@@ -5,10 +5,9 @@
 
 base::base()
 {
-	std::cerr << "base standard constructor called" << std::endl;
 }
 
-base::base(std::string p_name) :name(p_name)
+base::base(std::string Name): name(Name)
 {
 }
 

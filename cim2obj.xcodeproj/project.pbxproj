@@ -7,25 +7,55 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		65219DD51BF1F50700F3EC18 /* PowerSystemResource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PowerSystemResource.cpp; path = src/PowerSystemResource.cpp; sourceTree = "<group>"; };
+		65219DD61BF1F50700F3EC18 /* PowerSystemResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PowerSystemResource.h; path = src/PowerSystemResource.h; sourceTree = "<group>"; };
+		65219DD71BF20A6400F3EC18 /* LTEModem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = LTEModem.cpp; path = src/LTEModem.cpp; sourceTree = "<group>"; };
+		65219DD81BF20A6400F3EC18 /* LTEModem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LTEModem.h; path = src/LTEModem.h; sourceTree = "<group>"; };
+		65219DD91BF20AF400F3EC18 /* Modem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Modem.cpp; sourceTree = "<group>"; };
+		65219DDA1BF20AF400F3EC18 /* Modem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Modem.h; sourceTree = "<group>"; };
 		65353C241BF0EC7A00602957 /* Makefile */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; fileEncoding = 4; path = Makefile; sourceTree = "<group>"; };
 		65353C271BF0EDC400602957 /* base.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = base.cpp; path = src/base.cpp; sourceTree = "<group>"; };
-		65353C281BF0EDC400602957 /* base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = base.h; path = src/base.h; sourceTree = "<group>"; };
+		65353C281BF0EDC400602957 /* base.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = base.h; path = src/base.h; sourceTree = "<group>"; };
 		65353C291BF0F0BC00602957 /* DSLModem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DSLModem.cpp; path = src/DSLModem.cpp; sourceTree = "<group>"; };
-		65353C2A1BF0F0BC00602957 /* DSLModem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSLModem.h; path = src/DSLModem.h; sourceTree = "<group>"; };
+		65353C2A1BF0F0BC00602957 /* DSLModem.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = DSLModem.h; path = src/DSLModem.h; sourceTree = "<group>"; };
 		65353C2B1BF0F17C00602957 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = "<group>"; };
+		65353C2E1BF0FA3D00602957 /* main */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = main; path = build/main; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		65353C191BF0EC3E00602957 = {
 			isa = PBXGroup;
 			children = (
-				65353C2B1BF0F17C00602957 /* main.cpp */,
-				65353C291BF0F0BC00602957 /* DSLModem.cpp */,
-				65353C2A1BF0F0BC00602957 /* DSLModem.h */,
-				65353C271BF0EDC400602957 /* base.cpp */,
-				65353C281BF0EDC400602957 /* base.h */,
+				65353C2D1BF0FA2E00602957 /* build */,
+				65353C2C1BF0FA0F00602957 /* src */,
 				65353C241BF0EC7A00602957 /* Makefile */,
 			);
+			sourceTree = "<group>";
+		};
+		65353C2C1BF0FA0F00602957 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				65353C271BF0EDC400602957 /* base.cpp */,
+				65353C281BF0EDC400602957 /* base.h */,
+				65353C291BF0F0BC00602957 /* DSLModem.cpp */,
+				65353C2A1BF0F0BC00602957 /* DSLModem.h */,
+				65219DD71BF20A6400F3EC18 /* LTEModem.cpp */,
+				65219DD81BF20A6400F3EC18 /* LTEModem.h */,
+				65353C2B1BF0F17C00602957 /* main.cpp */,
+				65219DD51BF1F50700F3EC18 /* PowerSystemResource.cpp */,
+				65219DD61BF1F50700F3EC18 /* PowerSystemResource.h */,
+				65219DD91BF20AF400F3EC18 /* Modem.cpp */,
+				65219DDA1BF20AF400F3EC18 /* Modem.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		65353C2D1BF0FA2E00602957 /* build */ = {
+			isa = PBXGroup;
+			children = (
+				65353C2E1BF0FA3D00602957 /* main */,
+			);
+			name = build;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +221,7 @@
 				65353C231BF0EC3E00602957 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

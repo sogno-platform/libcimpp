@@ -9,7 +9,7 @@ class base
 {
 public:
 	base();
-	base(std::string p_name);
+	base(std::string Name);
 	~base();
 	std::string name;
 };

@@ -3,15 +3,13 @@
 #ifndef DSLModem_h
 #define DSLModem_h
 
-#include "base.h"
+#include "Modem.h"
 
-class DSLModem : public base
+class DSLModem : public Modem
 {
 public:
 	DSLModem();
-	DSLModem(std::string p_name);
 	~DSLModem();
-	int cost;
 };
 
 #endif /* DSLModem_h */
