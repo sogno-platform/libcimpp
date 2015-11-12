@@ -4,39 +4,43 @@
 ifeq ($(SYSTEM),linux)
 	# Set Compiler
 	CC = gcc++
-
-	# Include directories
-	INCDIR = \
-		-I/usr/include/raptor2 \
-		-I/usr/include/rasqal
-
-	# Library directories
-	LIBDIR = \
-		-L/usr/lib/i386-linux-gnu
 endif
 # Mac OS X
 ifeq ($(SYSTEM),osx)
 	# Set Compiler
 	CC = clang++
 
-	# Include directories
-	INCDIR = \
-		-I/usr/local/include/raptor2 \
-		-I/usr/local/include/rasqal \
-		-I/usr/local/include/redland
+        # Include directories
+        INCDIR = \
+        -I/usr/local/Cellar/libxml++/2.40.0/include/libxml++-2.6 \
+        -I/usr/local/Cellar/libxml++/2.40.0/lib/libxml++-2.6/include \
+        -I/usr/local/Cellar/glibmm/2.46.1/include/glibmm-2.4 \
+        -I/usr/local/Cellar/glibmm/2.46.1/lib/glibmm-2.4/include \
+        -I/usr/local/Cellar/glib/2.46.1/include/glib-2.0 \
+        -I/usr/local/Cellar/glib/2.46.1/lib/glib-2.0/include \
+        -I/usr/local/opt/gettext/include \
+        -I/usr/local/Cellar/libsigc++/2.6.1/include/sigc++-2.0 \
+        -I/usr/local/Cellar/libsigc++/2.6.1/lib/sigc++-2.0/include \
+        -I/usr/include/libxml2
 
-	# Library directories
-	LIBDIR = \
-		-L/usr/local/Cellar/raptor/2.0.15/lib \
-		-L/usr/local/Cellar/rasqal/0.9.33/lib \
-		-L/usr/local/Cellar/redland/1.0.17_1/lib
+        # Library directories
+        LIBDIR = \
+        -L/usr/local/Cellar/libxml++/2.40.0/lib \
+        -L/usr/local/Cellar/glibmm/2.46.1/lib \
+        -L/usr/local/Cellar/glib/2.46.1/lib \
+        -L/usr/local/opt/gettext/lib \
+        -L/usr/local/Cellar/libsigc++/2.6.1/lib
 endif
 
 CFLAGS = -Wall -g -std=c++11
 LDFLAGS = \
-	-lraptor2 \
-	-lrasqal \
-	-lrdf
+        -lxml++-2.6 \
+        -lxml2 \
+        -lglibmm-2.4 \
+        -lgobject-2.0 \
+        -lglib-2.0 \
+        -lintl \
+        -lsigc-2.0
 
 # Directories
 PROJDIR = ./
@@ -44,7 +48,7 @@ SRCDIR = $(PROJDIR)/src
 OBJDIR = $(PROJDIR)/obj
 BINDIR = $(PROJDIR)/build
 
-OBJ = $(OBJDIR)/main.o $(OBJDIR)/DSLModem.o $(OBJDIR)/base.o
+OBJ = $(OBJDIR)/main.o $(OBJDIR)/myparser.o $(OBJDIR)/DSLModem.o $(OBJDIR)/LTEModem.o $(OBJDIR)/Modem.o $(OBJDIR)/PowerSystemResource.o $(OBJDIR)/base.o
 BIN = $(BINDIR)/main
 
 # First target which should be called to build
