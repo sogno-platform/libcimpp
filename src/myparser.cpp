@@ -37,6 +37,10 @@ void MyParser::on_start_element(const Glib::ustring &name, const AttributeList &
     // Remember last opened tag
     tagStack.push(name);
 
+    // Is the value of the tag a literal?
+    if(properties.empty())
+        return;
+
     if(name == "base:PowerSystemResource")
     {
         base* basePtr = new PowerSystemResource;
@@ -61,6 +65,8 @@ void MyParser::on_start_element(const Glib::ustring &name, const AttributeList &
         elementStack.push(basePtr);
         return;
     }
+    // Nobody knows what to do
+    std::cout << "Nobody knows what to do with " << name << std::endl;
 }
 
 void MyParser::on_end_element(const Glib::ustring &name)
