@@ -11,6 +11,7 @@ public:
 	base();
 	base(std::string Name);
 	~base();
+    //virtual void print() = 0;
 	std::string name;
 };
 

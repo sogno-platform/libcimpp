@@ -15,6 +15,8 @@ public:
 
     void print();
 
+    std::unordered_map<std::string, base*> elements;
+
 protected:
     void on_start_document() override;
     void on_end_document() override;
@@ -29,7 +31,6 @@ protected:
 private:
     std::stack<base*> elementStack;
     std::stack<std::string> tagStack;
-    std::unordered_map<std::string, base*> elements;
 };
 
 #endif // MYPARSER_H

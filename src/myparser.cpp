@@ -77,7 +77,7 @@ void MyParser::on_characters(const Glib::ustring &characters)
     {
         if(tagStack.top() == "base:cost")
             buffer >> ((Modem*) elementStack.top())->cost;
-        if(tagStack.top() == "base:freqency")
+        if(tagStack.top() == "base:frequency")
             buffer >> ((LTEModem*) elementStack.top())->frequency;
         if(tagStack.top() == "base:modulationType")
             buffer >> ((LTEModem*) elementStack.top())->modulationType;
