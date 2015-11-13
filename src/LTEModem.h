@@ -1,5 +1,3 @@
-//  Created by Daniel Knibbe on 10.11.15.
-
 #ifndef LTEModem_h
 #define LTEModem_h
 
@@ -8,8 +6,8 @@
 class LTEModem : public Modem
 {
 public:
-	LTEModem();
-	~LTEModem();
+    LTEModem();
+    using Modem::Modem;
 	double frequency;
 	int modulationType;
 };

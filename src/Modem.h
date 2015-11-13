@@ -1,5 +1,3 @@
-//  Created by Daniel Knibbe on 10.11.15.
-
 #ifndef Modem_h
 #define Modem_h
 
@@ -8,8 +6,8 @@
 class Modem : public base
 {
 public:
-	Modem();
-	~Modem();
+    Modem();
+    using base::base;
 	int cost;
 };
 

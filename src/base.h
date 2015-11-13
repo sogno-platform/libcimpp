@@ -1,5 +1,3 @@
-//  Created by Daniel Knibbe on 09.11.15.
-
 #ifndef base_h
 #define base_h
 
@@ -9,9 +7,8 @@ class base
 {
 public:
 	base();
-	base(std::string Name);
-	~base();
-    //virtual void print() = 0;
+    base(std::string Name);
+
 	std::string name;
 };
 

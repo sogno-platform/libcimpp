@@ -1,5 +1,3 @@
-//  Created by Daniel Knibbe on 10.11.15.
-
 #ifndef PowerSystemResource_h
 #define PowerSystemResource_h
 
@@ -9,9 +7,9 @@
 class PowerSystemResource : public base
 {
 public:
-	PowerSystemResource();
-	~PowerSystemResource();
-	std::vector<base> ComMod;
+    PowerSystemResource();
+    using base::base;
+    std::vector<base*> ComMod;
 };
 
 #endif /* PowerSystemResource_h */

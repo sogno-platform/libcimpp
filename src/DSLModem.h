@@ -1,5 +1,3 @@
-//  Created by Daniel Knibbe on 09.11.15.
-
 #ifndef DSLModem_h
 #define DSLModem_h
 
@@ -8,8 +6,8 @@
 class DSLModem : public Modem
 {
 public:
-	DSLModem();
-	~DSLModem();
+    DSLModem();
+    using Modem::Modem;
 };
 
 #endif /* DSLModem_h */
