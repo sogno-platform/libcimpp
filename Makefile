@@ -32,7 +32,7 @@ ifeq ($(SYSTEM),osx)
         -L/usr/local/Cellar/libsigc++/2.6.1/lib
 endif
 
-CFLAGS = -Wall -g -std=c++11
+CFLAGS = -Wall -Wno-inconsistent-missing-override -g -std=c++11
 LDFLAGS = \
         -lxml++-2.6 \
         -lxml2 \
@@ -48,7 +48,7 @@ SRCDIR = $(PROJDIR)/src
 OBJDIR = $(PROJDIR)/obj
 BINDIR = $(PROJDIR)/build
 
-OBJ = $(OBJDIR)/main.o $(OBJDIR)/myparser.o $(OBJDIR)/DSLModem.o $(OBJDIR)/LTEModem.o $(OBJDIR)/Modem.o $(OBJDIR)/PowerSystemResource.o $(OBJDIR)/base.o
+OBJ = $(OBJDIR)/main.o $(OBJDIR)/myparser.o $(OBJDIR)/commchannel.o $(OBJDIR)/DSLModem.o $(OBJDIR)/LTEModem.o $(OBJDIR)/Modem.o $(OBJDIR)/PowerSystemResource.o $(OBJDIR)/base.o
 BIN = $(BINDIR)/main
 
 # First target which should be called to build
