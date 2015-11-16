@@ -10,6 +10,8 @@ public:
     using Modem::Modem;
 	double frequency;
 	int modulationType;
+
+    virtual void print();
 };
 
 #endif /* LTEModem_h */

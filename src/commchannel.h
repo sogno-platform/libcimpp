@@ -15,6 +15,8 @@ public:
     double delay;
     Modem* src;
     Modem* dest;
+
+    virtual void print();
 };
 
 #endif // COMMCHANNEL_H

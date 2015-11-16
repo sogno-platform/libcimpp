@@ -10,6 +10,8 @@ public:
     base(std::string Name);
 
 	std::string name;
+
+    virtual void print();
 };
 
 #endif /* base_h */

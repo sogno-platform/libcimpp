@@ -19,9 +19,7 @@ int main()
         std::cout << "Node1 not found" << std::endl;
     else
     {
-        PSR = (PowerSystemResource*) got->second;
-        std::cout << "Name: " << PSR->name << std::endl;
-        std::cout << "ComMod: " << PSR->ComMod.front()->name << std::endl;
+        got->second->print();
     }
 	return 0;
 }

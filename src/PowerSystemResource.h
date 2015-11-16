@@ -10,6 +10,8 @@ public:
     PowerSystemResource();
     using base::base;
     std::vector<base*> ComMod;
+
+    virtual void print();
 };
 
 #endif /* PowerSystemResource_h */

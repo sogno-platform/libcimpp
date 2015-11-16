@@ -9,6 +9,8 @@ public:
     Modem();
     using base::base;
 	int cost;
+
+    virtual void print();
 };
 
 #endif /* Modem_h */
