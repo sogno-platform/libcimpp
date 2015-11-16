@@ -29,6 +29,11 @@ void MyParser::on_start_document()
 
 void MyParser::on_end_document()
 {
+    while(!taskQueue.empty())
+    {
+        taskQueue.front().resolve(elements);
+        taskQueue.pop();
+    }
     std::cout << "Reached end of the document" << std::endl;
 }
 
@@ -63,6 +68,13 @@ void MyParser::on_start_element(const Glib::ustring &name, const AttributeList &
         basePtr->name = properties.front().value;
         elements.emplace(properties.front().value, basePtr);
         elementStack.push(basePtr);
+        return;
+    }
+    if(name == "base:ComMod")
+    {
+        // Assume that the first attribute defines rdf:resource
+        task Task(&(((PowerSystemResource*) elementStack.top())->ComMod)  , properties.front().value);
+        taskQueue.push(Task);
         return;
     }
     // Nobody knows what to do

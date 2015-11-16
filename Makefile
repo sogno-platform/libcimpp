@@ -48,7 +48,7 @@ SRCDIR = $(PROJDIR)/src
 OBJDIR = $(PROJDIR)/obj
 BINDIR = $(PROJDIR)/build
 
-OBJ = $(OBJDIR)/main.o $(OBJDIR)/myparser.o $(OBJDIR)/commchannel.o $(OBJDIR)/DSLModem.o $(OBJDIR)/LTEModem.o $(OBJDIR)/Modem.o $(OBJDIR)/PowerSystemResource.o $(OBJDIR)/base.o
+OBJ = $(OBJDIR)/main.o $(OBJDIR)/task.o $(OBJDIR)/myparser.o $(OBJDIR)/commchannel.o $(OBJDIR)/DSLModem.o $(OBJDIR)/LTEModem.o $(OBJDIR)/Modem.o $(OBJDIR)/PowerSystemResource.o $(OBJDIR)/base.o
 BIN = $(BINDIR)/main
 
 # First target which should be called to build

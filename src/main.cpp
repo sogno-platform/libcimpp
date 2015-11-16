@@ -1,31 +1,27 @@
-//  Created by Daniel Knibbe on 09.11.15.
-
 #include "LTEModem.h"
+#include "DSLModem.h"
+#include "PowerSystemResource.h"
 #include <iostream>
 #include <string>
-#include <unordered_map>
 #include "myparser.h"
 
 int main()
 {
     LTEModem* modem;
+    PowerSystemResource* PSR;
 
     MyParser xmlparser;
-    //xmlparser.set_validate(false);
     xmlparser.parse_file("../../network.xml");
-    //xmlparser.print();
 
     std::unordered_map<std::string, base*>::const_iterator got;
-    got = xmlparser.elements.find("LTEModem1");
+    got = xmlparser.elements.find("Node1");
     if(got == xmlparser.elements.end())
-        std::cout << "LTEModem1 not found" << std::endl;
+        std::cout << "Node1 not found" << std::endl;
     else
     {
-        modem = (LTEModem*) got->second;
-        std::cout << "Name: " << modem->name << std::endl;
-        std::cout << "cost: " << modem->cost << std::endl;
-        std::cout << "frequency: " << modem->frequency << std::endl;
-        std::cout << "modulationType: " << modem->modulationType << std::endl;
+        PSR = (PowerSystemResource*) got->second;
+        std::cout << "Name: " << PSR->name << std::endl;
+        std::cout << "ComMod: " << PSR->ComMod.front()->name << std::endl;
     }
 	return 0;
 }

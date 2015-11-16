@@ -3,9 +3,11 @@
 
 #include <libxml++/libxml++.h>
 #include <stack>
+#include <queue>
 #include <unordered_map>
 
 #include "base.h"
+#include "task.h"
 
 class MyParser : public xmlpp::SaxParser
 {
@@ -31,6 +33,7 @@ protected:
 private:
     std::stack<base*> elementStack;
     std::stack<std::string> tagStack;
+    std::queue<task> taskQueue;
 };
 
 #endif // MYPARSER_H
