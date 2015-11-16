@@ -7,19 +7,27 @@
 
 int main()
 {
-    LTEModem* modem;
-    PowerSystemResource* PSR;
-
+    std::string input;
     MyParser xmlparser;
     xmlparser.parse_file("../../network.xml");
 
+
     std::unordered_map<std::string, base*>::const_iterator got;
-    got = xmlparser.elements.find("Node1");
-    if(got == xmlparser.elements.end())
-        std::cout << "Node1 not found" << std::endl;
-    else
+    while(true)
     {
-        got->second->print();
+        std::cout << "Gebe namen des Elements oder 'quit' ein" << std::endl;
+        std::cin >> input;
+
+        if(input == "quit")
+            break;
+
+        got = xmlparser.elements.find(input);
+        if(got == xmlparser.elements.end())
+            std::cout << "not found" << std::endl;
+        else
+        {
+            got->second->print();
+        }
     }
 	return 0;
 }
