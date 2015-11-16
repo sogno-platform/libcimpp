@@ -86,7 +86,7 @@ void MyParser::on_start_element(const Glib::ustring &name, const AttributeList &
     if(name == "base:ComMod")
     {
         // Assume that the first attribute defines rdf:resource
-        task Task(&(((PowerSystemResource*) elementStack.top())->ComMod)  , properties.front().value);
+        task Task(elementStack.top() , properties.front().value, PowerSystemResource_ComMod);
         taskQueue.push(Task);
         return;
     }

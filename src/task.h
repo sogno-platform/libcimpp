@@ -9,23 +9,22 @@
 enum type
 {
     UNDEFINED,
-    VECTOR,
-    POINTER
+    PowerSystemResource_ComMod,
+    CommChannel_src,
+    CommChannel_dest
 };
 
 class task
 {
 public:
     task();
-    task(std::vector<base*>* vectorPtr, std::string rdfID);
-    task(base** basePtr, std::string rdfID);
+    task(base* basePtr, std::string rdfID, type what);
     
     void resolve(std::unordered_map<std::string, base*> &map);
     
 private:
-    type what;
-    std::vector<base*>* m_vectorPtr;
-    base** m_basePtr;
+    type m_what;
+    base* m_basePtr;
     std::string m_rdfID;
 };
 

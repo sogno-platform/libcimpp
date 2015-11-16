@@ -1,25 +1,19 @@
 #include "task.h"
+#include "DSLModem.h"
+#include "LTEModem.h"
+#include "Modem.h"
+#include "commchannel.h"
+#include "PowerSystemResource.h"
 #include <iostream>
 
 task::task()
-  : what(UNDEFINED),
-    m_vectorPtr(nullptr),
+  : m_what(UNDEFINED),
     m_basePtr(nullptr)
 {
 }
 
-task::task(std::vector<base*>* vectorPtr, std::string rdfID)
-  : what(VECTOR),
-    m_vectorPtr(vectorPtr),
-    m_basePtr(nullptr),
-    m_rdfID(rdfID)
-
-{
-}
-
-task::task(base **basePtr, std::string rdfID)
-  : what(POINTER),
-    m_vectorPtr(nullptr),
+task::task(base* basePtr, std::string rdfID, type what)
+  : m_what(what),
     m_basePtr(basePtr),
     m_rdfID(rdfID)
 {
@@ -27,7 +21,9 @@ task::task(base **basePtr, std::string rdfID)
 
 void task::resolve(std::unordered_map<std::string, base*> &map)
 {
-    if(what == UNDEFINED)
+    if(m_what == UNDEFINED)
+        return;
+    if(m_basePtr == nullptr)
         return;
 
     // Search for item in map
@@ -39,21 +35,16 @@ void task::resolve(std::unordered_map<std::string, base*> &map)
         std::cerr << "not found" << std::endl;
         return;
     }
-    if(what == VECTOR)
+    if(m_what == PowerSystemResource_ComMod)
     {
-        if(m_vectorPtr != nullptr)
-        {
-            // Add base* to specified vector
-            m_vectorPtr->push_back(iterator->second);
-        }
+        ((PowerSystemResource*) m_basePtr)->ComMod.push_back(iterator->second);
     }
-    
-    if(what == POINTER)
+    if(m_what == CommChannel_src)
     {
-        if(m_basePtr != nullptr)
-        {
-            // Set base*
-            (*m_basePtr) = iterator->second;
-        }
+        ((CommChannel*) m_basePtr)->src = (Modem*) iterator->second;
+    }
+    if(m_what == CommChannel_dest)
+    {
+        ((CommChannel*) m_basePtr)->dest = (Modem*) iterator->second;
     }
 }
