@@ -5,6 +5,7 @@
 #include <stack>
 #include <queue>
 #include <unordered_map>
+#include <memory>
 
 #include "base.h"
 #include "task.h"
@@ -17,7 +18,7 @@ public:
 
     void print();
 
-    std::unordered_map<std::string, base*> elements;
+    std::unordered_map<std::string, std::shared_ptr<base>> elements;
 
 protected:
     void on_start_document() override;
@@ -31,7 +32,7 @@ protected:
     //void on_fatal_error(const Glib::ustring& text) override;
 
 private:
-    std::stack<base*> elementStack;
+    std::stack<std::shared_ptr<base>> elementStack;
     std::stack<std::string> tagStack;
     std::queue<task> taskQueue;
 };

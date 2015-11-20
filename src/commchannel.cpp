@@ -11,6 +11,6 @@ void CommChannel::print()
               << "\n\tber " << ber
               << "\n\tdataRate " << dataRate
               << "\n\tdelay " << delay
-              << "\n\tsrc " << src->name
-              << "\n\tdest " << dest->name << std::endl;
+              << "\n\tsrc " << src.lock()->name
+              << "\n\tdest " << dest.lock()->name << std::endl;
 }

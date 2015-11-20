@@ -18,13 +18,13 @@ class task
 {
 public:
     task();
-    task(base* basePtr, std::string rdfID, type what);
+    task(std::shared_ptr<base> basePtr, std::string rdfID, type what);
     
-    void resolve(std::unordered_map<std::string, base*> &map);
+    void resolve(std::unordered_map<std::string, std::shared_ptr<base>> &map);
     
 private:
     type m_what;
-    base* m_basePtr;
+    std::shared_ptr<base> m_basePtr;
     std::string m_rdfID;
 };
 

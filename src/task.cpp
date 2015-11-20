@@ -12,14 +12,14 @@ task::task()
 {
 }
 
-task::task(base* basePtr, std::string rdfID, type what)
+task::task(std::shared_ptr<base> basePtr, std::string rdfID, type what)
   : m_what(what),
     m_basePtr(basePtr),
     m_rdfID(rdfID)
 {
 }
 
-void task::resolve(std::unordered_map<std::string, base*> &map)
+void task::resolve(std::unordered_map<std::string, std::shared_ptr<base>> &map)
 {
     if(m_what == UNDEFINED)
         return;
@@ -37,14 +37,14 @@ void task::resolve(std::unordered_map<std::string, base*> &map)
     }
     if(m_what == PowerSystemResource_ComMod)
     {
-        ((PowerSystemResource*) m_basePtr)->ComMod.push_back(iterator->second);
+        std::dynamic_pointer_cast<PowerSystemResource>(m_basePtr)->ComMod.push_back(iterator->second);
     }
     if(m_what == CommChannel_src)
     {
-        ((CommChannel*) m_basePtr)->src = (Modem*) iterator->second;
+        std::dynamic_pointer_cast<CommChannel>(m_basePtr)->src = std::dynamic_pointer_cast<Modem>(iterator->second);
     }
     if(m_what == CommChannel_dest)
     {
-        ((CommChannel*) m_basePtr)->dest = (Modem*) iterator->second;
+        std::dynamic_pointer_cast<CommChannel>(m_basePtr)->dest = std::dynamic_pointer_cast<Modem>(iterator->second);
     }
 }

@@ -53,7 +53,7 @@ void MyParser::on_start_element(const Glib::ustring &name, const AttributeList &
 
     if(name == "base:PowerSystemResource")
     {
-        base* basePtr = new PowerSystemResource;
+        std::shared_ptr<base> basePtr(new PowerSystemResource);
         basePtr->name = properties.front().value;
         elements.emplace(properties.front().value, basePtr);
         elementStack.push(basePtr);
@@ -61,7 +61,7 @@ void MyParser::on_start_element(const Glib::ustring &name, const AttributeList &
     }
     if(name == "base:DSLModem")
     {
-        base* basePtr = new DSLModem;
+        std::shared_ptr<base> basePtr(new DSLModem);
         basePtr->name = properties.front().value;
         elements.emplace(properties.front().value, basePtr);
         elementStack.push(basePtr);
@@ -69,7 +69,7 @@ void MyParser::on_start_element(const Glib::ustring &name, const AttributeList &
     }
     if(name == "base:LTEModem")
     {
-        base* basePtr = new LTEModem;
+        std::shared_ptr<base> basePtr(new LTEModem);
         basePtr->name = properties.front().value;
         elements.emplace(properties.front().value, basePtr);
         elementStack.push(basePtr);
@@ -77,7 +77,7 @@ void MyParser::on_start_element(const Glib::ustring &name, const AttributeList &
     }
     if(name == "base:CommChannel")
     {
-        base* basePtr = new CommChannel;
+        std::shared_ptr<base> basePtr(new CommChannel);
         basePtr->name = properties.front().value;
         elements.emplace(properties.front().value, basePtr);
         elementStack.push(basePtr);
@@ -140,16 +140,16 @@ void MyParser::on_characters(const Glib::ustring &characters)
     if(!tagStack.empty())
     {
         if(tagStack.top() == "base:cost")
-            buffer >> ((Modem*) elementStack.top())->cost;
+            buffer >> std::dynamic_pointer_cast<Modem>(elementStack.top())->cost;
         if(tagStack.top() == "base:frequency")
-            buffer >> ((LTEModem*) elementStack.top())->frequency;
+            buffer >> std::dynamic_pointer_cast<LTEModem>(elementStack.top())->frequency;
         if(tagStack.top() == "base:modulationType")
-            buffer >> ((LTEModem*) elementStack.top())->modulationType;
+            buffer >> std::dynamic_pointer_cast<LTEModem>(elementStack.top())->modulationType;
         if(tagStack.top() == "base:ber")
-            buffer >> ((CommChannel*) elementStack.top())->ber;
+            buffer >> std::dynamic_pointer_cast<CommChannel>(elementStack.top())->ber;
         if(tagStack.top() == "base:dataRate")
-            buffer >> ((CommChannel*) elementStack.top())->dataRate;
+            buffer >> std::dynamic_pointer_cast<CommChannel>(elementStack.top())->dataRate;
         if(tagStack.top() == "base:delay")
-            buffer >> ((CommChannel*) elementStack.top())->delay;
+            buffer >> std::dynamic_pointer_cast<CommChannel>(elementStack.top())->delay;
     }
 }

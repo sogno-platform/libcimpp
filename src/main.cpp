@@ -12,7 +12,7 @@ int main()
     xmlparser.parse_file("../../network.xml");
 
 
-    std::unordered_map<std::string, base*>::const_iterator got;
+    std::unordered_map<std::string, std::shared_ptr<base>>::const_iterator got;
     while(true)
     {
         std::cout << "Gebe namen des Elements oder 'quit' ein" << std::endl;

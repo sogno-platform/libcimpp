@@ -2,6 +2,7 @@
 #define PowerSystemResource_h
 
 #include <vector>
+#include <memory>
 #include "base.h"
 
 class PowerSystemResource : public base
@@ -9,7 +10,7 @@ class PowerSystemResource : public base
 public:
     PowerSystemResource();
     using base::base;
-    std::vector<base*> ComMod;
+    std::vector<std::weak_ptr<base>> ComMod;
 
     virtual void print();
 };

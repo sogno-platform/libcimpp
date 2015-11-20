@@ -1,6 +1,8 @@
 #ifndef COMMCHANNEL_H
 #define COMMCHANNEL_H
 
+#include <memory>
+
 #include "base.h"
 #include "Modem.h"
 
@@ -13,8 +15,8 @@ public:
     double ber;
     double dataRate;
     double delay;
-    Modem* src;
-    Modem* dest;
+    std::weak_ptr<Modem> src;
+    std::weak_ptr<Modem> dest;
 
     virtual void print();
 };
