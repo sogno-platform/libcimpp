@@ -50,10 +50,13 @@ BINDIR = $(PROJDIR)/build
 
 OBJ = $(OBJDIR)/main.o $(OBJDIR)/task.o $(OBJDIR)/myparser.o $(OBJDIR)/commchannel.o $(OBJDIR)/DSLModem.o $(OBJDIR)/LTEModem.o $(OBJDIR)/Modem.o $(OBJDIR)/PowerSystemResource.o $(OBJDIR)/base.o
 BIN = $(BINDIR)/main
+DOXYFILE = $(PROJDIR)/Doxyfile
 
 # First target which should be called to build
-all: directories $(OBJ)
-	$(CC) $(CFLAGS) $(INCDIR) $(LIBDIR) $(OBJ) -o $(BIN) $(LDFLAGS)
+default: directories $(BIN)
+
+# Build all including documentation
+all: directories $(BIN) documentation
 
 # Directories target
 .PHONY: directories
@@ -66,7 +69,17 @@ directories:
 clean:
 	rm -rf $(OBJDIR)
 	rm -rf $(BINDIR)
+	rm -rf documentation
+
+# Documentation target
+documentation: documentation/html/index.html
+documentation/html/index.html: $(SRCDIR)/*.cpp $(SRCDIR)/*.h $(DOXYFILE)
+	doxygen Doxyfile
 
 # Pattern rule for source
 $(OBJDIR)/%.o: $(SRCDIR)/%.cpp
 	$(CC) $(CFLAGS) $(INCDIR) -c -o $@ $<
+
+# Linking pattern
+$(BIN): $(OBJ)
+	$(CC) $(CFLAGS) $(INCDIR) $(LIBDIR) $(OBJ) -o $(BIN) $(LDFLAGS)
