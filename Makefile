@@ -42,11 +42,15 @@ LDFLAGS = \
         -lintl \
         -lsigc-2.0
 
+# Project Name
+PROJECT_NAME = Cim2Obj
+
 # Directories
 PROJDIR = ./
 SRCDIR = $(PROJDIR)/src
 OBJDIR = $(PROJDIR)/obj
 BINDIR = $(PROJDIR)/build
+DOCDIR = $(PROJDIR)/documentation
 
 OBJ = $(OBJDIR)/main.o $(OBJDIR)/task.o $(OBJDIR)/myparser.o $(OBJDIR)/commchannel.o $(OBJDIR)/DSLModem.o $(OBJDIR)/LTEModem.o $(OBJDIR)/Modem.o $(OBJDIR)/PowerSystemResource.o $(OBJDIR)/base.o
 BIN = $(BINDIR)/main
@@ -61,20 +65,31 @@ all: directories $(BIN) documentation
 # Directories target
 .PHONY: directories
 directories:
-	mkdir -p $(OBJDIR)
-	mkdir -p $(BINDIR)
+	@mkdir -p $(OBJDIR)
+	@mkdir -p $(BINDIR)
 
 # Clean target
 .PHONY: clean
 clean:
-	rm -rf $(OBJDIR)
-	rm -rf $(BINDIR)
-	rm -rf documentation
+	@rm -rf $(OBJDIR)
+	@rm -rf $(BINDIR)
+	@rm -rf $(DOCDIR)
+	@rm -f $(DOXYFILE)
+	@echo Finished cleaning up
 
 # Documentation target
-documentation: documentation/html/index.html
-documentation/html/index.html: $(SRCDIR)/*.cpp $(SRCDIR)/*.h $(DOXYFILE)
-	doxygen Doxyfile
+documentation: $(DOCDIR)/html/index.html
+$(DOCDIR)/html/index.html: $(SRCDIR)/*.cpp $(SRCDIR)/*.h $(DOXYFILE)
+	doxygen $(DOXYFILE)
+
+# Doxyfile
+$(DOXYFILE):
+	@rm -f $(DOXYFILE)
+	@echo PROJECT_NAME = "$(PROJECT_NAME)" >> $(DOXYFILE)
+	@echo OUTPUT_DIRECTORY = $(DOCDIR) >> $(DOXYFILE)
+	@echo INPUT = $(SRCDIR) >> $(DOXYFILE)
+	@echo GENERATE_LATEX = NO >> $(DOXYFILE)
+	@echo Generated Doxyfile
 
 # Pattern rule for source
 $(OBJDIR)/%.o: $(SRCDIR)/%.cpp
