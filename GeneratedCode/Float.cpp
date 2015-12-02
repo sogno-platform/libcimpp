@@ -10,3 +10,19 @@
 Float::Float(){
 
 }
+
+Float::Float(double value)
+	: value(value)
+{
+}
+
+Float& Float::operator=(double &rop)
+{
+	value = rop;
+	return *this;
+}
+
+Float::operator double()
+{
+	return value;
+}

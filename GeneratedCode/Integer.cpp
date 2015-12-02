@@ -10,3 +10,19 @@
 Integer::Integer(){
 
 }
+
+Integer::Integer(long value)
+	: value(value)
+{
+}
+
+Integer& Integer::operator=(long &rop)
+{
+	value = rop;
+	return *this;
+}
+
+Integer::operator long()
+{
+	return value;
+}

@@ -15,6 +15,12 @@ class Boolean
 
 public:
 	Boolean();
+	Boolean(bool value);
+
+	Boolean& operator=(bool &rop);
+	operator bool();
+
+	bool value;
 
 };
 #endif // !defined(EA_0D56BB07_983A_4b5b_AD72_7ADFE8523598__INCLUDED_)

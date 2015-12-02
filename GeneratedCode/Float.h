@@ -15,6 +15,11 @@ class Float
 
 public:
 	Float();
+	Float(double value);
 
+	Float& operator=(double &rop);
+	operator double();
+
+	double value;
 };
 #endif // !defined(EA_9C59ED45_FF6B_46d2_ACD9_9C979E9B99EA__INCLUDED_)

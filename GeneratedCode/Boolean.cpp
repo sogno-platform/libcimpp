@@ -10,3 +10,19 @@
 Boolean::Boolean(){
 
 }
+
+Boolean::Boolean(bool value)
+	: value(value)
+{
+}
+
+Boolean& Boolean::operator=(bool &rop)
+{
+	value = rop;
+	return *this;
+}
+
+Boolean::operator bool()
+{
+	return value;
+}

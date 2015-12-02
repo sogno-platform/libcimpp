@@ -15,6 +15,11 @@ class Integer
 
 public:
 	Integer();
+	Integer(long value);
 
+	Integer& operator=(long &rop);
+	operator long();
+
+	long value;
 };
 #endif // !defined(EA_F10152A7_84B3_4603_9471_7C773F87788C__INCLUDED_)
