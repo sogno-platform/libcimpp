@@ -10,6 +10,9 @@
 #include "String.h"
 #include "DiagramObject.h"
 
+#include <vector>
+#include <memory>
+
 /**
  * This is a root class to provide common identification for all classes needing
  * identification and naming attributes.
@@ -51,7 +54,7 @@ public:
 	/**
 	 * The diagram objects that are associated with the domain object.
 	 */
-	std::vector<DiagramObject> *DiagramObjects;
+	std::vector<std::shared_ptr<DiagramObject>> DiagramObjects;
 
 };
 #endif // !defined(EA_0B448426_CFE5_49a8_B49C_69CC828A0033__INCLUDED_)

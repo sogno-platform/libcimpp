@@ -30,17 +30,17 @@ public:
 	/**
 	 * The connectivity node to which this terminal connects with zero impedance.
 	 */
-	ConnectivityNode *ConnectivityNode;
+	std::shared_ptr<ConnectivityNode> ConnectivityNode;
 	/**
 	 * The conducting equipment of the terminal.  Conducting equipment have  terminals
 	 * that may be connected to other conducting equipment terminals via connectivity
 	 * nodes or topological nodes.
 	 */
-	ConductingEquipment *ConductingEquipment;
+	std::shared_ptr<ConductingEquipment> ConductingEquipment;
 	/**
 	 * The controls regulating this terminal.
 	 */
-	std::vector<RegulatingControl> *RegulatingControl;
+	std::vector<std::shared_ptr<RegulatingControl>> RegulatingControl;
 
 };
 #endif // !defined(EA_70D9BD26_D997_4f77_BAD1_22D9B111CC4E__INCLUDED_)

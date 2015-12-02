@@ -70,21 +70,21 @@ public:
 	/**
 	 * A diagram object is part of a diagram.
 	 */
-	Diagram *Diagram;
+	std::shared_ptr<Diagram> Diagram;
 	/**
 	 * A diagram object can be part of multiple visibility layers.
 	 */
-	std::vector<VisibilityLayer> *VisibilityLayers;
+	std::vector<std::shared_ptr<VisibilityLayer>> VisibilityLayers;
 	/**
 	 * A diagram object can have 0 or more points to reflect its layout position,
 	 * routing (for polylines) or boundary (for polygons).
 	 */
-	std::vector<DiagramObjectPoint> *DiagramObjectPoints;
+	std::vector<std::shared_ptr<DiagramObjectPoint>> DiagramObjectPoints;
 	/**
 	 * A diagram object has a style associated that provides a reference for the style
 	 * used in the originating system.
 	 */
-	DiagramObjectStyle *DiagramObjectStyle;
+	std::shared_ptr<DiagramObjectStyle> DiagramObjectStyle;
 
 };
 #endif // !defined(EA_A77497A8_2CD8_4c56_9BFD_4E11CF1C44EC__INCLUDED_)

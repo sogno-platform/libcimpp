@@ -22,7 +22,7 @@ public:
 	/**
 	 * Container of this connectivity node.
 	 */
-	ConnectivityNodeContainer *ConnectivityNodeContainer;
+	std::shared_ptr<ConnectivityNodeContainer> ConnectivityNodeContainer;
 
 };
 #endif // !defined(EA_567FE854_699D_4290_87B9_40E5C0B26033__INCLUDED_)

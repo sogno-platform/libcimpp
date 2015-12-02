@@ -27,15 +27,15 @@ public:
 	 * The controller outputs used to actually govern a regulating device, e.g. the
 	 * magnetization of a synchronous machine or capacitor bank breaker actuator.
 	 */
-	std::vector<Control> *Controls;
+	std::vector<std::shared_ptr<Control>> Controls;
 	/**
 	 * The measurements associated with this power system resource.
 	 */
-	std::vector<Measurement> *Measurements;
+	std::vector<std::shared_ptr<Measurement>> Measurements;
 	/**
 	 * Custom classification for this power system resource.
 	 */
-	PSRType *PSRType;
+	std::shared_ptr<PSRType> PSRType;
 
 };
 #endif // !defined(EA_09A224FC_243A_4ffb_A06B_EC133CD3F1AD__INCLUDED_)

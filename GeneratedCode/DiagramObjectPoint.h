@@ -12,6 +12,8 @@
 #include "Float.h"
 #include "DiagramObjectGluePoint.h"
 
+#include <memory>
+
 /**
  * A point in a given space defined by 3 coordinates and associated to a diagram
  * object.  The coordinates may be positive or negative as the origin does not
@@ -42,7 +44,7 @@ public:
 	/**
 	 * The 'glue' point to which this point is associated.
 	 */
-	DiagramObjectGluePoint *DiagramObjectGluePoint;
+	std::shared_ptr<DiagramObjectGluePoint> DiagramObjectGluePoint;
 
 };
 #endif // !defined(EA_C8D66074_118C_452e_BC76_5AF368C4EA4F__INCLUDED_)
