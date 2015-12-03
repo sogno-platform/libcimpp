@@ -7,7 +7,7 @@
 #if !defined(EA_EC814483_65BF_482b_84FD_D53AD0687410__INCLUDED_)
 #define EA_EC814483_65BF_482b_84FD_D53AD0687410__INCLUDED_
 
-#include "String.h"
+#include "MyString.h"
 #include "PhaseCode.h"
 #include "UnitMultiplier.h"
 #include "UnitSymbol.h"
@@ -49,7 +49,7 @@ public:
 	 * measurement represents an indoor temperature, outdoor temperature, bus voltage,
 	 * line flow, etc.
 	 */
-	String measurementType;
+	CIM::String measurementType;
 	/**
 	 * Indicates to which phases the measurement applies and avoids the need to use
 	 * 'measurementType' to also encode phase information (which would explode the

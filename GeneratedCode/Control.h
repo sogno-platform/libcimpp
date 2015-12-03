@@ -7,7 +7,7 @@
 #if !defined(EA_41D0A354_C0A5_47fb_8920_343AF70C1EF6__INCLUDED_)
 #define EA_41D0A354_C0A5_47fb_8920_343AF70C1EF6__INCLUDED_
 
-#include "String.h"
+#include "MyString.h"
 #include "Boolean.h"
 #include "DateTime.h"
 #include "UnitMultiplier.h"
@@ -29,7 +29,7 @@ public:
 	 * TieLineFlow etc. The ControlType.name shall be unique among all specified types
 	 * and describe the type.
 	 */
-	String controlType;
+	CIM::String controlType;
 	/**
 	 * Indicates that a client is currently sending control commands that has not
 	 * completed.

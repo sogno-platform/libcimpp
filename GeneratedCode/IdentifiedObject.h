@@ -7,8 +7,9 @@
 #if !defined(EA_0B448426_CFE5_49a8_B49C_69CC828A0033__INCLUDED_)
 #define EA_0B448426_CFE5_49a8_B49C_69CC828A0033__INCLUDED_
 
-#include "String.h"
-#include "DiagramObject.h"
+#include "MyString.h"
+//#include "DiagramObject.h"
+class DiagramObject;
 
 #include <vector>
 #include <memory>
@@ -30,12 +31,12 @@ public:
 	 * CIM relases. It is however recommended to replace aliasName with the Name class
 	 * as aliasName is planned for retirement at a future time.
 	 */
-	String aliasName;
+	CIM::String aliasName;
 	/**
 	 * The description is a free human readable text describing or naming the object.
 	 * It may be non unique and may not correlate to a naming hierarchy.
 	 */
-	String description;
+	CIM::String description;
 	/**
 	 * Master resource identifier issued by a model authority. The mRID is unique
 	 * within an exchange context. Global uniqueness is easily achieved by using a
@@ -45,12 +46,12 @@ public:
 	 * mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object
 	 * elements.
 	 */
-	String mRID;
+	CIM::String mRID;
 	/**
 	 * The name is any free human readable and possibly non unique text naming the
 	 * object.
 	 */
-	String name;
+	CIM::String name;
 	/**
 	 * The diagram objects that are associated with the domain object.
 	 */
