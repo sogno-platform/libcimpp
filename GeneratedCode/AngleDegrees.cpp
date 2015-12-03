@@ -12,5 +12,5 @@ AngleDegrees::AngleDegrees(){
 }
 
 
-const UnitMultiplier AngleDegrees::multiplier = none;
-const UnitSymbol AngleDegrees::unit = deg;
+const UnitMultiplier AngleDegrees::multiplier = UnitMultiplier::none;
+const UnitSymbol AngleDegrees::unit = UnitSymbol::deg;

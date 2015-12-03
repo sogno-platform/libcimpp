@@ -13,7 +13,7 @@
  * exchange kilograms using unit symbol of kg, one uses the "none" multiplier, to
  * exchange metric ton (Mg), one uses the "k" multiplier.
  */
-enum UnitMultiplier
+enum class UnitMultiplier
 {
 	/**
 	 * yocto 10**-24.

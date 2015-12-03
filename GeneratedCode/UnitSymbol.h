@@ -10,7 +10,7 @@
 /**
  * The units defined for usage in the CIM.
  */
-enum UnitSymbol
+enum class UnitSymbol
 {
 	/**
 	 * Dimension less quantity, e.g. count, per unit, etc.
@@ -21,7 +21,7 @@ enum UnitSymbol
 	 */
 	m = 2,
 	/**
-	 * Mass in kilogram.  Note: multiplier “k” is included in this unit symbol for
+	 * Mass in kilogram.  Note: multiplier ï¿½kï¿½ is included in this unit symbol for
 	 * compatibility with IEC 61850-7-3.
 	 */
 	kg = 3,
@@ -67,10 +67,10 @@ enum UnitSymbol
 	Bq = 22,
 	/**
 	 * Relative temperature in degrees Celsius.
-	 * In the SI unit system the symbol is ºC. Electric charge is measured in coulomb
+	 * In the SI unit system the symbol is ï¿½C. Electric charge is measured in coulomb
 	 * that has the unit symbol C. To distinguish degree Celsius form coulomb the
-	 * symbol used in the UML is degC. Reason for not using ºC is the special
-	 * character º is difficult to manage in software.
+	 * symbol used in the UML is degC. Reason for not using ï¿½C is the special
+	 * character ï¿½ is difficult to manage in software.
 	 */
 	degC = 23,
 	/**
@@ -82,7 +82,7 @@ enum UnitSymbol
 	 */
 	F = 25,
 	/**
-	 * Electric charge in Coulomb (A·s).
+	 * Electric charge in Coulomb (Aï¿½s).
 	 */
 	C = 26,
 	/**
@@ -102,11 +102,11 @@ enum UnitSymbol
 	 */
 	ohm = 30,
 	/**
-	 * Energy in joule (N·m = C·V = W·s).
+	 * Energy in joule (Nï¿½m = Cï¿½V = Wï¿½s).
 	 */
 	J = 31,
 	/**
-	 * Force in Newton (kg·m/s²).
+	 * Force in Newton (kgï¿½m/sï¿½).
 	 */
 	N = 32,
 	/**
@@ -114,15 +114,15 @@ enum UnitSymbol
 	 */
 	Hz = 33,
 	/**
-	 * Illuminance in lux (lm/m²).
+	 * Illuminance in lux (lm/mï¿½).
 	 */
 	lx = 34,
 	/**
-	 * Luminous flux in lumen (cd·sr).
+	 * Luminous flux in lumen (cdï¿½sr).
 	 */
 	lm = 35,
 	/**
-	 * Magnetic flux in Weber (V·s).
+	 * Magnetic flux in Weber (Vï¿½s).
 	 */
 	Wb = 36,
 	/**
@@ -131,21 +131,21 @@ enum UnitSymbol
 	T = 37,
 	/**
 	 * Real power in Watt (J/s). Electrical power may have real and reactive
-	 * components. The real portion of electrical power (I²R or VIcos(phi)), is
+	 * components. The real portion of electrical power (Iï¿½R or VIcos(phi)), is
 	 * expressed in Watts. (See also apparent power and reactive power.)
 	 */
 	W = 38,
 	/**
-	 * Pressure in Pascal (N/m²). Note: the absolute or relative measurement of
+	 * Pressure in Pascal (N/mï¿½). Note: the absolute or relative measurement of
 	 * pressure is implied with this entry. See below for more explicit forms.
 	 */
 	Pa = 39,
 	/**
-	 * Area in square metre (m²).
+	 * Area in square metre (mï¿½).
 	 */
 	m2 = 41,
 	/**
-	 * Volume in cubic metre (m³).
+	 * Volume in cubic metre (mï¿½).
 	 */
 	m3 = 42,
 	/**
@@ -153,25 +153,25 @@ enum UnitSymbol
 	 */
 	mPers = 43,
 	/**
-	 * Acceleration in metre per second squared (m/s²).
+	 * Acceleration in metre per second squared (m/sï¿½).
 	 */
 	mPers2 = 44,
 	/**
-	 * Volumetric flow rate in cubic metres per second (m³/s).
+	 * Volumetric flow rate in cubic metres per second (mï¿½/s).
 	 */
 	m3Pers = 45,
 	/**
-	 * Fuel efficiency in metre per cubic metre (m/m³).
+	 * Fuel efficiency in metre per cubic metre (m/mï¿½).
 	 */
 	mPerm3 = 46,
 	/**
-	 * Moment of mass in kilogram metre (kg·m) (first moment of mass). Note:
-	 * multiplier “k” is included in this unit symbol for compatibility with IEC 61850-
+	 * Moment of mass in kilogram metre (kgï¿½m) (first moment of mass). Note:
+	 * multiplier ï¿½kï¿½ is included in this unit symbol for compatibility with IEC 61850-
 	 * 7-3.
 	 */
 	kgm = 47,
 	/**
-	 * Density in kilogram/cubic metre (kg/m³). Note: multiplier “k” is included in
+	 * Density in kilogram/cubic metre (kg/mï¿½). Note: multiplier ï¿½kï¿½ is included in
 	 * this unit symbol for compatibility with IEC 61850-7-3.
 	 */
 	kgPerm3 = 48,
@@ -200,7 +200,7 @@ enum UnitSymbol
 	 */
 	VA = 61,
 	/**
-	 * Reactive power in Volt Ampere reactive. The “reactive” or “imaginary” component
+	 * Reactive power in Volt Ampere reactive. The ï¿½reactiveï¿½ or ï¿½imaginaryï¿½ component
 	 * of electrical power (VIsin(phi)). (See also real power and apparent power).
 	 * Note: Different meter designs use different methods to arrive at their results.
 	 * Some meters may compute reactive power as an arithmetic value, while others
@@ -212,7 +212,7 @@ enum UnitSymbol
 	 * Power factor, dimensionless.
 	 * Note 1: This definition of power factor only holds for balanced systems. See
 	 * the alternative definition under code 153.
-	 * Note 2 : Beware of differing sign conventions in use between the IEC and EEI.
+	 * Note 2ï¿½: Beware of differing sign conventions in use between the IEC and EEI.
 	 * It is assumed that the data consumer understands the type of meter in use and
 	 * the sign convention in use by the utility.
 	 */
@@ -222,19 +222,19 @@ enum UnitSymbol
 	 */
 	Vs = 66,
 	/**
-	 * Volt squared (W²/A²).
+	 * Volt squared (Wï¿½/Aï¿½).
 	 */
 	V2 = 67,
 	/**
-	 * Ampere seconds (A·s).
+	 * Ampere seconds (Aï¿½s).
 	 */
 	As = 68,
 	/**
-	 * Ampere squared (A²).
+	 * Ampere squared (Aï¿½).
 	 */
 	A2 = 69,
 	/**
-	 * Ampere squared time in square ampere (A²s).
+	 * Ampere squared time in square ampere (Aï¿½s).
 	 */
 	A2s = 70,
 	/**
@@ -266,13 +266,13 @@ enum UnitSymbol
 	 */
 	charPers = 77,
 	/**
-	 * Moment of mass in kilogram square metre (kg·m²) (Second moment of mass,
-	 * commonly called the moment of inertia). Note: multiplier “k” is included in
+	 * Moment of mass in kilogram square metre (kgï¿½mï¿½) (Second moment of mass,
+	 * commonly called the moment of inertia). Note: multiplier ï¿½kï¿½ is included in
 	 * this unit symbol for compatibility with IEC 61850-7-3.
 	 */
 	kgm2 = 78,
 	/**
-	 * Sound pressure level in decibel. Note:  multiplier “d” is included in this unit
+	 * Sound pressure level in decibel. Note:  multiplier ï¿½dï¿½ is included in this unit
 	 * symbol for compatibility with IEC 61850-7-3.
 	 */
 	dB = 79,
@@ -286,7 +286,7 @@ enum UnitSymbol
 	lPers = 82,
 	/**
 	 * Power level (logrithmic ratio of signal strength , Bel-mW), normalized to 1mW.
-	 * Note:  multiplier “d” is included in this unit symbol for compatibility with
+	 * Note:  multiplier ï¿½dï¿½ is included in this unit symbol for compatibility with
 	 * IEC 61850-7-3.
 	 */
 	dBm = 83,
@@ -356,19 +356,19 @@ enum UnitSymbol
 	lPerh = 137,
 	/**
 	 * Concentration, The ratio of the volume of a solute divided by the volume of
-	 * the solution. Note: Users may need use a prefix such a ‘µ’ to express a
-	 * quantity such as ‘µL/L’.
+	 * the solution. Note: Users may need use a prefix such a ï¿½ï¿½ï¿½ to express a
+	 * quantity such as ï¿½ï¿½L/Lï¿½.
 	 */
 	lPerl = 143,
 	/**
 	 * Concentration, The ratio of the mass of a solute divided by the mass of  the
-	 * solution. Note: Users may need use a prefix such a ‘µ’ to express a quantity
-	 * such as ‘µg/g’.
+	 * solution. Note: Users may need use a prefix such a ï¿½ï¿½ï¿½ to express a quantity
+	 * such as ï¿½ï¿½g/gï¿½.
 	 */
 	gPerg = 144,
 	/**
 	 * Concentration, The amount of substance concentration, (c), the amount of
-	 * solvent in moles divided by the volume of solution in m³.
+	 * solvent in moles divided by the volume of solution in mï¿½.
 	 */
 	molPerm3 = 145,
 	/**
@@ -382,23 +382,23 @@ enum UnitSymbol
 	 */
 	molPerkg = 147,
 	/**
-	 * Time, Ratio of time Note: Users may need to supply a prefix such as ‘µ’ to show
-	 * rates such as ‘µs/s’
+	 * Time, Ratio of time Note: Users may need to supply a prefix such as ï¿½ï¿½ï¿½ to show
+	 * rates such as ï¿½ï¿½s/sï¿½
 	 */
 	sPers = 149,
 	/**
 	 * Frequency, Rate of frequency change  Note: Users may need to supply a prefix
-	 * such as ‘m’ to show rates such as ‘mHz/Hz’.
+	 * such as ï¿½mï¿½ to show rates such as ï¿½mHz/Hzï¿½.
 	 */
 	HzPerHz = 150,
 	/**
-	 * Voltage, Ratio of voltages Note: Users may need to supply a prefix such as ‘m’
-	 * to show rates such as ‘mV/V’.
+	 * Voltage, Ratio of voltages Note: Users may need to supply a prefix such as ï¿½mï¿½
+	 * to show rates such as ï¿½mV/Vï¿½.
 	 */
 	VPerV = 151,
 	/**
 	 * Current, Ratio of Amperages  Note: Users may need to supply a prefix such as
-	 * ‘m’ to show rates such as ‘mA/A’.
+	 * ï¿½mï¿½ to show rates such as ï¿½mA/Aï¿½.
 	 */
 	APerA = 152,
 	/**
@@ -430,7 +430,7 @@ enum UnitSymbol
 	m3Compensated = 167,
 	/**
 	 * Signal Strength, Ratio of power  Note: Users may need to supply a prefix such
-	 * as ‘m’ to show rates such as ‘mW/W’.
+	 * as ï¿½mï¿½ to show rates such as ï¿½mW/Wï¿½.
 	 */
 	WPerW = 168,
 	/**
@@ -538,7 +538,7 @@ enum UnitSymbol
 	 */
 	ha = 198,
 	/**
-	 * mass, “tonne” or “metric  ton” (1000 kg = 1 Mg).
+	 * mass, ï¿½tonneï¿½ or ï¿½metric  tonï¿½ (1000 kg = 1 Mg).
 	 */
 	tonne = 199,
 	/**
@@ -570,7 +570,7 @@ enum UnitSymbol
 	 */
 	G = 277,
 	/**
-	 * Magnetic field, Œrsted (1 Oe = (103/4p) A/m).
+	 * Magnetic field, ï¿½rsted (1 Oe = (103/4p) A/m).
 	 */
 	Oe = 278,
 	/**
@@ -597,7 +597,7 @@ enum UnitSymbol
 	 */
 	ohmPerm,
 	/**
-	 * Weigh per energy in kilogram/joule (kg/J). Note: multiplier “k” is included in
+	 * Weigh per energy in kilogram/joule (kg/J). Note: multiplier ï¿½kï¿½ is included in
 	 * this unit symbol for compatibility with IEC 61850-7-3.
 	 */
 	kgPerJ,
@@ -606,7 +606,7 @@ enum UnitSymbol
 	 */
 	JPers,
 	/**
-	 * Viscosity in metre square / second (m²/s).
+	 * Viscosity in metre square / second (mï¿½/s).
 	 */
 	m2Pers = 49,
 	/**
