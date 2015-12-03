@@ -1,4 +1,6 @@
 #!/bin/bash
+# This script can be used to find all .cpp and .h files recursivly
+# in a directory and put them plain into another directory.
 if [ "$#" == "2" ]
   then
   declare -a HEADERS
