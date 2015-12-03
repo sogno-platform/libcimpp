@@ -10,37 +10,37 @@ ifeq ($(SYSTEM),osx)
 	# Set Compiler
 	CC = clang++
 
-        # Include directories
-        INCDIR = \
-        -I/usr/local/Cellar/libxml++/2.40.0/include/libxml++-2.6 \
-        -I/usr/local/Cellar/libxml++/2.40.0/lib/libxml++-2.6/include \
-        -I/usr/local/Cellar/glibmm/2.46.1/include/glibmm-2.4 \
-        -I/usr/local/Cellar/glibmm/2.46.1/lib/glibmm-2.4/include \
-        -I/usr/local/Cellar/glib/2.46.1/include/glib-2.0 \
-        -I/usr/local/Cellar/glib/2.46.1/lib/glib-2.0/include \
-        -I/usr/local/opt/gettext/include \
-        -I/usr/local/Cellar/libsigc++/2.6.1/include/sigc++-2.0 \
-        -I/usr/local/Cellar/libsigc++/2.6.1/lib/sigc++-2.0/include \
-        -I/usr/include/libxml2
+	# Include directories
+	INCDIR = \
+	-I/usr/local/Cellar/libxml++/2.40.0/include/libxml++-2.6 \
+	-I/usr/local/Cellar/libxml++/2.40.0/lib/libxml++-2.6/include \
+	-I/usr/local/Cellar/glibmm/2.46.1/include/glibmm-2.4 \
+	-I/usr/local/Cellar/glibmm/2.46.1/lib/glibmm-2.4/include \
+	-I/usr/local/Cellar/glib/2.46.1/include/glib-2.0 \
+	-I/usr/local/Cellar/glib/2.46.1/lib/glib-2.0/include \
+	-I/usr/local/opt/gettext/include \
+	-I/usr/local/Cellar/libsigc++/2.6.1/include/sigc++-2.0 \
+	-I/usr/local/Cellar/libsigc++/2.6.1/lib/sigc++-2.0/include \
+	-I/usr/include/libxml2
 
-        # Library directories
-        LIBDIR = \
-        -L/usr/local/Cellar/libxml++/2.40.0/lib \
-        -L/usr/local/Cellar/glibmm/2.46.1/lib \
-        -L/usr/local/Cellar/glib/2.46.1/lib \
-        -L/usr/local/opt/gettext/lib \
-        -L/usr/local/Cellar/libsigc++/2.6.1/lib
+	# Library directories
+	LIBDIR = \
+	-L/usr/local/Cellar/libxml++/2.40.0/lib \
+	-L/usr/local/Cellar/glibmm/2.46.1/lib \
+	-L/usr/local/Cellar/glib/2.46.1/lib \
+	-L/usr/local/opt/gettext/lib \
+	-L/usr/local/Cellar/libsigc++/2.6.1/lib
 endif
 
 CFLAGS = -Wall -Wno-inconsistent-missing-override -g -std=c++11
 LDFLAGS = \
-        -lxml++-2.6 \
-        -lxml2 \
-        -lglibmm-2.4 \
-        -lgobject-2.0 \
-        -lglib-2.0 \
-        -lintl \
-        -lsigc-2.0
+	-lxml++-2.6 \
+	-lxml2 \
+	-lglibmm-2.4 \
+	-lgobject-2.0 \
+	-lglib-2.0 \
+	-lintl \
+	-lsigc-2.0
 
 # Project Name
 PROJECT_NAME = Cim2Obj
@@ -57,7 +57,9 @@ AUTOGENCODE = $(PROJDIR)/GeneratedCode
 # TODO: Bessere Möglichkeit finden.
 AUTOGENOBJ = $(shell find $(AUTOGENCODE) -name '*.cpp' | sed 's/.cpp/.o/g' | sed 's/GeneratedCode/obj/g' | tr '\n' ' ')
 
-OBJ = $(OBJDIR)/main.o $(OBJDIR)/task.o $(OBJDIR)/myparser.o $(OBJDIR)/commchannel.o $(OBJDIR)/DSLModem.o $(OBJDIR)/LTEModem.o $(OBJDIR)/Modem.o $(OBJDIR)/PowerSystemResource.o $(OBJDIR)/base.o
+INCDIR += -I$(SRCDIR) -I$(AUTOGENCODE)
+
+OBJ = $(OBJDIR)/main.o #$(OBJDIR)/task.o $(OBJDIR)/myparser.o
 BIN = $(BINDIR)/main
 DOXYFILE = $(PROJDIR)/Doxyfile
 
@@ -104,10 +106,10 @@ $(OBJDIR)/%.o: $(AUTOGENCODE)/%.cpp
 	$(CC) $(CFLAGS) $(INCDIR) -c -o $@ $<
 
 # Linking pattern
-$(BIN): $(OBJ)
-	$(CC) $(CFLAGS) $(INCDIR) $(LIBDIR) $(OBJ) -o $(BIN) $(LDFLAGS)
+$(BIN): $(OBJ) $(AUTOGENOBJ)
+	$(CC) $(CFLAGS) $(INCDIR) $(LIBDIR) $(OBJ) $(AUTOGENOBJ) -o $(BIN) $(LDFLAGS)
 
 # Testing
 .PHONY: test
 test: directories $(AUTOGENOBJ)
-	#@echo $(AUTOGENOB)
+	#@echo $(AUTOGENOBJ)
