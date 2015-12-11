@@ -7,6 +7,9 @@
 #if !defined(EA_0D56BB07_983A_4b5b_AD72_7ADFE8523598__INCLUDED_)
 #define EA_0D56BB07_983A_4b5b_AD72_7ADFE8523598__INCLUDED_
 
+#include <string>
+#include <istream>
+
 /**
  * A type with the value space "true" and "false".
  */
@@ -18,9 +21,9 @@ public:
 	Boolean(bool value);
 
 	Boolean& operator=(bool &rop);
+	friend std::istream& operator>>(std::istream& lop, Boolean& rop);
 	operator bool();
 
 	bool value;
-
 };
 #endif // !defined(EA_0D56BB07_983A_4b5b_AD72_7ADFE8523598__INCLUDED_)

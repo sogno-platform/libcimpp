@@ -23,6 +23,7 @@ class IdentifiedObject
 
 public:
 	IdentifiedObject();
+	virtual ~IdentifiedObject();
 	/**
 	 * The aliasName is free text human readable name of the object alternative to
 	 * IdentifiedObject.name. It may be non unique and may not correlate to a naming

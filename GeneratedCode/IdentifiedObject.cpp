@@ -10,3 +10,7 @@
 IdentifiedObject::IdentifiedObject(){
 
 }
+
+IdentifiedObject::~IdentifiedObject()
+{
+}

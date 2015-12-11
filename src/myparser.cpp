@@ -2,10 +2,11 @@
 #include <iostream>
 #include <sstream>
 
-#include "PowerSystemResource.h"
-#include "commchannel.h"
-#include "DSLModem.h"
-#include "LTEModem.h"
+#include <stdexcept>
+
+#include "IdentifiedObject.h"
+#include "Terminal.h"
+#include "ACDCTerminal.h"
 
 MyParser::MyParser()
 {
@@ -21,10 +22,7 @@ MyParser::~MyParser()
 
 void MyParser::print()
 {
-    for(auto pair : elements)
-    {
-        std::cout << pair.second->name << std::endl;
-    }
+	std::cout << "Cannot print objects" << std::endl;
 }
 
 void MyParser::on_start_document()
@@ -34,11 +32,12 @@ void MyParser::on_start_document()
 
 void MyParser::on_end_document()
 {
+	/*
     while(!taskQueue.empty())
     {
         taskQueue.front().resolve(elements);
         taskQueue.pop();
-    }
+	}*/
     std::cout << "Reached end of the document" << std::endl;
 }
 
@@ -51,38 +50,44 @@ void MyParser::on_start_element(const Glib::ustring &name, const AttributeList &
     if(properties.empty())
         return;
 
-    if(name == "base:PowerSystemResource")
+	if(name == "cim:Terminal")
     {
-        std::shared_ptr<base> basePtr(new PowerSystemResource);
-        basePtr->name = properties.front().value;
+		std::shared_ptr<IdentifiedObject> basePtr(new Terminal);
+		std::string rdf_id;
+		try
+		{
+			rdf_id = get_rdf_id(properties);
+		}
+		catch(std::logic_error &excep)
+		{
+			std::cerr << excep.what() << std::endl;
+			exit(1);
+		}
+
         elements.emplace(properties.front().value, basePtr);
         elementStack.push(basePtr);
         return;
     }
-    if(name == "base:DSLModem")
-    {
-        std::shared_ptr<base> basePtr(new DSLModem);
-        basePtr->name = properties.front().value;
-        elements.emplace(properties.front().value, basePtr);
-        elementStack.push(basePtr);
-        return;
-    }
-    if(name == "base:LTEModem")
-    {
-        std::shared_ptr<base> basePtr(new LTEModem);
-        basePtr->name = properties.front().value;
-        elements.emplace(properties.front().value, basePtr);
-        elementStack.push(basePtr);
-        return;
-    }
-    if(name == "base:CommChannel")
-    {
-        std::shared_ptr<base> basePtr(new CommChannel);
-        basePtr->name = properties.front().value;
-        elements.emplace(properties.front().value, basePtr);
-        elementStack.push(basePtr);
-        return;
-    }
+
+	if(name == "cim:Terminal.ConductingEquipment")
+	{
+		std::string rdf_resource;
+		try
+		{
+			rdf_resource = get_rdf_resource(properties);
+		}
+		catch(std::logic_error &excep)
+		{
+			std::cerr << excep.what() << std::endl;
+			exit(1);
+		}
+
+		task Task(&(std::dynamic_pointer_cast<Terminal>(elementStack.top())->ConductingEquipment), rdf_resource);
+		taskQueue.push(Task);
+		return;
+	}
+
+	/*
     if(name == "base:ComMod")
     {
         // Assume that the first attribute defines rdf:resource
@@ -101,7 +106,7 @@ void MyParser::on_start_element(const Glib::ustring &name, const AttributeList &
         task Task(elementStack.top(), properties.front().value, CommChannel_dest);
         taskQueue.push(Task);
         return;
-    }
+	}*/
 
     // Nobody knows what to do
     std::cout << "Nobody knows what to do with " << name << std::endl;
@@ -109,47 +114,69 @@ void MyParser::on_start_element(const Glib::ustring &name, const AttributeList &
 
 void MyParser::on_end_element(const Glib::ustring &name)
 {
-    if(tagStack.top() == name)
-        tagStack.pop();
-    if(name == "base:PowerSystemResource")
+	tagStack.pop();
+	if(name == "cim:Terminal")
     {
         elementStack.pop();
         return;
-    }
-    if(name == "base:DSLModem")
-    {
-        elementStack.pop();
-        return;
-    }
-    if(name == "base:LTEModem")
-    {
-        elementStack.pop();
-        return;
-    }
-    if(name == "base:CommChannel")
-    {
-        elementStack.pop();
-        return;
-    }
+	}
 }
 
 void MyParser::on_characters(const Glib::ustring &characters)
 {
-    std::stringstream buffer;
+	std::stringstream buffer; // TODO: UTF-8 support
     buffer << characters;
-    if(!tagStack.empty())
+	if(tagStack.empty())
+	{
+		throw std::runtime_error("tagStack leer");
+	}
+	else
     {
-        if(tagStack.top() == "base:cost")
-            buffer >> std::dynamic_pointer_cast<Modem>(elementStack.top())->cost;
-        if(tagStack.top() == "base:frequency")
-            buffer >> std::dynamic_pointer_cast<LTEModem>(elementStack.top())->frequency;
-        if(tagStack.top() == "base:modulationType")
-            buffer >> std::dynamic_pointer_cast<LTEModem>(elementStack.top())->modulationType;
-        if(tagStack.top() == "base:ber")
-            buffer >> std::dynamic_pointer_cast<CommChannel>(elementStack.top())->ber;
-        if(tagStack.top() == "base:dataRate")
-            buffer >> std::dynamic_pointer_cast<CommChannel>(elementStack.top())->dataRate;
-        if(tagStack.top() == "base:delay")
-            buffer >> std::dynamic_pointer_cast<CommChannel>(elementStack.top())->delay;
-    }
+		if(tagStack.top() == "cim:IdentifiedObject.name")
+		{
+			if(!elementStack.empty())
+			{
+				buffer >> std::dynamic_pointer_cast<IdentifiedObject>(elementStack.top())->name;
+				return;
+			}
+			else
+				std::cerr << "elementStack nicht leer" << std::endl; // TODO: replace with exception
+		}
+		if(tagStack.top() == "cim:ACDCTerminal.connected")
+		{
+			if(!elementStack.empty())
+			{
+				buffer >> std::dynamic_pointer_cast<ACDCTerminal>(elementStack.top())->connected;
+				return;
+			}
+			else
+				std::cerr << "elementStack nicht leer" << std::endl; // TODO: replace with exception
+		}
+	}
+}
+
+Glib::ustring MyParser::get_rdf_id(const AttributeList &properties)
+{
+	for(auto&& attribute : properties)
+	{
+		if(attribute.name == "rdf:ID")
+			return attribute.value;
+	}
+	throw std::logic_error("Attribute enthalten keine rdf:ID");
+}
+
+Glib::ustring MyParser::get_rdf_resource(const AttributeList &properties)
+{
+	for(auto&& attribute : properties)
+	{
+		if(attribute.name == "rdf:resource")
+		{
+			if(attribute.value.at(0) == '#')
+			{
+				return attribute.value.substr(1);
+			}
+			throw std::logic_error("rdf:resource verweist nicht auf ein Element in dieser Datei");
+		}
+	}
+	throw std::logic_error("Attribute enthalten keine rdf:resource");
 }
