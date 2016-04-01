@@ -43,6 +43,13 @@ void MyParser::on_end_document()
 
 void MyParser::on_start_element(const Glib::ustring &name, const AttributeList &properties)
 {
+	// Only process tags in cim namespace
+	if(name.find("cim:") == std::string::npos)
+	{
+		std::cerr << name << " not in namespace \"cim\"" << std::endl;
+		return;
+	}
+
     // Remember last opened tag
     tagStack.push(name);
 
@@ -126,9 +133,11 @@ void MyParser::on_characters(const Glib::ustring &characters)
 {
 	std::stringstream buffer; // TODO: UTF-8 support
     buffer << characters;
+
+	// Only process tags in "cim" namespace
 	if(tagStack.empty())
 	{
-		throw std::runtime_error("tagStack leer");
+		return;
 	}
 	if(elementStack.empty())
 	{
