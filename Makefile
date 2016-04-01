@@ -1,4 +1,4 @@
-# This is the makefile for the redland examples
+# This is the makefile for the libxml++ parser
 
 # Linux
 ifeq ($(SYSTEM),linux)
@@ -12,24 +12,19 @@ ifeq ($(SYSTEM),osx)
 
 	# Include directories
 	INCDIR = \
-	-I/usr/local/Cellar/libxml++/2.40.0/include/libxml++-2.6 \
-	-I/usr/local/Cellar/libxml++/2.40.0/lib/libxml++-2.6/include \
-	-I/usr/local/Cellar/glibmm/2.46.1/include/glibmm-2.4 \
-	-I/usr/local/Cellar/glibmm/2.46.1/lib/glibmm-2.4/include \
-	-I/usr/local/Cellar/glib/2.46.1/include/glib-2.0 \
-	-I/usr/local/Cellar/glib/2.46.1/lib/glib-2.0/include \
+	-I/usr/local/include/libxml++-2.6 \
+	-I/usr/local/lib/libxml++-2.6/include \
+	-I/usr/local/include/glibmm-2.4 \
+	-I/usr/local/lib/glibmm-2.4/include \
+	-I/usr/local/include/glib-2.0 \
+	-I/usr/local/lib/glib-2.0/include \
 	-I/usr/local/opt/gettext/include \
-	-I/usr/local/Cellar/libsigc++/2.6.1/include/sigc++-2.0 \
-	-I/usr/local/Cellar/libsigc++/2.6.1/lib/sigc++-2.0/include \
+	-I/usr/local/include/sigc++-2.0 \
 	-I/usr/include/libxml2
 
 	# Library directories
 	LIBDIR = \
-	-L/usr/local/Cellar/libxml++/2.40.0/lib \
-	-L/usr/local/Cellar/glibmm/2.46.1/lib \
-	-L/usr/local/Cellar/glib/2.46.1/lib \
-	-L/usr/local/opt/gettext/lib \
-	-L/usr/local/Cellar/libsigc++/2.6.1/lib
+	-L/usr/local/lib
 endif
 
 CFLAGS = -Wall -Wno-inconsistent-missing-override -g -std=c++11
@@ -39,7 +34,6 @@ LDFLAGS = \
 	-lglibmm-2.4 \
 	-lgobject-2.0 \
 	-lglib-2.0 \
-	-lintl \
 	-lsigc-2.0
 
 # Project Name
