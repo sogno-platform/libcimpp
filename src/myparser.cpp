@@ -130,28 +130,20 @@ void MyParser::on_characters(const Glib::ustring &characters)
 	{
 		throw std::runtime_error("tagStack leer");
 	}
-	else
-    {
-		if(tagStack.top() == "cim:IdentifiedObject.name")
-		{
-			if(!elementStack.empty())
-			{
-				buffer >> std::dynamic_pointer_cast<IdentifiedObject>(elementStack.top())->name;
-				return;
-			}
-			else
-				std::cerr << "elementStack nicht leer" << std::endl; // TODO: replace with exception
-		}
-		if(tagStack.top() == "cim:ACDCTerminal.connected")
-		{
-			if(!elementStack.empty())
-			{
-				buffer >> std::dynamic_pointer_cast<ACDCTerminal>(elementStack.top())->connected;
-				return;
-			}
-			else
-				std::cerr << "elementStack nicht leer" << std::endl; // TODO: replace with exception
-		}
+	if(elementStack.empty())
+	{
+		throw std::runtime_error("elementStack leer");
+	}
+
+	if(tagStack.top() == "cim:IdentifiedObject.name")
+	{
+		buffer >> std::dynamic_pointer_cast<IdentifiedObject>(elementStack.top())->name;
+		return;
+	}
+	if(tagStack.top() == "cim:ACDCTerminal.connected")
+	{
+		buffer >> std::dynamic_pointer_cast<ACDCTerminal>(elementStack.top())->connected;
+		return;
 	}
 }
 
