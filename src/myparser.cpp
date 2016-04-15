@@ -4,9 +4,9 @@
 
 #include <stdexcept>
 
-#include "IdentifiedObject.h"
-#include "Terminal.h"
-#include "ACDCTerminal.h"
+#include "IEC61970.h"
+#include "CIMFactory.h"
+#include "assignments.h"
 
 MyParser::MyParser()
 {
@@ -53,13 +53,14 @@ void MyParser::on_start_element(const Glib::ustring &name, const AttributeList &
     // Remember last opened tag
     tagStack.push(name);
 
-    // Is the value of the tag a literal?
-    if(properties.empty())
+	// Is the value of the tag a literal?
+	if(properties.empty()) // TODO: Was habe ich damit gemeint?
         return;
 
-	if(name == "cim:Terminal")
-    {
-		std::shared_ptr<IdentifiedObject> basePtr(new Terminal);
+	// Erstelle neues Object
+	BaseClass* BaseClass_ptr = CIMFactory::CreateNew(name);
+	if(BaseClass_ptr != nullptr)
+	{
 		std::string rdf_id;
 		try
 		{
@@ -70,12 +71,13 @@ void MyParser::on_start_element(const Glib::ustring &name, const AttributeList &
 			std::cerr << excep.what() << std::endl;
 			exit(1);
 		}
+		elements.emplace(rdf_id, BaseClass_ptr);
+		elementStack.push(BaseClass_ptr);
+		return;
+	}
 
-        elements.emplace(properties.front().value, basePtr);
-        elementStack.push(basePtr);
-        return;
-    }
 
+	/*
 	if(name == "cim:Terminal.ConductingEquipment")
 	{
 		std::string rdf_resource;
@@ -93,47 +95,31 @@ void MyParser::on_start_element(const Glib::ustring &name, const AttributeList &
 		taskQueue.push(Task);
 		return;
 	}
+	*/
 
-	/*
-    if(name == "base:ComMod")
-    {
-        // Assume that the first attribute defines rdf:resource
-        task Task(elementStack.top(), properties.front().value, PowerSystemResource_ComMod);
-        taskQueue.push(Task);
-        return;
-    }
-    if(name == "base:src")
-    {
-        task Task(elementStack.top(), properties.front().value, CommChannel_src);
-        taskQueue.push(Task);
-        return;
-    }
-    if(name == "base:dest")
-    {
-        task Task(elementStack.top(), properties.front().value, CommChannel_dest);
-        taskQueue.push(Task);
-        return;
-	}*/
-
+#ifdef DEBUG
     // Nobody knows what to do
-    std::cout << "Nobody knows what to do with " << name << std::endl;
+	//std::cerr << "Nobody knows what to do with " << name << std::endl;
+#endif
 }
 
 void MyParser::on_end_element(const Glib::ustring &name)
 {
-	tagStack.pop();
-	if(name == "cim:Terminal")
-    {
-        elementStack.pop();
-        return;
+	// Only process tags in cim namespace
+	if(name.find("cim:") == std::string::npos)
+	{
+		std::cerr << name << " not in namespace \"cim\"" << std::endl;
+		return;
 	}
+
+	// Pop Stacks
+	tagStack.pop();
+	if(CIMFactory::IsCIMObject(name))
+		elementStack.pop();
 }
 
 void MyParser::on_characters(const Glib::ustring &characters)
 {
-	std::stringstream buffer; // TODO: UTF-8 support
-    buffer << characters;
-
 	// Only process tags in "cim" namespace
 	if(tagStack.empty())
 	{
@@ -144,16 +130,14 @@ void MyParser::on_characters(const Glib::ustring &characters)
 		throw std::runtime_error("elementStack leer");
 	}
 
-	if(tagStack.top() == "cim:IdentifiedObject.name")
-	{
-		buffer >> std::dynamic_pointer_cast<IdentifiedObject>(elementStack.top())->name;
-		return;
-	}
-	if(tagStack.top() == "cim:ACDCTerminal.connected")
-	{
-		buffer >> std::dynamic_pointer_cast<ACDCTerminal>(elementStack.top())->connected;
-		return;
-	}
+#ifndef DEBUG
+	assign(characters, elementStack.top(), tagStack.top());
+#else
+	if(!assign(characters, elementStack.top(), tagStack.top()))
+		std::cout << "Kann '" << characters << "' nicht an " << tagStack.top() << " zuweisen" << std::endl;
+	else
+		std::cout << "'" << characters << "' an " << tagStack.top() << " zugewiesen" << std::endl;
+#endif
 }
 
 Glib::ustring MyParser::get_rdf_id(const AttributeList &properties)

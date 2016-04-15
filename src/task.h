@@ -1,33 +1,17 @@
 #ifndef TASK_H
 #define TASK_H
 
-#include <vector>
-#include <string>
 #include <unordered_map>
+#include <string>
+#include "BaseClass.h"
 
-#include "IdentifiedObject.h"
-
-/*
-enum type
-{
-    UNDEFINED,
-    PowerSystemResource_ComMod,
-    CommChannel_src,
-    CommChannel_dest
-};*/
-
-class task
+class Task
 {
 public:
-    task();
-	task(void* ptr, std::string rdfID);
-    
-	void resolve(std::unordered_map<std::string, std::shared_ptr<IdentifiedObject>> &map);
-    
-private:
-	//type m_what;
-	void* ptr;
-    std::string m_rdfID;
+	Task();
+	virtual ~Task();
+	virtual void resolve() = 0;
+	static std::unordered_map<std::string, BaseClass*> RDFMap;
 };
 
 #endif // TASK_H

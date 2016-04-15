@@ -8,7 +8,7 @@
 #include <unordered_map>
 #include <memory>
 
-#include "IdentifiedObject.h"
+#include "BaseClass.h"
 #include "task.h"
 
 class MyParser : public xmlpp::SaxParser
@@ -19,7 +19,7 @@ public:
 
     void print();
 
-	std::unordered_map<std::string, std::shared_ptr<IdentifiedObject>> elements;
+	std::unordered_map<std::string, BaseClass*> elements;
 
 protected:
     void on_start_document() override;
@@ -36,9 +36,9 @@ protected:
 	static Glib::ustring get_rdf_resource(const AttributeList &properties);
 
 private:
-	std::stack<std::shared_ptr<IdentifiedObject>> elementStack;
+	std::stack<BaseClass*> elementStack;
 	std::stack<Glib::ustring> tagStack;
-    std::queue<task> taskQueue;
+	std::queue<Task> taskQueue;
 };
 
 
