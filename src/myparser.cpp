@@ -1,6 +1,7 @@
 #include "myparser.h"
 #include <iostream>
 #include <sstream>
+#include <regex>
 
 #include <stdexcept>
 
@@ -32,13 +33,21 @@ void MyParser::on_start_document()
 
 void MyParser::on_end_document()
 {
-	/*
+	unsigned int size, unresolved;
+	size = taskQueue.size();
+	unresolved = 0;
     while(!taskQueue.empty())
     {
-        taskQueue.front().resolve(elements);
+		if(!taskQueue.front().resolve())
+		{
+			std::cout << "Kann folgende Beziehung nicht auflösen: ";
+			taskQueue.front().print();
+			unresolved++;
+		}
         taskQueue.pop();
-	}*/
+	}
     std::cout << "Reached end of the document" << std::endl;
+	std::cout << unresolved << " out of " << size << " tasks remain unresolved!" << std::endl;
 }
 
 void MyParser::on_start_element(const Glib::ustring &name, const AttributeList &properties)
@@ -46,7 +55,7 @@ void MyParser::on_start_element(const Glib::ustring &name, const AttributeList &
 	// Only process tags in cim namespace
 	if(name.find("cim:") == std::string::npos)
 	{
-		std::cerr << name << " not in namespace \"cim\"" << std::endl;
+		//std::cerr << name << " not in namespace \"cim\"" << std::endl;
 		return;
 	}
 
@@ -71,36 +80,31 @@ void MyParser::on_start_element(const Glib::ustring &name, const AttributeList &
 			std::cerr << excep.what() << std::endl;
 			exit(1);
 		}
-		elements.emplace(rdf_id, BaseClass_ptr);
+		//std::cout << "Created " << name << " = " << rdf_id << std::endl;
+		Task::RDFMap.emplace(rdf_id, BaseClass_ptr);
 		elementStack.push(BaseClass_ptr);
 		return;
 	}
 
 
-	/*
-	if(name == "cim:Terminal.ConductingEquipment")
+	// Lege einen neuen Task an
+	std::string rdf_id;
+	try
 	{
-		std::string rdf_resource;
-		try
-		{
-			rdf_resource = get_rdf_resource(properties);
-		}
-		catch(std::logic_error &excep)
-		{
-			std::cerr << excep.what() << std::endl;
-			exit(1);
-		}
+		rdf_id = get_rdf_resource(properties);
+	}
+	catch(std::logic_error &excep)
+	{
+	}
 
-		task Task(&(std::dynamic_pointer_cast<Terminal>(elementStack.top())->ConductingEquipment), rdf_resource);
-		taskQueue.push(Task);
+	if(!rdf_id.empty())
+	{
+		taskQueue.push(Task(elementStack.top(), name, rdf_id));
 		return;
 	}
-	*/
 
-#ifdef DEBUG
     // Nobody knows what to do
-	//std::cerr << "Nobody knows what to do with " << name << std::endl;
-#endif
+	std::cerr << "Nobody knows what to do with " << name << std::endl;
 }
 
 void MyParser::on_end_element(const Glib::ustring &name)
@@ -108,14 +112,16 @@ void MyParser::on_end_element(const Glib::ustring &name)
 	// Only process tags in cim namespace
 	if(name.find("cim:") == std::string::npos)
 	{
-		std::cerr << name << " not in namespace \"cim\"" << std::endl;
 		return;
 	}
 
 	// Pop Stacks
 	tagStack.pop();
 	if(CIMFactory::IsCIMObject(name))
+	{
 		elementStack.pop();
+		//std::cout << "Popped " << name << std::endl;
+	}
 }
 
 void MyParser::on_characters(const Glib::ustring &characters)
@@ -130,13 +136,17 @@ void MyParser::on_characters(const Glib::ustring &characters)
 		throw std::runtime_error("elementStack leer");
 	}
 
+	// Check if the characters only contain whitespace
+	if(is_only_whitespace(characters))
+	{
+		return;
+	}
+
 #ifndef DEBUG
 	assign(characters, elementStack.top(), tagStack.top());
 #else
 	if(!assign(characters, elementStack.top(), tagStack.top()))
 		std::cout << "Kann '" << characters << "' nicht an " << tagStack.top() << " zuweisen" << std::endl;
-	else
-		std::cout << "'" << characters << "' an " << tagStack.top() << " zugewiesen" << std::endl;
 #endif
 }
 
@@ -164,4 +174,9 @@ Glib::ustring MyParser::get_rdf_resource(const AttributeList &properties)
 		}
 	}
 	throw std::logic_error("Attribute enthalten keine rdf:resource");
+}
+
+bool MyParser::is_only_whitespace(const Glib::ustring& characters)
+{
+	return std::regex_match(characters.c_str(), std::regex("^[[:space:]]*$"));
 }

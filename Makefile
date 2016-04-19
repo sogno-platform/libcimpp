@@ -37,7 +37,7 @@ LDFLAGS = \
 	-lgobject-2.0 \
 	-lglib-2.0 \
 	-lsigc-2.0 \
-	-lcim++_static
+	-lcim++
 
 # Project Name
 PROJECT_NAME = Cim2Obj
@@ -55,10 +55,10 @@ BIN = $(BINDIR)/main
 DOXYFILE = $(PROJDIR)/Doxyfile
 
 # First target which should be called to build
-default: directories $(BIN)
+default: directories $(BIN) resource
 
 # Build all including documentation
-all: directories $(BIN) documentation
+all: directories $(BIN) documentation resource
 
 # Directories target
 .PHONY: directories
@@ -97,3 +97,7 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cpp
 $(BIN): $(OBJ) $(AUTOGENOBJ)
 	@$(CC) $(CFLAGS) $(INCDIR) $(LIBDIR) $(OBJ) $(AUTOGENOBJ) -o $(BIN) $(LDFLAGS)
 	@echo "Linked all objects to $@"
+
+# Resource
+resource:
+	@cp -f $(SRCDIR)/alias.csv $(BINDIR)

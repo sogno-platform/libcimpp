@@ -34,6 +34,7 @@ protected:
 
 	static Glib::ustring get_rdf_id(const AttributeList &properties);
 	static Glib::ustring get_rdf_resource(const AttributeList &properties);
+	static bool is_only_whitespace(const Glib::ustring &characters);
 
 private:
 	std::stack<BaseClass*> elementStack;
