@@ -26,11 +26,6 @@ void MyParser::print()
 	std::cout << "Cannot print objects" << std::endl;
 }
 
-void MyParser::on_start_document()
-{
-    std::cout << "Found start of the document" << std::endl;
-}
-
 void MyParser::on_end_document()
 {
 	unsigned int size, unresolved;
@@ -46,7 +41,6 @@ void MyParser::on_end_document()
 		}
         taskQueue.pop();
 	}
-    std::cout << "Reached end of the document" << std::endl;
 	std::cout << unresolved << " out of " << size << " tasks remain unresolved!" << std::endl;
 }
 
@@ -86,22 +80,25 @@ void MyParser::on_start_element(const Glib::ustring &name, const AttributeList &
 		return;
 	}
 
-
 	// Lege einen neuen Task an
-	std::string rdf_id;
 	try
 	{
-		rdf_id = get_rdf_resource(properties);
-	}
-	catch(std::logic_error &excep)
-	{
-	}
-
-	if(!rdf_id.empty())
-	{
+		std::string rdf_id = get_rdf_resource(properties);
 		taskQueue.push(Task(elementStack.top(), name, rdf_id));
 		return;
 	}
+	catch(std::logic_error &excep)
+	{}
+
+	try
+	{
+		std::string enumSymbol = get_rdf_enum(properties);
+		if(!assign(enumSymbol, elementStack.top(), name))
+			std::cerr << enumSymbol << " kann nicht zugewiesen werden" << std::endl;
+		return;
+	}
+	catch(std::logic_error &excep)
+	{}
 
     // Nobody knows what to do
 	std::cerr << "Nobody knows what to do with " << name << std::endl;
@@ -179,4 +176,23 @@ Glib::ustring MyParser::get_rdf_resource(const AttributeList &properties)
 bool MyParser::is_only_whitespace(const Glib::ustring& characters)
 {
 	return std::regex_match(characters.c_str(), std::regex("^[[:space:]]*$"));
+}
+
+std::string MyParser::get_rdf_enum(const AttributeList &properties)
+{
+	for(auto&& attribute : properties)
+	{
+		if(attribute.name == "rdf:resource")
+		{
+			std::regex expr("^http[s]*://[a-zA-Z0-9./_]*CIM-schema-cim[0-9]+#([a-zA-z0-9]*).([a-zA-z0-9]*)");
+			std::smatch m;
+			std::string str = attribute.value;
+			if(std::regex_match(str, m, expr))
+			{
+				return std::string(m[1]).append(".").append(m[2]);
+			}
+			throw std::logic_error("rdf:resource verweist nicht auf ein Element in dieser Datei");
+		}
+	}
+	throw std::logic_error("Attribute enthalten keine rdf:resource");
 }

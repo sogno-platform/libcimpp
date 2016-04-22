@@ -100,4 +100,4 @@ $(BIN): $(OBJ) $(AUTOGENOBJ)
 
 # Resource
 resource:
-	@cp -f $(SRCDIR)/alias.csv $(BINDIR)
+	@cp -f $(SRCDIR)/*.csv $(BINDIR)
