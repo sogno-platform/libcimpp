@@ -29,7 +29,7 @@ BINDIR = $(PROJDIR)/build
 DOCDIR = $(PROJDIR)/documentation
 
 # Objects
-OBJ = $(OBJDIR)/main.o $(OBJDIR)/task.o $(OBJDIR)/myparser.o $(OBJDIR)/CIMFactory.o $(OBJDIR)/assignments.o
+OBJ = $(OBJDIR)/main.o $(OBJDIR)/task.o $(OBJDIR)/CIMParser.o $(OBJDIR)/CIMFactory.o $(OBJDIR)/assignments.o
 BIN = $(BINDIR)/$(PROJECT_NAME)
 DOXYFILE = $(PROJDIR)/Doxyfile
 
