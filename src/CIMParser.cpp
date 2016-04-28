@@ -1,4 +1,4 @@
-#include "myparser.h"
+#include "CIMParser.h"
 #include <iostream>
 #include <sstream>
 #include <regex>

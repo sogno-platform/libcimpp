@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <chrono>
-#include "myparser.h"
+#include "CIMParser.h"
 
 unsigned int filesize(const char* filename)
 {
