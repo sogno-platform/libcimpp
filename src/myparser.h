@@ -1,21 +1,20 @@
-#ifndef MYPARSER_H
-#define MYPARSER_H
+#ifndef CIMPARSER_H
+#define CIMPARSER_H
 
 #include <libxml++/libxml++.h>
 #include <glibmm/ustring.h>
 #include <stack>
 #include <queue>
 #include <unordered_map>
-#include <memory>
 
 #include "BaseClass.h"
 #include "task.h"
 
-class MyParser : public xmlpp::SaxParser
+class CIMParser : public xmlpp::SaxParser
 {
 public:
-    MyParser();
-    ~MyParser();
+	CIMParser();
+	~CIMParser();
 
     void print();
 
@@ -45,4 +44,4 @@ private:
 
 
 
-#endif // MYPARSER_H
+#endif // CIMPARSER_H

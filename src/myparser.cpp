@@ -9,11 +9,11 @@
 #include "CIMFactory.h"
 #include "assignments.h"
 
-MyParser::MyParser()
+CIMParser::CIMParser()
 {
 }
 
-MyParser::~MyParser()
+CIMParser::~CIMParser()
 {
     if(!elementStack.empty())
         std::cerr << "elementStack nicht leer!!!" << std::endl;
@@ -21,12 +21,12 @@ MyParser::~MyParser()
         std::cerr << "tagStack nicht leer!!!" << std::endl;
 }
 
-void MyParser::print()
+void CIMParser::print()
 {
 	std::cout << "Cannot print objects" << std::endl;
 }
 
-void MyParser::on_end_document()
+void CIMParser::on_end_document()
 {
 	unsigned int size, unresolved;
 	size = taskQueue.size();
@@ -44,7 +44,7 @@ void MyParser::on_end_document()
 	std::cout << unresolved << " out of " << size << " tasks remain unresolved!" << std::endl;
 }
 
-void MyParser::on_start_element(const Glib::ustring &name, const AttributeList &properties)
+void CIMParser::on_start_element(const Glib::ustring &name, const AttributeList &properties)
 {
 	// Only process tags in cim namespace
 	if(name.find("cim:") == std::string::npos)
@@ -104,7 +104,7 @@ void MyParser::on_start_element(const Glib::ustring &name, const AttributeList &
 	std::cerr << "Nobody knows what to do with " << name << std::endl;
 }
 
-void MyParser::on_end_element(const Glib::ustring &name)
+void CIMParser::on_end_element(const Glib::ustring &name)
 {
 	// Only process tags in cim namespace
 	if(name.find("cim:") == std::string::npos)
@@ -121,7 +121,7 @@ void MyParser::on_end_element(const Glib::ustring &name)
 	}
 }
 
-void MyParser::on_characters(const Glib::ustring &characters)
+void CIMParser::on_characters(const Glib::ustring &characters)
 {
 	// Only process tags in "cim" namespace
 	if(tagStack.empty())
@@ -147,7 +147,7 @@ void MyParser::on_characters(const Glib::ustring &characters)
 #endif
 }
 
-Glib::ustring MyParser::get_rdf_id(const AttributeList &properties)
+Glib::ustring CIMParser::get_rdf_id(const AttributeList &properties)
 {
 	for(auto&& attribute : properties)
 	{
@@ -157,7 +157,7 @@ Glib::ustring MyParser::get_rdf_id(const AttributeList &properties)
 	throw std::logic_error("Attribute enthalten keine rdf:ID");
 }
 
-Glib::ustring MyParser::get_rdf_resource(const AttributeList &properties)
+Glib::ustring CIMParser::get_rdf_resource(const AttributeList &properties)
 {
 	for(auto&& attribute : properties)
 	{
@@ -173,12 +173,12 @@ Glib::ustring MyParser::get_rdf_resource(const AttributeList &properties)
 	throw std::logic_error("Attribute enthalten keine rdf:resource");
 }
 
-bool MyParser::is_only_whitespace(const Glib::ustring& characters)
+bool CIMParser::is_only_whitespace(const Glib::ustring& characters)
 {
 	return std::regex_match(characters.c_str(), std::regex("^[[:space:]]*$"));
 }
 
-std::string MyParser::get_rdf_enum(const AttributeList &properties)
+std::string CIMParser::get_rdf_enum(const AttributeList &properties)
 {
 	for(auto&& attribute : properties)
 	{
