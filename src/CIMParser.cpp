@@ -89,7 +89,7 @@ void CIMParser::on_start_element(const Glib::ustring &name, const AttributeList 
 	try
 	{
 		std::string enumSymbol = get_rdf_enum(properties);
-		if(!assign(enumSymbol, elementStack.top(), name))
+		if(!assign(elementStack.top(), name, enumSymbol))
 			std::cerr << enumSymbol << " kann nicht zugewiesen werden" << std::endl;
 		return;
 	}
@@ -130,14 +130,14 @@ void CIMParser::on_characters(const Glib::ustring &characters)
 	}
 
 #ifndef DEBUG
-	assign(characters, elementStack.top(), tagStack.top());
+	assign(elementStack.top(), tagStack.top(), characters);
 #else
 	// Check if the characters only contain whitespace
 	if(is_only_whitespace(characters))
 	{
 		return;
 	}
-	if(!assign(characters, elementStack.top(), tagStack.top()))
+	if(!assign(elementStack.top(), tagStack.top(), characters))
 		std::cout << "Kann '" << characters << "' nicht an " << tagStack.top() << " zuweisen" << std::endl;
 #endif
 }
