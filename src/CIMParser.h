@@ -16,19 +16,19 @@ public:
 	CIMParser();
 	~CIMParser();
 
-    void print();
+	void print();
 
 	std::unordered_map<std::string, BaseClass*> elements;
 
 protected:
-    void on_end_document() override;
-    void on_start_element(const Glib::ustring& name, const AttributeList& properties) override;
-    void on_end_element(const Glib::ustring& name) override;
+	void on_end_document() override;
+	void on_start_element(const Glib::ustring& name, const AttributeList& properties) override;
+	void on_end_element(const Glib::ustring& name) override;
 	void on_characters(const Glib::ustring& characters) override;
 
 	static Glib::ustring get_rdf_id(const AttributeList &properties);
 	static Glib::ustring get_rdf_resource(const AttributeList &properties);
-	std::string get_rdf_enum(const AttributeList &properties);
+	static std::string get_rdf_enum(const AttributeList &properties);
 	static bool is_only_whitespace(const Glib::ustring &characters);
 
 private:

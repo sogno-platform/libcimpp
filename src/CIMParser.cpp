@@ -15,10 +15,10 @@ CIMParser::CIMParser()
 
 CIMParser::~CIMParser()
 {
-    if(!elementStack.empty())
-        std::cerr << "elementStack nicht leer!!!" << std::endl;
-    if(!tagStack.empty())
-        std::cerr << "tagStack nicht leer!!!" << std::endl;
+	if(!elementStack.empty())
+		std::cerr << "elementStack nicht leer!!!" << std::endl;
+	if(!tagStack.empty())
+		std::cerr << "tagStack nicht leer!!!" << std::endl;
 }
 
 void CIMParser::print()
@@ -31,15 +31,15 @@ void CIMParser::on_end_document()
 	unsigned int size, unresolved;
 	size = taskQueue.size();
 	unresolved = 0;
-    while(!taskQueue.empty())
-    {
+	while(!taskQueue.empty())
+	{
 		if(!taskQueue.front().resolve())
 		{
 			std::cout << "Kann folgende Beziehung nicht auflösen: ";
 			taskQueue.front().print();
 			unresolved++;
 		}
-        taskQueue.pop();
+		taskQueue.pop();
 	}
 	std::cout << unresolved << " out of " << size << " tasks remain unresolved!" << std::endl;
 }
@@ -53,14 +53,14 @@ void CIMParser::on_start_element(const Glib::ustring &name, const AttributeList 
 		return;
 	}
 
-    // Remember last opened tag
-    tagStack.push(name);
+	// Remember last opened tag
+	tagStack.push(name);
 
 	// Is the value of the tag a literal?
 	if(properties.empty()) // TODO: Was habe ich damit gemeint?
-        return;
+		return;
 
-	// Erstelle neues Object
+	// Erstelle neues Objekt
 	BaseClass* BaseClass_ptr = CIMFactory::CreateNew(name);
 	if(BaseClass_ptr != nullptr)
 	{
@@ -81,7 +81,7 @@ void CIMParser::on_start_element(const Glib::ustring &name, const AttributeList 
 	}
 
 	// Lege einen neuen Task an
-	try
+	try // FIXME: No exep
 	{
 		std::string rdf_id = get_rdf_resource(properties);
 		taskQueue.push(Task(elementStack.top(), name, rdf_id));
@@ -100,8 +100,8 @@ void CIMParser::on_start_element(const Glib::ustring &name, const AttributeList 
 	catch(std::logic_error &excep)
 	{}
 
-    // Nobody knows what to do
-	std::cerr << "Nobody knows what to do with " << name << std::endl;
+	// Nobody knows what to do
+	std::cerr << "ERROR: Nobody knows, the " << name << " I've seen... *sing*" << std::endl;
 }
 
 void CIMParser::on_end_element(const Glib::ustring &name)
@@ -133,15 +133,14 @@ void CIMParser::on_characters(const Glib::ustring &characters)
 		throw std::runtime_error("elementStack leer");
 	}
 
+#ifndef DEBUG
+	assign(characters, elementStack.top(), tagStack.top());
+#else
 	// Check if the characters only contain whitespace
 	if(is_only_whitespace(characters))
 	{
 		return;
 	}
-
-#ifndef DEBUG
-	assign(characters, elementStack.top(), tagStack.top());
-#else
 	if(!assign(characters, elementStack.top(), tagStack.top()))
 		std::cout << "Kann '" << characters << "' nicht an " << tagStack.top() << " zuweisen" << std::endl;
 #endif
