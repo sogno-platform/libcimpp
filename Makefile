@@ -1,7 +1,7 @@
 # This is the makefile for the libxml++ parser
 
 # Project Name
-PROJECT_NAME = Cim2Obj
+PROJECT_NAME = CIMParser
 
 # Set compiler
 CXX = clang++
