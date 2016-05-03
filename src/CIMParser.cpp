@@ -21,11 +21,6 @@ CIMParser::~CIMParser()
 		std::cerr << "tagStack nicht leer!!!" << std::endl;
 }
 
-void CIMParser::print()
-{
-	std::cout << "Cannot print objects" << std::endl;
-}
-
 void CIMParser::on_end_document()
 {
 	unsigned int size, unresolved;
@@ -77,6 +72,7 @@ void CIMParser::on_start_element(const Glib::ustring &name, const AttributeList 
 		//std::cout << "Created " << name << " = " << rdf_id << std::endl;
 		Task::RDFMap.emplace(rdf_id, BaseClass_ptr);
 		elementStack.push(BaseClass_ptr);
+		Objects.push_back(BaseClass_ptr);
 		return;
 	}
 

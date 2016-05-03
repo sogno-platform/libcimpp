@@ -6,6 +6,7 @@
 #include <stack>
 #include <queue>
 #include <unordered_map>
+#include <vector>
 
 #include "BaseClass.h"
 #include "task.h"
@@ -16,9 +17,7 @@ public:
 	CIMParser();
 	~CIMParser();
 
-	void print();
-
-	std::unordered_map<std::string, BaseClass*> elements;
+	std::vector<BaseClass*> Objects;
 
 protected:
 	void on_end_document() override;
