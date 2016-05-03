@@ -110,7 +110,7 @@ void CIMParser::on_end_element(const Glib::ustring &name)
 
 	// Pop Stacks
 	tagStack.pop();
-	if(CIMFactory::IsCIMObject(name))
+	if(CIMFactory::IsCIMClass(name))
 	{
 		elementStack.pop();
 		//std::cout << "Popped " << name << std::endl;
