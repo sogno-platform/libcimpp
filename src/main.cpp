@@ -2,6 +2,7 @@
 #include <fstream>
 #include <chrono>
 #include "CIMParser.h"
+#include "IEC61970.h"
 
 unsigned int filesize(const char* filename)
 {
@@ -21,8 +22,15 @@ int main()
 	std::chrono::time_point<std::chrono::high_resolution_clock> start, stop;
 	start = std::chrono::high_resolution_clock::now();
 
-	//parser.parse_file("/Users/daniel/Bachelorarbeit/danielknibbe/ieee14.xml");
-	parser.parse_file("/Users/daniel/Bachelorarbeit/CIM_Daten/Rootnet_NE_04J11h/Rootnet_FULL_NE_04J11h_EQ.xml");
+	parser.parse_file("/Users/daniel/Bachelorarbeit/danielknibbe/ieee14.xml");
+	for (BaseClass* Object : parser.Objects)
+	{
+		if(IEC61970::Base::Core::IdentifiedObject* IdObj = dynamic_cast<IEC61970::Base::Core::IdentifiedObject*>(Object))
+			std::cout << IdObj->name << std::endl;
+	}
+	
+	//parser.parse_file("/Users/daniel/Downloads/CIM_Messdatensatz/CIGRE_MV_4/Rootnet_Area 1_NE_25J16h_EQ.xml");
+	//parser.parse_file("/Users/daniel/Downloads/CIM_Messdatensatz/CIGRE_MV_8/Rootnet_Area 1_NE_30J16h_EQ.xml");
 
 	// Timer stop
 	stop = std::chrono::high_resolution_clock::now();
