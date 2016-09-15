@@ -1,0 +1,19 @@
+To install the CIMParser use cmake. Do so by following these steps:
+
+0. Make shure libxml++ is installed
+
+1. Create build directory
+  mkdir build
+
+2. Change into build directory and run cmake
+  cd build/
+  cmake ..
+
+3. Compile CIMParser library
+  make -j4
+
+4. Install in desired directory
+  make DESTDIR=<dir> install
+
+For more information about how to use the Parser take a look at the example
+provided with this package.
