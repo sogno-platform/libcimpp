@@ -43,8 +43,3 @@ build
 obj
 documentation
 Doxyfile
-
-# Ignore the generated files
-src/assignments.*
-src/task.*
-src/CIMFactory.*
