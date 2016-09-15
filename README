@@ -15,5 +15,8 @@ To install the CIMParser use cmake. Do so by following these steps:
 4. Install in desired directory
   make DESTDIR=<dir> install
 
+5. [optional] Generate doxygen documentation
+  make doc
+
 For more information about how to use the Parser take a look at the example
 provided with this package.

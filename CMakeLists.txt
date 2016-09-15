@@ -32,3 +32,10 @@ target_link_libraries(${PROJECT_NAME} ${LibXML++_LIBRARIES})
 install(TARGETS ${PROJECT_NAME} DESTINATION lib)
 install(DIRECTORY src/IEC61970 DESTINATION include/${PROJECT_NAME} FILES_MATCHING PATTERN "*.h")
 install(FILES src/BaseClass.h src/CIMParser.h src/IEC61970.h src/task.h DESTINATION include/${PROJECT_NAME})
+
+# Configure Doxyfile
+find_package(Doxygen)
+if(DOXYGEN_FOUND)
+  configure_file(${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile @ONLY)
+  add_custom_target(doc ${DOXYGEN_EXECUTABLE} ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR} COMMENT "Generating API documentation with Doxygen" VERBATIM)
+endif(DOXYGEN_FOUND)
