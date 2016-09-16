@@ -4426,7 +4426,7 @@ bool assign_IdentifiedObject_aliasName(std::stringstream& buffer, BaseClass* bas
 {
 	if(IEC61970::Base::Core::IdentifiedObject* element = dynamic_cast<IEC61970::Base::Core::IdentifiedObject*>(base_class_ptr))
 	{
-		buffer >> element->aliasName;
+		element->aliasName = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -4441,7 +4441,7 @@ bool assign_IdentifiedObject_description(std::stringstream& buffer, BaseClass* b
 {
 	if(IEC61970::Base::Core::IdentifiedObject* element = dynamic_cast<IEC61970::Base::Core::IdentifiedObject*>(base_class_ptr))
 	{
-		buffer >> element->description;
+		element->description = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -4456,7 +4456,7 @@ bool assign_IdentifiedObject_mRID(std::stringstream& buffer, BaseClass* base_cla
 {
 	if(IEC61970::Base::Core::IdentifiedObject* element = dynamic_cast<IEC61970::Base::Core::IdentifiedObject*>(base_class_ptr))
 	{
-		buffer >> element->mRID;
+		element->mRID = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -4471,7 +4471,7 @@ bool assign_IdentifiedObject_name(std::stringstream& buffer, BaseClass* base_cla
 {
 	if(IEC61970::Base::Core::IdentifiedObject* element = dynamic_cast<IEC61970::Base::Core::IdentifiedObject*>(base_class_ptr))
 	{
-		buffer >> element->name;
+		element->name = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -4486,7 +4486,7 @@ bool assign_Control_controlType(std::stringstream& buffer, BaseClass* base_class
 {
 	if(IEC61970::Base::Meas::Control* element = dynamic_cast<IEC61970::Base::Meas::Control*>(base_class_ptr))
 	{
-		buffer >> element->controlType;
+		element->controlType = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -4516,7 +4516,7 @@ bool assign_Control_timeStamp(std::stringstream& buffer, BaseClass* base_class_p
 {
 	if(IEC61970::Base::Meas::Control* element = dynamic_cast<IEC61970::Base::Meas::Control*>(base_class_ptr))
 	{
-		buffer >> element->timeStamp.value;
+		element->timeStamp.value = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -4591,7 +4591,7 @@ bool assign_Measurement_measurementType(std::stringstream& buffer, BaseClass* ba
 {
 	if(IEC61970::Base::Meas::Measurement* element = dynamic_cast<IEC61970::Base::Meas::Measurement*>(base_class_ptr))
 	{
-		buffer >> element->measurementType;
+		element->measurementType = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -4831,7 +4831,7 @@ bool assign_CurrentTransformer_accuracyClass(std::stringstream& buffer, BaseClas
 {
 	if(IEC61970::Base::AuxiliaryEquipment::CurrentTransformer* element = dynamic_cast<IEC61970::Base::AuxiliaryEquipment::CurrentTransformer*>(base_class_ptr))
 	{
-		buffer >> element->accuracyClass;
+		element->accuracyClass = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -4876,7 +4876,7 @@ bool assign_CurrentTransformer_ctClass(std::stringstream& buffer, BaseClass* bas
 {
 	if(IEC61970::Base::AuxiliaryEquipment::CurrentTransformer* element = dynamic_cast<IEC61970::Base::AuxiliaryEquipment::CurrentTransformer*>(base_class_ptr))
 	{
-		buffer >> element->ctClass;
+		element->ctClass = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -4891,7 +4891,7 @@ bool assign_CurrentTransformer_usage(std::stringstream& buffer, BaseClass* base_
 {
 	if(IEC61970::Base::AuxiliaryEquipment::CurrentTransformer* element = dynamic_cast<IEC61970::Base::AuxiliaryEquipment::CurrentTransformer*>(base_class_ptr))
 	{
-		buffer >> element->usage;
+		element->usage = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -4906,7 +4906,7 @@ bool assign_PotentialTransformer_accuracyClass(std::stringstream& buffer, BaseCl
 {
 	if(IEC61970::Base::AuxiliaryEquipment::PotentialTransformer* element = dynamic_cast<IEC61970::Base::AuxiliaryEquipment::PotentialTransformer*>(base_class_ptr))
 	{
-		buffer >> element->accuracyClass;
+		element->accuracyClass = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -4936,7 +4936,7 @@ bool assign_PotentialTransformer_ptClass(std::stringstream& buffer, BaseClass* b
 {
 	if(IEC61970::Base::AuxiliaryEquipment::PotentialTransformer* element = dynamic_cast<IEC61970::Base::AuxiliaryEquipment::PotentialTransformer*>(base_class_ptr))
 	{
-		buffer >> element->ptClass;
+		element->ptClass = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -5251,7 +5251,7 @@ bool assign_MeasurementValue_timeStamp(std::stringstream& buffer, BaseClass* bas
 {
 	if(IEC61970::Base::Meas::MeasurementValue* element = dynamic_cast<IEC61970::Base::Meas::MeasurementValue*>(base_class_ptr))
 	{
-		buffer >> element->timeStamp.value;
+		element->timeStamp.value = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -5431,7 +5431,7 @@ bool assign_BasicIntervalSchedule_startTime(std::stringstream& buffer, BaseClass
 {
 	if(IEC61970::Base::Core::BasicIntervalSchedule* element = dynamic_cast<IEC61970::Base::Core::BasicIntervalSchedule*>(base_class_ptr))
 	{
-		buffer >> element->startTime.value;
+		element->startTime.value = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -5506,7 +5506,7 @@ bool assign_RegularIntervalSchedule_endTime(std::stringstream& buffer, BaseClass
 {
 	if(IEC61970::Base::Core::RegularIntervalSchedule* element = dynamic_cast<IEC61970::Base::Core::RegularIntervalSchedule*>(base_class_ptr))
 	{
-		buffer >> element->endTime.value;
+		element->endTime.value = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -6766,7 +6766,7 @@ bool assign_NameTypeAuthority_description(std::stringstream& buffer, BaseClass* 
 {
 	if(IEC61970::Base::Core::NameTypeAuthority* element = dynamic_cast<IEC61970::Base::Core::NameTypeAuthority*>(base_class_ptr))
 	{
-		buffer >> element->description;
+		element->description = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -6781,7 +6781,7 @@ bool assign_NameTypeAuthority_name(std::stringstream& buffer, BaseClass* base_cl
 {
 	if(IEC61970::Base::Core::NameTypeAuthority* element = dynamic_cast<IEC61970::Base::Core::NameTypeAuthority*>(base_class_ptr))
 	{
-		buffer >> element->name;
+		element->name = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -6796,7 +6796,7 @@ bool assign_NameType_description(std::stringstream& buffer, BaseClass* base_clas
 {
 	if(IEC61970::Base::Core::NameType* element = dynamic_cast<IEC61970::Base::Core::NameType*>(base_class_ptr))
 	{
-		buffer >> element->description;
+		element->description = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -6811,7 +6811,7 @@ bool assign_NameType_name(std::stringstream& buffer, BaseClass* base_class_ptr)
 {
 	if(IEC61970::Base::Core::NameType* element = dynamic_cast<IEC61970::Base::Core::NameType*>(base_class_ptr))
 	{
-		buffer >> element->name;
+		element->name = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -6826,7 +6826,7 @@ bool assign_Name_name(std::stringstream& buffer, BaseClass* base_class_ptr)
 {
 	if(IEC61970::Base::Core::Name* element = dynamic_cast<IEC61970::Base::Core::Name*>(base_class_ptr))
 	{
-		buffer >> element->name;
+		element->name = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -8041,7 +8041,7 @@ bool assign_TextDiagramObject_text(std::stringstream& buffer, BaseClass* base_cl
 {
 	if(IEC61970::Base::DiagramLayout::TextDiagramObject* element = dynamic_cast<IEC61970::Base::DiagramLayout::TextDiagramObject*>(base_class_ptr))
 	{
-		buffer >> element->text;
+		element->text = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -8206,7 +8206,7 @@ bool assign_DateInterval_end(std::stringstream& buffer, BaseClass* base_class_pt
 {
 	if(IEC61970::Base::Domain::DateInterval* element = dynamic_cast<IEC61970::Base::Domain::DateInterval*>(base_class_ptr))
 	{
-		buffer >> element->end.value;
+		element->end.value = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -8221,7 +8221,7 @@ bool assign_DateInterval_start(std::stringstream& buffer, BaseClass* base_class_
 {
 	if(IEC61970::Base::Domain::DateInterval* element = dynamic_cast<IEC61970::Base::Domain::DateInterval*>(base_class_ptr))
 	{
-		buffer >> element->start.value;
+		element->start.value = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -8236,7 +8236,7 @@ bool assign_DateTimeInterval_end(std::stringstream& buffer, BaseClass* base_clas
 {
 	if(IEC61970::Base::Domain::DateTimeInterval* element = dynamic_cast<IEC61970::Base::Domain::DateTimeInterval*>(base_class_ptr))
 	{
-		buffer >> element->end.value;
+		element->end.value = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -8251,7 +8251,7 @@ bool assign_DateTimeInterval_start(std::stringstream& buffer, BaseClass* base_cl
 {
 	if(IEC61970::Base::Domain::DateTimeInterval* element = dynamic_cast<IEC61970::Base::Domain::DateTimeInterval*>(base_class_ptr))
 	{
-		buffer >> element->start.value;
+		element->start.value = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -8386,7 +8386,7 @@ bool assign_MonthDayInterval_end(std::stringstream& buffer, BaseClass* base_clas
 {
 	if(IEC61970::Base::Domain::MonthDayInterval* element = dynamic_cast<IEC61970::Base::Domain::MonthDayInterval*>(base_class_ptr))
 	{
-		buffer >> element->end.value;
+		element->end.value = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -8401,7 +8401,7 @@ bool assign_MonthDayInterval_start(std::stringstream& buffer, BaseClass* base_cl
 {
 	if(IEC61970::Base::Domain::MonthDayInterval* element = dynamic_cast<IEC61970::Base::Domain::MonthDayInterval*>(base_class_ptr))
 	{
-		buffer >> element->start.value;
+		element->start.value = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -8506,7 +8506,7 @@ bool assign_TimeInterval_end(std::stringstream& buffer, BaseClass* base_class_pt
 {
 	if(IEC61970::Base::Domain::TimeInterval* element = dynamic_cast<IEC61970::Base::Domain::TimeInterval*>(base_class_ptr))
 	{
-		buffer >> element->end.value;
+		element->end.value = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -8521,7 +8521,7 @@ bool assign_TimeInterval_start(std::stringstream& buffer, BaseClass* base_class_
 {
 	if(IEC61970::Base::Domain::TimeInterval* element = dynamic_cast<IEC61970::Base::Domain::TimeInterval*>(base_class_ptr))
 	{
-		buffer >> element->start.value;
+		element->start.value = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -11401,7 +11401,7 @@ bool assign_FuelAllocationSchedule_fuelAllocationEndDate(std::stringstream& buff
 {
 	if(IEC61970::Base::Generation::Production::FuelAllocationSchedule* element = dynamic_cast<IEC61970::Base::Generation::Production::FuelAllocationSchedule*>(base_class_ptr))
 	{
-		buffer >> element->fuelAllocationEndDate.value;
+		element->fuelAllocationEndDate.value = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -11416,7 +11416,7 @@ bool assign_FuelAllocationSchedule_fuelAllocationStartDate(std::stringstream& bu
 {
 	if(IEC61970::Base::Generation::Production::FuelAllocationSchedule* element = dynamic_cast<IEC61970::Base::Generation::Production::FuelAllocationSchedule*>(base_class_ptr))
 	{
-		buffer >> element->fuelAllocationStartDate.value;
+		element->fuelAllocationStartDate.value = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -11641,7 +11641,7 @@ bool assign_StartupModel_startupDate(std::stringstream& buffer, BaseClass* base_
 {
 	if(IEC61970::Base::Generation::Production::StartupModel* element = dynamic_cast<IEC61970::Base::Generation::Production::StartupModel*>(base_class_ptr))
 	{
-		buffer >> element->startupDate.value;
+		element->startupDate.value = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -11746,7 +11746,7 @@ bool assign_ShutdownCurve_shutdownDate(std::stringstream& buffer, BaseClass* bas
 {
 	if(IEC61970::Base::Generation::Production::ShutdownCurve* element = dynamic_cast<IEC61970::Base::Generation::Production::ShutdownCurve*>(base_class_ptr))
 	{
-		buffer >> element->shutdownDate.value;
+		element->shutdownDate.value = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -12301,7 +12301,7 @@ bool assign_Reservoir_riverOutletWorks(std::stringstream& buffer, BaseClass* bas
 {
 	if(IEC61970::Base::Generation::Production::Reservoir* element = dynamic_cast<IEC61970::Base::Generation::Production::Reservoir*>(base_class_ptr))
 	{
-		buffer >> element->riverOutletWorks;
+		element->riverOutletWorks = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -12376,7 +12376,7 @@ bool assign_Reservoir_spillWayGateType(std::stringstream& buffer, BaseClass* bas
 {
 	if(IEC61970::Base::Generation::Production::Reservoir* element = dynamic_cast<IEC61970::Base::Generation::Production::Reservoir*>(base_class_ptr))
 	{
-		buffer >> element->spillWayGateType;
+		element->spillWayGateType = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -12436,7 +12436,7 @@ bool assign_HydroPowerPlant_penstockType(std::stringstream& buffer, BaseClass* b
 {
 	if(IEC61970::Base::Generation::Production::HydroPowerPlant* element = dynamic_cast<IEC61970::Base::Generation::Production::HydroPowerPlant*>(base_class_ptr))
 	{
-		buffer >> element->penstockType;
+		element->penstockType = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -12496,7 +12496,7 @@ bool assign_HydroPowerPlant_surgeTankCode(std::stringstream& buffer, BaseClass* 
 {
 	if(IEC61970::Base::Generation::Production::HydroPowerPlant* element = dynamic_cast<IEC61970::Base::Generation::Production::HydroPowerPlant*>(base_class_ptr))
 	{
-		buffer >> element->surgeTankCode;
+		element->surgeTankCode = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -12946,7 +12946,7 @@ bool assign_Season_endDate(std::stringstream& buffer, BaseClass* base_class_ptr)
 {
 	if(IEC61970::Base::LoadModel::Season* element = dynamic_cast<IEC61970::Base::LoadModel::Season*>(base_class_ptr))
 	{
-		buffer >> element->endDate.value;
+		element->endDate.value = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -12961,7 +12961,7 @@ bool assign_Season_startDate(std::stringstream& buffer, BaseClass* base_class_pt
 {
 	if(IEC61970::Base::LoadModel::Season* element = dynamic_cast<IEC61970::Base::LoadModel::Season*>(base_class_ptr))
 	{
-		buffer >> element->startDate.value;
+		element->startDate.value = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -13246,7 +13246,7 @@ bool assign_StringMeasurementValue_value(std::stringstream& buffer, BaseClass* b
 {
 	if(IEC61970::Base::Meas::StringMeasurementValue* element = dynamic_cast<IEC61970::Base::Meas::StringMeasurementValue*>(base_class_ptr))
 	{
-		buffer >> element->value;
+		element->value = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -13621,7 +13621,7 @@ bool assign_Switch_switchOnDate(std::stringstream& buffer, BaseClass* base_class
 {
 	if(IEC61970::Base::Wires::Switch* element = dynamic_cast<IEC61970::Base::Wires::Switch*>(base_class_ptr))
 	{
-		buffer >> element->switchOnDate.value;
+		element->switchOnDate.value = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -14236,7 +14236,7 @@ bool assign_ShuntCompensator_switchOnDate(std::stringstream& buffer, BaseClass* 
 {
 	if(IEC61970::Base::Wires::ShuntCompensator* element = dynamic_cast<IEC61970::Base::Wires::ShuntCompensator*>(base_class_ptr))
 	{
-		buffer >> element->switchOnDate.value;
+		element->switchOnDate.value = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -14986,7 +14986,7 @@ bool assign_CompositeSwitch_compositeSwitchType(std::stringstream& buffer, BaseC
 {
 	if(IEC61970::Base::Wires::CompositeSwitch* element = dynamic_cast<IEC61970::Base::Wires::CompositeSwitch*>(base_class_ptr))
 	{
-		buffer >> element->compositeSwitchType;
+		element->compositeSwitchType = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
@@ -17056,7 +17056,7 @@ bool assign_PowerTransformer_vectorGroup(std::stringstream& buffer, BaseClass* b
 {
 	if(IEC61970::Base::Wires::PowerTransformer* element = dynamic_cast<IEC61970::Base::Wires::PowerTransformer*>(base_class_ptr))
 	{
-		buffer >> element->vectorGroup;
+		element->vectorGroup = buffer.str();
 		if(buffer.fail())
 			return false;
 		else
