@@ -27,11 +27,8 @@ PROJDIR = .
 
 BIN = $(PROJECT_NAME)
 
-# First target which should be called to build
-default: $(BIN)
-
 # Build all
-all: $(BIN)
+all: $(BIN) resource
 
 # Clean target
 .PHONY: clean
@@ -42,3 +39,7 @@ clean:
 $(BIN): main.cpp
 	@$(CXX) $(INCDIR) $(CXXFLAGS) $(LDFLAGS) -o $(BIN) $<
 	@echo "Linked all objects to $@"
+
+# Resource
+resource:
+	@cp -f ../src/*.csv .
