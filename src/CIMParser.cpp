@@ -55,10 +55,10 @@ void CIMParser::on_start_element(const Glib::ustring &name, const AttributeList 
 	if(properties.empty()) // TODO: Was habe ich damit gemeint?
 		return;
 
-	// If name is a CIM class check if to create a new object
-	if(CIMFactory::IsCIMClass(name))
+	// Erstelle neues Objekt
+	BaseClass* BaseClass_ptr = CIMFactory::CreateNew(name);
+	if(BaseClass_ptr != nullptr)
 	{
-		// Get rdf_id
 		std::string rdf_id;
 		try
 		{
@@ -69,19 +69,10 @@ void CIMParser::on_start_element(const Glib::ustring &name, const AttributeList 
 			std::cerr << excep.what() << std::endl;
 			exit(1);
 		}
-		// check if object already exists
-		std::unordered_map<std::string, BaseClass*>::iterator it = Task::RDFMap.find(rdf_id);
-		if(it != Task::RDFMap.end()) // object exists -> push it on the stack
-		{
-			elementStack.push(it->second);
-		}
-		else // object does not exist -> create object
-		{
-			BaseClass* BaseClass_ptr = CIMFactory::CreateNew(name);
-			Task::RDFMap.emplace(rdf_id, BaseClass_ptr);
-			elementStack.push(BaseClass_ptr);
-			Objects.push_back(BaseClass_ptr);
-		}
+		//std::cout << "Created " << name << " = " << rdf_id << std::endl;
+		Task::RDFMap.emplace(rdf_id, BaseClass_ptr);
+		elementStack.push(BaseClass_ptr);
+		Objects.push_back(BaseClass_ptr);
 		return;
 	}
 
@@ -155,7 +146,7 @@ Glib::ustring CIMParser::get_rdf_id(const AttributeList &properties)
 {
 	for(auto&& attribute : properties)
 	{
-		if(attribute.name == "rdf:ID" || attribute.name == "rdf:about")
+		if(attribute.name == "rdf:ID")
 			return attribute.value;
 	}
 	throw std::logic_error("Attribute enthalten keine rdf:ID");
