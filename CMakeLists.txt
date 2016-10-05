@@ -19,6 +19,7 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
   list(REMOVE_ITEM LibXML++_LIBRARIES intl)
 endif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 include_directories(${LibXML++_INCLUDE_DIRS})
+link_directories(${LibXML++_LIBRARY_DIRS})
 
 # Add combile flag to aviod warnings with C++11
 set(CMAKE_CXX_FLAGS_RELEASE  "${CMAKE_CXX_FLAGS_RELEASE} -Wno-inconsistent-missing-override")
