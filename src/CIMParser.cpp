@@ -15,8 +15,8 @@ CIMParser::CIMParser()
 
 CIMParser::~CIMParser()
 {
-	if(!elementStack.empty())
-		std::cerr << "elementStack nicht leer!!!" << std::endl;
+	if(!objectStack.empty())
+		std::cerr << "objectStack nicht leer!!!" << std::endl;
 	if(!tagStack.empty())
 		std::cerr << "tagStack nicht leer!!!" << std::endl;
 }
@@ -71,7 +71,7 @@ void CIMParser::on_start_element(const Glib::ustring &name, const AttributeList 
 		}
 		//std::cout << "Created " << name << " = " << rdf_id << std::endl;
 		Task::RDFMap.emplace(rdf_id, BaseClass_ptr);
-		elementStack.push(BaseClass_ptr);
+		objectStack.push(BaseClass_ptr);
 		Objects.push_back(BaseClass_ptr);
 		return;
 	}
@@ -80,7 +80,7 @@ void CIMParser::on_start_element(const Glib::ustring &name, const AttributeList 
 	try // FIXME: No exep
 	{
 		std::string rdf_id = get_rdf_resource(properties);
-		taskQueue.push(Task(elementStack.top(), name, rdf_id));
+		taskQueue.push(Task(objectStack.top(), name, rdf_id));
 		return;
 	}
 	catch(std::logic_error &excep)
@@ -89,7 +89,7 @@ void CIMParser::on_start_element(const Glib::ustring &name, const AttributeList 
 	try
 	{
 		std::string enumSymbol = get_rdf_enum(properties);
-		if(!assign(elementStack.top(), name, enumSymbol))
+		if(!assign(objectStack.top(), name, enumSymbol))
 			std::cerr << enumSymbol << " kann nicht zugewiesen werden" << std::endl;
 		return;
 	}
@@ -112,7 +112,7 @@ void CIMParser::on_end_element(const Glib::ustring &name)
 	tagStack.pop();
 	if(CIMFactory::IsCIMClass(name))
 	{
-		elementStack.pop();
+		objectStack.pop();
 		//std::cout << "Popped " << name << std::endl;
 	}
 }
@@ -124,20 +124,20 @@ void CIMParser::on_characters(const Glib::ustring &characters)
 	{
 		return;
 	}
-	if(elementStack.empty())
+	if(objectStack.empty())
 	{
-		throw std::runtime_error("elementStack leer");
+		throw std::runtime_error("objectStack leer");
 	}
 
 #ifndef DEBUG
-	assign(elementStack.top(), tagStack.top(), characters);
+	assign(objectStack.top(), tagStack.top(), characters);
 #else
 	// Check if the characters only contain whitespace
 	if(is_only_whitespace(characters))
 	{
 		return;
 	}
-	if(!assign(elementStack.top(), tagStack.top(), characters))
+	if(!assign(objectStack.top(), tagStack.top(), characters))
 		std::cout << "Kann '" << characters << "' nicht an " << tagStack.top() << " zuweisen" << std::endl;
 #endif
 }

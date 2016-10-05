@@ -31,7 +31,7 @@ protected:
 	static bool is_only_whitespace(const Glib::ustring &characters);
 
 private:
-	std::stack<BaseClass*> elementStack;
+	std::stack<BaseClass*> objectStack;
 	std::stack<Glib::ustring> tagStack;
 	std::queue<Task> taskQueue;
 };
