@@ -34,11 +34,12 @@ all: $(BIN) resource
 .PHONY: clean
 clean:
 	@rm -f $(BIN)
+	@rm *.csv
 
 # Combile
 $(BIN): main.cpp
 	@$(CXX) $(INCDIR) $(CXXFLAGS) $(LDFLAGS) -o $(BIN) $<
-	@echo "Linked all objects to $@"
+	@echo "Compiled $@"
 
 # Resource
 resource:
