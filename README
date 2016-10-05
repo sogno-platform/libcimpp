@@ -1,6 +1,6 @@
 To install the CIMParser use cmake do so by following these steps:
 
-0. Make shure libxml++ is installed
+0. Make sure libxml++ is installed
 
 1. Create build directory
   mkdir build
