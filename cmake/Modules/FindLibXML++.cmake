@@ -5,14 +5,13 @@
 #   LibXML++_FOUND
 #   LibXML++_INCLUDE_DIRS
 #   LibXML++_LIBRARIES
-#   LibXML++_LIBRARY_DIRS
 #
 
 include(FindPkgConfig)
 include(FindPackageHandleStandardArgs)
 
 # Use pkg-config to get hints about paths
-pkg_check_modules(LibXML++_PKGCONF REQUIRED libxml++-2.6)
+pkg_check_modules(LibXML++_PKGCONF REQUIRED QUIET libxml++-2.6)
 
 # Include dir
 find_path(LibXML++_INCLUDE_DIR
@@ -26,18 +25,24 @@ find_library(LibXML++_LIBRARY
   PATHS ${LibXML++_PKGCONF_LIBRARY_DIRS}
 )
 
-FIND_PACKAGE_HANDLE_STANDARD_ARGS(LibXML++ DEFAULT_MSG LibXML++_LIBRARY LibXML++_INCLUDE_DIR)
+foreach(LIB ${LibXML++_PKGCONF_LIBRARIES})
+find_library(${LIB}_PATH
+  NAMES ${LIB}
+  PATHS ${LibXML++_PKGCONF_LIBRARY_DIRS}
+)
+list(APPEND LibXML++_LIBRARIES ${${LIB}_PATH})
+endforeach(LIB)
 
+find_package_handle_standard_args(LibXML++
+  REQUIRED_VARS LibXML++_LIBRARY LibXML++_INCLUDE_DIR
+  VERSION_VAR LibXML++_PKGCONF_VERSION)
 
 if(LibXML++_PKGCONF_FOUND)
-  set(LibXML++_LIBRARIES ${LibXML++_PKGCONF_LIBRARIES})
   set(LibXML++_INCLUDE_DIRS ${LibXML++_INCLUDE_DIR} ${LibXML++_PKGCONF_INCLUDE_DIRS})
-  set(LibXML++_LIBRARY_DIRS ${LibXML++_PKGCONF_LIBRARY_DIRS})
   set(LibXML++_FOUND yes)
 else()
   set(LibXML++_LIBRARIES)
   set(LibXML++_INCLUDE_DIRS)
-  set(LibXML++_LIBRARY_DIRS)
   set(LibXML++_FOUND no)
 endif()
 

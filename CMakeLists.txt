@@ -7,32 +7,41 @@ set(CIMParser_MINOR_VERSION 1)
 set(CIMParser_PATCH_VERSION 0)
 set(CIMParser_VERSION ${CIMParser_MAJOR_VERSION}.${CIMParser_MINOR_VERSION}.${CIMParser_PATCH_VERSION})
 
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
-
-include_directories(src)
-file(GLOB_RECURSE SRC src/*.cpp)
-
 # Find LibXML++
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 find_package(LibXML++ REQUIRED)
-if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-  list(REMOVE_ITEM LibXML++_LIBRARIES intl)
-endif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-include_directories(${LibXML++_INCLUDE_DIRS})
-link_directories(${LibXML++_LIBRARY_DIRS})
 
 # Add combile flag to aviod warnings with C++11
 set(CMAKE_CXX_FLAGS_RELEASE  "${CMAKE_CXX_FLAGS_RELEASE} -Wno-inconsistent-missing-override")
 
-SET(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
-#add_library(${PROJECT_NAME} STATIC ${SRC})
+#include_directories(src)
+file(GLOB_RECURSE SRC src/*.cpp)
+
 add_library(${PROJECT_NAME} SHARED ${SRC})
+target_compile_features(${PROJECT_NAME} PUBLIC cxx_range_for cxx_nullptr)
+target_include_directories(${PROJECT_NAME} PRIVATE $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>)
+target_include_directories(${PROJECT_NAME} INTERFACE $<INSTALL_INTERFACE:include/${PROJECT_NAME}>)
+target_include_directories(${PROJECT_NAME} PUBLIC ${LibXML++_INCLUDE_DIRS})
 target_link_libraries(${PROJECT_NAME} ${LibXML++_LIBRARIES})
 
 # Install target
-install(TARGETS ${PROJECT_NAME} DESTINATION lib)
-install(DIRECTORY src/IEC61970 DESTINATION include/${PROJECT_NAME} FILES_MATCHING PATTERN "*.h")
-install(FILES src/BaseClass.h src/CIMParser.h src/IEC61970.h src/task.h DESTINATION include/${PROJECT_NAME})
+install(
+  TARGETS ${PROJECT_NAME}
+  DESTINATION lib
+  EXPORT ${PROJECT_NAME}Targets)
+install(
+  DIRECTORY src/IEC61970
+  DESTINATION include/${PROJECT_NAME}
+  FILES_MATCHING PATTERN "*.h")
+install(
+  FILES src/BaseClass.h src/CIMParser.h src/IEC61970.h src/task.h
+  DESTINATION include/${PROJECT_NAME})
+install(
+  EXPORT ${PROJECT_NAME}Targets
+  DESTINATION lib/${PROJECT_NAME})
+install(
+  FILES cmake/CIMParserConfig.cmake
+  DESTINATION lib/${PROJECT_NAME})
 
 # Configure Doxyfile
 find_package(Doxygen)
