@@ -1,0 +1,3 @@
+The CIMParserConfig file is located in <PREFIX>/lib/CIMParser/. To make cmake
+find the file call
+  cmake .. -DCMAKE_PREFIX_PATH=<PREFIX>.
