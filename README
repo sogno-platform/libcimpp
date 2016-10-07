@@ -5,15 +5,15 @@ To install the CIMParser use cmake do so by following these steps:
 1. Create build directory
   mkdir build
 
-2. Change into build directory and run cmake
+2. Change into build directory and run cmake (with -DCMAKE_INSTALL_PREFIX=<PREFIX> for installation under <PREFIX> directory instead of the default '/usr/local')
   cd build/
-  cmake ..
+  cmake .. -DCMAKE_INSTALL_PREFIX=<PREFIX>
 
 3. Compile CIMParser library
   make -j4
 
 4. Install in desired directory
-  make DESTDIR=<dir> install
+  make install
 
 5. [optional] Generate doxygen documentation
   make doc
