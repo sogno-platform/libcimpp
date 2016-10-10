@@ -16,9 +16,9 @@ CIMParser::CIMParser()
 CIMParser::~CIMParser()
 {
 	if(!objectStack.empty())
-		std::cerr << "objectStack nicht leer!!!" << std::endl;
+		std::cerr << "Error: objectStack is not empty!" << std::endl;
 	if(!tagStack.empty())
-		std::cerr << "tagStack nicht leer!!!" << std::endl;
+		std::cerr << "Error: tagStack is not empty!" << std::endl;
 }
 
 void CIMParser::on_end_document()
@@ -30,13 +30,13 @@ void CIMParser::on_end_document()
 	{
 		if(!taskQueue.front().resolve())
 		{
-			std::cout << "Kann folgende Beziehung nicht auflösen: ";
+			std::cout << "Note: Cannot resolve following RDF raltionship: ";
 			taskQueue.front().print();
 			unresolved++;
 		}
 		taskQueue.pop();
 	}
-	std::cout << unresolved << " out of " << size << " tasks remain unresolved!" << std::endl;
+	std::cout << "Note: " << unresolved << " out of " << size << " tasks remain unresolved!" << std::endl;
 }
 
 void CIMParser::on_start_element(const Glib::ustring &name, const AttributeList &properties)
@@ -90,14 +90,14 @@ void CIMParser::on_start_element(const Glib::ustring &name, const AttributeList 
 	{
 		std::string enumSymbol = get_rdf_enum(properties);
 		if(!assign(objectStack.top(), name, enumSymbol))
-			std::cerr << enumSymbol << " kann nicht zugewiesen werden" << std::endl;
+			std::cerr << "Error: " << enumSymbol << " can not be assigned" << std::endl;
 		return;
 	}
 	catch(std::logic_error &excep)
 	{}
 
 	// Nobody knows what to do
-	std::cerr << "ERROR: Nobody knows, the " << name << " I've seen... *sing*" << std::endl;
+	std::cerr << "Error: Nobody knows, the " << name << " I've seen... *sing*" << std::endl;
 }
 
 void CIMParser::on_end_element(const Glib::ustring &name)
@@ -126,7 +126,7 @@ void CIMParser::on_characters(const Glib::ustring &characters)
 	}
 	if(objectStack.empty())
 	{
-		throw std::runtime_error("objectStack leer");
+		throw std::runtime_error("objectStack empty");
 	}
 
 #ifndef DEBUG
@@ -138,7 +138,7 @@ void CIMParser::on_characters(const Glib::ustring &characters)
 		return;
 	}
 	if(!assign(objectStack.top(), tagStack.top(), characters))
-		std::cout << "Kann '" << characters << "' nicht an " << tagStack.top() << " zuweisen" << std::endl;
+		std::cout << "Note: Cannot assign '" << characters << "' to " << tagStack.top() << std::endl;
 #endif
 }
 
@@ -149,7 +149,7 @@ Glib::ustring CIMParser::get_rdf_id(const AttributeList &properties)
 		if(attribute.name == "rdf:ID")
 			return attribute.value;
 	}
-	throw std::logic_error("Attribute enthalten keine rdf:ID");
+	throw std::logic_error("Attributes contain no rdf:ID");
 }
 
 Glib::ustring CIMParser::get_rdf_resource(const AttributeList &properties)
@@ -162,10 +162,10 @@ Glib::ustring CIMParser::get_rdf_resource(const AttributeList &properties)
 			{
 				return attribute.value.substr(1);
 			}
-			throw std::logic_error("rdf:resource verweist nicht auf ein Element in dieser Datei");
+			throw std::logic_error("rdf:resource does not relate to an object in this file");
 		}
 	}
-	throw std::logic_error("Attribute enthalten keine rdf:resource");
+	throw std::logic_error("Attribute contain no rdf:resource");
 }
 
 bool CIMParser::is_only_whitespace(const Glib::ustring& characters)
@@ -186,8 +186,8 @@ std::string CIMParser::get_rdf_enum(const AttributeList &properties)
 			{
 				return std::string(m[1]).append(".").append(m[2]);
 			}
-			throw std::logic_error("rdf:resource verweist nicht auf ein Element in dieser Datei");
+			throw std::logic_error("rdf:resource does not relate to an object in this file");
 		}
 	}
-	throw std::logic_error("Attribute enthalten keine rdf:resource");
+	throw std::logic_error("Attribute contain no rdf:resource");
 }
