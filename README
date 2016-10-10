@@ -1,3 +1,8 @@
+CIM XML Parser Library
+
+CIM eap file used:
+iec61970cim17v07_iec61968cim12v10_iec62325cim03v02.eap
+
 To install the CIMParser use cmake do so by following these steps:
 
 0. Make sure libxml++ is installed
