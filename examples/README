@@ -1,0 +1,8 @@
+This folder contains a single example (src/main.cpp) which can be compiled using
+two different build systems.
+
+cmake:
+  Use the CIM Parser library as an imported cmake target.
+
+make:
+  Use classic makefile to compile and link against the CIM Parser library.

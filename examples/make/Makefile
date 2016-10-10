@@ -1,13 +1,13 @@
 # This is the makefile for the libxml++ parser
 
 # Project Name
-PROJECT_NAME = ParserExample
+PROJECT_NAME = example
 
 # Set compiler
 CXX = clang++
 
 # libCIMParser
-CIMParser = /Users/daniel/Bachelorarbeit/Git/CIM-XML-Parser/build/usr/local
+CIMParser = ../../build
 
 # Include directories
 INCDIR = \
@@ -37,10 +37,10 @@ clean:
 	@rm *.csv
 
 # Combile
-$(BIN): main.cpp
+$(BIN): ../src/main.cpp
 	@$(CXX) $(INCDIR) $(CXXFLAGS) $(LDFLAGS) -o $(BIN) $<
 	@echo "Compiled $@"
 
 # Resource
 resource:
-	@cp -f ../src/*.csv .
+	@cp -f ../../src/*.csv .
