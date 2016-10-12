@@ -148,6 +148,8 @@ Glib::ustring CIMParser::get_rdf_id(const AttributeList &properties)
 	{
 		if(attribute.name == "rdf:ID")
 			return attribute.value;
+		if(attribute.name == "rdf:about")
+			return attribute.value.substr(1);
 	}
 	throw std::logic_error("Attributes contain no rdf:ID");
 }
