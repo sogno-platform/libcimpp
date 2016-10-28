@@ -1,4 +1,4 @@
-#include "CIMParser.h"
+#include "CIMContentHandler.hpp"
 #include <iostream>
 #include <sstream>
 #include <regex>
@@ -9,11 +9,11 @@
 #include "CIMFactory.h"
 #include "assignments.h"
 
-CIMParser::CIMParser()
+CIMContentHandler::CIMContentHandler()
 {
 }
 
-CIMParser::~CIMParser()
+CIMContentHandler::~CIMContentHandler()
 {
 	if(!objectStack.empty())
 		std::cerr << "Error: objectStack is not empty!" << std::endl;
@@ -21,7 +21,18 @@ CIMParser::~CIMParser()
 		std::cerr << "Error: tagStack is not empty!" << std::endl;
 }
 
-void CIMParser::on_end_document()
+void CIMContentHandler::setObjectsContainer(std::vector<BaseClass*> *Objects)
+{
+	this->Objects = Objects;
+}
+
+void CIMContentHandler::setDocumentLocator(const LocatorT &locator)
+{}
+
+void CIMContentHandler::startDocument()
+{}
+
+void CIMContentHandler::endDocument()
 {
 	unsigned int size, unresolved;
 	size = taskQueue.size();
@@ -39,30 +50,36 @@ void CIMParser::on_end_document()
 	std::cout << "Note: " << unresolved << " out of " << size << " tasks remain unresolved!" << std::endl;
 }
 
-void CIMParser::on_start_element(const Glib::ustring &name, const AttributeList &properties)
+void CIMContentHandler::startPrefixMapping(const std::string &prefix, const std::string &uri)
+{}
+
+void CIMContentHandler::endPrefixMapping(const std::string &prefix)
+{}
+
+void CIMContentHandler::startElement(const std::string &namespaceURI, const std::string &localName, const std::string &qName, const AttributesT &atts)
 {
 	// Only process tags in cim namespace
-	if(name.find("cim:") == std::string::npos)
+	if(qName.find("cim:") == std::string::npos)
 	{
 		//std::cerr << name << " not in namespace \"cim\"" << std::endl;
 		return;
 	}
 
 	// Remember last opened tag
-	tagStack.push(name);
+	tagStack.push(qName);
 
 	// Is the value of the tag a literal?
-	if(properties.empty()) // TODO: Was habe ich damit gemeint?
+	if(atts.getLength() == 0) // TODO: Was habe ich damit gemeint?
 		return;
 
 	// If name is a CIM class check if to create a new object
-	if(CIMFactory::IsCIMClass(name))
+	if(CIMFactory::IsCIMClass(qName))
 	{
 		// Get rdf_id
 		std::string rdf_id;
 		try
 		{
-			rdf_id = get_rdf_id(properties);
+			rdf_id = get_rdf_id(atts);
 		}
 		catch(std::logic_error &excep)
 		{
@@ -77,10 +94,10 @@ void CIMParser::on_start_element(const Glib::ustring &name, const AttributeList 
 		}
 		else // object does not exist -> create object
 		{
-			BaseClass* BaseClass_ptr = CIMFactory::CreateNew(name);
+			BaseClass* BaseClass_ptr = CIMFactory::CreateNew(qName);
 			Task::RDFMap.emplace(rdf_id, BaseClass_ptr);
 			objectStack.push(BaseClass_ptr);
-			Objects.push_back(BaseClass_ptr);
+			Objects->push_back(BaseClass_ptr);
 		}
 		return;
 	}
@@ -88,8 +105,8 @@ void CIMParser::on_start_element(const Glib::ustring &name, const AttributeList 
 	// Lege einen neuen Task an
 	try // FIXME: No exep
 	{
-		std::string rdf_id = get_rdf_resource(properties);
-		taskQueue.push(Task(objectStack.top(), name, rdf_id));
+		std::string rdf_id = get_rdf_resource(atts);
+		taskQueue.push(Task(objectStack.top(), qName, rdf_id));
 		return;
 	}
 	catch(std::logic_error &excep)
@@ -97,8 +114,8 @@ void CIMParser::on_start_element(const Glib::ustring &name, const AttributeList 
 
 	try
 	{
-		std::string enumSymbol = get_rdf_enum(properties);
-		if(!assign(objectStack.top(), name, enumSymbol))
+		std::string enumSymbol = get_rdf_enum(atts);
+		if(!assign(objectStack.top(), qName, enumSymbol))
 			std::cerr << "Error: " << enumSymbol << " can not be assigned" << std::endl;
 		return;
 	}
@@ -106,27 +123,27 @@ void CIMParser::on_start_element(const Glib::ustring &name, const AttributeList 
 	{}
 
 	// Nobody knows what to do
-	std::cerr << "Error: Nobody knows, the " << name << " I've seen... *sing*" << std::endl;
+	std::cerr << "Error: Nobody knows, the " << qName << " I've seen... *sing*" << std::endl;
 }
 
-void CIMParser::on_end_element(const Glib::ustring &name)
+void CIMContentHandler::endElement(const std::string &namespaceURI, const std::string &localName, const std::string &qName)
 {
 	// Only process tags in cim namespace
-	if(name.find("cim:") == std::string::npos)
+	if(qName.find("cim:") == std::string::npos)
 	{
 		return;
 	}
 
 	// Pop Stacks
 	tagStack.pop();
-	if(CIMFactory::IsCIMClass(name))
+	if(CIMFactory::IsCIMClass(qName))
 	{
 		objectStack.pop();
 		//std::cout << "Popped " << name << std::endl;
 	}
 }
 
-void CIMParser::on_characters(const Glib::ustring &characters)
+void CIMContentHandler::characters(const std::string &characters)
 {
 	// Only process tags in "cim" namespace
 	if(tagStack.empty())
@@ -151,27 +168,36 @@ void CIMParser::on_characters(const Glib::ustring &characters)
 #endif
 }
 
-Glib::ustring CIMParser::get_rdf_id(const AttributeList &properties)
+void CIMContentHandler::ignorableWhitespace(const std::string &ch)
+{}
+
+void CIMContentHandler::processingInstruction(const std::string &target, const std::string &data)
+{}
+
+void CIMContentHandler::skippedEntity(const std::string &name)
+{}
+
+std::string CIMContentHandler::get_rdf_id(const AttributesT &attributes)
 {
-	for(auto&& attribute : properties)
+	for(int i = 0; i < attributes.getLength(); i++)
 	{
-		if(attribute.name == "rdf:ID")
-			return attribute.value;
-		if(attribute.name == "rdf:about")
-			return attribute.value.substr(1);
+		if(attributes.getQName(i) == "rdf:ID")
+			return attributes.getValue(i);
+		if(attributes.getQName(i) == "rdf:ID")
+			return attributes.getValue(i).substr(1);
 	}
 	throw std::logic_error("Attributes contain no rdf:ID");
 }
 
-Glib::ustring CIMParser::get_rdf_resource(const AttributeList &properties)
+std::string CIMContentHandler::get_rdf_resource(const AttributesT &attributes)
 {
-	for(auto&& attribute : properties)
+	for(int i = 0; i < attributes.getLength(); i++)
 	{
-		if(attribute.name == "rdf:resource")
+		if(attributes.getQName(i) == "rdf:resource")
 		{
-			if(attribute.value.at(0) == '#')
+			if(attributes.getValue(i).at(0) == '#')
 			{
-				return attribute.value.substr(1);
+				return attributes.getValue(i).substr(1);
 			}
 			throw std::logic_error("rdf:resource does not relate to an object in this file");
 		}
@@ -179,20 +205,20 @@ Glib::ustring CIMParser::get_rdf_resource(const AttributeList &properties)
 	throw std::logic_error("Attribute contain no rdf:resource");
 }
 
-bool CIMParser::is_only_whitespace(const Glib::ustring& characters)
+bool CIMContentHandler::is_only_whitespace(const std::string& characters)
 {
-	return std::regex_match(characters.c_str(), std::regex("^[[:space:]]*$"));
+	return std::regex_match(characters, std::regex("^[[:space:]]*$"));
 }
 
-std::string CIMParser::get_rdf_enum(const AttributeList &properties)
+std::string CIMContentHandler::get_rdf_enum(const AttributesT &attributes)
 {
-	for(auto&& attribute : properties)
+	for(int i = 0; i < attributes.getLength(); i++)
 	{
-		if(attribute.name == "rdf:resource")
+		if(attributes.getQName(i) == "rdf:resource")
 		{
 			std::regex expr("^http[s]*://[a-zA-Z0-9./_]*CIM-schema-cim[0-9]+#([a-zA-z0-9]*).([a-zA-z0-9]*)");
 			std::smatch m;
-			std::string str = attribute.value;
+			std::string str = attributes.getValue(i);
 			if(std::regex_match(str, m, expr))
 			{
 				return std::string(m[1]).append(".").append(m[2]);

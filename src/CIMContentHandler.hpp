@@ -1,8 +1,9 @@
-#ifndef CIMPARSER_H
-#define CIMPARSER_H
+#ifndef CIMCONTENTHANDLER_HPP
+#define CIMCONTENTHANDLER_HPP
 
-#include <libxml++/libxml++.h>
-#include <glibmm/ustring.h>
+#include <SAX/ContentHandler.hpp>
+#include <SAX/Locator.hpp>
+
 #include <stack>
 #include <queue>
 #include <unordered_map>
@@ -11,31 +12,39 @@
 #include "BaseClass.h"
 #include "task.h"
 
-class CIMParser : public xmlpp::SaxParser
+class CIMContentHandler : public Arabica::SAX::ContentHandler<std::string>
 {
 public:
-	CIMParser();
-	~CIMParser();
+	CIMContentHandler();
+	~CIMContentHandler();
 
-	std::vector<BaseClass*> Objects;
+	std::vector<BaseClass*> *Objects;
+	void setObjectsContainer(std::vector<BaseClass*> *Objects);
 
 protected:
-	void on_end_document() override;
-	void on_start_element(const Glib::ustring& name, const AttributeList& properties) override;
-	void on_end_element(const Glib::ustring& name) override;
-	void on_characters(const Glib::ustring& characters) override;
+	void setDocumentLocator(const LocatorT &locator) override;
+	void startDocument() override;
+	void endDocument() override;
+	void startPrefixMapping(const std::string &prefix, const std::string &uri) override;
+	void endPrefixMapping(const std::string &prefix) override;
+	void startElement(const std::string &namespaceURI, const std::string &localName, const std::string &qName, const AttributesT &atts) override;
+	void endElement(const std::string &namespaceURI, const std::string &localName, const std::string &qName) override;
+	void characters(const std::string &ch) override;
+	void ignorableWhitespace(const std::string &ch) override;
+	void processingInstruction(const std::string &target, const std::string &data) override;
+	void skippedEntity(const std::string &name) override;
 
-	static Glib::ustring get_rdf_id(const AttributeList &properties);
-	static Glib::ustring get_rdf_resource(const AttributeList &properties);
-	static std::string get_rdf_enum(const AttributeList &properties);
-	static bool is_only_whitespace(const Glib::ustring &characters);
+	static std::string get_rdf_id(const AttributesT &properties);
+	static std::string get_rdf_resource(const AttributesT &properties);
+	static std::string get_rdf_enum(const AttributesT &properties);
+	static bool is_only_whitespace(const std::string &characters);
 
 private:
 	std::stack<BaseClass*> objectStack;
-	std::stack<Glib::ustring> tagStack;
+	std::stack<std::string> tagStack;
 	std::queue<Task> taskQueue;
 };
 
 
 
-#endif // CIMPARSER_H
+#endif // CIMCONTENTHANDLER_HPP
