@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Money.h
 //  Implementation of the Class Money
-//  Created on:      28-Jan-2016 12:45:44
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_584E8DB1_54E5_451d_AFDC_A86969D4133C__INCLUDED_)
-#define EA_584E8DB1_54E5_451d_AFDC_A86969D4133C__INCLUDED_
+#ifndef MONEY_H
+#define MONEY_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/Currency.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_584E8DB1_54E5_451d_AFDC_A86969D4133C__INCLUDED_)
+#endif // MONEY_H

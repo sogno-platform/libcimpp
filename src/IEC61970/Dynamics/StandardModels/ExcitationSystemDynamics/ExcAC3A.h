@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcAC3A.h
 //  Implementation of the Class ExcAC3A
-//  Created on:      28-Jan-2016 12:44:19
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_565620C4_46C3_4121_85F0_70ACFF247452__INCLUDED_)
-#define EA_565620C4_46C3_4121_85F0_70ACFF247452__INCLUDED_
+#ifndef EXCAC3A_H
+#define EXCAC3A_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -159,4 +158,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_565620C4_46C3_4121_85F0_70ACFF247452__INCLUDED_)
+#endif // EXCAC3A_H

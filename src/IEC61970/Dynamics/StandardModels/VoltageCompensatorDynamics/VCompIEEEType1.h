@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  VCompIEEEType1.h
 //  Implementation of the Class VCompIEEEType1
-//  Created on:      28-Jan-2016 12:47:32
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_2678C59E_97F0_4eb0_AAE9_9E63CC09F550__INCLUDED_)
-#define EA_2678C59E_97F0_4eb0_AAE9_9E63CC09F550__INCLUDED_
+#ifndef VCOMPIEEETYPE1_H
+#define VCOMPIEEETYPE1_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -59,4 +58,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_2678C59E_97F0_4eb0_AAE9_9E63CC09F550__INCLUDED_)
+#endif // VCOMPIEEETYPE1_H

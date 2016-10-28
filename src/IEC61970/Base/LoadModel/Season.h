@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Season.h
 //  Implementation of the Class Season
-//  Created on:      28-Jan-2016 12:46:37
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_0EA02DE2_71F4_44f2_BE3C_23D9886076A5__INCLUDED_)
-#define EA_0EA02DE2_71F4_44f2_BE3C_23D9886076A5__INCLUDED_
+#ifndef SEASON_H
+#define SEASON_H
 
 #include <list>
 
@@ -48,4 +47,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_0EA02DE2_71F4_44f2_BE3C_23D9886076A5__INCLUDED_)
+#endif // SEASON_H

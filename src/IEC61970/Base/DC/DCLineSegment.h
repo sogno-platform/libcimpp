@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  DCLineSegment.h
 //  Implementation of the Class DCLineSegment
-//  Created on:      28-Jan-2016 12:43:59
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_965238EF_5495_4268_94B2_395AFD1E5772__INCLUDED_)
-#define EA_965238EF_5495_4268_94B2_395AFD1E5772__INCLUDED_
+#ifndef DCLINESEGMENT_H
+#define DCLINESEGMENT_H
 
 #include "IEC61970/Base/Domain/Capacitance.h"
 #include "IEC61970/Base/Domain/Inductance.h"
@@ -55,4 +54,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_965238EF_5495_4268_94B2_395AFD1E5772__INCLUDED_)
+#endif // DCLINESEGMENT_H

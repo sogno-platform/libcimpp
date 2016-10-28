@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovGASTWD.h
 //  Implementation of the Class GovGASTWD
-//  Created on:      28-Jan-2016 12:45:03
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_9BB3CB90_6136_4008_B174_870D2575DED7__INCLUDED_)
-#define EA_9BB3CB90_6136_4008_B174_870D2575DED7__INCLUDED_
+#ifndef GOVGASTWD_H
+#define GOVGASTWD_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -177,4 +176,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_9BB3CB90_6136_4008_B174_870D2575DED7__INCLUDED_)
+#endif // GOVGASTWD_H

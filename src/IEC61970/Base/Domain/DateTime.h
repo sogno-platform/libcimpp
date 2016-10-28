@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  DateTime.h
 //  Implementation of the Class DateTime
-//  Created on:      28-Jan-2016 12:43:53
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_2802D7D0_FE3A_4e64_8A0E_299BBD5933F7__INCLUDED_)
-#define EA_2802D7D0_FE3A_4e64_8A0E_299BBD5933F7__INCLUDED_
+#ifndef DATETIME_H
+#define DATETIME_H
 
 #include "IEC61970/Base/Domain/String.h"
 
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_2802D7D0_FE3A_4e64_8A0E_299BBD5933F7__INCLUDED_)
+#endif // DATETIME_H

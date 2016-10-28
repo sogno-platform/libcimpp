@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  VoltagePerReactivePower.h
 //  Implementation of the Class VoltagePerReactivePower
-//  Created on:      28-Jan-2016 12:47:39
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_584E69A8_E006_4142_8A6C_EC9E05EE261D__INCLUDED_)
-#define EA_584E69A8_E006_4142_8A6C_EC9E05EE261D__INCLUDED_
+#ifndef VOLTAGEPERREACTIVEPOWER_H
+#define VOLTAGEPERREACTIVEPOWER_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_584E69A8_E006_4142_8A6C_EC9E05EE261D__INCLUDED_)
+#endif // VOLTAGEPERREACTIVEPOWER_H

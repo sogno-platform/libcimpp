@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  SvStatus.h
 //  Implementation of the Class SvStatus
-//  Created on:      28-Jan-2016 12:46:59
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_72D16C22_B624_4456_800E_E8DF906DA8C4__INCLUDED_)
-#define EA_72D16C22_B624_4456_800E_E8DF906DA8C4__INCLUDED_
+#ifndef SVSTATUS_H
+#define SVSTATUS_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Wires/SinglePhaseKind.h"
@@ -49,4 +48,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_72D16C22_B624_4456_800E_E8DF906DA8C4__INCLUDED_)
+#endif // SVSTATUS_H

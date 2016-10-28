@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  EmissionAccount.h
 //  Implementation of the Class EmissionAccount
-//  Created on:      28-Jan-2016 12:44:12
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_ABBE6B9D_B403_4c02_BB97_DE3A61611542__INCLUDED_)
-#define EA_ABBE6B9D_B403_4c02_BB97_DE3A61611542__INCLUDED_
+#ifndef EMISSIONACCOUNT_H
+#define EMISSIONACCOUNT_H
 
 #include "IEC61970/Base/Generation/Production/EmissionType.h"
 #include "IEC61970/Base/Generation/Production/EmissionValueSource.h"
@@ -50,4 +49,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_ABBE6B9D_B403_4c02_BB97_DE3A61611542__INCLUDED_)
+#endif // EMISSIONACCOUNT_H

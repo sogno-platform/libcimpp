@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  CurrentFlow.h
 //  Implementation of the Class CurrentFlow
-//  Created on:      28-Jan-2016 12:43:47
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_87E25BF5_EBC6_405d_82A2_239F89E1B8BB__INCLUDED_)
-#define EA_87E25BF5_EBC6_405d_82A2_239F89E1B8BB__INCLUDED_
+#ifndef CURRENTFLOW_H
+#define CURRENTFLOW_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_87E25BF5_EBC6_405d_82A2_239F89E1B8BB__INCLUDED_)
+#endif // CURRENTFLOW_H

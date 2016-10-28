@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  AsynchronousMachineEquivalentCircuit.h
 //  Implementation of the Class AsynchronousMachineEquivalentCircuit
-//  Created on:      28-Jan-2016 12:43:24
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_22ECBCD1_2F07_4918_9EF4_8CDCAC342095__INCLUDED_)
-#define EA_22ECBCD1_2F07_4918_9EF4_8CDCAC342095__INCLUDED_
+#ifndef ASYNCHRONOUSMACHINEEQUIVALENTCIRCUIT_H
+#define ASYNCHRONOUSMACHINEEQUIVALENTCIRCUIT_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Dynamics/StandardModels/AsynchronousMachineDynamics/AsynchronousMachineDynamics.h"
@@ -83,4 +82,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_22ECBCD1_2F07_4918_9EF4_8CDCAC342095__INCLUDED_)
+#endif // ASYNCHRONOUSMACHINEEQUIVALENTCIRCUIT_H

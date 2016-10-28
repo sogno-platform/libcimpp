@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcREXSFeedbackSignalKind.h
 //  Implementation of the Class ExcREXSFeedbackSignalKind
-//  Created on:      28-Jan-2016 12:44:42
 //  Original author: civanov
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_05847632_6809_4d60_A100_96BBE0B9A479__INCLUDED_)
-#define EA_05847632_6809_4d60_A100_96BBE0B9A479__INCLUDED_
+#ifndef EXCREXSFEEDBACKSIGNALKIND_H
+#define EXCREXSFEEDBACKSIGNALKIND_H
 
 namespace IEC61970
 {
@@ -43,4 +42,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_05847632_6809_4d60_A100_96BBE0B9A479__INCLUDED_)
+#endif // EXCREXSFEEDBACKSIGNALKIND_H

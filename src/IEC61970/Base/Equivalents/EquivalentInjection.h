@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  EquivalentInjection.h
 //  Implementation of the Class EquivalentInjection
-//  Created on:      28-Jan-2016 12:44:17
 //  Original author: KLH
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_CF191893_29FB_40bb_8BE9_1B696F07D9FF__INCLUDED_)
-#define EA_CF191893_29FB_40bb_8BE9_1B696F07D9FF__INCLUDED_
+#ifndef EQUIVALENTINJECTION_H
+#define EQUIVALENTINJECTION_H
 
 #include "IEC61970/Base/Domain/ActivePower.h"
 #include "IEC61970/Base/Domain/ReactivePower.h"
@@ -120,4 +119,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_CF191893_29FB_40bb_8BE9_1B696F07D9FF__INCLUDED_)
+#endif // EQUIVALENTINJECTION_H

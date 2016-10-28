@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindContPType3IEC.h
 //  Implementation of the Class WindContPType3IEC
-//  Created on:      28-Jan-2016 12:47:47
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_0338D19B_4EBC_4d8f_81A7_F846A5E166A4__INCLUDED_)
-#define EA_0338D19B_4EBC_4d8f_81A7_F846A5E166A4__INCLUDED_
+#ifndef WINDCONTPTYPE3IEC_H
+#define WINDCONTPTYPE3IEC_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Boolean.h"
@@ -158,4 +157,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_0338D19B_4EBC_4d8f_81A7_F846A5E166A4__INCLUDED_)
+#endif // WINDCONTPTYPE3IEC_H

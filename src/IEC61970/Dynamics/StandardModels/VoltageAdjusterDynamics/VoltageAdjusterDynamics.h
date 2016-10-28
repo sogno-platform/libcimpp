@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  VoltageAdjusterDynamics.h
 //  Implementation of the Class VoltageAdjusterDynamics
-//  Created on:      28-Jan-2016 12:47:35
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_2B2CA678_C91F_4171_A40C_2766D5FE1733__INCLUDED_)
-#define EA_2B2CA678_C91F_4171_A40C_2766D5FE1733__INCLUDED_
+#ifndef VOLTAGEADJUSTERDYNAMICS_H
+#define VOLTAGEADJUSTERDYNAMICS_H
 
 #include "IEC61970/Dynamics/StandardModels/PFVArControllerType1Dynamics/PFVArControllerType1Dynamics.h"
 #include "IEC61970/Dynamics/StandardModels/DynamicsFunctionBlock.h"
@@ -45,4 +44,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_2B2CA678_C91F_4171_A40C_2766D5FE1733__INCLUDED_)
+#endif // VOLTAGEADJUSTERDYNAMICS_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  SynchronousMachineSimplified.h
 //  Implementation of the Class SynchronousMachineSimplified
-//  Created on:      28-Jan-2016 12:47:07
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_671284DD_1040_4f1a_8DAF_9F0979535709__INCLUDED_)
-#define EA_671284DD_1040_4f1a_8DAF_9F0979535709__INCLUDED_
+#ifndef SYNCHRONOUSMACHINESIMPLIFIED_H
+#define SYNCHRONOUSMACHINESIMPLIFIED_H
 
 #include "IEC61970/Dynamics/StandardModels/SynchronousMachineDynamics/SynchronousMachineDynamics.h"
 
@@ -54,4 +53,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_671284DD_1040_4f1a_8DAF_9F0979535709__INCLUDED_)
+#endif // SYNCHRONOUSMACHINESIMPLIFIED_H

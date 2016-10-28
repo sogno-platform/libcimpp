@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Weight.h
 //  Implementation of the Class Weight
-//  Created on:      28-Jan-2016 12:47:44
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_ACC74AA3_792F_47f0_A7AB_20E43B4AAFD1__INCLUDED_)
-#define EA_ACC74AA3_792F_47f0_A7AB_20E43B4AAFD1__INCLUDED_
+#ifndef WEIGHT_H
+#define WEIGHT_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_ACC74AA3_792F_47f0_A7AB_20E43B4AAFD1__INCLUDED_)
+#endif // WEIGHT_H

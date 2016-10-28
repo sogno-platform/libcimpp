@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  BaseFrequency.h
 //  Implementation of the Class BaseFrequency
-//  Created on:      28-Jan-2016 12:43:25
 //  Original author: SELAOST1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_A2AC2591_9349_4515_973F_10591A311984__INCLUDED_)
-#define EA_A2AC2591_9349_4515_973F_10591A311984__INCLUDED_
+#ifndef BASEFREQUENCY_H
+#define BASEFREQUENCY_H
 
 #include "IEC61970/Base/Domain/Frequency.h"
 #include "IEC61970/Base/Core/IdentifiedObject.h"
@@ -42,4 +41,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_A2AC2591_9349_4515_973F_10591A311984__INCLUDED_)
+#endif // BASEFREQUENCY_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PFVArType2Common1.h
 //  Implementation of the Class PFVArType2Common1
-//  Created on:      28-Jan-2016 12:46:01
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_8503AE4F_EE6E_4760_BFD8_08275AD4A73F__INCLUDED_)
-#define EA_8503AE4F_EE6E_4760_BFD8_08275AD4A73F__INCLUDED_
+#ifndef PFVARTYPE2COMMON1_H
+#define PFVARTYPE2COMMON1_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -67,4 +66,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_8503AE4F_EE6E_4760_BFD8_08275AD4A73F__INCLUDED_)
+#endif // PFVARTYPE2COMMON1_H

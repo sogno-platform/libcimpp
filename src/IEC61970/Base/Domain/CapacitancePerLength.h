@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  CapacitancePerLength.h
 //  Implementation of the Class CapacitancePerLength
-//  Created on:      28-Jan-2016 12:43:32
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_6634A4E1_2630_475c_A5AC_B66FB3542DDA__INCLUDED_)
-#define EA_6634A4E1_2630_475c_A5AC_B66FB3542DDA__INCLUDED_
+#ifndef CAPACITANCEPERLENGTH_H
+#define CAPACITANCEPERLENGTH_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_6634A4E1_2630_475c_A5AC_B66FB3542DDA__INCLUDED_)
+#endif // CAPACITANCEPERLENGTH_H

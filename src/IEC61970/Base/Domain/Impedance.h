@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Impedance.h
 //  Implementation of the Class Impedance
-//  Created on:      28-Jan-2016 12:45:26
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_AD81899F_6511_491c_8903_8937A76C1D73__INCLUDED_)
-#define EA_AD81899F_6511_491c_8903_8937A76C1D73__INCLUDED_
+#ifndef IMPEDANCE_H
+#define IMPEDANCE_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_AD81899F_6511_491c_8903_8937A76C1D73__INCLUDED_)
+#endif // IMPEDANCE_H

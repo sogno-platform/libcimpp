@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PerLengthSequenceImpedance.h
 //  Implementation of the Class PerLengthSequenceImpedance
-//  Created on:      28-Jan-2016 12:45:58
 //  Original author: Tom
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_BDB7747F_4638_4410_880A_A3937D5714B1__INCLUDED_)
-#define EA_BDB7747F_4638_4410_880A_A3937D5714B1__INCLUDED_
+#ifndef PERLENGTHSEQUENCEIMPEDANCE_H
+#define PERLENGTHSEQUENCEIMPEDANCE_H
 
 #include "IEC61970/Base/Domain/SusceptancePerLength.h"
 #include "IEC61970/Base/Domain/ConductancePerLength.h"
@@ -71,4 +70,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_BDB7747F_4638_4410_880A_A3937D5714B1__INCLUDED_)
+#endif // PERLENGTHSEQUENCEIMPEDANCE_H

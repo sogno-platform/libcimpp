@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  Pss1.h
 //  Implementation of the Class Pss1
-//  Created on:      28-Jan-2016 12:46:14
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_5D0C664A_7103_4a0c_9CCF_D63CFEF84881__INCLUDED_)
-#define EA_5D0C664A_7103_4a0c_9CCF_D63CFEF84881__INCLUDED_
+#ifndef PSS1_H
+#define PSS1_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -105,4 +104,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_5D0C664A_7103_4a0c_9CCF_D63CFEF84881__INCLUDED_)
+#endif // PSS1_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Switch.h
 //  Implementation of the Class Switch
-//  Created on:      28-Jan-2016 12:47:01
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_1F4FD1BC_624D_42be_906F_D53311629395__INCLUDED_)
-#define EA_1F4FD1BC_624D_42be_906F_D53311629395__INCLUDED_
+#ifndef SWITCH_H
+#define SWITCH_H
 
 #include <list>
 
@@ -78,4 +77,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_1F4FD1BC_624D_42be_906F_D53311629395__INCLUDED_)
+#endif // SWITCH_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  OverexcitationLimiterDynamics.h
 //  Implementation of the Class OverexcitationLimiterDynamics
-//  Created on:      28-Jan-2016 12:45:53
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C1ADD2D2_20C1_432c_859C_A9ADBC2F8B99__INCLUDED_)
-#define EA_C1ADD2D2_20C1_432c_859C_A9ADBC2F8B99__INCLUDED_
+#ifndef OVEREXCITATIONLIMITERDYNAMICS_H
+#define OVEREXCITATIONLIMITERDYNAMICS_H
 
 #include "IEC61970/Dynamics/StandardModels/ExcitationSystemDynamics/ExcitationSystemDynamics.h"
 #include "IEC61970/Dynamics/StandardModels/DynamicsFunctionBlock.h"
@@ -45,4 +44,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C1ADD2D2_20C1_432c_859C_A9ADBC2F8B99__INCLUDED_)
+#endif // OVEREXCITATIONLIMITERDYNAMICS_H

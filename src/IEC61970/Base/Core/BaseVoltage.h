@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  BaseVoltage.h
 //  Implementation of the Class BaseVoltage
-//  Created on:      28-Jan-2016 12:43:26
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C3C9F908_574F_4a52_BCC1_9B398D2CCBF4__INCLUDED_)
-#define EA_C3C9F908_574F_4a52_BCC1_9B398D2CCBF4__INCLUDED_
+#ifndef BASEVOLTAGE_H
+#define BASEVOLTAGE_H
 
 #include <list>
 
@@ -46,4 +45,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C3C9F908_574F_4a52_BCC1_9B398D2CCBF4__INCLUDED_)
+#endif // BASEVOLTAGE_H

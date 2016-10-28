@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  UnitMultiplier.h
 //  Implementation of the Class UnitMultiplier
-//  Created on:      28-Jan-2016 12:47:30
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B46A3751_8F2F_4cb7_9C6F_3B11520CC16D__INCLUDED_)
-#define EA_B46A3751_8F2F_4cb7_9C6F_3B11520CC16D__INCLUDED_
+#ifndef UNITMULTIPLIER_H
+#define UNITMULTIPLIER_H
 
 namespace IEC61970
 {
@@ -112,4 +111,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B46A3751_8F2F_4cb7_9C6F_3B11520CC16D__INCLUDED_)
+#endif // UNITMULTIPLIER_H

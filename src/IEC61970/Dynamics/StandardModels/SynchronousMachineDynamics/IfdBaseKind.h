@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  IfdBaseKind.h
 //  Implementation of the Class IfdBaseKind
-//  Created on:      28-Jan-2016 12:45:26
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_91EE6FEF_E7BA_415c_B1FC_02803F1FB069__INCLUDED_)
-#define EA_91EE6FEF_E7BA_415c_B1FC_02803F1FB069__INCLUDED_
+#ifndef IFDBASEKIND_H
+#define IFDBASEKIND_H
 
 namespace IEC61970
 {
@@ -49,4 +48,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_91EE6FEF_E7BA_415c_B1FC_02803F1FB069__INCLUDED_)
+#endif // IFDBASEKIND_H

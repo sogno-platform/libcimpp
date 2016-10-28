@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  LoadBreakSwitch.h
 //  Implementation of the Class LoadBreakSwitch
-//  Created on:      28-Jan-2016 12:45:35
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_5DCBF77A_40AD_43e0_B345_68DA69D3AD91__INCLUDED_)
-#define EA_5DCBF77A_40AD_43e0_B345_68DA69D3AD91__INCLUDED_
+#ifndef LOADBREAKSWITCH_H
+#define LOADBREAKSWITCH_H
 
 #include "IEC61970/Base/Wires/ProtectedSwitch.h"
 
@@ -33,4 +32,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_5DCBF77A_40AD_43e0_B345_68DA69D3AD91__INCLUDED_)
+#endif // LOADBREAKSWITCH_H

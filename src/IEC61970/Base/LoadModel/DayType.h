@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  DayType.h
 //  Implementation of the Class DayType
-//  Created on:      28-Jan-2016 12:43:54
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C169DAF2_1C7E_43e4_81FD_B2B4207B2D7F__INCLUDED_)
-#define EA_C169DAF2_1C7E_43e4_81FD_B2B4207B2D7F__INCLUDED_
+#ifndef DAYTYPE_H
+#define DAYTYPE_H
 
 #include <list>
 
@@ -40,4 +39,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C169DAF2_1C7E_43e4_81FD_B2B4207B2D7F__INCLUDED_)
+#endif // DAYTYPE_H

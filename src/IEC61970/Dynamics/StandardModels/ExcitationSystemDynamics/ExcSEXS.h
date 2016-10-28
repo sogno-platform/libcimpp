@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcSEXS.h
 //  Implementation of the Class ExcSEXS
-//  Created on:      28-Jan-2016 12:44:42
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_28544D70_D171_4e70_BBFA_D051CBF03E2F__INCLUDED_)
-#define EA_28544D70_D171_4e70_BBFA_D051CBF03E2F__INCLUDED_
+#ifndef EXCSEXS_H
+#define EXCSEXS_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Float.h"
@@ -80,4 +79,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_28544D70_D171_4e70_BBFA_D051CBF03E2F__INCLUDED_)
+#endif // EXCSEXS_H

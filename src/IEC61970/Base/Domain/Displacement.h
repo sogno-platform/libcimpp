@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  Displacement.h
 //  Implementation of the Class Displacement
-//  Created on:      28-Jan-2016 12:44:10
 //  Original author: LOO
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_8E288D68_9A69_4afe_87E4_80808228F98C__INCLUDED_)
-#define EA_8E288D68_9A69_4afe_87E4_80808228F98C__INCLUDED_
+#ifndef DISPLACEMENT_H
+#define DISPLACEMENT_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_8E288D68_9A69_4afe_87E4_80808228F98C__INCLUDED_)
+#endif // DISPLACEMENT_H

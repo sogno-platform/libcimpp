@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  TransformerStarImpedance.h
 //  Implementation of the Class TransformerStarImpedance
-//  Created on:      28-Jan-2016 12:47:23
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_ADD897D7_8F96_4712_AB46_205DB675E864__INCLUDED_)
-#define EA_ADD897D7_8F96_4712_AB46_205DB675E864__INCLUDED_
+#ifndef TRANSFORMERSTARIMPEDANCE_H
+#define TRANSFORMERSTARIMPEDANCE_H
 
 #include "IEC61970/Base/Domain/Resistance.h"
 #include "IEC61970/Base/Domain/Reactance.h"
@@ -55,4 +54,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_ADD897D7_8F96_4712_AB46_205DB675E864__INCLUDED_)
+#endif // TRANSFORMERSTARIMPEDANCE_H

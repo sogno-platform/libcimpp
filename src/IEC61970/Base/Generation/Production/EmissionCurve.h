@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  EmissionCurve.h
 //  Implementation of the Class EmissionCurve
-//  Created on:      28-Jan-2016 12:44:12
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_7F8F10FE_7AB9_4def_BA51_DE516D2EEB25__INCLUDED_)
-#define EA_7F8F10FE_7AB9_4def_BA51_DE516D2EEB25__INCLUDED_
+#ifndef EMISSIONCURVE_H
+#define EMISSIONCURVE_H
 
 #include "IEC61970/Base/Generation/Production/Emission.h"
 #include "IEC61970/Base/Generation/Production/EmissionType.h"
@@ -55,4 +54,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_7F8F10FE_7AB9_4def_BA51_DE516D2EEB25__INCLUDED_)
+#endif // EMISSIONCURVE_H

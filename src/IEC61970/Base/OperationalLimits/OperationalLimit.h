@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  OperationalLimit.h
 //  Implementation of the Class OperationalLimit
-//  Created on:      28-Jan-2016 12:45:52
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_2EAC39B8_4C55_470f_9A7B_9D08844FAB1A__INCLUDED_)
-#define EA_2EAC39B8_4C55_470f_9A7B_9D08844FAB1A__INCLUDED_
+#ifndef OPERATIONALLIMIT_H
+#define OPERATIONALLIMIT_H
 
 #include "IEC61970/Base/OperationalLimits/OperationalLimitType.h"
 #include "IEC61970/Base/Core/IdentifiedObject.h"
@@ -46,4 +45,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_2EAC39B8_4C55_470f_9A7B_9D08844FAB1A__INCLUDED_)
+#endif // OPERATIONALLIMIT_H

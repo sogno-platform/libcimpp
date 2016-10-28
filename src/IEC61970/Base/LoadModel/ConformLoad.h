@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  ConformLoad.h
 //  Implementation of the Class ConformLoad
-//  Created on:      28-Jan-2016 12:43:37
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_8C1D8513_C473_4901_B67C_E515A982427C__INCLUDED_)
-#define EA_8C1D8513_C473_4901_B67C_E515A982427C__INCLUDED_
+#ifndef CONFORMLOAD_H
+#define CONFORMLOAD_H
 
 #include "IEC61970/Base/Wires/EnergyConsumer.h"
 
@@ -33,4 +32,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_8C1D8513_C473_4901_B67C_E515A982427C__INCLUDED_)
+#endif // CONFORMLOAD_H

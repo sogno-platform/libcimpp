@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  PhaseCode.h
 //  Implementation of the Class PhaseCode
-//  Created on:      28-Jan-2016 12:46:02
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_26CF1358_FC09_4444_BE86_0272904374D3__INCLUDED_)
-#define EA_26CF1358_FC09_4444_BE86_0272904374D3__INCLUDED_
+#ifndef PHASECODE_H
+#define PHASECODE_H
 
 namespace IEC61970
 {
@@ -138,4 +137,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_26CF1358_FC09_4444_BE86_0272904374D3__INCLUDED_)
+#endif // PHASECODE_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindTurbineType3or4Dynamics.h
 //  Implementation of the Class WindTurbineType3or4Dynamics
-//  Created on:      28-Jan-2016 12:48:00
 //  Original author: civanov
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B9FBD473_8FFA_4369_9E66_253921670F5B__INCLUDED_)
-#define EA_B9FBD473_8FFA_4369_9E66_253921670F5B__INCLUDED_
+#ifndef WINDTURBINETYPE3OR4DYNAMICS_H
+#define WINDTURBINETYPE3OR4DYNAMICS_H
 
 #include "IEC61970/Dynamics/StandardModels/DynamicsFunctionBlock.h"
 #include "IEC61970/Dynamics/StandardInterconnections/RemoteInputSignal.h"
@@ -45,4 +44,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B9FBD473_8FFA_4369_9E66_253921670F5B__INCLUDED_)
+#endif // WINDTURBINETYPE3OR4DYNAMICS_H

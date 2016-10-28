@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  SynchronousMachineModelKind.h
 //  Implementation of the Class SynchronousMachineModelKind
-//  Created on:      28-Jan-2016 12:47:07
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_55919DDF_7CEC_455b_B6B2_0238BC3F1C18__INCLUDED_)
-#define EA_55919DDF_7CEC_455b_B6B2_0238BC3F1C18__INCLUDED_
+#ifndef SYNCHRONOUSMACHINEMODELKIND_H
+#define SYNCHRONOUSMACHINEMODELKIND_H
 
 namespace IEC61970
 {
@@ -52,4 +51,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_55919DDF_7CEC_455b_B6B2_0238BC3F1C18__INCLUDED_)
+#endif // SYNCHRONOUSMACHINEMODELKIND_H

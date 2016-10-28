@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindContPType4aIEC.h
 //  Implementation of the Class WindContPType4aIEC
-//  Created on:      28-Jan-2016 12:47:48
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F4CC9727_3EB1_44d0_B0CD_C3D01387C3C7__INCLUDED_)
-#define EA_F4CC9727_3EB1_44d0_B0CD_C3D01387C3C7__INCLUDED_
+#ifndef WINDCONTPTYPE4AIEC_H
+#define WINDCONTPTYPE4AIEC_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -62,4 +61,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F4CC9727_3EB1_44d0_B0CD_C3D01387C3C7__INCLUDED_)
+#endif // WINDCONTPTYPE4AIEC_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  SteamSupply.h
 //  Implementation of the Class SteamSupply
-//  Created on:      28-Jan-2016 12:46:48
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_A1A89E01_2B80_4b12_A1F3_76A2639DFE57__INCLUDED_)
-#define EA_A1A89E01_2B80_4b12_A1F3_76A2639DFE57__INCLUDED_
+#ifndef STEAMSUPPLY_H
+#define STEAMSUPPLY_H
 
 #include <list>
 
@@ -48,4 +47,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_A1A89E01_2B80_4b12_A1F3_76A2639DFE57__INCLUDED_)
+#endif // STEAMSUPPLY_H

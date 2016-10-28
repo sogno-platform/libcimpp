@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Date.h
 //  Implementation of the Class Date
-//  Created on:      28-Jan-2016 12:43:52
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B2876DBE_6F86_4066_B3E1_29EB7BE75090__INCLUDED_)
-#define EA_B2876DBE_6F86_4066_B3E1_29EB7BE75090__INCLUDED_
+#ifndef DATE_H
+#define DATE_H
 
 #include "IEC61970/Base/Domain/String.h"
 
@@ -36,4 +35,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B2876DBE_6F86_4066_B3E1_29EB7BE75090__INCLUDED_)
+#endif // DATE_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Discrete.h
 //  Implementation of the Class Discrete
-//  Created on:      28-Jan-2016 12:44:08
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_881D18C8_C56E_4727_976E_BC0DA70459E8__INCLUDED_)
-#define EA_881D18C8_C56E_4727_976E_BC0DA70459E8__INCLUDED_
+#ifndef DISCRETE_H
+#define DISCRETE_H
 
 #include <list>
 
@@ -55,4 +54,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_881D18C8_C56E_4727_976E_BC0DA70459E8__INCLUDED_)
+#endif // DISCRETE_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindAeroConstIEC.h
 //  Implementation of the Class WindAeroConstIEC
-//  Created on:      28-Jan-2016 12:47:45
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F3BD5160_A395_4f08_B1B0_8D6E5AEE8789__INCLUDED_)
-#define EA_F3BD5160_A395_4f08_B1B0_8D6E5AEE8789__INCLUDED_
+#ifndef WINDAEROCONSTIEC_H
+#define WINDAEROCONSTIEC_H
 
 #include "IEC61970/Dynamics/StandardModels/WindDynamics/WindGenTurbineType1IEC.h"
 #include "IEC61970/Base/Core/IdentifiedObject.h"
@@ -45,4 +44,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F3BD5160_A395_4f08_B1B0_8D6E5AEE8789__INCLUDED_)
+#endif // WINDAEROCONSTIEC_H

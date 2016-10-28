@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcAC2A.h
 //  Implementation of the Class ExcAC2A
-//  Created on:      28-Jan-2016 12:44:19
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_A0F1072D_B0E0_43d2_AFCC_736A3BCF60B9__INCLUDED_)
-#define EA_A0F1072D_B0E0_43d2_AFCC_736A3BCF60B9__INCLUDED_
+#ifndef EXCAC2A_H
+#define EXCAC2A_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -173,4 +172,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_A0F1072D_B0E0_43d2_AFCC_736A3BCF60B9__INCLUDED_)
+#endif // EXCAC2A_H

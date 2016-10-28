@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  CsOperatingModeKind.h
 //  Implementation of the Class CsOperatingModeKind
-//  Created on:      28-Jan-2016 12:43:46
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_9EA1CE55_46ED_4a80_9326_00D0BBAF7AE6__INCLUDED_)
-#define EA_9EA1CE55_46ED_4a80_9326_00D0BBAF7AE6__INCLUDED_
+#ifndef CSOPERATINGMODEKIND_H
+#define CSOPERATINGMODEKIND_H
 
 namespace IEC61970
 {
@@ -34,4 +33,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_9EA1CE55_46ED_4a80_9326_00D0BBAF7AE6__INCLUDED_)
+#endif // CSOPERATINGMODEKIND_H

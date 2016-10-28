@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcIEEEST7B.h
 //  Implementation of the Class ExcIEEEST7B
-//  Created on:      28-Jan-2016 12:44:38
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_1590438F_863D_4db3_9344_EE18880A1051__INCLUDED_)
-#define EA_1590438F_863D_4db3_9344_EE18880A1051__INCLUDED_
+#ifndef EXCIEEEST7B_H
+#define EXCIEEEST7B_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Dynamics/StandardModels/ExcitationSystemDynamics/ExcST7BOELselectorKind.h"
@@ -118,4 +117,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_1590438F_863D_4db3_9344_EE18880A1051__INCLUDED_)
+#endif // EXCIEEEST7B_H

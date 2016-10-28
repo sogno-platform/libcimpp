@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Reactance.h
 //  Implementation of the Class Reactance
-//  Created on:      28-Jan-2016 12:46:25
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_52125CA6_34EB_49c3_A18B_208B7B7896C3__INCLUDED_)
-#define EA_52125CA6_34EB_49c3_A18B_208B7B7896C3__INCLUDED_
+#ifndef REACTANCE_H
+#define REACTANCE_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_52125CA6_34EB_49c3_A18B_208B7B7896C3__INCLUDED_)
+#endif // REACTANCE_H

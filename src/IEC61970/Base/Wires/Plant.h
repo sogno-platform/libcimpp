@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Plant.h
 //  Implementation of the Class Plant
-//  Created on:      28-Jan-2016 12:46:06
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_77CE6A55_DB69_41e1_B3D2_F568DBAEB47A__INCLUDED_)
-#define EA_77CE6A55_DB69_41e1_B3D2_F568DBAEB47A__INCLUDED_
+#ifndef PLANT_H
+#define PLANT_H
 
 #include "IEC61970/Base/Core/EquipmentContainer.h"
 
@@ -32,4 +31,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_77CE6A55_DB69_41e1_B3D2_F568DBAEB47A__INCLUDED_)
+#endif // PLANT_H

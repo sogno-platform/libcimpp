@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  UnitSymbol.h
 //  Implementation of the Class UnitSymbol
-//  Created on:      28-Jan-2016 12:47:30
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_A50F2E7C_1253_4a1f_BFB5_33C1AB8BCD51__INCLUDED_)
-#define EA_A50F2E7C_1253_4a1f_BFB5_33C1AB8BCD51__INCLUDED_
+#ifndef UNITSYMBOL_H
+#define UNITSYMBOL_H
 
 namespace IEC61970
 {
@@ -635,4 +634,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_A50F2E7C_1253_4a1f_BFB5_33C1AB8BCD51__INCLUDED_)
+#endif // UNITSYMBOL_H

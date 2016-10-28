@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  OverexcLimX2.h
 //  Implementation of the Class OverexcLimX2
-//  Created on:      28-Jan-2016 12:45:56
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_00FFE35D_DB50_41b9_AE62_2C012A4AFB60__INCLUDED_)
-#define EA_00FFE35D_DB50_41b9_AE62_2C012A4AFB60__INCLUDED_
+#ifndef OVEREXCLIMX2_H
+#define OVEREXCLIMX2_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Boolean.h"
@@ -96,4 +95,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_00FFE35D_DB50_41b9_AE62_2C012A4AFB60__INCLUDED_)
+#endif // OVEREXCLIMX2_H

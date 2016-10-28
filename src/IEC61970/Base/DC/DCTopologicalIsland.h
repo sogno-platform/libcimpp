@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DCTopologicalIsland.h
 //  Implementation of the Class DCTopologicalIsland
-//  Created on:      28-Jan-2016 12:44:01
 //  Original author: SELAOST1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_87A7E0EC_A023_4e87_A84E_5093EF596BA4__INCLUDED_)
-#define EA_87A7E0EC_A023_4e87_A84E_5093EF596BA4__INCLUDED_
+#ifndef DCTOPOLOGICALISLAND_H
+#define DCTOPOLOGICALISLAND_H
 
 #include <list>
 
@@ -40,4 +39,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_87A7E0EC_A023_4e87_A84E_5093EF596BA4__INCLUDED_)
+#endif // DCTOPOLOGICALISLAND_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  EmissionType.h
 //  Implementation of the Class EmissionType
-//  Created on:      28-Jan-2016 12:44:13
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C514E7C4_399E_4009_A672_FA0E0538B769__INCLUDED_)
-#define EA_C514E7C4_399E_4009_A672_FA0E0538B769__INCLUDED_
+#ifndef EMISSIONTYPE_H
+#define EMISSIONTYPE_H
 
 namespace IEC61970
 {
@@ -53,4 +52,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C514E7C4_399E_4009_A672_FA0E0538B769__INCLUDED_)
+#endif // EMISSIONTYPE_H

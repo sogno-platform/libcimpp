@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  RotationSpeed.h
 //  Implementation of the Class RotationSpeed
-//  Created on:      28-Jan-2016 12:46:37
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E01B1D9A_1856_4e7f_8DA5_A563249585CA__INCLUDED_)
-#define EA_E01B1D9A_1856_4e7f_8DA5_A563249585CA__INCLUDED_
+#ifndef ROTATIONSPEED_H
+#define ROTATIONSPEED_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_E01B1D9A_1856_4e7f_8DA5_A563249585CA__INCLUDED_)
+#endif // ROTATIONSPEED_H

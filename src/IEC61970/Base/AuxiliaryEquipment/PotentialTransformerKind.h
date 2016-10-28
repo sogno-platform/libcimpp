@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PotentialTransformerKind.h
 //  Implementation of the Class PotentialTransformerKind
-//  Created on:      28-Jan-2016 12:46:07
 //  Original author: kdemaree
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B8E6F9A4_0DFD_48e2_AA98_FFA08688F457__INCLUDED_)
-#define EA_B8E6F9A4_0DFD_48e2_AA98_FFA08688F457__INCLUDED_
+#ifndef POTENTIALTRANSFORMERKIND_H
+#define POTENTIALTRANSFORMERKIND_H
 
 namespace IEC61970
 {
@@ -35,4 +34,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B8E6F9A4_0DFD_48e2_AA98_FFA08688F457__INCLUDED_)
+#endif // POTENTIALTRANSFORMERKIND_H

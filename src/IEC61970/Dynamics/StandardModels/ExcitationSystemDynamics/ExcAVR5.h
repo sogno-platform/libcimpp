@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcAVR5.h
 //  Implementation of the Class ExcAVR5
-//  Created on:      28-Jan-2016 12:44:24
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_D5431CB9_EEB0_4473_B4D5_A35CADC549D6__INCLUDED_)
-#define EA_D5431CB9_EEB0_4473_B4D5_A35CADC549D6__INCLUDED_
+#ifndef EXCAVR5_H
+#define EXCAVR5_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -53,4 +52,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_D5431CB9_EEB0_4473_B4D5_A35CADC549D6__INCLUDED_)
+#endif // EXCAVR5_H

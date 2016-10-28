@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  Cut.h
 //  Implementation of the Class Cut
-//  Created on:      28-Jan-2016 12:43:51
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C21B5A1C_8E18_45d3_8A0C_FF47C5784DA6__INCLUDED_)
-#define EA_C21B5A1C_8E18_45d3_8A0C_FF47C5784DA6__INCLUDED_
+#ifndef CUT_H
+#define CUT_H
 
 #include "IEC61970/Base/Domain/Length.h"
 #include "IEC61970/Base/Wires/Switch.h"
@@ -54,4 +53,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C21B5A1C_8E18_45d3_8A0C_FF47C5784DA6__INCLUDED_)
+#endif // CUT_H

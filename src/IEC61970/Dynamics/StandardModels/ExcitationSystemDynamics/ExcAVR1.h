@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcAVR1.h
 //  Implementation of the Class ExcAVR1
-//  Created on:      28-Jan-2016 12:44:22
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_7EE8704D_B398_4909_8020_21D19546281E__INCLUDED_)
-#define EA_7EE8704D_B398_4909_8020_21D19546281E__INCLUDED_
+#ifndef EXCAVR1_H
+#define EXCAVR1_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Float.h"
@@ -89,4 +88,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_7EE8704D_B398_4909_8020_21D19546281E__INCLUDED_)
+#endif // EXCAVR1_H

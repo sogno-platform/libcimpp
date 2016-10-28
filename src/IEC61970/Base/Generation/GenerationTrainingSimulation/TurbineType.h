@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  TurbineType.h
 //  Implementation of the Class TurbineType
-//  Created on:      28-Jan-2016 12:47:27
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F88376E3_0149_4998_BD1B_8DB5B61AE12D__INCLUDED_)
-#define EA_F88376E3_0149_4998_BD1B_8DB5B61AE12D__INCLUDED_
+#ifndef TURBINETYPE_H
+#define TURBINETYPE_H
 
 namespace IEC61970
 {
@@ -41,4 +40,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F88376E3_0149_4998_BD1B_8DB5B61AE12D__INCLUDED_)
+#endif // TURBINETYPE_H

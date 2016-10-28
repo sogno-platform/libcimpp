@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  ConformLoadGroup.h
 //  Implementation of the Class ConformLoadGroup
-//  Created on:      28-Jan-2016 12:43:38
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_13FE5525_C276_4852_ACDA_22E6D15CA214__INCLUDED_)
-#define EA_13FE5525_C276_4852_ACDA_22E6D15CA214__INCLUDED_
+#ifndef CONFORMLOADGROUP_H
+#define CONFORMLOADGROUP_H
 
 #include <list>
 
@@ -44,4 +43,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_13FE5525_C276_4852_ACDA_22E6D15CA214__INCLUDED_)
+#endif // CONFORMLOADGROUP_H

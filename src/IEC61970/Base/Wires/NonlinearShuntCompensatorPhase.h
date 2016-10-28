@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  NonlinearShuntCompensatorPhase.h
 //  Implementation of the Class NonlinearShuntCompensatorPhase
-//  Created on:      28-Jan-2016 12:45:49
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_AD6505F6_391C_4d95_9EF4_4B9BE4E5EF61__INCLUDED_)
-#define EA_AD6505F6_391C_4d95_9EF4_4B9BE4E5EF61__INCLUDED_
+#ifndef NONLINEARSHUNTCOMPENSATORPHASE_H
+#define NONLINEARSHUNTCOMPENSATORPHASE_H
 
 #include <list>
 
@@ -41,4 +40,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_AD6505F6_391C_4d95_9EF4_4B9BE4E5EF61__INCLUDED_)
+#endif // NONLINEARSHUNTCOMPENSATORPHASE_H

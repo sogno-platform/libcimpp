@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DCChopper.h
 //  Implementation of the Class DCChopper
-//  Created on:      28-Jan-2016 12:43:56
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_FDCFFEE1_1A7A_44f5_997B_EA73B7540C59__INCLUDED_)
-#define EA_FDCFFEE1_1A7A_44f5_997B_EA73B7540C59__INCLUDED_
+#ifndef DCCHOPPER_H
+#define DCCHOPPER_H
 
 #include "IEC61970/Base/DC/DCConductingEquipment.h"
 
@@ -34,4 +33,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_FDCFFEE1_1A7A_44f5_997B_EA73B7540C59__INCLUDED_)
+#endif // DCCHOPPER_H

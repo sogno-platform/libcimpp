@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  SynchronousMachineUserDefined.h
 //  Implementation of the Class SynchronousMachineUserDefined
-//  Created on:      28-Jan-2016 12:47:09
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_32049E0E_10F7_4262_B21E_F495B3394795__INCLUDED_)
-#define EA_32049E0E_10F7_4262_B21E_F495B3394795__INCLUDED_
+#ifndef SYNCHRONOUSMACHINEUSERDEFINED_H
+#define SYNCHRONOUSMACHINEUSERDEFINED_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Dynamics/StandardModels/SynchronousMachineDynamics/SynchronousMachineDynamics.h"
@@ -43,4 +42,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_32049E0E_10F7_4262_B21E_F495B3394795__INCLUDED_)
+#endif // SYNCHRONOUSMACHINEUSERDEFINED_H

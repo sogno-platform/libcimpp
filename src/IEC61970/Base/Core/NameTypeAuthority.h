@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  NameTypeAuthority.h
 //  Implementation of the Class NameTypeAuthority
-//  Created on:      28-Jan-2016 12:45:46
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_988481CB_6E06_4401_A5E5_FAA32FBD1C96__INCLUDED_)
-#define EA_988481CB_6E06_4401_A5E5_FAA32FBD1C96__INCLUDED_
+#ifndef NAMETYPEAUTHORITY_H
+#define NAMETYPEAUTHORITY_H
 
 #include "IEC61970/Base/Domain/String.h"
 #include "BaseClass.h"
@@ -43,4 +42,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_988481CB_6E06_4401_A5E5_FAA32FBD1C96__INCLUDED_)
+#endif // NAMETYPEAUTHORITY_H

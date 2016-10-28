@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DCLine.h
 //  Implementation of the Class DCLine
-//  Created on:      28-Jan-2016 12:43:58
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_D4BC9DBC_1A22_4444_82DD_446F964F256E__INCLUDED_)
-#define EA_D4BC9DBC_1A22_4444_82DD_446F964F256E__INCLUDED_
+#ifndef DCLINE_H
+#define DCLINE_H
 
 #include "IEC61970/Base/DC/DCEquipmentContainer.h"
 #include "IEC61970/Base/Core/SubGeographicalRegion.h"
@@ -35,4 +34,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_D4BC9DBC_1A22_4444_82DD_446F964F256E__INCLUDED_)
+#endif // DCLINE_H

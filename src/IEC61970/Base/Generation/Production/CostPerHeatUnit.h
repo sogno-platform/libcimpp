@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  CostPerHeatUnit.h
 //  Implementation of the Class CostPerHeatUnit
-//  Created on:      28-Jan-2016 12:43:44
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B9519497_C432_4709_9332_70B24F2CC3F7__INCLUDED_)
-#define EA_B9519497_C432_4709_9332_70B24F2CC3F7__INCLUDED_
+#ifndef COSTPERHEATUNIT_H
+#define COSTPERHEATUNIT_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -44,4 +43,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B9519497_C432_4709_9332_70B24F2CC3F7__INCLUDED_)
+#endif // COSTPERHEATUNIT_H

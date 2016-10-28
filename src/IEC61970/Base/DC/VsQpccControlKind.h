@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  VsQpccControlKind.h
 //  Implementation of the Class VsQpccControlKind
-//  Created on:      28-Jan-2016 12:47:43
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_14B4BF99_1055_4bdf_9AFB_17479192119A__INCLUDED_)
-#define EA_14B4BF99_1055_4bdf_9AFB_17479192119A__INCLUDED_
+#ifndef VSQPCCCONTROLKIND_H
+#define VSQPCCCONTROLKIND_H
 
 namespace IEC61970
 {
@@ -26,4 +25,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_14B4BF99_1055_4bdf_9AFB_17479192119A__INCLUDED_)
+#endif // VSQPCCCONTROLKIND_H

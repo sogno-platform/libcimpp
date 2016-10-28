@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ACDCTerminal.h
 //  Implementation of the Class ACDCTerminal
-//  Created on:      28-Jan-2016 12:43:12
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_6888F0E3_A6CD_43db_8859_C3BE6D8FF83F__INCLUDED_)
-#define EA_6888F0E3_A6CD_43db_8859_C3BE6D8FF83F__INCLUDED_
+#ifndef ACDCTERMINAL_H
+#define ACDCTERMINAL_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Domain/Integer.h"
@@ -55,4 +54,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_6888F0E3_A6CD_43db_8859_C3BE6D8FF83F__INCLUDED_)
+#endif // ACDCTERMINAL_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  RegularTimePoint.h
 //  Implementation of the Class RegularTimePoint
-//  Created on:      28-Jan-2016 12:46:28
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_4E1E33BB_4F1F_40c7_8C98_FC718F538FC9__INCLUDED_)
-#define EA_4E1E33BB_4F1F_40c7_8C98_FC718F538FC9__INCLUDED_
+#ifndef REGULARTIMEPOINT_H
+#define REGULARTIMEPOINT_H
 
 #include "IEC61970/Base/Domain/Integer.h"
 #include "IEC61970/Base/Domain/Float.h"
@@ -53,4 +52,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_4E1E33BB_4F1F_40c7_8C98_FC718F538FC9__INCLUDED_)
+#endif // REGULARTIMEPOINT_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  HeatInputCurve.h
 //  Implementation of the Class HeatInputCurve
-//  Created on:      28-Jan-2016 12:45:17
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_7F48E6D2_8EEB_4cf4_9950_4E341B7211B0__INCLUDED_)
-#define EA_7F48E6D2_8EEB_4cf4_9950_4E341B7211B0__INCLUDED_
+#ifndef HEATINPUTCURVE_H
+#define HEATINPUTCURVE_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/ActivePower.h"
@@ -64,4 +63,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_7F48E6D2_8EEB_4cf4_9950_4E341B7211B0__INCLUDED_)
+#endif // HEATINPUTCURVE_H

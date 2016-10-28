@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovHydro3.h
 //  Implementation of the Class GovHydro3
-//  Created on:      28-Jan-2016 12:45:05
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_002879B4_AB32_452b_B406_F0B381F42A38__INCLUDED_)
-#define EA_002879B4_AB32_452b_B406_F0B381F42A38__INCLUDED_
+#ifndef GOVHYDRO3_H
+#define GOVHYDRO3_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Frequency.h"
@@ -196,4 +195,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_002879B4_AB32_452b_B406_F0B381F42A38__INCLUDED_)
+#endif // GOVHYDRO3_H

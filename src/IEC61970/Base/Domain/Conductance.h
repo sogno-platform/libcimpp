@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Conductance.h
 //  Implementation of the Class Conductance
-//  Created on:      28-Jan-2016 12:43:36
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_029051B6_CE8F_4a57_AE4C_4A2DD5D5DF27__INCLUDED_)
-#define EA_029051B6_CE8F_4a57_AE4C_4A2DD5D5DF27__INCLUDED_
+#ifndef CONDUCTANCE_H
+#define CONDUCTANCE_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_029051B6_CE8F_4a57_AE4C_4A2DD5D5DF27__INCLUDED_)
+#endif // CONDUCTANCE_H

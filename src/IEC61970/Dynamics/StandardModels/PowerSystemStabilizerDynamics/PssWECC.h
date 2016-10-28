@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PssWECC.h
 //  Implementation of the Class PssWECC
-//  Created on:      28-Jan-2016 12:46:22
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_DEA98D65_2F4B_48c3_B0D1_F186CA5D1803__INCLUDED_)
-#define EA_DEA98D65_2F4B_48c3_B0D1_F186CA5D1803__INCLUDED_
+#ifndef PSSWECC_H
+#define PSSWECC_H
 
 #include "IEC61970/Dynamics/StandardModels/PowerSystemStabilizerDynamics/InputSignalKind.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -113,4 +112,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_DEA98D65_2F4B_48c3_B0D1_F186CA5D1803__INCLUDED_)
+#endif // PSSWECC_H

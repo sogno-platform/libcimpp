@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  MeasurementValueSource.h
 //  Implementation of the Class MeasurementValueSource
-//  Created on:      28-Jan-2016 12:45:41
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F5F3B014_5E08_4590_BC36_FBEAAE07E249__INCLUDED_)
-#define EA_F5F3B014_5E08_4590_BC36_FBEAAE07E249__INCLUDED_
+#ifndef MEASUREMENTVALUESOURCE_H
+#define MEASUREMENTVALUESOURCE_H
 
 #include <list>
 
@@ -41,4 +40,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F5F3B014_5E08_4590_BC36_FBEAAE07E249__INCLUDED_)
+#endif // MEASUREMENTVALUESOURCE_H

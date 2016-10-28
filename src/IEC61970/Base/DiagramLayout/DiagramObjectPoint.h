@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DiagramObjectPoint.h
 //  Implementation of the Class DiagramObjectPoint
-//  Created on:      28-Jan-2016 12:44:04
 //  Original author: mcmorran
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_9314198A_5648_4cf9_80D3_8338A1082347__INCLUDED_)
-#define EA_9314198A_5648_4cf9_80D3_8338A1082347__INCLUDED_
+#ifndef DIAGRAMOBJECTPOINT_H
+#define DIAGRAMOBJECTPOINT_H
 
 #include "IEC61970/Base/Domain/Integer.h"
 #include "IEC61970/Base/Domain/Float.h"
@@ -59,4 +58,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_9314198A_5648_4cf9_80D3_8338A1082347__INCLUDED_)
+#endif // DIAGRAMOBJECTPOINT_H

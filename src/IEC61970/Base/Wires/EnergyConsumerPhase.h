@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  EnergyConsumerPhase.h
 //  Implementation of the Class EnergyConsumerPhase
-//  Created on:      28-Jan-2016 12:44:14
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F1092298_09D6_4855_BE7F_DC7EFAD0073B__INCLUDED_)
-#define EA_F1092298_09D6_4855_BE7F_DC7EFAD0073B__INCLUDED_
+#ifndef ENERGYCONSUMERPHASE_H
+#define ENERGYCONSUMERPHASE_H
 
 #include "IEC61970/Base/Domain/ActivePower.h"
 #include "IEC61970/Base/Domain/PerCent.h"
@@ -65,4 +64,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F1092298_09D6_4855_BE7F_DC7EFAD0073B__INCLUDED_)
+#endif // ENERGYCONSUMERPHASE_H

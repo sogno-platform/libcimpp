@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  HydroPumpOpSchedule.h
 //  Implementation of the Class HydroPumpOpSchedule
-//  Created on:      28-Jan-2016 12:45:21
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_DF3E789D_7217_4c43_ACEE_C65ABDC32625__INCLUDED_)
-#define EA_DF3E789D_7217_4c43_ACEE_C65ABDC32625__INCLUDED_
+#ifndef HYDROPUMPOPSCHEDULE_H
+#define HYDROPUMPOPSCHEDULE_H
 
 #include "IEC61970/Base/Core/RegularIntervalSchedule.h"
 
@@ -39,4 +38,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_DF3E789D_7217_4c43_ACEE_C65ABDC32625__INCLUDED_)
+#endif // HYDROPUMPOPSCHEDULE_H

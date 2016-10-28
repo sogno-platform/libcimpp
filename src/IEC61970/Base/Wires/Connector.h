@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Connector.h
 //  Implementation of the Class Connector
-//  Created on:      28-Jan-2016 12:43:40
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_2F94ED53_B99A_4f52_A913_4AC4913D41C2__INCLUDED_)
-#define EA_2F94ED53_B99A_4f52_A913_4AC4913D41C2__INCLUDED_
+#ifndef CONNECTOR_H
+#define CONNECTOR_H
 
 #include "IEC61970/Base/Core/ConductingEquipment.h"
 
@@ -34,4 +33,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_2F94ED53_B99A_4f52_A913_4AC4913D41C2__INCLUDED_)
+#endif // CONNECTOR_H

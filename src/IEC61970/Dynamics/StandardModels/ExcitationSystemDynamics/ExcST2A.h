@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcST2A.h
 //  Implementation of the Class ExcST2A
-//  Created on:      28-Jan-2016 12:44:44
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_FF857031_6AF5_49b6_92D9_1909E1CECB4E__INCLUDED_)
-#define EA_FF857031_6AF5_49b6_92D9_1909E1CECB4E__INCLUDED_
+#ifndef EXCST2A_H
+#define EXCST2A_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -106,4 +105,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_FF857031_6AF5_49b6_92D9_1909E1CECB4E__INCLUDED_)
+#endif // EXCST2A_H

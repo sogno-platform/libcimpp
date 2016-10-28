@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  InductancePerLength.h
 //  Implementation of the Class InductancePerLength
-//  Created on:      28-Jan-2016 12:45:28
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_7128B626_F52E_4163_AFA2_BFAA4D792D22__INCLUDED_)
-#define EA_7128B626_F52E_4163_AFA2_BFAA4D792D22__INCLUDED_
+#ifndef INDUCTANCEPERLENGTH_H
+#define INDUCTANCEPERLENGTH_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_7128B626_F52E_4163_AFA2_BFAA4D792D22__INCLUDED_)
+#endif // INDUCTANCEPERLENGTH_H

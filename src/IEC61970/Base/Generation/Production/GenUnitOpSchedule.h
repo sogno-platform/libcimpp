@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  GenUnitOpSchedule.h
 //  Implementation of the Class GenUnitOpSchedule
-//  Created on:      28-Jan-2016 12:44:58
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E76CF4C2_2B1A_46e9_A3CC_F1F1FA8F5EEC__INCLUDED_)
-#define EA_E76CF4C2_2B1A_46e9_A3CC_F1F1FA8F5EEC__INCLUDED_
+#ifndef GENUNITOPSCHEDULE_H
+#define GENUNITOPSCHEDULE_H
 
 #include "IEC61970/Base/Core/RegularIntervalSchedule.h"
 
@@ -40,4 +39,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_E76CF4C2_2B1A_46e9_A3CC_F1F1FA8F5EEC__INCLUDED_)
+#endif // GENUNITOPSCHEDULE_H

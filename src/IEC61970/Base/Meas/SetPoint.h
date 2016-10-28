@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  SetPoint.h
 //  Implementation of the Class SetPoint
-//  Created on:      28-Jan-2016 12:46:40
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_24C25AFC_59B4_4a74_9B54_6D157D75376C__INCLUDED_)
-#define EA_24C25AFC_59B4_4a74_9B54_6D157D75376C__INCLUDED_
+#ifndef SETPOINT_H
+#define SETPOINT_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Meas/AnalogControl.h"
@@ -41,4 +40,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_24C25AFC_59B4_4a74_9B54_6D157D75376C__INCLUDED_)
+#endif // SETPOINT_H

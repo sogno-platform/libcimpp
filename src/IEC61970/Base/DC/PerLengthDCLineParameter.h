@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PerLengthDCLineParameter.h
 //  Implementation of the Class PerLengthDCLineParameter
-//  Created on:      28-Jan-2016 12:45:57
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_CE4E509A_EB51_42c0_B113_57A84C729460__INCLUDED_)
-#define EA_CE4E509A_EB51_42c0_B113_57A84C729460__INCLUDED_
+#ifndef PERLENGTHDCLINEPARAMETER_H
+#define PERLENGTHDCLINEPARAMETER_H
 
 #include <list>
 
@@ -53,4 +52,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_CE4E509A_EB51_42c0_B113_57A84C729460__INCLUDED_)
+#endif // PERLENGTHDCLINEPARAMETER_H

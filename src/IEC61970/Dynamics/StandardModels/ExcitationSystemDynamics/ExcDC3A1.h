@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcDC3A1.h
 //  Implementation of the Class ExcDC3A1
-//  Created on:      28-Jan-2016 12:44:28
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E95278D0_DAAC_4c95_A6B8_6284D478933B__INCLUDED_)
-#define EA_E95278D0_DAAC_4c95_A6B8_6284D478933B__INCLUDED_
+#ifndef EXCDC3A1_H
+#define EXCDC3A1_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -103,4 +102,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_E95278D0_DAAC_4c95_A6B8_6284D478933B__INCLUDED_)
+#endif // EXCDC3A1_H

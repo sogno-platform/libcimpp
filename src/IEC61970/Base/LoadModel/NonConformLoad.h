@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  NonConformLoad.h
 //  Implementation of the Class NonConformLoad
-//  Created on:      28-Jan-2016 12:45:47
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_681ED022_12C9_4f4d_ADD3_598C5F908494__INCLUDED_)
-#define EA_681ED022_12C9_4f4d_ADD3_598C5F908494__INCLUDED_
+#ifndef NONCONFORMLOAD_H
+#define NONCONFORMLOAD_H
 
 #include "IEC61970/Base/Wires/EnergyConsumer.h"
 
@@ -33,4 +32,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_681ED022_12C9_4f4d_ADD3_598C5F908494__INCLUDED_)
+#endif // NONCONFORMLOAD_H

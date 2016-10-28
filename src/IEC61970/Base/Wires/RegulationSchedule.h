@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  RegulationSchedule.h
 //  Implementation of the Class RegulationSchedule
-//  Created on:      28-Jan-2016 12:46:30
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E9472FAE_01B9_4579_A412_E30247101067__INCLUDED_)
-#define EA_E9472FAE_01B9_4579_A412_E30247101067__INCLUDED_
+#ifndef REGULATIONSCHEDULE_H
+#define REGULATIONSCHEDULE_H
 
 #include <list>
 
@@ -45,4 +44,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_E9472FAE_01B9_4579_A412_E30247101067__INCLUDED_)
+#endif // REGULATIONSCHEDULE_H

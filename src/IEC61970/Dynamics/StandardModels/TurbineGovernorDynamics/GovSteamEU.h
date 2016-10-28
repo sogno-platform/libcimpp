@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovSteamEU.h
 //  Implementation of the Class GovSteamEU
-//  Created on:      28-Jan-2016 12:45:13
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E76DFED7_7239_4eae_B7F7_474BA1059DBD__INCLUDED_)
-#define EA_E76DFED7_7239_4eae_B7F7_474BA1059DBD__INCLUDED_
+#ifndef GOVSTEAMEU_H
+#define GOVSTEAMEU_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -184,4 +183,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_E76DFED7_7239_4eae_B7F7_474BA1059DBD__INCLUDED_)
+#endif // GOVSTEAMEU_H

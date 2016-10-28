@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcIEEEDC3A.h
 //  Implementation of the Class ExcIEEEDC3A
-//  Created on:      28-Jan-2016 12:44:34
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_57C7789C_C065_4c32_B1E5_A1590E579EBC__INCLUDED_)
-#define EA_57C7789C_C065_4c32_B1E5_A1590E579EBC__INCLUDED_
+#ifndef EXCIEEEDC3A_H
+#define EXCIEEEDC3A_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Boolean.h"
@@ -106,4 +105,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_57C7789C_C065_4c32_B1E5_A1590E579EBC__INCLUDED_)
+#endif // EXCIEEEDC3A_H

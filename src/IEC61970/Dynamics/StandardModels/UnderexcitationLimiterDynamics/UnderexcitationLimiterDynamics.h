@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  UnderexcitationLimiterDynamics.h
 //  Implementation of the Class UnderexcitationLimiterDynamics
-//  Created on:      28-Jan-2016 12:47:28
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_972F5000_17E8_4cd4_AAA2_27A730817C45__INCLUDED_)
-#define EA_972F5000_17E8_4cd4_AAA2_27A730817C45__INCLUDED_
+#ifndef UNDEREXCITATIONLIMITERDYNAMICS_H
+#define UNDEREXCITATIONLIMITERDYNAMICS_H
 
 #include "IEC61970/Dynamics/StandardModels/ExcitationSystemDynamics/ExcitationSystemDynamics.h"
 #include "IEC61970/Dynamics/StandardModels/DynamicsFunctionBlock.h"
@@ -50,4 +49,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_972F5000_17E8_4cd4_AAA2_27A730817C45__INCLUDED_)
+#endif // UNDEREXCITATIONLIMITERDYNAMICS_H

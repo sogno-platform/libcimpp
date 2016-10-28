@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcSCRX.h
 //  Implementation of the Class ExcSCRX
-//  Created on:      28-Jan-2016 12:44:42
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_EE8B06C2_F9A7_46b4_A90B_B418FFB233C7__INCLUDED_)
-#define EA_EE8B06C2_F9A7_46b4_A90B_B418FFB233C7__INCLUDED_
+#ifndef EXCSCRX_H
+#define EXCSCRX_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -79,4 +78,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_EE8B06C2_F9A7_46b4_A90B_B418FFB233C7__INCLUDED_)
+#endif // EXCSCRX_H

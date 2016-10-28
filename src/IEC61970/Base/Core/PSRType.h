@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  PSRType.h
 //  Implementation of the Class PSRType
-//  Created on:      28-Jan-2016 12:46:14
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_4791D4FC_BA74_47f9_9C2A_FF0FCC15670D__INCLUDED_)
-#define EA_4791D4FC_BA74_47f9_9C2A_FF0FCC15670D__INCLUDED_
+#ifndef PSRTYPE_H
+#define PSRTYPE_H
 
 #include "IEC61970/Base/Core/IdentifiedObject.h"
 
@@ -35,4 +34,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_4791D4FC_BA74_47f9_9C2A_FF0FCC15670D__INCLUDED_)
+#endif // PSRTYPE_H

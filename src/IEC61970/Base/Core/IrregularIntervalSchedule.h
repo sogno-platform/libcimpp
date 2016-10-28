@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  IrregularIntervalSchedule.h
 //  Implementation of the Class IrregularIntervalSchedule
-//  Created on:      28-Jan-2016 12:45:30
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_EE0E9152_B541_43c9_B607_B9D75CE1B581__INCLUDED_)
-#define EA_EE0E9152_B541_43c9_B607_B9D75CE1B581__INCLUDED_
+#ifndef IRREGULARINTERVALSCHEDULE_H
+#define IRREGULARINTERVALSCHEDULE_H
 
 #include <list>
 
@@ -39,4 +38,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_EE0E9152_B541_43c9_B607_B9D75CE1B581__INCLUDED_)
+#endif // IRREGULARINTERVALSCHEDULE_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Analog.h
 //  Implementation of the Class Analog
-//  Created on:      28-Jan-2016 12:43:17
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_0BF10A59_F529_4935_A7D6_0D867E0B7B93__INCLUDED_)
-#define EA_0BF10A59_F529_4935_A7D6_0D867E0B7B93__INCLUDED_
+#ifndef ANALOG_H
+#define ANALOG_H
 
 #include <list>
 
@@ -66,4 +65,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_0BF10A59_F529_4935_A7D6_0D867E0B7B93__INCLUDED_)
+#endif // ANALOG_H

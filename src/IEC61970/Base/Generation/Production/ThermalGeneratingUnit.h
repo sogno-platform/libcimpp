@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  ThermalGeneratingUnit.h
 //  Implementation of the Class ThermalGeneratingUnit
-//  Created on:      28-Jan-2016 12:47:16
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_25AF7336_7215_44d7_8257_2A2472DE983B__INCLUDED_)
-#define EA_25AF7336_7215_44d7_8257_2A2472DE983B__INCLUDED_
+#ifndef THERMALGENERATINGUNIT_H
+#define THERMALGENERATINGUNIT_H
 
 #include <list>
 
@@ -84,4 +83,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_25AF7336_7215_44d7_8257_2A2472DE983B__INCLUDED_)
+#endif // THERMALGENERATINGUNIT_H

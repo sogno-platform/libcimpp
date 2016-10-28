@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindContCurrLimIEC.h
 //  Implementation of the Class WindContCurrLimIEC
-//  Created on:      28-Jan-2016 12:47:46
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_26B058AB_B578_4c7f_9566_0609876DB434__INCLUDED_)
-#define EA_26B058AB_B578_4c7f_9566_0609876DB434__INCLUDED_
+#ifndef WINDCONTCURRLIMIEC_H
+#define WINDCONTCURRLIMIEC_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Boolean.h"
@@ -80,4 +79,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_26B058AB_B578_4c7f_9566_0609876DB434__INCLUDED_)
+#endif // WINDCONTCURRLIMIEC_H

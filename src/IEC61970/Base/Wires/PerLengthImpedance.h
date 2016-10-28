@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PerLengthImpedance.h
 //  Implementation of the Class PerLengthImpedance
-//  Created on:      28-Jan-2016 12:45:57
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_4EBD3E44_CB0C_4562_A4B8_0BD24F005FEC__INCLUDED_)
-#define EA_4EBD3E44_CB0C_4562_A4B8_0BD24F005FEC__INCLUDED_
+#ifndef PERLENGTHIMPEDANCE_H
+#define PERLENGTHIMPEDANCE_H
 
 #include <list>
 
@@ -40,4 +39,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_4EBD3E44_CB0C_4562_A4B8_0BD24F005FEC__INCLUDED_)
+#endif // PERLENGTHIMPEDANCE_H

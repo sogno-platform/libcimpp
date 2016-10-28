@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PssSH.h
 //  Implementation of the Class PssSH
-//  Created on:      28-Jan-2016 12:46:20
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_2007BA3D_EFE7_4875_8B6E_2B451E6DFAC3__INCLUDED_)
-#define EA_2007BA3D_EFE7_4875_8B6E_2B451E6DFAC3__INCLUDED_
+#ifndef PSSSH_H
+#define PSSSH_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -92,4 +91,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_2007BA3D_EFE7_4875_8B6E_2B451E6DFAC3__INCLUDED_)
+#endif // PSSSH_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindDynamicsLookupTable.h
 //  Implementation of the Class WindDynamicsLookupTable
-//  Created on:      28-Jan-2016 12:47:50
 //  Original author: civanov
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_59082EEB_D836_486e_945F_6B2FF17641B5__INCLUDED_)
-#define EA_59082EEB_D836_486e_945F_6B2FF17641B5__INCLUDED_
+#ifndef WINDDYNAMICSLOOKUPTABLE_H
+#define WINDDYNAMICSLOOKUPTABLE_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Dynamics/StandardModels/WindDynamics/WindLookupTableFunctionKind.h"
@@ -81,4 +80,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_59082EEB_D836_486e_945F_6B2FF17641B5__INCLUDED_)
+#endif // WINDDYNAMICSLOOKUPTABLE_H

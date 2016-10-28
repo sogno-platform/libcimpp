@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  TimeInterval.h
 //  Implementation of the Class TimeInterval
-//  Created on:      28-Jan-2016 12:47:18
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_BCCD1ED3_C977_4cd4_ACA5_15C418BD3DE8__INCLUDED_)
-#define EA_BCCD1ED3_C977_4cd4_ACA5_15C418BD3DE8__INCLUDED_
+#ifndef TIMEINTERVAL_H
+#define TIMEINTERVAL_H
 
 #include "IEC61970/Base/Domain/Time.h"
 #include "BaseClass.h"
@@ -42,4 +41,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_BCCD1ED3_C977_4cd4_ACA5_15C418BD3DE8__INCLUDED_)
+#endif // TIMEINTERVAL_H

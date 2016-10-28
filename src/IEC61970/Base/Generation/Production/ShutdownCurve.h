@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  ShutdownCurve.h
 //  Implementation of the Class ShutdownCurve
-//  Created on:      28-Jan-2016 12:46:42
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_924F2FE0_AD32_4ab0_B72A_F7CF6938024A__INCLUDED_)
-#define EA_924F2FE0_AD32_4ab0_B72A_F7CF6938024A__INCLUDED_
+#ifndef SHUTDOWNCURVE_H
+#define SHUTDOWNCURVE_H
 
 #include "IEC61970/Base/Domain/Money.h"
 #include "IEC61970/Base/Domain/DateTime.h"
@@ -47,4 +46,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_924F2FE0_AD32_4ab0_B72A_F7CF6938024A__INCLUDED_)
+#endif // SHUTDOWNCURVE_H

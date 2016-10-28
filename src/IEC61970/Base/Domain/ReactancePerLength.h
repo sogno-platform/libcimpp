@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ReactancePerLength.h
 //  Implementation of the Class ReactancePerLength
-//  Created on:      28-Jan-2016 12:46:25
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E573AF92_81FF_4959_AB94_330F715B7540__INCLUDED_)
-#define EA_E573AF92_81FF_4959_AB94_330F715B7540__INCLUDED_
+#ifndef REACTANCEPERLENGTH_H
+#define REACTANCEPERLENGTH_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_E573AF92_81FF_4959_AB94_330F715B7540__INCLUDED_)
+#endif // REACTANCEPERLENGTH_H

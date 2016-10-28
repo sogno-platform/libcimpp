@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindPlantUserDefined.h
 //  Implementation of the Class WindPlantUserDefined
-//  Created on:      28-Jan-2016 12:47:57
 //  Original author: civanov
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_A90DAB80_129E_43d3_A722_4C909234B273__INCLUDED_)
-#define EA_A90DAB80_129E_43d3_A722_4C909234B273__INCLUDED_
+#ifndef WINDPLANTUSERDEFINED_H
+#define WINDPLANTUSERDEFINED_H
 
 #include <list>
 
@@ -50,4 +49,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_A90DAB80_129E_43d3_A722_4C909234B273__INCLUDED_)
+#endif // WINDPLANTUSERDEFINED_H

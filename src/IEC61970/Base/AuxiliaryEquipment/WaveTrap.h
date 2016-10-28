@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WaveTrap.h
 //  Implementation of the Class WaveTrap
-//  Created on:      28-Jan-2016 12:47:43
 //  Original author: kdemaree
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_39C8DCDC_482C_4178_ABEF_67B5FC3FA5C0__INCLUDED_)
-#define EA_39C8DCDC_482C_4178_ABEF_67B5FC3FA5C0__INCLUDED_
+#ifndef WAVETRAP_H
+#define WAVETRAP_H
 
 #include "IEC61970/Base/AuxiliaryEquipment/AuxiliaryEquipment.h"
 
@@ -34,4 +33,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_39C8DCDC_482C_4178_ABEF_67B5FC3FA5C0__INCLUDED_)
+#endif // WAVETRAP_H

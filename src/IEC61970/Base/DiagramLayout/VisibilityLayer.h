@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  VisibilityLayer.h
 //  Implementation of the Class VisibilityLayer
-//  Created on:      28-Jan-2016 12:47:34
 //  Original author: mcmorran
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F7E1F931_EA65_40d0_88F4_CD07510F020E__INCLUDED_)
-#define EA_F7E1F931_EA65_40d0_88F4_CD07510F020E__INCLUDED_
+#ifndef VISIBILITYLAYER_H
+#define VISIBILITYLAYER_H
 
 #include "IEC61970/Base/Domain/Integer.h"
 #include "IEC61970/Base/Core/IdentifiedObject.h"
@@ -48,4 +47,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F7E1F931_EA65_40d0_88F4_CD07510F020E__INCLUDED_)
+#endif // VISIBILITYLAYER_H

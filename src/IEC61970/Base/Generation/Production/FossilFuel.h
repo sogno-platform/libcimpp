@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  FossilFuel.h
 //  Implementation of the Class FossilFuel
-//  Created on:      28-Jan-2016 12:44:52
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_3DDF53A3_DF8B_4ab1_8A09_6E31DF83B2A7__INCLUDED_)
-#define EA_3DDF53A3_DF8B_4ab1_8A09_6E31DF83B2A7__INCLUDED_
+#ifndef FOSSILFUEL_H
+#define FOSSILFUEL_H
 
 #include <list>
 
@@ -103,4 +102,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_3DDF53A3_DF8B_4ab1_8A09_6E31DF83B2A7__INCLUDED_)
+#endif // FOSSILFUEL_H

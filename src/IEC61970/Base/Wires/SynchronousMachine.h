@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  SynchronousMachine.h
 //  Implementation of the Class SynchronousMachine
-//  Created on:      28-Jan-2016 12:47:03
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_2BCA300A_9B71_4ef4_B192_9AD50499CF4C__INCLUDED_)
-#define EA_2BCA300A_9B71_4ef4_B192_9AD50499CF4C__INCLUDED_
+#ifndef SYNCHRONOUSMACHINE_H
+#define SYNCHRONOUSMACHINE_H
 
 #include "IEC61970/Base/Domain/Seconds.h"
 #include "IEC61970/Base/Domain/ReactivePower.h"
@@ -199,4 +198,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_2BCA300A_9B71_4ef4_B192_9AD50499CF4C__INCLUDED_)
+#endif // SYNCHRONOUSMACHINE_H

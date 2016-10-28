@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  BWRSteamSupply.h
 //  Implementation of the Class BWRSteamSupply
-//  Created on:      28-Jan-2016 12:43:31
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E561CCB7_73CB_495a_A497_CD127CFADBBA__INCLUDED_)
-#define EA_E561CCB7_73CB_495a_A497_CD127CFADBBA__INCLUDED_
+#ifndef BWRSTEAMSUPPLY_H
+#define BWRSTEAMSUPPLY_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -131,4 +130,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_E561CCB7_73CB_495a_A497_CD127CFADBBA__INCLUDED_)
+#endif // BWRSTEAMSUPPLY_H

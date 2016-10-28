@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DCShunt.h
 //  Implementation of the Class DCShunt
-//  Created on:      28-Jan-2016 12:44:00
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_9772DC59_7B90_4de5_A33B_BC2679D779D4__INCLUDED_)
-#define EA_9772DC59_7B90_4de5_A33B_BC2679D779D4__INCLUDED_
+#ifndef DCSHUNT_H
+#define DCSHUNT_H
 
 #include "IEC61970/Base/Domain/Capacitance.h"
 #include "IEC61970/Base/Domain/Voltage.h"
@@ -49,4 +48,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_9772DC59_7B90_4de5_A33B_BC2679D779D4__INCLUDED_)
+#endif // DCSHUNT_H

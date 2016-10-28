@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Classification.h
 //  Implementation of the Class Classification
-//  Created on:      28-Jan-2016 12:43:33
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_3861EE74_1C5E_4697_ACB2_97FD887C8077__INCLUDED_)
-#define EA_3861EE74_1C5E_4697_ACB2_97FD887C8077__INCLUDED_
+#ifndef CLASSIFICATION_H
+#define CLASSIFICATION_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -42,4 +41,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_3861EE74_1C5E_4697_ACB2_97FD887C8077__INCLUDED_)
+#endif // CLASSIFICATION_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovCT2.h
 //  Implementation of the Class GovCT2
-//  Created on:      28-Jan-2016 12:45:00
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_4CB99C03_1A98_49df_BAD1_569FFB9A3348__INCLUDED_)
-#define EA_4CB99C03_1A98_49df_BAD1_569FFB9A3348__INCLUDED_
+#ifndef GOVCT2_H
+#define GOVCT2_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -291,4 +290,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_4CB99C03_1A98_49df_BAD1_569FFB9A3348__INCLUDED_)
+#endif // GOVCT2_H

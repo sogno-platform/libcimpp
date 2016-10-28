@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  OverexcLim2.h
 //  Implementation of the Class OverexcLim2
-//  Created on:      28-Jan-2016 12:45:54
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_BEF5C110_89ED_4c17_A49C_535B2BAE865F__INCLUDED_)
-#define EA_BEF5C110_89ED_4c17_A49C_535B2BAE865F__INCLUDED_
+#ifndef OVEREXCLIM2_H
+#define OVEREXCLIM2_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Dynamics/StandardModels/OverexcitationLimiterDynamics/OverexcitationLimiterDynamics.h"
@@ -57,4 +56,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_BEF5C110_89ED_4c17_A49C_535B2BAE865F__INCLUDED_)
+#endif // OVEREXCLIM2_H

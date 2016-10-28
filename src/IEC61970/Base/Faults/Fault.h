@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  Fault.h
 //  Implementation of the Class Fault
-//  Created on:      28-Jan-2016 12:44:49
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E952B5C0_A04C_4338_8B2C_75468120433F__INCLUDED_)
-#define EA_E952B5C0_A04C_4338_8B2C_75468120433F__INCLUDED_
+#ifndef FAULT_H
+#define FAULT_H
 
 #include <list>
 
@@ -63,4 +62,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_E952B5C0_A04C_4338_8B2C_75468120433F__INCLUDED_)
+#endif // FAULT_H

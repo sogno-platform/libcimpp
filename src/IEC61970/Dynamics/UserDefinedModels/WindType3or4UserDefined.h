@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindType3or4UserDefined.h
 //  Implementation of the Class WindType3or4UserDefined
-//  Created on:      28-Jan-2016 12:48:02
 //  Original author: civanov
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_1C03EC92_B917_4a7a_A050_423A3B4B7A1E__INCLUDED_)
-#define EA_1C03EC92_B917_4a7a_A050_423A3B4B7A1E__INCLUDED_
+#ifndef WINDTYPE3OR4USERDEFINED_H
+#define WINDTYPE3OR4USERDEFINED_H
 
 #include <list>
 
@@ -50,4 +49,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_1C03EC92_B917_4a7a_A050_423A3B4B7A1E__INCLUDED_)
+#endif // WINDTYPE3OR4USERDEFINED_H

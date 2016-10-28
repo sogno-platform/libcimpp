@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  FrancisGovernorControlKind.h
 //  Implementation of the Class FrancisGovernorControlKind
-//  Created on:      28-Jan-2016 12:44:53
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_ABAD1020_D0CF_4f99_81ED_0757C17281BB__INCLUDED_)
-#define EA_ABAD1020_D0CF_4f99_81ED_0757C17281BB__INCLUDED_
+#ifndef FRANCISGOVERNORCONTROLKIND_H
+#define FRANCISGOVERNORCONTROLKIND_H
 
 namespace IEC61970
 {
@@ -42,4 +41,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_ABAD1020_D0CF_4f99_81ED_0757C17281BB__INCLUDED_)
+#endif // FRANCISGOVERNORCONTROLKIND_H

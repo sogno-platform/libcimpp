@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Quality61850.h
 //  Implementation of the Class Quality61850
-//  Created on:      28-Jan-2016 12:46:23
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_584FA494_746B_4faa_B2B6_51B888E2980A__INCLUDED_)
-#define EA_584FA494_746B_4faa_B2B6_51B888E2980A__INCLUDED_
+#ifndef QUALITY61850_H
+#define QUALITY61850_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/SCADA/Source.h"
@@ -102,4 +101,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_584FA494_746B_4faa_B2B6_51B888E2980A__INCLUDED_)
+#endif // QUALITY61850_H

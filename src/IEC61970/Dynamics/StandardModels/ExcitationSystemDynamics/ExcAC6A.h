@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcAC6A.h
 //  Implementation of the Class ExcAC6A
-//  Created on:      28-Jan-2016 12:44:21
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C7122DB6_BA2B_49e4_81CF_1BBC1630BE86__INCLUDED_)
-#define EA_C7122DB6_BA2B_49e4_81CF_1BBC1630BE86__INCLUDED_
+#ifndef EXCAC6A_H
+#define EXCAC6A_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Float.h"
@@ -141,4 +140,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C7122DB6_BA2B_49e4_81CF_1BBC1630BE86__INCLUDED_)
+#endif // EXCAC6A_H

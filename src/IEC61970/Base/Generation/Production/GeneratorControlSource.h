@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  GeneratorControlSource.h
 //  Implementation of the Class GeneratorControlSource
-//  Created on:      28-Jan-2016 12:44:56
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C2C4853E_2EC7_4f66_9ABA_42169A2F82EA__INCLUDED_)
-#define EA_C2C4853E_2EC7_4f66_9ABA_42169A2F82EA__INCLUDED_
+#ifndef GENERATORCONTROLSOURCE_H
+#define GENERATORCONTROLSOURCE_H
 
 namespace IEC61970
 {
@@ -45,4 +44,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C2C4853E_2EC7_4f66_9ABA_42169A2F82EA__INCLUDED_)
+#endif // GENERATORCONTROLSOURCE_H

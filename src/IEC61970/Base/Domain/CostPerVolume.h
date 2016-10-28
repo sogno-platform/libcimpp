@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  CostPerVolume.h
 //  Implementation of the Class CostPerVolume
-//  Created on:      28-Jan-2016 12:43:45
 //  Original author: SELAOST1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_0A34C0A7_66A8_422f_9839_3695FECAFF88__INCLUDED_)
-#define EA_0A34C0A7_66A8_422f_9839_3695FECAFF88__INCLUDED_
+#ifndef COSTPERVOLUME_H
+#define COSTPERVOLUME_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -41,4 +40,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_0A34C0A7_66A8_422f_9839_3695FECAFF88__INCLUDED_)
+#endif // COSTPERVOLUME_H

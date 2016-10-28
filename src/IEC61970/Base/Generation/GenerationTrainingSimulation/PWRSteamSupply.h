@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  PWRSteamSupply.h
 //  Implementation of the Class PWRSteamSupply
-//  Created on:      28-Jan-2016 12:46:22
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_1EA40E3A_5077_4125_B2E7_6BA5574BD82C__INCLUDED_)
-#define EA_1EA40E3A_5077_4125_B2E7_6BA5574BD82C__INCLUDED_
+#ifndef PWRSTEAMSUPPLY_H
+#define PWRSTEAMSUPPLY_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Generation/GenerationTrainingSimulation/SteamSupply.h"
@@ -117,4 +116,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_1EA40E3A_5077_4125_B2E7_6BA5574BD82C__INCLUDED_)
+#endif // PWRSTEAMSUPPLY_H

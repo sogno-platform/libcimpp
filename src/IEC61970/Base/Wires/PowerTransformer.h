@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PowerTransformer.h
 //  Implementation of the Class PowerTransformer
-//  Created on:      28-Jan-2016 12:46:10
 //  Original author: Tom
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F5D719F5_7D73_42a4_B680_5E776DAD55C8__INCLUDED_)
-#define EA_F5D719F5_7D73_42a4_B680_5E776DAD55C8__INCLUDED_
+#ifndef POWERTRANSFORMER_H
+#define POWERTRANSFORMER_H
 
 #include <list>
 
@@ -121,4 +120,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F5D719F5_7D73_42a4_B680_5E776DAD55C8__INCLUDED_)
+#endif // POWERTRANSFORMER_H

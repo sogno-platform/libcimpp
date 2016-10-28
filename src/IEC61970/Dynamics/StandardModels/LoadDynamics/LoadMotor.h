@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  LoadMotor.h
 //  Implementation of the Class LoadMotor
-//  Created on:      28-Jan-2016 12:45:37
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_6B846976_B962_47b6_A311_B0BC587B4BFB__INCLUDED_)
-#define EA_6B846976_B962_47b6_A311_B0BC587B4BFB__INCLUDED_
+#ifndef LOADMOTOR_H
+#define LOADMOTOR_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -125,4 +124,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_6B846976_B962_47b6_A311_B0BC587B4BFB__INCLUDED_)
+#endif // LOADMOTOR_H

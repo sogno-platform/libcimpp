@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PhaseTapChangerAsymmetrical.h
 //  Implementation of the Class PhaseTapChangerAsymmetrical
-//  Created on:      28-Jan-2016 12:46:03
 //  Original author: SELAOST1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C9EF7F1F_789A_4b96_9F97_A2C153A04598__INCLUDED_)
-#define EA_C9EF7F1F_789A_4b96_9F97_A2C153A04598__INCLUDED_
+#ifndef PHASETAPCHANGERASYMMETRICAL_H
+#define PHASETAPCHANGERASYMMETRICAL_H
 
 #include "IEC61970/Base/Domain/AngleDegrees.h"
 #include "IEC61970/Base/Wires/PhaseTapChangerNonLinear.h"
@@ -45,4 +44,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C9EF7F1F_789A_4b96_9F97_A2C153A04598__INCLUDED_)
+#endif // PHASETAPCHANGERASYMMETRICAL_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindAeroLinearIEC.h
 //  Implementation of the Class WindAeroLinearIEC
-//  Created on:      28-Jan-2016 12:47:45
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B662359D_F2D7_4a5e_A024_6703B317C95B__INCLUDED_)
-#define EA_B662359D_F2D7_4a5e_A024_6703B317C95B__INCLUDED_
+#ifndef WINDAEROLINEARIEC_H
+#define WINDAEROLINEARIEC_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/AngleDegrees.h"
@@ -72,4 +71,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B662359D_F2D7_4a5e_A024_6703B317C95B__INCLUDED_)
+#endif // WINDAEROLINEARIEC_H

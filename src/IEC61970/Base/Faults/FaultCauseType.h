@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  FaultCauseType.h
 //  Implementation of the Class FaultCauseType
-//  Created on:      28-Jan-2016 12:44:49
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C4739EFF_EA75_43d3_A0A4_26A987A2679C__INCLUDED_)
-#define EA_C4739EFF_EA75_43d3_A0A4_26A987A2679C__INCLUDED_
+#ifndef FAULTCAUSETYPE_H
+#define FAULTCAUSETYPE_H
 
 #include "IEC61970/Base/Core/IdentifiedObject.h"
 
@@ -33,4 +32,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C4739EFF_EA75_43d3_A0A4_26A987A2679C__INCLUDED_)
+#endif // FAULTCAUSETYPE_H

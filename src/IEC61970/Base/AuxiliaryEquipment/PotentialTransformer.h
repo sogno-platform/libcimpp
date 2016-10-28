@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  PotentialTransformer.h
 //  Implementation of the Class PotentialTransformer
-//  Created on:      28-Jan-2016 12:46:07
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_51543F79_2682_4045_B483_0E1D30917F51__INCLUDED_)
-#define EA_51543F79_2682_4045_B483_0E1D30917F51__INCLUDED_
+#ifndef POTENTIALTRANSFORMER_H
+#define POTENTIALTRANSFORMER_H
 
 #include "IEC61970/Base/Domain/String.h"
 #include "IEC61970/Base/Domain/Float.h"
@@ -55,4 +54,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_51543F79_2682_4045_B483_0E1D30917F51__INCLUDED_)
+#endif // POTENTIALTRANSFORMER_H

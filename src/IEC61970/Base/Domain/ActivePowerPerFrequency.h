@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  ActivePowerPerFrequency.h
 //  Implementation of the Class ActivePowerPerFrequency
-//  Created on:      28-Jan-2016 12:43:15
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_A4CEFFE0_EBD9_4d2f_AD6F_BEE1C10189C1__INCLUDED_)
-#define EA_A4CEFFE0_EBD9_4d2f_AD6F_BEE1C10189C1__INCLUDED_
+#ifndef ACTIVEPOWERPERFREQUENCY_H
+#define ACTIVEPOWERPERFREQUENCY_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_A4CEFFE0_EBD9_4d2f_AD6F_BEE1C10189C1__INCLUDED_)
+#endif // ACTIVEPOWERPERFREQUENCY_H

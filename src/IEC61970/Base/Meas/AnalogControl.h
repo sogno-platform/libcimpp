@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  AnalogControl.h
 //  Implementation of the Class AnalogControl
-//  Created on:      28-Jan-2016 12:43:18
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_9BEA6545_0C6A_4495_A769_9CBE5D40B4C6__INCLUDED_)
-#define EA_9BEA6545_0C6A_4495_A769_9CBE5D40B4C6__INCLUDED_
+#ifndef ANALOGCONTROL_H
+#define ANALOGCONTROL_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Meas/Control.h"
@@ -44,4 +43,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_9BEA6545_0C6A_4495_A769_9CBE5D40B4C6__INCLUDED_)
+#endif // ANALOGCONTROL_H

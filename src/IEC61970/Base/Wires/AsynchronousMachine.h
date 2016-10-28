@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  AsynchronousMachine.h
 //  Implementation of the Class AsynchronousMachine
-//  Created on:      28-Jan-2016 12:43:22
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_8B1D3A1C_9950_4f0c_A477_16256781106A__INCLUDED_)
-#define EA_8B1D3A1C_9950_4f0c_A477_16256781106A__INCLUDED_
+#ifndef ASYNCHRONOUSMACHINE_H
+#define ASYNCHRONOUSMACHINE_H
 
 #include "IEC61970/Base/Wires/AsynchronousMachineKind.h"
 #include "IEC61970/Base/Domain/Boolean.h"
@@ -134,4 +133,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_8B1D3A1C_9950_4f0c_A477_16256781106A__INCLUDED_)
+#endif // ASYNCHRONOUSMACHINE_H

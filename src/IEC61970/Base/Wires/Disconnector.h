@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Disconnector.h
 //  Implementation of the Class Disconnector
-//  Created on:      28-Jan-2016 12:44:07
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B26FCF5B_1520_49b9_A42D_3F6A952C487F__INCLUDED_)
-#define EA_B26FCF5B_1520_49b9_A42D_3F6A952C487F__INCLUDED_
+#ifndef DISCONNECTOR_H
+#define DISCONNECTOR_H
 
 #include "IEC61970/Base/Wires/Switch.h"
 
@@ -35,4 +34,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B26FCF5B_1520_49b9_A42D_3F6A952C487F__INCLUDED_)
+#endif // DISCONNECTOR_H

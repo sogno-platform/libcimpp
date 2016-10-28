@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  DiscreteValue.h
 //  Implementation of the Class DiscreteValue
-//  Created on:      28-Jan-2016 12:44:09
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_3C91C112_0A16_4253_B6D2_34C18FB01FB4__INCLUDED_)
-#define EA_3C91C112_0A16_4253_B6D2_34C18FB01FB4__INCLUDED_
+#ifndef DISCRETEVALUE_H
+#define DISCRETEVALUE_H
 
 #include "IEC61970/Base/Domain/Integer.h"
 #include "IEC61970/Base/Meas/Command.h"
@@ -42,4 +41,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_3C91C112_0A16_4253_B6D2_34C18FB01FB4__INCLUDED_)
+#endif // DISCRETEVALUE_H

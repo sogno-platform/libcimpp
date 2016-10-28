@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovSteam1.h
 //  Implementation of the Class GovSteam1
-//  Created on:      28-Jan-2016 12:45:11
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_003FBADC_0AFE_4a23_A4FF_B06FCC2A9599__INCLUDED_)
-#define EA_003FBADC_0AFE_4a23_A4FF_B06FCC2A9599__INCLUDED_
+#ifndef GOVSTEAM1_H
+#define GOVSTEAM1_H
 
 #include "IEC61970/Base/Domain/Frequency.h"
 #include "IEC61970/Base/Domain/ActivePower.h"
@@ -209,4 +208,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_003FBADC_0AFE_4a23_A4FF_B06FCC2A9599__INCLUDED_)
+#endif // GOVSTEAM1_H

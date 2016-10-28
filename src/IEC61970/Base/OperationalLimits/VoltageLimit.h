@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  VoltageLimit.h
 //  Implementation of the Class VoltageLimit
-//  Created on:      28-Jan-2016 12:47:39
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E2FFBCC0_F659_4362_9800_654F118867E4__INCLUDED_)
-#define EA_E2FFBCC0_F659_4362_9800_654F118867E4__INCLUDED_
+#ifndef VOLTAGELIMIT_H
+#define VOLTAGELIMIT_H
 
 #include "IEC61970/Base/Domain/Voltage.h"
 #include "IEC61970/Base/OperationalLimits/OperationalLimit.h"
@@ -39,4 +38,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_E2FFBCC0_F659_4362_9800_654F118867E4__INCLUDED_)
+#endif // VOLTAGELIMIT_H

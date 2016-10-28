@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  AsynchronousMachineUserDefined.h
 //  Implementation of the Class AsynchronousMachineUserDefined
-//  Created on:      28-Jan-2016 12:43:25
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C6795829_1C64_413f_9BFB_D6D7D95B1932__INCLUDED_)
-#define EA_C6795829_1C64_413f_9BFB_D6D7D95B1932__INCLUDED_
+#ifndef ASYNCHRONOUSMACHINEUSERDEFINED_H
+#define ASYNCHRONOUSMACHINEUSERDEFINED_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Dynamics/StandardModels/AsynchronousMachineDynamics/AsynchronousMachineDynamics.h"
@@ -43,4 +42,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C6795829_1C64_413f_9BFB_D6D7D95B1932__INCLUDED_)
+#endif // ASYNCHRONOUSMACHINEUSERDEFINED_H

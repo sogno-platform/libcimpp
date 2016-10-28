@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  OperatingParticipant.h
 //  Implementation of the Class OperatingParticipant
-//  Created on:      28-Jan-2016 12:45:51
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_4B73EA2A_564F_4f26_8E48_B072309648C6__INCLUDED_)
-#define EA_4B73EA2A_564F_4f26_8E48_B072309648C6__INCLUDED_
+#ifndef OPERATINGPARTICIPANT_H
+#define OPERATINGPARTICIPANT_H
 
 #include "IEC61970/Base/Core/IdentifiedObject.h"
 
@@ -36,4 +35,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_4B73EA2A_564F_4f26_8E48_B072309648C6__INCLUDED_)
+#endif // OPERATINGPARTICIPANT_H

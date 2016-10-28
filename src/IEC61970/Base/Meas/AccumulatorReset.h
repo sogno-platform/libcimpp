@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  AccumulatorReset.h
 //  Implementation of the Class AccumulatorReset
-//  Created on:      28-Jan-2016 12:43:10
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_27F9FCD9_E0DD_4959_8BC7_AB686AAF14FA__INCLUDED_)
-#define EA_27F9FCD9_E0DD_4959_8BC7_AB686AAF14FA__INCLUDED_
+#ifndef ACCUMULATORRESET_H
+#define ACCUMULATORRESET_H
 
 #include "IEC61970/Base/Meas/Control.h"
 #include "IEC61970/Base/Meas/AccumulatorValue.h"
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_27F9FCD9_E0DD_4959_8BC7_AB686AAF14FA__INCLUDED_)
+#endif // ACCUMULATORRESET_H

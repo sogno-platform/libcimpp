@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ControlAreaGeneratingUnit.h
 //  Implementation of the Class ControlAreaGeneratingUnit
-//  Created on:      28-Jan-2016 12:43:43
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F887C389_AA07_473f_8CFF_F5DB82401C73__INCLUDED_)
-#define EA_F887C389_AA07_473f_8CFF_F5DB82401C73__INCLUDED_
+#ifndef CONTROLAREAGENERATINGUNIT_H
+#define CONTROLAREAGENERATINGUNIT_H
 
 #include <list>
 
@@ -48,4 +47,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F887C389_AA07_473f_8CFF_F5DB82401C73__INCLUDED_)
+#endif // CONTROLAREAGENERATINGUNIT_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ShortCircuitRotorKind.h
 //  Implementation of the Class ShortCircuitRotorKind
-//  Created on:      28-Jan-2016 12:46:40
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_12363359_4783_4a33_A919_53D014B17AC1__INCLUDED_)
-#define EA_12363359_4783_4a33_A919_53D014B17AC1__INCLUDED_
+#ifndef SHORTCIRCUITROTORKIND_H
+#define SHORTCIRCUITROTORKIND_H
 
 namespace IEC61970
 {
@@ -42,4 +41,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_12363359_4783_4a33_A919_53D014B17AC1__INCLUDED_)
+#endif // SHORTCIRCUITROTORKIND_H

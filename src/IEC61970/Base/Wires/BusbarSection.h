@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  BusbarSection.h
 //  Implementation of the Class BusbarSection
-//  Created on:      28-Jan-2016 12:43:30
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_5C2B1852_3774_48c0_AB55_6AAC67A0472A__INCLUDED_)
-#define EA_5C2B1852_3774_48c0_AB55_6AAC67A0472A__INCLUDED_
+#ifndef BUSBARSECTION_H
+#define BUSBARSECTION_H
 
 #include "IEC61970/Base/Domain/CurrentFlow.h"
 #include "IEC61970/Base/Wires/VoltageControlZone.h"
@@ -49,4 +48,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_5C2B1852_3774_48c0_AB55_6AAC67A0472A__INCLUDED_)
+#endif // BUSBARSECTION_H

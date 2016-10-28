@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  TransformerEnd.h
 //  Implementation of the Class TransformerEnd
-//  Created on:      28-Jan-2016 12:47:22
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_D42023C7_E2BD_4d55_9DC5_EC8B9FFA98B2__INCLUDED_)
-#define EA_D42023C7_E2BD_4d55_9DC5_EC8B9FFA98B2__INCLUDED_
+#ifndef TRANSFORMEREND_H
+#define TRANSFORMEREND_H
 
 #include "IEC61970/Base/Domain/PerCent.h"
 #include "IEC61970/Base/Domain/Integer.h"
@@ -104,4 +103,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_D42023C7_E2BD_4d55_9DC5_EC8B9FFA98B2__INCLUDED_)
+#endif // TRANSFORMEREND_H

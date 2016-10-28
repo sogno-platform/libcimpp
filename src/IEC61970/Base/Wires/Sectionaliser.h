@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  Sectionaliser.h
 //  Implementation of the Class Sectionaliser
-//  Created on:      28-Jan-2016 12:46:38
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_D12CB04F_856D_41c1_9562_2C494C6E11E2__INCLUDED_)
-#define EA_D12CB04F_856D_41c1_9562_2C494C6E11E2__INCLUDED_
+#ifndef SECTIONALISER_H
+#define SECTIONALISER_H
 
 #include "IEC61970/Base/Wires/Switch.h"
 
@@ -36,4 +35,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_D12CB04F_856D_41c1_9562_2C494C6E11E2__INCLUDED_)
+#endif // SECTIONALISER_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindGenTurbineType1IEC.h
 //  Implementation of the Class WindGenTurbineType1IEC
-//  Created on:      28-Jan-2016 12:47:50
 //  Original author: civanov
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F73DE5B7_5654_43a8_A5D6_31EFF067BD36__INCLUDED_)
-#define EA_F73DE5B7_5654_43a8_A5D6_31EFF067BD36__INCLUDED_
+#ifndef WINDGENTURBINETYPE1IEC_H
+#define WINDGENTURBINETYPE1IEC_H
 
 #include "IEC61970/Dynamics/StandardModels/WindDynamics/WindTurbineType1or2IEC.h"
 
@@ -39,4 +38,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F73DE5B7_5654_43a8_A5D6_31EFF067BD36__INCLUDED_)
+#endif // WINDGENTURBINETYPE1IEC_H

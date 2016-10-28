@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  VolumeFlowRate.h
 //  Implementation of the Class VolumeFlowRate
-//  Created on:      28-Jan-2016 12:47:40
 //  Original author: SELAOST1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_D4EF2A4E_A855_4699_839B_EFFB78224788__INCLUDED_)
-#define EA_D4EF2A4E_A855_4699_839B_EFFB78224788__INCLUDED_
+#ifndef VOLUMEFLOWRATE_H
+#define VOLUMEFLOWRATE_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_D4EF2A4E_A855_4699_839B_EFFB78224788__INCLUDED_)
+#endif // VOLUMEFLOWRATE_H

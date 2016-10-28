@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  ActivePower.h
 //  Implementation of the Class ActivePower
-//  Created on:      28-Jan-2016 12:43:14
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_EC2ADAD4_0A5D_438c_A1BE_3CE3B0C5F207__INCLUDED_)
-#define EA_EC2ADAD4_0A5D_438c_A1BE_3CE3B0C5F207__INCLUDED_
+#ifndef ACTIVEPOWER_H
+#define ACTIVEPOWER_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_EC2ADAD4_0A5D_438c_A1BE_3CE3B0C5F207__INCLUDED_)
+#endif // ACTIVEPOWER_H

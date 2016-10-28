@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PostLineSensor.h
 //  Implementation of the Class PostLineSensor
-//  Created on:      28-Jan-2016 12:46:06
 //  Original author: kdemaree
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_2C77A8F4_B0C9_4905_8E75_340FB2511063__INCLUDED_)
-#define EA_2C77A8F4_B0C9_4905_8E75_340FB2511063__INCLUDED_
+#ifndef POSTLINESENSOR_H
+#define POSTLINESENSOR_H
 
 #include "IEC61970/Base/AuxiliaryEquipment/Sensor.h"
 
@@ -34,4 +33,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_2C77A8F4_B0C9_4905_8E75_340FB2511063__INCLUDED_)
+#endif // POSTLINESENSOR_H

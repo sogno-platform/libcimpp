@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovGAST.h
 //  Implementation of the Class GovGAST
-//  Created on:      28-Jan-2016 12:45:01
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_BDE81643_6539_4691_82E8_B9F936993AED__INCLUDED_)
-#define EA_BDE81643_6539_4691_82E8_B9F936993AED__INCLUDED_
+#ifndef GOVGAST_H
+#define GOVGAST_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/ActivePower.h"
@@ -86,4 +85,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_BDE81643_6539_4691_82E8_B9F936993AED__INCLUDED_)
+#endif // GOVGAST_H

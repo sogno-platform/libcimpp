@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DecimalQuantity.h
 //  Implementation of the Class DecimalQuantity
-//  Created on:      28-Jan-2016 12:44:02
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_5724D3A6_C4A0_40b9_B202_4FE3C48081FB__INCLUDED_)
-#define EA_5724D3A6_C4A0_40b9_B202_4FE3C48081FB__INCLUDED_
+#ifndef DECIMALQUANTITY_H
+#define DECIMALQUANTITY_H
 
 #include "IEC61970/Base/Domain/Currency.h"
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
@@ -40,4 +39,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_5724D3A6_C4A0_40b9_B202_4FE3C48081FB__INCLUDED_)
+#endif // DECIMALQUANTITY_H

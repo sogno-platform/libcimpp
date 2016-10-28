@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcIEEEST1AUELselectorKind.h
 //  Implementation of the Class ExcIEEEST1AUELselectorKind
-//  Created on:      28-Jan-2016 12:44:36
 //  Original author: civanov
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_EE714C91_454E_46db_8835_F566F526F8BA__INCLUDED_)
-#define EA_EE714C91_454E_46db_8835_F566F526F8BA__INCLUDED_
+#ifndef EXCIEEEST1AUELSELECTORKIND_H
+#define EXCIEEEST1AUELSELECTORKIND_H
 
 namespace IEC61970
 {
@@ -46,4 +45,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_EE714C91_454E_46db_8835_F566F526F8BA__INCLUDED_)
+#endif // EXCIEEEST1AUELSELECTORKIND_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  Pss2ST.h
 //  Implementation of the Class Pss2ST
-//  Created on:      28-Jan-2016 12:46:16
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_6EE6BF81_7FC7_42ea_8FFC_6F6C235246F4__INCLUDED_)
-#define EA_6EE6BF81_7FC7_42ea_8FFC_6F6C235246F4__INCLUDED_
+#ifndef PSS2ST_H
+#define PSS2ST_H
 
 #include "IEC61970/Dynamics/StandardModels/PowerSystemStabilizerDynamics/InputSignalKind.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -112,4 +111,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_6EE6BF81_7FC7_42ea_8FFC_6F6C235246F4__INCLUDED_)
+#endif // PSS2ST_H

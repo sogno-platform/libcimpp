@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Voltage.h
 //  Implementation of the Class Voltage
-//  Created on:      28-Jan-2016 12:47:34
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_0C2E925B_C9F6_43ee_92C1_4D81BD097FE8__INCLUDED_)
-#define EA_0C2E925B_C9F6_43ee_92C1_4D81BD097FE8__INCLUDED_
+#ifndef VOLTAGE_H
+#define VOLTAGE_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_0C2E925B_C9F6_43ee_92C1_4D81BD097FE8__INCLUDED_)
+#endif // VOLTAGE_H

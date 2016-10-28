@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Inductance.h
 //  Implementation of the Class Inductance
-//  Created on:      28-Jan-2016 12:45:27
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_87F16ECE_3CEA_407f_8185_2118945FB188__INCLUDED_)
-#define EA_87F16ECE_3CEA_407f_8185_2118945FB188__INCLUDED_
+#ifndef INDUCTANCE_H
+#define INDUCTANCE_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_87F16ECE_3CEA_407f_8185_2118945FB188__INCLUDED_)
+#endif // INDUCTANCE_H

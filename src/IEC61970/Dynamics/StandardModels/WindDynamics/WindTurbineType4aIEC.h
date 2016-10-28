@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindTurbineType4aIEC.h
 //  Implementation of the Class WindTurbineType4aIEC
-//  Created on:      28-Jan-2016 12:48:00
 //  Original author: civanov
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_8396A6A9_4348_491d_8669_C129A85242C7__INCLUDED_)
-#define EA_8396A6A9_4348_491d_8669_C129A85242C7__INCLUDED_
+#ifndef WINDTURBINETYPE4AIEC_H
+#define WINDTURBINETYPE4AIEC_H
 
 #include "IEC61970/Dynamics/StandardModels/WindDynamics/WindGenType4IEC.h"
 
@@ -39,4 +38,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_8396A6A9_4348_491d_8669_C129A85242C7__INCLUDED_)
+#endif // WINDTURBINETYPE4AIEC_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ConductancePerLength.h
 //  Implementation of the Class ConductancePerLength
-//  Created on:      28-Jan-2016 12:43:36
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_7C32C1B9_7284_44e8_AAE4_860738F3F887__INCLUDED_)
-#define EA_7C32C1B9_7284_44e8_AAE4_860738F3F887__INCLUDED_
+#ifndef CONDUCTANCEPERLENGTH_H
+#define CONDUCTANCEPERLENGTH_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_7C32C1B9_7284_44e8_AAE4_860738F3F887__INCLUDED_)
+#endif // CONDUCTANCEPERLENGTH_H

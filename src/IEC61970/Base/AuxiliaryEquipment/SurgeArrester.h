@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  SurgeArrester.h
 //  Implementation of the Class SurgeArrester
-//  Created on:      28-Jan-2016 12:46:55
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E4920173_C896_491b_ABF8_378FE704DB74__INCLUDED_)
-#define EA_E4920173_C896_491b_ABF8_378FE704DB74__INCLUDED_
+#ifndef SURGEARRESTER_H
+#define SURGEARRESTER_H
 
 #include "IEC61970/Base/AuxiliaryEquipment/AuxiliaryEquipment.h"
 
@@ -34,4 +33,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_E4920173_C896_491b_ABF8_378FE704DB74__INCLUDED_)
+#endif // SURGEARRESTER_H

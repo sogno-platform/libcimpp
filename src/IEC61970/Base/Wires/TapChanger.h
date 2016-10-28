@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  TapChanger.h
 //  Implementation of the Class TapChanger
-//  Created on:      28-Jan-2016 12:47:10
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_95F84C4D_52DA_4ddf_9606_7F5A4AA733AF__INCLUDED_)
-#define EA_95F84C4D_52DA_4ddf_9606_7F5A4AA733AF__INCLUDED_
+#ifndef TAPCHANGER_H
+#define TAPCHANGER_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Domain/Integer.h"
@@ -97,4 +96,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_95F84C4D_52DA_4ddf_9606_7F5A4AA733AF__INCLUDED_)
+#endif // TAPCHANGER_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  VsConverter.h
 //  Implementation of the Class VsConverter
-//  Created on:      28-Jan-2016 12:47:42
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_8EA37C69_1DA0_44c9_9B36_FA701DB6EB39__INCLUDED_)
-#define EA_8EA37C69_1DA0_44c9_9B36_FA701DB6EB39__INCLUDED_
+#ifndef VSCONVERTER_H
+#define VSCONVERTER_H
 
 #include "IEC61970/Base/Domain/AngleDegrees.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -93,4 +92,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_8EA37C69_1DA0_44c9_9B36_FA701DB6EB39__INCLUDED_)
+#endif // VSCONVERTER_H

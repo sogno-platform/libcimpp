@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcAC4A.h
 //  Implementation of the Class ExcAC4A
-//  Created on:      28-Jan-2016 12:44:20
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_EECAF9B6_B52A_4ede_9D4D_93CD43C638FE__INCLUDED_)
-#define EA_EECAF9B6_B52A_4ede_9D4D_93CD43C638FE__INCLUDED_
+#ifndef EXCAC4A_H
+#define EXCAC4A_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -77,4 +76,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_EECAF9B6_B52A_4ede_9D4D_93CD43C638FE__INCLUDED_)
+#endif // EXCAC4A_H

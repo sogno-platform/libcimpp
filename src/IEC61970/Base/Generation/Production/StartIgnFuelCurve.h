@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  StartIgnFuelCurve.h
 //  Implementation of the Class StartIgnFuelCurve
-//  Created on:      28-Jan-2016 12:46:44
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F8F9FFF2_CF75_4f0d_AB65_1783A02AB4D7__INCLUDED_)
-#define EA_F8F9FFF2_CF75_4f0d_AB65_1783A02AB4D7__INCLUDED_
+#ifndef STARTIGNFUELCURVE_H
+#define STARTIGNFUELCURVE_H
 
 #include "IEC61970/Base/Generation/Production/FuelType.h"
 #include "IEC61970/Base/Core/Curve.h"
@@ -42,4 +41,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F8F9FFF2_CF75_4f0d_AB65_1783A02AB4D7__INCLUDED_)
+#endif // STARTIGNFUELCURVE_H

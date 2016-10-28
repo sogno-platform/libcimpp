@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PhaseConnectedFaultKind.h
 //  Implementation of the Class PhaseConnectedFaultKind
-//  Created on:      28-Jan-2016 12:46:02
 //  Original author: kdemaree
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B038B3B8_849C_458f_AF37_A80D1416223E__INCLUDED_)
-#define EA_B038B3B8_849C_458f_AF37_A80D1416223E__INCLUDED_
+#ifndef PHASECONNECTEDFAULTKIND_H
+#define PHASECONNECTEDFAULTKIND_H
 
 namespace IEC61970
 {
@@ -50,4 +49,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B038B3B8_849C_458f_AF37_A80D1416223E__INCLUDED_)
+#endif // PHASECONNECTEDFAULTKIND_H

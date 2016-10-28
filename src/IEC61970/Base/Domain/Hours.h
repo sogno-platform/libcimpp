@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Hours.h
 //  Implementation of the Class Hours
-//  Created on:      28-Jan-2016 12:45:19
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_3B1801C2_A937_47fb_AD27_353C6727E895__INCLUDED_)
-#define EA_3B1801C2_A937_47fb_AD27_353C6727E895__INCLUDED_
+#ifndef HOURS_H
+#define HOURS_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_3B1801C2_A937_47fb_AD27_353C6727E895__INCLUDED_)
+#endif // HOURS_H

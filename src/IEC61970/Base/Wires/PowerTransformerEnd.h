@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PowerTransformerEnd.h
 //  Implementation of the Class PowerTransformerEnd
-//  Created on:      28-Jan-2016 12:46:10
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E23E6C56_24AD_444a_A3A7_2DF8E390293D__INCLUDED_)
-#define EA_E23E6C56_24AD_444a_A3A7_2DF8E390293D__INCLUDED_
+#ifndef POWERTRANSFORMEREND_H
+#define POWERTRANSFORMEREND_H
 
 #include "IEC61970/Base/Domain/Susceptance.h"
 #include "IEC61970/Base/Wires/WindingConnection.h"
@@ -114,4 +113,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_E23E6C56_24AD_444a_A3A7_2DF8E390293D__INCLUDED_)
+#endif // POWERTRANSFORMEREND_H

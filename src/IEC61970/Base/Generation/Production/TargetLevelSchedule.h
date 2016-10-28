@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  TargetLevelSchedule.h
 //  Implementation of the Class TargetLevelSchedule
-//  Created on:      28-Jan-2016 12:47:12
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_684A97A7_57D8_4317_8A0E_5485BC7D6218__INCLUDED_)
-#define EA_684A97A7_57D8_4317_8A0E_5485BC7D6218__INCLUDED_
+#ifndef TARGETLEVELSCHEDULE_H
+#define TARGETLEVELSCHEDULE_H
 
 #include "IEC61970/Base/Domain/WaterLevel.h"
 #include "IEC61970/Base/Core/Curve.h"
@@ -46,4 +45,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_684A97A7_57D8_4317_8A0E_5485BC7D6218__INCLUDED_)
+#endif // TARGETLEVELSCHEDULE_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GenICompensationForGenJ.h
 //  Implementation of the Class GenICompensationForGenJ
-//  Created on:      28-Jan-2016 12:44:57
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_29D3B211_F291_4909_A5F6_21C5A85D03E7__INCLUDED_)
-#define EA_29D3B211_F291_4909_A5F6_21C5A85D03E7__INCLUDED_
+#ifndef GENICOMPENSATIONFORGENJ_H
+#define GENICOMPENSATIONFORGENJ_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Core/IdentifiedObject.h"
@@ -62,4 +61,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_29D3B211_F291_4909_A5F6_21C5A85D03E7__INCLUDED_)
+#endif // GENICOMPENSATIONFORGENJ_H

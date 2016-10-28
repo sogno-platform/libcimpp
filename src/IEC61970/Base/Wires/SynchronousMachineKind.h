@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  SynchronousMachineKind.h
 //  Implementation of the Class SynchronousMachineKind
-//  Created on:      28-Jan-2016 12:47:06
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_2F7B7F2F_50A5_4379_AA9D_36955ED01873__INCLUDED_)
-#define EA_2F7B7F2F_50A5_4379_AA9D_36955ED01873__INCLUDED_
+#ifndef SYNCHRONOUSMACHINEKIND_H
+#define SYNCHRONOUSMACHINEKIND_H
 
 namespace IEC61970
 {
@@ -32,4 +31,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_2F7B7F2F_50A5_4379_AA9D_36955ED01873__INCLUDED_)
+#endif // SYNCHRONOUSMACHINEKIND_H

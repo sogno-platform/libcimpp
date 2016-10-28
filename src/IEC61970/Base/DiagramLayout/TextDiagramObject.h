@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  TextDiagramObject.h
 //  Implementation of the Class TextDiagramObject
-//  Created on:      28-Jan-2016 12:47:15
 //  Original author: mcmorran
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_414CE0A0_5A1E_4e7e_BAB9_2C8359C6031B__INCLUDED_)
-#define EA_414CE0A0_5A1E_4e7e_BAB9_2C8359C6031B__INCLUDED_
+#ifndef TEXTDIAGRAMOBJECT_H
+#define TEXTDIAGRAMOBJECT_H
 
 #include "IEC61970/Base/Domain/String.h"
 #include "IEC61970/Base/DiagramLayout/DiagramObject.h"
@@ -39,4 +38,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_414CE0A0_5A1E_4e7e_BAB9_2C8359C6031B__INCLUDED_)
+#endif // TEXTDIAGRAMOBJECT_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovGAST2.h
 //  Implementation of the Class GovGAST2
-//  Created on:      28-Jan-2016 12:45:02
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_38FABC9F_9DF6_47cf_B968_5F136B1608B9__INCLUDED_)
-#define EA_38FABC9F_9DF6_47cf_B968_5F136B1608B9__INCLUDED_
+#ifndef GOVGAST2_H
+#define GOVGAST2_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -177,4 +176,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_38FABC9F_9DF6_47cf_B968_5F136B1608B9__INCLUDED_)
+#endif // GOVGAST2_H

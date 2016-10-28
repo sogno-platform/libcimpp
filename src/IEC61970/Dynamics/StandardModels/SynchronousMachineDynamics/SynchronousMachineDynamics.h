@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  SynchronousMachineDynamics.h
 //  Implementation of the Class SynchronousMachineDynamics
-//  Created on:      28-Jan-2016 12:47:05
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_505E3805_2B31_4c0c_9C3C_BACCFBC0191E__INCLUDED_)
-#define EA_505E3805_2B31_4c0c_9C3C_BACCFBC0191E__INCLUDED_
+#ifndef SYNCHRONOUSMACHINEDYNAMICS_H
+#define SYNCHRONOUSMACHINEDYNAMICS_H
 
 #include <list>
 
@@ -74,4 +73,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_505E3805_2B31_4c0c_9C3C_BACCFBC0191E__INCLUDED_)
+#endif // SYNCHRONOUSMACHINEDYNAMICS_H

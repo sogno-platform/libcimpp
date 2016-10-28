@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  ProtectedSwitch.h
 //  Implementation of the Class ProtectedSwitch
-//  Created on:      28-Jan-2016 12:46:13
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F26AFC3F_7BA7_4e7e_8BA4_99962712303D__INCLUDED_)
-#define EA_F26AFC3F_7BA7_4e7e_8BA4_99962712303D__INCLUDED_
+#ifndef PROTECTEDSWITCH_H
+#define PROTECTEDSWITCH_H
 
 #include <list>
 
@@ -46,4 +45,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F26AFC3F_7BA7_4e7e_8BA4_99962712303D__INCLUDED_)
+#endif // PROTECTEDSWITCH_H

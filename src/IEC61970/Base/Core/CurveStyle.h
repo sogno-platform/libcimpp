@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  CurveStyle.h
 //  Implementation of the Class CurveStyle
-//  Created on:      28-Jan-2016 12:43:51
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_AC594992_3B86_4bbb_8D7D_E810F49FC7CE__INCLUDED_)
-#define EA_AC594992_3B86_4bbb_8D7D_E810F49FC7CE__INCLUDED_
+#ifndef CURVESTYLE_H
+#define CURVESTYLE_H
 
 namespace IEC61970
 {
@@ -35,4 +34,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_AC594992_3B86_4bbb_8D7D_E810F49FC7CE__INCLUDED_)
+#endif // CURVESTYLE_H

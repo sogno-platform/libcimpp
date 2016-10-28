@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  LoadUserDefined.h
 //  Implementation of the Class LoadUserDefined
-//  Created on:      28-Jan-2016 12:45:38
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B5B45F2D_81B0_4862_8B2E_1891D90AF82F__INCLUDED_)
-#define EA_B5B45F2D_81B0_4862_8B2E_1891D90AF82F__INCLUDED_
+#ifndef LOADUSERDEFINED_H
+#define LOADUSERDEFINED_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Dynamics/StandardModels/LoadDynamics/LoadDynamics.h"
@@ -42,4 +41,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B5B45F2D_81B0_4862_8B2E_1891D90AF82F__INCLUDED_)
+#endif // LOADUSERDEFINED_H

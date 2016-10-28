@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Limit.h
 //  Implementation of the Class Limit
-//  Created on:      28-Jan-2016 12:45:33
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_6E3107A5_CED1_4489_B0A0_FB9415CCFBF1__INCLUDED_)
-#define EA_6E3107A5_CED1_4489_B0A0_FB9415CCFBF1__INCLUDED_
+#ifndef LIMIT_H
+#define LIMIT_H
 
 #include "IEC61970/Base/Core/IdentifiedObject.h"
 
@@ -36,4 +35,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_6E3107A5_CED1_4489_B0A0_FB9415CCFBF1__INCLUDED_)
+#endif // LIMIT_H

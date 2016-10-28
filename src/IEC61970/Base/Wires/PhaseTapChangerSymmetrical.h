@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PhaseTapChangerSymmetrical.h
 //  Implementation of the Class PhaseTapChangerSymmetrical
-//  Created on:      28-Jan-2016 12:46:05
 //  Original author: SELAOST1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E8B7AB43_63EF_4c2b_B436_965CEAB029D0__INCLUDED_)
-#define EA_E8B7AB43_63EF_4c2b_B436_965CEAB029D0__INCLUDED_
+#ifndef PHASETAPCHANGERSYMMETRICAL_H
+#define PHASETAPCHANGERSYMMETRICAL_H
 
 #include "IEC61970/Base/Wires/PhaseTapChangerNonLinear.h"
 
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_E8B7AB43_63EF_4c2b_B436_965CEAB029D0__INCLUDED_)
+#endif // PHASETAPCHANGERSYMMETRICAL_H

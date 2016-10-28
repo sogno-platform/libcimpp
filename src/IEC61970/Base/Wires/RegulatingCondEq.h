@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  RegulatingCondEq.h
 //  Implementation of the Class RegulatingCondEq
-//  Created on:      28-Jan-2016 12:46:28
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_31FA34E0_018E_4aec_8A5C_5C716DAA0D3E__INCLUDED_)
-#define EA_31FA34E0_018E_4aec_8A5C_5C716DAA0D3E__INCLUDED_
+#ifndef REGULATINGCONDEQ_H
+#define REGULATINGCONDEQ_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Wires/RegulatingControl.h"
@@ -44,4 +43,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_31FA34E0_018E_4aec_8A5C_5C716DAA0D3E__INCLUDED_)
+#endif // REGULATINGCONDEQ_H

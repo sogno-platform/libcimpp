@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovGAST1.h
 //  Implementation of the Class GovGAST1
-//  Created on:      28-Jan-2016 12:45:01
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B7BAF18F_163C_4b94_8AC9_FEB31635D071__INCLUDED_)
-#define EA_B7BAF18F_163C_4b94_8AC9_FEB31635D071__INCLUDED_
+#ifndef GOVGAST1_H
+#define GOVGAST1_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Domain/Frequency.h"
@@ -186,4 +185,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B7BAF18F_163C_4b94_8AC9_FEB31635D071__INCLUDED_)
+#endif // GOVGAST1_H

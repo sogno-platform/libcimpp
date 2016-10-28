@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcDC2A.h
 //  Implementation of the Class ExcDC2A
-//  Created on:      28-Jan-2016 12:44:27
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_371BDA48_A77D_4507_B27F_3680847C5998__INCLUDED_)
-#define EA_371BDA48_A77D_4507_B27F_3680847C5998__INCLUDED_
+#ifndef EXCDC2A_H
+#define EXCDC2A_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Boolean.h"
@@ -131,4 +130,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_371BDA48_A77D_4507_B27F_3680847C5998__INCLUDED_)
+#endif // EXCDC2A_H

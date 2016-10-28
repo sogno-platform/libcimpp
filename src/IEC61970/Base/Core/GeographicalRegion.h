@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  GeographicalRegion.h
 //  Implementation of the Class GeographicalRegion
-//  Created on:      28-Jan-2016 12:44:58
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_1AF7F1F5_1F79_4d91_B76A_E4A60805FFBB__INCLUDED_)
-#define EA_1AF7F1F5_1F79_4d91_B76A_E4A60805FFBB__INCLUDED_
+#ifndef GEOGRAPHICALREGION_H
+#define GEOGRAPHICALREGION_H
 
 #include <list>
 
@@ -39,4 +38,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_1AF7F1F5_1F79_4d91_B76A_E4A60805FFBB__INCLUDED_)
+#endif // GEOGRAPHICALREGION_H

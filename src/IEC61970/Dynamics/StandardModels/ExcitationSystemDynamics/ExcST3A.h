@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcST3A.h
 //  Implementation of the Class ExcST3A
-//  Created on:      28-Jan-2016 12:44:45
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_13FDC1A9_D609_46c1_9D60_F06FD401FCCD__INCLUDED_)
-#define EA_13FDC1A9_D609_46c1_9D60_F06FD401FCCD__INCLUDED_
+#ifndef EXCST3A_H
+#define EXCST3A_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -125,4 +124,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_13FDC1A9_D609_46c1_9D60_F06FD401FCCD__INCLUDED_)
+#endif // EXCST3A_H

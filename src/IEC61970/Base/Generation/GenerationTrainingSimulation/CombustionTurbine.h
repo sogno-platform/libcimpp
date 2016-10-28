@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  CombustionTurbine.h
 //  Implementation of the Class CombustionTurbine
-//  Created on:      28-Jan-2016 12:43:35
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_2CC83846_81B2_4e93_8427_C71F47460E0E__INCLUDED_)
-#define EA_2CC83846_81B2_4e93_8427_C71F47460E0E__INCLUDED_
+#ifndef COMBUSTIONTURBINE_H
+#define COMBUSTIONTURBINE_H
 
 #include "IEC61970/Base/Domain/Temperature.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -90,4 +89,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_2CC83846_81B2_4e93_8427_C71F47460E0E__INCLUDED_)
+#endif // COMBUSTIONTURBINE_H

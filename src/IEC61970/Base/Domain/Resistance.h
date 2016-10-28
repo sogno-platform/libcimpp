@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Resistance.h
 //  Implementation of the Class Resistance
-//  Created on:      28-Jan-2016 12:46:35
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_D6487B5B_DB99_480a_8796_A626575C8AEF__INCLUDED_)
-#define EA_D6487B5B_DB99_480a_8796_A626575C8AEF__INCLUDED_
+#ifndef RESISTANCE_H
+#define RESISTANCE_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_D6487B5B_DB99_480a_8796_A626575C8AEF__INCLUDED_)
+#endif // RESISTANCE_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ControlAreaTypeKind.h
 //  Implementation of the Class ControlAreaTypeKind
-//  Created on:      28-Jan-2016 12:43:43
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_7DE871BD_A517_493f_9218_6C425570684E__INCLUDED_)
-#define EA_7DE871BD_A517_493f_9218_6C425570684E__INCLUDED_
+#ifndef CONTROLAREATYPEKIND_H
+#define CONTROLAREATYPEKIND_H
 
 namespace IEC61970
 {
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_7DE871BD_A517_493f_9218_6C425570684E__INCLUDED_)
+#endif // CONTROLAREATYPEKIND_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  EquipmentFault.h
 //  Implementation of the Class EquipmentFault
-//  Created on:      28-Jan-2016 12:44:16
 //  Original author: kdemaree
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_256BB744_D1E6_4dd8_A69F_A159B2018917__INCLUDED_)
-#define EA_256BB744_D1E6_4dd8_A69F_A159B2018917__INCLUDED_
+#ifndef EQUIPMENTFAULT_H
+#define EQUIPMENTFAULT_H
 
 #include "IEC61970/Base/Core/Terminal.h"
 #include "IEC61970/Base/Faults/Fault.h"
@@ -39,4 +38,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_256BB744_D1E6_4dd8_A69F_A159B2018917__INCLUDED_)
+#endif // EQUIPMENTFAULT_H

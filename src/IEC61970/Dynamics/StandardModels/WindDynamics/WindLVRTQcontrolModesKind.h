@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindLVRTQcontrolModesKind.h
 //  Implementation of the Class WindLVRTQcontrolModesKind
-//  Created on:      28-Jan-2016 12:47:54
 //  Original author: civanov
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B4DB06B9_3009_4b28_918E_BBDC97A0423A__INCLUDED_)
-#define EA_B4DB06B9_3009_4b28_918E_BBDC97A0423A__INCLUDED_
+#ifndef WINDLVRTQCONTROLMODESKIND_H
+#define WINDLVRTQCONTROLMODESKIND_H
 
 namespace IEC61970
 {
@@ -46,4 +45,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B4DB06B9_3009_4b28_918E_BBDC97A0423A__INCLUDED_)
+#endif // WINDLVRTQCONTROLMODESKIND_H

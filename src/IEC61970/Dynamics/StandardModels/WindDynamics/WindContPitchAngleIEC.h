@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindContPitchAngleIEC.h
 //  Implementation of the Class WindContPitchAngleIEC
-//  Created on:      28-Jan-2016 12:47:47
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_9A877E44_6330_40ed_BD78_6B701A8B3BA9__INCLUDED_)
-#define EA_9A877E44_6330_40ed_BD78_6B701A8B3BA9__INCLUDED_
+#ifndef WINDCONTPITCHANGLEIEC_H
+#define WINDCONTPITCHANGLEIEC_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -96,4 +95,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_9A877E44_6330_40ed_BD78_6B701A8B3BA9__INCLUDED_)
+#endif // WINDCONTPITCHANGLEIEC_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  LineFault.h
 //  Implementation of the Class LineFault
-//  Created on:      28-Jan-2016 12:45:34
 //  Original author: kdemaree
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_BB67A7B5_EE0C_4dd0_A27A_9B5EAD62F69E__INCLUDED_)
-#define EA_BB67A7B5_EE0C_4dd0_A27A_9B5EAD62F69E__INCLUDED_
+#ifndef LINEFAULT_H
+#define LINEFAULT_H
 
 #include "IEC61970/Base/Domain/Length.h"
 #include "IEC61970/Base/Wires/ACLineSegment.h"
@@ -44,4 +43,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_BB67A7B5_EE0C_4dd0_A27A_9B5EAD62F69E__INCLUDED_)
+#endif // LINEFAULT_H

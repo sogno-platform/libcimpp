@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindContQIEC.h
 //  Implementation of the Class WindContQIEC
-//  Created on:      28-Jan-2016 12:47:48
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_EFC42903_B91B_49c9_A248_93F1F25CF03E__INCLUDED_)
-#define EA_EFC42903_B91B_49c9_A248_93F1F25CF03E__INCLUDED_
+#ifndef WINDCONTQIEC_H
+#define WINDCONTQIEC_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -177,4 +176,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_EFC42903_B91B_49c9_A248_93F1F25CF03E__INCLUDED_)
+#endif // WINDCONTQIEC_H

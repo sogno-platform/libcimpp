@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  SwitchPhase.h
 //  Implementation of the Class SwitchPhase
-//  Created on:      28-Jan-2016 12:47:02
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_A0668285_340D_4f64_BA0E_A8BB6F9F22AD__INCLUDED_)
-#define EA_A0668285_340D_4f64_BA0E_A8BB6F9F22AD__INCLUDED_
+#ifndef SWITCHPHASE_H
+#define SWITCHPHASE_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Wires/SinglePhaseKind.h"
@@ -57,4 +56,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_A0668285_340D_4f64_BA0E_A8BB6F9F22AD__INCLUDED_)
+#endif // SWITCHPHASE_H

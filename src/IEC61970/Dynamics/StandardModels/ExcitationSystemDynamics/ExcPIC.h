@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcPIC.h
 //  Implementation of the Class ExcPIC
-//  Created on:      28-Jan-2016 12:44:41
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_09E99CD3_C5A9_4e07_A190_D2FBEDE84F77__INCLUDED_)
-#define EA_09E99CD3_C5A9_4e07_A190_D2FBEDE84F77__INCLUDED_
+#ifndef EXCPIC_H
+#define EXCPIC_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -133,4 +132,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_09E99CD3_C5A9_4e07_A190_D2FBEDE84F77__INCLUDED_)
+#endif // EXCPIC_H

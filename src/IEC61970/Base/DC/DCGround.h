@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DCGround.h
 //  Implementation of the Class DCGround
-//  Created on:      28-Jan-2016 12:43:58
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_3D539508_ADAE_4d61_9466_27B989B56504__INCLUDED_)
-#define EA_3D539508_ADAE_4d61_9466_27B989B56504__INCLUDED_
+#ifndef DCGROUND_H
+#define DCGROUND_H
 
 #include "IEC61970/Base/Domain/Inductance.h"
 #include "IEC61970/Base/Domain/Resistance.h"
@@ -43,4 +42,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_3D539508_ADAE_4d61_9466_27B989B56504__INCLUDED_)
+#endif // DCGROUND_H

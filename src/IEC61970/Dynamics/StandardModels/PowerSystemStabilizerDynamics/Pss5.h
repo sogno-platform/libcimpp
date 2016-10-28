@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  Pss5.h
 //  Implementation of the Class Pss5
-//  Created on:      28-Jan-2016 12:46:16
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F583B5A2_56EC_4332_9658_CB537E2C8E2E__INCLUDED_)
-#define EA_F583B5A2_56EC_4332_9658_CB537E2C8E2E__INCLUDED_
+#ifndef PSS5_H
+#define PSS5_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -119,4 +118,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F583B5A2_56EC_4332_9658_CB537E2C8E2E__INCLUDED_)
+#endif // PSS5_H

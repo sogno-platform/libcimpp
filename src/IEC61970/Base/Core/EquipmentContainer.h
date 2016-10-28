@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  EquipmentContainer.h
 //  Implementation of the Class EquipmentContainer
-//  Created on:      28-Jan-2016 12:44:16
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_58622B5E_0D17_4017_961E_F395046858E6__INCLUDED_)
-#define EA_58622B5E_0D17_4017_961E_F395046858E6__INCLUDED_
+#ifndef EQUIPMENTCONTAINER_H
+#define EQUIPMENTCONTAINER_H
 
 #include <list>
 
@@ -39,4 +38,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_58622B5E_0D17_4017_961E_F395046858E6__INCLUDED_)
+#endif // EQUIPMENTCONTAINER_H

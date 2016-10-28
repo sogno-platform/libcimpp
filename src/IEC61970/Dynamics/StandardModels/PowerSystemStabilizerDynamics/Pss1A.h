@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  Pss1A.h
 //  Implementation of the Class Pss1A
-//  Created on:      28-Jan-2016 12:46:15
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_19B245F8_6A44_44fb_8CA2_3795976ACA42__INCLUDED_)
-#define EA_19B245F8_6A44_44fb_8CA2_3795976ACA42__INCLUDED_
+#ifndef PSS1A_H
+#define PSS1A_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Dynamics/StandardModels/PowerSystemStabilizerDynamics/InputSignalKind.h"
@@ -132,4 +131,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_19B245F8_6A44_44fb_8CA2_3795976ACA42__INCLUDED_)
+#endif // PSS1A_H

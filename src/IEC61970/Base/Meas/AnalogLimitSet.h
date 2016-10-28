@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  AnalogLimitSet.h
 //  Implementation of the Class AnalogLimitSet
-//  Created on:      28-Jan-2016 12:43:19
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_092E9A77_E83A_4b07_BE83_6B667D349FAA__INCLUDED_)
-#define EA_092E9A77_E83A_4b07_BE83_6B667D349FAA__INCLUDED_
+#ifndef ANALOGLIMITSET_H
+#define ANALOGLIMITSET_H
 
 #include <list>
 
@@ -40,4 +39,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_092E9A77_E83A_4b07_BE83_6B667D349FAA__INCLUDED_)
+#endif // ANALOGLIMITSET_H

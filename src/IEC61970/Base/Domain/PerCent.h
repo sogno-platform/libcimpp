@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  PerCent.h
 //  Implementation of the Class PerCent
-//  Created on:      28-Jan-2016 12:45:56
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E417AB5A_2CB2_41a6_9B2B_9F2735CAF436__INCLUDED_)
-#define EA_E417AB5A_2CB2_41a6_9B2B_9F2735CAF436__INCLUDED_
+#ifndef PERCENT_H
+#define PERCENT_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -41,4 +40,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_E417AB5A_2CB2_41a6_9B2B_9F2735CAF436__INCLUDED_)
+#endif // PERCENT_H

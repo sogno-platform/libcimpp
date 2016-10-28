@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  ValueAliasSet.h
 //  Implementation of the Class ValueAliasSet
-//  Created on:      28-Jan-2016 12:47:31
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_4FBAED72_FC5B_4cf8_8CD9_817F172DFCC3__INCLUDED_)
-#define EA_4FBAED72_FC5B_4cf8_8CD9_817F172DFCC3__INCLUDED_
+#ifndef VALUEALIASSET_H
+#define VALUEALIASSET_H
 
 #include <list>
 
@@ -51,4 +50,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_4FBAED72_FC5B_4cf8_8CD9_817F172DFCC3__INCLUDED_)
+#endif // VALUEALIASSET_H

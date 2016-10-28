@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  CsConverter.h
 //  Implementation of the Class CsConverter
-//  Created on:      28-Jan-2016 12:43:46
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_39217393_C74E_4797_AC93_1C229FA80D9A__INCLUDED_)
-#define EA_39217393_C74E_4797_AC93_1C229FA80D9A__INCLUDED_
+#ifndef CSCONVERTER_H
+#define CSCONVERTER_H
 
 #include "IEC61970/Base/Domain/AngleDegrees.h"
 #include "IEC61970/Base/Domain/CurrentFlow.h"
@@ -95,4 +94,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_39217393_C74E_4797_AC93_1C229FA80D9A__INCLUDED_)
+#endif // CSCONVERTER_H

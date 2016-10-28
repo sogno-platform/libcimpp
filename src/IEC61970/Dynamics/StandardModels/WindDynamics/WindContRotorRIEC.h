@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindContRotorRIEC.h
 //  Implementation of the Class WindContRotorRIEC
-//  Created on:      28-Jan-2016 12:47:49
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_DC047496_7563_4379_B722_D97BCB79D421__INCLUDED_)
-#define EA_DC047496_7563_4379_B722_D97BCB79D421__INCLUDED_
+#ifndef WINDCONTROTORRIEC_H
+#define WINDCONTROTORRIEC_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Float.h"
@@ -88,4 +87,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_DC047496_7563_4379_B722_D97BCB79D421__INCLUDED_)
+#endif // WINDCONTROTORRIEC_H

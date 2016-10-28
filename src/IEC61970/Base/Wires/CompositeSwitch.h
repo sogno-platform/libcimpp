@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  CompositeSwitch.h
 //  Implementation of the Class CompositeSwitch
-//  Created on:      28-Jan-2016 12:43:35
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_5EB2C75B_4F05_4593_A763_80D4C278B38D__INCLUDED_)
-#define EA_5EB2C75B_4F05_4593_A763_80D4C278B38D__INCLUDED_
+#ifndef COMPOSITESWITCH_H
+#define COMPOSITESWITCH_H
 
 #include <list>
 
@@ -53,4 +52,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_5EB2C75B_4F05_4593_A763_80D4C278B38D__INCLUDED_)
+#endif // COMPOSITESWITCH_H

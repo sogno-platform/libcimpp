@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindTurbineType1or2Dynamics.h
 //  Implementation of the Class WindTurbineType1or2Dynamics
-//  Created on:      28-Jan-2016 12:47:58
 //  Original author: civanov
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_07773767_27F2_42cf_9501_4AA93D21ED07__INCLUDED_)
-#define EA_07773767_27F2_42cf_9501_4AA93D21ED07__INCLUDED_
+#ifndef WINDTURBINETYPE1OR2DYNAMICS_H
+#define WINDTURBINETYPE1OR2DYNAMICS_H
 
 #include "IEC61970/Dynamics/StandardModels/AsynchronousMachineDynamics/AsynchronousMachineDynamics.h"
 #include "IEC61970/Dynamics/StandardModels/DynamicsFunctionBlock.h"
@@ -49,4 +48,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_07773767_27F2_42cf_9501_4AA93D21ED07__INCLUDED_)
+#endif // WINDTURBINETYPE1OR2DYNAMICS_H

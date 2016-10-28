@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  BusbarConfiguration.h
 //  Implementation of the Class BusbarConfiguration
-//  Created on:      28-Jan-2016 12:43:30
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_BE13A598_17BB_4db2_BBD6_E228E99D211F__INCLUDED_)
-#define EA_BE13A598_17BB_4db2_BBD6_E228E99D211F__INCLUDED_
+#ifndef BUSBARCONFIGURATION_H
+#define BUSBARCONFIGURATION_H
 
 namespace IEC61970
 {
@@ -41,4 +40,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_BE13A598_17BB_4db2_BBD6_E228E99D211F__INCLUDED_)
+#endif // BUSBARCONFIGURATION_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Source.h
 //  Implementation of the Class Source
-//  Created on:      28-Jan-2016 12:46:43
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_335B4725_73F0_400c_869C_2B59D3004FF5__INCLUDED_)
-#define EA_335B4725_73F0_400c_869C_2B59D3004FF5__INCLUDED_
+#ifndef SOURCE_H
+#define SOURCE_H
 
 namespace IEC61970
 {
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_335B4725_73F0_400c_869C_2B59D3004FF5__INCLUDED_)
+#endif // SOURCE_H

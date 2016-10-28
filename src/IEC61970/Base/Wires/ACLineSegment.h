@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  ACLineSegment.h
 //  Implementation of the Class ACLineSegment
-//  Created on:      28-Jan-2016 12:43:13
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_438F9EBD_B6EC_49a3_84D6_C4FB4BA13044__INCLUDED_)
-#define EA_438F9EBD_B6EC_49a3_84D6_C4FB4BA13044__INCLUDED_
+#ifndef ACLINESEGMENT_H
+#define ACLINESEGMENT_H
 
 #include <list>
 
@@ -97,4 +96,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_438F9EBD_B6EC_49a3_84D6_C4FB4BA13044__INCLUDED_)
+#endif // ACLINESEGMENT_H

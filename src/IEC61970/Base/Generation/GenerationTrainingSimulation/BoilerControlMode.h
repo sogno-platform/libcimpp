@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  BoilerControlMode.h
 //  Implementation of the Class BoilerControlMode
-//  Created on:      28-Jan-2016 12:43:28
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_60A8C420_C216_44fc_945C_ECFE9FE7C542__INCLUDED_)
-#define EA_60A8C420_C216_44fc_945C_ECFE9FE7C542__INCLUDED_
+#ifndef BOILERCONTROLMODE_H
+#define BOILERCONTROLMODE_H
 
 namespace IEC61970
 {
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_60A8C420_C216_44fc_945C_ECFE9FE7C542__INCLUDED_)
+#endif // BOILERCONTROLMODE_H

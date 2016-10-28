@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Control.h
 //  Implementation of the Class Control
-//  Created on:      28-Jan-2016 12:43:42
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C135CA04_FF7C_411a_BAA2_B3C30B49FD80__INCLUDED_)
-#define EA_C135CA04_FF7C_411a_BAA2_B3C30B49FD80__INCLUDED_
+#ifndef CONTROL_H
+#define CONTROL_H
 
 #include "IEC61970/Base/Domain/String.h"
 #include "IEC61970/Base/Domain/Boolean.h"
@@ -62,4 +61,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C135CA04_FF7C_411a_BAA2_B3C30B49FD80__INCLUDED_)
+#endif // CONTROL_H

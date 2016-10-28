@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  VsCapabilityCurve.h
 //  Implementation of the Class VsCapabilityCurve
-//  Created on:      28-Jan-2016 12:47:41
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_0660EE0C_C153_40e9_AC1F_F146906A2B47__INCLUDED_)
-#define EA_0660EE0C_C153_40e9_AC1F_F146906A2B47__INCLUDED_
+#ifndef VSCAPABILITYCURVE_H
+#define VSCAPABILITYCURVE_H
 
 #include "IEC61970/Base/Core/Curve.h"
 
@@ -34,4 +33,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_0660EE0C_C153_40e9_AC1F_F146906A2B47__INCLUDED_)
+#endif // VSCAPABILITYCURVE_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  LoadGenericNonLinear.h
 //  Implementation of the Class LoadGenericNonLinear
-//  Created on:      28-Jan-2016 12:45:36
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_3273D1C2_67B4_43c8_8FFC_69D0A0A13B1C__INCLUDED_)
-#define EA_3273D1C2_67B4_43c8_8FFC_69D0A0A13B1C__INCLUDED_
+#ifndef LOADGENERICNONLINEAR_H
+#define LOADGENERICNONLINEAR_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Dynamics/StandardModels/LoadDynamics/GenericNonLinearLoadModelKind.h"
@@ -80,4 +79,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_3273D1C2_67B4_43c8_8FFC_69D0A0A13B1C__INCLUDED_)
+#endif // LOADGENERICNONLINEAR_H

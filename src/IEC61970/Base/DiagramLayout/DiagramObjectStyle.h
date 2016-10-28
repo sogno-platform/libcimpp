@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DiagramObjectStyle.h
 //  Implementation of the Class DiagramObjectStyle
-//  Created on:      28-Jan-2016 12:44:05
 //  Original author: mcmorran
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_7B3391FB_F635_4667_AAB1_773B4FD1300C__INCLUDED_)
-#define EA_7B3391FB_F635_4667_AAB1_773B4FD1300C__INCLUDED_
+#ifndef DIAGRAMOBJECTSTYLE_H
+#define DIAGRAMOBJECTSTYLE_H
 
 #include "IEC61970/Base/Core/IdentifiedObject.h"
 
@@ -35,4 +34,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_7B3391FB_F635_4667_AAB1_773B4FD1300C__INCLUDED_)
+#endif // DIAGRAMOBJECTSTYLE_H

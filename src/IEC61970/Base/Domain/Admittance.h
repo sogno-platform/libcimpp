@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Admittance.h
 //  Implementation of the Class Admittance
-//  Created on:      28-Jan-2016 12:43:15
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_7CF67142_8868_4069_A5F1_C6D733265E35__INCLUDED_)
-#define EA_7CF67142_8868_4069_A5F1_C6D733265E35__INCLUDED_
+#ifndef ADMITTANCE_H
+#define ADMITTANCE_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_7CF67142_8868_4069_A5F1_C6D733265E35__INCLUDED_)
+#endif // ADMITTANCE_H

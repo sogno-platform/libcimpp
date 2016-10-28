@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovHydroIEEE2.h
 //  Implementation of the Class GovHydroIEEE2
-//  Created on:      28-Jan-2016 12:45:07
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_BB9B025E_1261_4b68_B129_5A548300523E__INCLUDED_)
-#define EA_BB9B025E_1261_4b68_B129_5A548300523E__INCLUDED_
+#ifndef GOVHYDROIEEE2_H
+#define GOVHYDROIEEE2_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/ActivePower.h"
@@ -152,4 +151,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_BB9B025E_1261_4b68_B129_5A548300523E__INCLUDED_)
+#endif // GOVHYDROIEEE2_H

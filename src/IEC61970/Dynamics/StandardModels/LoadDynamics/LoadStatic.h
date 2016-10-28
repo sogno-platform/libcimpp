@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  LoadStatic.h
 //  Implementation of the Class LoadStatic
-//  Created on:      28-Jan-2016 12:45:38
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_6582E08E_C403_4b6e_B49A_418E12D90B60__INCLUDED_)
-#define EA_6582E08E_C403_4b6e_B49A_418E12D90B60__INCLUDED_
+#ifndef LOADSTATIC_H
+#define LOADSTATIC_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Dynamics/StandardModels/LoadDynamics/StaticLoadModelKind.h"
@@ -131,4 +130,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_6582E08E_C403_4b6e_B49A_418E12D90B60__INCLUDED_)
+#endif // LOADSTATIC_H

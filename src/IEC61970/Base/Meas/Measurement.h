@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Measurement.h
 //  Implementation of the Class Measurement
-//  Created on:      28-Jan-2016 12:45:39
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_DFFB9C1D_3ABD_4b79_BF9B_7F4AD8278B27__INCLUDED_)
-#define EA_DFFB9C1D_3ABD_4b79_BF9B_7F4AD8278B27__INCLUDED_
+#ifndef MEASUREMENT_H
+#define MEASUREMENT_H
 
 #include "IEC61970/Base/Domain/String.h"
 #include "IEC61970/Base/Core/PhaseCode.h"
@@ -86,4 +85,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_DFFB9C1D_3ABD_4b79_BF9B_7F4AD8278B27__INCLUDED_)
+#endif // MEASUREMENT_H

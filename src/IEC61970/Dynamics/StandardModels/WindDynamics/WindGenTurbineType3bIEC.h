@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindGenTurbineType3bIEC.h
 //  Implementation of the Class WindGenTurbineType3bIEC
-//  Created on:      28-Jan-2016 12:47:52
 //  Original author: civanov
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_FB0EF898_4086_4ae9_8846_25EF41E14AC5__INCLUDED_)
-#define EA_FB0EF898_4086_4ae9_8846_25EF41E14AC5__INCLUDED_
+#ifndef WINDGENTURBINETYPE3BIEC_H
+#define WINDGENTURBINETYPE3BIEC_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Domain/Boolean.h"
@@ -72,4 +71,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_FB0EF898_4086_4ae9_8846_25EF41E14AC5__INCLUDED_)
+#endif // WINDGENTURBINETYPE3BIEC_H

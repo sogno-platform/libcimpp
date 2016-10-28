@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  AltGeneratingUnitMeas.h
 //  Implementation of the Class AltGeneratingUnitMeas
-//  Created on:      28-Jan-2016 12:43:16
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_A312B16B_BFF5_47c1_9FD3_B87D03B302D0__INCLUDED_)
-#define EA_A312B16B_BFF5_47c1_9FD3_B87D03B302D0__INCLUDED_
+#ifndef ALTGENERATINGUNITMEAS_H
+#define ALTGENERATINGUNITMEAS_H
 
 #include "IEC61970/Base/Domain/Integer.h"
 #include "IEC61970/Base/Meas/AnalogValue.h"
@@ -44,4 +43,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_A312B16B_BFF5_47c1_9FD3_B87D03B302D0__INCLUDED_)
+#endif // ALTGENERATINGUNITMEAS_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Equipment.h
 //  Implementation of the Class Equipment
-//  Created on:      28-Jan-2016 12:44:16
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_1296321D_F39F_4788_A80D_E31AE245F480__INCLUDED_)
-#define EA_1296321D_F39F_4788_A80D_E31AE245F480__INCLUDED_
+#ifndef EQUIPMENT_H
+#define EQUIPMENT_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Core/PowerSystemResource.h"
@@ -50,4 +49,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_1296321D_F39F_4788_A80D_E31AE245F480__INCLUDED_)
+#endif // EQUIPMENT_H

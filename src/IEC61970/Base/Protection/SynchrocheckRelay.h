@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  SynchrocheckRelay.h
 //  Implementation of the Class SynchrocheckRelay
-//  Created on:      28-Jan-2016 12:47:03
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_2DF133C0_0691_446b_A8AA_F340748746C7__INCLUDED_)
-#define EA_2DF133C0_0691_446b_A8AA_F340748746C7__INCLUDED_
+#ifndef SYNCHROCHECKRELAY_H
+#define SYNCHROCHECKRELAY_H
 
 #include "IEC61970/Base/Domain/AngleRadians.h"
 #include "IEC61970/Base/Domain/Frequency.h"
@@ -51,4 +50,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_2DF133C0_0691_446b_A8AA_F340748746C7__INCLUDED_)
+#endif // SYNCHROCHECKRELAY_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  GeneratingUnit.h
 //  Implementation of the Class GeneratingUnit
-//  Created on:      28-Jan-2016 12:44:55
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_A4B9C29B_54A7_4730_8D45_365F5F237B52__INCLUDED_)
-#define EA_A4B9C29B_54A7_4730_8D45_365F5F237B52__INCLUDED_
+#ifndef GENERATINGUNIT_H
+#define GENERATINGUNIT_H
 
 #include <list>
 
@@ -255,4 +254,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_A4B9C29B_54A7_4730_8D45_365F5F237B52__INCLUDED_)
+#endif // GENERATINGUNIT_H

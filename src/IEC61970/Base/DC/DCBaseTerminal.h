@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DCBaseTerminal.h
 //  Implementation of the Class DCBaseTerminal
-//  Created on:      28-Jan-2016 12:43:54
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_AA26E2C4_CE42_49b7_82D3_1AFE0932DAE6__INCLUDED_)
-#define EA_AA26E2C4_CE42_49b7_82D3_1AFE0932DAE6__INCLUDED_
+#ifndef DCBASETERMINAL_H
+#define DCBASETERMINAL_H
 
 #include "IEC61970/Base/Topology/DCTopologicalNode.h"
 #include "IEC61970/Base/Core/ACDCTerminal.h"
@@ -41,4 +40,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_AA26E2C4_CE42_49b7_82D3_1AFE0932DAE6__INCLUDED_)
+#endif // DCBASETERMINAL_H

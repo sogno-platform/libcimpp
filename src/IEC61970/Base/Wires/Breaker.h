@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Breaker.h
 //  Implementation of the Class Breaker
-//  Created on:      28-Jan-2016 12:43:30
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_1B14BE8F_BD9A_4be8_80DD_F9B06C85D96E__INCLUDED_)
-#define EA_1B14BE8F_BD9A_4be8_80DD_F9B06C85D96E__INCLUDED_
+#ifndef BREAKER_H
+#define BREAKER_H
 
 #include "IEC61970/Base/Domain/Seconds.h"
 #include "IEC61970/Base/Wires/ProtectedSwitch.h"
@@ -40,4 +39,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_1B14BE8F_BD9A_4be8_80DD_F9B06C85D96E__INCLUDED_)
+#endif // BREAKER_H

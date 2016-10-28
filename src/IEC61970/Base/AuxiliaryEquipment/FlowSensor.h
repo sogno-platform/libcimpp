@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  FlowSensor.h
 //  Implementation of the Class FlowSensor
-//  Created on:      28-Jan-2016 12:44:52
 //  Original author: 222206
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B1D76C87_110D_475a_86C3_174BFC2D761D__INCLUDED_)
-#define EA_B1D76C87_110D_475a_86C3_174BFC2D761D__INCLUDED_
+#ifndef FLOWSENSOR_H
+#define FLOWSENSOR_H
 
 #include "IEC61970/Base/Core/ConductingEquipment.h"
 
@@ -34,4 +33,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B1D76C87_110D_475a_86C3_174BFC2D761D__INCLUDED_)
+#endif // FLOWSENSOR_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  StringMeasurementValue.h
 //  Implementation of the Class StringMeasurementValue
-//  Created on:      28-Jan-2016 12:46:50
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E208B51A_A234_4e1c_9316_89E3D0ED3586__INCLUDED_)
-#define EA_E208B51A_A234_4e1c_9316_89E3D0ED3586__INCLUDED_
+#ifndef STRINGMEASUREMENTVALUE_H
+#define STRINGMEASUREMENTVALUE_H
 
 #include "IEC61970/Base/Domain/String.h"
 #include "IEC61970/Base/Meas/MeasurementValue.h"
@@ -42,4 +41,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_E208B51A_A234_4e1c_9316_89E3D0ED3586__INCLUDED_)
+#endif // STRINGMEASUREMENTVALUE_H

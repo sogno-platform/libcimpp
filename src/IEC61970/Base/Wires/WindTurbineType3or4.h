@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  WindTurbineType3or4.h
 //  Implementation of the Class WindTurbineType3or4
-//  Created on:      28-Jan-2016 12:47:59
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_EFA74F40_A80B_44cf_A747_9688F0C44C59__INCLUDED_)
-#define EA_EFA74F40_A80B_44cf_A747_9688F0C44C59__INCLUDED_
+#ifndef WINDTURBINETYPE3OR4_H
+#define WINDTURBINETYPE3OR4_H
 
 #include "IEC61970/Base/Wires/NonRotatingEnergy.h"
 
@@ -33,4 +32,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_EFA74F40_A80B_44cf_A747_9688F0C44C59__INCLUDED_)
+#endif // WINDTURBINETYPE3OR4_H

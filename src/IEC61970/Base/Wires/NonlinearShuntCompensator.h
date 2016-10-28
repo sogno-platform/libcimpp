@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  NonlinearShuntCompensator.h
 //  Implementation of the Class NonlinearShuntCompensator
-//  Created on:      28-Jan-2016 12:45:48
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_26DF23C1_F277_4ca1_BB3D_89E5696E4934__INCLUDED_)
-#define EA_26DF23C1_F277_4ca1_BB3D_89E5696E4934__INCLUDED_
+#ifndef NONLINEARSHUNTCOMPENSATOR_H
+#define NONLINEARSHUNTCOMPENSATOR_H
 
 #include <list>
 
@@ -41,4 +40,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_26DF23C1_F277_4ca1_BB3D_89E5696E4934__INCLUDED_)
+#endif // NONLINEARSHUNTCOMPENSATOR_H

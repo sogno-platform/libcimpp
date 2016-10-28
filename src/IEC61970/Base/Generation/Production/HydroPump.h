@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  HydroPump.h
 //  Implementation of the Class HydroPump
-//  Created on:      28-Jan-2016 12:45:21
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_933CBA35_320B_433d_AB19_1FCFE28A47A2__INCLUDED_)
-#define EA_933CBA35_320B_433d_AB19_1FCFE28A47A2__INCLUDED_
+#ifndef HYDROPUMP_H
+#define HYDROPUMP_H
 
 #include "IEC61970/Base/Domain/VolumeFlowRate.h"
 #include "IEC61970/Base/Domain/ActivePower.h"
@@ -61,4 +60,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_933CBA35_320B_433d_AB19_1FCFE28A47A2__INCLUDED_)
+#endif // HYDROPUMP_H

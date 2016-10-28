@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcitationSystemDynamics.h
 //  Implementation of the Class ExcitationSystemDynamics
-//  Created on:      28-Jan-2016 12:44:39
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_1B9D2987_1D99_456b_AD5F_D2ECC82D2409__INCLUDED_)
-#define EA_1B9D2987_1D99_456b_AD5F_D2ECC82D2409__INCLUDED_
+#ifndef EXCITATIONSYSTEMDYNAMICS_H
+#define EXCITATIONSYSTEMDYNAMICS_H
 
 #include "IEC61970/Dynamics/StandardModels/SynchronousMachineDynamics/SynchronousMachineDynamics.h"
 #include "IEC61970/Dynamics/StandardModels/DynamicsFunctionBlock.h"
@@ -44,4 +43,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_1B9D2987_1D99_456b_AD5F_D2ECC82D2409__INCLUDED_)
+#endif // EXCITATIONSYSTEMDYNAMICS_H

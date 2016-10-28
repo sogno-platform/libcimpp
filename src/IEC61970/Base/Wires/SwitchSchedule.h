@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  SwitchSchedule.h
 //  Implementation of the Class SwitchSchedule
-//  Created on:      28-Jan-2016 12:47:02
 //  Original author: KLH
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_256FA50D_8025_4c71_8424_44F8C683B081__INCLUDED_)
-#define EA_256FA50D_8025_4c71_8424_44F8C683B081__INCLUDED_
+#ifndef SWITCHSCHEDULE_H
+#define SWITCHSCHEDULE_H
 
 #include "IEC61970/Base/LoadModel/SeasonDayTypeSchedule.h"
 
@@ -34,4 +33,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_256FA50D_8025_4c71_8424_44F8C683B081__INCLUDED_)
+#endif // SWITCHSCHEDULE_H

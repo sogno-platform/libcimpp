@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  FuelAllocationSchedule.h
 //  Implementation of the Class FuelAllocationSchedule
-//  Created on:      28-Jan-2016 12:44:54
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_3A839DC5_91B5_4df7_951B_0635F2C871FB__INCLUDED_)
-#define EA_3A839DC5_91B5_4df7_951B_0635F2C871FB__INCLUDED_
+#ifndef FUELALLOCATIONSCHEDULE_H
+#define FUELALLOCATIONSCHEDULE_H
 
 #include "IEC61970/Base/Domain/DateTime.h"
 #include "IEC61970/Base/Generation/Production/FuelType.h"
@@ -62,4 +61,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_3A839DC5_91B5_4df7_951B_0635F2C871FB__INCLUDED_)
+#endif // FUELALLOCATIONSCHEDULE_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  Speed.h
 //  Implementation of the Class Speed
-//  Created on:      28-Jan-2016 12:46:43
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C3627124_F59F_4631_A327_741FFC1440D0__INCLUDED_)
-#define EA_C3627124_F59F_4631_A327_741FFC1440D0__INCLUDED_
+#ifndef SPEED_H
+#define SPEED_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C3627124_F59F_4631_A327_741FFC1440D0__INCLUDED_)
+#endif // SPEED_H

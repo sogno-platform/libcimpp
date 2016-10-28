@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  TailbayLossCurve.h
 //  Implementation of the Class TailbayLossCurve
-//  Created on:      28-Jan-2016 12:47:09
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_92E1B272_959D_42af_B56F_DAD976C697CA__INCLUDED_)
-#define EA_92E1B272_959D_42af_B56F_DAD976C697CA__INCLUDED_
+#ifndef TAILBAYLOSSCURVE_H
+#define TAILBAYLOSSCURVE_H
 
 #include "IEC61970/Base/Core/Curve.h"
 
@@ -39,4 +38,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_92E1B272_959D_42af_B56F_DAD976C697CA__INCLUDED_)
+#endif // TAILBAYLOSSCURVE_H

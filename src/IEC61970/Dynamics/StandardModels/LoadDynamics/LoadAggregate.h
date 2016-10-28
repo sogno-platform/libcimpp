@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  LoadAggregate.h
 //  Implementation of the Class LoadAggregate
-//  Created on:      28-Jan-2016 12:45:34
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_5418504E_7B73_46c1_8261_9DCA388BF93B__INCLUDED_)
-#define EA_5418504E_7B73_46c1_8261_9DCA388BF93B__INCLUDED_
+#ifndef LOADAGGREGATE_H
+#define LOADAGGREGATE_H
 
 #include "IEC61970/Dynamics/StandardModels/LoadDynamics/LoadDynamics.h"
 
@@ -41,4 +40,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_5418504E_7B73_46c1_8261_9DCA388BF93B__INCLUDED_)
+#endif // LOADAGGREGATE_H

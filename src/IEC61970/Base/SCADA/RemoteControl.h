@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  RemoteControl.h
 //  Implementation of the Class RemoteControl
-//  Created on:      28-Jan-2016 12:46:30
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F9043851_0DAA_4eb8_86A5_7EA7BC8D2990__INCLUDED_)
-#define EA_F9043851_0DAA_4eb8_86A5_7EA7BC8D2990__INCLUDED_
+#ifndef REMOTECONTROL_H
+#define REMOTECONTROL_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Domain/Boolean.h"
@@ -52,4 +51,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F9043851_0DAA_4eb8_86A5_7EA7BC8D2990__INCLUDED_)
+#endif // REMOTECONTROL_H

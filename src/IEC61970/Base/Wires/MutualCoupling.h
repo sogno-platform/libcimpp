@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  MutualCoupling.h
 //  Implementation of the Class MutualCoupling
-//  Created on:      28-Jan-2016 12:45:45
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_9304C0F3_42E0_4acf_9CA7_EBA43847F596__INCLUDED_)
-#define EA_9304C0F3_42E0_4acf_9CA7_EBA43847F596__INCLUDED_
+#ifndef MUTUALCOUPLING_H
+#define MUTUALCOUPLING_H
 
 #include "IEC61970/Base/Domain/Susceptance.h"
 #include "IEC61970/Base/Domain/Length.h"
@@ -88,4 +87,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_9304C0F3_42E0_4acf_9CA7_EBA43847F596__INCLUDED_)
+#endif // MUTUALCOUPLING_H

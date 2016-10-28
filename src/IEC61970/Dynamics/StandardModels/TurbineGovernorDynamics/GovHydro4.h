@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovHydro4.h
 //  Implementation of the Class GovHydro4
-//  Created on:      28-Jan-2016 12:45:05
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_36712320_BAF4_4809_85FC_365A958CF944__INCLUDED_)
-#define EA_36712320_BAF4_4809_85FC_365A958CF944__INCLUDED_
+#ifndef GOVHYDRO4_H
+#define GOVHYDRO4_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Float.h"
@@ -215,4 +214,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_36712320_BAF4_4809_85FC_365A958CF944__INCLUDED_)
+#endif // GOVHYDRO4_H

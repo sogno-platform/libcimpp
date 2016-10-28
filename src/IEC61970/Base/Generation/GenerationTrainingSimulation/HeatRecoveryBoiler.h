@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  HeatRecoveryBoiler.h
 //  Implementation of the Class HeatRecoveryBoiler
-//  Created on:      28-Jan-2016 12:45:18
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_8D8FBA31_C335_48ab_847E_0305CC41AB67__INCLUDED_)
-#define EA_8D8FBA31_C335_48ab_847E_0305CC41AB67__INCLUDED_
+#ifndef HEATRECOVERYBOILER_H
+#define HEATRECOVERYBOILER_H
 
 #include <list>
 
@@ -49,4 +48,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_8D8FBA31_C335_48ab_847E_0305CC41AB67__INCLUDED_)
+#endif // HEATRECOVERYBOILER_H

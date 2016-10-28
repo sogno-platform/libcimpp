@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcHU.h
 //  Implementation of the Class ExcHU
-//  Created on:      28-Jan-2016 12:44:30
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_8797CEA7_1AF2_4b7d_A260_8082583336AB__INCLUDED_)
-#define EA_8797CEA7_1AF2_4b7d_A260_8082583336AB__INCLUDED_
+#ifndef EXCHU_H
+#define EXCHU_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Float.h"
@@ -92,4 +91,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_8797CEA7_1AF2_4b7d_A260_8082583336AB__INCLUDED_)
+#endif // EXCHU_H

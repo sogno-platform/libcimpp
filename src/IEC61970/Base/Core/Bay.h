@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Bay.h
 //  Implementation of the Class Bay
-//  Created on:      28-Jan-2016 12:43:27
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C416F635_23C2_4831_8293_603C76B9526C__INCLUDED_)
-#define EA_C416F635_23C2_4831_8293_603C76B9526C__INCLUDED_
+#ifndef BAY_H
+#define BAY_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Core/BreakerConfiguration.h"
@@ -53,4 +52,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C416F635_23C2_4831_8293_603C76B9526C__INCLUDED_)
+#endif // BAY_H

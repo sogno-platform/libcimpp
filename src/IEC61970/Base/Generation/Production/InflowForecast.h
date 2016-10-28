@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  InflowForecast.h
 //  Implementation of the Class InflowForecast
-//  Created on:      28-Jan-2016 12:45:28
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E8839FC3_38DA_4df0_90F3_FD686EE41BF7__INCLUDED_)
-#define EA_E8839FC3_38DA_4df0_90F3_FD686EE41BF7__INCLUDED_
+#ifndef INFLOWFORECAST_H
+#define INFLOWFORECAST_H
 
 #include "IEC61970/Base/Core/RegularIntervalSchedule.h"
 
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_E8839FC3_38DA_4df0_90F3_FD686EE41BF7__INCLUDED_)
+#endif // INFLOWFORECAST_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovHydroPelton.h
 //  Implementation of the Class GovHydroPelton
-//  Created on:      28-Jan-2016 12:45:08
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_61A1C278_E031_40cd_924C_609D0D434D8A__INCLUDED_)
-#define EA_61A1C278_E031_40cd_924C_609D0D434D8A__INCLUDED_
+#ifndef GOVHYDROPELTON_H
+#define GOVHYDROPELTON_H
 
 #include "IEC61970/Base/Domain/Area.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -176,4 +175,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_61A1C278_E031_40cd_924C_609D0D434D8A__INCLUDED_)
+#endif // GOVHYDROPELTON_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Conductor.h
 //  Implementation of the Class Conductor
-//  Created on:      28-Jan-2016 12:43:37
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F0CC71F3_A786_499f_B90E_B3BA7A15C6B4__INCLUDED_)
-#define EA_F0CC71F3_A786_499f_B90E_B3BA7A15C6B4__INCLUDED_
+#ifndef CONDUCTOR_H
+#define CONDUCTOR_H
 
 #include "IEC61970/Base/Domain/Length.h"
 #include "IEC61970/Base/Core/ConductingEquipment.h"
@@ -39,4 +38,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F0CC71F3_A786_499f_B90E_B3BA7A15C6B4__INCLUDED_)
+#endif // CONDUCTOR_H

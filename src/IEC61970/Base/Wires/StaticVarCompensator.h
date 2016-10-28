@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  StaticVarCompensator.h
 //  Implementation of the Class StaticVarCompensator
-//  Created on:      28-Jan-2016 12:46:46
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_D29F1332_B9BA_484d_8995_A82E2E2EB5AC__INCLUDED_)
-#define EA_D29F1332_B9BA_484d_8995_A82E2E2EB5AC__INCLUDED_
+#ifndef STATICVARCOMPENSATOR_H
+#define STATICVARCOMPENSATOR_H
 
 #include "IEC61970/Base/Domain/Reactance.h"
 #include "IEC61970/Base/Domain/ReactivePower.h"
@@ -75,4 +74,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_D29F1332_B9BA_484d_8995_A82E2E2EB5AC__INCLUDED_)
+#endif // STATICVARCOMPENSATOR_H

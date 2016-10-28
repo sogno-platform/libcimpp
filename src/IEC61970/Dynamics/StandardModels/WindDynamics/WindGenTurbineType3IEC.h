@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindGenTurbineType3IEC.h
 //  Implementation of the Class WindGenTurbineType3IEC
-//  Created on:      28-Jan-2016 12:47:52
 //  Original author: civanov
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_78C0D721_359B_4269_875D_BAD9695DB353__INCLUDED_)
-#define EA_78C0D721_359B_4269_875D_BAD9695DB353__INCLUDED_
+#ifndef WINDGENTURBINETYPE3IEC_H
+#define WINDGENTURBINETYPE3IEC_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Dynamics/StandardModels/WindDynamics/WindTurbineType3or4IEC.h"
@@ -48,4 +47,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_78C0D721_359B_4269_875D_BAD9695DB353__INCLUDED_)
+#endif // WINDGENTURBINETYPE3IEC_H

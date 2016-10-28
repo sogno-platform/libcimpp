@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovHydro2.h
 //  Implementation of the Class GovHydro2
-//  Created on:      28-Jan-2016 12:45:04
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B272889F_1D79_46d3_B161_71F2C560C7D2__INCLUDED_)
-#define EA_B272889F_1D79_46d3_B161_71F2C560C7D2__INCLUDED_
+#ifndef GOVHYDRO2_H
+#define GOVHYDRO2_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Frequency.h"
@@ -159,4 +158,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B272889F_1D79_46d3_B161_71F2C560C7D2__INCLUDED_)
+#endif // GOVHYDRO2_H

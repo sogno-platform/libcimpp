@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PetersenCoil.h
 //  Implementation of the Class PetersenCoil
-//  Created on:      28-Jan-2016 12:45:58
 //  Original author: kdemaree
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F6BB95C2_33F3_42d8_95B2_542B6CEBD8D6__INCLUDED_)
-#define EA_F6BB95C2_33F3_42d8_95B2_542B6CEBD8D6__INCLUDED_
+#ifndef PETERSENCOIL_H
+#define PETERSENCOIL_H
 
 #include "IEC61970/Base/Wires/PetersenCoilModeKind.h"
 #include "IEC61970/Base/Domain/Voltage.h"
@@ -73,4 +72,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F6BB95C2_33F3_42d8_95B2_542B6CEBD8D6__INCLUDED_)
+#endif // PETERSENCOIL_H

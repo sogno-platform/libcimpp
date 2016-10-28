@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  HydroPlantStorageKind.h
 //  Implementation of the Class HydroPlantStorageKind
-//  Created on:      28-Jan-2016 12:45:20
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_532FE9F0_A265_46ae_8933_B4F960E54E46__INCLUDED_)
-#define EA_532FE9F0_A265_46ae_8933_B4F960E54E46__INCLUDED_
+#ifndef HYDROPLANTSTORAGEKIND_H
+#define HYDROPLANTSTORAGEKIND_H
 
 namespace IEC61970
 {
@@ -41,4 +40,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_532FE9F0_A265_46ae_8933_B4F960E54E46__INCLUDED_)
+#endif // HYDROPLANTSTORAGEKIND_H

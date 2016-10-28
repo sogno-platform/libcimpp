@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PhaseTapChangerNonLinear.h
 //  Implementation of the Class PhaseTapChangerNonLinear
-//  Created on:      28-Jan-2016 12:46:04
 //  Original author: SELAOST1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_2C176C6F_E476_4133_BABB_6339459D8224__INCLUDED_)
-#define EA_2C176C6F_E476_4133_BABB_6339459D8224__INCLUDED_
+#ifndef PHASETAPCHANGERNONLINEAR_H
+#define PHASETAPCHANGERNONLINEAR_H
 
 #include "IEC61970/Base/Domain/PerCent.h"
 #include "IEC61970/Base/Domain/Reactance.h"
@@ -53,4 +52,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_2C176C6F_E476_4133_BABB_6339459D8224__INCLUDED_)
+#endif // PHASETAPCHANGERNONLINEAR_H

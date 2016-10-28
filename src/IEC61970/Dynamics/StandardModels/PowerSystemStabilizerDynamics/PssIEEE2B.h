@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PssIEEE2B.h
 //  Implementation of the Class PssIEEE2B
-//  Created on:      28-Jan-2016 12:46:18
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_1F889104_9C52_487c_862A_446475F99AF2__INCLUDED_)
-#define EA_1F889104_9C52_487c_862A_446475F99AF2__INCLUDED_
+#ifndef PSSIEEE2B_H
+#define PSSIEEE2B_H
 
 #include "IEC61970/Dynamics/StandardModels/PowerSystemStabilizerDynamics/InputSignalKind.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -154,4 +153,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_1F889104_9C52_487c_862A_446475F99AF2__INCLUDED_)
+#endif // PSSIEEE2B_H

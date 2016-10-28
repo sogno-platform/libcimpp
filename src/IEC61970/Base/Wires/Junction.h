@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Junction.h
 //  Implementation of the Class Junction
-//  Created on:      28-Jan-2016 12:45:31
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_D6BD3342_707C_409b_9F45_6F5B0A19A917__INCLUDED_)
-#define EA_D6BD3342_707C_409b_9F45_6F5B0A19A917__INCLUDED_
+#ifndef JUNCTION_H
+#define JUNCTION_H
 
 #include "IEC61970/Base/Wires/Connector.h"
 
@@ -33,4 +32,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_D6BD3342_707C_409b_9F45_6F5B0A19A917__INCLUDED_)
+#endif // JUNCTION_H

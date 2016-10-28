@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovSteamCC.h
 //  Implementation of the Class GovSteamCC
-//  Created on:      28-Jan-2016 12:45:12
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_039340A5_BF39_4642_B765_CF82ED523C9C__INCLUDED_)
-#define EA_039340A5_BF39_4642_B765_CF82ED523C9C__INCLUDED_
+#ifndef GOVSTEAMCC_H
+#define GOVSTEAMCC_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/ActivePower.h"
@@ -108,4 +107,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_039340A5_BF39_4642_B765_CF82ED523C9C__INCLUDED_)
+#endif // GOVSTEAMCC_H

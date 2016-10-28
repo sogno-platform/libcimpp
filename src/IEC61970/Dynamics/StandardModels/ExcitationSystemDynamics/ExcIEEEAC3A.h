@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcIEEEAC3A.h
 //  Implementation of the Class ExcIEEEAC3A
-//  Created on:      28-Jan-2016 12:44:31
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B197D755_8D83_4486_8359_883E0E580C1A__INCLUDED_)
-#define EA_B197D755_8D83_4486_8359_883E0E580C1A__INCLUDED_
+#ifndef EXCIEEEAC3A_H
+#define EXCIEEEAC3A_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Float.h"
@@ -151,4 +150,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B197D755_8D83_4486_8359_883E0E580C1A__INCLUDED_)
+#endif // EXCIEEEAC3A_H

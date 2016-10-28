@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindType1or2UserDefined.h
 //  Implementation of the Class WindType1or2UserDefined
-//  Created on:      28-Jan-2016 12:48:01
 //  Original author: civanov
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_115D40BC_3874_4e17_8666_B2FA1DC908C6__INCLUDED_)
-#define EA_115D40BC_3874_4e17_8666_B2FA1DC908C6__INCLUDED_
+#ifndef WINDTYPE1OR2USERDEFINED_H
+#define WINDTYPE1OR2USERDEFINED_H
 
 #include <list>
 
@@ -50,4 +49,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_115D40BC_3874_4e17_8666_B2FA1DC908C6__INCLUDED_)
+#endif // WINDTYPE1OR2USERDEFINED_H

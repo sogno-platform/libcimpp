@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  OperationalLimitType.h
 //  Implementation of the Class OperationalLimitType
-//  Created on:      28-Jan-2016 12:45:53
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_DDFA1869_461A_4830_A7BD_60B3EF79D89E__INCLUDED_)
-#define EA_DDFA1869_461A_4830_A7BD_60B3EF79D89E__INCLUDED_
+#ifndef OPERATIONALLIMITTYPE_H
+#define OPERATIONALLIMITTYPE_H
 
 #include "IEC61970/Base/Domain/Seconds.h"
 #include "IEC61970/Base/OperationalLimits/OperationalLimitDirectionKind.h"
@@ -46,4 +45,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_DDFA1869_461A_4830_A7BD_60B3EF79D89E__INCLUDED_)
+#endif // OPERATIONALLIMITTYPE_H

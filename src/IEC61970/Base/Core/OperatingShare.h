@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  OperatingShare.h
 //  Implementation of the Class OperatingShare
-//  Created on:      28-Jan-2016 12:45:51
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C4C8AA38_31DA_4928_B20F_A1ED846FDE9F__INCLUDED_)
-#define EA_C4C8AA38_31DA_4928_B20F_A1ED846FDE9F__INCLUDED_
+#ifndef OPERATINGSHARE_H
+#define OPERATINGSHARE_H
 
 #include "IEC61970/Base/Domain/PerCent.h"
 #include "IEC61970/Base/Core/OperatingParticipant.h"
@@ -52,4 +51,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C4C8AA38_31DA_4928_B20F_A1ED846FDE9F__INCLUDED_)
+#endif // OPERATINGSHARE_H

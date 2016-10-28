@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  RegulatingControlModeKind.h
 //  Implementation of the Class RegulatingControlModeKind
-//  Created on:      28-Jan-2016 12:46:29
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_6A5C92C2_1757_4452_AC2E_2B3CEAFB0DAF__INCLUDED_)
-#define EA_6A5C92C2_1757_4452_AC2E_2B3CEAFB0DAF__INCLUDED_
+#ifndef REGULATINGCONTROLMODEKIND_H
+#define REGULATINGCONTROLMODEKIND_H
 
 namespace IEC61970
 {
@@ -60,4 +59,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_6A5C92C2_1757_4452_AC2E_2B3CEAFB0DAF__INCLUDED_)
+#endif // REGULATINGCONTROLMODEKIND_H

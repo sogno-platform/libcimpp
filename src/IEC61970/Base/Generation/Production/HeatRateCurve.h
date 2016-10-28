@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  HeatRateCurve.h
 //  Implementation of the Class HeatRateCurve
-//  Created on:      28-Jan-2016 12:45:18
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_1EF41C52_5914_4cac_9838_5B89B1911239__INCLUDED_)
-#define EA_1EF41C52_5914_4cac_9838_5B89B1911239__INCLUDED_
+#ifndef HEATRATECURVE_H
+#define HEATRATECURVE_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Core/Curve.h"
@@ -42,4 +41,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_1EF41C52_5914_4cac_9838_5B89B1911239__INCLUDED_)
+#endif // HEATRATECURVE_H

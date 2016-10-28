@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  SvTapStep.h
 //  Implementation of the Class SvTapStep
-//  Created on:      28-Jan-2016 12:46:59
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_69C233C3_F274_4f3e_BA87_1CDBD55D448D__INCLUDED_)
-#define EA_69C233C3_F274_4f3e_BA87_1CDBD55D448D__INCLUDED_
+#ifndef SVTAPSTEP_H
+#define SVTAPSTEP_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/StateVariables/StateVariable.h"
@@ -46,4 +45,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_69C233C3_F274_4f3e_BA87_1CDBD55D448D__INCLUDED_)
+#endif // SVTAPSTEP_H

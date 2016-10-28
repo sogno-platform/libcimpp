@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PhaseImpedanceData.h
 //  Implementation of the Class PhaseImpedanceData
-//  Created on:      28-Jan-2016 12:46:02
 //  Original author: Tom
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B2CB8601_AFFA_4bef_9C00_5F489B79628D__INCLUDED_)
-#define EA_B2CB8601_AFFA_4bef_9C00_5F489B79628D__INCLUDED_
+#ifndef PHASEIMPEDANCEDATA_H
+#define PHASEIMPEDANCEDATA_H
 
 #include "IEC61970/Base/Domain/SusceptancePerLength.h"
 #include "IEC61970/Base/Domain/ResistancePerLength.h"
@@ -56,4 +55,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B2CB8601_AFFA_4bef_9C00_5F489B79628D__INCLUDED_)
+#endif // PHASEIMPEDANCEDATA_H

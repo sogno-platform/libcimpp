@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcOEX3T.h
 //  Implementation of the Class ExcOEX3T
-//  Created on:      28-Jan-2016 12:44:40
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_2CE0ED9A_A4B4_4554_94E0_D08DADAD1199__INCLUDED_)
-#define EA_2CE0ED9A_A4B4_4554_94E0_D08DADAD1199__INCLUDED_
+#ifndef EXCOEX3T_H
+#define EXCOEX3T_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -116,4 +115,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_2CE0ED9A_A4B4_4554_94E0_D08DADAD1199__INCLUDED_)
+#endif // EXCOEX3T_H

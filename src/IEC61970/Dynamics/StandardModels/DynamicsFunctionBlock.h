@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DynamicsFunctionBlock.h
 //  Implementation of the Class DynamicsFunctionBlock
-//  Created on:      28-Jan-2016 12:44:11
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C551510D_5004_41b2_BB3E_BCECD7498C7C__INCLUDED_)
-#define EA_C551510D_5004_41b2_BB3E_BCECD7498C7C__INCLUDED_
+#ifndef DYNAMICSFUNCTIONBLOCK_H
+#define DYNAMICSFUNCTIONBLOCK_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Core/IdentifiedObject.h"
@@ -40,4 +39,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C551510D_5004_41b2_BB3E_BCECD7498C7C__INCLUDED_)
+#endif // DYNAMICSFUNCTIONBLOCK_H

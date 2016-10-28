@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  VoltageCompensatorDynamics.h
 //  Implementation of the Class VoltageCompensatorDynamics
-//  Created on:      28-Jan-2016 12:47:36
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E4186707_4D4E_45c3_BFFC_996B4E415DBB__INCLUDED_)
-#define EA_E4186707_4D4E_45c3_BFFC_996B4E415DBB__INCLUDED_
+#ifndef VOLTAGECOMPENSATORDYNAMICS_H
+#define VOLTAGECOMPENSATORDYNAMICS_H
 
 #include "IEC61970/Dynamics/StandardModels/ExcitationSystemDynamics/ExcitationSystemDynamics.h"
 #include "IEC61970/Dynamics/StandardModels/DynamicsFunctionBlock.h"
@@ -49,4 +48,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_E4186707_4D4E_45c3_BFFC_996B4E415DBB__INCLUDED_)
+#endif // VOLTAGECOMPENSATORDYNAMICS_H

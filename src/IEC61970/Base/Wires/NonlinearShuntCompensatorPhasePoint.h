@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  NonlinearShuntCompensatorPhasePoint.h
 //  Implementation of the Class NonlinearShuntCompensatorPhasePoint
-//  Created on:      28-Jan-2016 12:45:49
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_1E2620F4_CD5F_4463_B888_B277D416D415__INCLUDED_)
-#define EA_1E2620F4_CD5F_4463_B888_B277D416D415__INCLUDED_
+#ifndef NONLINEARSHUNTCOMPENSATORPHASEPOINT_H
+#define NONLINEARSHUNTCOMPENSATORPHASEPOINT_H
 
 #include "IEC61970/Base/Domain/Susceptance.h"
 #include "IEC61970/Base/Domain/Conductance.h"
@@ -48,4 +47,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_1E2620F4_CD5F_4463_B888_B277D416D415__INCLUDED_)
+#endif // NONLINEARSHUNTCOMPENSATORPHASEPOINT_H

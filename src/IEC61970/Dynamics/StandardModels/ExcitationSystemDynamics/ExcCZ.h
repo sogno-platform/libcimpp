@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcCZ.h
 //  Implementation of the Class ExcCZ
-//  Created on:      28-Jan-2016 12:44:26
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_5CAB3572_B325_42da_95B2_A50265974535__INCLUDED_)
-#define EA_5CAB3572_B325_42da_95B2_A50265974535__INCLUDED_
+#ifndef EXCCZ_H
+#define EXCCZ_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -79,4 +78,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_5CAB3572_B325_42da_95B2_A50265974535__INCLUDED_)
+#endif // EXCCZ_H

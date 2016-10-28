@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  VoltageAdjusterUserDefined.h
 //  Implementation of the Class VoltageAdjusterUserDefined
-//  Created on:      28-Jan-2016 12:47:35
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_10E3EA7E_C6CD_4bdf_B169_99096CC33DCC__INCLUDED_)
-#define EA_10E3EA7E_C6CD_4bdf_B169_99096CC33DCC__INCLUDED_
+#ifndef VOLTAGEADJUSTERUSERDEFINED_H
+#define VOLTAGEADJUSTERUSERDEFINED_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Dynamics/StandardModels/VoltageAdjusterDynamics/VoltageAdjusterDynamics.h"
@@ -43,4 +42,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_10E3EA7E_C6CD_4bdf_B169_99096CC33DCC__INCLUDED_)
+#endif // VOLTAGEADJUSTERUSERDEFINED_H

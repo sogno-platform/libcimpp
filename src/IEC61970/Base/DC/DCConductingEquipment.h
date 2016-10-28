@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DCConductingEquipment.h
 //  Implementation of the Class DCConductingEquipment
-//  Created on:      28-Jan-2016 12:43:56
 //  Original author: SELAOST1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_ADEF6CCD_9FD0_473d_97B8_8BA94D61DB89__INCLUDED_)
-#define EA_ADEF6CCD_9FD0_473d_97B8_8BA94D61DB89__INCLUDED_
+#ifndef DCCONDUCTINGEQUIPMENT_H
+#define DCCONDUCTINGEQUIPMENT_H
 
 #include <list>
 
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_ADEF6CCD_9FD0_473d_97B8_8BA94D61DB89__INCLUDED_)
+#endif // DCCONDUCTINGEQUIPMENT_H

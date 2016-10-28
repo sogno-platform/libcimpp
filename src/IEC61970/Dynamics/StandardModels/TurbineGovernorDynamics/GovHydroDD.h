@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovHydroDD.h
 //  Implementation of the Class GovHydroDD
-//  Created on:      28-Jan-2016 12:45:06
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F7D991DF_B54D_4e09_89E4_D1400C536242__INCLUDED_)
-#define EA_F7D991DF_B54D_4e09_89E4_D1400C536242__INCLUDED_
+#ifndef GOVHYDRODD_H
+#define GOVHYDRODD_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Frequency.h"
@@ -188,4 +187,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F7D991DF_B54D_4e09_89E4_D1400C536242__INCLUDED_)
+#endif // GOVHYDRODD_H

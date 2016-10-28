@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Pressure.h
 //  Implementation of the Class Pressure
-//  Created on:      28-Jan-2016 12:46:11
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_1F879E5A_4298_431d_BA18_9E3E98CC43FC__INCLUDED_)
-#define EA_1F879E5A_4298_431d_BA18_9E3E98CC43FC__INCLUDED_
+#ifndef PRESSURE_H
+#define PRESSURE_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_1F879E5A_4298_431d_BA18_9E3E98CC43FC__INCLUDED_)
+#endif // PRESSURE_H

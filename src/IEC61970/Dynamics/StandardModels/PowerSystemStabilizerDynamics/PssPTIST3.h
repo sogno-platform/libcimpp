@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PssPTIST3.h
 //  Implementation of the Class PssPTIST3
-//  Created on:      28-Jan-2016 12:46:19
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_1D58472A_D309_403f_88B8_25FDAB0B0667__INCLUDED_)
-#define EA_1D58472A_D309_403f_88B8_25FDAB0B0667__INCLUDED_
+#ifndef PSSPTIST3_H
+#define PSSPTIST3_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -182,4 +181,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_1D58472A_D309_403f_88B8_25FDAB0B0667__INCLUDED_)
+#endif // PSSPTIST3_H

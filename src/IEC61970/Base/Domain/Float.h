@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Float.h
 //  Implementation of the Class Float
-//  Created on:      28-Jan-2016 12:44:51
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_79F22551_4058_4823_A0F3_51337F8E537F__INCLUDED_)
-#define EA_79F22551_4058_4823_A0F3_51337F8E537F__INCLUDED_
+#ifndef FLOAT_H
+#define FLOAT_H
 
 namespace IEC61970
 {
@@ -23,4 +22,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_79F22551_4058_4823_A0F3_51337F8E537F__INCLUDED_)
+#endif // FLOAT_H

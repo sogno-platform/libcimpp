@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  VoltageControlZone.h
 //  Implementation of the Class VoltageControlZone
-//  Created on:      28-Jan-2016 12:47:37
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_12D4E724_077B_4381_9B75_A82E8EE69C7A__INCLUDED_)
-#define EA_12D4E724_077B_4381_9B75_A82E8EE69C7A__INCLUDED_
+#ifndef VOLTAGECONTROLZONE_H
+#define VOLTAGECONTROLZONE_H
 
 #include "IEC61970/Base/Core/PowerSystemResource.h"
 
@@ -34,4 +33,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_12D4E724_077B_4381_9B75_A82E8EE69C7A__INCLUDED_)
+#endif // VOLTAGECONTROLZONE_H

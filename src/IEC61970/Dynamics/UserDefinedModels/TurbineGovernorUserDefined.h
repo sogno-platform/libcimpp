@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  TurbineGovernorUserDefined.h
 //  Implementation of the Class TurbineGovernorUserDefined
-//  Created on:      28-Jan-2016 12:47:26
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B2368B8A_27AC_44dc_AFDF_2EA1B7B9AC67__INCLUDED_)
-#define EA_B2368B8A_27AC_44dc_AFDF_2EA1B7B9AC67__INCLUDED_
+#ifndef TURBINEGOVERNORUSERDEFINED_H
+#define TURBINEGOVERNORUSERDEFINED_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Dynamics/StandardModels/TurbineGovernorDynamics/TurbineGovernorDynamics.h"
@@ -43,4 +42,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B2368B8A_27AC_44dc_AFDF_2EA1B7B9AC67__INCLUDED_)
+#endif // TURBINEGOVERNORUSERDEFINED_H

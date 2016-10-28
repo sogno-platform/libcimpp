@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  VCompIEEEType2.h
 //  Implementation of the Class VCompIEEEType2
-//  Created on:      28-Jan-2016 12:47:33
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_D991F286_A737_431e_8812_2C3708A1BC1B__INCLUDED_)
-#define EA_D991F286_A737_431e_8812_2C3708A1BC1B__INCLUDED_
+#ifndef VCOMPIEEETYPE2_H
+#define VCOMPIEEETYPE2_H
 
 #include "IEC61970/Base/Domain/Seconds.h"
 #include "IEC61970/Dynamics/StandardModels/VoltageCompensatorDynamics/VoltageCompensatorDynamics.h"
@@ -55,4 +54,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_D991F286_A737_431e_8812_2C3708A1BC1B__INCLUDED_)
+#endif // VCOMPIEEETYPE2_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  ApparentPower.h
 //  Implementation of the Class ApparentPower
-//  Created on:      28-Jan-2016 12:43:21
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_DE76360B_84C3_4948_8B0E_44FD26FD8EBB__INCLUDED_)
-#define EA_DE76360B_84C3_4948_8B0E_44FD26FD8EBB__INCLUDED_
+#ifndef APPARENTPOWER_H
+#define APPARENTPOWER_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_DE76360B_84C3_4948_8B0E_44FD26FD8EBB__INCLUDED_)
+#endif // APPARENTPOWER_H

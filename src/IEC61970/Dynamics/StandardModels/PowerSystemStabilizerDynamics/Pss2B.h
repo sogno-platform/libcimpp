@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  Pss2B.h
 //  Implementation of the Class Pss2B
-//  Created on:      28-Jan-2016 12:46:15
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B3241AFB_26D7_4145_B573_10F4ABBC8F02__INCLUDED_)
-#define EA_B3241AFB_26D7_4145_B573_10F4ABBC8F02__INCLUDED_
+#ifndef PSS2B_H
+#define PSS2B_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Dynamics/StandardModels/PowerSystemStabilizerDynamics/InputSignalKind.h"
@@ -167,4 +166,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B3241AFB_26D7_4145_B573_10F4ABBC8F02__INCLUDED_)
+#endif // PSS2B_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ActivePowerLimit.h
 //  Implementation of the Class ActivePowerLimit
-//  Created on:      28-Jan-2016 12:43:14
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_DD04D169_1C7F_4bbe_AF1C_D998CEA8A2F8__INCLUDED_)
-#define EA_DD04D169_1C7F_4bbe_AF1C_D998CEA8A2F8__INCLUDED_
+#ifndef ACTIVEPOWERLIMIT_H
+#define ACTIVEPOWERLIMIT_H
 
 #include "IEC61970/Base/Domain/ActivePower.h"
 #include "IEC61970/Base/OperationalLimits/OperationalLimit.h"
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_DD04D169_1C7F_4bbe_AF1C_D998CEA8A2F8__INCLUDED_)
+#endif // ACTIVEPOWERLIMIT_H

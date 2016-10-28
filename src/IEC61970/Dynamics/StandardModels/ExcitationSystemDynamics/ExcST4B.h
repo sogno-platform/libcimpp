@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcST4B.h
 //  Implementation of the Class ExcST4B
-//  Created on:      28-Jan-2016 12:44:45
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_104F4B33_BE21_4ecd_8B19_5434C505786A__INCLUDED_)
-#define EA_104F4B33_BE21_4ecd_8B19_5434C505786A__INCLUDED_
+#ifndef EXCST4B_H
+#define EXCST4B_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Boolean.h"
@@ -126,4 +125,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_104F4B33_BE21_4ecd_8B19_5434C505786A__INCLUDED_)
+#endif // EXCST4B_H

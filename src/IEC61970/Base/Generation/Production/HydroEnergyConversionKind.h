@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  HydroEnergyConversionKind.h
 //  Implementation of the Class HydroEnergyConversionKind
-//  Created on:      28-Jan-2016 12:45:19
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F2801A68_A0E9_4a8c_8243_CA2044BCA784__INCLUDED_)
-#define EA_F2801A68_A0E9_4a8c_8243_CA2044BCA784__INCLUDED_
+#ifndef HYDROENERGYCONVERSIONKIND_H
+#define HYDROENERGYCONVERSIONKIND_H
 
 namespace IEC61970
 {
@@ -39,4 +38,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F2801A68_A0E9_4a8c_8243_CA2044BCA784__INCLUDED_)
+#endif // HYDROENERGYCONVERSIONKIND_H

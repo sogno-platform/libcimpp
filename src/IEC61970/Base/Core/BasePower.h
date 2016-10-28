@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  BasePower.h
 //  Implementation of the Class BasePower
-//  Created on:      28-Jan-2016 12:43:26
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_BCDAF241_FCDD_4147_8E5F_CF71BB1CCBEE__INCLUDED_)
-#define EA_BCDAF241_FCDD_4147_8E5F_CF71BB1CCBEE__INCLUDED_
+#ifndef BASEPOWER_H
+#define BASEPOWER_H
 
 #include "IEC61970/Base/Domain/ApparentPower.h"
 #include "IEC61970/Base/Core/IdentifiedObject.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_BCDAF241_FCDD_4147_8E5F_CF71BB1CCBEE__INCLUDED_)
+#endif // BASEPOWER_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  SynchronousMachineTimeConstantReactance.h
 //  Implementation of the Class SynchronousMachineTimeConstantReactance
-//  Created on:      28-Jan-2016 12:47:08
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_EA21170E_8B2A_4089_995A_077B80087571__INCLUDED_)
-#define EA_EA21170E_8B2A_4089_995A_077B80087571__INCLUDED_
+#ifndef SYNCHRONOUSMACHINETIMECONSTANTREACTANCE_H
+#define SYNCHRONOUSMACHINETIMECONSTANTREACTANCE_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Dynamics/StandardModels/SynchronousMachineDynamics/SynchronousMachineModelKind.h"
@@ -148,4 +147,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_EA21170E_8B2A_4089_995A_077B80087571__INCLUDED_)
+#endif // SYNCHRONOUSMACHINETIMECONSTANTREACTANCE_H

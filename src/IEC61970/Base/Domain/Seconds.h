@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Seconds.h
 //  Implementation of the Class Seconds
-//  Created on:      28-Jan-2016 12:46:38
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_79B6C787_ABBF_46f8_9FF8_F9FE8F38C607__INCLUDED_)
-#define EA_79B6C787_ABBF_46f8_9FF8_F9FE8F38C607__INCLUDED_
+#ifndef SECONDS_H
+#define SECONDS_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -40,4 +39,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_79B6C787_ABBF_46f8_9FF8_F9FE8F38C607__INCLUDED_)
+#endif // SECONDS_H

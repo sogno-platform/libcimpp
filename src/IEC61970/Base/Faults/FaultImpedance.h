@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  FaultImpedance.h
 //  Implementation of the Class FaultImpedance
-//  Created on:      28-Jan-2016 12:44:50
 //  Original author: kdemaree
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_AC2BA714_8FD7_401e_9AA5_C00D69A6BB9F__INCLUDED_)
-#define EA_AC2BA714_8FD7_401e_9AA5_C00D69A6BB9F__INCLUDED_
+#ifndef FAULTIMPEDANCE_H
+#define FAULTIMPEDANCE_H
 
 #include "IEC61970/Base/Domain/Resistance.h"
 #include "IEC61970/Base/Domain/Reactance.h"
@@ -51,4 +50,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_AC2BA714_8FD7_401e_9AA5_C00D69A6BB9F__INCLUDED_)
+#endif // FAULTIMPEDANCE_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  UnderexcLimX2.h
 //  Implementation of the Class UnderexcLimX2
-//  Created on:      28-Jan-2016 12:47:30
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B9C6E841_56AE_4559_AA31_AC0B35198CEF__INCLUDED_)
-#define EA_B9C6E841_56AE_4559_AA31_AC0B35198CEF__INCLUDED_
+#ifndef UNDEREXCLIMX2_H
+#define UNDEREXCLIMX2_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -67,4 +66,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B9C6E841_56AE_4559_AA31_AC0B35198CEF__INCLUDED_)
+#endif // UNDEREXCLIMX2_H

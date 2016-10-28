@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  GroundDisconnector.h
 //  Implementation of the Class GroundDisconnector
-//  Created on:      28-Jan-2016 12:45:16
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_1DB4A883_2759_49a9_9099_E4267183535D__INCLUDED_)
-#define EA_1DB4A883_2759_49a9_9099_E4267183535D__INCLUDED_
+#ifndef GROUNDDISCONNECTOR_H
+#define GROUNDDISCONNECTOR_H
 
 #include "IEC61970/Base/Wires/Switch.h"
 
@@ -33,4 +32,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_1DB4A883_2759_49a9_9099_E4267183535D__INCLUDED_)
+#endif // GROUNDDISCONNECTOR_H

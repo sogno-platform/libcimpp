@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  StaticLoadModelKind.h
 //  Implementation of the Class StaticLoadModelKind
-//  Created on:      28-Jan-2016 12:46:46
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_CDCC4D44_575B_45dc_B2E5_3C0165CA0F73__INCLUDED_)
-#define EA_CDCC4D44_575B_45dc_B2E5_3C0165CA0F73__INCLUDED_
+#ifndef STATICLOADMODELKIND_H
+#define STATICLOADMODELKIND_H
 
 namespace IEC61970
 {
@@ -56,4 +55,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_CDCC4D44_575B_45dc_B2E5_3C0165CA0F73__INCLUDED_)
+#endif // STATICLOADMODELKIND_H

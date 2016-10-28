@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  EmissionValueSource.h
 //  Implementation of the Class EmissionValueSource
-//  Created on:      28-Jan-2016 12:44:13
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_CD88FC35_DC22_4879_A4B2_6287A47D0FA6__INCLUDED_)
-#define EA_CD88FC35_DC22_4879_A4B2_6287A47D0FA6__INCLUDED_
+#ifndef EMISSIONVALUESOURCE_H
+#define EMISSIONVALUESOURCE_H
 
 namespace IEC61970
 {
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_CD88FC35_DC22_4879_A4B2_6287A47D0FA6__INCLUDED_)
+#endif // EMISSIONVALUESOURCE_H

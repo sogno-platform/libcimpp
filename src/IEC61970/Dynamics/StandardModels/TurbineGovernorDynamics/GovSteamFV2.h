@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovSteamFV2.h
 //  Implementation of the Class GovSteamFV2
-//  Created on:      28-Jan-2016 12:45:13
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_617062B2_AEA5_4c32_AE35_30C11B562E84__INCLUDED_)
-#define EA_617062B2_AEA5_4c32_AE35_30C11B562E84__INCLUDED_
+#ifndef GOVSTEAMFV2_H
+#define GOVSTEAMFV2_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/ActivePower.h"
@@ -95,4 +94,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_617062B2_AEA5_4c32_AE35_30C11B562E84__INCLUDED_)
+#endif // GOVSTEAMFV2_H

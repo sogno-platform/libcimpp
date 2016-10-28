@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExternalNetworkInjection.h
 //  Implementation of the Class ExternalNetworkInjection
-//  Created on:      28-Jan-2016 12:44:48
 //  Original author: Jean-Luc
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_498195CE_629E_4dcc_9AD7_DE4013A0E4A6__INCLUDED_)
-#define EA_498195CE_629E_4dcc_9AD7_DE4013A0E4A6__INCLUDED_
+#ifndef EXTERNALNETWORKINJECTION_H
+#define EXTERNALNETWORKINJECTION_H
 
 #include "IEC61970/Base/Domain/ActivePowerPerFrequency.h"
 #include "IEC61970/Base/Domain/Boolean.h"
@@ -139,4 +138,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_498195CE_629E_4dcc_9AD7_DE4013A0E4A6__INCLUDED_)
+#endif // EXTERNALNETWORKINJECTION_H

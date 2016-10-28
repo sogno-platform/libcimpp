@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Accumulator.h
 //  Implementation of the Class Accumulator
-//  Created on:      28-Jan-2016 12:43:08
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_26C0AA0B_40A9_4870_8138_8245B4136A39__INCLUDED_)
-#define EA_26C0AA0B_40A9_4870_8138_8245B4136A39__INCLUDED_
+#ifndef ACCUMULATOR_H
+#define ACCUMULATOR_H
 
 #include <list>
 
@@ -51,4 +50,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_26C0AA0B_40A9_4870_8138_8245B4136A39__INCLUDED_)
+#endif // ACCUMULATOR_H

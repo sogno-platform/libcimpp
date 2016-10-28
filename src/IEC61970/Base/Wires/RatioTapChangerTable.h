@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  RatioTapChangerTable.h
 //  Implementation of the Class RatioTapChangerTable
-//  Created on:      28-Jan-2016 12:46:24
 //  Original author: SELAOST1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_D7B117C2_4213_4c99_8FF1_A0F67F45D927__INCLUDED_)
-#define EA_D7B117C2_4213_4c99_8FF1_A0F67F45D927__INCLUDED_
+#ifndef RATIOTAPCHANGERTABLE_H
+#define RATIOTAPCHANGERTABLE_H
 
 #include "IEC61970/Base/Core/IdentifiedObject.h"
 
@@ -34,4 +33,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_D7B117C2_4213_4c99_8FF1_A0F67F45D927__INCLUDED_)
+#endif // RATIOTAPCHANGERTABLE_H

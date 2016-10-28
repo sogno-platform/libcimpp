@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ContingencyEquipment.h
 //  Implementation of the Class ContingencyEquipment
-//  Created on:      28-Jan-2016 12:43:41
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_853420C6_793D_4eb9_A766_5E83D8CC2142__INCLUDED_)
-#define EA_853420C6_793D_4eb9_A766_5E83D8CC2142__INCLUDED_
+#ifndef CONTINGENCYEQUIPMENT_H
+#define CONTINGENCYEQUIPMENT_H
 
 #include "IEC61970/Base/Contingency/ContingencyEquipmentStatusKind.h"
 #include "IEC61970/Base/Contingency/ContingencyElement.h"
@@ -46,4 +45,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_853420C6_793D_4eb9_A766_5E83D8CC2142__INCLUDED_)
+#endif // CONTINGENCYEQUIPMENT_H

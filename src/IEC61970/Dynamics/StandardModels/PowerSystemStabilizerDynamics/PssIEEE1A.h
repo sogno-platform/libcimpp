@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PssIEEE1A.h
 //  Implementation of the Class PssIEEE1A
-//  Created on:      28-Jan-2016 12:46:17
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_1199AC5B_EF1A_410d_B984_F849F68074AA__INCLUDED_)
-#define EA_1199AC5B_EF1A_410d_B984_F849F68074AA__INCLUDED_
+#ifndef PSSIEEE1A_H
+#define PSSIEEE1A_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Dynamics/StandardModels/PowerSystemStabilizerDynamics/InputSignalKind.h"
@@ -92,4 +91,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_1199AC5B_EF1A_410d_B984_F849F68074AA__INCLUDED_)
+#endif // PSSIEEE1A_H

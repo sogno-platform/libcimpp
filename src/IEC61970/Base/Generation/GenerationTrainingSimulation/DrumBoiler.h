@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  DrumBoiler.h
 //  Implementation of the Class DrumBoiler
-//  Created on:      28-Jan-2016 12:44:10
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_BBE8B600_B8C7_4216_B66D_2873665A3EF9__INCLUDED_)
-#define EA_BBE8B600_B8C7_4216_B66D_2873665A3EF9__INCLUDED_
+#ifndef DRUMBOILER_H
+#define DRUMBOILER_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Generation/GenerationTrainingSimulation/FossilSteamSupply.h"
@@ -41,4 +40,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_BBE8B600_B8C7_4216_B66D_2873665A3EF9__INCLUDED_)
+#endif // DRUMBOILER_H

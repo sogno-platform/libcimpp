@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  BasicIntervalSchedule.h
 //  Implementation of the Class BasicIntervalSchedule
-//  Created on:      28-Jan-2016 12:43:27
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_AD44902C_AA73_4388_99BC_2925AD4464F8__INCLUDED_)
-#define EA_AD44902C_AA73_4388_99BC_2925AD4464F8__INCLUDED_
+#ifndef BASICINTERVALSCHEDULE_H
+#define BASICINTERVALSCHEDULE_H
 
 #include "IEC61970/Base/Domain/DateTime.h"
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
@@ -55,4 +54,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_AD44902C_AA73_4388_99BC_2925AD4464F8__INCLUDED_)
+#endif // BASICINTERVALSCHEDULE_H

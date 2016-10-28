@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcREXS.h
 //  Implementation of the Class ExcREXS
-//  Created on:      28-Jan-2016 12:44:41
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_5E8C331B_55AF_46fc_897F_64AFE8ADE654__INCLUDED_)
-#define EA_5E8C331B_55AF_46fc_897F_64AFE8ADE654__INCLUDED_
+#ifndef EXCREXS_H
+#define EXCREXS_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Dynamics/StandardModels/ExcitationSystemDynamics/ExcREXSFeedbackSignalKind.h"
@@ -188,4 +187,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_5E8C331B_55AF_46fc_897F_64AFE8ADE654__INCLUDED_)
+#endif // EXCREXS_H

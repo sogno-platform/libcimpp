@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  NonConformLoadSchedule.h
 //  Implementation of the Class NonConformLoadSchedule
-//  Created on:      28-Jan-2016 12:45:48
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_3A91C66C_A753_4d0c_B686_FA75822670EF__INCLUDED_)
-#define EA_3A91C66C_A753_4d0c_B686_FA75822670EF__INCLUDED_
+#ifndef NONCONFORMLOADSCHEDULE_H
+#define NONCONFORMLOADSCHEDULE_H
 
 #include "IEC61970/Base/LoadModel/SeasonDayTypeSchedule.h"
 
@@ -34,4 +33,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_3A91C66C_A753_4d0c_B686_FA75822670EF__INCLUDED_)
+#endif // NONCONFORMLOADSCHEDULE_H

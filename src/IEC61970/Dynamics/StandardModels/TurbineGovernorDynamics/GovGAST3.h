@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovGAST3.h
 //  Implementation of the Class GovGAST3
-//  Created on:      28-Jan-2016 12:45:02
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_D2340B82_AF08_4b46_9BFB_BEA65000CFBC__INCLUDED_)
-#define EA_D2340B82_AF08_4b46_9BFB_BEA65000CFBC__INCLUDED_
+#ifndef GOVGAST3_H
+#define GOVGAST3_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -129,4 +128,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_D2340B82_AF08_4b46_9BFB_BEA65000CFBC__INCLUDED_)
+#endif // GOVGAST3_H

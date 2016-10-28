@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  RegulatingControl.h
 //  Implementation of the Class RegulatingControl
-//  Created on:      28-Jan-2016 12:46:29
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_D173BBE0_16A6_4965_9756_0049948AFAEA__INCLUDED_)
-#define EA_D173BBE0_16A6_4965_9756_0049948AFAEA__INCLUDED_
+#ifndef REGULATINGCONTROL_H
+#define REGULATINGCONTROL_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Wires/RegulatingControlModeKind.h"
@@ -82,4 +81,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_D173BBE0_16A6_4965_9756_0049948AFAEA__INCLUDED_)
+#endif // REGULATINGCONTROL_H

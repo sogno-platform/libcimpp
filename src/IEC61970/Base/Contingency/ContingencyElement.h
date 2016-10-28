@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  ContingencyElement.h
 //  Implementation of the Class ContingencyElement
-//  Created on:      28-Jan-2016 12:43:41
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_1A79246D_A613_455f_90B0_B75261A34E41__INCLUDED_)
-#define EA_1A79246D_A613_455f_90B0_B75261A34E41__INCLUDED_
+#ifndef CONTINGENCYELEMENT_H
+#define CONTINGENCYELEMENT_H
 
 #include "IEC61970/Base/Core/IdentifiedObject.h"
 
@@ -33,4 +32,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_1A79246D_A613_455f_90B0_B75261A34E41__INCLUDED_)
+#endif // CONTINGENCYELEMENT_H

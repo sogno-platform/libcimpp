@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DiscontinuousExcitationControlDynamics.h
 //  Implementation of the Class DiscontinuousExcitationControlDynamics
-//  Created on:      28-Jan-2016 12:44:07
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_172AA98D_0344_4bd9_B926_0913B302930F__INCLUDED_)
-#define EA_172AA98D_0344_4bd9_B926_0913B302930F__INCLUDED_
+#ifndef DISCONTINUOUSEXCITATIONCONTROLDYNAMICS_H
+#define DISCONTINUOUSEXCITATIONCONTROLDYNAMICS_H
 
 #include "IEC61970/Dynamics/StandardModels/ExcitationSystemDynamics/ExcitationSystemDynamics.h"
 #include "IEC61970/Dynamics/StandardModels/DynamicsFunctionBlock.h"
@@ -50,4 +49,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_172AA98D_0344_4bd9_B926_0913B302930F__INCLUDED_)
+#endif // DISCONTINUOUSEXCITATIONCONTROLDYNAMICS_H

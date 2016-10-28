@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  ConductingEquipment.h
 //  Implementation of the Class ConductingEquipment
-//  Created on:      28-Jan-2016 12:43:37
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_FDA9D87F_3FDE_44cf_A5A1_74DEB4078BF1__INCLUDED_)
-#define EA_FDA9D87F_3FDE_44cf_A5A1_74DEB4078BF1__INCLUDED_
+#ifndef CONDUCTINGEQUIPMENT_H
+#define CONDUCTINGEQUIPMENT_H
 
 #include "IEC61970/Base/Core/Equipment.h"
 
@@ -33,4 +32,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_FDA9D87F_3FDE_44cf_A5A1_74DEB4078BF1__INCLUDED_)
+#endif // CONDUCTINGEQUIPMENT_H

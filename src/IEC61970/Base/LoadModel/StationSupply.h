@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  StationSupply.h
 //  Implementation of the Class StationSupply
-//  Created on:      28-Jan-2016 12:46:47
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F242F719_E38A_4413_8522_6511EB6330CA__INCLUDED_)
-#define EA_F242F719_E38A_4413_8522_6511EB6330CA__INCLUDED_
+#ifndef STATIONSUPPLY_H
+#define STATIONSUPPLY_H
 
 #include "IEC61970/Base/Wires/EnergyConsumer.h"
 
@@ -32,4 +31,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F242F719_E38A_4413_8522_6511EB6330CA__INCLUDED_)
+#endif // STATIONSUPPLY_H

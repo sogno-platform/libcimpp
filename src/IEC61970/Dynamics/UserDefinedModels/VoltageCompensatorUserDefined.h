@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  VoltageCompensatorUserDefined.h
 //  Implementation of the Class VoltageCompensatorUserDefined
-//  Created on:      28-Jan-2016 12:47:37
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C168FAB7_C8C5_4baa_B1B3_26D2DE16A08E__INCLUDED_)
-#define EA_C168FAB7_C8C5_4baa_B1B3_26D2DE16A08E__INCLUDED_
+#ifndef VOLTAGECOMPENSATORUSERDEFINED_H
+#define VOLTAGECOMPENSATORUSERDEFINED_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Dynamics/StandardModels/VoltageCompensatorDynamics/VoltageCompensatorDynamics.h"
@@ -43,4 +42,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C168FAB7_C8C5_4baa_B1B3_26D2DE16A08E__INCLUDED_)
+#endif // VOLTAGECOMPENSATORUSERDEFINED_H

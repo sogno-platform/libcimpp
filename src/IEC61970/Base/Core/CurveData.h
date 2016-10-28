@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  CurveData.h
 //  Implementation of the Class CurveData
-//  Created on:      28-Jan-2016 12:43:51
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_DB5C1C99_23B0_4a66_A1B9_84DAD8F0825D__INCLUDED_)
-#define EA_DB5C1C99_23B0_4a66_A1B9_84DAD8F0825D__INCLUDED_
+#ifndef CURVEDATA_H
+#define CURVEDATA_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "BaseClass.h"
@@ -53,4 +52,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_DB5C1C99_23B0_4a66_A1B9_84DAD8F0825D__INCLUDED_)
+#endif // CURVEDATA_H

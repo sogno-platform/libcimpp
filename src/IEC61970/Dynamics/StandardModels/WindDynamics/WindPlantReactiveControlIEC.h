@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindPlantReactiveControlIEC.h
 //  Implementation of the Class WindPlantReactiveControlIEC
-//  Created on:      28-Jan-2016 12:47:57
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_051E7A4A_C660_4f60_BE1E_56C9B273B155__INCLUDED_)
-#define EA_051E7A4A_C660_4f60_BE1E_56C9B273B155__INCLUDED_
+#ifndef WINDPLANTREACTIVECONTROLIEC_H
+#define WINDPLANTREACTIVECONTROLIEC_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -116,4 +115,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_051E7A4A_C660_4f60_BE1E_56C9B273B155__INCLUDED_)
+#endif // WINDPLANTREACTIVECONTROLIEC_H

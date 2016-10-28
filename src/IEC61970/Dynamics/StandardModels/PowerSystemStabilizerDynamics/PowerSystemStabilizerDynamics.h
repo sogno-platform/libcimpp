@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PowerSystemStabilizerDynamics.h
 //  Implementation of the Class PowerSystemStabilizerDynamics
-//  Created on:      28-Jan-2016 12:46:09
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_634F3FFB_DCD8_4dd6_ABD2_6B754A544A65__INCLUDED_)
-#define EA_634F3FFB_DCD8_4dd6_ABD2_6B754A544A65__INCLUDED_
+#ifndef POWERSYSTEMSTABILIZERDYNAMICS_H
+#define POWERSYSTEMSTABILIZERDYNAMICS_H
 
 #include <list>
 
@@ -52,4 +51,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_634F3FFB_DCD8_4dd6_ABD2_6B754A544A65__INCLUDED_)
+#endif // POWERSYSTEMSTABILIZERDYNAMICS_H

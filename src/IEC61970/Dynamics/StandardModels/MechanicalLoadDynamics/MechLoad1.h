@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  MechLoad1.h
 //  Implementation of the Class MechLoad1
-//  Created on:      28-Jan-2016 12:45:43
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_DE168CE4_3DC7_496d_B361_AF7ED271517D__INCLUDED_)
-#define EA_DE168CE4_3DC7_496d_B361_AF7ED271517D__INCLUDED_
+#ifndef MECHLOAD1_H
+#define MECHLOAD1_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Dynamics/StandardModels/MechanicalLoadDynamics/MechanicalLoadDynamics.h"
@@ -54,4 +53,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_DE168CE4_3DC7_496d_B361_AF7ED271517D__INCLUDED_)
+#endif // MECHLOAD1_H

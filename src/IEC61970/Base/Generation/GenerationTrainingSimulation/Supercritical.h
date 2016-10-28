@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Supercritical.h
 //  Implementation of the Class Supercritical
-//  Created on:      28-Jan-2016 12:46:54
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C2C33637_F354_402e_9218_D32C80AAE0A6__INCLUDED_)
-#define EA_C2C33637_F354_402e_9218_D32C80AAE0A6__INCLUDED_
+#ifndef SUPERCRITICAL_H
+#define SUPERCRITICAL_H
 
 #include "IEC61970/Base/Generation/GenerationTrainingSimulation/FossilSteamSupply.h"
 
@@ -36,4 +35,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C2C33637_F354_402e_9218_D32C80AAE0A6__INCLUDED_)
+#endif // SUPERCRITICAL_H

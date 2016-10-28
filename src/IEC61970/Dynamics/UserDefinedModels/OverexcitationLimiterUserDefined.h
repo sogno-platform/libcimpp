@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  OverexcitationLimiterUserDefined.h
 //  Implementation of the Class OverexcitationLimiterUserDefined
-//  Created on:      28-Jan-2016 12:45:54
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B5D96AC9_4460_4b28_B7D9_298DDAD7DEB6__INCLUDED_)
-#define EA_B5D96AC9_4460_4b28_B7D9_298DDAD7DEB6__INCLUDED_
+#ifndef OVEREXCITATIONLIMITERUSERDEFINED_H
+#define OVEREXCITATIONLIMITERUSERDEFINED_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Dynamics/StandardModels/OverexcitationLimiterDynamics/OverexcitationLimiterDynamics.h"
@@ -43,4 +42,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B5D96AC9_4460_4b28_B7D9_298DDAD7DEB6__INCLUDED_)
+#endif // OVEREXCITATIONLIMITERUSERDEFINED_H

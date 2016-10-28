@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  OverexcLimX1.h
 //  Implementation of the Class OverexcLimX1
-//  Created on:      28-Jan-2016 12:45:55
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_CF0B0F85_C113_417c_A957_0A185BBA674A__INCLUDED_)
-#define EA_CF0B0F85_C113_417c_A957_0A185BBA674A__INCLUDED_
+#ifndef OVEREXCLIMX1_H
+#define OVEREXCLIMX1_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -85,4 +84,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_CF0B0F85_C113_417c_A957_0A185BBA674A__INCLUDED_)
+#endif // OVEREXCLIMX1_H

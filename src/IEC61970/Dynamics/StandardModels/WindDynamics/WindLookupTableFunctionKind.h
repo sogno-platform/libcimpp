@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindLookupTableFunctionKind.h
 //  Implementation of the Class WindLookupTableFunctionKind
-//  Created on:      28-Jan-2016 12:47:54
 //  Original author: civanov
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_0F8AD0FB_7C7F_4cac_806F_A5829FA13C1C__INCLUDED_)
-#define EA_0F8AD0FB_7C7F_4cac_806F_A5829FA13C1C__INCLUDED_
+#ifndef WINDLOOKUPTABLEFUNCTIONKIND_H
+#define WINDLOOKUPTABLEFUNCTIONKIND_H
 
 namespace IEC61970
 {
@@ -58,4 +57,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_0F8AD0FB_7C7F_4cac_806F_A5829FA13C1C__INCLUDED_)
+#endif // WINDLOOKUPTABLEFUNCTIONKIND_H

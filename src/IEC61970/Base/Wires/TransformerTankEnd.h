@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  TransformerTankEnd.h
 //  Implementation of the Class TransformerTankEnd
-//  Created on:      28-Jan-2016 12:47:25
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_6FBF37B4_6F5A_4856_8EC6_6194143ED923__INCLUDED_)
-#define EA_6FBF37B4_6F5A_4856_8EC6_6194143ED923__INCLUDED_
+#ifndef TRANSFORMERTANKEND_H
+#define TRANSFORMERTANKEND_H
 
 #include "IEC61970/Base/Core/PhaseCode.h"
 #include "IEC61970/Base/Wires/TransformerEnd.h"
@@ -45,4 +44,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_6FBF37B4_6F5A_4856_8EC6_6194143ED923__INCLUDED_)
+#endif // TRANSFORMERTANKEND_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  Time.h
 //  Implementation of the Class Time
-//  Created on:      28-Jan-2016 12:47:18
 //  Original author: kdemaree
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_DF4F8038_5042_4353_998C_59A5610A8D08__INCLUDED_)
-#define EA_DF4F8038_5042_4353_998C_59A5610A8D08__INCLUDED_
+#ifndef TIME_H
+#define TIME_H
 
 #include "IEC61970/Base/Domain/String.h"
 
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_DF4F8038_5042_4353_998C_59A5610A8D08__INCLUDED_)
+#endif // TIME_H

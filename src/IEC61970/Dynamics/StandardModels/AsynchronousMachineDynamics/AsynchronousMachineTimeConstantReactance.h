@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  AsynchronousMachineTimeConstantReactance.h
 //  Implementation of the Class AsynchronousMachineTimeConstantReactance
-//  Created on:      28-Jan-2016 12:43:24
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_EE91C418_57A6_4a46_ADE4_517B9FF17442__INCLUDED_)
-#define EA_EE91C418_57A6_4a46_ADE4_517B9FF17442__INCLUDED_
+#ifndef ASYNCHRONOUSMACHINETIMECONSTANTREACTANCE_H
+#define ASYNCHRONOUSMACHINETIMECONSTANTREACTANCE_H
 
 #include "IEC61970/Base/Domain/Seconds.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -82,4 +81,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_EE91C418_57A6_4a46_ADE4_517B9FF17442__INCLUDED_)
+#endif // ASYNCHRONOUSMACHINETIMECONSTANTREACTANCE_H

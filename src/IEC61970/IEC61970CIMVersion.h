@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  IEC61970CIMVersion.h
 //  Implementation of the Class IEC61970CIMVersion
-//  Created on:      28-Jan-2016 12:45:26
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C518B36D_1869_45c7_8B46_1D2ACAC62E6C__INCLUDED_)
-#define EA_C518B36D_1869_45c7_8B46_1D2ACAC62E6C__INCLUDED_
+#ifndef IEC61970CIMVERSION_H
+#define IEC61970CIMVERSION_H
 
 #include "IEC61970/Base/Domain/Date.h"
 #include "IEC61970/Base/Domain/String.h"
@@ -35,4 +34,4 @@ namespace IEC61970
 	};
 
 }
-#endif // !defined(EA_C518B36D_1869_45c7_8B46_1D2ACAC62E6C__INCLUDED_)
+#endif // IEC61970CIMVERSION_H

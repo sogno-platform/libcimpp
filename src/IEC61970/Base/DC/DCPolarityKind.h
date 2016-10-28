@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DCPolarityKind.h
 //  Implementation of the Class DCPolarityKind
-//  Created on:      28-Jan-2016 12:44:00
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_30DBAC88_576C_41fc_93CE_56626F38BF12__INCLUDED_)
-#define EA_30DBAC88_576C_41fc_93CE_56626F38BF12__INCLUDED_
+#ifndef DCPOLARITYKIND_H
+#define DCPOLARITYKIND_H
 
 namespace IEC61970
 {
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_30DBAC88_576C_41fc_93CE_56626F38BF12__INCLUDED_)
+#endif // DCPOLARITYKIND_H

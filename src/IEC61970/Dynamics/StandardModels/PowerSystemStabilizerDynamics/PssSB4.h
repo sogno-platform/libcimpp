@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PssSB4.h
 //  Implementation of the Class PssSB4
-//  Created on:      28-Jan-2016 12:46:20
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_BDB658DB_A97F_4124_864E_4944AD92F341__INCLUDED_)
-#define EA_BDB658DB_A97F_4124_864E_4944AD92F341__INCLUDED_
+#ifndef PSSSB4_H
+#define PSSSB4_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -83,4 +82,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_BDB658DB_A97F_4124_864E_4944AD92F341__INCLUDED_)
+#endif // PSSSB4_H

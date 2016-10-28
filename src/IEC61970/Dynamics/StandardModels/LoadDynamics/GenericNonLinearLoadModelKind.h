@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GenericNonLinearLoadModelKind.h
 //  Implementation of the Class GenericNonLinearLoadModelKind
-//  Created on:      28-Jan-2016 12:44:56
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_7005D8D0_CE88_491c_A9A4_62201514A1A8__INCLUDED_)
-#define EA_7005D8D0_CE88_491c_A9A4_62201514A1A8__INCLUDED_
+#ifndef GENERICNONLINEARLOADMODELKIND_H
+#define GENERICNONLINEARLOADMODELKIND_H
 
 namespace IEC61970
 {
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_7005D8D0_CE88_491c_A9A4_62201514A1A8__INCLUDED_)
+#endif // GENERICNONLINEARLOADMODELKIND_H

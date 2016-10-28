@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Integer.h
 //  Implementation of the Class Integer
-//  Created on:      28-Jan-2016 12:45:29
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_8B7A3026_33C5_404c_B28B_29F2613DF377__INCLUDED_)
-#define EA_8B7A3026_33C5_404c_B28B_29F2613DF377__INCLUDED_
+#ifndef INTEGER_H
+#define INTEGER_H
 
 namespace IEC61970
 {
@@ -23,4 +22,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_8B7A3026_33C5_404c_B28B_29F2613DF377__INCLUDED_)
+#endif // INTEGER_H

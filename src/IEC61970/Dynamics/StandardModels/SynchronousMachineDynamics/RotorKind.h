@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  RotorKind.h
 //  Implementation of the Class RotorKind
-//  Created on:      28-Jan-2016 12:46:37
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_1BEA9C66_6E86_42e7_8E46_8F098E5C9F58__INCLUDED_)
-#define EA_1BEA9C66_6E86_42e7_8E46_8F098E5C9F58__INCLUDED_
+#ifndef ROTORKIND_H
+#define ROTORKIND_H
 
 namespace IEC61970
 {
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_1BEA9C66_6E86_42e7_8E46_8F098E5C9F58__INCLUDED_)
+#endif // ROTORKIND_H

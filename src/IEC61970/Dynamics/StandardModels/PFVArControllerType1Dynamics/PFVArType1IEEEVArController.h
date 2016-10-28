@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PFVArType1IEEEVArController.h
 //  Implementation of the Class PFVArType1IEEEVArController
-//  Created on:      28-Jan-2016 12:46:01
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_4A370DA5_0B0C_41ab_BC94_8511B46EFFEF__INCLUDED_)
-#define EA_4A370DA5_0B0C_41ab_BC94_8511B46EFFEF__INCLUDED_
+#ifndef PFVARTYPE1IEEEVARCONTROLLER_H
+#define PFVARTYPE1IEEEVARCONTROLLER_H
 
 #include "IEC61970/Base/Domain/Seconds.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -70,4 +69,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_4A370DA5_0B0C_41ab_BC94_8511B46EFFEF__INCLUDED_)
+#endif // PFVARTYPE1IEEEVARCONTROLLER_H

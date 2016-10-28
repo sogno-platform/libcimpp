@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PhaseTapChangerTable.h
 //  Implementation of the Class PhaseTapChangerTable
-//  Created on:      28-Jan-2016 12:46:05
 //  Original author: SELAOST1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_54F1A0A9_FD33_4375_B651_FF20E7ECED04__INCLUDED_)
-#define EA_54F1A0A9_FD33_4375_B651_FF20E7ECED04__INCLUDED_
+#ifndef PHASETAPCHANGERTABLE_H
+#define PHASETAPCHANGERTABLE_H
 
 #include <list>
 
@@ -41,4 +40,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_54F1A0A9_FD33_4375_B651_FF20E7ECED04__INCLUDED_)
+#endif // PHASETAPCHANGERTABLE_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  EquivalentEquipment.h
 //  Implementation of the Class EquivalentEquipment
-//  Created on:      28-Jan-2016 12:44:17
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_BAC82FEB_0659_49bf_A666_BAE8D978663E__INCLUDED_)
-#define EA_BAC82FEB_0659_49bf_A666_BAE8D978663E__INCLUDED_
+#ifndef EQUIVALENTEQUIPMENT_H
+#define EQUIVALENTEQUIPMENT_H
 
 #include "IEC61970/Base/Core/ConductingEquipment.h"
 
@@ -33,4 +32,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_BAC82FEB_0659_49bf_A666_BAE8D978663E__INCLUDED_)
+#endif // EQUIVALENTEQUIPMENT_H

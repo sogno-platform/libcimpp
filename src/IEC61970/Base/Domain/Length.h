@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Length.h
 //  Implementation of the Class Length
-//  Created on:      28-Jan-2016 12:45:32
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_2B6E09C7_39C8_4513_82EA_6C8C8BBD9041__INCLUDED_)
-#define EA_2B6E09C7_39C8_4513_82EA_6C8C8BBD9041__INCLUDED_
+#ifndef LENGTH_H
+#define LENGTH_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_2B6E09C7_39C8_4513_82EA_6C8C8BBD9041__INCLUDED_)
+#endif // LENGTH_H

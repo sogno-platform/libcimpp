@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Substation.h
 //  Implementation of the Class Substation
-//  Created on:      28-Jan-2016 12:46:54
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_10470C15_B3C8_4c96_AABD_B3B2B8FE0CC7__INCLUDED_)
-#define EA_10470C15_B3C8_4c96_AABD_B3B2B8FE0CC7__INCLUDED_
+#ifndef SUBSTATION_H
+#define SUBSTATION_H
 
 #include <list>
 
@@ -51,4 +50,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_10470C15_B3C8_4c96_AABD_B3B2B8FE0CC7__INCLUDED_)
+#endif // SUBSTATION_H

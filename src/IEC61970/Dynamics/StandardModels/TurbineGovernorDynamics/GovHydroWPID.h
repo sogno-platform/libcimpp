@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovHydroWPID.h
 //  Implementation of the Class GovHydroWPID
-//  Created on:      28-Jan-2016 12:45:10
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C6D34D77_C17F_4535_8A77_C59AE64225F9__INCLUDED_)
-#define EA_C6D34D77_C17F_4535_8A77_C59AE64225F9__INCLUDED_
+#ifndef GOVHYDROWPID_H
+#define GOVHYDROWPID_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/ActivePower.h"
@@ -128,4 +127,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C6D34D77_C17F_4535_8A77_C59AE64225F9__INCLUDED_)
+#endif // GOVHYDROWPID_H

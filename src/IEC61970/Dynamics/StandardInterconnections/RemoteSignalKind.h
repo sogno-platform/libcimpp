@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  RemoteSignalKind.h
 //  Implementation of the Class RemoteSignalKind
-//  Created on:      28-Jan-2016 12:46:32
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_43DCFD43_92C6_4fad_843E_4E004EFBF618__INCLUDED_)
-#define EA_43DCFD43_92C6_4fad_843E_4E004EFBF618__INCLUDED_
+#ifndef REMOTESIGNALKIND_H
+#define REMOTESIGNALKIND_H
 
 namespace IEC61970
 {
@@ -62,4 +61,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_43DCFD43_92C6_4fad_843E_4E004EFBF618__INCLUDED_)
+#endif // REMOTESIGNALKIND_H

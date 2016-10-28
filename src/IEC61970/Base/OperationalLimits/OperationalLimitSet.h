@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  OperationalLimitSet.h
 //  Implementation of the Class OperationalLimitSet
-//  Created on:      28-Jan-2016 12:45:52
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_D2F860C2_5CA8_4cf3_9434_E8A76EA5FF1B__INCLUDED_)
-#define EA_D2F860C2_5CA8_4cf3_9434_E8A76EA5FF1B__INCLUDED_
+#ifndef OPERATIONALLIMITSET_H
+#define OPERATIONALLIMITSET_H
 
 #include <list>
 
@@ -52,4 +51,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_D2F860C2_5CA8_4cf3_9434_E8A76EA5FF1B__INCLUDED_)
+#endif // OPERATIONALLIMITSET_H

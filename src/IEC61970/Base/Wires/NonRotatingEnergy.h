@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  NonRotatingEnergy.h
 //  Implementation of the Class NonRotatingEnergy
-//  Created on:      28-Jan-2016 12:45:50
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F731F0FC_9B56_489b_B42D_E9469B00B57F__INCLUDED_)
-#define EA_F731F0FC_9B56_489b_B42D_E9469B00B57F__INCLUDED_
+#ifndef NONROTATINGENERGY_H
+#define NONROTATINGENERGY_H
 
 #include "IEC61970/Base/Domain/ActivePower.h"
 #include "IEC61970/Base/Domain/ReactivePower.h"
@@ -93,4 +92,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F731F0FC_9B56_489b_B42D_E9469B00B57F__INCLUDED_)
+#endif // NONROTATINGENERGY_H

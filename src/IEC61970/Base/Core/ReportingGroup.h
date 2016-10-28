@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ReportingGroup.h
 //  Implementation of the Class ReportingGroup
-//  Created on:      28-Jan-2016 12:46:34
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_AC6E5392_D671_43e0_98E0_7FB7B3334DEF__INCLUDED_)
-#define EA_AC6E5392_D671_43e0_98E0_7FB7B3334DEF__INCLUDED_
+#ifndef REPORTINGGROUP_H
+#define REPORTINGGROUP_H
 
 #include <list>
 
@@ -40,4 +39,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_AC6E5392_D671_43e0_98E0_7FB7B3334DEF__INCLUDED_)
+#endif // REPORTINGGROUP_H

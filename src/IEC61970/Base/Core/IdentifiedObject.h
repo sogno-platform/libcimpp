@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  IdentifiedObject.h
 //  Implementation of the Class IdentifiedObject
-//  Created on:      28-Jan-2016 12:45:26
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_3E504573_F610_4ec4_8539_94399E7D1219__INCLUDED_)
-#define EA_3E504573_F610_4ec4_8539_94399E7D1219__INCLUDED_
+#ifndef IDENTIFIEDOBJECT_H
+#define IDENTIFIEDOBJECT_H
 
 #include <list>
 
@@ -81,4 +80,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_3E504573_F610_4ec4_8539_94399E7D1219__INCLUDED_)
+#endif // IDENTIFIEDOBJECT_H

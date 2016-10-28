@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  EquivalentNetwork.h
 //  Implementation of the Class EquivalentNetwork
-//  Created on:      28-Jan-2016 12:44:18
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C36318F3_8A39_4920_96DD_BC94960D7370__INCLUDED_)
-#define EA_C36318F3_8A39_4920_96DD_BC94960D7370__INCLUDED_
+#ifndef EQUIVALENTNETWORK_H
+#define EQUIVALENTNETWORK_H
 
 #include <list>
 
@@ -43,4 +42,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C36318F3_8A39_4920_96DD_BC94960D7370__INCLUDED_)
+#endif // EQUIVALENTNETWORK_H

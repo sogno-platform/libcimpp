@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  SeasonDayTypeSchedule.h
 //  Implementation of the Class SeasonDayTypeSchedule
-//  Created on:      28-Jan-2016 12:46:38
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_D29E211D_4993_4098_93FA_8D701E684908__INCLUDED_)
-#define EA_D29E211D_4993_4098_93FA_8D701E684908__INCLUDED_
+#ifndef SEASONDAYTYPESCHEDULE_H
+#define SEASONDAYTYPESCHEDULE_H
 
 #include "IEC61970/Base/Core/RegularIntervalSchedule.h"
 
@@ -33,4 +32,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_D29E211D_4993_4098_93FA_8D701E684908__INCLUDED_)
+#endif // SEASONDAYTYPESCHEDULE_H

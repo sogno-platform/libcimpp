@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  FossilSteamSupply.h
 //  Implementation of the Class FossilSteamSupply
-//  Created on:      28-Jan-2016 12:44:53
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_9C7C18C5_DCCC_4e63_806D_9408F53D7E4A__INCLUDED_)
-#define EA_9C7C18C5_DCCC_4e63_806D_9408F53D7E4A__INCLUDED_
+#ifndef FOSSILSTEAMSUPPLY_H
+#define FOSSILSTEAMSUPPLY_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Generation/GenerationTrainingSimulation/BoilerControlMode.h"
@@ -147,4 +146,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_9C7C18C5_DCCC_4e63_806D_9408F53D7E4A__INCLUDED_)
+#endif // FOSSILSTEAMSUPPLY_H

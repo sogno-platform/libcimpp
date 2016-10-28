@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  NuclearGeneratingUnit.h
 //  Implementation of the Class NuclearGeneratingUnit
-//  Created on:      28-Jan-2016 12:45:50
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_13E623FC_4299_46a7_B681_B23864BA5453__INCLUDED_)
-#define EA_13E623FC_4299_46a7_B681_B23864BA5453__INCLUDED_
+#ifndef NUCLEARGENERATINGUNIT_H
+#define NUCLEARGENERATINGUNIT_H
 
 #include "IEC61970/Base/Generation/Production/GeneratingUnit.h"
 
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_13E623FC_4299_46a7_B681_B23864BA5453__INCLUDED_)
+#endif // NUCLEARGENERATINGUNIT_H

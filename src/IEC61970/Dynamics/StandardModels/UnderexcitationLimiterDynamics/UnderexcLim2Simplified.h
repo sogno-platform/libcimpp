@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  UnderexcLim2Simplified.h
 //  Implementation of the Class UnderexcLim2Simplified
-//  Created on:      28-Jan-2016 12:47:28
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_69785BF5_9E09_4701_B0AB_246163124D21__INCLUDED_)
-#define EA_69785BF5_9E09_4701_B0AB_246163124D21__INCLUDED_
+#ifndef UNDEREXCLIM2SIMPLIFIED_H
+#define UNDEREXCLIM2SIMPLIFIED_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Dynamics/StandardModels/UnderexcitationLimiterDynamics/UnderexcitationLimiterDynamics.h"
@@ -68,4 +67,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_69785BF5_9E09_4701_B0AB_246163124D21__INCLUDED_)
+#endif // UNDEREXCLIM2SIMPLIFIED_H

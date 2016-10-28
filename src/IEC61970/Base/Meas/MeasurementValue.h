@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  MeasurementValue.h
 //  Implementation of the Class MeasurementValue
-//  Created on:      28-Jan-2016 12:45:40
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_94146F4D_435C_40f0_99AB_E9E99989F4C7__INCLUDED_)
-#define EA_94146F4D_435C_40f0_99AB_E9E99989F4C7__INCLUDED_
+#ifndef MEASUREMENTVALUE_H
+#define MEASUREMENTVALUE_H
 
 #include "IEC61970/Base/Domain/PerCent.h"
 #include "IEC61970/Base/Domain/DateTime.h"
@@ -55,4 +54,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_94146F4D_435C_40f0_99AB_E9E99989F4C7__INCLUDED_)
+#endif // MEASUREMENTVALUE_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  Duration.h
 //  Implementation of the Class Duration
-//  Created on:      28-Jan-2016 12:44:11
 //  Original author: kdemaree
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_28E146CE_376B_4e8c_8A41_A3128560CB7E__INCLUDED_)
-#define EA_28E146CE_376B_4e8c_8A41_A3128560CB7E__INCLUDED_
+#ifndef DURATION_H
+#define DURATION_H
 
 #include "IEC61970/Base/Domain/String.h"
 
@@ -39,4 +38,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_28E146CE_376B_4e8c_8A41_A3128560CB7E__INCLUDED_)
+#endif // DURATION_H

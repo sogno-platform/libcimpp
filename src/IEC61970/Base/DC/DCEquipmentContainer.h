@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DCEquipmentContainer.h
 //  Implementation of the Class DCEquipmentContainer
-//  Created on:      28-Jan-2016 12:43:58
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F3BFFC37_E4A4_4d1b_8403_9261DC442DF5__INCLUDED_)
-#define EA_F3BFFC37_E4A4_4d1b_8403_9261DC442DF5__INCLUDED_
+#ifndef DCEQUIPMENTCONTAINER_H
+#define DCEQUIPMENTCONTAINER_H
 
 #include <list>
 
@@ -39,4 +38,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F3BFFC37_E4A4_4d1b_8403_9261DC442DF5__INCLUDED_)
+#endif // DCEQUIPMENTCONTAINER_H

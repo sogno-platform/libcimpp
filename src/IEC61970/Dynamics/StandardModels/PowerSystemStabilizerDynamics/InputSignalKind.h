@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  InputSignalKind.h
 //  Implementation of the Class InputSignalKind
-//  Created on:      28-Jan-2016 12:45:29
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_9100AE60_5332_48b8_8A2E_3A72BC4D38A0__INCLUDED_)
-#define EA_9100AE60_5332_48b8_8A2E_3A72BC4D38A0__INCLUDED_
+#ifndef INPUTSIGNALKIND_H
+#define INPUTSIGNALKIND_H
 
 namespace IEC61970
 {
@@ -74,4 +73,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_9100AE60_5332_48b8_8A2E_3A72BC4D38A0__INCLUDED_)
+#endif // INPUTSIGNALKIND_H

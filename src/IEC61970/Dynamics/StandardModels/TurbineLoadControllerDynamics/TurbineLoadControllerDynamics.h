@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  TurbineLoadControllerDynamics.h
 //  Implementation of the Class TurbineLoadControllerDynamics
-//  Created on:      28-Jan-2016 12:47:27
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_AB5464FD_84FB_4bd4_ABB2_8063B615F102__INCLUDED_)
-#define EA_AB5464FD_84FB_4bd4_ABB2_8063B615F102__INCLUDED_
+#ifndef TURBINELOADCONTROLLERDYNAMICS_H
+#define TURBINELOADCONTROLLERDYNAMICS_H
 
 #include "IEC61970/Dynamics/StandardModels/TurbineGovernorDynamics/TurbineGovernorDynamics.h"
 #include "IEC61970/Dynamics/StandardModels/DynamicsFunctionBlock.h"
@@ -44,4 +43,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_AB5464FD_84FB_4bd4_ABB2_8063B615F102__INCLUDED_)
+#endif // TURBINELOADCONTROLLERDYNAMICS_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  WindGenUnitKind.h
 //  Implementation of the Class WindGenUnitKind
-//  Created on:      28-Jan-2016 12:47:53
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_6588E7AD_E708_499b_BC90_A70A09A3008C__INCLUDED_)
-#define EA_6588E7AD_E708_499b_BC90_A70A09A3008C__INCLUDED_
+#ifndef WINDGENUNITKIND_H
+#define WINDGENUNITKIND_H
 
 namespace IEC61970
 {
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_6588E7AD_E708_499b_BC90_A70A09A3008C__INCLUDED_)
+#endif // WINDGENUNITKIND_H

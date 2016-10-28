@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DroopSignalFeedbackKind.h
 //  Implementation of the Class DroopSignalFeedbackKind
-//  Created on:      28-Jan-2016 12:44:10
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_2EFF87F9_8F18_4536_8C14_4F1FADC33EDD__INCLUDED_)
-#define EA_2EFF87F9_8F18_4536_8C14_4F1FADC33EDD__INCLUDED_
+#ifndef DROOPSIGNALFEEDBACKKIND_H
+#define DROOPSIGNALFEEDBACKKIND_H
 
 namespace IEC61970
 {
@@ -49,4 +48,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_2EFF87F9_8F18_4536_8C14_4F1FADC33EDD__INCLUDED_)
+#endif // DROOPSIGNALFEEDBACKKIND_H

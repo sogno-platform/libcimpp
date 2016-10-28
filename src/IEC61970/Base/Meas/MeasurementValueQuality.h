@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  MeasurementValueQuality.h
 //  Implementation of the Class MeasurementValueQuality
-//  Created on:      28-Jan-2016 12:45:41
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C25E6A23_BB7B_493a_A131_128A646B2F03__INCLUDED_)
-#define EA_C25E6A23_BB7B_493a_A131_128A646B2F03__INCLUDED_
+#ifndef MEASUREMENTVALUEQUALITY_H
+#define MEASUREMENTVALUEQUALITY_H
 
 #include "IEC61970/Base/Meas/Quality61850.h"
 
@@ -34,4 +33,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C25E6A23_BB7B_493a_A131_128A646B2F03__INCLUDED_)
+#endif // MEASUREMENTVALUEQUALITY_H

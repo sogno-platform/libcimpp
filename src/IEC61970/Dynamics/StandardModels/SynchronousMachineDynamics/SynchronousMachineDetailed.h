@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  SynchronousMachineDetailed.h
 //  Implementation of the Class SynchronousMachineDetailed
-//  Created on:      28-Jan-2016 12:47:04
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_6C4BF575_A60C_4626_B5DB_FD2D0FB8A95F__INCLUDED_)
-#define EA_6C4BF575_A60C_4626_B5DB_FD2D0FB8A95F__INCLUDED_
+#ifndef SYNCHRONOUSMACHINEDETAILED_H
+#define SYNCHRONOUSMACHINEDETAILED_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Dynamics/StandardModels/SynchronousMachineDynamics/IfdBaseKind.h"
@@ -77,4 +76,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_6C4BF575_A60C_4626_B5DB_FD2D0FB8A95F__INCLUDED_)
+#endif // SYNCHRONOUSMACHINEDETAILED_H

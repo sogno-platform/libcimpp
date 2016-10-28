@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  AnalogLimit.h
 //  Implementation of the Class AnalogLimit
-//  Created on:      28-Jan-2016 12:43:18
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_5F2569AE_911B_479c_B7D5_EFAEA7220C06__INCLUDED_)
-#define EA_5F2569AE_911B_479c_B7D5_EFAEA7220C06__INCLUDED_
+#ifndef ANALOGLIMIT_H
+#define ANALOGLIMIT_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Meas/Limit.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_5F2569AE_911B_479c_B7D5_EFAEA7220C06__INCLUDED_)
+#endif // ANALOGLIMIT_H

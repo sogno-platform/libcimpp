@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  RemoteUnitType.h
 //  Implementation of the Class RemoteUnitType
-//  Created on:      28-Jan-2016 12:46:33
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_AAA927F4_BC7D_4250_BE4E_C4CBBDE7AB8D__INCLUDED_)
-#define EA_AAA927F4_BC7D_4250_BE4E_C4CBBDE7AB8D__INCLUDED_
+#ifndef REMOTEUNITTYPE_H
+#define REMOTEUNITTYPE_H
 
 namespace IEC61970
 {
@@ -41,4 +40,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_AAA927F4_BC7D_4250_BE4E_C4CBBDE7AB8D__INCLUDED_)
+#endif // REMOTEUNITTYPE_H

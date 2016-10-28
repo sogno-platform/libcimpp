@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  NonConformLoadGroup.h
 //  Implementation of the Class NonConformLoadGroup
-//  Created on:      28-Jan-2016 12:45:47
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_4E9BF984_FD69_49eb_8465_6C2ACA54B50A__INCLUDED_)
-#define EA_4E9BF984_FD69_49eb_8465_6C2ACA54B50A__INCLUDED_
+#ifndef NONCONFORMLOADGROUP_H
+#define NONCONFORMLOADGROUP_H
 
 #include <list>
 
@@ -44,4 +43,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_4E9BF984_FD69_49eb_8465_6C2ACA54B50A__INCLUDED_)
+#endif // NONCONFORMLOADGROUP_H

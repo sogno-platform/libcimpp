@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcST7BOELselectorKind.h
 //  Implementation of the Class ExcST7BOELselectorKind
-//  Created on:      28-Jan-2016 12:44:47
 //  Original author: civanov
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_2288EC3B_60E3_4874_8676_8B02C0763462__INCLUDED_)
-#define EA_2288EC3B_60E3_4874_8676_8B02C0763462__INCLUDED_
+#ifndef EXCST7BOELSELECTORKIND_H
+#define EXCST7BOELSELECTORKIND_H
 
 namespace IEC61970
 {
@@ -46,4 +45,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_2288EC3B_60E3_4874_8676_8B02C0763462__INCLUDED_)
+#endif // EXCST7BOELSELECTORKIND_H

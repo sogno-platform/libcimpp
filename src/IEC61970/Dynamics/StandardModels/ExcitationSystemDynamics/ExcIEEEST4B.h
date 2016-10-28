@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcIEEEST4B.h
 //  Implementation of the Class ExcIEEEST4B
-//  Created on:      28-Jan-2016 12:44:37
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_A5C02950_BA95_46c5_A1EB_57F5D633BAE2__INCLUDED_)
-#define EA_A5C02950_BA95_46c5_A1EB_57F5D633BAE2__INCLUDED_
+#ifndef EXCIEEEST4B_H
+#define EXCIEEEST4B_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -114,4 +113,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_A5C02950_BA95_46c5_A1EB_57F5D633BAE2__INCLUDED_)
+#endif // EXCIEEEST4B_H

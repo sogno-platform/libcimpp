@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  VAdjIEEE.h
 //  Implementation of the Class VAdjIEEE
-//  Created on:      28-Jan-2016 12:47:31
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_92330886_4DB9_49da_9350_CD80B852E6B5__INCLUDED_)
-#define EA_92330886_4DB9_49da_9350_CD80B852E6B5__INCLUDED_
+#ifndef VADJIEEE_H
+#define VADJIEEE_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -73,4 +72,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_92330886_4DB9_49da_9350_CD80B852E6B5__INCLUDED_)
+#endif // VADJIEEE_H

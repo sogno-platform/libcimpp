@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DCNode.h
 //  Implementation of the Class DCNode
-//  Created on:      28-Jan-2016 12:43:59
 //  Original author: SELAOST1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_4E28390C_316F_4f71_84FB_378E40EF7BF2__INCLUDED_)
-#define EA_4E28390C_316F_4f71_84FB_378E40EF7BF2__INCLUDED_
+#ifndef DCNODE_H
+#define DCNODE_H
 
 #include <list>
 
@@ -48,4 +47,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_4E28390C_316F_4f71_84FB_378E40EF7BF2__INCLUDED_)
+#endif // DCNODE_H

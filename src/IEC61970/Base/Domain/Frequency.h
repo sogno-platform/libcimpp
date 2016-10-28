@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Frequency.h
 //  Implementation of the Class Frequency
-//  Created on:      28-Jan-2016 12:44:54
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_A0E87876_0C1C_45c8_9166_BFF24FC11553__INCLUDED_)
-#define EA_A0E87876_0C1C_45c8_9166_BFF24FC11553__INCLUDED_
+#ifndef FREQUENCY_H
+#define FREQUENCY_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_A0E87876_0C1C_45c8_9166_BFF24FC11553__INCLUDED_)
+#endif // FREQUENCY_H

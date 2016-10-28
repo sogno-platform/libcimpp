@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  PowerSystemResource.h
 //  Implementation of the Class PowerSystemResource
-//  Created on:      28-Jan-2016 12:46:09
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_695739DF_57BB_4b99_ACB6_B41DC55C9FF2__INCLUDED_)
-#define EA_695739DF_57BB_4b99_ACB6_B41DC55C9FF2__INCLUDED_
+#ifndef POWERSYSTEMRESOURCE_H
+#define POWERSYSTEMRESOURCE_H
 
 #include <list>
 
@@ -53,4 +52,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_695739DF_57BB_4b99_ACB6_B41DC55C9FF2__INCLUDED_)
+#endif // POWERSYSTEMRESOURCE_H

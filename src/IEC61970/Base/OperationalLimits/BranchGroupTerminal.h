@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  BranchGroupTerminal.h
 //  Implementation of the Class BranchGroupTerminal
-//  Created on:      28-Jan-2016 12:43:29
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_3FE4FA9F_BC99_4eab_819B_1F5FA152FE39__INCLUDED_)
-#define EA_3FE4FA9F_BC99_4eab_819B_1F5FA152FE39__INCLUDED_
+#ifndef BRANCHGROUPTERMINAL_H
+#define BRANCHGROUPTERMINAL_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Core/Terminal.h"
@@ -44,4 +43,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_3FE4FA9F_BC99_4eab_819B_1F5FA152FE39__INCLUDED_)
+#endif // BRANCHGROUPTERMINAL_H

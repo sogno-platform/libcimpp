@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  LinearShuntCompensatorPhase.h
 //  Implementation of the Class LinearShuntCompensatorPhase
-//  Created on:      28-Jan-2016 12:45:34
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E700937E_017D_4308_A29D_958C67E06EE3__INCLUDED_)
-#define EA_E700937E_017D_4308_A29D_958C67E06EE3__INCLUDED_
+#ifndef LINEARSHUNTCOMPENSATORPHASE_H
+#define LINEARSHUNTCOMPENSATORPHASE_H
 
 #include "IEC61970/Base/Domain/Susceptance.h"
 #include "IEC61970/Base/Domain/Conductance.h"
@@ -46,4 +45,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_E700937E_017D_4308_A29D_958C67E06EE3__INCLUDED_)
+#endif // LINEARSHUNTCOMPENSATORPHASE_H

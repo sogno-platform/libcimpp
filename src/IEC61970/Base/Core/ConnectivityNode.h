@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  ConnectivityNode.h
 //  Implementation of the Class ConnectivityNode
-//  Created on:      28-Jan-2016 12:43:39
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C710F4B5_2CE0_4c15_BD21_7C8F795969EA__INCLUDED_)
-#define EA_C710F4B5_2CE0_4c15_BD21_7C8F795969EA__INCLUDED_
+#ifndef CONNECTIVITYNODE_H
+#define CONNECTIVITYNODE_H
 
 #include "IEC61970/Base/Core/ConnectivityNodeContainer.h"
 #include "IEC61970/Base/Core/IdentifiedObject.h"
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C710F4B5_2CE0_4c15_BD21_7C8F795969EA__INCLUDED_)
+#endif // CONNECTIVITYNODE_H

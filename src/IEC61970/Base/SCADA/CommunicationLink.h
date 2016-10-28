@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  CommunicationLink.h
 //  Implementation of the Class CommunicationLink
-//  Created on:      28-Jan-2016 12:43:35
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_2B5D502B_C806_462c_B739_0CADF690CB81__INCLUDED_)
-#define EA_2B5D502B_C806_462c_B739_0CADF690CB81__INCLUDED_
+#ifndef COMMUNICATIONLINK_H
+#define COMMUNICATIONLINK_H
 
 #include <list>
 
@@ -43,4 +42,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_2B5D502B_C806_462c_B739_0CADF690CB81__INCLUDED_)
+#endif // COMMUNICATIONLINK_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ShuntCompensatorPhase.h
 //  Implementation of the Class ShuntCompensatorPhase
-//  Created on:      28-Jan-2016 12:46:41
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_86C2037B_C702_4397_8F21_AC1E9366ECEA__INCLUDED_)
-#define EA_86C2037B_C702_4397_8F21_AC1E9366ECEA__INCLUDED_
+#ifndef SHUNTCOMPENSATORPHASE_H
+#define SHUNTCOMPENSATORPHASE_H
 
 #include "IEC61970/Base/Domain/Integer.h"
 #include "IEC61970/Base/Wires/SinglePhaseKind.h"
@@ -52,4 +51,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_86C2037B_C702_4397_8F21_AC1E9366ECEA__INCLUDED_)
+#endif // SHUNTCOMPENSATORPHASE_H

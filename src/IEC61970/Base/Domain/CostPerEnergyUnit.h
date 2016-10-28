@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  CostPerEnergyUnit.h
 //  Implementation of the Class CostPerEnergyUnit
-//  Created on:      28-Jan-2016 12:43:44
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E91440CE_3E51_4286_BE97_797BEA7AFF9E__INCLUDED_)
-#define EA_E91440CE_3E51_4286_BE97_797BEA7AFF9E__INCLUDED_
+#ifndef COSTPERENERGYUNIT_H
+#define COSTPERENERGYUNIT_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -40,4 +39,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_E91440CE_3E51_4286_BE97_797BEA7AFF9E__INCLUDED_)
+#endif // COSTPERENERGYUNIT_H

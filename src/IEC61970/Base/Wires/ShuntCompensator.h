@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  ShuntCompensator.h
 //  Implementation of the Class ShuntCompensator
-//  Created on:      28-Jan-2016 12:46:41
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_4A708C7E_FCF2_4226_874E_57E19DD0B6BF__INCLUDED_)
-#define EA_4A708C7E_FCF2_4226_874E_57E19DD0B6BF__INCLUDED_
+#ifndef SHUNTCOMPENSATOR_H
+#define SHUNTCOMPENSATOR_H
 
 #include <list>
 
@@ -99,4 +98,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_4A708C7E_FCF2_4226_874E_57E19DD0B6BF__INCLUDED_)
+#endif // SHUNTCOMPENSATOR_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  EnergySourcePhase.h
 //  Implementation of the Class EnergySourcePhase
-//  Created on:      28-Jan-2016 12:44:15
 //  Original author: 222206
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_3F69DD27_0FC5_4085_B961_AC637790F2FA__INCLUDED_)
-#define EA_3F69DD27_0FC5_4085_B961_AC637790F2FA__INCLUDED_
+#ifndef ENERGYSOURCEPHASE_H
+#define ENERGYSOURCEPHASE_H
 
 #include "IEC61970/Base/Wires/SinglePhaseKind.h"
 #include "IEC61970/Base/Core/PowerSystemResource.h"
@@ -46,4 +45,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_3F69DD27_0FC5_4085_B961_AC637790F2FA__INCLUDED_)
+#endif // ENERGYSOURCEPHASE_H

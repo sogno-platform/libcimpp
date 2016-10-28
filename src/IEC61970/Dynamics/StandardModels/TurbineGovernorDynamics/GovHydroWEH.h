@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovHydroWEH.h
 //  Implementation of the Class GovHydroWEH
-//  Created on:      28-Jan-2016 12:45:10
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_19032C77_EA8B_40cb_B8C4_A86958C8C119__INCLUDED_)
-#define EA_19032C77_EA8B_40cb_B8C4_A86958C8C119__INCLUDED_
+#ifndef GOVHYDROWEH_H
+#define GOVHYDROWEH_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Boolean.h"
@@ -304,4 +303,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_19032C77_EA8B_40cb_B8C4_A86958C8C119__INCLUDED_)
+#endif // GOVHYDROWEH_H

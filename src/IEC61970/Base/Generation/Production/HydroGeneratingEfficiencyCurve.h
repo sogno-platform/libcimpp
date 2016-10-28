@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  HydroGeneratingEfficiencyCurve.h
 //  Implementation of the Class HydroGeneratingEfficiencyCurve
-//  Created on:      28-Jan-2016 12:45:19
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_D3225AA6_32F1_4e9d_ACA1_BCB03B2D3C30__INCLUDED_)
-#define EA_D3225AA6_32F1_4e9d_ACA1_BCB03B2D3C30__INCLUDED_
+#ifndef HYDROGENERATINGEFFICIENCYCURVE_H
+#define HYDROGENERATINGEFFICIENCYCURVE_H
 
 #include "IEC61970/Base/Core/Curve.h"
 
@@ -42,4 +41,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_D3225AA6_32F1_4e9d_ACA1_BCB03B2D3C30__INCLUDED_)
+#endif // HYDROGENERATINGEFFICIENCYCURVE_H

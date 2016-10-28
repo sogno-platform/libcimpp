@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindTurbineType3or4IEC.h
 //  Implementation of the Class WindTurbineType3or4IEC
-//  Created on:      28-Jan-2016 12:48:00
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C63C159D_BB87_4790_9E57_4524A58A7BFC__INCLUDED_)
-#define EA_C63C159D_BB87_4790_9E57_4524A58A7BFC__INCLUDED_
+#ifndef WINDTURBINETYPE3OR4IEC_H
+#define WINDTURBINETYPE3OR4IEC_H
 
 #include "IEC61970/Dynamics/StandardModels/WindDynamics/WindTurbineType3or4Dynamics.h"
 
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C63C159D_BB87_4790_9E57_4524A58A7BFC__INCLUDED_)
+#endif // WINDTURBINETYPE3OR4IEC_H

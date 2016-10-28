@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  CurrentRelay.h
 //  Implementation of the Class CurrentRelay
-//  Created on:      28-Jan-2016 12:43:48
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_887C83CB_91AE_4794_9A7A_0E1537380FEE__INCLUDED_)
-#define EA_887C83CB_91AE_4794_9A7A_0E1537380FEE__INCLUDED_
+#ifndef CURRENTRELAY_H
+#define CURRENTRELAY_H
 
 #include "IEC61970/Base/Domain/CurrentFlow.h"
 #include "IEC61970/Base/Domain/Boolean.h"
@@ -64,4 +63,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_887C83CB_91AE_4794_9A7A_0E1537380FEE__INCLUDED_)
+#endif // CURRENTRELAY_H

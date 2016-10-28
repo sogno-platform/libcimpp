@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PFVArControllerType2UserDefined.h
 //  Implementation of the Class PFVArControllerType2UserDefined
-//  Created on:      28-Jan-2016 12:46:00
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B4FC347C_8626_4a6e_98FC_2ECD2C72F060__INCLUDED_)
-#define EA_B4FC347C_8626_4a6e_98FC_2ECD2C72F060__INCLUDED_
+#ifndef PFVARCONTROLLERTYPE2USERDEFINED_H
+#define PFVARCONTROLLERTYPE2USERDEFINED_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Dynamics/StandardModels/PFVArControllerType2Dynamics/PFVArControllerType2Dynamics.h"
@@ -43,4 +42,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B4FC347C_8626_4a6e_98FC_2ECD2C72F060__INCLUDED_)
+#endif // PFVARCONTROLLERTYPE2USERDEFINED_H

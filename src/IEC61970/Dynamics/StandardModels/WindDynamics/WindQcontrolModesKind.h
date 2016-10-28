@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindQcontrolModesKind.h
 //  Implementation of the Class WindQcontrolModesKind
-//  Created on:      28-Jan-2016 12:47:58
 //  Original author: civanov
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_2D3A1FF8_9ED4_44ec_8EA0_9259296D4A47__INCLUDED_)
-#define EA_2D3A1FF8_9ED4_44ec_8EA0_9259296D4A47__INCLUDED_
+#ifndef WINDQCONTROLMODESKIND_H
+#define WINDQCONTROLMODESKIND_H
 
 namespace IEC61970
 {
@@ -47,4 +46,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_2D3A1FF8_9ED4_44ec_8EA0_9259296D4A47__INCLUDED_)
+#endif // WINDQCONTROLMODESKIND_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  HydroTurbine.h
 //  Implementation of the Class HydroTurbine
-//  Created on:      28-Jan-2016 12:45:22
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_DE94E9FB_77BE_4e8a_866F_FDC87CF15D6B__INCLUDED_)
-#define EA_DE94E9FB_77BE_4e8a_866F_FDC87CF15D6B__INCLUDED_
+#ifndef HYDROTURBINE_H
+#define HYDROTURBINE_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -87,4 +86,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_DE94E9FB_77BE_4e8a_866F_FDC87CF15D6B__INCLUDED_)
+#endif // HYDROTURBINE_H

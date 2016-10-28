@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PssIEEE4B.h
 //  Implementation of the Class PssIEEE4B
-//  Created on:      28-Jan-2016 12:46:18
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_5A259716_8724_497d_AE28_931C91DB46F7__INCLUDED_)
-#define EA_5A259716_8724_497d_AE28_931C91DB46F7__INCLUDED_
+#ifndef PSSIEEE4B_H
+#define PSSIEEE4B_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -323,4 +322,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_5A259716_8724_497d_AE28_931C91DB46F7__INCLUDED_)
+#endif // PSSIEEE4B_H

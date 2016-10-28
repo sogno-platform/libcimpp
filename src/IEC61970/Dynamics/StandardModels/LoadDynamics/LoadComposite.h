@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  LoadComposite.h
 //  Implementation of the Class LoadComposite
-//  Created on:      28-Jan-2016 12:45:35
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_DD5FFEAD_E30E_4b82_BA76_1692AE865B41__INCLUDED_)
-#define EA_DD5FFEAD_E30E_4b82_BA76_1692AE865B41__INCLUDED_
+#ifndef LOADCOMPOSITE_H
+#define LOADCOMPOSITE_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -87,4 +86,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_DD5FFEAD_E30E_4b82_BA76_1692AE865B41__INCLUDED_)
+#endif // LOADCOMPOSITE_H

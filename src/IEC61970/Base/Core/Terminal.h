@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Terminal.h
 //  Implementation of the Class Terminal
-//  Created on:      28-Jan-2016 12:47:15
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_11BB1AC9_299E_4eaa_852F_FBBD0EBE94EA__INCLUDED_)
-#define EA_11BB1AC9_299E_4eaa_852F_FBBD0EBE94EA__INCLUDED_
+#ifndef TERMINAL_H
+#define TERMINAL_H
 
 #include <list>
 
@@ -58,4 +57,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_11BB1AC9_299E_4eaa_852F_FBBD0EBE94EA__INCLUDED_)
+#endif // TERMINAL_H

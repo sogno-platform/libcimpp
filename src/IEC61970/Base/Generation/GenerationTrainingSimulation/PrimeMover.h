@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  PrimeMover.h
 //  Implementation of the Class PrimeMover
-//  Created on:      28-Jan-2016 12:46:11
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_0344ECC6_79C4_4a2b_B5CF_4749588EE54D__INCLUDED_)
-#define EA_0344ECC6_79C4_4a2b_B5CF_4749588EE54D__INCLUDED_
+#ifndef PRIMEMOVER_H
+#define PRIMEMOVER_H
 
 #include <list>
 
@@ -48,4 +47,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_0344ECC6_79C4_4a2b_B5CF_4749588EE54D__INCLUDED_)
+#endif // PRIMEMOVER_H

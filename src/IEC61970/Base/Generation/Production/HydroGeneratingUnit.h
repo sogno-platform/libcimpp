@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  HydroGeneratingUnit.h
 //  Implementation of the Class HydroGeneratingUnit
-//  Created on:      28-Jan-2016 12:45:20
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_18BAE2B9_17E1_4c46_8D07_4D8C1A6DAA0A__INCLUDED_)
-#define EA_18BAE2B9_17E1_4c46_8D07_4D8C1A6DAA0A__INCLUDED_
+#ifndef HYDROGENERATINGUNIT_H
+#define HYDROGENERATINGUNIT_H
 
 #include <list>
 
@@ -64,4 +63,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_18BAE2B9_17E1_4c46_8D07_4D8C1A6DAA0A__INCLUDED_)
+#endif // HYDROGENERATINGUNIT_H

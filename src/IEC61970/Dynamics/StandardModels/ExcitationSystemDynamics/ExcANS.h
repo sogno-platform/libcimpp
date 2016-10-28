@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcANS.h
 //  Implementation of the Class ExcANS
-//  Created on:      28-Jan-2016 12:44:22
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_39140344_EBEB_45e5_B952_5819ABAAA157__INCLUDED_)
-#define EA_39140344_EBEB_45e5_B952_5819ABAAA157__INCLUDED_
+#ifndef EXCANS_H
+#define EXCANS_H
 
 #include "IEC61970/Base/Domain/Integer.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -107,4 +106,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_39140344_EBEB_45e5_B952_5819ABAAA157__INCLUDED_)
+#endif // EXCANS_H

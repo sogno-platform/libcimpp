@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  EnergySource.h
 //  Implementation of the Class EnergySource
-//  Created on:      28-Jan-2016 12:44:15
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_0B0C2B00_5AF8_416f_9DF7_D7194F822005__INCLUDED_)
-#define EA_0B0C2B00_5AF8_416f_9DF7_D7194F822005__INCLUDED_
+#ifndef ENERGYSOURCE_H
+#define ENERGYSOURCE_H
 
 #include "IEC61970/Base/Domain/ActivePower.h"
 #include "IEC61970/Base/Domain/Voltage.h"
@@ -87,4 +86,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_0B0C2B00_5AF8_416f_9DF7_D7194F822005__INCLUDED_)
+#endif // ENERGYSOURCE_H

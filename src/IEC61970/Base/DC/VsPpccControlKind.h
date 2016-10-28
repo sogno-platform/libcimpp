@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  VsPpccControlKind.h
 //  Implementation of the Class VsPpccControlKind
-//  Created on:      28-Jan-2016 12:47:42
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_AB25ED5E_E111_44e8_88BC_B2FAC7D67791__INCLUDED_)
-#define EA_AB25ED5E_E111_44e8_88BC_B2FAC7D67791__INCLUDED_
+#ifndef VSPPCCCONTROLKIND_H
+#define VSPPCCCONTROLKIND_H
 
 namespace IEC61970
 {
@@ -52,4 +51,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_AB25ED5E_E111_44e8_88BC_B2FAC7D67791__INCLUDED_)
+#endif // VSPPCCCONTROLKIND_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  TransformerTank.h
 //  Implementation of the Class TransformerTank
-//  Created on:      28-Jan-2016 12:47:24
 //  Original author: Tom
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_D1B97BE2_B9B3_4eb1_ACDE_19CD3D6EBD62__INCLUDED_)
-#define EA_D1B97BE2_B9B3_4eb1_ACDE_19CD3D6EBD62__INCLUDED_
+#ifndef TRANSFORMERTANK_H
+#define TRANSFORMERTANK_H
 
 #include "IEC61970/Base/Wires/PowerTransformer.h"
 #include "IEC61970/Base/Core/Equipment.h"
@@ -41,4 +40,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_D1B97BE2_B9B3_4eb1_ACDE_19CD3D6EBD62__INCLUDED_)
+#endif // TRANSFORMERTANK_H

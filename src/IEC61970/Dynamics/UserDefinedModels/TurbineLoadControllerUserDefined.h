@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  TurbineLoadControllerUserDefined.h
 //  Implementation of the Class TurbineLoadControllerUserDefined
-//  Created on:      28-Jan-2016 12:47:27
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F4F8CC12_1B53_408f_A7F1_806A66EC01BC__INCLUDED_)
-#define EA_F4F8CC12_1B53_408f_A7F1_806A66EC01BC__INCLUDED_
+#ifndef TURBINELOADCONTROLLERUSERDEFINED_H
+#define TURBINELOADCONTROLLERUSERDEFINED_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Dynamics/StandardModels/TurbineLoadControllerDynamics/TurbineLoadControllerDynamics.h"
@@ -43,4 +42,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F4F8CC12_1B53_408f_A7F1_806A66EC01BC__INCLUDED_)
+#endif // TURBINELOADCONTROLLERUSERDEFINED_H

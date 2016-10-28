@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DateInterval.h
 //  Implementation of the Class DateInterval
-//  Created on:      28-Jan-2016 12:43:52
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_81734E17_BC16_4701_999A_87E0486E7FBB__INCLUDED_)
-#define EA_81734E17_BC16_4701_999A_87E0486E7FBB__INCLUDED_
+#ifndef DATEINTERVAL_H
+#define DATEINTERVAL_H
 
 #include "IEC61970/Base/Domain/Date.h"
 #include "BaseClass.h"
@@ -42,4 +41,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_81734E17_BC16_4701_999A_87E0486E7FBB__INCLUDED_)
+#endif // DATEINTERVAL_H

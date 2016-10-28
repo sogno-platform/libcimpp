@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  StringQuantity.h
 //  Implementation of the Class StringQuantity
-//  Created on:      28-Jan-2016 12:46:51
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E1A52F99_CAFF_447d_9753_2509CE3F4C84__INCLUDED_)
-#define EA_E1A52F99_CAFF_447d_9753_2509CE3F4C84__INCLUDED_
+#ifndef STRINGQUANTITY_H
+#define STRINGQUANTITY_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_E1A52F99_CAFF_447d_9753_2509CE3F4C84__INCLUDED_)
+#endif // STRINGQUANTITY_H

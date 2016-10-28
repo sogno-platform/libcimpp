@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PhaseShuntConnectionKind.h
 //  Implementation of the Class PhaseShuntConnectionKind
-//  Created on:      28-Jan-2016 12:46:03
 //  Original author: kdemaree
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_253A4339_36DA_4c8e_868A_957CA9A18B56__INCLUDED_)
-#define EA_253A4339_36DA_4c8e_868A_957CA9A18B56__INCLUDED_
+#ifndef PHASESHUNTCONNECTIONKIND_H
+#define PHASESHUNTCONNECTIONKIND_H
 
 namespace IEC61970
 {
@@ -49,4 +48,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_253A4339_36DA_4c8e_868A_957CA9A18B56__INCLUDED_)
+#endif // PHASESHUNTCONNECTIONKIND_H

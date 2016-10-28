@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcIEEEAC4A.h
 //  Implementation of the Class ExcIEEEAC4A
-//  Created on:      28-Jan-2016 12:44:31
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B8FD4E35_FBCE_4c97_81F4_786172A92F61__INCLUDED_)
-#define EA_B8FD4E35_FBCE_4c97_81F4_786172A92F61__INCLUDED_
+#ifndef EXCIEEEAC4A_H
+#define EXCIEEEAC4A_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -86,4 +85,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B8FD4E35_FBCE_4c97_81F4_786172A92F61__INCLUDED_)
+#endif // EXCIEEEAC4A_H

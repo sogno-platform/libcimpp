@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  Sensor.h
 //  Implementation of the Class Sensor
-//  Created on:      28-Jan-2016 12:46:39
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_1A3403C0_D2D1_4763_88D4_57E08C7EED29__INCLUDED_)
-#define EA_1A3403C0_D2D1_4763_88D4_57E08C7EED29__INCLUDED_
+#ifndef SENSOR_H
+#define SENSOR_H
 
 #include "IEC61970/Base/AuxiliaryEquipment/AuxiliaryEquipment.h"
 
@@ -34,4 +33,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_1A3403C0_D2D1_4763_88D4_57E08C7EED29__INCLUDED_)
+#endif // SENSOR_H

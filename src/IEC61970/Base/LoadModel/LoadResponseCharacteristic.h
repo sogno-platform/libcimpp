@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  LoadResponseCharacteristic.h
 //  Implementation of the Class LoadResponseCharacteristic
-//  Created on:      28-Jan-2016 12:45:38
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_42793A07_5AB3_4576_925C_0CBD34FC6CE7__INCLUDED_)
-#define EA_42793A07_5AB3_4576_925C_0CBD34FC6CE7__INCLUDED_
+#ifndef LOADRESPONSECHARACTERISTIC_H
+#define LOADRESPONSECHARACTERISTIC_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Domain/Float.h"
@@ -107,4 +106,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_42793A07_5AB3_4576_925C_0CBD34FC6CE7__INCLUDED_)
+#endif // LOADRESPONSECHARACTERISTIC_H

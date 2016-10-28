@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  RotatingMachine.h
 //  Implementation of the Class RotatingMachine
-//  Created on:      28-Jan-2016 12:46:36
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_EFD965B7_B7C2_46fd_B3B8_E478C5B9B620__INCLUDED_)
-#define EA_EFD965B7_B7C2_46fd_B3B8_E478C5B9B620__INCLUDED_
+#ifndef ROTATINGMACHINE_H
+#define ROTATINGMACHINE_H
 
 #include "IEC61970/Base/Domain/ActivePower.h"
 #include "IEC61970/Base/Domain/ReactivePower.h"
@@ -72,4 +71,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_EFD965B7_B7C2_46fd_B3B8_E478C5B9B620__INCLUDED_)
+#endif // ROTATINGMACHINE_H

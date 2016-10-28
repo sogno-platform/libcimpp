@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Boolean.h
 //  Implementation of the Class Boolean
-//  Created on:      28-Jan-2016 12:43:28
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_1B9899D6_3BF7_4d55_82C8_55637F416069__INCLUDED_)
-#define EA_1B9899D6_3BF7_4d55_82C8_55637F416069__INCLUDED_
+#ifndef BOOLEAN_H
+#define BOOLEAN_H
 
 #include <string>
 #include <istream>
@@ -40,4 +39,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_1B9899D6_3BF7_4d55_82C8_55637F416069__INCLUDED_)
+#endif // BOOLEAN_H

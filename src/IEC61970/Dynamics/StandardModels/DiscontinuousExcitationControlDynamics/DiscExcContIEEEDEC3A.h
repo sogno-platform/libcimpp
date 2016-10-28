@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DiscExcContIEEEDEC3A.h
 //  Implementation of the Class DiscExcContIEEEDEC3A
-//  Created on:      28-Jan-2016 12:44:07
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_75C08630_1413_4315_A60A_C64FA37F1483__INCLUDED_)
-#define EA_75C08630_1413_4315_A60A_C64FA37F1483__INCLUDED_
+#ifndef DISCEXCCONTIEEEDEC3A_H
+#define DISCEXCCONTIEEEDEC3A_H
 
 #include "IEC61970/Base/Domain/Seconds.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -52,4 +51,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_75C08630_1413_4315_A60A_C64FA37F1483__INCLUDED_)
+#endif // DISCEXCCONTIEEEDEC3A_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  HeatRate.h
 //  Implementation of the Class HeatRate
-//  Created on:      28-Jan-2016 12:45:17
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C5AC7711_6B73_453f_B939_E72FFF21FAB2__INCLUDED_)
-#define EA_C5AC7711_6B73_453f_B939_E72FFF21FAB2__INCLUDED_
+#ifndef HEATRATE_H
+#define HEATRATE_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -41,4 +40,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C5AC7711_6B73_453f_B939_E72FFF21FAB2__INCLUDED_)
+#endif // HEATRATE_H

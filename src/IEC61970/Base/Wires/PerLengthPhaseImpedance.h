@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PerLengthPhaseImpedance.h
 //  Implementation of the Class PerLengthPhaseImpedance
-//  Created on:      28-Jan-2016 12:45:57
 //  Original author: Tom
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_27D11D51_F5C4_48d8_B415_4AA17C4BBEF1__INCLUDED_)
-#define EA_27D11D51_F5C4_48d8_B415_4AA17C4BBEF1__INCLUDED_
+#ifndef PERLENGTHPHASEIMPEDANCE_H
+#define PERLENGTHPHASEIMPEDANCE_H
 
 #include <list>
 
@@ -47,4 +46,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_27D11D51_F5C4_48d8_B415_4AA17C4BBEF1__INCLUDED_)
+#endif // PERLENGTHPHASEIMPEDANCE_H

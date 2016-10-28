@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ProprietaryParameterDynamics.h
 //  Implementation of the Class ProprietaryParameterDynamics
-//  Created on:      28-Jan-2016 12:46:12
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_A8E7960D_0800_4253_9E0E_960DD378CA24__INCLUDED_)
-#define EA_A8E7960D_0800_4253_9E0E_960DD378CA24__INCLUDED_
+#ifndef PROPRIETARYPARAMETERDYNAMICS_H
+#define PROPRIETARYPARAMETERDYNAMICS_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Domain/Float.h"
@@ -134,4 +133,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_A8E7960D_0800_4253_9E0E_960DD378CA24__INCLUDED_)
+#endif // PROPRIETARYPARAMETERDYNAMICS_H

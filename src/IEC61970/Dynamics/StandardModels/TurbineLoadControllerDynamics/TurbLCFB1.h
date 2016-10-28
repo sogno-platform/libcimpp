@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  TurbLCFB1.h
 //  Implementation of the Class TurbLCFB1
-//  Created on:      28-Jan-2016 12:47:27
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_DD453E12_8123_4602_98B1_C352EC4BBE12__INCLUDED_)
-#define EA_DD453E12_8123_4602_98B1_C352EC4BBE12__INCLUDED_
+#ifndef TURBLCFB1_H
+#define TURBLCFB1_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Boolean.h"
@@ -102,4 +101,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_DD453E12_8123_4602_98B1_C352EC4BBE12__INCLUDED_)
+#endif // TURBLCFB1_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ResistancePerLength.h
 //  Implementation of the Class ResistancePerLength
-//  Created on:      28-Jan-2016 12:46:35
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_AFDA04D6_5D8A_4d77_8929_83B108F25F56__INCLUDED_)
-#define EA_AFDA04D6_5D8A_4d77_8929_83B108F25F56__INCLUDED_
+#ifndef RESISTANCEPERLENGTH_H
+#define RESISTANCEPERLENGTH_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_AFDA04D6_5D8A_4d77_8929_83B108F25F56__INCLUDED_)
+#endif // RESISTANCEPERLENGTH_H

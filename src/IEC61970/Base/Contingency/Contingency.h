@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Contingency.h
 //  Implementation of the Class Contingency
-//  Created on:      28-Jan-2016 12:43:40
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_5DF27732_22A2_4cf1_8F1D_15C1A6F20A58__INCLUDED_)
-#define EA_5DF27732_22A2_4cf1_8F1D_15C1A6F20A58__INCLUDED_
+#ifndef CONTINGENCY_H
+#define CONTINGENCY_H
 
 #include <list>
 
@@ -45,4 +44,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_5DF27732_22A2_4cf1_8F1D_15C1A6F20A58__INCLUDED_)
+#endif // CONTINGENCY_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  Decimal.h
 //  Implementation of the Class Decimal
-//  Created on:      28-Jan-2016 12:44:02
 //  Original author: kdemaree
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F04188AF_4ECF_4cc1_A5F4_410635CE5C4F__INCLUDED_)
-#define EA_F04188AF_4ECF_4cc1_A5F4_410635CE5C4F__INCLUDED_
+#ifndef DECIMAL_H
+#define DECIMAL_H
 
 #include "IEC61970/Base/Domain/String.h"
 #include "IEC61970/Base/Domain/Integer.h"
@@ -49,4 +48,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F04188AF_4ECF_4cc1_A5F4_410635CE5C4F__INCLUDED_)
+#endif // DECIMAL_H

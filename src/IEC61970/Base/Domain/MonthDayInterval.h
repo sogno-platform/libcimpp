@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  MonthDayInterval.h
 //  Implementation of the Class MonthDayInterval
-//  Created on:      28-Jan-2016 12:45:44
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_3ABD9079_7932_4a08_A099_E16873347128__INCLUDED_)
-#define EA_3ABD9079_7932_4a08_A099_E16873347128__INCLUDED_
+#ifndef MONTHDAYINTERVAL_H
+#define MONTHDAYINTERVAL_H
 
 #include "IEC61970/Base/Domain/MonthDay.h"
 #include "BaseClass.h"
@@ -42,4 +41,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_3ABD9079_7932_4a08_A099_E16873347128__INCLUDED_)
+#endif // MONTHDAYINTERVAL_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  BranchGroup.h
 //  Implementation of the Class BranchGroup
-//  Created on:      28-Jan-2016 12:43:28
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_DBF35F52_797E_4613_9106_F4B88E5018B2__INCLUDED_)
-#define EA_DBF35F52_797E_4613_9106_F4B88E5018B2__INCLUDED_
+#ifndef BRANCHGROUP_H
+#define BRANCHGROUP_H
 
 #include <list>
 
@@ -68,4 +67,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_DBF35F52_797E_4613_9106_F4B88E5018B2__INCLUDED_)
+#endif // BRANCHGROUP_H

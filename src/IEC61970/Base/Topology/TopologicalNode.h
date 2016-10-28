@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  TopologicalNode.h
 //  Implementation of the Class TopologicalNode
-//  Created on:      28-Jan-2016 12:47:20
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_D7CD5BBD_77F2_44a6_BA3B_9463912B028C__INCLUDED_)
-#define EA_D7CD5BBD_77F2_44a6_BA3B_9463912B028C__INCLUDED_
+#ifndef TOPOLOGICALNODE_H
+#define TOPOLOGICALNODE_H
 
 #include <list>
 
@@ -86,4 +85,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_D7CD5BBD_77F2_44a6_BA3B_9463912B028C__INCLUDED_)
+#endif // TOPOLOGICALNODE_H

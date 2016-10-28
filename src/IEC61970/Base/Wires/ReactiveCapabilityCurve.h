@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  ReactiveCapabilityCurve.h
 //  Implementation of the Class ReactiveCapabilityCurve
-//  Created on:      28-Jan-2016 12:46:26
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_DD8549AB_C533_45b3_B192_B97210D31A69__INCLUDED_)
-#define EA_DD8549AB_C533_45b3_B192_B97210D31A69__INCLUDED_
+#ifndef REACTIVECAPABILITYCURVE_H
+#define REACTIVECAPABILITYCURVE_H
 
 #include <list>
 
@@ -64,4 +63,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_DD8549AB_C533_45b3_B192_B97210D31A69__INCLUDED_)
+#endif // REACTIVECAPABILITYCURVE_H

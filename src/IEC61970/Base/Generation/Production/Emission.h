@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Emission.h
 //  Implementation of the Class Emission
-//  Created on:      28-Jan-2016 12:44:12
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_9FB98C37_9FA3_4202_AD52_8D5B5C74E501__INCLUDED_)
-#define EA_9FB98C37_9FA3_4202_AD52_8D5B5C74E501__INCLUDED_
+#ifndef EMISSION_H
+#define EMISSION_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -41,4 +40,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_9FB98C37_9FA3_4202_AD52_8D5B5C74E501__INCLUDED_)
+#endif // EMISSION_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  LoadGroup.h
 //  Implementation of the Class LoadGroup
-//  Created on:      28-Jan-2016 12:45:37
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F88B4929_CB7A_4009_8592_C24223205ADA__INCLUDED_)
-#define EA_F88B4929_CB7A_4009_8592_C24223205ADA__INCLUDED_
+#ifndef LOADGROUP_H
+#define LOADGROUP_H
 
 #include "IEC61970/Base/Core/IdentifiedObject.h"
 
@@ -33,4 +32,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F88B4929_CB7A_4009_8592_C24223205ADA__INCLUDED_)
+#endif // LOADGROUP_H

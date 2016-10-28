@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindTurbineType1or2IEC.h
 //  Implementation of the Class WindTurbineType1or2IEC
-//  Created on:      28-Jan-2016 12:47:59
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C2FC3B49_7832_4dfc_B822_56C62DD5FA4E__INCLUDED_)
-#define EA_C2FC3B49_7832_4dfc_B822_56C62DD5FA4E__INCLUDED_
+#ifndef WINDTURBINETYPE1OR2IEC_H
+#define WINDTURBINETYPE1OR2IEC_H
 
 #include "IEC61970/Dynamics/StandardModels/WindDynamics/WindTurbineType1or2Dynamics.h"
 
@@ -40,4 +39,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C2FC3B49_7832_4dfc_B822_56C62DD5FA4E__INCLUDED_)
+#endif // WINDTURBINETYPE1OR2IEC_H

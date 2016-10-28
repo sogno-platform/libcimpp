@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  RatioTapChanger.h
 //  Implementation of the Class RatioTapChanger
-//  Created on:      28-Jan-2016 12:46:24
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_278AC25D_138B_42e8_AF7B_2E0EB581F683__INCLUDED_)
-#define EA_278AC25D_138B_42e8_AF7B_2E0EB581F683__INCLUDED_
+#ifndef RATIOTAPCHANGER_H
+#define RATIOTAPCHANGER_H
 
 #include "IEC61970/Base/Domain/PerCent.h"
 #include "IEC61970/Base/Wires/TransformerControlMode.h"
@@ -50,4 +49,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_278AC25D_138B_42e8_AF7B_2E0EB581F683__INCLUDED_)
+#endif // RATIOTAPCHANGER_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DCBusbar.h
 //  Implementation of the Class DCBusbar
-//  Created on:      28-Jan-2016 12:43:55
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C8F8CD4F_FB97_4782_A9FF_59F478D588B1__INCLUDED_)
-#define EA_C8F8CD4F_FB97_4782_A9FF_59F478D588B1__INCLUDED_
+#ifndef DCBUSBAR_H
+#define DCBUSBAR_H
 
 #include "IEC61970/Base/DC/DCConductingEquipment.h"
 
@@ -33,4 +32,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C8F8CD4F_FB97_4782_A9FF_59F478D588B1__INCLUDED_)
+#endif // DCBUSBAR_H

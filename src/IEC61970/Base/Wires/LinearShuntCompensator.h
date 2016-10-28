@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  LinearShuntCompensator.h
 //  Implementation of the Class LinearShuntCompensator
-//  Created on:      28-Jan-2016 12:45:33
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_5D211039_21EB_47f8_8243_DD43892CE1CC__INCLUDED_)
-#define EA_5D211039_21EB_47f8_8243_DD43892CE1CC__INCLUDED_
+#ifndef LINEARSHUNTCOMPENSATOR_H
+#define LINEARSHUNTCOMPENSATOR_H
 
 #include "IEC61970/Base/Domain/Susceptance.h"
 #include "IEC61970/Base/Domain/Conductance.h"
@@ -51,4 +50,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_5D211039_21EB_47f8_8243_DD43892CE1CC__INCLUDED_)
+#endif // LINEARSHUNTCOMPENSATOR_H

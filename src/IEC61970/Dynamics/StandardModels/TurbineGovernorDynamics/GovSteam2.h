@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovSteam2.h
 //  Implementation of the Class GovSteam2
-//  Created on:      28-Jan-2016 12:45:12
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_DD333F2B_3583_4d7c_89D7_F569D9252504__INCLUDED_)
-#define EA_DD333F2B_3583_4d7c_89D7_F569D9252504__INCLUDED_
+#ifndef GOVSTEAM2_H
+#define GOVSTEAM2_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Float.h"
@@ -72,4 +71,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_DD333F2B_3583_4d7c_89D7_F569D9252504__INCLUDED_)
+#endif // GOVSTEAM2_H

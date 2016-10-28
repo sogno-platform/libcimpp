@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  SvShuntCompensatorSections.h
 //  Implementation of the Class SvShuntCompensatorSections
-//  Created on:      28-Jan-2016 12:46:58
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_9A17C802_7C40_41a6_ACFF_2B50C738636B__INCLUDED_)
-#define EA_9A17C802_7C40_41a6_ACFF_2B50C738636B__INCLUDED_
+#ifndef SVSHUNTCOMPENSATORSECTIONS_H
+#define SVSHUNTCOMPENSATORSECTIONS_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/StateVariables/StateVariable.h"
@@ -44,4 +43,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_9A17C802_7C40_41a6_ACFF_2B50C738636B__INCLUDED_)
+#endif // SVSHUNTCOMPENSATORSECTIONS_H

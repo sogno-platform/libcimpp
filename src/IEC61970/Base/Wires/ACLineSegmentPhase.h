@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ACLineSegmentPhase.h
 //  Implementation of the Class ACLineSegmentPhase
-//  Created on:      28-Jan-2016 12:43:13
 //  Original author: kdemaree
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_FB9F74D4_4CBB_4746_93B3_BD54F12B9B34__INCLUDED_)
-#define EA_FB9F74D4_4CBB_4746_93B3_BD54F12B9B34__INCLUDED_
+#ifndef ACLINESEGMENTPHASE_H
+#define ACLINESEGMENTPHASE_H
 
 #include "IEC61970/Base/Wires/SinglePhaseKind.h"
 #include "IEC61970/Base/Domain/Integer.h"
@@ -52,4 +51,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_FB9F74D4_4CBB_4746_93B3_BD54F12B9B34__INCLUDED_)
+#endif // ACLINESEGMENTPHASE_H

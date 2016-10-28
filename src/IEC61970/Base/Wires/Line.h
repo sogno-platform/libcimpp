@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Line.h
 //  Implementation of the Class Line
-//  Created on:      28-Jan-2016 12:45:33
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_33CB5677_4309_48f9_A095_5EE24B23E757__INCLUDED_)
-#define EA_33CB5677_4309_48f9_A095_5EE24B23E757__INCLUDED_
+#ifndef LINE_H
+#define LINE_H
 
 #include "IEC61970/Base/Core/EquipmentContainer.h"
 
@@ -32,4 +31,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_33CB5677_4309_48f9_A095_5EE24B23E757__INCLUDED_)
+#endif // LINE_H

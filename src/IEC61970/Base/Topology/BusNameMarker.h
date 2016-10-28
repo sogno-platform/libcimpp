@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  BusNameMarker.h
 //  Implementation of the Class BusNameMarker
-//  Created on:      28-Jan-2016 12:43:31
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_89C52C8C_8183_4f2e_9A05_E3E8F90E163B__INCLUDED_)
-#define EA_89C52C8C_8183_4f2e_9A05_E3E8F90E163B__INCLUDED_
+#ifndef BUSNAMEMARKER_H
+#define BUSNAMEMARKER_H
 
 #include <list>
 
@@ -58,4 +57,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_89C52C8C_8183_4f2e_9A05_E3E8F90E163B__INCLUDED_)
+#endif // BUSNAMEMARKER_H

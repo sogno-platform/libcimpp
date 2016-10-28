@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Fuse.h
 //  Implementation of the Class Fuse
-//  Created on:      28-Jan-2016 12:44:55
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_431F898F_C63E_44d7_AAB1_2197511D95B8__INCLUDED_)
-#define EA_431F898F_C63E_44d7_AAB1_2197511D95B8__INCLUDED_
+#ifndef FUSE_H
+#define FUSE_H
 
 #include "IEC61970/Base/Wires/Switch.h"
 
@@ -34,4 +33,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_431F898F_C63E_44d7_AAB1_2197511D95B8__INCLUDED_)
+#endif // FUSE_H

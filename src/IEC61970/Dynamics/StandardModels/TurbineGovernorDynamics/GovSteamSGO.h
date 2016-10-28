@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovSteamSGO.h
 //  Implementation of the Class GovSteamSGO
-//  Created on:      28-Jan-2016 12:45:15
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_3EB7D4D3_999B_4e2b_866D_BF40283270D5__INCLUDED_)
-#define EA_3EB7D4D3_999B_4e2b_866D_BF40283270D5__INCLUDED_
+#ifndef GOVSTEAMSGO_H
+#define GOVSTEAMSGO_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/ActivePower.h"
@@ -89,4 +88,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_3EB7D4D3_999B_4e2b_866D_BF40283270D5__INCLUDED_)
+#endif // GOVSTEAMSGO_H

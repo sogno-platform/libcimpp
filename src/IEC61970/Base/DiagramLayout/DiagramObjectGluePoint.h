@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DiagramObjectGluePoint.h
 //  Implementation of the Class DiagramObjectGluePoint
-//  Created on:      28-Jan-2016 12:44:04
 //  Original author: mcmorran
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_57A0F7C1_B5B9_4088_B432_E8FC4B6FB278__INCLUDED_)
-#define EA_57A0F7C1_B5B9_4088_B432_E8FC4B6FB278__INCLUDED_
+#ifndef DIAGRAMOBJECTGLUEPOINT_H
+#define DIAGRAMOBJECTGLUEPOINT_H
 
 #include "BaseClass.h"
 
@@ -35,4 +34,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_57A0F7C1_B5B9_4088_B432_E8FC4B6FB278__INCLUDED_)
+#endif // DIAGRAMOBJECTGLUEPOINT_H

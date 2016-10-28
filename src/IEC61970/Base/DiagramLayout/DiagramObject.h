@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DiagramObject.h
 //  Implementation of the Class DiagramObject
-//  Created on:      28-Jan-2016 12:44:04
 //  Original author: mcmorran
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_1E27AB75_BB40_4e27_A8DF_D1B19AC819F5__INCLUDED_)
-#define EA_1E27AB75_BB40_4e27_A8DF_D1B19AC819F5__INCLUDED_
+#ifndef DIAGRAMOBJECT_H
+#define DIAGRAMOBJECT_H
 
 #include <list>
 
@@ -102,4 +101,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_1E27AB75_BB40_4e27_A8DF_D1B19AC819F5__INCLUDED_)
+#endif // DIAGRAMOBJECT_H

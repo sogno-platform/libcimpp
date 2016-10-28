@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  FrequencyConverter.h
 //  Implementation of the Class FrequencyConverter
-//  Created on:      28-Jan-2016 12:44:54
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_439EF181_CA9A_44b7_A831_31902486421B__INCLUDED_)
-#define EA_439EF181_CA9A_44b7_A831_31902486421B__INCLUDED_
+#ifndef FREQUENCYCONVERTER_H
+#define FREQUENCYCONVERTER_H
 
 #include "IEC61970/Base/Domain/Frequency.h"
 #include "IEC61970/Base/Domain/ActivePower.h"
@@ -61,4 +60,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_439EF181_CA9A_44b7_A831_31902486421B__INCLUDED_)
+#endif // FREQUENCYCONVERTER_H

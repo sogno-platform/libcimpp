@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindPlantDynamics.h
 //  Implementation of the Class WindPlantDynamics
-//  Created on:      28-Jan-2016 12:47:55
 //  Original author: civanov
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E0ED4EBA_7773_43f4_A655_5F12976FDA23__INCLUDED_)
-#define EA_E0ED4EBA_7773_43f4_A655_5F12976FDA23__INCLUDED_
+#ifndef WINDPLANTDYNAMICS_H
+#define WINDPLANTDYNAMICS_H
 
 #include <list>
 
@@ -50,4 +49,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_E0ED4EBA_7773_43f4_A655_5F12976FDA23__INCLUDED_)
+#endif // WINDPLANTDYNAMICS_H

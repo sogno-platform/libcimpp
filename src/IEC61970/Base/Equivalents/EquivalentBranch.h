@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  EquivalentBranch.h
 //  Implementation of the Class EquivalentBranch
-//  Created on:      28-Jan-2016 12:44:16
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_6262E961_9847_4d8c_A499_B28A04497968__INCLUDED_)
-#define EA_6262E961_9847_4d8c_A499_B28A04497968__INCLUDED_
+#ifndef EQUIVALENTBRANCH_H
+#define EQUIVALENTBRANCH_H
 
 #include "IEC61970/Base/Domain/Resistance.h"
 #include "IEC61970/Base/Domain/Reactance.h"
@@ -139,4 +138,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_6262E961_9847_4d8c_A499_B28A04497968__INCLUDED_)
+#endif // EQUIVALENTBRANCH_H

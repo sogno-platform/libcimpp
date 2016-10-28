@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcAVR3.h
 //  Implementation of the Class ExcAVR3
-//  Created on:      28-Jan-2016 12:44:23
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_A606A7B6_637E_461a_BC59_314B615F42AE__INCLUDED_)
-#define EA_A606A7B6_637E_461a_BC59_314B615F42AE__INCLUDED_
+#ifndef EXCAVR3_H
+#define EXCAVR3_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Float.h"
@@ -88,4 +87,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_A606A7B6_637E_461a_BC59_314B615F42AE__INCLUDED_)
+#endif // EXCAVR3_H

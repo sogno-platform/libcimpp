@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Temperature.h
 //  Implementation of the Class Temperature
-//  Created on:      28-Jan-2016 12:47:13
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_9AD8F6D8_A142_48ca_8D2F_9EC924CEB295__INCLUDED_)
-#define EA_9AD8F6D8_A142_48ca_8D2F_9EC924CEB295__INCLUDED_
+#ifndef TEMPERATURE_H
+#define TEMPERATURE_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_9AD8F6D8_A142_48ca_8D2F_9EC924CEB295__INCLUDED_)
+#endif // TEMPERATURE_H

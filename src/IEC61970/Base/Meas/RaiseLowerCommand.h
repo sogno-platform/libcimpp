@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  RaiseLowerCommand.h
 //  Implementation of the Class RaiseLowerCommand
-//  Created on:      28-Jan-2016 12:46:23
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_6B1DE715_A4DB_41cd_A8D1_5E256948A89B__INCLUDED_)
-#define EA_6B1DE715_A4DB_41cd_A8D1_5E256948A89B__INCLUDED_
+#ifndef RAISELOWERCOMMAND_H
+#define RAISELOWERCOMMAND_H
 
 #include "IEC61970/Base/Meas/AnalogControl.h"
 #include "IEC61970/Base/Meas/ValueAliasSet.h"
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_6B1DE715_A4DB_41cd_A8D1_5E256948A89B__INCLUDED_)
+#endif // RAISELOWERCOMMAND_H

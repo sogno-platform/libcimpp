@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  CogenerationPlant.h
 //  Implementation of the Class CogenerationPlant
-//  Created on:      28-Jan-2016 12:43:34
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_445EAD5F_28EE_4467_A0C7_5EF74AF70D67__INCLUDED_)
-#define EA_445EAD5F_28EE_4467_A0C7_5EF74AF70D67__INCLUDED_
+#ifndef COGENERATIONPLANT_H
+#define COGENERATIONPLANT_H
 
 #include <list>
 
@@ -73,4 +72,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_445EAD5F_28EE_4467_A0C7_5EF74AF70D67__INCLUDED_)
+#endif // COGENERATIONPLANT_H

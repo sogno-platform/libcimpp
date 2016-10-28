@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  OrientationKind.h
 //  Implementation of the Class OrientationKind
-//  Created on:      28-Jan-2016 12:45:53
 //  Original author: mcmorran
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_FCE496C7_F151_48db_9EB9_5DA3A64C5F7B__INCLUDED_)
-#define EA_FCE496C7_F151_48db_9EB9_5DA3A64C5F7B__INCLUDED_
+#ifndef ORIENTATIONKIND_H
+#define ORIENTATIONKIND_H
 
 namespace IEC61970
 {
@@ -40,4 +39,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_FCE496C7_F151_48db_9EB9_5DA3A64C5F7B__INCLUDED_)
+#endif // ORIENTATIONKIND_H

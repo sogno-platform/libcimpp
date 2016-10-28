@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  SvInjection.h
 //  Implementation of the Class SvInjection
-//  Created on:      28-Jan-2016 12:46:57
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_1AEC5BF7_C202_4eef_B0C0_35C41F763779__INCLUDED_)
-#define EA_1AEC5BF7_C202_4eef_B0C0_35C41F763779__INCLUDED_
+#ifndef SVINJECTION_H
+#define SVINJECTION_H
 
 #include "IEC61970/Base/Wires/SinglePhaseKind.h"
 #include "IEC61970/Base/Domain/ActivePower.h"
@@ -60,4 +59,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_1AEC5BF7_C202_4eef_B0C0_35C41F763779__INCLUDED_)
+#endif // SVINJECTION_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  OverexcLimIEEE.h
 //  Implementation of the Class OverexcLimIEEE
-//  Created on:      28-Jan-2016 12:45:55
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_D2BF8498_27BD_4a76_8ADC_647C40A35E8E__INCLUDED_)
-#define EA_D2BF8498_27BD_4a76_8ADC_647C40A35E8E__INCLUDED_
+#ifndef OVEREXCLIMIEEE_H
+#define OVEREXCLIMIEEE_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Float.h"
@@ -72,4 +71,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_D2BF8498_27BD_4a76_8ADC_647C40A35E8E__INCLUDED_)
+#endif // OVEREXCLIMIEEE_H

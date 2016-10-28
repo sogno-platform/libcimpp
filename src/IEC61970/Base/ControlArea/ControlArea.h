@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ControlArea.h
 //  Implementation of the Class ControlArea
-//  Created on:      28-Jan-2016 12:43:42
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_62A36E22_E8D6_4543_9D10_8C12151A29F3__INCLUDED_)
-#define EA_62A36E22_E8D6_4543_9D10_8C12151A29F3__INCLUDED_
+#ifndef CONTROLAREA_H
+#define CONTROLAREA_H
 
 #include <list>
 
@@ -74,4 +73,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_62A36E22_E8D6_4543_9D10_8C12151A29F3__INCLUDED_)
+#endif // CONTROLAREA_H

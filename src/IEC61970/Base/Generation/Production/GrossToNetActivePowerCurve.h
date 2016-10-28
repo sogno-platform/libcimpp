@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  GrossToNetActivePowerCurve.h
 //  Implementation of the Class GrossToNetActivePowerCurve
-//  Created on:      28-Jan-2016 12:45:16
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_8F3756EB_E097_4126_B6DF_F9CDA2F36EC7__INCLUDED_)
-#define EA_8F3756EB_E097_4126_B6DF_F9CDA2F36EC7__INCLUDED_
+#ifndef GROSSTONETACTIVEPOWERCURVE_H
+#define GROSSTONETACTIVEPOWERCURVE_H
 
 #include "IEC61970/Base/Core/Curve.h"
 
@@ -41,4 +40,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_8F3756EB_E097_4126_B6DF_F9CDA2F36EC7__INCLUDED_)
+#endif // GROSSTONETACTIVEPOWERCURVE_H

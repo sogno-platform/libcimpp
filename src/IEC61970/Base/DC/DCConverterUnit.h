@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DCConverterUnit.h
 //  Implementation of the Class DCConverterUnit
-//  Created on:      28-Jan-2016 12:43:57
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_DD6846EC_4161_4f2a_ACE1_E5C5AC532761__INCLUDED_)
-#define EA_DD6846EC_4161_4f2a_ACE1_E5C5AC532761__INCLUDED_
+#ifndef DCCONVERTERUNIT_H
+#define DCCONVERTERUNIT_H
 
 #include "IEC61970/Base/DC/DCConverterOperatingModeKind.h"
 #include "IEC61970/Base/DC/DCEquipmentContainer.h"
@@ -39,4 +38,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_DD6846EC_4161_4f2a_ACE1_E5C5AC532761__INCLUDED_)
+#endif // DCCONVERTERUNIT_H

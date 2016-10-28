@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  CTTempActivePowerCurve.h
 //  Implementation of the Class CTTempActivePowerCurve
-//  Created on:      28-Jan-2016 12:43:47
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_736207AA_2358_46e5_995D_B7766EC6C7B9__INCLUDED_)
-#define EA_736207AA_2358_46e5_995D_B7766EC6C7B9__INCLUDED_
+#ifndef CTTEMPACTIVEPOWERCURVE_H
+#define CTTEMPACTIVEPOWERCURVE_H
 
 #include "IEC61970/Base/Core/Curve.h"
 
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_736207AA_2358_46e5_995D_B7766EC6C7B9__INCLUDED_)
+#endif // CTTEMPACTIVEPOWERCURVE_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  EnergyConsumer.h
 //  Implementation of the Class EnergyConsumer
-//  Created on:      28-Jan-2016 12:44:14
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_6A6C930B_B7C7_43f7_9E13_D736F615C213__INCLUDED_)
-#define EA_6A6C930B_B7C7_43f7_9E13_D736F615C213__INCLUDED_
+#ifndef ENERGYCONSUMER_H
+#define ENERGYCONSUMER_H
 
 #include <list>
 
@@ -97,4 +96,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_6A6C930B_B7C7_43f7_9E13_D736F615C213__INCLUDED_)
+#endif // ENERGYCONSUMER_H

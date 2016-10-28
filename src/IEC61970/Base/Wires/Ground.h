@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Ground.h
 //  Implementation of the Class Ground
-//  Created on:      28-Jan-2016 12:45:16
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_5053F9DB_8685_40fa_8FD6_C595D1C6EA9A__INCLUDED_)
-#define EA_5053F9DB_8685_40fa_8FD6_C595D1C6EA9A__INCLUDED_
+#ifndef GROUND_H
+#define GROUND_H
 
 #include "IEC61970/Base/Core/ConductingEquipment.h"
 
@@ -33,4 +32,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_5053F9DB_8685_40fa_8FD6_C595D1C6EA9A__INCLUDED_)
+#endif // GROUND_H

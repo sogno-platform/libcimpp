@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  VoltageLevel.h
 //  Implementation of the Class VoltageLevel
-//  Created on:      28-Jan-2016 12:47:38
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_75626E8A_1F72_4937_99DF_949196A28373__INCLUDED_)
-#define EA_75626E8A_1F72_4937_99DF_949196A28373__INCLUDED_
+#ifndef VOLTAGELEVEL_H
+#define VOLTAGELEVEL_H
 
 #include <list>
 
@@ -55,4 +54,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_75626E8A_1F72_4937_99DF_949196A28373__INCLUDED_)
+#endif // VOLTAGELEVEL_H

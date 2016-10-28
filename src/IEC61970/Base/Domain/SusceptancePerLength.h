@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  SusceptancePerLength.h
 //  Implementation of the Class SusceptancePerLength
-//  Created on:      28-Jan-2016 12:46:56
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_5594A1BD_0C48_4a4a_AD51_303340C2A9FE__INCLUDED_)
-#define EA_5594A1BD_0C48_4a4a_AD51_303340C2A9FE__INCLUDED_
+#ifndef SUSCEPTANCEPERLENGTH_H
+#define SUSCEPTANCEPERLENGTH_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_5594A1BD_0C48_4a4a_AD51_303340C2A9FE__INCLUDED_)
+#endif // SUSCEPTANCEPERLENGTH_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcAC8B.h
 //  Implementation of the Class ExcAC8B
-//  Created on:      28-Jan-2016 12:44:21
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_A97633B9_E0DA_4605_A2AD_8E67C791318B__INCLUDED_)
-#define EA_A97633B9_E0DA_4605_A2AD_8E67C791318B__INCLUDED_
+#ifndef EXCAC8B_H
+#define EXCAC8B_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -171,4 +170,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_A97633B9_E0DA_4605_A2AD_8E67C791318B__INCLUDED_)
+#endif // EXCAC8B_H

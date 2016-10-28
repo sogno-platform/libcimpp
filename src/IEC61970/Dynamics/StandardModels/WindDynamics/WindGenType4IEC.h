@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindGenType4IEC.h
 //  Implementation of the Class WindGenType4IEC
-//  Created on:      28-Jan-2016 12:47:53
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_81B1B395_3AF5_43c4_A7F8_FEF2DA1E95F6__INCLUDED_)
-#define EA_81B1B395_3AF5_43c4_A7F8_FEF2DA1E95F6__INCLUDED_
+#ifndef WINDGENTYPE4IEC_H
+#define WINDGENTYPE4IEC_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -60,4 +59,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_81B1B395_3AF5_43c4_A7F8_FEF2DA1E95F6__INCLUDED_)
+#endif // WINDGENTYPE4IEC_H

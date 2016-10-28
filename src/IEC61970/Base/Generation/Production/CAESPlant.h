@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  CAESPlant.h
 //  Implementation of the Class CAESPlant
-//  Created on:      28-Jan-2016 12:43:31
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_576E1DCC_02AA_4506_AA42_922E16622BF2__INCLUDED_)
-#define EA_576E1DCC_02AA_4506_AA42_922E16622BF2__INCLUDED_
+#ifndef CAESPLANT_H
+#define CAESPLANT_H
 
 #include "IEC61970/Base/Domain/RealEnergy.h"
 #include "IEC61970/Base/Domain/ActivePower.h"
@@ -57,4 +56,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_576E1DCC_02AA_4506_AA42_922E16622BF2__INCLUDED_)
+#endif // CAESPLANT_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  BreakerConfiguration.h
 //  Implementation of the Class BreakerConfiguration
-//  Created on:      28-Jan-2016 12:43:30
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C108B5E4_56E1_4267_855A_D889F04CA817__INCLUDED_)
-#define EA_C108B5E4_56E1_4267_855A_D889F04CA817__INCLUDED_
+#ifndef BREAKERCONFIGURATION_H
+#define BREAKERCONFIGURATION_H
 
 namespace IEC61970
 {
@@ -41,4 +40,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C108B5E4_56E1_4267_855A_D889F04CA817__INCLUDED_)
+#endif // BREAKERCONFIGURATION_H

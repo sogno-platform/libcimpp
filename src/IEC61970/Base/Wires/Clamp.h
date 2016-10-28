@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  Clamp.h
 //  Implementation of the Class Clamp
-//  Created on:      28-Jan-2016 12:43:33
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_3E891F00_52EE_4f61_B61D_34674C7E1533__INCLUDED_)
-#define EA_3E891F00_52EE_4f61_B61D_34674C7E1533__INCLUDED_
+#ifndef CLAMP_H
+#define CLAMP_H
 
 #include "IEC61970/Base/Domain/Length.h"
 #include "IEC61970/Base/Core/ConductingEquipment.h"
@@ -44,4 +43,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_3E891F00_52EE_4f61_B61D_34674C7E1533__INCLUDED_)
+#endif // CLAMP_H

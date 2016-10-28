@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ACDCConverterDCTerminal.h
 //  Implementation of the Class ACDCConverterDCTerminal
-//  Created on:      28-Jan-2016 12:43:11
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E2A58F76_9034_4073_A4CA_A92E9B6BA101__INCLUDED_)
-#define EA_E2A58F76_9034_4073_A4CA_A92E9B6BA101__INCLUDED_
+#ifndef ACDCCONVERTERDCTERMINAL_H
+#define ACDCCONVERTERDCTERMINAL_H
 
 #include "IEC61970/Base/DC/DCPolarityKind.h"
 #include "IEC61970/Base/DC/DCBaseTerminal.h"
@@ -45,4 +44,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_E2A58F76_9034_4073_A4CA_A92E9B6BA101__INCLUDED_)
+#endif // ACDCCONVERTERDCTERMINAL_H

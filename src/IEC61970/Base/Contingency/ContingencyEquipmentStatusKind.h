@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ContingencyEquipmentStatusKind.h
 //  Implementation of the Class ContingencyEquipmentStatusKind
-//  Created on:      28-Jan-2016 12:43:42
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_992BA0A0_502A_41a9_98BB_BD171EAC896A__INCLUDED_)
-#define EA_992BA0A0_502A_41a9_98BB_BD171EAC896A__INCLUDED_
+#ifndef CONTINGENCYEQUIPMENTSTATUSKIND_H
+#define CONTINGENCYEQUIPMENTSTATUSKIND_H
 
 namespace IEC61970
 {
@@ -35,4 +34,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_992BA0A0_502A_41a9_98BB_BD171EAC896A__INCLUDED_)
+#endif // CONTINGENCYEQUIPMENTSTATUSKIND_H

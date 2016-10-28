@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  ProtectionEquipment.h
 //  Implementation of the Class ProtectionEquipment
-//  Created on:      28-Jan-2016 12:46:13
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_0E7F3168_A93D_464f_A3B4_82EEBFDF0AC1__INCLUDED_)
-#define EA_0E7F3168_A93D_464f_A3B4_82EEBFDF0AC1__INCLUDED_
+#ifndef PROTECTIONEQUIPMENT_H
+#define PROTECTIONEQUIPMENT_H
 
 #include <list>
 
@@ -77,4 +76,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_0E7F3168_A93D_464f_A3B4_82EEBFDF0AC1__INCLUDED_)
+#endif // PROTECTIONEQUIPMENT_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  ValueToAlias.h
 //  Implementation of the Class ValueToAlias
-//  Created on:      28-Jan-2016 12:47:32
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_8741F45F_3BE9_4cd0_8F87_E1FD1B80BEAE__INCLUDED_)
-#define EA_8741F45F_3BE9_4cd0_8F87_E1FD1B80BEAE__INCLUDED_
+#ifndef VALUETOALIAS_H
+#define VALUETOALIAS_H
 
 #include "IEC61970/Base/Domain/Integer.h"
 #include "IEC61970/Base/Core/IdentifiedObject.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_8741F45F_3BE9_4cd0_8F87_E1FD1B80BEAE__INCLUDED_)
+#endif // VALUETOALIAS_H

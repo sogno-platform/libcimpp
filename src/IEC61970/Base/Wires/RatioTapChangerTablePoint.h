@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  RatioTapChangerTablePoint.h
 //  Implementation of the Class RatioTapChangerTablePoint
-//  Created on:      28-Jan-2016 12:46:25
 //  Original author: SELAOST1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_8EE4D94D_88B9_4536_B852_2637A8803011__INCLUDED_)
-#define EA_8EE4D94D_88B9_4536_B852_2637A8803011__INCLUDED_
+#ifndef RATIOTAPCHANGERTABLEPOINT_H
+#define RATIOTAPCHANGERTABLEPOINT_H
 
 #include "IEC61970/Base/Wires/RatioTapChangerTable.h"
 #include "IEC61970/Base/Wires/TapChangerTablePoint.h"
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_8EE4D94D_88B9_4536_B852_2637A8803011__INCLUDED_)
+#endif // RATIOTAPCHANGERTABLEPOINT_H

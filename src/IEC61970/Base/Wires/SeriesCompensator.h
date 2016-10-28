@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  SeriesCompensator.h
 //  Implementation of the Class SeriesCompensator
-//  Created on:      28-Jan-2016 12:46:40
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_44164959_6317_491f_A2CD_04EF000BBB4C__INCLUDED_)
-#define EA_44164959_6317_491f_A2CD_04EF000BBB4C__INCLUDED_
+#ifndef SERIESCOMPENSATOR_H
+#define SERIESCOMPENSATOR_H
 
 #include "IEC61970/Base/Domain/Resistance.h"
 #include "IEC61970/Base/Domain/Boolean.h"
@@ -67,4 +66,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_44164959_6317_491f_A2CD_04EF000BBB4C__INCLUDED_)
+#endif // SERIESCOMPENSATOR_H

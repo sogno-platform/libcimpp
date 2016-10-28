@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PssIEEE3B.h
 //  Implementation of the Class PssIEEE3B
-//  Created on:      28-Jan-2016 12:46:18
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_DC522D7D_C673_4fb1_A913_7A5A25F34329__INCLUDED_)
-#define EA_DC522D7D_C673_4fb1_A913_7A5A25F34329__INCLUDED_
+#ifndef PSSIEEE3B_H
+#define PSSIEEE3B_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Dynamics/StandardModels/PowerSystemStabilizerDynamics/InputSignalKind.h"
@@ -121,4 +120,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_DC522D7D_C673_4fb1_A913_7A5A25F34329__INCLUDED_)
+#endif // PSSIEEE3B_H

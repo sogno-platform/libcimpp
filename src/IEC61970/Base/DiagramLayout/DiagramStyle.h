@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DiagramStyle.h
 //  Implementation of the Class DiagramStyle
-//  Created on:      28-Jan-2016 12:44:06
 //  Original author: SELAOST1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_5F8CF8D7_D28F_4f29_995E_EEDDE8BF010B__INCLUDED_)
-#define EA_5F8CF8D7_D28F_4f29_995E_EEDDE8BF010B__INCLUDED_
+#ifndef DIAGRAMSTYLE_H
+#define DIAGRAMSTYLE_H
 
 #include <list>
 
@@ -42,4 +41,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_5F8CF8D7_D28F_4f29_995E_EEDDE8BF010B__INCLUDED_)
+#endif // DIAGRAMSTYLE_H

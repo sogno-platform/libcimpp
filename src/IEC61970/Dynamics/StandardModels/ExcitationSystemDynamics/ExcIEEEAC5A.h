@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcIEEEAC5A.h
 //  Implementation of the Class ExcIEEEAC5A
-//  Created on:      28-Jan-2016 12:44:31
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_165C3F8B_84EA_4374_9790_D7EAD78CD383__INCLUDED_)
-#define EA_165C3F8B_84EA_4374_9790_D7EAD78CD383__INCLUDED_
+#ifndef EXCIEEEAC5A_H
+#define EXCIEEEAC5A_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Float.h"
@@ -116,4 +115,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_165C3F8B_84EA_4374_9790_D7EAD78CD383__INCLUDED_)
+#endif // EXCIEEEAC5A_H

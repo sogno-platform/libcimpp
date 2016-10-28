@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PFVArControllerType2Dynamics.h
 //  Implementation of the Class PFVArControllerType2Dynamics
-//  Created on:      28-Jan-2016 12:46:00
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_D48FF1AF_51B1_4503_BA8B_54B24864AA5B__INCLUDED_)
-#define EA_D48FF1AF_51B1_4503_BA8B_54B24864AA5B__INCLUDED_
+#ifndef PFVARCONTROLLERTYPE2DYNAMICS_H
+#define PFVARCONTROLLERTYPE2DYNAMICS_H
 
 #include "IEC61970/Dynamics/StandardModels/ExcitationSystemDynamics/ExcitationSystemDynamics.h"
 #include "IEC61970/Dynamics/StandardModels/DynamicsFunctionBlock.h"
@@ -45,4 +44,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_D48FF1AF_51B1_4503_BA8B_54B24864AA5B__INCLUDED_)
+#endif // PFVARCONTROLLERTYPE2DYNAMICS_H

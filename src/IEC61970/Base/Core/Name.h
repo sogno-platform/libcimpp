@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  Name.h
 //  Implementation of the Class Name
-//  Created on:      28-Jan-2016 12:45:45
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_89FD129B_639E_4a08_BE1E_73127409CF2E__INCLUDED_)
-#define EA_89FD129B_639E_4a08_BE1E_73127409CF2E__INCLUDED_
+#ifndef NAME_H
+#define NAME_H
 
 #include "IEC61970/Base/Domain/String.h"
 #include "IEC61970/Base/Core/NameType.h"
@@ -51,4 +50,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_89FD129B_639E_4a08_BE1E_73127409CF2E__INCLUDED_)
+#endif // NAME_H

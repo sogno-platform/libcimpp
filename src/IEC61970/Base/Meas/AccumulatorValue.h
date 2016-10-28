@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  AccumulatorValue.h
 //  Implementation of the Class AccumulatorValue
-//  Created on:      28-Jan-2016 12:43:10
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_09F73FD0_4EE2_46ce_A9E1_7D201C90B77A__INCLUDED_)
-#define EA_09F73FD0_4EE2_46ce_A9E1_7D201C90B77A__INCLUDED_
+#ifndef ACCUMULATORVALUE_H
+#define ACCUMULATORVALUE_H
 
 #include "IEC61970/Base/Domain/Integer.h"
 #include "IEC61970/Base/Meas/MeasurementValue.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_09F73FD0_4EE2_46ce_A9E1_7D201C90B77A__INCLUDED_)
+#endif // ACCUMULATORVALUE_H

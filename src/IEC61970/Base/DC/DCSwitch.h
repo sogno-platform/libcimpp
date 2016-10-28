@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DCSwitch.h
 //  Implementation of the Class DCSwitch
-//  Created on:      28-Jan-2016 12:44:01
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_88530C4E_2C78_40e3_A462_9947256F0D38__INCLUDED_)
-#define EA_88530C4E_2C78_40e3_A462_9947256F0D38__INCLUDED_
+#ifndef DCSWITCH_H
+#define DCSWITCH_H
 
 #include "IEC61970/Base/DC/DCConductingEquipment.h"
 
@@ -33,4 +32,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_88530C4E_2C78_40e3_A462_9947256F0D38__INCLUDED_)
+#endif // DCSWITCH_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindProtectionIEC.h
 //  Implementation of the Class WindProtectionIEC
-//  Created on:      28-Jan-2016 12:47:57
 //  Original author: civanov
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_113F46BA_9D58_42a9_BDA6_FBD35C1A7B21__INCLUDED_)
-#define EA_113F46BA_9D58_42a9_BDA6_FBD35C1A7B21__INCLUDED_
+#ifndef WINDPROTECTIONIEC_H
+#define WINDPROTECTIONIEC_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -94,4 +93,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_113F46BA_9D58_42a9_BDA6_FBD35C1A7B21__INCLUDED_)
+#endif // WINDPROTECTIONIEC_H

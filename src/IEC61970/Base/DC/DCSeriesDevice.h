@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DCSeriesDevice.h
 //  Implementation of the Class DCSeriesDevice
-//  Created on:      28-Jan-2016 12:44:00
 //  Original author: SELAOST1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_CB2291C8_A9C9_4ed9_8743_8D3274EF9D7B__INCLUDED_)
-#define EA_CB2291C8_A9C9_4ed9_8743_8D3274EF9D7B__INCLUDED_
+#ifndef DCSERIESDEVICE_H
+#define DCSERIESDEVICE_H
 
 #include "IEC61970/Base/Domain/Inductance.h"
 #include "IEC61970/Base/Domain/Voltage.h"
@@ -49,4 +48,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_CB2291C8_A9C9_4ed9_8743_8D3274EF9D7B__INCLUDED_)
+#endif // DCSERIESDEVICE_H

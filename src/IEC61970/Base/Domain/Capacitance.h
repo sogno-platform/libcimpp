@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Capacitance.h
 //  Implementation of the Class Capacitance
-//  Created on:      28-Jan-2016 12:43:32
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_1524DD94_B988_41ae_80A6_BCC07941A088__INCLUDED_)
-#define EA_1524DD94_B988_41ae_80A6_BCC07941A088__INCLUDED_
+#ifndef CAPACITANCE_H
+#define CAPACITANCE_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_1524DD94_B988_41ae_80A6_BCC07941A088__INCLUDED_)
+#endif // CAPACITANCE_H

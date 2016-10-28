@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PhaseTapChanger.h
 //  Implementation of the Class PhaseTapChanger
-//  Created on:      28-Jan-2016 12:46:03
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_D156BFB9_3778_4fc6_AB85_9DAF6F3DC2FB__INCLUDED_)
-#define EA_D156BFB9_3778_4fc6_AB85_9DAF6F3DC2FB__INCLUDED_
+#ifndef PHASETAPCHANGER_H
+#define PHASETAPCHANGER_H
 
 #include "IEC61970/Base/Wires/TapChanger.h"
 
@@ -35,4 +34,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_D156BFB9_3778_4fc6_AB85_9DAF6F3DC2FB__INCLUDED_)
+#endif // PHASETAPCHANGER_H

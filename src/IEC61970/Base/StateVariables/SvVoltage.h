@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  SvVoltage.h
 //  Implementation of the Class SvVoltage
-//  Created on:      28-Jan-2016 12:47:00
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_8E5998BE_DFF9_4a5a_9F75_5BFAEFB6905D__INCLUDED_)
-#define EA_8E5998BE_DFF9_4a5a_9F75_5BFAEFB6905D__INCLUDED_
+#ifndef SVVOLTAGE_H
+#define SVVOLTAGE_H
 
 #include "IEC61970/Base/Domain/AngleDegrees.h"
 #include "IEC61970/Base/Wires/SinglePhaseKind.h"
@@ -55,4 +54,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_8E5998BE_DFF9_4a5a_9F75_5BFAEFB6905D__INCLUDED_)
+#endif // SVVOLTAGE_H

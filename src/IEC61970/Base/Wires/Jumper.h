@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Jumper.h
 //  Implementation of the Class Jumper
-//  Created on:      28-Jan-2016 12:45:31
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E5DAF2E3_7595_4c08_904E_FA7215626AF3__INCLUDED_)
-#define EA_E5DAF2E3_7595_4c08_904E_FA7215626AF3__INCLUDED_
+#ifndef JUMPER_H
+#define JUMPER_H
 
 #include "IEC61970/Base/Wires/Switch.h"
 
@@ -34,4 +33,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_E5DAF2E3_7595_4c08_904E_FA7215626AF3__INCLUDED_)
+#endif // JUMPER_H

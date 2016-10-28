@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  KiloActivePower.h
 //  Implementation of the Class KiloActivePower
-//  Created on:      28-Jan-2016 12:45:31
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_5E256DC7_D9AC_46ee_97D1_D9840D14C5FC__INCLUDED_)
-#define EA_5E256DC7_D9AC_46ee_97D1_D9840D14C5FC__INCLUDED_
+#ifndef KILOACTIVEPOWER_H
+#define KILOACTIVEPOWER_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_5E256DC7_D9AC_46ee_97D1_D9840D14C5FC__INCLUDED_)
+#endif // KILOACTIVEPOWER_H

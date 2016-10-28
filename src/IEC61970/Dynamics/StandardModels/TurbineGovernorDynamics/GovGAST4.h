@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovGAST4.h
 //  Implementation of the Class GovGAST4
-//  Created on:      28-Jan-2016 12:45:02
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_79A27B12_B7B9_4b40_8DF0_E279F1D6DF7E__INCLUDED_)
-#define EA_79A27B12_B7B9_4b40_8DF0_E279F1D6DF7E__INCLUDED_
+#ifndef GOVGAST4_H
+#define GOVGAST4_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -84,4 +83,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_79A27B12_B7B9_4b40_8DF0_E279F1D6DF7E__INCLUDED_)
+#endif // GOVGAST4_H

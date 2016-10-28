@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  TapChangerTablePoint.h
 //  Implementation of the Class TapChangerTablePoint
-//  Created on:      28-Jan-2016 12:47:11
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_534D4073_6DEB_4b66_98E5_83EEF36D0A74__INCLUDED_)
-#define EA_534D4073_6DEB_4b66_98E5_83EEF36D0A74__INCLUDED_
+#ifndef TAPCHANGERTABLEPOINT_H
+#define TAPCHANGERTABLEPOINT_H
 
 #include "IEC61970/Base/Domain/PerCent.h"
 #include "IEC61970/Base/Domain/Float.h"
@@ -75,4 +74,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_534D4073_6DEB_4b66_98E5_83EEF36D0A74__INCLUDED_)
+#endif // TAPCHANGERTABLEPOINT_H

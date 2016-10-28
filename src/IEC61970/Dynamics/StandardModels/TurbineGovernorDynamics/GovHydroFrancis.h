@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovHydroFrancis.h
 //  Implementation of the Class GovHydroFrancis
-//  Created on:      28-Jan-2016 12:45:06
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_13E52CEF_BA2C_4230_9641_D400A9544818__INCLUDED_)
-#define EA_13E52CEF_BA2C_4230_9641_D400A9544818__INCLUDED_
+#ifndef GOVHYDROFRANCIS_H
+#define GOVHYDROFRANCIS_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Area.h"
@@ -168,4 +167,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_13E52CEF_BA2C_4230_9641_D400A9544818__INCLUDED_)
+#endif // GOVHYDROFRANCIS_H

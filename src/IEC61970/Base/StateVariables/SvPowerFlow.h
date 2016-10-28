@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  SvPowerFlow.h
 //  Implementation of the Class SvPowerFlow
-//  Created on:      28-Jan-2016 12:46:57
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_995810EB_5598_483d_9529_218853081EB0__INCLUDED_)
-#define EA_995810EB_5598_483d_9529_218853081EB0__INCLUDED_
+#ifndef SVPOWERFLOW_H
+#define SVPOWERFLOW_H
 
 #include "IEC61970/Base/Domain/ActivePower.h"
 #include "IEC61970/Base/Wires/SinglePhaseKind.h"
@@ -57,4 +56,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_995810EB_5598_483d_9529_218853081EB0__INCLUDED_)
+#endif // SVPOWERFLOW_H

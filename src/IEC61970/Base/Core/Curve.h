@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Curve.h
 //  Implementation of the Class Curve
-//  Created on:      28-Jan-2016 12:43:50
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_996C2E98_9CAA_4ddb_83F1_57BAF3284957__INCLUDED_)
-#define EA_996C2E98_9CAA_4ddb_83F1_57BAF3284957__INCLUDED_
+#ifndef CURVE_H
+#define CURVE_H
 
 #include <list>
 
@@ -79,4 +78,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_996C2E98_9CAA_4ddb_83F1_57BAF3284957__INCLUDED_)
+#endif // CURVE_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  MechanicalLoadUserDefined.h
 //  Implementation of the Class MechanicalLoadUserDefined
-//  Created on:      28-Jan-2016 12:45:42
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_D47DC8B6_5BAC_4ac7_A50B_B188890DA775__INCLUDED_)
-#define EA_D47DC8B6_5BAC_4ac7_A50B_B188890DA775__INCLUDED_
+#ifndef MECHANICALLOADUSERDEFINED_H
+#define MECHANICALLOADUSERDEFINED_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Dynamics/StandardModels/MechanicalLoadDynamics/MechanicalLoadDynamics.h"
@@ -43,4 +42,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_D47DC8B6_5BAC_4ac7_A50B_B188890DA775__INCLUDED_)
+#endif // MECHANICALLOADUSERDEFINED_H

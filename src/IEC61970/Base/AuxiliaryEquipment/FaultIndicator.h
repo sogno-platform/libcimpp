@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  FaultIndicator.h
 //  Implementation of the Class FaultIndicator
-//  Created on:      28-Jan-2016 12:44:50
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_A365652E_CD2F_4c79_9B5E_0AA47C6921F3__INCLUDED_)
-#define EA_A365652E_CD2F_4c79_9B5E_0AA47C6921F3__INCLUDED_
+#ifndef FAULTINDICATOR_H
+#define FAULTINDICATOR_H
 
 #include "IEC61970/Base/AuxiliaryEquipment/AuxiliaryEquipment.h"
 
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_A365652E_CD2F_4c79_9B5E_0AA47C6921F3__INCLUDED_)
+#endif // FAULTINDICATOR_H

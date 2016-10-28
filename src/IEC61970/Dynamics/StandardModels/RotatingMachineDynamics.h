@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  RotatingMachineDynamics.h
 //  Implementation of the Class RotatingMachineDynamics
-//  Created on:      28-Jan-2016 12:46:36
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_3D20B55B_4C64_4318_B467_F017FFC854F7__INCLUDED_)
-#define EA_3D20B55B_4C64_4318_B467_F017FFC854F7__INCLUDED_
+#ifndef ROTATINGMACHINEDYNAMICS_H
+#define ROTATINGMACHINEDYNAMICS_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -76,4 +75,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_3D20B55B_4C64_4318_B467_F017FFC854F7__INCLUDED_)
+#endif // ROTATINGMACHINEDYNAMICS_H

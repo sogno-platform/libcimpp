@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ActivePowerPerCurrentFlow.h
 //  Implementation of the Class ActivePowerPerCurrentFlow
-//  Created on:      28-Jan-2016 12:43:15
 //  Original author: 222206
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_10589B37_A622_4e48_A4A2_25B42CFDF189__INCLUDED_)
-#define EA_10589B37_A622_4e48_A4A2_25B42CFDF189__INCLUDED_
+#ifndef ACTIVEPOWERPERCURRENTFLOW_H
+#define ACTIVEPOWERPERCURRENTFLOW_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -35,4 +34,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_10589B37_A622_4e48_A4A2_25B42CFDF189__INCLUDED_)
+#endif // ACTIVEPOWERPERCURRENTFLOW_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  CombinedCyclePlant.h
 //  Implementation of the Class CombinedCyclePlant
-//  Created on:      28-Jan-2016 12:43:34
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_80DE793E_5DBE_4438_86AC_05E1A8FDC32C__INCLUDED_)
-#define EA_80DE793E_5DBE_4438_86AC_05E1A8FDC32C__INCLUDED_
+#ifndef COMBINEDCYCLEPLANT_H
+#define COMBINEDCYCLEPLANT_H
 
 #include <list>
 
@@ -50,4 +49,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_80DE793E_5DBE_4438_86AC_05E1A8FDC32C__INCLUDED_)
+#endif // COMBINEDCYCLEPLANT_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Validity.h
 //  Implementation of the Class Validity
-//  Created on:      28-Jan-2016 12:47:31
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B9C21A00_3802_4388_AC09_592E2782F735__INCLUDED_)
-#define EA_B9C21A00_3802_4388_AC09_592E2782F735__INCLUDED_
+#ifndef VALIDITY_H
+#define VALIDITY_H
 
 namespace IEC61970
 {
@@ -44,4 +43,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B9C21A00_3802_4388_AC09_592E2782F735__INCLUDED_)
+#endif // VALIDITY_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  SynchronousMachineEquivalentCircuit.h
 //  Implementation of the Class SynchronousMachineEquivalentCircuit
-//  Created on:      28-Jan-2016 12:47:06
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_FB904D10_55D5_4ec6_BFBF_65B8C48C04C3__INCLUDED_)
-#define EA_FB904D10_55D5_4ec6_BFBF_65B8C48C04C3__INCLUDED_
+#ifndef SYNCHRONOUSMACHINEEQUIVALENTCIRCUIT_H
+#define SYNCHRONOUSMACHINEEQUIVALENTCIRCUIT_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Dynamics/StandardModels/SynchronousMachineDynamics/SynchronousMachineDetailed.h"
@@ -127,4 +126,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_FB904D10_55D5_4ec6_BFBF_65B8C48C04C3__INCLUDED_)
+#endif // SYNCHRONOUSMACHINEEQUIVALENTCIRCUIT_H

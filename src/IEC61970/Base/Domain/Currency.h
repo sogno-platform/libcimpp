@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Currency.h
 //  Implementation of the Class Currency
-//  Created on:      28-Jan-2016 12:43:47
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_3EBBF94C_5F1A_4e33_A689_42382C1D822E__INCLUDED_)
-#define EA_3EBBF94C_5F1A_4e33_A689_42382C1D822E__INCLUDED_
+#ifndef CURRENCY_H
+#define CURRENCY_H
 
 namespace IEC61970
 {
@@ -669,4 +668,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_3EBBF94C_5F1A_4e33_A689_42382C1D822E__INCLUDED_)
+#endif // CURRENCY_H

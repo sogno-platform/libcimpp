@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  EquivalentShunt.h
 //  Implementation of the Class EquivalentShunt
-//  Created on:      28-Jan-2016 12:44:18
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_BE13EB23_7BD5_43ec_8F89_9E3693D2564B__INCLUDED_)
-#define EA_BE13EB23_7BD5_43ec_8F89_9E3693D2564B__INCLUDED_
+#ifndef EQUIVALENTSHUNT_H
+#define EQUIVALENTSHUNT_H
 
 #include "IEC61970/Base/Domain/Susceptance.h"
 #include "IEC61970/Base/Domain/Conductance.h"
@@ -42,4 +41,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_BE13EB23_7BD5_43ec_8F89_9E3693D2564B__INCLUDED_)
+#endif // EQUIVALENTSHUNT_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  RegularIntervalSchedule.h
 //  Implementation of the Class RegularIntervalSchedule
-//  Created on:      28-Jan-2016 12:46:28
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_70ABC912_C005_4c91_8BEE_DBBAA3BCA5A8__INCLUDED_)
-#define EA_70ABC912_C005_4c91_8BEE_DBBAA3BCA5A8__INCLUDED_
+#ifndef REGULARINTERVALSCHEDULE_H
+#define REGULARINTERVALSCHEDULE_H
 
 #include <list>
 
@@ -49,4 +48,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_70ABC912_C005_4c91_8BEE_DBBAA3BCA5A8__INCLUDED_)
+#endif // REGULARINTERVALSCHEDULE_H

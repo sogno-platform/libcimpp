@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  PowerCutZone.h
 //  Implementation of the Class PowerCutZone
-//  Created on:      28-Jan-2016 12:46:07
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_79B72960_9CB7_4db1_8698_187B12F581F8__INCLUDED_)
-#define EA_79B72960_9CB7_4db1_8698_187B12F581F8__INCLUDED_
+#ifndef POWERCUTZONE_H
+#define POWERCUTZONE_H
 
 #include <list>
 
@@ -48,4 +47,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_79B72960_9CB7_4db1_8698_187B12F581F8__INCLUDED_)
+#endif // POWERCUTZONE_H

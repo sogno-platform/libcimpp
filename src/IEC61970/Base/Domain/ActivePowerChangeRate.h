@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  ActivePowerChangeRate.h
 //  Implementation of the Class ActivePowerChangeRate
-//  Created on:      28-Jan-2016 12:43:14
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_974D2B99_3ABF_434f_8016_7D7120CB5F5A__INCLUDED_)
-#define EA_974D2B99_3ABF_434f_8016_7D7120CB5F5A__INCLUDED_
+#ifndef ACTIVEPOWERCHANGERATE_H
+#define ACTIVEPOWERCHANGERATE_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_974D2B99_3ABF_434f_8016_7D7120CB5F5A__INCLUDED_)
+#endif // ACTIVEPOWERCHANGERATE_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  MechanicalLoadDynamics.h
 //  Implementation of the Class MechanicalLoadDynamics
-//  Created on:      28-Jan-2016 12:45:42
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_72DCB42C_13C8_4561_ABB2_EEE7F84C0EAB__INCLUDED_)
-#define EA_72DCB42C_13C8_4561_ABB2_EEE7F84C0EAB__INCLUDED_
+#ifndef MECHANICALLOADDYNAMICS_H
+#define MECHANICALLOADDYNAMICS_H
 
 #include "IEC61970/Dynamics/StandardModels/AsynchronousMachineDynamics/AsynchronousMachineDynamics.h"
 #include "IEC61970/Dynamics/StandardModels/SynchronousMachineDynamics/SynchronousMachineDynamics.h"
@@ -49,4 +48,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_72DCB42C_13C8_4561_ABB2_EEE7F84C0EAB__INCLUDED_)
+#endif // MECHANICALLOADDYNAMICS_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  AccumulatorLimitSet.h
 //  Implementation of the Class AccumulatorLimitSet
-//  Created on:      28-Jan-2016 12:43:09
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_58CC1AB0_DBD3_4f26_8D2B_F4377545FD99__INCLUDED_)
-#define EA_58CC1AB0_DBD3_4f26_8D2B_F4377545FD99__INCLUDED_
+#ifndef ACCUMULATORLIMITSET_H
+#define ACCUMULATORLIMITSET_H
 
 #include <list>
 
@@ -40,4 +39,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_58CC1AB0_DBD3_4f26_8D2B_F4377545FD99__INCLUDED_)
+#endif // ACCUMULATORLIMITSET_H

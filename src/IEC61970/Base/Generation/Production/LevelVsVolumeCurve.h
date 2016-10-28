@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  LevelVsVolumeCurve.h
 //  Implementation of the Class LevelVsVolumeCurve
-//  Created on:      28-Jan-2016 12:45:32
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_831D6970_44CB_4d4e_B605_BA87F068EF8D__INCLUDED_)
-#define EA_831D6970_44CB_4d4e_B605_BA87F068EF8D__INCLUDED_
+#ifndef LEVELVSVOLUMECURVE_H
+#define LEVELVSVOLUMECURVE_H
 
 #include "IEC61970/Base/Core/Curve.h"
 
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_831D6970_44CB_4d4e_B605_BA87F068EF8D__INCLUDED_)
+#endif // LEVELVSVOLUMECURVE_H

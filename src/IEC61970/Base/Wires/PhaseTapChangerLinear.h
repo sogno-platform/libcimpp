@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PhaseTapChangerLinear.h
 //  Implementation of the Class PhaseTapChangerLinear
-//  Created on:      28-Jan-2016 12:46:04
 //  Original author: SELAOST1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_47CCB12B_25DC_4d16_A7F0_59036CF73BC7__INCLUDED_)
-#define EA_47CCB12B_25DC_4d16_A7F0_59036CF73BC7__INCLUDED_
+#ifndef PHASETAPCHANGERLINEAR_H
+#define PHASETAPCHANGERLINEAR_H
 
 #include "IEC61970/Base/Domain/AngleDegrees.h"
 #include "IEC61970/Base/Domain/Reactance.h"
@@ -58,4 +57,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_47CCB12B_25DC_4d16_A7F0_59036CF73BC7__INCLUDED_)
+#endif // PHASETAPCHANGERLINEAR_H

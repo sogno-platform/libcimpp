@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  SubLoadArea.h
 //  Implementation of the Class SubLoadArea
-//  Created on:      28-Jan-2016 12:46:53
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_BF7F11C8_065E_41c5_92B8_F3B36AAC1A85__INCLUDED_)
-#define EA_BF7F11C8_065E_41c5_92B8_F3B36AAC1A85__INCLUDED_
+#ifndef SUBLOADAREA_H
+#define SUBLOADAREA_H
 
 #include <list>
 
@@ -40,4 +39,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_BF7F11C8_065E_41c5_92B8_F3B36AAC1A85__INCLUDED_)
+#endif // SUBLOADAREA_H

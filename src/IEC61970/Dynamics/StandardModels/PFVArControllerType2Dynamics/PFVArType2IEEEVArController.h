@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PFVArType2IEEEVArController.h
 //  Implementation of the Class PFVArType2IEEEVArController
-//  Created on:      28-Jan-2016 12:46:02
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_01EE70BE_77B1_4aba_B242_11FA123CFE8C__INCLUDED_)
-#define EA_01EE70BE_77B1_4aba_B242_11FA123CFE8C__INCLUDED_
+#ifndef PFVARTYPE2IEEEVARCONTROLLER_H
+#define PFVARTYPE2IEEEVARCONTROLLER_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -77,4 +76,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_01EE70BE_77B1_4aba_B242_11FA123CFE8C__INCLUDED_)
+#endif // PFVARTYPE2IEEEVARCONTROLLER_H

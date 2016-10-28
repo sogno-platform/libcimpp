@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  ReactivePower.h
 //  Implementation of the Class ReactivePower
-//  Created on:      28-Jan-2016 12:46:26
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_97172BEF_95C3_4ac5_8C6E_386DF797AF18__INCLUDED_)
-#define EA_97172BEF_95C3_4ac5_8C6E_386DF797AF18__INCLUDED_
+#ifndef REACTIVEPOWER_H
+#define REACTIVEPOWER_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_97172BEF_95C3_4ac5_8C6E_386DF797AF18__INCLUDED_)
+#endif // REACTIVEPOWER_H

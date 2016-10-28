@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcAVR4.h
 //  Implementation of the Class ExcAVR4
-//  Created on:      28-Jan-2016 12:44:24
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_6815F774_B628_481c_B71F_F4CB56E3866D__INCLUDED_)
-#define EA_6815F774_B628_481c_B71F_F4CB56E3866D__INCLUDED_
+#ifndef EXCAVR4_H
+#define EXCAVR4_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Domain/Float.h"
@@ -101,4 +100,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_6815F774_B628_481c_B71F_F4CB56E3866D__INCLUDED_)
+#endif // EXCAVR4_H

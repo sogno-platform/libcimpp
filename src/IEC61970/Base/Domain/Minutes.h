@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Minutes.h
 //  Implementation of the Class Minutes
-//  Created on:      28-Jan-2016 12:45:44
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_CFBB03D5_F88E_4e02_B8EE_8F0AC0D43E70__INCLUDED_)
-#define EA_CFBB03D5_F88E_4e02_B8EE_8F0AC0D43E70__INCLUDED_
+#ifndef MINUTES_H
+#define MINUTES_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_CFBB03D5_F88E_4e02_B8EE_8F0AC0D43E70__INCLUDED_)
+#endif // MINUTES_H

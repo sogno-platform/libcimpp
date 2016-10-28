@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PowerSystemStabilizerUserDefined.h
 //  Implementation of the Class PowerSystemStabilizerUserDefined
-//  Created on:      28-Jan-2016 12:46:10
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E4F3072E_9E9A_462e_B870_0729C01CFE50__INCLUDED_)
-#define EA_E4F3072E_9E9A_462e_B870_0729C01CFE50__INCLUDED_
+#ifndef POWERSYSTEMSTABILIZERUSERDEFINED_H
+#define POWERSYSTEMSTABILIZERUSERDEFINED_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Dynamics/StandardModels/PowerSystemStabilizerDynamics/PowerSystemStabilizerDynamics.h"
@@ -44,4 +43,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_E4F3072E_9E9A_462e_B870_0729C01CFE50__INCLUDED_)
+#endif // POWERSYSTEMSTABILIZERUSERDEFINED_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  AsynchronousMachineDynamics.h
 //  Implementation of the Class AsynchronousMachineDynamics
-//  Created on:      28-Jan-2016 12:43:23
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F2ACCB3F_A309_4440_8F6A_39F0FF53303C__INCLUDED_)
-#define EA_F2ACCB3F_A309_4440_8F6A_39F0FF53303C__INCLUDED_
+#ifndef ASYNCHRONOUSMACHINEDYNAMICS_H
+#define ASYNCHRONOUSMACHINEDYNAMICS_H
 
 #include "IEC61970/Base/Wires/AsynchronousMachine.h"
 #include "IEC61970/Dynamics/StandardModels/RotatingMachineDynamics.h"
@@ -52,4 +51,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F2ACCB3F_A309_4440_8F6A_39F0FF53303C__INCLUDED_)
+#endif // ASYNCHRONOUSMACHINEDYNAMICS_H

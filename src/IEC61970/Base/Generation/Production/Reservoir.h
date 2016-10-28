@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Reservoir.h
 //  Implementation of the Class Reservoir
-//  Created on:      28-Jan-2016 12:46:34
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E6814A9E_8ED7_4b73_8AFB_DC1FE196F9CC__INCLUDED_)
-#define EA_E6814A9E_8ED7_4b73_8AFB_DC1FE196F9CC__INCLUDED_
+#ifndef RESERVOIR_H
+#define RESERVOIR_H
 
 #include <list>
 
@@ -110,4 +109,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_E6814A9E_8ED7_4b73_8AFB_DC1FE196F9CC__INCLUDED_)
+#endif // RESERVOIR_H

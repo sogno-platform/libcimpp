@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  UnderexcLimIEEE2.h
 //  Implementation of the Class UnderexcLimIEEE2
-//  Created on:      28-Jan-2016 12:47:29
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_917D984A_08C1_4d28_8B7A_7A0658D89667__INCLUDED_)
-#define EA_917D984A_08C1_4d28_8B7A_7A0658D89667__INCLUDED_
+#ifndef UNDEREXCLIMIEEE2_H
+#define UNDEREXCLIMIEEE2_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -209,4 +208,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_917D984A_08C1_4d28_8B7A_7A0658D89667__INCLUDED_)
+#endif // UNDEREXCLIMIEEE2_H

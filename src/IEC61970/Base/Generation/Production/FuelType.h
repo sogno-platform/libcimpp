@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  FuelType.h
 //  Implementation of the Class FuelType
-//  Created on:      28-Jan-2016 12:44:54
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_72DCA1E6_DCFD_4526_BDC1_15867AF0E5A9__INCLUDED_)
-#define EA_72DCA1E6_DCFD_4526_BDC1_15867AF0E5A9__INCLUDED_
+#ifndef FUELTYPE_H
+#define FUELTYPE_H
 
 namespace IEC61970
 {
@@ -55,4 +54,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_72DCA1E6_DCFD_4526_BDC1_15867AF0E5A9__INCLUDED_)
+#endif // FUELTYPE_H

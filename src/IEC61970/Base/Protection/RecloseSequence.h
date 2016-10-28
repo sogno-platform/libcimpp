@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  RecloseSequence.h
 //  Implementation of the Class RecloseSequence
-//  Created on:      28-Jan-2016 12:46:27
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_86017B80_3FE6_47d3_9C72_60A15B8B0196__INCLUDED_)
-#define EA_86017B80_3FE6_47d3_9C72_60A15B8B0196__INCLUDED_
+#ifndef RECLOSESEQUENCE_H
+#define RECLOSESEQUENCE_H
 
 #include "IEC61970/Base/Domain/Seconds.h"
 #include "IEC61970/Base/Domain/Integer.h"
@@ -44,4 +43,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_86017B80_3FE6_47d3_9C72_60A15B8B0196__INCLUDED_)
+#endif // RECLOSESEQUENCE_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  IrregularTimePoint.h
 //  Implementation of the Class IrregularTimePoint
-//  Created on:      28-Jan-2016 12:45:30
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_39F5E0B9_4F2B_4aec_8316_B9AA61113EF9__INCLUDED_)
-#define EA_39F5E0B9_4F2B_4aec_8316_B9AA61113EF9__INCLUDED_
+#ifndef IRREGULARTIMEPOINT_H
+#define IRREGULARTIMEPOINT_H
 
 #include "IEC61970/Base/Domain/Seconds.h"
 #include "IEC61970/Base/Domain/Float.h"
@@ -48,4 +47,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_39F5E0B9_4F2B_4aec_8316_B9AA61113EF9__INCLUDED_)
+#endif // IRREGULARTIMEPOINT_H

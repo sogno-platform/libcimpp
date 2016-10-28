@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Volume.h
 //  Implementation of the Class Volume
-//  Created on:      28-Jan-2016 12:47:40
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B54A7B38_BC38_4d25_8F39_F7DD6374FF37__INCLUDED_)
-#define EA_B54A7B38_BC38_4d25_8F39_F7DD6374FF37__INCLUDED_
+#ifndef VOLUME_H
+#define VOLUME_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B54A7B38_BC38_4d25_8F39_F7DD6374FF37__INCLUDED_)
+#endif // VOLUME_H

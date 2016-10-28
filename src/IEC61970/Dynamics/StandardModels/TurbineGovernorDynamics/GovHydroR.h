@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovHydroR.h
 //  Implementation of the Class GovHydroR
-//  Created on:      28-Jan-2016 12:45:09
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_0572708E_800F_4727_BDD5_F8C9303F8595__INCLUDED_)
-#define EA_0572708E_800F_4727_BDD5_F8C9303F8595__INCLUDED_
+#ifndef GOVHYDROR_H
+#define GOVHYDROR_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Frequency.h"
@@ -215,4 +214,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_0572708E_800F_4727_BDD5_F8C9303F8595__INCLUDED_)
+#endif // GOVHYDROR_H

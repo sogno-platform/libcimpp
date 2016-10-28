@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  SVCControlMode.h
 //  Implementation of the Class SVCControlMode
-//  Created on:      28-Jan-2016 12:46:57
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_73006764_180F_4149_B34F_D033ABDE5729__INCLUDED_)
-#define EA_73006764_180F_4149_B34F_D033ABDE5729__INCLUDED_
+#ifndef SVCCONTROLMODE_H
+#define SVCCONTROLMODE_H
 
 namespace IEC61970
 {
@@ -27,4 +26,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_73006764_180F_4149_B34F_D033ABDE5729__INCLUDED_)
+#endif // SVCCONTROLMODE_H

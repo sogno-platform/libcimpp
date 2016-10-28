@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcSK.h
 //  Implementation of the Class ExcSK
-//  Created on:      28-Jan-2016 12:44:43
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C3A38476_7801_467f_AE71_2AFEFEF056BA__INCLUDED_)
-#define EA_C3A38476_7801_467f_AE71_2AFEFEF056BA__INCLUDED_
+#ifndef EXCSK_H
+#define EXCSK_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Boolean.h"
@@ -181,4 +180,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C3A38476_7801_467f_AE71_2AFEFEF056BA__INCLUDED_)
+#endif // EXCSK_H

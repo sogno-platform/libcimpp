@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  RemoteUnit.h
 //  Implementation of the Class RemoteUnit
-//  Created on:      28-Jan-2016 12:46:33
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C20022B5_52B2_4e40_AFD1_B58E1693753E__INCLUDED_)
-#define EA_C20022B5_52B2_4e40_AFD1_B58E1693753E__INCLUDED_
+#ifndef REMOTEUNIT_H
+#define REMOTEUNIT_H
 
 #include <list>
 
@@ -50,4 +49,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C20022B5_52B2_4e40_AFD1_B58E1693753E__INCLUDED_)
+#endif // REMOTEUNIT_H

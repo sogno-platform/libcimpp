@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcIEEEST3A.h
 //  Implementation of the Class ExcIEEEST3A
-//  Created on:      28-Jan-2016 12:44:36
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B6E091FA_8421_4b7b_8736_06DA557FEE4B__INCLUDED_)
-#define EA_B6E091FA_8421_4b7b_8736_06DA557FEE4B__INCLUDED_
+#ifndef EXCIEEEST3A_H
+#define EXCIEEEST3A_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -140,4 +139,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B6E091FA_8421_4b7b_8736_06DA557FEE4B__INCLUDED_)
+#endif // EXCIEEEST3A_H

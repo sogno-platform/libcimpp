@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  EnergyArea.h
 //  Implementation of the Class EnergyArea
-//  Created on:      28-Jan-2016 12:44:13
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_3A35ABCA_88A1_4cff_B3C7_02927DC85915__INCLUDED_)
-#define EA_3A35ABCA_88A1_4cff_B3C7_02927DC85915__INCLUDED_
+#ifndef ENERGYAREA_H
+#define ENERGYAREA_H
 
 #include "IEC61970/Base/Core/IdentifiedObject.h"
 
@@ -36,4 +35,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_3A35ABCA_88A1_4cff_B3C7_02927DC85915__INCLUDED_)
+#endif // ENERGYAREA_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  TransformerMeshImpedance.h
 //  Implementation of the Class TransformerMeshImpedance
-//  Created on:      28-Jan-2016 12:47:23
 //  Original author: LOO
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_D47FB613_0011_4864_9F6C_DE3F11508021__INCLUDED_)
-#define EA_D47FB613_0011_4864_9F6C_DE3F11508021__INCLUDED_
+#ifndef TRANSFORMERMESHIMPEDANCE_H
+#define TRANSFORMERMESHIMPEDANCE_H
 
 #include <list>
 
@@ -69,4 +68,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_D47FB613_0011_4864_9F6C_DE3F11508021__INCLUDED_)
+#endif // TRANSFORMERMESHIMPEDANCE_H

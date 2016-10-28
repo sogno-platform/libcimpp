@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  TapChangerControl.h
 //  Implementation of the Class TapChangerControl
-//  Created on:      28-Jan-2016 12:47:11
 //  Original author: Tom
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_89E8992A_5C78_42a6_A358_19AC6C05A708__INCLUDED_)
-#define EA_89E8992A_5C78_42a6_A358_19AC6C05A708__INCLUDED_
+#ifndef TAPCHANGERCONTROL_H
+#define TAPCHANGERCONTROL_H
 
 #include "IEC61970/Base/Domain/Voltage.h"
 #include "IEC61970/Base/Domain/Boolean.h"
@@ -64,4 +63,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_89E8992A_5C78_42a6_A358_19AC6C05A708__INCLUDED_)
+#endif // TAPCHANGERCONTROL_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  PU.h
 //  Implementation of the Class PU
-//  Created on:      28-Jan-2016 12:46:22
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_31C219EA_3ED4_49ff_8AA2_512B0A93FF52__INCLUDED_)
-#define EA_31C219EA_3ED4_49ff_8AA2_512B0A93FF52__INCLUDED_
+#ifndef PU_H
+#define PU_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_31C219EA_3ED4_49ff_8AA2_512B0A93FF52__INCLUDED_)
+#endif // PU_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Subcritical.h
 //  Implementation of the Class Subcritical
-//  Created on:      28-Jan-2016 12:46:52
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_240A860A_1031_4b9a_9A4A_5856361D5E42__INCLUDED_)
-#define EA_240A860A_1031_4b9a_9A4A_5856361D5E42__INCLUDED_
+#ifndef SUBCRITICAL_H
+#define SUBCRITICAL_H
 
 #include "IEC61970/Base/Generation/GenerationTrainingSimulation/FossilSteamSupply.h"
 
@@ -36,4 +35,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_240A860A_1031_4b9a_9A4A_5856361D5E42__INCLUDED_)
+#endif // SUBCRITICAL_H

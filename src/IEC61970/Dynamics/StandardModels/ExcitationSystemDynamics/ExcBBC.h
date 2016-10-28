@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcBBC.h
 //  Implementation of the Class ExcBBC
-//  Created on:      28-Jan-2016 12:44:25
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_F398FBF2_1DA4_4f4d_AF3F_7E5E99A0B868__INCLUDED_)
-#define EA_F398FBF2_1DA4_4f4d_AF3F_7E5E99A0B868__INCLUDED_
+#ifndef EXCBBC_H
+#define EXCBBC_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Boolean.h"
@@ -90,4 +89,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_F398FBF2_1DA4_4f4d_AF3F_7E5E99A0B868__INCLUDED_)
+#endif // EXCBBC_H

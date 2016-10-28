@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DCTerminal.h
 //  Implementation of the Class DCTerminal
-//  Created on:      28-Jan-2016 12:44:01
 //  Original author: SELAOST1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_801B6FF1_6F7F_431d_B522_CCF7FAC43488__INCLUDED_)
-#define EA_801B6FF1_6F7F_431d_B522_CCF7FAC43488__INCLUDED_
+#ifndef DCTERMINAL_H
+#define DCTERMINAL_H
 
 #include "IEC61970/Base/DC/DCBaseTerminal.h"
 
@@ -33,4 +32,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_801B6FF1_6F7F_431d_B522_CCF7FAC43488__INCLUDED_)
+#endif // DCTERMINAL_H

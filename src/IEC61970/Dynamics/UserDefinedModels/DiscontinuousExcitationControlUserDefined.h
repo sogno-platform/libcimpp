@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DiscontinuousExcitationControlUserDefined.h
 //  Implementation of the Class DiscontinuousExcitationControlUserDefined
-//  Created on:      28-Jan-2016 12:44:08
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_247C479E_8D8C_4ed3_8003_1D17BD94D967__INCLUDED_)
-#define EA_247C479E_8D8C_4ed3_8003_1D17BD94D967__INCLUDED_
+#ifndef DISCONTINUOUSEXCITATIONCONTROLUSERDEFINED_H
+#define DISCONTINUOUSEXCITATIONCONTROLUSERDEFINED_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Dynamics/StandardModels/DiscontinuousExcitationControlDynamics/DiscontinuousExcitationControlDynamics.h"
@@ -43,4 +42,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_247C479E_8D8C_4ed3_8003_1D17BD94D967__INCLUDED_)
+#endif // DISCONTINUOUSEXCITATIONCONTROLUSERDEFINED_H

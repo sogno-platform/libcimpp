@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  Diagram.h
 //  Implementation of the Class Diagram
-//  Created on:      28-Jan-2016 12:44:03
 //  Original author: mcmorran
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_AE8E9845_B781_48a0_96E8_FA6DE54D2F22__INCLUDED_)
-#define EA_AE8E9845_B781_48a0_96E8_FA6DE54D2F22__INCLUDED_
+#ifndef DIAGRAM_H
+#define DIAGRAM_H
 
 #include "IEC61970/Base/DiagramLayout/OrientationKind.h"
 #include "IEC61970/Base/Domain/Float.h"
@@ -56,4 +55,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_AE8E9845_B781_48a0_96E8_FA6DE54D2F22__INCLUDED_)
+#endif // DIAGRAM_H

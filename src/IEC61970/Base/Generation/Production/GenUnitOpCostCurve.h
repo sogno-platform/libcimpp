@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  GenUnitOpCostCurve.h
 //  Implementation of the Class GenUnitOpCostCurve
-//  Created on:      28-Jan-2016 12:44:57
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_2211B865_CCB4_46c6_B288_B6F4F2B21A4C__INCLUDED_)
-#define EA_2211B865_CCB4_46c6_B288_B6F4F2B21A4C__INCLUDED_
+#ifndef GENUNITOPCOSTCURVE_H
+#define GENUNITOPCOSTCURVE_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Core/Curve.h"
@@ -44,4 +43,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_2211B865_CCB4_46c6_B288_B6F4F2B21A4C__INCLUDED_)
+#endif // GENUNITOPCOSTCURVE_H

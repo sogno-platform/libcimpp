@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  EarthFaultCompensator.h
 //  Implementation of the Class EarthFaultCompensator
-//  Created on:      28-Jan-2016 12:44:12
 //  Original author: namstutz
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_6920FC10_6A36_4573_9196_FF31AA6A4950__INCLUDED_)
-#define EA_6920FC10_6A36_4573_9196_FF31AA6A4950__INCLUDED_
+#ifndef EARTHFAULTCOMPENSATOR_H
+#define EARTHFAULTCOMPENSATOR_H
 
 #include "IEC61970/Base/Domain/Resistance.h"
 #include "IEC61970/Base/Core/ConductingEquipment.h"
@@ -42,4 +41,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_6920FC10_6A36_4573_9196_FF31AA6A4950__INCLUDED_)
+#endif // EARTHFAULTCOMPENSATOR_H

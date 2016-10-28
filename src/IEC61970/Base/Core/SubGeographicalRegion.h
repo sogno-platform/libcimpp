@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  SubGeographicalRegion.h
 //  Implementation of the Class SubGeographicalRegion
-//  Created on:      28-Jan-2016 12:46:52
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_2B73F34E_D7DE_4bde_BE81_E68F8F2FB216__INCLUDED_)
-#define EA_2B73F34E_D7DE_4bde_BE81_E68F8F2FB216__INCLUDED_
+#ifndef SUBGEOGRAPHICALREGION_H
+#define SUBGEOGRAPHICALREGION_H
 
 #include <list>
 
@@ -44,4 +43,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_2B73F34E_D7DE_4bde_BE81_E68F8F2FB216__INCLUDED_)
+#endif // SUBGEOGRAPHICALREGION_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  RemotePoint.h
 //  Implementation of the Class RemotePoint
-//  Created on:      28-Jan-2016 12:46:31
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_BCBBB760_42CD_48cb_8612_0E4DE1979F50__INCLUDED_)
-#define EA_BCBBB760_42CD_48cb_8612_0E4DE1979F50__INCLUDED_
+#ifndef REMOTEPOINT_H
+#define REMOTEPOINT_H
 
 #include "IEC61970/Base/Core/IdentifiedObject.h"
 
@@ -33,4 +32,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_BCBBB760_42CD_48cb_8612_0E4DE1979F50__INCLUDED_)
+#endif // REMOTEPOINT_H

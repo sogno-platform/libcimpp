@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ApparentPowerLimit.h
 //  Implementation of the Class ApparentPowerLimit
-//  Created on:      28-Jan-2016 12:43:21
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_FA75D514_30E1_4233_8D76_22EBB925DCA2__INCLUDED_)
-#define EA_FA75D514_30E1_4233_8D76_22EBB925DCA2__INCLUDED_
+#ifndef APPARENTPOWERLIMIT_H
+#define APPARENTPOWERLIMIT_H
 
 #include "IEC61970/Base/Domain/ApparentPower.h"
 #include "IEC61970/Base/OperationalLimits/OperationalLimit.h"
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_FA75D514_30E1_4233_8D76_22EBB925DCA2__INCLUDED_)
+#endif // APPARENTPOWERLIMIT_H

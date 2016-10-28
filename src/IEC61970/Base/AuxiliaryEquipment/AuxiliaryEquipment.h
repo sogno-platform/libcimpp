@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  AuxiliaryEquipment.h
 //  Implementation of the Class AuxiliaryEquipment
-//  Created on:      28-Jan-2016 12:43:25
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_8BDFFA24_361F_4353_8268_3641CC8971B7__INCLUDED_)
-#define EA_8BDFFA24_361F_4353_8268_3641CC8971B7__INCLUDED_
+#ifndef AUXILIARYEQUIPMENT_H
+#define AUXILIARYEQUIPMENT_H
 
 #include "IEC61970/Base/Core/Equipment.h"
 #include "IEC61970/Base/Core/Terminal.h"
@@ -41,4 +40,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_8BDFFA24_361F_4353_8268_3641CC8971B7__INCLUDED_)
+#endif // AUXILIARYEQUIPMENT_H

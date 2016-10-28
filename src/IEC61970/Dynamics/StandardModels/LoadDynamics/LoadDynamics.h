@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  LoadDynamics.h
 //  Implementation of the Class LoadDynamics
-//  Created on:      28-Jan-2016 12:45:36
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_DFF4D078_09CD_4619_908E_91319F25A07A__INCLUDED_)
-#define EA_DFF4D078_09CD_4619_908E_91319F25A07A__INCLUDED_
+#ifndef LOADDYNAMICS_H
+#define LOADDYNAMICS_H
 
 #include <list>
 
@@ -55,4 +54,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_DFF4D078_09CD_4619_908E_91319F25A07A__INCLUDED_)
+#endif // LOADDYNAMICS_H

@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindGeneratingUnit.h
 //  Implementation of the Class WindGeneratingUnit
-//  Created on:      28-Jan-2016 12:47:50
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_8554FDAA_B6C5_4ead_B0AB_9843B774B50E__INCLUDED_)
-#define EA_8554FDAA_B6C5_4ead_B0AB_9843B774B50E__INCLUDED_
+#ifndef WINDGENERATINGUNIT_H
+#define WINDGENERATINGUNIT_H
 
 #include "IEC61970/Base/Generation/Production/WindGenUnitKind.h"
 #include "IEC61970/Base/Generation/Production/GeneratingUnit.h"
@@ -43,4 +42,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_8554FDAA_B6C5_4ead_B0AB_9843B774B50E__INCLUDED_)
+#endif // WINDGENERATINGUNIT_H

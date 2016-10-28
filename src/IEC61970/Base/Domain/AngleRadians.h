@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  AngleRadians.h
 //  Implementation of the Class AngleRadians
-//  Created on:      28-Jan-2016 12:43:20
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_3850C62C_462E_4685_B246_FBA67CA20087__INCLUDED_)
-#define EA_3850C62C_462E_4685_B246_FBA67CA20087__INCLUDED_
+#ifndef ANGLERADIANS_H
+#define ANGLERADIANS_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_3850C62C_462E_4685_B246_FBA67CA20087__INCLUDED_)
+#endif // ANGLERADIANS_H

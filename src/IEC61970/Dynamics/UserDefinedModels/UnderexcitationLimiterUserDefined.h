@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  UnderexcitationLimiterUserDefined.h
 //  Implementation of the Class UnderexcitationLimiterUserDefined
-//  Created on:      28-Jan-2016 12:47:28
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_4A350326_FF58_4a4e_8DF8_0580911FA1C4__INCLUDED_)
-#define EA_4A350326_FF58_4a4e_8DF8_0580911FA1C4__INCLUDED_
+#ifndef UNDEREXCITATIONLIMITERUSERDEFINED_H
+#define UNDEREXCITATIONLIMITERUSERDEFINED_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Dynamics/StandardModels/UnderexcitationLimiterDynamics/UnderexcitationLimiterDynamics.h"
@@ -43,4 +42,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_4A350326_FF58_4a4e_8DF8_0580911FA1C4__INCLUDED_)
+#endif // UNDEREXCITATIONLIMITERUSERDEFINED_H

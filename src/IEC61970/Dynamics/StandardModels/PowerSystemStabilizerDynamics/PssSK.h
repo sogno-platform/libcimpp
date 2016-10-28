@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PssSK.h
 //  Implementation of the Class PssSK
-//  Created on:      28-Jan-2016 12:46:21
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_5B4AAD55_E69E_4979_9ED9_650E52E417DF__INCLUDED_)
-#define EA_5B4AAD55_E69E_4979_9ED9_650E52E417DF__INCLUDED_
+#ifndef PSSSK_H
+#define PSSSK_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -83,4 +82,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_5B4AAD55_E69E_4979_9ED9_650E52E417DF__INCLUDED_)
+#endif // PSSSK_H

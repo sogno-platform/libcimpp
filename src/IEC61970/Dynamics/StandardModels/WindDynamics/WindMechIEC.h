@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindMechIEC.h
 //  Implementation of the Class WindMechIEC
-//  Created on:      28-Jan-2016 12:47:54
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_07598258_3166_4388_B25B_FFDB6252ED1F__INCLUDED_)
-#define EA_07598258_3166_4388_B25B_FFDB6252ED1F__INCLUDED_
+#ifndef WINDMECHIEC_H
+#define WINDMECHIEC_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -77,4 +76,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_07598258_3166_4388_B25B_FFDB6252ED1F__INCLUDED_)
+#endif // WINDMECHIEC_H

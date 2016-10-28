@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcELIN1.h
 //  Implementation of the Class ExcELIN1
-//  Created on:      28-Jan-2016 12:44:28
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_9B93161D_9276_4d5f_98D7_7316A9B6536D__INCLUDED_)
-#define EA_9B93161D_9276_4d5f_98D7_7316A9B6536D__INCLUDED_
+#ifndef EXCELIN1_H
+#define EXCELIN1_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -105,4 +104,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_9B93161D_9276_4d5f_98D7_7316A9B6536D__INCLUDED_)
+#endif // EXCELIN1_H

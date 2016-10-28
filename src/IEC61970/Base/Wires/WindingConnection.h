@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  WindingConnection.h
 //  Implementation of the Class WindingConnection
-//  Created on:      28-Jan-2016 12:47:53
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_71A722CC_B0A0_4214_96E6_96C0BAEA27E0__INCLUDED_)
-#define EA_71A722CC_B0A0_4214_96E6_96C0BAEA27E0__INCLUDED_
+#ifndef WINDINGCONNECTION_H
+#define WINDINGCONNECTION_H
 
 namespace IEC61970
 {
@@ -53,4 +52,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_71A722CC_B0A0_4214_96E6_96C0BAEA27E0__INCLUDED_)
+#endif // WINDINGCONNECTION_H

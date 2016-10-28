@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcIEEEST6B.h
 //  Implementation of the Class ExcIEEEST6B
-//  Created on:      28-Jan-2016 12:44:37
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_CAF60577_216C_4c0d_9C83_046566F38975__INCLUDED_)
-#define EA_CAF60577_216C_4c0d_9C83_046566F38975__INCLUDED_
+#ifndef EXCIEEEST6B_H
+#define EXCIEEEST6B_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Dynamics/StandardModels/ExcitationSystemDynamics/ExcST6BOELselectorKind.h"
@@ -106,4 +105,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_CAF60577_216C_4c0d_9C83_046566F38975__INCLUDED_)
+#endif // EXCIEEEST6B_H

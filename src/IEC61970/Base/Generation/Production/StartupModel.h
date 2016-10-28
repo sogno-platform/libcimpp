@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  StartupModel.h
 //  Implementation of the Class StartupModel
-//  Created on:      28-Jan-2016 12:46:45
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_2B092EBF_139F_4aaf_8029_399D276E6B81__INCLUDED_)
-#define EA_2B092EBF_139F_4aaf_8029_399D276E6B81__INCLUDED_
+#ifndef STARTUPMODEL_H
+#define STARTUPMODEL_H
 
 #include "IEC61970/Base/Domain/CostRate.h"
 #include "IEC61970/Base/Generation/Production/HeatRate.h"
@@ -103,4 +102,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_2B092EBF_139F_4aaf_8029_399D276E6B81__INCLUDED_)
+#endif // STARTUPMODEL_H

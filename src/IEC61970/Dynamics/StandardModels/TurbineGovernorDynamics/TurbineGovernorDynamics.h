@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  TurbineGovernorDynamics.h
 //  Implementation of the Class TurbineGovernorDynamics
-//  Created on:      28-Jan-2016 12:47:26
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_5DB79AD6_73E6_4686_BCB9_3D27B45E8543__INCLUDED_)
-#define EA_5DB79AD6_73E6_4686_BCB9_3D27B45E8543__INCLUDED_
+#ifndef TURBINEGOVERNORDYNAMICS_H
+#define TURBINEGOVERNORDYNAMICS_H
 
 #include "IEC61970/Dynamics/StandardModels/AsynchronousMachineDynamics/AsynchronousMachineDynamics.h"
 #include "IEC61970/Dynamics/StandardModels/DynamicsFunctionBlock.h"
@@ -44,4 +43,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_5DB79AD6_73E6_4686_BCB9_3D27B45E8543__INCLUDED_)
+#endif // TURBINEGOVERNORDYNAMICS_H

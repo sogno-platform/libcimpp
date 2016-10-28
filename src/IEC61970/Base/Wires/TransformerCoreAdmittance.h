@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  TransformerCoreAdmittance.h
 //  Implementation of the Class TransformerCoreAdmittance
-//  Created on:      28-Jan-2016 12:47:21
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_0B7FD321_8B2A_4ed7_8103_4146C1EDFF46__INCLUDED_)
-#define EA_0B7FD321_8B2A_4ed7_8103_4146C1EDFF46__INCLUDED_
+#ifndef TRANSFORMERCOREADMITTANCE_H
+#define TRANSFORMERCOREADMITTANCE_H
 
 #include <list>
 
@@ -59,4 +58,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_0B7FD321_8B2A_4ed7_8103_4146C1EDFF46__INCLUDED_)
+#endif // TRANSFORMERCOREADMITTANCE_H

@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  SteamTurbine.h
 //  Implementation of the Class SteamTurbine
-//  Created on:      28-Jan-2016 12:46:49
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_509E52DD_F5DE_4754_BF63_48F58F58B2EC__INCLUDED_)
-#define EA_509E52DD_F5DE_4754_BF63_48F58F58B2EC__INCLUDED_
+#ifndef STEAMTURBINE_H
+#define STEAMTURBINE_H
 
 #include "IEC61970/Base/Domain/Seconds.h"
 #include "IEC61970/Base/Domain/Float.h"
@@ -86,4 +85,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_509E52DD_F5DE_4754_BF63_48F58F58B2EC__INCLUDED_)
+#endif // STEAMTURBINE_H

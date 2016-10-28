@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Command.h
 //  Implementation of the Class Command
-//  Created on:      28-Jan-2016 12:43:35
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_05A19D3D_BA24_4946_8DAD_BAF35118F0D7__INCLUDED_)
-#define EA_05A19D3D_BA24_4946_8DAD_BAF35118F0D7__INCLUDED_
+#ifndef COMMAND_H
+#define COMMAND_H
 
 #include "IEC61970/Base/Domain/Integer.h"
 #include "IEC61970/Base/Meas/ValueAliasSet.h"
@@ -46,4 +45,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_05A19D3D_BA24_4946_8DAD_BAF35118F0D7__INCLUDED_)
+#endif // COMMAND_H

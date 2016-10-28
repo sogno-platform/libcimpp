@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovHydro1.h
 //  Implementation of the Class GovHydro1
-//  Created on:      28-Jan-2016 12:45:04
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_3A957599_A4EE_47d9_91D6_4B16E91EA75C__INCLUDED_)
-#define EA_3A957599_A4EE_47d9_91D6_4B16E91EA75C__INCLUDED_
+#ifndef GOVHYDRO1_H
+#define GOVHYDRO1_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/ActivePower.h"
@@ -97,4 +96,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_3A957599_A4EE_47d9_91D6_4B16E91EA75C__INCLUDED_)
+#endif // GOVHYDRO1_H

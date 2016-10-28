@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ACDCConverter.h
 //  Implementation of the Class ACDCConverter
-//  Created on:      28-Jan-2016 12:43:11
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B0A8349C_75C4_4b9e_9239_CFEDD5302071__INCLUDED_)
-#define EA_B0A8349C_75C4_4b9e_9239_CFEDD5302071__INCLUDED_
+#ifndef ACDCCONVERTER_H
+#define ACDCCONVERTER_H
 
 #include "IEC61970/Base/Domain/ApparentPower.h"
 #include "IEC61970/Base/Domain/CurrentFlow.h"
@@ -139,4 +138,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_B0A8349C_75C4_4b9e_9239_CFEDD5302071__INCLUDED_)
+#endif // ACDCCONVERTER_H

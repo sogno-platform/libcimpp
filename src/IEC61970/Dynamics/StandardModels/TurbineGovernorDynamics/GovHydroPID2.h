@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovHydroPID2.h
 //  Implementation of the Class GovHydroPID2
-//  Created on:      28-Jan-2016 12:45:09
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_032A4142_16ED_40c2_B98A_05B270695F49__INCLUDED_)
-#define EA_032A4142_16ED_40c2_B98A_05B270695F49__INCLUDED_
+#ifndef GOVHYDROPID2_H
+#define GOVHYDROPID2_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Boolean.h"
@@ -134,4 +133,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_032A4142_16ED_40c2_B98A_05B270695F49__INCLUDED_)
+#endif // GOVHYDROPID2_H

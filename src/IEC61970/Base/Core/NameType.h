@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  NameType.h
 //  Implementation of the Class NameType
-//  Created on:      28-Jan-2016 12:45:46
 //  Original author: T. Kostic
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_C6A1109E_B847_494a_A218_C74D19F4D8B2__INCLUDED_)
-#define EA_C6A1109E_B847_494a_A218_C74D19F4D8B2__INCLUDED_
+#ifndef NAMETYPE_H
+#define NAMETYPE_H
 
 #include "IEC61970/Base/Domain/String.h"
 #include "IEC61970/Base/Core/NameTypeAuthority.h"
@@ -57,4 +56,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_C6A1109E_B847_494a_A218_C74D19F4D8B2__INCLUDED_)
+#endif // NAMETYPE_H

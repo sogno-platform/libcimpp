@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcIEEEAC7B.h
 //  Implementation of the Class ExcIEEEAC7B
-//  Created on:      28-Jan-2016 12:44:32
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_9B4AD60A_5000_42fc_864F_603A98B7A30A__INCLUDED_)
-#define EA_9B4AD60A_5000_42fc_864F_603A98B7A30A__INCLUDED_
+#ifndef EXCIEEEAC7B_H
+#define EXCIEEEAC7B_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Float.h"
@@ -167,4 +166,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_9B4AD60A_5000_42fc_864F_603A98B7A30A__INCLUDED_)
+#endif // EXCIEEEAC7B_H

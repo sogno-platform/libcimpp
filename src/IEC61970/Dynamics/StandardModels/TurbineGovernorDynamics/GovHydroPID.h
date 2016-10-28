@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  GovHydroPID.h
 //  Implementation of the Class GovHydroPID
-//  Created on:      28-Jan-2016 12:45:08
 //  Original author: tsaxton
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_13DB3B71_439E_440b_9A5B_7BEF65EA13F5__INCLUDED_)
-#define EA_13DB3B71_439E_440b_9A5B_7BEF65EA13F5__INCLUDED_
+#ifndef GOVHYDROPID_H
+#define GOVHYDROPID_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Frequency.h"
@@ -179,4 +178,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_13DB3B71_439E_440b_9A5B_7BEF65EA13F5__INCLUDED_)
+#endif // GOVHYDROPID_H

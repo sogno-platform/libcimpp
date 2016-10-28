@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  ConformLoadSchedule.h
 //  Implementation of the Class ConformLoadSchedule
-//  Created on:      28-Jan-2016 12:43:38
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_03E139CC_07DE_4291_B475_233966D184D2__INCLUDED_)
-#define EA_03E139CC_07DE_4291_B475_233966D184D2__INCLUDED_
+#ifndef CONFORMLOADSCHEDULE_H
+#define CONFORMLOADSCHEDULE_H
 
 #include "IEC61970/Base/LoadModel/SeasonDayTypeSchedule.h"
 
@@ -35,4 +34,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_03E139CC_07DE_4291_B475_233966D184D2__INCLUDED_)
+#endif // CONFORMLOADSCHEDULE_H

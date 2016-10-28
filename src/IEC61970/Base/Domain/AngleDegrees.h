@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  AngleDegrees.h
 //  Implementation of the Class AngleDegrees
-//  Created on:      28-Jan-2016 12:43:20
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_FEC44135_8AE5_41ba_835D_E0BD99BB5F8C__INCLUDED_)
-#define EA_FEC44135_8AE5_41ba_835D_E0BD99BB5F8C__INCLUDED_
+#ifndef ANGLEDEGREES_H
+#define ANGLEDEGREES_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_FEC44135_8AE5_41ba_835D_E0BD99BB5F8C__INCLUDED_)
+#endif // ANGLEDEGREES_H

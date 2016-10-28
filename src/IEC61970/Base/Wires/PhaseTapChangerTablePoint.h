@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PhaseTapChangerTablePoint.h
 //  Implementation of the Class PhaseTapChangerTablePoint
-//  Created on:      28-Jan-2016 12:46:05
 //  Original author: SELAOST1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_9DDC220F_BCAC_4bf5_801B_AFD7A1186732__INCLUDED_)
-#define EA_9DDC220F_BCAC_4bf5_801B_AFD7A1186732__INCLUDED_
+#ifndef PHASETAPCHANGERTABLEPOINT_H
+#define PHASETAPCHANGERTABLEPOINT_H
 
 #include "IEC61970/Base/Domain/AngleDegrees.h"
 #include "IEC61970/Base/Wires/PhaseTapChangerTable.h"
@@ -43,4 +42,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_9DDC220F_BCAC_4bf5_801B_AFD7A1186732__INCLUDED_)
+#endif // PHASETAPCHANGERTABLEPOINT_H

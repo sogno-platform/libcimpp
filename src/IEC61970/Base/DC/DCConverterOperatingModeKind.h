@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DCConverterOperatingModeKind.h
 //  Implementation of the Class DCConverterOperatingModeKind
-//  Created on:      28-Jan-2016 12:43:57
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_5EC9BD71_F637_4806_9B78_A1A64929565C__INCLUDED_)
-#define EA_5EC9BD71_F637_4806_9B78_A1A64929565C__INCLUDED_
+#ifndef DCCONVERTEROPERATINGMODEKIND_H
+#define DCCONVERTEROPERATINGMODEKIND_H
 
 namespace IEC61970
 {
@@ -38,4 +37,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_5EC9BD71_F637_4806_9B78_A1A64929565C__INCLUDED_)
+#endif // DCCONVERTEROPERATINGMODEKIND_H

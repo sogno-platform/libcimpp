@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  Susceptance.h
 //  Implementation of the Class Susceptance
-//  Created on:      28-Jan-2016 12:46:56
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_A3195E9F_D880_4936_9B6A_B3377EC82712__INCLUDED_)
-#define EA_A3195E9F_D880_4936_9B6A_B3377EC82712__INCLUDED_
+#ifndef SUSCEPTANCE_H
+#define SUSCEPTANCE_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -37,4 +36,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_A3195E9F_D880_4936_9B6A_B3377EC82712__INCLUDED_)
+#endif // SUSCEPTANCE_H

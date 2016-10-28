@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindPlantFreqPcontrolIEC.h
 //  Implementation of the Class WindPlantFreqPcontrolIEC
-//  Created on:      28-Jan-2016 12:47:56
 //  Original author: civanov
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_7D4E8A7A_5B5E_45d9_8D3E_6158B3F637B5__INCLUDED_)
-#define EA_7D4E8A7A_5B5E_45d9_8D3E_6158B3F637B5__INCLUDED_
+#ifndef WINDPLANTFREQPCONTROLIEC_H
+#define WINDPLANTFREQPCONTROLIEC_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Float.h"
@@ -100,4 +99,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_7D4E8A7A_5B5E_45d9_8D3E_6158B3F637B5__INCLUDED_)
+#endif // WINDPLANTFREQPCONTROLIEC_H

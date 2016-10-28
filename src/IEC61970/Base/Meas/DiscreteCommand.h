@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  DiscreteCommand.h
 //  Implementation of the Class DiscreteCommand
-//  Created on:      28-Jan-2016 12:44:09
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_65BAC169_6177_4887_A48B_1512AE05064C__INCLUDED_)
-#define EA_65BAC169_6177_4887_A48B_1512AE05064C__INCLUDED_
+#ifndef DISCRETECOMMAND_H
+#define DISCRETECOMMAND_H
 
 #include "IEC61970/Base/Meas/Command.h"
 
@@ -30,4 +29,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_65BAC169_6177_4887_A48B_1512AE05064C__INCLUDED_)
+#endif // DISCRETECOMMAND_H

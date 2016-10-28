@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ExcitationSystemUserDefined.h
 //  Implementation of the Class ExcitationSystemUserDefined
-//  Created on:      28-Jan-2016 12:44:40
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_591DC669_3F3D_4560_98D0_855DDDDFB57F__INCLUDED_)
-#define EA_591DC669_3F3D_4560_98D0_855DDDDFB57F__INCLUDED_
+#ifndef EXCITATIONSYSTEMUSERDEFINED_H
+#define EXCITATIONSYSTEMUSERDEFINED_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Dynamics/StandardModels/ExcitationSystemDynamics/ExcitationSystemDynamics.h"
@@ -43,4 +42,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_591DC669_3F3D_4560_98D0_855DDDDFB57F__INCLUDED_)
+#endif // EXCITATIONSYSTEMUSERDEFINED_H

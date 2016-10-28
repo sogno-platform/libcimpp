@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindPlantIEC.h
 //  Implementation of the Class WindPlantIEC
-//  Created on:      28-Jan-2016 12:47:56
 //  Original author: civanov
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_01F84FC2_5961_45b5_A6A3_308583E1E745__INCLUDED_)
-#define EA_01F84FC2_5961_45b5_A6A3_308583E1E745__INCLUDED_
+#ifndef WINDPLANTIEC_H
+#define WINDPLANTIEC_H
 
 #include "IEC61970/Dynamics/StandardModels/WindDynamics/WindPlantDynamics.h"
 #include "IEC61970/Dynamics/StandardModels/WindDynamics/WindPlantReactiveControlIEC.h"
@@ -44,4 +43,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_01F84FC2_5961_45b5_A6A3_308583E1E745__INCLUDED_)
+#endif // WINDPLANTIEC_H

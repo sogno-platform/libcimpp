@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PssELIN2.h
 //  Implementation of the Class PssELIN2
-//  Created on:      28-Jan-2016 12:46:17
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_CA3082A9_1564_4e55_A887_7E74BA80D358__INCLUDED_)
-#define EA_CA3082A9_1564_4e55_A887_7E74BA80D358__INCLUDED_
+#ifndef PSSELIN2_H
+#define PSSELIN2_H
 
 #include "IEC61970/Base/Domain/PU.h"
 #include "IEC61970/Base/Domain/Seconds.h"
@@ -84,4 +83,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_CA3082A9_1564_4e55_A887_7E74BA80D358__INCLUDED_)
+#endif // PSSELIN2_H

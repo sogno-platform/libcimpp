@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  CurrentTransformer.h
 //  Implementation of the Class CurrentTransformer
-//  Created on:      28-Jan-2016 12:43:49
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_3350EBCF_821C_4333_8602_718A5BE86954__INCLUDED_)
-#define EA_3350EBCF_821C_4333_8602_718A5BE86954__INCLUDED_
+#ifndef CURRENTTRANSFORMER_H
+#define CURRENTTRANSFORMER_H
 
 #include "IEC61970/Base/Domain/String.h"
 #include "IEC61970/Base/Domain/PerCent.h"
@@ -59,4 +58,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_3350EBCF_821C_4333_8602_718A5BE86954__INCLUDED_)
+#endif // CURRENTTRANSFORMER_H

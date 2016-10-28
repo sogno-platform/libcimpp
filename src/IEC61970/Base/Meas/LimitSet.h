@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  LimitSet.h
 //  Implementation of the Class LimitSet
-//  Created on:      28-Jan-2016 12:45:33
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_FB6AC19B_6B39_4344_BF64_6E40698767CF__INCLUDED_)
-#define EA_FB6AC19B_6B39_4344_BF64_6E40698767CF__INCLUDED_
+#ifndef LIMITSET_H
+#define LIMITSET_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Core/IdentifiedObject.h"
@@ -42,4 +41,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_FB6AC19B_6B39_4344_BF64_6E40698767CF__INCLUDED_)
+#endif // LIMITSET_H

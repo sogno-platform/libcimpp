@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  PFVArControllerType1UserDefined.h
 //  Implementation of the Class PFVArControllerType1UserDefined
-//  Created on:      28-Jan-2016 12:45:59
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_1E17BC74_871D_4758_A06E_50FE778E2EE2__INCLUDED_)
-#define EA_1E17BC74_871D_4758_A06E_50FE778E2EE2__INCLUDED_
+#ifndef PFVARCONTROLLERTYPE1USERDEFINED_H
+#define PFVARCONTROLLERTYPE1USERDEFINED_H
 
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Dynamics/StandardModels/PFVArControllerType1Dynamics/PFVArControllerType1Dynamics.h"
@@ -43,4 +42,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_1E17BC74_871D_4758_A06E_50FE778E2EE2__INCLUDED_)
+#endif // PFVARCONTROLLERTYPE1USERDEFINED_H

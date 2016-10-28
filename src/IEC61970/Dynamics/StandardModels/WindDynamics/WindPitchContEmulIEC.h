@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  WindPitchContEmulIEC.h
 //  Implementation of the Class WindPitchContEmulIEC
-//  Created on:      28-Jan-2016 12:47:55
 //  Original author: civanov
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_02E01FA8_8603_4477_BB9B_21874F3BE0FE__INCLUDED_)
-#define EA_02E01FA8_8603_4477_BB9B_21874F3BE0FE__INCLUDED_
+#ifndef WINDPITCHCONTEMULIEC_H
+#define WINDPITCHCONTEMULIEC_H
 
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Domain/PU.h"
@@ -97,4 +96,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_02E01FA8_8603_4477_BB9B_21874F3BE0FE__INCLUDED_)
+#endif // WINDPITCHCONTEMULIEC_H

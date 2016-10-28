@@ -1,12 +1,11 @@
 ///////////////////////////////////////////////////////////
 //  ReportingSuperGroup.h
 //  Implementation of the Class ReportingSuperGroup
-//  Created on:      28-Jan-2016 12:46:34
 //  Original author: kdd
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_0CDDE238_4D91_417f_86F7_15155185C9BD__INCLUDED_)
-#define EA_0CDDE238_4D91_417f_86F7_15155185C9BD__INCLUDED_
+#ifndef REPORTINGSUPERGROUP_H
+#define REPORTINGSUPERGROUP_H
 
 #include <list>
 
@@ -40,4 +39,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_0CDDE238_4D91_417f_86F7_15155185C9BD__INCLUDED_)
+#endif // REPORTINGSUPERGROUP_H

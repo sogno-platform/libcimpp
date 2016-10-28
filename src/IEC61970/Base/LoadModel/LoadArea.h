@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  LoadArea.h
 //  Implementation of the Class LoadArea
-//  Created on:      28-Jan-2016 12:45:35
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_480FBF71_A178_4388_8C97_2541BB470B3E__INCLUDED_)
-#define EA_480FBF71_A178_4388_8C97_2541BB470B3E__INCLUDED_
+#ifndef LOADAREA_H
+#define LOADAREA_H
 
 #include <list>
 
@@ -40,4 +39,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_480FBF71_A178_4388_8C97_2541BB470B3E__INCLUDED_)
+#endif // LOADAREA_H

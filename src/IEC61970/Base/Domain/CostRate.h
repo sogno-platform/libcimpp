@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  CostRate.h
 //  Implementation of the Class CostRate
-//  Created on:      28-Jan-2016 12:43:45
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_2EA3F06D_1A62_4011_9F29_1CE828989D54__INCLUDED_)
-#define EA_2EA3F06D_1A62_4011_9F29_1CE828989D54__INCLUDED_
+#ifndef COSTRATE_H
+#define COSTRATE_H
 
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
@@ -40,4 +39,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_2EA3F06D_1A62_4011_9F29_1CE828989D54__INCLUDED_)
+#endif // COSTRATE_H

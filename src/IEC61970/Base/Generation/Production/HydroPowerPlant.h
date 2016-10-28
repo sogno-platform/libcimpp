@@ -1,11 +1,10 @@
 ///////////////////////////////////////////////////////////
 //  HydroPowerPlant.h
 //  Implementation of the Class HydroPowerPlant
-//  Created on:      28-Jan-2016 12:45:20
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_93DF4BEC_99F9_473f_9B98_8048C4CC449C__INCLUDED_)
-#define EA_93DF4BEC_99F9_473f_9B98_8048C4CC449C__INCLUDED_
+#ifndef HYDROPOWERPLANT_H
+#define HYDROPOWERPLANT_H
 
 #include <list>
 
@@ -106,4 +105,4 @@ namespace IEC61970
 	}
 
 }
-#endif // !defined(EA_93DF4BEC_99F9_473f_9B98_8048C4CC449C__INCLUDED_)
+#endif // HYDROPOWERPLANT_H
