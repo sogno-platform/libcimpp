@@ -1,5 +1,5 @@
-#ifndef CIMPARSER_H
-#define CIMPARSER_H
+#ifndef CIMPARSER_HPP
+#define CIMPARSER_HPP
 
 #include <vector>
 
@@ -20,4 +20,4 @@ private:
 	CIMContentHandler* ContentHandler;
 };
 
-#endif // CIMPARSER_H
+#endif // CIMPARSER_HPP

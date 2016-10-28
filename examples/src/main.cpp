@@ -1,5 +1,5 @@
 #include <iostream>
-#include "CIMParser.h"
+#include "CIMParser.hpp"
 #include "IEC61970.h"
 
 int main(int argc, char** argv)
