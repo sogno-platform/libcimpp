@@ -8,7 +8,7 @@ set(CIMParser_PATCH_VERSION 0)
 set(CIMParser_VERSION ${CIMParser_MAJOR_VERSION}.${CIMParser_MINOR_VERSION}.${CIMParser_PATCH_VERSION})
 
 # Find LibXML++
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_LIST_DIR}/cmake/Modules/")
 find_package(LibXML++ REQUIRED)
 
 # Add combile flag to aviod warnings with C++11
@@ -19,8 +19,8 @@ file(GLOB_RECURSE SRC src/*.cpp)
 
 add_library(${PROJECT_NAME} SHARED ${SRC})
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_range_for cxx_nullptr)
-target_include_directories(${PROJECT_NAME} PRIVATE $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>)
-target_include_directories(${PROJECT_NAME} INTERFACE $<INSTALL_INTERFACE:include/${PROJECT_NAME}>)
+target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>)
+target_include_directories(${PROJECT_NAME} PUBLIC $<INSTALL_INTERFACE:include/${PROJECT_NAME}>)
 target_include_directories(${PROJECT_NAME} PUBLIC ${LibXML++_INCLUDE_DIRS})
 target_link_libraries(${PROJECT_NAME} ${LibXML++_LIBRARIES})
 
