@@ -1,7 +1,7 @@
 Create a new build directory and change into it:
   mkdir build
   cd build
-
-Assuming, CIMParser was installed with -DCMAKE_INSTALL_PREFIX=<PREFIX> (i.e. the CIMParserConfig file is located in <PREFIX>/lib/CIMParser):
-To make cmake find the CIMParser, call
-  cmake .. -DCMAKE_PREFIX_PATH=<PREFIX>
+Then run cmake to configure:
+  cmake ..
+THen run make to build:
+  make [-j4]
