@@ -73,13 +73,13 @@ void CIMParser::on_start_element(const Glib::ustring &name, const AttributeList 
 		std::unordered_map<std::string, BaseClass*>::iterator it = Task::RDFMap.find(rdf_id);
 		if(it != Task::RDFMap.end()) // object exists -> push it on the stack
 		{
-			elementStack.push(it->second);
+			objectStack.push(it->second);
 		}
 		else // object does not exist -> create object
 		{
 			BaseClass* BaseClass_ptr = CIMFactory::CreateNew(name);
 			Task::RDFMap.emplace(rdf_id, BaseClass_ptr);
-			elementStack.push(BaseClass_ptr);
+			objectStack.push(BaseClass_ptr);
 			Objects.push_back(BaseClass_ptr);
 		}
 		return;
