@@ -43,3 +43,7 @@ build
 obj
 documentation
 Doxyfile
+
+# CLion development
+.idea
+cmake-build*
