@@ -16,10 +16,8 @@ option(BUILD_SHARED_LIBS "Build shared library" OFF)
 file(GLOB_RECURSE SRC src/*.cpp)
 
 add_library(${PROJECT_NAME} ${SRC})
-#target_compile_features(${PROJECT_NAME} PUBLIC cxx_range_for cxx_nullptr)
 target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>)
 target_include_directories(${PROJECT_NAME} PUBLIC $<INSTALL_INTERFACE:include/${PROJECT_NAME}>)
-target_include_directories(${PROJECT_NAME} PUBLIC ${LibXML++_INCLUDE_DIRS})
 target_link_libraries(${PROJECT_NAME} PRIVATE arabica)
 
 # Install target
