@@ -17,27 +17,7 @@ file(GLOB_RECURSE SRC src/*.cpp)
 
 add_library(${PROJECT_NAME} ${SRC})
 target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>)
-target_include_directories(${PROJECT_NAME} PUBLIC $<INSTALL_INTERFACE:include/${PROJECT_NAME}>)
 target_link_libraries(${PROJECT_NAME} PRIVATE arabica)
-
-# Install target
-install(
-  TARGETS ${PROJECT_NAME}
-  DESTINATION lib
-  EXPORT ${PROJECT_NAME}Targets)
-install(
-  DIRECTORY src/IEC61970
-  DESTINATION include/${PROJECT_NAME}
-  FILES_MATCHING PATTERN "*.h")
-install(
-  FILES src/BaseClass.h src/CIMParser.hpp src/CIMContentHandler.hpp src/IEC61970.h src/task.h
-  DESTINATION include/${PROJECT_NAME})
-install(
-  EXPORT ${PROJECT_NAME}Targets
-  DESTINATION lib/${PROJECT_NAME})
-install(
-  FILES cmake/CIMParserConfig.cmake
-  DESTINATION lib/${PROJECT_NAME})
 
 # Configure Doxyfile
 find_package(Doxygen)
