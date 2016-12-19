@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////////////
 //  VoltagePerReactivePower.cpp
 //  Implementation of the Class VoltagePerReactivePower
-//  Created on:      28-Jan-2016 12:47:40
 ///////////////////////////////////////////////////////////
 
 #include "VoltagePerReactivePower.h"

@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////////////
 //  GrossToNetActivePowerCurve.cpp
 //  Implementation of the Class GrossToNetActivePowerCurve
-//  Created on:      28-Jan-2016 12:45:16
 ///////////////////////////////////////////////////////////
 
 #include "GrossToNetActivePowerCurve.h"

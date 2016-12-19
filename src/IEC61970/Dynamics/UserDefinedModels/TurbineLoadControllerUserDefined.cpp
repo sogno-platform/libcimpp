@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////////////
 //  TurbineLoadControllerUserDefined.cpp
 //  Implementation of the Class TurbineLoadControllerUserDefined
-//  Created on:      28-Jan-2016 12:47:27
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 

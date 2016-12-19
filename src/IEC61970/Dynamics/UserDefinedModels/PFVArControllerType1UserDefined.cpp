@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////////////
 //  PFVArControllerType1UserDefined.cpp
 //  Implementation of the Class PFVArControllerType1UserDefined
-//  Created on:      28-Jan-2016 12:46:00
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 

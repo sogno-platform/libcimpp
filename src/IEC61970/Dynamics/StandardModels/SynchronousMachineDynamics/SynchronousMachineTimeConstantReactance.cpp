@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////////////
 //  SynchronousMachineTimeConstantReactance.cpp
 //  Implementation of the Class SynchronousMachineTimeConstantReactance
-//  Created on:      28-Jan-2016 12:47:08
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 

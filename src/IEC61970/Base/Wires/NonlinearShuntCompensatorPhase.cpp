@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////////////
 //  NonlinearShuntCompensatorPhase.cpp
 //  Implementation of the Class NonlinearShuntCompensatorPhase
-//  Created on:      28-Jan-2016 12:45:49
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 

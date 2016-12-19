@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////////////
 //  PowerSystemStabilizerUserDefined.cpp
 //  Implementation of the Class PowerSystemStabilizerUserDefined
-//  Created on:      28-Jan-2016 12:46:10
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 

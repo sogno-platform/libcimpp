@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////////////
 //  WindTurbineType1or2Dynamics.cpp
 //  Implementation of the Class WindTurbineType1or2Dynamics
-//  Created on:      28-Jan-2016 12:47:58
 //  Original author: civanov
 ///////////////////////////////////////////////////////////
 

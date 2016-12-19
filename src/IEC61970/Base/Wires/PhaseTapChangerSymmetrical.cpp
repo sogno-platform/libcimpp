@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////////////
 //  PhaseTapChangerSymmetrical.cpp
 //  Implementation of the Class PhaseTapChangerSymmetrical
-//  Created on:      28-Jan-2016 12:46:05
 //  Original author: SELAOST1
 ///////////////////////////////////////////////////////////
 

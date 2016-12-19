@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////////////
 //  VoltageCompensatorUserDefined.cpp
 //  Implementation of the Class VoltageCompensatorUserDefined
-//  Created on:      28-Jan-2016 12:47:37
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 

@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////////////
 //  AsynchronousMachineUserDefined.cpp
 //  Implementation of the Class AsynchronousMachineUserDefined
-//  Created on:      28-Jan-2016 12:43:25
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 

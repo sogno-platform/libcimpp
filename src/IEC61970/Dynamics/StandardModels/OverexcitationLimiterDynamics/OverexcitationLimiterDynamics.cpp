@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////////////
 //  OverexcitationLimiterDynamics.cpp
 //  Implementation of the Class OverexcitationLimiterDynamics
-//  Created on:      28-Jan-2016 12:45:53
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 

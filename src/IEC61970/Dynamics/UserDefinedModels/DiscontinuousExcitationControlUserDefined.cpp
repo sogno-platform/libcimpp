@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////////////
 //  DiscontinuousExcitationControlUserDefined.cpp
 //  Implementation of the Class DiscontinuousExcitationControlUserDefined
-//  Created on:      28-Jan-2016 12:44:08
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 

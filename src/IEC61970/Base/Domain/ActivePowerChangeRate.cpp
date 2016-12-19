@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////////////
 //  ActivePowerChangeRate.cpp
 //  Implementation of the Class ActivePowerChangeRate
-//  Created on:      28-Jan-2016 12:43:14
 ///////////////////////////////////////////////////////////
 
 #include "ActivePowerChangeRate.h"

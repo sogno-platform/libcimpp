@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////////////
 //  SynchronousMachineUserDefined.cpp
 //  Implementation of the Class SynchronousMachineUserDefined
-//  Created on:      28-Jan-2016 12:47:09
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 

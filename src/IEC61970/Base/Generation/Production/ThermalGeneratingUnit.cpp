@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////////////
 //  ThermalGeneratingUnit.cpp
 //  Implementation of the Class ThermalGeneratingUnit
-//  Created on:      28-Jan-2016 12:47:17
 ///////////////////////////////////////////////////////////
 
 #include "ThermalGeneratingUnit.h"

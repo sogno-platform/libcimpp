@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////////////
 //  WindPlantReactiveControlIEC.cpp
 //  Implementation of the Class WindPlantReactiveControlIEC
-//  Created on:      28-Jan-2016 12:47:57
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 

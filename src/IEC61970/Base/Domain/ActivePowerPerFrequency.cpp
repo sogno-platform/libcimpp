@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////////////
 //  ActivePowerPerFrequency.cpp
 //  Implementation of the Class ActivePowerPerFrequency
-//  Created on:      28-Jan-2016 12:43:15
 ///////////////////////////////////////////////////////////
 
 #include "ActivePowerPerFrequency.h"

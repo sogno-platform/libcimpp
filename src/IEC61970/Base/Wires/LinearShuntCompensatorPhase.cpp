@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////////////
 //  LinearShuntCompensatorPhase.cpp
 //  Implementation of the Class LinearShuntCompensatorPhase
-//  Created on:      28-Jan-2016 12:45:34
 //  Original author: selaost1
 ///////////////////////////////////////////////////////////
 

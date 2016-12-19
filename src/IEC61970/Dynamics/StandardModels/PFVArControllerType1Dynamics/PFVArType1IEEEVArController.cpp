@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////////////
 //  PFVArType1IEEEVArController.cpp
 //  Implementation of the Class PFVArType1IEEEVArController
-//  Created on:      28-Jan-2016 12:46:01
 //  Original author: pcha006
 ///////////////////////////////////////////////////////////
 

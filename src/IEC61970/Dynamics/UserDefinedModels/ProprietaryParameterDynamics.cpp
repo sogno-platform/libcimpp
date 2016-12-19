@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////////////
 //  ProprietaryParameterDynamics.cpp
 //  Implementation of the Class ProprietaryParameterDynamics
-//  Created on:      28-Jan-2016 12:46:12
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 

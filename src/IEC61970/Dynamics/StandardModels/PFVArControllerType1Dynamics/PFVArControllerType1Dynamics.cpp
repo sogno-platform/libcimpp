@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////////////
 //  PFVArControllerType1Dynamics.cpp
 //  Implementation of the Class PFVArControllerType1Dynamics
-//  Created on:      28-Jan-2016 12:45:59
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 

@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////////////
 //  SynchronousMachineEquivalentCircuit.cpp
 //  Implementation of the Class SynchronousMachineEquivalentCircuit
-//  Created on:      28-Jan-2016 12:47:06
 //  Original author: ppbr003
 ///////////////////////////////////////////////////////////
 
