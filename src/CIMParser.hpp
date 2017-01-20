@@ -2,6 +2,7 @@
 #define CIMPARSER_HPP
 
 #include <vector>
+#include <string>
 
 #include "BaseClass.h"
 
