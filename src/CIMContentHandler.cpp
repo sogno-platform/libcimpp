@@ -183,7 +183,7 @@ std::string CIMContentHandler::get_rdf_id(const AttributesT &attributes)
 	{
 		if(attributes.getQName(i) == "rdf:ID")
 			return attributes.getValue(i);
-		if(attributes.getQName(i) == "rdf:ID")
+		if(attributes.getQName(i) == "rdf:about")
 			return attributes.getValue(i).substr(1);
 	}
 	throw std::logic_error("Attributes contain no rdf:ID");
