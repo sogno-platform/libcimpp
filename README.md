@@ -48,6 +48,9 @@ To use the CIM parser as an cmake module, the project using the CIM parser needs
 4. Open the *.vcxproj file with Visual Studio
   + Now the CIM parser can be build using the Visual Studio Compiler
 
+#### Usage of the library
+For information how to use the library please see the cmake example. The make example is currently not supported due to the lack of an install target for arabica.
+
 ### v0.x
 Version `v0.x` uses [libxml2++](http://libxmlplusplus.sourceforge.net/) as XML backend. For more information see the README provided with Version 0.x.
 
