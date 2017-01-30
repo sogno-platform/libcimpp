@@ -5,7 +5,7 @@
 #include <SAX/Locator.hpp>
 
 #include <stack>
-#include <queue>
+#include <list>
 #include <unordered_map>
 #include <vector>
 
@@ -20,6 +20,8 @@ public:
 
 	std::vector<BaseClass*> *Objects;
 	void setObjectsContainer(std::vector<BaseClass*> *Objects);
+
+	bool resolveRDFRelations(); // AKA work through task queue
 
 protected:
 	void setDocumentLocator(const LocatorT &locator) override;
@@ -42,7 +44,7 @@ protected:
 private:
 	std::stack<BaseClass*> objectStack;
 	std::stack<std::string> tagStack;
-	std::queue<Task> taskQueue;
+	std::list<Task> taskQueue;
 };
 
 

@@ -34,20 +34,7 @@ void CIMContentHandler::startDocument()
 
 void CIMContentHandler::endDocument()
 {
-	unsigned int size, unresolved;
-	size = taskQueue.size();
-	unresolved = 0;
-	while(!taskQueue.empty())
-	{
-		if(!taskQueue.front().resolve())
-		{
-			std::cout << "Note: Cannot resolve following RDF raltionship: ";
-			taskQueue.front().print();
-			unresolved++;
-		}
-		taskQueue.pop();
-	}
-	std::cout << "Note: " << unresolved << " out of " << size << " tasks remain unresolved!" << std::endl;
+	this->resolveRDFRelations();
 }
 
 void CIMContentHandler::startPrefixMapping(const std::string &prefix, const std::string &uri)
@@ -106,7 +93,7 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 	try // FIXME: No exep
 	{
 		std::string rdf_id = get_rdf_resource(atts);
-		taskQueue.push(Task(objectStack.top(), qName, rdf_id));
+		taskQueue.push_back(Task(objectStack.top(), qName, rdf_id));
 		return;
 	}
 	catch(std::logic_error &excep)
@@ -227,4 +214,30 @@ std::string CIMContentHandler::get_rdf_enum(const AttributesT &attributes)
 		}
 	}
 	throw std::logic_error("Attribute contain no rdf:resource");
+}
+
+bool CIMContentHandler::resolveRDFRelations()
+{
+	unsigned int size, unresolved;
+	unresolved = 0;
+	size = taskQueue.size();
+	std::list<Task>::iterator it;
+	for(it = taskQueue.begin(); it != taskQueue.end(); ++it)
+	{
+		if(!it->resolve())
+		{
+			std::cout << "Note: Cannot resolve following RDF relationship: ";
+			it->print();
+			unresolved++;
+		}
+		else
+		{
+			taskQueue.erase(it);
+		}
+	}
+	std::cout << "Note: " << unresolved << " out of " << size << " tasks remain unresolved!" << std::endl;
+	if(unresolved > 0)
+		return false;
+	else
+		return true;
 }
