@@ -16,9 +16,12 @@ int main(int argc, char** argv)
 	for(int i = 1; i < argc; i++)
 	{
 		parser.parse_file(argv[i]);
-		for (BaseClass* Object : parser.Objects)
+	}
+	for (BaseClass* Object : parser.Objects)
+	{
+		if(IEC61970::Base::Core::IdentifiedObject* IdObj = dynamic_cast<IEC61970::Base::Core::IdentifiedObject*>(Object))
 		{
-			if(IEC61970::Base::Core::IdentifiedObject* IdObj = dynamic_cast<IEC61970::Base::Core::IdentifiedObject*>(Object))
+			if(!IdObj->name.empty())
 				std::cout << IdObj->name << std::endl;
 		}
 	}
