@@ -1,5 +1,5 @@
-#include "task.h"
-#include "IEC61970.h"
+#include "Task.hpp"
+#include "IEC61970.hpp"
 #include <iostream>
 #include <fstream>
 #include <regex>

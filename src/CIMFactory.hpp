@@ -1,5 +1,5 @@
-#ifndef CIMFACTORY_H
-#define CIMFACTORY_H
+#ifndef CIMFACTORY_HPP
+#define CIMFACTORY_HPP
 
 #include <string>
 #include <unordered_map>
@@ -16,4 +16,4 @@ private:
 	static std::unordered_map<std::string, BaseClass* (*)()> factory_map;
 };
 
-#endif // CIMFACTORY_H
+#endif // CIMFACTORY_HPP

@@ -5,9 +5,9 @@
 
 #include <stdexcept>
 
-#include "IEC61970.h"
-#include "CIMFactory.h"
-#include "assignments.h"
+#include "IEC61970.hpp"
+#include "CIMFactory.hpp"
+#include "assignments.hpp"
 
 CIMContentHandler::CIMContentHandler() : Objects(nullptr), RDFMap(nullptr)
 {

@@ -1,11 +1,11 @@
-#include "assignments.h"
+#include "assignments.hpp"
 #include <sstream>
 #include <utility>
 #include <unordered_map>
 #include <regex>
 #include <fstream>
 
-#include "IEC61970.h"
+#include "IEC61970.hpp"
 
 typedef bool (*assign_function)(std::stringstream&, BaseClass*);
 static std::unordered_map<std::string, assign_function> dynamic_switch_factory();

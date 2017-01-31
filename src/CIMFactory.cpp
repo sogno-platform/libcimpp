@@ -1,5 +1,5 @@
-#include "CIMFactory.h"
-#include "IEC61970.h"
+#include "CIMFactory.hpp"
+#include "IEC61970.hpp"
 
 static std::unordered_map<std::string, BaseClass* (*)()> initialize();
 std::unordered_map<std::string, BaseClass* (*)()> CIMFactory::factory_map = initialize();

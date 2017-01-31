@@ -1,5 +1,5 @@
-#ifndef TASK_H
-#define TASK_H
+#ifndef TASK_HPP
+#define TASK_HPP
 
 #include <unordered_map>
 #include <string>
@@ -21,4 +21,4 @@ private:
 	static std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)> dynamic_switch;
 };
 
-#endif // TASK_H
+#endif // TASK_HPP
