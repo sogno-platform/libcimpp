@@ -9,7 +9,7 @@
 #include "CIMFactory.h"
 #include "assignments.h"
 
-CIMContentHandler::CIMContentHandler()
+CIMContentHandler::CIMContentHandler() : Objects(nullptr), RDFMap(nullptr)
 {
 }
 
@@ -26,11 +26,21 @@ void CIMContentHandler::setObjectsContainer(std::vector<BaseClass*> *Objects)
 	this->Objects = Objects;
 }
 
+void CIMContentHandler::setRDFMap(std::unordered_map<std::string, BaseClass*> *RDFMap)
+{
+	this->RDFMap = RDFMap;
+}
+
 void CIMContentHandler::setDocumentLocator(const LocatorT &locator)
 {}
 
 void CIMContentHandler::startDocument()
-{}
+{
+	if(Objects == nullptr)
+		throw std::runtime_error("CIMContentHandler: Objects container not set");
+	if(RDFMap == nullptr)
+		throw std::runtime_error("CIMContentHandler: RDFMap not set");
+}
 
 void CIMContentHandler::endDocument()
 {
@@ -74,15 +84,15 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 			exit(1);
 		}
 		// check if object already exists
-		std::unordered_map<std::string, BaseClass*>::iterator it = Task::RDFMap.find(rdf_id);
-		if(it != Task::RDFMap.end()) // object exists -> push it on the stack
+		std::unordered_map<std::string, BaseClass*>::iterator it = RDFMap->find(rdf_id);
+		if(it != RDFMap->end()) // object exists -> push it on the stack
 		{
 			objectStack.push(it->second);
 		}
 		else // object does not exist -> create object
 		{
 			BaseClass* BaseClass_ptr = CIMFactory::CreateNew(qName);
-			Task::RDFMap.emplace(rdf_id, BaseClass_ptr);
+			RDFMap->emplace(rdf_id, BaseClass_ptr);
 			objectStack.push(BaseClass_ptr);
 			Objects->push_back(BaseClass_ptr);
 		}

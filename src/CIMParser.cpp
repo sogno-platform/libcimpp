@@ -6,6 +6,7 @@
 CIMParser::CIMParser() : ContentHandler(new CIMContentHandler)
 {
 	ContentHandler->setObjectsContainer(&Objects);
+	ContentHandler->setRDFMap(&Task::RDFMap);
 }
 
 CIMParser::~CIMParser()

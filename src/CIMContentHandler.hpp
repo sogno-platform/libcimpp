@@ -19,7 +19,9 @@ public:
 	~CIMContentHandler();
 
 	std::vector<BaseClass*> *Objects;
+	std::unordered_map<std::string, BaseClass*> *RDFMap;
 	void setObjectsContainer(std::vector<BaseClass*> *Objects);
+	void setRDFMap(std::unordered_map<std::string, BaseClass*> *RDFMap);
 
 	bool resolveRDFRelations(); // AKA work through task queue
 
