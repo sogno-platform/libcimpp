@@ -221,18 +221,19 @@ bool CIMContentHandler::resolveRDFRelations()
 	unsigned int size, unresolved;
 	unresolved = 0;
 	size = taskQueue.size();
-	std::list<Task>::iterator it;
-	for(it = taskQueue.begin(); it != taskQueue.end(); ++it)
+	std::list<Task>::iterator it = taskQueue.begin();
+	while(it != taskQueue.end())
 	{
 		if(!it->resolve())
 		{
 			std::cout << "Note: Cannot resolve following RDF relationship: ";
 			it->print();
 			unresolved++;
+			++it;
 		}
 		else
 		{
-			taskQueue.erase(it);
+			taskQueue.erase(it++);
 		}
 	}
 	std::cout << "Note: " << unresolved << " out of " << size << " tasks remain unresolved!" << std::endl;
