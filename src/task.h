@@ -11,9 +11,8 @@ public:
 	Task();
 	Task(BaseClass* CIMObj, const std::string CIMAttrName, const std::string Value);
 	~Task();
-	bool resolve();
+	bool resolve(std::unordered_map<std::string, BaseClass*> *RDFMap);
 	void print();
-	static std::unordered_map<std::string, BaseClass*> RDFMap;
 
 private:
 	BaseClass* _CIMObj;

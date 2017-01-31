@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <string>
+#include <unordered_map>
 
 #include "BaseClass.h"
 
@@ -18,6 +19,7 @@ public:
 
 	std::vector<BaseClass*> Objects;
 private:
+	std::unordered_map<std::string, BaseClass*> RDFMap;
 	CIMContentHandler* ContentHandler;
 };
 

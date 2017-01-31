@@ -5,7 +5,6 @@
 #include <regex>
 static std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)> initialize();
 std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)> Task::dynamic_switch = initialize();
-std::unordered_map<std::string, BaseClass*> Task::RDFMap;
 
 Task::Task()
 {
@@ -22,13 +21,17 @@ Task::~Task()
 
 void Task::print()
 {
-	std::cout << _CIMAttrName << " = " << _Value << std::endl;
+	if(IEC61970::Base::Core::IdentifiedObject* IdObj = dynamic_cast<IEC61970::Base::Core::IdentifiedObject*>(_CIMObj))
+		std::cout << _CIMAttrName << " '" << IdObj->name << "' = '" << _Value << "'" << std::endl;
+	else
+		std::cout << _CIMAttrName << " = '" << _Value << "'" << std::endl;
+
 }
 
-bool Task::resolve()
+bool Task::resolve(std::unordered_map<std::string, BaseClass*> *RDFMap)
 {
-	std::unordered_map<std::string, BaseClass*>::iterator it_id = RDFMap.find(_Value);
-	if(it_id == RDFMap.end())
+	std::unordered_map<std::string, BaseClass*>::iterator it_id = RDFMap->find(_Value);
+	if(it_id == RDFMap->end())
 		return false;
 
 	std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)>::iterator it_func = dynamic_switch.find(_CIMAttrName);
@@ -3795,6 +3798,10 @@ static std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)> initial
 				}
 			}
 		}
+	}
+	else
+	{
+		std::cerr << "task_alias.csv could not be loaded" << std::endl;
 	}
 
 	return map;
