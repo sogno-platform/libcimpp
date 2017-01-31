@@ -1,6 +1,6 @@
 #include <iostream>
 #include "CIMModel.hpp"
-#include "IEC61970.h"
+#include "IEC61970.hpp"
 
 int main(int argc, char** argv)
 {
