@@ -7,10 +7,10 @@
 #ifndef NONLINEARSHUNTCOMPENSATORPHASEPOINT_H
 #define NONLINEARSHUNTCOMPENSATORPHASEPOINT_H
 
+#include "BaseClass.h"
 #include "IEC61970/Base/Domain/Susceptance.h"
 #include "IEC61970/Base/Domain/Conductance.h"
 #include "IEC61970/Base/Domain/Integer.h"
-#include "BaseClass.h"
 
 namespace IEC61970
 {

@@ -7,10 +7,10 @@
 #ifndef NAME_H
 #define NAME_H
 
+#include "BaseClass.h"
 #include "IEC61970/Base/Domain/String.h"
 #include "IEC61970/Base/Core/NameType.h"
 #include "IEC61970/Base/Core/IdentifiedObject.h"
-#include "BaseClass.h"
 
 namespace IEC61970
 {

@@ -7,10 +7,10 @@
 #ifndef OPERATINGSHARE_H
 #define OPERATINGSHARE_H
 
+#include "BaseClass.h"
 #include "IEC61970/Base/Domain/PerCent.h"
 #include "IEC61970/Base/Core/OperatingParticipant.h"
 #include "IEC61970/Base/Core/PowerSystemResource.h"
-#include "BaseClass.h"
 
 namespace IEC61970
 {

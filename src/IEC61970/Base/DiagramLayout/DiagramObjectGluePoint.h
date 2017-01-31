@@ -6,7 +6,6 @@
 
 #ifndef DIAGRAMOBJECTGLUEPOINT_H
 #define DIAGRAMOBJECTGLUEPOINT_H
-
 #include "BaseClass.h"
 
 namespace IEC61970

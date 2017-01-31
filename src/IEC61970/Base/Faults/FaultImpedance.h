@@ -7,9 +7,9 @@
 #ifndef FAULTIMPEDANCE_H
 #define FAULTIMPEDANCE_H
 
+#include "BaseClass.h"
 #include "IEC61970/Base/Domain/Resistance.h"
 #include "IEC61970/Base/Domain/Reactance.h"
-#include "BaseClass.h"
 
 namespace IEC61970
 {

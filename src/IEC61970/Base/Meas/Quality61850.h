@@ -6,10 +6,10 @@
 #ifndef QUALITY61850_H
 #define QUALITY61850_H
 
+#include "BaseClass.h"
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/SCADA/Source.h"
 #include "IEC61970/Base/Meas/Validity.h"
-#include "BaseClass.h"
 
 namespace IEC61970
 {
@@ -47,7 +47,7 @@ namespace IEC61970
 				 */
 				IEC61970::Base::Domain::Boolean oldData;
 				/**
-				 * Measurement value is blocked and hence unavailable for transmission.
+				 * Measurement value is blocked and hence unavailable for transmission. 
 				 */
 				IEC61970::Base::Domain::Boolean operatorBlocked;
 				/**
@@ -72,7 +72,7 @@ namespace IEC61970
 				IEC61970::Base::Domain::Boolean outOfRange;
 				/**
 				 * Measurement value is beyond the capability of being  represented properly. For
-				 * example, a counter value overflows from maximum count back to a value of zero.
+				 * example, a counter value overflows from maximum count back to a value of zero. 
 				 */
 				IEC61970::Base::Domain::Boolean overFlow;
 				/**

@@ -1,3 +1,4 @@
+#include "BaseClass.h"
 #include "IEC61970/Base/AuxiliaryEquipment/AuxiliaryEquipment.h"
 #include "IEC61970/Base/AuxiliaryEquipment/CurrentTransformer.h"
 #include "IEC61970/Base/AuxiliaryEquipment/FaultIndicator.h"

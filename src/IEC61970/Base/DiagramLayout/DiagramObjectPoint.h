@@ -7,10 +7,10 @@
 #ifndef DIAGRAMOBJECTPOINT_H
 #define DIAGRAMOBJECTPOINT_H
 
+#include "BaseClass.h"
 #include "IEC61970/Base/Domain/Integer.h"
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/DiagramLayout/DiagramObjectGluePoint.h"
-#include "BaseClass.h"
 
 namespace IEC61970
 {
@@ -21,7 +21,7 @@ namespace IEC61970
 			/**
 			 * A point in a given space defined by 3 coordinates and associated to a diagram
 			 * object.  The coordinates may be positive or negative as the origin does not
-			 * have to be in the corner of a diagram.
+			 * have to be in the corner of a diagram.  
 			 */
 			class DiagramObjectPoint : public BaseClass
 			{

@@ -7,11 +7,11 @@
 #ifndef PHASEIMPEDANCEDATA_H
 #define PHASEIMPEDANCEDATA_H
 
+#include "BaseClass.h"
 #include "IEC61970/Base/Domain/SusceptancePerLength.h"
 #include "IEC61970/Base/Domain/ResistancePerLength.h"
 #include "IEC61970/Base/Domain/Integer.h"
 #include "IEC61970/Base/Domain/ReactancePerLength.h"
-#include "BaseClass.h"
 
 namespace IEC61970
 {

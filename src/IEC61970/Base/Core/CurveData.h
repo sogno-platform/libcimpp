@@ -6,8 +6,8 @@
 #ifndef CURVEDATA_H
 #define CURVEDATA_H
 
-#include "IEC61970/Base/Domain/Float.h"
 #include "BaseClass.h"
+#include "IEC61970/Base/Domain/Float.h"
 
 namespace IEC61970
 {

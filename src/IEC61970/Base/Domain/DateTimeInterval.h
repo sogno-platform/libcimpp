@@ -7,8 +7,8 @@
 #ifndef DATETIMEINTERVAL_H
 #define DATETIMEINTERVAL_H
 
-#include "IEC61970/Base/Domain/DateTime.h"
 #include "BaseClass.h"
+#include "IEC61970/Base/Domain/DateTime.h"
 
 namespace IEC61970
 {

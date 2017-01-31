@@ -7,9 +7,9 @@
 #ifndef BRANCHGROUPTERMINAL_H
 #define BRANCHGROUPTERMINAL_H
 
+#include "BaseClass.h"
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Core/Terminal.h"
-#include "BaseClass.h"
 
 namespace IEC61970
 {

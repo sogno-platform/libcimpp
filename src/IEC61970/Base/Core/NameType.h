@@ -7,9 +7,9 @@
 #ifndef NAMETYPE_H
 #define NAMETYPE_H
 
+#include "BaseClass.h"
 #include "IEC61970/Base/Domain/String.h"
 #include "IEC61970/Base/Core/NameTypeAuthority.h"
-#include "BaseClass.h"
 
 namespace IEC61970
 {

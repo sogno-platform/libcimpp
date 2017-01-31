@@ -6,7 +6,6 @@
 
 #ifndef STATEVARIABLE_H
 #define STATEVARIABLE_H
-
 #include "BaseClass.h"
 
 namespace IEC61970

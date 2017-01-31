@@ -6,9 +6,9 @@
 #ifndef IEC61970CIMVERSION_H
 #define IEC61970CIMVERSION_H
 
+#include "BaseClass.h"
 #include "IEC61970/Base/Domain/Date.h"
 #include "IEC61970/Base/Domain/String.h"
-#include "BaseClass.h"
 
 namespace IEC61970
 {

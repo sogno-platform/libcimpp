@@ -7,8 +7,8 @@
 #ifndef TIMEINTERVAL_H
 #define TIMEINTERVAL_H
 
-#include "IEC61970/Base/Domain/Time.h"
 #include "BaseClass.h"
+#include "IEC61970/Base/Domain/Time.h"
 
 namespace IEC61970
 {

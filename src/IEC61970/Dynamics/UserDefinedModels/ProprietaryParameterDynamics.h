@@ -7,6 +7,7 @@
 #ifndef PROPRIETARYPARAMETERDYNAMICS_H
 #define PROPRIETARYPARAMETERDYNAMICS_H
 
+#include "BaseClass.h"
 #include "IEC61970/Base/Domain/Boolean.h"
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Domain/Integer.h"
@@ -25,7 +26,6 @@
 #include "IEC61970/Dynamics/UserDefinedModels/LoadUserDefined.h"
 #include "IEC61970/Dynamics/UserDefinedModels/TurbineLoadControllerUserDefined.h"
 #include "IEC61970/Dynamics/UserDefinedModels/ExcitationSystemUserDefined.h"
-#include "BaseClass.h"
 
 namespace IEC61970
 {

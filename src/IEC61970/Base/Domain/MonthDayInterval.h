@@ -7,8 +7,8 @@
 #ifndef MONTHDAYINTERVAL_H
 #define MONTHDAYINTERVAL_H
 
-#include "IEC61970/Base/Domain/MonthDay.h"
 #include "BaseClass.h"
+#include "IEC61970/Base/Domain/MonthDay.h"
 
 namespace IEC61970
 {

@@ -7,10 +7,10 @@
 #ifndef TAPCHANGERTABLEPOINT_H
 #define TAPCHANGERTABLEPOINT_H
 
+#include "BaseClass.h"
 #include "IEC61970/Base/Domain/PerCent.h"
 #include "IEC61970/Base/Domain/Float.h"
 #include "IEC61970/Base/Domain/Integer.h"
-#include "BaseClass.h"
 
 namespace IEC61970
 {

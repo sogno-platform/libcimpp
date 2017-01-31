@@ -6,10 +6,10 @@
 #ifndef IDENTIFIEDOBJECT_H
 #define IDENTIFIEDOBJECT_H
 
+#include "BaseClass.h"
 #include <list>
 
 #include "IEC61970/Base/Domain/String.h"
-#include "BaseClass.h"
 
 // Forward declaration of DiagramObject
 namespace IEC61970

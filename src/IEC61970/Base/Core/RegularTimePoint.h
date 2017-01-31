@@ -6,9 +6,9 @@
 #ifndef REGULARTIMEPOINT_H
 #define REGULARTIMEPOINT_H
 
+#include "BaseClass.h"
 #include "IEC61970/Base/Domain/Integer.h"
 #include "IEC61970/Base/Domain/Float.h"
-#include "BaseClass.h"
 
 namespace IEC61970
 {

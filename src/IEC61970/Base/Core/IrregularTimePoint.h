@@ -6,9 +6,9 @@
 #ifndef IRREGULARTIMEPOINT_H
 #define IRREGULARTIMEPOINT_H
 
+#include "BaseClass.h"
 #include "IEC61970/Base/Domain/Seconds.h"
 #include "IEC61970/Base/Domain/Float.h"
-#include "BaseClass.h"
 
 namespace IEC61970
 {
