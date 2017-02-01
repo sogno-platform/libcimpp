@@ -44,7 +44,6 @@ void CIMContentHandler::startDocument()
 
 void CIMContentHandler::endDocument()
 {
-	this->resolveRDFRelations();
 }
 
 void CIMContentHandler::startPrefixMapping(const std::string &prefix, const std::string &uri)

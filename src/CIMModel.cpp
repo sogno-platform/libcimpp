@@ -30,6 +30,7 @@ bool CIMModel::addCIMFile(std::string path)
 
 void CIMModel::parseFiles()
 {
+	// TODO: What happens when run twice?!
 	CIMContentHandler ContentHandler;
 	ContentHandler.setObjectsContainer(&Objects);
 	ContentHandler.setRDFMap(&RDFMap);
