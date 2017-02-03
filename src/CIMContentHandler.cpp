@@ -88,14 +88,10 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 	if(CIMFactory::IsCIMClass(qName))
 	{
 		// Get rdf_id
-		std::string rdf_id;
-		try
+		std::string rdf_id = get_rdf_id(atts);
+		if(rdf_id.empty())
 		{
-			rdf_id = get_rdf_id(atts);
-		}
-		catch(std::logic_error &excep)
-		{
-			std::cerr << excep.what() << std::endl; // TODO: No exeptions
+			std::cerr << "CIMContentHandler: Error: Attributes contain no rdf:ID" << std::endl;
 			exit(CIMPARSER_OBJECT_WITHOUT_RDF_ID);
 		}
 		// check if object already exists
@@ -114,28 +110,25 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 		return;
 	}
 
-	// Lege einen neuen Task an
-	try // FIXME: No exep
+	// Create a task if the XML element is no CIM class and contains a RDF ID
+	std::string rdf_id = get_rdf_resource(atts);
+	if(!rdf_id.empty())
 	{
-		std::string rdf_id = get_rdf_resource(atts);
 		taskQueue.push_back(Task(objectStack.top(), qName, rdf_id));
 		return;
 	}
-	catch(std::logic_error &excep)
-	{}
 
-	try
+	// Assign an enum symbol if the rdf id contains a enum symbol
+	std::string enumSymbol = get_rdf_enum(atts);
+	if(!enumSymbol.empty())
 	{
-		std::string enumSymbol = get_rdf_enum(atts);
 		if(!assign(objectStack.top(), qName, enumSymbol))
-			std::cerr << "Error: " << enumSymbol << " can not be assigned" << std::endl;
+			std::cerr << "CIMContentHandler: Error: " << enumSymbol << " can not be assigned" << std::endl;
 		return;
 	}
-	catch(std::logic_error &excep)
-	{}
 
 	// Nobody knows what to do
-	std::cerr << "Error: Nobody knows, the " << qName << " I've seen... *sing*" << std::endl;
+	std::cerr << "CIMContentHandler: Error: Nobody knows, the " << qName << " I've seen... *sing*" << std::endl;
 }
 
 void CIMContentHandler::endElement(const std::string &namespaceURI, const std::string &localName, const std::string &qName)
@@ -164,7 +157,8 @@ void CIMContentHandler::characters(const std::string &characters)
 	}
 	if(objectStack.empty())
 	{
-		throw std::runtime_error("objectStack empty");
+		std::cerr << "CIMContentHandler: Critical Error: objectStack empty" << std::endl;
+		exit(CIMPARSER_OBJECT_STACK_EMPTY);
 	}
 
 #ifndef DEBUG
@@ -176,7 +170,7 @@ void CIMContentHandler::characters(const std::string &characters)
 		return;
 	}
 	if(!assign(objectStack.top(), tagStack.top(), characters))
-		std::cout << "Note: Cannot assign '" << characters << "' to " << tagStack.top() << std::endl;
+		std::cout << "CIMContentHandler: Note: Cannot assign '" << characters << "' to " << tagStack.top() << std::endl;
 #endif
 }
 
@@ -198,7 +192,7 @@ std::string CIMContentHandler::get_rdf_id(const AttributesT &attributes)
 		if(attributes.getQName(i) == "rdf:about")
 			return attributes.getValue(i).substr(1);
 	}
-	throw std::logic_error("Attributes contain no rdf:ID");
+	return std::string();
 }
 
 std::string CIMContentHandler::get_rdf_resource(const AttributesT &attributes)
@@ -211,10 +205,9 @@ std::string CIMContentHandler::get_rdf_resource(const AttributesT &attributes)
 			{
 				return attributes.getValue(i).substr(1);
 			}
-			throw std::logic_error("rdf:resource does not relate to an object in this file");
 		}
 	}
-	throw std::logic_error("Attribute contain no rdf:resource");
+	return std::string();
 }
 
 bool CIMContentHandler::is_only_whitespace(const std::string& characters)
@@ -235,10 +228,11 @@ std::string CIMContentHandler::get_rdf_enum(const AttributesT &attributes)
 			{
 				return std::string(m[1]).append(".").append(m[2]);
 			}
-			throw std::logic_error("rdf:resource does not relate to an object in this file");
+			std::cerr << "CIMContentHandler: Note: rdf:resource does not relate to an object in this file" << std::endl;
 		}
 	}
-	throw std::logic_error("Attribute contain no rdf:resource");
+	std::cerr << "CIMContentHandler: Note: Attribute contain no rdf:resource" << std::endl;
+	return std::string();
 }
 
 bool CIMContentHandler::resolveRDFRelations()
@@ -251,7 +245,7 @@ bool CIMContentHandler::resolveRDFRelations()
 	{
 		if(!it->resolve(RDFMap))
 		{
-			std::cout << "Note: Cannot resolve following RDF relationship: ";
+			std::cout << "CIMContentHandler: Note: Cannot resolve following RDF relationship: ";
 			it->print();
 			unresolved++;
 			++it;
@@ -261,7 +255,7 @@ bool CIMContentHandler::resolveRDFRelations()
 			taskQueue.erase(it++);
 		}
 	}
-	std::cout << "Note: " << unresolved << " out of " << size << " tasks remain unresolved!" << std::endl;
+	std::cout << "CIMContentHandler: Note: " << unresolved << " out of " << size << " tasks remain unresolved!" << std::endl;
 	if(unresolved > 0)
 		return false;
 	else
