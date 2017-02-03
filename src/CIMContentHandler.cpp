@@ -8,6 +8,7 @@
 #include "IEC61970.hpp"
 #include "CIMFactory.hpp"
 #include "assignments.hpp"
+#include "ErrorCodes.hpp"
 
 CIMContentHandler::CIMContentHandler() : Objects(nullptr), RDFMap(nullptr)
 {
@@ -16,9 +17,15 @@ CIMContentHandler::CIMContentHandler() : Objects(nullptr), RDFMap(nullptr)
 CIMContentHandler::~CIMContentHandler()
 {
 	if(!objectStack.empty())
-		std::cerr << "Error: objectStack is not empty!" << std::endl;
+	{
+		std::cerr << "CIMContentHandler: Critical Error: objectStack is not empty!" << std::endl;
+		exit(CIMPARSER_OBJECT_STACK_ERROR);
+	}
 	if(!tagStack.empty())
-		std::cerr << "Error: tagStack is not empty!" << std::endl;
+	{
+		std::cerr << "CIMContentHandler: Critical Error: tagStack is not empty!" << std::endl;
+		exit(CIMPARSER_TAG_STACK_ERROR);
+	}
 }
 
 void CIMContentHandler::setObjectsContainer(std::vector<BaseClass*> *Objects)
@@ -37,9 +44,16 @@ void CIMContentHandler::setDocumentLocator(const LocatorT &locator)
 void CIMContentHandler::startDocument()
 {
 	if(Objects == nullptr)
-		throw std::runtime_error("CIMContentHandler: Objects container not set");
+	{
+		std::cerr << "CIMContentHandler: Error: Objects container not set" << std::endl;
+		exit(CIMPARSER_OBJECT_CONTAINER_NOT_SET);
+	}
 	if(RDFMap == nullptr)
-		throw std::runtime_error("CIMContentHandler: RDFMap not set");
+	{
+		std::cerr << "CIMContentHandler: Error: RDFMap not set" << std::endl;
+		exit(CIMPARSER_RDF_MAP_NOT_SET);
+	}
+
 }
 
 void CIMContentHandler::endDocument()
@@ -64,8 +78,10 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 	// Remember last opened tag
 	tagStack.push(qName);
 
-	// Is the value of the tag a literal?
-	if(atts.getLength() == 0) // TODO: Was habe ich damit gemeint?
+	// If there is no RDF ID (an XML attribute!) then we don't have a new CIM
+	// object or RDF relation therefore the XML element will contain a value
+	// assignment.
+	if(atts.getLength() == 0)
 		return;
 
 	// If name is a CIM class check if to create a new object
@@ -79,8 +95,8 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 		}
 		catch(std::logic_error &excep)
 		{
-			std::cerr << excep.what() << std::endl;
-			exit(1);
+			std::cerr << excep.what() << std::endl; // TODO: No exeptions
+			exit(CIMPARSER_OBJECT_WITHOUT_RDF_ID);
 		}
 		// check if object already exists
 		std::unordered_map<std::string, BaseClass*>::iterator it = RDFMap->find(rdf_id);
