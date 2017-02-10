@@ -36,6 +36,8 @@ void ModelDescriptionHandler::startElement(const std::string &namespaceURI, cons
 		return;
 	}
 
+	tagStack.push(qName);
+
 	if(qName.find("DependentOn") != std::string::npos) //TODO:Exception
 	{
 		std::string rdfID = get_rdf_resource(atts);
@@ -50,13 +52,16 @@ void ModelDescriptionHandler::startElement(const std::string &namespaceURI, cons
 
 		modelDescription->rdfID = rdfID;
 	}
-
-	tagStack.push(qName);
-
 }
 
 void ModelDescriptionHandler::endElement(const std::string &namespaceURI, const std::string &localName, const std::string &qName)
 {
+	//Only process tags in md namespace
+	if(qName.find("md:") == std::string::npos)
+	{
+		return;
+	}
+
 	tagStack.pop();
 }
 
