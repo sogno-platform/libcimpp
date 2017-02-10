@@ -67,7 +67,7 @@ void ModelDescriptionHandler::endElement(const std::string &namespaceURI, const 
 
 void ModelDescriptionHandler::characters(const std::string &ch) //TODO:getter
 {
-	if(tagStack.top().find("md:") != std::string::npos)
+	if(!tagStack.empty() && tagStack.top().find("md:") != std::string::npos)
 	{
 		std::string name = tagStack.top();
 		if(name.find("created") != std::string::npos)
