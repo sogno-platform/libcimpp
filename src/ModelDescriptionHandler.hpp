@@ -3,12 +3,11 @@
 
 #include <string>
 #include <stack>
-#include <vector>
 
 #include <SAX/ContentHandler.hpp>
 #include <SAX/Locator.hpp>
 
-class ModelDescription;
+#include "ModelDescription.hpp"
 
 class ModelDescriptionHandler : public Arabica::SAX::ContentHandler<std::string>
 {

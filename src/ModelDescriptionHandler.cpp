@@ -1,5 +1,4 @@
 #include "ModelDescriptionHandler.hpp"
-#include "ModelDescription.hpp"
 
 #include <stdexcept>
 #include <iostream>
