@@ -2,14 +2,20 @@
 #define MODELDESCRIPTIONHANDLER_HPP
 
 #include <string>
+#include <stack>
+#include <vector>
+
 #include <SAX/ContentHandler.hpp>
 #include <SAX/Locator.hpp>
+
+class ModelDescription;
 
 class ModelDescriptionHandler : public Arabica::SAX::ContentHandler<std::string>
 {
 public:
 	ModelDescriptionHandler();
 
+	void setModelDescription(ModelDescription* mDesc);
 protected:
 	void setDocumentLocator(const LocatorT &locator) override;
 	void startDocument() override;
@@ -22,6 +28,15 @@ protected:
 	void ignorableWhitespace(const std::string &ch) override;
 	void processingInstruction(const std::string &target, const std::string &data) override;
 	void skippedEntity(const std::string &name) override;
+
+	static std::string get_rdf_id(const AttributesT &properties);
+	static std::string get_rdf_resource(const AttributesT &properties);
+
+private: 
+	ModelDescription* modelDescription;
+	
+	std::stack<std::string> tagStack;
+
 };
 
 #endif // MODELDESCRIPTIONHANDLER_HPP
