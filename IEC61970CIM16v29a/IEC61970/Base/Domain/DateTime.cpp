@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  DateTime.cpp
+//  Implementation of the Class DateTime
+///////////////////////////////////////////////////////////
+
+#include "DateTime.h"
+
+using IEC61970::Base::Domain::DateTime;
+
+
+DateTime::DateTime(){
+
+}
+
+
+
+DateTime::~DateTime(){
+
+}

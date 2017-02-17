@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  Switch.cpp
+//  Implementation of the Class Switch
+///////////////////////////////////////////////////////////
+
+#include "Switch.h"
+
+using IEC61970::Base::Wires::Switch;
+
+
+Switch::Switch(){
+
+}
+
+
+
+Switch::~Switch(){
+
+}

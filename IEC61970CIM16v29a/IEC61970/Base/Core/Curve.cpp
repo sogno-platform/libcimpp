@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  Curve.cpp
+//  Implementation of the Class Curve
+///////////////////////////////////////////////////////////
+
+#include "Curve.h"
+
+using IEC61970::Base::Core::Curve;
+
+
+Curve::Curve(){
+
+}
+
+
+
+Curve::~Curve(){
+
+}
