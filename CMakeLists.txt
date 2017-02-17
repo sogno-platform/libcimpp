@@ -11,13 +11,26 @@ set(CIMParser_VERSION ${CIMParser_MAJOR_VERSION}.${CIMParser_MINOR_VERSION})
 
 # Options
 option(BUILD_SHARED_LIBS "Build shared library" OFF)
+set(USE_CIM_VERSION "IEC61970CIM17v07" CACHE STRING "Define CIM Version")
+message(STATUS "Building ${PROJECT_NAME} with USE_CIM_VERSION=${USE_CIM_VERSION}")
 
-#include_directories(src)
 file(GLOB_RECURSE SRC src/*.cpp)
 
 add_library(${PROJECT_NAME} ${SRC})
 target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>)
 target_link_libraries(${PROJECT_NAME} PRIVATE arabica)
+
+if(USE_CIM_VERSION STREQUAL "IEC61970CIM17v07")
+  target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/IEC61970CIM17v07>)
+  file(GLOB_RECURSE CIM_SRC IEC61970CIM17v07/*.cpp)
+  target_sources(${PROJECT_NAME} PRIVATE ${CIM_SRC})
+  configure_file(${CMAKE_CURRENT_SOURCE_DIR}/IEC61970CIM17v07/assignment_alias.csv ${CMAKE_BINARY_DIR}/assignment_alias.csv COPYONLY)
+  configure_file(${CMAKE_CURRENT_SOURCE_DIR}/IEC61970CIM17v07/task_alias.csv ${CMAKE_BINARY_DIR}/task_alias.csv COPYONLY)
+elseif(USE_CIM_VERSION STREQUAL "IEC61970CIM16v29a")
+  message(FATAL_ERROR "USE_CIM_VERSION=IEC61970CIM16v29a currently unsupported")
+else()
+  message(FATAL_ERROR "${USE_CIM_VERSION} is an invalid value for USE_CIM_VERSION")
+endif()
 
 # Configure Doxyfile
 find_package(Doxygen)
