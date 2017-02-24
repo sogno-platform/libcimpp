@@ -23,36 +23,28 @@ CIMModel::~CIMModel()
 
 bool CIMModel::addCIMFile(CIMFile file)
 {
+	if(!file.good())
+	{
+		return false;
+	}
+
 	Files.push_back(file);
 
-	ModelDescriptionHandler DescriptionHandler;
-	DescriptionHandler.setModelDescription(file.getModelDescription());
-
-	Arabica::SAX::XMLReader<std::string> Reader;
-	Reader.setContentHandler(DescriptionHandler);
-
-	Arabica::SAX::InputSource<std::string> source(file.getpath());
-	Reader.parse(source);
-
-	// TODO: Check file
 	return true;
 }
 
 bool CIMModel::addCIMFile(std::string path)
 {
-	Files.push_back(CIMFile(path));
+	CIMFile file(path);
 
-	ModelDescriptionHandler DescriptionHandler;
-	DescriptionHandler.setModelDescription((Files.back()).getModelDescription());
+	if(!file.good())
+	{
+		return false;
+	}
 
-	Arabica::SAX::XMLReader<std::string> Reader;
-	Reader.setContentHandler(DescriptionHandler);
+	Files.push_back(file);
 
-	Arabica::SAX::InputSource<std::string> source(path);
-	Reader.parse(source);
-
-	// TODO: Check file
-	return false;
+	return true;
 }
 
 void CIMModel::parseFiles()

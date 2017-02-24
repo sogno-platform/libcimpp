@@ -15,7 +15,10 @@ int main(int argc, char** argv)
 
 	for(int i = 1; i < argc; i++)
 	{
-		someModel.addCIMFile(argv[i]);
+		if(!someModel.addCIMFile(argv[i]))
+		{
+			std::cout << "File ' " << argv[i] << " ' is not XML or does not exist" << std::endl;
+		};
 	}
 
 	someModel.parseFiles();
