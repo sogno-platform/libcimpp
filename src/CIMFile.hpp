@@ -15,10 +15,12 @@ public:
 
 	ModelDescription* getModelDescription();
 
+	bool good();
+
 private:
 	std::string path;
 
-	ModelDescription modelDescription;// Additional meta data
+	ModelDescription* modelDescription;// Additional meta data
 };
 
 #endif // CIMFILE_HPP
