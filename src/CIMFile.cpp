@@ -36,6 +36,7 @@ ModelDescription* CIMFile::getModelDescription()
 		Reader.setContentHandler(DescriptionHandler);
 
 		Arabica::SAX::InputSource<std::string> source(path);
+		Reader.parse(source);
 	}
 
 	return modelDescription;
