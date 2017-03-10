@@ -4,6 +4,7 @@
 #include "ModelDescription.hpp"
 #include "SAX/InputSource.hpp"
 #include "SAX/XMLReader.hpp"
+#include "exceptions.h"
 
 #include <vector>
 #include <string>
@@ -75,8 +76,7 @@ void CIMModel::parseFiles()
 				}
 				if(!depFound)
 				{
-					std::exit;
-					//TODO: Throw exception
+					throw missingFile_exception(this, fileDepID, "CIMModel: Error: Dependency is missing");
 				}
 			}
 		}
