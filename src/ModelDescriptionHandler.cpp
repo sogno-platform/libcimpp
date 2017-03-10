@@ -4,6 +4,8 @@
 #include <iostream>
 #include <string>
 
+#include "exceptions.h"
+
 
 ModelDescriptionHandler::ModelDescriptionHandler() : modelDescription(nullptr)
 {
@@ -15,7 +17,7 @@ void ModelDescriptionHandler::setDocumentLocator(const LocatorT &locator)
 void ModelDescriptionHandler::startDocument()
 {
 	if(modelDescription == nullptr)
-		throw std::runtime_error("ModelDescriptionHandler: modelDescription not set");
+		throw critical_error("ModelDescriptionHandler: Critical Error: modelDescription not set");
 }
 
 void ModelDescriptionHandler::endDocument()

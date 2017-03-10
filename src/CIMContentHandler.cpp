@@ -8,7 +8,7 @@
 #include "IEC61970.hpp"
 #include "CIMFactory.hpp"
 #include "assignments.hpp"
-#include "ErrorCodes.hpp"
+#include "exceptions.h"
 
 CIMContentHandler::CIMContentHandler() : Objects(nullptr), RDFMap(nullptr)
 {
@@ -18,13 +18,11 @@ CIMContentHandler::~CIMContentHandler()
 {
 	if(!objectStack.empty())
 	{
-		std::cerr << "CIMContentHandler: Critical Error: objectStack is not empty!" << std::endl;
-		exit(CIMPARSER_OBJECT_STACK_ERROR);
+		throw critical_error("CIMContentHandler: Critical Error: objectStack is not empty!");
 	}
 	if(!tagStack.empty())
 	{
-		std::cerr << "CIMContentHandler: Critical Error: tagStack is not empty!" << std::endl;
-		exit(CIMPARSER_TAG_STACK_ERROR);
+		throw critical_error("CIMContentHandler: Critical Error: tagStack is not empty!");
 	}
 }
 
@@ -45,13 +43,11 @@ void CIMContentHandler::startDocument()
 {
 	if(Objects == nullptr)
 	{
-		std::cerr << "CIMContentHandler: Error: Objects container not set" << std::endl;
-		exit(CIMPARSER_OBJECT_CONTAINER_NOT_SET);
+		throw std::logic_error("CIMContentHandler: Error: Objects container not set");
 	}
 	if(RDFMap == nullptr)
 	{
-		std::cerr << "CIMContentHandler: Error: RDFMap not set" << std::endl;
-		exit(CIMPARSER_RDF_MAP_NOT_SET);
+		throw std::logic_error("CIMContentHandler: Error: RDFMap not set");
 	}
 
 }
@@ -91,8 +87,7 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 		std::string rdf_id = get_rdf_id(atts);
 		if(rdf_id.empty())
 		{
-			std::cerr << "CIMContentHandler: Error: Attributes contain no rdf:ID" << std::endl;
-			exit(CIMPARSER_OBJECT_WITHOUT_RDF_ID);
+			throw std::logic_error("CIMContentHandler: Error: Attributes contain no rdf:ID");
 		}
 		// check if object already exists
 		std::unordered_map<std::string, BaseClass*>::iterator it = RDFMap->find(rdf_id);
@@ -157,8 +152,7 @@ void CIMContentHandler::characters(const std::string &characters)
 	}
 	if(objectStack.empty())
 	{
-		std::cerr << "CIMContentHandler: Critical Error: objectStack empty" << std::endl;
-		exit(CIMPARSER_OBJECT_STACK_EMPTY);
+		throw critical_error("CIMContentHandler: Critical Error: objectStack empty");
 	}
 
 #ifndef DEBUG
