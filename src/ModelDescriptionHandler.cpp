@@ -36,11 +36,7 @@ void ModelDescriptionHandler::startPrefixMapping(const std::string &prefix, cons
 
 		if(versionParser != versionFile)
 		{
-			std::cout << "File version: '" << versionFile << "' does not match parser version: '" << versionParser << "'" << std::endl;
-		}
-        else
-		{
-			std::cout << "Using CIM Version: '" << versionParser << "'" << std::endl;
+			std::cout << "CIM version(" << versionFile << ") in File does not match CIM version(" << versionParser << ") in Parser" << std::endl;
 		}
 	}
 }
