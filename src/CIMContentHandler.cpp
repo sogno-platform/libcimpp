@@ -43,11 +43,11 @@ void CIMContentHandler::startDocument()
 {
 	if(Objects == nullptr)
 	{
-		throw std::logic_error("CIMContentHandler: Error: Objects container not set");
+		throw NoObjectsContainer(this, "CIMContentHandler: Error: Objects container not set");
 	}
 	if(RDFMap == nullptr)
 	{
-		throw std::logic_error("CIMContentHandler: Error: RDFMap not set");
+		throw NoRdfMap(this, "CIMContentHandler: Error: RDFMap not set");
 	}
 
 }
@@ -87,7 +87,7 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 		std::string rdf_id = get_rdf_id(atts);
 		if(rdf_id.empty())
 		{
-			throw std::logic_error("CIMContentHandler: Error: Attributes contain no rdf:ID");
+			throw NoRdfID("CIMContentHandler: Error: Attributes contain no rdf:ID");
 		}
 		// check if object already exists
 		std::unordered_map<std::string, BaseClass*>::iterator it = RDFMap->find(rdf_id);
