@@ -10,7 +10,7 @@
 #include <vector>
 
 #include "BaseClass.h"
-#include "task.h"
+#include "Task.hpp"
 
 class CIMContentHandler : public Arabica::SAX::ContentHandler<std::string>
 {

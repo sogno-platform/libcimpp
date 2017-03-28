@@ -1,9 +1,9 @@
 CIM-XML-Parser
 ==============
 
-### v1.x
+### v2.x
 #### General
-Version `v1.x` uses [arabica](http://www.jezuk.co.uk/cgi-bin/view/arabica) as a cross platform wrapper around one of the XML parsers listed int the dependencies.
+Version `v2.x` uses [arabica](http://www.jezuk.co.uk/cgi-bin/view/arabica) as a cross platform wrapper around one of the XML parsers listed int the dependencies.
 It is recommended to use the CIM parser as a cmake module.
 Currently the CIM parser does not provide an install target.
 
@@ -50,6 +50,12 @@ To use the CIM parser as an cmake module, the project using the CIM parser needs
 
 #### Usage of the library
 For information how to use the library please see the cmake example. The make example is currently not supported due to the lack of an install target for arabica.
+
+
+### v1.x
+#### General
+Version v1.x and v2.x use the same backend and require the same build instructions. They differ only in interface and functionality.
+
 
 ### v0.x
 Version `v0.x` uses [libxml2++](http://libxmlplusplus.sourceforge.net/) as XML backend. For more information see the README provided with Version 0.x.
