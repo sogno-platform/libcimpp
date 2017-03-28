@@ -1,0 +1,20 @@
+///////////////////////////////////////////////////////////
+//  Time.cpp
+//  Implementation of the Class Time
+//  Original author: kdemaree
+///////////////////////////////////////////////////////////
+
+#include "Time.h"
+
+using IEC61970::Base::Domain::Time;
+
+
+Time::Time(){
+
+}
+
+
+
+Time::~Time(){
+
+}

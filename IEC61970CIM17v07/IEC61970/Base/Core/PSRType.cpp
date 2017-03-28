@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  PSRType.cpp
+//  Implementation of the Class PSRType
+///////////////////////////////////////////////////////////
+
+#include "PSRType.h"
+
+using IEC61970::Base::Core::PSRType;
+
+
+PSRType::PSRType(){
+
+}
+
+
+
+PSRType::~PSRType(){
+
+}

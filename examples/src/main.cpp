@@ -1,6 +1,6 @@
 #include <iostream>
-#include "CIMParser.hpp"
-#include "IEC61970.h"
+#include "CIMModel.hpp"
+#include "IEC61970.hpp"
 
 int main(int argc, char** argv)
 {
@@ -11,13 +11,19 @@ int main(int argc, char** argv)
 		return 1;
 	}
 
-	CIMParser parser;
+	CIMModel someModel;
 
 	for(int i = 1; i < argc; i++)
 	{
-		parser.parse_file(argv[i]);
+		if(!someModel.addCIMFile(argv[i]))
+		{
+			std::cout << "File ' " << argv[i] << " ' is not XML or does not exist" << std::endl;
+		};
 	}
-	for (BaseClass* Object : parser.Objects)
+
+	someModel.parseFiles();
+
+	for (BaseClass* Object : someModel.Objects)
 	{
 		if(IEC61970::Base::Core::IdentifiedObject* IdObj = dynamic_cast<IEC61970::Base::Core::IdentifiedObject*>(Object))
 		{
