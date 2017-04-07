@@ -11,7 +11,7 @@
 #include <stdexcept>
 #include <iostream>
 
-CIMModel::CIMModel()
+CIMModel::CIMModel() : DependencyCheck(true)
 {
 }
 
@@ -60,23 +60,26 @@ void CIMModel::parseFiles()
 
 	for(CIMFile& file : Files) //TODO: Suche evtl. mit eigener dependency-liste beschleunigen
 	{
-		if(!(file.getModelDescription()->dependencyID).empty()) //TODO: Ueberpruefung besser Implementieren
+		if(DependencyCheck == true)
 		{
-			bool depFound;
-			for(std::string& fileDepID : (file.getModelDescription()->dependencyID))
+			if(!(file.getModelDescription()->dependencyID).empty()) //TODO: Ueberpruefung besser Implementieren
 			{
-				depFound = 0;
-				for(CIMFile& fileDep : Files)
+				bool depFound;
+				for(std::string& fileDepID : (file.getModelDescription()->dependencyID))
 				{
-					if(fileDep.getModelDescription()->rdfID == fileDepID)
+					depFound = 0;
+					for(CIMFile& fileDep : Files)
 					{
-						depFound = 1;
-						break;
+						if(fileDep.getModelDescription()->rdfID == fileDepID)
+						{
+							depFound = 1;
+							break;
+						}
 					}
-				}
-				if(!depFound)
-				{
-					throw missingFile_exception(this, fileDepID, "CIMModel: Error: Dependency is missing");
+					if(!depFound)
+					{
+						throw missingFile_exception(this, fileDepID, "CIMModel: Error: Dependency is missing");
+					}
 				}
 			}
 		}
@@ -87,4 +90,19 @@ void CIMModel::parseFiles()
 	}
 
 	ContentHandler.resolveRDFRelations();
+}
+
+void CIMModel::setDependencyCheckOn()
+{
+	DependencyCheck = true;
+}
+
+void CIMModel::setDependencyCheckOff()
+{
+	DependencyCheck = false;
+}
+
+bool CIMModel::getDependencyCheck()
+{
+	return DependencyCheck;
 }
