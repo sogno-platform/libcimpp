@@ -1,5 +1,5 @@
-#ifndef EXCEPTIONS_H
-#define EXCEPTIONS_H
+#ifndef CIMEXCEPTIONS_HPP
+#define CIMEXCEPTIONS_HPP
 
 #include <string>
 #include <stdexcept>
@@ -58,4 +58,4 @@ public:
 	NoRdfMap(CIMContentHandler* handler, const std::string& what) : ContentHandler(handler), logic_error(what){}
 };
 
-#endif // EXCEPTIONS_H
+#endif // CIMEXCEPTIONS_HPP

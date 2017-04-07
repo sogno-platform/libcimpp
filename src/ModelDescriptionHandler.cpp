@@ -6,7 +6,7 @@
 #include <iostream>
 #include <string>
 
-#include "exceptions.h"
+#include "CIMExceptions.hpp"
 
 using IEC61970::IEC61970CIMVersion;
 

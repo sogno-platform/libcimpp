@@ -4,7 +4,7 @@
 #include "ModelDescription.hpp"
 #include "SAX/InputSource.hpp"
 #include "SAX/XMLReader.hpp"
-#include "exceptions.h"
+#include "CIMExceptions.hpp"
 
 #include <vector>
 #include <string>

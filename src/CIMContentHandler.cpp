@@ -8,7 +8,7 @@
 #include "IEC61970.hpp"
 #include "CIMFactory.hpp"
 #include "assignments.hpp"
-#include "exceptions.h"
+#include "CIMExceptions.hpp"
 
 CIMContentHandler::CIMContentHandler() : Objects(nullptr), RDFMap(nullptr)
 {
