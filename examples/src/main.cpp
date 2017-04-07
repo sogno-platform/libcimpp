@@ -1,6 +1,7 @@
 #include <iostream>
 #include "CIMModel.hpp"
 #include "IEC61970.hpp"
+#include "CIMExceptions.hpp"
 
 int main(int argc, char** argv)
 {
@@ -22,7 +23,15 @@ int main(int argc, char** argv)
 		};
 	}
 
-	someModel.parseFiles();
+	try
+	{
+		someModel.parseFiles();
+	}
+	catch(std::runtime_error &exp)
+	{
+		std::cerr << exp.what() << std::endl;
+	}
+
 
 	for (BaseClass* Object : someModel.Objects)
 	{
