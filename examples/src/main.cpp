@@ -12,6 +12,7 @@ int main(int argc, char** argv)
 	}
 
 	CIMModel someModel;
+	someModel.setDependencyCheckOff();
 
 	for(int i = 1; i < argc; i++)
 	{

@@ -44,11 +44,21 @@ public:
 	/** Container to access all the CIM objects */
 	std::vector<BaseClass*> Objects;
 
+	/** \brief Set dependency check on */
+	void setDependencyCheckOn();
+
+	/** \brief Set dependency check off */
+	void setDependencyCheckOff();
+
+	/** \brief get dependency check status */
+	bool getDependencyCheck();
+
 	// Model meta data
 
 private:
 	std::list<CIMFile> Files;
 	std::unordered_map<std::string, BaseClass*> RDFMap;
+	bool DependencyCheck;
 };
 
 #endif // CIMModel_HPP
