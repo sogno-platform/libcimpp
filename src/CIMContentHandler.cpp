@@ -67,7 +67,13 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 	// Only process tags in cim namespace
 	if(qName.find("cim:") == std::string::npos)
 	{
-		//std::cerr << name << " not in namespace \"cim\"" << std::endl;
+		bool isModelDescription = qName.find("md:") != std::string::npos || qName.find("DependentOn:") != std::string::npos || qName.find("createdBy") != std::string::npos;
+		bool isModel = qName.find("rdf:") != std::string::npos;
+
+		if(!isModelDescription && !isModel)
+		{
+			std::cerr << "WARNING: "<< qName << " not in namespace \"cim\"" << std::endl;
+		}
 		return;
 	}
 
