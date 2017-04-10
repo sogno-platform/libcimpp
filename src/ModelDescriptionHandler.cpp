@@ -56,13 +56,11 @@ void ModelDescriptionHandler::startElement(const std::string &namespaceURI, cons
 
 	tagStack.push(qName);
 
-	if(qName.find("DependentOn") != std::string::npos) //TODO:Exception
+	if(qName.find("DependentOn") != std::string::npos)
 	{
 		std::string rdfID = get_rdf_resource(atts);
-		if(rdfID != "urn:uuid:2399cbd1-9a39-11e0-aa80-0800200c9a66")
-		{
-			modelDescription->dependencyID.push_back(rdfID);
-		}
+
+		modelDescription->dependencyID.push_back(rdfID);
 	}
 	else if(qName.find("FullModel") != std::string::npos)
 	{
