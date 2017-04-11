@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 11)
 add_subdirectory(thirdparty)
 
 set(CIMParser_MAJOR_VERSION 2)
-set(CIMParser_MINOR_VERSION 0)
+set(CIMParser_MINOR_VERSION 1)
 set(CIMParser_VERSION ${CIMParser_MAJOR_VERSION}.${CIMParser_MINOR_VERSION})
 
 # Options
