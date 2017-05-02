@@ -8,54 +8,73 @@ class CIMModel;
 class ModelDescriptionHandler;
 class CIMContentHandler;
 
-class critical_error: public std::runtime_error
+class CriticalError : public std::runtime_error
 {
 public:
-	critical_error(const std::string& what) : runtime_error(what) {}
-
-private:
-
+	CriticalError(const std::string& what);
 };
 
-class missingFile_exception: public std::runtime_error
+
+
+class MissingDependencyFile : public std::exception
 {
 public:
-	CIMModel* Model;
-	std::string rdfID;
+	MissingDependencyFile(const CIMModel* model, const std::string id);
+	virtual const char* what() const noexcept override;
 
-	missingFile_exception(CIMModel* model, std::string id, const std::string& what) : Model(model), rdfID(id), runtime_error(what) {}
-
+	const CIMModel* Model;
+	const std::string rdfID;
 };
 
-class NoModelDescriptionHandler : public std::logic_error
+
+
+class MissingModelDescription : public std::exception
 {
 public:
-	ModelDescriptionHandler* DescriptionHandler;
+	MissingModelDescription(const ModelDescriptionHandler* desc);
+	virtual const char* what() const noexcept override;
 
-	NoModelDescriptionHandler(ModelDescriptionHandler* desc, const std::string& what) : DescriptionHandler(desc), logic_error(what){}
+	const ModelDescriptionHandler* DescriptionHandler;
 };
 
-class NoObjectsContainer : public std::logic_error
+
+
+class NoObjectsContainer : public std::exception
 {
 public:
-	CIMContentHandler* ContentHandler;
+	NoObjectsContainer(const CIMContentHandler* handler);
+	virtual const char* what() const noexcept override;
 
-	NoObjectsContainer(CIMContentHandler* handler, const std::string& what) : ContentHandler(handler), logic_error(what){}
+	const CIMContentHandler* ContentHandler;
 };
 
-class NoRdfID : public std::logic_error
+
+
+class NoRdfID : public std::exception
 {
 public:
-
-	NoRdfID(const std::string& what) : logic_error(what){};
+	NoRdfID();
+	virtual const char* what() const noexcept override;
 };
 
-class NoRdfMap : public std::logic_error
+
+
+class NoRdfMap : public std::exception
 {
 public:
-	CIMContentHandler* ContentHandler;
+	NoRdfMap(const CIMContentHandler* handler);
+	virtual const char* what() const noexcept override;
 
-	NoRdfMap(CIMContentHandler* handler, const std::string& what) : ContentHandler(handler), logic_error(what){}
+	const CIMContentHandler* ContentHandler;
+};
+
+
+
+class ReadingUninitializedField : public std::exception
+{
+public:
+	ReadingUninitializedField();
+	virtual const char* what() const noexcept override;
 };
 
 #endif // CIMEXCEPTIONS_HPP

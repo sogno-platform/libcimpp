@@ -18,11 +18,11 @@ CIMContentHandler::~CIMContentHandler()
 {
 	if(!objectStack.empty())
 	{
-		throw critical_error("CIMContentHandler: Critical Error: objectStack is not empty!");
+		throw CriticalError("CIMContentHandler: Critical Error: objectStack is not empty!");
 	}
 	if(!tagStack.empty())
 	{
-		throw critical_error("CIMContentHandler: Critical Error: tagStack is not empty!");
+		throw CriticalError("CIMContentHandler: Critical Error: tagStack is not empty!");
 	}
 }
 
@@ -43,11 +43,11 @@ void CIMContentHandler::startDocument()
 {
 	if(Objects == nullptr)
 	{
-		throw NoObjectsContainer(this, "CIMContentHandler: Error: Objects container not set");
+		throw NoObjectsContainer(this);
 	}
 	if(RDFMap == nullptr)
 	{
-		throw NoRdfMap(this, "CIMContentHandler: Error: RDFMap not set");
+		throw NoRdfMap(this);
 	}
 
 }
@@ -93,7 +93,7 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 		std::string rdf_id = get_rdf_id(atts);
 		if(rdf_id.empty())
 		{
-			throw NoRdfID("CIMContentHandler: Error: Attributes contain no rdf:ID");
+			throw NoRdfID();
 		}
 		// check if object already exists
 		std::unordered_map<std::string, BaseClass*>::iterator it = RDFMap->find(rdf_id);
@@ -164,7 +164,7 @@ void CIMContentHandler::characters(const std::string &characters)
 	}
 	if(objectStack.empty())
 	{
-		throw critical_error("CIMContentHandler: Critical Error: objectStack empty");
+		throw CriticalError("CIMContentHandler: Critical Error: objectStack empty");
 	}
 
 #ifndef DEBUG
