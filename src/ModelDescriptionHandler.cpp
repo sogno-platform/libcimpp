@@ -20,7 +20,7 @@ void ModelDescriptionHandler::setDocumentLocator(const LocatorT &locator)
 void ModelDescriptionHandler::startDocument()
 {
 	if(modelDescription == nullptr)
-		throw critical_error("ModelDescriptionHandler: Critical Error: modelDescription not set");
+		throw MissingModelDescription(this);
 }
 
 void ModelDescriptionHandler::endDocument()

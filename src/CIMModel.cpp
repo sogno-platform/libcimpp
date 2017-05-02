@@ -78,7 +78,7 @@ void CIMModel::parseFiles()
 					}
 					if(!depFound)
 					{
-						//throw missingFile_exception(this, fileDepID, "CIMModel: Error: Dependency is missing");
+						//throw MissingDependencyFile(this, fileDepID);
 						std::cerr << "WARNING: Dependency " << fileDepID << " is missing" << std::endl;
 					}
 				}
