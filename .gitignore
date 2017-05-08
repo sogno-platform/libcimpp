@@ -39,7 +39,7 @@ Temporary Items
 *.xcodeproj
 
 # Folders to exclude for this project
-build
+*build*
 obj
 documentation
 Doxyfile
