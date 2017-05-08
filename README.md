@@ -40,6 +40,12 @@ To use the CIM parser as an cmake module, the project using the CIM parser needs
 2. Create a build directory and change into it
   + Can be either in or out of tree
 3. Call `cmake [CIMParser root directory]`
+  + Alternatively specify CIM version
+  `cmake [CIMParser root directory] -DUSE_CIM_VERSION=[CIM Version]`
+  + Valid options are
+    * `IEC61970CIM16v29a` (default)
+    * `IEC61970CIM17v07`
+    * `IEC61970CIM16v29a_SINERGIEN`
 4. Build the CIM parser using make
 
 #### Build instructions for using the CIM parser in general (MS Visual Studio)
