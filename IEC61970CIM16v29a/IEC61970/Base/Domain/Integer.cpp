@@ -1,29 +1,29 @@
-#include "Time.h"
+#include "Integer.h"
 #include "../../../../src/CIMExceptions.hpp"
 
-using IEC61970::Base::Domain::Time;
+using IEC61970::Base::Domain::Integer;
 
 
-Time::Time(){
-
-}
-
-
-
-Time::~Time(){
+Integer::Integer(){
 
 }
 
 
 
-Time::Time(IEC61970::Base::Domain::String value)
+Integer::~Integer(){
+
+}
+
+
+
+Integer::Integer(long int value)
 	: value(value), initialized(true)
 {
 }
 
 
 
-Time& Time::operator=(IEC61970::Base::Domain::String &rop)
+Integer& Integer::operator=(long int &rop)
 {
 	value = rop;
 	initialized = true;
@@ -32,7 +32,7 @@ Time& Time::operator=(IEC61970::Base::Domain::String &rop)
 
 
 
-Time::operator IEC61970::Base::Domain::String()
+Integer::operator long int()
 {
 	if(!initialized)
 	{
@@ -41,21 +41,19 @@ Time::operator IEC61970::Base::Domain::String()
 	return value;
 }
 
-
-
 namespace IEC61970
 {
 	namespace Base
 	{
 		namespace Domain
 		{
-			std::istream& operator>>(std::istream& lop, Time& rop)
+			std::istream& operator>>(std::istream& lop, Integer& rop)
 			{
 				std::string tmp;
 				lop >> tmp;
 
-				rop.value = tmp;
-				rop.initialized = true;
+                		rop.value = stol(tmp);
+                		rop.initialized = true;
 			}
 		}
 	}

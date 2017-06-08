@@ -1,13 +1,10 @@
-///////////////////////////////////////////////////////////
-//  MonthDay.h
-//  Implementation of the Class MonthDay
-//  Original author: selaost1
-///////////////////////////////////////////////////////////
-
 #ifndef MONTHDAY_H
 #define MONTHDAY_H
 
 #include "IEC61970/Base/Domain/String.h"
+#include <string>
+#include <iostream>
+#include <istream>
 
 namespace IEC61970
 {
@@ -24,8 +21,16 @@ namespace IEC61970
 			public:
 				MonthDay();
 				virtual ~MonthDay();
-				IEC61970::Base::Domain::String value;
 
+				MonthDay(IEC61970::Base::Domain::String value);
+				MonthDay& operator=(IEC61970::Base::Domain::String &rop);
+				friend std::istream& operator>>(std::istream& lop, MonthDay& rop);
+				operator IEC61970::Base::Domain::String();
+
+
+
+				IEC61970::Base::Domain::String value;
+				bool initialized = false;
 			};
 
 		}

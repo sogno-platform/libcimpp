@@ -1,9 +1,5 @@
-///////////////////////////////////////////////////////////
-//  Boolean.cpp
-//  Implementation of the Class Boolean
-///////////////////////////////////////////////////////////
-
 #include "Boolean.h"
+#include "../../../../src/CIMExceptions.hpp"
 
 using IEC61970::Base::Domain::Boolean;
 
@@ -21,7 +17,7 @@ Boolean::~Boolean(){
 
 
 Boolean::Boolean(bool value)
-	: value(value)
+	: value(value), initialized(true)
 {
 }
 
@@ -30,6 +26,7 @@ Boolean::Boolean(bool value)
 Boolean& Boolean::operator=(bool &rop)
 {
 	value = rop;
+	initialized = true;
 	return *this;
 }
 
@@ -37,6 +34,10 @@ Boolean& Boolean::operator=(bool &rop)
 
 Boolean::operator bool()
 {
+	if(!initialized)
+	{
+		throw new ReadingUninitializedField();
+	}
 	return value;
 }
 
@@ -53,11 +54,13 @@ namespace IEC61970
 				if(tmp == "true" || tmp == "True" || tmp == "TRUE")
 				{
 					rop.value = true;
+					rop.initialized = true;
 					return lop;
 				}
 				if(tmp == "false" || tmp == "False" || tmp == "FALSE")
 				{
 					rop.value = false;
+					rop.initialized = true;
 					return lop;
 				}
 				else
