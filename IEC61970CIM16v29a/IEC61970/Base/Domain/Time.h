@@ -1,13 +1,10 @@
-///////////////////////////////////////////////////////////
-//  Time.h
-//  Implementation of the Class Time
-//  Original author: kdemaree
-///////////////////////////////////////////////////////////
-
 #ifndef TIME_H
 #define TIME_H
 
 #include "IEC61970/Base/Domain/String.h"
+#include <string>
+#include <iostream>
+#include <istream>
 
 namespace IEC61970
 {
@@ -28,8 +25,16 @@ namespace IEC61970
 			public:
 				Time();
 				virtual ~Time();
-				IEC61970::Base::Domain::String value;
 
+				Time(IEC61970::Base::Domain::String value);
+				Time& operator=(IEC61970::Base::Domain::String &rop);
+				friend std::istream& operator>>(std::istream& lop, Time& rop);
+				operator IEC61970::Base::Domain::String();
+
+
+
+				IEC61970::Base::Domain::String value;
+				bool initialized = false;
 			};
 
 		}
