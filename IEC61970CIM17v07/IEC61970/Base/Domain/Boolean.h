@@ -1,12 +1,8 @@
-///////////////////////////////////////////////////////////
-//  Boolean.h
-//  Implementation of the Class Boolean
-///////////////////////////////////////////////////////////
-
 #ifndef BOOLEAN_H
 #define BOOLEAN_H
 
 #include <string>
+#include <iostream>
 #include <istream>
 
 namespace IEC61970
@@ -30,7 +26,8 @@ namespace IEC61970
 				friend std::istream& operator>>(std::istream& lop, Boolean& rop);
 				operator bool();
 
-				bool value;
+				bool value = false;
+				bool initialized = false;
 
 			};
 

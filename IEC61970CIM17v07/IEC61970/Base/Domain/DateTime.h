@@ -1,12 +1,10 @@
-///////////////////////////////////////////////////////////
-//  DateTime.h
-//  Implementation of the Class DateTime
-///////////////////////////////////////////////////////////
-
 #ifndef DATETIME_H
 #define DATETIME_H
 
 #include "IEC61970/Base/Domain/String.h"
+#include <string>
+#include <iostream>
+#include <istream>
 
 namespace IEC61970
 {
@@ -27,8 +25,16 @@ namespace IEC61970
 			public:
 				DateTime();
 				virtual ~DateTime();
-				IEC61970::Base::Domain::String value;
 
+				DateTime(IEC61970::Base::Domain::String value);
+				DateTime& operator=(IEC61970::Base::Domain::String &rop);
+				friend std::istream& operator>>(std::istream& lop, DateTime& rop);
+				operator IEC61970::Base::Domain::String();
+
+
+
+				IEC61970::Base::Domain::String value;
+				bool initialized = false;
 			};
 
 		}
