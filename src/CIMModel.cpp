@@ -55,11 +55,10 @@ void CIMModel::parseFiles()
 	ContentHandler.setObjectsContainer(&Objects);
 	ContentHandler.setRDFMap(&RDFMap);
 
-	Arabica::SAX::XMLReader<std::string> Reader;
-	Reader.setContentHandler(ContentHandler);
-
 	for(CIMFile& file : Files) //TODO: Suche evtl. mit eigener dependency-liste beschleunigen
 	{
+		Arabica::SAX::XMLReader<std::string> Reader;
+		Reader.setContentHandler(ContentHandler);
 		if(DependencyCheck == true)
 		{
 			if(!(file.getModelDescription()->dependencyID).empty()) //TODO: Ueberpruefung besser Implementieren
