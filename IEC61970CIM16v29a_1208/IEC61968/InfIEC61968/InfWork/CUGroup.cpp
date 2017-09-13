@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  CUGroup.cpp
+//  Implementation of the Class CUGroup
+///////////////////////////////////////////////////////////
+
+#include "CUGroup.h"
+
+using IEC61968::InfIEC61968::InfWork::CUGroup;
+
+
+CUGroup::CUGroup(){
+
+}
+
+
+
+CUGroup::~CUGroup(){
+
+}

@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  Charge.cpp
+//  Implementation of the Class Charge
+///////////////////////////////////////////////////////////
+
+#include "Charge.h"
+
+using IEC61968::PaymentMetering::Charge;
+
+
+Charge::Charge(){
+
+}
+
+
+
+Charge::~Charge(){
+
+}

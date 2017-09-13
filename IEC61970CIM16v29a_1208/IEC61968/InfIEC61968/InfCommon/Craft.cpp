@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  Craft.cpp
+//  Implementation of the Class Craft
+///////////////////////////////////////////////////////////
+
+#include "Craft.h"
+
+using IEC61968::InfIEC61968::InfCommon::Craft;
+
+
+Craft::Craft(){
+
+}
+
+
+
+Craft::~Craft(){
+
+}

@@ -1,0 +1,21 @@
+///////////////////////////////////////////////////////////
+//  Card.cpp
+//  Implementation of the Class Card
+///////////////////////////////////////////////////////////
+
+#include "Card.h"
+
+using IEC61968::PaymentMetering::Card;
+
+
+Card::Card()
+	: Tender(nullptr)
+{
+
+}
+
+
+
+Card::~Card(){
+
+}
