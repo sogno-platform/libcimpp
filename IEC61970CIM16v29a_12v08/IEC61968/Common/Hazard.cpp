@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  Hazard.cpp
+//  Implementation of the Class Hazard
+///////////////////////////////////////////////////////////
+
+#include "Hazard.h"
+
+using IEC61968::Common::Hazard;
+
+
+Hazard::Hazard(){
+
+}
+
+
+
+Hazard::~Hazard(){
+
+}

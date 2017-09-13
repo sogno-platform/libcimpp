@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  Shift.cpp
+//  Implementation of the Class Shift
+///////////////////////////////////////////////////////////
+
+#include "Shift.h"
+
+using IEC61968::PaymentMetering::Shift;
+
+
+Shift::Shift(){
+
+}
+
+
+
+Shift::~Shift(){
+
+}

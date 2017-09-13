@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  ErpBOM.cpp
+//  Implementation of the Class ErpBOM
+///////////////////////////////////////////////////////////
+
+#include "ErpBOM.h"
+
+using IEC61968::InfIEC61968::InfERPSupport::ErpBOM;
+
+
+ErpBOM::ErpBOM(){
+
+}
+
+
+
+ErpBOM::~ErpBOM(){
+
+}

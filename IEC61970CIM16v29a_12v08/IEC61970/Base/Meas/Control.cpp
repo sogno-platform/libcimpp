@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  Control.cpp
+//  Implementation of the Class Control
+///////////////////////////////////////////////////////////
+
+#include "Control.h"
+
+using IEC61970::Base::Meas::Control;
+
+
+Control::Control(){
+
+}
+
+
+
+Control::~Control(){
+
+}
