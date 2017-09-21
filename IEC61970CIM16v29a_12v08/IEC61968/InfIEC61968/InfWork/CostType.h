@@ -54,7 +54,7 @@ namespace IEC61968
 				 */
 				IEC61970::Base::Domain::String stage;
 				IEC61968::Common::Status status;
-				std::list<CostType*> ChildCostTypes;
+				std::list<IEC61968::InfIEC61968::InfWork::CostType*> ChildCostTypes;
 				std::list<IEC61968::InfIEC61968::InfWork::WorkCostDetail*> WorkCostDetails;
 				std::list<IEC61968::InfIEC61968::InfERPSupport::ErpJournalEntry*> ErpJournalEntries;
 				std::list<IEC61968::InfIEC61968::InfWork::CompatibleUnit*> CompatibleUnits;

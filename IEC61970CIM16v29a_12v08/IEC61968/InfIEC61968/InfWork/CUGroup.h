@@ -28,7 +28,7 @@ namespace IEC61968
 				CUGroup();
 				virtual ~CUGroup();
 				IEC61968::Common::Status status;
-				std::list<CUGroup*> ChildCUGroups;
+				std::list<IEC61968::InfIEC61968::InfWork::CUGroup*> ChildCUGroups;
 
 			};
 

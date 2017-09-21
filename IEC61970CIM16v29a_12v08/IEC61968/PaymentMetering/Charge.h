@@ -44,7 +44,7 @@ namespace IEC61968
 			/**
 			 * All sub-components of this complex charge.
 			 */
-			std::list<Charge*> ChildCharges;
+			std::list<IEC61968::PaymentMetering::Charge*> ChildCharges;
 
 		};
 

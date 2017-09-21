@@ -73,7 +73,7 @@ namespace IEC61968
 				 */
 				IEC61970::Base::Domain::Float previousAmount;
 				std::list<IEC61968::InfIEC61968::InfERPSupport::ErpJournalEntry*> ErpJournalEntries;
-				ErpInvoiceLineItem *ContainerErpInvoiceLineItem;
+				IEC61968::InfIEC61968::InfERPSupport::ErpInvoiceLineItem *ContainerErpInvoiceLineItem;
 				IEC61968::InfIEC61968::InfERPSupport::ErpRecLineItem *ErpRecLineItem;
 				std::list<IEC61968::InfIEC61968::InfERPSupport::ErpPayment*> ErpPayments;
 				IEC61968::InfIEC61968::InfERPSupport::ErpPayableLineItem *ErpPayableLineItem;

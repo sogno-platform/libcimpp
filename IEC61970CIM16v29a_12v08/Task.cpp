@@ -1,5 +1,5 @@
 #include "Task.hpp"
-#include "IEC61970.hpp"
+#include "Folders.hpp"
 #include <iostream>
 #include <fstream>
 #include <regex>
@@ -335,7 +335,7 @@ bool assign_ErpInvoiceLineItem_ContainerErpInvoiceLineItem(BaseClass* BaseClass_
 {
 	if(IEC61968::InfIEC61968::InfERPSupport::ErpInvoiceLineItem* element = dynamic_cast<IEC61968::InfIEC61968::InfERPSupport::ErpInvoiceLineItem*>(BaseClass_ptr1))
 	{
-		element->ContainerErpInvoiceLineItem = dynamic_cast<ErpInvoiceLineItem*>(BaseClass_ptr2);
+		element->ContainerErpInvoiceLineItem = dynamic_cast<IEC61968::InfIEC61968::InfERPSupport::ErpInvoiceLineItem*>(BaseClass_ptr2);
 		if(element->ContainerErpInvoiceLineItem != nullptr)
 			return true;
 	}
@@ -4137,9 +4137,9 @@ bool assign_Project_SubProjects(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_
 {
 	if(IEC61968::InfIEC61968::InfWork::Project* element = dynamic_cast<IEC61968::InfIEC61968::InfWork::Project*>(BaseClass_ptr1))
 	{
-		if(dynamic_cast<Project*>(BaseClass_ptr2) != nullptr)
+		if(dynamic_cast<IEC61968::InfIEC61968::InfWork::Project*>(BaseClass_ptr2) != nullptr)
 		{
-			element->SubProjects.push_back(dynamic_cast<Project*>(BaseClass_ptr2));
+			element->SubProjects.push_back(dynamic_cast<IEC61968::InfIEC61968::InfWork::Project*>(BaseClass_ptr2));
 			return true;
 		}
 	}
@@ -4163,9 +4163,9 @@ bool assign_CUGroup_ChildCUGroups(BaseClass* BaseClass_ptr1, BaseClass* BaseClas
 {
 	if(IEC61968::InfIEC61968::InfWork::CUGroup* element = dynamic_cast<IEC61968::InfIEC61968::InfWork::CUGroup*>(BaseClass_ptr1))
 	{
-		if(dynamic_cast<CUGroup*>(BaseClass_ptr2) != nullptr)
+		if(dynamic_cast<IEC61968::InfIEC61968::InfWork::CUGroup*>(BaseClass_ptr2) != nullptr)
 		{
-			element->ChildCUGroups.push_back(dynamic_cast<CUGroup*>(BaseClass_ptr2));
+			element->ChildCUGroups.push_back(dynamic_cast<IEC61968::InfIEC61968::InfWork::CUGroup*>(BaseClass_ptr2));
 			return true;
 		}
 	}
@@ -4995,9 +4995,9 @@ bool assign_Charge_ChildCharges(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_
 {
 	if(IEC61968::PaymentMetering::Charge* element = dynamic_cast<IEC61968::PaymentMetering::Charge*>(BaseClass_ptr1))
 	{
-		if(dynamic_cast<Charge*>(BaseClass_ptr2) != nullptr)
+		if(dynamic_cast<IEC61968::PaymentMetering::Charge*>(BaseClass_ptr2) != nullptr)
 		{
-			element->ChildCharges.push_back(dynamic_cast<Charge*>(BaseClass_ptr2));
+			element->ChildCharges.push_back(dynamic_cast<IEC61968::PaymentMetering::Charge*>(BaseClass_ptr2));
 			return true;
 		}
 	}
@@ -5593,9 +5593,9 @@ bool assign_CostType_ChildCostTypes(BaseClass* BaseClass_ptr1, BaseClass* BaseCl
 {
 	if(IEC61968::InfIEC61968::InfWork::CostType* element = dynamic_cast<IEC61968::InfIEC61968::InfWork::CostType*>(BaseClass_ptr1))
 	{
-		if(dynamic_cast<CostType*>(BaseClass_ptr2) != nullptr)
+		if(dynamic_cast<IEC61968::InfIEC61968::InfWork::CostType*>(BaseClass_ptr2) != nullptr)
 		{
-			element->ChildCostTypes.push_back(dynamic_cast<CostType*>(BaseClass_ptr2));
+			element->ChildCostTypes.push_back(dynamic_cast<IEC61968::InfIEC61968::InfWork::CostType*>(BaseClass_ptr2));
 			return true;
 		}
 	}

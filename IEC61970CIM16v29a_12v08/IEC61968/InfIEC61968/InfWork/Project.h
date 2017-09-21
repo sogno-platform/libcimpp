@@ -31,7 +31,7 @@ namespace IEC61968
 				 * Overall project budget.
 				 */
 				IEC61970::Base::Domain::Money budget;
-				std::list<Project*> SubProjects;
+				std::list<IEC61968::InfIEC61968::InfWork::Project*> SubProjects;
 
 			};
 
