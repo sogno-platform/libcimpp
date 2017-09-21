@@ -1,4 +1,10 @@
 # include arabica
 set(BUILD_ARABICA_EXAMPLES OFF CACHE BOOL "Build arabica with examples")
-set(ARABICA_XML_BACKEND USE_LIBXML2)
+if (NOT ARABICA_XML_BACKEND)
+    if(WIN32)
+        set(ARABICA_XML_BACKEND USE_MSXML)
+    else()
+        set(ARABICA_XML_BACKEND USE_LIBXML2)
+    endif()
+endif()
 add_subdirectory(arabica)
