@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  Meter.cpp
+//  Implementation of the Class Meter
+///////////////////////////////////////////////////////////
+
+#include "Meter.h"
+
+using IEC61968::Metering::Meter;
+
+
+Meter::Meter(){
+
+}
+
+
+
+Meter::~Meter(){
+
+}

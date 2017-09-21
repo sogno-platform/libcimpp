@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  WireInfo.cpp
+//  Implementation of the Class WireInfo
+///////////////////////////////////////////////////////////
+
+#include "WireInfo.h"
+
+using IEC61968::AssetInfo::WireInfo;
+
+
+WireInfo::WireInfo(){
+
+}
+
+
+
+WireInfo::~WireInfo(){
+
+}

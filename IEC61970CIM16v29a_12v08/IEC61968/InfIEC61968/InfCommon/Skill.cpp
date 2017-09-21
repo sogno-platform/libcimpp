@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  Skill.cpp
+//  Implementation of the Class Skill
+///////////////////////////////////////////////////////////
+
+#include "Skill.h"
+
+using IEC61968::InfIEC61968::InfCommon::Skill;
+
+
+Skill::Skill(){
+
+}
+
+
+
+Skill::~Skill(){
+
+}

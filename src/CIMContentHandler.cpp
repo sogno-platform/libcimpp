@@ -5,7 +5,7 @@
 
 #include <stdexcept>
 
-#include "IEC61970.hpp"
+#include "Folders.hpp"
 #include "CIMFactory.hpp"
 #include "assignments.hpp"
 #include "CIMExceptions.hpp"

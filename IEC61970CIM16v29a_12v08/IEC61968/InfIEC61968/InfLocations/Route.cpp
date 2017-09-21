@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  Route.cpp
+//  Implementation of the Class Route
+///////////////////////////////////////////////////////////
+
+#include "Route.h"
+
+using IEC61968::InfIEC61968::InfLocations::Route;
+
+
+Route::Route(){
+
+}
+
+
+
+Route::~Route(){
+
+}
