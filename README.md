@@ -44,6 +44,7 @@ To use the CIM parser as an cmake module, the project using the CIM parser needs
   `cmake [CIMParser root directory] -DUSE_CIM_VERSION=[CIM Version]`
   + Valid options are
     * `IEC61970CIM16v29a` (default)
+    * `IEC61970CIM16v29a_12v08`
     * `IEC61970CIM17v07`
     * `IEC61970CIM16v29a_SINERGIEN`
 4. Build the CIM parser using make
