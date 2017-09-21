@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  Jumper.cpp
+//  Implementation of the Class Jumper
+///////////////////////////////////////////////////////////
+
+#include "Jumper.h"
+
+using IEC61970::Base::Wires::Jumper;
+
+
+Jumper::Jumper(){
+
+}
+
+
+
+Jumper::~Jumper(){
+
+}

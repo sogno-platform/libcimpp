@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  LimitSet.cpp
+//  Implementation of the Class LimitSet
+///////////////////////////////////////////////////////////
+
+#include "LimitSet.h"
+
+using IEC61970::Base::Meas::LimitSet;
+
+
+LimitSet::LimitSet(){
+
+}
+
+
+
+LimitSet::~LimitSet(){
+
+}

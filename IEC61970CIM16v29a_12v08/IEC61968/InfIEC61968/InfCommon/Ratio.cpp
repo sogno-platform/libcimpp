@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  Ratio.cpp
+//  Implementation of the Class Ratio
+///////////////////////////////////////////////////////////
+
+#include "Ratio.h"
+
+using IEC61968::InfIEC61968::InfCommon::Ratio;
+
+
+Ratio::Ratio(){
+
+}
+
+
+
+Ratio::~Ratio(){
+
+}

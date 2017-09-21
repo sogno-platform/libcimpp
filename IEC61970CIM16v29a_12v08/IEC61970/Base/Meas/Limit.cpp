@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  Limit.cpp
+//  Implementation of the Class Limit
+///////////////////////////////////////////////////////////
+
+#include "Limit.h"
+
+using IEC61970::Base::Meas::Limit;
+
+
+Limit::Limit(){
+
+}
+
+
+
+Limit::~Limit(){
+
+}
