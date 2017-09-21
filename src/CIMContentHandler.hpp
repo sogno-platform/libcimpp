@@ -11,6 +11,7 @@
 
 #include "BaseClass.h"
 #include "Task.hpp"
+#include "Folders.hpp"
 
 class CIMContentHandler : public Arabica::SAX::ContentHandler<std::string>
 {
