@@ -20,7 +20,6 @@ namespace IEC61968
 			{
 				line,
 				transformer,
-				#warning Enumerator "switch" is renamed to "routing_selector", this does not commply the CIM standard!
 				routing_selector,
 				breaker,
 				recloser,

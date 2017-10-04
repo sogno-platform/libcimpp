@@ -38,7 +38,6 @@ namespace IEC61968
 			 * Randomisation of start and/or end times involving the operation of one or more
 			 * devices is controlled by default settings for the device(s).
 			 */
-			#warning Enumerator "default" is renamed to "default_val", this does not commply the CIM standard!
 			default_val,
 			/**
 			 * Neither the start time nor the end time of an event or control action affecting

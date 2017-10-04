@@ -195,7 +195,6 @@ namespace IEC61968
 					/**
 					 * Number of characters, characters, char
 					 */
-					#warning Enumerator "char" is renamed to "characters", this does not commply the CIM standard!
 					characters = 76,
 					/**
 					 * Rate of change of frequency, hertz per second, Hz/s
