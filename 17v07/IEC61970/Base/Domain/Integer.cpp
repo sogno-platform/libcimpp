@@ -54,6 +54,7 @@ namespace IEC61970
 
                 		rop.value = stol(tmp);
                 		rop.initialized = true;
+				return lop;
 			}
 		}
 	}
