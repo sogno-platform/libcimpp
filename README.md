@@ -54,7 +54,7 @@ To use the CIM parser as an cmake module, the project using the CIM parser needs
 2. Create a build directory
   + Can be either in or out of tree
 3. Use the cmake GUI to configure cmake project and generate Visual Studio project files
-  + Set CIM parser root directory
+  + Set CIM parser root directory (with the `CMakeLists.txt`)
   + Set build directory
 4. Open the *.vcxproj file with Visual Studio
   + Now the CIM parser can be build using the Visual Studio Compiler
