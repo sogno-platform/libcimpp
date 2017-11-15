@@ -1,4 +1,4 @@
-CIM-XML-Parser
+CIM-Deserializer
 ==============
 
 ### Licensing
