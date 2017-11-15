@@ -1,5 +1,5 @@
-CIM++ Deserializer
-==================
+libcimpp
+========
 
 ### Licensing
 For **non-commercial** use this software is licensed under the terms in the included [LICENSE](LICENSE) file.
