@@ -33,7 +33,7 @@ namespace IEC61968
 				/**
 				 * How the asset failure was isolated from the system.
 				 */
-				IEC61968::InfIEC61968::InfAssets::FailureIsolationMethodKind failureIsolationMethod;
+				IEC61968::InfIEC61968::InfAssets::FailureIsolationMethodKind failureIsolationMethod = IEC61968::InfIEC61968::InfAssets::FailureIsolationMethodKind::_undef;
 				/**
 				 * The method used for locating the faulted part of the asset. For example, cable
 				 * options include: Cap Discharge-Thumping, Bridge Method, Visual Inspection,

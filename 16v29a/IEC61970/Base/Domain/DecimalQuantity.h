@@ -27,9 +27,9 @@ namespace IEC61970
 				/**
 				 * Quantity with decimal value and associated unit or currency information.
 				 */
-				IEC61970::Base::Domain::Currency currency;
-				IEC61970::Base::Domain::UnitMultiplier multiplier;
-				IEC61970::Base::Domain::UnitSymbol unit;
+				IEC61970::Base::Domain::Currency currency = IEC61970::Base::Domain::Currency::_undef;
+				IEC61970::Base::Domain::UnitMultiplier multiplier = IEC61970::Base::Domain::UnitMultiplier::_undef;
+				IEC61970::Base::Domain::UnitSymbol unit = IEC61970::Base::Domain::UnitSymbol::_undef;
 				IEC61970::Base::Domain::Decimal value;
 
 			};

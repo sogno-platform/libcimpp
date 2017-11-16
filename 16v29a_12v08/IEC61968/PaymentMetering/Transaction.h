@@ -42,7 +42,7 @@ namespace IEC61968
 			/**
 			 * Kind of transaction.
 			 */
-			IEC61968::PaymentMetering::TransactionKind kind;
+			IEC61968::PaymentMetering::TransactionKind kind = IEC61968::PaymentMetering::TransactionKind::_undef;
 			/**
 			 * Transaction amount, rounding, date and note for this transaction line.
 			 */

@@ -30,7 +30,7 @@ namespace IEC61970
 					/**
 					 * Type of main fuel.
 					 */
-					IEC61970::Base::Generation::Production::FuelType mainFuelType;
+					IEC61970::Base::Generation::Production::FuelType mainFuelType = IEC61970::Base::Generation::Production::FuelType::_undef;
 
 				};
 

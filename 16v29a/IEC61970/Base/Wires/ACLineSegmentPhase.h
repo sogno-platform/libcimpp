@@ -29,7 +29,7 @@ namespace IEC61970
 				/**
 				 * The phase connection of the wire at both ends.
 				 */
-				IEC61970::Base::Wires::SinglePhaseKind phase;
+				IEC61970::Base::Wires::SinglePhaseKind phase = IEC61970::Base::Wires::SinglePhaseKind::_undef;
 				/**
 				 * The line segment to which the phase belongs.
 				 */

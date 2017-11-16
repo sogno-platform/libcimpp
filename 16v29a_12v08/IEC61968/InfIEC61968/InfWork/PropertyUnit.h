@@ -38,7 +38,7 @@ namespace IEC61968
 				/**
 				 * Activity code identifies a specific and distinguishable work action.
 				 */
-				IEC61968::InfIEC61968::InfWork::WorkActionKind activityCode;
+				IEC61968::InfIEC61968::InfWork::WorkActionKind activityCode = IEC61968::InfIEC61968::InfWork::WorkActionKind::_undef;
 				/**
 				 * Used for property record accounting. For example, in the USA, this would be a
 				 * FERC account.

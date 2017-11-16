@@ -33,7 +33,7 @@ namespace IEC61968
 				/**
 				 * Lamp kind.
 				 */
-				IEC61968::InfIEC61968::InfAssets::StreetlightLampKind lampKind;
+				IEC61968::InfIEC61968::InfAssets::StreetlightLampKind lampKind = IEC61968::InfIEC61968::InfAssets::StreetlightLampKind::_undef;
 				/**
 				 * Power rating of light.
 				 */

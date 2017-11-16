@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class StreetlightLampKind
 			{
-				highPressureSodium,
+				 _undef = -1, 	highPressureSodium,
 				mercuryVapor,
 				metalHalide,
 				other

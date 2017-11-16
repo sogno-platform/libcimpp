@@ -20,7 +20,7 @@ namespace IEC61970
 				/**
 				 * Voltage control
 				 */
-				volt,
+				 _undef = -1, 	volt,
 				/**
 				 * Reactive power flow control
 				 */

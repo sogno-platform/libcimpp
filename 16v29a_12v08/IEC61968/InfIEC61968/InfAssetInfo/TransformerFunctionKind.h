@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class TransformerFunctionKind
 			{
-				powerTransformer,
+				 _undef = -1, 	powerTransformer,
 				voltageRegulator,
 				autotransformer,
 				secondaryTransformer,

@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class TransformerCoreKind
 			{
-				core,
+				 _undef = -1, 	core,
 				shell
 			};
 

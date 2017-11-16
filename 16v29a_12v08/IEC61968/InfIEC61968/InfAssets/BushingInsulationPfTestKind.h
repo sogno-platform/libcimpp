@@ -21,7 +21,7 @@ namespace IEC61968
 				/**
 				 * Power factor tap-to-ground.
 				 */
-				c1,
+				 _undef = -1, 	c1,
 				/**
 				 * Power factor tap-to-conductor.
 				 */

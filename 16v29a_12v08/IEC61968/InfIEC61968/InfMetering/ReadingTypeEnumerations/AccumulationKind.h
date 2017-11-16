@@ -20,7 +20,7 @@ namespace IEC61968
 					/**
 					 * Not Applicable, or implied by the unit of measure.
 					 */
-					none = 0,
+					 _undef = -1, 	none = 0,
 					/**
 					 * A value from a register which represents the bulk quantity of a commodity. This
 					 * quantity is computed as the integral of the commodity usage rate. This value is

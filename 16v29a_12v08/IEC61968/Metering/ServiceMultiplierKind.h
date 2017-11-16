@@ -20,7 +20,7 @@ namespace IEC61968
 			 * Current transformer ratio used to convert associated quantities to real
 			 * measurements.
 			 */
-			ctRatio,
+			 _undef = -1, 	ctRatio,
 			/**
 			 * Voltage transformer ratio used to convert associated quantities to real
 			 * measurements.

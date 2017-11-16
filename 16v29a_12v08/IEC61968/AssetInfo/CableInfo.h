@@ -30,7 +30,7 @@ namespace IEC61968
 			/**
 			 * Kind of construction of this cable.
 			 */
-			IEC61968::AssetInfo::CableConstructionKind constructionKind;
+			IEC61968::AssetInfo::CableConstructionKind constructionKind = IEC61968::AssetInfo::CableConstructionKind::_undef;
 			/**
 			 * Diameter over the core, including any semi-con screen; should be the insulating
 			 * layer's inside diameter.
@@ -59,7 +59,7 @@ namespace IEC61968
 			/**
 			 * Kind of outer jacket of this cable.
 			 */
-			IEC61968::AssetInfo::CableOuterJacketKind outerJacketKind;
+			IEC61968::AssetInfo::CableOuterJacketKind outerJacketKind = IEC61968::AssetInfo::CableOuterJacketKind::_undef;
 			/**
 			 * True if sheath / shield is used as a neutral (i.e., bonded).
 			 */
@@ -67,7 +67,7 @@ namespace IEC61968
 			/**
 			 * Material of the shield.
 			 */
-			IEC61968::AssetInfo::CableShieldMaterialKind shieldMaterial;
+			IEC61968::AssetInfo::CableShieldMaterialKind shieldMaterial = IEC61968::AssetInfo::CableShieldMaterialKind::_undef;
 
 		};
 

@@ -44,7 +44,7 @@ namespace IEC61970
 					/**
 					 * Type of input signal.  Typical Value = rotorAngularFrequencyDeviation.
 					 */
-					IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind inputSignalType;
+					IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind inputSignalType = IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind::_undef;
 					/**
 					 * Stabilizer gain (Ks).  Typical Value = 5.
 					 */

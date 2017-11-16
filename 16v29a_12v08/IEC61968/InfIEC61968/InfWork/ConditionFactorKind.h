@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class ConditionFactorKind
 			{
-				labor,
+				 _undef = -1, 	labor,
 				accountAllocation,
 				material,
 				travel,

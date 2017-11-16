@@ -42,7 +42,7 @@ namespace IEC61968
 				/**
 				 * A code that instructs the crew what action to perform.
 				 */
-				IEC61968::InfIEC61968::InfWork::WorkActionKind cuAction;
+				IEC61968::InfIEC61968::InfWork::WorkActionKind cuAction = IEC61968::InfIEC61968::InfWork::WorkActionKind::_undef;
 				/**
 				 * The quantity of the CU being assigned to this location.
 				 */

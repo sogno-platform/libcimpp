@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class WindingInsulationKind
 			{
-				paper,
+				 _undef = -1, 	paper,
 				thermallyUpgradedPaper,
 				nomex,
 				other

@@ -29,7 +29,7 @@ namespace IEC61970
 				 * Mass in kilogram.  Note: multiplier “k” is included in this unit symbol for
 				 * compatibility with IEC 61850-7-3.
 				 */
-				kg = 3,
+				 _undef = -1, 	kg = 3,
 				/**
 				 * Time in seconds.
 				 */

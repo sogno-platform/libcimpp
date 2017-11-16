@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class PoleTreatmentKind
 			{
-				full,
+				 _undef = -1, 	full,
 				butt,
 				natural,
 				grayStain,

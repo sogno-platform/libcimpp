@@ -52,7 +52,7 @@ namespace IEC61968
 				/**
 				 * Kind of insulation.
 				 */
-				IEC61968::InfIEC61968::InfAssets::BushingInsulationKind insulationKind;
+				IEC61968::InfIEC61968::InfAssets::BushingInsulationKind insulationKind = IEC61968::InfIEC61968::InfAssets::BushingInsulationKind::_undef;
 				std::list<IEC61968::InfIEC61968::InfAssets::BushingInsulationPF*> BushingInsulationPFs;
 				IEC61970::Base::Core::Terminal *Terminal;
 

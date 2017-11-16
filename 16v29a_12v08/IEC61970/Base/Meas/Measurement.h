@@ -64,15 +64,15 @@ namespace IEC61970
 				 * changed due to jumpers or other reasons.
 				 * If the attribute is missing three phases (ABC) shall be assumed.
 				 */
-				IEC61970::Base::Core::PhaseCode phases;
+				IEC61970::Base::Core::PhaseCode phases = IEC61970::Base::Core::PhaseCode::_undef;
 				/**
 				 * The unit multiplier of the measured quantity.
 				 */
-				IEC61970::Base::Domain::UnitMultiplier unitMultiplier;
+				IEC61970::Base::Domain::UnitMultiplier unitMultiplier = IEC61970::Base::Domain::UnitMultiplier::_undef;
 				/**
 				 * The unit of measure of the measured quantity.
 				 */
-				IEC61970::Base::Domain::UnitSymbol unitSymbol;
+				IEC61970::Base::Domain::UnitSymbol unitSymbol = IEC61970::Base::Domain::UnitSymbol::_undef;
 				/**
 				 * One or more measurements may be associated with a terminal in the network.
 				 */

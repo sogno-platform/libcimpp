@@ -20,7 +20,7 @@ namespace IEC61970
 				/**
 				 * Single bus.
 				 */
-				singleBus,
+				 _undef = -1, 	singleBus,
 				/**
 				 * Double bus.
 				 */

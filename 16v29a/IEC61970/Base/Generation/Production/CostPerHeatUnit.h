@@ -30,8 +30,8 @@ namespace IEC61970
 					virtual ~CostPerHeatUnit();
 					static const IEC61970::Base::Domain::UnitMultiplier denominatorMultiplier;
 					static const IEC61970::Base::Domain::UnitSymbol denominatorUnit;
-					IEC61970::Base::Domain::UnitMultiplier multiplier;
-					IEC61970::Base::Domain::Currency unit;
+					IEC61970::Base::Domain::UnitMultiplier multiplier = IEC61970::Base::Domain::UnitMultiplier::_undef;
+					IEC61970::Base::Domain::Currency unit = IEC61970::Base::Domain::Currency::_undef;
 					IEC61970::Base::Domain::Float value;
 
 				};

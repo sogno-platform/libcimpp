@@ -69,11 +69,11 @@ namespace IEC61970
 					/**
 					 * Type of input signal #1.  Typical Value = generatorElectricalPower.
 					 */
-					IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind inputSignal1Type;
+					IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind inputSignal1Type = IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind::_undef;
 					/**
 					 * Type of input signal #2.  Typical Value = rotorSpeed.
 					 */
-					IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind inputSignal2Type;
+					IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind inputSignal2Type = IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind::_undef;
 					/**
 					 * Gain on signal # 1 (Ks1).  Typical Value = -0.602.
 					 */

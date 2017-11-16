@@ -30,7 +30,7 @@ namespace IEC61970
 					/**
 					 * Type of ignition fuel.
 					 */
-					IEC61970::Base::Generation::Production::FuelType ignitionFuelType;
+					IEC61970::Base::Generation::Production::FuelType ignitionFuelType = IEC61970::Base::Generation::Production::FuelType::_undef;
 
 				};
 

@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class JointConfigurationKind
 			{
-				wires3to1,
+				 _undef = -1, 	wires3to1,
 				wires2to1,
 				wires1to1,
 				other

@@ -27,7 +27,7 @@ namespace IEC61968
 			/**
 			 * Clearance action to perform.
 			 */
-			IEC61968::Operations::ClearanceActionKind kind;
+			IEC61968::Operations::ClearanceActionKind kind = IEC61968::Operations::ClearanceActionKind::_undef;
 			/**
 			 * Clearance associated with this clearance action.
 			 */

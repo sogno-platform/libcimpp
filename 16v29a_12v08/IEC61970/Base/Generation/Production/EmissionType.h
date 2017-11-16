@@ -22,7 +22,7 @@ namespace IEC61970
 					/**
 					 * Sulfer dioxide.
 					 */
-					sulfurDioxide,
+					 _undef = -1, 	sulfurDioxide,
 					/**
 					 * Carbon diaoxide.
 					 */

@@ -36,7 +36,7 @@ namespace IEC61968
 				/**
 				 * Kind of base for this pole.
 				 */
-				IEC61968::InfIEC61968::InfAssets::PoleBaseKind baseKind;
+				IEC61968::InfIEC61968::InfAssets::PoleBaseKind baseKind = IEC61968::InfIEC61968::InfAssets::PoleBaseKind::_undef;
 				/**
 				 * True if a block of material has been attached to base of pole in ground for
 				 * stability. This technique is used primarily when anchors can not be used.
@@ -66,7 +66,7 @@ namespace IEC61968
 				/**
 				 * Kind of preservative for this pole.
 				 */
-				IEC61968::InfIEC61968::InfAssets::PolePreservativeKind preservativeKind;
+				IEC61968::InfIEC61968::InfAssets::PolePreservativeKind preservativeKind = IEC61968::InfIEC61968::InfAssets::PolePreservativeKind::_undef;
 				/**
 				 * Pole species. Aluminum, Aluminum Davit, Concrete, Fiberglass, Galvanized Davit,
 				 * Galvanized, Steel Davit Primed, Steel Davit, Steel Standard Primed, Steel,
@@ -81,7 +81,7 @@ namespace IEC61968
 				/**
 				 * Kind of treatment for this pole.
 				 */
-				IEC61968::InfIEC61968::InfAssets::PoleTreatmentKind treatmentKind;
+				IEC61968::InfIEC61968::InfAssets::PoleTreatmentKind treatmentKind = IEC61968::InfIEC61968::InfAssets::PoleTreatmentKind::_undef;
 				/**
 				 * All streetlights attached to this pole.
 				 */

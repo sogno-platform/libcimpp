@@ -22,7 +22,7 @@ namespace IEC61970
 					/**
 					 * Not available.
 					 */
-					unavailable,
+					 _undef = -1, 	unavailable,
 					/**
 					 * Off of automatic generation control (AGC).
 					 */

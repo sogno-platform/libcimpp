@@ -23,7 +23,7 @@ namespace IEC61970
 					/**
 					 * Ignore UEL signal.
 					 */
-					ignoreUELsignal,
+					 _undef = -1, 	ignoreUELsignal,
 					/**
 					 * UEL input HV gate with voltage regulator output.
 					 */

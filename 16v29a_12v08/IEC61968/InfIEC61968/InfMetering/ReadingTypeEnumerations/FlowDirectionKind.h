@@ -20,7 +20,7 @@ namespace IEC61968
 					/**
 					 * Not Applicable (N/A)
 					 */
-					none = 0,
+					 _undef = -1, 	none = 0,
 					/**
 					 * "Delivered," or "Imported" as defined 61968-2.
 					 * 

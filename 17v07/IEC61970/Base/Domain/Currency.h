@@ -20,7 +20,7 @@ namespace IEC61970
 				/**
 				 * United Arab Emirates dirham.
 				 */
-				AED = 784,
+				 _undef = -1, 	AED = 784,
 				/**
 				 * Afghan afghani.
 				 */

@@ -22,7 +22,7 @@ namespace IEC61970
 				/**
 				 * Voltage is specified.
 				 */
-				voltage,
+				 _undef = -1, 	voltage,
 				/**
 				 * Active power is specified.
 				 */

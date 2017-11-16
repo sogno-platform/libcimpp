@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Reading(s) taken or to be taken in conjunction with installation of a meter.
 			 */
-			installation,
+			 _undef = -1, 	installation,
 			/**
 			 * Reading(s) taken or to be taken in conjunction with removal of a meter.
 			 */

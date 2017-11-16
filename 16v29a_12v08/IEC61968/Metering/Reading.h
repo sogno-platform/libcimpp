@@ -30,7 +30,7 @@ namespace IEC61968
 			/**
 			 * Reason for this reading being taken.
 			 */
-			IEC61968::Metering::ReadingReasonKind reason;
+			IEC61968::Metering::ReadingReasonKind reason = IEC61968::Metering::ReadingReasonKind::_undef;
 			/**
 			 * Type information for this reading value.
 			 */

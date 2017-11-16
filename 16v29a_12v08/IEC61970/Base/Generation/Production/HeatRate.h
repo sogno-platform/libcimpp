@@ -29,7 +29,7 @@ namespace IEC61970
 					virtual ~HeatRate();
 					static const IEC61970::Base::Domain::UnitMultiplier denominatorMultiplier;
 					static const IEC61970::Base::Domain::UnitSymbol denominatorUnit;
-					IEC61970::Base::Domain::UnitMultiplier multiplier;
+					IEC61970::Base::Domain::UnitMultiplier multiplier = IEC61970::Base::Domain::UnitMultiplier::_undef;
 					static const IEC61970::Base::Domain::UnitSymbol unit;
 					IEC61970::Base::Domain::Float value;
 

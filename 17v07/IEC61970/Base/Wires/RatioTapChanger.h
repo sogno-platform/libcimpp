@@ -36,7 +36,7 @@ namespace IEC61970
 				 * Specifies the regulation control mode (voltage or reactive) of the
 				 * RatioTapChanger.
 				 */
-				IEC61970::Base::Wires::TransformerControlMode tculControlMode;
+				IEC61970::Base::Wires::TransformerControlMode tculControlMode = IEC61970::Base::Wires::TransformerControlMode::_undef;
 				/**
 				 * The tap ratio table for this ratio  tap changer.
 				 */

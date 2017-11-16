@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class JointFillKind
 			{
-				noFillPrefab,
+				 _undef = -1, 	noFillPrefab,
 				airNoFilling,
 				petrolatum,
 				asphaltic,

@@ -22,7 +22,7 @@ namespace IEC61970
 					/**
 					 * The wind generating unit is located offshore.
 					 */
-					offshore,
+					 _undef = -1, 	offshore,
 					/**
 					 * The wind generating unit is located onshore.
 					 */

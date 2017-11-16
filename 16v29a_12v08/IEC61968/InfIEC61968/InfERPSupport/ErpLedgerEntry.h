@@ -41,7 +41,7 @@ namespace IEC61968
 				/**
 				 * Kind of account for this entry.
 				 */
-				IEC61968::InfIEC61968::InfERPSupport::ErpAccountKind accountKind;
+				IEC61968::InfIEC61968::InfERPSupport::ErpAccountKind accountKind = IEC61968::InfIEC61968::InfERPSupport::ErpAccountKind::_undef;
 				/**
 				 * The amount of the debit or credit for this account.
 				 */
@@ -55,6 +55,7 @@ namespace IEC61968
 				 * Date and time journal entry was recorded.
 				 */
 				IEC61970::Base::Domain::DateTime transactionDateTime;
+				//warning Enumerator "ErpLedgerEntry" is renamed to "MyErpLedgerEntry", this does not commply the CIM standard!
 				IEC61968::InfIEC61968::InfERPSupport::ErpLedBudLineItem *MyErpLedgerEntry;
 				IEC61968::InfIEC61968::InfERPSupport::ErpJournalEntry *ErpJounalEntry;
 				std::list<IEC61968::Common::UserAttribute*> UserAttributes;

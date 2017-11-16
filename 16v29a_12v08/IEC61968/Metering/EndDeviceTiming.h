@@ -44,7 +44,7 @@ namespace IEC61968
 			 * Kind of randomisation to be applied to the end device control actions to be
 			 * executed.
 			 */
-			IEC61968::Metering::RandomisationKind randomisation;
+			IEC61968::Metering::RandomisationKind randomisation = IEC61968::Metering::RandomisationKind::_undef;
 
 		};
 

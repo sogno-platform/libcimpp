@@ -20,7 +20,7 @@ namespace IEC61968
 					/**
 					 * Not Applicable
 					 */
-					none = 0,
+					 _undef = -1, 	none = 0,
 					/**
 					 * All types of metered quantities. This type of reading comes from the meter and
 					 * represents a “secondary” metered value.

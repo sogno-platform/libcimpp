@@ -50,7 +50,7 @@ namespace IEC61970
 					/**
 					 * OEL input selector (OELin). Typical Value = noOELinput.
 					 */
-					IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcST7BOELselectorKind oelin;
+					IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcST7BOELselectorKind oelin = IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcST7BOELselectorKind::_undef;
 					/**
 					 * Regulator lag time constant (Tb).  Typical Value = 1.
 					 */
@@ -79,7 +79,7 @@ namespace IEC61970
 					/**
 					 * UEL input selector (UELin). Typical Value = noUELinput.
 					 */
-					IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcST7BUELselectorKind uelin;
+					IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcST7BUELselectorKind uelin = IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcST7BUELselectorKind::_undef;
 					/**
 					 * Maximum voltage reference signal (Vmax).  Typical Value = 1.1.
 					 */

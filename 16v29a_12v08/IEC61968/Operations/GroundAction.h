@@ -29,7 +29,7 @@ namespace IEC61968
 			/**
 			 * Switching action to perform.
 			 */
-			IEC61968::Operations::TempEquipActionKind kind;
+			IEC61968::Operations::TempEquipActionKind kind = IEC61968::Operations::TempEquipActionKind::_undef;
 			/**
 			 * Equipment being grounded with this operation. In case of placing a ground
 			 * anywhere along a line segment, you must use the clamp (to get the distance from

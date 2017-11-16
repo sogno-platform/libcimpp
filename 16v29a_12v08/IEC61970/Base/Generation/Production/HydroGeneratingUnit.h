@@ -36,7 +36,7 @@ namespace IEC61970
 					/**
 					 * Energy conversion capability for generating.
 					 */
-					IEC61970::Base::Generation::Production::HydroEnergyConversionKind energyConversionCapability;
+					IEC61970::Base::Generation::Production::HydroEnergyConversionKind energyConversionCapability = IEC61970::Base::Generation::Production::HydroEnergyConversionKind::_undef;
 					/**
 					 * The equivalent cost of water that drives the hydro turbine.
 					 */

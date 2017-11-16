@@ -27,7 +27,7 @@ namespace IEC61968
 			/**
 			 * Switching action to perform.
 			 */
-			IEC61968::Operations::TempEquipActionKind kind;
+			IEC61968::Operations::TempEquipActionKind kind = IEC61968::Operations::TempEquipActionKind::_undef;
 			/**
 			 * Cut on which this action is taken.
 			 */

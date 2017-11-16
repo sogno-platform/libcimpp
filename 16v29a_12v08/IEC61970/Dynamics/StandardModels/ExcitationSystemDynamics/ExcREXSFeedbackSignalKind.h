@@ -24,7 +24,7 @@ namespace IEC61970
 					 * The voltage regulator output voltage is used. It is the same as exciter field
 					 * voltage.
 					 */
-					fieldVoltage,
+					 _undef = -1, 	fieldVoltage,
 					/**
 					 * The exciter field current is used.
 					 */

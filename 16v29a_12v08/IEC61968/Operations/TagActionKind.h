@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Place the tag.
 			 */
-			place,
+			 _undef = -1, 	place,
 			/**
 			 * Remove the tag.
 			 */

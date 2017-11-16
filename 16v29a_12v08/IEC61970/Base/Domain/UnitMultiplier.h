@@ -20,7 +20,7 @@ namespace IEC61970
 				/**
 				 * Pico 10**-12.
 				 */
-				p,
+				 _undef = -1, 	p,
 				/**
 				 * Nano 10**-9.
 				 */

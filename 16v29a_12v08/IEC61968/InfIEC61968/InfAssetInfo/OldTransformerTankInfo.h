@@ -30,7 +30,7 @@ namespace IEC61968
 				/**
 				 * Kind of construction for this transformer.
 				 */
-				IEC61968::InfIEC61968::InfAssetInfo::TransformerConstructionKind constructionKind;
+				IEC61968::InfIEC61968::InfAssetInfo::TransformerConstructionKind constructionKind = IEC61968::InfIEC61968::InfAssetInfo::TransformerConstructionKind::_undef;
 				/**
 				 * Weight of core and coils in transformer.
 				 */
@@ -38,11 +38,11 @@ namespace IEC61968
 				/**
 				 * Core kind of this transformer product.
 				 */
-				IEC61968::InfIEC61968::InfAssetInfo::TransformerCoreKind coreKind;
+				IEC61968::InfIEC61968::InfAssetInfo::TransformerCoreKind coreKind = IEC61968::InfIEC61968::InfAssetInfo::TransformerCoreKind::_undef;
 				/**
 				 * Function of this transformer.
 				 */
-				IEC61968::InfIEC61968::InfAssetInfo::TransformerFunctionKind function;
+				IEC61968::InfIEC61968::InfAssetInfo::TransformerFunctionKind function = IEC61968::InfIEC61968::InfAssetInfo::TransformerFunctionKind::_undef;
 				/**
 				 * Basic insulation level of neutral.
 				 */
@@ -50,7 +50,7 @@ namespace IEC61968
 				/**
 				 * Kind of oil preservation system.
 				 */
-				IEC61968::InfIEC61968::InfAssetInfo::OilPreservationKind oilPreservationKind;
+				IEC61968::InfIEC61968::InfAssetInfo::OilPreservationKind oilPreservationKind = IEC61968::InfIEC61968::InfAssetInfo::OilPreservationKind::_undef;
 
 			};
 

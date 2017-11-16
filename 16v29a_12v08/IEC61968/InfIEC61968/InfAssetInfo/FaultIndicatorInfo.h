@@ -27,7 +27,7 @@ namespace IEC61968
 				/**
 				 * Kind of reset mechanisim of this fault indicator.
 				 */
-				IEC61968::InfIEC61968::InfAssetInfo::FaultIndicatorResetKind resetKind;
+				IEC61968::InfIEC61968::InfAssetInfo::FaultIndicatorResetKind resetKind = IEC61968::InfIEC61968::InfAssetInfo::FaultIndicatorResetKind::_undef;
 
 			};
 

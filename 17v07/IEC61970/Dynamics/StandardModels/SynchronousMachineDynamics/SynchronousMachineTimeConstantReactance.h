@@ -76,11 +76,11 @@ namespace IEC61970
 					/**
 					 * Type of synchronous machine model used in Dynamic simulation applications.
 					 */
-					IEC61970::Dynamics::StandardModels::SynchronousMachineDynamics::SynchronousMachineModelKind modelType;
+					IEC61970::Dynamics::StandardModels::SynchronousMachineDynamics::SynchronousMachineModelKind modelType = IEC61970::Dynamics::StandardModels::SynchronousMachineDynamics::SynchronousMachineModelKind::_undef;
 					/**
 					 * Type of rotor on physical machine.
 					 */
-					IEC61970::Dynamics::StandardModels::SynchronousMachineDynamics::RotorKind rotorType;
+					IEC61970::Dynamics::StandardModels::SynchronousMachineDynamics::RotorKind rotorType = IEC61970::Dynamics::StandardModels::SynchronousMachineDynamics::RotorKind::_undef;
 					/**
 					 * Damping time constant for “Canay” reactance.  Typical Value = 0.
 					 */

@@ -22,7 +22,7 @@ namespace IEC61970
 				/**
 				 * Control variable (target) is real power at PCC bus.
 				 */
-				pPcc,
+				 _undef = -1, 	pPcc,
 				/**
 				 * Control variable (target) is DC voltage and real power at PCC bus is derived.
 				 */

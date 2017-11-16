@@ -37,11 +37,11 @@ namespace IEC61968
 			/**
 			 * Kind of communication direction.
 			 */
-			IEC61968::Metering::ComDirectionKind direction;
+			IEC61968::Metering::ComDirectionKind direction = IEC61968::Metering::ComDirectionKind::_undef;
 			/**
 			 * Kind of communication technology.
 			 */
-			IEC61968::Metering::ComTechnologyKind technology;
+			IEC61968::Metering::ComTechnologyKind technology = IEC61968::Metering::ComTechnologyKind::_undef;
 
 		};
 

@@ -63,7 +63,7 @@ namespace IEC61970
 				/**
 				 * The type of phase connection, such as wye or delta.
 				 */
-				IEC61970::Base::Wires::PhaseShuntConnectionKind phaseConnection;
+				IEC61970::Base::Wires::PhaseShuntConnectionKind phaseConnection = IEC61970::Base::Wires::PhaseShuntConnectionKind::_undef;
 				/**
 				 * Shunt compensator sections in use.
 				 * Starting value for steady state solution. Non integer values are allowed to

@@ -21,7 +21,7 @@ namespace IEC61970
 				 * The value is provided by input from the process I/O or being calculated from
 				 * some function.
 				 */
-				PROCESS,
+				 _undef = -1, 	PROCESS,
 				/**
 				 * The value contains a default value.
 				 */

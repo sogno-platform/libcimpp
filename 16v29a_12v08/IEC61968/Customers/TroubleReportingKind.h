@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Trouble call received by customer service representative.
 			 */
-			call,
+			 _undef = -1, 	call,
 			/**
 			 * Trouble reported by email.
 			 */

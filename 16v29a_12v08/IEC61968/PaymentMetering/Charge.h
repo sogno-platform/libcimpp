@@ -35,7 +35,7 @@ namespace IEC61968
 			/**
 			 * The kind of charge to be applied.
 			 */
-			IEC61968::PaymentMetering::ChargeKind kind;
+			IEC61968::PaymentMetering::ChargeKind kind = IEC61968::PaymentMetering::ChargeKind::_undef;
 			/**
 			 * The variable portion of this charge element, calculated as a percentage of the
 			 * total amount of a parent charge.

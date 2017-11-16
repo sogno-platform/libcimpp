@@ -23,7 +23,7 @@ namespace IEC61970
 					/**
 					 * No OEL input is used.
 					 */
-					noOELinput,
+					 _undef = -1, 	noOELinput,
 					/**
 					 * The connection is before UEL.
 					 */

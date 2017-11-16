@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class PoleBaseKind
 			{
-				asphalt,
+				 _undef = -1, 	asphalt,
 				cement,
 				dirt,
 				unknown,

@@ -22,7 +22,7 @@ namespace IEC61970
 					/**
 					 * Generic coal, not including lignite type.
 					 */
-					coal,
+					 _undef = -1, 	coal,
 					/**
 					 * Oil.
 					 */

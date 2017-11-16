@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class ShuntImpedanceControlKind
 			{
-				fixed,
+				 _undef = -1, 	fixed,
 				localOnly,
 				remoteOnly,
 				remoteWithLocalOverride

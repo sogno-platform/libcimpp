@@ -20,7 +20,7 @@ namespace IEC61970
 				/**
 				 * Remote terminal unit.
 				 */
-				RTU,
+				 _undef = -1, 	RTU,
 				/**
 				 * Substation control system.
 				 */

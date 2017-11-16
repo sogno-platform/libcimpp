@@ -61,7 +61,7 @@ namespace IEC61970
 				/**
 				 * The type of phase connection, such as wye or delta.
 				 */
-				IEC61970::Base::Wires::PhaseShuntConnectionKind phaseConnection;
+				IEC61970::Base::Wires::PhaseShuntConnectionKind phaseConnection = IEC61970::Base::Wires::PhaseShuntConnectionKind::_undef;
 				/**
 				 * Reactive power of the load. Load sign convention is used, i.e. positive sign
 				 * means flow out from a node.

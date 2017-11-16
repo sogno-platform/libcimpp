@@ -20,7 +20,7 @@ namespace IEC61968
 			/**
 			 * Residential revenue.
 			 */
-			residential,
+			 _undef = -1, 	residential,
 			/**
 			 * Non-residential revenue.
 			 */

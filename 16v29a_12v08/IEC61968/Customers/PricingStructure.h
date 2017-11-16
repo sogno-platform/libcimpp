@@ -62,7 +62,7 @@ namespace IEC61968
 			 * before collection actions are taken on a customer (grace periods vary between
 			 * revenue classes).
 			 */
-			IEC61968::Customers::RevenueKind revenueKind;
+			IEC61968::Customers::RevenueKind revenueKind = IEC61968::Customers::RevenueKind::_undef;
 			/**
 			 * True if this pricing structure is not taxable.
 			 */

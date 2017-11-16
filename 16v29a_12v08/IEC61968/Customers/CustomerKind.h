@@ -23,7 +23,7 @@ namespace IEC61968
 			/**
 			 * Residential and commercial customer.
 			 */
-			residentialAndCommercial,
+			 _undef = -1, 	residentialAndCommercial,
 			/**
 			 * Residential and streetlight customer.
 			 */

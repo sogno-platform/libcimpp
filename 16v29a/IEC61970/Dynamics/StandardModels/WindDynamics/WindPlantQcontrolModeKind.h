@@ -23,7 +23,7 @@ namespace IEC61970
 					/**
 					 * Reactive power reference.
 					 */
-					reactivePower,
+					 _undef = -1, 	reactivePower,
 					/**
 					 * Power factor reference.
 					 */

@@ -23,7 +23,7 @@ namespace IEC61970
 					/**
 					 * Round rotor type of synchronous machine.
 					 */
-					roundRotor,
+					 _undef = -1, 	roundRotor,
 					/**
 					 * Salient pole type of synchronous machine.
 					 */

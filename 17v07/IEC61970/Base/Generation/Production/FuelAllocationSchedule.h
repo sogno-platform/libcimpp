@@ -40,7 +40,7 @@ namespace IEC61970
 					/**
 					 * The type of fuel, which also indicates the corresponding measurement unit.
 					 */
-					IEC61970::Base::Generation::Production::FuelType fuelType;
+					IEC61970::Base::Generation::Production::FuelType fuelType = IEC61970::Base::Generation::Production::FuelType::_undef;
 					/**
 					 * The maximum amount fuel that is allocated for consumption for the scheduled
 					 * time period.

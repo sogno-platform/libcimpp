@@ -61,8 +61,8 @@ namespace IEC61970
 				/**
 				 * Kind of control of real power and/or DC voltage.
 				 */
-				IEC61970::Base::DC::VsPpccControlKind pPccControl;
-				IEC61970::Base::DC::VsQpccControlKind qPccControl;
+				IEC61970::Base::DC::VsPpccControlKind pPccControl = IEC61970::Base::DC::VsPpccControlKind::_undef;
+				IEC61970::Base::DC::VsQpccControlKind qPccControl = IEC61970::Base::DC::VsQpccControlKind::_undef;
 				/**
 				 * Reactive power sharing factor among parallel converters on Uac control.
 				 */

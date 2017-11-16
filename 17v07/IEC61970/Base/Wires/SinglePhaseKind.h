@@ -22,7 +22,7 @@ namespace IEC61970
 				/**
 				 * Phase A.
 				 */
-				A,
+				 _undef = -1, 	A,
 				/**
 				 * Phase B.
 				 */

@@ -20,7 +20,7 @@ namespace IEC61970
 				/**
 				 * US dollar
 				 */
-				USD,
+				 _undef = -1, 	USD,
 				/**
 				 * European euro
 				 */

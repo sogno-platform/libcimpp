@@ -22,7 +22,7 @@ namespace IEC61968
 					/**
 					 * Apparent power, Volt Ampere (See also real power and reactive power.), VA
 					 */
-					VA = 61,
+					 _undef = -1, 	VA = 61,
 					/**
 					 * Real power, Watt. By definition, one Watt equals oneJoule per second.
 					 * Electrical power may have real and reactive components. The real portion of
@@ -195,6 +195,7 @@ namespace IEC61968
 					/**
 					 * Number of characters, characters, char
 					 */
+					//warning Enumerator "char" is renamed to "characters", this does not commply the CIM standard!
 					characters = 76,
 					/**
 					 * Rate of change of frequency, hertz per second, Hz/s

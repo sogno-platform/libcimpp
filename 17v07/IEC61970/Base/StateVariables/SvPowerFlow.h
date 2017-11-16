@@ -38,7 +38,7 @@ namespace IEC61970
 				 * The individual phase of the flow.   If unspecified, then assumed to be balanced
 				 * among phases.
 				 */
-				IEC61970::Base::Wires::SinglePhaseKind phase;
+				IEC61970::Base::Wires::SinglePhaseKind phase = IEC61970::Base::Wires::SinglePhaseKind::_undef;
 				/**
 				 * The reactive power flow. Load sign convention is used, i.e. positive sign means
 				 * flow out from a TopologicalNode (bus) into the conducting equipment.

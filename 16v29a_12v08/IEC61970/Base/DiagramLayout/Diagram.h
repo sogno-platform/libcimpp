@@ -30,7 +30,7 @@ namespace IEC61970
 				/**
 				 * Coordinate system orientation of the diagram.
 				 */
-				IEC61970::Base::DiagramLayout::OrientationKind orientation;
+				IEC61970::Base::DiagramLayout::OrientationKind orientation = IEC61970::Base::DiagramLayout::OrientationKind::_undef;
 				/**
 				 * X coordinate of the first corner of the initial view.
 				 */

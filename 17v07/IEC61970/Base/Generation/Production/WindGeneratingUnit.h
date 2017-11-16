@@ -31,7 +31,7 @@ namespace IEC61970
 					/**
 					 * The kind of wind generating unit
 					 */
-					IEC61970::Base::Generation::Production::WindGenUnitKind windGenUnitType;
+					IEC61970::Base::Generation::Production::WindGenUnitKind windGenUnitType = IEC61970::Base::Generation::Production::WindGenUnitKind::_undef;
 
 				};
 

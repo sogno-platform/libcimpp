@@ -25,8 +25,8 @@ namespace IEC61970
 			public:
 				Money();
 				virtual ~Money();
-				IEC61970::Base::Domain::UnitMultiplier multiplier;
-				IEC61970::Base::Domain::Currency unit;
+				IEC61970::Base::Domain::UnitMultiplier multiplier = IEC61970::Base::Domain::UnitMultiplier::_undef;
+				IEC61970::Base::Domain::Currency unit = IEC61970::Base::Domain::Currency::_undef;
 				IEC61970::Base::Domain::Decimal value;
 
 			};

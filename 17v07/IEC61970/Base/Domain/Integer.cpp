@@ -52,8 +52,8 @@ namespace IEC61970
 				std::string tmp;
 				lop >> tmp;
 
-                		rop.value = stol(tmp);
-                		rop.initialized = true;
+				rop.value = stol(tmp);
+				rop.initialized = true;
 				return lop;
 			}
 		}

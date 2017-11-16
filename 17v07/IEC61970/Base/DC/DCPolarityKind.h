@@ -21,7 +21,7 @@ namespace IEC61970
 				/**
 				 * Positive pole.
 				 */
-				positive,
+				 _undef = -1, 	positive,
 				/**
 				 * Middle pole, potentially grounded.
 				 */

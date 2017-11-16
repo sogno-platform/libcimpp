@@ -23,7 +23,7 @@ namespace IEC61970
 					/**
 					 * Voltage control (<i>M</i><i><sub>q</sub></i><sub>G</sub> equals 0).
 					 */
-					voltage,
+					 _undef = -1, 	voltage,
 					/**
 					 * Reactive power control (<i>M</i><i><sub>q</sub></i><sub>G</sub> equals 1).
 					 */

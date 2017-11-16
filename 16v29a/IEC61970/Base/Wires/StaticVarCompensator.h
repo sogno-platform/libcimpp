@@ -59,7 +59,7 @@ namespace IEC61970
 				/**
 				 * SVC control mode.
 				 */
-				IEC61970::Base::Wires::SVCControlMode sVCControlMode;
+				IEC61970::Base::Wires::SVCControlMode sVCControlMode = IEC61970::Base::Wires::SVCControlMode::_undef;
 				/**
 				 * The reactive power output of the SVC is proportional to the difference between
 				 * the voltage at the regulated bus and the voltage setpoint.  When the regulated

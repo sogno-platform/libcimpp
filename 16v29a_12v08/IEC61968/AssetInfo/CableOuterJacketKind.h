@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Cable has no outer jacket.
 			 */
-			none,
+			 _undef = -1, 	none,
 			/**
 			 * Linear low density polyethylene cable outer jacket.
 			 */

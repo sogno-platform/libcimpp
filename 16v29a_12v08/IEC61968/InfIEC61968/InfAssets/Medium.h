@@ -36,7 +36,7 @@ namespace IEC61968
 				/**
 				 * Kind of this medium.
 				 */
-				IEC61968::InfIEC61968::InfAssets::MediumKind kind;
+				IEC61968::InfIEC61968::InfAssets::MediumKind kind = IEC61968::InfIEC61968::InfAssets::MediumKind::_undef;
 				/**
 				 * The volume of the medium specified for this application. Note that the actual
 				 * volume is a type of measurement associated witht the asset.

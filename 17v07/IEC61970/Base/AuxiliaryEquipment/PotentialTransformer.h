@@ -45,7 +45,7 @@ namespace IEC61970
 				/**
 				 * Potential transformer construction type.
 				 */
-				IEC61970::Base::AuxiliaryEquipment::PotentialTransformerKind type;
+				IEC61970::Base::AuxiliaryEquipment::PotentialTransformerKind type = IEC61970::Base::AuxiliaryEquipment::PotentialTransformerKind::_undef;
 
 			};
 

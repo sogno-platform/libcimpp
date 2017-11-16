@@ -25,8 +25,8 @@ namespace IEC61970
 			public:
 				FloatQuantity();
 				virtual ~FloatQuantity();
-				IEC61970::Base::Domain::UnitMultiplier multiplier;
-				IEC61970::Base::Domain::UnitSymbol unit;
+				IEC61970::Base::Domain::UnitMultiplier multiplier = IEC61970::Base::Domain::UnitMultiplier::_undef;
+				IEC61970::Base::Domain::UnitSymbol unit = IEC61970::Base::Domain::UnitSymbol::_undef;
 				IEC61970::Base::Domain::Float value;
 
 			};
