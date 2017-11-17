@@ -1,0 +1,7 @@
+image: ubuntu
+
+mirror:
+  stage: deploy
+  script:
+    - ./mirrorToGithub.sh
+	
