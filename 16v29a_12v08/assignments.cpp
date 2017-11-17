@@ -1,11 +1,10 @@
-#include "assignments.hpp"
 #include <sstream>
 #include <utility>
 #include <unordered_map>
-#include <regex>
-#include <fstream>
 
 #include "Folders.hpp"
+#include "Aliases.hpp"
+#include "assignments.hpp"
 
 typedef bool (*assign_function)(std::stringstream&, BaseClass*);
 static std::unordered_map<std::string, assign_function> dynamic_switch_factory();
@@ -34,37 +33,37 @@ std::istream& operator>>(std::istream& lop, IEC61968::Assets::SealConditionKind&
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "locked")
 	{
 		rop = IEC61968::Assets::SealConditionKind::locked;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "open")
 	{
 		rop = IEC61968::Assets::SealConditionKind::open;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "broken")
 	{
 		rop = IEC61968::Assets::SealConditionKind::broken;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "missing")
 	{
 		rop = IEC61968::Assets::SealConditionKind::missing;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::Assets::SealConditionKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -81,31 +80,31 @@ std::istream& operator>>(std::istream& lop, IEC61968::Assets::SealKind& rop)
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "steel")
 	{
 		rop = IEC61968::Assets::SealKind::steel;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "lead")
 	{
 		rop = IEC61968::Assets::SealKind::lead;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "lock")
 	{
 		rop = IEC61968::Assets::SealKind::lock;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::Assets::SealKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -122,73 +121,73 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Domain::UnitMultipli
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "p")
 	{
 		rop = IEC61970::Base::Domain::UnitMultiplier::p;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "n")
 	{
 		rop = IEC61970::Base::Domain::UnitMultiplier::n;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "micro")
 	{
 		rop = IEC61970::Base::Domain::UnitMultiplier::micro;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "m")
 	{
 		rop = IEC61970::Base::Domain::UnitMultiplier::m;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "c")
 	{
 		rop = IEC61970::Base::Domain::UnitMultiplier::c;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "d")
 	{
 		rop = IEC61970::Base::Domain::UnitMultiplier::d;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "k")
 	{
 		rop = IEC61970::Base::Domain::UnitMultiplier::k;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "M")
 	{
 		rop = IEC61970::Base::Domain::UnitMultiplier::M;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "G")
 	{
 		rop = IEC61970::Base::Domain::UnitMultiplier::G;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "T")
 	{
 		rop = IEC61970::Base::Domain::UnitMultiplier::T;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "none")
 	{
 		rop = IEC61970::Base::Domain::UnitMultiplier::none;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -205,169 +204,169 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Domain::UnitSymbol& 
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "VA")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::VA;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "W")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::W;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "VAr")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::VAr;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "VAh")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::VAh;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "Wh")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::Wh;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "VArh")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::VArh;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "V")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::V;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ohm")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::ohm;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "A")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::A;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "F")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::F;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "H")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::H;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "degC")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::degC;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "s")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::s;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "min")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::min;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "h")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::h;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "deg")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::deg;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rad")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::rad;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "J")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::J;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "N")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::N;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "S")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::S;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "none")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::none;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "Hz")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::Hz;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "g")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::g;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "Pa")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::Pa;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "m")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::m;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "m2")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::m2;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "m3")
 	{
 		rop = IEC61970::Base::Domain::UnitSymbol::m3;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -384,91 +383,91 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Domain::Currency& ro
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "USD")
 	{
 		rop = IEC61970::Base::Domain::Currency::USD;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "EUR")
 	{
 		rop = IEC61970::Base::Domain::Currency::EUR;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "AUD")
 	{
 		rop = IEC61970::Base::Domain::Currency::AUD;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "CAD")
 	{
 		rop = IEC61970::Base::Domain::Currency::CAD;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "CHF")
 	{
 		rop = IEC61970::Base::Domain::Currency::CHF;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "CNY")
 	{
 		rop = IEC61970::Base::Domain::Currency::CNY;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "DKK")
 	{
 		rop = IEC61970::Base::Domain::Currency::DKK;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "GBP")
 	{
 		rop = IEC61970::Base::Domain::Currency::GBP;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "JPY")
 	{
 		rop = IEC61970::Base::Domain::Currency::JPY;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "NOK")
 	{
 		rop = IEC61970::Base::Domain::Currency::NOK;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "RUR")
 	{
 		rop = IEC61970::Base::Domain::Currency::RUR;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "SEK")
 	{
 		rop = IEC61970::Base::Domain::Currency::SEK;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "INR")
 	{
 		rop = IEC61970::Base::Domain::Currency::INR;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61970::Base::Domain::Currency::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -485,133 +484,133 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Core::PhaseCode& rop
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "ABCN")
 	{
 		rop = IEC61970::Base::Core::PhaseCode::ABCN;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ABC")
 	{
 		rop = IEC61970::Base::Core::PhaseCode::ABC;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ABN")
 	{
 		rop = IEC61970::Base::Core::PhaseCode::ABN;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ACN")
 	{
 		rop = IEC61970::Base::Core::PhaseCode::ACN;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "BCN")
 	{
 		rop = IEC61970::Base::Core::PhaseCode::BCN;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "AB")
 	{
 		rop = IEC61970::Base::Core::PhaseCode::AB;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "AC")
 	{
 		rop = IEC61970::Base::Core::PhaseCode::AC;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "BC")
 	{
 		rop = IEC61970::Base::Core::PhaseCode::BC;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "AN")
 	{
 		rop = IEC61970::Base::Core::PhaseCode::AN;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "BN")
 	{
 		rop = IEC61970::Base::Core::PhaseCode::BN;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "CN")
 	{
 		rop = IEC61970::Base::Core::PhaseCode::CN;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "A")
 	{
 		rop = IEC61970::Base::Core::PhaseCode::A;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "B")
 	{
 		rop = IEC61970::Base::Core::PhaseCode::B;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "C")
 	{
 		rop = IEC61970::Base::Core::PhaseCode::C;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "N")
 	{
 		rop = IEC61970::Base::Core::PhaseCode::N;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "s1N")
 	{
 		rop = IEC61970::Base::Core::PhaseCode::s1N;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "s2N")
 	{
 		rop = IEC61970::Base::Core::PhaseCode::s2N;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "s12N")
 	{
 		rop = IEC61970::Base::Core::PhaseCode::s12N;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "s1")
 	{
 		rop = IEC61970::Base::Core::PhaseCode::s1;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "s2")
 	{
 		rop = IEC61970::Base::Core::PhaseCode::s2;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "s12")
 	{
 		rop = IEC61970::Base::Core::PhaseCode::s12;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -628,19 +627,19 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Core::CurveStyle& ro
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "constantYValue")
 	{
 		rop = IEC61970::Base::Core::CurveStyle::constantYValue;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "straightLineYValues")
 	{
 		rop = IEC61970::Base::Core::CurveStyle::straightLineYValues;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -657,25 +656,25 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfERPSupport
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "initial")
 	{
 		rop = IEC61968::InfIEC61968::InfERPSupport::ErpInvoiceLineItemKind::initial;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "recalculation")
 	{
 		rop = IEC61968::InfIEC61968::InfERPSupport::ErpInvoiceLineItemKind::recalculation;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfERPSupport::ErpInvoiceLineItemKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -692,25 +691,25 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfERPSupport
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "paper")
 	{
 		rop = IEC61968::InfIEC61968::InfERPSupport::BillMediaKind::paper;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "electronic")
 	{
 		rop = IEC61968::InfIEC61968::InfERPSupport::BillMediaKind::electronic;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfERPSupport::BillMediaKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -727,19 +726,19 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfERPSupport
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "sale")
 	{
 		rop = IEC61968::InfIEC61968::InfERPSupport::ErpInvoiceKind::sale;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "purchase")
 	{
 		rop = IEC61968::InfIEC61968::InfERPSupport::ErpInvoiceKind::purchase;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -756,25 +755,25 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssets::Me
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "gas")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::MediumKind::gas;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "liquid")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::MediumKind::liquid;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "solid")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::MediumKind::solid;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -791,25 +790,25 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::SCADA::Source& rop)
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "PROCESS")
 	{
 		rop = IEC61970::Base::SCADA::Source::PROCESS;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "DEFAULTED")
 	{
 		rop = IEC61970::Base::SCADA::Source::DEFAULTED;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "SUBSTITUTED")
 	{
 		rop = IEC61970::Base::SCADA::Source::SUBSTITUTED;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -826,25 +825,25 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Meas::Validity& rop)
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "GOOD")
 	{
 		rop = IEC61970::Base::Meas::Validity::GOOD;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "QUESTIONABLE")
 	{
 		rop = IEC61970::Base::Meas::Validity::QUESTIONABLE;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "INVALID")
 	{
 		rop = IEC61970::Base::Meas::Validity::INVALID;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -861,49 +860,49 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Wires::WindingConnec
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "D")
 	{
 		rop = IEC61970::Base::Wires::WindingConnection::D;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "Y")
 	{
 		rop = IEC61970::Base::Wires::WindingConnection::Y;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "Z")
 	{
 		rop = IEC61970::Base::Wires::WindingConnection::Z;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "Yn")
 	{
 		rop = IEC61970::Base::Wires::WindingConnection::Yn;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "Zn")
 	{
 		rop = IEC61970::Base::Wires::WindingConnection::Zn;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "A")
 	{
 		rop = IEC61970::Base::Wires::WindingConnection::A;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "I")
 	{
 		rop = IEC61970::Base::Wires::WindingConnection::I;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -920,55 +919,55 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Wires::RegulatingCon
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "voltage")
 	{
 		rop = IEC61970::Base::Wires::RegulatingControlModeKind::voltage;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "activePower")
 	{
 		rop = IEC61970::Base::Wires::RegulatingControlModeKind::activePower;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "reactivePower")
 	{
 		rop = IEC61970::Base::Wires::RegulatingControlModeKind::reactivePower;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "currentFlow")
 	{
 		rop = IEC61970::Base::Wires::RegulatingControlModeKind::currentFlow;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "admittance")
 	{
 		rop = IEC61970::Base::Wires::RegulatingControlModeKind::admittance;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "timeScheduled")
 	{
 		rop = IEC61970::Base::Wires::RegulatingControlModeKind::timeScheduled;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "temperature")
 	{
 		rop = IEC61970::Base::Wires::RegulatingControlModeKind::temperature;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "powerFactor")
 	{
 		rop = IEC61970::Base::Wires::RegulatingControlModeKind::powerFactor;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -985,19 +984,19 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Wires::TransformerCo
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "volt")
 	{
 		rop = IEC61970::Base::Wires::TransformerControlMode::volt;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "reactive")
 	{
 		rop = IEC61970::Base::Wires::TransformerControlMode::reactive;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -1014,85 +1013,85 @@ std::istream& operator>>(std::istream& lop, IEC61968::PaymentMetering::Transacti
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "serviceChargePayment")
 	{
 		rop = IEC61968::PaymentMetering::TransactionKind::serviceChargePayment;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "taxChargePayment")
 	{
 		rop = IEC61968::PaymentMetering::TransactionKind::taxChargePayment;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "auxiliaryChargePayment")
 	{
 		rop = IEC61968::PaymentMetering::TransactionKind::auxiliaryChargePayment;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "accountPayment")
 	{
 		rop = IEC61968::PaymentMetering::TransactionKind::accountPayment;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "diversePayment")
 	{
 		rop = IEC61968::PaymentMetering::TransactionKind::diversePayment;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "transactionReversal")
 	{
 		rop = IEC61968::PaymentMetering::TransactionKind::transactionReversal;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "tokenSalePayment")
 	{
 		rop = IEC61968::PaymentMetering::TransactionKind::tokenSalePayment;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "tokenFreeIssue")
 	{
 		rop = IEC61968::PaymentMetering::TransactionKind::tokenFreeIssue;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "tokenGrant")
 	{
 		rop = IEC61968::PaymentMetering::TransactionKind::tokenGrant;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "tokenExchange")
 	{
 		rop = IEC61968::PaymentMetering::TransactionKind::tokenExchange;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "tokenCancellation")
 	{
 		rop = IEC61968::PaymentMetering::TransactionKind::tokenCancellation;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "meterConfigurationToken")
 	{
 		rop = IEC61968::PaymentMetering::TransactionKind::meterConfigurationToken;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::PaymentMetering::TransactionKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -1109,37 +1108,37 @@ std::istream& operator>>(std::istream& lop, IEC61968::Assets::ProcedureKind& rop
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "inspection")
 	{
 		rop = IEC61968::Assets::ProcedureKind::inspection;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "diagnosis")
 	{
 		rop = IEC61968::Assets::ProcedureKind::diagnosis;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "maintenance")
 	{
 		rop = IEC61968::Assets::ProcedureKind::maintenance;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "test")
 	{
 		rop = IEC61968::Assets::ProcedureKind::test;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::Assets::ProcedureKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -1156,31 +1155,31 @@ std::istream& operator>>(std::istream& lop, IEC61968::Assets::CorporateStandardK
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "standard")
 	{
 		rop = IEC61968::Assets::CorporateStandardKind::standard;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "experimental")
 	{
 		rop = IEC61968::Assets::CorporateStandardKind::experimental;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "underEvaluation")
 	{
 		rop = IEC61968::Assets::CorporateStandardKind::underEvaluation;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::Assets::CorporateStandardKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -1197,55 +1196,55 @@ std::istream& operator>>(std::istream& lop, IEC61968::Assets::AssetModelUsageKin
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "distributionOverhead")
 	{
 		rop = IEC61968::Assets::AssetModelUsageKind::distributionOverhead;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "distributionUnderground")
 	{
 		rop = IEC61968::Assets::AssetModelUsageKind::distributionUnderground;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "transmission")
 	{
 		rop = IEC61968::Assets::AssetModelUsageKind::transmission;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "substation")
 	{
 		rop = IEC61968::Assets::AssetModelUsageKind::substation;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "streetlight")
 	{
 		rop = IEC61968::Assets::AssetModelUsageKind::streetlight;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "customerSubstation")
 	{
 		rop = IEC61968::Assets::AssetModelUsageKind::customerSubstation;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "unknown")
 	{
 		rop = IEC61968::Assets::AssetModelUsageKind::unknown;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::Assets::AssetModelUsageKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -1262,19 +1261,19 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssets::To
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "suspension")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::TowerConstructionKind::suspension;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "tension")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::TowerConstructionKind::tension;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -1291,49 +1290,49 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssets::An
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "concrete")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::AnchorKind::concrete;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "helix")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::AnchorKind::helix;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "multiHelix")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::AnchorKind::multiHelix;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rod")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::AnchorKind::rod;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "screw")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::AnchorKind::screw;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "unknown")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::AnchorKind::unknown;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::AnchorKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -1350,19 +1349,19 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssets::St
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "anchor")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::StructureSupportKind::anchor;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "guy")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::StructureSupportKind::guy;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -1379,31 +1378,31 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssets::St
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "wood")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::StructureMaterialKind::wood;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "steel")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::StructureMaterialKind::steel;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "concrete")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::StructureMaterialKind::concrete;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::StructureMaterialKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -1420,31 +1419,31 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssets::Jo
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "wires3to1")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::JointConfigurationKind::wires3to1;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "wires2to1")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::JointConfigurationKind::wires2to1;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "wires1to1")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::JointConfigurationKind::wires1to1;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::JointConfigurationKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -1461,67 +1460,67 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssets::Jo
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "noFillPrefab")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::JointFillKind::noFillPrefab;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "airNoFilling")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::JointFillKind::airNoFilling;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "petrolatum")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::JointFillKind::petrolatum;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "asphaltic")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::JointFillKind::asphaltic;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "oil")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::JointFillKind::oil;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "bluefill254")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::JointFillKind::bluefill254;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "noVoid")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::JointFillKind::noVoid;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "epoxy")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::JointFillKind::epoxy;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "insoluseal")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::JointFillKind::insoluseal;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::JointFillKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -1538,37 +1537,37 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssets::Po
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "asphalt")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::PoleBaseKind::asphalt;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "cement")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::PoleBaseKind::cement;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "dirt")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::PoleBaseKind::dirt;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "unknown")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::PoleBaseKind::unknown;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::PoleBaseKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -1585,49 +1584,49 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssets::Po
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "creosote")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::PolePreservativeKind::creosote;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "cellon")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::PolePreservativeKind::cellon;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "naphthena")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::PolePreservativeKind::naphthena;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "penta")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::PolePreservativeKind::penta;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "chemonite")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::PolePreservativeKind::chemonite;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "unknown")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::PolePreservativeKind::unknown;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::PolePreservativeKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -1644,55 +1643,55 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssets::Po
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "full")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::PoleTreatmentKind::full;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "butt")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::PoleTreatmentKind::butt;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "natural")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::PoleTreatmentKind::natural;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "grayStain")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::PoleTreatmentKind::grayStain;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "greenStain")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::PoleTreatmentKind::greenStain;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "penta")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::PoleTreatmentKind::penta;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "unknown")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::PoleTreatmentKind::unknown;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::PoleTreatmentKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -1709,31 +1708,31 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssets::St
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "highPressureSodium")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::StreetlightLampKind::highPressureSodium;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "mercuryVapor")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::StreetlightLampKind::mercuryVapor;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "metalHalide")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::StreetlightLampKind::metalHalide;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::StreetlightLampKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -1750,31 +1749,31 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssets::Bu
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "paperoil")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::BushingInsulationKind::paperoil;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "compound")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::BushingInsulationKind::compound;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "solidPorcelain")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::BushingInsulationKind::solidPorcelain;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::BushingInsulationKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -1791,19 +1790,19 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssets::Bu
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "c1")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::BushingInsulationPfTestKind::c1;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "c2")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::BushingInsulationPfTestKind::c2;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -1820,37 +1819,37 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssets::Fa
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "breakerOperation")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::FailureIsolationMethodKind::breakerOperation;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "fuse")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::FailureIsolationMethodKind::fuse;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "burnedInTheClear")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::FailureIsolationMethodKind::burnedInTheClear;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "manuallyIsolated")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::FailureIsolationMethodKind::manuallyIsolated;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::FailureIsolationMethodKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -1867,67 +1866,67 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssets::Un
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "burd")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::UndergroundStructureKind::burd;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "enclosure")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::UndergroundStructureKind::enclosure;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "handhole")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::UndergroundStructureKind::handhole;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "manhole")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::UndergroundStructureKind::manhole;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "pad")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::UndergroundStructureKind::pad;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "subsurfaceEnclosure")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::UndergroundStructureKind::subsurfaceEnclosure;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "trench")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::UndergroundStructureKind::trench;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "tunnel")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::UndergroundStructureKind::tunnel;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "vault")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::UndergroundStructureKind::vault;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "pullbox")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::UndergroundStructureKind::pullbox;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -1944,31 +1943,31 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssets::Co
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "selfCooling")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::CoolingKind::selfCooling;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "forcedAir")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::CoolingKind::forcedAir;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "forcedOilAndAir")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::CoolingKind::forcedOilAndAir;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::CoolingKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -1985,31 +1984,31 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfWork::Work
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "install")
 	{
 		rop = IEC61968::InfIEC61968::InfWork::WorkActionKind::install;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "remove")
 	{
 		rop = IEC61968::InfIEC61968::InfWork::WorkActionKind::remove;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "abandon")
 	{
 		rop = IEC61968::InfIEC61968::InfWork::WorkActionKind::abandon;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "transfer")
 	{
 		rop = IEC61968::InfIEC61968::InfWork::WorkActionKind::transfer;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -2026,31 +2025,31 @@ std::istream& operator>>(std::istream& lop, IEC61968::Work::WorkTaskKind& rop)
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "install")
 	{
 		rop = IEC61968::Work::WorkTaskKind::install;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "remove")
 	{
 		rop = IEC61968::Work::WorkTaskKind::remove;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "exchange")
 	{
 		rop = IEC61968::Work::WorkTaskKind::exchange;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "investigate")
 	{
 		rop = IEC61968::Work::WorkTaskKind::investigate;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -2067,67 +2066,67 @@ std::istream& operator>>(std::istream& lop, IEC61968::Work::WorkKind& rop)
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "construction")
 	{
 		rop = IEC61968::Work::WorkKind::construction;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "inspection")
 	{
 		rop = IEC61968::Work::WorkKind::inspection;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "maintenance")
 	{
 		rop = IEC61968::Work::WorkKind::maintenance;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "repair")
 	{
 		rop = IEC61968::Work::WorkKind::repair;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "test")
 	{
 		rop = IEC61968::Work::WorkKind::test;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "service")
 	{
 		rop = IEC61968::Work::WorkKind::service;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "disconnect")
 	{
 		rop = IEC61968::Work::WorkKind::disconnect;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "reconnect")
 	{
 		rop = IEC61968::Work::WorkKind::reconnect;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "connect")
 	{
 		rop = IEC61968::Work::WorkKind::connect;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::Work::WorkKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -2144,79 +2143,79 @@ std::istream& operator>>(std::istream& lop, IEC61968::Work::WorkStatusKind& rop)
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "waitingOnApproval")
 	{
 		rop = IEC61968::Work::WorkStatusKind::waitingOnApproval;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "approved")
 	{
 		rop = IEC61968::Work::WorkStatusKind::approved;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "cancelled")
 	{
 		rop = IEC61968::Work::WorkStatusKind::cancelled;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "waitingToBeScheduled")
 	{
 		rop = IEC61968::Work::WorkStatusKind::waitingToBeScheduled;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "scheduled")
 	{
 		rop = IEC61968::Work::WorkStatusKind::scheduled;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "waitingOnMaterial")
 	{
 		rop = IEC61968::Work::WorkStatusKind::waitingOnMaterial;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "inProgress")
 	{
 		rop = IEC61968::Work::WorkStatusKind::inProgress;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "completed")
 	{
 		rop = IEC61968::Work::WorkStatusKind::completed;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "closed")
 	{
 		rop = IEC61968::Work::WorkStatusKind::closed;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "dispatched")
 	{
 		rop = IEC61968::Work::WorkStatusKind::dispatched;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "enroute")
 	{
 		rop = IEC61968::Work::WorkStatusKind::enroute;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "onSite")
 	{
 		rop = IEC61968::Work::WorkStatusKind::onSite;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -2233,37 +2232,37 @@ std::istream& operator>>(std::istream& lop, IEC61968::Work::WorkTimeScheduleKind
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "estimate")
 	{
 		rop = IEC61968::Work::WorkTimeScheduleKind::estimate;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "request")
 	{
 		rop = IEC61968::Work::WorkTimeScheduleKind::request;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "actual")
 	{
 		rop = IEC61968::Work::WorkTimeScheduleKind::actual;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "earliest")
 	{
 		rop = IEC61968::Work::WorkTimeScheduleKind::earliest;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "latest")
 	{
 		rop = IEC61968::Work::WorkTimeScheduleKind::latest;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -2280,37 +2279,37 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfWork::Cond
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "labor")
 	{
 		rop = IEC61968::InfIEC61968::InfWork::ConditionFactorKind::labor;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "accountAllocation")
 	{
 		rop = IEC61968::InfIEC61968::InfWork::ConditionFactorKind::accountAllocation;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "material")
 	{
 		rop = IEC61968::InfIEC61968::InfWork::ConditionFactorKind::material;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "travel")
 	{
 		rop = IEC61968::InfIEC61968::InfWork::ConditionFactorKind::travel;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfWork::ConditionFactorKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -2327,25 +2326,25 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfWork::Desi
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "estimated")
 	{
 		rop = IEC61968::InfIEC61968::InfWork::DesignKind::estimated;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "asBuilt")
 	{
 		rop = IEC61968::InfIEC61968::InfWork::DesignKind::asBuilt;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfWork::DesignKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -2362,55 +2361,55 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssets::FA
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "svc")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::FACTSDeviceKind::svc;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "statcom")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::FACTSDeviceKind::statcom;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "tcpar")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::FACTSDeviceKind::tcpar;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "tcsc")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::FACTSDeviceKind::tcsc;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "tcvl")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::FACTSDeviceKind::tcvl;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "tsbr")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::FACTSDeviceKind::tsbr;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "tssc")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::FACTSDeviceKind::tssc;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "upfc")
 	{
 		rop = IEC61968::InfIEC61968::InfAssets::FACTSDeviceKind::upfc;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -2427,757 +2426,757 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfMetering::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "VA")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::VA;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "W")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::W;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "VAr")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::VAr;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "VAh")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::VAh;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "Wh")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::Wh;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "VArh")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::VArh;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "V")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::V;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ohm")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::ohm;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "A")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::A;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "F")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::F;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "H")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::H;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "degC")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::degC;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "sec")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::sec;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "min")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::min;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "h")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::h;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "deg")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::deg;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rad")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::rad;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "J")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::J;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "n")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::n;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "siemens")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::siemens;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "none")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::none;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "Hz")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::Hz;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "g")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::g;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "pa")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::pa;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "m")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::m;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "m2")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::m2;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "m3")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::m3;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "A2")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::A2;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "A2h")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::A2h;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "A2s")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::A2s;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "Ah")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::Ah;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "APerA")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::APerA;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "aPerM")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::aPerM;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "As")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::As;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "b")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::b;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "bm")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::bm;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "bq")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::bq;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "btu")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::btu;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "btuPerH")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::btuPerH;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "cd")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::cd;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "characters")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::characters;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "HzPerSec")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::HzPerSec;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "code")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::code;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "cosTheta")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::cosTheta;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "count")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::count;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ft3")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::ft3;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ft3compensated")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::ft3compensated;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ft3compensatedPerH")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::ft3compensatedPerH;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "gM2")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::gM2;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "gPerG")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::gPerG;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "gy")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::gy;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "HzPerHz")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::HzPerHz;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "charPerSec")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::charPerSec;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "imperialGal")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::imperialGal;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "imperialGalPerH")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::imperialGalPerH;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "jPerK")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::jPerK;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "jPerKg")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::jPerKg;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "K")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::K;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "kat")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::kat;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "kgM")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::kgM;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "kgPerM3")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::kgPerM3;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "litre")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::litre;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "litreCompensated")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::litreCompensated;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "litreCompensatedPerH")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::litreCompensatedPerH;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "litrePerH")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::litrePerH;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "litrePerLitre")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::litrePerLitre;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "litrePerSec")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::litrePerSec;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "litreUncompensated")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::litreUncompensated;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "litreUncompensatedPerH")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::litreUncompensatedPerH;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "lm")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::lm;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "lx")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::lx;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "m2PerSec")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::m2PerSec;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "m3compensated")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::m3compensated;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "m3compensatedPerH")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::m3compensatedPerH;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "m3PerH")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::m3PerH;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "m3PerSec")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::m3PerSec;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "m3uncompensated")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::m3uncompensated;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "m3uncompensatedPerH")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::m3uncompensatedPerH;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "meCode")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::meCode;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "mol")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::mol;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "molPerKg")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::molPerKg;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "molPerM3")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::molPerM3;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "molPerMol")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::molPerMol;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "money")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::money;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "mPerM")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::mPerM;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "mPerM3")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::mPerM3;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "mPerSec")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::mPerSec;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "mPerSec2")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::mPerSec2;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ohmM")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::ohmM;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "paA")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::paA;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "paG")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::paG;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "psiA")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::psiA;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "psiG")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::psiG;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "q")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::q;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "q45")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::q45;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "q45h")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::q45h;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "q60")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::q60;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "q60h")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::q60h;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "qh")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::qh;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "radPerSec")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::radPerSec;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rev")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::rev;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "revPerSec")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::revPerSec;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "secPerSec")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::secPerSec;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "sr")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::sr;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "status")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::status;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "sv")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::sv;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "t")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::t;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "therm")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::therm;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "timeStamp")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::timeStamp;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "usGal")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::usGal;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "usGalPerH")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::usGalPerH;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "V2")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::V2;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "V2h")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::V2h;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "VAhPerRev")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::VAhPerRev;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "VArhPerRev")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::VArhPerRev;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "VPerHz")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::VPerHz;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "VPerV")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::VPerV;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "Vs")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::Vs;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "wb")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::wb;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "WhPerM3")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::WhPerM3;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "WhPerRev")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::WhPerRev;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "wPerMK")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::wPerMK;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "WPerSec")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::WPerSec;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "WPerVA")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::WPerVA;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "WPerW")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitSymbolKind::WPerW;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -3194,85 +3193,85 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfMetering::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "p")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitMultiplierKind::p;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "n")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitMultiplierKind::n;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "micro")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitMultiplierKind::micro;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "m")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitMultiplierKind::m;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "c")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitMultiplierKind::c;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "d")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitMultiplierKind::d;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "k")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitMultiplierKind::k;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "M")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitMultiplierKind::M;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "G")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitMultiplierKind::G;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "T")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitMultiplierKind::T;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "none")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitMultiplierKind::none;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "da")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitMultiplierKind::da;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "h")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtUnitMultiplierKind::h;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -3289,169 +3288,169 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfMetering::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "ABCN")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::ABCN;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ABC")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::ABC;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ABN")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::ABN;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ACN")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::ACN;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "BCN")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::BCN;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "AB")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::AB;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "AC")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::AC;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "BC")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::BC;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "AN")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::AN;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "BN")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::BN;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "CN")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::CN;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "A")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::A;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "B")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::B;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "C")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::C;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "N")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::N;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "S2N")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::S2N;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "S12N")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::S12N;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "S1N")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::S1N;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "S2")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::S2;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "S12")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::S12;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "none")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::none;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "AtoAv")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::AtoAv;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "BAv")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::BAv;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "CAN")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::CAN;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "CAv")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::CAv;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "NG")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::NG;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "S1")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ExistingEnumExtensions::ExtPhaseCodeKind::S1;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -3468,97 +3467,97 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfMetering::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "none")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AggregateKind::none;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "average")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AggregateKind::average;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "excess")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AggregateKind::excess;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "highThreshold")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AggregateKind::highThreshold;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "lowThreshold")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AggregateKind::lowThreshold;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "maximum")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AggregateKind::maximum;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "minimum")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AggregateKind::minimum;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "nominal")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AggregateKind::nominal;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "normal")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AggregateKind::normal;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "secondMaximum")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AggregateKind::secondMaximum;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "secondMinimum")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AggregateKind::secondMinimum;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "thirdMaximum")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AggregateKind::thirdMaximum;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "fourthMaximum")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AggregateKind::fourthMaximum;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "fifthMaximum")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AggregateKind::fifthMaximum;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "sum")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AggregateKind::sum;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -3575,133 +3574,133 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfMetering::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "none")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::FlowDirectionKind::none;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "forward")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::FlowDirectionKind::forward;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "lagging")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::FlowDirectionKind::lagging;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "leading")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::FlowDirectionKind::leading;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "net")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::FlowDirectionKind::net;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "q1plusQ2")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::FlowDirectionKind::q1plusQ2;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "q1plusQ3")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::FlowDirectionKind::q1plusQ3;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "q1plusQ4")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::FlowDirectionKind::q1plusQ4;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "q1minusQ4")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::FlowDirectionKind::q1minusQ4;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "q2plusQ3")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::FlowDirectionKind::q2plusQ3;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "q2plusQ4")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::FlowDirectionKind::q2plusQ4;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "q2minusQ3")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::FlowDirectionKind::q2minusQ3;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "q3plusQ4")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::FlowDirectionKind::q3plusQ4;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "q3minusQ2")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::FlowDirectionKind::q3minusQ2;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "quadrant1")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::FlowDirectionKind::quadrant1;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "quadrant2")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::FlowDirectionKind::quadrant2;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "quadrant3")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::FlowDirectionKind::quadrant3;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "quadrant4")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::FlowDirectionKind::quadrant4;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "reverse")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::FlowDirectionKind::reverse;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "total")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::FlowDirectionKind::total;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "totalByPhase")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::FlowDirectionKind::totalByPhase;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -3718,253 +3717,253 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfMetering::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "none")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::none;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "tenMinute")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::tenMinute;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "fifteenMinute")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::fifteenMinute;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "oneMinute")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::oneMinute;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "twentyfourHour")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::twentyfourHour;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "thirtyMinute")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::thirtyMinute;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "fiveMinute")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::fiveMinute;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "sixtyMinute")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::sixtyMinute;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "twoMinute")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::twoMinute;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "threeMinute")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::threeMinute;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "present")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::present;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "previous")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::previous;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "twentyMinute")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::twentyMinute;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "fixedBlock60Min")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::fixedBlock60Min;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "fixedBlock30Min")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::fixedBlock30Min;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "fixedBlock20Min")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::fixedBlock20Min;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "fixedBlock15Min")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::fixedBlock15Min;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "fixedBlock10Min")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::fixedBlock10Min;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "fixedBlock5Min")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::fixedBlock5Min;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "fixedBlock1Min")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::fixedBlock1Min;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rollingBlock60MinIntvl30MinSubIntvl")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::rollingBlock60MinIntvl30MinSubIntvl;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rollingBlock60MinIntvl20MinSubIntvl")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::rollingBlock60MinIntvl20MinSubIntvl;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rollingBlock60MinIntvl15MinSubIntvl")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::rollingBlock60MinIntvl15MinSubIntvl;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rollingBlock60MinIntvl12MinSubIntvl")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::rollingBlock60MinIntvl12MinSubIntvl;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rollingBlock60MinIntvl10MinSubIntvl")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::rollingBlock60MinIntvl10MinSubIntvl;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rollingBlock60MinIntvl6MinSubIntvl")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::rollingBlock60MinIntvl6MinSubIntvl;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rollingBlock60MinIntvl5MinSubIntvl")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::rollingBlock60MinIntvl5MinSubIntvl;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rollingBlock60MinIntvl4MinSubIntvl")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::rollingBlock60MinIntvl4MinSubIntvl;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rollingBlock30MinIntvl15MinSubIntvl")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::rollingBlock30MinIntvl15MinSubIntvl;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rollingBlock30MinIntvl10MinSubIntvl")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::rollingBlock30MinIntvl10MinSubIntvl;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rollingBlock30MinIntvl6MinSubIntvl")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::rollingBlock30MinIntvl6MinSubIntvl;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rollingBlock30MinIntvl5MinSubIntvl")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::rollingBlock30MinIntvl5MinSubIntvl;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rollingBlock30MinIntvl3MinSubIntvl")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::rollingBlock30MinIntvl3MinSubIntvl;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rollingBlock30MinIntvl2MinSubIntvl")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::rollingBlock30MinIntvl2MinSubIntvl;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rollingBlock15MinIntvl5MinSubIntvl")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::rollingBlock15MinIntvl5MinSubIntvl;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rollingBlock15MinIntvl3MinSubIntvl")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::rollingBlock15MinIntvl3MinSubIntvl;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rollingBlock15MinIntvl1MinSubIntvl")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::rollingBlock15MinIntvl1MinSubIntvl;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rollingBlock10MinIntvl5MinSubIntvl")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::rollingBlock10MinIntvl5MinSubIntvl;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rollingBlock10MinIntvl2MinSubIntvl")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::rollingBlock10MinIntvl2MinSubIntvl;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rollingBlock10MinIntvl1MinSubIntvl")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::rollingBlock10MinIntvl1MinSubIntvl;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rollingBlock5MinIntvl1MinSubIntvl")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasuringPeriodKind::rollingBlock5MinIntvl1MinSubIntvl;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -3981,73 +3980,73 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfMetering::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "none")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AccumulationKind::none;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "bulkQuantity")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AccumulationKind::bulkQuantity;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "continuousCumulative")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AccumulationKind::continuousCumulative;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "cumulative")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AccumulationKind::cumulative;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "deltaData")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AccumulationKind::deltaData;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "indicating")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AccumulationKind::indicating;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "summation")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AccumulationKind::summation;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "timeDelay")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AccumulationKind::timeDelay;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "instantaneous")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AccumulationKind::instantaneous;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "latchingQuantity")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AccumulationKind::latchingQuantity;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "boundedQuantity")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::AccumulationKind::boundedQuantity;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -4064,757 +4063,757 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfMetering::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "none")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::none;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "apparentPowerFactor")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::apparentPowerFactor;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "currency")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::currency;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "current")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::current;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "currentAngle")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::currentAngle;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "currentImbalance")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::currentImbalance;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "date")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::date;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "demand")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::demand;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "distance")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::distance;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "distortionVoltAmp")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::distortionVoltAmp;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "energization")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::energization;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "energy")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::energy;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "energizationLoadSide")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::energizationLoadSide;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "fan")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::fan;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "frequency")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::frequency;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "fund")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::fund;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ieee1366ASAI")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::ieee1366ASAI;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ieee1366ASIDI")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::ieee1366ASIDI;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ieee1366ASIFI")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::ieee1366ASIFI;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ieee1366CAIDI")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::ieee1366CAIDI;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ieee1366CAIFI")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::ieee1366CAIFI;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ieee1366CEMIn")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::ieee1366CEMIn;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ieee1366CEMSMIn")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::ieee1366CEMSMIn;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ieee1366CTAIDI")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::ieee1366CTAIDI;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ieee1366MAIFI")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::ieee1366MAIFI;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ieee1366MAIFIe")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::ieee1366MAIFIe;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ieee1366SAIDI")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::ieee1366SAIDI;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ieee1366SAIFI")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::ieee1366SAIFI;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "lineLoss")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::lineLoss;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "loss")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::loss;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "negativeSequence")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::negativeSequence;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "phasorPowerFactor")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::phasorPowerFactor;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "phasorReactivePower")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::phasorReactivePower;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "positiveSequence")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::positiveSequence;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "power")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::power;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "powerFactor")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::powerFactor;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "quantityPower")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::quantityPower;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "sag")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::sag;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "swell")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::swell;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "switchPosition")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::switchPosition;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "tapPosition")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::tapPosition;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "tariffRate")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::tariffRate;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "temperature")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::temperature;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "totalHarmonicDistortion")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::totalHarmonicDistortion;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "transformerLoss")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::transformerLoss;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "unipedeVoltageDip10to15")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::unipedeVoltageDip10to15;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "unipedeVoltageDip15to30")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::unipedeVoltageDip15to30;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "unipedeVoltageDip30to60")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::unipedeVoltageDip30to60;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "unipedeVoltageDip60to90")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::unipedeVoltageDip60to90;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "unipedeVoltageDip90to100")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::unipedeVoltageDip90to100;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "voltage")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::voltage;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "voltageAngle")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::voltageAngle;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "voltageExcursion")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::voltageExcursion;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "voltageImbalance")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::voltageImbalance;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "volume")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::volume;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "zeroFlowDuration")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::zeroFlowDuration;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "zeroSequence")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::zeroSequence;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "distortionPowerFactor")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::distortionPowerFactor;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "frequencyExcursion")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::frequencyExcursion;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "applicationContext")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::applicationContext;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "apTitle")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::apTitle;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "assetNumber")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::assetNumber;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "bandwidth")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::bandwidth;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "batteryVoltage")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::batteryVoltage;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "broadcastAddress")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::broadcastAddress;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "deviceAddressType1")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::deviceAddressType1;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "deviceAddressType2")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::deviceAddressType2;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "deviceAddressType3")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::deviceAddressType3;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "deviceAddressType4")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::deviceAddressType4;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "deviceClass")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::deviceClass;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "electronicSerialNumber")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::electronicSerialNumber;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "endDeviceID")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::endDeviceID;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "groupAddressType1")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::groupAddressType1;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "groupAddressType2")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::groupAddressType2;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "groupAddressType3")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::groupAddressType3;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "groupAddressType4")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::groupAddressType4;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ipAddress")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::ipAddress;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "macAddress")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::macAddress;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "mfgAssignedConfigurationID")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::mfgAssignedConfigurationID;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "mfgAssignedPhysicalSerialNumber")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::mfgAssignedPhysicalSerialNumber;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "mfgAssignedProductNumber")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::mfgAssignedProductNumber;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "mfgAssignedUniqueCommunicationAddress")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::mfgAssignedUniqueCommunicationAddress;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "multiCastAddress")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::multiCastAddress;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "oneWayAddress")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::oneWayAddress;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "signalStrength")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::signalStrength;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "twoWayAddress")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::twoWayAddress;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "signaltoNoiseRatio")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::signaltoNoiseRatio;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "alarm")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::alarm;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "batteryCarryover")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::batteryCarryover;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "dataOverflowAlarm")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::dataOverflowAlarm;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "demandLimit")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::demandLimit;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "demandReset")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::demandReset;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "diagnostic")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::diagnostic;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "emergencyLimit")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::emergencyLimit;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "encoderTamper")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::encoderTamper;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ieee1366MomentaryInterruption")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::ieee1366MomentaryInterruption;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ieee1366MomentaryInterruptionEvent")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::ieee1366MomentaryInterruptionEvent;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ieee1366SustainedInterruption")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::ieee1366SustainedInterruption;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "interruptionBehaviour")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::interruptionBehaviour;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "inversionTamper")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::inversionTamper;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "loadInterrupt")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::loadInterrupt;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "loadShed")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::loadShed;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "maintenance")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::maintenance;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "physicalTamper")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::physicalTamper;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "powerLossTamper")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::powerLossTamper;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "powerOutage")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::powerOutage;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "powerQuality")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::powerQuality;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "powerRestoration")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::powerRestoration;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "programmed")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::programmed;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "pushbutton")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::pushbutton;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "relayActivation")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::relayActivation;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "relayCycle")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::relayCycle;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "removalTamper")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::removalTamper;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "reprogrammingTamper")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::reprogrammingTamper;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "reverseRotationTamper")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::reverseRotationTamper;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "switchArmed")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::switchArmed;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "switchDisabled")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::switchDisabled;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "tamper")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::tamper;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "watchdogTimeout")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::watchdogTimeout;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "billLastPeriod")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::billLastPeriod;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "billToDate")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::billToDate;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "billCarryover")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::billCarryover;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "connectionFee")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::connectionFee;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "audibleVolume")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::audibleVolume;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "volumetricFlow")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MeasurementKind::volumetricFlow;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -4831,49 +4830,49 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfMetering::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "none")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MacroPeriodKind::none;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "billingPeriod")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MacroPeriodKind::billingPeriod;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "daily")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MacroPeriodKind::daily;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "monthly")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MacroPeriodKind::monthly;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "seasonal")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MacroPeriodKind::seasonal;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "weekly")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MacroPeriodKind::weekly;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "specifiedPeriod")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::MacroPeriodKind::specifiedPeriod;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -4890,163 +4889,163 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfMetering::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "none")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::none;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "electricitySecondaryMetered")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::electricitySecondaryMetered;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "electricityPrimaryMetered")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::electricityPrimaryMetered;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "communication")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::communication;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "air")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::air;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "insulativeGas")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::insulativeGas;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "insulativeOil")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::insulativeOil;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "naturalGas")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::naturalGas;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "propane")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::propane;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "potableWater")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::potableWater;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "steam")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::steam;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "wasteWater")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::wasteWater;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "heatingFluid")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::heatingFluid;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "coolingFluid")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::coolingFluid;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "nonpotableWater")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::nonpotableWater;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "nox")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::nox;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "so2")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::so2;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ch4")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::ch4;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "co2")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::co2;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "carbon")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::carbon;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "hch")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::hch;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "pfc")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::pfc;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "sf6")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::sf6;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "tvLicence")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::tvLicence;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "internet")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::internet;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "refuse")
 	{
 		rop = IEC61968::InfIEC61968::InfMetering::ReadingTypeEnumerations::CommodityKind::refuse;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -5063,25 +5062,25 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfLocations:
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "urban")
 	{
 		rop = IEC61968::InfIEC61968::InfLocations::DemographicKind::urban;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rural")
 	{
 		rop = IEC61968::InfIEC61968::InfLocations::DemographicKind::rural;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfLocations::DemographicKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -5098,49 +5097,49 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfLocations:
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "building")
 	{
 		rop = IEC61968::InfIEC61968::InfLocations::LandPropertyKind::building;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "customerPremise")
 	{
 		rop = IEC61968::InfIEC61968::InfLocations::LandPropertyKind::customerPremise;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "depot")
 	{
 		rop = IEC61968::InfIEC61968::InfLocations::LandPropertyKind::depot;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "store")
 	{
 		rop = IEC61968::InfIEC61968::InfLocations::LandPropertyKind::store;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "substation")
 	{
 		rop = IEC61968::InfIEC61968::InfLocations::LandPropertyKind::substation;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "gridSupplyPoint")
 	{
 		rop = IEC61968::InfIEC61968::InfLocations::LandPropertyKind::gridSupplyPoint;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "external")
 	{
 		rop = IEC61968::InfIEC61968::InfLocations::LandPropertyKind::external;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -5157,31 +5156,31 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfLocations:
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "electricalNetwork")
 	{
 		rop = IEC61968::InfIEC61968::InfLocations::ZoneKind::electricalNetwork;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "specialRestrictionLand")
 	{
 		rop = IEC61968::InfIEC61968::InfLocations::ZoneKind::specialRestrictionLand;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "weatherZone")
 	{
 		rop = IEC61968::InfIEC61968::InfLocations::ZoneKind::weatherZone;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfLocations::ZoneKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -5198,31 +5197,31 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssetInfo:
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "fixed")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::ShuntImpedanceControlKind::fixed;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "localOnly")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::ShuntImpedanceControlKind::localOnly;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "remoteOnly")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::ShuntImpedanceControlKind::remoteOnly;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "remoteWithLocalOverride")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::ShuntImpedanceControlKind::remoteWithLocalOverride;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -5239,31 +5238,31 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssetInfo:
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "freeBreathing")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::OilPreservationKind::freeBreathing;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "nitrogenBlanket")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::OilPreservationKind::nitrogenBlanket;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "conservator")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::OilPreservationKind::conservator;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::OilPreservationKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -5280,49 +5279,49 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssetInfo:
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "throwOver")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::CompositeSwitchKind::throwOver;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "escoThrowOver")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::CompositeSwitchKind::escoThrowOver;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ral")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::CompositeSwitchKind::ral;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "gral")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::CompositeSwitchKind::gral;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "regulatorBypass")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::CompositeSwitchKind::regulatorBypass;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ugMultiSwitch")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::CompositeSwitchKind::ugMultiSwitch;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::CompositeSwitchKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -5339,103 +5338,103 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssetInfo:
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "onePhase")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::TransformerConstructionKind::onePhase;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "threePhase")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::TransformerConstructionKind::threePhase;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "aerial")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::TransformerConstructionKind::aerial;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "overhead")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::TransformerConstructionKind::overhead;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "dryType")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::TransformerConstructionKind::dryType;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "network")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::TransformerConstructionKind::network;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "padmountDeadFront")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::TransformerConstructionKind::padmountDeadFront;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "padmountFeedThrough")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::TransformerConstructionKind::padmountFeedThrough;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "padmountLiveFront")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::TransformerConstructionKind::padmountLiveFront;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "padmountLoopThrough")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::TransformerConstructionKind::padmountLoopThrough;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "padmounted")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::TransformerConstructionKind::padmounted;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "subway")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::TransformerConstructionKind::subway;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "underground")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::TransformerConstructionKind::underground;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "vault")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::TransformerConstructionKind::vault;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "vaultThreePhase")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::TransformerConstructionKind::vaultThreePhase;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "unknown")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::TransformerConstructionKind::unknown;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -5452,31 +5451,31 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssetInfo:
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "paper")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::WindingInsulationKind::paper;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "thermallyUpgradedPaper")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::WindingInsulationKind::thermallyUpgradedPaper;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "nomex")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::WindingInsulationKind::nomex;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::WindingInsulationKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -5493,37 +5492,37 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssetInfo:
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "powerTransformer")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::TransformerFunctionKind::powerTransformer;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "voltageRegulator")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::TransformerFunctionKind::voltageRegulator;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "autotransformer")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::TransformerFunctionKind::autotransformer;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "secondaryTransformer")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::TransformerFunctionKind::secondaryTransformer;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::TransformerFunctionKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -5540,49 +5539,49 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssetInfo:
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "none")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::ShuntImpedanceLocalControlKind::none;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "powerFactor")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::ShuntImpedanceLocalControlKind::powerFactor;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "time")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::ShuntImpedanceLocalControlKind::time;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "temperature")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::ShuntImpedanceLocalControlKind::temperature;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "reactivePower")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::ShuntImpedanceLocalControlKind::reactivePower;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "current")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::ShuntImpedanceLocalControlKind::current;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "voltage")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::ShuntImpedanceLocalControlKind::voltage;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -5599,31 +5598,31 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssetInfo:
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "automatic")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::FaultIndicatorResetKind::automatic;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "manual")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::FaultIndicatorResetKind::manual;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "remote")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::FaultIndicatorResetKind::remote;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::FaultIndicatorResetKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -5640,55 +5639,55 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssetInfo:
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "line")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::RegulationBranchKind::line;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "transformer")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::RegulationBranchKind::transformer;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "routing_selector")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::RegulationBranchKind::routing_selector;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "breaker")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::RegulationBranchKind::breaker;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "recloser")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::RegulationBranchKind::recloser;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "fuse")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::RegulationBranchKind::fuse;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "sectionner")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::RegulationBranchKind::sectionner;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::RegulationBranchKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -5705,19 +5704,19 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfAssetInfo:
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "core")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::TransformerCoreKind::core;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "shell")
 	{
 		rop = IEC61968::InfIEC61968::InfAssetInfo::TransformerCoreKind::shell;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -5734,31 +5733,31 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Wires::PhaseShuntCon
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "D")
 	{
 		rop = IEC61970::Base::Wires::PhaseShuntConnectionKind::D;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "Y")
 	{
 		rop = IEC61970::Base::Wires::PhaseShuntConnectionKind::Y;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "Yn")
 	{
 		rop = IEC61970::Base::Wires::PhaseShuntConnectionKind::Yn;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "I")
 	{
 		rop = IEC61970::Base::Wires::PhaseShuntConnectionKind::I;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -5775,43 +5774,43 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Wires::SinglePhaseKi
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "A")
 	{
 		rop = IEC61970::Base::Wires::SinglePhaseKind::A;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "B")
 	{
 		rop = IEC61970::Base::Wires::SinglePhaseKind::B;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "C")
 	{
 		rop = IEC61970::Base::Wires::SinglePhaseKind::C;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "N")
 	{
 		rop = IEC61970::Base::Wires::SinglePhaseKind::N;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "s1")
 	{
 		rop = IEC61970::Base::Wires::SinglePhaseKind::s1;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "s2")
 	{
 		rop = IEC61970::Base::Wires::SinglePhaseKind::s2;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -5828,31 +5827,31 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfCustomers:
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "consolidatedEss")
 	{
 		rop = IEC61968::InfIEC61968::InfCustomers::CustomerBillingKind::consolidatedEss;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "consolidatedUdc")
 	{
 		rop = IEC61968::InfIEC61968::InfCustomers::CustomerBillingKind::consolidatedUdc;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "separateEssUdc")
 	{
 		rop = IEC61968::InfIEC61968::InfCustomers::CustomerBillingKind::separateEssUdc;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfCustomers::CustomerBillingKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -5869,49 +5868,49 @@ std::istream& operator>>(std::istream& lop, IEC61968::Metering::AmiBillingReadyK
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "enabled")
 	{
 		rop = IEC61968::Metering::AmiBillingReadyKind::enabled;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "operable")
 	{
 		rop = IEC61968::Metering::AmiBillingReadyKind::operable;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "billingApproved")
 	{
 		rop = IEC61968::Metering::AmiBillingReadyKind::billingApproved;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "nonAmi")
 	{
 		rop = IEC61968::Metering::AmiBillingReadyKind::nonAmi;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "amiDisabled")
 	{
 		rop = IEC61968::Metering::AmiBillingReadyKind::amiDisabled;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "amiCapable")
 	{
 		rop = IEC61968::Metering::AmiBillingReadyKind::amiCapable;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "nonMetered")
 	{
 		rop = IEC61968::Metering::AmiBillingReadyKind::nonMetered;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -5928,25 +5927,25 @@ std::istream& operator>>(std::istream& lop, IEC61968::Metering::UsagePointConnec
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "connected")
 	{
 		rop = IEC61968::Metering::UsagePointConnectedKind::connected;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "physicallyDisconnected")
 	{
 		rop = IEC61968::Metering::UsagePointConnectedKind::physicallyDisconnected;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "logicallyDisconnected")
 	{
 		rop = IEC61968::Metering::UsagePointConnectedKind::logicallyDisconnected;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -5963,25 +5962,25 @@ std::istream& operator>>(std::istream& lop, IEC61968::Metering::ServiceMultiplie
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "ctRatio")
 	{
 		rop = IEC61968::Metering::ServiceMultiplierKind::ctRatio;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ptRatio")
 	{
 		rop = IEC61968::Metering::ServiceMultiplierKind::ptRatio;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "transformerRatio")
 	{
 		rop = IEC61968::Metering::ServiceMultiplierKind::transformerRatio;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -5998,73 +5997,73 @@ std::istream& operator>>(std::istream& lop, IEC61968::Customers::ServiceKind& ro
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "electricity")
 	{
 		rop = IEC61968::Customers::ServiceKind::electricity;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "gas")
 	{
 		rop = IEC61968::Customers::ServiceKind::gas;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "water")
 	{
 		rop = IEC61968::Customers::ServiceKind::water;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "time")
 	{
 		rop = IEC61968::Customers::ServiceKind::time;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "heat")
 	{
 		rop = IEC61968::Customers::ServiceKind::heat;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "refuse")
 	{
 		rop = IEC61968::Customers::ServiceKind::refuse;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "sewerage")
 	{
 		rop = IEC61968::Customers::ServiceKind::sewerage;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rates")
 	{
 		rop = IEC61968::Customers::ServiceKind::rates;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "tvLicence")
 	{
 		rop = IEC61968::Customers::ServiceKind::tvLicence;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "internet")
 	{
 		rop = IEC61968::Customers::ServiceKind::internet;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::Customers::ServiceKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -6081,49 +6080,49 @@ std::istream& operator>>(std::istream& lop, IEC61968::Customers::RevenueKind& ro
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "residential")
 	{
 		rop = IEC61968::Customers::RevenueKind::residential;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "nonResidential")
 	{
 		rop = IEC61968::Customers::RevenueKind::nonResidential;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "commercial")
 	{
 		rop = IEC61968::Customers::RevenueKind::commercial;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "industrial")
 	{
 		rop = IEC61968::Customers::RevenueKind::industrial;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "irrigation")
 	{
 		rop = IEC61968::Customers::RevenueKind::irrigation;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "streetLight")
 	{
 		rop = IEC61968::Customers::RevenueKind::streetLight;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::Customers::RevenueKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -6140,37 +6139,37 @@ std::istream& operator>>(std::istream& lop, IEC61968::PaymentMetering::ChargeKin
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "consumptionCharge")
 	{
 		rop = IEC61968::PaymentMetering::ChargeKind::consumptionCharge;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "demandCharge")
 	{
 		rop = IEC61968::PaymentMetering::ChargeKind::demandCharge;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "auxiliaryCharge")
 	{
 		rop = IEC61968::PaymentMetering::ChargeKind::auxiliaryCharge;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "taxCharge")
 	{
 		rop = IEC61968::PaymentMetering::ChargeKind::taxCharge;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::PaymentMetering::ChargeKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -6187,31 +6186,31 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfCommon::Sk
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "master")
 	{
 		rop = IEC61968::InfIEC61968::InfCommon::SkillLevelKind::master;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "standard")
 	{
 		rop = IEC61968::InfIEC61968::InfCommon::SkillLevelKind::standard;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "apprentice")
 	{
 		rop = IEC61968::InfIEC61968::InfCommon::SkillLevelKind::apprentice;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::InfIEC61968::InfCommon::SkillLevelKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -6228,31 +6227,31 @@ std::istream& operator>>(std::istream& lop, IEC61968::InfIEC61968::InfERPSupport
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "normal")
 	{
 		rop = IEC61968::InfIEC61968::InfERPSupport::ErpAccountKind::normal;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "reversal")
 	{
 		rop = IEC61968::InfIEC61968::InfERPSupport::ErpAccountKind::reversal;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "statistical")
 	{
 		rop = IEC61968::InfIEC61968::InfERPSupport::ErpAccountKind::statistical;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "estimate")
 	{
 		rop = IEC61968::InfIEC61968::InfERPSupport::ErpAccountKind::estimate;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -6269,37 +6268,37 @@ std::istream& operator>>(std::istream& lop, IEC61968::Customers::TroubleReportin
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "call")
 	{
 		rop = IEC61968::Customers::TroubleReportingKind::call;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "email")
 	{
 		rop = IEC61968::Customers::TroubleReportingKind::email;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "letter")
 	{
 		rop = IEC61968::Customers::TroubleReportingKind::letter;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::Customers::TroubleReportingKind::other;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ivr")
 	{
 		rop = IEC61968::Customers::TroubleReportingKind::ivr;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -6316,79 +6315,79 @@ std::istream& operator>>(std::istream& lop, IEC61968::Customers::CustomerKind& r
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "residential")
 	{
 		rop = IEC61968::Customers::CustomerKind::residential;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "residentialAndCommercial")
 	{
 		rop = IEC61968::Customers::CustomerKind::residentialAndCommercial;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "residentialAndStreetlight")
 	{
 		rop = IEC61968::Customers::CustomerKind::residentialAndStreetlight;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "residentialStreetlightOthers")
 	{
 		rop = IEC61968::Customers::CustomerKind::residentialStreetlightOthers;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "residentialFarmService")
 	{
 		rop = IEC61968::Customers::CustomerKind::residentialFarmService;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "commercialIndustrial")
 	{
 		rop = IEC61968::Customers::CustomerKind::commercialIndustrial;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "pumpingLoad")
 	{
 		rop = IEC61968::Customers::CustomerKind::pumpingLoad;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "windMachine")
 	{
 		rop = IEC61968::Customers::CustomerKind::windMachine;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "energyServiceSupplier")
 	{
 		rop = IEC61968::Customers::CustomerKind::energyServiceSupplier;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "energyServiceScheduler")
 	{
 		rop = IEC61968::Customers::CustomerKind::energyServiceScheduler;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "internalUse")
 	{
 		rop = IEC61968::Customers::CustomerKind::internalUse;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::Customers::CustomerKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -6405,37 +6404,37 @@ std::istream& operator>>(std::istream& lop, IEC61968::Customers::NotificationTri
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "initialEtr")
 	{
 		rop = IEC61968::Customers::NotificationTriggerKind::initialEtr;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "etrChange")
 	{
 		rop = IEC61968::Customers::NotificationTriggerKind::etrChange;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "powerRestored")
 	{
 		rop = IEC61968::Customers::NotificationTriggerKind::powerRestored;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "powerOut")
 	{
 		rop = IEC61968::Customers::NotificationTriggerKind::powerOut;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "informDispatched")
 	{
 		rop = IEC61968::Customers::NotificationTriggerKind::informDispatched;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -6452,31 +6451,31 @@ std::istream& operator>>(std::istream& lop, IEC61968::Work::VehicleUsageKind& ro
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "crew")
 	{
 		rop = IEC61968::Work::VehicleUsageKind::crew;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "user")
 	{
 		rop = IEC61968::Work::VehicleUsageKind::user;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "contractor")
 	{
 		rop = IEC61968::Work::VehicleUsageKind::contractor;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::Work::VehicleUsageKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -6493,49 +6492,49 @@ std::istream& operator>>(std::istream& lop, IEC61968::Operations::PSREventKind& 
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "inService")
 	{
 		rop = IEC61968::Operations::PSREventKind::inService;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "outOfService")
 	{
 		rop = IEC61968::Operations::PSREventKind::outOfService;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "pendingAdd")
 	{
 		rop = IEC61968::Operations::PSREventKind::pendingAdd;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "pendingRemove")
 	{
 		rop = IEC61968::Operations::PSREventKind::pendingRemove;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "pendingReplace")
 	{
 		rop = IEC61968::Operations::PSREventKind::pendingReplace;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::Operations::PSREventKind::other;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "unknown")
 	{
 		rop = IEC61968::Operations::PSREventKind::unknown;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -6552,19 +6551,19 @@ std::istream& operator>>(std::istream& lop, IEC61968::Operations::TempEquipActio
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "place")
 	{
 		rop = IEC61968::Operations::TempEquipActionKind::place;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "remove")
 	{
 		rop = IEC61968::Operations::TempEquipActionKind::remove;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -6581,25 +6580,25 @@ std::istream& operator>>(std::istream& lop, IEC61968::Operations::ClearanceActio
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "issue")
 	{
 		rop = IEC61968::Operations::ClearanceActionKind::issue;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "update")
 	{
 		rop = IEC61968::Operations::ClearanceActionKind::update;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "release")
 	{
 		rop = IEC61968::Operations::ClearanceActionKind::release;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -6616,31 +6615,31 @@ std::istream& operator>>(std::istream& lop, IEC61968::Operations::SwitchActionKi
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "open")
 	{
 		rop = IEC61968::Operations::SwitchActionKind::open;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "close")
 	{
 		rop = IEC61968::Operations::SwitchActionKind::close;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "disableReclosing")
 	{
 		rop = IEC61968::Operations::SwitchActionKind::disableReclosing;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "enableReclosing")
 	{
 		rop = IEC61968::Operations::SwitchActionKind::enableReclosing;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -6657,25 +6656,25 @@ std::istream& operator>>(std::istream& lop, IEC61968::Operations::TagActionKind&
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "place")
 	{
 		rop = IEC61968::Operations::TagActionKind::place;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "remove")
 	{
 		rop = IEC61968::Operations::TagActionKind::remove;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "verify")
 	{
 		rop = IEC61968::Operations::TagActionKind::verify;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -6692,25 +6691,25 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Faults::PhaseConnect
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "lineToGround")
 	{
 		rop = IEC61970::Base::Faults::PhaseConnectedFaultKind::lineToGround;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "lineToLine")
 	{
 		rop = IEC61970::Base::Faults::PhaseConnectedFaultKind::lineToLine;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "lineToLineToGround")
 	{
 		rop = IEC61970::Base::Faults::PhaseConnectedFaultKind::lineToLineToGround;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -6727,49 +6726,49 @@ std::istream& operator>>(std::istream& lop, IEC61968::AssetInfo::CableConstructi
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "compacted")
 	{
 		rop = IEC61968::AssetInfo::CableConstructionKind::compacted;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "compressed")
 	{
 		rop = IEC61968::AssetInfo::CableConstructionKind::compressed;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "sector")
 	{
 		rop = IEC61968::AssetInfo::CableConstructionKind::sector;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "segmental")
 	{
 		rop = IEC61968::AssetInfo::CableConstructionKind::segmental;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "solid")
 	{
 		rop = IEC61968::AssetInfo::CableConstructionKind::solid;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "stranded")
 	{
 		rop = IEC61968::AssetInfo::CableConstructionKind::stranded;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::AssetInfo::CableConstructionKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -6786,115 +6785,115 @@ std::istream& operator>>(std::istream& lop, IEC61968::AssetInfo::WireInsulationK
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "asbestosAndVarnishedCambric")
 	{
 		rop = IEC61968::AssetInfo::WireInsulationKind::asbestosAndVarnishedCambric;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "butyl")
 	{
 		rop = IEC61968::AssetInfo::WireInsulationKind::butyl;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ethylenePropyleneRubber")
 	{
 		rop = IEC61968::AssetInfo::WireInsulationKind::ethylenePropyleneRubber;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "highMolecularWeightPolyethylene")
 	{
 		rop = IEC61968::AssetInfo::WireInsulationKind::highMolecularWeightPolyethylene;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "treeResistantHighMolecularWeightPolyethylene")
 	{
 		rop = IEC61968::AssetInfo::WireInsulationKind::treeResistantHighMolecularWeightPolyethylene;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "lowCapacitanceRubber")
 	{
 		rop = IEC61968::AssetInfo::WireInsulationKind::lowCapacitanceRubber;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "oilPaper")
 	{
 		rop = IEC61968::AssetInfo::WireInsulationKind::oilPaper;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ozoneResistantRubber")
 	{
 		rop = IEC61968::AssetInfo::WireInsulationKind::ozoneResistantRubber;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "beltedPilc")
 	{
 		rop = IEC61968::AssetInfo::WireInsulationKind::beltedPilc;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "unbeltedPilc")
 	{
 		rop = IEC61968::AssetInfo::WireInsulationKind::unbeltedPilc;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rubber")
 	{
 		rop = IEC61968::AssetInfo::WireInsulationKind::rubber;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "siliconRubber")
 	{
 		rop = IEC61968::AssetInfo::WireInsulationKind::siliconRubber;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "varnishedCambricCloth")
 	{
 		rop = IEC61968::AssetInfo::WireInsulationKind::varnishedCambricCloth;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "varnishedDacronGlass")
 	{
 		rop = IEC61968::AssetInfo::WireInsulationKind::varnishedDacronGlass;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "crosslinkedPolyethylene")
 	{
 		rop = IEC61968::AssetInfo::WireInsulationKind::crosslinkedPolyethylene;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "treeRetardantCrosslinkedPolyethylene")
 	{
 		rop = IEC61968::AssetInfo::WireInsulationKind::treeRetardantCrosslinkedPolyethylene;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "highPressureFluidFilled")
 	{
 		rop = IEC61968::AssetInfo::WireInsulationKind::highPressureFluidFilled;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::AssetInfo::WireInsulationKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -6911,61 +6910,61 @@ std::istream& operator>>(std::istream& lop, IEC61968::AssetInfo::WireMaterialKin
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "copper")
 	{
 		rop = IEC61968::AssetInfo::WireMaterialKind::copper;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "steel")
 	{
 		rop = IEC61968::AssetInfo::WireMaterialKind::steel;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "aluminum")
 	{
 		rop = IEC61968::AssetInfo::WireMaterialKind::aluminum;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "aluminumSteel")
 	{
 		rop = IEC61968::AssetInfo::WireMaterialKind::aluminumSteel;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "acsr")
 	{
 		rop = IEC61968::AssetInfo::WireMaterialKind::acsr;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "aluminumAlloy")
 	{
 		rop = IEC61968::AssetInfo::WireMaterialKind::aluminumAlloy;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "aluminumAlloySteel")
 	{
 		rop = IEC61968::AssetInfo::WireMaterialKind::aluminumAlloySteel;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "aaac")
 	{
 		rop = IEC61968::AssetInfo::WireMaterialKind::aaac;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::AssetInfo::WireMaterialKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -6982,31 +6981,31 @@ std::istream& operator>>(std::istream& lop, IEC61968::AssetInfo::WireUsageKind& 
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "transmission")
 	{
 		rop = IEC61968::AssetInfo::WireUsageKind::transmission;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "distribution")
 	{
 		rop = IEC61968::AssetInfo::WireUsageKind::distribution;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "secondary")
 	{
 		rop = IEC61968::AssetInfo::WireUsageKind::secondary;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::AssetInfo::WireUsageKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -7023,49 +7022,49 @@ std::istream& operator>>(std::istream& lop, IEC61968::AssetInfo::CableOuterJacke
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "none")
 	{
 		rop = IEC61968::AssetInfo::CableOuterJacketKind::none;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "linearLowDensityPolyethylene")
 	{
 		rop = IEC61968::AssetInfo::CableOuterJacketKind::linearLowDensityPolyethylene;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "pvc")
 	{
 		rop = IEC61968::AssetInfo::CableOuterJacketKind::pvc;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "polyethylene")
 	{
 		rop = IEC61968::AssetInfo::CableOuterJacketKind::polyethylene;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "insulating")
 	{
 		rop = IEC61968::AssetInfo::CableOuterJacketKind::insulating;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "semiconducting")
 	{
 		rop = IEC61968::AssetInfo::CableOuterJacketKind::semiconducting;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::AssetInfo::CableOuterJacketKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -7082,37 +7081,37 @@ std::istream& operator>>(std::istream& lop, IEC61968::AssetInfo::CableShieldMate
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "lead")
 	{
 		rop = IEC61968::AssetInfo::CableShieldMaterialKind::lead;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "copper")
 	{
 		rop = IEC61968::AssetInfo::CableShieldMaterialKind::copper;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "steel")
 	{
 		rop = IEC61968::AssetInfo::CableShieldMaterialKind::steel;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "aluminum")
 	{
 		rop = IEC61968::AssetInfo::CableShieldMaterialKind::aluminum;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::AssetInfo::CableShieldMaterialKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -7129,37 +7128,37 @@ std::istream& operator>>(std::istream& lop, IEC61968::PaymentMetering::TenderKin
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "cheque")
 	{
 		rop = IEC61968::PaymentMetering::TenderKind::cheque;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "card")
 	{
 		rop = IEC61968::PaymentMetering::TenderKind::card;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "cash")
 	{
 		rop = IEC61968::PaymentMetering::TenderKind::cash;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "unspecified")
 	{
 		rop = IEC61968::PaymentMetering::TenderKind::unspecified;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::PaymentMetering::TenderKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -7176,25 +7175,25 @@ std::istream& operator>>(std::istream& lop, IEC61968::PaymentMetering::ChequeKin
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "postalOrder")
 	{
 		rop = IEC61968::PaymentMetering::ChequeKind::postalOrder;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "bankOrder")
 	{
 		rop = IEC61968::PaymentMetering::ChequeKind::bankOrder;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::PaymentMetering::ChequeKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -7211,25 +7210,25 @@ std::istream& operator>>(std::istream& lop, IEC61968::PaymentMetering::SupplierK
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "utility")
 	{
 		rop = IEC61968::PaymentMetering::SupplierKind::utility;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "retailer")
 	{
 		rop = IEC61968::PaymentMetering::SupplierKind::retailer;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::PaymentMetering::SupplierKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -7246,37 +7245,37 @@ std::istream& operator>>(std::istream& lop, IEC61968::Metering::RandomisationKin
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "start")
 	{
 		rop = IEC61968::Metering::RandomisationKind::start;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "end")
 	{
 		rop = IEC61968::Metering::RandomisationKind::end;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "startAndEnd")
 	{
 		rop = IEC61968::Metering::RandomisationKind::startAndEnd;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "default_val")
 	{
 		rop = IEC61968::Metering::RandomisationKind::default_val;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "none")
 	{
 		rop = IEC61968::Metering::RandomisationKind::none;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -7293,79 +7292,79 @@ std::istream& operator>>(std::istream& lop, IEC61968::Metering::ReadingReasonKin
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "installation")
 	{
 		rop = IEC61968::Metering::ReadingReasonKind::installation;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "removal")
 	{
 		rop = IEC61968::Metering::ReadingReasonKind::removal;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "inquiry")
 	{
 		rop = IEC61968::Metering::ReadingReasonKind::inquiry;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "billing")
 	{
 		rop = IEC61968::Metering::ReadingReasonKind::billing;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "moveIn")
 	{
 		rop = IEC61968::Metering::ReadingReasonKind::moveIn;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "moveOut")
 	{
 		rop = IEC61968::Metering::ReadingReasonKind::moveOut;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "demandReset")
 	{
 		rop = IEC61968::Metering::ReadingReasonKind::demandReset;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "serviceDisconnect")
 	{
 		rop = IEC61968::Metering::ReadingReasonKind::serviceDisconnect;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "serviceConnect")
 	{
 		rop = IEC61968::Metering::ReadingReasonKind::serviceConnect;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "loadManagement")
 	{
 		rop = IEC61968::Metering::ReadingReasonKind::loadManagement;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "loadResearch")
 	{
 		rop = IEC61968::Metering::ReadingReasonKind::loadResearch;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "other")
 	{
 		rop = IEC61968::Metering::ReadingReasonKind::other;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -7382,25 +7381,25 @@ std::istream& operator>>(std::istream& lop, IEC61968::Metering::ComDirectionKind
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "fromDevice")
 	{
 		rop = IEC61968::Metering::ComDirectionKind::fromDevice;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "toDevice")
 	{
 		rop = IEC61968::Metering::ComDirectionKind::toDevice;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "biDirectional")
 	{
 		rop = IEC61968::Metering::ComDirectionKind::biDirectional;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -7417,61 +7416,61 @@ std::istream& operator>>(std::istream& lop, IEC61968::Metering::ComTechnologyKin
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "cellular")
 	{
 		rop = IEC61968::Metering::ComTechnologyKind::cellular;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ethernet")
 	{
 		rop = IEC61968::Metering::ComTechnologyKind::ethernet;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "homePlug")
 	{
 		rop = IEC61968::Metering::ComTechnologyKind::homePlug;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "pager")
 	{
 		rop = IEC61968::Metering::ComTechnologyKind::pager;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "phone")
 	{
 		rop = IEC61968::Metering::ComTechnologyKind::phone;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "plc")
 	{
 		rop = IEC61968::Metering::ComTechnologyKind::plc;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rf")
 	{
 		rop = IEC61968::Metering::ComTechnologyKind::rf;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rfMesh")
 	{
 		rop = IEC61968::Metering::ComTechnologyKind::rfMesh;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "zigbee")
 	{
 		rop = IEC61968::Metering::ComTechnologyKind::zigbee;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -7488,25 +7487,25 @@ std::istream& operator>>(std::istream& lop, IEC61968::Metering::TransmissionMode
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "normal")
 	{
 		rop = IEC61968::Metering::TransmissionModeKind::normal;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "anonymous")
 	{
 		rop = IEC61968::Metering::TransmissionModeKind::anonymous;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "both")
 	{
 		rop = IEC61968::Metering::TransmissionModeKind::both;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -7523,43 +7522,43 @@ std::istream& operator>>(std::istream& lop, IEC61968::Metering::MeterMultiplierK
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "kH")
 	{
 		rop = IEC61968::Metering::MeterMultiplierKind::kH;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "kR")
 	{
 		rop = IEC61968::Metering::MeterMultiplierKind::kR;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "kE")
 	{
 		rop = IEC61968::Metering::MeterMultiplierKind::kE;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ctRatio")
 	{
 		rop = IEC61968::Metering::MeterMultiplierKind::ctRatio;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ptRatio")
 	{
 		rop = IEC61968::Metering::MeterMultiplierKind::ptRatio;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "transformerRatio")
 	{
 		rop = IEC61968::Metering::MeterMultiplierKind::transformerRatio;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -7576,67 +7575,67 @@ std::istream& operator>>(std::istream& lop, IEC61968::Metering::EndDeviceFunctio
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "reverseFlow")
 	{
 		rop = IEC61968::Metering::EndDeviceFunctionKind::reverseFlow;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "demandResponse")
 	{
 		rop = IEC61968::Metering::EndDeviceFunctionKind::demandResponse;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "metrology")
 	{
 		rop = IEC61968::Metering::EndDeviceFunctionKind::metrology;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "outageHistory")
 	{
 		rop = IEC61968::Metering::EndDeviceFunctionKind::outageHistory;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "relaysProgramming")
 	{
 		rop = IEC61968::Metering::EndDeviceFunctionKind::relaysProgramming;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "onRequestRead")
 	{
 		rop = IEC61968::Metering::EndDeviceFunctionKind::onRequestRead;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "autonomousDst")
 	{
 		rop = IEC61968::Metering::EndDeviceFunctionKind::autonomousDst;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "electricMetering")
 	{
 		rop = IEC61968::Metering::EndDeviceFunctionKind::electricMetering;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "gasMetering")
 	{
 		rop = IEC61968::Metering::EndDeviceFunctionKind::gasMetering;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "waterMetering")
 	{
 		rop = IEC61968::Metering::EndDeviceFunctionKind::waterMetering;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -7653,61 +7652,61 @@ std::istream& operator>>(std::istream& lop, IEC61970::Dynamics::StandardIntercon
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "remoteBusVoltageFrequency")
 	{
 		rop = IEC61970::Dynamics::StandardInterconnections::RemoteSignalKind::remoteBusVoltageFrequency;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "remoteBusVoltageFrequencyDeviation")
 	{
 		rop = IEC61970::Dynamics::StandardInterconnections::RemoteSignalKind::remoteBusVoltageFrequencyDeviation;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "remoteBusFrequency")
 	{
 		rop = IEC61970::Dynamics::StandardInterconnections::RemoteSignalKind::remoteBusFrequency;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "remoteBusFrequencyDeviation")
 	{
 		rop = IEC61970::Dynamics::StandardInterconnections::RemoteSignalKind::remoteBusFrequencyDeviation;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "remoteBusVoltageAmplitude")
 	{
 		rop = IEC61970::Dynamics::StandardInterconnections::RemoteSignalKind::remoteBusVoltageAmplitude;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "remoteBusVoltage")
 	{
 		rop = IEC61970::Dynamics::StandardInterconnections::RemoteSignalKind::remoteBusVoltage;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "remoteBranchCurrentAmplitude")
 	{
 		rop = IEC61970::Dynamics::StandardInterconnections::RemoteSignalKind::remoteBranchCurrentAmplitude;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "remoteBusVoltageAmplitudeDerivative")
 	{
 		rop = IEC61970::Dynamics::StandardInterconnections::RemoteSignalKind::remoteBusVoltageAmplitudeDerivative;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "remotePuBusVoltageDerivative")
 	{
 		rop = IEC61970::Dynamics::StandardInterconnections::RemoteSignalKind::remotePuBusVoltageDerivative;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -7724,19 +7723,19 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Wires::AsynchronousM
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "generator")
 	{
 		rop = IEC61970::Base::Wires::AsynchronousMachineKind::generator;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "motor")
 	{
 		rop = IEC61970::Base::Wires::AsynchronousMachineKind::motor;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -7753,25 +7752,25 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Wires::CoolantType& 
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "air")
 	{
 		rop = IEC61970::Base::Wires::CoolantType::air;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "hydrogenGas")
 	{
 		rop = IEC61970::Base::Wires::CoolantType::hydrogenGas;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "water")
 	{
 		rop = IEC61970::Base::Wires::CoolantType::water;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -7788,25 +7787,25 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Wires::SynchronousMa
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "generator")
 	{
 		rop = IEC61970::Base::Wires::SynchronousMachineOperatingMode::generator;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "condenser")
 	{
 		rop = IEC61970::Base::Wires::SynchronousMachineOperatingMode::condenser;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "motor")
 	{
 		rop = IEC61970::Base::Wires::SynchronousMachineOperatingMode::motor;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -7823,31 +7822,31 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Wires::ShortCircuitR
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "salientPole1")
 	{
 		rop = IEC61970::Base::Wires::ShortCircuitRotorKind::salientPole1;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "salientPole2")
 	{
 		rop = IEC61970::Base::Wires::ShortCircuitRotorKind::salientPole2;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "turboSeries1")
 	{
 		rop = IEC61970::Base::Wires::ShortCircuitRotorKind::turboSeries1;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "turboSeries2")
 	{
 		rop = IEC61970::Base::Wires::ShortCircuitRotorKind::turboSeries2;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -7864,49 +7863,49 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Wires::SynchronousMa
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "generator")
 	{
 		rop = IEC61970::Base::Wires::SynchronousMachineKind::generator;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "condenser")
 	{
 		rop = IEC61970::Base::Wires::SynchronousMachineKind::condenser;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "generatorOrCondenser")
 	{
 		rop = IEC61970::Base::Wires::SynchronousMachineKind::generatorOrCondenser;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "motor")
 	{
 		rop = IEC61970::Base::Wires::SynchronousMachineKind::motor;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "generatorOrMotor")
 	{
 		rop = IEC61970::Base::Wires::SynchronousMachineKind::generatorOrMotor;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "motorOrCondenser")
 	{
 		rop = IEC61970::Base::Wires::SynchronousMachineKind::motorOrCondenser;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "generatorOrCondenserOrMotor")
 	{
 		rop = IEC61970::Base::Wires::SynchronousMachineKind::generatorOrCondenserOrMotor;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -7923,67 +7922,67 @@ std::istream& operator>>(std::istream& lop, IEC61970::Dynamics::StandardModels::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "rotorSpeed")
 	{
 		rop = IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind::rotorSpeed;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rotorAngularFrequencyDeviation")
 	{
 		rop = IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind::rotorAngularFrequencyDeviation;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "busFrequency")
 	{
 		rop = IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind::busFrequency;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "busFrequencyDeviation")
 	{
 		rop = IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind::busFrequencyDeviation;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "generatorElectricalPower")
 	{
 		rop = IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind::generatorElectricalPower;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "generatorAcceleratingPower")
 	{
 		rop = IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind::generatorAcceleratingPower;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "busVoltage")
 	{
 		rop = IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind::busVoltage;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "busVoltageDerivative")
 	{
 		rop = IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind::busVoltageDerivative;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "branchCurrent")
 	{
 		rop = IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind::branchCurrent;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "fieldCurrent")
 	{
 		rop = IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind::fieldCurrent;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8000,31 +7999,31 @@ std::istream& operator>>(std::istream& lop, IEC61970::Dynamics::StandardModels::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "exponential")
 	{
 		rop = IEC61970::Dynamics::StandardModels::LoadDynamics::StaticLoadModelKind::exponential;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "zIP1")
 	{
 		rop = IEC61970::Dynamics::StandardModels::LoadDynamics::StaticLoadModelKind::zIP1;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "zIP2")
 	{
 		rop = IEC61970::Dynamics::StandardModels::LoadDynamics::StaticLoadModelKind::zIP2;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "constantZ")
 	{
 		rop = IEC61970::Dynamics::StandardModels::LoadDynamics::StaticLoadModelKind::constantZ;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8041,19 +8040,19 @@ std::istream& operator>>(std::istream& lop, IEC61970::Dynamics::StandardModels::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "exponentialRecovery")
 	{
 		rop = IEC61970::Dynamics::StandardModels::LoadDynamics::GenericNonLinearLoadModelKind::exponentialRecovery;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "loadAdaptive")
 	{
 		rop = IEC61970::Dynamics::StandardModels::LoadDynamics::GenericNonLinearLoadModelKind::loadAdaptive;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8070,31 +8069,31 @@ std::istream& operator>>(std::istream& lop, IEC61970::Dynamics::StandardModels::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "electricalPower")
 	{
 		rop = IEC61970::Dynamics::StandardModels::TurbineGovernorDynamics::DroopSignalFeedbackKind::electricalPower;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "none")
 	{
 		rop = IEC61970::Dynamics::StandardModels::TurbineGovernorDynamics::DroopSignalFeedbackKind::none;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "fuelValveStroke")
 	{
 		rop = IEC61970::Dynamics::StandardModels::TurbineGovernorDynamics::DroopSignalFeedbackKind::fuelValveStroke;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "governorOutput")
 	{
 		rop = IEC61970::Dynamics::StandardModels::TurbineGovernorDynamics::DroopSignalFeedbackKind::governorOutput;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8111,25 +8110,25 @@ std::istream& operator>>(std::istream& lop, IEC61970::Dynamics::StandardModels::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "mechanicHydrolicTachoAccelerator")
 	{
 		rop = IEC61970::Dynamics::StandardModels::TurbineGovernorDynamics::FrancisGovernorControlKind::mechanicHydrolicTachoAccelerator;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "mechanicHydraulicTransientFeedback")
 	{
 		rop = IEC61970::Dynamics::StandardModels::TurbineGovernorDynamics::FrancisGovernorControlKind::mechanicHydraulicTransientFeedback;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "electromechanicalElectrohydraulic")
 	{
 		rop = IEC61970::Dynamics::StandardModels::TurbineGovernorDynamics::FrancisGovernorControlKind::electromechanicalElectrohydraulic;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8146,31 +8145,31 @@ std::istream& operator>>(std::istream& lop, IEC61970::Dynamics::StandardModels::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "noOELinput")
 	{
 		rop = IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcST7BOELselectorKind::noOELinput;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "addVref")
 	{
 		rop = IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcST7BOELselectorKind::addVref;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "inputLVgate")
 	{
 		rop = IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcST7BOELselectorKind::inputLVgate;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "outputLVgate")
 	{
 		rop = IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcST7BOELselectorKind::outputLVgate;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8187,31 +8186,31 @@ std::istream& operator>>(std::istream& lop, IEC61970::Dynamics::StandardModels::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "noUELinput")
 	{
 		rop = IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcST7BUELselectorKind::noUELinput;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "addVref")
 	{
 		rop = IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcST7BUELselectorKind::addVref;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "inputHVgate")
 	{
 		rop = IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcST7BUELselectorKind::inputHVgate;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "outputHVgate")
 	{
 		rop = IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcST7BUELselectorKind::outputHVgate;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8228,25 +8227,25 @@ std::istream& operator>>(std::istream& lop, IEC61970::Dynamics::StandardModels::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "noOELinput")
 	{
 		rop = IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcST6BOELselectorKind::noOELinput;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "beforeUEL")
 	{
 		rop = IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcST6BOELselectorKind::beforeUEL;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "afterUEL")
 	{
 		rop = IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcST6BOELselectorKind::afterUEL;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8263,31 +8262,31 @@ std::istream& operator>>(std::istream& lop, IEC61970::Dynamics::StandardModels::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "ignoreUELsignal")
 	{
 		rop = IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcIEEEST1AUELselectorKind::ignoreUELsignal;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "inputHVgateVoltageOutput")
 	{
 		rop = IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcIEEEST1AUELselectorKind::inputHVgateVoltageOutput;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "inputHVgateErrorSignal")
 	{
 		rop = IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcIEEEST1AUELselectorKind::inputHVgateErrorSignal;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "inputAddedToErrorSignal")
 	{
 		rop = IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcIEEEST1AUELselectorKind::inputAddedToErrorSignal;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8304,25 +8303,25 @@ std::istream& operator>>(std::istream& lop, IEC61970::Dynamics::StandardModels::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "fieldVoltage")
 	{
 		rop = IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcREXSFeedbackSignalKind::fieldVoltage;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "fieldCurrent")
 	{
 		rop = IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcREXSFeedbackSignalKind::fieldCurrent;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "outputVoltage")
 	{
 		rop = IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcREXSFeedbackSignalKind::outputVoltage;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8339,25 +8338,25 @@ std::istream& operator>>(std::istream& lop, IEC61970::Dynamics::StandardModels::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "ifag")
 	{
 		rop = IEC61970::Dynamics::StandardModels::SynchronousMachineDynamics::IfdBaseKind::ifag;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ifnl")
 	{
 		rop = IEC61970::Dynamics::StandardModels::SynchronousMachineDynamics::IfdBaseKind::ifnl;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "iffl")
 	{
 		rop = IEC61970::Dynamics::StandardModels::SynchronousMachineDynamics::IfdBaseKind::iffl;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8374,37 +8373,37 @@ std::istream& operator>>(std::istream& lop, IEC61970::Dynamics::StandardModels::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "subtransient")
 	{
 		rop = IEC61970::Dynamics::StandardModels::SynchronousMachineDynamics::SynchronousMachineModelKind::subtransient;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "subtransientTypeF")
 	{
 		rop = IEC61970::Dynamics::StandardModels::SynchronousMachineDynamics::SynchronousMachineModelKind::subtransientTypeF;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "subtransientTypeJ")
 	{
 		rop = IEC61970::Dynamics::StandardModels::SynchronousMachineDynamics::SynchronousMachineModelKind::subtransientTypeJ;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "subtransientSimplified")
 	{
 		rop = IEC61970::Dynamics::StandardModels::SynchronousMachineDynamics::SynchronousMachineModelKind::subtransientSimplified;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "subtransientSimplifiedDirectAxis")
 	{
 		rop = IEC61970::Dynamics::StandardModels::SynchronousMachineDynamics::SynchronousMachineModelKind::subtransientSimplifiedDirectAxis;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8421,19 +8420,19 @@ std::istream& operator>>(std::istream& lop, IEC61970::Dynamics::StandardModels::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "roundRotor")
 	{
 		rop = IEC61970::Dynamics::StandardModels::SynchronousMachineDynamics::RotorKind::roundRotor;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "salientPole")
 	{
 		rop = IEC61970::Dynamics::StandardModels::SynchronousMachineDynamics::RotorKind::salientPole;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8450,103 +8449,103 @@ std::istream& operator>>(std::istream& lop, IEC61970::Dynamics::StandardModels::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "prr")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindLookupTableFunctionKind::prr;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "omegap")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindLookupTableFunctionKind::omegap;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ipmax")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindLookupTableFunctionKind::ipmax;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "iqmax")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindLookupTableFunctionKind::iqmax;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "pwp")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindLookupTableFunctionKind::pwp;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "tcwdu")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindLookupTableFunctionKind::tcwdu;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "tduwt")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindLookupTableFunctionKind::tduwt;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "qmaxp")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindLookupTableFunctionKind::qmaxp;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "qminp")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindLookupTableFunctionKind::qminp;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "qmaxu")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindLookupTableFunctionKind::qmaxu;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "qminu")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindLookupTableFunctionKind::qminu;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "tuover")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindLookupTableFunctionKind::tuover;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "tuunder")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindLookupTableFunctionKind::tuunder;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "tfover")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindLookupTableFunctionKind::tfover;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "tfunder")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindLookupTableFunctionKind::tfunder;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "qwp")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindLookupTableFunctionKind::qwp;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8563,37 +8562,37 @@ std::istream& operator>>(std::istream& lop, IEC61970::Dynamics::StandardModels::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "voltage")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindQcontrolModeKind::voltage;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "reactivePower")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindQcontrolModeKind::reactivePower;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "openLoopReactivePower")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindQcontrolModeKind::openLoopReactivePower;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "powerFactor")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindQcontrolModeKind::powerFactor;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "openLooppowerFactor")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindQcontrolModeKind::openLooppowerFactor;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8610,31 +8609,31 @@ std::istream& operator>>(std::istream& lop, IEC61970::Dynamics::StandardModels::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "reactivePower")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindPlantQcontrolModeKind::reactivePower;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "powerFactor")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindPlantQcontrolModeKind::powerFactor;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "uqStatic")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindPlantQcontrolModeKind::uqStatic;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "voltageControl")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindPlantQcontrolModeKind::voltageControl;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8651,25 +8650,25 @@ std::istream& operator>>(std::istream& lop, IEC61970::Dynamics::StandardModels::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "mode0")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindUVRTQcontrolModeKind::mode0;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "mode1")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindUVRTQcontrolModeKind::mode1;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "mode2")
 	{
 		rop = IEC61970::Dynamics::StandardModels::WindDynamics::WindUVRTQcontrolModeKind::mode2;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8686,25 +8685,25 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Wires::PetersenCoilM
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "fixed")
 	{
 		rop = IEC61970::Base::Wires::PetersenCoilModeKind::fixed;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "manual")
 	{
 		rop = IEC61970::Base::Wires::PetersenCoilModeKind::manual;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "automaticPositioning")
 	{
 		rop = IEC61970::Base::Wires::PetersenCoilModeKind::automaticPositioning;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8721,19 +8720,19 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Wires::SVCControlMod
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "reactivePower")
 	{
 		rop = IEC61970::Base::Wires::SVCControlMode::reactivePower;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "voltage")
 	{
 		rop = IEC61970::Base::Wires::SVCControlMode::voltage;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8750,19 +8749,19 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::DiagramLayout::Orien
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "positive")
 	{
 		rop = IEC61970::Base::DiagramLayout::OrientationKind::positive;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "negative")
 	{
 		rop = IEC61970::Base::DiagramLayout::OrientationKind::negative;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8779,31 +8778,31 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Core::BreakerConfigu
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "singleBreaker")
 	{
 		rop = IEC61970::Base::Core::BreakerConfiguration::singleBreaker;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "breakerAndAHalf")
 	{
 		rop = IEC61970::Base::Core::BreakerConfiguration::breakerAndAHalf;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "doubleBreaker")
 	{
 		rop = IEC61970::Base::Core::BreakerConfiguration::doubleBreaker;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "noBreaker")
 	{
 		rop = IEC61970::Base::Core::BreakerConfiguration::noBreaker;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8820,31 +8819,31 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Core::BusbarConfigur
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "singleBus")
 	{
 		rop = IEC61970::Base::Core::BusbarConfiguration::singleBus;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "doubleBus")
 	{
 		rop = IEC61970::Base::Core::BusbarConfiguration::doubleBus;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "mainWithTransfer")
 	{
 		rop = IEC61970::Base::Core::BusbarConfiguration::mainWithTransfer;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ringBus")
 	{
 		rop = IEC61970::Base::Core::BusbarConfiguration::ringBus;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8861,25 +8860,25 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::DC::DCConverterOpera
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "bipolar")
 	{
 		rop = IEC61970::Base::DC::DCConverterOperatingModeKind::bipolar;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "monopolarMetallicReturn")
 	{
 		rop = IEC61970::Base::DC::DCConverterOperatingModeKind::monopolarMetallicReturn;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "monopolarGroundReturn")
 	{
 		rop = IEC61970::Base::DC::DCConverterOperatingModeKind::monopolarGroundReturn;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8896,19 +8895,19 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::DC::CsOperatingModeK
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "inverter")
 	{
 		rop = IEC61970::Base::DC::CsOperatingModeKind::inverter;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "rectifier")
 	{
 		rop = IEC61970::Base::DC::CsOperatingModeKind::rectifier;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8925,25 +8924,25 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::DC::CsPpccControlKin
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "activePower")
 	{
 		rop = IEC61970::Base::DC::CsPpccControlKind::activePower;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "dcVoltage")
 	{
 		rop = IEC61970::Base::DC::CsPpccControlKind::dcVoltage;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "dcCurrent")
 	{
 		rop = IEC61970::Base::DC::CsPpccControlKind::dcCurrent;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -8960,37 +8959,37 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::DC::VsPpccControlKin
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "pPcc")
 	{
 		rop = IEC61970::Base::DC::VsPpccControlKind::pPcc;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "udc")
 	{
 		rop = IEC61970::Base::DC::VsPpccControlKind::udc;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "pPccAndUdcDroop")
 	{
 		rop = IEC61970::Base::DC::VsPpccControlKind::pPccAndUdcDroop;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "pPccAndUdcDroopWithCompensation")
 	{
 		rop = IEC61970::Base::DC::VsPpccControlKind::pPccAndUdcDroopWithCompensation;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "pPccAndUdcDroopPilot")
 	{
 		rop = IEC61970::Base::DC::VsPpccControlKind::pPccAndUdcDroopPilot;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -9007,25 +9006,25 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::DC::VsQpccControlKin
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "reactivePcc")
 	{
 		rop = IEC61970::Base::DC::VsQpccControlKind::reactivePcc;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "voltagePcc")
 	{
 		rop = IEC61970::Base::DC::VsQpccControlKind::voltagePcc;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "powerFactorPcc")
 	{
 		rop = IEC61970::Base::DC::VsQpccControlKind::powerFactorPcc;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -9042,25 +9041,25 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::DC::DCPolarityKind& 
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "positive")
 	{
 		rop = IEC61970::Base::DC::DCPolarityKind::positive;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "middle")
 	{
 		rop = IEC61970::Base::DC::DCPolarityKind::middle;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "negative")
 	{
 		rop = IEC61970::Base::DC::DCPolarityKind::negative;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -9077,25 +9076,25 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::OperationalLimits::O
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "high")
 	{
 		rop = IEC61970::Base::OperationalLimits::OperationalLimitDirectionKind::high;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "low")
 	{
 		rop = IEC61970::Base::OperationalLimits::OperationalLimitDirectionKind::low;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "absoluteValue")
 	{
 		rop = IEC61970::Base::OperationalLimits::OperationalLimitDirectionKind::absoluteValue;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -9112,19 +9111,19 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Generation::Producti
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "offshore")
 	{
 		rop = IEC61970::Base::Generation::Production::WindGenUnitKind::offshore;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "onshore")
 	{
 		rop = IEC61970::Base::Generation::Production::WindGenUnitKind::onshore;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -9141,19 +9140,19 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Generation::Producti
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "setpoint")
 	{
 		rop = IEC61970::Base::Generation::Production::GeneratorControlMode::setpoint;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "pulse")
 	{
 		rop = IEC61970::Base::Generation::Production::GeneratorControlMode::pulse;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -9170,31 +9169,31 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Generation::Producti
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "unavailable")
 	{
 		rop = IEC61970::Base::Generation::Production::GeneratorControlSource::unavailable;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "offAGC")
 	{
 		rop = IEC61970::Base::Generation::Production::GeneratorControlSource::offAGC;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "onAGC")
 	{
 		rop = IEC61970::Base::Generation::Production::GeneratorControlSource::onAGC;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "plantControl")
 	{
 		rop = IEC61970::Base::Generation::Production::GeneratorControlSource::plantControl;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -9211,43 +9210,43 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Generation::Producti
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "sulfurDioxide")
 	{
 		rop = IEC61970::Base::Generation::Production::EmissionType::sulfurDioxide;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "carbonDioxide")
 	{
 		rop = IEC61970::Base::Generation::Production::EmissionType::carbonDioxide;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "nitrogenOxide")
 	{
 		rop = IEC61970::Base::Generation::Production::EmissionType::nitrogenOxide;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "hydrogenSulfide")
 	{
 		rop = IEC61970::Base::Generation::Production::EmissionType::hydrogenSulfide;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "chlorine")
 	{
 		rop = IEC61970::Base::Generation::Production::EmissionType::chlorine;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "carbonDisulfide")
 	{
 		rop = IEC61970::Base::Generation::Production::EmissionType::carbonDisulfide;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -9264,19 +9263,19 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Generation::Producti
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "measured")
 	{
 		rop = IEC61970::Base::Generation::Production::EmissionValueSource::measured;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "calculated")
 	{
 		rop = IEC61970::Base::Generation::Production::EmissionValueSource::calculated;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -9293,43 +9292,43 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Generation::Producti
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "coal")
 	{
 		rop = IEC61970::Base::Generation::Production::FuelType::coal;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "oil")
 	{
 		rop = IEC61970::Base::Generation::Production::FuelType::oil;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "gas")
 	{
 		rop = IEC61970::Base::Generation::Production::FuelType::gas;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "lignite")
 	{
 		rop = IEC61970::Base::Generation::Production::FuelType::lignite;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "hardCoal")
 	{
 		rop = IEC61970::Base::Generation::Production::FuelType::hardCoal;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "oilShale")
 	{
 		rop = IEC61970::Base::Generation::Production::FuelType::oilShale;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -9346,19 +9345,19 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Generation::Producti
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "generator")
 	{
 		rop = IEC61970::Base::Generation::Production::HydroEnergyConversionKind::generator;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "pumpAndGenerator")
 	{
 		rop = IEC61970::Base::Generation::Production::HydroEnergyConversionKind::pumpAndGenerator;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -9375,25 +9374,25 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Generation::Producti
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "runOfRiver")
 	{
 		rop = IEC61970::Base::Generation::Production::HydroPlantStorageKind::runOfRiver;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "pumpedStorage")
 	{
 		rop = IEC61970::Base::Generation::Production::HydroPlantStorageKind::pumpedStorage;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "storage")
 	{
 		rop = IEC61970::Base::Generation::Production::HydroPlantStorageKind::storage;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -9410,19 +9409,19 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Generation::Generati
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "following")
 	{
 		rop = IEC61970::Base::Generation::GenerationTrainingSimulation::BoilerControlMode::following;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "coordinated")
 	{
 		rop = IEC61970::Base::Generation::GenerationTrainingSimulation::BoilerControlMode::coordinated;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -9439,25 +9438,25 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Generation::Generati
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "francis")
 	{
 		rop = IEC61970::Base::Generation::GenerationTrainingSimulation::TurbineType::francis;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "pelton")
 	{
 		rop = IEC61970::Base::Generation::GenerationTrainingSimulation::TurbineType::pelton;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "kaplan")
 	{
 		rop = IEC61970::Base::Generation::GenerationTrainingSimulation::TurbineType::kaplan;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -9474,19 +9473,19 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::AuxiliaryEquipment::
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "inductive")
 	{
 		rop = IEC61970::Base::AuxiliaryEquipment::PotentialTransformerKind::inductive;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "capacitiveCoupling")
 	{
 		rop = IEC61970::Base::AuxiliaryEquipment::PotentialTransformerKind::capacitiveCoupling;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -9503,19 +9502,19 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Contingency::Conting
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "inService")
 	{
 		rop = IEC61970::Base::Contingency::ContingencyEquipmentStatusKind::inService;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "outOfService")
 	{
 		rop = IEC61970::Base::Contingency::ContingencyEquipmentStatusKind::outOfService;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -9532,31 +9531,31 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::SCADA::RemoteUnitTyp
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "RTU")
 	{
 		rop = IEC61970::Base::SCADA::RemoteUnitType::RTU;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "SubstationControlSystem")
 	{
 		rop = IEC61970::Base::SCADA::RemoteUnitType::SubstationControlSystem;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "ControlCenter")
 	{
 		rop = IEC61970::Base::SCADA::RemoteUnitType::ControlCenter;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "IED")
 	{
 		rop = IEC61970::Base::SCADA::RemoteUnitType::IED;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -9573,25 +9572,25 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::ControlArea::Control
 	}
 
 	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
+
 	if(EnumSymbol == "AGC")
 	{
 		rop = IEC61970::Base::ControlArea::ControlAreaTypeKind::AGC;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "Forecast")
 	{
 		rop = IEC61970::Base::ControlArea::ControlAreaTypeKind::Forecast;
 		return lop;
 	}
-	
+
 	if(EnumSymbol == "Interchange")
 	{
 		rop = IEC61970::Base::ControlArea::ControlAreaTypeKind::Interchange;
 		return lop;
 	}
-	
+
 	lop.setstate(std::ios::failbit);
 	return lop;
 }
@@ -79796,28 +79795,8 @@ std::unordered_map<std::string, assign_function> dynamic_switch_factory()
 	dynamic_switch.insert(std::make_pair("cim:CurrentRelay.timeDelay1", &assign_CurrentRelay_timeDelay1));
 	dynamic_switch.insert(std::make_pair("cim:CurrentRelay.timeDelay2", &assign_CurrentRelay_timeDelay2));
 	dynamic_switch.insert(std::make_pair("cim:CurrentRelay.timeDelay3", &assign_CurrentRelay_timeDelay3));
-	
 
-	// Get aliases
-	std::ifstream file("assignment_alias.csv");
-	if(file.good())
-	{
-		std::string line;
-		std::regex expr("^([a-zA-Z0-9:.]*)[\t ,;]+([a-zA-Z0-9:.]*)$");
-		std::smatch m;
-		std::unordered_map<std::string, assign_function>::iterator it;
-		while (std::getline(file, line))
-		{
-			if(std::regex_match(line, m, expr))
-			{
-				it = dynamic_switch.find(m[1]);
-				if(it != dynamic_switch.end())
-				{
-					dynamic_switch.insert(std::make_pair(m[2], it->second));
-				}
-			}
-		}
-	}
+	load_aliases<assign_function>(dynamic_switch, "assignment_alias.csv");
 
 	return dynamic_switch;
 }

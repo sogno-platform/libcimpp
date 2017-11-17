@@ -1,10 +1,12 @@
-#include "Task.hpp"
-#include "Folders.hpp"
 #include <iostream>
-#include <fstream>
-#include <regex>
-static std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)> initialize();
-std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)> Task::dynamic_switch = initialize();
+
+#include "Folders.hpp"
+#include "Aliases.hpp"
+#include "Task.hpp"
+
+typedef bool (*task_function)(BaseClass*, BaseClass*);
+static std::unordered_map<std::string, task_function> initialize();
+std::unordered_map<std::string, task_function> Task::dynamic_switch = initialize();
 
 Task::Task()
 {
@@ -34,7 +36,7 @@ bool Task::resolve(std::unordered_map<std::string, BaseClass*> *RDFMap)
 	if(it_id == RDFMap->end())
 		return false;
 
-	std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)>::iterator it_func = dynamic_switch.find(_CIMAttrName);
+	std::unordered_map<std::string, task_function>::iterator it_func = dynamic_switch.find(_CIMAttrName);
 	if(it_func == dynamic_switch.end())
 		return false;
 
@@ -8008,9 +8010,9 @@ bool assign_ProtectionEquipment_ConductingEquipments(BaseClass* BaseClass_ptr1, 
 }
 
 
-static std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)> initialize()
+static std::unordered_map<std::string, task_function> initialize()
 {
-	std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)> map;
+	std::unordered_map<std::string, task_function> map;
 
 	map.insert(std::make_pair("cim:OrganisationRole.Organisation", &assign_OrganisationRole_Organisation));
 	map.insert(std::make_pair("cim:Organisation.OrganisationRole", &assign_OrganisationRole_Organisation));
@@ -8632,7 +8634,7 @@ static std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)> initial
 	map.insert(std::make_pair("cim:Terminal.TieFlow", &assign_TieFlow_Terminal));
 	map.insert(std::make_pair("cim:ControlArea.EnergyArea", &assign_ControlArea_EnergyArea));
 	map.insert(std::make_pair("cim:EnergyArea.ControlArea", &assign_ControlArea_EnergyArea));
-	
+
 	map.insert(std::make_pair("cim:IdentifiedObject.DiagramObjects", &assign_IdentifiedObject_DiagramObjects));
 	map.insert(std::make_pair("cim:DiagramObjects.IdentifiedObject", &assign_IdentifiedObject_DiagramObjects));
 	map.insert(std::make_pair("cim:Organisation.ActivityRecords", &assign_Organisation_ActivityRecords));
@@ -9333,32 +9335,8 @@ static std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)> initial
 	map.insert(std::make_pair("cim:ProtectedSwitches.ProtectionEquipment", &assign_ProtectionEquipment_ProtectedSwitches));
 	map.insert(std::make_pair("cim:ProtectionEquipment.ConductingEquipments", &assign_ProtectionEquipment_ConductingEquipments));
 	map.insert(std::make_pair("cim:ConductingEquipments.ProtectionEquipment", &assign_ProtectionEquipment_ConductingEquipments));
-	
 
-	// Get aliases
-	std::ifstream file("task_alias.csv");
-	if(file.good())
-	{
-		std::string line;
-		std::regex expr("^([a-zA-Z0-9:.]*)[\t ,;]+([a-zA-Z0-9:.]*)$");
-		std::smatch m;
-		std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)>::iterator it;
-		while (std::getline(file, line))
-		{
-			if(std::regex_match(line, m, expr))
-			{
-				it = map.find(m[1]);
-				if(it != map.end())
-				{
-					map.insert(std::make_pair(m[2], it->second));
-				}
-			}
-		}
-	}
-	else
-	{
-		std::cerr << "task_alias.csv could not be loaded" << std::endl;
-	}
+	load_aliases<task_function>(map, "task_alias.csv");
 
 	return map;
 }
