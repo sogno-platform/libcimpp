@@ -3,6 +3,6 @@ image: ubuntu
 mirror:
   stage: deploy
   script:
-    - ./mirrorToGithub.sh
+    - ./ci/mirrorToGithub.sh
   tags:
     - docker
