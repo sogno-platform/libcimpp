@@ -1,13 +1,13 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(CIMParser CXX)
+project(libcimpp CXX)
 set(CMAKE_CXX_STANDARD 11)
 
 add_subdirectory(thirdparty)
 
-set(CIMParser_MAJOR_VERSION 2)
-set(CIMParser_MINOR_VERSION 1)
-set(CIMParser_VERSION ${CIMParser_MAJOR_VERSION}.${CIMParser_MINOR_VERSION})
+set(libcimpp_MAJOR_VERSION 2)
+set(libcimpp_MINOR_VERSION 1)
+set(libcimpp_VERSION ${libcimpp_MAJOR_VERSION}.${libcimpp_MINOR_VERSION})
 
 # Options
 option(BUILD_SHARED_LIBS "Build shared library" OFF)
