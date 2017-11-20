@@ -5,11 +5,8 @@ libcimpp
 For **non-commercial** use this software is licensed under the terms in the included [LICENSE](LICENSE) file.
 In case of **commercial** use you are required to negotiate a proper license model with the *Institute for Automation of Complex Power Systems* at *RWTH Aachen University*. Therefor please write to [acs-sek@eonerc.rwth-aachen.de](mailto:acs-sek@eonerc.rwth-aachen.de).
 
-### Idea
-More about the idea you can read [here](http://rdcu.be/vOop).
-
-### HomePage
-You can find the CIM++ home [here](http://fine-aachen.rwth-aachen.de/projects/cimpp).
+### Context
+More about the idea you can read [here](http://rdcu.be/vOop) and the CIM++ hompage you can find [here](http://fine-aachen.rwth-aachen.de/projects/cimpp).
 
 ### v2.x
 #### General
