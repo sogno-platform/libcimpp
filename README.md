@@ -6,7 +6,7 @@ For **non-commercial** use this software is licensed under the terms in the incl
 In case of **commercial** use, you are asked to inform the *Institute for Automation of Complex Power Systems* at *RWTH Aachen University*. Therefore please write to [acs-sek@eonerc.rwth-aachen.de](mailto:acs-sek@eonerc.rwth-aachen.de).
 
 ### Context
-More about the idea you can read [here](http://rdcu.be/vOop) and the CIM++ hompage you can find [here](http://fine-aachen.rwth-aachen.de/projects/cimpp).
+More about the idea you can read [here](http://rdcu.be/vOop). The CIM++ hompage you can find [here](http://fine-aachen.rwth-aachen.de/projects/cimpp).
 
 ### v2.x
 #### General
