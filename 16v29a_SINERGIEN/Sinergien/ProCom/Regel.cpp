@@ -1,0 +1,20 @@
+///////////////////////////////////////////////////////////
+//  Regel.cpp
+//  Implementation of the Class Regel
+//  Original author: rn
+///////////////////////////////////////////////////////////
+
+#include "Regel.h"
+
+using Sinergien::ProCom::Regel;
+
+
+Regel::Regel(){
+
+}
+
+
+
+Regel::~Regel(){
+
+}

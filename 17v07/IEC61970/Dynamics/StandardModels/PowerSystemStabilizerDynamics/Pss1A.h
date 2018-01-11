@@ -66,7 +66,7 @@ namespace IEC61970
 					/**
 					 * Type of input signal.
 					 */
-					IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind inputSignalType;
+					IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind inputSignalType = IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind::_undef;
 					/**
 					 * Selector (Kd).
 					 * true = e<sup>-sTdelay</sup> used

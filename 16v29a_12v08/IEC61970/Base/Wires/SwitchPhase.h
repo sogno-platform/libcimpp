@@ -42,12 +42,12 @@ namespace IEC61970
 				 * Phase of this SwitchPhase on the side with terminal sequence number equal 1.
 				 * Should be a phase contained in that terminal&rsquo;s phases attribute.
 				 */
-				IEC61970::Base::Wires::SinglePhaseKind phaseSide1;
+				IEC61970::Base::Wires::SinglePhaseKind phaseSide1 = IEC61970::Base::Wires::SinglePhaseKind::_undef;
 				/**
 				 * Phase of this SwitchPhase on the side with terminal sequence number equal 2.
 				 * Should be a phase contained in that terminal&rsquo;s Terminal.phases attribute.
 				 */
-				IEC61970::Base::Wires::SinglePhaseKind phaseSide2;
+				IEC61970::Base::Wires::SinglePhaseKind phaseSide2 = IEC61970::Base::Wires::SinglePhaseKind::_undef;
 
 			};
 

@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Communicates using a public cellular radio network. A specific variant of 'rf'.
 			 */
-			cellular,
+			 _undef = -1, 	cellular,
 			/**
 			 * Communicates using one or more of a family of frame-based computer networking
 			 * technologies conforming to the IEEE 802.3 standard.

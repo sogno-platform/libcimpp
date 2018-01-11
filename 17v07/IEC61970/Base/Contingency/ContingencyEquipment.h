@@ -32,7 +32,7 @@ namespace IEC61970
 				 * status is independent of the case to which the contingency is originally
 				 * applied, but defines the equipment status when the contingency is applied.
 				 */
-				IEC61970::Base::Contingency::ContingencyEquipmentStatusKind contingentStatus;
+				IEC61970::Base::Contingency::ContingencyEquipmentStatusKind contingentStatus = IEC61970::Base::Contingency::ContingencyEquipmentStatusKind::_undef;
 				/**
 				 * The single piece of equipment to which to apply the contingency.
 				 */

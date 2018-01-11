@@ -39,7 +39,7 @@ namespace IEC61970
 					 * The y1AxisUnits of the curve contains the unit of measure (e.g. kg) and the
 					 * emissionType is the type of emission (e.g. sulfer dioxide).
 					 */
-					IEC61970::Base::Generation::Production::EmissionType emissionType;
+					IEC61970::Base::Generation::Production::EmissionType emissionType = IEC61970::Base::Generation::Production::EmissionType::_undef;
 					/**
 					 * Flag is set to true when output is expressed in net active power.
 					 */

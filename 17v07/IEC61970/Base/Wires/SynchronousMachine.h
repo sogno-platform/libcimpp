@@ -67,7 +67,7 @@ namespace IEC61970
 				/**
 				 * Method of cooling the machine.
 				 */
-				IEC61970::Base::Wires::CoolantType coolantType;
+				IEC61970::Base::Wires::CoolantType coolantType = IEC61970::Base::Wires::CoolantType::_undef;
 				/**
 				 * Indicates whether or not the generator is earthed. Used for short circuit data
 				 * exchange according to IEC 60909
@@ -127,7 +127,7 @@ namespace IEC61970
 				/**
 				 * Current mode of operation.
 				 */
-				IEC61970::Base::Wires::SynchronousMachineOperatingMode operatingMode;
+				IEC61970::Base::Wires::SynchronousMachineOperatingMode operatingMode = IEC61970::Base::Wires::SynchronousMachineOperatingMode::_undef;
 				/**
 				 * Percent of the coordinated reactive control that comes from this machine.
 				 */
@@ -171,11 +171,11 @@ namespace IEC61970
 				 * Type of rotor, used by short circuit applications, only for single fed short
 				 * circuit according to IEC 60909.
 				 */
-				IEC61970::Base::Wires::ShortCircuitRotorKind shortCircuitRotorType;
+				IEC61970::Base::Wires::ShortCircuitRotorKind shortCircuitRotorType = IEC61970::Base::Wires::ShortCircuitRotorKind::_undef;
 				/**
 				 * Modes that this synchronous machine can operate in.
 				 */
-				IEC61970::Base::Wires::SynchronousMachineKind type;
+				IEC61970::Base::Wires::SynchronousMachineKind type = IEC61970::Base::Wires::SynchronousMachineKind::_undef;
 				/**
 				 * Range of generator voltage regulation (PG in the IEC 60909-0) used for
 				 * calculation of the impedance correction factor KG defined in IEC 60909-0

@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class BillMediaKind
 			{
-				paper,
+				 _undef = -1, 	paper,
 				electronic,
 				other
 			};

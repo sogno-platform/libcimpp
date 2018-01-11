@@ -22,7 +22,7 @@ namespace IEC61970
 				/**
 				 * The equipment is to be put into service.
 				 */
-				inService,
+				 _undef = -1, 	inService,
 				/**
 				 * The equipment is to be taken out of service.
 				 */

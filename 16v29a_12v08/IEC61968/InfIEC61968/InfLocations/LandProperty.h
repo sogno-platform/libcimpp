@@ -40,7 +40,7 @@ namespace IEC61968
 				/**
 				 * Demographics around the site.
 				 */
-				IEC61968::InfIEC61968::InfLocations::DemographicKind demographicKind;
+				IEC61968::InfIEC61968::InfLocations::DemographicKind demographicKind = IEC61968::InfIEC61968::InfLocations::DemographicKind::_undef;
 				/**
 				 * Reference allocated by the governing organisation (such as municipality) to
 				 * this piece of land that has a formal reference to Surveyor General's records.
@@ -51,7 +51,7 @@ namespace IEC61968
 				 * Kind of (land) property, categorised according to its main functional use from
 				 * the utility's perspective.
 				 */
-				IEC61968::InfIEC61968::InfLocations::LandPropertyKind kind;
+				IEC61968::InfIEC61968::InfLocations::LandPropertyKind kind = IEC61968::InfIEC61968::InfLocations::LandPropertyKind::_undef;
 				IEC61968::Common::Status status;
 				/**
 				 * All location grants this land property has.

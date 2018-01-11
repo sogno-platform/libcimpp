@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Open the switch.
 			 */
-			open,
+			 _undef = -1, 	open,
 			/**
 			 * Close the switch.
 			 */

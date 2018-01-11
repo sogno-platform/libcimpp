@@ -21,7 +21,7 @@ namespace IEC61970
 				/**
 				 * Fixed position.
 				 */
-				fixed,
+				 _undef = -1, 	fixed,
 				/**
 				 * Manual positioning.
 				 */

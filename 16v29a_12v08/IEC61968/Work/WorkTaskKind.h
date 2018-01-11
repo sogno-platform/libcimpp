@@ -16,7 +16,7 @@ namespace IEC61968
 			/**
 			 * Work task deals with installation of assets.
 			 */
-			install,
+			 _undef = -1, 	install,
 			/**
 			 * Work task deals with removal of assets.
 			 */

@@ -36,7 +36,7 @@ namespace IEC61968
 			/**
 			 * Kind of customer.
 			 */
-			IEC61968::Customers::CustomerKind kind;
+			IEC61968::Customers::CustomerKind kind = IEC61968::Customers::CustomerKind::_undef;
 			/**
 			 * Locale designating language to use in communications with this customer.
 			 */

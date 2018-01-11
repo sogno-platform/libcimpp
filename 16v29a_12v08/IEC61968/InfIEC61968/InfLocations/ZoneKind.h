@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class ZoneKind
 			{
-				electricalNetwork,
+				 _undef = -1, 	electricalNetwork,
 				specialRestrictionLand,
 				weatherZone,
 				other

@@ -23,7 +23,7 @@ namespace IEC61968
 			 * Start time of an event or control action affecting one or more multiple devices
 			 * is randomised.
 			 */
-			start,
+			 _undef = -1, 	start,
 			/**
 			 * End time of an event or control action affecting one or more devices is
 			 * randomised to prevent simultaneous operation.
@@ -38,6 +38,7 @@ namespace IEC61968
 			 * Randomisation of start and/or end times involving the operation of one or more
 			 * devices is controlled by default settings for the device(s).
 			 */
+			//warning Enumerator "default" is renamed to "default_val", this does not commply the CIM standard!
 			default_val,
 			/**
 			 * Neither the start time nor the end time of an event or control action affecting

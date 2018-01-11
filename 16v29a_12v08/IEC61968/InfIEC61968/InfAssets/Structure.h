@@ -51,7 +51,7 @@ namespace IEC61968
 				/**
 				 * Material this structure is made of.
 				 */
-				IEC61968::InfIEC61968::InfAssets::StructureMaterialKind materialKind;
+				IEC61968::InfIEC61968::InfAssets::StructureMaterialKind materialKind = IEC61968::InfIEC61968::InfAssets::StructureMaterialKind::_undef;
 				/**
 				 * Maximum rated voltage of the equipment that can be mounted on/contained within
 				 * the structure.

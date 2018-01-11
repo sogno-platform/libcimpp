@@ -23,7 +23,7 @@ namespace IEC61970
 				/**
 				 * yocto 10**-24.
 				 */
-				y = -24,
+				 _undef = -1, 	y = -24,
 				/**
 				 * zepto 10**-21.
 				 */

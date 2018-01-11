@@ -51,7 +51,7 @@ namespace IEC61968
 				/**
 				 * Kind of line item.
 				 */
-				IEC61968::InfIEC61968::InfERPSupport::ErpInvoiceLineItemKind kind;
+				IEC61968::InfIEC61968::InfERPSupport::ErpInvoiceLineItemKind kind = IEC61968::InfIEC61968::InfERPSupport::ErpInvoiceLineItemKind::_undef;
 				/**
 				 * Amount due for this line item.
 				 */

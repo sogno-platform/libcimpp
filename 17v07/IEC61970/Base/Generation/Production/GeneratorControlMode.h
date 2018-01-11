@@ -22,7 +22,7 @@ namespace IEC61970
 					/**
 					 * Setpoint control mode.
 					 */
-					setpoint,
+					 _undef = -1, 	setpoint,
 					/**
 					 * Pulse control mode.
 					 */

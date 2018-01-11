@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Payment method by means of a cheque.
 			 */
-			cheque,
+			 _undef = -1, 	cheque,
 			/**
 			 * Payment method by means of a credit or debit card.
 			 */

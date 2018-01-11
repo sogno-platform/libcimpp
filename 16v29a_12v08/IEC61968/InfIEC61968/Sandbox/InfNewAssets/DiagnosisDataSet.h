@@ -56,7 +56,7 @@ namespace IEC61968
 					/**
 					 * Phase(s) diagnosed.
 					 */
-					IEC61970::Base::Core::PhaseCode phaseCode;
+					IEC61970::Base::Core::PhaseCode phaseCode = IEC61970::Base::Core::PhaseCode::_undef;
 					/**
 					 * Code for problem type determined during preliminary assessment.
 					 */

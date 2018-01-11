@@ -21,7 +21,7 @@ namespace IEC61968
 				/**
 				 * Static VAr compensator.
 				 */
-				svc,
+				 _undef = -1, 	svc,
 				/**
 				 * Static synchronous compensator.
 				 */

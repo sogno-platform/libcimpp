@@ -24,7 +24,7 @@ namespace IEC61970
 				 * connected between each phase specified in the fault and ground, but not between
 				 * the phases.
 				 */
-				lineToGround,
+				 _undef = -1, 	lineToGround,
 				/**
 				 * The fault connects the specified phases together without a connection to ground.
 				 * The ground impedance of this fault is ignored. The line to line impedance is

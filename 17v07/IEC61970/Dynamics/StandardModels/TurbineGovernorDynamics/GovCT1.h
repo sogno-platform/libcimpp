@@ -142,7 +142,7 @@ namespace IEC61970
 					/**
 					 * Feedback signal for droop (Rselect).  Typical Value = electricalPower.
 					 */
-					IEC61970::Dynamics::StandardModels::TurbineGovernorDynamics::DroopSignalFeedbackKind rselect;
+					IEC61970::Dynamics::StandardModels::TurbineGovernorDynamics::DroopSignalFeedbackKind rselect = IEC61970::Dynamics::StandardModels::TurbineGovernorDynamics::DroopSignalFeedbackKind::_undef;
 					/**
 					 * Maximum rate of load limit increase (Rup).  Typical Value = 99.
 					 */

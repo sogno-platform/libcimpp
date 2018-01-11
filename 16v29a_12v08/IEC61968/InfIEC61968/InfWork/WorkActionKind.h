@@ -20,7 +20,7 @@ namespace IEC61968
 				/**
 				 * Install.
 				 */
-				install,
+				 _undef = -1, 	install,
 				/**
 				 * Remove.
 				 */

@@ -21,7 +21,7 @@ namespace IEC61970
 				/**
 				 * Used for automatic generation control.
 				 */
-				AGC,
+				 _undef = -1, 	AGC,
 				/**
 				 * Used for load forecast.
 				 */

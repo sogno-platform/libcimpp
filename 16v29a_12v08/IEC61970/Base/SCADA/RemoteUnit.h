@@ -36,7 +36,7 @@ namespace IEC61970
 				/**
 				 * Type of remote unit.
 				 */
-				IEC61970::Base::SCADA::RemoteUnitType remoteUnitType;
+				IEC61970::Base::SCADA::RemoteUnitType remoteUnitType = IEC61970::Base::SCADA::RemoteUnitType::_undef;
 				/**
 				 * Remote points this Remote unit contains.
 				 */

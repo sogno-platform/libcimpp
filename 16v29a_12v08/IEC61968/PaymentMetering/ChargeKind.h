@@ -20,7 +20,7 @@ namespace IEC61968
 			 * terms of a tariff. For example: usage x price per kWh = total charge for
 			 * consumption.
 			 */
-			consumptionCharge,
+			 _undef = -1, 	consumptionCharge,
 			/**
 			 * The charge related to the usage within a defined time interval, normally
 			 * expressed in terms of a tariff. For example: a maximum-demand tariff will levy

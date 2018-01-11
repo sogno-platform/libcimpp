@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Wire is used in extra-high voltage or high voltage network.
 			 */
-			transmission,
+			 _undef = -1, 	transmission,
 			/**
 			 * Wire is used in medium voltage network.
 			 */

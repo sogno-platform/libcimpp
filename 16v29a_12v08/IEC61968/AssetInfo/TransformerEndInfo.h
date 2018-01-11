@@ -35,7 +35,7 @@ namespace IEC61968
 			/**
 			 * Kind of connection.
 			 */
-			IEC61970::Base::Wires::WindingConnection connectionKind;
+			IEC61970::Base::Wires::WindingConnection connectionKind = IEC61970::Base::Wires::WindingConnection::_undef;
 			/**
 			 * Apparent power that the winding can carry under emergency conditions (also
 			 * called long-term emergency power).

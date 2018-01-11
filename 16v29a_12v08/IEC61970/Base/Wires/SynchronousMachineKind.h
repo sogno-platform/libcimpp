@@ -19,7 +19,7 @@ namespace IEC61970
 			{
 				generator,
 				condenser,
-				generatorOrCondenser,
+				 _undef = -1, 	generatorOrCondenser,
 				motor,
 				generatorOrMotor,
 				motorOrCondenser,

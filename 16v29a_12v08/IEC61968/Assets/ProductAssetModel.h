@@ -33,7 +33,7 @@ namespace IEC61968
 			/**
 			 * Kind of corporate standard for this asset model.
 			 */
-			IEC61968::Assets::CorporateStandardKind corporateStandardKind;
+			IEC61968::Assets::CorporateStandardKind corporateStandardKind = IEC61968::Assets::CorporateStandardKind::_undef;
 			/**
 			 * Manufacturer's model number.
 			 */
@@ -45,7 +45,7 @@ namespace IEC61968
 			/**
 			 * Intended usage for this asset model.
 			 */
-			IEC61968::Assets::AssetModelUsageKind usageKind;
+			IEC61968::Assets::AssetModelUsageKind usageKind = IEC61968::Assets::AssetModelUsageKind::_undef;
 			/**
 			 * Total manufactured weight of asset.
 			 */

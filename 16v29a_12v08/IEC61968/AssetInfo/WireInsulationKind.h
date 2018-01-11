@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Asbestos and varnished cambric wire insulation.
 			 */
-			asbestosAndVarnishedCambric,
+			 _undef = -1, 	asbestosAndVarnishedCambric,
 			/**
 			 * Butyl wire insulation.
 			 */

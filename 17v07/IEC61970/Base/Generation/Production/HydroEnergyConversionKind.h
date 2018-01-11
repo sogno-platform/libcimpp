@@ -24,7 +24,7 @@ namespace IEC61970
 					/**
 					 * Able to generate power, but not able to pump water for energy storage.
 					 */
-					generator,
+					 _undef = -1, 	generator,
 					/**
 					 * Able to both generate power and pump water for energy storage.
 					 */

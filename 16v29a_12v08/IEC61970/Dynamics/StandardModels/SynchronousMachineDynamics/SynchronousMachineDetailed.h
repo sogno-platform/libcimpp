@@ -51,7 +51,7 @@ namespace IEC61970
 					 * the user. WLMDV is the per unit ratio between the field voltage and the
 					 * excitation current: Efd = WLMDV*Ifd. Typical Value = ifag.
 					 */
-					IEC61970::Dynamics::StandardModels::SynchronousMachineDynamics::IfdBaseKind ifdBaseType;
+					IEC61970::Dynamics::StandardModels::SynchronousMachineDynamics::IfdBaseKind ifdBaseType = IEC61970::Dynamics::StandardModels::SynchronousMachineDynamics::IfdBaseKind::_undef;
 					/**
 					 * Q-axis saturation factor at 120% of rated terminal voltage (S12q) (>=S1q).
 					 * Typical Value = 0.12.

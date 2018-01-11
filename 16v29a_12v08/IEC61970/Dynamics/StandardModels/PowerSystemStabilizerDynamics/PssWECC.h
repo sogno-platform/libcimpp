@@ -33,11 +33,11 @@ namespace IEC61970
 					/**
 					 * Type of input signal #1.
 					 */
-					IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind inputSignal1Type;
+					IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind inputSignal1Type = IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind::_undef;
 					/**
 					 * Type of input signal #2.
 					 */
-					IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind inputSignal2Type;
+					IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind inputSignal2Type = IEC61970::Dynamics::StandardModels::PowerSystemStabilizerDynamics::InputSignalKind::_undef;
 					/**
 					 * Input signal 1 gain  (K<sub>1</sub>). 
 					 */

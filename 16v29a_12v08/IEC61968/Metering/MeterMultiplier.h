@@ -27,7 +27,7 @@ namespace IEC61968
 			/**
 			 * Kind of multiplier.
 			 */
-			IEC61968::Metering::MeterMultiplierKind kind;
+			IEC61968::Metering::MeterMultiplierKind kind = IEC61968::Metering::MeterMultiplierKind::_undef;
 			/**
 			 * Multiplier value.
 			 */

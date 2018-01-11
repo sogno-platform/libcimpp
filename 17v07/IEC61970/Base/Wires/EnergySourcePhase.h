@@ -32,7 +32,7 @@ namespace IEC61970
 				 * point.  If the energy source is delta connected, the phase indicates an energy
 				 * source connected from the indicated phase to the next logical non-neutral phase.
 				 */
-				IEC61970::Base::Wires::SinglePhaseKind phase;
+				IEC61970::Base::Wires::SinglePhaseKind phase = IEC61970::Base::Wires::SinglePhaseKind::_undef;
 				/**
 				 * The energy sourceto which the phase belongs.
 				 */

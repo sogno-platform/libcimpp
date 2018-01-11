@@ -33,11 +33,11 @@ namespace IEC61968
 			/**
 			 * Condition of seal.
 			 */
-			IEC61968::Assets::SealConditionKind condition;
+			IEC61968::Assets::SealConditionKind condition = IEC61968::Assets::SealConditionKind::_undef;
 			/**
 			 * Kind of seal.
 			 */
-			IEC61968::Assets::SealKind kind;
+			IEC61968::Assets::SealKind kind = IEC61968::Assets::SealKind::_undef;
 			/**
 			 * (reserved word) Seal number.
 			 */

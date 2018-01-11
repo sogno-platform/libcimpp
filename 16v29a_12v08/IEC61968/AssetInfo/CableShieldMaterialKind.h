@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Lead cable shield.
 			 */
-			lead,
+			 _undef = -1, 	lead,
 			/**
 			 * Copper cable shield.
 			 */

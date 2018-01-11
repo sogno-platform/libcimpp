@@ -23,7 +23,7 @@ namespace IEC61970
 					/**
 					 * Exponential recovery model.
 					 */
-					exponentialRecovery,
+					 _undef = -1, 	exponentialRecovery,
 					/**
 					 * Load adaptive model.
 					 */

@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class StructureSupportKind
 			{
-				anchor,
+				 _undef = -1, 	anchor,
 				guy
 			};
 

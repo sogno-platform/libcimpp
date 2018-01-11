@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Construction work.
 			 */
-			construction,
+			 _undef = -1, 	construction,
 			/**
 			 * Inspection work.
 			 */

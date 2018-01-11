@@ -36,7 +36,7 @@ namespace IEC61970
 				/**
 				 * The direction of the limit.
 				 */
-				IEC61970::Base::OperationalLimits::OperationalLimitDirectionKind direction;
+				IEC61970::Base::OperationalLimits::OperationalLimitDirectionKind direction = IEC61970::Base::OperationalLimits::OperationalLimitDirectionKind::_undef;
 
 			};
 

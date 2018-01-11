@@ -43,7 +43,7 @@ namespace IEC61970
 					/**
 					 * The control mode of the boiler.
 					 */
-					IEC61970::Base::Generation::GenerationTrainingSimulation::BoilerControlMode boilerControlMode;
+					IEC61970::Base::Generation::GenerationTrainingSimulation::BoilerControlMode boilerControlMode = IEC61970::Base::Generation::GenerationTrainingSimulation::BoilerControlMode::_undef;
 					/**
 					 * Active power error bias ratio.
 					 */

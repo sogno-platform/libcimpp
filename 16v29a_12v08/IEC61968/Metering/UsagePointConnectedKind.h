@@ -20,7 +20,7 @@ namespace IEC61968
 			 * The usage point is connected to the network and able to receive or send the
 			 * applicable commodity (electricity, gas, water, etc.).
 			 */
-			connected,
+			 _undef = -1, 	connected,
 			/**
 			 * The usage point has been disconnected from the network at a point upstream of
 			 * the meter. The usage point is unable to receive or send the applicable

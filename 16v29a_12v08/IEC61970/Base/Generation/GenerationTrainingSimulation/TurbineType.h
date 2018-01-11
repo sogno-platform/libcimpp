@@ -22,7 +22,7 @@ namespace IEC61970
 					/**
 					 * Francis.
 					 */
-					francis,
+					 _undef = -1, 	francis,
 					/**
 					 * Pelton.
 					 */

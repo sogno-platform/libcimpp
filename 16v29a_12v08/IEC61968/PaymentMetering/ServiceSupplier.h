@@ -38,7 +38,7 @@ namespace IEC61968
 			/**
 			 * Kind of supplier.
 			 */
-			IEC61968::PaymentMetering::SupplierKind kind;
+			IEC61968::PaymentMetering::SupplierKind kind = IEC61968::PaymentMetering::SupplierKind::_undef;
 			/**
 			 * All BackAccounts this ServiceSupplier owns.
 			 */

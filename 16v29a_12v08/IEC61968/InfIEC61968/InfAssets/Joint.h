@@ -30,11 +30,11 @@ namespace IEC61968
 				/**
 				 * Configuration of joint.
 				 */
-				IEC61968::InfIEC61968::InfAssets::JointConfigurationKind configurationKind;
+				IEC61968::InfIEC61968::InfAssets::JointConfigurationKind configurationKind = IEC61968::InfIEC61968::InfAssets::JointConfigurationKind::_undef;
 				/**
 				 * Material used to fill the joint.
 				 */
-				IEC61968::InfIEC61968::InfAssets::JointFillKind fillKind;
+				IEC61968::InfIEC61968::InfAssets::JointFillKind fillKind = IEC61968::InfIEC61968::InfAssets::JointFillKind::_undef;
 				/**
 				 * The type of insulation around the joint, classified according to the utility's
 				 * asset management standards and practices.

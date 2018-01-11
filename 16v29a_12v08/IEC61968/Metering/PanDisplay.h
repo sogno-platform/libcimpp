@@ -41,7 +41,7 @@ namespace IEC61968
 			/**
 			 * Transmission mode to be used for this PAN display control.
 			 */
-			IEC61968::Metering::TransmissionModeKind transmissionMode;
+			IEC61968::Metering::TransmissionModeKind transmissionMode = IEC61968::Metering::TransmissionModeKind::_undef;
 
 		};
 

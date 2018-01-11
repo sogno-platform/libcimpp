@@ -21,7 +21,7 @@ namespace IEC61968
 				/**
 				 * Site enclosed within a building.
 				 */
-				building,
+				 _undef = -1, 	building,
 				/**
 				 * Site with a customer.
 				 */

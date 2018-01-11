@@ -35,7 +35,7 @@ namespace IEC61970
 				 * The individual phase status.    If the attribute is unspecified, then three
 				 * phase model is assumed.
 				 */
-				IEC61970::Base::Wires::SinglePhaseKind phase;
+				IEC61970::Base::Wires::SinglePhaseKind phase = IEC61970::Base::Wires::SinglePhaseKind::_undef;
 				/**
 				 * The conducting equipment associated with the status state variable.
 				 */

@@ -25,7 +25,7 @@ namespace IEC61970
 					 * (p<sub>rr</sub>(deltaomega)). It is used for rotor resistance control model,
 					 * IEC 61400-27-1, section 5.6.5.3. 
 					 */
-					prr,
+					 _undef = -1, 	prr,
 					/**
 					 * Power vs. speed lookup table (omega(p)). It is used for P control model type 3,
 					 * IEC 61400-27-1, section 5.6.5.4. 

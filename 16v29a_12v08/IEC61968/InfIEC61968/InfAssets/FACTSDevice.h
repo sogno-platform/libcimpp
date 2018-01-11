@@ -27,7 +27,7 @@ namespace IEC61968
 				/**
 				 * Kind of FACTS device.
 				 */
-				IEC61968::InfIEC61968::InfAssets::FACTSDeviceKind kind;
+				IEC61968::InfIEC61968::InfAssets::FACTSDeviceKind kind = IEC61968::InfIEC61968::InfAssets::FACTSDeviceKind::_undef;
 
 			};
 

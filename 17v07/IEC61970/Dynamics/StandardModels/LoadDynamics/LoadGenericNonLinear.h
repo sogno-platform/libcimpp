@@ -44,7 +44,7 @@ namespace IEC61970
 					/**
 					 * Type of generic non-linear load model.
 					 */
-					IEC61970::Dynamics::StandardModels::LoadDynamics::GenericNonLinearLoadModelKind genericNonLinearLoadModelType;
+					IEC61970::Dynamics::StandardModels::LoadDynamics::GenericNonLinearLoadModelKind genericNonLinearLoadModelType = IEC61970::Dynamics::StandardModels::LoadDynamics::GenericNonLinearLoadModelKind::_undef;
 					/**
 					 * Steady state voltage index for active power (LS).
 					 */

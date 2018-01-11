@@ -31,7 +31,7 @@ namespace IEC61968
 			/**
 			 * Aluminum-steel wire.
 			 */
-			aluminumSteel,
+			 _undef = -1, 	aluminumSteel,
 			/**
 			 * Aluminum conductor steel reinforced.
 			 */

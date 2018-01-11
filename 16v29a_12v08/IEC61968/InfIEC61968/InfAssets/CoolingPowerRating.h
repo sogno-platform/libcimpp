@@ -51,7 +51,7 @@ namespace IEC61968
 				/**
 				 * Kind of cooling system.
 				 */
-				IEC61968::InfIEC61968::InfAssets::CoolingKind coolingKind;
+				IEC61968::InfIEC61968::InfAssets::CoolingKind coolingKind = IEC61968::InfIEC61968::InfAssets::CoolingKind::_undef;
 				/**
 				 * The power rating associated with type of cooling specified for this stage.
 				 */

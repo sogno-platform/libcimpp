@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Entity that delivers the service to the customer.
 			 */
-			utility,
+			 _undef = -1, 	utility,
 			/**
 			 * Entity that sells the service, but does not deliver to the customer; applies to
 			 * the deregulated markets.

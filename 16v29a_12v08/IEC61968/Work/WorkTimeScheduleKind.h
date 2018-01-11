@@ -16,7 +16,7 @@ namespace IEC61968
 		 */
 		enum class WorkTimeScheduleKind
 		{
-			estimate,
+			 _undef = -1, 	estimate,
 			request,
 			actual,
 			earliest,

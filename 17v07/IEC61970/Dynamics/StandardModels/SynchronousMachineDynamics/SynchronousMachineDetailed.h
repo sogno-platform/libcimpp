@@ -49,7 +49,7 @@ namespace IEC61970
 					/**
 					 * Excitation base system mode.  Typical Value = ifag.
 					 */
-					IEC61970::Dynamics::StandardModels::SynchronousMachineDynamics::IfdBaseKind ifdBaseType;
+					IEC61970::Dynamics::StandardModels::SynchronousMachineDynamics::IfdBaseKind ifdBaseType = IEC61970::Dynamics::StandardModels::SynchronousMachineDynamics::IfdBaseKind::_undef;
 					/**
 					 * Ifd base current if .ifdBaseType = other.
 					 * Not needed if .ifdBaseType not = other.

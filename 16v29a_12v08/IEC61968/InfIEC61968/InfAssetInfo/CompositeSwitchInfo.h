@@ -46,11 +46,11 @@ namespace IEC61968
 				/**
 				 * Kind of composite switch.
 				 */
-				IEC61968::InfIEC61968::InfAssetInfo::CompositeSwitchKind kind;
+				IEC61968::InfIEC61968::InfAssetInfo::CompositeSwitchKind kind = IEC61968::InfIEC61968::InfAssetInfo::CompositeSwitchKind::_undef;
 				/**
 				 * Phases carried, if applicable.
 				 */
-				IEC61970::Base::Core::PhaseCode phaseCode;
+				IEC61970::Base::Core::PhaseCode phaseCode = IEC61970::Base::Core::PhaseCode::_undef;
 				/**
 				 * Supported number of phases, typically 0, 1 or 3.
 				 */

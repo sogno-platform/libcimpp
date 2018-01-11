@@ -32,7 +32,7 @@ namespace IEC61968
 				/**
 				 * (if anchor) Kind of anchor.
 				 */
-				IEC61968::InfIEC61968::InfAssets::AnchorKind anchorKind;
+				IEC61968::InfIEC61968::InfAssets::AnchorKind anchorKind = IEC61968::InfIEC61968::InfAssets::AnchorKind::_undef;
 				/**
 				 * (if anchor) Number of rods used.
 				 */
@@ -48,7 +48,7 @@ namespace IEC61968
 				/**
 				 * Kind of structure support.
 				 */
-				IEC61968::InfIEC61968::InfAssets::StructureSupportKind kind;
+				IEC61968::InfIEC61968::InfAssets::StructureSupportKind kind = IEC61968::InfIEC61968::InfAssets::StructureSupportKind::_undef;
 				/**
 				 * Length of this support structure.
 				 */

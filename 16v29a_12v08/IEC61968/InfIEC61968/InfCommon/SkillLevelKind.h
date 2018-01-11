@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class SkillLevelKind
 			{
-				master,
+				 _undef = -1, 	master,
 				standard,
 				apprentice,
 				other

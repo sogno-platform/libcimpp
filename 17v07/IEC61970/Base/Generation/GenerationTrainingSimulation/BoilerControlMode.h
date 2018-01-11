@@ -22,7 +22,7 @@ namespace IEC61970
 					/**
 					 * Following.
 					 */
-					following,
+					 _undef = -1, 	following,
 					/**
 					 * Coordinated.
 					 */

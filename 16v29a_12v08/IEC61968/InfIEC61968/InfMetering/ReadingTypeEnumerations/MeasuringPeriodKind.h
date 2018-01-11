@@ -20,7 +20,7 @@ namespace IEC61968
 					/**
 					 * Not Applicable
 					 */
-					none = 0,
+					 _undef = -1, 	none = 0,
 					/**
 					 * 10-minute
 					 */

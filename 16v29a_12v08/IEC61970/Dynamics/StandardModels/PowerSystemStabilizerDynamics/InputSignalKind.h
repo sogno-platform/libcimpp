@@ -23,7 +23,7 @@ namespace IEC61970
 					/**
 					 * Input signal is rotor or shaft speed (angular frequency).
 					 */
-					rotorSpeed,
+					 _undef = -1, 	rotorSpeed,
 					/**
 					 * Input signal is rotor or shaft angular frequency deviation.
 					 */

@@ -21,7 +21,7 @@ namespace IEC61968
 				/**
 				 * Consolidated bill from energy service supplier (ESS).
 				 */
-				consolidatedEss,
+				 _undef = -1, 	consolidatedEss,
 				/**
 				 * Consolidated bill from utility distribution company (UDC).
 				 */

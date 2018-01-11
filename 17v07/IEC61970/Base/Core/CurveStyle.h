@@ -21,7 +21,7 @@ namespace IEC61970
 				 * The Y-axis values are assumed constant until the next curve point and prior to
 				 * the first curve point.
 				 */
-				constantYValue,
+				 _undef = -1, 	constantYValue,
 				/**
 				 * The Y-axis values are assumed to be a straight line between values.  Also known
 				 * as linear interpolation.

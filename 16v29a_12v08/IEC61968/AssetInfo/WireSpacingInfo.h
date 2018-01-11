@@ -50,7 +50,7 @@ namespace IEC61968
 			/**
 			 * Usage of the associated wires.
 			 */
-			IEC61968::AssetInfo::WireUsageKind usage;
+			IEC61968::AssetInfo::WireUsageKind usage = IEC61968::AssetInfo::WireUsageKind::_undef;
 			std::list<IEC61968::InfIEC61968::InfAssets::Structure*> Structures;
 			IEC61968::InfIEC61968::InfAssets::DuctBank *DuctBank;
 			/**

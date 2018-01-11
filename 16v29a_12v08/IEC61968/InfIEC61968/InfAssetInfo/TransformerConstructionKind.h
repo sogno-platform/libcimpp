@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class TransformerConstructionKind
 			{
-				onePhase,
+				 _undef = -1, 	onePhase,
 				threePhase,
 				aerial,
 				overhead,

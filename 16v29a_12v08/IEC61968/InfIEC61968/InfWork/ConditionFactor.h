@@ -34,7 +34,7 @@ namespace IEC61968
 				/**
 				 * Kind of this condition factor.
 				 */
-				IEC61968::InfIEC61968::InfWork::ConditionFactorKind kind;
+				IEC61968::InfIEC61968::InfWork::ConditionFactorKind kind = IEC61968::InfIEC61968::InfWork::ConditionFactorKind::_undef;
 				IEC61968::Common::Status status;
 
 			};

@@ -34,7 +34,7 @@ namespace IEC61970
 				/**
 				 * Represents the normal network polarity condition.
 				 */
-				IEC61970::Base::DC::DCPolarityKind polarity;
+				IEC61970::Base::DC::DCPolarityKind polarity = IEC61970::Base::DC::DCPolarityKind::_undef;
 				IEC61970::Base::DC::ACDCConverter *DCConductingEquipment;
 
 			};

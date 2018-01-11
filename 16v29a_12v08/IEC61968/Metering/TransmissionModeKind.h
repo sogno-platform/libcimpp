@@ -21,7 +21,7 @@ namespace IEC61968
 			 * Message transmission mode whereby messages or commands are sent to specific
 			 * devices.
 			 */
-			normal,
+			 _undef = -1, 	normal,
 			/**
 			 * Message transmission mode whereby messages or commands are broadcast to
 			 * unspecified devices listening for such communications.

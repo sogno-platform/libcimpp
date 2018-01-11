@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class UndergroundStructureKind
 			{
-				burd,
+				 _undef = -1, 	burd,
 				enclosure,
 				handhole,
 				manhole,

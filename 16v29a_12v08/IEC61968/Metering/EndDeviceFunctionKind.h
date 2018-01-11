@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Detection and monitoring of reverse flow.
 			 */
-			reverseFlow,
+			 _undef = -1, 	reverseFlow,
 			/**
 			 * Demand response functions.
 			 */

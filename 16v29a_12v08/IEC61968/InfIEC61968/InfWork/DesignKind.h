@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class DesignKind
 			{
-				estimated,
+				 _undef = -1, 	estimated,
 				asBuilt,
 				other
 			};

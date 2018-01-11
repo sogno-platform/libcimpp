@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Electricity service.
 			 */
-			electricity,
+			 _undef = -1, 	electricity,
 			/**
 			 * Gas service.
 			 */

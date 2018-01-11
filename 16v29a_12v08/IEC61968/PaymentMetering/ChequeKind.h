@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Payment order used by institutions other than banks.
 			 */
-			postalOrder,
+			 _undef = -1, 	postalOrder,
 			/**
 			 * Payment order used by a bank.
 			 */

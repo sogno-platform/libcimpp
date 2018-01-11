@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class CoolingKind
 			{
-				selfCooling,
+				 _undef = -1, 	selfCooling,
 				forcedAir,
 				forcedOilAndAir,
 				other

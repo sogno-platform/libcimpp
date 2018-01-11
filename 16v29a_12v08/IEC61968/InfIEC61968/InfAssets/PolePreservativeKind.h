@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class PolePreservativeKind
 			{
-				creosote,
+				 _undef = -1, 	creosote,
 				cellon,
 				naphthena,
 				penta,

@@ -29,7 +29,7 @@ namespace IEC61968
 					/**
 					 * ABC to Neutral
 					 */
-					ABCN = 225,
+					 _undef = -1, 	ABCN = 225,
 					/**
 					 * Involving all phases
 					 */

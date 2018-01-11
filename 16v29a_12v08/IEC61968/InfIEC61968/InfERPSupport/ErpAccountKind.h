@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class ErpAccountKind
 			{
-				normal,
+				 _undef = -1, 	normal,
 				reversal,
 				statistical,
 				estimate

@@ -16,7 +16,7 @@ namespace IEC61968
 		 */
 		enum class VehicleUsageKind
 		{
-			crew,
+			 _undef = -1, 	crew,
 			user,
 			contractor,
 			other

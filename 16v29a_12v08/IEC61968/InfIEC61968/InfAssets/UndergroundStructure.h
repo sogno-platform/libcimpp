@@ -34,7 +34,7 @@ namespace IEC61968
 				/**
 				 * True if vault is ventilating.
 				 */
-				IEC61968::InfIEC61968::InfAssets::UndergroundStructureKind kind;
+				IEC61968::InfIEC61968::InfAssets::UndergroundStructureKind kind = IEC61968::InfIEC61968::InfAssets::UndergroundStructureKind::_undef;
 				/**
 				 * Primary material of underground structure.
 				 */

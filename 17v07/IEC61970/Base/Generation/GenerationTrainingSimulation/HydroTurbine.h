@@ -71,7 +71,7 @@ namespace IEC61970
 					/**
 					 * Type of turbine.
 					 */
-					IEC61970::Base::Generation::GenerationTrainingSimulation::TurbineType turbineType;
+					IEC61970::Base::Generation::GenerationTrainingSimulation::TurbineType turbineType = IEC61970::Base::Generation::GenerationTrainingSimulation::TurbineType::_undef;
 					/**
 					 * Water starting time.
 					 */

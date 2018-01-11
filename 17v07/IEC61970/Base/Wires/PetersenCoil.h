@@ -32,7 +32,7 @@ namespace IEC61970
 				/**
 				 * The mode of operation of the Petersen coil.
 				 */
-				IEC61970::Base::Wires::PetersenCoilModeKind mode;
+				IEC61970::Base::Wires::PetersenCoilModeKind mode = IEC61970::Base::Wires::PetersenCoilModeKind::_undef;
 				/**
 				 * The nominal voltage for which the coil is designed.
 				 */

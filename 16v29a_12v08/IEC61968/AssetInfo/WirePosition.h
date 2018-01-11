@@ -27,7 +27,7 @@ namespace IEC61968
 			/**
 			 * Single phase or neutral designation for the wire with this position.
 			 */
-			IEC61970::Base::Wires::SinglePhaseKind phase;
+			IEC61970::Base::Wires::SinglePhaseKind phase = IEC61970::Base::Wires::SinglePhaseKind::_undef;
 			/**
 			 * Signed horizontal distance from the wire at this position to a common reference
 			 * point.

@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Asset model is used as corporate standard.
 			 */
-			standard,
+			 _undef = -1, 	standard,
 			/**
 			 * Asset model is used experimentally.
 			 */

@@ -21,7 +21,7 @@ namespace IEC61970
 				/**
 				 * The potential transformer is using induction coils to create secondary voltage.
 				 */
-				inductive,
+				 _undef = -1, 	inductive,
 				/**
 				 * The potential transformer is using capacitive coupling to create secondary
 				 * voltage.

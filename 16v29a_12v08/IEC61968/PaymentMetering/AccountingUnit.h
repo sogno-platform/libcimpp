@@ -33,11 +33,11 @@ namespace IEC61968
 			/**
 			 * Unit of currency.
 			 */
-			IEC61970::Base::Domain::Currency monetaryUnit;
+			IEC61970::Base::Domain::Currency monetaryUnit = IEC61970::Base::Domain::Currency::_undef;
 			/**
 			 * Multiplier for the 'energyUnit' or 'monetaryUnit'.
 			 */
-			IEC61970::Base::Domain::UnitMultiplier multiplier;
+			IEC61970::Base::Domain::UnitMultiplier multiplier = IEC61970::Base::Domain::UnitMultiplier::_undef;
 			/**
 			 * Value expressed in applicable units.
 			 */

@@ -21,7 +21,7 @@ namespace IEC61970
 				/**
 				 * Input is voltage frequency from remote terminal bus.
 				 */
-				remoteBusVoltageFrequency,
+				 _undef = -1, 	remoteBusVoltageFrequency,
 				/**
 				 * Input is voltage frequency deviation from remote terminal bus.
 				 */

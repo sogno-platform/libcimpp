@@ -35,7 +35,7 @@ namespace IEC61970
 				 * The terminal phase at which the connection is applied.   If missing, the
 				 * injection is assumed to be balanced among non-neutral phases.
 				 */
-				IEC61970::Base::Wires::SinglePhaseKind phase;
+				IEC61970::Base::Wires::SinglePhaseKind phase = IEC61970::Base::Wires::SinglePhaseKind::_undef;
 				/**
 				 * The active power injected into the bus in addition to injections from equipment
 				 * terminals.  Positive sign means injection into the TopologicalNode (bus).

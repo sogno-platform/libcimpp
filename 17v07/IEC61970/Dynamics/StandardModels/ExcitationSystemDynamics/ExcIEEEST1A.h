@@ -93,7 +93,7 @@ namespace IEC61970
 					 * Selector of the connection of the UEL input (UELin). Typical Value =
 					 * ignoreUELsignal.
 					 */
-					IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcIEEEST1AUELselectorKind uelin;
+					IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcIEEEST1AUELselectorKind uelin = IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcIEEEST1AUELselectorKind::_undef;
 					/**
 					 * Maximum voltage regulator output (V<sub>AMAX</sub>).  Typical Value = 14.5.
 					 */
