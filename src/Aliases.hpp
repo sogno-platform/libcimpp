@@ -1,49 +1,64 @@
 #ifndef ALIASES_HPP
 #define ALIASES_HPP
 
+#include <cstdlib>
+#include <string.h>
 #include <fstream>
 #include <regex>
 #include <unordered_map>
 
 #include "IEC61970/IEC61970CIMVersion.h"
 
-static std::string search_paths[] = {
+static std::list<std::string> search_paths = {
 	"./",
-
-	"/usr/share/cimpp/"
+#ifdef __linux__
+	"/usr/share/cimpp/",
 	"/usr/local/share/cimpp/",
+	"/usr/share/cimpp/${CIM_VERSION}/",
+	"/usr/local/share/cimpp/${CIM_VERSION}/",
+#elif defined(_WIN32)
+	"${APPDATA}\\CIMpp\\"
+	"${APPDATA}\\CIMpp\\${CIM_VERSION}\\"
+#endif
 };
+
+// Update the input string.
+static std::string expand_env_variables(std::string str)
+{
+	static std::regex env("\\$\\{([^}]+)\\}");
+	std::smatch match;
+
+	while (std::regex_search(str, match, env)) {
+		const char *s = getenv(match[1].str().c_str());
+		const std::string var(s == NULL ? "" : s);
+		str.replace(match[0].first, match[0].second, var);
+	}
+
+	return str;
+}
 
 static std::ifstream find_aliases(const std::string &filename)
 {
 	std::ifstream file;
-	std::string path, subdir;
+	std::string path;
 	std::string::size_type pos;
 
-	// Search for filename in the list of hard-coded search paths
-	subdir = IEC61970::IEC61970CIMVersion::version;
+	// Set CIM_DIR variable if not set
+	std::string cim_dir = IEC61970::IEC61970CIMVersion::version;
 
-	pos = subdir.find("IEC61970CIM");
+	pos = cim_dir.find("IEC61970CIM");
 	if (pos == 0)
-		subdir.erase(0, 11);
+		cim_dir.erase(0, 11);
 
-	file.open(filename);
-	if (file.good())
-		return file;
+	setenv("CIM_VERSION", cim_dir.c_str(), 1);
 
-#ifdef __linux__
-	path = "/usr/share/cimpp/";
+	for (std::string &path : search_paths) {
+		std::string expanded_path = expand_env_variables(path);
 
-	file.open(path + subdir + "/" + filename);
-	if (file.good())
-		return file;
-
-	path = "/usr/local/share/cimpp/";
-
-	file.open(path + subdir + "/" + filename);
-	if (file.good())
-		return file;
-#endif // __linux__
+		file.open(expanded_path + filename);
+		if (file.good())
+			return file;
+	}
 
 	return file;
 }
