@@ -4026,7 +4026,20 @@ bool assign_BatteryStorage_nominalQ(std::stringstream& buffer, BaseClass* base_c
 	else
 		return false;
 }
-
+// cim:BatteryStorage.capacity
+    bool assign_BatteryStorage_capacity(std::stringstream& buffer, BaseClass* base_class_ptr)
+    {
+    if(Sinergien::EnergyGrid::EnergyStorage::BatteryStorage* element = dynamic_cast<Sinergien::EnergyGrid::EnergyStorage::BatteryStorage*>(base_class_ptr))
+    {
+    buffer >> element->capacity.value;
+    if(buffer.fail())
+    return false;
+    else
+    return true;
+    }
+    else
+    return false;
+    }
 // cim:BatteryStorage.ratedS
 bool assign_BatteryStorage_ratedS(std::stringstream& buffer, BaseClass* base_class_ptr)
 {
@@ -55975,7 +55988,8 @@ std::unordered_map<std::string, assign_function> dynamic_switch_factory()
 	dynamic_switch.insert(std::make_pair("cim:Equipment.normallyInService", &assign_Equipment_normallyInService));
 	dynamic_switch.insert(std::make_pair("cim:RegulatingCondEq.controlEnabled", &assign_RegulatingCondEq_controlEnabled));
 	dynamic_switch.insert(std::make_pair("cim:ComMod.cost", &assign_ComMod_cost));
-	dynamic_switch.insert(std::make_pair("cim:BatteryStorage.nominalP", &assign_BatteryStorage_nominalP));
+    dynamic_switch.insert(std::make_pair("cim:BatteryStorage.capacity", &assign_BatteryStorage_capacity));
+    dynamic_switch.insert(std::make_pair("cim:BatteryStorage.nominalP", &assign_BatteryStorage_nominalP));
 	dynamic_switch.insert(std::make_pair("cim:BatteryStorage.nominalQ", &assign_BatteryStorage_nominalQ));
 	dynamic_switch.insert(std::make_pair("cim:BatteryStorage.ratedS", &assign_BatteryStorage_ratedS));
 	dynamic_switch.insert(std::make_pair("cim:BatteryStorage.ratedU", &assign_BatteryStorage_ratedU));

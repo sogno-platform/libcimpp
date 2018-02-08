@@ -31,17 +31,19 @@ void Task::print()
 bool Task::resolve(std::unordered_map<std::string, BaseClass*> *RDFMap)
 {
 	std::unordered_map<std::string, BaseClass*>::iterator it_id = RDFMap->find(_Value);
-	if(it_id == RDFMap->end())
+	if(it_id == RDFMap->end()) {
 		return false;
-
+	}
 	std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)>::iterator it_func = dynamic_switch.find(_CIMAttrName);
 	if(it_func == dynamic_switch.end())
 		return false;
 
-	if((*it_func->second)(_CIMObj, it_id->second))
+	if((*it_func->second)(_CIMObj, it_id->second)) {
 		return true;
-	else
+	}
+	else{
 		return (*it_func->second)(it_id->second, _CIMObj);
+	}
 }
 
 
