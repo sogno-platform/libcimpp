@@ -85,7 +85,6 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 	// assignment.
 	if(atts.getLength() == 0)
 		return;
-
 	// If name is a CIM class check if to create a new object
 	if(CIMFactory::IsCIMClass(qName))
 	{
@@ -116,15 +115,13 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 		}
 		return;
 	}
-
 	// Create a task if the XML element is no CIM class and contains a RDF ID
 	std::string rdf_id = get_rdf_resource(atts);
-	if(!rdf_id.empty())
+    if(!rdf_id.empty())
 	{
 		taskQueue.push_back(Task(objectStack.top(), qName, rdf_id));
 		return;
 	}
-
 	// Assign an enum symbol if the rdf id contains a enum symbol
 	std::string enumSymbol = get_rdf_enum(atts);
 	if(!enumSymbol.empty())
@@ -234,7 +231,7 @@ std::string CIMContentHandler::get_rdf_enum(const AttributesT &attributes)
 			{
 				return std::string(m[1]).append(".").append(m[2]);
 			}
-			std::cerr << "CIMContentHandler: Note: rdf:resource does not relate to an object in this file" << std::endl;
+			std::cerr << "CIMContentHandler: Note: rdf:resource does not relate to an object in this file "<< str << std::endl;
 		}
 	}
 	std::cerr << "CIMContentHandler: Note: Attribute contain no rdf:resource" << std::endl;
