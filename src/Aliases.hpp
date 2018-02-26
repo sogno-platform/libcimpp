@@ -89,10 +89,6 @@ void load_aliases(std::unordered_map<std::string, T> &map, const std::string &fi
 			}
 		}
 	}
-	else
-	{
-		std::cerr << "Aliases from '" << filename << "' could not be loaded" << std::endl;
-	}
 }
 
 #endif // ALIASES_HPP
