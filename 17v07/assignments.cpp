@@ -60011,6 +60011,8 @@ std::unordered_map<std::string, assign_function> dynamic_switch_factory()
 	dynamic_switch.insert(std::make_pair("cim:WindType1or2UserDefined.proprietary", &assign_WindType1or2UserDefined_proprietary));
 	dynamic_switch.insert(std::make_pair("cim:WindType3or4UserDefined.proprietary", &assign_WindType3or4UserDefined_proprietary));
 
+#include "AliasesAssignment.hpp"
+
 	load_aliases<assign_function>(dynamic_switch, "assignment_alias.csv");
 
 	return dynamic_switch;

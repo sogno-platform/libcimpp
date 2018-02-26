@@ -79796,6 +79796,8 @@ std::unordered_map<std::string, assign_function> dynamic_switch_factory()
 	dynamic_switch.insert(std::make_pair("cim:CurrentRelay.timeDelay2", &assign_CurrentRelay_timeDelay2));
 	dynamic_switch.insert(std::make_pair("cim:CurrentRelay.timeDelay3", &assign_CurrentRelay_timeDelay3));
 
+#include "AliasesAssignment.hpp"
+
 	load_aliases<assign_function>(dynamic_switch, "assignment_alias.csv");
 
 	return dynamic_switch;

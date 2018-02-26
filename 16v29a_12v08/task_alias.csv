@@ -1,7 +1,0 @@
-cim:Substation.VoltageLevels, cim:VoltageLevel.Substation
-cim:GeographicalRegion.Regions, cim:SubGeographicalRegion.Region
-cim:EquipmentContainer.Equipments, cim:Equipment.EquipmentContainer
-cim:IdentifiedObject.DiagramObjects, cim:DiagramObject.IdentifiedObject
-cim:DiagramObject.DiagramObjectPoints, cim:DiagramObjectPoint.DiagramObject
-cim:SubGeographicalRegion.Substations, cim:Substation.Region
-cim:OperationalLimitSet.OperationalLimitValue, cim:OperationalLimit.OperationalLimitSet

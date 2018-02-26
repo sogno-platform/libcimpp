@@ -9336,6 +9336,8 @@ static std::unordered_map<std::string, task_function> initialize()
 	map.insert(std::make_pair("cim:ProtectionEquipment.ConductingEquipments", &assign_ProtectionEquipment_ConductingEquipments));
 	map.insert(std::make_pair("cim:ConductingEquipments.ProtectionEquipment", &assign_ProtectionEquipment_ConductingEquipments));
 
+#include "AliasesTask.hpp"
+
 	load_aliases<task_function>(map, "task_alias.csv");
 
 	return map;

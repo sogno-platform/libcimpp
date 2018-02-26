@@ -3780,6 +3780,8 @@ static std::unordered_map<std::string, task_function> initialize()
 	map.insert(std::make_pair("cim:WindType3or4UserDefined.ProprietaryParameterDynamics", &assign_WindType3or4UserDefined_ProprietaryParameterDynamics));
 	map.insert(std::make_pair("cim:ProprietaryParameterDynamics.WindType3or4UserDefined", &assign_WindType3or4UserDefined_ProprietaryParameterDynamics));
 
+#include "AliasesTask.hpp"
+
 	load_aliases<task_function>(map, "task_alias.csv");
 
 	return map;
