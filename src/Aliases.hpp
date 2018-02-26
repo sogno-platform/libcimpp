@@ -11,13 +11,15 @@
 
 static std::list<std::string> search_paths = {
 	"./",
+	"${CIMPP_ALIASDIR}/",
 #ifdef __linux__
 	"/usr/share/cimpp/",
 	"/usr/local/share/cimpp/",
 	"/usr/share/cimpp/${CIM_VERSION}/",
 	"/usr/local/share/cimpp/${CIM_VERSION}/",
+	"${HOME}/.cimpp/"
 #elif defined(_WIN32)
-	"${APPDATA}\\CIMpp\\"
+	"${APPDATA}\\CIMpp\\",
 	"${APPDATA}\\CIMpp\\${CIM_VERSION}\\"
 #endif
 };
