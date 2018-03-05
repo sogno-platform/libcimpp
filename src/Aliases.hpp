@@ -51,8 +51,13 @@ static std::ifstream find_aliases(const std::string &filename)
 	pos = cim_dir.find("IEC61970CIM");
 	if (pos == 0)
 		cim_dir.erase(0, 11);
-
+#ifdef __linux__
 	setenv("CIM_VERSION", cim_dir.c_str(), 1);
+#elif defined(_WIN32)
+	char buf[1024];
+	snprintf(buf, sizeof buf, "%s%s", "CIM_VERSION=", cim_dir.c_str());
+	_putenv(buf);
+#endif
 
 	for (std::string &path : search_paths) {
 		std::string expanded_path = expand_env_variables(path);
