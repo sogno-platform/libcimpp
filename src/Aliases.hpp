@@ -2,7 +2,7 @@
 #define ALIASES_HPP
 
 #include <cstdlib>
-#include <string.h>
+#include <cstring>
 #include <fstream>
 #include <regex>
 #include <unordered_map>
@@ -54,9 +54,8 @@ static std::ifstream find_aliases(const std::string &filename)
 #ifdef __linux__
 	setenv("CIM_VERSION", cim_dir.c_str(), 1);
 #elif defined(_WIN32)
-	char buf[1024];
-	snprintf(buf, sizeof buf, "%s%s", "CIM_VERSION=", cim_dir.c_str());
-	_putenv(buf);
+	std::string cim_version = "CIM_VERSION=" + cim_dir;
+	_putenv(cim_version.c_str());
 #endif
 
 	for (std::string &path : search_paths) {
