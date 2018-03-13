@@ -21,7 +21,7 @@ namespace IEC61968
 			 * the meter to cause one disk revolution for an electromechanical meter or the
 			 * number of watthours represented by one increment pulse for an electronic meter.
 			 */
-			kH,
+			 _undef = -1, 	kH,
 			/**
 			 * Register multiplier. The number to multiply the register reading by in order to
 			 * get kWh.

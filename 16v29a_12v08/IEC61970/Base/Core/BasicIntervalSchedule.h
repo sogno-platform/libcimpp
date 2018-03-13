@@ -33,19 +33,19 @@ namespace IEC61970
 				/**
 				 * Multiplier for value1.
 				 */
-				IEC61970::Base::Domain::UnitMultiplier value1Multiplier;
+				IEC61970::Base::Domain::UnitMultiplier value1Multiplier = IEC61970::Base::Domain::UnitMultiplier::_undef;
 				/**
 				 * Value1 units of measure.
 				 */
-				IEC61970::Base::Domain::UnitSymbol value1Unit;
+				IEC61970::Base::Domain::UnitSymbol value1Unit = IEC61970::Base::Domain::UnitSymbol::_undef;
 				/**
 				 * Multiplier for value2.
 				 */
-				IEC61970::Base::Domain::UnitMultiplier value2Multiplier;
+				IEC61970::Base::Domain::UnitMultiplier value2Multiplier = IEC61970::Base::Domain::UnitMultiplier::_undef;
 				/**
 				 * Value2 units of measure.
 				 */
-				IEC61970::Base::Domain::UnitSymbol value2Unit;
+				IEC61970::Base::Domain::UnitSymbol value2Unit = IEC61970::Base::Domain::UnitSymbol::_undef;
 
 			};
 

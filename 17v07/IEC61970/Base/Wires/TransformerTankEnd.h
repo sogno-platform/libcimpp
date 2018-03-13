@@ -31,7 +31,7 @@ namespace IEC61970
 				/**
 				 * Describes the phases carried by a conducting equipment.
 				 */
-				IEC61970::Base::Core::PhaseCode phases;
+				IEC61970::Base::Core::PhaseCode phases = IEC61970::Base::Core::PhaseCode::_undef;
 				/**
 				 * Transformer this winding belongs to.
 				 */

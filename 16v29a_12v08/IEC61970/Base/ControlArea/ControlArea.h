@@ -52,7 +52,7 @@ namespace IEC61970
 				 * control could still be forecast and used as an interchange area in power flow
 				 * analysis.
 				 */
-				IEC61970::Base::ControlArea::ControlAreaTypeKind type;
+				IEC61970::Base::ControlArea::ControlAreaTypeKind type = IEC61970::Base::ControlArea::ControlAreaTypeKind::_undef;
 				/**
 				 * The generating unit specificaitons for the control area.
 				 */

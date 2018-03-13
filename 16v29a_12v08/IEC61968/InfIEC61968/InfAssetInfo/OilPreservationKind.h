@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class OilPreservationKind
 			{
-				freeBreathing,
+				 _undef = -1, 	freeBreathing,
 				nitrogenBlanket,
 				conservator,
 				other

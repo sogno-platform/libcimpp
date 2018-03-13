@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Seal is locked.
 			 */
-			locked,
+			 _undef = -1, 	locked,
 			/**
 			 * Seal is open.
 			 */

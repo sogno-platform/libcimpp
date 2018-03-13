@@ -26,7 +26,7 @@ namespace IEC61970
 					 * kp1, kp2, kp3, kpf, ep1, ep2, ep3
 					 * kq1, kq2, kq3, kqf, eq1, eq2, eq3.
 					 */
-					exponential,
+					 _undef = -1, 	exponential,
 					/**
 					 * ZIP1 P and Q equations are used and the following attributes are required:
 					 * kp1, kp2, kp3, kpf

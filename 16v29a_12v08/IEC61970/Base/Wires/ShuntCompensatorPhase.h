@@ -42,7 +42,7 @@ namespace IEC61970
 				 * indicates a shunt compensator connected from the indicated phase to the next
 				 * logical non-neutral phase.
 				 */
-				IEC61970::Base::Wires::SinglePhaseKind phase;
+				IEC61970::Base::Wires::SinglePhaseKind phase = IEC61970::Base::Wires::SinglePhaseKind::_undef;
 
 			};
 

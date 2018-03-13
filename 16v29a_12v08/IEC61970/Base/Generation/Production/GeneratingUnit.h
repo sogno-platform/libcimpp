@@ -89,11 +89,11 @@ namespace IEC61970
 					/**
 					 * The unit control mode.
 					 */
-					IEC61970::Base::Generation::Production::GeneratorControlMode genControlMode;
+					IEC61970::Base::Generation::Production::GeneratorControlMode genControlMode = IEC61970::Base::Generation::Production::GeneratorControlMode::_undef;
 					/**
 					 * The source of controls for a generating unit.
 					 */
-					IEC61970::Base::Generation::Production::GeneratorControlSource genControlSource;
+					IEC61970::Base::Generation::Production::GeneratorControlSource genControlSource = IEC61970::Base::Generation::Production::GeneratorControlSource::_undef;
 					/**
 					 * Governor motor position limit.
 					 */

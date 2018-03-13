@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class ShuntImpedanceLocalControlKind
 			{
-				none,
+				 _undef = -1, 	none,
 				powerFactor,
 				time,
 				temperature,

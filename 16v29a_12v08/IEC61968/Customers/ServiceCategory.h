@@ -29,7 +29,7 @@ namespace IEC61968
 			/**
 			 * Kind of service.
 			 */
-			IEC61968::Customers::ServiceKind kind;
+			IEC61968::Customers::ServiceKind kind = IEC61968::Customers::ServiceKind::_undef;
 			/**
 			 * All pricing structures applicable to this service category.
 			 */

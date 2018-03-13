@@ -54,7 +54,7 @@ namespace IEC61968
 			/**
 			 * (if insulated conductor) Material used for insulation.
 			 */
-			IEC61968::AssetInfo::WireInsulationKind insulationMaterial;
+			IEC61968::AssetInfo::WireInsulationKind insulationMaterial = IEC61968::AssetInfo::WireInsulationKind::_undef;
 			/**
 			 * (if insulated conductor) Thickness of the insulation.
 			 */
@@ -62,7 +62,7 @@ namespace IEC61968
 			/**
 			 * Conductor material.
 			 */
-			IEC61968::AssetInfo::WireMaterialKind material;
+			IEC61968::AssetInfo::WireMaterialKind material = IEC61968::AssetInfo::WireMaterialKind::_undef;
 			/**
 			 * AC resistance per unit length of the conductor at 25 °C.
 			 */

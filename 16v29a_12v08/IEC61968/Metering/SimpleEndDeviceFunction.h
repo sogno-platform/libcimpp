@@ -28,7 +28,7 @@ namespace IEC61968
 			/**
 			 * Kind of this function.
 			 */
-			IEC61968::Metering::EndDeviceFunctionKind kind;
+			IEC61968::Metering::EndDeviceFunctionKind kind = IEC61968::Metering::EndDeviceFunctionKind::_undef;
 
 		};
 

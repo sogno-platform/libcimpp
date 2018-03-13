@@ -29,7 +29,7 @@ namespace IEC61968
 				/**
 				 * Kind of this zone.
 				 */
-				IEC61968::InfIEC61968::InfLocations::ZoneKind kind;
+				IEC61968::InfIEC61968::InfLocations::ZoneKind kind = IEC61968::InfIEC61968::InfLocations::ZoneKind::_undef;
 
 			};
 

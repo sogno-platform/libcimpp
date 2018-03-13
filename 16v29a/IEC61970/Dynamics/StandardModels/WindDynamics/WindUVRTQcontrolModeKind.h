@@ -24,7 +24,7 @@ namespace IEC61970
 					 * Voltage dependent reactive current injection
 					 * (<i>M</i><i><sub>q</sub></i><sub>UVRT </sub>equals 0).
 					 */
-					mode0,
+					 _undef = -1, 	mode0,
 					/**
 					 * Reactive current injection controlled as the pre-fault value plus an additional
 					 * voltage dependent reactive current injection

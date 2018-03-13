@@ -69,7 +69,7 @@ namespace IEC61970
 					 * Governor control flag (Cflag).  Typical Value =
 					 * mechanicHydrolicTachoAccelerator.
 					 */
-					IEC61970::Dynamics::StandardModels::TurbineGovernorDynamics::FrancisGovernorControlKind governorControl;
+					IEC61970::Dynamics::StandardModels::TurbineGovernorDynamics::FrancisGovernorControlKind governorControl = IEC61970::Dynamics::StandardModels::TurbineGovernorDynamics::FrancisGovernorControlKind::_undef;
 					/**
 					 * Head of compensation chamber water level with respect to the level of penstock
 					 * (H<sub>1</sub>).  Unit = m. Typical Value = 4.

@@ -41,7 +41,7 @@ namespace IEC61968
 			/**
 			 * Kind of cheque.
 			 */
-			IEC61968::PaymentMetering::ChequeKind kind;
+			IEC61968::PaymentMetering::ChequeKind kind = IEC61968::PaymentMetering::ChequeKind::_undef;
 			/**
 			 * The magnetic ink character recognition number printed on the cheque.
 			 */

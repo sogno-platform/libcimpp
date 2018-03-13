@@ -60,7 +60,7 @@ namespace IEC61968
 				/**
 				 * Kind of bill customer receives.
 				 */
-				IEC61968::InfIEC61968::InfCustomers::CustomerBillingKind kind;
+				IEC61968::InfIEC61968::InfCustomers::CustomerBillingKind kind = IEC61968::InfIEC61968::InfCustomers::CustomerBillingKind::_undef;
 				/**
 				 * Amount of the last payment received from the customer. It is retained in the
 				 * Customer Billing system, although the details of each payment are tracked in

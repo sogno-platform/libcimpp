@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Communication is from device.
 			 */
-			fromDevice,
+			 _undef = -1, 	fromDevice,
 			/**
 			 * Communication is to device.
 			 */

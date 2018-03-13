@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class TowerConstructionKind
 			{
-				suspension,
+				 _undef = -1, 	suspension,
 				tension
 			};
 

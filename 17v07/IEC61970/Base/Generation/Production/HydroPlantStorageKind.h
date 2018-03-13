@@ -22,7 +22,7 @@ namespace IEC61970
 					/**
 					 * Run of river.
 					 */
-					runOfRiver,
+					 _undef = -1, 	runOfRiver,
 					/**
 					 * Pumped storage.
 					 */

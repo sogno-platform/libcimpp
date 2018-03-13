@@ -22,7 +22,7 @@ namespace IEC61968
 					/**
 					 * Pico 10**-12
 					 */
-					p = -12,
+					 _undef = -1, 	p = -12,
 					/**
 					 * Nano 10**-9
 					 */

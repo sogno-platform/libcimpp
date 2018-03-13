@@ -21,7 +21,7 @@ namespace IEC61970
 				/**
 				 * Operating as inverter
 				 */
-				inverter,
+				 _undef = -1, 	inverter,
 				/**
 				 * Operating as rectifier.
 				 */

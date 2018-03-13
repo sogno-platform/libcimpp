@@ -21,7 +21,7 @@ namespace IEC61968
 			 * Usage point is equipped with an AMI capable meter having communications
 			 * capability.
 			 */
-			enabled,
+			 _undef = -1, 	enabled,
 			/**
 			 * Usage point is equipped with an AMI capable meter that is functioning and
 			 * communicating with the AMI network.

@@ -19,7 +19,7 @@ namespace IEC61968
 			enum class AnchorKind
 			{
 				concrete,
-				helix,
+				 _undef = -1, 	helix,
 				multiHelix,
 				rod,
 				screw,

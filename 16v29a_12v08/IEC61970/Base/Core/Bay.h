@@ -39,11 +39,11 @@ namespace IEC61970
 				/**
 				 * Breaker configuration. 
 				 */
-				IEC61970::Base::Core::BreakerConfiguration breakerConfiguration;
+				IEC61970::Base::Core::BreakerConfiguration breakerConfiguration = IEC61970::Base::Core::BreakerConfiguration::_undef;
 				/**
 				 * Bus bar configuration.
 				 */
-				IEC61970::Base::Core::BusbarConfiguration busBarConfiguration;
+				IEC61970::Base::Core::BusbarConfiguration busBarConfiguration = IEC61970::Base::Core::BusbarConfiguration::_undef;
 
 			};
 

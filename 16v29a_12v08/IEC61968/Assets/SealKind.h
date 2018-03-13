@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Steel seal.
 			 */
-			steel,
+			 _undef = -1, 	steel,
 			/**
 			 * Lead seal.
 			 */

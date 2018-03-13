@@ -23,7 +23,7 @@ namespace IEC61970
 					/**
 					 * No UEL input is used.
 					 */
-					noUELinput,
+					 _undef = -1, 	noUELinput,
 					/**
 					 * The signal is added to Vref.
 					 */

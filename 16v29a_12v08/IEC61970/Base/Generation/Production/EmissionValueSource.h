@@ -22,7 +22,7 @@ namespace IEC61970
 					/**
 					 * Measured.
 					 */
-					measured,
+					 _undef = -1, 	measured,
 					/**
 					 * Calculated.
 					 */

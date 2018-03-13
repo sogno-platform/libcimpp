@@ -27,7 +27,7 @@ namespace IEC61968
 			/**
 			 * Kind of tag action.
 			 */
-			IEC61968::Operations::TagActionKind kind;
+			IEC61968::Operations::TagActionKind kind = IEC61968::Operations::TagActionKind::_undef;
 			/**
 			 * Tag associated with this tag action.
 			 */

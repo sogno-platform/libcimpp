@@ -36,7 +36,7 @@ namespace IEC61968
 			/**
 			 * Kind of usage of the vehicle.
 			 */
-			IEC61968::Work::VehicleUsageKind usageKind;
+			IEC61968::Work::VehicleUsageKind usageKind = IEC61968::Work::VehicleUsageKind::_undef;
 
 		};
 

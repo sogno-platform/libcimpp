@@ -30,7 +30,7 @@ namespace IEC61970
 				/**
 				 * Type of input signal.
 				 */
-				IEC61970::Dynamics::StandardInterconnections::RemoteSignalKind remoteSignalType;
+				IEC61970::Dynamics::StandardInterconnections::RemoteSignalKind remoteSignalType = IEC61970::Dynamics::StandardInterconnections::RemoteSignalKind::_undef;
 				/**
 				 * Remote terminal with which this input signal is associated.
 				 */

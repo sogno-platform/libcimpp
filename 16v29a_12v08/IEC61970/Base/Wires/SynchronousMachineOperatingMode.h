@@ -17,7 +17,7 @@ namespace IEC61970
 			 */
 			enum class SynchronousMachineOperatingMode
 			{
-				generator,
+				 _undef = -1, 	generator,
 				condenser,
 				motor
 			};

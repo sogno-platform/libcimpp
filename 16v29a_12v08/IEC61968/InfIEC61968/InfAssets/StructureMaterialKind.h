@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class StructureMaterialKind
 			{
-				wood,
+				 _undef = -1, 	wood,
 				steel,
 				concrete,
 				other

@@ -73,7 +73,7 @@ namespace IEC61970
 					/**
 					 * OEL input selector (OELin). Typical Value = noOELinput.
 					 */
-					IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcST6BOELselectorKind oelin;
+					IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcST6BOELselectorKind oelin = IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcST6BOELselectorKind::_undef;
 					/**
 					 * Feedback time constant of inner loop field voltage regulator (T<sub>G</sub>).
 					 * Typical Value = 0.02.

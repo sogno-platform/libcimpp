@@ -21,7 +21,7 @@ namespace IEC61970
 				 * The value is marked good if no abnormal condition of the acquisition function
 				 * or the information source is detected.
 				 */
-				GOOD,
+				 _undef = -1, 	GOOD,
 				/**
 				 * The value is marked questionable if a supervision function detects an abnormal
 				 * behaviour, however the value could still be valid. The client is responsible

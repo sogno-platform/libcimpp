@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Issue clearance.
 			 */
-			issue,
+			 _undef = -1, 	issue,
 			/**
 			 * Update clearance.
 			 */

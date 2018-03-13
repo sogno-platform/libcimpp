@@ -45,7 +45,7 @@ namespace IEC61970
 					/**
 					 * Type of the lookup table function.
 					 */
-					IEC61970::Dynamics::StandardModels::WindDynamics::WindLookupTableFunctionKind lookupTableFunctionType;
+					IEC61970::Dynamics::StandardModels::WindDynamics::WindLookupTableFunctionKind lookupTableFunctionType = IEC61970::Dynamics::StandardModels::WindDynamics::WindLookupTableFunctionKind::_undef;
 					/**
 					 * Output value (y) for the lookup table function.
 					 */

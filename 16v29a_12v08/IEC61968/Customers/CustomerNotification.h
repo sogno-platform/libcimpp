@@ -50,7 +50,7 @@ namespace IEC61968
 			/**
 			 * Trigger for this notification.
 			 */
-			IEC61968::Customers::NotificationTriggerKind trigger;
+			IEC61968::Customers::NotificationTriggerKind trigger = IEC61968::Customers::NotificationTriggerKind::_undef;
 			/**
 			 * Customer requiring this notification.
 			 */

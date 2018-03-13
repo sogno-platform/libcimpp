@@ -31,7 +31,7 @@ namespace IEC61968
 			/**
 			 * Reason for this metrology requirement being specified.
 			 */
-			IEC61968::Metering::ReadingReasonKind reason;
+			IEC61968::Metering::ReadingReasonKind reason = IEC61968::Metering::ReadingReasonKind::_undef;
 			/**
 			 * All reading types required to be collected by this metrology requirement.
 			 */

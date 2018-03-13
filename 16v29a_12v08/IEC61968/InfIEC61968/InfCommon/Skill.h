@@ -42,7 +42,7 @@ namespace IEC61968
 				/**
 				 * Level of skill for a Craft.
 				 */
-				IEC61968::InfIEC61968::InfCommon::SkillLevelKind level;
+				IEC61968::InfIEC61968::InfCommon::SkillLevelKind level = IEC61968::InfIEC61968::InfCommon::SkillLevelKind::_undef;
 				std::list<IEC61968::InfIEC61968::InfWork::QualificationRequirement*> QualificationRequirements;
 				std::list<IEC61968::InfIEC61968::InfCommon::Craft*> Crafts;
 

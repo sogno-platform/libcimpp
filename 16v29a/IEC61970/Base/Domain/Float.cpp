@@ -16,14 +16,14 @@ Float::~Float(){
 
 
 
-Float::Float(elem_type value)
+Float::Float(long double value)
 	: value(value), initialized(true)
 {
 }
 
 
 
-Float& Float::operator=(elem_type &rop)
+Float& Float::operator=(long double &rop)
 {
 	value = rop;
 	initialized = true;
@@ -32,7 +32,7 @@ Float& Float::operator=(elem_type &rop)
 
 
 
-Float::operator elem_type()
+Float::operator long double()
 {
 	if(!initialized)
 	{

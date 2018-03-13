@@ -150,12 +150,12 @@ namespace IEC61970
 					 * Types of LVRT Q control modes (<i>M</i><sub>qLVRT</sub>). It is project
 					 * dependent parameter.
 					 */
-					IEC61970::Dynamics::StandardModels::WindDynamics::WindLVRTQcontrolModesKind windLVRTQcontrolModesType;
+					IEC61970::Dynamics::StandardModels::WindDynamics::WindLVRTQcontrolModesKind windLVRTQcontrolModesType = IEC61970::Dynamics::StandardModels::WindDynamics::WindLVRTQcontrolModesKind::_undef;
 					/**
 					 * Types of general wind turbine Q control modes (<i>M</i><sub>qG</sub>).  It is
 					 * project dependent parameter.
 					 */
-					IEC61970::Dynamics::StandardModels::WindDynamics::WindQcontrolModesKind windQcontrolModesType;
+					IEC61970::Dynamics::StandardModels::WindDynamics::WindQcontrolModesKind windQcontrolModesType = IEC61970::Dynamics::StandardModels::WindDynamics::WindQcontrolModesKind::_undef;
 					/**
 					 * Inductive component of voltage drop impedance (<i>x</i><sub>droop</sub>). It is
 					 * project dependent parameter.

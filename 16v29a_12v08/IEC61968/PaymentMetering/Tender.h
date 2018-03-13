@@ -43,7 +43,7 @@ namespace IEC61968
 			/**
 			 * Kind of tender from customer.
 			 */
-			IEC61968::PaymentMetering::TenderKind kind;
+			IEC61968::PaymentMetering::TenderKind kind = IEC61968::PaymentMetering::TenderKind::_undef;
 			/**
 			 * Receipt that recorded this receiving of a payment in the form of tenders.
 			 */

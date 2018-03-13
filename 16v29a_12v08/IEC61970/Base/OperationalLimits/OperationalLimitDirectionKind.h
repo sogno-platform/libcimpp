@@ -22,7 +22,7 @@ namespace IEC61970
 				 * High means that a monitored value above the limit value is a violation.   If
 				 * applied to a terminal flow, the positive direction is into the terminal.
 				 */
-				high,
+				 _undef = -1, 	high,
 				/**
 				 * Low means a monitored value below the limit is a violation.  If applied to a
 				 * terminal flow, the positive direction is into the terminal.

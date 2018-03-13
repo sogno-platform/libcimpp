@@ -40,7 +40,7 @@ namespace IEC61970
 				/**
 				 * Indicates the type of Asynchronous Machine (motor or generator).
 				 */
-				IEC61970::Base::Wires::AsynchronousMachineKind asynchronousMachineType;
+				IEC61970::Base::Wires::AsynchronousMachineKind asynchronousMachineType = IEC61970::Base::Wires::AsynchronousMachineKind::_undef;
 				/**
 				 * Indicates whether the machine is a converter fed drive. Used for short circuit
 				 * data exchange according to IEC 60909

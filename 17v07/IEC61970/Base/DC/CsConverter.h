@@ -67,8 +67,8 @@ namespace IEC61970
 				 * Indicates whether the DC pole is operating as an inverter or as a rectifier.
 				 * CSC control variable used in power flow.
 				 */
-				IEC61970::Base::DC::CsOperatingModeKind operatingMode;
-				IEC61970::Base::DC::CsPpccControlKind pPccControl;
+				IEC61970::Base::DC::CsOperatingModeKind operatingMode = IEC61970::Base::DC::CsOperatingModeKind::_undef;
+				IEC61970::Base::DC::CsPpccControlKind pPccControl = IEC61970::Base::DC::CsPpccControlKind::_undef;
 				/**
 				 * Rated converter DC current, also called IdN. Converter configuration data used
 				 * in power flow.

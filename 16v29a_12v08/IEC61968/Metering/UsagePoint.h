@@ -42,7 +42,7 @@ namespace IEC61968
 			 * Tracks the lifecycle of the metering installation at a usage point with respect
 			 * to readiness for billing via advanced metering infrastructure reads.
 			 */
-			IEC61968::Metering::AmiBillingReadyKind amiBillingReady;
+			IEC61968::Metering::AmiBillingReadyKind amiBillingReady = IEC61968::Metering::AmiBillingReadyKind::_undef;
 			/**
 			 * True if as a result of an inspection or otherwise, there is a reason to suspect
 			 * that a previous billing may have been performed with erroneous data. Value
@@ -52,7 +52,7 @@ namespace IEC61968
 			/**
 			 * State of the usage point with respect to connection to the network.
 			 */
-			IEC61968::Metering::UsagePointConnectedKind connectionState;
+			IEC61968::Metering::UsagePointConnectedKind connectionState = IEC61968::Metering::UsagePointConnectedKind::_undef;
 			/**
 			 * Estimated load.
 			 */
@@ -96,7 +96,7 @@ namespace IEC61968
 			 * (splitSecondary12N) is single-phase, three-wire, and s1n and s2n are single-
 			 * phase, two-wire.
 			 */
-			IEC61970::Base::Core::PhaseCode phaseCode;
+			IEC61970::Base::Core::PhaseCode phaseCode = IEC61970::Base::Core::PhaseCode::_undef;
 			/**
 			 * Current flow that this usage point is configured to deliver.
 			 */

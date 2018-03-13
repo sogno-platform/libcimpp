@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class MediumKind
 			{
-				gas,
+				 _undef = -1, 	gas,
 				liquid,
 				solid
 			};

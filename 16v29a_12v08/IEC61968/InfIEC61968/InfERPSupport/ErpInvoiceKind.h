@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class ErpInvoiceKind
 			{
-				sale,
+				 _undef = -1, 	sale,
 				purchase
 			};
 

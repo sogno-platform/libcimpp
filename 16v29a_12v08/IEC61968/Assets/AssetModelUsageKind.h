@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Asset model is intended for use in distribution overhead network.
 			 */
-			distributionOverhead,
+			 _undef = -1, 	distributionOverhead,
 			/**
 			 * Asset model is intended for use in underground distribution network.
 			 */

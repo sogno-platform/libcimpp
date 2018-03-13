@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class CompositeSwitchKind
 			{
-				throwOver,
+				 _undef = -1, 	throwOver,
 				escoThrowOver,
 				ral,
 				gral,

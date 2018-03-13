@@ -36,7 +36,7 @@ namespace IEC61968
 			/**
 			 * Kind of procedure.
 			 */
-			IEC61968::Assets::ProcedureKind kind;
+			IEC61968::Assets::ProcedureKind kind = IEC61968::Assets::ProcedureKind::_undef;
 			/**
 			 * Sequence number in a sequence of procedures being performed.
 			 */

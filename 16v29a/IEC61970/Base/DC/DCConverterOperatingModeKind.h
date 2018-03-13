@@ -21,7 +21,7 @@ namespace IEC61970
 				/**
 				 * Bipolar operation.
 				 */
-				bipolar,
+				 _undef = -1, 	bipolar,
 				/**
 				 * Monopolar operation with metallic return
 				 */

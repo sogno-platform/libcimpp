@@ -24,7 +24,7 @@ namespace IEC61970
 					 * Power versus slip lookup table (f<sub>pslip</sub>()). It is used for rotor
 					 * resistance control model, IEC 61400-27-1, section 6.6.5.2. 
 					 */
-					fpslip,
+					 _undef = -1, 	fpslip,
 					/**
 					 * Power vs. speed lookup table (f<sub>pomega</sub>()). It is used for P control
 					 * model type 3, IEC 61400-27-1, section 6.6.5.3. 

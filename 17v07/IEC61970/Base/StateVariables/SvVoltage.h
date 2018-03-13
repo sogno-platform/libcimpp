@@ -37,7 +37,7 @@ namespace IEC61970
 				 * If specified the voltage is the line to ground voltage of the individual phase.
 				 *  If unspecified, then the voltage is assumed balanced.  
 				 */
-				IEC61970::Base::Wires::SinglePhaseKind phase;
+				IEC61970::Base::Wires::SinglePhaseKind phase = IEC61970::Base::Wires::SinglePhaseKind::_undef;
 				/**
 				 * The voltage magnitude at the topological node.
 				 */

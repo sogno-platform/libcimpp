@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Work approval is pending.
 			 */
-			waitingOnApproval,
+			 _undef = -1, 	waitingOnApproval,
 			/**
 			 * Work has been approved.
 			 */

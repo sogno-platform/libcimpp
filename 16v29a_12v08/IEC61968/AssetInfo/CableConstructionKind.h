@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Compacted cable.
 			 */
-			compacted,
+			 _undef = -1, 	compacted,
 			/**
 			 * Compressed cable.
 			 */

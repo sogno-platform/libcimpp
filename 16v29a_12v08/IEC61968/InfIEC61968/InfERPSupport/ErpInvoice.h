@@ -40,7 +40,7 @@ namespace IEC61968
 				/**
 				 * Kind of media by which the CustomerBillingInfo was delivered.
 				 */
-				IEC61968::InfIEC61968::InfERPSupport::BillMediaKind billMediaKind;
+				IEC61968::InfIEC61968::InfERPSupport::BillMediaKind billMediaKind = IEC61968::InfIEC61968::InfERPSupport::BillMediaKind::_undef;
 				/**
 				 * Calculated date upon which the Invoice amount is due.
 				 */
@@ -48,7 +48,7 @@ namespace IEC61968
 				/**
 				 * Kind of invoice (default is 'sales').
 				 */
-				IEC61968::InfIEC61968::InfERPSupport::ErpInvoiceKind kind;
+				IEC61968::InfIEC61968::InfERPSupport::ErpInvoiceKind kind = IEC61968::InfIEC61968::InfERPSupport::ErpInvoiceKind::_undef;
 				/**
 				 * Date on which the customer billing statement/invoice was printed/mailed.
 				 */

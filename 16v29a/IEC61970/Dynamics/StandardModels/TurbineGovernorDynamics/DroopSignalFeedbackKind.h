@@ -24,7 +24,7 @@ namespace IEC61970
 					 * Electrical power feedback (connection indicated as 1 in the block diagrams of
 					 * models, e.g. GovCT1, GovCT2).
 					 */
-					electricalPower,
+					 _undef = -1, 	electricalPower,
 					/**
 					 * No droop signal feedback, is isochronous governor.
 					 */

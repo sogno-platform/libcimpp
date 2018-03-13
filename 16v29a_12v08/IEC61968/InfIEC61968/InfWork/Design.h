@@ -42,7 +42,7 @@ namespace IEC61968
 				/**
 				 * Kind of this design.
 				 */
-				IEC61968::InfIEC61968::InfWork::DesignKind kind;
+				IEC61968::InfIEC61968::InfWork::DesignKind kind = IEC61968::InfIEC61968::InfWork::DesignKind::_undef;
 				/**
 				 * Price to customer for implementing design.
 				 */

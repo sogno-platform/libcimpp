@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class FailureIsolationMethodKind
 			{
-				breakerOperation,
+				 _undef = -1, 	breakerOperation,
 				fuse,
 				burnedInTheClear,
 				manuallyIsolated,

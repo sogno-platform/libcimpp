@@ -21,7 +21,7 @@ namespace IEC61970
 				/**
 				 * Active power control at AC side.
 				 */
-				activePower,
+				 _undef = -1, 	activePower,
 				/**
 				 * DC voltage control.
 				 */

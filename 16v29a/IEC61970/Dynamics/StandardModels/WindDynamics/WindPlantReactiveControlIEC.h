@@ -112,7 +112,7 @@ namespace IEC61970
 					 * Reactive power/voltage controller mode (<i>M</i><sub>WPqmode</sub>). It is case
 					 * dependent parameter.
 					 */
-					IEC61970::Dynamics::StandardModels::WindDynamics::WindPlantQcontrolModeKind windPlantQcontrolModesType;
+					IEC61970::Dynamics::StandardModels::WindDynamics::WindPlantQcontrolModeKind windPlantQcontrolModesType = IEC61970::Dynamics::StandardModels::WindDynamics::WindPlantQcontrolModeKind::_undef;
 					/**
 					 * Maximum <i>x</i><sub>WTref</sub> (<i>q</i><sub>WTref</sub> or delta
 					 * <i>u</i><sub>WTref</sub>) request from the plant controller

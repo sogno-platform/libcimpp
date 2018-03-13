@@ -20,7 +20,7 @@ namespace IEC61970
 				/**
 				 * Air.
 				 */
-				air,
+				 _undef = -1, 	air,
 				/**
 				 * Hydrogen gas.
 				 */

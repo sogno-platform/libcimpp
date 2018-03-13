@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Notify customer for the first time that estimated restoration time is available.
 			 */
-			initialEtr,
+			 _undef = -1, 	initialEtr,
 			/**
 			 * Notify customer if estimated restoration time changes.
 			 */

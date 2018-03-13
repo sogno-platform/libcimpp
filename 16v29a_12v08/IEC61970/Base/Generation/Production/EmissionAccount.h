@@ -34,11 +34,11 @@ namespace IEC61970
 					 * curve contains the unit of measure (e.g. kg) and the emissionType is the type
 					 * of emission (e.g. sulfer dioxide).
 					 */
-					IEC61970::Base::Generation::Production::EmissionType emissionType;
+					IEC61970::Base::Generation::Production::EmissionType emissionType = IEC61970::Base::Generation::Production::EmissionType::_undef;
 					/**
 					 * The source of the emission value.
 					 */
-					IEC61970::Base::Generation::Production::EmissionValueSource emissionValueSource;
+					IEC61970::Base::Generation::Production::EmissionValueSource emissionValueSource = IEC61970::Base::Generation::Production::EmissionValueSource::_undef;
 
 				};
 

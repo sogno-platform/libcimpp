@@ -23,7 +23,7 @@ namespace IEC61970
 					/**
 					 * Mechanic-hydraulic regulator with tacho-accelerometer (Cflag = 1).
 					 */
-					mechanicHydrolicTachoAccelerator,
+					 _undef = -1, 	mechanicHydrolicTachoAccelerator,
 					/**
 					 * Mechanic-hydraulic regulator with transient feedback (Cflag=2).
 					 */

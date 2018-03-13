@@ -21,7 +21,7 @@ namespace IEC61970
 				/**
 				 * The Asynchronous Machine is a generator.
 				 */
-				generator,
+				generator,	 _undef = -1,  none,
 				/**
 				 * The Asynchronous Machine is a motor.
 				 */

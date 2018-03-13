@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class ErpInvoiceLineItemKind
 			{
-				initial,
+				 _undef = -1, 	initial,
 				recalculation,
 				other
 			};

@@ -44,7 +44,7 @@ namespace IEC61968
 			/**
 			 * Kind of work.
 			 */
-			IEC61968::Work::WorkTaskKind taskKind;
+			IEC61968::Work::WorkTaskKind taskKind = IEC61968::Work::WorkTaskKind::_undef;
 			std::list<IEC61968::Work::MaterialItem*> MaterialItems;
 			/**
 			 * All crews participating in this work task.

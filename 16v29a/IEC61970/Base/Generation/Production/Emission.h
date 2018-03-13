@@ -27,7 +27,7 @@ namespace IEC61970
 				public:
 					Emission();
 					virtual ~Emission();
-					IEC61970::Base::Domain::UnitMultiplier denominatorMultiplier;
+					IEC61970::Base::Domain::UnitMultiplier denominatorMultiplier = IEC61970::Base::Domain::UnitMultiplier::_undef;
 					static const IEC61970::Base::Domain::UnitSymbol denominatorUnit;
 					static const IEC61970::Base::Domain::UnitMultiplier multiplier;
 					static const IEC61970::Base::Domain::UnitSymbol unit;

@@ -16,7 +16,7 @@ namespace IEC61968
 		 */
 		enum class ProcedureKind
 		{
-			inspection,
+			 _undef = -1, 	inspection,
 			diagnosis,
 			maintenance,
 			test,

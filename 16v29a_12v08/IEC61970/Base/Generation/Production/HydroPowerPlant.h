@@ -50,7 +50,7 @@ namespace IEC61970
 					/**
 					 * The type of hydro power plant water storage.
 					 */
-					IEC61970::Base::Generation::Production::HydroPlantStorageKind hydroPlantStorageType;
+					IEC61970::Base::Generation::Production::HydroPlantStorageKind hydroPlantStorageType = IEC61970::Base::Generation::Production::HydroPlantStorageKind::_undef;
 					/**
 					 * Type and configuration of hydro plant penstock(s).
 					 */

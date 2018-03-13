@@ -23,7 +23,7 @@ namespace IEC61970
 					/**
 					 * Voltage dependent reactive current injection (<i>M</i><sub>LVRT,1</sub>).
 					 */
-					mode1,
+					 _undef = -1, 	mode1,
 					/**
 					 * Reactive current injection controlled as the pre-fault value plus an additional
 					 * voltage dependent reactive current injection (<i>M</i><sub>LVRT,2</sub>).

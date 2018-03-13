@@ -32,7 +32,7 @@ namespace IEC61968
 			/**
 			 * Kind of work.
 			 */
-			IEC61968::Work::WorkKind kind;
+			IEC61968::Work::WorkKind kind = IEC61968::Work::WorkKind::_undef;
 			/**
 			 * Priority of work.
 			 */
@@ -40,7 +40,7 @@ namespace IEC61968
 			/**
 			 * Kind of work status.
 			 */
-			IEC61968::Work::WorkStatusKind statusKind;
+			IEC61968::Work::WorkStatusKind statusKind = IEC61968::Work::WorkStatusKind::_undef;
 			/**
 			 * Location for this work/task.
 			 */

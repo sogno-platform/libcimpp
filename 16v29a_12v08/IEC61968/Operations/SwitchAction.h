@@ -27,7 +27,7 @@ namespace IEC61968
 			/**
 			 * Switching action to perform.
 			 */
-			IEC61968::Operations::SwitchActionKind kind;
+			IEC61968::Operations::SwitchActionKind kind = IEC61968::Operations::SwitchActionKind::_undef;
 			/**
 			 * Switch that is the object of this switch action.
 			 */

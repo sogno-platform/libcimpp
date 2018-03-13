@@ -33,7 +33,7 @@ namespace IEC61968
 				/**
 				 * Construction structure on the tower.
 				 */
-				IEC61968::InfIEC61968::InfAssets::TowerConstructionKind constructionKind;
+				IEC61968::InfIEC61968::InfAssets::TowerConstructionKind constructionKind = IEC61968::InfIEC61968::InfAssets::TowerConstructionKind::_undef;
 
 			};
 

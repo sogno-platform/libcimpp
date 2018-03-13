@@ -23,7 +23,7 @@ namespace IEC61970
 					/**
 					 * Subtransient synchronous machine model.
 					 */
-					subtransient,
+					 _undef = -1, 	subtransient,
 					/**
 					 * WECC Type F variant of subtransient synchronous machine model.
 					 */

@@ -26,8 +26,8 @@ namespace IEC61970
 			public:
 				StringQuantity();
 				virtual ~StringQuantity();
-				IEC61970::Base::Domain::UnitMultiplier multiplier;
-				IEC61970::Base::Domain::UnitSymbol unit;
+				IEC61970::Base::Domain::UnitMultiplier multiplier = IEC61970::Base::Domain::UnitMultiplier::_undef;
+				IEC61970::Base::Domain::UnitSymbol unit = IEC61970::Base::Domain::UnitSymbol::_undef;
 				IEC61970::Base::Domain::String value;
 
 			};

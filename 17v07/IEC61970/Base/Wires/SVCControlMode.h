@@ -17,7 +17,7 @@ namespace IEC61970
 			 */
 			enum class SVCControlMode
 			{
-				reactivePower,
+				 _undef = -1, 	reactivePower,
 				voltage
 			};
 

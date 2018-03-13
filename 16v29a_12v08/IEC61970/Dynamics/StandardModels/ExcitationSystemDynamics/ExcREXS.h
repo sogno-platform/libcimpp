@@ -43,7 +43,7 @@ namespace IEC61970
 					/**
 					 * Rate feedback signal flag (Fbf). Typical Value = fieldCurrent.
 					 */
-					IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcREXSFeedbackSignalKind fbf;
+					IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcREXSFeedbackSignalKind fbf = IEC61970::Dynamics::StandardModels::ExcitationSystemDynamics::ExcREXSFeedbackSignalKind::_undef;
 					/**
 					 * Limit type flag (Flimf).  Typical Value = 0.
 					 */

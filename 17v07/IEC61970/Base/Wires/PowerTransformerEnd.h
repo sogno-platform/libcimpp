@@ -55,7 +55,7 @@ namespace IEC61970
 				/**
 				 * Kind of connection.
 				 */
-				IEC61970::Base::Wires::WindingConnection connectionKind;
+				IEC61970::Base::Wires::WindingConnection connectionKind = IEC61970::Base::Wires::WindingConnection::_undef;
 				/**
 				 * Magnetizing branch conductance.
 				 */

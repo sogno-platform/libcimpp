@@ -52,11 +52,11 @@ namespace IEC61970
 				 * determining the kind of regulation without need for obtaining the units from a
 				 * schedule.
 				 */
-				IEC61970::Base::Wires::RegulatingControlModeKind mode;
+				IEC61970::Base::Wires::RegulatingControlModeKind mode = IEC61970::Base::Wires::RegulatingControlModeKind::_undef;
 				/**
 				 * Phase voltage controlling this regulator, measured at regulator location.
 				 */
-				IEC61970::Base::Core::PhaseCode monitoredPhase;
+				IEC61970::Base::Core::PhaseCode monitoredPhase = IEC61970::Base::Core::PhaseCode::_undef;
 				/**
 				 * This is a deadband used with discrete control to avoid excessive update of
 				 * controls like tap changers and shunt compensator banks while regulating.
@@ -72,7 +72,7 @@ namespace IEC61970
 				/**
 				 * Specify the multiplier for used for the targetValue.
 				 */
-				IEC61970::Base::Domain::UnitMultiplier targetValueUnitMultiplier;
+				IEC61970::Base::Domain::UnitMultiplier targetValueUnitMultiplier = IEC61970::Base::Domain::UnitMultiplier::_undef;
 
 			};
 

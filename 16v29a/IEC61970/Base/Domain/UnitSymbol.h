@@ -20,7 +20,7 @@ namespace IEC61970
 				/**
 				 * Apparent power in volt ampere.
 				 */
-				VA,
+				 _undef = -1, 	VA,
 				/**
 				 * Active power in watt.
 				 */

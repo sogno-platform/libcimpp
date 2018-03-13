@@ -16,18 +16,17 @@ namespace IEC61970
 			 */
 			class Float
 			{
-                typedef double elem_type; // elemental type for primitive CIM type Float
 
 			public:
 				Float();
 				virtual ~Float();
 
-				Float(elem_type value);
-				Float& operator=(elem_type &rop);
+				Float(long double value);
+				Float& operator=(long double &rop);
 				friend std::istream& operator>>(std::istream& lop, Float& rop);
-				operator elem_type();
+				operator long double();
 
-				elem_type value = 0.0;
+				long double value = 0.0;
 				bool initialized = false;
 
 			};

@@ -55,11 +55,11 @@ namespace IEC61970
 				/**
 				 * The unit multiplier of the value.
 				 */
-				IEC61970::Base::Domain::UnitMultiplier unitMultiplier;
+				IEC61970::Base::Domain::UnitMultiplier unitMultiplier = IEC61970::Base::Domain::UnitMultiplier::_undef;
 				/**
 				 * The unit of measure of the value.
 				 */
-				IEC61970::Base::Domain::UnitSymbol unitSymbol;
+				IEC61970::Base::Domain::UnitSymbol unitSymbol = IEC61970::Base::Domain::UnitSymbol::_undef;
 				/**
 				 * Protected switches operated by this ProtectionEquipment.
 				 */

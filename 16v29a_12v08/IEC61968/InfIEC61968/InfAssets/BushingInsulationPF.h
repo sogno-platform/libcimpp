@@ -32,7 +32,7 @@ namespace IEC61968
 				/**
 				 * Kind of test for this bushing.
 				 */
-				IEC61968::InfIEC61968::InfAssets::BushingInsulationPfTestKind testKind;
+				IEC61968::InfIEC61968::InfAssets::BushingInsulationPfTestKind testKind = IEC61968::InfIEC61968::InfAssets::BushingInsulationPfTestKind::_undef;
 				IEC61968::InfIEC61968::InfAssets::TransformerObservation *TransformerObservation;
 
 			};

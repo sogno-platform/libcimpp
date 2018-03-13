@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Payment for a service.
 			 */
-			serviceChargePayment,
+			 _undef = -1, 	serviceChargePayment,
 			/**
 			 * Payment for a tax.
 			 */

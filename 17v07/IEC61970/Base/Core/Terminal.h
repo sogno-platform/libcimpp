@@ -34,7 +34,7 @@ namespace IEC61970
 				 * Represents the normal network phasing condition.
 				 * If the attribute is missing three phases (ABC or ABCN) shall be assumed.
 				 */
-				IEC61970::Base::Core::PhaseCode phases;
+				IEC61970::Base::Core::PhaseCode phases = IEC61970::Base::Core::PhaseCode::_undef;
 				/**
 				 * The connectivity node to which this terminal connects with zero impedance.
 				 */

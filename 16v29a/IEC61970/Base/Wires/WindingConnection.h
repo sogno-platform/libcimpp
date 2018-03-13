@@ -20,7 +20,7 @@ namespace IEC61970
 				/**
 				 * Delta
 				 */
-				D,
+				 _undef = -1, 	D,
 				/**
 				 * Wye
 				 */

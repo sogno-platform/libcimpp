@@ -29,7 +29,7 @@ namespace IEC61970
 			public:
 				DCConverterUnit();
 				virtual ~DCConverterUnit();
-				IEC61970::Base::DC::DCConverterOperatingModeKind operationMode;
+				IEC61970::Base::DC::DCConverterOperatingModeKind operationMode = IEC61970::Base::DC::DCConverterOperatingModeKind::_undef;
 
 			};
 

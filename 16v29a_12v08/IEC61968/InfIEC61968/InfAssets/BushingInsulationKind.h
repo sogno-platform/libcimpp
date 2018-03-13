@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class BushingInsulationKind
 			{
-				paperoil,
+				 _undef = -1, 	paperoil,
 				compound,
 				solidPorcelain,
 				other

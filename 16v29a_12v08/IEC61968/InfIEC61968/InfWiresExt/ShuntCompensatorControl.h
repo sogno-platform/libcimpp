@@ -45,7 +45,7 @@ namespace IEC61968
 				/**
 				 * Kind of control (if any).
 				 */
-				IEC61968::InfIEC61968::InfAssetInfo::ShuntImpedanceControlKind controlKind;
+				IEC61968::InfIEC61968::InfAssetInfo::ShuntImpedanceControlKind controlKind = IEC61968::InfIEC61968::InfAssetInfo::ShuntImpedanceControlKind::_undef;
 				/**
 				 * For locally controlled shunt impedances which have a voltage override feature,
 				 * the high voltage override value. If the voltage is above this value, the shunt
@@ -55,7 +55,7 @@ namespace IEC61968
 				/**
 				 * Kind of local controller.
 				 */
-				IEC61968::InfIEC61968::InfAssetInfo::ShuntImpedanceLocalControlKind localControlKind;
+				IEC61968::InfIEC61968::InfAssetInfo::ShuntImpedanceLocalControlKind localControlKind = IEC61968::InfIEC61968::InfAssetInfo::ShuntImpedanceLocalControlKind::_undef;
 				/**
 				 * Upper control setting.
 				 */
@@ -98,11 +98,11 @@ namespace IEC61968
 				 * (For VAR, amp, or power factor locally controlled shunt impedances) Kind of
 				 * regulation branch.
 				 */
-				IEC61968::InfIEC61968::InfAssetInfo::RegulationBranchKind regBranchKind;
+				IEC61968::InfIEC61968::InfAssetInfo::RegulationBranchKind regBranchKind = IEC61968::InfIEC61968::InfAssetInfo::RegulationBranchKind::_undef;
 				/**
 				 * Phases that are measured for controlling the device.
 				 */
-				IEC61970::Base::Core::PhaseCode sensingPhaseCode;
+				IEC61970::Base::Core::PhaseCode sensingPhaseCode = IEC61970::Base::Core::PhaseCode::_undef;
 				/**
 				 * Time interval between consecutive switching operations.
 				 */

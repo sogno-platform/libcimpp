@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class DemographicKind
 			{
-				urban,
+				 _undef = -1, 	urban,
 				rural,
 				other
 			};

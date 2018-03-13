@@ -21,7 +21,7 @@ namespace IEC61970
 				/**
 				 * Salient pole 1 in the IEC 60909
 				 */
-				salientPole1,
+				 _undef = -1, 	salientPole1,
 				/**
 				 * Salient pole 2 in IEC 60909
 				 */

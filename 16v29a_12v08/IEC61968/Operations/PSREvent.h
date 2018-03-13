@@ -27,7 +27,7 @@ namespace IEC61968
 			/**
 			 * Kind of event.
 			 */
-			IEC61968::Operations::PSREventKind kind;
+			IEC61968::Operations::PSREventKind kind = IEC61968::Operations::PSREventKind::_undef;
 			/**
 			 * Power system resource that generated this event.
 			 */

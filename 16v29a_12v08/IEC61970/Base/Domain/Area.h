@@ -26,7 +26,7 @@ namespace IEC61970
 			public:
 				Area();
 				virtual ~Area();
-				IEC61970::Base::Domain::UnitMultiplier multiplier;
+				IEC61970::Base::Domain::UnitMultiplier multiplier = IEC61970::Base::Domain::UnitMultiplier::_undef;
 				static const IEC61970::Base::Domain::UnitSymbol unit;
 				IEC61970::Base::Domain::Float value;
 

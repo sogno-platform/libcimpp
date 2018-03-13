@@ -18,7 +18,7 @@ namespace IEC61968
 			 */
 			enum class FaultIndicatorResetKind
 			{
-				automatic,
+				 _undef = -1, 	automatic,
 				manual,
 				remote,
 				other

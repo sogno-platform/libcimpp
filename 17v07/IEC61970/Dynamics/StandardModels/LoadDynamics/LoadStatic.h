@@ -115,7 +115,7 @@ namespace IEC61970
 					/**
 					 * Type of static load model.  Typical Value = constantZ.
 					 */
-					IEC61970::Dynamics::StandardModels::LoadDynamics::StaticLoadModelKind staticLoadModelType;
+					IEC61970::Dynamics::StandardModels::LoadDynamics::StaticLoadModelKind staticLoadModelType = IEC61970::Dynamics::StandardModels::LoadDynamics::StaticLoadModelKind::_undef;
 					/**
 					 * Aggregate load to which this aggregate static load belongs.
 					 */

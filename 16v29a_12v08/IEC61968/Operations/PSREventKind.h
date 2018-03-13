@@ -19,7 +19,7 @@ namespace IEC61968
 			/**
 			 * Power system resource state change to in service.
 			 */
-			inService,
+			 _undef = -1, 	inService,
 			/**
 			 * Power system resource state change to out of service.
 			 */

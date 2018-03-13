@@ -24,7 +24,7 @@ namespace IEC61970
 					 * Air gap line mode.  ifdBaseValue is computed, not defined by the user, in this
 					 * mode.
 					 */
-					ifag,
+					 _undef = -1, 	ifag,
 					/**
 					 * No load system with saturation mode.  ifdBaseValue is computed, not defined by
 					 * the user, in this mode.

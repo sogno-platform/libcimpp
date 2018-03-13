@@ -20,7 +20,7 @@ namespace IEC61968
 					/**
 					 * Not Applicable
 					 */
-					none = 0,
+					 _undef = -1, 	none = 0,
 					/**
 					 * Captured during the billing period starting at midnight of the first day of the
 					 * billing period (as defined by the billing cycle day). If during the current

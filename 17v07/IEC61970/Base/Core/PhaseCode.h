@@ -29,7 +29,7 @@ namespace IEC61970
 				/**
 				 * Phases A, B, C, and N.
 				 */
-				ABCN = 225,
+				 _undef = -1, 	ABCN = 225,
 				/**
 				 * Phases A, B, and C.
 				 */

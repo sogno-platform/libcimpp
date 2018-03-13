@@ -45,7 +45,7 @@ namespace IEC61970
 				 * an energy consumer connected from the indicated phase to the next logical non-
 				 * neutral phase.
 				 */
-				IEC61970::Base::Wires::SinglePhaseKind phase;
+				IEC61970::Base::Wires::SinglePhaseKind phase = IEC61970::Base::Wires::SinglePhaseKind::_undef;
 				/**
 				 * Reactive power of the load that is a fixed quantity. Load sign convention is
 				 * used, i.e. positive sign means flow out from a node.

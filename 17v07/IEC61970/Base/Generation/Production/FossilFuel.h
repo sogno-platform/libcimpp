@@ -40,7 +40,7 @@ namespace IEC61970
 					/**
 					 * The type of fossil fuel, such as coal, oil, or gas.
 					 */
-					IEC61970::Base::Generation::Production::FuelType fossilFuelType;
+					IEC61970::Base::Generation::Production::FuelType fossilFuelType = IEC61970::Base::Generation::Production::FuelType::_undef;
 					/**
 					 * The cost in terms of heat value for the given type of fuel.
 					 */

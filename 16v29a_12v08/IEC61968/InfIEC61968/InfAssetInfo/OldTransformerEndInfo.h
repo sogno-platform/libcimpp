@@ -39,7 +39,7 @@ namespace IEC61968
 				/**
 				 * Type of insultation used for transformer windings.
 				 */
-				IEC61968::InfIEC61968::InfAssetInfo::WindingInsulationKind windingInsulationKind;
+				IEC61968::InfIEC61968::InfAssetInfo::WindingInsulationKind windingInsulationKind = IEC61968::InfIEC61968::InfAssetInfo::WindingInsulationKind::_undef;
 
 			};
 

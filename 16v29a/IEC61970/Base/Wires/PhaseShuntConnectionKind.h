@@ -22,7 +22,7 @@ namespace IEC61970
 				/**
 				 * Delta connection.
 				 */
-				D,
+				 _undef = -1, 	D,
 				/**
 				 * Wye connection.
 				 */

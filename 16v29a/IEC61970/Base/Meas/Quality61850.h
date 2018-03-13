@@ -79,7 +79,7 @@ namespace IEC61970
 				 * Source gives information related to the origin of a value. The value may be
 				 * acquired from the process, defaulted or substituted.
 				 */
-				IEC61970::Base::SCADA::Source source;
+				IEC61970::Base::SCADA::Source source = IEC61970::Base::SCADA::Source::_undef;
 				/**
 				 * A correlation function has detected that the value is not consitent with other
 				 * values. Typically set by a network State Estimator.
@@ -92,7 +92,7 @@ namespace IEC61970
 				/**
 				 * Validity of the measurement value.
 				 */
-				IEC61970::Base::Meas::Validity validity;
+				IEC61970::Base::Meas::Validity validity = IEC61970::Base::Meas::Validity::_undef;
 
 			};
 

@@ -20,7 +20,7 @@ namespace IEC61968
 			/**
 			 * Place the jumper (close) or the cut (open).
 			 */
-			place,
+			 _undef = -1, 	place,
 			/**
 			 * Remove the jumper (open) or the cut (close).
 			 */

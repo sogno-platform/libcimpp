@@ -40,7 +40,7 @@ namespace IEC61968
 			/**
 			 * Indicates how the customer reported trouble.
 			 */
-			IEC61968::Customers::TroubleReportingKind reportingKind;
+			IEC61968::Customers::TroubleReportingKind reportingKind = IEC61968::Customers::TroubleReportingKind::_undef;
 			/**
 			 * Date and time this trouble ticket has been resolved.
 			 */

@@ -26,7 +26,7 @@ namespace IEC61968
 			/**
 			 * Kind of this work schedule.
 			 */
-			IEC61968::Work::WorkTimeScheduleKind kind;
+			IEC61968::Work::WorkTimeScheduleKind kind = IEC61968::Work::WorkTimeScheduleKind::_undef;
 
 		};
 

@@ -15,7 +15,7 @@ namespace IEC61970
 		{
 			enum class VsQpccControlKind
 			{
-				reactivePcc,
+				 _undef = -1, 	reactivePcc,
 				voltagePcc,
 				powerFactorPcc
 			};

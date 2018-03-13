@@ -20,7 +20,7 @@ namespace IEC61970
 				/**
 				 * Single breaker.
 				 */
-				singleBreaker,
+				 _undef = -1, 	singleBreaker,
 				/**
 				 * Breaker and a half.
 				 */
