@@ -1,8 +1,10 @@
-#include "Task.hpp"
-#include "Folders.hpp"
 #include <iostream>
-#include <fstream>
-#include <regex>
+
+#include "Folders.hpp"
+#include "Aliases.hpp"
+#include "Task.hpp"
+
+typedef bool (*task_function)(BaseClass*, BaseClass*);
 static std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)> initialize();
 std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)> Task::dynamic_switch = initialize();
 
@@ -3779,30 +3781,9 @@ static std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)> initial
 	map.insert(std::make_pair("cim:FaultCauseTypes.Fault", &assign_Fault_FaultCauseTypes));
 	
 
-	// Get aliases
-	std::ifstream file("task_alias.csv");
-	if(file.good())
-	{
-		std::string line;
-		std::regex expr("^([a-zA-Z0-9:.]*)[\t ,;]+([a-zA-Z0-9:.]*)$");
-		std::smatch m;
-		std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)>::iterator it;
-		while (std::getline(file, line))
-		{
-			if(std::regex_match(line, m, expr))
-			{
-				it = map.find(m[1]);
-				if(it != map.end())
-				{
-					map.insert(std::make_pair(m[2], it->second));
-				}
-			}
-		}
-	}
-	else
-	{
-		std::cerr << "task_alias.csv could not be loaded" << std::endl;
-	}
+#include "AliasesTask.hpp"
+
+	load_aliases<task_function>(map, "task_alias.csv");
 
 	return map;
 }

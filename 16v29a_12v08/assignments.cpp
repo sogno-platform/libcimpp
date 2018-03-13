@@ -1,11 +1,10 @@
-#include "assignments.hpp"
 #include <sstream>
 #include <utility>
 #include <unordered_map>
-#include <regex>
-#include <fstream>
 
 #include "Folders.hpp"
+#include "Aliases.hpp"
+#include "assignments.hpp"
 
 typedef bool (*assign_function)(std::stringstream&, BaseClass*);
 static std::unordered_map<std::string, assign_function> dynamic_switch_factory();
@@ -80716,26 +80715,9 @@ std::unordered_map<std::string, assign_function> dynamic_switch_factory()
 	dynamic_switch.insert(std::make_pair("cim:LineFault.lengthFromTerminal1", &assign_LineFault_lengthFromTerminal1));
 	
 
-	// Get aliases
-	std::ifstream file("assignment_alias.csv");
-	if(file.good())
-	{
-		std::string line;
-		std::regex expr("^([a-zA-Z0-9:.]*)[\t ,;]+([a-zA-Z0-9:.]*)$");
-		std::smatch m;
-		std::unordered_map<std::string, assign_function>::iterator it;
-		while (std::getline(file, line))
-		{
-			if(std::regex_match(line, m, expr))
-			{
-				it = dynamic_switch.find(m[1]);
-				if(it != dynamic_switch.end())
-				{
-					dynamic_switch.insert(std::make_pair(m[2], it->second));
-				}
-			}
-		}
-	}
+#include "AliasesAssignment.hpp"
+
+	load_aliases<assign_function>(dynamic_switch, "assignment_alias.csv");
 
 	return dynamic_switch;
 }

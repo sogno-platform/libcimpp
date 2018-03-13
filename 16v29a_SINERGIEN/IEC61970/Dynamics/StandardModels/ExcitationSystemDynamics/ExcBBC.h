@@ -50,7 +50,7 @@ namespace IEC61970
 					 * false =  Vs connected to 1st summing point (see diagram).
 					 * Typical Value = true.
 					 */
-#warning Member "switch" is renamed to "routing_selector", this does not comply the CIM standard!
+//#warning Member "switch" is renamed to "routing_selector", this does not comply the CIM standard!
 					IEC61970::Base::Domain::Boolean routing_selector;
 					/**
 					 * Controller time constant (T1).  Typical Value = 6.

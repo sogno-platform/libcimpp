@@ -1,11 +1,10 @@
-#include "assignments.hpp"
 #include <sstream>
 #include <utility>
 #include <unordered_map>
-#include <regex>
-#include <fstream>
 
 #include "Folders.hpp"
+#include "Aliases.hpp"
+#include "assignments.hpp"
 
 typedef bool (*assign_function)(std::stringstream&, BaseClass*);
 static std::unordered_map<std::string, assign_function> dynamic_switch_factory();
@@ -296,12 +295,12 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Domain::UnitSymbol& 
 	return lop;
 }
 
-std::istream& operator>>(std::istream& lop, IEC61970::Base::Wires::PhaseShuntConnectionKind& rop)
+std::istream& operator>>(std::istream& lop, Sinergien::Communication::commTypeQos& rop)
 {
 	std::string EnumSymbol;
 	lop >> EnumSymbol;
 	size_t pos = EnumSymbol.find_first_of('.');
-	if(EnumSymbol.substr(0, pos) != "PhaseShuntConnectionKind")
+	if(EnumSymbol.substr(0, pos) != "commTypeQos")
 	{
 		lop.setstate(std::ios::failbit);
 		return lop;
@@ -311,31 +310,25 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Wires::PhaseShuntCon
 	
 	if(EnumSymbol == "_undef")
 	{
-		rop = IEC61970::Base::Wires::PhaseShuntConnectionKind::_undef;
+		rop = Sinergien::Communication::commTypeQos::_undef;
 		return lop;
 	}
 	
-	if(EnumSymbol == "D")
+	if(EnumSymbol == "nonCritical")
 	{
-		rop = IEC61970::Base::Wires::PhaseShuntConnectionKind::D;
+		rop = Sinergien::Communication::commTypeQos::nonCritical;
 		return lop;
 	}
 	
-	if(EnumSymbol == "Y")
+	if(EnumSymbol == "critical")
 	{
-		rop = IEC61970::Base::Wires::PhaseShuntConnectionKind::Y;
+		rop = Sinergien::Communication::commTypeQos::critical;
 		return lop;
 	}
 	
-	if(EnumSymbol == "Yn")
+	if(EnumSymbol == "veryCritical")
 	{
-		rop = IEC61970::Base::Wires::PhaseShuntConnectionKind::Yn;
-		return lop;
-	}
-	
-	if(EnumSymbol == "I")
-	{
-		rop = IEC61970::Base::Wires::PhaseShuntConnectionKind::I;
+		rop = Sinergien::Communication::commTypeQos::veryCritical;
 		return lop;
 	}
 	
@@ -343,12 +336,12 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Wires::PhaseShuntCon
 	return lop;
 }
 
-std::istream& operator>>(std::istream& lop, IEC61970::Base::Wires::SinglePhaseKind& rop)
+std::istream& operator>>(std::istream& lop, Sinergien::Communication::commTypeReliability& rop)
 {
 	std::string EnumSymbol;
 	lop >> EnumSymbol;
 	size_t pos = EnumSymbol.find_first_of('.');
-	if(EnumSymbol.substr(0, pos) != "SinglePhaseKind")
+	if(EnumSymbol.substr(0, pos) != "commTypeReliability")
 	{
 		lop.setstate(std::ios::failbit);
 		return lop;
@@ -358,43 +351,96 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Wires::SinglePhaseKi
 	
 	if(EnumSymbol == "_undef")
 	{
-		rop = IEC61970::Base::Wires::SinglePhaseKind::_undef;
+		rop = Sinergien::Communication::commTypeReliability::_undef;
 		return lop;
 	}
 	
-	if(EnumSymbol == "A")
+	if(EnumSymbol == "low")
 	{
-		rop = IEC61970::Base::Wires::SinglePhaseKind::A;
+		rop = Sinergien::Communication::commTypeReliability::low;
 		return lop;
 	}
 	
-	if(EnumSymbol == "B")
+	if(EnumSymbol == "high")
 	{
-		rop = IEC61970::Base::Wires::SinglePhaseKind::B;
+		rop = Sinergien::Communication::commTypeReliability::high;
 		return lop;
 	}
 	
-	if(EnumSymbol == "C")
+	if(EnumSymbol == "medium")
 	{
-		rop = IEC61970::Base::Wires::SinglePhaseKind::C;
+		rop = Sinergien::Communication::commTypeReliability::medium;
 		return lop;
 	}
 	
-	if(EnumSymbol == "N")
+	lop.setstate(std::ios::failbit);
+	return lop;
+}
+
+std::istream& operator>>(std::istream& lop, IEC61970::Base::Wires::RegulatingControlModeKind& rop)
+{
+	std::string EnumSymbol;
+	lop >> EnumSymbol;
+	size_t pos = EnumSymbol.find_first_of('.');
+	if(EnumSymbol.substr(0, pos) != "RegulatingControlModeKind")
 	{
-		rop = IEC61970::Base::Wires::SinglePhaseKind::N;
+		lop.setstate(std::ios::failbit);
+		return lop;
+	}
+
+	EnumSymbol = EnumSymbol.substr(pos + 1);
+	
+	if(EnumSymbol == "_undef")
+	{
+		rop = IEC61970::Base::Wires::RegulatingControlModeKind::_undef;
 		return lop;
 	}
 	
-	if(EnumSymbol == "s1")
+	if(EnumSymbol == "voltage")
 	{
-		rop = IEC61970::Base::Wires::SinglePhaseKind::s1;
+		rop = IEC61970::Base::Wires::RegulatingControlModeKind::voltage;
 		return lop;
 	}
 	
-	if(EnumSymbol == "s2")
+	if(EnumSymbol == "activePower")
 	{
-		rop = IEC61970::Base::Wires::SinglePhaseKind::s2;
+		rop = IEC61970::Base::Wires::RegulatingControlModeKind::activePower;
+		return lop;
+	}
+	
+	if(EnumSymbol == "reactivePower")
+	{
+		rop = IEC61970::Base::Wires::RegulatingControlModeKind::reactivePower;
+		return lop;
+	}
+	
+	if(EnumSymbol == "currentFlow")
+	{
+		rop = IEC61970::Base::Wires::RegulatingControlModeKind::currentFlow;
+		return lop;
+	}
+	
+	if(EnumSymbol == "admittance")
+	{
+		rop = IEC61970::Base::Wires::RegulatingControlModeKind::admittance;
+		return lop;
+	}
+	
+	if(EnumSymbol == "timeScheduled")
+	{
+		rop = IEC61970::Base::Wires::RegulatingControlModeKind::timeScheduled;
+		return lop;
+	}
+	
+	if(EnumSymbol == "temperature")
+	{
+		rop = IEC61970::Base::Wires::RegulatingControlModeKind::temperature;
+		return lop;
+	}
+	
+	if(EnumSymbol == "powerFactor")
+	{
+		rop = IEC61970::Base::Wires::RegulatingControlModeKind::powerFactor;
 		return lop;
 	}
 	
@@ -544,6 +590,153 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Core::PhaseCode& rop
 	if(EnumSymbol == "s12")
 	{
 		rop = IEC61970::Base::Core::PhaseCode::s12;
+		return lop;
+	}
+	
+	lop.setstate(std::ios::failbit);
+	return lop;
+}
+
+std::istream& operator>>(std::istream& lop, Sinergien::Communication::Modems::WLANType& rop)
+{
+	std::string EnumSymbol;
+	lop >> EnumSymbol;
+	size_t pos = EnumSymbol.find_first_of('.');
+	if(EnumSymbol.substr(0, pos) != "WLANType")
+	{
+		lop.setstate(std::ios::failbit);
+		return lop;
+	}
+
+	EnumSymbol = EnumSymbol.substr(pos + 1);
+	
+	if(EnumSymbol == "_undef")
+	{
+		rop = Sinergien::Communication::Modems::WLANType::_undef;
+		return lop;
+	}
+	
+	if(EnumSymbol == "IEEE80211n")
+	{
+		rop = Sinergien::Communication::Modems::WLANType::IEEE80211n;
+		return lop;
+	}
+	
+	if(EnumSymbol == "IEEE80211g")
+	{
+		rop = Sinergien::Communication::Modems::WLANType::IEEE80211g;
+		return lop;
+	}
+	
+	if(EnumSymbol == "IEEE80211ac")
+	{
+		rop = Sinergien::Communication::Modems::WLANType::IEEE80211ac;
+		return lop;
+	}
+	
+	lop.setstate(std::ios::failbit);
+	return lop;
+}
+
+std::istream& operator>>(std::istream& lop, IEC61970::Base::Wires::PhaseShuntConnectionKind& rop)
+{
+	std::string EnumSymbol;
+	lop >> EnumSymbol;
+	size_t pos = EnumSymbol.find_first_of('.');
+	if(EnumSymbol.substr(0, pos) != "PhaseShuntConnectionKind")
+	{
+		lop.setstate(std::ios::failbit);
+		return lop;
+	}
+
+	EnumSymbol = EnumSymbol.substr(pos + 1);
+	
+	if(EnumSymbol == "_undef")
+	{
+		rop = IEC61970::Base::Wires::PhaseShuntConnectionKind::_undef;
+		return lop;
+	}
+	
+	if(EnumSymbol == "D")
+	{
+		rop = IEC61970::Base::Wires::PhaseShuntConnectionKind::D;
+		return lop;
+	}
+	
+	if(EnumSymbol == "Y")
+	{
+		rop = IEC61970::Base::Wires::PhaseShuntConnectionKind::Y;
+		return lop;
+	}
+	
+	if(EnumSymbol == "Yn")
+	{
+		rop = IEC61970::Base::Wires::PhaseShuntConnectionKind::Yn;
+		return lop;
+	}
+	
+	if(EnumSymbol == "I")
+	{
+		rop = IEC61970::Base::Wires::PhaseShuntConnectionKind::I;
+		return lop;
+	}
+	
+	lop.setstate(std::ios::failbit);
+	return lop;
+}
+
+std::istream& operator>>(std::istream& lop, IEC61970::Base::Wires::SinglePhaseKind& rop)
+{
+	std::string EnumSymbol;
+	lop >> EnumSymbol;
+	size_t pos = EnumSymbol.find_first_of('.');
+	if(EnumSymbol.substr(0, pos) != "SinglePhaseKind")
+	{
+		lop.setstate(std::ios::failbit);
+		return lop;
+	}
+
+	EnumSymbol = EnumSymbol.substr(pos + 1);
+	
+	if(EnumSymbol == "_undef")
+	{
+		rop = IEC61970::Base::Wires::SinglePhaseKind::_undef;
+		return lop;
+	}
+	
+	if(EnumSymbol == "A")
+	{
+		rop = IEC61970::Base::Wires::SinglePhaseKind::A;
+		return lop;
+	}
+	
+	if(EnumSymbol == "B")
+	{
+		rop = IEC61970::Base::Wires::SinglePhaseKind::B;
+		return lop;
+	}
+	
+	if(EnumSymbol == "C")
+	{
+		rop = IEC61970::Base::Wires::SinglePhaseKind::C;
+		return lop;
+	}
+	
+	if(EnumSymbol == "N")
+	{
+		rop = IEC61970::Base::Wires::SinglePhaseKind::N;
+		return lop;
+	}
+	
+	if(EnumSymbol == "s1")
+	{
+		rop = IEC61970::Base::Wires::SinglePhaseKind::s1;
+		return lop;
+	}
+	
+	if(EnumSymbol == "s2")
+	{
+		rop = IEC61970::Base::Wires::SinglePhaseKind::s2;
 		return lop;
 	}
 	
@@ -738,77 +931,6 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Wires::SynchronousMa
 	if(EnumSymbol == "generatorOrCondenserOrMotor")
 	{
 		rop = IEC61970::Base::Wires::SynchronousMachineKind::generatorOrCondenserOrMotor;
-		return lop;
-	}
-	
-	lop.setstate(std::ios::failbit);
-	return lop;
-}
-
-std::istream& operator>>(std::istream& lop, IEC61970::Base::Wires::RegulatingControlModeKind& rop)
-{
-	std::string EnumSymbol;
-	lop >> EnumSymbol;
-	size_t pos = EnumSymbol.find_first_of('.');
-	if(EnumSymbol.substr(0, pos) != "RegulatingControlModeKind")
-	{
-		lop.setstate(std::ios::failbit);
-		return lop;
-	}
-
-	EnumSymbol = EnumSymbol.substr(pos + 1);
-	
-	if(EnumSymbol == "_undef")
-	{
-		rop = IEC61970::Base::Wires::RegulatingControlModeKind::_undef;
-		return lop;
-	}
-	
-	if(EnumSymbol == "voltage")
-	{
-		rop = IEC61970::Base::Wires::RegulatingControlModeKind::voltage;
-		return lop;
-	}
-	
-	if(EnumSymbol == "activePower")
-	{
-		rop = IEC61970::Base::Wires::RegulatingControlModeKind::activePower;
-		return lop;
-	}
-	
-	if(EnumSymbol == "reactivePower")
-	{
-		rop = IEC61970::Base::Wires::RegulatingControlModeKind::reactivePower;
-		return lop;
-	}
-	
-	if(EnumSymbol == "currentFlow")
-	{
-		rop = IEC61970::Base::Wires::RegulatingControlModeKind::currentFlow;
-		return lop;
-	}
-	
-	if(EnumSymbol == "admittance")
-	{
-		rop = IEC61970::Base::Wires::RegulatingControlModeKind::admittance;
-		return lop;
-	}
-	
-	if(EnumSymbol == "timeScheduled")
-	{
-		rop = IEC61970::Base::Wires::RegulatingControlModeKind::timeScheduled;
-		return lop;
-	}
-	
-	if(EnumSymbol == "temperature")
-	{
-		rop = IEC61970::Base::Wires::RegulatingControlModeKind::temperature;
-		return lop;
-	}
-	
-	if(EnumSymbol == "powerFactor")
-	{
-		rop = IEC61970::Base::Wires::RegulatingControlModeKind::powerFactor;
 		return lop;
 	}
 	
@@ -3244,6 +3366,51 @@ std::istream& operator>>(std::istream& lop, IEC61970::Base::Faults::PhaseConnect
 
 
 
+// cim:ElectricalCapacity.multiplier
+bool assign_ElectricalCapacity_multiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::EnergyGrid::Domain::ElectricalCapacity* element = dynamic_cast<Sinergien::EnergyGrid::Domain::ElectricalCapacity*>(base_class_ptr))
+	{
+		buffer >> element->multiplier;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ElectricalCapacity.unit
+bool assign_ElectricalCapacity_unit(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::EnergyGrid::Domain::ElectricalCapacity* element = dynamic_cast<Sinergien::EnergyGrid::Domain::ElectricalCapacity*>(base_class_ptr))
+	{
+		buffer >> element->unit;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ElectricalCapacity.value
+bool assign_ElectricalCapacity_value(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::EnergyGrid::Domain::ElectricalCapacity* element = dynamic_cast<Sinergien::EnergyGrid::Domain::ElectricalCapacity*>(base_class_ptr))
+	{
+		buffer >> element->value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
 // cim:ActivePower.multiplier
 bool assign_ActivePower_multiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
 {
@@ -3265,6 +3432,171 @@ bool assign_ReactivePower_multiplier(std::stringstream& buffer, BaseClass* base_
 	if(IEC61970::Base::Domain::ReactivePower* element = dynamic_cast<IEC61970::Base::Domain::ReactivePower*>(base_class_ptr))
 	{
 		buffer >> element->multiplier;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ApparentPower.multiplier
+bool assign_ApparentPower_multiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Domain::ApparentPower* element = dynamic_cast<IEC61970::Base::Domain::ApparentPower*>(base_class_ptr))
+	{
+		buffer >> element->multiplier;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:Voltage.multiplier
+bool assign_Voltage_multiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Domain::Voltage* element = dynamic_cast<IEC61970::Base::Domain::Voltage*>(base_class_ptr))
+	{
+		buffer >> element->multiplier;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:communicationRequirement.capacityRequirement
+bool assign_communicationRequirement_capacityRequirement(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::Communication::communicationRequirement* element = dynamic_cast<Sinergien::Communication::communicationRequirement*>(base_class_ptr))
+	{
+		buffer >> element->capacityRequirement;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:communicationRequirement.delayRequirement
+bool assign_communicationRequirement_delayRequirement(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::Communication::communicationRequirement* element = dynamic_cast<Sinergien::Communication::communicationRequirement*>(base_class_ptr))
+	{
+		buffer >> element->delayRequirement;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:communicationRequirement.isAvailableBPLC
+bool assign_communicationRequirement_isAvailableBPLC(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::Communication::communicationRequirement* element = dynamic_cast<Sinergien::Communication::communicationRequirement*>(base_class_ptr))
+	{
+		buffer >> element->isAvailableBPLC;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:communicationRequirement.isAvailableFiber
+bool assign_communicationRequirement_isAvailableFiber(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::Communication::communicationRequirement* element = dynamic_cast<Sinergien::Communication::communicationRequirement*>(base_class_ptr))
+	{
+		buffer >> element->isAvailableFiber;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:communicationRequirement.isAvailableLTE
+bool assign_communicationRequirement_isAvailableLTE(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::Communication::communicationRequirement* element = dynamic_cast<Sinergien::Communication::communicationRequirement*>(base_class_ptr))
+	{
+		buffer >> element->isAvailableLTE;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:communicationRequirement.isAvailableWLAN
+bool assign_communicationRequirement_isAvailableWLAN(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::Communication::communicationRequirement* element = dynamic_cast<Sinergien::Communication::communicationRequirement*>(base_class_ptr))
+	{
+		buffer >> element->isAvailableWLAN;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:communicationRequirement.QosRequirement
+bool assign_communicationRequirement_QosRequirement(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::Communication::communicationRequirement* element = dynamic_cast<Sinergien::Communication::communicationRequirement*>(base_class_ptr))
+	{
+		buffer >> element->QosRequirement;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:communicationRequirement.reliabilityRequirement
+bool assign_communicationRequirement_reliabilityRequirement(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::Communication::communicationRequirement* element = dynamic_cast<Sinergien::Communication::communicationRequirement*>(base_class_ptr))
+	{
+		buffer >> element->reliabilityRequirement;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:communicationRequirement.requiresCommunication
+bool assign_communicationRequirement_requiresCommunication(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::Communication::communicationRequirement* element = dynamic_cast<Sinergien::Communication::communicationRequirement*>(base_class_ptr))
+	{
+		buffer >> element->requiresCommunication;
 		if(buffer.fail())
 			return false;
 		else
@@ -3325,171 +3657,6 @@ bool assign_IdentifiedObject_name(std::stringstream& buffer, BaseClass* base_cla
 	if(IEC61970::Base::Core::IdentifiedObject* element = dynamic_cast<IEC61970::Base::Core::IdentifiedObject*>(base_class_ptr))
 	{
 		element->name = buffer.str();
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:LoadResponseCharacteristic.exponentModel
-bool assign_LoadResponseCharacteristic_exponentModel(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::LoadModel::LoadResponseCharacteristic* element = dynamic_cast<IEC61970::Base::LoadModel::LoadResponseCharacteristic*>(base_class_ptr))
-	{
-		buffer >> element->exponentModel;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:LoadResponseCharacteristic.pConstantCurrent
-bool assign_LoadResponseCharacteristic_pConstantCurrent(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::LoadModel::LoadResponseCharacteristic* element = dynamic_cast<IEC61970::Base::LoadModel::LoadResponseCharacteristic*>(base_class_ptr))
-	{
-		buffer >> element->pConstantCurrent;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:LoadResponseCharacteristic.pConstantImpedance
-bool assign_LoadResponseCharacteristic_pConstantImpedance(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::LoadModel::LoadResponseCharacteristic* element = dynamic_cast<IEC61970::Base::LoadModel::LoadResponseCharacteristic*>(base_class_ptr))
-	{
-		buffer >> element->pConstantImpedance;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:LoadResponseCharacteristic.pConstantPower
-bool assign_LoadResponseCharacteristic_pConstantPower(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::LoadModel::LoadResponseCharacteristic* element = dynamic_cast<IEC61970::Base::LoadModel::LoadResponseCharacteristic*>(base_class_ptr))
-	{
-		buffer >> element->pConstantPower;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:LoadResponseCharacteristic.pFrequencyExponent
-bool assign_LoadResponseCharacteristic_pFrequencyExponent(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::LoadModel::LoadResponseCharacteristic* element = dynamic_cast<IEC61970::Base::LoadModel::LoadResponseCharacteristic*>(base_class_ptr))
-	{
-		buffer >> element->pFrequencyExponent;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:LoadResponseCharacteristic.pVoltageExponent
-bool assign_LoadResponseCharacteristic_pVoltageExponent(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::LoadModel::LoadResponseCharacteristic* element = dynamic_cast<IEC61970::Base::LoadModel::LoadResponseCharacteristic*>(base_class_ptr))
-	{
-		buffer >> element->pVoltageExponent;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:LoadResponseCharacteristic.qConstantCurrent
-bool assign_LoadResponseCharacteristic_qConstantCurrent(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::LoadModel::LoadResponseCharacteristic* element = dynamic_cast<IEC61970::Base::LoadModel::LoadResponseCharacteristic*>(base_class_ptr))
-	{
-		buffer >> element->qConstantCurrent;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:LoadResponseCharacteristic.qConstantImpedance
-bool assign_LoadResponseCharacteristic_qConstantImpedance(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::LoadModel::LoadResponseCharacteristic* element = dynamic_cast<IEC61970::Base::LoadModel::LoadResponseCharacteristic*>(base_class_ptr))
-	{
-		buffer >> element->qConstantImpedance;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:LoadResponseCharacteristic.qConstantPower
-bool assign_LoadResponseCharacteristic_qConstantPower(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::LoadModel::LoadResponseCharacteristic* element = dynamic_cast<IEC61970::Base::LoadModel::LoadResponseCharacteristic*>(base_class_ptr))
-	{
-		buffer >> element->qConstantPower;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:LoadResponseCharacteristic.qFrequencyExponent
-bool assign_LoadResponseCharacteristic_qFrequencyExponent(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::LoadModel::LoadResponseCharacteristic* element = dynamic_cast<IEC61970::Base::LoadModel::LoadResponseCharacteristic*>(base_class_ptr))
-	{
-		buffer >> element->qFrequencyExponent;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:LoadResponseCharacteristic.qVoltageExponent
-bool assign_LoadResponseCharacteristic_qVoltageExponent(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::LoadModel::LoadResponseCharacteristic* element = dynamic_cast<IEC61970::Base::LoadModel::LoadResponseCharacteristic*>(base_class_ptr))
-	{
-		buffer >> element->qVoltageExponent;
 		if(buffer.fail())
 			return false;
 		else
@@ -3664,6 +3831,1146 @@ bool assign_Measurement_unitSymbol(std::stringstream& buffer, BaseClass* base_cl
 		return false;
 }
 
+// cim:RegulatingControl.discrete
+bool assign_RegulatingControl_discrete(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::RegulatingControl* element = dynamic_cast<IEC61970::Base::Wires::RegulatingControl*>(base_class_ptr))
+	{
+		buffer >> element->discrete;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:RegulatingControl.enabled
+bool assign_RegulatingControl_enabled(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::RegulatingControl* element = dynamic_cast<IEC61970::Base::Wires::RegulatingControl*>(base_class_ptr))
+	{
+		buffer >> element->enabled;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:RegulatingControl.mode
+bool assign_RegulatingControl_mode(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::RegulatingControl* element = dynamic_cast<IEC61970::Base::Wires::RegulatingControl*>(base_class_ptr))
+	{
+		buffer >> element->mode;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:RegulatingControl.monitoredPhase
+bool assign_RegulatingControl_monitoredPhase(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::RegulatingControl* element = dynamic_cast<IEC61970::Base::Wires::RegulatingControl*>(base_class_ptr))
+	{
+		buffer >> element->monitoredPhase;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:RegulatingControl.targetDeadband
+bool assign_RegulatingControl_targetDeadband(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::RegulatingControl* element = dynamic_cast<IEC61970::Base::Wires::RegulatingControl*>(base_class_ptr))
+	{
+		buffer >> element->targetDeadband;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:RegulatingControl.targetValue
+bool assign_RegulatingControl_targetValue(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::RegulatingControl* element = dynamic_cast<IEC61970::Base::Wires::RegulatingControl*>(base_class_ptr))
+	{
+		buffer >> element->targetValue;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:RegulatingControl.targetValueUnitMultiplier
+bool assign_RegulatingControl_targetValueUnitMultiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::RegulatingControl* element = dynamic_cast<IEC61970::Base::Wires::RegulatingControl*>(base_class_ptr))
+	{
+		buffer >> element->targetValueUnitMultiplier;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:Equipment.aggregate
+bool assign_Equipment_aggregate(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Core::Equipment* element = dynamic_cast<IEC61970::Base::Core::Equipment*>(base_class_ptr))
+	{
+		buffer >> element->aggregate;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:Equipment.normallyInService
+bool assign_Equipment_normallyInService(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Core::Equipment* element = dynamic_cast<IEC61970::Base::Core::Equipment*>(base_class_ptr))
+	{
+		buffer >> element->normallyInService;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:RegulatingCondEq.controlEnabled
+bool assign_RegulatingCondEq_controlEnabled(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::RegulatingCondEq* element = dynamic_cast<IEC61970::Base::Wires::RegulatingCondEq*>(base_class_ptr))
+	{
+		buffer >> element->controlEnabled;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ComMod.cost
+bool assign_ComMod_cost(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::Communication::Modems::ComMod* element = dynamic_cast<Sinergien::Communication::Modems::ComMod*>(base_class_ptr))
+	{
+		buffer >> element->cost;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:BatteryStorage.nominalP
+bool assign_BatteryStorage_nominalP(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::EnergyGrid::EnergyStorage::BatteryStorage* element = dynamic_cast<Sinergien::EnergyGrid::EnergyStorage::BatteryStorage*>(base_class_ptr))
+	{
+		buffer >> element->nominalP.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:BatteryStorage.nominalQ
+bool assign_BatteryStorage_nominalQ(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::EnergyGrid::EnergyStorage::BatteryStorage* element = dynamic_cast<Sinergien::EnergyGrid::EnergyStorage::BatteryStorage*>(base_class_ptr))
+	{
+		buffer >> element->nominalQ.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:BatteryStorage.ratedS
+bool assign_BatteryStorage_ratedS(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::EnergyGrid::EnergyStorage::BatteryStorage* element = dynamic_cast<Sinergien::EnergyGrid::EnergyStorage::BatteryStorage*>(base_class_ptr))
+	{
+		buffer >> element->ratedS.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:BatteryStorage.ratedU
+bool assign_BatteryStorage_ratedU(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::EnergyGrid::EnergyStorage::BatteryStorage* element = dynamic_cast<Sinergien::EnergyGrid::EnergyStorage::BatteryStorage*>(base_class_ptr))
+	{
+		buffer >> element->ratedU.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:CurrentFlow.multiplier
+bool assign_CurrentFlow_multiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Domain::CurrentFlow* element = dynamic_cast<IEC61970::Base::Domain::CurrentFlow*>(base_class_ptr))
+	{
+		buffer >> element->multiplier;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:Susceptance.multiplier
+bool assign_Susceptance_multiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Domain::Susceptance* element = dynamic_cast<IEC61970::Base::Domain::Susceptance*>(base_class_ptr))
+	{
+		buffer >> element->multiplier;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:Conductance.multiplier
+bool assign_Conductance_multiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Domain::Conductance* element = dynamic_cast<IEC61970::Base::Domain::Conductance*>(base_class_ptr))
+	{
+		buffer >> element->multiplier;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:Resistance.multiplier
+bool assign_Resistance_multiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Domain::Resistance* element = dynamic_cast<IEC61970::Base::Domain::Resistance*>(base_class_ptr))
+	{
+		buffer >> element->multiplier;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:Reactance.multiplier
+bool assign_Reactance_multiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Domain::Reactance* element = dynamic_cast<IEC61970::Base::Domain::Reactance*>(base_class_ptr))
+	{
+		buffer >> element->multiplier;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:Length.multiplier
+bool assign_Length_multiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Domain::Length* element = dynamic_cast<IEC61970::Base::Domain::Length*>(base_class_ptr))
+	{
+		buffer >> element->multiplier;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:Conductor.length
+bool assign_Conductor_length(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::Conductor* element = dynamic_cast<IEC61970::Base::Wires::Conductor*>(base_class_ptr))
+	{
+		buffer >> element->length.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:Clamp.lengthFromTerminal1
+bool assign_Clamp_lengthFromTerminal1(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::Clamp* element = dynamic_cast<IEC61970::Base::Wires::Clamp*>(base_class_ptr))
+	{
+		buffer >> element->lengthFromTerminal1.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ACLineSegment.b0ch
+bool assign_ACLineSegment_b0ch(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ACLineSegment* element = dynamic_cast<IEC61970::Base::Wires::ACLineSegment*>(base_class_ptr))
+	{
+		buffer >> element->b0ch.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ACLineSegment.bch
+bool assign_ACLineSegment_bch(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ACLineSegment* element = dynamic_cast<IEC61970::Base::Wires::ACLineSegment*>(base_class_ptr))
+	{
+		buffer >> element->bch.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ACLineSegment.g0ch
+bool assign_ACLineSegment_g0ch(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ACLineSegment* element = dynamic_cast<IEC61970::Base::Wires::ACLineSegment*>(base_class_ptr))
+	{
+		buffer >> element->g0ch.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ACLineSegment.gch
+bool assign_ACLineSegment_gch(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ACLineSegment* element = dynamic_cast<IEC61970::Base::Wires::ACLineSegment*>(base_class_ptr))
+	{
+		buffer >> element->gch.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ACLineSegment.r
+bool assign_ACLineSegment_r(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ACLineSegment* element = dynamic_cast<IEC61970::Base::Wires::ACLineSegment*>(base_class_ptr))
+	{
+		buffer >> element->r.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ACLineSegment.r0
+bool assign_ACLineSegment_r0(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ACLineSegment* element = dynamic_cast<IEC61970::Base::Wires::ACLineSegment*>(base_class_ptr))
+	{
+		buffer >> element->r0.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ACLineSegment.shortCircuitEndTemperature
+bool assign_ACLineSegment_shortCircuitEndTemperature(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ACLineSegment* element = dynamic_cast<IEC61970::Base::Wires::ACLineSegment*>(base_class_ptr))
+	{
+		buffer >> element->shortCircuitEndTemperature.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ACLineSegment.x
+bool assign_ACLineSegment_x(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ACLineSegment* element = dynamic_cast<IEC61970::Base::Wires::ACLineSegment*>(base_class_ptr))
+	{
+		buffer >> element->x.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ACLineSegment.x0
+bool assign_ACLineSegment_x0(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ACLineSegment* element = dynamic_cast<IEC61970::Base::Wires::ACLineSegment*>(base_class_ptr))
+	{
+		buffer >> element->x0.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:SinergienACLineSegment.maxCurrent
+bool assign_SinergienACLineSegment_maxCurrent(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::EnergyGrid::Wires::SinergienACLineSegment* element = dynamic_cast<Sinergien::EnergyGrid::Wires::SinergienACLineSegment*>(base_class_ptr))
+	{
+		buffer >> element->maxCurrent.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:SinergienACLineSegment.ratedPower
+bool assign_SinergienACLineSegment_ratedPower(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::EnergyGrid::Wires::SinergienACLineSegment* element = dynamic_cast<Sinergien::EnergyGrid::Wires::SinergienACLineSegment*>(base_class_ptr))
+	{
+		buffer >> element->ratedPower.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ActivePowerPerFrequency.denominatorMultiplier
+bool assign_ActivePowerPerFrequency_denominatorMultiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Domain::ActivePowerPerFrequency* element = dynamic_cast<IEC61970::Base::Domain::ActivePowerPerFrequency*>(base_class_ptr))
+	{
+		buffer >> element->denominatorMultiplier;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ActivePowerPerFrequency.multiplier
+bool assign_ActivePowerPerFrequency_multiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Domain::ActivePowerPerFrequency* element = dynamic_cast<IEC61970::Base::Domain::ActivePowerPerFrequency*>(base_class_ptr))
+	{
+		buffer >> element->multiplier;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ExternalNetworkInjection.governorSCD
+bool assign_ExternalNetworkInjection_governorSCD(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
+	{
+		buffer >> element->governorSCD.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ExternalNetworkInjection.ikSecond
+bool assign_ExternalNetworkInjection_ikSecond(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
+	{
+		buffer >> element->ikSecond;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ExternalNetworkInjection.maxInitialSymShCCurrent
+bool assign_ExternalNetworkInjection_maxInitialSymShCCurrent(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
+	{
+		buffer >> element->maxInitialSymShCCurrent.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ExternalNetworkInjection.maxP
+bool assign_ExternalNetworkInjection_maxP(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
+	{
+		buffer >> element->maxP.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ExternalNetworkInjection.maxQ
+bool assign_ExternalNetworkInjection_maxQ(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
+	{
+		buffer >> element->maxQ.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ExternalNetworkInjection.maxR0ToX0Ratio
+bool assign_ExternalNetworkInjection_maxR0ToX0Ratio(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
+	{
+		buffer >> element->maxR0ToX0Ratio;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ExternalNetworkInjection.maxR1ToX1Ratio
+bool assign_ExternalNetworkInjection_maxR1ToX1Ratio(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
+	{
+		buffer >> element->maxR1ToX1Ratio;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ExternalNetworkInjection.maxZ0ToZ1Ratio
+bool assign_ExternalNetworkInjection_maxZ0ToZ1Ratio(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
+	{
+		buffer >> element->maxZ0ToZ1Ratio;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ExternalNetworkInjection.minInitialSymShCCurrent
+bool assign_ExternalNetworkInjection_minInitialSymShCCurrent(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
+	{
+		buffer >> element->minInitialSymShCCurrent.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ExternalNetworkInjection.minP
+bool assign_ExternalNetworkInjection_minP(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
+	{
+		buffer >> element->minP.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ExternalNetworkInjection.minQ
+bool assign_ExternalNetworkInjection_minQ(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
+	{
+		buffer >> element->minQ.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ExternalNetworkInjection.minR0ToX0Ratio
+bool assign_ExternalNetworkInjection_minR0ToX0Ratio(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
+	{
+		buffer >> element->minR0ToX0Ratio;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ExternalNetworkInjection.minR1ToX1Ratio
+bool assign_ExternalNetworkInjection_minR1ToX1Ratio(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
+	{
+		buffer >> element->minR1ToX1Ratio;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ExternalNetworkInjection.minZ0ToZ1Ratio
+bool assign_ExternalNetworkInjection_minZ0ToZ1Ratio(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
+	{
+		buffer >> element->minZ0ToZ1Ratio;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ExternalNetworkInjection.p
+bool assign_ExternalNetworkInjection_p(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
+	{
+		buffer >> element->p.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ExternalNetworkInjection.q
+bool assign_ExternalNetworkInjection_q(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
+	{
+		buffer >> element->q.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ExternalNetworkInjection.referencePriority
+bool assign_ExternalNetworkInjection_referencePriority(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
+	{
+		buffer >> element->referencePriority;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:ExternalNetworkInjection.voltageFactor
+bool assign_ExternalNetworkInjection_voltageFactor(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
+	{
+		buffer >> element->voltageFactor.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:SinergienNetworkInjection.phiV
+bool assign_SinergienNetworkInjection_phiV(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::EnergyGrid::Wires::SinergienNetworkInjection* element = dynamic_cast<Sinergien::EnergyGrid::Wires::SinergienNetworkInjection*>(base_class_ptr))
+	{
+		buffer >> element->phiV.value;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:BackboneNode.isAvailableBPLC
+bool assign_BackboneNode_isAvailableBPLC(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::Communication::NetworkNodes::BackboneNode* element = dynamic_cast<Sinergien::Communication::NetworkNodes::BackboneNode*>(base_class_ptr))
+	{
+		buffer >> element->isAvailableBPLC;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:BackboneNode.isAvailableFiber
+bool assign_BackboneNode_isAvailableFiber(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::Communication::NetworkNodes::BackboneNode* element = dynamic_cast<Sinergien::Communication::NetworkNodes::BackboneNode*>(base_class_ptr))
+	{
+		buffer >> element->isAvailableFiber;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:BackboneNode.isAvailableLTE
+bool assign_BackboneNode_isAvailableLTE(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::Communication::NetworkNodes::BackboneNode* element = dynamic_cast<Sinergien::Communication::NetworkNodes::BackboneNode*>(base_class_ptr))
+	{
+		buffer >> element->isAvailableLTE;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:BackboneNode.isAvailableWLAN
+bool assign_BackboneNode_isAvailableWLAN(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::Communication::NetworkNodes::BackboneNode* element = dynamic_cast<Sinergien::Communication::NetworkNodes::BackboneNode*>(base_class_ptr))
+	{
+		buffer >> element->isAvailableWLAN;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:LTEModem.frequency
+bool assign_LTEModem_frequency(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::Communication::Modems::LTEModem* element = dynamic_cast<Sinergien::Communication::Modems::LTEModem*>(base_class_ptr))
+	{
+		buffer >> element->frequency;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:WLANModem.WiFiType
+bool assign_WLANModem_WiFiType(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::Communication::Modems::WLANModem* element = dynamic_cast<Sinergien::Communication::Modems::WLANModem*>(base_class_ptr))
+	{
+		buffer >> element->WiFiType;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:CommChannel.ber
+bool assign_CommChannel_ber(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::Communication::Channels::CommChannel* element = dynamic_cast<Sinergien::Communication::Channels::CommChannel*>(base_class_ptr))
+	{
+		buffer >> element->ber;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:CommChannel.dataRate
+bool assign_CommChannel_dataRate(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::Communication::Channels::CommChannel* element = dynamic_cast<Sinergien::Communication::Channels::CommChannel*>(base_class_ptr))
+	{
+		buffer >> element->dataRate;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:CommChannel.delay
+bool assign_CommChannel_delay(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::Communication::Channels::CommChannel* element = dynamic_cast<Sinergien::Communication::Channels::CommChannel*>(base_class_ptr))
+	{
+		buffer >> element->delay;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:CommChannel.length
+bool assign_CommChannel_length(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(Sinergien::Communication::Channels::CommChannel* element = dynamic_cast<Sinergien::Communication::Channels::CommChannel*>(base_class_ptr))
+	{
+		buffer >> element->length;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:LoadResponseCharacteristic.exponentModel
+bool assign_LoadResponseCharacteristic_exponentModel(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::LoadModel::LoadResponseCharacteristic* element = dynamic_cast<IEC61970::Base::LoadModel::LoadResponseCharacteristic*>(base_class_ptr))
+	{
+		buffer >> element->exponentModel;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:LoadResponseCharacteristic.pConstantCurrent
+bool assign_LoadResponseCharacteristic_pConstantCurrent(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::LoadModel::LoadResponseCharacteristic* element = dynamic_cast<IEC61970::Base::LoadModel::LoadResponseCharacteristic*>(base_class_ptr))
+	{
+		buffer >> element->pConstantCurrent;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:LoadResponseCharacteristic.pConstantImpedance
+bool assign_LoadResponseCharacteristic_pConstantImpedance(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::LoadModel::LoadResponseCharacteristic* element = dynamic_cast<IEC61970::Base::LoadModel::LoadResponseCharacteristic*>(base_class_ptr))
+	{
+		buffer >> element->pConstantImpedance;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:LoadResponseCharacteristic.pConstantPower
+bool assign_LoadResponseCharacteristic_pConstantPower(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::LoadModel::LoadResponseCharacteristic* element = dynamic_cast<IEC61970::Base::LoadModel::LoadResponseCharacteristic*>(base_class_ptr))
+	{
+		buffer >> element->pConstantPower;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:LoadResponseCharacteristic.pFrequencyExponent
+bool assign_LoadResponseCharacteristic_pFrequencyExponent(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::LoadModel::LoadResponseCharacteristic* element = dynamic_cast<IEC61970::Base::LoadModel::LoadResponseCharacteristic*>(base_class_ptr))
+	{
+		buffer >> element->pFrequencyExponent;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:LoadResponseCharacteristic.pVoltageExponent
+bool assign_LoadResponseCharacteristic_pVoltageExponent(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::LoadModel::LoadResponseCharacteristic* element = dynamic_cast<IEC61970::Base::LoadModel::LoadResponseCharacteristic*>(base_class_ptr))
+	{
+		buffer >> element->pVoltageExponent;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:LoadResponseCharacteristic.qConstantCurrent
+bool assign_LoadResponseCharacteristic_qConstantCurrent(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::LoadModel::LoadResponseCharacteristic* element = dynamic_cast<IEC61970::Base::LoadModel::LoadResponseCharacteristic*>(base_class_ptr))
+	{
+		buffer >> element->qConstantCurrent;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:LoadResponseCharacteristic.qConstantImpedance
+bool assign_LoadResponseCharacteristic_qConstantImpedance(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::LoadModel::LoadResponseCharacteristic* element = dynamic_cast<IEC61970::Base::LoadModel::LoadResponseCharacteristic*>(base_class_ptr))
+	{
+		buffer >> element->qConstantImpedance;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:LoadResponseCharacteristic.qConstantPower
+bool assign_LoadResponseCharacteristic_qConstantPower(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::LoadModel::LoadResponseCharacteristic* element = dynamic_cast<IEC61970::Base::LoadModel::LoadResponseCharacteristic*>(base_class_ptr))
+	{
+		buffer >> element->qConstantPower;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:LoadResponseCharacteristic.qFrequencyExponent
+bool assign_LoadResponseCharacteristic_qFrequencyExponent(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::LoadModel::LoadResponseCharacteristic* element = dynamic_cast<IEC61970::Base::LoadModel::LoadResponseCharacteristic*>(base_class_ptr))
+	{
+		buffer >> element->qFrequencyExponent;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
+// cim:LoadResponseCharacteristic.qVoltageExponent
+bool assign_LoadResponseCharacteristic_qVoltageExponent(std::stringstream& buffer, BaseClass* base_class_ptr)
+{
+	if(IEC61970::Base::LoadModel::LoadResponseCharacteristic* element = dynamic_cast<IEC61970::Base::LoadModel::LoadResponseCharacteristic*>(base_class_ptr))
+	{
+		buffer >> element->qVoltageExponent;
+		if(buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	else
+		return false;
+}
+
 // cim:EnergyConsumerPhase.pfixed
 bool assign_EnergyConsumerPhase_pfixed(std::stringstream& buffer, BaseClass* base_class_ptr)
 {
@@ -3730,36 +5037,6 @@ bool assign_EnergyConsumerPhase_qfixedPct(std::stringstream& buffer, BaseClass* 
 	if(IEC61970::Base::Wires::EnergyConsumerPhase* element = dynamic_cast<IEC61970::Base::Wires::EnergyConsumerPhase*>(base_class_ptr))
 	{
 		buffer >> element->qfixedPct.value;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:Equipment.aggregate
-bool assign_Equipment_aggregate(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Core::Equipment* element = dynamic_cast<IEC61970::Base::Core::Equipment*>(base_class_ptr))
-	{
-		buffer >> element->aggregate;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:Equipment.normallyInService
-bool assign_Equipment_normallyInService(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Core::Equipment* element = dynamic_cast<IEC61970::Base::Core::Equipment*>(base_class_ptr))
-	{
-		buffer >> element->normallyInService;
 		if(buffer.fail())
 			return false;
 		else
@@ -3925,81 +5202,6 @@ bool assign_DynamicsFunctionBlock_enabled(std::stringstream& buffer, BaseClass* 
 	if(IEC61970::Dynamics::StandardModels::DynamicsFunctionBlock* element = dynamic_cast<IEC61970::Dynamics::StandardModels::DynamicsFunctionBlock*>(base_class_ptr))
 	{
 		buffer >> element->enabled;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:Resistance.multiplier
-bool assign_Resistance_multiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Domain::Resistance* element = dynamic_cast<IEC61970::Base::Domain::Resistance*>(base_class_ptr))
-	{
-		buffer >> element->multiplier;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:Reactance.multiplier
-bool assign_Reactance_multiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Domain::Reactance* element = dynamic_cast<IEC61970::Base::Domain::Reactance*>(base_class_ptr))
-	{
-		buffer >> element->multiplier;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:CurrentFlow.multiplier
-bool assign_CurrentFlow_multiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Domain::CurrentFlow* element = dynamic_cast<IEC61970::Base::Domain::CurrentFlow*>(base_class_ptr))
-	{
-		buffer >> element->multiplier;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:Voltage.multiplier
-bool assign_Voltage_multiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Domain::Voltage* element = dynamic_cast<IEC61970::Base::Domain::Voltage*>(base_class_ptr))
-	{
-		buffer >> element->multiplier;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ApparentPower.multiplier
-bool assign_ApparentPower_multiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Domain::ApparentPower* element = dynamic_cast<IEC61970::Base::Domain::ApparentPower*>(base_class_ptr))
-	{
-		buffer >> element->multiplier;
 		if(buffer.fail())
 			return false;
 		else
@@ -4210,126 +5412,6 @@ bool assign_HydroPump_pumpPowerAtMinHead(std::stringstream& buffer, BaseClass* b
 	if(IEC61970::Base::Generation::Production::HydroPump* element = dynamic_cast<IEC61970::Base::Generation::Production::HydroPump*>(base_class_ptr))
 	{
 		buffer >> element->pumpPowerAtMinHead.value;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:RegulatingControl.discrete
-bool assign_RegulatingControl_discrete(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::RegulatingControl* element = dynamic_cast<IEC61970::Base::Wires::RegulatingControl*>(base_class_ptr))
-	{
-		buffer >> element->discrete;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:RegulatingControl.enabled
-bool assign_RegulatingControl_enabled(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::RegulatingControl* element = dynamic_cast<IEC61970::Base::Wires::RegulatingControl*>(base_class_ptr))
-	{
-		buffer >> element->enabled;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:RegulatingControl.mode
-bool assign_RegulatingControl_mode(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::RegulatingControl* element = dynamic_cast<IEC61970::Base::Wires::RegulatingControl*>(base_class_ptr))
-	{
-		buffer >> element->mode;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:RegulatingControl.monitoredPhase
-bool assign_RegulatingControl_monitoredPhase(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::RegulatingControl* element = dynamic_cast<IEC61970::Base::Wires::RegulatingControl*>(base_class_ptr))
-	{
-		buffer >> element->monitoredPhase;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:RegulatingControl.targetDeadband
-bool assign_RegulatingControl_targetDeadband(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::RegulatingControl* element = dynamic_cast<IEC61970::Base::Wires::RegulatingControl*>(base_class_ptr))
-	{
-		buffer >> element->targetDeadband;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:RegulatingControl.targetValue
-bool assign_RegulatingControl_targetValue(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::RegulatingControl* element = dynamic_cast<IEC61970::Base::Wires::RegulatingControl*>(base_class_ptr))
-	{
-		buffer >> element->targetValue;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:RegulatingControl.targetValueUnitMultiplier
-bool assign_RegulatingControl_targetValueUnitMultiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::RegulatingControl* element = dynamic_cast<IEC61970::Base::Wires::RegulatingControl*>(base_class_ptr))
-	{
-		buffer >> element->targetValueUnitMultiplier;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:RegulatingCondEq.controlEnabled
-bool assign_RegulatingCondEq_controlEnabled(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::RegulatingCondEq* element = dynamic_cast<IEC61970::Base::Wires::RegulatingCondEq*>(base_class_ptr))
-	{
-		buffer >> element->controlEnabled;
 		if(buffer.fail())
 			return false;
 		else
@@ -37894,21 +38976,6 @@ bool assign_Area_multiplier(std::stringstream& buffer, BaseClass* base_class_ptr
 		return false;
 }
 
-// cim:Length.multiplier
-bool assign_Length_multiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Domain::Length* element = dynamic_cast<IEC61970::Base::Domain::Length*>(base_class_ptr))
-	{
-		buffer >> element->multiplier;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
 // cim:GovHydroPelton.av0
 bool assign_GovHydroPelton_av0(std::stringstream& buffer, BaseClass* base_class_ptr)
 {
@@ -44689,36 +45756,6 @@ bool assign_UnderexcLimX1_tm(std::stringstream& buffer, BaseClass* base_class_pt
 		return false;
 }
 
-// cim:Susceptance.multiplier
-bool assign_Susceptance_multiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Domain::Susceptance* element = dynamic_cast<IEC61970::Base::Domain::Susceptance*>(base_class_ptr))
-	{
-		buffer >> element->multiplier;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:Conductance.multiplier
-bool assign_Conductance_multiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Domain::Conductance* element = dynamic_cast<IEC61970::Base::Domain::Conductance*>(base_class_ptr))
-	{
-		buffer >> element->multiplier;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
 // cim:EquivalentShunt.b
 bool assign_EquivalentShunt_b(std::stringstream& buffer, BaseClass* base_class_ptr)
 {
@@ -45803,36 +46840,6 @@ bool assign_ActivePowerPerCurrentFlow_denominatorMultiplier(std::stringstream& b
 bool assign_ActivePowerPerCurrentFlow_multiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
 {
 	if(IEC61970::Base::Domain::ActivePowerPerCurrentFlow* element = dynamic_cast<IEC61970::Base::Domain::ActivePowerPerCurrentFlow*>(base_class_ptr))
-	{
-		buffer >> element->multiplier;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ActivePowerPerFrequency.denominatorMultiplier
-bool assign_ActivePowerPerFrequency_denominatorMultiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Domain::ActivePowerPerFrequency* element = dynamic_cast<IEC61970::Base::Domain::ActivePowerPerFrequency*>(base_class_ptr))
-	{
-		buffer >> element->denominatorMultiplier;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ActivePowerPerFrequency.multiplier
-bool assign_ActivePowerPerFrequency_multiplier(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Domain::ActivePowerPerFrequency* element = dynamic_cast<IEC61970::Base::Domain::ActivePowerPerFrequency*>(base_class_ptr))
 	{
 		buffer >> element->multiplier;
 		if(buffer.fail())
@@ -47599,171 +48606,6 @@ bool assign_TapChanger_subsequentDelay(std::stringstream& buffer, BaseClass* bas
 		return false;
 }
 
-// cim:Conductor.length
-bool assign_Conductor_length(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::Conductor* element = dynamic_cast<IEC61970::Base::Wires::Conductor*>(base_class_ptr))
-	{
-		buffer >> element->length.value;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:Clamp.lengthFromTerminal1
-bool assign_Clamp_lengthFromTerminal1(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::Clamp* element = dynamic_cast<IEC61970::Base::Wires::Clamp*>(base_class_ptr))
-	{
-		buffer >> element->lengthFromTerminal1.value;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ACLineSegment.b0ch
-bool assign_ACLineSegment_b0ch(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ACLineSegment* element = dynamic_cast<IEC61970::Base::Wires::ACLineSegment*>(base_class_ptr))
-	{
-		buffer >> element->b0ch.value;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ACLineSegment.bch
-bool assign_ACLineSegment_bch(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ACLineSegment* element = dynamic_cast<IEC61970::Base::Wires::ACLineSegment*>(base_class_ptr))
-	{
-		buffer >> element->bch.value;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ACLineSegment.g0ch
-bool assign_ACLineSegment_g0ch(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ACLineSegment* element = dynamic_cast<IEC61970::Base::Wires::ACLineSegment*>(base_class_ptr))
-	{
-		buffer >> element->g0ch.value;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ACLineSegment.gch
-bool assign_ACLineSegment_gch(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ACLineSegment* element = dynamic_cast<IEC61970::Base::Wires::ACLineSegment*>(base_class_ptr))
-	{
-		buffer >> element->gch.value;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ACLineSegment.r
-bool assign_ACLineSegment_r(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ACLineSegment* element = dynamic_cast<IEC61970::Base::Wires::ACLineSegment*>(base_class_ptr))
-	{
-		buffer >> element->r.value;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ACLineSegment.r0
-bool assign_ACLineSegment_r0(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ACLineSegment* element = dynamic_cast<IEC61970::Base::Wires::ACLineSegment*>(base_class_ptr))
-	{
-		buffer >> element->r0.value;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ACLineSegment.shortCircuitEndTemperature
-bool assign_ACLineSegment_shortCircuitEndTemperature(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ACLineSegment* element = dynamic_cast<IEC61970::Base::Wires::ACLineSegment*>(base_class_ptr))
-	{
-		buffer >> element->shortCircuitEndTemperature.value;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ACLineSegment.x
-bool assign_ACLineSegment_x(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ACLineSegment* element = dynamic_cast<IEC61970::Base::Wires::ACLineSegment*>(base_class_ptr))
-	{
-		buffer >> element->x.value;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ACLineSegment.x0
-bool assign_ACLineSegment_x0(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ACLineSegment* element = dynamic_cast<IEC61970::Base::Wires::ACLineSegment*>(base_class_ptr))
-	{
-		buffer >> element->x0.value;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
 // cim:LinearShuntCompensatorPhase.bPerSection
 bool assign_LinearShuntCompensatorPhase_bPerSection(std::stringstream& buffer, BaseClass* base_class_ptr)
 {
@@ -48775,276 +49617,6 @@ bool assign_PowerTransformerEnd_x0(std::stringstream& buffer, BaseClass* base_cl
 	if(IEC61970::Base::Wires::PowerTransformerEnd* element = dynamic_cast<IEC61970::Base::Wires::PowerTransformerEnd*>(base_class_ptr))
 	{
 		buffer >> element->x0.value;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ExternalNetworkInjection.governorSCD
-bool assign_ExternalNetworkInjection_governorSCD(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
-	{
-		buffer >> element->governorSCD.value;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ExternalNetworkInjection.ikSecond
-bool assign_ExternalNetworkInjection_ikSecond(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
-	{
-		buffer >> element->ikSecond;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ExternalNetworkInjection.maxInitialSymShCCurrent
-bool assign_ExternalNetworkInjection_maxInitialSymShCCurrent(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
-	{
-		buffer >> element->maxInitialSymShCCurrent.value;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ExternalNetworkInjection.maxP
-bool assign_ExternalNetworkInjection_maxP(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
-	{
-		buffer >> element->maxP.value;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ExternalNetworkInjection.maxQ
-bool assign_ExternalNetworkInjection_maxQ(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
-	{
-		buffer >> element->maxQ.value;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ExternalNetworkInjection.maxR0ToX0Ratio
-bool assign_ExternalNetworkInjection_maxR0ToX0Ratio(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
-	{
-		buffer >> element->maxR0ToX0Ratio;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ExternalNetworkInjection.maxR1ToX1Ratio
-bool assign_ExternalNetworkInjection_maxR1ToX1Ratio(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
-	{
-		buffer >> element->maxR1ToX1Ratio;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ExternalNetworkInjection.maxZ0ToZ1Ratio
-bool assign_ExternalNetworkInjection_maxZ0ToZ1Ratio(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
-	{
-		buffer >> element->maxZ0ToZ1Ratio;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ExternalNetworkInjection.minInitialSymShCCurrent
-bool assign_ExternalNetworkInjection_minInitialSymShCCurrent(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
-	{
-		buffer >> element->minInitialSymShCCurrent.value;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ExternalNetworkInjection.minP
-bool assign_ExternalNetworkInjection_minP(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
-	{
-		buffer >> element->minP.value;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ExternalNetworkInjection.minQ
-bool assign_ExternalNetworkInjection_minQ(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
-	{
-		buffer >> element->minQ.value;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ExternalNetworkInjection.minR0ToX0Ratio
-bool assign_ExternalNetworkInjection_minR0ToX0Ratio(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
-	{
-		buffer >> element->minR0ToX0Ratio;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ExternalNetworkInjection.minR1ToX1Ratio
-bool assign_ExternalNetworkInjection_minR1ToX1Ratio(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
-	{
-		buffer >> element->minR1ToX1Ratio;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ExternalNetworkInjection.minZ0ToZ1Ratio
-bool assign_ExternalNetworkInjection_minZ0ToZ1Ratio(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
-	{
-		buffer >> element->minZ0ToZ1Ratio;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ExternalNetworkInjection.p
-bool assign_ExternalNetworkInjection_p(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
-	{
-		buffer >> element->p.value;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ExternalNetworkInjection.q
-bool assign_ExternalNetworkInjection_q(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
-	{
-		buffer >> element->q.value;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ExternalNetworkInjection.referencePriority
-bool assign_ExternalNetworkInjection_referencePriority(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
-	{
-		buffer >> element->referencePriority;
-		if(buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	else
-		return false;
-}
-
-// cim:ExternalNetworkInjection.voltageFactor
-bool assign_ExternalNetworkInjection_voltageFactor(std::stringstream& buffer, BaseClass* base_class_ptr)
-{
-	if(IEC61970::Base::Wires::ExternalNetworkInjection* element = dynamic_cast<IEC61970::Base::Wires::ExternalNetworkInjection*>(base_class_ptr))
-	{
-		buffer >> element->voltageFactor.value;
 		if(buffer.fail())
 			return false;
 		else
@@ -55360,23 +55932,26 @@ std::unordered_map<std::string, assign_function> dynamic_switch_factory()
 {
 	std::unordered_map<std::string, assign_function> dynamic_switch;
 
+	dynamic_switch.insert(std::make_pair("cim:ElectricalCapacity.multiplier", &assign_ElectricalCapacity_multiplier));
+	dynamic_switch.insert(std::make_pair("cim:ElectricalCapacity.unit", &assign_ElectricalCapacity_unit));
+	dynamic_switch.insert(std::make_pair("cim:ElectricalCapacity.value", &assign_ElectricalCapacity_value));
 	dynamic_switch.insert(std::make_pair("cim:ActivePower.multiplier", &assign_ActivePower_multiplier));
 	dynamic_switch.insert(std::make_pair("cim:ReactivePower.multiplier", &assign_ReactivePower_multiplier));
+	dynamic_switch.insert(std::make_pair("cim:ApparentPower.multiplier", &assign_ApparentPower_multiplier));
+	dynamic_switch.insert(std::make_pair("cim:Voltage.multiplier", &assign_Voltage_multiplier));
+	dynamic_switch.insert(std::make_pair("cim:communicationRequirement.capacityRequirement", &assign_communicationRequirement_capacityRequirement));
+	dynamic_switch.insert(std::make_pair("cim:communicationRequirement.delayRequirement", &assign_communicationRequirement_delayRequirement));
+	dynamic_switch.insert(std::make_pair("cim:communicationRequirement.isAvailableBPLC", &assign_communicationRequirement_isAvailableBPLC));
+	dynamic_switch.insert(std::make_pair("cim:communicationRequirement.isAvailableFiber", &assign_communicationRequirement_isAvailableFiber));
+	dynamic_switch.insert(std::make_pair("cim:communicationRequirement.isAvailableLTE", &assign_communicationRequirement_isAvailableLTE));
+	dynamic_switch.insert(std::make_pair("cim:communicationRequirement.isAvailableWLAN", &assign_communicationRequirement_isAvailableWLAN));
+	dynamic_switch.insert(std::make_pair("cim:communicationRequirement.QosRequirement", &assign_communicationRequirement_QosRequirement));
+	dynamic_switch.insert(std::make_pair("cim:communicationRequirement.reliabilityRequirement", &assign_communicationRequirement_reliabilityRequirement));
+	dynamic_switch.insert(std::make_pair("cim:communicationRequirement.requiresCommunication", &assign_communicationRequirement_requiresCommunication));
 	dynamic_switch.insert(std::make_pair("cim:IdentifiedObject.aliasName", &assign_IdentifiedObject_aliasName));
 	dynamic_switch.insert(std::make_pair("cim:IdentifiedObject.description", &assign_IdentifiedObject_description));
 	dynamic_switch.insert(std::make_pair("cim:IdentifiedObject.mRID", &assign_IdentifiedObject_mRID));
 	dynamic_switch.insert(std::make_pair("cim:IdentifiedObject.name", &assign_IdentifiedObject_name));
-	dynamic_switch.insert(std::make_pair("cim:LoadResponseCharacteristic.exponentModel", &assign_LoadResponseCharacteristic_exponentModel));
-	dynamic_switch.insert(std::make_pair("cim:LoadResponseCharacteristic.pConstantCurrent", &assign_LoadResponseCharacteristic_pConstantCurrent));
-	dynamic_switch.insert(std::make_pair("cim:LoadResponseCharacteristic.pConstantImpedance", &assign_LoadResponseCharacteristic_pConstantImpedance));
-	dynamic_switch.insert(std::make_pair("cim:LoadResponseCharacteristic.pConstantPower", &assign_LoadResponseCharacteristic_pConstantPower));
-	dynamic_switch.insert(std::make_pair("cim:LoadResponseCharacteristic.pFrequencyExponent", &assign_LoadResponseCharacteristic_pFrequencyExponent));
-	dynamic_switch.insert(std::make_pair("cim:LoadResponseCharacteristic.pVoltageExponent", &assign_LoadResponseCharacteristic_pVoltageExponent));
-	dynamic_switch.insert(std::make_pair("cim:LoadResponseCharacteristic.qConstantCurrent", &assign_LoadResponseCharacteristic_qConstantCurrent));
-	dynamic_switch.insert(std::make_pair("cim:LoadResponseCharacteristic.qConstantImpedance", &assign_LoadResponseCharacteristic_qConstantImpedance));
-	dynamic_switch.insert(std::make_pair("cim:LoadResponseCharacteristic.qConstantPower", &assign_LoadResponseCharacteristic_qConstantPower));
-	dynamic_switch.insert(std::make_pair("cim:LoadResponseCharacteristic.qFrequencyExponent", &assign_LoadResponseCharacteristic_qFrequencyExponent));
-	dynamic_switch.insert(std::make_pair("cim:LoadResponseCharacteristic.qVoltageExponent", &assign_LoadResponseCharacteristic_qVoltageExponent));
 	dynamic_switch.insert(std::make_pair("cim:Control.controlType", &assign_Control_controlType));
 	dynamic_switch.insert(std::make_pair("cim:Control.operationInProgress", &assign_Control_operationInProgress));
 	dynamic_switch.insert(std::make_pair("cim:Control.timeStamp", &assign_Control_timeStamp));
@@ -55388,13 +55963,87 @@ std::unordered_map<std::string, assign_function> dynamic_switch_factory()
 	dynamic_switch.insert(std::make_pair("cim:Measurement.phases", &assign_Measurement_phases));
 	dynamic_switch.insert(std::make_pair("cim:Measurement.unitMultiplier", &assign_Measurement_unitMultiplier));
 	dynamic_switch.insert(std::make_pair("cim:Measurement.unitSymbol", &assign_Measurement_unitSymbol));
+	dynamic_switch.insert(std::make_pair("cim:RegulatingControl.discrete", &assign_RegulatingControl_discrete));
+	dynamic_switch.insert(std::make_pair("cim:RegulatingControl.enabled", &assign_RegulatingControl_enabled));
+	dynamic_switch.insert(std::make_pair("cim:RegulatingControl.mode", &assign_RegulatingControl_mode));
+	dynamic_switch.insert(std::make_pair("cim:RegulatingControl.monitoredPhase", &assign_RegulatingControl_monitoredPhase));
+	dynamic_switch.insert(std::make_pair("cim:RegulatingControl.targetDeadband", &assign_RegulatingControl_targetDeadband));
+	dynamic_switch.insert(std::make_pair("cim:RegulatingControl.targetValue", &assign_RegulatingControl_targetValue));
+	dynamic_switch.insert(std::make_pair("cim:RegulatingControl.targetValueUnitMultiplier", &assign_RegulatingControl_targetValueUnitMultiplier));
+	dynamic_switch.insert(std::make_pair("cim:Equipment.aggregate", &assign_Equipment_aggregate));
+	dynamic_switch.insert(std::make_pair("cim:Equipment.normallyInService", &assign_Equipment_normallyInService));
+	dynamic_switch.insert(std::make_pair("cim:RegulatingCondEq.controlEnabled", &assign_RegulatingCondEq_controlEnabled));
+	dynamic_switch.insert(std::make_pair("cim:ComMod.cost", &assign_ComMod_cost));
+	dynamic_switch.insert(std::make_pair("cim:BatteryStorage.nominalP", &assign_BatteryStorage_nominalP));
+	dynamic_switch.insert(std::make_pair("cim:BatteryStorage.nominalQ", &assign_BatteryStorage_nominalQ));
+	dynamic_switch.insert(std::make_pair("cim:BatteryStorage.ratedS", &assign_BatteryStorage_ratedS));
+	dynamic_switch.insert(std::make_pair("cim:BatteryStorage.ratedU", &assign_BatteryStorage_ratedU));
+	dynamic_switch.insert(std::make_pair("cim:CurrentFlow.multiplier", &assign_CurrentFlow_multiplier));
+	dynamic_switch.insert(std::make_pair("cim:Susceptance.multiplier", &assign_Susceptance_multiplier));
+	dynamic_switch.insert(std::make_pair("cim:Conductance.multiplier", &assign_Conductance_multiplier));
+	dynamic_switch.insert(std::make_pair("cim:Resistance.multiplier", &assign_Resistance_multiplier));
+	dynamic_switch.insert(std::make_pair("cim:Reactance.multiplier", &assign_Reactance_multiplier));
+	dynamic_switch.insert(std::make_pair("cim:Length.multiplier", &assign_Length_multiplier));
+	dynamic_switch.insert(std::make_pair("cim:Conductor.length", &assign_Conductor_length));
+	dynamic_switch.insert(std::make_pair("cim:Clamp.lengthFromTerminal1", &assign_Clamp_lengthFromTerminal1));
+	dynamic_switch.insert(std::make_pair("cim:ACLineSegment.b0ch", &assign_ACLineSegment_b0ch));
+	dynamic_switch.insert(std::make_pair("cim:ACLineSegment.bch", &assign_ACLineSegment_bch));
+	dynamic_switch.insert(std::make_pair("cim:ACLineSegment.g0ch", &assign_ACLineSegment_g0ch));
+	dynamic_switch.insert(std::make_pair("cim:ACLineSegment.gch", &assign_ACLineSegment_gch));
+	dynamic_switch.insert(std::make_pair("cim:ACLineSegment.r", &assign_ACLineSegment_r));
+	dynamic_switch.insert(std::make_pair("cim:ACLineSegment.r0", &assign_ACLineSegment_r0));
+	dynamic_switch.insert(std::make_pair("cim:ACLineSegment.shortCircuitEndTemperature", &assign_ACLineSegment_shortCircuitEndTemperature));
+	dynamic_switch.insert(std::make_pair("cim:ACLineSegment.x", &assign_ACLineSegment_x));
+	dynamic_switch.insert(std::make_pair("cim:ACLineSegment.x0", &assign_ACLineSegment_x0));
+	dynamic_switch.insert(std::make_pair("cim:SinergienACLineSegment.maxCurrent", &assign_SinergienACLineSegment_maxCurrent));
+	dynamic_switch.insert(std::make_pair("cim:SinergienACLineSegment.ratedPower", &assign_SinergienACLineSegment_ratedPower));
+	dynamic_switch.insert(std::make_pair("cim:ActivePowerPerFrequency.denominatorMultiplier", &assign_ActivePowerPerFrequency_denominatorMultiplier));
+	dynamic_switch.insert(std::make_pair("cim:ActivePowerPerFrequency.multiplier", &assign_ActivePowerPerFrequency_multiplier));
+	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.governorSCD", &assign_ExternalNetworkInjection_governorSCD));
+	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.ikSecond", &assign_ExternalNetworkInjection_ikSecond));
+	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.maxInitialSymShCCurrent", &assign_ExternalNetworkInjection_maxInitialSymShCCurrent));
+	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.maxP", &assign_ExternalNetworkInjection_maxP));
+	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.maxQ", &assign_ExternalNetworkInjection_maxQ));
+	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.maxR0ToX0Ratio", &assign_ExternalNetworkInjection_maxR0ToX0Ratio));
+	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.maxR1ToX1Ratio", &assign_ExternalNetworkInjection_maxR1ToX1Ratio));
+	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.maxZ0ToZ1Ratio", &assign_ExternalNetworkInjection_maxZ0ToZ1Ratio));
+	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.minInitialSymShCCurrent", &assign_ExternalNetworkInjection_minInitialSymShCCurrent));
+	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.minP", &assign_ExternalNetworkInjection_minP));
+	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.minQ", &assign_ExternalNetworkInjection_minQ));
+	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.minR0ToX0Ratio", &assign_ExternalNetworkInjection_minR0ToX0Ratio));
+	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.minR1ToX1Ratio", &assign_ExternalNetworkInjection_minR1ToX1Ratio));
+	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.minZ0ToZ1Ratio", &assign_ExternalNetworkInjection_minZ0ToZ1Ratio));
+	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.p", &assign_ExternalNetworkInjection_p));
+	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.q", &assign_ExternalNetworkInjection_q));
+	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.referencePriority", &assign_ExternalNetworkInjection_referencePriority));
+	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.voltageFactor", &assign_ExternalNetworkInjection_voltageFactor));
+	dynamic_switch.insert(std::make_pair("cim:SinergienNetworkInjection.phiV", &assign_SinergienNetworkInjection_phiV));
+	dynamic_switch.insert(std::make_pair("cim:BackboneNode.isAvailableBPLC", &assign_BackboneNode_isAvailableBPLC));
+	dynamic_switch.insert(std::make_pair("cim:BackboneNode.isAvailableFiber", &assign_BackboneNode_isAvailableFiber));
+	dynamic_switch.insert(std::make_pair("cim:BackboneNode.isAvailableLTE", &assign_BackboneNode_isAvailableLTE));
+	dynamic_switch.insert(std::make_pair("cim:BackboneNode.isAvailableWLAN", &assign_BackboneNode_isAvailableWLAN));
+	dynamic_switch.insert(std::make_pair("cim:LTEModem.frequency", &assign_LTEModem_frequency));
+	dynamic_switch.insert(std::make_pair("cim:WLANModem.WiFiType", &assign_WLANModem_WiFiType));
+	dynamic_switch.insert(std::make_pair("cim:CommChannel.ber", &assign_CommChannel_ber));
+	dynamic_switch.insert(std::make_pair("cim:CommChannel.dataRate", &assign_CommChannel_dataRate));
+	dynamic_switch.insert(std::make_pair("cim:CommChannel.delay", &assign_CommChannel_delay));
+	dynamic_switch.insert(std::make_pair("cim:CommChannel.length", &assign_CommChannel_length));
+	dynamic_switch.insert(std::make_pair("cim:LoadResponseCharacteristic.exponentModel", &assign_LoadResponseCharacteristic_exponentModel));
+	dynamic_switch.insert(std::make_pair("cim:LoadResponseCharacteristic.pConstantCurrent", &assign_LoadResponseCharacteristic_pConstantCurrent));
+	dynamic_switch.insert(std::make_pair("cim:LoadResponseCharacteristic.pConstantImpedance", &assign_LoadResponseCharacteristic_pConstantImpedance));
+	dynamic_switch.insert(std::make_pair("cim:LoadResponseCharacteristic.pConstantPower", &assign_LoadResponseCharacteristic_pConstantPower));
+	dynamic_switch.insert(std::make_pair("cim:LoadResponseCharacteristic.pFrequencyExponent", &assign_LoadResponseCharacteristic_pFrequencyExponent));
+	dynamic_switch.insert(std::make_pair("cim:LoadResponseCharacteristic.pVoltageExponent", &assign_LoadResponseCharacteristic_pVoltageExponent));
+	dynamic_switch.insert(std::make_pair("cim:LoadResponseCharacteristic.qConstantCurrent", &assign_LoadResponseCharacteristic_qConstantCurrent));
+	dynamic_switch.insert(std::make_pair("cim:LoadResponseCharacteristic.qConstantImpedance", &assign_LoadResponseCharacteristic_qConstantImpedance));
+	dynamic_switch.insert(std::make_pair("cim:LoadResponseCharacteristic.qConstantPower", &assign_LoadResponseCharacteristic_qConstantPower));
+	dynamic_switch.insert(std::make_pair("cim:LoadResponseCharacteristic.qFrequencyExponent", &assign_LoadResponseCharacteristic_qFrequencyExponent));
+	dynamic_switch.insert(std::make_pair("cim:LoadResponseCharacteristic.qVoltageExponent", &assign_LoadResponseCharacteristic_qVoltageExponent));
 	dynamic_switch.insert(std::make_pair("cim:EnergyConsumerPhase.pfixed", &assign_EnergyConsumerPhase_pfixed));
 	dynamic_switch.insert(std::make_pair("cim:EnergyConsumerPhase.pfixedPct", &assign_EnergyConsumerPhase_pfixedPct));
 	dynamic_switch.insert(std::make_pair("cim:EnergyConsumerPhase.phase", &assign_EnergyConsumerPhase_phase));
 	dynamic_switch.insert(std::make_pair("cim:EnergyConsumerPhase.qfixed", &assign_EnergyConsumerPhase_qfixed));
 	dynamic_switch.insert(std::make_pair("cim:EnergyConsumerPhase.qfixedPct", &assign_EnergyConsumerPhase_qfixedPct));
-	dynamic_switch.insert(std::make_pair("cim:Equipment.aggregate", &assign_Equipment_aggregate));
-	dynamic_switch.insert(std::make_pair("cim:Equipment.normallyInService", &assign_Equipment_normallyInService));
 	dynamic_switch.insert(std::make_pair("cim:EnergyConsumer.customerCount", &assign_EnergyConsumer_customerCount));
 	dynamic_switch.insert(std::make_pair("cim:EnergyConsumer.grounded", &assign_EnergyConsumer_grounded));
 	dynamic_switch.insert(std::make_pair("cim:EnergyConsumer.p", &assign_EnergyConsumer_p));
@@ -55406,11 +56055,6 @@ std::unordered_map<std::string, assign_function> dynamic_switch_factory()
 	dynamic_switch.insert(std::make_pair("cim:EnergyConsumer.qfixedPct", &assign_EnergyConsumer_qfixedPct));
 	dynamic_switch.insert(std::make_pair("cim:LoadUserDefined.proprietary", &assign_LoadUserDefined_proprietary));
 	dynamic_switch.insert(std::make_pair("cim:DynamicsFunctionBlock.enabled", &assign_DynamicsFunctionBlock_enabled));
-	dynamic_switch.insert(std::make_pair("cim:Resistance.multiplier", &assign_Resistance_multiplier));
-	dynamic_switch.insert(std::make_pair("cim:Reactance.multiplier", &assign_Reactance_multiplier));
-	dynamic_switch.insert(std::make_pair("cim:CurrentFlow.multiplier", &assign_CurrentFlow_multiplier));
-	dynamic_switch.insert(std::make_pair("cim:Voltage.multiplier", &assign_Voltage_multiplier));
-	dynamic_switch.insert(std::make_pair("cim:ApparentPower.multiplier", &assign_ApparentPower_multiplier));
 	dynamic_switch.insert(std::make_pair("cim:RegularTimePoint.sequenceNumber", &assign_RegularTimePoint_sequenceNumber));
 	dynamic_switch.insert(std::make_pair("cim:RegularTimePoint.value1", &assign_RegularTimePoint_value1));
 	dynamic_switch.insert(std::make_pair("cim:RegularTimePoint.value2", &assign_RegularTimePoint_value2));
@@ -55425,14 +56069,6 @@ std::unordered_map<std::string, assign_function> dynamic_switch_factory()
 	dynamic_switch.insert(std::make_pair("cim:HydroPump.pumpDischAtMinHead", &assign_HydroPump_pumpDischAtMinHead));
 	dynamic_switch.insert(std::make_pair("cim:HydroPump.pumpPowerAtMaxHead", &assign_HydroPump_pumpPowerAtMaxHead));
 	dynamic_switch.insert(std::make_pair("cim:HydroPump.pumpPowerAtMinHead", &assign_HydroPump_pumpPowerAtMinHead));
-	dynamic_switch.insert(std::make_pair("cim:RegulatingControl.discrete", &assign_RegulatingControl_discrete));
-	dynamic_switch.insert(std::make_pair("cim:RegulatingControl.enabled", &assign_RegulatingControl_enabled));
-	dynamic_switch.insert(std::make_pair("cim:RegulatingControl.mode", &assign_RegulatingControl_mode));
-	dynamic_switch.insert(std::make_pair("cim:RegulatingControl.monitoredPhase", &assign_RegulatingControl_monitoredPhase));
-	dynamic_switch.insert(std::make_pair("cim:RegulatingControl.targetDeadband", &assign_RegulatingControl_targetDeadband));
-	dynamic_switch.insert(std::make_pair("cim:RegulatingControl.targetValue", &assign_RegulatingControl_targetValue));
-	dynamic_switch.insert(std::make_pair("cim:RegulatingControl.targetValueUnitMultiplier", &assign_RegulatingControl_targetValueUnitMultiplier));
-	dynamic_switch.insert(std::make_pair("cim:RegulatingCondEq.controlEnabled", &assign_RegulatingCondEq_controlEnabled));
 	dynamic_switch.insert(std::make_pair("cim:RotatingMachine.p", &assign_RotatingMachine_p));
 	dynamic_switch.insert(std::make_pair("cim:RotatingMachine.q", &assign_RotatingMachine_q));
 	dynamic_switch.insert(std::make_pair("cim:RotatingMachine.ratedPowerFactor", &assign_RotatingMachine_ratedPowerFactor));
@@ -57670,7 +58306,6 @@ std::unordered_map<std::string, assign_function> dynamic_switch_factory()
 	dynamic_switch.insert(std::make_pair("cim:GovCT2.wfnl", &assign_GovCT2_wfnl));
 	dynamic_switch.insert(std::make_pair("cim:GovCT2.wfspd", &assign_GovCT2_wfspd));
 	dynamic_switch.insert(std::make_pair("cim:Area.multiplier", &assign_Area_multiplier));
-	dynamic_switch.insert(std::make_pair("cim:Length.multiplier", &assign_Length_multiplier));
 	dynamic_switch.insert(std::make_pair("cim:GovHydroPelton.av0", &assign_GovHydroPelton_av0));
 	dynamic_switch.insert(std::make_pair("cim:GovHydroPelton.av1", &assign_GovHydroPelton_av1));
 	dynamic_switch.insert(std::make_pair("cim:GovHydroPelton.bp", &assign_GovHydroPelton_bp));
@@ -58123,8 +58758,6 @@ std::unordered_map<std::string, assign_function> dynamic_switch_factory()
 	dynamic_switch.insert(std::make_pair("cim:UnderexcLimX1.melmax", &assign_UnderexcLimX1_melmax));
 	dynamic_switch.insert(std::make_pair("cim:UnderexcLimX1.tf2", &assign_UnderexcLimX1_tf2));
 	dynamic_switch.insert(std::make_pair("cim:UnderexcLimX1.tm", &assign_UnderexcLimX1_tm));
-	dynamic_switch.insert(std::make_pair("cim:Susceptance.multiplier", &assign_Susceptance_multiplier));
-	dynamic_switch.insert(std::make_pair("cim:Conductance.multiplier", &assign_Conductance_multiplier));
 	dynamic_switch.insert(std::make_pair("cim:EquivalentShunt.b", &assign_EquivalentShunt_b));
 	dynamic_switch.insert(std::make_pair("cim:EquivalentShunt.g", &assign_EquivalentShunt_g));
 	dynamic_switch.insert(std::make_pair("cim:EquivalentBranch.negativeR12", &assign_EquivalentBranch_negativeR12));
@@ -58198,8 +58831,6 @@ std::unordered_map<std::string, assign_function> dynamic_switch_factory()
 	dynamic_switch.insert(std::make_pair("cim:DecimalQuantity.unit", &assign_DecimalQuantity_unit));
 	dynamic_switch.insert(std::make_pair("cim:ActivePowerPerCurrentFlow.denominatorMultiplier", &assign_ActivePowerPerCurrentFlow_denominatorMultiplier));
 	dynamic_switch.insert(std::make_pair("cim:ActivePowerPerCurrentFlow.multiplier", &assign_ActivePowerPerCurrentFlow_multiplier));
-	dynamic_switch.insert(std::make_pair("cim:ActivePowerPerFrequency.denominatorMultiplier", &assign_ActivePowerPerFrequency_denominatorMultiplier));
-	dynamic_switch.insert(std::make_pair("cim:ActivePowerPerFrequency.multiplier", &assign_ActivePowerPerFrequency_multiplier));
 	dynamic_switch.insert(std::make_pair("cim:Capacitance.multiplier", &assign_Capacitance_multiplier));
 	dynamic_switch.insert(std::make_pair("cim:Inductance.multiplier", &assign_Inductance_multiplier));
 	dynamic_switch.insert(std::make_pair("cim:Money.multiplier", &assign_Money_multiplier));
@@ -58317,17 +58948,6 @@ std::unordered_map<std::string, assign_function> dynamic_switch_factory()
 	dynamic_switch.insert(std::make_pair("cim:TapChanger.normalStep", &assign_TapChanger_normalStep));
 	dynamic_switch.insert(std::make_pair("cim:TapChanger.step", &assign_TapChanger_step));
 	dynamic_switch.insert(std::make_pair("cim:TapChanger.subsequentDelay", &assign_TapChanger_subsequentDelay));
-	dynamic_switch.insert(std::make_pair("cim:Conductor.length", &assign_Conductor_length));
-	dynamic_switch.insert(std::make_pair("cim:Clamp.lengthFromTerminal1", &assign_Clamp_lengthFromTerminal1));
-	dynamic_switch.insert(std::make_pair("cim:ACLineSegment.b0ch", &assign_ACLineSegment_b0ch));
-	dynamic_switch.insert(std::make_pair("cim:ACLineSegment.bch", &assign_ACLineSegment_bch));
-	dynamic_switch.insert(std::make_pair("cim:ACLineSegment.g0ch", &assign_ACLineSegment_g0ch));
-	dynamic_switch.insert(std::make_pair("cim:ACLineSegment.gch", &assign_ACLineSegment_gch));
-	dynamic_switch.insert(std::make_pair("cim:ACLineSegment.r", &assign_ACLineSegment_r));
-	dynamic_switch.insert(std::make_pair("cim:ACLineSegment.r0", &assign_ACLineSegment_r0));
-	dynamic_switch.insert(std::make_pair("cim:ACLineSegment.shortCircuitEndTemperature", &assign_ACLineSegment_shortCircuitEndTemperature));
-	dynamic_switch.insert(std::make_pair("cim:ACLineSegment.x", &assign_ACLineSegment_x));
-	dynamic_switch.insert(std::make_pair("cim:ACLineSegment.x0", &assign_ACLineSegment_x0));
 	dynamic_switch.insert(std::make_pair("cim:LinearShuntCompensatorPhase.bPerSection", &assign_LinearShuntCompensatorPhase_bPerSection));
 	dynamic_switch.insert(std::make_pair("cim:LinearShuntCompensatorPhase.gPerSection", &assign_LinearShuntCompensatorPhase_gPerSection));
 	dynamic_switch.insert(std::make_pair("cim:MutualCoupling.b0ch", &assign_MutualCoupling_b0ch));
@@ -58396,24 +59016,6 @@ std::unordered_map<std::string, assign_function> dynamic_switch_factory()
 	dynamic_switch.insert(std::make_pair("cim:PowerTransformerEnd.ratedU", &assign_PowerTransformerEnd_ratedU));
 	dynamic_switch.insert(std::make_pair("cim:PowerTransformerEnd.x", &assign_PowerTransformerEnd_x));
 	dynamic_switch.insert(std::make_pair("cim:PowerTransformerEnd.x0", &assign_PowerTransformerEnd_x0));
-	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.governorSCD", &assign_ExternalNetworkInjection_governorSCD));
-	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.ikSecond", &assign_ExternalNetworkInjection_ikSecond));
-	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.maxInitialSymShCCurrent", &assign_ExternalNetworkInjection_maxInitialSymShCCurrent));
-	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.maxP", &assign_ExternalNetworkInjection_maxP));
-	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.maxQ", &assign_ExternalNetworkInjection_maxQ));
-	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.maxR0ToX0Ratio", &assign_ExternalNetworkInjection_maxR0ToX0Ratio));
-	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.maxR1ToX1Ratio", &assign_ExternalNetworkInjection_maxR1ToX1Ratio));
-	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.maxZ0ToZ1Ratio", &assign_ExternalNetworkInjection_maxZ0ToZ1Ratio));
-	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.minInitialSymShCCurrent", &assign_ExternalNetworkInjection_minInitialSymShCCurrent));
-	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.minP", &assign_ExternalNetworkInjection_minP));
-	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.minQ", &assign_ExternalNetworkInjection_minQ));
-	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.minR0ToX0Ratio", &assign_ExternalNetworkInjection_minR0ToX0Ratio));
-	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.minR1ToX1Ratio", &assign_ExternalNetworkInjection_minR1ToX1Ratio));
-	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.minZ0ToZ1Ratio", &assign_ExternalNetworkInjection_minZ0ToZ1Ratio));
-	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.p", &assign_ExternalNetworkInjection_p));
-	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.q", &assign_ExternalNetworkInjection_q));
-	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.referencePriority", &assign_ExternalNetworkInjection_referencePriority));
-	dynamic_switch.insert(std::make_pair("cim:ExternalNetworkInjection.voltageFactor", &assign_ExternalNetworkInjection_voltageFactor));
 	dynamic_switch.insert(std::make_pair("cim:TapChangerTablePoint.b", &assign_TapChangerTablePoint_b));
 	dynamic_switch.insert(std::make_pair("cim:TapChangerTablePoint.g", &assign_TapChangerTablePoint_g));
 	dynamic_switch.insert(std::make_pair("cim:TapChangerTablePoint.r", &assign_TapChangerTablePoint_r));
@@ -58836,26 +59438,9 @@ std::unordered_map<std::string, assign_function> dynamic_switch_factory()
 	dynamic_switch.insert(std::make_pair("cim:LineFault.lengthFromTerminal1", &assign_LineFault_lengthFromTerminal1));
 	
 
-	// Get aliases
-	std::ifstream file("assignment_alias.csv");
-	if(file.good())
-	{
-		std::string line;
-		std::regex expr("^([a-zA-Z0-9:.]*)[\t ,;]+([a-zA-Z0-9:.]*)$");
-		std::smatch m;
-		std::unordered_map<std::string, assign_function>::iterator it;
-		while (std::getline(file, line))
-		{
-			if(std::regex_match(line, m, expr))
-			{
-				it = dynamic_switch.find(m[1]);
-				if(it != dynamic_switch.end())
-				{
-					dynamic_switch.insert(std::make_pair(m[2], it->second));
-				}
-			}
-		}
-	}
+#include "AliasesAssignment.hpp"
+
+	load_aliases<assign_function>(dynamic_switch, "assignment_alias.csv");
 
 	return dynamic_switch;
 }

@@ -1,11 +1,10 @@
-#include "assignments.hpp"
 #include <sstream>
 #include <utility>
 #include <unordered_map>
-#include <regex>
-#include <fstream>
 
 #include "Folders.hpp"
+#include "Aliases.hpp"
+#include "assignments.hpp"
 
 typedef bool (*assign_function)(std::stringstream&, BaseClass*);
 static std::unordered_map<std::string, assign_function> dynamic_switch_factory();
@@ -4026,20 +4025,7 @@ bool assign_BatteryStorage_nominalQ(std::stringstream& buffer, BaseClass* base_c
 	else
 		return false;
 }
-// cim:BatteryStorage.capacity
-    bool assign_BatteryStorage_capacity(std::stringstream& buffer, BaseClass* base_class_ptr)
-    {
-    if(Sinergien::EnergyGrid::EnergyStorage::BatteryStorage* element = dynamic_cast<Sinergien::EnergyGrid::EnergyStorage::BatteryStorage*>(base_class_ptr))
-    {
-    buffer >> element->capacity.value;
-    if(buffer.fail())
-    return false;
-    else
-    return true;
-    }
-    else
-    return false;
-    }
+
 // cim:BatteryStorage.ratedS
 bool assign_BatteryStorage_ratedS(std::stringstream& buffer, BaseClass* base_class_ptr)
 {
@@ -55988,8 +55974,7 @@ std::unordered_map<std::string, assign_function> dynamic_switch_factory()
 	dynamic_switch.insert(std::make_pair("cim:Equipment.normallyInService", &assign_Equipment_normallyInService));
 	dynamic_switch.insert(std::make_pair("cim:RegulatingCondEq.controlEnabled", &assign_RegulatingCondEq_controlEnabled));
 	dynamic_switch.insert(std::make_pair("cim:ComMod.cost", &assign_ComMod_cost));
-    dynamic_switch.insert(std::make_pair("cim:BatteryStorage.capacity", &assign_BatteryStorage_capacity));
-    dynamic_switch.insert(std::make_pair("cim:BatteryStorage.nominalP", &assign_BatteryStorage_nominalP));
+	dynamic_switch.insert(std::make_pair("cim:BatteryStorage.nominalP", &assign_BatteryStorage_nominalP));
 	dynamic_switch.insert(std::make_pair("cim:BatteryStorage.nominalQ", &assign_BatteryStorage_nominalQ));
 	dynamic_switch.insert(std::make_pair("cim:BatteryStorage.ratedS", &assign_BatteryStorage_ratedS));
 	dynamic_switch.insert(std::make_pair("cim:BatteryStorage.ratedU", &assign_BatteryStorage_ratedU));
@@ -59453,26 +59438,9 @@ std::unordered_map<std::string, assign_function> dynamic_switch_factory()
 	dynamic_switch.insert(std::make_pair("cim:LineFault.lengthFromTerminal1", &assign_LineFault_lengthFromTerminal1));
 	
 
-	// Get aliases
-	std::ifstream file("assignment_alias.csv");
-	if(file.good())
-	{
-		std::string line;
-		std::regex expr("^([a-zA-Z0-9:.]*)[\t ,;]+([a-zA-Z0-9:.]*)$");
-		std::smatch m;
-		std::unordered_map<std::string, assign_function>::iterator it;
-		while (std::getline(file, line))
-		{
-			if(std::regex_match(line, m, expr))
-			{
-				it = dynamic_switch.find(m[1]);
-				if(it != dynamic_switch.end())
-				{
-					dynamic_switch.insert(std::make_pair(m[2], it->second));
-				}
-			}
-		}
-	}
+#include "AliasesAssignment.hpp"
+
+	load_aliases<assign_function>(dynamic_switch, "assignment_alias.csv");
 
 	return dynamic_switch;
 }

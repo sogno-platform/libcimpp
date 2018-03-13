@@ -47,7 +47,7 @@ namespace IEC61970
 				/**
 				 * Reporting groups that are grouped under this super group.
 				 */
-#warning Member "ReportingGroup" is renamed to "ReportingGroups", this does not comply the CIM standard!
+//#warning Member "ReportingGroup" is renamed to "ReportingGroups", this does not comply the CIM standard!
 				std::list<IEC61970::Base::Core::ReportingSuperGroup::ReportingGroup*> ReportingGroups;
 
 			};
