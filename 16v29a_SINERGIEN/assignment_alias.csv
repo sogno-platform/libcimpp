@@ -1,0 +1,2 @@
+cim:ACDCTerminal.sequenceNumber, cim:Terminal.sequenceNumber
+cim:ACDCTerminal.connected, cim:Terminal.connected

@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  Discrete.cpp
+//  Implementation of the Class Discrete
+///////////////////////////////////////////////////////////
+
+#include "Discrete.h"
+
+using IEC61970::Base::Meas::Discrete;
+
+
+Discrete::Discrete(){
+
+}
+
+
+
+Discrete::~Discrete(){
+
+}
