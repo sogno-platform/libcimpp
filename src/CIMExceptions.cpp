@@ -1,8 +1,14 @@
 #include "CIMExceptions.hpp"
 
+
+CIMException::CIMException()
+{
+}
+
 CriticalError::CriticalError(const std::string& what) : runtime_error(what)
 {
 }
+
 
 
 
@@ -10,11 +16,12 @@ MissingDependencyFile::MissingDependencyFile(const CIMModel* model, const std::s
 	: Model(model),
 	  rdfID(id)
 {
+	message = "CIMModel: Dependency is missing";
 }
 
-const char* MissingDependencyFile::what() const noexcept
+const char* CIMException::what() const noexcept
 {
-	return "CIMModel: Dependency is missing";
+	return message.c_str();
 }
 
 
@@ -22,55 +29,32 @@ const char* MissingDependencyFile::what() const noexcept
 MissingModelDescription::MissingModelDescription(const ModelDescriptionHandler* desc)
 	: DescriptionHandler(desc)
 {
+	message = "ModelDescriptionHandler: modelDescription not set";
 }
-
-const char* MissingModelDescription::what() const noexcept
-{
-	return "ModelDescriptionHandler: modelDescription not set";
-}
-
 
 
 NoObjectsContainer::NoObjectsContainer(const CIMContentHandler* handler)
 	: ContentHandler(handler)
 {
+	message = "CIMContentHandler: Object container not set";
 }
-
-const char* NoObjectsContainer::what() const noexcept
-{
-	return "CIMContentHandler: Object container not set";
-}
-
 
 
 NoRdfID::NoRdfID()
 {
+	message = "CIMContentHandler: Attributes contain no rdf:ID";
 }
-
-const char* NoRdfID::what() const noexcept
-{
-	return "CIMContentHandler: Attributes contain no rdf:ID";
-}
-
 
 
 NoRdfMap::NoRdfMap(const CIMContentHandler* handler)
 	: ContentHandler(handler)
 {
+	message = "CIMContentHandler: RDFMap not set";
 }
-
-const char* NoRdfMap::what() const noexcept
-{
-	return "CIMContentHandler: RDFMap not set";
-}
-
 
 
 ReadingUninitializedField::ReadingUninitializedField()
 {
+	message = "Error: Uninitilized Field";
 }
 
-const char* ReadingUninitializedField::what() const noexcept
-{
-	return "Error: Uninitilized Field";
-}

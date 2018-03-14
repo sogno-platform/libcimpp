@@ -4,9 +4,20 @@
 #include <string>
 #include <stdexcept>
 
+class CIMException;
 class CIMModel;
 class ModelDescriptionHandler;
 class CIMContentHandler;
+
+class CIMException : public std::exception
+{	
+public:
+	CIMException();
+protected:
+	std::string message;
+	virtual const char* what() const noexcept override;
+};
+
 
 class CriticalError : public std::runtime_error
 {
@@ -15,12 +26,10 @@ public:
 };
 
 
-
-class MissingDependencyFile : public std::exception
+class MissingDependencyFile : CIMException
 {
 public:
 	MissingDependencyFile(const CIMModel* model, const std::string id);
-	virtual const char* what() const noexcept override;
 
 	const CIMModel* Model;
 	const std::string rdfID;
@@ -28,53 +37,45 @@ public:
 
 
 
-class MissingModelDescription : public std::exception
+class MissingModelDescription : CIMException
 {
 public:
 	MissingModelDescription(const ModelDescriptionHandler* desc);
-	virtual const char* what() const noexcept override;
-
 	const ModelDescriptionHandler* DescriptionHandler;
 };
 
 
 
-class NoObjectsContainer : public std::exception
+class NoObjectsContainer : CIMException
 {
 public:
 	NoObjectsContainer(const CIMContentHandler* handler);
-	virtual const char* what() const noexcept override;
-
 	const CIMContentHandler* ContentHandler;
 };
 
 
 
-class NoRdfID : public std::exception
+class NoRdfID : CIMException
 {
 public:
 	NoRdfID();
-	virtual const char* what() const noexcept override;
 };
 
 
 
-class NoRdfMap : public std::exception
+class NoRdfMap : CIMException
 {
 public:
 	NoRdfMap(const CIMContentHandler* handler);
-	virtual const char* what() const noexcept override;
-
 	const CIMContentHandler* ContentHandler;
 };
 
 
 
-class ReadingUninitializedField : public std::exception
+class ReadingUninitializedField : CIMException
 {
 public:
 	ReadingUninitializedField();
-	virtual const char* what() const noexcept override;
 };
 
 #endif // CIMEXCEPTIONS_HPP
