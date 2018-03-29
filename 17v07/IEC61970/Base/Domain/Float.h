@@ -23,6 +23,10 @@ namespace IEC61970
 
 				Float(long double value);
 				Float& operator=(long double &rop);
+				Float& operator+=(const Float& rhs);
+				Float& operator-=(const Float& rhs);
+				Float& operator*=(const Float& rhs);
+				Float& operator/=(const Float& rhs);
 				friend std::istream& operator>>(std::istream& lop, Float& rop);
 				operator long double();
 

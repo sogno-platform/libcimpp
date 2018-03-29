@@ -23,6 +23,10 @@ namespace IEC61970
 
 				Integer(long int value);
 				Integer& operator=(long int &rop);
+				Integer& operator+=(const Integer& rhs);
+				Integer& operator-=(const Integer& rhs);
+				Integer& operator*=(const Integer& rhs);
+				Integer& operator/=(const Integer& rhs);
 				friend std::istream& operator>>(std::istream& lop, Integer& rop);
 				operator long int();
 

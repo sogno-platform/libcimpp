@@ -30,7 +30,25 @@ Integer& Integer::operator=(long int &rop)
 	return *this;
 }
 
+Integer& Integer::operator-=(const Integer& rhs){
+    value -= rhs.value;
+    return *this;
+}
 
+Integer& Integer::operator*=(const Integer& rhs){
+    value *= rhs.value;
+    return *this;
+}
+
+Integer& Integer::operator/=(const Integer& rhs){
+    value /= rhs.value;
+    return *this;
+}
+
+Integer& Integer::operator+=(const Integer& rhs){
+    value += rhs.value;
+    return *this;
+}
 
 Integer::operator long int()
 {

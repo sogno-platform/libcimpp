@@ -30,7 +30,25 @@ Float& Float::operator=(long double &rop)
 	return *this;
 }
 
+Float& Float::operator-=(const Float& rhs){
+    value -= rhs.value;
+    return *this;
+}
 
+Float& Float::operator*=(const Float& rhs){
+    value *= rhs.value;
+    return *this;
+}
+
+Float& Float::operator/=(const Float& rhs){
+    value /= rhs.value;
+    return *this;
+}
+
+Float& Float::operator+=(const Float& rhs){
+    value += rhs.value;
+    return *this;
+}
 
 Float::operator long double()
 {
