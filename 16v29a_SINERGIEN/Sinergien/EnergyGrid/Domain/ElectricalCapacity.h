@@ -7,7 +7,6 @@
 #ifndef ELECTRICALCAPACITY_H
 #define ELECTRICALCAPACITY_H
 
-#include "BaseClass.h"
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
 #include "IEC61970/Base/Domain/UnitSymbol.h"
 #include "IEC61970/Base/Domain/Float.h"
@@ -18,7 +17,7 @@ namespace Sinergien
 	{
 		namespace Domain
 		{
-			class ElectricalCapacity : public BaseClass
+			class ElectricalCapacity
 			{
 
 			public:

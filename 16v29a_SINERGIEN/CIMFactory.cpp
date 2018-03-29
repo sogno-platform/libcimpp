@@ -95,12 +95,6 @@ BaseClass* Attribut_factory()
 	return new Sinergien::ProCom::Attribut;
 }
 
-// cim:ElectricalCapacity
-BaseClass* ElectricalCapacity_factory()
-{
-	return new Sinergien::EnergyGrid::Domain::ElectricalCapacity;
-}
-
 // cim:communicationRequirement
 BaseClass* communicationRequirement_factory()
 {
@@ -3357,7 +3351,6 @@ static std::unordered_map<std::string, BaseClass* (*)()> initialize()
 	map.insert(std::make_pair("cim:Element", &Element_factory));
 	map.insert(std::make_pair("cim:Modelltyp", &Modelltyp_factory));
 	map.insert(std::make_pair("cim:Attribut", &Attribut_factory));
-	map.insert(std::make_pair("cim:ElectricalCapacity", &ElectricalCapacity_factory));
 	map.insert(std::make_pair("cim:communicationRequirement", &communicationRequirement_factory));
 	map.insert(std::make_pair("cim:IdentifiedObject", &IdentifiedObject_factory));
 	map.insert(std::make_pair("cim:Control", &Control_factory));
