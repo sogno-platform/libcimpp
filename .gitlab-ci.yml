@@ -1,6 +1,54 @@
-image: docker:git
+variables:
+  DOCKER_TAG_DEV: ${CI_COMMIT_REF_NAME}
+  DOCKER_IMAGE_DEV: libcimpp-dev
+  GIT_SUBMODULE_STRATEGY: recursive
+
+stages:
+  - prepare
+  - build
+  - deploy
+
+docker:
+  stage: prepare
+  script:
+    - docker build -t ${DOCKER_IMAGE_DEV}:${DOCKER_TAG_DEV} .
+    - docker images
+  tags:
+    - shell
+
+# Template
+.build: &build
+  stage: build
+  image: ${DOCKER_IMAGE_DEV}:${DOCKER_TAG_DEV}
+  tags:
+    - docker
+  script:
+    - mkdir -p build/${CIM_VERSION} && cd build/${CIM_VERSION}
+    - cmake ../.. -DUSE_CIM_VERSION=${CIM_VERSION}
+    - make -j8
+
+build-16v29a:
+  <<: *build
+  variables:
+    CIM_VERSION: IEC61970_16v29a
+
+build-17v07:
+  <<: *build
+  variables:
+    CIM_VERSION: IEC61970_17v07
+
+build-16v29a-12v08:
+  <<: *build
+  variables:
+    CIM_VERSION: IEC61970_16v29a_IEC61968_12v08
+
+build-16v29a-sinergien:
+  <<: *build
+  variables:
+    CIM_VERSION: IEC61970_16v29a_SINERGIEN
 
 mirror:
+  image: docker:git
   stage: deploy
   script:
     - git clone --mirror https://${GITLAB_USER}:${GITLAB_TOKEN}@git.rwth-aachen.de/acs/core/cim/cimpp/libcimpp.git/
