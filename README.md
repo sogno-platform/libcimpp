@@ -46,10 +46,10 @@ To use libcimpp as an cmake module, the project using the CIM parser needs to be
   + Alternatively specify CIM version
   `cmake [libcimpp root directory] -DUSE_CIM_VERSION=[CIM Version]`
   + Valid options are
-    * `IEC61970CIM16v29a` (default)
-    * `IEC61970CIM16v29a_12v08`
-    * `IEC61970CIM17v07`
-    * `IEC61970CIM16v29a_SINERGIEN`
+    * `IEC61970_16v29a` (default)
+    * `IEC61970_16v29a_IEC61968_12v08`
+    * `IEC61970_17v07`
+    * `IEC61970_16v29a_SINERGIEN`
 4. Build libcimpp using make
 
 #### Build instructions for using libcimpp in general (MS Visual Studio)
