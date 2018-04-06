@@ -5,7 +5,8 @@ variables:
 
 stages:
   - prepare
-  - build
+  - build-src
+  - build-doc
   - deploy
 
 docker:
@@ -17,8 +18,8 @@ docker:
     - shell
 
 # Template
-.build: &build
-  stage: build
+.build-src: &build-src
+  stage: build-src
   image: ${DOCKER_IMAGE_DEV}:${DOCKER_TAG_DEV}
   tags:
     - docker
@@ -27,23 +28,58 @@ docker:
     - cmake ../.. -DUSE_CIM_VERSION=${CIM_VERSION}
     - make -j8
 
-build-16v29a:
-  <<: *build
+build-src-16v29a:
+  <<: *build-src
   variables:
     CIM_VERSION: IEC61970_16v29a
 
-build-17v07:
-  <<: *build
+build-src-17v07:
+  <<: *build-src
   variables:
     CIM_VERSION: IEC61970_17v07
 
-build-16v29a-12v08:
-  <<: *build
+build-src-16v29a-12v08:
+  <<: *build-src
   variables:
     CIM_VERSION: IEC61970_16v29a_IEC61968_12v08
 
-build-16v29a-sinergien:
-  <<: *build
+build-src-16v29a-sinergien:
+  <<: *build-src
+  variables:
+    CIM_VERSION: IEC61970_16v29a_SINERGIEN
+
+# Documentation
+.build-doc: &build-doc
+  stage: build-doc
+  image: ${DOCKER_IMAGE_DEV}:${DOCKER_TAG_DEV}
+  tags:
+    - docker
+  script:
+    - mkdir -p build/${CIM_VERSION} && cd build/${CIM_VERSION}
+    - cmake ../.. -DUSE_CIM_VERSION=${CIM_VERSION}
+    - make doc
+  artifacts:
+    paths:
+      - build/${CIM_VERSION}/doc/html
+    expire_in: 6 months
+
+build-doc-16v29a:
+  <<: *build-doc
+  variables:
+    CIM_VERSION: IEC61970_16v29a
+
+build-doc-17v07:
+  <<: *build-doc
+  variables:
+    CIM_VERSION: IEC61970_17v07
+
+build-doc-16v29a-12v08:
+  <<: *build-doc
+  variables:
+    CIM_VERSION: IEC61970_16v29a_IEC61968_12v08
+
+build-doc-16v29a-sinergien:
+  <<: *build-doc
   variables:
     CIM_VERSION: IEC61970_16v29a_SINERGIEN
 
