@@ -47,72 +47,6 @@ bool Task::resolve(std::unordered_map<std::string, BaseClass*> *RDFMap)
 }
 
 
-bool assign_Anschlusstyp_m_Einheitentyp(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::ProCom::Anschlusstyp* element = dynamic_cast<Sinergien::ProCom::Anschlusstyp*>(BaseClass_ptr1))
-	{
-		element->m_Einheitentyp = dynamic_cast<Sinergien::ProCom::Einheitentyp*>(BaseClass_ptr2);
-		if(element->m_Einheitentyp != nullptr)
-			return true;
-	}
-	return false;
-}
-
-bool assign_Anschluss_m_Anschlussart(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::ProCom::Anschluss* element = dynamic_cast<Sinergien::ProCom::Anschluss*>(BaseClass_ptr1))
-	{
-		element->m_Anschlussart = dynamic_cast<Sinergien::ProCom::Anschlussart*>(BaseClass_ptr2);
-		if(element->m_Anschlussart != nullptr)
-			return true;
-	}
-	return false;
-}
-
-bool assign_Anschluss_m_Anschlusstyp(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::ProCom::Anschluss* element = dynamic_cast<Sinergien::ProCom::Anschluss*>(BaseClass_ptr1))
-	{
-		element->m_Anschlusstyp = dynamic_cast<Sinergien::ProCom::Anschlusstyp*>(BaseClass_ptr2);
-		if(element->m_Anschlusstyp != nullptr)
-			return true;
-	}
-	return false;
-}
-
-bool assign_Element_m_Anschluss(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::ProCom::Element* element = dynamic_cast<Sinergien::ProCom::Element*>(BaseClass_ptr1))
-	{
-		element->m_Anschluss = dynamic_cast<Sinergien::ProCom::Anschluss*>(BaseClass_ptr2);
-		if(element->m_Anschluss != nullptr)
-			return true;
-	}
-	return false;
-}
-
-bool assign_Element_m_Palettenregister(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::ProCom::Element* element = dynamic_cast<Sinergien::ProCom::Element*>(BaseClass_ptr1))
-	{
-		element->m_Palettenregister = dynamic_cast<Sinergien::ProCom::Palettenregister*>(BaseClass_ptr2);
-		if(element->m_Palettenregister != nullptr)
-			return true;
-	}
-	return false;
-}
-
-bool assign_Attribut_m_Element(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::ProCom::Attribut* element = dynamic_cast<Sinergien::ProCom::Attribut*>(BaseClass_ptr1))
-	{
-		element->m_Element = dynamic_cast<Sinergien::ProCom::Element*>(BaseClass_ptr2);
-		if(element->m_Element != nullptr)
-			return true;
-	}
-	return false;
-}
-
 bool assign_Measurement_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
 	if(IEC61970::Base::Meas::Measurement* element = dynamic_cast<IEC61970::Base::Meas::Measurement*>(BaseClass_ptr1))
@@ -135,182 +69,6 @@ bool assign_PowerSystemResource_PSRType(BaseClass* BaseClass_ptr1, BaseClass* Ba
 	return false;
 }
 
-bool assign_RegulatingCondEq_RegulatingControl(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(IEC61970::Base::Wires::RegulatingCondEq* element = dynamic_cast<IEC61970::Base::Wires::RegulatingCondEq*>(BaseClass_ptr1))
-	{
-		element->RegulatingControl = dynamic_cast<IEC61970::Base::Wires::RegulatingControl*>(BaseClass_ptr2);
-		if(element->RegulatingControl != nullptr)
-			return true;
-	}
-	return false;
-}
-
-bool assign_BatteryStorage_m_communicationRequirement(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::EnergyGrid::EnergyStorage::BatteryStorage* element = dynamic_cast<Sinergien::EnergyGrid::EnergyStorage::BatteryStorage*>(BaseClass_ptr1))
-	{
-		element->m_communicationRequirement = dynamic_cast<Sinergien::Communication::communicationRequirement*>(BaseClass_ptr2);
-		if(element->m_communicationRequirement != nullptr)
-			return true;
-	}
-	return false;
-}
-
-bool assign_ChargingUnit_m_BatteryStorage(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::EnergyGrid::EnergyStorage::ChargingUnit* element = dynamic_cast<Sinergien::EnergyGrid::EnergyStorage::ChargingUnit*>(BaseClass_ptr1))
-	{
-		element->m_BatteryStorage = dynamic_cast<Sinergien::EnergyGrid::EnergyStorage::BatteryStorage*>(BaseClass_ptr2);
-		if(element->m_BatteryStorage != nullptr)
-			return true;
-	}
-	return false;
-}
-
-bool assign_WeatherData_temperature(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::EnergyGrid::SimulationData::WeatherData* element = dynamic_cast<Sinergien::EnergyGrid::SimulationData::WeatherData*>(BaseClass_ptr1))
-	{
-		element->temperature = dynamic_cast<IEC61970::Base::Domain::Temperature*>(BaseClass_ptr2);
-		if(element->temperature != nullptr)
-			return true;
-	}
-	return false;
-}
-
-bool assign_WeatherData_time(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::EnergyGrid::SimulationData::WeatherData* element = dynamic_cast<Sinergien::EnergyGrid::SimulationData::WeatherData*>(BaseClass_ptr1))
-	{
-		element->time = dynamic_cast<IEC61970::Base::Domain::Seconds*>(BaseClass_ptr2);
-		if(element->time != nullptr)
-			return true;
-	}
-	return false;
-}
-
-bool assign_WeatherData_windSpeed(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::EnergyGrid::SimulationData::WeatherData* element = dynamic_cast<Sinergien::EnergyGrid::SimulationData::WeatherData*>(BaseClass_ptr1))
-	{
-		element->windSpeed = dynamic_cast<IEC61970::Base::Domain::Speed*>(BaseClass_ptr2);
-		if(element->windSpeed != nullptr)
-			return true;
-	}
-	return false;
-}
-
-bool assign_WLANAP_m_WLANModem(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::Communication::NetworkNodes::WLANAP* element = dynamic_cast<Sinergien::Communication::NetworkNodes::WLANAP*>(BaseClass_ptr1))
-	{
-		element->m_WLANModem = dynamic_cast<Sinergien::Communication::Modems::WLANModem*>(BaseClass_ptr2);
-		if(element->m_WLANModem != nullptr)
-			return true;
-	}
-	return false;
-}
-
-bool assign_BPLCChannel_endInterface1(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::Communication::Channels::BPLCChannel* element = dynamic_cast<Sinergien::Communication::Channels::BPLCChannel*>(BaseClass_ptr1))
-	{
-		element->endInterface1 = dynamic_cast<Sinergien::Communication::Interfaces::BPLCInt*>(BaseClass_ptr2);
-		if(element->endInterface1 != nullptr)
-			return true;
-	}
-	return false;
-}
-
-bool assign_BPLCChannel_endInterface2(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::Communication::Channels::BPLCChannel* element = dynamic_cast<Sinergien::Communication::Channels::BPLCChannel*>(BaseClass_ptr1))
-	{
-		element->endInterface2 = dynamic_cast<Sinergien::Communication::Interfaces::BPLCInt*>(BaseClass_ptr2);
-		if(element->endInterface2 != nullptr)
-			return true;
-	}
-	return false;
-}
-
-bool assign_WLANChannel_endInterface1(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::Communication::Channels::WLANChannel* element = dynamic_cast<Sinergien::Communication::Channels::WLANChannel*>(BaseClass_ptr1))
-	{
-		element->endInterface1 = dynamic_cast<Sinergien::Communication::Interfaces::WLANInt*>(BaseClass_ptr2);
-		if(element->endInterface1 != nullptr)
-			return true;
-	}
-	return false;
-}
-
-bool assign_WLANChannel_endInterface2(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::Communication::Channels::WLANChannel* element = dynamic_cast<Sinergien::Communication::Channels::WLANChannel*>(BaseClass_ptr1))
-	{
-		element->endInterface2 = dynamic_cast<Sinergien::Communication::Interfaces::WLANInt*>(BaseClass_ptr2);
-		if(element->endInterface2 != nullptr)
-			return true;
-	}
-	return false;
-}
-
-bool assign_FiberChannel_endInterface1(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::Communication::Channels::FiberChannel* element = dynamic_cast<Sinergien::Communication::Channels::FiberChannel*>(BaseClass_ptr1))
-	{
-		element->endInterface1 = dynamic_cast<Sinergien::Communication::Interfaces::FiberInt*>(BaseClass_ptr2);
-		if(element->endInterface1 != nullptr)
-			return true;
-	}
-	return false;
-}
-
-bool assign_FiberChannel_endInterface2(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::Communication::Channels::FiberChannel* element = dynamic_cast<Sinergien::Communication::Channels::FiberChannel*>(BaseClass_ptr1))
-	{
-		element->endInterface2 = dynamic_cast<Sinergien::Communication::Interfaces::FiberInt*>(BaseClass_ptr2);
-		if(element->endInterface2 != nullptr)
-			return true;
-	}
-	return false;
-}
-
-bool assign_LTEChannel_endInterface1(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::Communication::Channels::LTEChannel* element = dynamic_cast<Sinergien::Communication::Channels::LTEChannel*>(BaseClass_ptr1))
-	{
-		element->endInterface1 = dynamic_cast<Sinergien::Communication::Interfaces::LTEInt*>(BaseClass_ptr2);
-		if(element->endInterface1 != nullptr)
-			return true;
-	}
-	return false;
-}
-
-bool assign_LTEChannel_endInterface2(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::Communication::Channels::LTEChannel* element = dynamic_cast<Sinergien::Communication::Channels::LTEChannel*>(BaseClass_ptr1))
-	{
-		element->endInterface2 = dynamic_cast<Sinergien::Communication::Interfaces::LTEInt*>(BaseClass_ptr2);
-		if(element->endInterface2 != nullptr)
-			return true;
-	}
-	return false;
-}
-
-bool assign_EnergyConsumer_m_communicationRequirement(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(IEC61970::Base::Wires::EnergyConsumer* element = dynamic_cast<IEC61970::Base::Wires::EnergyConsumer*>(BaseClass_ptr1))
-	{
-		element->m_communicationRequirement = dynamic_cast<Sinergien::Communication::communicationRequirement*>(BaseClass_ptr2);
-		if(element->m_communicationRequirement != nullptr)
-			return true;
-	}
-	return false;
-}
-
 bool assign_EnergyConsumer_LoadResponse(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
 	if(IEC61970::Base::Wires::EnergyConsumer* element = dynamic_cast<IEC61970::Base::Wires::EnergyConsumer*>(BaseClass_ptr1))
@@ -328,6 +86,17 @@ bool assign_HydroPump_HydroPumpOpSchedule(BaseClass* BaseClass_ptr1, BaseClass* 
 	{
 		element->HydroPumpOpSchedule = dynamic_cast<IEC61970::Base::Generation::Production::HydroPumpOpSchedule*>(BaseClass_ptr2);
 		if(element->HydroPumpOpSchedule != nullptr)
+			return true;
+	}
+	return false;
+}
+
+bool assign_RegulatingCondEq_RegulatingControl(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
+{
+	if(IEC61970::Base::Wires::RegulatingCondEq* element = dynamic_cast<IEC61970::Base::Wires::RegulatingCondEq*>(BaseClass_ptr1))
+	{
+		element->RegulatingControl = dynamic_cast<IEC61970::Base::Wires::RegulatingControl*>(BaseClass_ptr2);
+		if(element->RegulatingControl != nullptr)
 			return true;
 	}
 	return false;
@@ -1829,45 +1598,12 @@ bool assign_SvInjection_TopologicalNode(BaseClass* BaseClass_ptr1, BaseClass* Ba
 	return false;
 }
 
-bool assign_GeneratingUnit_m_BatteryStorage(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(IEC61970::Base::Generation::Production::GeneratingUnit* element = dynamic_cast<IEC61970::Base::Generation::Production::GeneratingUnit*>(BaseClass_ptr1))
-	{
-		element->m_BatteryStorage = dynamic_cast<Sinergien::EnergyGrid::EnergyStorage::BatteryStorage*>(BaseClass_ptr2);
-		if(element->m_BatteryStorage != nullptr)
-			return true;
-	}
-	return false;
-}
-
 bool assign_GeneratingUnit_GenUnitOpSchedule(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
 	if(IEC61970::Base::Generation::Production::GeneratingUnit* element = dynamic_cast<IEC61970::Base::Generation::Production::GeneratingUnit*>(BaseClass_ptr1))
 	{
 		element->GenUnitOpSchedule = dynamic_cast<IEC61970::Base::Generation::Production::GenUnitOpSchedule*>(BaseClass_ptr2);
 		if(element->GenUnitOpSchedule != nullptr)
-			return true;
-	}
-	return false;
-}
-
-bool assign_SolarGeneratingUnit_m_communicationRequirement(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(IEC61970::Base::Generation::Production::SolarGeneratingUnit* element = dynamic_cast<IEC61970::Base::Generation::Production::SolarGeneratingUnit*>(BaseClass_ptr1))
-	{
-		element->m_communicationRequirement = dynamic_cast<Sinergien::Communication::communicationRequirement*>(BaseClass_ptr2);
-		if(element->m_communicationRequirement != nullptr)
-			return true;
-	}
-	return false;
-}
-
-bool assign_SolarGeneratingUnit_m_WeatherData(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(IEC61970::Base::Generation::Production::SolarGeneratingUnit* element = dynamic_cast<IEC61970::Base::Generation::Production::SolarGeneratingUnit*>(BaseClass_ptr1))
-	{
-		element->m_WeatherData = dynamic_cast<Sinergien::EnergyGrid::SimulationData::WeatherData*>(BaseClass_ptr2);
-		if(element->m_WeatherData != nullptr)
 			return true;
 	}
 	return false;
@@ -2027,45 +1763,12 @@ bool assign_HydroPowerPlant_GenSourcePumpDischargeReservoir(BaseClass* BaseClass
 	return false;
 }
 
-bool assign_WindGeneratingUnit_m_communicationRequirement(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(IEC61970::Base::Generation::Production::WindGeneratingUnit* element = dynamic_cast<IEC61970::Base::Generation::Production::WindGeneratingUnit*>(BaseClass_ptr1))
-	{
-		element->m_communicationRequirement = dynamic_cast<Sinergien::Communication::communicationRequirement*>(BaseClass_ptr2);
-		if(element->m_communicationRequirement != nullptr)
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindGeneratingUnit_m_WeatherData(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(IEC61970::Base::Generation::Production::WindGeneratingUnit* element = dynamic_cast<IEC61970::Base::Generation::Production::WindGeneratingUnit*>(BaseClass_ptr1))
-	{
-		element->m_WeatherData = dynamic_cast<Sinergien::EnergyGrid::SimulationData::WeatherData*>(BaseClass_ptr2);
-		if(element->m_WeatherData != nullptr)
-			return true;
-	}
-	return false;
-}
-
 bool assign_FossilFuel_ThermalGeneratingUnit(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
 	if(IEC61970::Base::Generation::Production::FossilFuel* element = dynamic_cast<IEC61970::Base::Generation::Production::FossilFuel*>(BaseClass_ptr1))
 	{
 		element->ThermalGeneratingUnit = dynamic_cast<IEC61970::Base::Generation::Production::ThermalGeneratingUnit*>(BaseClass_ptr2);
 		if(element->ThermalGeneratingUnit != nullptr)
-			return true;
-	}
-	return false;
-}
-
-bool assign_CogenerationPlant_m_communicationRequirement(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(IEC61970::Base::Generation::Production::CogenerationPlant* element = dynamic_cast<IEC61970::Base::Generation::Production::CogenerationPlant*>(BaseClass_ptr1))
-	{
-		element->m_communicationRequirement = dynamic_cast<Sinergien::Communication::communicationRequirement*>(BaseClass_ptr2);
-		if(element->m_communicationRequirement != nullptr)
 			return true;
 	}
 	return false;
@@ -2315,188 +2018,6 @@ bool assign_PowerSystemResource_Measurements(BaseClass* BaseClass_ptr1, BaseClas
 		if(dynamic_cast<IEC61970::Base::Meas::Measurement*>(BaseClass_ptr2) != nullptr)
 		{
 			element->Measurements.push_back(dynamic_cast<IEC61970::Base::Meas::Measurement*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
-
-bool assign_BatteryStorage_m_ComMod(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::EnergyGrid::EnergyStorage::BatteryStorage* element = dynamic_cast<Sinergien::EnergyGrid::EnergyStorage::BatteryStorage*>(BaseClass_ptr1))
-	{
-		if(dynamic_cast<Sinergien::Communication::Modems::ComMod*>(BaseClass_ptr2) != nullptr)
-		{
-			element->m_ComMod.push_back(dynamic_cast<Sinergien::Communication::Modems::ComMod*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
-
-bool assign_ACLineSegment_Clamp(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(IEC61970::Base::Wires::ACLineSegment* element = dynamic_cast<IEC61970::Base::Wires::ACLineSegment*>(BaseClass_ptr1))
-	{
-		if(dynamic_cast<IEC61970::Base::Wires::Clamp*>(BaseClass_ptr2) != nullptr)
-		{
-			element->Clamp.push_back(dynamic_cast<IEC61970::Base::Wires::Clamp*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
-
-bool assign_BackboneNode_m_ComMod(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::Communication::NetworkNodes::BackboneNode* element = dynamic_cast<Sinergien::Communication::NetworkNodes::BackboneNode*>(BaseClass_ptr1))
-	{
-		if(dynamic_cast<Sinergien::Communication::Modems::ComMod*>(BaseClass_ptr2) != nullptr)
-		{
-			element->m_ComMod.push_back(dynamic_cast<Sinergien::Communication::Modems::ComMod*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
-
-bool assign_BackboneNode_m_WLANInt(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::Communication::NetworkNodes::BackboneNode* element = dynamic_cast<Sinergien::Communication::NetworkNodes::BackboneNode*>(BaseClass_ptr1))
-	{
-		if(dynamic_cast<Sinergien::Communication::Interfaces::WLANInt*>(BaseClass_ptr2) != nullptr)
-		{
-			element->m_WLANInt.push_back(dynamic_cast<Sinergien::Communication::Interfaces::WLANInt*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
-
-bool assign_BackboneNode_m_LTEInt(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::Communication::NetworkNodes::BackboneNode* element = dynamic_cast<Sinergien::Communication::NetworkNodes::BackboneNode*>(BaseClass_ptr1))
-	{
-		if(dynamic_cast<Sinergien::Communication::Interfaces::LTEInt*>(BaseClass_ptr2) != nullptr)
-		{
-			element->m_LTEInt.push_back(dynamic_cast<Sinergien::Communication::Interfaces::LTEInt*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
-
-bool assign_BackboneNode_m_FiberInt(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::Communication::NetworkNodes::BackboneNode* element = dynamic_cast<Sinergien::Communication::NetworkNodes::BackboneNode*>(BaseClass_ptr1))
-	{
-		if(dynamic_cast<Sinergien::Communication::Interfaces::FiberInt*>(BaseClass_ptr2) != nullptr)
-		{
-			element->m_FiberInt.push_back(dynamic_cast<Sinergien::Communication::Interfaces::FiberInt*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
-
-bool assign_BackboneNode_m_ComInterface(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::Communication::NetworkNodes::BackboneNode* element = dynamic_cast<Sinergien::Communication::NetworkNodes::BackboneNode*>(BaseClass_ptr1))
-	{
-		if(dynamic_cast<Sinergien::Communication::Interfaces::ComInterface*>(BaseClass_ptr2) != nullptr)
-		{
-			element->m_ComInterface.push_back(dynamic_cast<Sinergien::Communication::Interfaces::ComInterface*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
-
-bool assign_LTEModem_m_LTEInt(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::Communication::Modems::LTEModem* element = dynamic_cast<Sinergien::Communication::Modems::LTEModem*>(BaseClass_ptr1))
-	{
-		if(dynamic_cast<Sinergien::Communication::Interfaces::LTEInt*>(BaseClass_ptr2) != nullptr)
-		{
-			element->m_LTEInt.push_back(dynamic_cast<Sinergien::Communication::Interfaces::LTEInt*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
-
-bool assign_eNodeB_m_LTEModem(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::Communication::NetworkNodes::eNodeB* element = dynamic_cast<Sinergien::Communication::NetworkNodes::eNodeB*>(BaseClass_ptr1))
-	{
-		if(dynamic_cast<Sinergien::Communication::Modems::LTEModem*>(BaseClass_ptr2) != nullptr)
-		{
-			element->m_LTEModem.push_back(dynamic_cast<Sinergien::Communication::Modems::LTEModem*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
-
-bool assign_WLANModem_m_WLANInt(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::Communication::Modems::WLANModem* element = dynamic_cast<Sinergien::Communication::Modems::WLANModem*>(BaseClass_ptr1))
-	{
-		if(dynamic_cast<Sinergien::Communication::Interfaces::WLANInt*>(BaseClass_ptr2) != nullptr)
-		{
-			element->m_WLANInt.push_back(dynamic_cast<Sinergien::Communication::Interfaces::WLANInt*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
-
-bool assign_FiberModem_m_FiberInt(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::Communication::Modems::FiberModem* element = dynamic_cast<Sinergien::Communication::Modems::FiberModem*>(BaseClass_ptr1))
-	{
-		if(dynamic_cast<Sinergien::Communication::Interfaces::FiberInt*>(BaseClass_ptr2) != nullptr)
-		{
-			element->m_FiberInt.push_back(dynamic_cast<Sinergien::Communication::Interfaces::FiberInt*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
-
-bool assign_BPLCModem_m_BPLCInt(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::Communication::Modems::BPLCModem* element = dynamic_cast<Sinergien::Communication::Modems::BPLCModem*>(BaseClass_ptr1))
-	{
-		if(dynamic_cast<Sinergien::Communication::Interfaces::BPLCInt*>(BaseClass_ptr2) != nullptr)
-		{
-			element->m_BPLCInt.push_back(dynamic_cast<Sinergien::Communication::Interfaces::BPLCInt*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
-
-bool assign_CommChannel_m_ComInterface(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(Sinergien::Communication::Channels::CommChannel* element = dynamic_cast<Sinergien::Communication::Channels::CommChannel*>(BaseClass_ptr1))
-	{
-		if(dynamic_cast<Sinergien::Communication::Interfaces::ComInterface*>(BaseClass_ptr2) != nullptr)
-		{
-			element->m_ComInterface.push_back(dynamic_cast<Sinergien::Communication::Interfaces::ComInterface*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
-
-bool assign_EnergyConsumer_m_ComMod(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(IEC61970::Base::Wires::EnergyConsumer* element = dynamic_cast<IEC61970::Base::Wires::EnergyConsumer*>(BaseClass_ptr1))
-	{
-		if(dynamic_cast<Sinergien::Communication::Modems::ComMod*>(BaseClass_ptr2) != nullptr)
-		{
-			element->m_ComMod.push_back(dynamic_cast<Sinergien::Communication::Modems::ComMod*>(BaseClass_ptr2));
 			return true;
 		}
 	}
@@ -3101,6 +2622,19 @@ bool assign_ShuntCompensator_ShuntCompensatorPhase(BaseClass* BaseClass_ptr1, Ba
 	return false;
 }
 
+bool assign_ACLineSegment_Clamp(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
+{
+	if(IEC61970::Base::Wires::ACLineSegment* element = dynamic_cast<IEC61970::Base::Wires::ACLineSegment*>(BaseClass_ptr1))
+	{
+		if(dynamic_cast<IEC61970::Base::Wires::Clamp*>(BaseClass_ptr2) != nullptr)
+		{
+			element->Clamp.push_back(dynamic_cast<IEC61970::Base::Wires::Clamp*>(BaseClass_ptr2));
+			return true;
+		}
+	}
+	return false;
+}
+
 bool assign_PerLengthImpedance_ACLineSegments(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
 	if(IEC61970::Base::Wires::PerLengthImpedance* element = dynamic_cast<IEC61970::Base::Wires::PerLengthImpedance*>(BaseClass_ptr1))
@@ -3478,19 +3012,6 @@ bool assign_GeneratingUnit_RotatingMachine(BaseClass* BaseClass_ptr1, BaseClass*
 	return false;
 }
 
-bool assign_SolarGeneratingUnit_m_ComMod(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(IEC61970::Base::Generation::Production::SolarGeneratingUnit* element = dynamic_cast<IEC61970::Base::Generation::Production::SolarGeneratingUnit*>(BaseClass_ptr1))
-	{
-		if(dynamic_cast<Sinergien::Communication::Modems::ComMod*>(BaseClass_ptr2) != nullptr)
-		{
-			element->m_ComMod.push_back(dynamic_cast<Sinergien::Communication::Modems::ComMod*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
-
 bool assign_HydroGeneratingUnit_TailbayLossCurve(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
 	if(IEC61970::Base::Generation::Production::HydroGeneratingUnit* element = dynamic_cast<IEC61970::Base::Generation::Production::HydroGeneratingUnit*>(BaseClass_ptr1))
@@ -3621,19 +3142,6 @@ bool assign_HydroPowerPlant_HydroGeneratingUnits(BaseClass* BaseClass_ptr1, Base
 	return false;
 }
 
-bool assign_WindGeneratingUnit_m_ComMod(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(IEC61970::Base::Generation::Production::WindGeneratingUnit* element = dynamic_cast<IEC61970::Base::Generation::Production::WindGeneratingUnit*>(BaseClass_ptr1))
-	{
-		if(dynamic_cast<Sinergien::Communication::Modems::ComMod*>(BaseClass_ptr2) != nullptr)
-		{
-			element->m_ComMod.push_back(dynamic_cast<Sinergien::Communication::Modems::ComMod*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
-
 bool assign_FossilFuel_FuelAllocationSchedules(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
 	if(IEC61970::Base::Generation::Production::FossilFuel* element = dynamic_cast<IEC61970::Base::Generation::Production::FossilFuel*>(BaseClass_ptr1))
@@ -3641,19 +3149,6 @@ bool assign_FossilFuel_FuelAllocationSchedules(BaseClass* BaseClass_ptr1, BaseCl
 		if(dynamic_cast<IEC61970::Base::Generation::Production::FuelAllocationSchedule*>(BaseClass_ptr2) != nullptr)
 		{
 			element->FuelAllocationSchedules.push_back(dynamic_cast<IEC61970::Base::Generation::Production::FuelAllocationSchedule*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
-
-bool assign_CogenerationPlant_m_ComMod(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
-{
-	if(IEC61970::Base::Generation::Production::CogenerationPlant* element = dynamic_cast<IEC61970::Base::Generation::Production::CogenerationPlant*>(BaseClass_ptr1))
-	{
-		if(dynamic_cast<Sinergien::Communication::Modems::ComMod*>(BaseClass_ptr2) != nullptr)
-		{
-			element->m_ComMod.push_back(dynamic_cast<Sinergien::Communication::Modems::ComMod*>(BaseClass_ptr2));
 			return true;
 		}
 	}
@@ -3886,58 +3381,16 @@ static std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)> initial
 {
 	std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)> map;
 
-	map.insert(std::make_pair("cim:Anschlusstyp.m_Einheitentyp", &assign_Anschlusstyp_m_Einheitentyp));
-	map.insert(std::make_pair("cim:m_Einheitentyp.Anschlusstyp", &assign_Anschlusstyp_m_Einheitentyp));
-	map.insert(std::make_pair("cim:Anschluss.m_Anschlussart", &assign_Anschluss_m_Anschlussart));
-	map.insert(std::make_pair("cim:m_Anschlussart.Anschluss", &assign_Anschluss_m_Anschlussart));
-	map.insert(std::make_pair("cim:Anschluss.m_Anschlusstyp", &assign_Anschluss_m_Anschlusstyp));
-	map.insert(std::make_pair("cim:m_Anschlusstyp.Anschluss", &assign_Anschluss_m_Anschlusstyp));
-	map.insert(std::make_pair("cim:Element.m_Anschluss", &assign_Element_m_Anschluss));
-	map.insert(std::make_pair("cim:m_Anschluss.Element", &assign_Element_m_Anschluss));
-	map.insert(std::make_pair("cim:Element.m_Palettenregister", &assign_Element_m_Palettenregister));
-	map.insert(std::make_pair("cim:m_Palettenregister.Element", &assign_Element_m_Palettenregister));
-	map.insert(std::make_pair("cim:Attribut.m_Element", &assign_Attribut_m_Element));
-	map.insert(std::make_pair("cim:m_Element.Attribut", &assign_Attribut_m_Element));
 	map.insert(std::make_pair("cim:Measurement.Terminal", &assign_Measurement_Terminal));
 	map.insert(std::make_pair("cim:Terminal.Measurement", &assign_Measurement_Terminal));
 	map.insert(std::make_pair("cim:PowerSystemResource.PSRType", &assign_PowerSystemResource_PSRType));
 	map.insert(std::make_pair("cim:PSRType.PowerSystemResource", &assign_PowerSystemResource_PSRType));
-	map.insert(std::make_pair("cim:RegulatingCondEq.RegulatingControl", &assign_RegulatingCondEq_RegulatingControl));
-	map.insert(std::make_pair("cim:RegulatingControl.RegulatingCondEq", &assign_RegulatingCondEq_RegulatingControl));
-	map.insert(std::make_pair("cim:BatteryStorage.m_communicationRequirement", &assign_BatteryStorage_m_communicationRequirement));
-	map.insert(std::make_pair("cim:m_communicationRequirement.BatteryStorage", &assign_BatteryStorage_m_communicationRequirement));
-	map.insert(std::make_pair("cim:ChargingUnit.m_BatteryStorage", &assign_ChargingUnit_m_BatteryStorage));
-	map.insert(std::make_pair("cim:m_BatteryStorage.ChargingUnit", &assign_ChargingUnit_m_BatteryStorage));
-	map.insert(std::make_pair("cim:WeatherData.temperature", &assign_WeatherData_temperature));
-	map.insert(std::make_pair("cim:temperature.WeatherData", &assign_WeatherData_temperature));
-	map.insert(std::make_pair("cim:WeatherData.time", &assign_WeatherData_time));
-	map.insert(std::make_pair("cim:time.WeatherData", &assign_WeatherData_time));
-	map.insert(std::make_pair("cim:WeatherData.windSpeed", &assign_WeatherData_windSpeed));
-	map.insert(std::make_pair("cim:windSpeed.WeatherData", &assign_WeatherData_windSpeed));
-	map.insert(std::make_pair("cim:WLANAP.m_WLANModem", &assign_WLANAP_m_WLANModem));
-	map.insert(std::make_pair("cim:m_WLANModem.WLANAP", &assign_WLANAP_m_WLANModem));
-	map.insert(std::make_pair("cim:BPLCChannel.endInterface1", &assign_BPLCChannel_endInterface1));
-	map.insert(std::make_pair("cim:endInterface1.BPLCChannel", &assign_BPLCChannel_endInterface1));
-	map.insert(std::make_pair("cim:BPLCChannel.endInterface2", &assign_BPLCChannel_endInterface2));
-	map.insert(std::make_pair("cim:endInterface2.BPLCChannel", &assign_BPLCChannel_endInterface2));
-	map.insert(std::make_pair("cim:WLANChannel.endInterface1", &assign_WLANChannel_endInterface1));
-	map.insert(std::make_pair("cim:endInterface1.WLANChannel", &assign_WLANChannel_endInterface1));
-	map.insert(std::make_pair("cim:WLANChannel.endInterface2", &assign_WLANChannel_endInterface2));
-	map.insert(std::make_pair("cim:endInterface2.WLANChannel", &assign_WLANChannel_endInterface2));
-	map.insert(std::make_pair("cim:FiberChannel.endInterface1", &assign_FiberChannel_endInterface1));
-	map.insert(std::make_pair("cim:endInterface1.FiberChannel", &assign_FiberChannel_endInterface1));
-	map.insert(std::make_pair("cim:FiberChannel.endInterface2", &assign_FiberChannel_endInterface2));
-	map.insert(std::make_pair("cim:endInterface2.FiberChannel", &assign_FiberChannel_endInterface2));
-	map.insert(std::make_pair("cim:LTEChannel.endInterface1", &assign_LTEChannel_endInterface1));
-	map.insert(std::make_pair("cim:endInterface1.LTEChannel", &assign_LTEChannel_endInterface1));
-	map.insert(std::make_pair("cim:LTEChannel.endInterface2", &assign_LTEChannel_endInterface2));
-	map.insert(std::make_pair("cim:endInterface2.LTEChannel", &assign_LTEChannel_endInterface2));
-	map.insert(std::make_pair("cim:EnergyConsumer.m_communicationRequirement", &assign_EnergyConsumer_m_communicationRequirement));
-	map.insert(std::make_pair("cim:m_communicationRequirement.EnergyConsumer", &assign_EnergyConsumer_m_communicationRequirement));
 	map.insert(std::make_pair("cim:EnergyConsumer.LoadResponse", &assign_EnergyConsumer_LoadResponse));
 	map.insert(std::make_pair("cim:LoadResponse.EnergyConsumer", &assign_EnergyConsumer_LoadResponse));
 	map.insert(std::make_pair("cim:HydroPump.HydroPumpOpSchedule", &assign_HydroPump_HydroPumpOpSchedule));
 	map.insert(std::make_pair("cim:HydroPumpOpSchedule.HydroPump", &assign_HydroPump_HydroPumpOpSchedule));
+	map.insert(std::make_pair("cim:RegulatingCondEq.RegulatingControl", &assign_RegulatingCondEq_RegulatingControl));
+	map.insert(std::make_pair("cim:RegulatingControl.RegulatingCondEq", &assign_RegulatingCondEq_RegulatingControl));
 	map.insert(std::make_pair("cim:RotatingMachine.HydroPump", &assign_RotatingMachine_HydroPump));
 	map.insert(std::make_pair("cim:HydroPump.RotatingMachine", &assign_RotatingMachine_HydroPump));
 	map.insert(std::make_pair("cim:AsynchronousMachineDynamics.AsynchronousMachine", &assign_AsynchronousMachineDynamics_AsynchronousMachine));
@@ -4210,14 +3663,8 @@ static std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)> initial
 	map.insert(std::make_pair("cim:Terminal.SvPowerFlow", &assign_SvPowerFlow_Terminal));
 	map.insert(std::make_pair("cim:SvInjection.TopologicalNode", &assign_SvInjection_TopologicalNode));
 	map.insert(std::make_pair("cim:TopologicalNode.SvInjection", &assign_SvInjection_TopologicalNode));
-	map.insert(std::make_pair("cim:GeneratingUnit.m_BatteryStorage", &assign_GeneratingUnit_m_BatteryStorage));
-	map.insert(std::make_pair("cim:m_BatteryStorage.GeneratingUnit", &assign_GeneratingUnit_m_BatteryStorage));
 	map.insert(std::make_pair("cim:GeneratingUnit.GenUnitOpSchedule", &assign_GeneratingUnit_GenUnitOpSchedule));
 	map.insert(std::make_pair("cim:GenUnitOpSchedule.GeneratingUnit", &assign_GeneratingUnit_GenUnitOpSchedule));
-	map.insert(std::make_pair("cim:SolarGeneratingUnit.m_communicationRequirement", &assign_SolarGeneratingUnit_m_communicationRequirement));
-	map.insert(std::make_pair("cim:m_communicationRequirement.SolarGeneratingUnit", &assign_SolarGeneratingUnit_m_communicationRequirement));
-	map.insert(std::make_pair("cim:SolarGeneratingUnit.m_WeatherData", &assign_SolarGeneratingUnit_m_WeatherData));
-	map.insert(std::make_pair("cim:m_WeatherData.SolarGeneratingUnit", &assign_SolarGeneratingUnit_m_WeatherData));
 	map.insert(std::make_pair("cim:HydroGeneratingUnit.PenstockLossCurve", &assign_HydroGeneratingUnit_PenstockLossCurve));
 	map.insert(std::make_pair("cim:PenstockLossCurve.HydroGeneratingUnit", &assign_HydroGeneratingUnit_PenstockLossCurve));
 	map.insert(std::make_pair("cim:StartupModel.StartRampCurve", &assign_StartupModel_StartRampCurve));
@@ -4246,14 +3693,8 @@ static std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)> initial
 	map.insert(std::make_pair("cim:Reservoir.HydroPowerPlant", &assign_HydroPowerPlant_Reservoir));
 	map.insert(std::make_pair("cim:HydroPowerPlant.GenSourcePumpDischargeReservoir", &assign_HydroPowerPlant_GenSourcePumpDischargeReservoir));
 	map.insert(std::make_pair("cim:GenSourcePumpDischargeReservoir.HydroPowerPlant", &assign_HydroPowerPlant_GenSourcePumpDischargeReservoir));
-	map.insert(std::make_pair("cim:WindGeneratingUnit.m_communicationRequirement", &assign_WindGeneratingUnit_m_communicationRequirement));
-	map.insert(std::make_pair("cim:m_communicationRequirement.WindGeneratingUnit", &assign_WindGeneratingUnit_m_communicationRequirement));
-	map.insert(std::make_pair("cim:WindGeneratingUnit.m_WeatherData", &assign_WindGeneratingUnit_m_WeatherData));
-	map.insert(std::make_pair("cim:m_WeatherData.WindGeneratingUnit", &assign_WindGeneratingUnit_m_WeatherData));
 	map.insert(std::make_pair("cim:FossilFuel.ThermalGeneratingUnit", &assign_FossilFuel_ThermalGeneratingUnit));
 	map.insert(std::make_pair("cim:ThermalGeneratingUnit.FossilFuel", &assign_FossilFuel_ThermalGeneratingUnit));
-	map.insert(std::make_pair("cim:CogenerationPlant.m_communicationRequirement", &assign_CogenerationPlant_m_communicationRequirement));
-	map.insert(std::make_pair("cim:m_communicationRequirement.CogenerationPlant", &assign_CogenerationPlant_m_communicationRequirement));
 	map.insert(std::make_pair("cim:CogenerationPlant.SteamSendoutSchedule", &assign_CogenerationPlant_SteamSendoutSchedule));
 	map.insert(std::make_pair("cim:SteamSendoutSchedule.CogenerationPlant", &assign_CogenerationPlant_SteamSendoutSchedule));
 	map.insert(std::make_pair("cim:CombustionTurbine.AirCompressor", &assign_CombustionTurbine_AirCompressor));
@@ -4299,34 +3740,6 @@ static std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)> initial
 	map.insert(std::make_pair("cim:Controls.PowerSystemResource", &assign_PowerSystemResource_Controls));
 	map.insert(std::make_pair("cim:PowerSystemResource.Measurements", &assign_PowerSystemResource_Measurements));
 	map.insert(std::make_pair("cim:Measurements.PowerSystemResource", &assign_PowerSystemResource_Measurements));
-	map.insert(std::make_pair("cim:BatteryStorage.m_ComMod", &assign_BatteryStorage_m_ComMod));
-	map.insert(std::make_pair("cim:m_ComMod.BatteryStorage", &assign_BatteryStorage_m_ComMod));
-	map.insert(std::make_pair("cim:ACLineSegment.Clamp", &assign_ACLineSegment_Clamp));
-	map.insert(std::make_pair("cim:Clamp.ACLineSegment", &assign_ACLineSegment_Clamp));
-	map.insert(std::make_pair("cim:BackboneNode.m_ComMod", &assign_BackboneNode_m_ComMod));
-	map.insert(std::make_pair("cim:m_ComMod.BackboneNode", &assign_BackboneNode_m_ComMod));
-	map.insert(std::make_pair("cim:BackboneNode.m_WLANInt", &assign_BackboneNode_m_WLANInt));
-	map.insert(std::make_pair("cim:m_WLANInt.BackboneNode", &assign_BackboneNode_m_WLANInt));
-	map.insert(std::make_pair("cim:BackboneNode.m_LTEInt", &assign_BackboneNode_m_LTEInt));
-	map.insert(std::make_pair("cim:m_LTEInt.BackboneNode", &assign_BackboneNode_m_LTEInt));
-	map.insert(std::make_pair("cim:BackboneNode.m_FiberInt", &assign_BackboneNode_m_FiberInt));
-	map.insert(std::make_pair("cim:m_FiberInt.BackboneNode", &assign_BackboneNode_m_FiberInt));
-	map.insert(std::make_pair("cim:BackboneNode.m_ComInterface", &assign_BackboneNode_m_ComInterface));
-	map.insert(std::make_pair("cim:m_ComInterface.BackboneNode", &assign_BackboneNode_m_ComInterface));
-	map.insert(std::make_pair("cim:LTEModem.m_LTEInt", &assign_LTEModem_m_LTEInt));
-	map.insert(std::make_pair("cim:m_LTEInt.LTEModem", &assign_LTEModem_m_LTEInt));
-	map.insert(std::make_pair("cim:eNodeB.m_LTEModem", &assign_eNodeB_m_LTEModem));
-	map.insert(std::make_pair("cim:m_LTEModem.eNodeB", &assign_eNodeB_m_LTEModem));
-	map.insert(std::make_pair("cim:WLANModem.m_WLANInt", &assign_WLANModem_m_WLANInt));
-	map.insert(std::make_pair("cim:m_WLANInt.WLANModem", &assign_WLANModem_m_WLANInt));
-	map.insert(std::make_pair("cim:FiberModem.m_FiberInt", &assign_FiberModem_m_FiberInt));
-	map.insert(std::make_pair("cim:m_FiberInt.FiberModem", &assign_FiberModem_m_FiberInt));
-	map.insert(std::make_pair("cim:BPLCModem.m_BPLCInt", &assign_BPLCModem_m_BPLCInt));
-	map.insert(std::make_pair("cim:m_BPLCInt.BPLCModem", &assign_BPLCModem_m_BPLCInt));
-	map.insert(std::make_pair("cim:CommChannel.m_ComInterface", &assign_CommChannel_m_ComInterface));
-	map.insert(std::make_pair("cim:m_ComInterface.CommChannel", &assign_CommChannel_m_ComInterface));
-	map.insert(std::make_pair("cim:EnergyConsumer.m_ComMod", &assign_EnergyConsumer_m_ComMod));
-	map.insert(std::make_pair("cim:m_ComMod.EnergyConsumer", &assign_EnergyConsumer_m_ComMod));
 	map.insert(std::make_pair("cim:EnergyConsumer.EnergyConsumerPhase", &assign_EnergyConsumer_EnergyConsumerPhase));
 	map.insert(std::make_pair("cim:EnergyConsumerPhase.EnergyConsumer", &assign_EnergyConsumer_EnergyConsumerPhase));
 	map.insert(std::make_pair("cim:LoadDynamics.EnergyConsumer", &assign_LoadDynamics_EnergyConsumer));
@@ -4419,6 +3832,8 @@ static std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)> initial
 	map.insert(std::make_pair("cim:ConformLoadSchedules.ConformLoadGroup", &assign_ConformLoadGroup_ConformLoadSchedules));
 	map.insert(std::make_pair("cim:ShuntCompensator.ShuntCompensatorPhase", &assign_ShuntCompensator_ShuntCompensatorPhase));
 	map.insert(std::make_pair("cim:ShuntCompensatorPhase.ShuntCompensator", &assign_ShuntCompensator_ShuntCompensatorPhase));
+	map.insert(std::make_pair("cim:ACLineSegment.Clamp", &assign_ACLineSegment_Clamp));
+	map.insert(std::make_pair("cim:Clamp.ACLineSegment", &assign_ACLineSegment_Clamp));
 	map.insert(std::make_pair("cim:PerLengthImpedance.ACLineSegments", &assign_PerLengthImpedance_ACLineSegments));
 	map.insert(std::make_pair("cim:ACLineSegments.PerLengthImpedance", &assign_PerLengthImpedance_ACLineSegments));
 	map.insert(std::make_pair("cim:PerLengthPhaseImpedance.PhaseImpedanceData", &assign_PerLengthPhaseImpedance_PhaseImpedanceData));
@@ -4477,8 +3892,6 @@ static std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)> initial
 	map.insert(std::make_pair("cim:GenUnitOpCostCurves.GeneratingUnit", &assign_GeneratingUnit_GenUnitOpCostCurves));
 	map.insert(std::make_pair("cim:GeneratingUnit.RotatingMachine", &assign_GeneratingUnit_RotatingMachine));
 	map.insert(std::make_pair("cim:RotatingMachine.GeneratingUnit", &assign_GeneratingUnit_RotatingMachine));
-	map.insert(std::make_pair("cim:SolarGeneratingUnit.m_ComMod", &assign_SolarGeneratingUnit_m_ComMod));
-	map.insert(std::make_pair("cim:m_ComMod.SolarGeneratingUnit", &assign_SolarGeneratingUnit_m_ComMod));
 	map.insert(std::make_pair("cim:HydroGeneratingUnit.TailbayLossCurve", &assign_HydroGeneratingUnit_TailbayLossCurve));
 	map.insert(std::make_pair("cim:TailbayLossCurve.HydroGeneratingUnit", &assign_HydroGeneratingUnit_TailbayLossCurve));
 	map.insert(std::make_pair("cim:HydroGeneratingUnit.HydroGeneratingEfficiencyCurves", &assign_HydroGeneratingUnit_HydroGeneratingEfficiencyCurves));
@@ -4499,12 +3912,8 @@ static std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)> initial
 	map.insert(std::make_pair("cim:HydroPumps.HydroPowerPlant", &assign_HydroPowerPlant_HydroPumps));
 	map.insert(std::make_pair("cim:HydroPowerPlant.HydroGeneratingUnits", &assign_HydroPowerPlant_HydroGeneratingUnits));
 	map.insert(std::make_pair("cim:HydroGeneratingUnits.HydroPowerPlant", &assign_HydroPowerPlant_HydroGeneratingUnits));
-	map.insert(std::make_pair("cim:WindGeneratingUnit.m_ComMod", &assign_WindGeneratingUnit_m_ComMod));
-	map.insert(std::make_pair("cim:m_ComMod.WindGeneratingUnit", &assign_WindGeneratingUnit_m_ComMod));
 	map.insert(std::make_pair("cim:FossilFuel.FuelAllocationSchedules", &assign_FossilFuel_FuelAllocationSchedules));
 	map.insert(std::make_pair("cim:FuelAllocationSchedules.FossilFuel", &assign_FossilFuel_FuelAllocationSchedules));
-	map.insert(std::make_pair("cim:CogenerationPlant.m_ComMod", &assign_CogenerationPlant_m_ComMod));
-	map.insert(std::make_pair("cim:m_ComMod.CogenerationPlant", &assign_CogenerationPlant_m_ComMod));
 	map.insert(std::make_pair("cim:CogenerationPlant.ThermalGeneratingUnits", &assign_CogenerationPlant_ThermalGeneratingUnits));
 	map.insert(std::make_pair("cim:ThermalGeneratingUnits.CogenerationPlant", &assign_CogenerationPlant_ThermalGeneratingUnits));
 	map.insert(std::make_pair("cim:CombinedCyclePlant.ThermalGeneratingUnits", &assign_CombinedCyclePlant_ThermalGeneratingUnits));
