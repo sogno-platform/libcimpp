@@ -1,0 +1,16 @@
+#projectname {
+	font-size: 200%;
+}
+
+#projectlogo img {
+	height: 3.5em;
+	margin: 0.25em;
+}
+
+#institutelogo img {
+	height: 3em;
+	margin: 0.5em;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
