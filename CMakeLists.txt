@@ -11,7 +11,7 @@ set(libcimpp_VERSION ${libcimpp_MAJOR_VERSION}.${libcimpp_MINOR_VERSION})
 
 # Options
 option(BUILD_SHARED_LIBS "Build shared library" OFF)
-set(USE_CIM_VERSION "IEC61970_16v29a_SINERGIEN" CACHE STRING "Define CIM Version")
+set(USE_CIM_VERSION "IEC61970_16v29a_IEC61968_12v08" CACHE STRING "Define CIM Version")
 message(STATUS "Building ${PROJECT_NAME} with USE_CIM_VERSION=${USE_CIM_VERSION}")
 
 file(GLOB_RECURSE SRC src/*.cpp)
