@@ -29,13 +29,21 @@ static std::string expand_env_variables(std::string str)
 {
 	static std::regex env("\\$\\{([^}]+)\\}");
 	std::smatch match;
-
+#ifdef __linux__
 	while (std::regex_search(str, match, env)) {
 		const char *s = getenv(match[1].str().c_str());
 		const std::string var(s == NULL ? "" : s);
 		str.replace(match[0].first, match[0].second, var);
 	}
-
+#elif defined(_WIN32)
+	while (std::regex_search(str, match, env)) {
+		char *pValue;
+		size_t len;
+		_dupenv_s(&pValue, &len, match[1].str().c_str());
+		const std::string var(pValue == NULL ? "" : pValue);
+		str.replace(match[0].first, match[0].second, var);
+	}
+#endif
 	return str;
 }
 
