@@ -16,11 +16,16 @@ CIMContentHandler::CIMContentHandler() : Objects(nullptr), RDFMap(nullptr)
 
 CIMContentHandler::~CIMContentHandler()
 {
-	if(!objectStack.empty())
+	checkStacksEmpty();
+}
+
+void CIMContentHandler::checkStacksEmpty()
+{
+	if (!objectStack.empty())
 	{
 		throw CriticalError("CIMContentHandler: Critical Error: objectStack is not empty!");
 	}
-	if(!tagStack.empty())
+	if (!tagStack.empty())
 	{
 		throw CriticalError("CIMContentHandler: Critical Error: tagStack is not empty!");
 	}
@@ -240,9 +245,8 @@ std::string CIMContentHandler::get_rdf_enum(const AttributesT &attributes)
 
 bool CIMContentHandler::resolveRDFRelations()
 {
-	unsigned int size, unresolved;
+	unsigned int unresolved;
 	unresolved = 0;
-	size = taskQueue.size();
 	std::list<Task>::iterator it = taskQueue.begin();
 	while(it != taskQueue.end())
 	{
@@ -258,7 +262,7 @@ bool CIMContentHandler::resolveRDFRelations()
 			taskQueue.erase(it++);
 		}
 	}
-	std::cout << "CIMContentHandler: Note: " << unresolved << " out of " << size << " tasks remain unresolved!" << std::endl;
+	std::cout << "CIMContentHandler: Note: " << unresolved << " out of " << taskQueue.size() << " tasks remain unresolved!" << std::endl;
 	if(unresolved > 0)
 		return false;
 	else
