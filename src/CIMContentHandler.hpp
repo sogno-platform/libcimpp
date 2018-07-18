@@ -24,6 +24,8 @@ public:
 	void setObjectsContainer(std::vector<BaseClass*> *Objects);
 	void setRDFMap(std::unordered_map<std::string, BaseClass*> *RDFMap);
 
+	void checkStacksEmpty(); //Check if tagStack or ObjectStack is empty, throw CriticalError if true
+
 	bool resolveRDFRelations(); // AKA work through task queue
 
 protected:
