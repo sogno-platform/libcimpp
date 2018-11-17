@@ -1,0 +1,20 @@
+///////////////////////////////////////////////////////////
+//  URI.cpp
+//  Implementation of the Class URI
+//  Original author: SELAOST1
+///////////////////////////////////////////////////////////
+
+#include "URI.h"
+
+using IEC61970::Part552Header::URI;
+
+
+URI::URI(){
+
+}
+
+
+
+URI::~URI(){
+
+}

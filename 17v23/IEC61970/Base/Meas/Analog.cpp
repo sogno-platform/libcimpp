@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  Analog.cpp
+//  Implementation of the Class Analog
+///////////////////////////////////////////////////////////
+
+#include "Analog.h"
+
+using IEC61970::Base::Meas::Analog;
+
+
+Analog::Analog(){
+
+}
+
+
+
+Analog::~Analog(){
+
+}
