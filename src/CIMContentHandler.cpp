@@ -251,7 +251,6 @@ bool CIMContentHandler::resolveRDFRelations()
 	std::list<Task>::iterator it = taskQueue.begin();
 	while(it != taskQueue.end())
 	{
-		std::cout << "Processing Task" << std::endl;
 		if(!it->resolve(RDFMap))
 		{
 			std::cout << "CIMContentHandler: Note: Cannot resolve following RDF relationship: ";
