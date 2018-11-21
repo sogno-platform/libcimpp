@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  Breaker.cpp
+//  Implementation of the Class Breaker
+///////////////////////////////////////////////////////////
+
+#include "Breaker.h"
+
+using IEC61970::Base::Wires::Breaker;
+
+
+Breaker::Breaker(){
+
+}
+
+
+
+Breaker::~Breaker(){
+
+}
