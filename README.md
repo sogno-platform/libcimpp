@@ -6,12 +6,11 @@ For **non-commercial** use this software is licensed under the terms in the incl
 In case of **commercial** use, you are asked to inform the *Institute for Automation of Complex Power Systems* at *RWTH Aachen University*. Therefore please write to [acs-sek@eonerc.rwth-aachen.de](mailto:acs-sek@eonerc.rwth-aachen.de).
 
 ## Context
-More about the idea you can read [here](http://rdcu.be/vOop). The CIM++ hompage you can find [here](http://fine-aachen.rwth-aachen.de/projects/cimpp).
+More about the idea of  you can read [here](http://rdcu.be/vOop). The CIM++ homepage can be found [here](http://fein-aachen.org/projects/cimpp).
 
-## General
-Version `v2.x` uses [arabica](http://www.jezuk.co.uk/cgi-bin/view/arabica) as a cross platform wrapper around one of the XML parsers listed int the dependencies.
-It is recommended to use libcimpp as a cmake module.
-Currently the libcimpp does not provide an install target.
+## General information
+`limcimpp` uses [arabica](http://www.jezuk.co.uk/cgi-bin/view/arabica) as cross platform wrapper around one of the XML parsers listed int the dependencies (see below).
+It is recommended to use libcimpp as cmake module.
 
 ## Dependencies
 You need following software packages for libcimpp:
@@ -63,20 +62,11 @@ All available CIM versions can be determined in the [CMakeLists.txt](CMakeLists.
 7. Click on `Open Project` to open Visual Studio.
 8. In Visual Studio's main menu choose `Build -> Build Solution`. This will build the `libcimpp` library.
 
-### Build instructions for using libcimpp as a cmake module [TODO: This section needs rewriting...]
-To use libcimpp as an cmake module, the project using the CIM parser needs to be an cmake project itself.
-
-1. Clone the release branch of libcimpp repository
-  + Usually but not necessary into a subdirectory
-2. Assuming the project using libcimpp has a CMakeLists.txt with one of the following lines:
-  + `add_executable(target_name ...)`
-  + `add_library(target_name ...)`
-
-  One can link libcimpp using the cmake statement
-  + `target_link_library(target_name cimpp)`
-3. Build the project
-  + CMake will automatically build libcimpp as a dependency
+### Build instructions for using libcimpp as a cmake module
+To be continued...
 
 
 ## Usage of the library
-For information how to use the library please see the cmake example. The make example is currently not supported due to the lack of an install target for arabica.
+For information how to use the library please see the [cmake based example](https://git.rwth-aachen.de/acs/core/cim/cimpp/libcimpp/tree/master/examples/cmake).
+Building of the example can be performed analogous to bulding the library itself (as described in the `Building instructzions` above)
+The make example is currently not supported due to the lack of an install target for arabica.
