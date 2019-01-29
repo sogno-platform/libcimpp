@@ -66,7 +66,7 @@ All available CIM versions can be determined in the [CMakeLists.txt](CMakeLists.
 To be continued...
 
 
-## Usage of the library
+## Usage of the libcimpp library
 For information how to use the library please see the [cmake based example](https://git.rwth-aachen.de/acs/core/cim/cimpp/libcimpp/tree/master/examples/cmake).
 Building of the example can be performed analogous to bulding the library itself (as described in the `Building instructzions` above)
 The make example is currently not supported due to the lack of an install target for arabica.
