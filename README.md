@@ -15,7 +15,7 @@ It is recommended to use libcimpp as cmake module.
 ## Dependencies
 You need following software packages for libcimpp:
 + One of the following XML parsers:
-  + [libxml2](http://www.xmlsoft.org/) (usually chosen under Linux and usually can be installed as a package)
+  + [libxml2](http://www.xmlsoft.org/) (usually chosen under Linux and often can be installed as a package of the used distribution)
   + [expat](http://expat.sourceforge.net/)
   + [Xerces](http://xerces.apache.org/xerces-c/)
   + [Microsoft XML Parser](https://support.microsoft.com/en-en/help/324460) (this comes with Visual Studio and is the default when compiling with it)
@@ -45,7 +45,7 @@ make -j 4
 
 For building `libcimpp` with a certain CIM version (e.g. `IEC61970_16v29a`), type:
 ```bash
-cmake [libcimpp root directory] -DUSE_CIM_VERSION=IEC61970_16v29a
+cmake .. -DUSE_CIM_VERSION=IEC61970_16v29a
 make -j 4
 ```
 All available CIM versions can be determined in the [CMakeLists.txt](CMakeLists.txt)
