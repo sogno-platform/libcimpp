@@ -37,13 +37,13 @@ mkdir build
 cd build
 ```
 
-For building `libcimpp` with the default CIM version, write:
+For building libcimpp with the default CIM version, write:
 ```bash
 cmake ..
 make -j 4
 ```
 
-For building `libcimpp` with a certain CIM version (e.g. `IEC61970_16v29a`), type:
+For building libcimpp with a certain CIM version (e.g. `IEC61970_16v29a`), type:
 ```bash
 cmake .. -DUSE_CIM_VERSION=IEC61970_16v29a
 make -j 4
