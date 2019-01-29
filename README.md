@@ -31,7 +31,7 @@ git submodule update --init --recursive
 ```
 
 ## Build instructions
-## The UNIX / Linux / MacOS way
+### The UNIX / Linux / MacOS way
 After getting the Git repository, create a build subdirectory and change into it:
 ```bash
 mkdir build
@@ -61,7 +61,7 @@ All available CIM versions can be determined in the [CMakeLists.txt](CMakeLists.
 5. Click on `Finish` and wait while CMake is configuring the project.
 6. Click on `Generate` to generate the Visual Studio project files.
 7. Click on `Open Project` to open Visual Studio.
-8. In Visual Studio's main menu choose `Build -> Build Solution`. This will build the library.
+8. In Visual Studio's main menu choose `Build -> Build Solution`. This will build the `libcimpp` library.
 
 ### Build instructions for using libcimpp as a cmake module [TODO: This section needs rewriting...]
 To use libcimpp as an cmake module, the project using the CIM parser needs to be an cmake project itself.
@@ -78,5 +78,5 @@ To use libcimpp as an cmake module, the project using the CIM parser needs to be
   + CMake will automatically build libcimpp as a dependency
 
 
-### Usage of the library
+## Usage of the library
 For information how to use the library please see the cmake example. The make example is currently not supported due to the lack of an install target for arabica.
