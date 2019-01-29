@@ -22,7 +22,7 @@ You need following software packages for libcimpp:
 + Build system:
   + [cmake](https://cmake.org/)
 
-## Get Git repository
+## Get the Git repository
 ```bash
 git clone https://github.com/RWTH-ACS/libcimpp.git
 cd libcimpp
