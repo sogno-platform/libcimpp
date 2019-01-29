@@ -59,7 +59,7 @@ All available CIM versions can be determined in the [CMakeLists.txt](CMakeLists.
 4. Click on `Configure` and choose the Visual Studio project version, e.g.: `Visual Studio 15 2017`
 5. Click on `Finish` and wait while CMake is configuring the project.
 6. Click on `Generate` to generate the Visual Studio project files.
-7. Click on `Open Project` to open Visual Studio.
+7. Click on `Open Project` to open the project in Visual Studio.
 8. In Visual Studio's main menu choose `Build -> Build Solution`. This will build the `libcimpp` library.
 
 ### Build instructions for using libcimpp as a cmake module
