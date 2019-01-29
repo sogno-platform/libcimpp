@@ -1,29 +1,69 @@
 libcimpp
 ========
 
-### Licensing
+## Licensing
 For **non-commercial** use this software is licensed under the terms in the included [LICENSE](LICENSE) file.
 In case of **commercial** use, you are asked to inform the *Institute for Automation of Complex Power Systems* at *RWTH Aachen University*. Therefore please write to [acs-sek@eonerc.rwth-aachen.de](mailto:acs-sek@eonerc.rwth-aachen.de).
 
-### Context
+## Context
 More about the idea you can read [here](http://rdcu.be/vOop). The CIM++ hompage you can find [here](http://fine-aachen.rwth-aachen.de/projects/cimpp).
 
-### v2.x
-#### General
+## General
 Version `v2.x` uses [arabica](http://www.jezuk.co.uk/cgi-bin/view/arabica) as a cross platform wrapper around one of the XML parsers listed int the dependencies.
 It is recommended to use libcimpp as a cmake module.
 Currently the libcimpp does not provide an install target.
 
-#### Dependencies
-+ One of the following XML Parsers:
-  + [libxml2](http://www.xmlsoft.org/)
+## Dependencies
+You need following software packages for libcimpp:
++ One of the following XML parsers:
+  + [libxml2](http://www.xmlsoft.org/) (usually chosen under Linux)
   + [expat](http://expat.sourceforge.net/)
   + [Xerces](http://xerces.apache.org/xerces-c/)
-  + [Microsoft XML Parser](https://support.microsoft.com/en-en/help/324460)
-+ Buildsystem:
+  + [Microsoft XML Parser](https://support.microsoft.com/en-en/help/324460) (default when compiling with Visual Studio)
++ Build system:
   + [cmake](https://cmake.org/)
 
-#### Build instructions for using libcimpp as a cmake module
+## Get Git repository
+```bash
+git clone https://github.com/RWTH-ACS/libcimpp.git
+cd libcimpp
+git submodule update --init --recursive
+```
+
+## Build instructions
+## The UNIX / Linux / MacOS way
+After getting the Git repository, create a build subdirectory and change into it:
+```bash
+mkdir build
+cd build
+```
+
+For building `libcimpp` with the default CIM version, write:
+```bash
+cmake ..
+make -j 4
+```
+
+For building `libcimpp` with a certain CIM version (e.g. `IEC61970_16v29a`), type:
+```bash
+cmake [libcimpp root directory] -DUSE_CIM_VERSION=IEC61970_16v29a
+make -j 4
+```
+All available CIM versions can be determined in the [CMakeLists.txt](CMakeLists.txt)
+
+### The Windows way with MS Visual Studio
+1. After getting the Git repository, create a `build` subdirectory.
+2. Run the Windows CMake (GUI)
+3. Set the
+* source code directory, e.g.: `C:/git/libcimpp`
+* build directory, e.g.: `C:/git/libcimpp/build`
+4. Click on `Configure` and choose the Visual Studio project version, e.g.: `Visual Studio 15 2017`
+5. Click on `Finish` and wait while CMake is configuring the project.
+6. Click on `Generate` to generate the Visual Studio project files.
+7. Click on `Open Project` to open Visual Studio.
+8. In Visual Studio's main menu choose `Build -> Build Solution`. This will build the library.
+
+### Build instructions for using libcimpp as a cmake module [TODO: This section needs rewriting...]
 To use libcimpp as an cmake module, the project using the CIM parser needs to be an cmake project itself.
 
 1. Clone the release branch of libcimpp repository
@@ -38,44 +78,5 @@ To use libcimpp as an cmake module, the project using the CIM parser needs to be
   + CMake will automatically build libcimpp as a dependency
 
 
-#### Build instructions for using libcimpp in general (UNIX)
-1. Clone the release branch of libcimpp repository
-2. Create a build directory and change into it
-  + Can be either in or out of tree
-3. Call `cmake [libcimpp root directory]`
-  + Alternatively specify CIM version
-  `cmake [libcimpp root directory] -DUSE_CIM_VERSION=[CIM Version]`
-  + Valid options are
-    * `IEC61970_16v29a` (default)
-    * `IEC61970_16v29a_IEC61968_12v08`
-    * `IEC61970_17v07`
-    * `IEC61970_16v29a_SINERGIEN`
-4. Build libcimpp using make
-
-#### Build instructions for using libcimpp in general (MS Visual Studio)
-1. Clone the release branch of libcimpp repository
-2. Create a build directory
-  + Can be either in or out of tree
-3. Use the cmake GUI to configure cmake project and generate Visual Studio project files
-  + Set libcimpp root directory (with the `CMakeLists.txt`)
-  + Set build directory
-4. Open the *.vcxproj file with Visual Studio
-  + Now libcimpp can be build using the Visual Studio Compiler
-
-#### Usage of the library
+### Usage of the library
 For information how to use the library please see the cmake example. The make example is currently not supported due to the lack of an install target for arabica.
-
-
-### v1.x
-#### General
-Version v1.x and v2.x use the same backend and require the same build instructions. They differ only in interface and functionality.
-
-
-### v0.x
-Version `v0.x` uses [libxml2++](http://libxmlplusplus.sourceforge.net/) as XML backend. For more information see the README provided with Version 0.x.
-
-#### Dependencies
-+ [libxml2](http://www.xmlsoft.org/)
-+ [libxml2++](http://libxmlplusplus.sourceforge.net/)
-+ Buildsystem:
-  + [cmake](https://cmake.org/)
