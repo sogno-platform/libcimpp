@@ -16,10 +16,10 @@ Currently the libcimpp does not provide an install target.
 ## Dependencies
 You need following software packages for libcimpp:
 + One of the following XML parsers:
-  + [libxml2](http://www.xmlsoft.org/) (usually chosen under Linux)
+  + [libxml2](http://www.xmlsoft.org/) (usually chosen under Linux and usually can be installed as a package)
   + [expat](http://expat.sourceforge.net/)
   + [Xerces](http://xerces.apache.org/xerces-c/)
-  + [Microsoft XML Parser](https://support.microsoft.com/en-en/help/324460) (default when compiling with Visual Studio)
+  + [Microsoft XML Parser](https://support.microsoft.com/en-en/help/324460) (this comes with Visual Studio and is the default when compiling with it)
 + Build system:
   + [cmake](https://cmake.org/)
 
