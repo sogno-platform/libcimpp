@@ -18,7 +18,7 @@ You need following software packages for libcimpp:
   + [libxml2](http://www.xmlsoft.org/) (usually chosen under Linux and often can be installed as a package of the used distribution)
   + [expat](http://expat.sourceforge.net/)
   + [Xerces](http://xerces.apache.org/xerces-c/)
-  + [Microsoft XML Parser](https://support.microsoft.com/en-en/help/324460) (this comes with Visual Studio and is the default when compiling with it)
+  + [Microsoft XML Parser](https://support.microsoft.com/en-en/help/324460) (this comes with MS Visual Studio and is the default when compiling with it)
 + Build system:
   + [cmake](https://cmake.org/)
 
