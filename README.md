@@ -6,7 +6,7 @@ For **non-commercial** use this software is licensed under the terms in the incl
 In case of **commercial** use, you are asked to inform the *Institute for Automation of Complex Power Systems* at *RWTH Aachen University*. Therefore please write to [acs-sek@eonerc.rwth-aachen.de](mailto:acs-sek@eonerc.rwth-aachen.de).
 
 ## Context
-More about the idea of  you can read [here](http://rdcu.be/vOop). The CIM++ homepage can be found [here](http://fein-aachen.org/projects/cimpp).
+More about the idea of CIM++ you can read [here](http://rdcu.be/vOop). The CIM++ homepage can be found [here](http://fein-aachen.org/projects/cimpp).
 
 ## General information
 limcimpp uses [arabica](http://www.jezuk.co.uk/cgi-bin/view/arabica) as cross platform wrapper around one of the XML parsers listed int the dependencies (see below).
