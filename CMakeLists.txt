@@ -7,7 +7,8 @@ add_subdirectory(thirdparty)
 
 set(libcimpp_MAJOR_VERSION 2)
 set(libcimpp_MINOR_VERSION 1)
-set(libcimpp_VERSION ${libcimpp_MAJOR_VERSION}.${libcimpp_MINOR_VERSION})
+set(libcimpp_PATCH_VERSION 0)
+set(libcimpp_VERSION ${libcimpp_MAJOR_VERSION}.${libcimpp_MINOR_VERSION}.${libcimpp_PATCH_VERSION})
 
 # Options
 option(BUILD_SHARED_LIBS "Build shared library" OFF)
