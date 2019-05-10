@@ -47,3 +47,9 @@ file(GLOB_RECURSE CIM_SRC ${CIM_FOLDER}/*.cpp)
 target_sources(${PROJECT_NAME} PRIVATE ${CIM_SRC})
 
 add_subdirectory(doc)
+
+# Show feature summary
+include(FeatureSummary)
+feature_summary(WHAT ALL VAR enabledFeaturesText)
+message(STATUS "${enabledFeaturesText}")
+message(STATUS "Building CIMpp with USE_CIM_VERSION=${USE_CIM_VERSION}")
