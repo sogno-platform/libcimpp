@@ -46,6 +46,28 @@ target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURR
 file(GLOB_RECURSE CIM_SRC ${CIM_FOLDER}/*.cpp)
 target_sources(${PROJECT_NAME} PRIVATE ${CIM_SRC})
 
+include(GNUInstallDirs)
+
+install(TARGETS ${PROJECT_NAME}
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}/static
+)
+
+file(GLOB HEADERS "src/*.h" "src/*.hpp")
+install(FILES ${HEADERS}
+    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/cimpp/${CIM_FOLDER}
+    COMPONENT devel
+)
+
+install(DIRECTORY ${CIM_FOLDER}
+    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/cimpp
+    COMPONENT devel
+    FILES_MATCHING
+        PATTERN "*.h"
+        PATTERN "*.hpp"
+)
+
 add_subdirectory(doc)
 
 # Show feature summary
