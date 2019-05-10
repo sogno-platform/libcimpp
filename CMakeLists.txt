@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
 
+add_subdirectory(doc)
 add_subdirectory(thirdparty)
 
 set(libcimpp_MAJOR_VERSION 2)
@@ -70,7 +71,6 @@ install(DIRECTORY ${CIM_FOLDER}
         PATTERN "*.hpp"
 )
 
-add_subdirectory(doc)
 # Settings for packaging
 include(CIMppPackaging)
 
