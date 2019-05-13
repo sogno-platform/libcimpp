@@ -18,12 +18,6 @@ option(BUILD_SHARED_LIBS "Build shared library" OFF)
 set(USE_CIM_VERSION "IEC61970_17v23" CACHE STRING "Define CIM Version")
 message(STATUS "Building ${PROJECT_NAME} with USE_CIM_VERSION=${USE_CIM_VERSION}")
 
-file(GLOB_RECURSE SRC src/*.cpp)
-
-add_library(${PROJECT_NAME} ${SRC})
-target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>)
-target_link_libraries(${PROJECT_NAME} PRIVATE arabica)
-
 if(USE_CIM_VERSION STREQUAL "IEC61970_17v07")
   set(CIM_FOLDER "17v07")
   set(CIM_NAME "IEC61970 17v07")
@@ -45,9 +39,14 @@ else()
   message(FATAL_ERROR "${USE_CIM_VERSION} is an invalid value for USE_CIM_VERSION")
 endif()
 
-target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/${CIM_FOLDER}>)
+file(GLOB_RECURSE SRC src/*.cpp)
 file(GLOB_RECURSE CIM_SRC ${CIM_FOLDER}/*.cpp)
-target_sources(${PROJECT_NAME} PRIVATE ${CIM_SRC})
+
+add_library(${PROJECT_NAME} ${SRC} ${CIM_SRC})
+set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "cimpp${CIM_FOLDER}")
+target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>)
+target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/${CIM_FOLDER}>)
+target_link_libraries(${PROJECT_NAME} PRIVATE arabica)
 
 include(GNUInstallDirs)
 
