@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  Line.cpp
+//  Implementation of the Class Line
+///////////////////////////////////////////////////////////
+
+#include "Line.h"
+
+using IEC61970::Base::Wires::Line;
+
+
+Line::Line(){
+
+}
+
+
+
+Line::~Line(){
+
+}

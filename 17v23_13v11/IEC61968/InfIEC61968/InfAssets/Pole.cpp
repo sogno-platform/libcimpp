@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  Pole.cpp
+//  Implementation of the Class Pole
+///////////////////////////////////////////////////////////
+
+#include "Pole.h"
+
+using IEC61968::InfIEC61968::InfAssets::Pole;
+
+
+Pole::Pole(){
+
+}
+
+
+
+Pole::~Pole(){
+
+}

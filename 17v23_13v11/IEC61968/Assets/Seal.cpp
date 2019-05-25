@@ -1,0 +1,20 @@
+///////////////////////////////////////////////////////////
+//  Seal.cpp
+//  Implementation of the Class Seal
+//  Original author: T. Kostic
+///////////////////////////////////////////////////////////
+
+#include "Seal.h"
+
+using IEC61968::Assets::Seal;
+
+
+Seal::Seal(){
+
+}
+
+
+
+Seal::~Seal(){
+
+}

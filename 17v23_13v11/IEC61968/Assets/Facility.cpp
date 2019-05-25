@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  Facility.cpp
+//  Implementation of the Class Facility
+///////////////////////////////////////////////////////////
+
+#include "Facility.h"
+
+using IEC61968::Assets::Facility;
+
+
+Facility::Facility(){
+
+}
+
+
+
+Facility::~Facility(){
+
+}
