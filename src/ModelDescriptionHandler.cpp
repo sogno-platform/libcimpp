@@ -131,7 +131,7 @@ std::string ModelDescriptionHandler::get_rdf_id(const AttributesT &attributes)
  		if(attributes.getQName(i) == "rdf:ID")
  			return attributes.getValue(i);
  		if(attributes.getQName(i) == "rdf:about")
- 			return attributes.getValue(i).substr(1);
+ 			return attributes.getValue(i).substr(0);
  	}
  	return std::string();
 }
@@ -142,10 +142,7 @@ std::string ModelDescriptionHandler::get_rdf_resource(const AttributesT &attribu
  	{
  		if(attributes.getQName(i) == "rdf:resource")
  		{
- 			if(attributes.getValue(i).at(0) == '#')
- 			{
- 				return attributes.getValue(i).substr(1);
- 			}
+ 			return attributes.getValue(i).substr(0);
  		}
  	}
  	return std::string();
