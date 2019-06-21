@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  Usage.cpp
+//  Implementation of the Class Usage
+///////////////////////////////////////////////////////////
+
+#include "Usage.h"
+
+using IEC61968::InfIEC61968::InfWork::Usage;
+
+
+Usage::Usage(){
+
+}
+
+
+
+Usage::~Usage(){
+
+}

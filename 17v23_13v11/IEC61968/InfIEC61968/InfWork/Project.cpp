@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  Project.cpp
+//  Implementation of the Class Project
+///////////////////////////////////////////////////////////
+
+#include "Project.h"
+
+using IEC61968::InfIEC61968::InfWork::Project;
+
+
+Project::Project(){
+
+}
+
+
+
+Project::~Project(){
+
+}

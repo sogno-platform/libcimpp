@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+//  Junction.cpp
+//  Implementation of the Class Junction
+///////////////////////////////////////////////////////////
+
+#include "Junction.h"
+
+using IEC61970::Base::Wires::Junction;
+
+
+Junction::Junction(){
+
+}
+
+
+
+Junction::~Junction(){
+
+}
