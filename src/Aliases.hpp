@@ -39,7 +39,7 @@ static std::string expand_env_variables(std::string str)
 #endif
 
 		const std::string var(s == NULL ? "" : s);
-		str.replace(match[0].first - str.begin(), match[0].length() , var);
+		str.replace(match.position(0), match.length(0) , var);
 	}
 
 	return str;
