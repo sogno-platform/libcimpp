@@ -30,12 +30,14 @@ static std::string expand_env_variables(std::string str)
 	static std::regex env("\\$\\{([^}]+)\\}");
 	std::smatch match;
 	while (std::regex_search(str, match, env)) {
-#ifdef __linux__
+#if defined(__linux__) || defined(__APPLE__)
 		const char *s = getenv(match[1].str().c_str());
 #elif defined(_WIN32)
 		char *s;
 		size_t len;
 		_dupenv_s(&s, &len, match[1].str().c_str());
+#else
+  #error Unsupported platform
 #endif
 
 		const std::string var(s == NULL ? "" : s);
