@@ -49,7 +49,8 @@ add_library(${PROJECT_NAME} ${SRC} ${CIM_SRC})
 set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "cimpp${CIM_FOLDER}")
 target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>)
 target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/${CIM_FOLDER}>)
-target_link_libraries(${PROJECT_NAME} PRIVATE arabica)
+target_link_libraries(${PROJECT_NAME} PUBLIC arabica)
+set_property(TARGET arabica PROPERTY POSITION_INDEPENDENT_CODE ON)
 
 include(GNUInstallDirs)
 
