@@ -6,3 +6,5 @@ map.insert(std::make_pair("cim:DiagramObjectPoint.DiagramObject", &assign_Diagra
 map.insert(std::make_pair("cim:Substation.Region", &assign_SubGeographicalRegion_Substations));
 map.insert(std::make_pair("cim:OperationalLimit.OperationalLimitSet", &assign_OperationalLimitSet_OperationalLimitValue));
 map.insert(std::make_pair("cim:ConformLoad.LoadGroup", &assign_ConformLoadGroup_EnergyConsumers));
+map.insert(std::make_pair("cim:LoadGroup.SubLoadArea", &assign_SubLoadArea_LoadGroups));
+map.insert(std::make_pair("cim:SubLoadArea.LoadArea", &assign_LoadArea_SubLoadAreas));
