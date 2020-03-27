@@ -35,7 +35,7 @@ int main(int argc, char** argv)
 
 	for (BaseClass* Object : someModel.Objects)
 	{
-		if(IEC61970::Base::Core::IdentifiedObject* IdObj = dynamic_cast<IEC61970::Base::Core::IdentifiedObject*>(Object))
+		if(CGMES::IdentifiedObject* IdObj = dynamic_cast<CGMES::IdentifiedObject*>(Object))
 		{
 			if(!IdObj->name.empty())
 				std::cout << IdObj->name << std::endl;

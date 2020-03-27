@@ -1,6 +1,6 @@
 #include "ModelDescriptionHandler.hpp"
 #include "IEC61970/IEC61970CIMVersion.h"
-#include "IEC61970/Base/Domain/String.h"
+#include "String.hpp"
 
 #include <stdexcept>
 #include <iostream>
@@ -8,7 +8,7 @@
 
 #include "CIMExceptions.hpp"
 
-using IEC61970::IEC61970CIMVersion;
+using CGMES::IEC61970CIMVersion;
 
 ModelDescriptionHandler::ModelDescriptionHandler() : modelDescription(nullptr)
 {
