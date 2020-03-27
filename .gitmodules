@@ -1,3 +1,7 @@
 [submodule "thirdparty/arabica"]
 	path = thirdparty/arabica
 	url = https://github.com/RWTH-ACS/arabica
+[submodule "CGMES"]
+	path = CGMES
+	url = git@git.rwth-aachen.de:acs/public/cim/cim-codebase-generator
+	branch = 16-assignment-functions-not-generated-correctly-for-1-many-relationships

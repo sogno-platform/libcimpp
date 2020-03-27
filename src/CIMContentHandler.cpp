@@ -110,7 +110,7 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 			BaseClass* BaseClass_ptr = CIMFactory::CreateNew(qName);
 
 			//Check if created Object is IdentifiedObject and place rdf_id into mRID
-			if(IEC61970::Base::Core::IdentifiedObject* idOb = dynamic_cast<IEC61970::Base::Core::IdentifiedObject*>(BaseClass_ptr))
+			if(CGMES::IdentifiedObject* idOb = dynamic_cast<CGMES::IdentifiedObject*>(BaseClass_ptr))
 			{
 				(*idOb).mRID = rdf_id;
 			}

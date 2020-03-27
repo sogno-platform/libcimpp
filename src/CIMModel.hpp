@@ -7,6 +7,8 @@
 #include "CIMFile.hpp"
 #include "BaseClass.h"
 
+using namespace CGMES;
+
 /** \brief CIM model handler
  *
  * This model handler organizes the files of a CIM model. It also gives access
