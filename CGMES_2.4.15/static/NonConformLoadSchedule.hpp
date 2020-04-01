@@ -1,0 +1,8 @@
+#ifndef NONCONFORMLOADSCHEDULE_HPP
+#define NONCONFORMLOADSCHEDULE_HPP
+
+namespace CGMES
+{
+	class NonConformLoadSchedule {};
+}
+#endif // NONCONFORMLOADSCHEDULE_HPP
