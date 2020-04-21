@@ -22,7 +22,7 @@ bool assign(BaseClass* CIMObj, const std::string& CIMAttrName, const std::string
 		return (*prim_it->second)(str, CIMObj);
 	}
 
-	std::cerr << "!! ********* Could not assign object: " << Value << " to " << CIMAttrName << " in object of type " << CIMObj->debugString() << std::endl;
+	std::cerr << "Couldn't assign attribute with value: " << Value << " to " << CIMAttrName << " in object of type " << CIMObj->debugString() << std::endl;
 	return false;
 }
 
