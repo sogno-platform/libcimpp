@@ -30,7 +30,7 @@ bool Task::resolve(std::unordered_map<std::string, BaseClass*> *RDFMap)
 {
 	std::unordered_map<std::string, BaseClass*>::iterator it_id = RDFMap->find(_Value);
 	if(it_id == RDFMap->end()) {
-                std::cerr << "Couldn't find " << _CIMAttrName << " in RDFMap." << std::endl;
+                std::cerr << "Couldn't find " << _CIMAttrName << " with value: " << _Value << " in RDFMap." << std::endl;
 		return false;
 	}
 
