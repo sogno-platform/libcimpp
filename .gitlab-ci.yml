@@ -2,8 +2,11 @@ before_script:
   ##
   ## The SSH_KNOWN_HOSTS variable is defined in the project settings
   ##
-  - echo "$SSH_KNOWN_HOSTS" >> ~/.ssh/known_hosts
+  - cat ~/.ssh/known_hosts
+  - echo "${SSH_KNOWN_HOSTS}"
+  - echo "${SSH_KNOWN_HOSTS}" >> ~/.ssh/known_hosts
   - chmod 644 ~/.ssh/known_hosts
+  - cat ~/.ssh/known_hosts
 
 variables:
   DOCKER_TAG_DEV: ${CI_COMMIT_REF_NAME}
