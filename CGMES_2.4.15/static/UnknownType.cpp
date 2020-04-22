@@ -30,12 +30,12 @@ bool seenAttribute(std::string name, std::string value) {
 bool assign_Unknown_Attribute(std::stringstream &buffer, std::string name) {
 	std::string attribute;
 	buffer >> attribute;
-	if(buffer.fail())
+	if(buffer.fail()) {
 		return false;
-	else
-		if (!seenAttribute(name, attribute)) {	
+	}
+	else if (!seenAttribute(name, attribute)) {
 			std::cout << "Warning: could not assign attribute with name: " << name << " and value: " << attribute << std::endl;
-		}
+	}
 	return true;
 }
 

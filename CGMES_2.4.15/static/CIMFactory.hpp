@@ -14,7 +14,7 @@ namespace CGMES
 		virtual ~CIMFactory();
 		static CGMES::BaseClass* CreateNew(const std::string& name);
 		static bool IsCIMClass(const std::string& name);
-	
+
 	private:
 		static std::unordered_map<std::string, BaseClass* (*)()> factory_map;
 	};

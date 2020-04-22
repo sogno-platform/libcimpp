@@ -66,7 +66,7 @@ namespace CGMES {
 			return lop;
 		}
 	}
-	
+
 	std::ostream& operator<<(std::ostream& os, Boolean& rop)
 	{
 		if (rop) {
