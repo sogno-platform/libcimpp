@@ -1,7 +1,19 @@
 #include <iostream>
+#include <string>
 #include "CIMModel.hpp"
 #include "cimpp/IEC61970.hpp"
 #include "CIMExceptions.hpp"
+
+std::string formatName(std::string name) {
+	if (name.length() > 12) {
+		name.resize(10, ' ');
+		name += "..  ";
+	}
+	else {
+		name.resize(14, ' ');
+	}
+	return name;
+}
 
 int main(int argc, char** argv)
 {
@@ -37,9 +49,17 @@ int main(int argc, char** argv)
 	{
 		if(CGMES::IdentifiedObject* IdObj = dynamic_cast<CGMES::IdentifiedObject*>(Object))
 		{
-			if(!IdObj->name.empty())
-				std::cout << IdObj->name << std::endl;
+			if(!IdObj->name.empty()) {
+				static unsigned int i = 0;
+				std::string outputName = formatName(IdObj->name);
+				std::cout << outputName;
+				i++;
+				if (i % 5 == 0) {
+					std::cout << "\n";
+				}
+			}
 		}
 	}
+	std::cout << "\n";
 	return 0;
 }

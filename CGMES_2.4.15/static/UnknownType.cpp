@@ -12,13 +12,30 @@ UnknownType::UnknownType() {};
 
 UnknownType::~UnknownType() {};
 
+bool seenAttribute(std::string name, std::string value) {
+	static std::list<std::pair<std::string, std::string>> seenAttributes;
+	bool found = false;
+	for(const std::pair<std::string, std::string> & attribute : seenAttributes) {
+		if (name == attribute.first && value == attribute.second) {
+			found = true;
+
+		}
+	}
+	if (!found) {
+		seenAttributes.push_back(std::pair<std::string, std::string>(name, value));
+	}
+	return found;
+}
+
 bool assign_Unknown_Attribute(std::stringstream &buffer, std::string name) {
 	std::string attribute;
 	buffer >> attribute;
 	if(buffer.fail())
 		return false;
 	else
-		std::cout << "Warning: could not assign attribute with name: " << name << " and value: " << attribute << std::endl;
+		if (!seenAttribute(name, attribute)) {	
+			std::cout << "Warning: could not assign attribute with name: " << name << " and value: " << attribute << std::endl;
+		}
 	return true;
 }
 
@@ -42,19 +59,47 @@ bool assign_Unknown_Class(std::string type) {
 }
 
 bool assign_Class_NameType_name(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	return assign_Unknown_Class("cim:NameType.name");
+	static bool seen = false;
+	if (seen){
+		return true;
+	}
+	else {
+		seen = true;
+		return assign_Unknown_Class("cim:NameType.name");
+	}
 }
 
 bool assign_Class_Name_NameType(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	return assign_Unknown_Class("cim:Name.NameType");
+	static bool seen = false;
+	if (seen){
+		return true;
+	}
+	else {
+		seen = true;
+		return assign_Unknown_Class("cim:Name.NameType");
+	}
 }
 
 bool assign_Class_Name_name(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	return assign_Unknown_Class("cim:Name.name");
+	static bool seen = false;
+	if (seen){
+		return true;
+	}
+	else {
+		seen = true;
+		return assign_Unknown_Class("cim:Name.name");
+	}
 }
 
 bool assign_Class_Name_IdentifiedObject(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	return assign_Unknown_Class("cim:Name.IdentifiedObject");
+	static bool seen = false;
+	if (seen){
+		return true;
+	}
+	else {
+		seen = true;
+		return assign_Unknown_Class("cim:Name.IdentifiedObject");
+	}
 }
 
 void UnknownType::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
