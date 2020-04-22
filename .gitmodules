@@ -3,5 +3,5 @@
 	url = https://github.com/RWTH-ACS/arabica
 [submodule "CGMES"]
 	path = CGMES_2.4.15/generate
-	url = ../cimpp/libcimpp
+	url = ../../cim-codebase-generator
 	branch = 16-assignment-functions-not-generated-correctly-for-1-many-relationships
