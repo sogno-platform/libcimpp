@@ -55,11 +55,11 @@ int main(int argc, char** argv)
 				std::cout << outputName;
 				i++;
 				if (i % 5 == 0) {
-					std::cout << "\n";
+					std::cout << std::endl;
 				}
 			}
 		}
 	}
-	std::cout << "\n";
+	std::cout << std::endl;
 	return 0;
 }
