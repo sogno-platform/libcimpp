@@ -9,12 +9,12 @@ Date::Date() {}
 
 Date::Date(String s)
 {
-    value=s;
+	value=s;
 }
 
 Date::~Date() {}
 
 BaseClass* Date_factory()
 {
-      return new Date;
+	return new Date;
 }

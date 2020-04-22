@@ -13,12 +13,12 @@ namespace CGMES
 	class Date: public BaseClass
 	{
 	public:
-	    Date();
-	    Date(String);
-	    virtual ~Date();
-	
+		Date();
+		Date(String);
+		virtual ~Date();
+
 	private:
-	    String value;
+		String value;
 	};
 
 	BaseClass* Date_factory();

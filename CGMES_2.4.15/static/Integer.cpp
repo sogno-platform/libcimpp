@@ -19,7 +19,7 @@ const char* Integer::debugString() {
 	return Integer::debugName;
 }
 
-void Integer::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {} 
+void Integer::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {}
 
 void Integer::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {}
 
@@ -31,27 +31,27 @@ namespace CGMES {
 		initialized = true;
 		return *this;
 	}
-	
+
 	Integer& Integer::operator-=(const Integer& rhs){
 	    value -= rhs.value;
 	    return *this;
 	}
-	
+
 	Integer& Integer::operator*=(const Integer& rhs){
 	    value *= rhs.value;
 	    return *this;
 	}
-	
+
 	Integer& Integer::operator/=(const Integer& rhs){
 	    value /= rhs.value;
 	    return *this;
 	}
-	
+
 	Integer& Integer::operator+=(const Integer& rhs){
 	    value += rhs.value;
 	    return *this;
 	}
-	
+
 	Integer::operator long int(){
 		if(!initialized)
 		{
