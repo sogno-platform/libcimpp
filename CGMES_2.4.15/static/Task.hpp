@@ -5,8 +5,6 @@
 #include <string>
 #include "BaseClass.hpp"
 
-using namespace CGMES;
-
 class Task
 {
 public:

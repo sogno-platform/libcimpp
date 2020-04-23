@@ -3,7 +3,7 @@
 #include <unordered_map>
 
 #include "Folders.hpp"
-#include "cimpp/CIMClassList.hpp"
+#include "CIMClassList.hpp"
 #include "assignments.hpp"
 #include <iostream>
 #include "BaseClass.hpp"

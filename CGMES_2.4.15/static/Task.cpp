@@ -1,7 +1,7 @@
 #include <iostream>
 
 #include "Folders.hpp"
-#include "cimpp/CIMClassList.hpp"
+#include "CIMClassList.hpp"
 #include "Task.hpp"
 
 using namespace CGMES;
