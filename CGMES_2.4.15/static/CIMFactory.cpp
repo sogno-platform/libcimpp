@@ -1,6 +1,6 @@
 #include "CIMFactory.hpp"
 #include "Folders.hpp"
-#include "cimpp/CIMClassList.hpp"
+#include "CIMClassList.hpp"
 #include <algorithm>
 #include <iostream>
 

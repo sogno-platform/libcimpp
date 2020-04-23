@@ -12,7 +12,7 @@ namespace CGMES
 	public:
 		CIMFactory();
 		virtual ~CIMFactory();
-		static CGMES::BaseClass* CreateNew(const std::string& name);
+		static BaseClass* CreateNew(const std::string& name);
 		static bool IsCIMClass(const std::string& name);
 
 	private:

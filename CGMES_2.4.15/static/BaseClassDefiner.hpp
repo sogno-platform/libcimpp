@@ -4,11 +4,11 @@
 #include <unordered_map>
 #include <ostream>
 
+class BaseClass;
+typedef bool (*class_assign_function)(BaseClass*, BaseClass*);
+typedef bool (*assign_function)(std::stringstream&, BaseClass*);
 namespace CGMES
 {
-	class BaseClass;
-	typedef bool (*class_assign_function)(BaseClass*, BaseClass*);
-	typedef bool (*assign_function)(std::stringstream&, BaseClass*);
 
 	class BaseClassDefiner {
 	public:

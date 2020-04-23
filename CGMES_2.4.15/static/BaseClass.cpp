@@ -17,6 +17,6 @@ const char* BaseClass::debugString()
 	return BaseClass::debugName;
 }
 
-BaseClassDefiner BaseClass::define() {
+CGMES::BaseClassDefiner BaseClass::define() {
 	return BaseClassDefiner(BaseClass::addConstructToMap, BaseClass::addPrimitiveAssignFnsToMap, BaseClass::addClassAssignFnsToMap, BaseClass::debugName);
 }

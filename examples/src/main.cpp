@@ -1,8 +1,12 @@
 #include <iostream>
 #include <string>
 #include "CIMModel.hpp"
-#include "cimpp/IEC61970.hpp"
+#include "IEC61970.hpp"
 #include "CIMExceptions.hpp"
+
+#ifdef CGMES_BUILD
+#include "CIMNamespaces.hpp"
+#endif
 
 std::string formatName(std::string name) {
 	if (name.length() > 12) {
@@ -47,7 +51,7 @@ int main(int argc, char** argv)
 
 	for (BaseClass* Object : someModel.Objects)
 	{
-		if(CGMES::IdentifiedObject* IdObj = dynamic_cast<CGMES::IdentifiedObject*>(Object))
+		if(IEC61970::Base::Core::IdentifiedObject* IdObj = dynamic_cast<IEC61970::Base::Core::IdentifiedObject*>(Object))
 		{
 			if(!IdObj->name.empty()) {
 				static unsigned int i = 0;
