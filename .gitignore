@@ -47,3 +47,7 @@ Doxyfile
 # CLion development
 .idea
 cmake-build*
+
+CGMES_2.4.15/src/**/*.cpp
+CGMES_2.4.15/src/*.hpp
+CGMES_2.4.15/src/**/*.h
