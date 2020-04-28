@@ -1,5 +1,6 @@
 #include "CIMModel.hpp"
 #include "CIMContentHandler.hpp"
+#include "SAXErrorHandler.hpp"
 #include "ModelDescriptionHandler.hpp"
 #include "ModelDescription.hpp"
 #include "SAX/InputSource.hpp"
@@ -55,10 +56,14 @@ void CIMModel::parseFiles()
 	ContentHandler.setObjectsContainer(&Objects);
 	ContentHandler.setRDFMap(&RDFMap);
 
+	SAXErrorHandler ErrorHandler;
+
 	for(CIMFile& file : Files) //TODO: Suche evtl. mit eigener dependency-liste beschleunigen
 	{
 		Arabica::SAX::XMLReader<std::string> Reader;
 		Reader.setContentHandler(ContentHandler);
+		Reader.setErrorHandler(ErrorHandler);
+
 		if(DependencyCheck == true)
 		{
 			if(!(file.getModelDescription()->dependencyID).empty()) //TODO: Ueberpruefung besser Implementieren
