@@ -1,7 +1,7 @@
 
 #include "BaseClass.hpp"
 
-using namespace CGMES;
+using namespace CIMPP;
 
 BaseClass::~BaseClass() {}
 
@@ -17,6 +17,6 @@ const char* BaseClass::debugString()
 	return BaseClass::debugName;
 }
 
-CGMES::BaseClassDefiner BaseClass::define() {
+CIMPP::BaseClassDefiner BaseClass::define() {
 	return BaseClassDefiner(BaseClass::addConstructToMap, BaseClass::addPrimitiveAssignFnsToMap, BaseClass::addClassAssignFnsToMap, BaseClass::debugName);
 }

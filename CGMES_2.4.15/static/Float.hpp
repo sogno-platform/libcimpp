@@ -7,8 +7,8 @@
 
 #include "BaseClass.hpp"
 
-namespace CGMES
-{
+namespace CIMPP {
+
 	/**
 	 * A floating point number. The range is unspecified and not limited.
 	 */

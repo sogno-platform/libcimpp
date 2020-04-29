@@ -7,8 +7,8 @@
 /*
 A string consisting of a sequence of characters. The character encoding is UTF-8. The string length is unspecified and unlimited.
 */
-namespace CGMES
-{
+namespace CIMPP {
+
 	typedef std::string String;
 }
 #endif

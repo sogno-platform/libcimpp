@@ -5,8 +5,8 @@
 #include <unordered_map>
 #include "BaseClass.hpp"
 
-namespace CGMES
-{
+namespace CIMPP {
+
 	class CIMFactory
 	{
 	public:

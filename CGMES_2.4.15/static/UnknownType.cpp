@@ -6,7 +6,7 @@
 #include "BaseClass.hpp"
 #include "UnknownType.hpp"
 
-using namespace CGMES;
+using namespace CIMPP;
 
 UnknownType::UnknownType() {};
 
@@ -116,7 +116,7 @@ void UnknownType::addClassAssignFnsToMap(std::unordered_map<std::string, class_a
 	assign_map.insert(std::make_pair(std::string("cim:Name.NameType"), &assign_Class_Name_NameType));
 }
 
-namespace CGMES {
+namespace CIMPP {
 	BaseClass* UnknownType_factory() {
 		return new UnknownType;
 	}

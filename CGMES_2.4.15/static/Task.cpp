@@ -4,7 +4,7 @@
 #include "CIMClassList.hpp"
 #include "Task.hpp"
 
-using namespace CGMES;
+using namespace CIMPP;
 
 typedef bool (*task_function)(BaseClass*, BaseClass*);
 static std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)> initialize();
