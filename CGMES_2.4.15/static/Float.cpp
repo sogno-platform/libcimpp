@@ -1,7 +1,7 @@
 #include "Float.hpp"
 #include "../src/CIMExceptions.hpp"
 
-using namespace CGMES;
+using namespace CIMPP;
 
 Float::Float(){}
 

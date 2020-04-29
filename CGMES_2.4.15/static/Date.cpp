@@ -3,7 +3,7 @@
 #include "Date.hpp"
 #include "String.hpp"
 
-using namespace CGMES;
+using namespace CIMPP;
 
 Date::Date() {}
 

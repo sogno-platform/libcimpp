@@ -7,8 +7,7 @@
 
 #include "BaseClass.hpp"
 
-namespace CGMES
-{
+namespace CIMPP {
 	/**
 	 * A type with the value space "true" and "false".
 	 */

@@ -7,8 +7,7 @@
 class BaseClass;
 typedef bool (*class_assign_function)(BaseClass*, BaseClass*);
 typedef bool (*assign_function)(std::stringstream&, BaseClass*);
-namespace CGMES
-{
+namespace CIMPP {
 
 	class BaseClassDefiner {
 	public:

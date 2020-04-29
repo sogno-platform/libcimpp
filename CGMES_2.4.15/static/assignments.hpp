@@ -4,7 +4,7 @@
 #include <string>
 #include "BaseClass.hpp"
 
-using namespace CGMES;
+using namespace CIMPP;
 
 bool assign(BaseClass* CIMObj, const std::string& CIMAttrName, const std::string& Value);
 

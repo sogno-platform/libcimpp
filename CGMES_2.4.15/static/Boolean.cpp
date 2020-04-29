@@ -1,7 +1,7 @@
 #include "Boolean.hpp"
 #include "../src/CIMExceptions.hpp"
 
-using namespace CGMES;
+using namespace CIMPP;
 
 Boolean::Boolean(){}
 
@@ -43,7 +43,7 @@ const char* Boolean::debugString()
 	return Boolean::debugName;
 }
 
-namespace CGMES {
+namespace CIMPP {
 	std::istream& operator>>(std::istream& lop, Boolean& rop)
 	{
 		std::string tmp;

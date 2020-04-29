@@ -10,8 +10,8 @@
 #include "Date.hpp"
 #include "String.hpp"
 
-namespace CGMES
-{
+namespace CIMPP {
+
 	class IEC61970CIMVersion : public BaseClass
 	{
 	public:

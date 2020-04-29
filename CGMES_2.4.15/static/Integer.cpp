@@ -1,7 +1,7 @@
 #include "Integer.hpp"
 #include "../src/CIMExceptions.hpp"
 
-using namespace CGMES;
+using namespace CIMPP;
 
 Integer::Integer(){}
 
@@ -25,7 +25,7 @@ void Integer::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_
 
 void Integer::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {}
 
-namespace CGMES {
+namespace  CIMPP {
 	Integer& Integer::operator=(long int &rop){
 		value = rop;
 		initialized = true;

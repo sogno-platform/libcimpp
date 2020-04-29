@@ -1,7 +1,7 @@
 
 #include "BaseClassDefiner.hpp"
 
-using namespace CGMES;
+using namespace CIMPP;
 
 BaseClassDefiner::BaseClassDefiner(void(*addConstruct)(std::unordered_map<std::string, BaseClass* (*)()>&),
 			 void(*addPrimitiveAssignFns)(std::unordered_map<std::string, assign_function>&),

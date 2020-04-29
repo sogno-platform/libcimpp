@@ -4,7 +4,7 @@
 #include "IEC61970.hpp"
 #include "CIMExceptions.hpp"
 
-#ifdef CGMES_BUILD
+#ifndef CGMES_BUILD
 #include "CIMNamespaces.hpp"
 #endif
 
@@ -51,7 +51,7 @@ int main(int argc, char** argv)
 
 	for (BaseClass* Object : someModel.Objects)
 	{
-		if(IEC61970::Base::Core::IdentifiedObject* IdObj = dynamic_cast<IEC61970::Base::Core::IdentifiedObject*>(Object))
+		if(CIMPP::IdentifiedObject* IdObj = dynamic_cast<CIMPP::IdentifiedObject*>(Object))
 		{
 			if(!IdObj->name.empty()) {
 				static unsigned int i = 0;

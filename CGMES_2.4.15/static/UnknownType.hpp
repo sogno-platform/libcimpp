@@ -6,8 +6,8 @@
 #include "BaseClass.hpp"
 
 
-namespace CGMES
-{
+namespace CIMPP {
+
 	class UnknownType: public BaseClass
 	{
 public:

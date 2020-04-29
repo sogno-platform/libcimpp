@@ -5,7 +5,7 @@
 
 #include "IEC61970CIMVersion.h"
 
-using namespace CGMES;
+using namespace CIMPP;
 
 IEC61970CIMVersion::IEC61970CIMVersion(){}
 
