@@ -9,9 +9,6 @@ CriticalError::CriticalError(const std::string& what) : runtime_error(what)
 {
 }
 
-
-
-
 MissingDependencyFile::MissingDependencyFile(const CIMModel* model, const std::string id)
 	: Model(model),
 	  rdfID(id)
@@ -55,6 +52,6 @@ NoRdfMap::NoRdfMap(const CIMContentHandler* handler)
 
 ReadingUninitializedField::ReadingUninitializedField()
 {
-	message = "Error: Uninitilized Field";
+	message = "Error: Uninitialized Field";
 }
 
