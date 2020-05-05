@@ -1,7 +1,9 @@
 #ifndef BASECLASS_HPP
 #define BASECLASS_HPP
 
+#ifndef CGMES_BUILD
 #define CGMES_BUILD
+#endif
 
 #include <unordered_map>
 #include "BaseClassDefiner.hpp"
