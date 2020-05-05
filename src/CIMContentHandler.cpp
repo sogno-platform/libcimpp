@@ -10,6 +10,10 @@
 #include "assignments.hpp"
 #include "CIMExceptions.hpp"
 
+#ifndef CGMES_BUILD
+#include "CIMNamespaces.hpp"
+#endif
+
 CIMContentHandler::CIMContentHandler() : Objects(nullptr), RDFMap(nullptr)
 {
 }
@@ -27,6 +31,13 @@ void CIMContentHandler::checkStacksEmpty()
 	}
 	if (!tagStack.empty())
 	{
+		std::cerr << "First 5 items on stack: " << std::endl;
+		int i = 10;
+		while (!tagStack.empty() && i--) {
+			std::string name = tagStack.top();
+			std::cerr << "{" << name << "}" << std::endl;
+			tagStack.pop();
+		}
 		throw CriticalError("CIMContentHandler: Critical Error: tagStack is not empty!");
 	}
 }
@@ -110,7 +121,7 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 			BaseClass* BaseClass_ptr = CIMFactory::CreateNew(qName);
 
 			//Check if created Object is IdentifiedObject and place rdf_id into mRID
-			if(IEC61970::Base::Core::IdentifiedObject* idOb = dynamic_cast<IEC61970::Base::Core::IdentifiedObject*>(BaseClass_ptr))
+			if(CIMPP::IdentifiedObject* idOb = dynamic_cast<CIMPP::IdentifiedObject*>(BaseClass_ptr))
 			{
 				(*idOb).mRID = rdf_id;
 			}
@@ -149,10 +160,20 @@ void CIMContentHandler::endElement(const std::string &namespaceURI, const std::s
 	}
 
 	// Pop Stacks
-	tagStack.pop();
+	if (tagStack.size() == 0) {
+		std::cerr << "WARNING: Nearly tried to pop empty tag stack for tag: " << qName << std::endl;
+	}
+	else {
+		tagStack.pop();
+	}
 	if(CIMFactory::IsCIMClass(qName))
 	{
-		objectStack.pop();
+		if (objectStack.size() == 0) {
+			std::cerr << "WARNING: Nearly tried to pop empty object stack for tag: " << qName << std::endl;
+		}
+		else {
+			objectStack.pop();
+		}
 		//std::cout << "Popped " << name << std::endl;
 	}
 }
