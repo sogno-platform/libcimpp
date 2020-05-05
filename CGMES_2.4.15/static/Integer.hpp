@@ -18,7 +18,7 @@ namespace CIMPP {
 		Integer();
 		Integer(long int value);
 		virtual ~Integer();
-		static const BaseClassDefiner define();
+		static const BaseClassDefiner declare();
 		Integer& operator=(long int &rop);
 		Integer& operator+=(const Integer& rhs);
 		Integer& operator-=(const Integer& rhs);

@@ -10,7 +10,7 @@ Integer::~Integer(){}
 Integer::Integer(long int value)
 	: value(value), initialized(true) {}
 
-const BaseClassDefiner Integer::define() {
+const BaseClassDefiner Integer::declare() {
 	return BaseClassDefiner(Integer::addConstructToMap, Integer::addPrimitiveAssignFnsToMap, Integer::addClassAssignFnsToMap, Integer::debugName);
 }
 

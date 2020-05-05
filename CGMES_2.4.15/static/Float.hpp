@@ -19,7 +19,7 @@ namespace CIMPP {
 		Float();
 		virtual ~Float();
 		Float(long double value);
-		static const BaseClassDefiner define();
+		static const BaseClassDefiner declare();
 		Float& operator=(long double &rop);
 		Float& operator+=(const Float& rhs);
 		Float& operator-=(const Float& rhs);

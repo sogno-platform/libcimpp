@@ -10,7 +10,7 @@ Boolean::~Boolean(){}
 Boolean::Boolean(bool value)
         : value(value), initialized(true) {}
 
-const BaseClassDefiner Boolean::define()
+const BaseClassDefiner Boolean::declare()
 {
 	return BaseClassDefiner(Boolean::addConstructToMap, Boolean::addPrimitiveAssignFnsToMap, Boolean::addClassAssignFnsToMap, Boolean::debugName);
 }
