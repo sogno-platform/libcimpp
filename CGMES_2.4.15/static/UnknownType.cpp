@@ -56,6 +56,7 @@ bool assign_ACDCTerminal_sequenceNumber(std::stringstream &buffer, BaseClass* Ba
 
 bool assign_Unknown_Class(std::string type) {
 	std::cout << "Warning: could not assign class of unrecognised type " << type << "." << std::endl;
+	return true;
 }
 
 bool assign_Class_NameType_name(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
@@ -129,7 +130,7 @@ void UnknownType::addConstructToMap(std::unordered_map<std::string, BaseClass* (
 
 const char UnknownType::debugName[] = "UnknownType";
 
-const BaseClassDefiner UnknownType::define()
+const BaseClassDefiner UnknownType::declare()
 {
 	return BaseClassDefiner(addConstructToMap, addPrimitiveAssignFnsToMap, addClassAssignFnsToMap, debugName);
 }

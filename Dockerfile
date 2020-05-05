@@ -15,11 +15,11 @@ RUN dnf -y update
 RUN dnf -y install \
 	git \
 	gcc-c++ \
-	make cmake \
+	make \
 	doxygen graphviz \
 	python3-pip rpmdevtools
 
-RUN pip3 install xmltodict chevron
+RUN pip3 install xmltodict chevron cmake
 # Some of the dependencies are only available in our own repo
 ADD https://packages.fein-aachen.org/redhat/fein.repo /etc/yum.repos.d/
 

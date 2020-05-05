@@ -20,7 +20,7 @@ const char* Float::debugString() {
 	return Float::debugName;
 }
 
-const BaseClassDefiner Float::define() {
+const BaseClassDefiner Float::declare() {
 	return BaseClassDefiner(Float::addConstructToMap, Float::addPrimitiveAssignFnsToMap, Float::addClassAssignFnsToMap, Float::debugName);
 }
 

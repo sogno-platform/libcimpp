@@ -17,6 +17,6 @@ const char* BaseClass::debugString()
 	return BaseClass::debugName;
 }
 
-CIMPP::BaseClassDefiner BaseClass::define() {
+CIMPP::BaseClassDefiner BaseClass::declare() {
 	return BaseClassDefiner(BaseClass::addConstructToMap, BaseClass::addPrimitiveAssignFnsToMap, BaseClass::addClassAssignFnsToMap, BaseClass::debugName);
 }

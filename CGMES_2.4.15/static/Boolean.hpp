@@ -16,7 +16,7 @@ namespace CIMPP {
 	public:
 		Boolean();
 		virtual ~Boolean();
-		static const BaseClassDefiner define();
+		static const BaseClassDefiner declare();
 
 		Boolean(bool value);
 		Boolean& operator=(bool &rop);
