@@ -15,7 +15,7 @@ set(libcimpp_VERSION ${libcimpp_MAJOR_VERSION}.${libcimpp_MINOR_VERSION}.${libci
 
 # Options
 option(BUILD_SHARED_LIBS "Build shared library" OFF)
-set(USE_CIM_VERSION "IEC61970_CGMES" CACHE STRING "Define CIM Version")
+set(USE_CIM_VERSION "IEC61970_17v23" CACHE STRING "Define CIM Version")
 message(STATUS "Building ${PROJECT_NAME} with USE_CIM_VERSION=${USE_CIM_VERSION}")
 
 if(USE_CIM_VERSION STREQUAL "IEC61970_CGMES")
