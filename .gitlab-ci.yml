@@ -28,11 +28,6 @@ docker:
     - cmake ../.. -DUSE_CIM_VERSION=${CIM_VERSION}
     - make -j8
 
-build-src-CGMES:
-  <<: *build-src
-  variables:
-    CIM_VERSION: IEC61970_CGMES
-
 build-src-16v29a:
   <<: *build-src
   variables:
