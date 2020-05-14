@@ -48,6 +48,4 @@ Doxyfile
 .idea
 cmake-build*
 
-CGMES_2.4.15_16FEB2016/*
-CGMES_2.4.15_27JAN2020/*
 *.swp
