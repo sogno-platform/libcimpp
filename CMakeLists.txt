@@ -98,6 +98,10 @@ install(DIRECTORY ${CIM_FOLDER}
 # Settings for packaging
 include(CIMppPackaging)
 
+add_executable(example examples/src/main.cpp)
+target_link_libraries(example libcimpp)
+target_compile_features(example PUBLIC cxx_range_for)
+
 # Show feature summary
 include(FeatureSummary)
 feature_summary(WHAT ALL VAR enabledFeaturesText)
