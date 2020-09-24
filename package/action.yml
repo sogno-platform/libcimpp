@@ -1,0 +1,6 @@
+
+name: Docker Image CI
+description: 'Create package'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
