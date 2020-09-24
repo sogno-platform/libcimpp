@@ -8,6 +8,7 @@ set(CPACK_PACKAGE_VERSION_PATCH ${libcimpp_PATCH_VERSION})
 
 set(CPACK_DEBIAN_PACKAGE_SECTION "devel")
 set(CPACK_DEBIAN_PACKAGE_HOMEPAGE "http://www.fein-aachen.org/projects/cimpp/")
+set(CPACK_DEBIAN_PACKAGE_ARCHITECTURE "amd64")
 
 set(CPACK_RPM_PACKAGE_LICENSE "MPL 2.0")
 set(CPACK_RPM_PACKAGE_URL "http://www.fein-aachen.org/projects/cimpp/")
