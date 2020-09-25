@@ -1,26 +1,50 @@
 #ifndef CIM_NAMESPACE_HPP
 #define CIM_NAMESPACE_HPP
 
-#include "IEC61970/IEC61970CIMVersion.h"
-#include "IEC61970/Base/Core/IdentifiedObject.h"
 #include "IEC61970/Base/Domain/UnitMultiplier.h"
-#include "IEC61970/Base/StateVariables/SvVoltage.h"
-#include "IEC61970/Base/StateVariables/SvPowerFlow.h"
-#include "IEC61970/Base/Topology/TopologicalNode.h"
-#include "IEC61970/Base/Wires/ACLineSegment.h"
-#include "IEC61970/Base/Wires/PowerTransformer.h"
-#include "IEC61970/Base/Wires/SynchronousMachine.h"
-#include "IEC61970/Base/Wires/EnergyConsumer.h"
-#include "IEC61970/Base/Wires/ExternalNetworkInjection.h"
-#include "IEC61970/Base/Equivalents/EquivalentShunt.h"
-#include "IEC61970/Base/Core/Terminal.h"
-#include "IEC61970/Base/Core/BaseVoltage.h"
-#include "IEC61970/Base/Wires/PowerTransformerEnd.h"
-#include "IEC61970/Base/StateVariables/SvTapStep.h"
-#include "IEC61970/Dynamics/StandardModels/SynchronousMachineDynamics/SynchronousMachineTimeConstantReactance.h"
-#include "IEC61970/Base/Generation/Production/GeneratingUnit.h"
-#include "IEC61970/Base/Core/ConductingEquipment.h"
 
+namespace IEC61970 {
+    class IEC61970CIMVersion;
+    namespace Base {
+        namespace Core {
+            class BaseVoltage;
+            class ConductingEquipment;
+            class IdentifiedObject;
+            class Terminal;
+        }
+        namespace Equivalents {
+            class EquivalentShunt;
+        }
+        namespace Generation {
+            namespace Production {
+                class GeneratingUnit;
+            }
+        }
+        namespace StateVariables {
+            class SvVoltage;
+            class SvPowerFlow;
+            class SvTapStep;
+        }
+        namespace Topology {
+            class TopologicalNode;
+        }
+        namespace Wires {
+            class ACLineSegment;
+            class PowerTransformer;
+            class SynchronousMachine;
+            class EnergyConsumer;
+            class ExternalNetworkInjection;
+            class PowerTransformerEnd;
+        }
+    }
+    namespace Dynamics {
+        namespace StandardModels {
+            namespace SynchronousMachineDynamics {
+                class SynchronousMachineTimeConstantReactance;
+            }
+        }
+    }
+}
 
 namespace CIMPP {
 	using IEC61970::IEC61970CIMVersion;
