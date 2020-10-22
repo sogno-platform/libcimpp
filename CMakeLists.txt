@@ -15,6 +15,7 @@ set(libcimpp_VERSION ${libcimpp_MAJOR_VERSION}.${libcimpp_MINOR_VERSION}.${libci
 
 # Options
 option(BUILD_SHARED_LIBS "Build shared library" OFF)
+option (BUILD_EXAMPLES "Build examples" OFF)
 
 if(NOT USE_CIM_VERSION)
 	set(USE_CIM_VERSION "CGMES_2.4.15_27JAN2020" CACHE STRING "Define CIM Version")
@@ -98,9 +99,11 @@ install(DIRECTORY ${CIM_FOLDER}
 # Settings for packaging
 include(CIMppPackaging)
 
-add_executable(example examples/src/main.cpp)
-target_link_libraries(example libcimpp)
-target_compile_features(example PUBLIC cxx_range_for)
+if(BUILD_EXAMPLES)
+  add_executable(example examples/src/main.cpp)
+  target_link_libraries(example libcimpp)
+  target_compile_features(example PUBLIC cxx_range_for)
+endif()
 
 # Show feature summary
 include(FeatureSummary)
