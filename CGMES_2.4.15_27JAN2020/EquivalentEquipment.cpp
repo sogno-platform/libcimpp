@@ -6,7 +6,7 @@
 
 using namespace CIMPP;
 
-EquivalentEquipment::EquivalentEquipment() {};
+EquivalentEquipment::EquivalentEquipment(): EquivalentNetwork(nullptr) {};
 
 EquivalentEquipment::~EquivalentEquipment() {};
 

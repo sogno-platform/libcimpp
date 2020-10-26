@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-RegulatingCondEq::RegulatingCondEq() {};
+RegulatingCondEq::RegulatingCondEq(): RegulatingControl(nullptr) {};
 
 RegulatingCondEq::~RegulatingCondEq() {};
 

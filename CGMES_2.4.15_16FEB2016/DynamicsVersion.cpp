@@ -15,7 +15,7 @@
 
 using namespace CIMPP;
 
-DynamicsVersion::DynamicsVersion() {};
+DynamicsVersion::DynamicsVersion(): date(nullptr) {};
 
 DynamicsVersion::~DynamicsVersion() {};
 

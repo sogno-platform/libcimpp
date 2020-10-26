@@ -11,7 +11,7 @@
 
 using namespace CIMPP;
 
-NonlinearShuntCompensatorPoint::NonlinearShuntCompensatorPoint() {};
+NonlinearShuntCompensatorPoint::NonlinearShuntCompensatorPoint(): NonlinearShuntCompensator(nullptr) {};
 
 NonlinearShuntCompensatorPoint::~NonlinearShuntCompensatorPoint() {};
 

@@ -6,7 +6,7 @@
 
 using namespace CIMPP;
 
-OverexcitationLimiterDynamics::OverexcitationLimiterDynamics() {};
+OverexcitationLimiterDynamics::OverexcitationLimiterDynamics(): ExcitationSystemDynamics(nullptr) {};
 
 OverexcitationLimiterDynamics::~OverexcitationLimiterDynamics() {};
 

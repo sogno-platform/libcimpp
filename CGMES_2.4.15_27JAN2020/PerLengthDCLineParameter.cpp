@@ -9,7 +9,7 @@
 
 using namespace CIMPP;
 
-PerLengthDCLineParameter::PerLengthDCLineParameter() {};
+PerLengthDCLineParameter::PerLengthDCLineParameter(): capacitance(nullptr), inductance(nullptr), resistance(nullptr) {};
 
 PerLengthDCLineParameter::~PerLengthDCLineParameter() {};
 

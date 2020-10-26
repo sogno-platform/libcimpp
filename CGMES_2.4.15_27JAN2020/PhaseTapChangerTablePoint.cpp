@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-PhaseTapChangerTablePoint::PhaseTapChangerTablePoint() {};
+PhaseTapChangerTablePoint::PhaseTapChangerTablePoint(): PhaseTapChangerTable(nullptr) {};
 
 PhaseTapChangerTablePoint::~PhaseTapChangerTablePoint() {};
 

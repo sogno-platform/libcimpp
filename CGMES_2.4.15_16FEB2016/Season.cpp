@@ -8,7 +8,7 @@
 
 using namespace CIMPP;
 
-Season::Season() {};
+Season::Season(): endDate(nullptr), startDate(nullptr) {};
 
 Season::~Season() {};
 

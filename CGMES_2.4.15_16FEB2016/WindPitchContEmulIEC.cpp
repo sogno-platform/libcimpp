@@ -16,7 +16,7 @@
 
 using namespace CIMPP;
 
-WindPitchContEmulIEC::WindPitchContEmulIEC() {};
+WindPitchContEmulIEC::WindPitchContEmulIEC(): WindGenTurbineType2IEC(nullptr) {};
 
 WindPitchContEmulIEC::~WindPitchContEmulIEC() {};
 

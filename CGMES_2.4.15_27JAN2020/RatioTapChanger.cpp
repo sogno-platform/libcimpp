@@ -9,7 +9,7 @@
 
 using namespace CIMPP;
 
-RatioTapChanger::RatioTapChanger() {};
+RatioTapChanger::RatioTapChanger(): RatioTapChangerTable(nullptr), TransformerEnd(nullptr) {};
 
 RatioTapChanger::~RatioTapChanger() {};
 

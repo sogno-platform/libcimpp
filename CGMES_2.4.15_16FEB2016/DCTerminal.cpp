@@ -6,7 +6,7 @@
 
 using namespace CIMPP;
 
-DCTerminal::DCTerminal() {};
+DCTerminal::DCTerminal(): DCConductingEquipment(nullptr) {};
 
 DCTerminal::~DCTerminal() {};
 

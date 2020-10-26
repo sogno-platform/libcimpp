@@ -6,7 +6,7 @@
 
 using namespace CIMPP;
 
-TurbineLoadControllerDynamics::TurbineLoadControllerDynamics() {};
+TurbineLoadControllerDynamics::TurbineLoadControllerDynamics(): TurbineGovernorDynamics(nullptr) {};
 
 TurbineLoadControllerDynamics::~TurbineLoadControllerDynamics() {};
 

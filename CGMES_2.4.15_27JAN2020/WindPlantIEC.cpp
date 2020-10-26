@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-WindPlantIEC::WindPlantIEC() {};
+WindPlantIEC::WindPlantIEC(): WindPlantFreqPcontrolIEC(nullptr), WindPlantReactiveControlIEC(nullptr) {};
 
 WindPlantIEC::~WindPlantIEC() {};
 

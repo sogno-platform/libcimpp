@@ -16,7 +16,7 @@
 
 using namespace CIMPP;
 
-WindContPitchAngleIEC::WindContPitchAngleIEC() {};
+WindContPitchAngleIEC::WindContPitchAngleIEC(): WindGenTurbineType3IEC(nullptr) {};
 
 WindContPitchAngleIEC::~WindContPitchAngleIEC() {};
 

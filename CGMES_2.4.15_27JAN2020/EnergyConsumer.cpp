@@ -13,7 +13,7 @@
 
 using namespace CIMPP;
 
-EnergyConsumer::EnergyConsumer() {};
+EnergyConsumer::EnergyConsumer(): LoadResponse(nullptr), LoadDynamics(nullptr) {};
 
 EnergyConsumer::~EnergyConsumer() {};
 

@@ -15,7 +15,7 @@
 
 using namespace CIMPP;
 
-MutualCoupling::MutualCoupling() {};
+MutualCoupling::MutualCoupling(): First_Terminal(nullptr), Second_Terminal(nullptr) {};
 
 MutualCoupling::~MutualCoupling() {};
 

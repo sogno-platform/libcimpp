@@ -15,7 +15,7 @@
 
 using namespace CIMPP;
 
-WindContRotorRIEC::WindContRotorRIEC() {};
+WindContRotorRIEC::WindContRotorRIEC(): WindGenTurbineType2IEC(nullptr) {};
 
 WindContRotorRIEC::~WindContRotorRIEC() {};
 

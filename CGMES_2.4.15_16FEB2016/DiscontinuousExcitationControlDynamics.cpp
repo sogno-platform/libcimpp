@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-DiscontinuousExcitationControlDynamics::DiscontinuousExcitationControlDynamics() {};
+DiscontinuousExcitationControlDynamics::DiscontinuousExcitationControlDynamics(): RemoteInputSignal(nullptr), ExcitationSystemDynamics(nullptr) {};
 
 DiscontinuousExcitationControlDynamics::~DiscontinuousExcitationControlDynamics() {};
 

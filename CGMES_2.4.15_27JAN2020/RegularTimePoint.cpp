@@ -9,7 +9,7 @@
 
 using namespace CIMPP;
 
-RegularTimePoint::RegularTimePoint() {};
+RegularTimePoint::RegularTimePoint(): IntervalSchedule(nullptr) {};
 
 RegularTimePoint::~RegularTimePoint() {};
 

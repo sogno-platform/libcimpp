@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-AnalogLimit::AnalogLimit() {};
+AnalogLimit::AnalogLimit(): LimitSet(nullptr) {};
 
 AnalogLimit::~AnalogLimit() {};
 

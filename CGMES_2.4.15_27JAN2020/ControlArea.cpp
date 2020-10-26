@@ -11,7 +11,7 @@
 
 using namespace CIMPP;
 
-ControlArea::ControlArea() {};
+ControlArea::ControlArea(): EnergyArea(nullptr) {};
 
 ControlArea::~ControlArea() {};
 

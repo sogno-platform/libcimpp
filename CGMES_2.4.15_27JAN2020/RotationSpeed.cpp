@@ -10,7 +10,7 @@
 
 using namespace CIMPP;
 
-RotationSpeed::RotationSpeed() {};
+RotationSpeed::RotationSpeed(): value(nullptr) {};
 
 RotationSpeed::~RotationSpeed() {};
 

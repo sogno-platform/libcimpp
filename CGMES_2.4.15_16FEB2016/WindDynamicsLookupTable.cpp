@@ -13,7 +13,7 @@
 
 using namespace CIMPP;
 
-WindDynamicsLookupTable::WindDynamicsLookupTable() {};
+WindDynamicsLookupTable::WindDynamicsLookupTable(): WindContCurrLimIEC(nullptr), WindContPType3IEC(nullptr), WindContRotorRIEC(nullptr), WindPlantFreqPcontrolIEC(nullptr) {};
 
 WindDynamicsLookupTable::~WindDynamicsLookupTable() {};
 

@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-WindTurbineType1or2IEC::WindTurbineType1or2IEC() {};
+WindTurbineType1or2IEC::WindTurbineType1or2IEC(): WindMechIEC(nullptr), WindProtectionIEC(nullptr) {};
 
 WindTurbineType1or2IEC::~WindTurbineType1or2IEC() {};
 

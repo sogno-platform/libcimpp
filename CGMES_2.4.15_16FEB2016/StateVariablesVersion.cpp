@@ -15,7 +15,7 @@
 
 using namespace CIMPP;
 
-StateVariablesVersion::StateVariablesVersion() {};
+StateVariablesVersion::StateVariablesVersion(): date(nullptr) {};
 
 StateVariablesVersion::~StateVariablesVersion() {};
 

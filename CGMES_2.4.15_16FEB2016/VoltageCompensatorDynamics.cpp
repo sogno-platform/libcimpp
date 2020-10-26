@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-VoltageCompensatorDynamics::VoltageCompensatorDynamics() {};
+VoltageCompensatorDynamics::VoltageCompensatorDynamics(): RemoteInputSignal(nullptr), ExcitationSystemDynamics(nullptr) {};
 
 VoltageCompensatorDynamics::~VoltageCompensatorDynamics() {};
 

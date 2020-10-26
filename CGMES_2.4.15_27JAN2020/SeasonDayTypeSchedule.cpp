@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-SeasonDayTypeSchedule::SeasonDayTypeSchedule() {};
+SeasonDayTypeSchedule::SeasonDayTypeSchedule(): DayType(nullptr), Season(nullptr) {};
 
 SeasonDayTypeSchedule::~SeasonDayTypeSchedule() {};
 

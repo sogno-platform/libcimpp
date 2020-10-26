@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-DCConverterUnit::DCConverterUnit() {};
+DCConverterUnit::DCConverterUnit(): Substation(nullptr) {};
 
 DCConverterUnit::~DCConverterUnit() {};
 

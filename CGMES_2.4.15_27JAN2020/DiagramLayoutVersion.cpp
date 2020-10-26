@@ -15,7 +15,7 @@
 
 using namespace CIMPP;
 
-DiagramLayoutVersion::DiagramLayoutVersion() {};
+DiagramLayoutVersion::DiagramLayoutVersion(): date(nullptr) {};
 
 DiagramLayoutVersion::~DiagramLayoutVersion() {};
 

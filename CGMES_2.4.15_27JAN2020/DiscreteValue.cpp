@@ -8,7 +8,7 @@
 
 using namespace CIMPP;
 
-DiscreteValue::DiscreteValue() {};
+DiscreteValue::DiscreteValue(): Command(nullptr), Discrete(nullptr) {};
 
 DiscreteValue::~DiscreteValue() {};
 

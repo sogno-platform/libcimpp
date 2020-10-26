@@ -8,7 +8,7 @@
 
 using namespace CIMPP;
 
-WindTurbineType3or4IEC::WindTurbineType3or4IEC() {};
+WindTurbineType3or4IEC::WindTurbineType3or4IEC(): WindContCurrLimIEC(nullptr), WIndContQIEC(nullptr), WindProtectionIEC(nullptr) {};
 
 WindTurbineType3or4IEC::~WindTurbineType3or4IEC() {};
 

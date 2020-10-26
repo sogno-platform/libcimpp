@@ -32,7 +32,7 @@
 
 using namespace CIMPP;
 
-GovHydroFrancis::GovHydroFrancis() {};
+GovHydroFrancis::GovHydroFrancis(): qn(nullptr) {};
 
 GovHydroFrancis::~GovHydroFrancis() {};
 

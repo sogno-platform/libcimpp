@@ -10,7 +10,7 @@
 
 using namespace CIMPP;
 
-VoltagePerReactivePower::VoltagePerReactivePower() {};
+VoltagePerReactivePower::VoltagePerReactivePower(): value(nullptr) {};
 
 VoltagePerReactivePower::~VoltagePerReactivePower() {};
 

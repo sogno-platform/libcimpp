@@ -10,7 +10,7 @@
 
 using namespace CIMPP;
 
-CapacitancePerLength::CapacitancePerLength() {};
+CapacitancePerLength::CapacitancePerLength(): value(nullptr) {};
 
 CapacitancePerLength::~CapacitancePerLength() {};
 

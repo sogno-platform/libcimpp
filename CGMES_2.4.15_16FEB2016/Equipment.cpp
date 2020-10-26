@@ -8,7 +8,7 @@
 
 using namespace CIMPP;
 
-Equipment::Equipment() {};
+Equipment::Equipment(): EquipmentContainer(nullptr) {};
 
 Equipment::~Equipment() {};
 

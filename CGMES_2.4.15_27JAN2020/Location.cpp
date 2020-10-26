@@ -8,7 +8,7 @@
 
 using namespace CIMPP;
 
-Location::Location() {};
+Location::Location(): CoordinateSystem(nullptr), PowerSystemResources(nullptr) {};
 
 Location::~Location() {};
 

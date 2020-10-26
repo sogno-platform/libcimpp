@@ -17,7 +17,7 @@
 
 using namespace CIMPP;
 
-Terminal::Terminal() {};
+Terminal::Terminal(): ConductingEquipment(nullptr), RegulatingControl(nullptr), TieFlow(nullptr), ConnectivityNode(nullptr), SvPowerFlow(nullptr), TopologicalNode(nullptr) {};
 
 Terminal::~Terminal() {};
 

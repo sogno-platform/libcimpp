@@ -21,7 +21,7 @@
 
 using namespace CIMPP;
 
-EquivalentInjection::EquivalentInjection() {};
+EquivalentInjection::EquivalentInjection(): ReactiveCapabilityCurve(nullptr) {};
 
 EquivalentInjection::~EquivalentInjection() {};
 

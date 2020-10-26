@@ -9,7 +9,7 @@
 
 using namespace CIMPP;
 
-AsynchronousMachineDynamics::AsynchronousMachineDynamics() {};
+AsynchronousMachineDynamics::AsynchronousMachineDynamics(): AsynchronousMachine(nullptr), MechanicalLoadDynamics(nullptr), WindTurbineType1or2Dynamics(nullptr), TurbineGovernorDynamics(nullptr) {};
 
 AsynchronousMachineDynamics::~AsynchronousMachineDynamics() {};
 

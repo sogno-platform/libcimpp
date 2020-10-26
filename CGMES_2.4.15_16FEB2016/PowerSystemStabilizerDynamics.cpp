@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-PowerSystemStabilizerDynamics::PowerSystemStabilizerDynamics() {};
+PowerSystemStabilizerDynamics::PowerSystemStabilizerDynamics(): ExcitationSystemDynamics(nullptr) {};
 
 PowerSystemStabilizerDynamics::~PowerSystemStabilizerDynamics() {};
 

@@ -13,7 +13,7 @@
 
 using namespace CIMPP;
 
-ExcitationSystemDynamics::ExcitationSystemDynamics() {};
+ExcitationSystemDynamics::ExcitationSystemDynamics(): SynchronousMachineDynamics(nullptr), PowerSystemStabilizerDynamics(nullptr), PFVArControllerType1Dynamics(nullptr), VoltageCompensatorDynamics(nullptr), DiscontinuousExcitationControlDynamics(nullptr), UnderexcitationLimiterDynamics(nullptr), PFVArControllerType2Dynamics(nullptr), OverexcitationLimiterDynamics(nullptr) {};
 
 ExcitationSystemDynamics::~ExcitationSystemDynamics() {};
 

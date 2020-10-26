@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-SvShuntCompensatorSections::SvShuntCompensatorSections() {};
+SvShuntCompensatorSections::SvShuntCompensatorSections(): ShuntCompensator(nullptr) {};
 
 SvShuntCompensatorSections::~SvShuntCompensatorSections() {};
 

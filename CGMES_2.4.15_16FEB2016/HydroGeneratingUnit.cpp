@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-HydroGeneratingUnit::HydroGeneratingUnit() {};
+HydroGeneratingUnit::HydroGeneratingUnit(): HydroPowerPlant(nullptr) {};
 
 HydroGeneratingUnit::~HydroGeneratingUnit() {};
 

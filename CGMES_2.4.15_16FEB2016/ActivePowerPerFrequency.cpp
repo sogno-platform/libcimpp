@@ -10,7 +10,7 @@
 
 using namespace CIMPP;
 
-ActivePowerPerFrequency::ActivePowerPerFrequency() {};
+ActivePowerPerFrequency::ActivePowerPerFrequency(): value(nullptr) {};
 
 ActivePowerPerFrequency::~ActivePowerPerFrequency() {};
 

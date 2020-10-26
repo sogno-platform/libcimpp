@@ -11,7 +11,7 @@
 
 using namespace CIMPP;
 
-Control::Control() {};
+Control::Control(): timeStamp(nullptr), PowerSystemResource(nullptr) {};
 
 Control::~Control() {};
 

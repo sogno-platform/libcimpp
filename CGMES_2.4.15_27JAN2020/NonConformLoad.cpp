@@ -6,7 +6,7 @@
 
 using namespace CIMPP;
 
-NonConformLoad::NonConformLoad() {};
+NonConformLoad::NonConformLoad(): LoadGroup(nullptr) {};
 
 NonConformLoad::~NonConformLoad() {};
 

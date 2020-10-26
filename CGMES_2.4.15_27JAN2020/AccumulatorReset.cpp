@@ -6,7 +6,7 @@
 
 using namespace CIMPP;
 
-AccumulatorReset::AccumulatorReset() {};
+AccumulatorReset::AccumulatorReset(): AccumulatorValue(nullptr) {};
 
 AccumulatorReset::~AccumulatorReset() {};
 

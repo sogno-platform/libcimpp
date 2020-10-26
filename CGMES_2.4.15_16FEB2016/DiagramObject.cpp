@@ -15,7 +15,7 @@
 
 using namespace CIMPP;
 
-DiagramObject::DiagramObject() {};
+DiagramObject::DiagramObject(): Diagram(nullptr), IdentifiedObject(nullptr), DiagramObjectStyle(nullptr) {};
 
 DiagramObject::~DiagramObject() {};
 

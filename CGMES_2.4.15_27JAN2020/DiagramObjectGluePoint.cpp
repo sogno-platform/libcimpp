@@ -6,7 +6,7 @@
 
 using namespace CIMPP;
 
-DiagramObjectGluePoint::DiagramObjectGluePoint() {};
+DiagramObjectGluePoint::DiagramObjectGluePoint(): DiagramObjectPoints(nullptr) {};
 
 DiagramObjectGluePoint::~DiagramObjectGluePoint() {};
 

@@ -6,7 +6,7 @@
 
 using namespace CIMPP;
 
-DCLine::DCLine() {};
+DCLine::DCLine(): Region(nullptr) {};
 
 DCLine::~DCLine() {};
 

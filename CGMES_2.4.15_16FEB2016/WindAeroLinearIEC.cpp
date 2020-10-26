@@ -11,7 +11,7 @@
 
 using namespace CIMPP;
 
-WindAeroLinearIEC::WindAeroLinearIEC() {};
+WindAeroLinearIEC::WindAeroLinearIEC(): WindGenTurbineType3IEC(nullptr) {};
 
 WindAeroLinearIEC::~WindAeroLinearIEC() {};
 

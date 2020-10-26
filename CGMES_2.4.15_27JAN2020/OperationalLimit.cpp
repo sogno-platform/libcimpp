@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-OperationalLimit::OperationalLimit() {};
+OperationalLimit::OperationalLimit(): OperationalLimitSet(nullptr), OperationalLimitType(nullptr) {};
 
 OperationalLimit::~OperationalLimit() {};
 

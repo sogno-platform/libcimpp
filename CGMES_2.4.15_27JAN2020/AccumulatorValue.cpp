@@ -8,7 +8,7 @@
 
 using namespace CIMPP;
 
-AccumulatorValue::AccumulatorValue() {};
+AccumulatorValue::AccumulatorValue(): Accumulator(nullptr), AccumulatorReset(nullptr) {};
 
 AccumulatorValue::~AccumulatorValue() {};
 

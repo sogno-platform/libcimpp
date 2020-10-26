@@ -10,7 +10,7 @@
 
 using namespace CIMPP;
 
-ResistancePerLength::ResistancePerLength() {};
+ResistancePerLength::ResistancePerLength(): value(nullptr) {};
 
 ResistancePerLength::~ResistancePerLength() {};
 

@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-WindPlantDynamics::WindPlantDynamics() {};
+WindPlantDynamics::WindPlantDynamics(): RemoteInputSignal(nullptr) {};
 
 WindPlantDynamics::~WindPlantDynamics() {};
 
