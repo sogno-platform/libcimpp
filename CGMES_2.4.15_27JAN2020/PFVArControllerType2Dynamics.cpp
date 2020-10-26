@@ -6,7 +6,7 @@
 
 using namespace CIMPP;
 
-PFVArControllerType2Dynamics::PFVArControllerType2Dynamics() {};
+PFVArControllerType2Dynamics::PFVArControllerType2Dynamics(): ExcitationSystemDynamics(nullptr) {};
 
 PFVArControllerType2Dynamics::~PFVArControllerType2Dynamics() {};
 

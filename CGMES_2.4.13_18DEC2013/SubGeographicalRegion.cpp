@@ -9,7 +9,7 @@
 
 using namespace CIMPP;
 
-SubGeographicalRegion::SubGeographicalRegion() {};
+SubGeographicalRegion::SubGeographicalRegion(): Region(nullptr) {};
 
 SubGeographicalRegion::~SubGeographicalRegion() {};
 

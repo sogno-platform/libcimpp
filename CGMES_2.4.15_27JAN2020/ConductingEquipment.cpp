@@ -8,7 +8,7 @@
 
 using namespace CIMPP;
 
-ConductingEquipment::ConductingEquipment() {};
+ConductingEquipment::ConductingEquipment(): BaseVoltage(nullptr), SvStatus(nullptr) {};
 
 ConductingEquipment::~ConductingEquipment() {};
 

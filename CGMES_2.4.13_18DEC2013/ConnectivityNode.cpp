@@ -15,7 +15,7 @@
 
 using namespace CIMPP;
 
-ConnectivityNode::ConnectivityNode() {};
+ConnectivityNode::ConnectivityNode(): TopologicalNode(nullptr), ConnectivityNodeContainer(nullptr) {};
 
 ConnectivityNode::~ConnectivityNode() {};
 

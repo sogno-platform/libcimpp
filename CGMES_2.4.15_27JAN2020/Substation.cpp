@@ -8,7 +8,7 @@
 
 using namespace CIMPP;
 
-Substation::Substation() {};
+Substation::Substation(): Region(nullptr) {};
 
 Substation::~Substation() {};
 

@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-ControlAreaGeneratingUnit::ControlAreaGeneratingUnit() {};
+ControlAreaGeneratingUnit::ControlAreaGeneratingUnit(): GeneratingUnit(nullptr), ControlArea(nullptr) {};
 
 ControlAreaGeneratingUnit::~ControlAreaGeneratingUnit() {};
 

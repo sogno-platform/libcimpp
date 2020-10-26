@@ -6,7 +6,7 @@
 
 using namespace CIMPP;
 
-WindGenTurbineType1IEC::WindGenTurbineType1IEC() {};
+WindGenTurbineType1IEC::WindGenTurbineType1IEC(): WindAeroConstIEC(nullptr) {};
 
 WindGenTurbineType1IEC::~WindGenTurbineType1IEC() {};
 

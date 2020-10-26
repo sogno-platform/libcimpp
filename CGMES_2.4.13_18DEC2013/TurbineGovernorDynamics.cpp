@@ -8,7 +8,7 @@
 
 using namespace CIMPP;
 
-TurbineGovernorDynamics::TurbineGovernorDynamics() {};
+TurbineGovernorDynamics::TurbineGovernorDynamics(): AsynchronousMachineDynamics(nullptr), TurbineLoadControllerDynamics(nullptr) {};
 
 TurbineGovernorDynamics::~TurbineGovernorDynamics() {};
 

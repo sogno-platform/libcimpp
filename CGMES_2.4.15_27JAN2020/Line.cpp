@@ -6,7 +6,7 @@
 
 using namespace CIMPP;
 
-Line::Line() {};
+Line::Line(): Region(nullptr) {};
 
 Line::~Line() {};
 

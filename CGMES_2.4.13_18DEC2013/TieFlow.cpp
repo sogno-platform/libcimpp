@@ -8,7 +8,7 @@
 
 using namespace CIMPP;
 
-TieFlow::TieFlow() {};
+TieFlow::TieFlow(): Terminal(nullptr), ControlArea(nullptr) {};
 
 TieFlow::~TieFlow() {};
 

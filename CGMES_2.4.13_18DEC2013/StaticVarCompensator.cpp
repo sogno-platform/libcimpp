@@ -11,7 +11,7 @@
 
 using namespace CIMPP;
 
-StaticVarCompensator::StaticVarCompensator() {};
+StaticVarCompensator::StaticVarCompensator(): slope(nullptr) {};
 
 StaticVarCompensator::~StaticVarCompensator() {};
 

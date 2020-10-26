@@ -11,7 +11,7 @@
 
 using namespace CIMPP;
 
-DiagramObjectPoint::DiagramObjectPoint() {};
+DiagramObjectPoint::DiagramObjectPoint(): DiagramObject(nullptr), DiagramObjectGluePoint(nullptr) {};
 
 DiagramObjectPoint::~DiagramObjectPoint() {};
 

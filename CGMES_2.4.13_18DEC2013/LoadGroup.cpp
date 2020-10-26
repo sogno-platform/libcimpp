@@ -6,7 +6,7 @@
 
 using namespace CIMPP;
 
-LoadGroup::LoadGroup() {};
+LoadGroup::LoadGroup(): SubLoadArea(nullptr) {};
 
 LoadGroup::~LoadGroup() {};
 

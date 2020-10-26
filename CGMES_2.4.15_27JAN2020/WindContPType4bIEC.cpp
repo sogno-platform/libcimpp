@@ -10,7 +10,7 @@
 
 using namespace CIMPP;
 
-WindContPType4bIEC::WindContPType4bIEC() {};
+WindContPType4bIEC::WindContPType4bIEC(): WindTurbineType4bIEC(nullptr) {};
 
 WindContPType4bIEC::~WindContPType4bIEC() {};
 

@@ -8,7 +8,7 @@
 
 using namespace CIMPP;
 
-SvPowerFlow::SvPowerFlow() {};
+SvPowerFlow::SvPowerFlow(): Terminal(nullptr) {};
 
 SvPowerFlow::~SvPowerFlow() {};
 

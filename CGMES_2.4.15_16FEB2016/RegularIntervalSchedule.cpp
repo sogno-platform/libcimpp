@@ -8,7 +8,7 @@
 
 using namespace CIMPP;
 
-RegularIntervalSchedule::RegularIntervalSchedule() {};
+RegularIntervalSchedule::RegularIntervalSchedule(): endTime(nullptr) {};
 
 RegularIntervalSchedule::~RegularIntervalSchedule() {};
 

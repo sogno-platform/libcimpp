@@ -15,7 +15,7 @@
 
 using namespace CIMPP;
 
-ShuntCompensator::ShuntCompensator() {};
+ShuntCompensator::ShuntCompensator(): switchOnDate(nullptr), voltageSensitivity(nullptr), SvShuntCompensatorSections(nullptr) {};
 
 ShuntCompensator::~ShuntCompensator() {};
 

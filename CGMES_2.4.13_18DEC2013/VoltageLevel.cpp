@@ -10,7 +10,7 @@
 
 using namespace CIMPP;
 
-VoltageLevel::VoltageLevel() {};
+VoltageLevel::VoltageLevel(): BaseVoltage(nullptr), Substation(nullptr) {};
 
 VoltageLevel::~VoltageLevel() {};
 

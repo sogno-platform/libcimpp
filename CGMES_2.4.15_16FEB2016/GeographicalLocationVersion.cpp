@@ -15,7 +15,7 @@
 
 using namespace CIMPP;
 
-GeographicalLocationVersion::GeographicalLocationVersion() {};
+GeographicalLocationVersion::GeographicalLocationVersion(): date(nullptr) {};
 
 GeographicalLocationVersion::~GeographicalLocationVersion() {};
 

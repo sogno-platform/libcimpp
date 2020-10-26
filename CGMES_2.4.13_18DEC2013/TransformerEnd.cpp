@@ -13,7 +13,7 @@
 
 using namespace CIMPP;
 
-TransformerEnd::TransformerEnd() {};
+TransformerEnd::TransformerEnd(): BaseVoltage(nullptr), Terminal(nullptr), PhaseTapChanger(nullptr), RatioTapChanger(nullptr) {};
 
 TransformerEnd::~TransformerEnd() {};
 

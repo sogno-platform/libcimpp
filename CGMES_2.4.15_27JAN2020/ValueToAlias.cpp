@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-ValueToAlias::ValueToAlias() {};
+ValueToAlias::ValueToAlias(): ValueAliasSet(nullptr) {};
 
 ValueToAlias::~ValueToAlias() {};
 

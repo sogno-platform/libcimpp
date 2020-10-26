@@ -14,7 +14,7 @@
 
 using namespace CIMPP;
 
-RegulatingControl::RegulatingControl() {};
+RegulatingControl::RegulatingControl(): Terminal(nullptr) {};
 
 RegulatingControl::~RegulatingControl() {};
 

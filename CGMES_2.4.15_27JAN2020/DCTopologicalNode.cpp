@@ -9,7 +9,7 @@
 
 using namespace CIMPP;
 
-DCTopologicalNode::DCTopologicalNode() {};
+DCTopologicalNode::DCTopologicalNode(): DCTopologicalIsland(nullptr), DCEquipmentContainer(nullptr) {};
 
 DCTopologicalNode::~DCTopologicalNode() {};
 

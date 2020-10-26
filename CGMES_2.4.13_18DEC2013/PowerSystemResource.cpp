@@ -8,7 +8,7 @@
 
 using namespace CIMPP;
 
-PowerSystemResource::PowerSystemResource() {};
+PowerSystemResource::PowerSystemResource(): Location(nullptr) {};
 
 PowerSystemResource::~PowerSystemResource() {};
 

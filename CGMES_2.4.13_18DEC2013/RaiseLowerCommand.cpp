@@ -6,7 +6,7 @@
 
 using namespace CIMPP;
 
-RaiseLowerCommand::RaiseLowerCommand() {};
+RaiseLowerCommand::RaiseLowerCommand(): ValueAliasSet(nullptr) {};
 
 RaiseLowerCommand::~RaiseLowerCommand() {};
 

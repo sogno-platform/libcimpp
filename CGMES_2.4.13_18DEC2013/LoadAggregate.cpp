@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-LoadAggregate::LoadAggregate() {};
+LoadAggregate::LoadAggregate(): LoadStatic(nullptr), LoadMotor(nullptr) {};
 
 LoadAggregate::~LoadAggregate() {};
 

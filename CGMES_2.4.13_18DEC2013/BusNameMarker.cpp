@@ -8,7 +8,7 @@
 
 using namespace CIMPP;
 
-BusNameMarker::BusNameMarker() {};
+BusNameMarker::BusNameMarker(): ReportingGroup(nullptr) {};
 
 BusNameMarker::~BusNameMarker() {};
 

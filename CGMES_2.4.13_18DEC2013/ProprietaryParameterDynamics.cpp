@@ -27,7 +27,7 @@
 
 using namespace CIMPP;
 
-ProprietaryParameterDynamics::ProprietaryParameterDynamics() {};
+ProprietaryParameterDynamics::ProprietaryParameterDynamics(): WindPlantUserDefined(nullptr), WindType1or2UserDefined(nullptr), WindType3or4UserDefined(nullptr), SynchronousMachineUserDefined(nullptr), AsynchronousMachineUserDefined(nullptr), TurbineGovernorUserDefined(nullptr), TurbineLoadControllerUserDefined(nullptr), MechanicalLoadUserDefined(nullptr), ExcitationSystemUserDefined(nullptr), OverexcitationLimiterUserDefined(nullptr), UnderexcitationLimiterUserDefined(nullptr), PowerSystemStabilizerUserDefined(nullptr), DiscontinuousExcitationControlUserDefined(nullptr), PFVArControllerType1UserDefined(nullptr), VoltageAdjusterUserDefined(nullptr), PFVArControllerType2UserDefined(nullptr), VoltageCompensatorUserDefined(nullptr), LoadUserDefined(nullptr) {};
 
 ProprietaryParameterDynamics::~ProprietaryParameterDynamics() {};
 

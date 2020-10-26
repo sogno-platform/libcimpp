@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-TopologicalIsland::TopologicalIsland() {};
+TopologicalIsland::TopologicalIsland(): AngleRefTopologicalNode(nullptr) {};
 
 TopologicalIsland::~TopologicalIsland() {};
 

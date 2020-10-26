@@ -21,7 +21,7 @@
 
 using namespace CIMPP;
 
-TopologicalNode::TopologicalNode() {};
+TopologicalNode::TopologicalNode(): BaseVoltage(nullptr), ConnectivityNodeContainer(nullptr), ReportingGroup(nullptr), SvInjection(nullptr), SvVoltage(nullptr), AngleRefTopologicalIsland(nullptr), TopologicalIsland(nullptr) {};
 
 TopologicalNode::~TopologicalNode() {};
 

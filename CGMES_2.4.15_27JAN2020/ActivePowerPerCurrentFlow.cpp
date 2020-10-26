@@ -10,7 +10,7 @@
 
 using namespace CIMPP;
 
-ActivePowerPerCurrentFlow::ActivePowerPerCurrentFlow() {};
+ActivePowerPerCurrentFlow::ActivePowerPerCurrentFlow(): value(nullptr) {};
 
 ActivePowerPerCurrentFlow::~ActivePowerPerCurrentFlow() {};
 

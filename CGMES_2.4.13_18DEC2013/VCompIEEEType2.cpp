@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-VCompIEEEType2::VCompIEEEType2() {};
+VCompIEEEType2::VCompIEEEType2(): GenICompensationForGenJ(nullptr) {};
 
 VCompIEEEType2::~VCompIEEEType2() {};
 

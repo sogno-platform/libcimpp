@@ -18,7 +18,7 @@
 
 using namespace CIMPP;
 
-EnergySource::EnergySource() {};
+EnergySource::EnergySource(): WindTurbineType3or4Dynamics(nullptr), EnergySchedulingType(nullptr) {};
 
 EnergySource::~EnergySource() {};
 

@@ -8,7 +8,7 @@
 
 using namespace CIMPP;
 
-WindTurbineType3or4Dynamics::WindTurbineType3or4Dynamics() {};
+WindTurbineType3or4Dynamics::WindTurbineType3or4Dynamics(): EnergySource(nullptr), RemoteInputSignal(nullptr), WindPlantDynamics(nullptr) {};
 
 WindTurbineType3or4Dynamics::~WindTurbineType3or4Dynamics() {};
 

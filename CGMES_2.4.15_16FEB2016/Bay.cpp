@@ -6,7 +6,7 @@
 
 using namespace CIMPP;
 
-Bay::Bay() {};
+Bay::Bay(): VoltageLevel(nullptr) {};
 
 Bay::~Bay() {};
 

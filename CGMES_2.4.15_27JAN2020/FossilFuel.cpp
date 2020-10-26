@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-FossilFuel::FossilFuel() {};
+FossilFuel::FossilFuel(): ThermalGeneratingUnit(nullptr) {};
 
 FossilFuel::~FossilFuel() {};
 

@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-SvStatus::SvStatus() {};
+SvStatus::SvStatus(): ConductingEquipment(nullptr) {};
 
 SvStatus::~SvStatus() {};
 

@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-MechanicalLoadDynamics::MechanicalLoadDynamics() {};
+MechanicalLoadDynamics::MechanicalLoadDynamics(): SynchronousMachineDynamics(nullptr), AsynchronousMachineDynamics(nullptr) {};
 
 MechanicalLoadDynamics::~MechanicalLoadDynamics() {};
 

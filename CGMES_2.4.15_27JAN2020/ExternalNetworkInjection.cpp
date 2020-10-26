@@ -23,7 +23,7 @@
 
 using namespace CIMPP;
 
-ExternalNetworkInjection::ExternalNetworkInjection() {};
+ExternalNetworkInjection::ExternalNetworkInjection(): governorSCD(nullptr) {};
 
 ExternalNetworkInjection::~ExternalNetworkInjection() {};
 

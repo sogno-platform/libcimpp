@@ -16,7 +16,7 @@
 
 using namespace CIMPP;
 
-AsynchronousMachine::AsynchronousMachine() {};
+AsynchronousMachine::AsynchronousMachine(): nominalSpeed(nullptr), AsynchronousMachineDynamics(nullptr) {};
 
 AsynchronousMachine::~AsynchronousMachine() {};
 

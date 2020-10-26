@@ -15,7 +15,7 @@
 
 using namespace CIMPP;
 
-SteadyStateHypothesisVersion::SteadyStateHypothesisVersion() {};
+SteadyStateHypothesisVersion::SteadyStateHypothesisVersion(): date(nullptr) {};
 
 SteadyStateHypothesisVersion::~SteadyStateHypothesisVersion() {};
 

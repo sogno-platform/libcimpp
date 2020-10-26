@@ -10,7 +10,7 @@
 
 using namespace CIMPP;
 
-DCLineSegment::DCLineSegment() {};
+DCLineSegment::DCLineSegment(): PerLengthParameter(nullptr) {};
 
 DCLineSegment::~DCLineSegment() {};
 

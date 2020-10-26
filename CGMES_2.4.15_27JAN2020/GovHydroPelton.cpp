@@ -33,7 +33,7 @@
 
 using namespace CIMPP;
 
-GovHydroPelton::GovHydroPelton() {};
+GovHydroPelton::GovHydroPelton(): qn(nullptr) {};
 
 GovHydroPelton::~GovHydroPelton() {};
 

@@ -23,7 +23,7 @@
 
 using namespace CIMPP;
 
-LoadStatic::LoadStatic() {};
+LoadStatic::LoadStatic(): LoadAggregate(nullptr) {};
 
 LoadStatic::~LoadStatic() {};
 

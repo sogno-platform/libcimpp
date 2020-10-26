@@ -6,7 +6,7 @@
 
 using namespace CIMPP;
 
-RegulationSchedule::RegulationSchedule() {};
+RegulationSchedule::RegulationSchedule(): RegulatingControl(nullptr) {};
 
 RegulationSchedule::~RegulationSchedule() {};
 

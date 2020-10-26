@@ -6,7 +6,7 @@
 
 using namespace CIMPP;
 
-PhaseTapChanger::PhaseTapChanger() {};
+PhaseTapChanger::PhaseTapChanger(): TransformerEnd(nullptr) {};
 
 PhaseTapChanger::~PhaseTapChanger() {};
 

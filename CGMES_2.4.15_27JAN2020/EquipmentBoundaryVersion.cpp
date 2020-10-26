@@ -16,7 +16,7 @@
 
 using namespace CIMPP;
 
-EquipmentBoundaryVersion::EquipmentBoundaryVersion() {};
+EquipmentBoundaryVersion::EquipmentBoundaryVersion(): date(nullptr) {};
 
 EquipmentBoundaryVersion::~EquipmentBoundaryVersion() {};
 

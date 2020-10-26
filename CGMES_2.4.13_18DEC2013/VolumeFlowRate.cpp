@@ -10,7 +10,7 @@
 
 using namespace CIMPP;
 
-VolumeFlowRate::VolumeFlowRate() {};
+VolumeFlowRate::VolumeFlowRate(): value(nullptr) {};
 
 VolumeFlowRate::~VolumeFlowRate() {};
 

@@ -12,7 +12,7 @@
 
 using namespace CIMPP;
 
-WindContCurrLimIEC::WindContCurrLimIEC() {};
+WindContCurrLimIEC::WindContCurrLimIEC(): WindTurbineType3or4IEC(nullptr) {};
 
 WindContCurrLimIEC::~WindContCurrLimIEC() {};
 

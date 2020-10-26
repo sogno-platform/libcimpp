@@ -9,7 +9,7 @@
 
 using namespace CIMPP;
 
-MeasurementValue::MeasurementValue() {};
+MeasurementValue::MeasurementValue(): timeStamp(nullptr), MeasurementValueQuality(nullptr), MeasurementValueSource(nullptr) {};
 
 MeasurementValue::~MeasurementValue() {};
 

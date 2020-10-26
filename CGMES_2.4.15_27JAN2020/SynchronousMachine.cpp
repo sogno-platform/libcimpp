@@ -28,7 +28,7 @@
 
 using namespace CIMPP;
 
-SynchronousMachine::SynchronousMachine() {};
+SynchronousMachine::SynchronousMachine(): InitialReactiveCapabilityCurve(nullptr), SynchronousMachineDynamics(nullptr) {};
 
 SynchronousMachine::~SynchronousMachine() {};
 

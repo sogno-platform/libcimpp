@@ -15,7 +15,7 @@
 
 using namespace CIMPP;
 
-WindProtectionIEC::WindProtectionIEC() {};
+WindProtectionIEC::WindProtectionIEC(): WindTurbineType3or4IEC(nullptr), WindTurbineType1or2IEC(nullptr) {};
 
 WindProtectionIEC::~WindProtectionIEC() {};
 

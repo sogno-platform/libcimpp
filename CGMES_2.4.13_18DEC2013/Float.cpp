@@ -9,7 +9,7 @@ Float::~Float(){}
 
 Float::Float(long double value) : value(value), initialized(true) {}
 
-void Float::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {} 
+void Float::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {}
 
 void Float::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {}
 

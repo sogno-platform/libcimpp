@@ -8,7 +8,7 @@
 
 using namespace CIMPP;
 
-BasicIntervalSchedule::BasicIntervalSchedule() {};
+BasicIntervalSchedule::BasicIntervalSchedule(): startTime(nullptr) {};
 
 BasicIntervalSchedule::~BasicIntervalSchedule() {};
 

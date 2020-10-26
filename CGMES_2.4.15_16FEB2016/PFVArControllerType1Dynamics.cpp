@@ -8,7 +8,7 @@
 
 using namespace CIMPP;
 
-PFVArControllerType1Dynamics::PFVArControllerType1Dynamics() {};
+PFVArControllerType1Dynamics::PFVArControllerType1Dynamics(): RemoteInputSignal(nullptr), ExcitationSystemDynamics(nullptr), VoltageAdjusterDynamics(nullptr) {};
 
 PFVArControllerType1Dynamics::~PFVArControllerType1Dynamics() {};
 

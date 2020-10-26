@@ -6,7 +6,7 @@
 
 using namespace CIMPP;
 
-TapSchedule::TapSchedule() {};
+TapSchedule::TapSchedule(): TapChanger(nullptr) {};
 
 TapSchedule::~TapSchedule() {};
 

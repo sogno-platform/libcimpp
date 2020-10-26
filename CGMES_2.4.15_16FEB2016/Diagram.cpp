@@ -12,7 +12,7 @@
 
 using namespace CIMPP;
 
-Diagram::Diagram() {};
+Diagram::Diagram(): DiagramStyle(nullptr) {};
 
 Diagram::~Diagram() {};
 

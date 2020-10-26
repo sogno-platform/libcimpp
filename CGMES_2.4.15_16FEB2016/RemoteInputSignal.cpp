@@ -15,7 +15,7 @@
 
 using namespace CIMPP;
 
-RemoteInputSignal::RemoteInputSignal() {};
+RemoteInputSignal::RemoteInputSignal(): Terminal(nullptr), PFVArControllerType1Dynamics(nullptr), UnderexcitationLimiterDynamics(nullptr), WindTurbineType1or2Dynamics(nullptr), VoltageCompensatorDynamics(nullptr), PowerSystemStabilizerDynamics(nullptr), DiscontinuousExcitationControlDynamics(nullptr), WindTurbineType3or4Dynamics(nullptr), WindPlantDynamics(nullptr) {};
 
 RemoteInputSignal::~RemoteInputSignal() {};
 

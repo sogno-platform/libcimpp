@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-DCNode::DCNode() {};
+DCNode::DCNode(): DCTopologicalNode(nullptr) {};
 
 DCNode::~DCNode() {};
 

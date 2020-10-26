@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-StringMeasurementValue::StringMeasurementValue() {};
+StringMeasurementValue::StringMeasurementValue(): StringMeasurement(nullptr) {};
 
 StringMeasurementValue::~StringMeasurementValue() {};
 

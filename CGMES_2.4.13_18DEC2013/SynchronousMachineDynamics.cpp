@@ -10,7 +10,7 @@
 
 using namespace CIMPP;
 
-SynchronousMachineDynamics::SynchronousMachineDynamics() {};
+SynchronousMachineDynamics::SynchronousMachineDynamics(): SynchronousMachine(nullptr), ExcitationSystemDynamics(nullptr), MechanicalLoadDynamics(nullptr) {};
 
 SynchronousMachineDynamics::~SynchronousMachineDynamics() {};
 

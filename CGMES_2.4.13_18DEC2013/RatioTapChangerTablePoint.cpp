@@ -6,7 +6,7 @@
 
 using namespace CIMPP;
 
-RatioTapChangerTablePoint::RatioTapChangerTablePoint() {};
+RatioTapChangerTablePoint::RatioTapChangerTablePoint(): RatioTapChangerTable(nullptr) {};
 
 RatioTapChangerTablePoint::~RatioTapChangerTablePoint() {};
 

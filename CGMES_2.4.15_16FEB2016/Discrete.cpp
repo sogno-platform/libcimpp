@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-Discrete::Discrete() {};
+Discrete::Discrete(): ValueAliasSet(nullptr) {};
 
 Discrete::~Discrete() {};
 

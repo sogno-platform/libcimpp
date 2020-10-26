@@ -9,7 +9,7 @@
 
 using namespace CIMPP;
 
-Command::Command() {};
+Command::Command(): DiscreteValue(nullptr), ValueAliasSet(nullptr) {};
 
 Command::~Command() {};
 

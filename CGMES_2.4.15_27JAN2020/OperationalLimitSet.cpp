@@ -8,7 +8,7 @@
 
 using namespace CIMPP;
 
-OperationalLimitSet::OperationalLimitSet() {};
+OperationalLimitSet::OperationalLimitSet(): Terminal(nullptr), Equipment(nullptr) {};
 
 OperationalLimitSet::~OperationalLimitSet() {};
 

@@ -8,7 +8,7 @@
 
 using namespace CIMPP;
 
-SvVoltage::SvVoltage() {};
+SvVoltage::SvVoltage(): TopologicalNode(nullptr) {};
 
 SvVoltage::~SvVoltage() {};
 

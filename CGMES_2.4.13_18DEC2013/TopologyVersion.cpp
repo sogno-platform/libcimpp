@@ -15,7 +15,7 @@
 
 using namespace CIMPP;
 
-TopologyVersion::TopologyVersion() {};
+TopologyVersion::TopologyVersion(): date(nullptr) {};
 
 TopologyVersion::~TopologyVersion() {};
 

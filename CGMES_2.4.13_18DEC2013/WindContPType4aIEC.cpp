@@ -9,7 +9,7 @@
 
 using namespace CIMPP;
 
-WindContPType4aIEC::WindContPType4aIEC() {};
+WindContPType4aIEC::WindContPType4aIEC(): WindTurbineType4aIEC(nullptr) {};
 
 WindContPType4aIEC::~WindContPType4aIEC() {};
 

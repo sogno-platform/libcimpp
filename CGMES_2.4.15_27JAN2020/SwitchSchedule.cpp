@@ -6,7 +6,7 @@
 
 using namespace CIMPP;
 
-SwitchSchedule::SwitchSchedule() {};
+SwitchSchedule::SwitchSchedule(): Switch(nullptr) {};
 
 SwitchSchedule::~SwitchSchedule() {};
 

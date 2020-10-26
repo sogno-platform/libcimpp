@@ -15,7 +15,7 @@
 
 using namespace CIMPP;
 
-TopologyBoundaryVersion::TopologyBoundaryVersion() {};
+TopologyBoundaryVersion::TopologyBoundaryVersion(): date(nullptr) {};
 
 TopologyBoundaryVersion::~TopologyBoundaryVersion() {};
 

@@ -25,7 +25,7 @@
 
 using namespace CIMPP;
 
-ACDCConverter::ACDCConverter() {};
+ACDCConverter::ACDCConverter(): PccTerminal(nullptr) {};
 
 ACDCConverter::~ACDCConverter() {};
 

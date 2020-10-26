@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-WindTurbineType1or2Dynamics::WindTurbineType1or2Dynamics() {};
+WindTurbineType1or2Dynamics::WindTurbineType1or2Dynamics(): RemoteInputSignal(nullptr), AsynchronousMachineDynamics(nullptr) {};
 
 WindTurbineType1or2Dynamics::~WindTurbineType1or2Dynamics() {};
 

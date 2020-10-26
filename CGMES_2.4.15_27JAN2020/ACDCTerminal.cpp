@@ -10,7 +10,7 @@
 
 using namespace CIMPP;
 
-ACDCTerminal::ACDCTerminal() {};
+ACDCTerminal::ACDCTerminal(): BusNameMarker(nullptr) {};
 
 ACDCTerminal::~ACDCTerminal() {};
 

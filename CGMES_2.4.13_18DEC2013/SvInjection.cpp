@@ -8,7 +8,7 @@
 
 using namespace CIMPP;
 
-SvInjection::SvInjection() {};
+SvInjection::SvInjection(): TopologicalNode(nullptr) {};
 
 SvInjection::~SvInjection() {};
 

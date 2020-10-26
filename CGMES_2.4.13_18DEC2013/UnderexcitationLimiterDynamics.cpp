@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-UnderexcitationLimiterDynamics::UnderexcitationLimiterDynamics() {};
+UnderexcitationLimiterDynamics::UnderexcitationLimiterDynamics(): RemoteInputSignal(nullptr), ExcitationSystemDynamics(nullptr) {};
 
 UnderexcitationLimiterDynamics::~UnderexcitationLimiterDynamics() {};
 

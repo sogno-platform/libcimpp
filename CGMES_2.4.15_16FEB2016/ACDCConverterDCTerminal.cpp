@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-ACDCConverterDCTerminal::ACDCConverterDCTerminal() {};
+ACDCConverterDCTerminal::ACDCConverterDCTerminal(): DCConductingEquipment(nullptr) {};
 
 ACDCConverterDCTerminal::~ACDCConverterDCTerminal() {};
 

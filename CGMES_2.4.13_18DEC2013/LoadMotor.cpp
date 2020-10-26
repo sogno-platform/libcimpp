@@ -19,7 +19,7 @@
 
 using namespace CIMPP;
 
-LoadMotor::LoadMotor() {};
+LoadMotor::LoadMotor(): LoadAggregate(nullptr) {};
 
 LoadMotor::~LoadMotor() {};
 

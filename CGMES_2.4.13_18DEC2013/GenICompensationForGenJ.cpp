@@ -9,7 +9,7 @@
 
 using namespace CIMPP;
 
-GenICompensationForGenJ::GenICompensationForGenJ() {};
+GenICompensationForGenJ::GenICompensationForGenJ(): SynchronousMachineDynamics(nullptr), VcompIEEEType2(nullptr) {};
 
 GenICompensationForGenJ::~GenICompensationForGenJ() {};
 

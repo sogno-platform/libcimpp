@@ -9,7 +9,7 @@
 
 using namespace CIMPP;
 
-CurveData::CurveData() {};
+CurveData::CurveData(): Curve(nullptr) {};
 
 CurveData::~CurveData() {};
 

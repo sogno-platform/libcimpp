@@ -11,7 +11,7 @@
 
 using namespace CIMPP;
 
-Measurement::Measurement() {};
+Measurement::Measurement(): Terminal(nullptr), PowerSystemResource(nullptr) {};
 
 Measurement::~Measurement() {};
 

@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-AccumulatorLimit::AccumulatorLimit() {};
+AccumulatorLimit::AccumulatorLimit(): LimitSet(nullptr) {};
 
 AccumulatorLimit::~AccumulatorLimit() {};
 

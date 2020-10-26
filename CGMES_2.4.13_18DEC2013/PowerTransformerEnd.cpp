@@ -18,7 +18,7 @@
 
 using namespace CIMPP;
 
-PowerTransformerEnd::PowerTransformerEnd() {};
+PowerTransformerEnd::PowerTransformerEnd(): PowerTransformer(nullptr) {};
 
 PowerTransformerEnd::~PowerTransformerEnd() {};
 

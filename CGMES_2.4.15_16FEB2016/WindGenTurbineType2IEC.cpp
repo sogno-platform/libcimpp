@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-WindGenTurbineType2IEC::WindGenTurbineType2IEC() {};
+WindGenTurbineType2IEC::WindGenTurbineType2IEC(): WindContRotorRIEC(nullptr), WindPitchContEmulIEC(nullptr) {};
 
 WindGenTurbineType2IEC::~WindGenTurbineType2IEC() {};
 

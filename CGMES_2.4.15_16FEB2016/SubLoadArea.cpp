@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-SubLoadArea::SubLoadArea() {};
+SubLoadArea::SubLoadArea(): LoadArea(nullptr) {};
 
 SubLoadArea::~SubLoadArea() {};
 

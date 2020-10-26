@@ -6,7 +6,7 @@
 
 using namespace CIMPP;
 
-EnergyArea::EnergyArea() {};
+EnergyArea::EnergyArea(): ControlArea(nullptr) {};
 
 EnergyArea::~EnergyArea() {};
 

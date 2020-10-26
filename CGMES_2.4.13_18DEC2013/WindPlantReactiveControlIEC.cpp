@@ -19,7 +19,7 @@
 
 using namespace CIMPP;
 
-WindPlantReactiveControlIEC::WindPlantReactiveControlIEC() {};
+WindPlantReactiveControlIEC::WindPlantReactiveControlIEC(): WindPlantIEC(nullptr) {};
 
 WindPlantReactiveControlIEC::~WindPlantReactiveControlIEC() {};
 

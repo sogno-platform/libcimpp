@@ -17,7 +17,7 @@
 
 using namespace CIMPP;
 
-VsConverter::VsConverter() {};
+VsConverter::VsConverter(): CapabilityCurve(nullptr) {};
 
 VsConverter::~VsConverter() {};
 

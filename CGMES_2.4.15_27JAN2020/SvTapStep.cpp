@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-SvTapStep::SvTapStep() {};
+SvTapStep::SvTapStep(): TapChanger(nullptr) {};
 
 SvTapStep::~SvTapStep() {};
 

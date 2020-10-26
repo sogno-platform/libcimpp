@@ -10,7 +10,7 @@
 
 using namespace CIMPP;
 
-PositionPoint::PositionPoint() {};
+PositionPoint::PositionPoint(): Location(nullptr) {};
 
 PositionPoint::~PositionPoint() {};
 

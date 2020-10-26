@@ -6,7 +6,7 @@
 
 using namespace CIMPP;
 
-GrossToNetActivePowerCurve::GrossToNetActivePowerCurve() {};
+GrossToNetActivePowerCurve::GrossToNetActivePowerCurve(): GeneratingUnit(nullptr) {};
 
 GrossToNetActivePowerCurve::~GrossToNetActivePowerCurve() {};
 

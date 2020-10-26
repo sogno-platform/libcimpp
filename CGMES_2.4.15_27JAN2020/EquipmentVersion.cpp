@@ -19,7 +19,7 @@
 
 using namespace CIMPP;
 
-EquipmentVersion::EquipmentVersion() {};
+EquipmentVersion::EquipmentVersion(): date(nullptr) {};
 
 EquipmentVersion::~EquipmentVersion() {};
 

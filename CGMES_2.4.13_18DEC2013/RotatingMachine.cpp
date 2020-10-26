@@ -12,7 +12,7 @@
 
 using namespace CIMPP;
 
-RotatingMachine::RotatingMachine() {};
+RotatingMachine::RotatingMachine(): GeneratingUnit(nullptr), HydroPump(nullptr) {};
 
 RotatingMachine::~RotatingMachine() {};
 

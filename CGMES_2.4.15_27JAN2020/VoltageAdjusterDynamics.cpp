@@ -6,7 +6,7 @@
 
 using namespace CIMPP;
 
-VoltageAdjusterDynamics::VoltageAdjusterDynamics() {};
+VoltageAdjusterDynamics::VoltageAdjusterDynamics(): PFVArControllerType1Dynamics(nullptr) {};
 
 VoltageAdjusterDynamics::~VoltageAdjusterDynamics() {};
 

@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-HydroPump::HydroPump() {};
+HydroPump::HydroPump(): HydroPowerPlant(nullptr), RotatingMachine(nullptr) {};
 
 HydroPump::~HydroPump() {};
 

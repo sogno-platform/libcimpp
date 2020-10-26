@@ -28,7 +28,7 @@
 
 using namespace CIMPP;
 
-WindContPType3IEC::WindContPType3IEC() {};
+WindContPType3IEC::WindContPType3IEC(): WindGenTurbineType3IEC(nullptr), WindDynamicsLookupTable(nullptr) {};
 
 WindContPType3IEC::~WindContPType3IEC() {};
 

@@ -7,7 +7,7 @@
 
 using namespace CIMPP;
 
-DCBaseTerminal::DCBaseTerminal() {};
+DCBaseTerminal::DCBaseTerminal(): DCNode(nullptr), DCTopologicalNode(nullptr) {};
 
 DCBaseTerminal::~DCBaseTerminal() {};
 

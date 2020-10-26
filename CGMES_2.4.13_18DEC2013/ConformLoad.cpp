@@ -6,7 +6,7 @@
 
 using namespace CIMPP;
 
-ConformLoad::ConformLoad() {};
+ConformLoad::ConformLoad(): LoadGroup(nullptr) {};
 
 ConformLoad::~ConformLoad() {};
 

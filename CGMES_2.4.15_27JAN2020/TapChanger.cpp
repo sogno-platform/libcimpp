@@ -16,7 +16,7 @@
 
 using namespace CIMPP;
 
-TapChanger::TapChanger() {};
+TapChanger::TapChanger(): TapChangerControl(nullptr), SvTapStep(nullptr) {};
 
 TapChanger::~TapChanger() {};
 

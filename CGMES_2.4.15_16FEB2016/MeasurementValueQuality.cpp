@@ -6,7 +6,7 @@
 
 using namespace CIMPP;
 
-MeasurementValueQuality::MeasurementValueQuality() {};
+MeasurementValueQuality::MeasurementValueQuality(): MeasurementValue(nullptr) {};
 
 MeasurementValueQuality::~MeasurementValueQuality() {};
 

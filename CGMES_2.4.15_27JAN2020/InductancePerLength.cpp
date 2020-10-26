@@ -10,7 +10,7 @@
 
 using namespace CIMPP;
 
-InductancePerLength::InductancePerLength() {};
+InductancePerLength::InductancePerLength(): value(nullptr) {};
 
 InductancePerLength::~InductancePerLength() {};
 

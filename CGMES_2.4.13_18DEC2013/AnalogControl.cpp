@@ -8,7 +8,7 @@
 
 using namespace CIMPP;
 
-AnalogControl::AnalogControl() {};
+AnalogControl::AnalogControl(): AnalogValue(nullptr) {};
 
 AnalogControl::~AnalogControl() {};
 

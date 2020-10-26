@@ -32,7 +32,7 @@
 
 using namespace CIMPP;
 
-WindContQIEC::WindContQIEC() {};
+WindContQIEC::WindContQIEC(): WindTurbineType3or4IEC(nullptr) {};
 
 WindContQIEC::~WindContQIEC() {};
 
