@@ -48,11 +48,6 @@ build-src-16v29a-12v08:
   variables:
     CIM_VERSION: IEC61970_16v29a_IEC61968_12v08
 
-build-src-16v29a-sinergien:
-  <<: *build-src
-  variables:
-    CIM_VERSION: IEC61970_16v29a_SINERGIEN
-
 # Documentation
 .build-doc: &build-doc
   stage: build-doc
@@ -82,8 +77,3 @@ build-doc-16v29a-12v08:
   <<: *build-doc
   variables:
     CIM_VERSION: IEC61970_16v29a_IEC61968_12v08
-
-build-doc-16v29a-sinergien:
-  <<: *build-doc
-  variables:
-    CIM_VERSION: IEC61970_16v29a_SINERGIEN
