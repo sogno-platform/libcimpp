@@ -1,0 +1,90 @@
+name: CMake
+
+on: [push]
+
+env:
+  # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
+  BUILD_TYPE: Release
+  DOCKER_TAG_DEV: ${CI_COMMIT_REF_NAME}
+  DOCKER_IMAGE_DEV: libcimpp-dev
+
+
+jobs:
+
+  build-src-IEC61970_16v29a:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2    
+    - name: Checkout submodules
+      run: git submodule update --init --recursive
+
+    - name: Create Build Environment
+      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/IEC61970_16v29a
+      
+    - name: Configure CMake and compile
+      shell: bash
+      working-directory: ${{runner.workspace}}/libcimpp/build/IEC61970_16v29a/
+      run: |
+          cd ${{runner.workspace}}/libcimpp/build/IEC61970_16v29a 
+          cmake ../.. -DUSE_CIM_VERSION=IEC61970_16v29a
+          make -j8
+
+
+
+  build-src-IEC61970_17v07:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2    
+    - name: Checkout submodules
+      run: git submodule update --init --recursive
+
+    - name: Create Build Environment
+      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/IEC61970_17v07
+      
+    - name: Configure CMake and compile
+      shell: bash
+      working-directory: ${{runner.workspace}}/libcimpp/build/IEC61970_17v07/
+      run: |
+          cd ${{runner.workspace}}/libcimpp/build/IEC61970_17v07 
+          cmake ../.. -DUSE_CIM_VERSION=IEC61970_17v07
+          make -j8
+
+  build-src-IEC61970_16v29a_IEC61968_12v08:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2    
+    - name: Checkout submodules
+      run: git submodule update --init --recursive
+
+    - name: Create Build Environment
+      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/IEC61970_16v29a_IEC61968_12v08
+      
+    - name: Configure CMake and compile
+      shell: bash
+      working-directory: ${{runner.workspace}}/libcimpp/build/IEC61970_16v29a_IEC61968_12v08/
+      run: |
+          cd ${{runner.workspace}}/libcimpp/build/IEC61970_16v29a_IEC61968_12v08 
+          cmake ../.. -DUSE_CIM_VERSION=IEC61970_16v29a_IEC61968_12v08
+          make -j8
+
+
+  build-src-CGMES_2-4-15_27JAN2020:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2    
+    - name: Checkout submodules
+      run: git submodule update --init --recursive
+
+    - name: Create Build Environment
+      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/IEC61970_16v29a_IEC61968_12v08
+      
+    - name: Configure CMake and compile
+      shell: bash
+      working-directory: ${{runner.workspace}}/libcimpp/build/IEC61970_16v29a_IEC61968_12v08/
+      run: |
+          cd ${{runner.workspace}}/libcimpp/build/IEC61970_16v29a_IEC61968_12v08 
+          cmake ../.. -DUSE_CIM_VERSION=IEC61970_16v29a_IEC61968_12v08
+          make -j8
+
+
+
