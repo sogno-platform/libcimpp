@@ -1,0 +1,124 @@
+name: build-doc
+
+on: [push]
+
+env:
+  # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
+  BUILD_TYPE: Release
+  DOCKER_TAG_DEV: ${CI_COMMIT_REF_NAME}
+  DOCKER_IMAGE_DEV: libcimpp-dev
+
+
+jobs:
+
+  build-doc-IEC61970_16v29a:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2    
+    - name: Checkout submodules
+      run: git submodule update --init --recursive
+    - name: Install Doxygen
+      run: sudo apt-get install doxygen 
+      shell: bash 
+    - name: Create Build Environment
+      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/IEC61970_16v29a
+      
+    - name: Configure CMake and compile
+      shell: bash
+      working-directory: ${{runner.workspace}}/libcimpp/build/IEC61970_16v29a/
+      run: |
+          cd ${{runner.workspace}}/libcimpp/build/IEC61970_16v29a 
+          cmake ../.. -DUSE_CIM_VERSION=IEC61970_16v29a
+          make doc
+    - uses: actions/upload-artifact@v2
+      with:
+        name: doc
+        path: ${{runner.workspace}}/libcimpp/build/IEC61970_16v29a/doc/html
+        retention-days: 90
+
+
+
+  build-doc-IEC61970_17v07:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2    
+    - name: Checkout submodules
+      run: git submodule update --init --recursive
+    - name: Install Doxygen
+      run: sudo apt-get install doxygen 
+      shell: bash 
+
+
+    - name: Create Build Environment
+      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/IEC61970_17v07
+      
+    - name: Configure CMake and compile
+      shell: bash
+      working-directory: ${{runner.workspace}}/libcimpp/build/IEC61970_17v07/
+      run: |
+          cd ${{runner.workspace}}/libcimpp/build/IEC61970_17v07 
+          cmake ../.. -DUSE_CIM_VERSION=IEC61970_17v07
+          make doc
+    - uses: actions/upload-artifact@v2
+      with:
+        name: doc
+        path: ${{runner.workspace}}/libcimpp/build/IEC61970_17v07/doc/html
+        retention-days: 90
+
+  build-doc-IEC61970_16v29a_IEC61968_12v08:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2    
+    - name: Checkout submodules
+      run: git submodule update --init --recursive
+    - name: Install Doxygen
+      run: sudo apt-get install doxygen 
+      shell: bash 
+
+
+    - name: Create Build Environment
+      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/IEC61970_16v29a_IEC61968_12v08
+      
+    - name: Configure CMake and compile
+      shell: bash
+      working-directory: ${{runner.workspace}}/libcimpp/build/IEC61970_16v29a_IEC61968_12v08/
+      run: |
+          cd ${{runner.workspace}}/libcimpp/build/IEC61970_16v29a_IEC61968_12v08 
+          cmake ../.. -DUSE_CIM_VERSION=IEC61970_16v29a_IEC61968_12v08
+          make doc
+    - uses: actions/upload-artifact@v2
+      with:
+        name: doc
+        path: ${{runner.workspace}}/libcimpp/build/IEC61970_16v29a_IEC61968_12v08/doc/html
+        retention-days: 90
+
+
+  build-doc-CGMES_2-4-15_27JAN2020:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2    
+    - name: Checkout submodules
+      run: git submodule update --init --recursive
+    - name: Install Doxygen
+      run: sudo apt-get install doxygen 
+      shell: bash 
+
+
+    - name: Create Build Environment
+      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/CGMES_2.4.15_27JAN2020
+      
+    - name: Configure CMake and compile
+      shell: bash
+      working-directory: ${{runner.workspace}}/libcimpp/build/CGMES_2.4.15_27JAN2020/
+      run: |
+          cd ${{runner.workspace}}/libcimpp/build/CGMES_2.4.15_27JAN2020
+          cmake ../.. -DUSE_CIM_VERSION=CGMES_2.4.15_27JAN2020
+          make doc
+    - uses: actions/upload-artifact@v2
+      with:
+        name: doc
+        path: ${{runner.workspace}}/libcimpp/build/CGMES_2.4.15_27JAN2020/doc/html
+        retention-days: 90
+
+
+
