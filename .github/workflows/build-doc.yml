@@ -52,14 +52,14 @@ jobs:
       run: sudo apt-get install doxygen 
       shell: bash 
     - name: Create Build Environment
-      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/$USE_CIM_VERSION
+      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}}
       
     - name: Configure CMake and compile
       shell: bash
-      working-directory: ${{runner.workspace}}/libcimpp/build/$USE_CIM_VERSION/
+      working-directory: ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}}/
       run: |
-          cd ${{runner.workspace}}/libcimpp/build/$USE_CIM_VERSION 
-          cmake ../.. -DUSE_CIM_VERSION=$USE_CIM_VERSION
+          cd ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}} 
+          cmake ../.. -DUSE_CIM_VERSION=${{env.USE_CIM_VERSION}}
           make doc
     - uses: actions/upload-artifact@v2
       with:
@@ -78,14 +78,14 @@ jobs:
       run: sudo apt-get install doxygen 
       shell: bash 
     - name: Create Build Environment
-      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/$USE_CIM_VERSION
+      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}}
       
     - name: Configure CMake and compile
       shell: bash
-      working-directory: ${{runner.workspace}}/libcimpp/build/$USE_CIM_VERSION/
+      working-directory: ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}}/
       run: |
-          cd ${{runner.workspace}}/libcimpp/build/$USE_CIM_VERSION 
-          cmake ../.. -DUSE_CIM_VERSION=$USE_CIM_VERSION
+          cd ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}} 
+          cmake ../.. -DUSE_CIM_VERSION=${{env.USE_CIM_VERSION}}
           make doc
     - uses: actions/upload-artifact@v2
       with:
@@ -105,14 +105,14 @@ jobs:
       run: sudo apt-get install doxygen 
       shell: bash 
     - name: Create Build Environment
-      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/$USE_CIM_VERSION
+      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}}
       
     - name: Configure CMake and compile
       shell: bash
-      working-directory: ${{runner.workspace}}/libcimpp/build/$USE_CIM_VERSION/
+      working-directory: ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}}/
       run: |
-          cd ${{runner.workspace}}/libcimpp/build/$USE_CIM_VERSION 
-          cmake ../.. -DUSE_CIM_VERSION=$USE_CIM_VERSION
+          cd ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}} 
+          cmake ../.. -DUSE_CIM_VERSION=${{env.USE_CIM_VERSION}}
           make doc
     - uses: actions/upload-artifact@v2
       with:
