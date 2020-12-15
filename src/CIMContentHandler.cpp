@@ -71,13 +71,18 @@ void CIMContentHandler::endDocument()
 }
 
 
-void CIMContentHandler::startElement(const std::string &namespaceURI, const std::string &localName, const std::string &qName, const xercesc::Attributes  &atts)
+void CIMContentHandler::startElement(const XMLCh* const uri,
+                                     const XMLCh* const localname,
+                                     const XMLCh* const qName,
+                                     const xercesc::Attributes&  atts )
 {
 	// Only process tags in cim namespace
-	if(qName.find("cim:") == std::string::npos)
+	if(std::string(xercesc::XMLString::transcode(qName)).find("cim:") == std::string::npos)
 	{
-		bool isModelDescription = qName.find("md:") != std::string::npos || qName.find("DependentOn:") != std::string::npos || qName.find("createdBy") != std::string::npos;
-		bool isModel = qName.find("rdf:") != std::string::npos;
+		bool isModelDescription = std::string(xercesc::XMLString::transcode(qName)).find("md:") != std::string::npos
+                                  || std::string(xercesc::XMLString::transcode(qName)).find("DependentOn:") != std::string::npos
+                                  || std::string(xercesc::XMLString::transcode(qName)).find("createdBy") != std::string::npos;
+		bool isModel = std::string(xercesc::XMLString::transcode(qName)).find("rdf:") != std::string::npos;
 
 		if(!isModelDescription && !isModel)
 		{
@@ -87,7 +92,7 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 	}
 
 	// Remember last opened tag
-	tagStack.push(qName);
+	tagStack.push(std::string(xercesc::XMLString::transcode(qName)));
 
 	// If there is no RDF ID (an XML attribute!) then we don't have a new CIM
 	// object or RDF relation therefore the XML element will contain a value
@@ -95,7 +100,7 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 	if(atts.getLength() == 0)
 		return;
 	// If name is a CIM class check if to create a new object
-	if(CIMFactory::IsCIMClass(qName))
+	if(CIMFactory::IsCIMClass(std::string(xercesc::XMLString::transcode(qName))))
 	{
 		// Get rdf_id
 		std::string rdf_id = get_rdf_id(atts);
@@ -111,7 +116,7 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 		}
 		else // object does not exist -> create object
 		{
-			BaseClass* BaseClass_ptr = CIMFactory::CreateNew(qName);
+			BaseClass* BaseClass_ptr = CIMFactory::CreateNew(std::string(xercesc::XMLString::transcode(qName)));
 
 			//Check if created Object is IdentifiedObject and place rdf_id into mRID
 			if(CIMPP::IdentifiedObject* idOb = dynamic_cast<CIMPP::IdentifiedObject*>(BaseClass_ptr))
@@ -128,14 +133,14 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 	std::string rdf_id = get_rdf_resource(atts);
     if(!rdf_id.empty())
 	{
-		taskQueue.push_back(Task(objectStack.top(), qName, rdf_id));
+		taskQueue.push_back(Task(objectStack.top(), std::string(xercesc::XMLString::transcode(qName)), rdf_id));
 		return;
 	}
 	// Assign an enum symbol if the rdf id contains a enum symbol
 	std::string enumSymbol = get_rdf_enum(atts);
 	if(!enumSymbol.empty())
 	{
-		if(!assign(objectStack.top(), qName, enumSymbol))
+		if(!assign(objectStack.top(), std::string(xercesc::XMLString::transcode(qName)), enumSymbol))
 			std::cerr << "CIMContentHandler: Error: " << enumSymbol << " can not be assigned" << std::endl;
 		return;
 	}
@@ -144,10 +149,12 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 	std::cerr << "CIMContentHandler: Error: Nobody knows, the " << qName << " I've seen... *sing*" << std::endl;
 }
 
-void CIMContentHandler::endElement(const std::string &namespaceURI, const std::string &localName, const std::string &qName)
+void CIMContentHandler::endElement(const XMLCh* const uri,
+								   const XMLCh* const localname,
+								   const XMLCh* const qName)
 {
 	// Only process tags in cim namespace
-	if(qName.find("cim:") == std::string::npos)
+	if(std::string(xercesc::XMLString::transcode(qName)).find("cim:") == std::string::npos)
 	{
 		return;
 	}
@@ -159,7 +166,7 @@ void CIMContentHandler::endElement(const std::string &namespaceURI, const std::s
 	else {
 		tagStack.pop();
 	}
-	if(CIMFactory::IsCIMClass(qName))
+	if(CIMFactory::IsCIMClass(std::string(xercesc::XMLString::transcode(qName))))
 	{
 		if (objectStack.size() == 0) {
 			std::cerr << "WARNING: Nearly tried to pop empty object stack for tag: " << qName << std::endl;
@@ -171,7 +178,8 @@ void CIMContentHandler::endElement(const std::string &namespaceURI, const std::s
 	}
 }
 
-void CIMContentHandler::characters(const std::string &characters)
+void CIMContentHandler::characters(const XMLCh* const chars,
+													const XMLSize_t length )
 {
 	// Only process tags in "cim" namespace
 	if(tagStack.empty())
@@ -184,7 +192,7 @@ void CIMContentHandler::characters(const std::string &characters)
 	}
 
 #ifndef DEBUG
-	assign(objectStack.top(), tagStack.top(), characters);
+	assign(objectStack.top(), tagStack.top(), std::string(xercesc::XMLString::transcode(chars)));
 #else
 	// Check if the characters only contain whitespace
 	if(is_only_whitespace(characters))
@@ -209,9 +217,12 @@ std::string CIMContentHandler::get_rdf_id(const xercesc::Attributes &attributes)
 {
 	for(int i = 0; i < attributes.getLength(); i++)
 	{
-		if(xercesc::XMLString::transcode(attributes.getQName(i)) == "rdf:ID")
-			return xercesc::XMLString::transcode(attributes.getValue(i));
-		if(xercesc::XMLString::transcode(attributes.getQName(i)) == "rdf:about")
+        std::string some = (std::string) xercesc::XMLString::transcode(attributes.getQName(i));
+        std::cout << some << std::endl;
+
+		if(std::string(xercesc::XMLString::transcode(attributes.getQName(i))) == "rdf:ID")
+			return std::string(xercesc::XMLString::transcode(attributes.getValue(i)));
+		if(std::string(xercesc::XMLString::transcode(attributes.getQName(i))) == "rdf:about")
 			return std::string(xercesc::XMLString::transcode(attributes.getValue(i))).substr(1);
 	}
 	return std::string();
@@ -220,7 +231,7 @@ std::string CIMContentHandler::get_rdf_id(const xercesc::Attributes &attributes)
 std::string CIMContentHandler::get_rdf_resource(const xercesc::Attributes &attributes)
 {
     for (XMLSize_t i = 0; i < attributes.getLength(); i++) {
-		if(xercesc::XMLString::transcode(attributes.getQName(i)) == "rdf:resource")
+		if(std::string(xercesc::XMLString::transcode(attributes.getQName(i))) == "rdf:resource")
 		{
 			if(std::string(xercesc::XMLString::transcode(attributes.getValue(i))).at(0) == '#')
 			{
@@ -239,11 +250,11 @@ bool CIMContentHandler::is_only_whitespace(const std::string& characters)
 std::string CIMContentHandler::get_rdf_enum(const xercesc::Attributes &attributes)
 {
     for (XMLSize_t i = 0; i < attributes.getLength(); i++) {
-		if(xercesc::XMLString::transcode(attributes.getQName(i)) == "rdf:resource")
+		if(std::string(xercesc::XMLString::transcode(attributes.getQName(i))) == "rdf:resource")
 		{
 			std::regex expr("^http[s]*://[a-zA-Z0-9./_]*CIM-schema-cim[0-9]+#([a-zA-z0-9]*).([a-zA-z0-9]*)");
 			std::smatch m;
-			std::string str = xercesc::XMLString::transcode(attributes.getValue(i));
+			std::string str = std::string(xercesc::XMLString::transcode(attributes.getValue(i)));
 			if(std::regex_match(str, m, expr))
 			{
 				return std::string(m[1]).append(".").append(m[2]);

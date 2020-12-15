@@ -58,12 +58,24 @@ void CIMModel::parseFiles()
 	CIMContentHandler* ContentHandler = new CIMContentHandler();
 	ContentHandler->setObjectsContainer(&Objects);
 	ContentHandler->setRDFMap(&RDFMap);
+    try
+    {
+        xercesc::XMLPlatformUtils::Initialize();
+    }
+    catch(const xercesc::XMLException& ex)
+    {
+        char* message = xercesc::XMLString::transcode(ex.getMessage());
+        std::cout << "Initialization Error :\n";
+        std::cout << "Exception message is: \n" << message << std::endl;
+        xercesc::XMLString::release(&message);
+        return;
+    }
 
 	for(CIMFile& file : Files) //TODO: Suche evtl. mit eigener dependency-liste beschleunigen
 	{
 
 		xercesc::SAX2XMLReader* xmlReader = xercesc::XMLReaderFactory::createXMLReader();
-		// xmlReader->setFeature(XMLUni::fgSAX2CoreValidation, true);
+		xmlReader->setFeature(xercesc::XMLUni::fgSAX2CoreValidation, true);
 		// xmlReader->setFeature(XMLUni::fgSAX2CoreNameSpaces, true);   // optional
 		// CIMContentHandler* cimContentHandler = new CIMContentHandler();
 
@@ -94,7 +106,10 @@ void CIMModel::parseFiles()
 				}
 			}
 		}
-		xmlReader->parse(file.getpath().c_str());
+        xmlReader->parse(file.getpath().c_str());
+
+
+        delete xmlReader;
 	}
 
 	ContentHandler->resolveRDFRelations();

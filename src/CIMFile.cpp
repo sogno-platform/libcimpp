@@ -27,18 +27,31 @@ ModelDescription* CIMFile::getModelDescription()
 			//TODO: file not good, say something
 			return nullptr;
 		}
-		modelDescription = new ModelDescription();
-		ModelDescriptionHandler* DescriptionHandler;
+        try
+        {
+            xercesc::XMLPlatformUtils::Initialize();
+        }
+        catch(const xercesc::XMLException& ex)
+        {
+            char* message = xercesc::XMLString::transcode(ex.getMessage());
+            std::cout << "Initialization Error :\n";
+            std::cout << "Exception message is: \n" << message << std::endl;
+            xercesc::XMLString::release(&message);
+            return modelDescription;
+        }
 
+		modelDescription = new ModelDescription();
+        ModelDescriptionHandler* DescriptionHandler = new ModelDescriptionHandler();
 		DescriptionHandler->setModelDescription(modelDescription);
 
-		xercesc::SAX2XMLReader* xmlReader = xercesc::XMLReaderFactory::createXMLReader();
-		// xmlReader->setFeature(XMLUni::fgSAX2CoreValidation, true);
+
+		xercesc::SAX2XMLReader* Reader = xercesc::XMLReaderFactory::createXMLReader();
+        Reader->setFeature(xercesc::XMLUni::fgSAX2CoreValidation, true);
 		// xmlReader->setFeature(XMLUni::fgSAX2CoreNameSpaces, true);   // optional
 
-		xmlReader->setContentHandler(DescriptionHandler);
-		xmlReader->setErrorHandler(DescriptionHandler);
-		xmlReader->parse(path.c_str());
+        Reader->setContentHandler(DescriptionHandler);
+        Reader->setErrorHandler(DescriptionHandler);
+        Reader->parse(getpath().c_str());
 
 	}
 

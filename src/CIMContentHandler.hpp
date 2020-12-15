@@ -34,9 +34,15 @@ protected:
 	void endDocument() override;
 	//void startPrefixMapping(const std::string &prefix, const std::string &uri) override;
 	//void endPrefixMapping(const std::string &prefix) override;
-	void startElement(const std::string &namespaceURI, const std::string &localName, const std::string &qName, const xercesc::Attributes &atts) ;
-	void endElement(const std::string &namespaceURI, const std::string &localName, const std::string &qName) ;
-	void characters(const std::string &ch) ;
+	void startElement( const XMLCh* const uri,
+                  const XMLCh* const localname,
+                  const XMLCh* const qname,
+                  const xercesc::Attributes&  attrs );
+	void endElement( const XMLCh* const uri,
+					 const XMLCh* const localname,
+					 const XMLCh* const qname );
+	void characters( const XMLCh* const chars,
+					 const XMLSize_t length );
 	void ignorableWhitespace(const std::string &ch) ;
 	void processingInstruction(const std::string &target, const std::string &data) ;
 	void skippedEntity(const std::string &name) ;

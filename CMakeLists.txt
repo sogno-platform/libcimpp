@@ -6,7 +6,6 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake/" "${CMAKE_CURRENT_SOURCE_DIR}/../../cmake")
 
 add_subdirectory(doc)
-add_subdirectory(thirdparty)
 find_package(XercesC REQUIRED)
 
 set(libcimpp_MAJOR_VERSION 2)
@@ -68,8 +67,8 @@ add_library(${PROJECT_NAME} ${SRC} ${CIM_SRC})
 set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "cimpp${USE_CIM_VERSION}")
 target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/${CIM_FOLDER}>)
 target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>)
-target_link_libraries(${PROJECT_NAME} PUBLIC arabica ${XercesC_LIBRARIES})
-set_property(TARGET arabica PROPERTY POSITION_INDEPENDENT_CODE ON)
+target_link_libraries(${PROJECT_NAME} PUBLIC ${XercesC_LIBRARIES})
+set_property(TARGET PROPERTY POSITION_INDEPENDENT_CODE ON)
 
 include(GNUInstallDirs)
 
