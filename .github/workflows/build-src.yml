@@ -15,6 +15,8 @@ jobs:
       run: git submodule update --init --recursive
     - name: Install Doxygen
       run: sudo apt-get install doxygen 
+    - name: Install Xerces-C
+      run: sudo apt install libxerces-c-dev
       shell: bash 
     - name: Create Build Environment
       run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}}
@@ -39,6 +41,8 @@ jobs:
       run: git submodule update --init --recursive
     - name: Install Doxygen
       run: sudo apt-get install doxygen 
+    - name: Install Xerces-C
+      run: sudo apt install libxerces-c-dev
       shell: bash 
     - name: Create Build Environment
       run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}}
@@ -61,6 +65,8 @@ jobs:
       run: git submodule update --init --recursive
     - name: Install Doxygen
       run: sudo apt-get install doxygen 
+    - name: Install Xerces-C
+      run: sudo apt install libxerces-c-dev
       shell: bash 
     - name: Create Build Environment
       run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}}
@@ -84,7 +90,9 @@ jobs:
     - name: Checkout submodules
       run: git submodule update --init --recursive
     - name: Install Doxygen
-      run: sudo apt-get install doxygen 
+      run: sudo apt-get install doxygen
+    - name: Install Xerces-C
+      run: sudo apt install libxerces-c-dev 
       shell: bash 
     - name: Create Build Environment
       run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}}
