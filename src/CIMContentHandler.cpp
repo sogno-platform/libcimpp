@@ -52,8 +52,6 @@ void CIMContentHandler::setRDFMap(std::unordered_map<std::string, BaseClass*> *R
 	this->RDFMap = RDFMap;
 }
 
-void CIMContentHandler::setDocumentLocator(const LocatorT &locator)
-{}
 
 void CIMContentHandler::startDocument()
 {
@@ -72,13 +70,8 @@ void CIMContentHandler::endDocument()
 {
 }
 
-void CIMContentHandler::startPrefixMapping(const std::string &prefix, const std::string &uri)
-{}
 
-void CIMContentHandler::endPrefixMapping(const std::string &prefix)
-{}
-
-void CIMContentHandler::startElement(const std::string &namespaceURI, const std::string &localName, const std::string &qName, const AttributesT &atts)
+void CIMContentHandler::startElement(const std::string &namespaceURI, const std::string &localName, const std::string &qName, const xercesc::Attributes  &atts)
 {
 	// Only process tags in cim namespace
 	if(qName.find("cim:") == std::string::npos)
@@ -212,27 +205,26 @@ void CIMContentHandler::processingInstruction(const std::string &target, const s
 void CIMContentHandler::skippedEntity(const std::string &name)
 {}
 
-std::string CIMContentHandler::get_rdf_id(const AttributesT &attributes)
+std::string CIMContentHandler::get_rdf_id(const xercesc::Attributes &attributes)
 {
 	for(int i = 0; i < attributes.getLength(); i++)
 	{
-		if(attributes.getQName(i) == "rdf:ID")
-			return attributes.getValue(i);
-		if(attributes.getQName(i) == "rdf:about")
-			return attributes.getValue(i).substr(1);
+		if(xercesc::XMLString::transcode(attributes.getQName(i)) == "rdf:ID")
+			return xercesc::XMLString::transcode(attributes.getValue(i));
+		if(xercesc::XMLString::transcode(attributes.getQName(i)) == "rdf:about")
+			return std::string(xercesc::XMLString::transcode(attributes.getValue(i))).substr(1);
 	}
 	return std::string();
 }
 
-std::string CIMContentHandler::get_rdf_resource(const AttributesT &attributes)
+std::string CIMContentHandler::get_rdf_resource(const xercesc::Attributes &attributes)
 {
-	for(int i = 0; i < attributes.getLength(); i++)
-	{
-		if(attributes.getQName(i) == "rdf:resource")
+    for (XMLSize_t i = 0; i < attributes.getLength(); i++) {
+		if(xercesc::XMLString::transcode(attributes.getQName(i)) == "rdf:resource")
 		{
-			if(attributes.getValue(i).at(0) == '#')
+			if(std::string(xercesc::XMLString::transcode(attributes.getValue(i))).at(0) == '#')
 			{
-				return attributes.getValue(i).substr(1);
+				return std::string(xercesc::XMLString::transcode(attributes.getValue(i))).substr(1);
 			}
 		}
 	}
@@ -244,15 +236,14 @@ bool CIMContentHandler::is_only_whitespace(const std::string& characters)
 	return std::regex_match(characters, std::regex("^[[:space:]]*$"));
 }
 
-std::string CIMContentHandler::get_rdf_enum(const AttributesT &attributes)
+std::string CIMContentHandler::get_rdf_enum(const xercesc::Attributes &attributes)
 {
-	for(int i = 0; i < attributes.getLength(); i++)
-	{
-		if(attributes.getQName(i) == "rdf:resource")
+    for (XMLSize_t i = 0; i < attributes.getLength(); i++) {
+		if(xercesc::XMLString::transcode(attributes.getQName(i)) == "rdf:resource")
 		{
 			std::regex expr("^http[s]*://[a-zA-Z0-9./_]*CIM-schema-cim[0-9]+#([a-zA-z0-9]*).([a-zA-z0-9]*)");
 			std::smatch m;
-			std::string str = attributes.getValue(i);
+			std::string str = xercesc::XMLString::transcode(attributes.getValue(i));
 			if(std::regex_match(str, m, expr))
 			{
 				return std::string(m[1]).append(".").append(m[2]);
@@ -289,4 +280,20 @@ bool CIMContentHandler::resolveRDFRelations()
 		return false;
 	else
 		return true;
+}
+
+
+void CIMContentHandler::error(const xercesc::SAXParseException& ex)
+{
+    char* message = xercesc::XMLString::transcode(ex.getMessage());
+    std::cout << "Error " << message << " at line: " << ex.getLineNumber() << std::endl;
+    xercesc::XMLString::release(&message);
+}
+
+
+void CIMContentHandler::fatalError(const xercesc::SAXParseException& ex)
+{
+    char* message = xercesc::XMLString::transcode(ex.getMessage());
+    std::cout << "Fatal Error: " << message << " at line: " << ex.getLineNumber() << std::endl;
+    xercesc::XMLString::release(&message);
 }

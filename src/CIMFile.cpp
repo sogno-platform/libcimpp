@@ -3,8 +3,8 @@
 
 #include "ModelDescriptionHandler.hpp"
 #include "ModelDescription.hpp"
-#include "SAX/InputSource.hpp"
-#include "SAX/XMLReader.hpp"
+#include <xercesc/sax2/SAX2XMLReader.hpp>
+#include <xercesc/sax2/XMLReaderFactory.hpp>
 
 #include <iostream>
 #include <fstream>
@@ -28,15 +28,18 @@ ModelDescription* CIMFile::getModelDescription()
 			return nullptr;
 		}
 		modelDescription = new ModelDescription();
-		ModelDescriptionHandler DescriptionHandler;
+		ModelDescriptionHandler* DescriptionHandler;
 
-		DescriptionHandler.setModelDescription(modelDescription);
+		DescriptionHandler->setModelDescription(modelDescription);
 
-		Arabica::SAX::XMLReader<std::string> Reader;
-		Reader.setContentHandler(DescriptionHandler);
+		xercesc::SAX2XMLReader* xmlReader = xercesc::XMLReaderFactory::createXMLReader();
+		// xmlReader->setFeature(XMLUni::fgSAX2CoreValidation, true);
+		// xmlReader->setFeature(XMLUni::fgSAX2CoreNameSpaces, true);   // optional
 
-		Arabica::SAX::InputSource<std::string> source(path);
-		Reader.parse(source);
+		xmlReader->setContentHandler(DescriptionHandler);
+		xmlReader->setErrorHandler(DescriptionHandler);
+		xmlReader->parse(path.c_str());
+
 	}
 
 	return modelDescription;
