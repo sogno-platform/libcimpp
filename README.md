@@ -18,12 +18,12 @@ You need following software packages for libcimpp:
   + [cmake](https://cmake.org/)
 
 ## Install Xerces
-### The UNIX / Linux
+### The UNIX / Linux way
 Install Xerces via the package-manager e.g.:
 ```
 sudo apt install libxerces-c-dev
 ```
-### Windows
+### The Windows way with MS Visual Studio
 1. Download the newest Version of [Xerces](https://xerces.apache.org/xerces-c/download.cgi)
 2. Unzip the downloaded File to your desired location
 3. Run the Windows CMake (GUI)

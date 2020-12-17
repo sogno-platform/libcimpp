@@ -217,9 +217,6 @@ std::string CIMContentHandler::get_rdf_id(const xercesc::Attributes &attributes)
 {
 	for(int i = 0; i < attributes.getLength(); i++)
 	{
-        std::string some = (std::string) xercesc::XMLString::transcode(attributes.getQName(i));
-        std::cout << some << std::endl;
-
 		if(std::string(xercesc::XMLString::transcode(attributes.getQName(i))) == "rdf:ID")
 			return std::string(xercesc::XMLString::transcode(attributes.getValue(i)));
 		if(std::string(xercesc::XMLString::transcode(attributes.getQName(i))) == "rdf:about")

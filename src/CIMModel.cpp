@@ -75,7 +75,7 @@ void CIMModel::parseFiles()
 	{
 
 		xercesc::SAX2XMLReader* xmlReader = xercesc::XMLReaderFactory::createXMLReader();
-		xmlReader->setFeature(xercesc::XMLUni::fgSAX2CoreValidation, true);
+		xmlReader->setFeature(xercesc::XMLUni::fgSAX2CoreValidation, false);
 		// xmlReader->setFeature(XMLUni::fgSAX2CoreNameSpaces, true);   // optional
 		// CIMContentHandler* cimContentHandler = new CIMContentHandler();
 
