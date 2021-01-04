@@ -36,6 +36,8 @@ sudo apt install libxerces-c-dev
 8. Click on `Open Project` to open the project in Visual Studio.
 9. In Visual Studio's main menu choose `Build -> Build Solution`. This will build the `xerces` library.
 10. In Visual Studio press on the `Developer-Shell` Button at the bottom-left.
+ In case there is no such button press the Windows button on your keyboard and search for the `Developer Command Prompt for VS 2019`.
+ It might be necessary to run the Shell with Administrator rights.
 11. In the `Developer-Shell` type `cmake --build . --config Debug --target install` to install the xerces library.
 
 
