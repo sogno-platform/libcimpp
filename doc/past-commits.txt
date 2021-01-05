@@ -1,0 +1,36 @@
+I, Lukas Razik hereby sign-off-by all of my past commits to this repo subject to the Developer Certificate of Origin (DCO), Version 1.1. In the past I have used emails: lrazik@eonerc.rwth-aachen.de
+
+06885cd22f97f5f30d0c55e684bc01beba64dc44 Refactoring: CIMParser -> libcimpp
+9c0b1cc0493ab342dd2b76dc78c538728e501cc3 Refactoring: CIMParser -> libcimpp
+42a5b7bf5ab40c05684c51d0b43a09398466d35a Changed long double to typedef double elem_type;
+5b2d731e24b291d0b4e912d375e9c8cb53bfd2aa Kleinere Anpassungen.
+604eb5944cbbba8082e06f9a65dc46606037fa0f Update README.md
+d1e305aaaec7786eb53ada8380ea3583565ee154 Update README.md
+9946688ed2954d1711b9d5ba6491fc0625109d6b Update README.md
+b4ac1bb56cb3786f867bd577118f5dff7c7ef55d Update README.md
+2819b3082b7c19d2c5f4b744a4e1ac23e649378a Update README.md
+113042c935511e296e309ff570e6def84bd28418 Update README.md
+91c00b68d5ca39f847c1672b7529be01ff208f09 Update README.md
+5bfe02fe2043d34cd289d5297dc7e142bfd43dc0 Update README.md
+9172f6054bc5fcf206ff1d41567df50ae433a852 Update README.md
+a8005cc848c46d11f34ea2ea4a9cc26f645ec73e Update README.md
+a0e8db2140cc3b1237caec410dbbac2d2b6672a4 Update README.md
+313156812ab9fd5ab7c92575891fbcb2864b15b8 Update README.md
+78cfcbd4be3fad67aaec3e0c139142fef01f9620 Update README.md
+2c654c038693231cb32cb86e320427e355822b19 Update README.md
+ba7791d7c4f600f258df75c8f99f7f0f9e43161b Update README.md
+7e68f7f4f6e3549534e901acd13f5eb3ec5767a4 Update README.md
+318182bf83e76445aa21cc591effe07a7e0b4432 Update README.md
+f957d9e7387148655ddfa10de9a9cde18e84fa94 Update README.md
+3d7018245d4b913fdabdc10d3ec7820d9374ff8f Update README.md
+ae5e57f17cc8116ace8915ad7869a5b1a0dea2c4 Update README.md
+bd6fdd00d337e9fd7ec64eef6381ff5d3088f97e Update README.md
+a56539cb3df4f05651481510307c490fa98d870a Update README.md
+519d6a2cae6e017241b9a10ae9899c65ba493f8f Update README.md
+3b5efda8087f5b0de9af493bf7cba332639496c8 Update README.md
+638767a64f44683242dbb9e09d3b14f63b6e4a96 Update README.md
+bc8b51be98e46fc0a9684ec8353c23d393aa75dd Update README.md
+91f306d48adf501c21a5c9ed11792a768efadbb9 Update README.md
+e58ce9aaa79cd1fe25c78878aad48cc375c3bd82 Update README.md
+d39bd69838e395064203e51d573eedcbf1ba49c1 Update README.md
+c2a2e8d1ee6bac2354031a55236f7b1cf4be77cc Add license
