@@ -14,8 +14,6 @@ It is recommended to use libcimpp as cmake module.
 ## Dependencies
 You need following software packages for libcimpp:
 + The XML parser [Xerces](http://xerces.apache.org/xerces-c/)
-+ Build system:
-  + [cmake](https://cmake.org/)
 
 ## Install Xerces
 ### The UNIX / Linux way
