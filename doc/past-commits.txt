@@ -1,3 +1,14 @@
+I, Achim Völker hereby sign-off-by all of my past commits to this repo subject to the Developer Certificate of Origin (DCO), Version 1.1. In the past I have used emails: achim.voelker@rwth-aachen.de, achim-voelker@live.at
+
+6e5348b1d9ad21ea8d7e9f3f9920621705744eaf fixup
+7791d0de43d1448c0450ad98ec9be3b087832da1 using cim_name_variable in action
+0c66caf23bda11a4249e46055635b7455839d0b4 added build-src action
+0db7bb325d96eba2e96c0005b261b499a44c263e changed lib-name to cim_version
+9558cac43d9d1501b9822ccbd06439bf733a8bf6 added sinergien support
+ba209c4b031b685588d2bf34bcd95dc20f6e158c Update CIMContentHandler.cpp
+dde2fcd6717c61b9ff18fc94a25435b0946e88ea Update build-src.yml
+d74dd6b8f2b243655ef73b5b54ddf547a99663ab Create build-doc
+
 I, Lukas Razik hereby sign-off-by all of my past commits to this repo subject to the Developer Certificate of Origin (DCO), Version 1.1. In the past I have used emails: lrazik@eonerc.rwth-aachen.de
 
 06885cd22f97f5f30d0c55e684bc01beba64dc44 Refactoring: CIMParser -> libcimpp
