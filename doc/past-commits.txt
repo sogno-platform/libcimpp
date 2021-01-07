@@ -45,3 +45,45 @@ bc8b51be98e46fc0a9684ec8353c23d393aa75dd Update README.md
 e58ce9aaa79cd1fe25c78878aad48cc375c3bd82 Update README.md
 d39bd69838e395064203e51d573eedcbf1ba49c1 Update README.md
 c2a2e8d1ee6bac2354031a55236f7b1cf4be77cc Add license
+
+I, Maximilian Kissgen hereby sign-off-by all of my past commits to this repo subject to the Developer Certificate of Origin (DCO), Version 1.1. In the past I have used emails: maximilian.kissgen@rwth-aachen.de
+
+23c18ef003fa636e305235f4a9585dadac26e355 use startig size of taskQueue instead of ending size
+3a2c0563c1917e3666031ce08f0526cc03c5856b Add 17v23 folder and alter CMakeLists accordingly
+bdf080ef6ccf771d7476e8b0b4b9d942afcad9a0 update SINERGIEN data
+fcde890ca4f5af2535abcd71ade9ce66e6bb98bd remove SINERGIEN data from plain 16v29a and comment out warnings
+17ed0d5c5181a6f1a2e6463a5f056ffa5b939843 update README.md
+53639ea0abf17c83417470b3dd41592b3d297045 Update code according to merge of primitive_ops in Ref-Script
+d15064f982dce750ee4b3ee0283fc5b6e35eb89b fix faulty SINERGIEN Data
+6344a7ebe8a2edcdca26cae3c3e4c13d3297a5bc changed doxygen project names
+2bb6b1eacec8ac923fffa1fd3dda810024292ca1 Move doxygen files in own folder and correct filepaths in CMakeLists and Doxyfile.in
+b8c9a08c2d3919d8dbb809c13c2d0d887efac440 Created new base class CIMException for (almost) all exception classes
+3171ce9640dff30c43ea355a2e085f708fbb65a6 Added SINERGIEN folder
+4b973437be984f4e5ac654e3263ca076dbc2941a Updated the code with enum initialisation
+67251a770e2a9edb987546cadd95aa50f053255c Added missing return statements
+df5bef2fa96c88540866244ba6389613c3f74609 changed folder names
+8afb70a23b084ceebc234a7d10ca56c1fa2834d5 Added initialization-checks also for CIM17v07
+e5b85a0c821bb3da7ce79444fbe47abf8a7f1b3b Added initialization-check for primitive datatypes
+95307b0eeccd274d48260ef1c916e31f94f2eb9b Now using libxml2 as default SAX parser
+3d70ef250daa3bc314d6321c4837ddc21226d5f4 Changed version of master to 2.1
+962ec1c0a6e466c6bf8c6f32ccf7241335de8770 Parser now recognises file "urn:uuid:2399cbd1-9a39-11e0-aa80-0800200c9a66" and outputs a warning
+instead of throwing an exception when a file is missing
+879bb13216874374ae2e0eb84a55928c4bfb1772 Created Warning for parsing namespaces other than cim or those in the ModelDescription
+57dd88f936d1b97689c5d66f37af401c07bfc6dd Implemented check for the ContentHandler to parse the given rdfID into an IdentifiedObject's K mRID
+7491d139bd080e7efda578ec320f24a6b5833e27 Added separate classes for logical exceptions
+bb75815e27794ee4badde26043d3816f7d776539 Added slight fixes in the output of version check
+9ad43511068cc72f8b934c5c3d93e4188e9e359e Exchanged Errorcodes on exit with Exceptions being thrown
+b1b88c8a75e3411145cba509657004a521c64b22 Added Check for CIM Version
+62c49f1b39226b4ac394736e1f8121b35fe58ac9 Fixed 81c4cc2
+81c4cc2fad0f02bbb4853e5d73b54c79fff40eb0 Added check for file and set ModelDescription on get
+7e0d1e7204dd633b3987c54c1f64c26126d10ad5 Start handling SAX Parser Errors
+32077b826b8d90df5127cfce06bca9cc12a537fe Fix parsing of model dependencies
+ba5537603558bf72697106774e383335eccb15eb Add 17v23_13v11 Folder and alter CMakeLists accordingly
+d5f12a004eef90b875d5d9b88ebeaed5ae21829f Add another module path for the example directory
+b17eb86e44c7caeabfb56a15463ce78b71a8fd1c change change default cmake target back to 16v29a_12v08
+d10cd8c6b9a639fece968ec1ed5b7999e227959c add search for SINERGIEN folder variants
+1be51a6f2e80a183239c20e6c4278d3f93a81f89 renamed SINERGIEN folder
+79e984b1f4d63f7816412c529e226ee5381baabc Implemented MetaData
+72e4dd5aa3124b4beefee3ba53cf1659b25950b4 Dont convert size_t value and move stack checks to new function
+805cad9d767ac1ae9f0b6e7c3019f9f9a64e6d60 Use _dupenv_s instead of getenv on windows
+d3860db33d94b9c99a81ff213a5d145c181e1284 Changed CIM_VERSION strings in CMakeLists.txt 
