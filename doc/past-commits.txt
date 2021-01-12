@@ -86,4 +86,134 @@ d10cd8c6b9a639fece968ec1ed5b7999e227959c add search for SINERGIEN folder variant
 79e984b1f4d63f7816412c529e226ee5381baabc Implemented MetaData
 72e4dd5aa3124b4beefee3ba53cf1659b25950b4 Dont convert size_t value and move stack checks to new function
 805cad9d767ac1ae9f0b6e7c3019f9f9a64e6d60 Use _dupenv_s instead of getenv on windows
-d3860db33d94b9c99a81ff213a5d145c181e1284 Changed CIM_VERSION strings in CMakeLists.txt 
+d3860db33d94b9c99a81ff213a5d145c181e1284 Changed CIM_VERSION strings in CMakeLists.txt
+
+I, Daniel Knibbe hereby sign-off-by all of my past commits to this repo subject to the Developer Certificate of Origin (DCO), Version 1.1. In the past I have used emails: daniel.knibbe@rwth-aachen.de, daniel.knibbe@rocketmail.com
+
+e34428dadf9613e96108e7a8736a674ed3ce52e7 Updated Readme and changed build option
+bcd2ec7ce35d2b05c9ef7f7ebfdfb40c6b6fd6de Modified .gitignore
+051c25e7affb5d976b04f3d934b256d299cc5a9e Reimplemented exceptions
+9e6750148e56cfdb5f12bfaf55a0d81f7c473a20 Merge branch 'iss15' into master
+03d3662d831214463b43bc25b3b002afdd44a278 Merge branch 'iss17'
+d70c1c4e27d242d0da3302fc41d614b0b80483b7 Updated example
+53117e9b3243f970691e6f609faa47527225c03c Renamed exceptions.h to CIMExceptions.hpp
+b7410034e06c7e55938170a9b5703b304a380caa Added the possibility to turn off the dependency check of the parser
+be508840c6fc1bfd7c5f31627a6fd8b6d1eddae0 Merge branch 'master' into release
+cf887fd7caf613d2bf60d5e64f81b7fc42be9e1d Changed version number to v2.0
+10964ac41f554cebbda331fab0b37d433e4f7718 Merge branch 'Exceptions' into v2
+fe4230b806662bc6862c753d4fafff75ac61f388 Added IEC61970CIM16v29a
+8c687a7d24090effde469d9e4f034d2573a5af9f Added possibility to switch between different CIM versions
+57cf3a0640fe7bd8a581127c38de6b596f2e45fe Removed forward declaration
+f2de77b49779690771a64dc872081496d44e127b Fix of segemtation fault when accessing tagStack
+8d0b14c7264100f2dfb49e3a909e8389b0ee0e03 Fixed stack imbalance
+3d3732b77b8aeec999dfeacdd7dd28421c6ed04b Changed version number
+98cecbdb01fe2dbb9fe398c32dd2304e7aa7cce0 Updated README.md
+c7d714a1a404bb1faa3e60cb2a100db89ce8f649 Added README as doxygen main page
+747cdda88a584009ebf63da190db86c92b6a7f42 Removed exeptions and documented error codes
+2e45dfe54bfa7138217999aa6271a9b95361b68f Added error codes
+2b4963c51603e83b4f0161b865dae94c9a43e8ab Fixed content handler
+21badd018c776d5d8838e3c4fb66a89045eb6f30 Removed old interface
+aaa14000b53f835ab530b0d6a001089f46316654 Updated example
+9424ca123e89325fa9261930b75fb0a0406b4f92 Some renaming
+a305500e0c963f609b985018668090292d3a156b Updated example
+a192496bf281452b41d35e733d2895b785ebfc19 Implemented object orientated interface
+db1bcf005b6318f57e66e45114a06c945e3feebd Updated code to follow latest tool chain
+f86f155a52a867581afa23c1f8ac4c81d5afd485 Modified Task class to use a specified RDF map
+69d5fefe9342cb2bbb22d972b261431132db2cc7 Added ability to change the RDF map
+a055b55fe8fdf6905d50e559914f33f6f396dcda Fixed 1c35361e
+118efc5efec2578052e9f4201af66ca0828204da Updated example
+606f49569f130ea7636f05051e389c53668cb1f1 Updated README.md
+ba9c99683d62e2f640fa6e7841673859282e73ee Changed version number
+3dad9fbabe12575173195cc0249c2f4a89b597c6 Deleted files which became obsolete with v1.0
+1c35361e8e62c6b24c3e749d07fdefc38ac819ab Added full functionality to parse models spread over more then one file
+827263da4ebfae470cb9ff46c87a05d5019a8bb7 Bugfix: rdf:about is now read in correctly
+a6744561af5f1dae35eefd5e79fec59ccce48611 Updated README
+d26b58b66e1317b8e25a59a5f3059dda7a8d995d Added missing include
+fcb08a4d351d39f3289ec1c73bd4e6efca6f6308 Removed "Created on" comment in source files
+2d816fe6d6991e36d2ec41bc14fb3ba6548adc17 Changed version number
+d4065be65c1a6cef56cf9d1c1061097dc24e4346 Removed install target, since arabica does not provide an install target
+6061da05ee30171f7a89357893e15fa24e88a202 CMake: Removed unused commands
+fc9ce9ed6036f4e8e699fb5f57dbc980291bcaef Fixed file name problem
+ff9f366005e51b0602cd7b89c1bb2247a21c99d7 Updated example/cmake to prevent warnings
+b56af8a56698b3ebd672ca532e92547ec3fa4ead Implemented arabica interface
+a56c814091206ba98d7daccef4f38d11fee43bdf Renamed files for using arabica
+221b7e16fe5114ea57218443d6ff6e17b2e5d79c Added arabica as submodule
+6a20c2179690e404c4d54f6fec432a6e3bb85de0 CMake: Added option to choose between static and shared library
+5653240abd8d1417c94b9a120cc206b3d6761806 Changed version numbering to two digits
+e643f32cf2882f4f3592dfcd32ca8876eb95a2ac Updated .gitignore for CLion
+f4ac25aff29fb1a81dd5450071bb8f01e65e1f13 Fixed remaining errors of corrupted merge dd68321
+4013d7f56ed2e9df92adaf0e261f02488f5d0355 Fixed corrupted merge dd68321
+b056f69264843615353a59a4002323bb180359cf Updated README for cmake example
+2c0363ef6ab554c9ceeaa2b5a2b502e891e0145d Modified cmake example
+4fd79bd719adbb2112bc2125f0dbac603140c65d Stripped UUIDs and created on line comments in cim header files
+dd6832189d71bf97cae7504c870f489b866b1e97 Merge branch 'fix5' into release
+b6fc036ea0375b6330bd42e198d125a41452088a Corrected last commit
+bdec2ddafdf265f6554adb22d36a438a756246e7 Tranlated and improved error messages
+feaaba525451fc65f8352605a777b1e7c935f115 Modified examples/src/main.cpp to make a simpler more complete version of the previous example
+e0a2c2272f626a90feee1e86bf0c25d4ff85e442 Reorganized examples
+9b9ba7eb0fe3b98c987b8ad2c44f48ff9ee78e53 Added information about eap file used to generate CIM code
+d202584c5e797d636b0f76b7f61f0d7b1baf84ee Updated examples to match build system update (see previous commit)
+e1153264c1ee7b6ee6d2178701305b7dd6f477f3 Updated cmake build system to provide CIMParserConfig.cmake
+9edfc782982d5ae1c8560c8e9779a360dcafd607 Updated Makefile of the example project and added inverse .gitignore
+7caf6a6c37a4ad8aa00a5f606e6d1cec967c9794 This closes #3
+72592692f697cf6687f8becae5b25aaec8573c91 Updated cmake build system
+f5d4912b19a01067bf07bcd59a6593f29db48db7 Corrected spelling mistake in README
+9df16c57697ea71a25eff37e886ad43c5b3629a7 Member CIMParser::get_rdf_id(...) now return correct RDF ID
+bbee653adc8aa9992bc4c5e17abc1ec93cbc78b8 Merge branch 'revert-63371d62' into 'release'
+6a8394dba51e78d2f206479f507181dda0355da4 Closes #5
+7f7635cfddcef159502591d7dda17d96d8a7e418 Modified example Makefile to copy necessary resources
+0bd4dbe01547d845916a75dcd20d109bf654cefa This commit closes #4
+19cffb145da1c79969e1a6d10ff3852966b4188c Corrected README
+f70711c955bfa7730c02fe791a91c6cd4cd4fe1b Added documentation target to build system
+b49e2b8905d04de23f63cdb72aae6c5c74dcb8be Added README
+5e8d06a5c49f918ef5459da5774441b520ba416c First attempt for a release version using cmake build system
+03f249ca0b30426dd70afcadbced05ddafb4aa82 Print names of read CIM objects
+2fbbaf7f2a95586aa09a226ed1d803207952822c Renamed CIMFactory::IsCIMObject to IsCIMClass
+c8f47be29422bda82dcef14f835225930dcbdb6c Modified usage of assign function
+a0403c253e9e692c2cb6a577d928821df2ffd5e0 Renamed program in Makefile
+3ad5e8ec01ef14c1b4e41bc15be00c0a9bf3345d Updated .gitignore
+8d02ee68e1cf1357ef09771dbe78ed25d8eb411f Added objects vector to store CIM objects
+b2ae1026625130ead9e3f81912ff239197a950ea Some refactoring to CIM-XML-Parser
+3e94a68c7d94269f5a2342b467ca9f495d7273a4 Removed plain.sh
+22b555916859aa90038bcd935038cbc9f4d0070c Removed unused code
+fee3476e3ead866841b0f0d47df7e617993d5e06 Renamed files
+14425002723ad40feb8284e86ba8420475a23298 Renamed MyParser to CIMParser
+765f534c5cee753209ca66922ebb0c5c88c2aab4 Updated Makefile
+6ccceb471ed26065467b01bddbd963304d547f2f Added assignment_alias.csv
+d44896c74dd4c4e5390a67a4f826e11987e6799b Added enum parsing and removed unused code
+a014845ce04a767055cc4d0e613dfd161cfdbfe4 Renamed alias.csv to task_alias.csv
+69a6c3d5b85d01a34c2968a9eb906c9beea00b90 Now task is generated automaticly
+08d707eb46b0ca333000f9dc9e44d6d9d9f37d1f Moved from sample CIM to real CIM, now using generated code
+418fd11449e17371078601cdca10b9335c48e082 Check if the opened tags are in "cim" namespace
+c4acf36ea5bb487e2ba69a00f5e367951152c390 Modified on_characters(...) in src/myparser.cpp
+38d0c45b8ab11f98ef153a4ca24944d77bb59104 Updated Makefile to make it a bit more universal
+8ba908caa3befa94fff8ebd367b3d3723830fb83 Updated .gitignore
+2cb63bcbaac6c4abfdcdb12335a8a9d9e49c9588 Some changes to cim2obj to get the GeneratedCode working
+73462935e61afa12637083eef122d7c2079fc488 Removed old code from first example with network.xml
+60c2a261ceed48fe5026c17f462888214962886d Changed enum to enum class (C++11) for UnitMultiplier and UnitSymbol
+d2d1e957a0daa05837f70d168401e85b4ccdb6e8 Added commented description to plain.sh
+8cde7f70fa46ccd4882544419573bc8108d8b431 Changed String.h to MyString.h due to compability issues
+4cb0ed34e2a98798d81c42fce30563d507ed7c63 Renamed shell script script.sh to plain.sh
+9c382e0a0705eb5fa6e72c6a6613c27fad1da7f7 Changed the container implementation
+e05d95e0380c43be701ac398b6b2da5d8764ca83 Added functionality to basic datatypes
+35e49449b41e110ec0d43f7a69d7ce28247ead2a Initial commit on branch GeneratedCode
+01114983185b19f6b6f16104cd32c8ddc87cb72c Added Qt Creator autosave files to cim2obj/.gitignore
+79907f4fd6cebe599cb298fe1ef24a6d6d1f775e Added automaticly generated Doxyfile to .gitignore
+cff2726df9ae97a55c5e1286e4f2bc8e94ae9d53 Changed the way how the documentation generation is called
+9f8e85e9a70a6e3c8a876c7766a8f46964d99e91 Added Doxygen to project
+42952139eb7e521dfb8fc0fb360060363c3980da Changed all row pointers to smart pointer
+79439098f6eb368715575abb9b2f0edf7bcec2e7 Modified main.cpp for better testing
+d9ffe1312b1d4b7fcf2cb8ba700f602242042e79 Added print function to all classes
+00ea0b22409c71c7e8a28379dc3e69eda01c4a6f Added ability to set src and dest to class CommChannel.
+b66007d93dc18ea3045f337589b6a4596abf995c Changed how class task works.
+0b54d3f0205c57ff9e344f36775a0f3211158edc Added ability to read in CommChannel properties.
+fc8abc8ee642f0c41ff9d3245a7f9294af018efc Added task class to resolve references after processing the xml document.
+c2fe9066dab4b56f63e89880e5cdf984283779c1 Modified Makefile to compile commchannel.cpp
+a7cfca7d126b1ca7dc18186c3ed8290424324145 Added commchannel class and removed destructors from all other classes
+de0d939c1629ae25610ffdbcd0b3bbde59bdd594 Added error message for unknown tags
+140c7190255c415b996c905676ea0d4db3cfd4a2 Added example functionality to print one LTE moden
+0060a1e5d3c1414487cbac8ffc43e9cbd8870103 Added libxml++ example to cim2obj to parse network.xml
+ad077d8e88c558356e7fba167af8ded41d5b7183 Removed Xcode project files from repository, since I think they don't belong there.
+3f719cd4fa40a5fa10b8876e8adcb09a8f2bb759 Changed gitignores to ignore Qt Creator and Xcode Project files
+3e0eae0e87e24462b290bb9f76fbf8261a116e87 Added new classes for the model
+1acc13c43ee2f6e80a31ed2f623dac814c694c1e Added new project for testing.
