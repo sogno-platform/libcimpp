@@ -217,3 +217,31 @@ ad077d8e88c558356e7fba167af8ded41d5b7183 Removed Xcode project files from reposi
 3f719cd4fa40a5fa10b8876e8adcb09a8f2bb759 Changed gitignores to ignore Qt Creator and Xcode Project files
 3e0eae0e87e24462b290bb9f76fbf8261a116e87 Added new classes for the model
 1acc13c43ee2f6e80a31ed2f623dac814c694c1e Added new project for testing.
+
+I, Steffen Vogel hereby sign-off-by all of my past commits to this repo subject to the Developer Certificate of Origin (DCO), Version 1.1. In the past I have used emails: stvogel@eonerc.rwth-aachen.de
+
+a00d674b04d3b67e5fec1da2730ff42b345f6d6b aliases: add support for macOS
+b68b5f218df8c87a2fa2752de971e45e8bd766a9 aliases: fix out_of_range exception
+f6ddd1f13e1cac9b41a05413c15a73c772d70a7d cmake: fix CMAKE_MODULE_PATH if libcimpp is included as subdir
+75f5f8054022f055d5a5bfdb5081f43755dcb5cf aliases: fix compilation error on MSVC
+d8d7434c8a2f1ea7059e43cf5e95b7525a7a139d fix name of installed library
+64b69c896c8d6b381045b474fe909b3210edc58e cmake: fix installation issue
+84138f077ff90f36cc14a940db6f799ef8e27c29 cmake: install arabica
+67dec25eb03b8f1068ff912c539e2e2a1b4b6164 cmake: allow overwriting CPACK_GENERATOR
+3f61f99b0a364a836e78664986d7e038f0f9e04b cmake: gather add_subdirectories() together
+d8e01068c17bce8fa5db39b5a03c4dcc8e2e2e3a cmake: add CPack support
+8b0f8a5979fde0f82607ebbd2707d0f84c420542 cmake: add install target
+22f65278b163fba1d42fb7378edb4e716b5e19f5 cmake: show feature summary after configuration
+ff9e65f237a252ec896fd1224608066ba4e709e1 add patch version
+7681d86a7a37fd8345431ec159ad9ceaecc069c6 fix indention
+3260912f521f5df3ee94e1e13fb538059be5db88 simplify CMakeLists.txt
+c2adcb7c251326a350da21c8483d6cfd83b5c70f ci: build Doxygen documentation via CI
+8a37791fea6090a957c93f79997fb783200a45b6 doxygen: improve header of Doxygen docuementation and update template files to doxygen 1.8.13
+2fe8a852656abd1d7dfcb2f8a9fa0cb409646e75 doxygen: added SVG versions of logos
+35d3d85f996d984a449ff71785baafab20f0140c ci: build all code and documentation on CI runners
+ad2444916aaf914eef039df015e47c8df175dab2 do now print an error message if alias CSV file is not found
+7b56dd5e8b86e77eb219be99a5a5ebb9c0795cbe add more search paths
+0048afb4929f511a656683889bdf6cb73ab570be move static aliases from CSV files to hard coded header files
+e57f77d60aff18619dc6ffb33c77cb5b1c0a8048 aliases: support windows search paths in %APPDATA%
+09c3f21d1246a29eb0cb59ad02a3a4caa9b44343 added load_aliases() to search for CSV config files (closes #7)
+0547a89f64b4facb78627195146a87945ecba0e1 refactor: CIM Deserializer -> libcimpp
