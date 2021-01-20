@@ -29,7 +29,25 @@ jobs:
           cmake ../.. -DUSE_CIM_VERSION=${{env.USE_CIM_VERSION}}
           make -j8
 
-
+    - name: Create Build Environment
+      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/examples/cmake/build/${{env.USE_CIM_VERSION}}
+      
+    - name: Configure CMake and compile
+      shell: bash
+      working-directory: ${{runner.workspace}}/libcimpp/examples/cmake/build/${{env.USE_CIM_VERSION}}/
+      run: |
+          cd ${{runner.workspace}}/libcimpp/examples/cmake/build/${{env.USE_CIM_VERSION}} 
+          cmake ../.. -DUSE_CIM_VERSION=${{env.USE_CIM_VERSION}}
+          make -j8
+    - name: Run tests
+      shell: bash
+      working-directory: ${{runner.workspace}}/libcimpp/test
+      run: |
+          ./testFiles.py $USE_CIM_VERSION
+    - uses: actions/upload-artifact@master
+      with:
+        name: test_results_${{env.USE_CIM_VERSION}}
+        path: ${{runner.workspace}}/libcimpp/test/outputs/${{env.USE_CIM_VERSION}}
 
   build-src-IEC61970_17v07:
     runs-on: ubuntu-latest
@@ -54,6 +72,27 @@ jobs:
           cd ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}} 
           cmake ../.. -DUSE_CIM_VERSION=${{env.USE_CIM_VERSION}}
           make -j8
+    - name: Create Build Environment
+      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/examples/cmake/build/${{env.USE_CIM_VERSION}}
+      
+    - name: Configure CMake and compile
+      shell: bash
+      working-directory: ${{runner.workspace}}/libcimpp/examples/cmake/build/${{env.USE_CIM_VERSION}}/
+      run: |
+          cd ${{runner.workspace}}/libcimpp/examples/cmake/build/${{env.USE_CIM_VERSION}} 
+          cmake ../.. -DUSE_CIM_VERSION=${{env.USE_CIM_VERSION}}
+          make -j8
+    - name: Run tests
+      shell: bash
+      working-directory: ${{runner.workspace}}/libcimpp/test
+      run: |
+          ./testFiles.py $USE_CIM_VERSION
+    - uses: actions/upload-artifact@master
+      with:
+        name: test_results_${{env.USE_CIM_VERSION}}
+        path: ${{runner.workspace}}/libcimpp/test/outputs/${{env.USE_CIM_VERSION}}
+
+
 
   build-src-IEC61970_16v29a_IEC61968_12v08:
     runs-on: ubuntu-latest
@@ -78,6 +117,27 @@ jobs:
           cd ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}} 
           cmake ../.. -DUSE_CIM_VERSION=${{env.USE_CIM_VERSION}}
           make -j8
+
+    - name: Create Build Environment
+      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/examples/cmake/build/${{env.USE_CIM_VERSION}}
+      
+    - name: Configure CMake and compile
+      shell: bash
+      working-directory: ${{runner.workspace}}/libcimpp/examples/cmake/build/${{env.USE_CIM_VERSION}}/
+      run: |
+          cd ${{runner.workspace}}/libcimpp/examples/cmake/build/${{env.USE_CIM_VERSION}} 
+          cmake ../.. -DUSE_CIM_VERSION=${{env.USE_CIM_VERSION}}
+          make -j8
+    - name: Run tests
+      shell: bash
+      working-directory: ${{runner.workspace}}/libcimpp/test
+      run: |
+          ./testFiles.py $USE_CIM_VERSION
+    - uses: actions/upload-artifact@master
+      with:
+        name: test_results_${{env.USE_CIM_VERSION}}
+        path: ${{runner.workspace}}/libcimpp/test/outputs/${{env.USE_CIM_VERSION}}
+
 
 
   build-src-CGMES_2-4-15_27JAN2020:
@@ -104,4 +164,25 @@ jobs:
           cd ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}} 
           cmake ../.. -DUSE_CIM_VERSION=${{env.USE_CIM_VERSION}}
           make -j8
+
+    - name: Create Build Environment
+      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/examples/cmake/build/${{env.USE_CIM_VERSION}}
+      
+    - name: Configure CMake and compile
+      shell: bash
+      working-directory: ${{runner.workspace}}/libcimpp/examples/cmake/build/${{env.USE_CIM_VERSION}}/
+      run: |
+          cd ${{runner.workspace}}/libcimpp/examples/cmake/build/${{env.USE_CIM_VERSION}} 
+          cmake ../.. -DUSE_CIM_VERSION=${{env.USE_CIM_VERSION}}
+          make -j8
+
+    - name: Run tests
+      shell: bash
+      working-directory: ${{runner.workspace}}/libcimpp/test
+      run: |
+          ./testFiles.py $USE_CIM_VERSION
+    - uses: actions/upload-artifact@master
+      with:
+        name: test_results_${{env.USE_CIM_VERSION}}
+        path: ${{runner.workspace}}/libcimpp/test/outputs/${{env.USE_CIM_VERSION}}
 
