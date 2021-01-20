@@ -17,7 +17,7 @@ RUN dnf -y install \
 	gcc-c++ \
 	make \
 	doxygen graphviz \
-	libxerces-c-dev \
+	xerces-c-devel \
 	python3-pip rpmdevtools
 
 
