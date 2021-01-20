@@ -46,7 +46,7 @@ ModelDescription* CIMFile::getModelDescription()
 
 
 		xercesc::SAX2XMLReader* Reader = xercesc::XMLReaderFactory::createXMLReader();
-        Reader->setFeature(xercesc::XMLUni::fgSAX2CoreValidation, true);
+        Reader->setFeature(xercesc::XMLUni::fgSAX2CoreValidation, false);
 		// xmlReader->setFeature(XMLUni::fgSAX2CoreNameSpaces, true);   // optional
 
         Reader->setContentHandler(DescriptionHandler);
