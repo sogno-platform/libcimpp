@@ -245,3 +245,16 @@ ad2444916aaf914eef039df015e47c8df175dab2 do now print an error message if alias 
 e57f77d60aff18619dc6ffb33c77cb5b1c0a8048 aliases: support windows search paths in %APPDATA%
 09c3f21d1246a29eb0cb59ad02a3a4caa9b44343 added load_aliases() to search for CSV config files (closes #7)
 0547a89f64b4facb78627195146a87945ecba0e1 refactor: CIM Deserializer -> libcimpp
+
+I, Markus Mirz hereby sign-off-by all of my past commits to this repo subject to the Developer Certificate of Origin (DCO), Version 1.1. In the past I have used emails: mmirz@eonerc.rwth-aachen.de
+
+f0d6950caf2eb71fc64f9f959daefdcbaf01b420 remove sinergien files
+b6ced00a0f27cb22f1ea18e3ba40e18767b1dd1a cmake: make example optional
+860e5577de4af2b5df1aa409633f6b820952b351 add example to main cmake
+9adee7afc64d1dcee4816f4132830614922231b7 add alias for LoadGroup and SubLoadArea
+c4b5807b917f54cdb297cebf680d7a1bb34da6d6 add alias for ConformLoad list
+1d928a09c20a84d6dbfd23a295566b66606a3558 update arabica
+c1124220ed117ab48fe1c6f781531d852d70960c fix shared-lib
+b9fcfc2047b6d768d25b864ae0da467bc83b6bb4 improving windows env variable setting
+c43cbffed4a0722d7a845860b66c5df699527b17 fixed environment variable setting for windows
+4855c4912da2c419da4037b0f02baad1262eabd3 manually fixed more return and #warning errors for windows build
