@@ -1,6 +1,7 @@
 name: build-src
 
-on: [push]
+#on: [push]
+on: workflow_dispatch
 
 
 jobs:
@@ -25,7 +26,7 @@ jobs:
       run: |
           cd ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}} 
           cmake ../.. -DUSE_CIM_VERSION=${{env.USE_CIM_VERSION}}
-          make -j8
+          make -j4
 
 
 
@@ -49,7 +50,7 @@ jobs:
       run: |
           cd ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}} 
           cmake ../.. -DUSE_CIM_VERSION=${{env.USE_CIM_VERSION}}
-          make -j8
+          make -j4
 
   build-src-IEC61970_16v29a_IEC61968_12v08:
     runs-on: ubuntu-latest
@@ -71,7 +72,7 @@ jobs:
       run: |
           cd ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}} 
           cmake ../.. -DUSE_CIM_VERSION=${{env.USE_CIM_VERSION}}
-          make -j8
+          make -j4
 
 
   build-src-CGMES_2-4-15_27JAN2020:
@@ -95,5 +96,5 @@ jobs:
       run: |
           cd ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}} 
           cmake ../.. -DUSE_CIM_VERSION=${{env.USE_CIM_VERSION}}
-          make -j8
+          make -j4
 
