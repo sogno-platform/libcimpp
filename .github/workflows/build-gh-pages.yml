@@ -1,0 +1,94 @@
+name: build-gh-pages
+ 
+on: [push]
+#on: workflow_dispatch
+
+jobs:
+   build-gh-pages:
+    
+    runs-on: ubuntu-latest
+    env:
+      USE_CIM_VERSION1: IEC61970_16v29a_IEC61968_12v08
+      USE_CIM_VERSION2: IEC61970_16v29a
+      USE_CIM_VERSION3: IEC61970_17v07
+      USE_CIM_VERSION4: CGMES_2.4.15_27JAN2020
+    steps:
+    - uses: actions/checkout@v2    
+    - name: Checkout submodules
+      run: git submodule update --init --recursive
+    - name: Install Doxygen
+      run: sudo apt-get install doxygen 
+      shell: bash 
+    - name: CIM1 Create Build Environment 
+      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION1}}      
+    - name: CIM1 Configure CMake and compile
+      shell: bash
+      working-directory: ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION1}}/
+      run: |
+          cd ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION1}} 
+          cmake ../.. -DUSE_CIM_VERSION=${{env.USE_CIM_VERSION1}}
+          make doc
+         
+    - name: CIM1 Copy 
+      run: |
+          mkdir -p ./copy_files/docs
+          cp -r ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION1}}/doc/html ./copy_files/docs/${{env.USE_CIM_VERSION1}}
+          
+        
+    - name: CIM2 Create Build Environment 
+      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION2}}
+      
+    - name: CIM2 Configure CMake and compile
+      shell: bash
+      working-directory: ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION2}}/
+      run: |
+          cd ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION2}} 
+          cmake ../.. -DUSE_CIM_VERSION=${{env.USE_CIM_VERSION2}}
+          make doc
+    - name: CIM2 Copy
+      run: |
+          mkdir -p ./copy_files/docs
+          cp -r ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION2}}/doc/html ./copy_files/docs/${{env.USE_CIM_VERSION2}}
+   
+    - name: CIM3 Create Build Environment
+      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION3}}
+      
+    - name: CIM3 Configure CMake and compile
+      shell: bash
+      working-directory: ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION3}}/
+      run: |
+          cd ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION3}} 
+          cmake ../.. -DUSE_CIM_VERSION=${{env.USE_CIM_VERSION3}}
+          make doc
+    - name: CIM3 Copy 
+      run: |
+          mkdir -p ./copy_files/docs
+          cp -r ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION3}}/doc/html ./copy_files/docs/${{env.USE_CIM_VERSION3}}  
+  
+   
+    - name: CIM4 Create Build Environment 
+      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION4}}
+      
+    - name: CIM4 Configure CMake and compile
+      shell: bash
+      working-directory: ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION4}}/
+      run: |
+          cd ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION4}} 
+          cmake ../.. -DUSE_CIM_VERSION=${{env.USE_CIM_VERSION4}}
+          make doc
+    - name: CIM4 Copy
+      run: |
+          mkdir -p ./copy_files/docs
+          cp -r ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION4}}/doc/html ./copy_files/docs/${{env.USE_CIM_VERSION4}}  
+          cp ./README.md ./copy_files/docs/README.md
+             
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3      
+      with:        
+        github_token: ${{ secrets.GITHUB_TOKEN }}     
+        publish_dir: ./copy_files
+        force_orphan: true
+        keep_files: false
+        publish_branch: gh-pages
+  
+   
