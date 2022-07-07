@@ -2,26 +2,7 @@ cmake_minimum_required(VERSION 3.5)
 
 project(libcimpp CXX)
 set(CMAKE_CXX_STANDARD 11)
-
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake/" "${CMAKE_CURRENT_SOURCE_DIR}/../../cmake")
-
-add_subdirectory(doc)
-add_subdirectory(thirdparty)
-
-set(libcimpp_MAJOR_VERSION 2)
-set(libcimpp_MINOR_VERSION 1)
-set(libcimpp_PATCH_VERSION 0)
-set(libcimpp_VERSION ${libcimpp_MAJOR_VERSION}.${libcimpp_MINOR_VERSION}.${libcimpp_PATCH_VERSION})
-
-# Options
-option(BUILD_SHARED_LIBS "Build shared library" OFF)
-option (BUILD_EXAMPLES "Build examples" OFF)
-
-if(NOT USE_CIM_VERSION)
-	set(USE_CIM_VERSION "CGMES_2.4.15_27JAN2020" CACHE STRING "Define CIM Version")
-endif()
-
-message(STATUS "Building ${PROJECT_NAME} with USE_CIM_VERSION=${USE_CIM_VERSION}")
 
 if(USE_CIM_VERSION STREQUAL "CGMES_2.4.15_27JAN2020")
   set(CGMES_BUILD ON)
@@ -45,6 +26,26 @@ elseif(USE_CIM_VERSION STREQUAL "IEC61970_16v29a_IEC61968_12v08")
 else()
   message(FATAL_ERROR "${USE_CIM_VERSION} is an invalid value for USE_CIM_VERSION")
 endif()
+
+
+add_subdirectory(doc)
+add_subdirectory(thirdparty)
+
+set(libcimpp_MAJOR_VERSION 2)
+set(libcimpp_MINOR_VERSION 1)
+set(libcimpp_PATCH_VERSION 0)
+set(libcimpp_VERSION ${libcimpp_MAJOR_VERSION}.${libcimpp_MINOR_VERSION}.${libcimpp_PATCH_VERSION})
+
+# Options
+option(BUILD_SHARED_LIBS "Build shared library" OFF)
+option (BUILD_EXAMPLES "Build examples" OFF)
+
+if(NOT USE_CIM_VERSION)
+	set(USE_CIM_VERSION "CGMES_2.4.15_27JAN2020" CACHE STRING "Define CIM Version")
+endif()
+
+message(STATUS "Building ${PROJECT_NAME} with USE_CIM_VERSION=${USE_CIM_VERSION}")
+
 
 # Uncomment this if you are developing on CIMgen and want to generate CIM c++
 #if(CGMES_BUILD)
