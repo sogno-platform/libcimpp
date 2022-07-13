@@ -16,6 +16,9 @@ jobs:
     - name: Install Doxygen
       run: sudo apt-get install doxygen 
       shell: bash 
+    - name: Install Graphviz
+      run: sudo apt-get install graphviz
+      shell: bash 
     - name: Create Build Environment
       run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}}
       
@@ -45,6 +48,9 @@ jobs:
     - name: Install Doxygen
       run: sudo apt-get install doxygen 
       shell: bash 
+    - name: Install Graphviz
+      run: sudo apt-get install graphviz
+      shell: bash 
     - name: Create Build Environment
       run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}}
       
@@ -70,6 +76,9 @@ jobs:
       run: git submodule update --init --recursive
     - name: Install Doxygen
       run: sudo apt-get install doxygen 
+      shell: bash 
+    - name: Install Graphviz
+      run: sudo apt-get install graphviz
       shell: bash 
     - name: Create Build Environment
       run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}}
@@ -97,6 +106,9 @@ jobs:
       run: git submodule update --init --recursive
     - name: Install Doxygen
       run: sudo apt-get install doxygen 
+      shell: bash 
+    - name: Install Graphviz
+      run: sudo apt-get install graphviz
       shell: bash 
     - name: Create Build Environment
       run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}}

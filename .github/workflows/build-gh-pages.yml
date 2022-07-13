@@ -1,5 +1,6 @@
 name: build-gh-pages
  
+ 
 on: [push]
 #on: workflow_dispatch
 
@@ -18,6 +19,9 @@ jobs:
       run: git submodule update --init --recursive
     - name: Install Doxygen
       run: sudo apt-get install doxygen 
+      shell: bash 
+    - name: Install Graphviz
+      run: sudo apt-get install graphviz
       shell: bash 
     - name: CIM1 Create Build Environment 
       run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION1}}      
