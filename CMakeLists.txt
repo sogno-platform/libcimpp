@@ -27,10 +27,6 @@ else()
   message(FATAL_ERROR "${USE_CIM_VERSION} is an invalid value for USE_CIM_VERSION")
 endif()
 
-
-add_subdirectory(doc)
-add_subdirectory(thirdparty)
-
 set(libcimpp_MAJOR_VERSION 2)
 set(libcimpp_MINOR_VERSION 1)
 set(libcimpp_PATCH_VERSION 0)
@@ -38,7 +34,14 @@ set(libcimpp_VERSION ${libcimpp_MAJOR_VERSION}.${libcimpp_MINOR_VERSION}.${libci
 
 # Options
 option(BUILD_SHARED_LIBS "Build shared library" OFF)
-option (BUILD_EXAMPLES "Build examples" OFF)
+option(CIMPP_BUILD_EXAMPLES "Build examples" OFF)
+option(CIMPP_BUILD_DOC "Build documentation" ON)
+
+if(CIMPP_BUILD_DOC)
+  add_subdirectory(doc)
+endif()
+
+add_subdirectory(thirdparty)
 
 if(NOT USE_CIM_VERSION)
 	set(USE_CIM_VERSION "CGMES_2.4.15_27JAN2020" CACHE STRING "Define CIM Version")
@@ -87,7 +90,7 @@ install(DIRECTORY ${USE_CIM_VERSION}
 # Settings for packaging
 include(CIMppPackaging)
 
-if(BUILD_EXAMPLES)
+if(CIMPP_BUILD_EXAMPLES)
   add_executable(example examples/src/main.cpp)
   target_link_libraries(example libcimpp)
   target_compile_features(example PUBLIC cxx_range_for)
