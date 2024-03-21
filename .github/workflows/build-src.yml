@@ -11,7 +11,7 @@ jobs:
     env:
       USE_CIM_VERSION: IEC61970_16v29a
     steps:
-    - uses: actions/checkout@v2    
+    - uses: actions/checkout@v3    
     - name: Checkout submodules
       run: git submodule update --init --recursive
     - name: Install Doxygen
@@ -38,7 +38,7 @@ jobs:
     env:
       USE_CIM_VERSION: IEC61970_17v07
     steps:
-    - uses: actions/checkout@v2    
+    - uses: actions/checkout@v3    
     - name: Checkout submodules
       run: git submodule update --init --recursive
     - name: Install Doxygen
@@ -63,7 +63,7 @@ jobs:
     env:
       USE_CIM_VERSION: IEC61970_16v29a_IEC61968_12v08
     steps:
-    - uses: actions/checkout@v2    
+    - uses: actions/checkout@v3    
     - name: Checkout submodules
       run: git submodule update --init --recursive
     - name: Install Doxygen
@@ -90,7 +90,7 @@ jobs:
     env:
       USE_CIM_VERSION: CGMES_2.4.15_27JAN2020
     steps:
-    - uses: actions/checkout@v2    
+    - uses: actions/checkout@v3    
     - name: Checkout submodules
       run: git submodule update --init --recursive
     - name: Install Doxygen
