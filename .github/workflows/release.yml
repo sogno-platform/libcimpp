@@ -11,17 +11,17 @@ jobs:
     name: A job to build the packages
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: Build
       id:   build-it-now
       uses: ./package/
     - name: UploadRPM
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: rpm
         path: ${{ github.workspace }}/build/*.rpm
     - name: UploadDEB
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: deb
         path: ${{ github.workspace }}/build/*.deb
@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: GetArtifact
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v3
     - name: Release
       uses: softprops/action-gh-release@v1
       with:
