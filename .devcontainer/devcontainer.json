@@ -1,0 +1,16 @@
+{
+	"name": "libcimpp",
+    //"image": "",
+	"build": {
+	    "dockerfile": "../Dockerfile"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cpptools",
+				"ms-vscode.cmake-tools",
+				"editorconfig.editorconfig"
+			]
+		}
+	}
+}
