@@ -1,0 +1,9 @@
+<map id="IEC61968::Common::ScheduledEvent" name="IEC61968::Common::ScheduledEvent">
+<area shape="rect" id="node1" title=" " alt="" coords="608,68,833,109"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="321,5,483,47"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="52,15,141,42"/>
+<area shape="rect" id="node4" href="$classIEC61968_1_1Common_1_1Status.html" title=" " alt="" coords="303,75,501,102"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTime.html" title=" " alt="" coords="5,72,188,113"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1Seconds.html" title=" " alt="" coords="311,135,493,176"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="5,137,188,179"/>
+</map>

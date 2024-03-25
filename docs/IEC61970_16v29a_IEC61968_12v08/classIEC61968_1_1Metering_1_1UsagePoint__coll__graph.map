@@ -1,0 +1,12 @@
+<map id="IEC61968::Metering::UsagePoint" name="IEC61968::Metering::UsagePoint">
+<area shape="rect" id="node1" title=" " alt="" coords="829,142,979,183"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="155,18,316,59"/>
+<area shape="rect" id="node9" href="$classIEC61968_1_1Customers_1_1ServiceCategory.html" title=" " alt="" coords="453,54,615,95"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="5,25,95,52"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Domain_1_1ActivePower.html" title=" " alt="" coords="443,250,625,291"/>
+<area shape="rect" id="node5" title=" " alt="" coords="180,153,291,180"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1CurrentFlow.html" title=" " alt="" coords="443,119,625,160"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Domain_1_1Voltage.html" title=" " alt="" coords="443,184,625,226"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="144,282,327,323"/>
+<area shape="rect" id="node10" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="443,315,625,356"/>
+</map>

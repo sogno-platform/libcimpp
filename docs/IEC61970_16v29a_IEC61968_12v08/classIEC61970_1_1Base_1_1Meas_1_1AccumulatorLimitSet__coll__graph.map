@@ -1,0 +1,7 @@
+<map id="IEC61970::Base::Meas::AccumulatorLimitSet" name="IEC61970::Base::Meas::AccumulatorLimitSet">
+<area shape="rect" id="node1" title=" " alt="" coords="149,276,316,317"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Meas_1_1LimitSet.html" title=" " alt="" coords="149,185,316,227"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="5,81,167,123"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="41,5,131,32"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="191,81,373,123"/>
+</map>

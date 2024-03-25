@@ -1,0 +1,8 @@
+<map id="IEC61970::Base::Wires::RegulationSchedule" name="IEC61970::Base::Wires::RegulationSchedule">
+<area shape="rect" id="node1" title=" " alt="" coords="23,437,191,479"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1LoadModel_1_1SeasonDayTypeSchedule.html" title=" " alt="" coords="5,348,208,389"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1RegularIntervalSchedule.html" title=" " alt="" coords="12,259,201,300"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1BasicIntervalSchedule.html" title=" " alt="" coords="19,169,194,211"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="26,80,187,121"/>
+<area shape="rect" id="node6" href="$classBaseClass.html" title=" " alt="" coords="62,5,151,32"/>
+</map>

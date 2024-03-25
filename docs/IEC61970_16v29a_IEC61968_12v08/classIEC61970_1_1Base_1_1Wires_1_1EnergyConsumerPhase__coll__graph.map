@@ -1,0 +1,12 @@
+<map id="IEC61970::Base::Wires::EnergyConsumerPhase" name="IEC61970::Base::Wires::EnergyConsumerPhase">
+<area shape="rect" id="node1" title=" " alt="" coords="948,148,1128,189"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="655,49,834,91"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="144,48,305,89"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1PSRType.html" title=" " alt="" coords="365,5,527,47"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,55,95,82"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1ActivePower.html" title=" " alt="" coords="653,245,836,287"/>
+<area shape="rect" id="node7" title=" " alt="" coords="391,281,501,307"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Domain_1_1ReactivePower.html" title=" " alt="" coords="653,180,836,221"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="355,160,537,201"/>
+<area shape="rect" id="node10" href="$classIEC61970_1_1Base_1_1Domain_1_1PerCent.html" title=" " alt="" coords="653,115,836,156"/>
+</map>

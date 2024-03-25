@@ -1,0 +1,12 @@
+<map id="IEC61970::Base::Generation::Production::GeneratingUnit" name="IEC61970::Base::Generation::Production::GeneratingUnit">
+<area shape="rect" id="node1" title=" " alt="" coords="788,136,995,177"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1HydroGeneratingUnit.html" title=" " alt="" coords="1050,5,1295,47"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1NuclearGeneratingUnit.html" title=" " alt="" coords="1045,71,1301,112"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1SolarGeneratingUnit.html" title=" " alt="" coords="1053,136,1292,177"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1ThermalGeneratingUnit.html" title=" " alt="" coords="1043,201,1303,243"/>
+<area shape="rect" id="node10" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1WindGeneratingUnit.html" title=" " alt="" coords="1053,267,1292,308"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1Equipment.html" title=" " alt="" coords="579,136,740,177"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="352,136,531,177"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,136,304,177"/>
+<area shape="rect" id="node5" href="$classBaseClass.html" title=" " alt="" coords="5,143,95,170"/>
+</map>

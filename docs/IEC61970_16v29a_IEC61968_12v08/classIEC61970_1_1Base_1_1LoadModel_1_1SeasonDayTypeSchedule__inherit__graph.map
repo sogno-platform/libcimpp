@@ -1,0 +1,12 @@
+<map id="IEC61970::Base::LoadModel::SeasonDayTypeSchedule" name="IEC61970::Base::LoadModel::SeasonDayTypeSchedule">
+<area shape="rect" id="node1" title=" " alt="" coords="812,136,1015,177"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1LoadModel_1_1ConformLoadSchedule.html" title=" " alt="" coords="1063,5,1265,47"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1LoadModel_1_1NonConformLoadSchedule.html" title=" " alt="" coords="1063,71,1265,112"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Wires_1_1RegulationSchedule.html" title=" " alt="" coords="1080,136,1248,177"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Wires_1_1SwitchSchedule.html" title=" " alt="" coords="1080,201,1248,243"/>
+<area shape="rect" id="node10" href="$classIEC61970_1_1Base_1_1Wires_1_1TapSchedule.html" title=" " alt="" coords="1080,267,1248,308"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1RegularIntervalSchedule.html" title=" " alt="" coords="575,136,764,177"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1BasicIntervalSchedule.html" title=" " alt="" coords="352,136,527,177"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,136,304,177"/>
+<area shape="rect" id="node5" href="$classBaseClass.html" title=" " alt="" coords="5,143,95,170"/>
+</map>

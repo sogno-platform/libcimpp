@@ -1,0 +1,22 @@
+<map id="CIMPP::EnergyConsumer" name="CIMPP::EnergyConsumer">
+<area shape="rect" id="node1" title=" " alt="" coords="2613,631,2796,657"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1ConductingEquipment.html" title=" " alt="" coords="2203,23,2417,49"/>
+<area shape="rect" id="node12" href="$classCIMPP_1_1SvStatus.html" title=" " alt="" coords="2641,52,2769,79"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1Equipment.html" title=" " alt="" coords="1855,141,1997,168"/>
+<area shape="rect" id="node4" href="$classCIMPP_1_1PowerSystemResource.html" title=" " alt="" coords="523,177,743,204"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1Location.html" title=" " alt="" coords="1021,245,1147,272"/>
+<area shape="rect" id="node11" href="$classCIMPP_1_1ConnectivityNodeContainer.html" title=" " alt="" coords="959,175,1209,201"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="144,295,319,321"/>
+<area shape="rect" id="node8" href="$classCIMPP_1_1CoordinateSystem.html" title=" " alt="" coords="537,295,728,321"/>
+<area shape="rect" id="node13" href="$classCIMPP_1_1BaseVoltage.html" title=" " alt="" coords="557,7,709,33"/>
+<area shape="rect" id="node15" href="$classCIMPP_1_1LoadResponseCharacteristic.html" title=" " alt="" coords="1799,444,2053,471"/>
+<area shape="rect" id="node19" href="$classCIMPP_1_1LoadDynamics.html" title=" " alt="" coords="1608,623,1775,649"/>
+<area shape="rect" id="node6" href="$classBaseClass.html" title=" " alt="" coords="5,595,95,621"/>
+<area shape="rect" id="node14" href="$classCIMPP_1_1Voltage.html" title=" " alt="" coords="171,9,291,36"/>
+<area shape="rect" id="node16" href="$classCIMPP_1_1Simple__Float.html" title=" " alt="" coords="343,595,499,621"/>
+<area shape="rect" id="node17" href="$classCIMPP_1_1ActivePower.html" title=" " alt="" coords="345,653,497,680"/>
+<area shape="rect" id="node18" href="$classCIMPP_1_1ReactivePower.html" title=" " alt="" coords="767,715,935,741"/>
+<area shape="rect" id="node20" href="$classCIMPP_1_1PerCent.html" title=" " alt="" coords="1233,780,1356,807"/>
+<area shape="rect" id="node9" href="$classCIMPP_1_1Boolean.html" title=" " alt="" coords="1420,248,1544,275"/>
+<area shape="rect" id="node10" href="$classCIMPP_1_1EquipmentContainer.html" title=" " alt="" coords="1380,175,1584,201"/>
+</map>

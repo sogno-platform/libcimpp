@@ -1,0 +1,8 @@
+<map id="IEC61970::Base::SCADA::RemoteSource" name="IEC61970::Base::SCADA::RemoteSource">
+<area shape="rect" id="node1" title=" " alt="" coords="732,95,908,136"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1SCADA_1_1RemotePoint.html" title=" " alt="" coords="419,5,595,47"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="155,5,316,47"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,13,95,39"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Domain_1_1Seconds.html" title=" " alt="" coords="416,164,599,205"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="144,120,327,161"/>
+</map>

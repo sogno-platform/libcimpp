@@ -1,0 +1,12 @@
+<map id="IEC61970::Base::Generation::Production::HeatInputCurve" name="IEC61970::Base::Generation::Production::HeatInputCurve">
+<area shape="rect" id="node1" title=" " alt="" coords="817,195,1027,236"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1Curve.html" title=" " alt="" coords="477,64,638,105"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="155,5,316,47"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,13,95,39"/>
+<area shape="rect" id="node5" title=" " alt="" coords="180,137,291,163"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1ActivePower.html" title=" " alt="" coords="466,195,649,236"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1HeatRate.html" title=" " alt="" coords="456,129,659,171"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="144,265,327,307"/>
+<area shape="rect" id="node10" href="$classIEC61970_1_1Base_1_1Domain_1_1PU.html" title=" " alt="" coords="453,326,661,353"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="466,260,649,301"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="CIMPP::EnergyConsumer" name="CIMPP::EnergyConsumer">
+<area shape="rect" id="node1" title=" " alt="" coords="189,379,372,405"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1ConformLoad.html" title=" " alt="" coords="5,453,164,480"/>
+<area shape="rect" id="node8" href="$classCIMPP_1_1NonConformLoad.html" title=" " alt="" coords="189,453,373,480"/>
+<area shape="rect" id="node9" href="$classCIMPP_1_1StationSupply.html" title=" " alt="" coords="397,453,559,480"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1ConductingEquipment.html" title=" " alt="" coords="173,304,388,331"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1Equipment.html" title=" " alt="" coords="210,229,351,256"/>
+<area shape="rect" id="node4" href="$classCIMPP_1_1PowerSystemResource.html" title=" " alt="" coords="171,155,391,181"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="193,80,368,107"/>
+<area shape="rect" id="node6" href="$classBaseClass.html" title=" " alt="" coords="236,5,325,32"/>
+</map>

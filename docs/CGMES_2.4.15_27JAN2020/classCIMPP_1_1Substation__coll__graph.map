@@ -1,0 +1,12 @@
+<map id="CIMPP::Substation" name="CIMPP::Substation">
+<area shape="rect" id="node1" title=" " alt="" coords="493,399,633,425"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1EquipmentContainer.html" title=" " alt="" coords="335,323,539,349"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1ConnectivityNodeContainer.html" title=" " alt="" coords="5,247,256,273"/>
+<area shape="rect" id="node4" href="$classCIMPP_1_1PowerSystemResource.html" title=" " alt="" coords="85,157,305,184"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1Location.html" title=" " alt="" coords="291,247,418,273"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="450,81,625,108"/>
+<area shape="rect" id="node8" href="$classCIMPP_1_1CoordinateSystem.html" title=" " alt="" coords="442,157,633,184"/>
+<area shape="rect" id="node9" href="$classCIMPP_1_1SubGeographicalRegion.html" title=" " alt="" coords="557,247,784,273"/>
+<area shape="rect" id="node10" href="$classCIMPP_1_1GeographicalRegion.html" title=" " alt="" coords="708,157,911,184"/>
+<area shape="rect" id="node6" href="$classBaseClass.html" title=" " alt="" coords="493,5,582,32"/>
+</map>

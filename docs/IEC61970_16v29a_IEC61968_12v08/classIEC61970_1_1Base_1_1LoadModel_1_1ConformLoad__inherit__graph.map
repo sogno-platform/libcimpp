@@ -1,0 +1,9 @@
+<map id="IEC61970::Base::LoadModel::ConformLoad" name="IEC61970::Base::LoadModel::ConformLoad">
+<area shape="rect" id="node1" title=" " alt="" coords="5,527,208,568"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Wires_1_1EnergyConsumer.html" title=" " alt="" coords="23,437,191,479"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1ConductingEquipment.html" title=" " alt="" coords="20,348,193,389"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1Equipment.html" title=" " alt="" coords="26,259,187,300"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="17,169,196,211"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="26,80,187,121"/>
+<area shape="rect" id="node7" href="$classBaseClass.html" title=" " alt="" coords="62,5,151,32"/>
+</map>

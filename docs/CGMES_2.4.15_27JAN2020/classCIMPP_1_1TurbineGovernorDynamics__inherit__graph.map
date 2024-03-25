@@ -1,0 +1,39 @@
+<map id="CIMPP::TurbineGovernorDynamics" name="CIMPP::TurbineGovernorDynamics">
+<area shape="rect" id="node1" title=" " alt="" coords="640,816,883,843"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1GovCT1.html" title=" " alt="" coords="973,5,1096,32"/>
+<area shape="rect" id="node6" href="$classCIMPP_1_1GovCT2.html" title=" " alt="" coords="973,56,1096,83"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1GovGAST.html" title=" " alt="" coords="969,107,1101,133"/>
+<area shape="rect" id="node8" href="$classCIMPP_1_1GovGAST1.html" title=" " alt="" coords="965,157,1105,184"/>
+<area shape="rect" id="node9" href="$classCIMPP_1_1GovGAST2.html" title=" " alt="" coords="965,208,1105,235"/>
+<area shape="rect" id="node10" href="$classCIMPP_1_1GovGAST3.html" title=" " alt="" coords="965,259,1105,285"/>
+<area shape="rect" id="node11" href="$classCIMPP_1_1GovGAST4.html" title=" " alt="" coords="965,309,1105,336"/>
+<area shape="rect" id="node12" href="$classCIMPP_1_1GovGASTWD.html" title=" " alt="" coords="957,360,1112,387"/>
+<area shape="rect" id="node13" href="$classCIMPP_1_1GovHydro1.html" title=" " alt="" coords="963,411,1107,437"/>
+<area shape="rect" id="node14" href="$classCIMPP_1_1GovHydro2.html" title=" " alt="" coords="963,461,1107,488"/>
+<area shape="rect" id="node15" href="$classCIMPP_1_1GovHydro3.html" title=" " alt="" coords="963,512,1107,539"/>
+<area shape="rect" id="node16" href="$classCIMPP_1_1GovHydro4.html" title=" " alt="" coords="963,563,1107,589"/>
+<area shape="rect" id="node17" href="$classCIMPP_1_1GovHydroDD.html" title=" " alt="" coords="957,613,1113,640"/>
+<area shape="rect" id="node18" href="$classCIMPP_1_1GovHydroFrancis.html" title=" " alt="" coords="943,664,1126,691"/>
+<area shape="rect" id="node19" href="$classCIMPP_1_1GovHydroIEEE0.html" title=" " alt="" coords="949,715,1121,741"/>
+<area shape="rect" id="node20" href="$classCIMPP_1_1GovHydroIEEE2.html" title=" " alt="" coords="949,765,1121,792"/>
+<area shape="rect" id="node21" href="$classCIMPP_1_1GovHydroPID.html" title=" " alt="" coords="955,816,1114,843"/>
+<area shape="rect" id="node22" href="$classCIMPP_1_1GovHydroPID2.html" title=" " alt="" coords="951,867,1118,893"/>
+<area shape="rect" id="node23" href="$classCIMPP_1_1GovHydroPelton.html" title=" " alt="" coords="946,917,1123,944"/>
+<area shape="rect" id="node24" href="$classCIMPP_1_1GovHydroR.html" title=" " alt="" coords="962,968,1107,995"/>
+<area shape="rect" id="node25" href="$classCIMPP_1_1GovHydroWEH.html" title=" " alt="" coords="951,1019,1118,1045"/>
+<area shape="rect" id="node26" href="$classCIMPP_1_1GovHydroWPID.html" title=" " alt="" coords="949,1069,1120,1096"/>
+<area shape="rect" id="node27" href="$classCIMPP_1_1GovSteam0.html" title=" " alt="" coords="961,1120,1108,1147"/>
+<area shape="rect" id="node28" href="$classCIMPP_1_1GovSteam1.html" title=" " alt="" coords="961,1171,1108,1197"/>
+<area shape="rect" id="node29" href="$classCIMPP_1_1GovSteam2.html" title=" " alt="" coords="961,1221,1108,1248"/>
+<area shape="rect" id="node30" href="$classCIMPP_1_1GovSteamCC.html" title=" " alt="" coords="956,1272,1113,1299"/>
+<area shape="rect" id="node31" href="$classCIMPP_1_1GovSteamEU.html" title=" " alt="" coords="956,1323,1113,1349"/>
+<area shape="rect" id="node32" href="$classCIMPP_1_1GovSteamFV2.html" title=" " alt="" coords="953,1373,1117,1400"/>
+<area shape="rect" id="node33" href="$classCIMPP_1_1GovSteamFV3.html" title=" " alt="" coords="953,1424,1117,1451"/>
+<area shape="rect" id="node34" href="$classCIMPP_1_1GovSteamFV4.html" title=" " alt="" coords="953,1475,1117,1501"/>
+<area shape="rect" id="node35" href="$classCIMPP_1_1GovSteamIEEE1.html" title=" " alt="" coords="947,1525,1122,1552"/>
+<area shape="rect" id="node36" href="$classCIMPP_1_1GovSteamSGO.html" title=" " alt="" coords="951,1576,1118,1603"/>
+<area shape="rect" id="node37" href="$classCIMPP_1_1TurbineGovernorUserDefined.html" title=" " alt="" coords="931,1627,1139,1669"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1DynamicsFunctionBlock.html" title=" " alt="" coords="365,816,592,843"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="143,816,317,843"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,816,95,843"/>
+</map>

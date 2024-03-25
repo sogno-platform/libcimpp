@@ -1,0 +1,14 @@
+<map id="CIMPP::DCConverterUnit" name="CIMPP::DCConverterUnit">
+<area shape="rect" id="node1" title=" " alt="" coords="407,488,588,515"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1DCEquipmentContainer.html" title=" " alt="" coords="285,399,507,425"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1EquipmentContainer.html" title=" " alt="" coords="294,323,498,349"/>
+<area shape="rect" id="node10" href="$classCIMPP_1_1Substation.html" title=" " alt="" coords="531,399,671,425"/>
+<area shape="rect" id="node4" href="$classCIMPP_1_1ConnectivityNodeContainer.html" title=" " alt="" coords="5,247,256,273"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1PowerSystemResource.html" title=" " alt="" coords="90,157,310,184"/>
+<area shape="rect" id="node8" href="$classCIMPP_1_1Location.html" title=" " alt="" coords="291,247,418,273"/>
+<area shape="rect" id="node6" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="455,81,630,108"/>
+<area shape="rect" id="node9" href="$classCIMPP_1_1CoordinateSystem.html" title=" " alt="" coords="447,157,638,184"/>
+<area shape="rect" id="node11" href="$classCIMPP_1_1SubGeographicalRegion.html" title=" " alt="" coords="563,247,789,273"/>
+<area shape="rect" id="node12" href="$classCIMPP_1_1GeographicalRegion.html" title=" " alt="" coords="713,157,916,184"/>
+<area shape="rect" id="node7" href="$classBaseClass.html" title=" " alt="" coords="498,5,587,32"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="CIMPP::PFVArControllerType2Dynamics" name="CIMPP::PFVArControllerType2Dynamics">
+<area shape="rect" id="node1" title=" " alt="" coords="640,89,851,131"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1PFVArControllerType2UserDefined.html" title=" " alt="" coords="921,5,1131,47"/>
+<area shape="rect" id="node6" href="$classCIMPP_1_1PFVArType2Common1.html" title=" " alt="" coords="919,71,1133,98"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1PFVArType2IEEEPFController.html" title=" " alt="" coords="899,122,1153,149"/>
+<area shape="rect" id="node8" href="$classCIMPP_1_1PFVArType2IEEEVArController.html" title=" " alt="" coords="927,173,1125,215"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1DynamicsFunctionBlock.html" title=" " alt="" coords="365,97,592,123"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="143,97,317,123"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,97,95,123"/>
+</map>

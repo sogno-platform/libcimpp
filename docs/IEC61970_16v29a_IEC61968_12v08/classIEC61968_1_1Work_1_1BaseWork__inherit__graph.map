@@ -1,0 +1,10 @@
+<map id="IEC61968::Work::BaseWork" name="IEC61968::Work::BaseWork">
+<area shape="rect" id="node1" title=" " alt="" coords="91,244,288,271"/>
+<area shape="rect" id="node5" href="$classIEC61968_1_1Work_1_1Work.html" title=" " alt="" coords="5,319,171,345"/>
+<area shape="rect" id="node7" href="$classIEC61968_1_1Work_1_1WorkTask.html" title=" " alt="" coords="195,319,389,345"/>
+<area shape="rect" id="node2" href="$classIEC61968_1_1Common_1_1Document.html" title=" " alt="" coords="77,169,302,196"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="109,80,270,121"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="145,5,234,32"/>
+<area shape="rect" id="node6" href="$classIEC61968_1_1Metering_1_1MeterServiceWork.html" title=" " alt="" coords="13,393,163,435"/>
+<area shape="rect" id="node8" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1OldWorkTask.html" title=" " alt="" coords="206,393,378,435"/>
+</map>

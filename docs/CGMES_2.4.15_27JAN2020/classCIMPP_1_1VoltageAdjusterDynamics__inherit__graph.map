@@ -1,0 +1,8 @@
+<map id="CIMPP::VoltageAdjusterDynamics" name="CIMPP::VoltageAdjusterDynamics">
+<area shape="rect" id="node1" title=" " alt="" coords="45,229,283,256"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1VAdjIEEE.html" title=" " alt="" coords="5,311,133,338"/>
+<area shape="rect" id="node6" href="$classCIMPP_1_1VoltageAdjusterUserDefined.html" title=" " alt="" coords="158,304,362,345"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1DynamicsFunctionBlock.html" title=" " alt="" coords="51,155,277,181"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="77,80,251,107"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="119,5,209,32"/>
+</map>

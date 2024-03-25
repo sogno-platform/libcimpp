@@ -1,0 +1,7 @@
+<map id="IEC61970::Dynamics::UserDefinedModels::WindType3or4UserDefined" name="IEC61970::Dynamics::UserDefinedModels::WindType3or4UserDefined">
+<area shape="rect" id="node1" title=" " alt="" coords="25,377,227,433"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1WindDynamics_1_1WindTurbineType3or4Dynamics.html" title=" " alt="" coords="5,273,247,329"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1DynamicsFunctionBlock.html" title=" " alt="" coords="22,169,230,225"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="45,80,207,121"/>
+<area shape="rect" id="node5" href="$classBaseClass.html" title=" " alt="" coords="81,5,171,32"/>
+</map>

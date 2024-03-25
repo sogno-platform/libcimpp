@@ -1,0 +1,7 @@
+<map id="IEC61968::PaymentMetering::Shift" name="IEC61968::PaymentMetering::Shift">
+<area shape="rect" id="node1" title=" " alt="" coords="120,169,327,211"/>
+<area shape="rect" id="node4" href="$classIEC61968_1_1PaymentMetering_1_1CashierShift.html" title=" " alt="" coords="5,259,212,300"/>
+<area shape="rect" id="node5" href="$classIEC61968_1_1PaymentMetering_1_1VendorShift.html" title=" " alt="" coords="236,259,443,300"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,80,304,121"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="179,5,268,32"/>
+</map>

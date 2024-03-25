@@ -1,0 +1,6 @@
+<map id="IEC61968::Metering::ServiceMultiplier" name="IEC61968::Metering::ServiceMultiplier">
+<area shape="rect" id="node1" title=" " alt="" coords="158,185,307,227"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="5,81,167,123"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="41,5,131,32"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="191,81,373,123"/>
+</map>

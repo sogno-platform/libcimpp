@@ -1,0 +1,43 @@
+<map id="IEC61970::Dynamics::StandardModels::UnderexcitationLimiterDynamics::UnderexcLimX1" name="IEC61970::Dynamics::StandardModels::UnderexcitationLimiterDynamics::UnderexcLimX1">
+<area shape="rect" id="node1" title=" " alt="" coords="4453,104,4700,160"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1UnderexcitationLimiterDynamics_1_1UnderexcitationLimiterDynamics.html" title=" " alt="" coords="4113,1565,4404,1635"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1DynamicsFunctionBlock.html" title=" " alt="" coords="1110,1548,1318,1604"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1ExcitationSystemDynamics_1_1ExcitationSystemDynamics.html" title=" " alt="" coords="3623,1521,3881,1591"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1RotatingMachineDynamics.html" title=" " alt="" coords="1581,179,1780,235"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="144,1546,305,1587"/>
+<area shape="rect" id="node18" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="698,1411,877,1453"/>
+<area shape="rect" id="node19" href="$classIEC61970_1_1Base_1_1Core_1_1PSRType.html" title=" " alt="" coords="365,1461,527,1502"/>
+<area shape="rect" id="node29" href="$classIEC61970_1_1Base_1_1Core_1_1BasicIntervalSchedule.html" title=" " alt="" coords="700,393,875,434"/>
+<area shape="rect" id="node37" href="$classIEC61970_1_1Dynamics_1_1StandardInterconnections_1_1RemoteInputSignal.html" title=" " alt="" coords="2453,1716,2649,1772"/>
+<area shape="rect" id="node39" href="$classIEC61970_1_1Base_1_1Core_1_1ACDCTerminal.html" title=" " alt="" coords="1133,1773,1295,1814"/>
+<area shape="rect" id="node40" href="$classIEC61970_1_1Base_1_1Core_1_1ConnectivityNode.html" title=" " alt="" coords="1600,1714,1761,1755"/>
+<area shape="rect" id="node5" href="$classBaseClass.html" title=" " alt="" coords="5,1553,95,1580"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="696,1214,879,1255"/>
+<area shape="rect" id="node13" href="$classIEC61970_1_1Base_1_1Wires_1_1SynchronousMachine.html" title=" " alt="" coords="2720,966,2888,1007"/>
+<area shape="rect" id="node15" href="$classIEC61970_1_1Base_1_1Wires_1_1RegulatingCondEq.html" title=" " alt="" coords="2059,1118,2227,1159"/>
+<area shape="rect" id="node17" href="$classIEC61970_1_1Base_1_1Core_1_1Equipment.html" title=" " alt="" coords="1133,1219,1295,1261"/>
+<area shape="rect" id="node20" href="$classIEC61970_1_1Base_1_1Wires_1_1RegulatingControl.html" title=" " alt="" coords="1130,1150,1298,1191"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1SynchronousMachineDynamics_1_1SynchronousMachineDynamics.html" title=" " alt="" coords="3079,951,3367,1022"/>
+<area shape="rect" id="node10" href="$classIEC61970_1_1Base_1_1Domain_1_1Seconds.html" title=" " alt="" coords="696,201,879,242"/>
+<area shape="rect" id="node28" href="$classIEC61970_1_1Base_1_1Core_1_1RegularIntervalSchedule.html" title=" " alt="" coords="1119,374,1309,415"/>
+<area shape="rect" id="node11" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="355,687,537,729"/>
+<area shape="rect" id="node12" href="$classIEC61970_1_1Base_1_1Domain_1_1PU.html" title=" " alt="" coords="1110,265,1318,292"/>
+<area shape="rect" id="node14" href="$classIEC61970_1_1Base_1_1Wires_1_1RotatingMachine.html" title=" " alt="" coords="2467,809,2635,850"/>
+<area shape="rect" id="node22" href="$classIEC61970_1_1Base_1_1Domain_1_1ActivePower.html" title=" " alt="" coords="1589,678,1772,719"/>
+<area shape="rect" id="node23" href="$classIEC61970_1_1Base_1_1Domain_1_1ApparentPower.html" title=" " alt="" coords="696,779,879,821"/>
+<area shape="rect" id="node24" href="$classIEC61970_1_1Base_1_1Domain_1_1Voltage.html" title=" " alt="" coords="903,927,1085,969"/>
+<area shape="rect" id="node25" href="$classIEC61970_1_1Base_1_1Domain_1_1ReactivePower.html" title=" " alt="" coords="1343,921,1526,962"/>
+<area shape="rect" id="node31" href="$classIEC61970_1_1Base_1_1Domain_1_1VolumeFlowRate.html" title=" " alt="" coords="903,611,1085,653"/>
+<area shape="rect" id="node32" href="$classIEC61970_1_1Base_1_1Domain_1_1CurrentFlow.html" title=" " alt="" coords="696,1279,879,1321"/>
+<area shape="rect" id="node34" href="$classIEC61970_1_1Base_1_1Domain_1_1PerCent.html" title=" " alt="" coords="1835,443,2017,485"/>
+<area shape="rect" id="node35" href="$classIEC61970_1_1Base_1_1Domain_1_1Reactance.html" title=" " alt="" coords="696,1487,879,1529"/>
+<area shape="rect" id="node36" href="$classIEC61970_1_1Base_1_1Domain_1_1Resistance.html" title=" " alt="" coords="696,1345,879,1386"/>
+<area shape="rect" id="node16" href="$classIEC61970_1_1Base_1_1Core_1_1ConductingEquipment.html" title=" " alt="" coords="1594,1219,1767,1261"/>
+<area shape="rect" id="node38" href="$classIEC61970_1_1Base_1_1Core_1_1Terminal.html" title=" " alt="" coords="2062,1723,2223,1765"/>
+<area shape="rect" id="node26" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1HydroPump.html" title=" " alt="" coords="2041,662,2244,703"/>
+<area shape="rect" id="node41" href="$classIEC61970_1_1Base_1_1Core_1_1ConnectivityNodeContainer.html" title=" " alt="" coords="1109,1707,1319,1749"/>
+<area shape="rect" id="node21" title=" " alt="" coords="391,1011,501,1037"/>
+<area shape="rect" id="node27" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1HydroPumpOpSchedule.html" title=" " alt="" coords="1551,377,1811,418"/>
+<area shape="rect" id="node30" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTime.html" title=" " alt="" coords="355,143,537,185"/>
+<area shape="rect" id="node33" href="$classIEC61970_1_1Base_1_1Domain_1_1Integer.html" title=" " alt="" coords="696,1686,879,1727"/>
+</map>

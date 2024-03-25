@@ -1,0 +1,7 @@
+<map id="CIMPP::EnergyArea" name="CIMPP::EnergyArea">
+<area shape="rect" id="node1" title=" " alt="" coords="82,155,229,181"/>
+<area shape="rect" id="node4" href="$classCIMPP_1_1LoadArea.html" title=" " alt="" coords="5,229,137,256"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1SubLoadArea.html" title=" " alt="" coords="161,229,317,256"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="68,80,243,107"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="111,5,200,32"/>
+</map>

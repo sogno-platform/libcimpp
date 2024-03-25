@@ -1,0 +1,9 @@
+<map id="IEC61970::Base::Equivalents::EquivalentShunt" name="IEC61970::Base::Equivalents::EquivalentShunt">
+<area shape="rect" id="node1" title=" " alt="" coords="5,527,212,568"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Equivalents_1_1EquivalentEquipment.html" title=" " alt="" coords="5,437,212,479"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1ConductingEquipment.html" title=" " alt="" coords="22,348,195,389"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1Equipment.html" title=" " alt="" coords="28,259,189,300"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="19,169,198,211"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="28,80,189,121"/>
+<area shape="rect" id="node7" href="$classBaseClass.html" title=" " alt="" coords="64,5,153,32"/>
+</map>

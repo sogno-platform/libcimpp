@@ -1,0 +1,27 @@
+<map id="IEC61968::InfIEC61968::InfWork::WorkIdentifiedObject" name="IEC61968::InfIEC61968::InfWork::WorkIdentifiedObject">
+<area shape="rect" id="node1" title=" " alt="" coords="352,692,576,733"/>
+<area shape="rect" id="node4" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1CUAllowableAction.html" title=" " alt="" coords="645,5,857,47"/>
+<area shape="rect" id="node5" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1CUAsset.html" title=" " alt="" coords="667,71,836,112"/>
+<area shape="rect" id="node6" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1CUContractorItem.html" title=" " alt="" coords="649,136,854,177"/>
+<area shape="rect" id="node7" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1CUGroup.html" title=" " alt="" coords="667,201,836,243"/>
+<area shape="rect" id="node8" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1CULaborCode.html" title=" " alt="" coords="663,267,839,308"/>
+<area shape="rect" id="node9" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1CULaborItem.html" title=" " alt="" coords="665,332,838,373"/>
+<area shape="rect" id="node10" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1CUMaterialItem.html" title=" " alt="" coords="656,397,847,439"/>
+<area shape="rect" id="node11" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1CUWorkEquipmentItem.html" title=" " alt="" coords="631,463,871,504"/>
+<area shape="rect" id="node12" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1Capability.html" title=" " alt="" coords="667,528,836,569"/>
+<area shape="rect" id="node13" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1ConditionFactor.html" title=" " alt="" coords="657,593,846,635"/>
+<area shape="rect" id="node14" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1ContractorItem.html" title=" " alt="" coords="658,659,845,700"/>
+<area shape="rect" id="node15" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1CostType.html" title=" " alt="" coords="667,724,836,765"/>
+<area shape="rect" id="node16" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1DesignLocation.html" title=" " alt="" coords="657,789,845,831"/>
+<area shape="rect" id="node17" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1DesignLocationCU.html" title=" " alt="" coords="648,855,855,896"/>
+<area shape="rect" id="node18" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1LaborItem.html" title=" " alt="" coords="667,920,836,961"/>
+<area shape="rect" id="node19" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1MiscCostItem.html" title=" " alt="" coords="663,985,840,1027"/>
+<area shape="rect" id="node20" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1OverheadCost.html" title=" " alt="" coords="661,1051,841,1092"/>
+<area shape="rect" id="node21" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1PropertyUnit.html" title=" " alt="" coords="666,1116,837,1157"/>
+<area shape="rect" id="node22" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1QualificationRequirement.html" title=" " alt="" coords="624,1181,879,1223"/>
+<area shape="rect" id="node23" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1ShiftPattern.html" title=" " alt="" coords="667,1247,836,1288"/>
+<area shape="rect" id="node24" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1Usage.html" title=" " alt="" coords="667,1312,836,1353"/>
+<area shape="rect" id="node25" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1WorkFlowStep.html" title=" " alt="" coords="661,1377,842,1419"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,692,304,733"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="5,699,95,726"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="IEC61968::Common::TimePoint" name="IEC61968::Common::TimePoint">
+<area shape="rect" id="node1" title=" " alt="" coords="687,183,911,210"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="321,5,483,47"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="52,33,141,59"/>
+<area shape="rect" id="node4" href="$classIEC61968_1_1Common_1_1Status.html" title=" " alt="" coords="303,86,501,113"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTimeInterval.html" title=" " alt="" coords="311,137,493,179"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTime.html" title=" " alt="" coords="5,153,188,195"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1Integer.html" title=" " alt="" coords="311,267,493,308"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Domain_1_1Seconds.html" title=" " alt="" coords="311,332,493,373"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="5,332,188,373"/>
+</map>

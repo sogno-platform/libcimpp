@@ -1,0 +1,9 @@
+<map id="IEC61970::Base::LoadModel::PowerCutZone" name="IEC61970::Base::LoadModel::PowerCutZone">
+<area shape="rect" id="node1" title=" " alt="" coords="943,68,1145,109"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="646,35,825,76"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="144,5,305,47"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1PSRType.html" title=" " alt="" coords="365,35,527,76"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,13,95,39"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1PerCent.html" title=" " alt="" coords="644,100,827,141"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="355,100,537,141"/>
+</map>

@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['raiselowercommand_327',['RaiseLowerCommand',['../classCIMPP_1_1RaiseLowerCommand.html',1,'CIMPP']]],
+  ['ratiotapchanger_328',['RatioTapChanger',['../classCIMPP_1_1RatioTapChanger.html',1,'CIMPP']]],
+  ['ratiotapchangertable_329',['RatioTapChangerTable',['../classCIMPP_1_1RatioTapChangerTable.html',1,'CIMPP']]],
+  ['ratiotapchangertablepoint_330',['RatioTapChangerTablePoint',['../classCIMPP_1_1RatioTapChangerTablePoint.html',1,'CIMPP']]],
+  ['reactance_331',['Reactance',['../classCIMPP_1_1Reactance.html',1,'CIMPP']]],
+  ['reactivecapabilitycurve_332',['ReactiveCapabilityCurve',['../classCIMPP_1_1ReactiveCapabilityCurve.html',1,'CIMPP']]],
+  ['reactivepower_333',['ReactivePower',['../classCIMPP_1_1ReactivePower.html',1,'CIMPP']]],
+  ['readinguninitializedfield_334',['ReadingUninitializedField',['../classReadingUninitializedField.html',1,'']]],
+  ['regularintervalschedule_335',['RegularIntervalSchedule',['../classCIMPP_1_1RegularIntervalSchedule.html',1,'CIMPP']]],
+  ['regulartimepoint_336',['RegularTimePoint',['../classCIMPP_1_1RegularTimePoint.html',1,'CIMPP']]],
+  ['regulatingcondeq_337',['RegulatingCondEq',['../classCIMPP_1_1RegulatingCondEq.html',1,'CIMPP']]],
+  ['regulatingcontrol_338',['RegulatingControl',['../classCIMPP_1_1RegulatingControl.html',1,'CIMPP']]],
+  ['regulationschedule_339',['RegulationSchedule',['../classCIMPP_1_1RegulationSchedule.html',1,'CIMPP']]],
+  ['remoteinputsignal_340',['RemoteInputSignal',['../classCIMPP_1_1RemoteInputSignal.html',1,'CIMPP']]],
+  ['reportinggroup_341',['ReportingGroup',['../classCIMPP_1_1ReportingGroup.html',1,'CIMPP']]],
+  ['resistance_342',['Resistance',['../classCIMPP_1_1Resistance.html',1,'CIMPP']]],
+  ['resistanceperlength_343',['ResistancePerLength',['../classCIMPP_1_1ResistancePerLength.html',1,'CIMPP']]],
+  ['rotatingmachine_344',['RotatingMachine',['../classCIMPP_1_1RotatingMachine.html',1,'CIMPP']]],
+  ['rotatingmachinedynamics_345',['RotatingMachineDynamics',['../classCIMPP_1_1RotatingMachineDynamics.html',1,'CIMPP']]],
+  ['rotationspeed_346',['RotationSpeed',['../classCIMPP_1_1RotationSpeed.html',1,'CIMPP']]]
+];

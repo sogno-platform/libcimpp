@@ -1,0 +1,11 @@
+<map id="CIMPP::RotatingMachine" name="CIMPP::RotatingMachine">
+<area shape="rect" id="node1" title=" " alt="" coords="142,453,323,480"/>
+<area shape="rect" id="node8" href="$classCIMPP_1_1AsynchronousMachine.html" title=" " alt="" coords="5,528,223,555"/>
+<area shape="rect" id="node9" href="$classCIMPP_1_1SynchronousMachine.html" title=" " alt="" coords="247,528,456,555"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1RegulatingCondEq.html" title=" " alt="" coords="137,379,328,405"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1ConductingEquipment.html" title=" " alt="" coords="125,304,340,331"/>
+<area shape="rect" id="node4" href="$classCIMPP_1_1Equipment.html" title=" " alt="" coords="162,229,303,256"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1PowerSystemResource.html" title=" " alt="" coords="123,155,343,181"/>
+<area shape="rect" id="node6" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="145,80,320,107"/>
+<area shape="rect" id="node7" href="$classBaseClass.html" title=" " alt="" coords="188,5,277,32"/>
+</map>

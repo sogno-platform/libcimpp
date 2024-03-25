@@ -1,0 +1,12 @@
+<map id="IEC61970::Base::Meas::MeasurementValue" name="IEC61970::Base::Meas::MeasurementValue">
+<area shape="rect" id="node1" title=" " alt="" coords="352,168,519,209"/>
+<area shape="rect" id="node4" href="$classIEC61968_1_1Metering_1_1BaseReading.html" title=" " alt="" coords="589,37,739,79"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Meas_1_1AccumulatorValue.html" title=" " alt="" coords="581,103,747,144"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Meas_1_1AnalogValue.html" title=" " alt="" coords="581,168,747,209"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Meas_1_1DiscreteValue.html" title=" " alt="" coords="581,233,747,275"/>
+<area shape="rect" id="node10" href="$classIEC61970_1_1Base_1_1Meas_1_1StringMeasurementValue.html" title=" " alt="" coords="567,299,761,340"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,168,304,209"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="5,175,95,202"/>
+<area shape="rect" id="node5" href="$classIEC61968_1_1Metering_1_1IntervalReading.html" title=" " alt="" coords="809,5,959,47"/>
+<area shape="rect" id="node6" href="$classIEC61968_1_1Metering_1_1Reading.html" title=" " alt="" coords="809,71,959,112"/>
+</map>

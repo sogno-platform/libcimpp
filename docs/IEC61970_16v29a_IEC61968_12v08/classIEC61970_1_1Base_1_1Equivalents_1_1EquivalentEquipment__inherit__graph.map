@@ -1,0 +1,11 @@
+<map id="IEC61970::Base::Equivalents::EquivalentEquipment" name="IEC61970::Base::Equivalents::EquivalentEquipment">
+<area shape="rect" id="node1" title=" " alt="" coords="1009,71,1216,112"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Equivalents_1_1EquivalentBranch.html" title=" " alt="" coords="1264,5,1471,47"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Equivalents_1_1EquivalentInjection.html" title=" " alt="" coords="1264,71,1471,112"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Equivalents_1_1EquivalentShunt.html" title=" " alt="" coords="1264,136,1471,177"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1ConductingEquipment.html" title=" " alt="" coords="788,71,961,112"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1Equipment.html" title=" " alt="" coords="579,71,740,112"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="352,71,531,112"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,71,304,112"/>
+<area shape="rect" id="node6" href="$classBaseClass.html" title=" " alt="" coords="5,78,95,105"/>
+</map>

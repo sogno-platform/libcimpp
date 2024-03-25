@@ -1,0 +1,8 @@
+<map id="IEC61970::Base::Wires::EnergySource" name="IEC61970::Base::Wires::EnergySource">
+<area shape="rect" id="node1" title=" " alt="" coords="11,437,179,479"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1ConductingEquipment.html" title=" " alt="" coords="8,348,181,389"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1Equipment.html" title=" " alt="" coords="14,259,175,300"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="5,169,184,211"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="14,80,175,121"/>
+<area shape="rect" id="node6" href="$classBaseClass.html" title=" " alt="" coords="50,5,139,32"/>
+</map>

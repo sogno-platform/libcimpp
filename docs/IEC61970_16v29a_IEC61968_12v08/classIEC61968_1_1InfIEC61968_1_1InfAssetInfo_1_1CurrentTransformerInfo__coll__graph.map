@@ -1,0 +1,12 @@
+<map id="IEC61968::InfIEC61968::InfAssetInfo::CurrentTransformerInfo" name="IEC61968::InfIEC61968::InfAssetInfo::CurrentTransformerInfo">
+<area shape="rect" id="node1" title=" " alt="" coords="843,146,1109,187"/>
+<area shape="rect" id="node2" href="$classIEC61968_1_1Assets_1_1AssetInfo.html" title=" " alt="" coords="463,5,665,32"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="155,13,316,54"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,277,95,304"/>
+<area shape="rect" id="node10" href="$classIEC61968_1_1InfIEC61968_1_1InfCommon_1_1Ratio.html" title=" " alt="" coords="479,286,649,327"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Domain_1_1CurrentFlow.html" title=" " alt="" coords="473,71,655,113"/>
+<area shape="rect" id="node6" title=" " alt="" coords="180,89,291,116"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Domain_1_1Voltage.html" title=" " alt="" coords="473,137,655,178"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="144,182,327,223"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Domain_1_1Integer.html" title=" " alt="" coords="473,202,655,243"/>
+</map>

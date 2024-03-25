@@ -1,0 +1,11 @@
+<map id="IEC61970::Base::OperationalLimits::OperationalLimitSet" name="IEC61970::Base::OperationalLimits::OperationalLimitSet">
+<area shape="rect" id="node1" title=" " alt="" coords="1256,177,1463,219"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="144,169,305,211"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="625,188,803,229"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Core_1_1PSRType.html" title=" " alt="" coords="355,133,516,175"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Core_1_1ACDCTerminal.html" title=" " alt="" coords="972,81,1133,123"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="5,177,95,203"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1Equipment.html" title=" " alt="" coords="972,177,1133,219"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="623,123,805,164"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Domain_1_1Integer.html" title=" " alt="" coords="623,5,805,47"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="IEC61968::PaymentMetering::TimeTariffInterval" name="IEC61968::PaymentMetering::TimeTariffInterval">
+<area shape="rect" id="node1" title=" " alt="" coords="107,109,313,151"/>
+<area shape="rect" id="node2" href="$classBaseClass.html" title=" " alt="" coords="5,13,95,39"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Domain_1_1Integer.html" title=" " alt="" coords="119,5,301,47"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Domain_1_1Time.html" title=" " alt="" coords="325,5,508,47"/>
+</map>

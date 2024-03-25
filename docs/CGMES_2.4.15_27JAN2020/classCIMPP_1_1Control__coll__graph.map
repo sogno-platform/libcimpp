@@ -1,0 +1,10 @@
+<map id="CIMPP::Control" name="CIMPP::Control">
+<area shape="rect" id="node1" title=" " alt="" coords="200,272,319,299"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="437,81,612,108"/>
+<area shape="rect" id="node6" href="$classCIMPP_1_1PowerSystemResource.html" title=" " alt="" coords="415,183,635,209"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1Location.html" title=" " alt="" coords="693,272,820,299"/>
+<area shape="rect" id="node8" href="$classCIMPP_1_1CoordinateSystem.html" title=" " alt="" coords="835,183,1025,209"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="296,5,385,32"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1DateTime.html" title=" " alt="" coords="168,132,303,159"/>
+<area shape="rect" id="node4" href="$classCIMPP_1_1Boolean.html" title=" " alt="" coords="5,183,129,209"/>
+</map>

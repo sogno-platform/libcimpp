@@ -1,0 +1,10 @@
+<map id="IEC61970::Base::DC::DCEquipmentContainer" name="IEC61970::Base::DC::DCEquipmentContainer">
+<area shape="rect" id="node1" title=" " alt="" coords="76,437,259,479"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1DC_1_1DCConverterUnit.html" title=" " alt="" coords="5,527,156,568"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1DC_1_1DCLine.html" title=" " alt="" coords="180,527,331,568"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1EquipmentContainer.html" title=" " alt="" coords="86,348,249,389"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1ConnectivityNodeContainer.html" title=" " alt="" coords="63,259,272,300"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="78,169,257,211"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="87,80,248,121"/>
+<area shape="rect" id="node6" href="$classBaseClass.html" title=" " alt="" coords="123,5,212,32"/>
+</map>

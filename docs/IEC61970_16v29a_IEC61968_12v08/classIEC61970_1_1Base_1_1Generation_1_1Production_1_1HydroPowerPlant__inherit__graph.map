@@ -1,0 +1,6 @@
+<map id="IEC61970::Base::Generation::Production::HydroPowerPlant" name="IEC61970::Base::Generation::Production::HydroPowerPlant">
+<area shape="rect" id="node1" title=" " alt="" coords="5,259,224,300"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="25,169,204,211"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="34,80,195,121"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="70,5,159,32"/>
+</map>

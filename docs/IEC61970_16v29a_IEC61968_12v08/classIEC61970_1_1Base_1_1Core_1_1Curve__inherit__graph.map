@@ -1,0 +1,27 @@
+<map id="IEC61970::Base::Core::Curve" name="IEC61970::Base::Core::Curve">
+<area shape="rect" id="node1" title=" " alt="" coords="352,724,513,765"/>
+<area shape="rect" id="node4" href="$classIEC61968_1_1InfIEC61968_1_1InfAssets_1_1AssetPropertyCurve.html" title=" " alt="" coords="607,5,834,47"/>
+<area shape="rect" id="node5" href="$classIEC61968_1_1InfIEC61968_1_1InfCustomers_1_1SubscribePowerCurve.html" title=" " alt="" coords="607,71,835,127"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1DC_1_1VsCapabilityCurve.html" title=" " alt="" coords="645,152,796,193"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Generation_1_1GenerationTrainingSimulation_1_1CTTempActivePowerCurve.html" title=" " alt="" coords="609,218,832,274"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1EmissionAccount.html" title=" " alt="" coords="611,299,830,340"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1EmissionCurve.html" title=" " alt="" coords="619,364,823,405"/>
+<area shape="rect" id="node10" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1FuelAllocationSchedule.html" title=" " alt="" coords="591,429,850,471"/>
+<area shape="rect" id="node11" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1GenUnitOpCostCurve.html" title=" " alt="" coords="598,495,843,536"/>
+<area shape="rect" id="node12" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1GrossToNetActivePowerCurve.html" title=" " alt="" coords="571,560,871,601"/>
+<area shape="rect" id="node13" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1HeatInputCurve.html" title=" " alt="" coords="616,625,825,667"/>
+<area shape="rect" id="node14" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1HeatRateCurve.html" title=" " alt="" coords="617,691,824,732"/>
+<area shape="rect" id="node15" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1HydroGeneratingEfficiencyCurve.html" title=" " alt="" coords="561,756,880,797"/>
+<area shape="rect" id="node16" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1IncrementalHeatRateCurve.html" title=" " alt="" coords="579,821,863,863"/>
+<area shape="rect" id="node17" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1LevelVsVolumeCurve.html" title=" " alt="" coords="598,887,843,928"/>
+<area shape="rect" id="node18" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1PenstockLossCurve.html" title=" " alt="" coords="604,952,837,993"/>
+<area shape="rect" id="node19" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1ShutdownCurve.html" title=" " alt="" coords="616,1017,825,1059"/>
+<area shape="rect" id="node20" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1StartIgnFuelCurve.html" title=" " alt="" coords="609,1083,832,1124"/>
+<area shape="rect" id="node21" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1StartMainFuelCurve.html" title=" " alt="" coords="603,1148,838,1189"/>
+<area shape="rect" id="node22" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1StartRampCurve.html" title=" " alt="" coords="613,1213,828,1255"/>
+<area shape="rect" id="node23" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1TailbayLossCurve.html" title=" " alt="" coords="611,1279,831,1320"/>
+<area shape="rect" id="node24" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1TargetLevelSchedule.html" title=" " alt="" coords="600,1344,841,1385"/>
+<area shape="rect" id="node25" href="$classIEC61970_1_1Base_1_1Wires_1_1ReactiveCapabilityCurve.html" title=" " alt="" coords="625,1409,816,1451"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,724,304,765"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="5,731,95,758"/>
+</map>

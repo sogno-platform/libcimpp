@@ -1,0 +1,9 @@
+<map id="IEC61970::Base::Core::ACDCTerminal" name="IEC61970::Base::Core::ACDCTerminal">
+<area shape="rect" id="node1" title=" " alt="" coords="95,169,256,211"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1Terminal.html" title=" " alt="" coords="5,259,167,300"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1DC_1_1DCBaseTerminal.html" title=" " alt="" coords="191,259,341,300"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="95,80,256,121"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="131,5,220,32"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1DC_1_1ACDCConverterDCTerminal.html" title=" " alt="" coords="61,348,268,389"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1DC_1_1DCTerminal.html" title=" " alt="" coords="292,348,443,389"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="IEC61968::Common::Agreement" name="IEC61968::Common::Agreement">
+<area shape="rect" id="node1" title=" " alt="" coords="625,193,856,219"/>
+<area shape="rect" id="node5" href="$classIEC61968_1_1Customers_1_1CustomerAgreement.html" title=" " alt="" coords="943,5,1108,47"/>
+<area shape="rect" id="node6" href="$classIEC61968_1_1InfIEC61968_1_1InfCustomers_1_1ExternalCustomerAgreement.html" title=" " alt="" coords="904,71,1147,127"/>
+<area shape="rect" id="node7" href="$classIEC61968_1_1InfIEC61968_1_1InfLocations_1_1LocationGrant.html" title=" " alt="" coords="921,152,1129,193"/>
+<area shape="rect" id="node8" href="$classIEC61968_1_1InfIEC61968_1_1InfLocations_1_1RightOfWay.html" title=" " alt="" coords="928,217,1123,259"/>
+<area shape="rect" id="node9" href="$classIEC61968_1_1PaymentMetering_1_1AuxiliaryAgreement.html" title=" " alt="" coords="922,283,1129,324"/>
+<area shape="rect" id="node10" href="$classIEC61968_1_1PaymentMetering_1_1MerchantAgreement.html" title=" " alt="" coords="922,348,1129,389"/>
+<area shape="rect" id="node2" href="$classIEC61968_1_1Common_1_1Document.html" title=" " alt="" coords="352,193,577,219"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,185,304,227"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,193,95,219"/>
+</map>

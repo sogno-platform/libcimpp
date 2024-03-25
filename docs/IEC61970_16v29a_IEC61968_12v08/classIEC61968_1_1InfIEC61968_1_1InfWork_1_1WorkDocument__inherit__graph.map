@@ -1,0 +1,19 @@
+<map id="IEC61968::InfIEC61968::InfWork::WorkDocument" name="IEC61968::InfIEC61968::InfWork::WorkDocument">
+<area shape="rect" id="node1" title=" " alt="" coords="625,397,813,439"/>
+<area shape="rect" id="node5" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1AccessPermit.html" title=" " alt="" coords="880,5,1056,47"/>
+<area shape="rect" id="node6" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1Assignment.html" title=" " alt="" coords="883,71,1053,112"/>
+<area shape="rect" id="node7" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1BusinessCase.html" title=" " alt="" coords="879,136,1057,177"/>
+<area shape="rect" id="node8" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1CompatibleUnit.html" title=" " alt="" coords="873,201,1063,243"/>
+<area shape="rect" id="node9" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1Design.html" title=" " alt="" coords="883,267,1053,308"/>
+<area shape="rect" id="node10" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1InfoQuestion.html" title=" " alt="" coords="883,332,1053,373"/>
+<area shape="rect" id="node11" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1NonStandardItem.html" title=" " alt="" coords="867,397,1069,439"/>
+<area shape="rect" id="node12" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1OneCallRequest.html" title=" " alt="" coords="872,463,1064,504"/>
+<area shape="rect" id="node13" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1Project.html" title=" " alt="" coords="883,528,1053,569"/>
+<area shape="rect" id="node14" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1Regulation.html" title=" " alt="" coords="883,593,1053,635"/>
+<area shape="rect" id="node15" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1TypeMaterial.html" title=" " alt="" coords="882,659,1054,700"/>
+<area shape="rect" id="node16" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1WorkCostDetail.html" title=" " alt="" coords="873,724,1063,765"/>
+<area shape="rect" id="node17" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1WorkCostSummary.html" title=" " alt="" coords="861,789,1075,831"/>
+<area shape="rect" id="node2" href="$classIEC61968_1_1Common_1_1Document.html" title=" " alt="" coords="352,405,577,431"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,397,304,439"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,405,95,431"/>
+</map>

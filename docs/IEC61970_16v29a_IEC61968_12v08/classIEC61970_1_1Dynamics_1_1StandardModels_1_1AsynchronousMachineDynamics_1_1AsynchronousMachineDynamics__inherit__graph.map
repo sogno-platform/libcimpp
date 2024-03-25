@@ -1,0 +1,10 @@
+<map id="IEC61970::Dynamics::StandardModels::AsynchronousMachineDynamics::AsynchronousMachineDynamics" name="IEC61970::Dynamics::StandardModels::AsynchronousMachineDynamics::AsynchronousMachineDynamics">
+<area shape="rect" id="node1" title=" " alt="" coords="855,100,1151,171"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1AsynchronousMachineDynamics_1_1AsynchronousMachineEquivalentCircuit.html" title=" " alt="" coords="1199,5,1495,76"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1AsynchronousMachineDynamics_1_1AsynchronousMachineTimeConstantReactance.html" title=" " alt="" coords="1199,100,1495,171"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Dynamics_1_1UserDefinedModels_1_1AsynchronousMachineUserDefined.html" title=" " alt="" coords="1219,195,1475,251"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1RotatingMachineDynamics.html" title=" " alt="" coords="608,107,807,163"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1DynamicsFunctionBlock.html" title=" " alt="" coords="352,107,560,163"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,115,304,156"/>
+<area shape="rect" id="node5" href="$classBaseClass.html" title=" " alt="" coords="5,122,95,149"/>
+</map>

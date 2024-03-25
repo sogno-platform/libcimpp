@@ -1,0 +1,8 @@
+<map id="IEC61970::Base::Generation::Production::NuclearGeneratingUnit" name="IEC61970::Base::Generation::Production::NuclearGeneratingUnit">
+<area shape="rect" id="node1" title=" " alt="" coords="5,437,261,479"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1GeneratingUnit.html" title=" " alt="" coords="30,348,237,389"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1Equipment.html" title=" " alt="" coords="53,259,214,300"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="44,169,223,211"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="53,80,214,121"/>
+<area shape="rect" id="node6" href="$classBaseClass.html" title=" " alt="" coords="89,5,178,32"/>
+</map>

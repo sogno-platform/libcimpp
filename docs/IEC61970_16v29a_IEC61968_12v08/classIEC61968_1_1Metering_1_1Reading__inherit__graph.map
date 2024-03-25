@@ -1,0 +1,7 @@
+<map id="IEC61968::Metering::Reading" name="IEC61968::Metering::Reading">
+<area shape="rect" id="node1" title=" " alt="" coords="14,348,163,389"/>
+<area shape="rect" id="node2" href="$classIEC61968_1_1Metering_1_1BaseReading.html" title=" " alt="" coords="14,259,163,300"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Meas_1_1MeasurementValue.html" title=" " alt="" coords="5,169,172,211"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="8,80,169,121"/>
+<area shape="rect" id="node5" href="$classBaseClass.html" title=" " alt="" coords="44,5,133,32"/>
+</map>

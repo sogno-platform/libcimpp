@@ -1,0 +1,11 @@
+<map id="IEC61970::Base::Wires::RotatingMachine" name="IEC61970::Base::Wires::RotatingMachine">
+<area shape="rect" id="node1" title=" " alt="" coords="1225,39,1393,80"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Wires_1_1AsynchronousMachine.html" title=" " alt="" coords="1441,5,1617,47"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Wires_1_1SynchronousMachine.html" title=" " alt="" coords="1445,71,1613,112"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Wires_1_1RegulatingCondEq.html" title=" " alt="" coords="1009,39,1177,80"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1ConductingEquipment.html" title=" " alt="" coords="788,39,961,80"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1Equipment.html" title=" " alt="" coords="579,39,740,80"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="352,39,531,80"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,39,304,80"/>
+<area shape="rect" id="node7" href="$classBaseClass.html" title=" " alt="" coords="5,46,95,73"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="IEC61970::Base::Generation::Production::GenUnitOpSchedule" name="IEC61970::Base::Generation::Production::GenUnitOpSchedule">
+<area shape="rect" id="node1" title=" " alt="" coords="5,348,243,389"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1RegularIntervalSchedule.html" title=" " alt="" coords="29,259,219,300"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1BasicIntervalSchedule.html" title=" " alt="" coords="37,169,211,211"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="43,80,205,121"/>
+<area shape="rect" id="node5" href="$classBaseClass.html" title=" " alt="" coords="79,5,169,32"/>
+</map>

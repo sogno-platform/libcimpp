@@ -1,0 +1,9 @@
+<map id="IEC61970::Base::Wires::PetersenCoil" name="IEC61970::Base::Wires::PetersenCoil">
+<area shape="rect" id="node1" title=" " alt="" coords="13,527,181,568"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Wires_1_1EarthFaultCompensator.html" title=" " alt="" coords="5,437,188,479"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1ConductingEquipment.html" title=" " alt="" coords="10,348,183,389"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1Equipment.html" title=" " alt="" coords="16,259,177,300"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="7,169,186,211"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="16,80,177,121"/>
+<area shape="rect" id="node7" href="$classBaseClass.html" title=" " alt="" coords="52,5,141,32"/>
+</map>

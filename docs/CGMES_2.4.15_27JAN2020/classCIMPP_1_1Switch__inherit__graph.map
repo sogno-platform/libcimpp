@@ -1,0 +1,13 @@
+<map id="CIMPP::Switch" name="CIMPP::Switch">
+<area shape="rect" id="node1" title=" " alt="" coords="230,379,345,405"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1Disconnector.html" title=" " alt="" coords="5,453,161,480"/>
+<area shape="rect" id="node8" href="$classCIMPP_1_1GroundDisconnector.html" title=" " alt="" coords="186,453,389,480"/>
+<area shape="rect" id="node9" href="$classCIMPP_1_1ProtectedSwitch.html" title=" " alt="" coords="413,453,589,480"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1ConductingEquipment.html" title=" " alt="" coords="180,304,395,331"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1Equipment.html" title=" " alt="" coords="217,229,358,256"/>
+<area shape="rect" id="node4" href="$classCIMPP_1_1PowerSystemResource.html" title=" " alt="" coords="177,155,397,181"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="200,80,375,107"/>
+<area shape="rect" id="node6" href="$classBaseClass.html" title=" " alt="" coords="243,5,332,32"/>
+<area shape="rect" id="node10" href="$classCIMPP_1_1Breaker.html" title=" " alt="" coords="352,528,473,555"/>
+<area shape="rect" id="node11" href="$classCIMPP_1_1LoadBreakSwitch.html" title=" " alt="" coords="497,528,680,555"/>
+</map>

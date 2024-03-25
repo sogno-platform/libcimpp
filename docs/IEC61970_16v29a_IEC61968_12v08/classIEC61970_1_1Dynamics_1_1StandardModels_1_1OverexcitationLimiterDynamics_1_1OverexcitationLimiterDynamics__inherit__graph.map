@@ -1,0 +1,11 @@
+<map id="IEC61970::Dynamics::StandardModels::OverexcitationLimiterDynamics::OverexcitationLimiterDynamics" name="IEC61970::Dynamics::StandardModels::OverexcitationLimiterDynamics::OverexcitationLimiterDynamics">
+<area shape="rect" id="node1" title=" " alt="" coords="608,158,891,229"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1OverexcitationLimiterDynamics_1_1OverexcLim2.html" title=" " alt="" coords="943,5,1181,61"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1OverexcitationLimiterDynamics_1_1OverexcLimIEEE.html" title=" " alt="" coords="939,85,1185,141"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1OverexcitationLimiterDynamics_1_1OverexcLimX1.html" title=" " alt="" coords="943,165,1181,221"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1OverexcitationLimiterDynamics_1_1OverexcLimX2.html" title=" " alt="" coords="943,245,1181,301"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Dynamics_1_1UserDefinedModels_1_1OverexcitationLimiterUserDefined.html" title=" " alt="" coords="961,326,1163,397"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1DynamicsFunctionBlock.html" title=" " alt="" coords="352,165,560,221"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,173,304,214"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,180,95,207"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="CIMPP::AnalogControl" name="CIMPP::AnalogControl">
+<area shape="rect" id="node1" title=" " alt="" coords="127,229,289,256"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1RaiseLowerCommand.html" title=" " alt="" coords="5,304,219,331"/>
+<area shape="rect" id="node6" href="$classCIMPP_1_1SetPoint.html" title=" " alt="" coords="243,304,368,331"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1Control.html" title=" " alt="" coords="149,155,267,181"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="121,80,295,107"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="163,5,253,32"/>
+</map>

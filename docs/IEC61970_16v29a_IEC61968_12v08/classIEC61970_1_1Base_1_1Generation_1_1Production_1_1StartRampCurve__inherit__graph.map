@@ -1,0 +1,6 @@
+<map id="IEC61970::Base::Generation::Production::StartRampCurve" name="IEC61970::Base::Generation::Production::StartRampCurve">
+<area shape="rect" id="node1" title=" " alt="" coords="5,259,220,300"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1Curve.html" title=" " alt="" coords="32,169,193,211"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="32,80,193,121"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="68,5,157,32"/>
+</map>

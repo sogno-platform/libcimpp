@@ -1,0 +1,19 @@
+<map id="IEC61968::Customers::ServiceLocation" name="IEC61968::Customers::ServiceLocation">
+<area shape="rect" id="node1" title=" " alt="" coords="2140,579,2301,621"/>
+<area shape="rect" id="node2" href="$classIEC61968_1_1Work_1_1WorkLocation.html" title=" " alt="" coords="1871,443,2091,469"/>
+<area shape="rect" id="node3" href="$classIEC61968_1_1Common_1_1Location.html" title=" " alt="" coords="1259,333,1472,360"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="388,239,549,281"/>
+<area shape="rect" id="node10" href="$classIEC61968_1_1Common_1_1CoordinateSystem.html" title=" " alt="" coords="856,266,1085,307"/>
+<area shape="rect" id="node17" href="$classIEC61968_1_1Common_1_1Document.html" title=" " alt="" coords="858,88,1083,115"/>
+<area shape="rect" id="node5" href="$classBaseClass.html" title=" " alt="" coords="52,361,141,388"/>
+<area shape="rect" id="node6" href="$classIEC61968_1_1Common_1_1Status.html" title=" " alt="" coords="369,311,568,337"/>
+<area shape="rect" id="node8" href="$classIEC61968_1_1Common_1_1TelephoneNumber.html" title=" " alt="" coords="608,351,832,393"/>
+<area shape="rect" id="node9" href="$classIEC61968_1_1Common_1_1ElectronicAddress.html" title=" " alt="" coords="357,174,580,215"/>
+<area shape="rect" id="node11" href="$classIEC61968_1_1Common_1_1StreetAddress.html" title=" " alt="" coords="872,473,1069,514"/>
+<area shape="rect" id="node12" href="$classIEC61968_1_1Common_1_1TownDetail.html" title=" " alt="" coords="353,467,584,493"/>
+<area shape="rect" id="node13" href="$classIEC61968_1_1Common_1_1StreetDetail.html" title=" " alt="" coords="370,518,567,559"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTime.html" title=" " alt="" coords="5,110,188,151"/>
+<area shape="rect" id="node14" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="5,577,188,618"/>
+<area shape="rect" id="node15" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1OneCallRequest.html" title=" " alt="" coords="1521,377,1713,418"/>
+<area shape="rect" id="node16" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1WorkDocument.html" title=" " alt="" coords="1271,182,1459,223"/>
+</map>

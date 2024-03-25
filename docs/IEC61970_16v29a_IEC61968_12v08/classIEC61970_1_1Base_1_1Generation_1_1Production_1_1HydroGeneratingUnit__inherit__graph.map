@@ -1,0 +1,8 @@
+<map id="IEC61970::Base::Generation::Production::HydroGeneratingUnit" name="IEC61970::Base::Generation::Production::HydroGeneratingUnit">
+<area shape="rect" id="node1" title=" " alt="" coords="5,437,251,479"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Generation_1_1Production_1_1GeneratingUnit.html" title=" " alt="" coords="25,348,231,389"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1Equipment.html" title=" " alt="" coords="47,259,209,300"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="39,169,217,211"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="47,80,209,121"/>
+<area shape="rect" id="node6" href="$classBaseClass.html" title=" " alt="" coords="83,5,173,32"/>
+</map>

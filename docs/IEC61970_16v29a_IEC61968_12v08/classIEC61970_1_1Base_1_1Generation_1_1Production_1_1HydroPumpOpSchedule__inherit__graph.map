@@ -1,0 +1,7 @@
+<map id="IEC61970::Base::Generation::Production::HydroPumpOpSchedule" name="IEC61970::Base::Generation::Production::HydroPumpOpSchedule">
+<area shape="rect" id="node1" title=" " alt="" coords="5,348,265,389"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1RegularIntervalSchedule.html" title=" " alt="" coords="41,259,230,300"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1BasicIntervalSchedule.html" title=" " alt="" coords="48,169,223,211"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="55,80,216,121"/>
+<area shape="rect" id="node5" href="$classBaseClass.html" title=" " alt="" coords="91,5,180,32"/>
+</map>

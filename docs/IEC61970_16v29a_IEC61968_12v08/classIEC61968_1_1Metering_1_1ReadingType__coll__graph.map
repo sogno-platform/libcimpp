@@ -1,0 +1,10 @@
+<map id="IEC61968::Metering::ReadingType" name="IEC61968::Metering::ReadingType">
+<area shape="rect" id="node1" title=" " alt="" coords="781,133,931,175"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="155,5,316,47"/>
+<area shape="rect" id="node5" href="$classIEC61968_1_1Metering_1_1Channel.html" title=" " alt="" coords="475,68,625,109"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="5,137,95,163"/>
+<area shape="rect" id="node7" href="$classIEC61968_1_1Metering_1_1RationalNumber.html" title=" " alt="" coords="475,133,625,175"/>
+<area shape="rect" id="node8" href="$classIEC61968_1_1Metering_1_1ReadingInterharmonic.html" title=" " alt="" coords="463,292,637,333"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Domain_1_1Integer.html" title=" " alt="" coords="144,223,327,264"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="144,71,327,112"/>
+</map>

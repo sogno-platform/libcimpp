@@ -1,0 +1,12 @@
+<map id="IEC61968::PaymentMetering::Tender" name="IEC61968::PaymentMetering::Tender">
+<area shape="rect" id="node1" title=" " alt="" coords="1240,72,1447,113"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="624,5,785,47"/>
+<area shape="rect" id="node7" href="$classIEC61968_1_1PaymentMetering_1_1Receipt.html" title=" " alt="" coords="932,72,1139,113"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="351,30,440,57"/>
+<area shape="rect" id="node8" href="$classIEC61968_1_1PaymentMetering_1_1LineDetail.html" title=" " alt="" coords="601,136,808,177"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Domain_1_1Money.html" title=" " alt="" coords="304,175,487,216"/>
+<area shape="rect" id="node5" title=" " alt="" coords="41,153,152,179"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1Decimal.html" title=" " alt="" coords="5,204,188,245"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTime.html" title=" " alt="" coords="304,91,487,132"/>
+<area shape="rect" id="node10" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="613,71,796,112"/>
+</map>

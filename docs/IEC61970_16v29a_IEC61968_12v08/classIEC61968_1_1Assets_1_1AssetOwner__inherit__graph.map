@@ -1,0 +1,7 @@
+<map id="IEC61968::Assets::AssetOwner" name="IEC61968::Assets::AssetOwner">
+<area shape="rect" id="node1" title=" " alt="" coords="41,319,261,345"/>
+<area shape="rect" id="node2" href="$classIEC61968_1_1Assets_1_1AssetOrganisationRole.html" title=" " alt="" coords="5,244,296,271"/>
+<area shape="rect" id="node3" href="$classIEC61968_1_1Common_1_1OrganisationRole.html" title=" " alt="" coords="15,169,286,196"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="70,80,231,121"/>
+<area shape="rect" id="node5" href="$classBaseClass.html" title=" " alt="" coords="106,5,195,32"/>
+</map>

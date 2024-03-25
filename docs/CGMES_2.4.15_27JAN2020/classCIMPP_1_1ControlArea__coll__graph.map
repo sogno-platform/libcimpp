@@ -1,0 +1,10 @@
+<map id="CIMPP::ControlArea" name="CIMPP::ControlArea">
+<area shape="rect" id="node1" title=" " alt="" coords="17,275,165,301"/>
+<area shape="rect" id="node8" href="$classCIMPP_1_1EnergyArea.html" title=" " alt="" coords="129,364,275,391"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1PowerSystemResource.html" title=" " alt="" coords="125,184,345,211"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1Location.html" title=" " alt="" coords="267,275,393,301"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="312,81,487,108"/>
+<area shape="rect" id="node6" href="$classCIMPP_1_1CoordinateSystem.html" title=" " alt="" coords="437,184,628,211"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="244,5,333,32"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1ActivePower.html" title=" " alt="" coords="9,132,161,159"/>
+</map>

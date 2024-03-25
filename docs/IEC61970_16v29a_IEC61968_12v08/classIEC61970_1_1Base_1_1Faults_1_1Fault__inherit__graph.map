@@ -1,0 +1,7 @@
+<map id="IEC61970::Base::Faults::Fault" name="IEC61970::Base::Faults::Fault">
+<area shape="rect" id="node1" title=" " alt="" coords="101,169,271,211"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Faults_1_1EquipmentFault.html" title=" " alt="" coords="5,259,175,300"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Faults_1_1LineFault.html" title=" " alt="" coords="199,259,368,300"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="105,80,267,121"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="141,5,231,32"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="IEC61970::Base::Generation::Production::FuelAllocationSchedule" name="IEC61970::Base::Generation::Production::FuelAllocationSchedule">
+<area shape="rect" id="node1" title=" " alt="" coords="816,109,1075,151"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1Curve.html" title=" " alt="" coords="443,44,604,85"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="144,5,305,47"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,13,95,39"/>
+<area shape="rect" id="node5" title=" " alt="" coords="169,91,280,118"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTime.html" title=" " alt="" coords="432,109,615,151"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="432,175,615,216"/>
+</map>

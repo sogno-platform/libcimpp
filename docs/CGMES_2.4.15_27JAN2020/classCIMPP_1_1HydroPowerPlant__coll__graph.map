@@ -1,0 +1,8 @@
+<map id="CIMPP::HydroPowerPlant" name="CIMPP::HydroPowerPlant">
+<area shape="rect" id="node1" title=" " alt="" coords="5,247,188,273"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1PowerSystemResource.html" title=" " alt="" coords="93,157,313,184"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1Location.html" title=" " alt="" coords="309,247,436,273"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="325,81,500,108"/>
+<area shape="rect" id="node6" href="$classCIMPP_1_1CoordinateSystem.html" title=" " alt="" coords="451,157,641,184"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="368,5,457,32"/>
+</map>

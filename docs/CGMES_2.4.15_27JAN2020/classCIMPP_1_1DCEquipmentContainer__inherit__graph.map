@@ -1,0 +1,10 @@
+<map id="CIMPP::DCEquipmentContainer" name="CIMPP::DCEquipmentContainer">
+<area shape="rect" id="node1" title=" " alt="" coords="71,379,294,405"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1DCConverterUnit.html" title=" " alt="" coords="5,453,187,480"/>
+<area shape="rect" id="node8" href="$classCIMPP_1_1DCLine.html" title=" " alt="" coords="211,453,328,480"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1EquipmentContainer.html" title=" " alt="" coords="81,304,285,331"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1ConnectivityNodeContainer.html" title=" " alt="" coords="57,229,308,256"/>
+<area shape="rect" id="node4" href="$classCIMPP_1_1PowerSystemResource.html" title=" " alt="" coords="73,155,293,181"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="95,80,270,107"/>
+<area shape="rect" id="node6" href="$classBaseClass.html" title=" " alt="" coords="138,5,227,32"/>
+</map>

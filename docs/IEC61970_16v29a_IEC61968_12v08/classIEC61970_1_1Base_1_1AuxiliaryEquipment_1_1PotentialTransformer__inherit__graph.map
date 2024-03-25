@@ -1,0 +1,9 @@
+<map id="IEC61970::Base::AuxiliaryEquipment::PotentialTransformer" name="IEC61970::Base::AuxiliaryEquipment::PotentialTransformer">
+<area shape="rect" id="node1" title=" " alt="" coords="5,527,241,568"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1AuxiliaryEquipment_1_1Sensor.html" title=" " alt="" coords="29,437,218,479"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1AuxiliaryEquipment_1_1AuxiliaryEquipment.html" title=" " alt="" coords="9,348,237,389"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1Equipment.html" title=" " alt="" coords="43,259,204,300"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="34,169,213,211"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="43,80,204,121"/>
+<area shape="rect" id="node7" href="$classBaseClass.html" title=" " alt="" coords="79,5,168,32"/>
+</map>

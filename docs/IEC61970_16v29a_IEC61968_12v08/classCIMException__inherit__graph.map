@@ -1,0 +1,10 @@
+<map id="CIMException" name="CIMException">
+<area shape="rect" id="node1" title=" " alt="" coords="168,132,279,159"/>
+<area shape="rect" id="node3" href="$classMissingDependencyFile.html" title=" " alt="" coords="333,5,509,32"/>
+<area shape="rect" id="node4" href="$classMissingModelDescription.html" title=" " alt="" coords="327,56,514,83"/>
+<area shape="rect" id="node5" href="$classNoObjectsContainer.html" title=" " alt="" coords="345,107,497,133"/>
+<area shape="rect" id="node6" href="$classNoRdfID.html" title=" " alt="" coords="383,157,459,184"/>
+<area shape="rect" id="node7" href="$classNoRdfMap.html" title=" " alt="" coords="375,208,466,235"/>
+<area shape="rect" id="node8" href="$classReadingUninitializedField.html" title=" " alt="" coords="327,259,515,285"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,132,120,159"/>
+</map>

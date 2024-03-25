@@ -1,0 +1,10 @@
+<map id="IEC61968::InfIEC61968::InfWork::WorkStatusEntry" name="IEC61968::InfIEC61968::InfWork::WorkStatusEntry">
+<area shape="rect" id="node1" title=" " alt="" coords="968,131,1164,172"/>
+<area shape="rect" id="node2" href="$classIEC61968_1_1Common_1_1ActivityRecord.html" title=" " alt="" coords="595,96,803,137"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="321,5,483,47"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="52,30,141,57"/>
+<area shape="rect" id="node5" href="$classIEC61968_1_1Common_1_1Status.html" title=" " alt="" coords="303,73,501,99"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTime.html" title=" " alt="" coords="5,91,188,132"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1PerCent.html" title=" " alt="" coords="607,163,790,204"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="311,187,493,228"/>
+</map>

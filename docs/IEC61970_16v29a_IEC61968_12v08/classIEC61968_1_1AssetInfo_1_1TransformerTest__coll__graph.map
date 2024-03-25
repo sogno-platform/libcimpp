@@ -1,0 +1,9 @@
+<map id="IEC61968::AssetInfo::TransformerTest" name="IEC61968::AssetInfo::TransformerTest">
+<area shape="rect" id="node1" title=" " alt="" coords="620,71,772,112"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="315,5,476,47"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="52,13,141,39"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Domain_1_1Temperature.html" title=" " alt="" coords="304,71,487,112"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="5,87,188,128"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1ApparentPower.html" title=" " alt="" coords="304,136,487,177"/>
+<area shape="rect" id="node7" title=" " alt="" coords="41,169,152,195"/>
+</map>

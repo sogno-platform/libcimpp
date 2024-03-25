@@ -1,0 +1,10 @@
+<map id="IEC61970::Dynamics::StandardModels::RotatingMachineDynamics" name="IEC61970::Dynamics::StandardModels::RotatingMachineDynamics">
+<area shape="rect" id="node1" title=" " alt="" coords="853,154,1052,210"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1DynamicsFunctionBlock.html" title=" " alt="" coords="432,37,640,93"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="155,5,316,47"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,13,95,39"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="144,71,327,112"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1Seconds.html" title=" " alt="" coords="445,209,627,251"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="144,209,327,251"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Domain_1_1PU.html" title=" " alt="" coords="432,275,640,302"/>
+</map>

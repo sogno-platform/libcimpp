@@ -1,0 +1,11 @@
+<map id="IEC61968::InfIEC61968::InfERPSupport::ErpJournalEntry" name="IEC61968::InfIEC61968::InfERPSupport::ErpJournalEntry">
+<area shape="rect" id="node1" title=" " alt="" coords="757,119,953,175"/>
+<area shape="rect" id="node2" href="$classIEC61968_1_1InfIEC61968_1_1InfERPSupport_1_1ErpIdentifiedObject.html" title=" " alt="" coords="443,5,655,61"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="155,10,316,51"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,60,95,87"/>
+<area shape="rect" id="node8" href="$classIEC61968_1_1Common_1_1Status.html" title=" " alt="" coords="449,88,648,115"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Domain_1_1Money.html" title=" " alt="" coords="457,217,640,258"/>
+<area shape="rect" id="node6" title=" " alt="" coords="180,216,291,243"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1Decimal.html" title=" " alt="" coords="144,267,327,309"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTime.html" title=" " alt="" coords="144,135,327,177"/>
+</map>

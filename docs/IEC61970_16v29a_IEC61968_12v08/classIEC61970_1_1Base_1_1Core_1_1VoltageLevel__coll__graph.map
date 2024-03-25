@@ -1,0 +1,13 @@
+<map id="IEC61970::Base::Core::VoltageLevel" name="IEC61970::Base::Core::VoltageLevel">
+<area shape="rect" id="node1" title=" " alt="" coords="1581,93,1743,135"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1EquipmentContainer.html" title=" " alt="" coords="1285,8,1448,49"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1ConnectivityNodeContainer.html" title=" " alt="" coords="921,7,1131,48"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="625,5,803,47"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="144,64,305,105"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Core_1_1PSRType.html" title=" " alt="" coords="355,5,516,47"/>
+<area shape="rect" id="node11" href="$classIEC61970_1_1Base_1_1Core_1_1BaseVoltage.html" title=" " alt="" coords="1286,163,1447,204"/>
+<area shape="rect" id="node6" href="$classBaseClass.html" title=" " alt="" coords="5,71,95,98"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Domain_1_1Voltage.html" title=" " alt="" coords="935,107,1117,148"/>
+<area shape="rect" id="node9" title=" " alt="" coords="659,137,769,163"/>
+<area shape="rect" id="node10" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="623,71,805,112"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="IEC61970::Base::Wires::TransformerEnd" name="IEC61970::Base::Wires::TransformerEnd">
+<area shape="rect" id="node1" title=" " alt="" coords="352,39,520,80"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Wires_1_1PowerTransformerEnd.html" title=" " alt="" coords="568,5,740,47"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Wires_1_1TransformerTankEnd.html" title=" " alt="" coords="570,71,738,112"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,39,304,80"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="5,46,95,73"/>
+</map>

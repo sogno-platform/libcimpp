@@ -1,0 +1,10 @@
+<map id="IEC61968::InfIEC61968::InfCommon::Skill" name="IEC61968::InfIEC61968::InfCommon::Skill">
+<area shape="rect" id="node1" title=" " alt="" coords="973,42,1143,83"/>
+<area shape="rect" id="node2" href="$classIEC61968_1_1Common_1_1Document.html" title=" " alt="" coords="699,185,924,212"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="333,302,495,343"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="52,245,141,272"/>
+<area shape="rect" id="node5" href="$classIEC61968_1_1Common_1_1ElectronicAddress.html" title=" " alt="" coords="303,237,525,278"/>
+<area shape="rect" id="node6" href="$classIEC61968_1_1Common_1_1Status.html" title=" " alt="" coords="315,185,513,212"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTimeInterval.html" title=" " alt="" coords="323,42,505,83"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTime.html" title=" " alt="" coords="5,82,188,123"/>
+</map>

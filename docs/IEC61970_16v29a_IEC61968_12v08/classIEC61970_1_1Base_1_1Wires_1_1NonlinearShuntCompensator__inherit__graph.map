@@ -1,0 +1,10 @@
+<map id="IEC61970::Base::Wires::NonlinearShuntCompensator" name="IEC61970::Base::Wires::NonlinearShuntCompensator">
+<area shape="rect" id="node1" title=" " alt="" coords="5,616,223,657"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Wires_1_1ShuntCompensator.html" title=" " alt="" coords="30,527,198,568"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Wires_1_1RegulatingCondEq.html" title=" " alt="" coords="30,437,198,479"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1ConductingEquipment.html" title=" " alt="" coords="27,348,201,389"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1Equipment.html" title=" " alt="" coords="33,259,195,300"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="25,169,203,211"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="33,80,195,121"/>
+<area shape="rect" id="node8" href="$classBaseClass.html" title=" " alt="" coords="69,5,159,32"/>
+</map>

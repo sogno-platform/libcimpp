@@ -1,0 +1,13 @@
+<map id="IEC61968::Operations::GenericAction" name="IEC61968::Operations::GenericAction">
+<area shape="rect" id="node1" title=" " alt="" coords="1540,115,1703,157"/>
+<area shape="rect" id="node2" href="$classIEC61968_1_1Operations_1_1SwitchingStep.html" title=" " alt="" coords="1328,115,1491,157"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="5,21,95,48"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="144,43,305,85"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Domain_1_1Integer.html" title=" " alt="" coords="938,145,1121,186"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTime.html" title=" " alt="" coords="938,210,1121,251"/>
+<area shape="rect" id="node6" href="$classIEC61968_1_1Common_1_1Operator.html" title=" " alt="" coords="922,43,1137,69"/>
+<area shape="rect" id="node7" href="$classIEC61968_1_1Common_1_1OperationPersonRole.html" title=" " alt="" coords="635,43,857,85"/>
+<area shape="rect" id="node11" href="$classIEC61968_1_1Common_1_1CrewMember.html" title=" " alt="" coords="907,93,1152,120"/>
+<area shape="rect" id="node8" href="$classIEC61968_1_1Common_1_1PersonRole.html" title=" " alt="" coords="355,51,585,77"/>
+<area shape="rect" id="node10" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="938,275,1121,317"/>
+</map>

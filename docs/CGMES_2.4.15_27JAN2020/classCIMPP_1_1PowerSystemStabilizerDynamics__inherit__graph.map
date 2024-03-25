@@ -1,0 +1,23 @@
+<map id="CIMPP::PowerSystemStabilizerDynamics" name="CIMPP::PowerSystemStabilizerDynamics">
+<area shape="rect" id="node1" title=" " alt="" coords="640,419,861,460"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1PowerSystemStabilizerUserDefined.html" title=" " alt="" coords="909,5,1131,47"/>
+<area shape="rect" id="node6" href="$classCIMPP_1_1Pss1.html" title=" " alt="" coords="969,71,1071,98"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1Pss1A.html" title=" " alt="" coords="965,122,1075,149"/>
+<area shape="rect" id="node8" href="$classCIMPP_1_1Pss2B.html" title=" " alt="" coords="965,173,1075,199"/>
+<area shape="rect" id="node9" href="$classCIMPP_1_1Pss2ST.html" title=" " alt="" coords="961,223,1079,250"/>
+<area shape="rect" id="node10" href="$classCIMPP_1_1Pss5.html" title=" " alt="" coords="969,274,1071,301"/>
+<area shape="rect" id="node11" href="$classCIMPP_1_1PssELIN2.html" title=" " alt="" coords="955,325,1085,351"/>
+<area shape="rect" id="node12" href="$classCIMPP_1_1PssIEEE1A.html" title=" " alt="" coords="951,375,1089,402"/>
+<area shape="rect" id="node13" href="$classCIMPP_1_1PssIEEE2B.html" title=" " alt="" coords="951,426,1089,453"/>
+<area shape="rect" id="node14" href="$classCIMPP_1_1PssIEEE3B.html" title=" " alt="" coords="951,477,1089,503"/>
+<area shape="rect" id="node15" href="$classCIMPP_1_1PssIEEE4B.html" title=" " alt="" coords="951,527,1089,554"/>
+<area shape="rect" id="node16" href="$classCIMPP_1_1PssPTIST1.html" title=" " alt="" coords="951,578,1089,605"/>
+<area shape="rect" id="node17" href="$classCIMPP_1_1PssPTIST3.html" title=" " alt="" coords="951,629,1089,655"/>
+<area shape="rect" id="node18" href="$classCIMPP_1_1PssSB4.html" title=" " alt="" coords="961,679,1079,706"/>
+<area shape="rect" id="node19" href="$classCIMPP_1_1PssSH.html" title=" " alt="" coords="965,730,1075,757"/>
+<area shape="rect" id="node20" href="$classCIMPP_1_1PssSK.html" title=" " alt="" coords="965,781,1075,807"/>
+<area shape="rect" id="node21" href="$classCIMPP_1_1PssWECC.html" title=" " alt="" coords="954,831,1086,858"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1DynamicsFunctionBlock.html" title=" " alt="" coords="365,426,592,453"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="143,426,317,453"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,426,95,453"/>
+</map>

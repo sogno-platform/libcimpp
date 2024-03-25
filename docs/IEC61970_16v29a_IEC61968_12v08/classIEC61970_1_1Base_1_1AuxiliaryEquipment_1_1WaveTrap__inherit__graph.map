@@ -1,0 +1,8 @@
+<map id="IEC61970::Base::AuxiliaryEquipment::WaveTrap" name="IEC61970::Base::AuxiliaryEquipment::WaveTrap">
+<area shape="rect" id="node1" title=" " alt="" coords="25,437,214,479"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1AuxiliaryEquipment_1_1AuxiliaryEquipment.html" title=" " alt="" coords="5,348,233,389"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1Equipment.html" title=" " alt="" coords="39,259,200,300"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="30,169,209,211"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="39,80,200,121"/>
+<area shape="rect" id="node6" href="$classBaseClass.html" title=" " alt="" coords="75,5,164,32"/>
+</map>

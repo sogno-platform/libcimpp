@@ -1,0 +1,10 @@
+<map id="CIMPP::DiscontinuousExcitationControlDynamics" name="CIMPP::DiscontinuousExcitationControlDynamics">
+<area shape="rect" id="node1" title=" " alt="" coords="640,74,868,115"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1DiscExcContIEEEDEC1A.html" title=" " alt="" coords="918,5,1142,32"/>
+<area shape="rect" id="node6" href="$classCIMPP_1_1DiscExcContIEEEDEC2A.html" title=" " alt="" coords="918,56,1142,83"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1DiscExcContIEEEDEC3A.html" title=" " alt="" coords="918,107,1142,133"/>
+<area shape="rect" id="node8" href="$classCIMPP_1_1DiscontinuousExcitationControlUserDefined.html" title=" " alt="" coords="916,158,1144,199"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1DynamicsFunctionBlock.html" title=" " alt="" coords="365,81,592,108"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="143,81,317,108"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,81,95,108"/>
+</map>

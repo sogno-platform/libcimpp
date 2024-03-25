@@ -1,0 +1,6 @@
+<map id="IEC61968::InfIEC61968::InfWork::CUWorkEquipmentItem" name="IEC61968::InfIEC61968::InfWork::CUWorkEquipmentItem">
+<area shape="rect" id="node1" title=" " alt="" coords="5,259,245,300"/>
+<area shape="rect" id="node2" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1WorkIdentifiedObject.html" title=" " alt="" coords="13,169,237,211"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="45,80,206,121"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="81,5,170,32"/>
+</map>

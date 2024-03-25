@@ -1,0 +1,8 @@
+<map id="IEC61968::Common::OperationPersonRole" name="IEC61968::Common::OperationPersonRole">
+<area shape="rect" id="node1" title=" " alt="" coords="143,244,366,285"/>
+<area shape="rect" id="node5" href="$classIEC61968_1_1Common_1_1CrewMember.html" title=" " alt="" coords="5,333,251,360"/>
+<area shape="rect" id="node6" href="$classIEC61968_1_1Common_1_1Operator.html" title=" " alt="" coords="275,333,490,360"/>
+<area shape="rect" id="node2" href="$classIEC61968_1_1Common_1_1PersonRole.html" title=" " alt="" coords="139,169,370,196"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="174,80,335,121"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="210,5,299,32"/>
+</map>

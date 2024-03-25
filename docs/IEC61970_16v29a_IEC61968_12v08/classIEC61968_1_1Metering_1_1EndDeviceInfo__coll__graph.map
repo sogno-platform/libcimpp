@@ -1,0 +1,13 @@
+<map id="IEC61968::Metering::EndDeviceInfo" name="IEC61968::Metering::EndDeviceInfo">
+<area shape="rect" id="node1" title=" " alt="" coords="864,209,1013,251"/>
+<area shape="rect" id="node2" href="$classIEC61968_1_1Assets_1_1AssetInfo.html" title=" " alt="" coords="525,33,728,59"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="155,5,316,47"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,207,95,234"/>
+<area shape="rect" id="node8" href="$classIEC61968_1_1Metering_1_1EndDeviceCapability.html" title=" " alt="" coords="544,237,709,279"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Domain_1_1CurrentFlow.html" title=" " alt="" coords="535,107,718,148"/>
+<area shape="rect" id="node6" title=" " alt="" coords="180,155,291,182"/>
+<area shape="rect" id="node10" href="$classIEC61970_1_1Base_1_1Domain_1_1Voltage.html" title=" " alt="" coords="535,172,718,213"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="144,77,327,119"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="144,419,327,460"/>
+<area shape="rect" id="node11" href="$classIEC61970_1_1Base_1_1Domain_1_1Integer.html" title=" " alt="" coords="535,511,718,552"/>
+</map>

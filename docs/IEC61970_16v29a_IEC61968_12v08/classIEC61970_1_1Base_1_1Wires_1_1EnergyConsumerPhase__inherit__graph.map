@@ -1,0 +1,6 @@
+<map id="IEC61970::Base::Wires::EnergyConsumerPhase" name="IEC61970::Base::Wires::EnergyConsumerPhase">
+<area shape="rect" id="node1" title=" " alt="" coords="5,259,185,300"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="6,169,185,211"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="15,80,176,121"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="51,5,140,32"/>
+</map>

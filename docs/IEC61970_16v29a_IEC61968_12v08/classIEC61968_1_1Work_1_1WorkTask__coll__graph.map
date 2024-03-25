@@ -1,0 +1,35 @@
+<map id="IEC61968::Work::WorkTask" name="IEC61968::Work::WorkTask">
+<area shape="rect" id="node1" title=" " alt="" coords="2703,879,2897,906"/>
+<area shape="rect" id="node2" href="$classIEC61968_1_1Work_1_1BaseWork.html" title=" " alt="" coords="2456,533,2653,559"/>
+<area shape="rect" id="node3" href="$classIEC61968_1_1Common_1_1Document.html" title=" " alt="" coords="875,666,1101,693"/>
+<area shape="rect" id="node20" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1WorkDocument.html" title=" " alt="" coords="1366,539,1554,580"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="399,640,561,681"/>
+<area shape="rect" id="node12" href="$classIEC61968_1_1Common_1_1Location.html" title=" " alt="" coords="1353,486,1567,513"/>
+<area shape="rect" id="node14" href="$classIEC61968_1_1Common_1_1CoordinateSystem.html" title=" " alt="" coords="873,537,1103,579"/>
+<area shape="rect" id="node21" href="$classIEC61968_1_1Assets_1_1Asset.html" title=" " alt="" coords="1731,835,1909,862"/>
+<area shape="rect" id="node28" href="$classIEC61968_1_1Assets_1_1AssetInfo.html" title=" " alt="" coords="1127,835,1329,862"/>
+<area shape="rect" id="node31" href="$classIEC61968_1_1InfIEC61968_1_1InfERPSupport_1_1ErpIdentifiedObject.html" title=" " alt="" coords="882,885,1094,941"/>
+<area shape="rect" id="node5" href="$classBaseClass.html" title=" " alt="" coords="52,426,141,453"/>
+<area shape="rect" id="node6" href="$classIEC61968_1_1Common_1_1ElectronicAddress.html" title=" " alt="" coords="369,377,591,419"/>
+<area shape="rect" id="node7" href="$classIEC61968_1_1Common_1_1Status.html" title=" " alt="" coords="381,763,579,790"/>
+<area shape="rect" id="node9" href="$classIEC61968_1_1Common_1_1Priority.html" title=" " alt="" coords="377,107,583,134"/>
+<area shape="rect" id="node13" href="$classIEC61968_1_1Common_1_1TelephoneNumber.html" title=" " alt="" coords="625,383,849,424"/>
+<area shape="rect" id="node15" href="$classIEC61968_1_1Common_1_1StreetAddress.html" title=" " alt="" coords="889,229,1087,271"/>
+<area shape="rect" id="node16" href="$classIEC61968_1_1Common_1_1TownDetail.html" title=" " alt="" coords="365,326,595,353"/>
+<area shape="rect" id="node17" href="$classIEC61968_1_1Common_1_1StreetDetail.html" title=" " alt="" coords="381,209,579,251"/>
+<area shape="rect" id="node27" href="$classIEC61968_1_1Assets_1_1AcceptanceTest.html" title=" " alt="" coords="359,906,601,933"/>
+<area shape="rect" id="node32" href="$classIEC61968_1_1Assets_1_1LifecycleDate.html" title=" " alt="" coords="365,1246,595,1273"/>
+<area shape="rect" id="node30" href="$classIEC61968_1_1InfIEC61968_1_1InfERPSupport_1_1ErpInventory.html" title=" " alt="" coords="1353,897,1567,939"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTime.html" title=" " alt="" coords="5,1009,188,1051"/>
+<area shape="rect" id="node10" href="$classIEC61970_1_1Base_1_1Domain_1_1Integer.html" title=" " alt="" coords="5,5,188,47"/>
+<area shape="rect" id="node11" href="$classIEC61968_1_1Work_1_1WorkLocation.html" title=" " alt="" coords="2084,486,2304,513"/>
+<area shape="rect" id="node18" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="5,168,188,209"/>
+<area shape="rect" id="node19" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1OneCallRequest.html" title=" " alt="" coords="1724,125,1916,167"/>
+<area shape="rect" id="node29" href="$classIEC61968_1_1Assets_1_1AssetContainer.html" title=" " alt="" coords="2073,814,2315,841"/>
+<area shape="rect" id="node22" href="$classIEC61970_1_1Base_1_1Domain_1_1Money.html" title=" " alt="" coords="1369,1129,1551,1171"/>
+<area shape="rect" id="node23" title=" " alt="" coords="933,1195,1043,1222"/>
+<area shape="rect" id="node24" href="$classIEC61970_1_1Base_1_1Domain_1_1Decimal.html" title=" " alt="" coords="897,1129,1079,1171"/>
+<area shape="rect" id="node25" href="$classIEC61970_1_1Base_1_1Domain_1_1PerCent.html" title=" " alt="" coords="1369,717,1551,759"/>
+<area shape="rect" id="node26" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="897,717,1079,759"/>
+<area shape="rect" id="node33" href="$classIEC61970_1_1Base_1_1Domain_1_1Date.html" title=" " alt="" coords="5,1397,188,1439"/>
+</map>

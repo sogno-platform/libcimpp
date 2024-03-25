@@ -1,0 +1,9 @@
+<map id="IEC61970::Base::Meas::Measurement" name="IEC61970::Base::Meas::Measurement">
+<area shape="rect" id="node1" title=" " alt="" coords="795,148,961,189"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="155,141,316,183"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1ACDCTerminal.html" title=" " alt="" coords="493,79,655,120"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="5,149,95,175"/>
+<area shape="rect" id="node4" title=" " alt="" coords="519,206,629,233"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1Integer.html" title=" " alt="" coords="144,5,327,47"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="144,71,327,112"/>
+</map>

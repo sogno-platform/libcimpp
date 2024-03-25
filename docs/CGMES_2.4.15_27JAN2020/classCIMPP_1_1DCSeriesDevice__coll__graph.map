@@ -1,0 +1,16 @@
+<map id="CIMPP::DCSeriesDevice" name="CIMPP::DCSeriesDevice">
+<area shape="rect" id="node1" title=" " alt="" coords="674,627,849,653"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1DCConductingEquipment.html" title=" " alt="" coords="414,551,647,577"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1Equipment.html" title=" " alt="" coords="352,475,493,501"/>
+<area shape="rect" id="node4" href="$classCIMPP_1_1PowerSystemResource.html" title=" " alt="" coords="147,183,367,209"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1Location.html" title=" " alt="" coords="294,284,421,311"/>
+<area shape="rect" id="node11" href="$classCIMPP_1_1ConnectivityNodeContainer.html" title=" " alt="" coords="5,284,256,311"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="394,81,569,108"/>
+<area shape="rect" id="node8" href="$classCIMPP_1_1CoordinateSystem.html" title=" " alt="" coords="477,183,667,209"/>
+<area shape="rect" id="node6" href="$classBaseClass.html" title=" " alt="" coords="731,5,821,32"/>
+<area shape="rect" id="node12" href="$classCIMPP_1_1Inductance.html" title=" " alt="" coords="637,132,779,159"/>
+<area shape="rect" id="node13" href="$classCIMPP_1_1Voltage.html" title=" " alt="" coords="756,233,876,260"/>
+<area shape="rect" id="node14" href="$classCIMPP_1_1Resistance.html" title=" " alt="" coords="839,335,982,361"/>
+<area shape="rect" id="node9" href="$classCIMPP_1_1Boolean.html" title=" " alt="" coords="310,385,434,412"/>
+<area shape="rect" id="node10" href="$classCIMPP_1_1EquipmentContainer.html" title=" " alt="" coords="74,385,278,412"/>
+</map>

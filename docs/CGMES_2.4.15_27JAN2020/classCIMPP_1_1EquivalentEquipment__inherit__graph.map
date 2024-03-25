@@ -1,0 +1,11 @@
+<map id="CIMPP::EquivalentEquipment" name="CIMPP::EquivalentEquipment">
+<area shape="rect" id="node1" title=" " alt="" coords="207,379,418,405"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1EquivalentBranch.html" title=" " alt="" coords="5,453,191,480"/>
+<area shape="rect" id="node8" href="$classCIMPP_1_1EquivalentInjection.html" title=" " alt="" coords="215,453,411,480"/>
+<area shape="rect" id="node9" href="$classCIMPP_1_1EquivalentShunt.html" title=" " alt="" coords="435,453,612,480"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1ConductingEquipment.html" title=" " alt="" coords="205,304,420,331"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1Equipment.html" title=" " alt="" coords="242,229,383,256"/>
+<area shape="rect" id="node4" href="$classCIMPP_1_1PowerSystemResource.html" title=" " alt="" coords="203,155,423,181"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="225,80,400,107"/>
+<area shape="rect" id="node6" href="$classBaseClass.html" title=" " alt="" coords="268,5,357,32"/>
+</map>

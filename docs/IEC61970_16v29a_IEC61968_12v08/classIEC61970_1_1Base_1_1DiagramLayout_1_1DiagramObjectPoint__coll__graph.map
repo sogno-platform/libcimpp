@@ -1,0 +1,7 @@
+<map id="IEC61970::Base::DiagramLayout::DiagramObjectPoint" name="IEC61970::Base::DiagramLayout::DiagramObjectPoint">
+<area shape="rect" id="node1" title=" " alt="" coords="588,58,819,99"/>
+<area shape="rect" id="node2" href="$classBaseClass.html" title=" " alt="" coords="5,5,95,32"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1DiagramLayout_1_1DiagramObjectGluePoint.html" title=" " alt="" coords="144,27,375,69"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Domain_1_1Integer.html" title=" " alt="" coords="168,93,351,134"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="168,162,351,203"/>
+</map>

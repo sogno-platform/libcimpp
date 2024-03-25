@@ -1,0 +1,11 @@
+<map id="IEC61970::Base::StateVariables::SvStatus" name="IEC61970::Base::StateVariables::SvStatus">
+<area shape="rect" id="node1" title=" " alt="" coords="1840,75,2065,116"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1StateVariables_1_1StateVariable.html" title=" " alt="" coords="329,5,555,47"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="5,42,95,69"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="144,64,305,105"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="847,131,1029,172"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Core_1_1Equipment.html" title=" " alt="" coords="1196,75,1357,116"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1ConductingEquipment.html" title=" " alt="" coords="1471,75,1644,116"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="849,64,1027,105"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Core_1_1PSRType.html" title=" " alt="" coords="579,119,740,160"/>
+</map>

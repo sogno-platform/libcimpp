@@ -1,0 +1,11 @@
+<map id="IEC61968::Common::ActivityRecord" name="IEC61968::Common::ActivityRecord">
+<area shape="rect" id="node1" title=" " alt="" coords="352,169,560,211"/>
+<area shape="rect" id="node4" href="$classIEC61968_1_1Common_1_1ConfigurationEvent.html" title=" " alt="" coords="608,5,853,47"/>
+<area shape="rect" id="node5" href="$classIEC61968_1_1InfIEC61968_1_1InfAssets_1_1FailureEvent.html" title=" " alt="" coords="641,71,820,112"/>
+<area shape="rect" id="node6" href="$classIEC61968_1_1InfIEC61968_1_1InfCustomers_1_1ComplianceEvent.html" title=" " alt="" coords="611,136,850,177"/>
+<area shape="rect" id="node7" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1WorkStatusEntry.html" title=" " alt="" coords="633,201,829,243"/>
+<area shape="rect" id="node8" href="$classIEC61968_1_1Metering_1_1EndDeviceEvent.html" title=" " alt="" coords="656,267,805,308"/>
+<area shape="rect" id="node9" href="$classIEC61968_1_1Operations_1_1PSREvent.html" title=" " alt="" coords="649,332,812,373"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,169,304,211"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="5,177,95,203"/>
+</map>

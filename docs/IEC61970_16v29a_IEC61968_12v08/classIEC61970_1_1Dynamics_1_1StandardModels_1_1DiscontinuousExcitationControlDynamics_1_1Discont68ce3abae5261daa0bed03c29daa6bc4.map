@@ -1,0 +1,10 @@
+<map id="IEC61970::Dynamics::StandardModels::DiscontinuousExcitationControlDynamics::DiscontinuousExcitationControlDynamics" name="IEC61970::Dynamics::StandardModels::DiscontinuousExcitationControlDynamics::DiscontinuousExcitationControlDynamics">
+<area shape="rect" id="node1" title=" " alt="" coords="608,148,907,219"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1DiscontinuousExcitationControlDynamics_1_1DiscExcContIEEEDEC1A.html" title=" " alt="" coords="955,5,1189,76"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1DiscontinuousExcitationControlDynamics_1_1DiscExcContIEEEDEC2A.html" title=" " alt="" coords="955,100,1189,171"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1DiscontinuousExcitationControlDynamics_1_1DiscExcContIEEEDEC3A.html" title=" " alt="" coords="955,195,1189,265"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Dynamics_1_1UserDefinedModels_1_1DiscontinuousExcitationControlUserDefined.html" title=" " alt="" coords="955,289,1189,360"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1DynamicsFunctionBlock.html" title=" " alt="" coords="352,155,560,211"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,163,304,204"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,170,95,197"/>
+</map>

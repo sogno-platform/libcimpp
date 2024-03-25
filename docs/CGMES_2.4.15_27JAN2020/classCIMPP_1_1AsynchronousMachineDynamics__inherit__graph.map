@@ -1,0 +1,10 @@
+<map id="CIMPP::AsynchronousMachineDynamics" name="CIMPP::AsynchronousMachineDynamics">
+<area shape="rect" id="node1" title=" " alt="" coords="935,71,1152,112"/>
+<area shape="rect" id="node6" href="$classCIMPP_1_1AsynchronousMachineEquivalentCircuit.html" title=" " alt="" coords="1200,5,1417,47"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1AsynchronousMachineTimeConstantReactance.html" title=" " alt="" coords="1200,71,1417,112"/>
+<area shape="rect" id="node8" href="$classCIMPP_1_1AsynchronousMachineUserDefined.html" title=" " alt="" coords="1200,136,1417,177"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1RotatingMachineDynamics.html" title=" " alt="" coords="640,78,887,105"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1DynamicsFunctionBlock.html" title=" " alt="" coords="365,78,592,105"/>
+<area shape="rect" id="node4" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="143,78,317,105"/>
+<area shape="rect" id="node5" href="$classBaseClass.html" title=" " alt="" coords="5,78,95,105"/>
+</map>

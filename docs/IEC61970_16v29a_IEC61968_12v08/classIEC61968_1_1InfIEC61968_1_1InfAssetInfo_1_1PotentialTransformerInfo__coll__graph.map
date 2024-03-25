@@ -1,0 +1,10 @@
+<map id="IEC61968::InfIEC61968::InfAssetInfo::PotentialTransformerInfo" name="IEC61968::InfIEC61968::InfAssetInfo::PotentialTransformerInfo">
+<area shape="rect" id="node1" title=" " alt="" coords="815,91,1092,132"/>
+<area shape="rect" id="node2" href="$classIEC61968_1_1Assets_1_1AssetInfo.html" title=" " alt="" coords="463,14,665,41"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="155,5,316,47"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,55,95,82"/>
+<area shape="rect" id="node8" href="$classIEC61968_1_1InfIEC61968_1_1InfCommon_1_1Ratio.html" title=" " alt="" coords="479,91,649,132"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Domain_1_1Voltage.html" title=" " alt="" coords="473,159,655,200"/>
+<area shape="rect" id="node6" title=" " alt="" coords="180,211,291,238"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="144,133,327,175"/>
+</map>

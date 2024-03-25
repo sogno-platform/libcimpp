@@ -1,0 +1,11 @@
+<map id="CIMPP::LoadAggregate" name="CIMPP::LoadAggregate">
+<area shape="rect" id="node1" title=" " alt="" coords="443,354,612,381"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1LoadStatic.html" title=" " alt="" coords="167,613,306,640"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1LoadMotor.html" title=" " alt="" coords="637,613,777,640"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1LoadDynamics.html" title=" " alt="" coords="472,183,639,209"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="521,81,696,108"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="711,5,800,32"/>
+<area shape="rect" id="node6" href="$classCIMPP_1_1Simple__Float.html" title=" " alt="" coords="5,354,161,381"/>
+<area shape="rect" id="node8" href="$classCIMPP_1_1Seconds.html" title=" " alt="" coords="725,132,850,159"/>
+<area shape="rect" id="node9" href="$classCIMPP_1_1PU.html" title=" " alt="" coords="824,257,913,283"/>
+</map>

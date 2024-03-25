@@ -1,0 +1,9 @@
+<map id="CIMPP::MeasurementValue" name="CIMPP::MeasurementValue">
+<area shape="rect" id="node1" title=" " alt="" coords="365,81,563,108"/>
+<area shape="rect" id="node4" href="$classCIMPP_1_1AccumulatorValue.html" title=" " alt="" coords="615,5,805,32"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1AnalogValue.html" title=" " alt="" coords="634,56,786,83"/>
+<area shape="rect" id="node6" href="$classCIMPP_1_1DiscreteValue.html" title=" " alt="" coords="629,107,791,133"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1StringMeasurementValue.html" title=" " alt="" coords="611,158,809,199"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="143,81,317,108"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="5,81,95,108"/>
+</map>

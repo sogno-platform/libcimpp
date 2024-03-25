@@ -1,0 +1,11 @@
+<map id="CIMPP::MeasurementValue" name="CIMPP::MeasurementValue">
+<area shape="rect" id="node1" title=" " alt="" coords="1123,112,1320,139"/>
+<area shape="rect" id="node4" href="$classCIMPP_1_1MeasurementValueQuality.html" title=" " alt="" coords="1545,157,1789,184"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="301,88,476,115"/>
+<area shape="rect" id="node8" href="$classCIMPP_1_1MeasurementValueSource.html" title=" " alt="" coords="659,112,900,139"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="23,123,112,149"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1Quality61850.html" title=" " alt="" coords="309,225,468,252"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1DateTime.html" title=" " alt="" coords="500,156,635,183"/>
+<area shape="rect" id="node9" href="$classCIMPP_1_1PerCent.html" title=" " alt="" coords="506,20,629,47"/>
+<area shape="rect" id="node6" href="$classCIMPP_1_1Boolean.html" title=" " alt="" coords="5,353,129,380"/>
+</map>

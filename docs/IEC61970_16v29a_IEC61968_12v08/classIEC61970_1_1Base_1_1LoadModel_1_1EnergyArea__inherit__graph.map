@@ -1,0 +1,7 @@
+<map id="IEC61970::Base::LoadModel::EnergyArea" name="IEC61970::Base::LoadModel::EnergyArea">
+<area shape="rect" id="node1" title=" " alt="" coords="119,169,321,211"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1LoadModel_1_1LoadArea.html" title=" " alt="" coords="5,259,208,300"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1LoadModel_1_1SubLoadArea.html" title=" " alt="" coords="232,259,435,300"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="139,80,301,121"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="175,5,265,32"/>
+</map>

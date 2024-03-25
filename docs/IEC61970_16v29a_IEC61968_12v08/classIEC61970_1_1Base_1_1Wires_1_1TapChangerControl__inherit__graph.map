@@ -1,0 +1,7 @@
+<map id="IEC61970::Base::Wires::TapChangerControl" name="IEC61970::Base::Wires::TapChangerControl">
+<area shape="rect" id="node1" title=" " alt="" coords="11,348,179,389"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Wires_1_1RegulatingControl.html" title=" " alt="" coords="11,259,179,300"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="5,169,184,211"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="14,80,175,121"/>
+<area shape="rect" id="node5" href="$classBaseClass.html" title=" " alt="" coords="50,5,139,32"/>
+</map>

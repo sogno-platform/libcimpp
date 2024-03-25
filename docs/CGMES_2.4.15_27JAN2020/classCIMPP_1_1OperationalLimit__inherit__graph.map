@@ -1,0 +1,9 @@
+<map id="CIMPP::OperationalLimit" name="CIMPP::OperationalLimit">
+<area shape="rect" id="node1" title=" " alt="" coords="365,81,545,108"/>
+<area shape="rect" id="node4" href="$classCIMPP_1_1ActivePowerLimit.html" title=" " alt="" coords="602,5,787,32"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1ApparentPowerLimit.html" title=" " alt="" coords="593,56,796,83"/>
+<area shape="rect" id="node6" href="$classCIMPP_1_1CurrentLimit.html" title=" " alt="" coords="619,107,771,133"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1VoltageLimit.html" title=" " alt="" coords="618,157,771,184"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="143,81,317,108"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="5,81,95,108"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="IEC61968::Assets::AssetFunction" name="IEC61968::Assets::AssetFunction">
+<area shape="rect" id="node1" title=" " alt="" coords="352,78,585,105"/>
+<area shape="rect" id="node4" href="$classIEC61968_1_1Metering_1_1EndDeviceFunction.html" title=" " alt="" coords="633,71,788,112"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,71,304,112"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="5,78,95,105"/>
+<area shape="rect" id="node5" href="$classIEC61968_1_1LoadControl_1_1ConnectDisconnectFunction.html" title=" " alt="" coords="836,5,1047,47"/>
+<area shape="rect" id="node6" href="$classIEC61968_1_1Metering_1_1ComFunction.html" title=" " alt="" coords="867,71,1016,112"/>
+<area shape="rect" id="node7" href="$classIEC61968_1_1Metering_1_1SimpleEndDeviceFunction.html" title=" " alt="" coords="842,136,1041,177"/>
+</map>

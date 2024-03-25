@@ -1,0 +1,9 @@
+<map id="IEC61970::Base::Wires::PhaseImpedanceData" name="IEC61970::Base::Wires::PhaseImpedanceData">
+<area shape="rect" id="node1" title=" " alt="" coords="627,122,799,163"/>
+<area shape="rect" id="node2" href="$classBaseClass.html" title=" " alt="" coords="324,5,413,32"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Domain_1_1ResistancePerLength.html" title=" " alt="" coords="277,57,460,98"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="5,122,188,163"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Domain_1_1SusceptancePerLength.html" title=" " alt="" coords="277,122,460,163"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1ReactancePerLength.html" title=" " alt="" coords="277,187,460,229"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1Integer.html" title=" " alt="" coords="277,253,460,294"/>
+</map>

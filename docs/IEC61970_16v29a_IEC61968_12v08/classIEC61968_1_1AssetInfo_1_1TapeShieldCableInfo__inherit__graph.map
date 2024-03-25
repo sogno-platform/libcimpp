@@ -1,0 +1,8 @@
+<map id="IEC61968::AssetInfo::TapeShieldCableInfo" name="IEC61968::AssetInfo::TapeShieldCableInfo">
+<area shape="rect" id="node1" title=" " alt="" coords="25,423,188,464"/>
+<area shape="rect" id="node2" href="$classIEC61968_1_1AssetInfo_1_1CableInfo.html" title=" " alt="" coords="31,333,183,375"/>
+<area shape="rect" id="node3" href="$classIEC61968_1_1AssetInfo_1_1WireInfo.html" title=" " alt="" coords="31,244,183,285"/>
+<area shape="rect" id="node4" href="$classIEC61968_1_1Assets_1_1AssetInfo.html" title=" " alt="" coords="5,169,208,196"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="26,80,187,121"/>
+<area shape="rect" id="node6" href="$classBaseClass.html" title=" " alt="" coords="62,5,151,32"/>
+</map>

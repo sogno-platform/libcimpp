@@ -1,0 +1,10 @@
+<map id="IEC61970::Base::StateVariables::StateVariable" name="IEC61970::Base::StateVariables::StateVariable">
+<area shape="rect" id="node1" title=" " alt="" coords="143,169,368,211"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1StateVariables_1_1SvInjection.html" title=" " alt="" coords="416,5,641,47"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1StateVariables_1_1SvPowerFlow.html" title=" " alt="" coords="416,71,641,112"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1StateVariables_1_1SvShuntCompensatorSections.html" title=" " alt="" coords="416,136,641,177"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1StateVariables_1_1SvStatus.html" title=" " alt="" coords="416,201,641,243"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1StateVariables_1_1SvTapStep.html" title=" " alt="" coords="416,267,641,308"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1StateVariables_1_1SvVoltage.html" title=" " alt="" coords="416,332,641,373"/>
+<area shape="rect" id="node2" href="$classBaseClass.html" title=" " alt="" coords="5,177,95,203"/>
+</map>

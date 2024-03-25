@@ -1,0 +1,11 @@
+<map id="IEC61970::Base::DC::DCLine" name="IEC61970::Base::DC::DCLine">
+<area shape="rect" id="node1" title=" " alt="" coords="1728,70,1879,111"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1DC_1_1DCEquipmentContainer.html" title=" " alt="" coords="1496,27,1679,69"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1EquipmentContainer.html" title=" " alt="" coords="1284,27,1447,69"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1ConnectivityNodeContainer.html" title=" " alt="" coords="977,27,1187,69"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="749,27,928,69"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="144,27,305,69"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Core_1_1PSRType.html" title=" " alt="" coords="355,27,516,69"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Core_1_1SubGeographicalRegion.html" title=" " alt="" coords="540,86,725,127"/>
+<area shape="rect" id="node7" href="$classBaseClass.html" title=" " alt="" coords="5,35,95,61"/>
+</map>

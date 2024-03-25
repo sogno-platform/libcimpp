@@ -1,0 +1,8 @@
+<map id="IEC61968::Metering::SimpleEndDeviceFunction" name="IEC61968::Metering::SimpleEndDeviceFunction">
+<area shape="rect" id="node1" title=" " alt="" coords="196,367,395,408"/>
+<area shape="rect" id="node2" href="$classIEC61968_1_1Metering_1_1EndDeviceFunction.html" title=" " alt="" coords="218,276,373,317"/>
+<area shape="rect" id="node3" href="$classIEC61968_1_1Assets_1_1AssetFunction.html" title=" " alt="" coords="5,179,239,206"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="41,81,203,123"/>
+<area shape="rect" id="node5" href="$classBaseClass.html" title=" " alt="" coords="77,5,167,32"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="263,172,445,213"/>
+</map>

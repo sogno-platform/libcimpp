@@ -1,0 +1,12 @@
+<map id="CIMPP::BasicIntervalSchedule" name="CIMPP::BasicIntervalSchedule">
+<area shape="rect" id="node1" title=" " alt="" coords="365,107,580,133"/>
+<area shape="rect" id="node4" href="$classCIMPP_1_1RegularIntervalSchedule.html" title=" " alt="" coords="628,107,859,133"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="143,107,317,133"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="5,107,95,133"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1SeasonDayTypeSchedule.html" title=" " alt="" coords="907,107,1140,133"/>
+<area shape="rect" id="node6" href="$classCIMPP_1_1ConformLoadSchedule.html" title=" " alt="" coords="1201,5,1418,32"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1NonConformLoadSchedule.html" title=" " alt="" coords="1188,56,1431,83"/>
+<area shape="rect" id="node8" href="$classCIMPP_1_1RegulationSchedule.html" title=" " alt="" coords="1209,107,1409,133"/>
+<area shape="rect" id="node9" href="$classCIMPP_1_1SwitchSchedule.html" title=" " alt="" coords="1223,157,1396,184"/>
+<area shape="rect" id="node10" href="$classCIMPP_1_1TapSchedule.html" title=" " alt="" coords="1233,208,1385,235"/>
+</map>

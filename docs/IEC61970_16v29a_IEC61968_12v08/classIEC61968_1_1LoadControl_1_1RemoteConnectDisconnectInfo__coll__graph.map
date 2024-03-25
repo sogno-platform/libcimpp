@@ -1,0 +1,12 @@
+<map id="IEC61968::LoadControl::RemoteConnectDisconnectInfo" name="IEC61968::LoadControl::RemoteConnectDisconnectInfo">
+<area shape="rect" id="node1" title=" " alt="" coords="720,167,951,209"/>
+<area shape="rect" id="node2" href="$classBaseClass.html" title=" " alt="" coords="351,5,440,32"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Domain_1_1ActivePower.html" title=" " alt="" coords="304,122,487,163"/>
+<area shape="rect" id="node4" title=" " alt="" coords="41,109,152,136"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1Voltage.html" title=" " alt="" coords="304,253,487,294"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Domain_1_1RealEnergy.html" title=" " alt="" coords="304,57,487,98"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="5,261,188,302"/>
+<area shape="rect" id="node10" href="$classIEC61970_1_1Base_1_1Domain_1_1Seconds.html" title=" " alt="" coords="304,390,487,431"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTime.html" title=" " alt="" coords="304,187,487,229"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="304,325,487,366"/>
+</map>

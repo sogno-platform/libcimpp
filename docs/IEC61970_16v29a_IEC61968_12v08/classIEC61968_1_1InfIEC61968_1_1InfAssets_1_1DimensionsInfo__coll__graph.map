@@ -1,0 +1,8 @@
+<map id="IEC61968::InfIEC61968::InfAssets::DimensionsInfo" name="IEC61968::InfIEC61968::InfAssets::DimensionsInfo">
+<area shape="rect" id="node1" title=" " alt="" coords="83,257,283,299"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="5,109,167,151"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="41,13,131,39"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Domain_1_1Length.html" title=" " alt="" coords="191,109,373,151"/>
+<area shape="rect" id="node5" title=" " alt="" coords="191,13,301,39"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="325,5,508,47"/>
+</map>

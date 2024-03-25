@@ -1,0 +1,11 @@
+<map id="IEC61970::Base::Meas::Command" name="IEC61970::Base::Meas::Command">
+<area shape="rect" id="node1" title=" " alt="" coords="833,72,1000,113"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Meas_1_1Control.html" title=" " alt="" coords="517,72,684,113"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="155,7,316,48"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Meas_1_1ValueAliasSet.html" title=" " alt="" coords="517,5,684,47"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,14,95,41"/>
+<area shape="rect" id="node5" title=" " alt="" coords="180,77,291,103"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTime.html" title=" " alt="" coords="144,128,327,169"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="144,193,327,235"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Domain_1_1Integer.html" title=" " alt="" coords="509,137,692,179"/>
+</map>

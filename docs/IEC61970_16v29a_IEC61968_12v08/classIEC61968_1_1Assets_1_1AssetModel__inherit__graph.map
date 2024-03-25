@@ -1,0 +1,8 @@
+<map id="IEC61968::Assets::AssetModel" name="IEC61968::Assets::AssetModel">
+<area shape="rect" id="node1" title=" " alt="" coords="352,50,571,77"/>
+<area shape="rect" id="node4" href="$classIEC61968_1_1Assets_1_1ProductAssetModel.html" title=" " alt="" coords="635,5,826,47"/>
+<area shape="rect" id="node5" href="$classIEC61968_1_1InfIEC61968_1_1InfAssets_1_1GenericAssetModelOrMaterial.html" title=" " alt="" coords="619,71,843,127"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,43,304,84"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="5,50,95,77"/>
+<area shape="rect" id="node6" href="$classIEC61968_1_1InfIEC61968_1_1InfTypeAsset_1_1GeneratorTypeAsset.html" title=" " alt="" coords="891,71,1107,127"/>
+</map>

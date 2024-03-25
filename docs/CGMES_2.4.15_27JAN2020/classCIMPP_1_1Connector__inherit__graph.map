@@ -1,0 +1,10 @@
+<map id="CIMPP::Connector" name="CIMPP::Connector">
+<area shape="rect" id="node1" title=" " alt="" coords="103,379,240,405"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1BusbarSection.html" title=" " alt="" coords="5,453,169,480"/>
+<area shape="rect" id="node8" href="$classCIMPP_1_1Junction.html" title=" " alt="" coords="194,453,317,480"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1ConductingEquipment.html" title=" " alt="" coords="64,304,279,331"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1Equipment.html" title=" " alt="" coords="101,229,242,256"/>
+<area shape="rect" id="node4" href="$classCIMPP_1_1PowerSystemResource.html" title=" " alt="" coords="61,155,281,181"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="84,80,259,107"/>
+<area shape="rect" id="node6" href="$classBaseClass.html" title=" " alt="" coords="127,5,216,32"/>
+</map>

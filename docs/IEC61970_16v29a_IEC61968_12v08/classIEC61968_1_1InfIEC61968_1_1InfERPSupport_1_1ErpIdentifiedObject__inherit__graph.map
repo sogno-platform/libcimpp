@@ -1,0 +1,22 @@
+<map id="IEC61968::InfIEC61968::InfERPSupport::ErpIdentifiedObject" name="IEC61968::InfIEC61968::InfERPSupport::ErpIdentifiedObject">
+<area shape="rect" id="node1" title=" " alt="" coords="352,553,564,609"/>
+<area shape="rect" id="node4" href="$classIEC61968_1_1InfIEC61968_1_1InfERPSupport_1_1ErpBomItemData.html" title=" " alt="" coords="619,5,861,47"/>
+<area shape="rect" id="node5" href="$classIEC61968_1_1InfIEC61968_1_1InfERPSupport_1_1ErpCompetency.html" title=" " alt="" coords="623,71,857,112"/>
+<area shape="rect" id="node6" href="$classIEC61968_1_1InfIEC61968_1_1InfERPSupport_1_1ErpInventory.html" title=" " alt="" coords="633,136,847,177"/>
+<area shape="rect" id="node7" href="$classIEC61968_1_1InfIEC61968_1_1InfERPSupport_1_1ErpInventoryCount.html" title=" " alt="" coords="633,202,847,258"/>
+<area shape="rect" id="node8" href="$classIEC61968_1_1InfIEC61968_1_1InfERPSupport_1_1ErpIssueInventory.html" title=" " alt="" coords="617,283,863,324"/>
+<area shape="rect" id="node9" href="$classIEC61968_1_1InfIEC61968_1_1InfERPSupport_1_1ErpItemMaster.html" title=" " alt="" coords="627,348,853,389"/>
+<area shape="rect" id="node10" href="$classIEC61968_1_1InfIEC61968_1_1InfERPSupport_1_1ErpJournalEntry.html" title=" " alt="" coords="642,414,838,470"/>
+<area shape="rect" id="node11" href="$classIEC61968_1_1InfIEC61968_1_1InfERPSupport_1_1ErpLedBudLineItem.html" title=" " alt="" coords="612,495,868,536"/>
+<area shape="rect" id="node12" href="$classIEC61968_1_1InfIEC61968_1_1InfERPSupport_1_1ErpLedgerEntry.html" title=" " alt="" coords="625,560,855,601"/>
+<area shape="rect" id="node13" href="$classIEC61968_1_1InfIEC61968_1_1InfERPSupport_1_1ErpPayableLineItem.html" title=" " alt="" coords="639,626,841,682"/>
+<area shape="rect" id="node14" href="$classIEC61968_1_1InfIEC61968_1_1InfERPSupport_1_1ErpPersonnel.html" title=" " alt="" coords="633,707,847,748"/>
+<area shape="rect" id="node15" href="$classIEC61968_1_1InfIEC61968_1_1InfERPSupport_1_1ErpQuoteLineItem.html" title=" " alt="" coords="617,772,863,813"/>
+<area shape="rect" id="node16" href="$classIEC61968_1_1InfIEC61968_1_1InfERPSupport_1_1ErpRecDelvLineItem.html" title=" " alt="" coords="637,838,843,894"/>
+<area shape="rect" id="node17" href="$classIEC61968_1_1InfIEC61968_1_1InfERPSupport_1_1ErpRecLineItem.html" title=" " alt="" coords="624,919,856,960"/>
+<area shape="rect" id="node18" href="$classIEC61968_1_1InfIEC61968_1_1InfERPSupport_1_1ErpReqLineItem.html" title=" " alt="" coords="623,984,857,1025"/>
+<area shape="rect" id="node19" href="$classIEC61968_1_1InfIEC61968_1_1InfERPSupport_1_1ErpSiteLevelData.html" title=" " alt="" coords="619,1049,861,1091"/>
+<area shape="rect" id="node20" href="$classIEC61968_1_1InfIEC61968_1_1InfERPSupport_1_1ErpTimeEntry.html" title=" " alt="" coords="631,1115,849,1156"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,560,304,601"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="5,567,95,594"/>
+</map>

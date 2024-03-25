@@ -1,0 +1,44 @@
+<map id="CIMPP::PhaseTapChanger" name="CIMPP::PhaseTapChanger">
+<area shape="rect" id="node1" title=" " alt="" coords="2737,684,2924,711"/>
+<area shape="rect" id="node37" href="$classCIMPP_1_1TransformerEnd.html" title=" " alt="" coords="3092,786,3265,812"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1TapChanger.html" title=" " alt="" coords="2361,640,2507,667"/>
+<area shape="rect" id="node11" href="$classCIMPP_1_1SvTapStep.html" title=" " alt="" coords="2761,352,2900,379"/>
+<area shape="rect" id="node40" href="$classCIMPP_1_1RatioTapChanger.html" title=" " alt="" coords="3428,1120,3609,1147"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1PowerSystemResource.html" title=" " alt="" coords="529,970,749,996"/>
+<area shape="rect" id="node6" href="$classCIMPP_1_1Location.html" title=" " alt="" coords="1021,855,1147,882"/>
+<area shape="rect" id="node14" href="$classCIMPP_1_1RegulatingControl.html" title=" " alt="" coords="1449,951,1637,978"/>
+<area shape="rect" id="node20" href="$classCIMPP_1_1ConnectivityNodeContainer.html" title=" " alt="" coords="959,1326,1209,1352"/>
+<area shape="rect" id="node30" href="$classCIMPP_1_1Equipment.html" title=" " alt="" coords="1896,1094,2037,1120"/>
+<area shape="rect" id="node35" href="$classCIMPP_1_1ControlArea.html" title=" " alt="" coords="1010,1804,1158,1831"/>
+<area shape="rect" id="node4" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="144,1255,319,1282"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1CoordinateSystem.html" title=" " alt="" coords="544,848,735,875"/>
+<area shape="rect" id="node16" href="$classCIMPP_1_1ACDCTerminal.html" title=" " alt="" coords="1461,1687,1625,1714"/>
+<area shape="rect" id="node17" href="$classCIMPP_1_1BusNameMarker.html" title=" " alt="" coords="995,1680,1173,1707"/>
+<area shape="rect" id="node18" href="$classCIMPP_1_1ReportingGroup.html" title=" " alt="" coords="553,1619,726,1646"/>
+<area shape="rect" id="node19" href="$classCIMPP_1_1ConnectivityNode.html" title=" " alt="" coords="1873,1490,2060,1516"/>
+<area shape="rect" id="node21" href="$classCIMPP_1_1TopologicalNode.html" title=" " alt="" coords="1454,1368,1633,1395"/>
+<area shape="rect" id="node22" href="$classCIMPP_1_1TopologicalIsland.html" title=" " alt="" coords="1875,1320,2058,1347"/>
+<area shape="rect" id="node26" href="$classCIMPP_1_1BaseVoltage.html" title=" " alt="" coords="1008,799,1160,826"/>
+<area shape="rect" id="node36" href="$classCIMPP_1_1EnergyArea.html" title=" " alt="" coords="1470,1804,1617,1831"/>
+<area shape="rect" id="node41" href="$classCIMPP_1_1RatioTapChangerTable.html" title=" " alt="" coords="2088,1854,2303,1880"/>
+<area shape="rect" id="node5" href="$classBaseClass.html" title=" " alt="" coords="5,623,95,650"/>
+<area shape="rect" id="node9" href="$classCIMPP_1_1Simple__Float.html" title=" " alt="" coords="1006,324,1162,351"/>
+<area shape="rect" id="node12" href="$classCIMPP_1_1Voltage.html" title=" " alt="" coords="579,536,699,563"/>
+<area shape="rect" id="node23" href="$classCIMPP_1_1SvInjection.html" title=" " alt="" coords="1895,2058,2038,2084"/>
+<area shape="rect" id="node24" href="$classCIMPP_1_1ActivePower.html" title=" " alt="" coords="563,2058,715,2084"/>
+<area shape="rect" id="node25" href="$classCIMPP_1_1ReactivePower.html" title=" " alt="" coords="1459,2108,1627,2135"/>
+<area shape="rect" id="node27" href="$classCIMPP_1_1SvVoltage.html" title=" " alt="" coords="1899,478,2035,504"/>
+<area shape="rect" id="node28" href="$classCIMPP_1_1AngleDegrees.html" title=" " alt="" coords="343,427,505,454"/>
+<area shape="rect" id="node32" href="$classCIMPP_1_1SvStatus.html" title=" " alt="" coords="2767,908,2895,935"/>
+<area shape="rect" id="node33" href="$classCIMPP_1_1SvPowerFlow.html" title=" " alt="" coords="3099,2007,3258,2034"/>
+<area shape="rect" id="node34" href="$classCIMPP_1_1TieFlow.html" title=" " alt="" coords="3117,1619,3240,1646"/>
+<area shape="rect" id="node38" href="$classCIMPP_1_1Reactance.html" title=" " alt="" coords="785,63,923,90"/>
+<area shape="rect" id="node39" href="$classCIMPP_1_1Resistance.html" title=" " alt="" coords="1254,122,1397,148"/>
+<area shape="rect" id="node42" href="$classCIMPP_1_1PerCent.html" title=" " alt="" coords="1696,2268,1819,2295"/>
+<area shape="rect" id="node8" href="$classCIMPP_1_1Boolean.html" title=" " alt="" coords="1022,1376,1146,1403"/>
+<area shape="rect" id="node10" href="$classCIMPP_1_1Integer.html" title=" " alt="" coords="581,1335,698,1362"/>
+<area shape="rect" id="node13" href="$classCIMPP_1_1TapChangerControl.html" title=" " alt="" coords="1869,942,2064,968"/>
+<area shape="rect" id="node15" href="$classCIMPP_1_1Terminal.html" title=" " alt="" coords="2767,1490,2894,1516"/>
+<area shape="rect" id="node31" href="$classCIMPP_1_1EquipmentContainer.html" title=" " alt="" coords="1441,1103,1645,1130"/>
+<area shape="rect" id="node29" href="$classCIMPP_1_1ConductingEquipment.html" title=" " alt="" coords="2327,931,2541,958"/>
+</map>

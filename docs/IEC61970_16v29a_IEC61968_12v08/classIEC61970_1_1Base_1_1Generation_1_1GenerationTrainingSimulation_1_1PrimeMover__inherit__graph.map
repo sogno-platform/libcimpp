@@ -1,0 +1,9 @@
+<map id="IEC61970::Base::Generation::GenerationTrainingSimulation::PrimeMover" name="IEC61970::Base::Generation::GenerationTrainingSimulation::PrimeMover">
+<area shape="rect" id="node1" title=" " alt="" coords="579,85,801,141"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Generation_1_1GenerationTrainingSimulation_1_1CombustionTurbine.html" title=" " alt="" coords="849,5,1072,61"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Generation_1_1GenerationTrainingSimulation_1_1HydroTurbine.html" title=" " alt="" coords="849,85,1072,141"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Generation_1_1GenerationTrainingSimulation_1_1SteamTurbine.html" title=" " alt="" coords="849,165,1072,221"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="352,93,531,134"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,93,304,134"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,100,95,127"/>
+</map>

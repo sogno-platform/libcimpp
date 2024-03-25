@@ -1,0 +1,9 @@
+<map id="IEC61968::Common::StreetAddress" name="IEC61968::Common::StreetAddress">
+<area shape="rect" id="node1" title=" " alt="" coords="713,100,911,141"/>
+<area shape="rect" id="node2" href="$classBaseClass.html" title=" " alt="" coords="52,107,141,134"/>
+<area shape="rect" id="node3" href="$classIEC61968_1_1Common_1_1Status.html" title=" " alt="" coords="369,191,568,218"/>
+<area shape="rect" id="node5" href="$classIEC61968_1_1Common_1_1TownDetail.html" title=" " alt="" coords="353,141,584,167"/>
+<area shape="rect" id="node6" href="$classIEC61968_1_1Common_1_1StreetDetail.html" title=" " alt="" coords="370,24,567,65"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTime.html" title=" " alt="" coords="5,184,188,225"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="5,5,188,47"/>
+</map>

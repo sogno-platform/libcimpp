@@ -1,0 +1,10 @@
+<map id="IEC61968::Common::Location" name="IEC61968::Common::Location">
+<area shape="rect" id="node1" title=" " alt="" coords="352,78,565,105"/>
+<area shape="rect" id="node4" href="$classIEC61968_1_1InfIEC61968_1_1InfLocations_1_1Zone.html" title=" " alt="" coords="639,5,808,47"/>
+<area shape="rect" id="node5" href="$classIEC61968_1_1Metering_1_1UsagePointLocation.html" title=" " alt="" coords="644,71,803,112"/>
+<area shape="rect" id="node6" href="$classIEC61968_1_1Work_1_1WorkLocation.html" title=" " alt="" coords="613,137,833,163"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,71,304,112"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="5,78,95,105"/>
+<area shape="rect" id="node7" href="$classIEC61968_1_1Customers_1_1ServiceLocation.html" title=" " alt="" coords="909,96,1070,137"/>
+<area shape="rect" id="node8" href="$classIEC61968_1_1Work_1_1MaintenanceLocation.html" title=" " alt="" coords="881,161,1097,203"/>
+</map>

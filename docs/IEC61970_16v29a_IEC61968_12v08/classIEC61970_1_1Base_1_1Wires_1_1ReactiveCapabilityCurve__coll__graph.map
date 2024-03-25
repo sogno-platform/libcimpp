@@ -1,0 +1,10 @@
+<map id="IEC61970::Base::Wires::ReactiveCapabilityCurve" name="IEC61970::Base::Wires::ReactiveCapabilityCurve">
+<area shape="rect" id="node1" title=" " alt="" coords="819,151,1009,192"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1Curve.html" title=" " alt="" coords="464,84,625,125"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="155,5,316,47"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,13,95,39"/>
+<area shape="rect" id="node5" title=" " alt="" coords="180,122,291,149"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1Pressure.html" title=" " alt="" coords="453,151,636,192"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="144,189,327,231"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Domain_1_1Temperature.html" title=" " alt="" coords="453,219,636,260"/>
+</map>

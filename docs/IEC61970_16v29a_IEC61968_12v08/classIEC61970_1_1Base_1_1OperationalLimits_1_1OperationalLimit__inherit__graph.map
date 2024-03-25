@@ -1,0 +1,9 @@
+<map id="IEC61970::Base::OperationalLimits::OperationalLimit" name="IEC61970::Base::OperationalLimits::OperationalLimit">
+<area shape="rect" id="node1" title=" " alt="" coords="352,104,559,145"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1OperationalLimits_1_1ActivePowerLimit.html" title=" " alt="" coords="607,5,813,47"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1OperationalLimits_1_1ApparentPowerLimit.html" title=" " alt="" coords="607,71,813,112"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1OperationalLimits_1_1CurrentLimit.html" title=" " alt="" coords="607,136,813,177"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1OperationalLimits_1_1VoltageLimit.html" title=" " alt="" coords="607,201,813,243"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,104,304,145"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="5,111,95,138"/>
+</map>

@@ -1,0 +1,39 @@
+<map id="IEC61970::Dynamics::StandardModels::TurbineGovernorDynamics::TurbineGovernorDynamics" name="IEC61970::Dynamics::StandardModels::TurbineGovernorDynamics::TurbineGovernorDynamics">
+<area shape="rect" id="node1" title=" " alt="" coords="608,1285,875,1341"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovCT1.html" title=" " alt="" coords="923,5,1173,61"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovCT2.html" title=" " alt="" coords="923,85,1173,141"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovGAST.html" title=" " alt="" coords="923,165,1173,221"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovGAST1.html" title=" " alt="" coords="923,245,1173,301"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovGAST2.html" title=" " alt="" coords="923,325,1173,381"/>
+<area shape="rect" id="node10" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovGAST3.html" title=" " alt="" coords="923,405,1173,461"/>
+<area shape="rect" id="node11" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovGAST4.html" title=" " alt="" coords="923,485,1173,541"/>
+<area shape="rect" id="node12" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovGASTWD.html" title=" " alt="" coords="923,565,1173,621"/>
+<area shape="rect" id="node13" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovHydro1.html" title=" " alt="" coords="923,645,1173,701"/>
+<area shape="rect" id="node14" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovHydro2.html" title=" " alt="" coords="923,725,1173,781"/>
+<area shape="rect" id="node15" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovHydro3.html" title=" " alt="" coords="923,805,1173,861"/>
+<area shape="rect" id="node16" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovHydro4.html" title=" " alt="" coords="923,885,1173,941"/>
+<area shape="rect" id="node17" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovHydroDD.html" title=" " alt="" coords="923,965,1173,1021"/>
+<area shape="rect" id="node18" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovHydroFrancis.html" title=" " alt="" coords="923,1045,1173,1101"/>
+<area shape="rect" id="node19" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovHydroIEEE0.html" title=" " alt="" coords="923,1125,1173,1181"/>
+<area shape="rect" id="node20" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovHydroIEEE2.html" title=" " alt="" coords="923,1205,1173,1261"/>
+<area shape="rect" id="node21" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovHydroPID.html" title=" " alt="" coords="923,1285,1173,1341"/>
+<area shape="rect" id="node22" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovHydroPID2.html" title=" " alt="" coords="923,1365,1173,1421"/>
+<area shape="rect" id="node23" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovHydroPelton.html" title=" " alt="" coords="923,1445,1173,1501"/>
+<area shape="rect" id="node24" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovHydroR.html" title=" " alt="" coords="923,1525,1173,1581"/>
+<area shape="rect" id="node25" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovHydroWEH.html" title=" " alt="" coords="923,1605,1173,1661"/>
+<area shape="rect" id="node26" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovHydroWPID.html" title=" " alt="" coords="923,1685,1173,1741"/>
+<area shape="rect" id="node27" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovSteam0.html" title=" " alt="" coords="923,1765,1173,1821"/>
+<area shape="rect" id="node28" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovSteam1.html" title=" " alt="" coords="923,1845,1173,1901"/>
+<area shape="rect" id="node29" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovSteam2.html" title=" " alt="" coords="923,1925,1173,1981"/>
+<area shape="rect" id="node30" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovSteamCC.html" title=" " alt="" coords="923,2005,1173,2061"/>
+<area shape="rect" id="node31" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovSteamEU.html" title=" " alt="" coords="923,2085,1173,2141"/>
+<area shape="rect" id="node32" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovSteamFV2.html" title=" " alt="" coords="923,2165,1173,2221"/>
+<area shape="rect" id="node33" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovSteamFV3.html" title=" " alt="" coords="923,2245,1173,2301"/>
+<area shape="rect" id="node34" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovSteamFV4.html" title=" " alt="" coords="923,2325,1173,2381"/>
+<area shape="rect" id="node35" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovSteamIEEE1.html" title=" " alt="" coords="923,2405,1173,2461"/>
+<area shape="rect" id="node36" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1GovSteamSGO.html" title=" " alt="" coords="923,2485,1173,2541"/>
+<area shape="rect" id="node37" href="$classIEC61970_1_1Dynamics_1_1UserDefinedModels_1_1TurbineGovernorUserDefined.html" title=" " alt="" coords="939,2565,1157,2621"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1DynamicsFunctionBlock.html" title=" " alt="" coords="352,1285,560,1341"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,1293,304,1334"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,1300,95,1327"/>
+</map>

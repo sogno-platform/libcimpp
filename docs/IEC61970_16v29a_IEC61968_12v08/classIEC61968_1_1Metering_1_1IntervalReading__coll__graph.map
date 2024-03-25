@@ -1,0 +1,17 @@
+<map id="IEC61968::Metering::IntervalReading" name="IEC61968::Metering::IntervalReading">
+<area shape="rect" id="node1" title=" " alt="" coords="1901,87,2051,129"/>
+<area shape="rect" id="node2" href="$classIEC61968_1_1Metering_1_1BaseReading.html" title=" " alt="" coords="1703,87,1852,129"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Meas_1_1MeasurementValue.html" title=" " alt="" coords="1404,185,1571,226"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="371,187,532,229"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1SCADA_1_1RemotePoint.html" title=" " alt="" coords="635,219,811,261"/>
+<area shape="rect" id="node5" href="$classBaseClass.html" title=" " alt="" coords="52,195,141,221"/>
+<area shape="rect" id="node13" href="$classIEC61970_1_1Base_1_1Meas_1_1Quality61850.html" title=" " alt="" coords="368,462,535,503"/>
+<area shape="rect" id="node15" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTimeInterval.html" title=" " alt="" coords="1396,87,1579,129"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1SCADA_1_1RemoteSource.html" title=" " alt="" coords="1069,254,1245,295"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Domain_1_1Seconds.html" title=" " alt="" coords="632,285,815,326"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="360,374,543,415"/>
+<area shape="rect" id="node11" href="$classIEC61970_1_1Base_1_1Domain_1_1PerCent.html" title=" " alt="" coords="849,421,1031,462"/>
+<area shape="rect" id="node10" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTime.html" title=" " alt="" coords="1065,21,1248,62"/>
+<area shape="rect" id="node12" href="$classIEC61970_1_1Base_1_1Meas_1_1MeasurementValueQuality.html" title=" " alt="" coords="839,479,1041,521"/>
+<area shape="rect" id="node14" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="5,462,188,503"/>
+</map>

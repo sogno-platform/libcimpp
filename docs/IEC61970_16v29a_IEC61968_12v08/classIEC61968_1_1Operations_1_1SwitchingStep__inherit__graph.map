@@ -1,0 +1,12 @@
+<map id="IEC61968::Operations::SwitchingStep" name="IEC61968::Operations::SwitchingStep">
+<area shape="rect" id="node1" title=" " alt="" coords="143,235,305,276"/>
+<area shape="rect" id="node3" href="$classIEC61968_1_1Operations_1_1ClearanceAction.html" title=" " alt="" coords="353,5,516,47"/>
+<area shape="rect" id="node4" href="$classIEC61968_1_1Operations_1_1CutAction.html" title=" " alt="" coords="353,71,516,112"/>
+<area shape="rect" id="node5" href="$classIEC61968_1_1Operations_1_1EnergySourceAction.html" title=" " alt="" coords="353,136,516,177"/>
+<area shape="rect" id="node6" href="$classIEC61968_1_1Operations_1_1GenericAction.html" title=" " alt="" coords="353,201,516,243"/>
+<area shape="rect" id="node7" href="$classIEC61968_1_1Operations_1_1GroundAction.html" title=" " alt="" coords="353,267,516,308"/>
+<area shape="rect" id="node8" href="$classIEC61968_1_1Operations_1_1JumperAction.html" title=" " alt="" coords="353,332,516,373"/>
+<area shape="rect" id="node9" href="$classIEC61968_1_1Operations_1_1SwitchAction.html" title=" " alt="" coords="353,397,516,439"/>
+<area shape="rect" id="node10" href="$classIEC61968_1_1Operations_1_1TagAction.html" title=" " alt="" coords="353,463,516,504"/>
+<area shape="rect" id="node2" href="$classBaseClass.html" title=" " alt="" coords="5,242,95,269"/>
+</map>

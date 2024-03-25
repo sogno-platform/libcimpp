@@ -1,0 +1,12 @@
+<map id="IEC61970::Base::Wires::PerLengthSequenceImpedance" name="IEC61970::Base::Wires::PerLengthSequenceImpedance">
+<area shape="rect" id="node1" title=" " alt="" coords="900,136,1131,177"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Wires_1_1PerLengthImpedance.html" title=" " alt="" coords="641,5,809,47"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Wires_1_1PerLengthLineParameter.html" title=" " alt="" coords="355,5,544,47"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="144,5,305,47"/>
+<area shape="rect" id="node5" href="$classBaseClass.html" title=" " alt="" coords="5,13,95,39"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1ResistancePerLength.html" title=" " alt="" coords="633,71,816,112"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="358,168,541,209"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Domain_1_1SusceptancePerLength.html" title=" " alt="" coords="633,136,816,177"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Domain_1_1ConductancePerLength.html" title=" " alt="" coords="633,201,816,243"/>
+<area shape="rect" id="node10" href="$classIEC61970_1_1Base_1_1Domain_1_1ReactancePerLength.html" title=" " alt="" coords="633,267,816,308"/>
+</map>

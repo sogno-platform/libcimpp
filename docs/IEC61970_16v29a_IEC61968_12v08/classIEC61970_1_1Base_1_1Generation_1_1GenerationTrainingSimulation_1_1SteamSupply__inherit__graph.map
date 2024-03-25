@@ -1,0 +1,13 @@
+<map id="IEC61970::Base::Generation::GenerationTrainingSimulation::SteamSupply" name="IEC61970::Base::Generation::GenerationTrainingSimulation::SteamSupply">
+<area shape="rect" id="node1" title=" " alt="" coords="579,125,801,181"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Generation_1_1GenerationTrainingSimulation_1_1BWRSteamSupply.html" title=" " alt="" coords="849,45,1072,101"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Generation_1_1GenerationTrainingSimulation_1_1FossilSteamSupply.html" title=" " alt="" coords="849,125,1072,181"/>
+<area shape="rect" id="node11" href="$classIEC61970_1_1Base_1_1Generation_1_1GenerationTrainingSimulation_1_1PWRSteamSupply.html" title=" " alt="" coords="849,205,1072,261"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="352,133,531,174"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,133,304,174"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,140,95,167"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Generation_1_1GenerationTrainingSimulation_1_1DrumBoiler.html" title=" " alt="" coords="1120,5,1343,61"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Generation_1_1GenerationTrainingSimulation_1_1HeatRecoveryBoiler.html" title=" " alt="" coords="1120,85,1343,141"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Generation_1_1GenerationTrainingSimulation_1_1Subcritical.html" title=" " alt="" coords="1120,165,1343,221"/>
+<area shape="rect" id="node10" href="$classIEC61970_1_1Base_1_1Generation_1_1GenerationTrainingSimulation_1_1Supercritical.html" title=" " alt="" coords="1120,245,1343,301"/>
+</map>

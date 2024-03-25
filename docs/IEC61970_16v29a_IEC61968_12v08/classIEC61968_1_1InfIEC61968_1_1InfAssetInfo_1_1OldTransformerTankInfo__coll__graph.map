@@ -1,0 +1,12 @@
+<map id="IEC61968::InfIEC61968::InfAssetInfo::OldTransformerTankInfo" name="IEC61968::InfIEC61968::InfAssetInfo::OldTransformerTankInfo">
+<area shape="rect" id="node1" title=" " alt="" coords="1325,75,1541,131"/>
+<area shape="rect" id="node2" href="$classIEC61968_1_1AssetInfo_1_1TransformerTankInfo.html" title=" " alt="" coords="995,17,1158,59"/>
+<area shape="rect" id="node3" href="$classIEC61968_1_1Assets_1_1AssetInfo.html" title=" " alt="" coords="355,13,557,39"/>
+<area shape="rect" id="node6" href="$classIEC61968_1_1AssetInfo_1_1PowerTransformerInfo.html" title=" " alt="" coords="611,35,785,76"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="144,5,305,47"/>
+<area shape="rect" id="node5" href="$classBaseClass.html" title=" " alt="" coords="5,13,95,39"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1Voltage.html" title=" " alt="" coords="985,148,1168,189"/>
+<area shape="rect" id="node8" title=" " alt="" coords="643,115,753,142"/>
+<area shape="rect" id="node10" href="$classIEC61970_1_1Base_1_1Domain_1_1Weight.html" title=" " alt="" coords="985,83,1168,124"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="607,183,789,224"/>
+</map>

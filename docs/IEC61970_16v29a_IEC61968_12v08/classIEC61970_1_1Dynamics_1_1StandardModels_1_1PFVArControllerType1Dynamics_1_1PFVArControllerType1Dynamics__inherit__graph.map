@@ -1,0 +1,9 @@
+<map id="IEC61970::Dynamics::StandardModels::PFVArControllerType1Dynamics::PFVArControllerType1Dynamics" name="IEC61970::Dynamics::StandardModels::PFVArControllerType1Dynamics::PFVArControllerType1Dynamics">
+<area shape="rect" id="node1" title=" " alt="" coords="608,78,881,149"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1PFVArControllerType1Dynamics_1_1PFVArType1IEEEPFController.html" title=" " alt="" coords="932,5,1249,61"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1PFVArControllerType1Dynamics_1_1PFVArType1IEEEVArController.html" title=" " alt="" coords="929,85,1252,141"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Dynamics_1_1UserDefinedModels_1_1PFVArControllerType1UserDefined.html" title=" " alt="" coords="965,165,1216,221"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1DynamicsFunctionBlock.html" title=" " alt="" coords="352,85,560,141"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,93,304,134"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,100,95,127"/>
+</map>

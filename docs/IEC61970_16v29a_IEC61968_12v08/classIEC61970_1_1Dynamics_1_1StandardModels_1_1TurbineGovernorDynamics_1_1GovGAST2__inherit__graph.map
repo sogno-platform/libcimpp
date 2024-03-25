@@ -1,0 +1,7 @@
+<map id="IEC61970::Dynamics::StandardModels::TurbineGovernorDynamics::GovGAST2" name="IEC61970::Dynamics::StandardModels::TurbineGovernorDynamics::GovGAST2">
+<area shape="rect" id="node1" title=" " alt="" coords="923,5,1173,61"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1TurbineGovernorDynamics_1_1TurbineGovernorDynamics.html" title=" " alt="" coords="608,5,875,61"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1DynamicsFunctionBlock.html" title=" " alt="" coords="352,5,560,61"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,13,304,54"/>
+<area shape="rect" id="node5" href="$classBaseClass.html" title=" " alt="" coords="5,20,95,47"/>
+</map>

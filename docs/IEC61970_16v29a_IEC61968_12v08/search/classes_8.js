@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['identifiedobject_3836',['IdentifiedObject',['../classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html',1,'IEC61970::Base::Core']]],
+  ['iec61968cimversion_3837',['IEC61968CIMVersion',['../classIEC61968_1_1IEC61968CIMVersion.html',1,'IEC61968']]],
+  ['iec61970cimversion_3838',['IEC61970CIMVersion',['../classIEC61970_1_1IEC61970CIMVersion.html',1,'IEC61970']]],
+  ['impedance_3839',['Impedance',['../classIEC61970_1_1Base_1_1Domain_1_1Impedance.html',1,'IEC61970::Base::Domain']]],
+  ['incident_3840',['Incident',['../classIEC61968_1_1Operations_1_1Incident.html',1,'IEC61968::Operations']]],
+  ['incidenthazard_3841',['IncidentHazard',['../classIEC61968_1_1Customers_1_1IncidentHazard.html',1,'IEC61968::Customers']]],
+  ['incrementalheatratecurve_3842',['IncrementalHeatRateCurve',['../classIEC61970_1_1Base_1_1Generation_1_1Production_1_1IncrementalHeatRateCurve.html',1,'IEC61970::Base::Generation::Production']]],
+  ['inductance_3843',['Inductance',['../classIEC61970_1_1Base_1_1Domain_1_1Inductance.html',1,'IEC61970::Base::Domain']]],
+  ['inductanceperlength_3844',['InductancePerLength',['../classIEC61970_1_1Base_1_1Domain_1_1InductancePerLength.html',1,'IEC61970::Base::Domain']]],
+  ['inflowforecast_3845',['InflowForecast',['../classIEC61970_1_1Base_1_1Generation_1_1Production_1_1InflowForecast.html',1,'IEC61970::Base::Generation::Production']]],
+  ['infoquestion_3846',['InfoQuestion',['../classIEC61968_1_1InfIEC61968_1_1InfWork_1_1InfoQuestion.html',1,'IEC61968::InfIEC61968::InfWork']]],
+  ['inspectiondataset_3847',['InspectionDataSet',['../classIEC61968_1_1InfIEC61968_1_1Sandbox_1_1InfNewAssets_1_1InspectionDataSet.html',1,'IEC61968::InfIEC61968::Sandbox::InfNewAssets']]],
+  ['integer_3848',['Integer',['../classIEC61970_1_1Base_1_1Domain_1_1Integer.html',1,'IEC61970::Base::Domain']]],
+  ['integerquantity_3849',['IntegerQuantity',['../classIEC61970_1_1Base_1_1Domain_1_1IntegerQuantity.html',1,'IEC61970::Base::Domain']]],
+  ['intervalblock_3850',['IntervalBlock',['../classIEC61968_1_1Metering_1_1IntervalBlock.html',1,'IEC61968::Metering']]],
+  ['intervalreading_3851',['IntervalReading',['../classIEC61968_1_1Metering_1_1IntervalReading.html',1,'IEC61968::Metering']]],
+  ['irregularintervalschedule_3852',['IrregularIntervalSchedule',['../classIEC61970_1_1Base_1_1Core_1_1IrregularIntervalSchedule.html',1,'IEC61970::Base::Core']]],
+  ['irregulartimepoint_3853',['IrregularTimePoint',['../classIEC61970_1_1Base_1_1Core_1_1IrregularTimePoint.html',1,'IEC61970::Base::Core']]]
+];

@@ -1,0 +1,11 @@
+<map id="IEC61970::Dynamics::StandardModels::WindDynamics::WindTurbineType3or4IEC" name="IEC61970::Dynamics::StandardModels::WindDynamics::WindTurbineType3or4IEC">
+<area shape="rect" id="node1" title=" " alt="" coords="897,45,1139,101"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1WindDynamics_1_1WindTurbineType3IEC.html" title=" " alt="" coords="1187,5,1428,61"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1WindDynamics_1_1WindTurbineType4IEC.html" title=" " alt="" coords="1187,85,1428,141"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1WindDynamics_1_1WindTurbineType3or4Dynamics.html" title=" " alt="" coords="608,45,849,101"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1DynamicsFunctionBlock.html" title=" " alt="" coords="352,45,560,101"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,53,304,94"/>
+<area shape="rect" id="node5" href="$classBaseClass.html" title=" " alt="" coords="5,60,95,87"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1WindDynamics_1_1WindTurbineType4aIEC.html" title=" " alt="" coords="1476,45,1717,101"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1WindDynamics_1_1WindTurbineType4bIEC.html" title=" " alt="" coords="1476,125,1717,181"/>
+</map>

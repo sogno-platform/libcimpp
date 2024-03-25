@@ -1,0 +1,9 @@
+<map id="CIMPP::VoltageCompensatorDynamics" name="CIMPP::VoltageCompensatorDynamics">
+<area shape="rect" id="node1" title=" " alt="" coords="202,229,409,271"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1VCompIEEEType1.html" title=" " alt="" coords="5,326,189,353"/>
+<area shape="rect" id="node6" href="$classCIMPP_1_1VCompIEEEType2.html" title=" " alt="" coords="213,326,397,353"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1VoltageCompensatorUserDefined.html" title=" " alt="" coords="422,319,629,360"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1DynamicsFunctionBlock.html" title=" " alt="" coords="192,155,419,181"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="218,80,393,107"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="261,5,350,32"/>
+</map>

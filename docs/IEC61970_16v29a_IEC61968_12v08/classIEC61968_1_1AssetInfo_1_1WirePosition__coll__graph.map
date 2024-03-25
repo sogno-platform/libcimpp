@@ -1,0 +1,7 @@
+<map id="IEC61968::AssetInfo::WirePosition" name="IEC61968::AssetInfo::WirePosition">
+<area shape="rect" id="node1" title=" " alt="" coords="107,228,259,269"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="5,109,167,151"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="41,13,131,39"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Domain_1_1Displacement.html" title=" " alt="" coords="191,109,373,151"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="191,5,373,47"/>
+</map>

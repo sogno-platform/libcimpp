@@ -1,0 +1,14 @@
+<map id="CIMPP::StringMeasurement" name="CIMPP::StringMeasurement">
+<area shape="rect" id="node1" title=" " alt="" coords="111,501,310,528"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1Measurement.html" title=" " alt="" coords="130,425,291,452"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="419,81,594,108"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1ACDCTerminal.html" title=" " alt="" coords="129,336,293,363"/>
+<area shape="rect" id="node8" href="$classCIMPP_1_1BusNameMarker.html" title=" " alt="" coords="409,247,588,273"/>
+<area shape="rect" id="node9" href="$classCIMPP_1_1ReportingGroup.html" title=" " alt="" coords="420,157,593,184"/>
+<area shape="rect" id="node10" href="$classCIMPP_1_1PowerSystemResource.html" title=" " alt="" coords="618,157,838,184"/>
+<area shape="rect" id="node11" href="$classCIMPP_1_1Location.html" title=" " alt="" coords="838,247,965,273"/>
+<area shape="rect" id="node12" href="$classCIMPP_1_1CoordinateSystem.html" title=" " alt="" coords="979,157,1170,184"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="462,5,551,32"/>
+<area shape="rect" id="node6" href="$classCIMPP_1_1Boolean.html" title=" " alt="" coords="94,247,218,273"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1Integer.html" title=" " alt="" coords="219,157,336,184"/>
+</map>

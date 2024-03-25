@@ -1,0 +1,9 @@
+<map id="IEC61970::Base::Wires::Cut" name="IEC61970::Base::Wires::Cut">
+<area shape="rect" id="node1" title=" " alt="" coords="5,527,204,553"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Wires_1_1Switch.html" title=" " alt="" coords="21,437,189,479"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1ConductingEquipment.html" title=" " alt="" coords="18,348,191,389"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1Equipment.html" title=" " alt="" coords="24,259,185,300"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="15,169,194,211"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="24,80,185,121"/>
+<area shape="rect" id="node7" href="$classBaseClass.html" title=" " alt="" coords="60,5,149,32"/>
+</map>

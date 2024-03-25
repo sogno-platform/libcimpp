@@ -1,0 +1,8 @@
+<map id="IEC61970::Dynamics::StandardModels::VoltageAdjusterDynamics::VoltageAdjusterDynamics" name="IEC61970::Dynamics::StandardModels::VoltageAdjusterDynamics::VoltageAdjusterDynamics">
+<area shape="rect" id="node1" title=" " alt="" coords="608,45,871,101"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1VoltageAdjusterDynamics_1_1VAdjIEEE.html" title=" " alt="" coords="919,5,1165,61"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Dynamics_1_1UserDefinedModels_1_1VoltageAdjusterUserDefined.html" title=" " alt="" coords="935,85,1149,141"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1DynamicsFunctionBlock.html" title=" " alt="" coords="352,45,560,101"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,53,304,94"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,60,95,87"/>
+</map>

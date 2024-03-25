@@ -1,0 +1,12 @@
+<map id="IEC61970::Base::Protection::ProtectionEquipment" name="IEC61970::Base::Protection::ProtectionEquipment">
+<area shape="rect" id="node1" title=" " alt="" coords="1312,160,1509,201"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1Equipment.html" title=" " alt="" coords="983,39,1144,80"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="625,5,803,47"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="144,12,305,53"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Core_1_1PSRType.html" title=" " alt="" coords="355,41,516,83"/>
+<area shape="rect" id="node5" href="$classBaseClass.html" title=" " alt="" coords="5,19,95,46"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="623,85,805,127"/>
+<area shape="rect" id="node8" title=" " alt="" coords="1008,167,1119,194"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Domain_1_1Seconds.html" title=" " alt="" coords="972,296,1155,337"/>
+<area shape="rect" id="node10" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="623,252,805,293"/>
+</map>

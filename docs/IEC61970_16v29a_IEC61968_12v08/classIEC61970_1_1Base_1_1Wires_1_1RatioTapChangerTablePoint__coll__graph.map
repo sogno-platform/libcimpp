@@ -1,0 +1,10 @@
+<map id="IEC61970::Base::Wires::RatioTapChangerTablePoint" name="IEC61970::Base::Wires::RatioTapChangerTablePoint">
+<area shape="rect" id="node1" title=" " alt="" coords="913,111,1120,152"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Wires_1_1TapChangerTablePoint.html" title=" " alt="" coords="542,143,715,184"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="52,55,141,82"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="288,5,449,47"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Domain_1_1Integer.html" title=" " alt="" coords="277,188,460,229"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Domain_1_1PerCent.html" title=" " alt="" coords="277,123,460,164"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="5,169,188,211"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Wires_1_1RatioTapChangerTable.html" title=" " alt="" coords="541,48,716,89"/>
+</map>

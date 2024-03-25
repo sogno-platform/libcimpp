@@ -1,0 +1,7 @@
+<map id="IEC61970::Base::LoadModel::LoadGroup" name="IEC61970::Base::LoadModel::LoadGroup">
+<area shape="rect" id="node1" title=" " alt="" coords="352,39,555,80"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1LoadModel_1_1ConformLoadGroup.html" title=" " alt="" coords="603,5,805,47"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1LoadModel_1_1NonConformLoadGroup.html" title=" " alt="" coords="603,71,805,112"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,39,304,80"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="5,46,95,73"/>
+</map>

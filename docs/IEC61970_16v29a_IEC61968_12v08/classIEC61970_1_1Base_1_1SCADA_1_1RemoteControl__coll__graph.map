@@ -1,0 +1,11 @@
+<map id="IEC61970::Base::SCADA::RemoteControl" name="IEC61970::Base::SCADA::RemoteControl">
+<area shape="rect" id="node1" title=" " alt="" coords="865,129,1041,171"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1SCADA_1_1RemotePoint.html" title=" " alt="" coords="513,167,689,208"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="155,196,316,237"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Meas_1_1Control.html" title=" " alt="" coords="517,101,684,143"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,203,95,230"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="144,5,327,47"/>
+<area shape="rect" id="node7" title=" " alt="" coords="180,77,291,103"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTime.html" title=" " alt="" coords="144,128,327,169"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="509,232,692,273"/>
+</map>

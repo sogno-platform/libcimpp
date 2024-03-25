@@ -1,0 +1,10 @@
+<map id="CIMPP::AnalogLimit" name="CIMPP::AnalogLimit">
+<area shape="rect" id="node1" title=" " alt="" coords="199,373,349,400"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1Limit.html" title=" " alt="" coords="214,233,318,260"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="153,81,328,108"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1LimitSet.html" title=" " alt="" coords="89,183,214,209"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="259,5,348,32"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1Simple__Float.html" title=" " alt="" coords="285,132,441,159"/>
+<area shape="rect" id="node6" href="$classCIMPP_1_1AnalogLimitSet.html" title=" " alt="" coords="66,284,237,311"/>
+<area shape="rect" id="node8" href="$classCIMPP_1_1Boolean.html" title=" " alt="" coords="5,81,129,108"/>
+</map>

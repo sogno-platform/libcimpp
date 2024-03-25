@@ -1,0 +1,10 @@
+<map id="IEC61970::Base::Core::Bay" name="IEC61970::Base::Core::Bay">
+<area shape="rect" id="node1" title=" " alt="" coords="111,576,306,603"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1EquipmentContainer.html" title=" " alt="" coords="29,457,191,499"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1ConnectivityNodeContainer.html" title=" " alt="" coords="5,367,215,408"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="21,276,199,317"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="24,81,185,123"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Core_1_1PSRType.html" title=" " alt="" coords="127,172,288,213"/>
+<area shape="rect" id="node6" href="$classBaseClass.html" title=" " alt="" coords="60,5,149,32"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="216,457,399,499"/>
+</map>

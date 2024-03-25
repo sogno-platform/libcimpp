@@ -1,0 +1,12 @@
+<map id="IEC61968::Common::ScheduledEventData" name="IEC61968::Common::ScheduledEventData">
+<area shape="rect" id="node1" title=" " alt="" coords="1596,97,1821,138"/>
+<area shape="rect" id="node2" href="$classBaseClass.html" title=" " alt="" coords="52,97,141,124"/>
+<area shape="rect" id="node3" href="$classIEC61968_1_1Common_1_1Status.html" title=" " alt="" coords="315,109,513,136"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTimeInterval.html" title=" " alt="" coords="323,355,505,397"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="333,43,495,85"/>
+<area shape="rect" id="node10" href="$classIEC61968_1_1Common_1_1ElectronicAddress.html" title=" " alt="" coords="303,161,525,202"/>
+<area shape="rect" id="node8" href="$classIEC61968_1_1Common_1_1Document.html" title=" " alt="" coords="711,185,936,212"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTime.html" title=" " alt="" coords="5,266,188,307"/>
+<area shape="rect" id="node7" href="$classIEC61968_1_1Assets_1_1ProcedureDataSet.html" title=" " alt="" coords="985,178,1192,219"/>
+<area shape="rect" id="node6" href="$classIEC61968_1_1InfIEC61968_1_1Sandbox_1_1InfNewAssets_1_1InspectionDataSet.html" title=" " alt="" coords="1241,149,1424,205"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="IEC61970::Base::Meas::AnalogLimit" name="IEC61970::Base::Meas::AnalogLimit">
+<area shape="rect" id="node1" title=" " alt="" coords="153,276,320,317"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Meas_1_1Limit.html" title=" " alt="" coords="5,172,172,213"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="8,81,169,123"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="44,5,133,32"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="196,172,379,213"/>
+</map>

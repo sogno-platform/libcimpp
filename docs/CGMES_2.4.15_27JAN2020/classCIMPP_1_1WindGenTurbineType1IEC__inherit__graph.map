@@ -1,0 +1,8 @@
+<map id="CIMPP::WindGenTurbineType1IEC" name="CIMPP::WindGenTurbineType1IEC">
+<area shape="rect" id="node1" title=" " alt="" coords="5,393,241,420"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1WindTurbineType1or2IEC.html" title=" " alt="" coords="8,319,239,345"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1WindTurbineType1or2Dynamics.html" title=" " alt="" coords="18,229,229,271"/>
+<area shape="rect" id="node4" href="$classCIMPP_1_1DynamicsFunctionBlock.html" title=" " alt="" coords="10,155,237,181"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="36,80,211,107"/>
+<area shape="rect" id="node6" href="$classBaseClass.html" title=" " alt="" coords="79,5,168,32"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="IEC61970::Base::ControlArea::ControlArea" name="IEC61970::Base::ControlArea::ControlArea">
+<area shape="rect" id="node1" title=" " alt="" coords="1121,85,1329,126"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="790,25,969,66"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="144,26,305,68"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1PSRType.html" title=" " alt="" coords="365,26,527,68"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1LoadModel_1_1EnergyArea.html" title=" " alt="" coords="561,85,764,126"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,34,95,60"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1ActivePower.html" title=" " alt="" coords="788,154,971,196"/>
+<area shape="rect" id="node7" title=" " alt="" coords="391,152,501,179"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="355,204,537,245"/>
+</map>

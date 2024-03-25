@@ -1,0 +1,9 @@
+<map id="IEC61970::Base::Wires::NonlinearShuntCompensatorPhasePoint" name="IEC61970::Base::Wires::NonlinearShuntCompensatorPhasePoint">
+<area shape="rect" id="node1" title=" " alt="" coords="639,73,856,129"/>
+<area shape="rect" id="node2" href="$classBaseClass.html" title=" " alt="" coords="351,5,440,32"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Domain_1_1Integer.html" title=" " alt="" coords="304,57,487,98"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Domain_1_1Susceptance.html" title=" " alt="" coords="304,122,487,163"/>
+<area shape="rect" id="node5" title=" " alt="" coords="41,124,152,151"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1Conductance.html" title=" " alt="" coords="304,187,487,229"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="5,191,188,233"/>
+</map>

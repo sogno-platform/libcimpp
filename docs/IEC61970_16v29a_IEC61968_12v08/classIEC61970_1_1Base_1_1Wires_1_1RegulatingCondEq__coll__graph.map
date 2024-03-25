@@ -1,0 +1,13 @@
+<map id="IEC61970::Base::Wires::RegulatingCondEq" name="IEC61970::Base::Wires::RegulatingCondEq">
+<area shape="rect" id="node1" title=" " alt="" coords="1563,58,1731,99"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1ConductingEquipment.html" title=" " alt="" coords="1340,58,1513,99"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1Equipment.html" title=" " alt="" coords="1026,58,1187,99"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="625,125,803,166"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Wires_1_1RegulatingControl.html" title=" " alt="" coords="1023,154,1191,195"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="144,131,305,173"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Core_1_1PSRType.html" title=" " alt="" coords="355,161,516,202"/>
+<area shape="rect" id="node6" href="$classBaseClass.html" title=" " alt="" coords="5,139,95,165"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="623,17,805,58"/>
+<area shape="rect" id="node10" title=" " alt="" coords="659,196,769,223"/>
+<area shape="rect" id="node11" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="623,249,805,290"/>
+</map>

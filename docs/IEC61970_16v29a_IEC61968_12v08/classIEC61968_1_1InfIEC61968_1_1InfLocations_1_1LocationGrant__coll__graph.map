@@ -1,0 +1,12 @@
+<map id="IEC61968::InfIEC61968::InfLocations::LocationGrant" name="IEC61968::InfIEC61968::InfLocations::LocationGrant">
+<area shape="rect" id="node1" title=" " alt="" coords="1311,80,1519,121"/>
+<area shape="rect" id="node2" href="$classIEC61968_1_1Common_1_1Agreement.html" title=" " alt="" coords="1031,87,1261,114"/>
+<area shape="rect" id="node3" href="$classIEC61968_1_1Common_1_1Document.html" title=" " alt="" coords="695,151,920,178"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="333,268,495,309"/>
+<area shape="rect" id="node5" href="$classBaseClass.html" title=" " alt="" coords="52,214,141,241"/>
+<area shape="rect" id="node6" href="$classIEC61968_1_1Common_1_1ElectronicAddress.html" title=" " alt="" coords="303,203,525,244"/>
+<area shape="rect" id="node7" href="$classIEC61968_1_1Common_1_1Status.html" title=" " alt="" coords="315,151,513,178"/>
+<area shape="rect" id="node10" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTimeInterval.html" title=" " alt="" coords="323,5,505,47"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTime.html" title=" " alt="" coords="5,79,188,120"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Domain_1_1Date.html" title=" " alt="" coords="716,80,899,121"/>
+</map>

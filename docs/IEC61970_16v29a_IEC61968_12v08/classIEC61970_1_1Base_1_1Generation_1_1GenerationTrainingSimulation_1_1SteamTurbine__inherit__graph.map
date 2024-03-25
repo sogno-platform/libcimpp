@@ -1,0 +1,7 @@
+<map id="IEC61970::Base::Generation::GenerationTrainingSimulation::SteamTurbine" name="IEC61970::Base::Generation::GenerationTrainingSimulation::SteamTurbine">
+<area shape="rect" id="node1" title=" " alt="" coords="5,363,228,419"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Generation_1_1GenerationTrainingSimulation_1_1PrimeMover.html" title=" " alt="" coords="5,259,228,315"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1PowerSystemResource.html" title=" " alt="" coords="27,169,206,211"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="36,80,197,121"/>
+<area shape="rect" id="node5" href="$classBaseClass.html" title=" " alt="" coords="72,5,161,32"/>
+</map>

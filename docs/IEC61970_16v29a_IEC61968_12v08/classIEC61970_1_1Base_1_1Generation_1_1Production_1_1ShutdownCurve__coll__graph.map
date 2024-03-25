@@ -1,0 +1,10 @@
+<map id="IEC61970::Base::Generation::Production::ShutdownCurve" name="IEC61970::Base::Generation::Production::ShutdownCurve">
+<area shape="rect" id="node1" title=" " alt="" coords="783,139,992,180"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1Curve.html" title=" " alt="" coords="464,73,625,115"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="155,5,316,47"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,13,95,39"/>
+<area shape="rect" id="node5" title=" " alt="" coords="180,107,291,134"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1Money.html" title=" " alt="" coords="453,139,636,180"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1Decimal.html" title=" " alt="" coords="144,175,327,216"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTime.html" title=" " alt="" coords="453,204,636,245"/>
+</map>

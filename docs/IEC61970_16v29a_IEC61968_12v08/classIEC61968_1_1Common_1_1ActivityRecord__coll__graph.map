@@ -1,0 +1,7 @@
+<map id="IEC61968::Common::ActivityRecord" name="IEC61968::Common::ActivityRecord">
+<area shape="rect" id="node1" title=" " alt="" coords="595,64,803,105"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="321,5,483,47"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="52,29,141,55"/>
+<area shape="rect" id="node4" href="$classIEC61968_1_1Common_1_1Status.html" title=" " alt="" coords="303,71,501,98"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTime.html" title=" " alt="" coords="5,89,188,131"/>
+</map>

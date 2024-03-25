@@ -1,0 +1,9 @@
+<map id="IEC61970::Dynamics::StandardModels::VoltageCompensatorDynamics::VoltageCompensatorDynamics" name="IEC61970::Dynamics::StandardModels::VoltageCompensatorDynamics::VoltageCompensatorDynamics">
+<area shape="rect" id="node1" title=" " alt="" coords="608,85,904,141"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1VoltageCompensatorDynamics_1_1VCompIEEEType1.html" title=" " alt="" coords="952,5,1231,61"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1VoltageCompensatorDynamics_1_1VCompIEEEType2.html" title=" " alt="" coords="952,85,1231,141"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Dynamics_1_1UserDefinedModels_1_1VoltageCompensatorUserDefined.html" title=" " alt="" coords="968,165,1215,221"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Dynamics_1_1StandardModels_1_1DynamicsFunctionBlock.html" title=" " alt="" coords="352,85,560,141"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="143,93,304,134"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,100,95,127"/>
+</map>

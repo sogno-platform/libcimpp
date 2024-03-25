@@ -1,0 +1,13 @@
+<map id="IEC61968::AssetInfo::WireInfo" name="IEC61968::AssetInfo::WireInfo">
+<area shape="rect" id="node1" title=" " alt="" coords="823,164,975,205"/>
+<area shape="rect" id="node2" href="$classIEC61968_1_1Assets_1_1AssetInfo.html" title=" " alt="" coords="443,13,645,39"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="155,5,316,47"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,13,95,39"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Domain_1_1CurrentFlow.html" title=" " alt="" coords="453,64,635,105"/>
+<area shape="rect" id="node6" title=" " alt="" coords="180,94,291,121"/>
+<area shape="rect" id="node10" href="$classIEC61970_1_1Base_1_1Domain_1_1Length.html" title=" " alt="" coords="453,129,635,171"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="144,200,327,241"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Domain_1_1ResistancePerLength.html" title=" " alt="" coords="453,261,635,303"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Domain_1_1Integer.html" title=" " alt="" coords="453,195,635,236"/>
+<area shape="rect" id="node11" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="453,328,635,369"/>
+</map>

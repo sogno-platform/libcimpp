@@ -1,0 +1,9 @@
+<map id="CIMPP::DCDisconnector" name="CIMPP::DCDisconnector">
+<area shape="rect" id="node1" title=" " alt="" coords="35,453,209,480"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1DCSwitch.html" title=" " alt="" coords="55,379,189,405"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1DCConductingEquipment.html" title=" " alt="" coords="5,304,239,331"/>
+<area shape="rect" id="node4" href="$classCIMPP_1_1Equipment.html" title=" " alt="" coords="51,229,193,256"/>
+<area shape="rect" id="node5" href="$classCIMPP_1_1PowerSystemResource.html" title=" " alt="" coords="12,155,232,181"/>
+<area shape="rect" id="node6" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="35,80,209,107"/>
+<area shape="rect" id="node7" href="$classBaseClass.html" title=" " alt="" coords="77,5,167,32"/>
+</map>

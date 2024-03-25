@@ -1,0 +1,8 @@
+<map id="IEC61970::Dynamics::StandardModels::WindDynamics::WindPlantReactiveControlIEC" name="IEC61970::Dynamics::StandardModels::WindDynamics::WindPlantReactiveControlIEC">
+<area shape="rect" id="node1" title=" " alt="" coords="603,127,844,183"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="301,5,462,47"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="52,13,141,39"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Domain_1_1Seconds.html" title=" " alt="" coords="290,188,473,229"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="5,188,188,229"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1PU.html" title=" " alt="" coords="277,306,485,333"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="CIMPP::PhaseTapChanger" name="CIMPP::PhaseTapChanger">
+<area shape="rect" id="node1" title=" " alt="" coords="828,64,1015,91"/>
+<area shape="rect" id="node6" href="$classCIMPP_1_1PhaseTapChangerLinear.html" title=" " alt="" coords="1066,5,1293,32"/>
+<area shape="rect" id="node7" href="$classCIMPP_1_1PhaseTapChangerNonLinear.html" title=" " alt="" coords="1073,57,1285,98"/>
+<area shape="rect" id="node10" href="$classCIMPP_1_1PhaseTapChangerTabular.html" title=" " alt="" coords="1063,123,1296,149"/>
+<area shape="rect" id="node2" href="$classCIMPP_1_1TapChanger.html" title=" " alt="" coords="633,64,780,91"/>
+<area shape="rect" id="node3" href="$classCIMPP_1_1PowerSystemResource.html" title=" " alt="" coords="365,64,585,91"/>
+<area shape="rect" id="node4" href="$classCIMPP_1_1IdentifiedObject.html" title=" " alt="" coords="143,64,317,91"/>
+<area shape="rect" id="node5" href="$classBaseClass.html" title=" " alt="" coords="5,64,95,91"/>
+<area shape="rect" id="node8" href="$classCIMPP_1_1PhaseTapChangerAsymmetrical.html" title=" " alt="" coords="1344,39,1621,65"/>
+<area shape="rect" id="node9" href="$classCIMPP_1_1PhaseTapChangerSymmetrical.html" title=" " alt="" coords="1348,89,1617,116"/>
+</map>

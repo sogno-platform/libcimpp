@@ -1,0 +1,11 @@
+<map id="IEC61970::Base::Wires::PhaseTapChangerTablePoint" name="IEC61970::Base::Wires::PhaseTapChangerTablePoint">
+<area shape="rect" id="node1" title=" " alt="" coords="1071,165,1283,207"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Wires_1_1TapChangerTablePoint.html" title=" " alt="" coords="693,165,867,207"/>
+<area shape="rect" id="node3" href="$classBaseClass.html" title=" " alt="" coords="52,49,141,75"/>
+<area shape="rect" id="node9" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="288,5,449,47"/>
+<area shape="rect" id="node4" href="$classIEC61970_1_1Base_1_1Domain_1_1Integer.html" title=" " alt="" coords="277,256,460,297"/>
+<area shape="rect" id="node5" href="$classIEC61970_1_1Base_1_1Domain_1_1PerCent.html" title=" " alt="" coords="277,127,460,168"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1Float.html" title=" " alt="" coords="5,187,188,228"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1AngleDegrees.html" title=" " alt="" coords="484,311,667,352"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Wires_1_1PhaseTapChangerTable.html" title=" " alt="" coords="691,49,869,91"/>
+</map>

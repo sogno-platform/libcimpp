@@ -1,0 +1,9 @@
+<map id="IEC61968::InfIEC61968::InfWork::CostType" name="IEC61968::InfIEC61968::InfWork::CostType">
+<area shape="rect" id="node1" title=" " alt="" coords="948,65,1117,107"/>
+<area shape="rect" id="node2" href="$classIEC61968_1_1InfIEC61968_1_1InfWork_1_1WorkIdentifiedObject.html" title=" " alt="" coords="551,5,775,47"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="321,5,483,47"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="52,18,141,45"/>
+<area shape="rect" id="node5" href="$classIEC61968_1_1Common_1_1Status.html" title=" " alt="" coords="303,73,501,99"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Domain_1_1DateTime.html" title=" " alt="" coords="5,73,188,115"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="571,135,754,176"/>
+</map>

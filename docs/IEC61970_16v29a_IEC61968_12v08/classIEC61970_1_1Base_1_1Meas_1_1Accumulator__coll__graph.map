@@ -1,0 +1,10 @@
+<map id="IEC61970::Base::Meas::Accumulator" name="IEC61970::Base::Meas::Accumulator">
+<area shape="rect" id="node1" title=" " alt="" coords="1011,57,1177,99"/>
+<area shape="rect" id="node2" href="$classIEC61970_1_1Base_1_1Meas_1_1Measurement.html" title=" " alt="" coords="795,140,961,181"/>
+<area shape="rect" id="node3" href="$classIEC61970_1_1Base_1_1Core_1_1IdentifiedObject.html" title=" " alt="" coords="155,148,316,189"/>
+<area shape="rect" id="node6" href="$classIEC61970_1_1Base_1_1Core_1_1ACDCTerminal.html" title=" " alt="" coords="493,85,655,127"/>
+<area shape="rect" id="node4" href="$classBaseClass.html" title=" " alt="" coords="5,155,95,182"/>
+<area shape="rect" id="node5" title=" " alt="" coords="519,213,629,239"/>
+<area shape="rect" id="node7" href="$classIEC61970_1_1Base_1_1Domain_1_1Integer.html" title=" " alt="" coords="144,5,327,47"/>
+<area shape="rect" id="node8" href="$classIEC61970_1_1Base_1_1Domain_1_1Boolean.html" title=" " alt="" coords="144,77,327,119"/>
+</map>
