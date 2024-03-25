@@ -1,7 +1,6 @@
 name: build-src
 
-#on: [push]
-on: workflow_dispatch
+on: push
 
 jobs:
   build-src-IEC61970_16v29a_IEC61968_12v08:
