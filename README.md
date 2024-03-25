@@ -5,9 +5,7 @@ It is part of the CIM++ project. More on CIM++ can be found [here](http://rdcu.b
 
 Supported CIM / CGMES versions:
 - [CGMES_2.4.15_27JAN2020](https://sogno-platform.github.io/libcimpp/CGMES_2.4.15_27JAN2020/annotated.html)
-- [IEC61970 16v29a](https://sogno-platform.github.io/libcimpp/IEC61970_16v29a/annotated.html)
 - [IEC61970_16v29a_IEC61968_12v08](https://sogno-platform.github.io/libcimpp/IEC61970_16v29a_IEC61968_12v08/annotated.html)
-- [IEC61970_17v07](https://sogno-platform.github.io/libcimpp/IEC61970_17v07/annotated.html)
 
 ## General information
 limcimpp uses [arabica](http://www.jezuk.co.uk/cgi-bin/view/arabica) as cross platform wrapper around one of the XML parsers listed in the dependencies (see below).
