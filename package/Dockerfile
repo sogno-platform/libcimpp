@@ -4,10 +4,7 @@ LABEL \
 	org.label-schema.schema-version = "2.1.0" \
 	org.label-schema.name = "libcimpp" \
 	org.label-schema.license = "MPL" \
-	org.label-schema.vendor = "Institute for Automation of Complex Power Systems, RWTH Aachen University" \
-	org.label-schema.author.name = "Lukas Razik" \
-	org.label-schema.author.email = "lrazik@eonerc.rwth-aachen.org" \
-	org.label-schema.vcs-url = "https://github.com/rwth-acs/libcimpp"
+	org.label-schema.vcs-url = "https://github.com/sogno-platform/libcimpp"
 
 RUN apt-get update
 
