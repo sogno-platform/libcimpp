@@ -16,4 +16,3 @@ DOT_GRAPH_MAX_NODES = 200
 
 HTML_HEADER = doc/header.html
 HTML_EXTRA_STYLESHEET = doc/style.css
-HTML_EXTRA_FILES = doc/all_logos.svg
