@@ -1,63 +1,8 @@
 name: build-src
 
-#on: [push]
-on: workflow_dispatch
-
+on: push
 
 jobs:
-
-  build-src-IEC61970_16v29a:
-    runs-on: ubuntu-latest
-    env:
-      USE_CIM_VERSION: IEC61970_16v29a
-    steps:
-    - uses: actions/checkout@v3    
-    - name: Checkout submodules
-      run: git submodule update --init --recursive
-    - name: Install Doxygen
-      run: sudo apt-get install doxygen 
-      shell: bash 
-    - name: Install Graphviz
-      run: sudo apt-get install graphviz
-      shell: bash 
-    - name: Create Build Environment
-      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}}
-      
-    - name: Configure CMake and compile
-      shell: bash
-      working-directory: ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}}/
-      run: |
-          cd ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}} 
-          cmake ../.. -DUSE_CIM_VERSION=${{env.USE_CIM_VERSION}}
-          make -j4
-
-
-
-  build-src-IEC61970_17v07:
-    runs-on: ubuntu-latest
-    env:
-      USE_CIM_VERSION: IEC61970_17v07
-    steps:
-    - uses: actions/checkout@v3    
-    - name: Checkout submodules
-      run: git submodule update --init --recursive
-    - name: Install Doxygen
-      run: sudo apt-get install doxygen 
-      shell: bash 
-    - name: Install Graphviz
-      run: sudo apt-get install graphviz
-      shell: bash 
-    - name: Create Build Environment
-      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}}
-      
-    - name: Configure CMake and compile
-      shell: bash
-      working-directory: ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}}/
-      run: |
-          cd ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}} 
-          cmake ../.. -DUSE_CIM_VERSION=${{env.USE_CIM_VERSION}}
-          make -j4
-
   build-src-IEC61970_16v29a_IEC61968_12v08:
     runs-on: ubuntu-latest
     env:
@@ -83,10 +28,8 @@ jobs:
           cmake ../.. -DUSE_CIM_VERSION=${{env.USE_CIM_VERSION}}
           make -j4
 
-
   build-src-CGMES_2-4-15_27JAN2020:
     runs-on: ubuntu-latest
-
     env:
       USE_CIM_VERSION: CGMES_2.4.15_27JAN2020
     steps:
@@ -109,4 +52,3 @@ jobs:
           cd ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}} 
           cmake ../.. -DUSE_CIM_VERSION=${{env.USE_CIM_VERSION}}
           make -j4
-
