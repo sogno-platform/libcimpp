@@ -28,7 +28,7 @@ if(CIMPP_BUILD_DOC)
   add_subdirectory(doc)
 endif()
 
-add_subdirectory(thirdparty)
+add_subdirectory(arabica)
 
 if(NOT USE_CIM_VERSION)
 	set(USE_CIM_VERSION "CGMES_2.4.15_27JAN2020" CACHE STRING "Define CIM Version")
