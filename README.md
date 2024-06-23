@@ -5,7 +5,6 @@ It is part of the CIM++ project. More on CIM++ can be found [here](http://rdcu.b
 
 Supported CIM / CGMES versions:
 - [CGMES_2.4.15_27JAN2020](https://sogno-platform.github.io/libcimpp/CGMES_2.4.15_27JAN2020/annotated.html)
-- [IEC61970_16v29a_IEC61968_12v08](https://sogno-platform.github.io/libcimpp/IEC61970_16v29a_IEC61968_12v08/annotated.html)
 
 ## General information
 limcimpp uses [arabica](http://www.jezuk.co.uk/cgi-bin/view/arabica) as cross platform wrapper around one of the XML parsers listed in the dependencies (see below).
@@ -37,9 +36,9 @@ cmake ..
 make -j 4
 ```
 
-For building libcimpp with a certain CIM version (e.g. `IEC61970_16v29a`), type:
+For building libcimpp with a certain CIM version (e.g. `CGMES_2.4.15_27JAN2020`), type:
 ```bash
-cmake .. -DUSE_CIM_VERSION=IEC61970_16v29a
+cmake .. -DUSE_CIM_VERSION=CGMES_2.4.15_27JAN2020
 make -j 4
 ```
 
