@@ -6,7 +6,6 @@ jobs:
    build-gh-pages:
     runs-on: ubuntu-latest
     env:
-      USE_CIM_VERSION1: IEC61970_16v29a_IEC61968_12v08
       USE_CIM_VERSION4: CGMES_2.4.15_27JAN2020
     steps:
     - uses: actions/checkout@v3   
