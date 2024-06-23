@@ -61,3 +61,7 @@ All available CIM versions are listed in the [CMakeLists.txt](CMakeLists.txt)
 For information on how to use the library please see the cmake based example in examples/cmake.
 Building the example is just like building the library itself using cmake.
 The make example is currently not supported due to the lack of an install target for arabica.
+
+## License
+
+This project is released under the terms of the [Apache License 2.0](./LICENSE).
