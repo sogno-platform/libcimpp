@@ -115,11 +115,7 @@ public:
   virtual void setFeature(const string_type& name, bool value)
   {
   	if(!parent_)
-    {
-      string_type ex = string_adaptor::construct_from_utf8("Feature: ");
-      string_adaptor::append(ex, name);
-      throw SAXNotRecognizedException(string_adaptor::asStdString(ex));
-    } // if ...
+      throw SAXNotRecognizedException("Feature: " + string_adaptor::asStdString(name));
 
     parent_->setFeature(name, value);
   } // setFeature
@@ -140,11 +136,7 @@ public:
   virtual bool getFeature(const string_type& name) const
   {
   	if(!parent_)
-    {
-      string_type ex = string_adaptor::construct_from_utf8("Feature: ");
-      string_adaptor::append(ex, name);
-      throw SAXNotRecognizedException(string_adaptor::asStdString(ex));
-    } // if ...
+      throw SAXNotRecognizedException("Feature: " + string_adaptor::asStdString(name));
 
     return parent_->getFeature(name);
   } // setFeature
@@ -222,29 +214,6 @@ public:
     setupParse();
     parent_->parse(input);
   } // parse
-
-  virtual std::auto_ptr<typename XMLReaderT::PropertyBase> doGetProperty(const string_type& name)
-  {
-   	if(parent_)
-	    return parent_->doGetProperty(name);
-
-    string_type ex = string_adaptor::construct_from_utf8("Property: ");
-    string_adaptor::append(ex, name);
-    throw SAXNotRecognizedException(string_adaptor::asStdString(ex));
-  } // doGetProperty
-
-  virtual void doSetProperty(const string_type& name, typename std::auto_ptr<typename XMLReaderT::PropertyBase> value)
-  {
-    if(parent_)
-    {
-      parent_->doSetProperty(name, value);
-      return;
-    } // if(parent_)
-
-    string_type ex = string_adaptor::construct_from_utf8("Property: ");
-    string_adaptor::append(ex, name);
-    throw SAXNotRecognizedException(string_adaptor::asStdString(ex));
-  } // doSetProperty
 
 public:
   //////////////////////////////////////////////////

@@ -1,12 +1,33 @@
-#ifndef ARABICA_ARABICA_CONFIG_H
-#define ARABICA_ARABICA_CONFIG_H
 
-#cmakedefine ARABICA_NO_WCHAR_T
-#cmakedefine ARABICA_VS6_WORKAROUND
-#cmakedefine ARABICA_NO_CODECVT_SPECIALISATIONS
-#cmakedefine ARABICA_USE_WINSOCK
-#cmakedefine ARABICA_WINDOWS
+/* define if the Boost library is available */
 #cmakedefine ARABICA_HAVE_BOOST
-#define ARABICA_@ARABICA_XML_BACKEND@
 
-#endif // ARABICA_ARABICA_CONFIG_H
+/* defined if we don't need extra codecvt template specialisations */
+#cmakedefine NO_CODECVT_SPECIALISATIONS
+
+/* no mbstate_t */
+#cmakedefine NO_MBSTATE_T
+
+/* no std::mbstate_t */
+#cmakedefine NO_STD_MBSTATE_T
+
+/* disables wchar_t */
+#cmakedefine NO_WCHAR_T
+
+/* define to build against Expat */
+#cmakedefine ARABICA_USE_EXPAT
+
+/* define to build against LibXML2 */
+#cmakedefine ARABICA_USE_LIBXML2
+
+/* define to build against Xerces */
+#cmakedefine ARABICA_USE_XERCES
+
+/* define to build using Garden */
+#cmakedefine USE_GARDEN
+
+/* defined for Windows builds using Winsock rather than BSD-style sockets */
+#cmakedefine USE_WINSOCK
+
+/* Version number of package */
+#cmakedefine VERSION

@@ -7,8 +7,8 @@ set(CMAKE_CXX_STANDARD 11)
 
 set(LIB_NAME arabica)
 
-set(ARABICA_MAJOR_VERSION 2016)
-set(ARABICA_MINOR_VERSION January)
+set(ARABICA_MAJOR_VERSION 2024)
+set(ARABICA_MINOR_VERSION September)
 
 #
 # Build as shared library
@@ -20,19 +20,20 @@ option(BUILD_SHARED_LIBS "Build as shared libaries" OFF)
 # options: USE_MSXML, USE_EXPAT, USE_LIBXML2, USE_XERCES
 set(ARABICA_XML_BACKEND USE_LIBXML2)
 
-configure_file(${CMAKE_CURRENT_LIST_DIR}/include/SAX/ArabicaConfig.hpp.in ${CMAKE_CURRENT_BINARY_DIR}/include/SAX/ArabicaConfig.hpp)
-
 #
 # find libxml2: LIBXML2_INCLUDE_DIR LIBXML2_LIBRARIES
 if(ARABICA_XML_BACKEND STREQUAL USE_LIBXML2)
-  find_package(LibXml2)
-  set(ADDITIONAL_INC ${LIBXML2_INCLUDE_DIR})
+  set(ARABICA_USE_LIBXML2 TRUE)
+  find_package(LibXml2 REQUIRED)
+  set(ADDITIONAL_INC ${LIBXML2_INCLUDE_DIRS})
   set(ADDITIONAL_LIB ${LIBXML2_LIBRARIES})
 endif()
 
 #
 # platform check
 set(BUILD_X64 TRUE)
+
+configure_file(${CMAKE_CURRENT_LIST_DIR}/include/SAX/ArabicaConfig.hpp.in ${CMAKE_CURRENT_BINARY_DIR}/include/SAX/ArabicaConfig.hpp)
 
 set(GENERATED_HEADER_FILES
   ${CMAKE_CURRENT_BINARY_DIR}/include/SAX/ArabicaConfig.hpp
@@ -72,7 +73,6 @@ set(PUBLIC_HEADER_FILES
   include/SAX/helpers/FeatureNames.hpp
   include/SAX/helpers/InputSourceResolver.hpp
   include/SAX/helpers/NamespaceSupport.hpp
-  include/SAX/helpers/PropertyNames.hpp
   include/SAX/helpers/XMLFilterImpl.hpp
   include/SAX/wrappers/saxlibxml2.hpp
   include/Arabica/getparam.hpp

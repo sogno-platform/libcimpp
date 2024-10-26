@@ -2,6 +2,10 @@
  * $Id$
  */
 
+#ifdef _MSC_VER
+#pragma warning(disable: 4786)
+#endif
+
 #include <SAX/helpers/InputSourceResolver.hpp>
 #include <istream>
 #include <fstream>
@@ -106,7 +110,7 @@ namespace
 
   std::istream* httpResolver(const std::string& httpURI)
   {
-#ifdef ARABICA_USE_WINSOCK
+#ifdef USE_WINSOCK
     WORD wVersionRequested;
     WSADATA wsaData;
     int err;

@@ -11,7 +11,7 @@
 #endif
 #endif
 
-#ifdef ARABICA_USE_MSXML
+#ifdef USE_MSXML
 #ifndef _MSC_VER
 #error "Can only use MSXML on Windows"
 #endif
@@ -37,7 +37,7 @@
 #endif
 #endif
 
-#ifdef ARABICA_USE_GARDEN
+#ifdef USE_GARDEN
 #ifdef _MSC_VER
 #pragma message("Including Garden")
 #endif

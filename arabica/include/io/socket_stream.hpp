@@ -12,7 +12,7 @@
 ///////////////////////////////////////////////////////////////////////
 
 #include <SAX/ArabicaConfig.hpp>
-#ifndef ARABICA_USE_WINSOCK
+#ifndef USE_WINSOCK
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <sys/un.h>
@@ -27,6 +27,7 @@
 #include <algorithm>
 #include <vector>
 #include <cstdlib>
+#include <cstdint>
 #include <cstring>
 
 #ifndef INADDR_NONE
@@ -49,6 +50,11 @@ class basic_socketbuf : public std::basic_streambuf<charT, traitsT>
 {
   public:
     typedef typename traitsT::int_type int_type;
+#if defined(USE_WINSOCK) && defined(UINTPTR_MAX)
+    typedef std::uintptr_t socket_type;
+#else
+    typedef int socket_type;
+#endif
 
     using std::basic_streambuf<charT, traitsT>::setp;
     using std::basic_streambuf<charT, traitsT>::setg;
@@ -77,7 +83,8 @@ class basic_socketbuf : public std::basic_streambuf<charT, traitsT>
   private:
     typedef typename traitsT::state_type state_t;
 
-    int sock_;
+    socket_type sock_;
+
     std::vector<charT> outBuffer_;
     state_t outState_;
     std::vector<charT> inBuffer_;
@@ -87,12 +94,12 @@ class basic_socketbuf : public std::basic_streambuf<charT, traitsT>
     bool writeSocket();
     void growInBuffer();
     int readSocket();
-    int closeSocket(int sock) const;
+    int closeSocket(socket_type sock) const;
 
     static const size_t bufferSize_;
     static const size_t pbSize_;
 
-#ifndef ARABICA_USE_WINSOCK
+#ifndef USE_WINSOCK
     static const int INVALID_SOCKET;
     static const int SOCKET_ERROR;
 #endif
@@ -103,7 +110,7 @@ const size_t basic_socketbuf<charT, traitsT>::bufferSize_ = 1024;
 template<class charT, class traitsT>
 const size_t basic_socketbuf<charT, traitsT>::pbSize_ = 4;
   // why 4? both Josuttis and Langer&Kreft use 4.
-#ifndef ARABICA_USE_WINSOCK
+#ifndef USE_WINSOCK
 template<class charT, class traitsT>
 const int basic_socketbuf<charT, traitsT>::INVALID_SOCKET = -1;
 template<class charT, class traitsT>
@@ -170,7 +177,7 @@ basic_socketbuf<charT, traitsT>* basic_socketbuf<charT, traitsT>::open(const cha
   sockAddr.sin_port = htons(port);
 
   // connect
-  int tmpsock = socket(AF_INET, SOCK_STREAM, 0);
+  int tmpsock = static_cast<int>(socket(AF_INET, SOCK_STREAM, 0));
   if(tmpsock == INVALID_SOCKET)
     return 0;
   if(connect(tmpsock, reinterpret_cast<sockaddr*>(&sockAddr), sizeof(sockaddr_in)) != 0)
@@ -267,7 +274,7 @@ bool basic_socketbuf<charT, traitsT>::writeSocket()
   if(!length)
     return true;
 
-  bool ok = (send(sock_, from_next, length, 0) != SOCKET_ERROR);
+  bool ok = (send(sock_, from_next, static_cast<int>(length), 0) != SOCKET_ERROR);
 
   if(ok)
     setp(from_next, from_next + outBuffer_.capacity());
@@ -289,13 +296,13 @@ int basic_socketbuf<charT, traitsT>::readSocket()
   if(!inBuffer_.capacity())
     growInBuffer();
 
-  size_t pbCount = std::min<int>(gptr() - eback(), pbSize_);
+  size_t pbCount = std::min<size_t>(gptr() - eback(), pbSize_);
 
   memcpy(&(inBuffer_[0]) + (pbSize_-pbCount)*sizeof(charT), 
          gptr() - pbCount*sizeof(charT),
          pbCount*sizeof(charT));
 
-  int res = recv(sock_, &(inBuffer_[0]) + pbSize_, inBuffer_.capacity() - pbSize_, 0);
+  int res = recv(sock_, &(inBuffer_[0]) + pbSize_, static_cast<int>(inBuffer_.capacity() - pbSize_), 0);
   if(res == 0)
   {
     // server closed the socket
@@ -304,7 +311,7 @@ int basic_socketbuf<charT, traitsT>::readSocket()
   } // if(res == 0)
   else if(res == SOCKET_ERROR)
   {
-#ifdef ARABICA_USE_WINSOCK
+#ifdef USE_WINSOCK
     if(GetLastError() == WSAEMSGSIZE)
     {
       // buffer was too small, so make it bigger
@@ -325,9 +332,9 @@ int basic_socketbuf<charT, traitsT>::readSocket()
 } // readSocket
 
 template <class charT, class traitsT>
-int basic_socketbuf<charT, traitsT>::closeSocket(int sock) const
+int basic_socketbuf<charT, traitsT>::closeSocket(socket_type sock) const
 {
-#ifdef ARABICA_USE_WINSOCK
+#ifdef USE_WINSOCK
   return closesocket(sock);
 #else
   return ::close(sock);
