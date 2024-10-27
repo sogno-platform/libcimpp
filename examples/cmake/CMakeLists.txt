@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 3.5)
+project(example)
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/../../ ${CMAKE_CURRENT_BINARY_DIR}/libcimpp)
 add_executable(example ${CMAKE_CURRENT_LIST_DIR}/../src/main.cpp)
+add_executable(readwrite ${CMAKE_CURRENT_LIST_DIR}/../src/readwrite.cpp)
 target_link_libraries(example libcimpp)
+target_link_libraries(readwrite libcimpp)
 target_compile_features(example PUBLIC cxx_range_for)

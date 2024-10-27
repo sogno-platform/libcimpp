@@ -37,6 +37,7 @@ option(CIMPP_BUILD_EXAMPLES "Build examples" OFF)
 option(CIMPP_BUILD_DOC "Build documentation" ON)
 
 if(CIMPP_BUILD_DOC)
+  message(STATUS "Building doc")
   add_subdirectory(doc)
 endif()
 
@@ -79,8 +80,11 @@ install(DIRECTORY ${USE_CIM_VERSION} static src
 include(CIMppPackaging)
 
 if(CIMPP_BUILD_EXAMPLES)
+  message(STATUS "Building examples")
   add_executable(example examples/src/main.cpp)
+  add_executable(readwrite examples/src/readwrite.cpp)
   target_link_libraries(example libcimpp)
+  target_link_libraries(readwrite libcimpp)
   target_compile_features(example PUBLIC cxx_range_for)
 endif()
 
