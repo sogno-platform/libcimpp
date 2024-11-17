@@ -6,21 +6,22 @@
 
 using namespace CIMPP;
 
-DiagramObjectGluePoint::DiagramObjectGluePoint(): DiagramObjectPoints(nullptr) {};
+DiagramObjectGluePoint::DiagramObjectGluePoint() {};
 
 DiagramObjectGluePoint::~DiagramObjectGluePoint() {};
 
 
+
+
 bool assign_DiagramObjectGluePoint_DiagramObjectPoints(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(DiagramObjectGluePoint* element = dynamic_cast<DiagramObjectGluePoint*>(BaseClass_ptr1)) {
-                element->DiagramObjectPoints = dynamic_cast<DiagramObjectPoint*>(BaseClass_ptr2);
-                if(element->DiagramObjectPoints != nullptr)
-                        return true;
-        }
-        return false;
+		if(dynamic_cast<DiagramObjectPoint*>(BaseClass_ptr2) != nullptr) {
+                        element->DiagramObjectPoints.push_back(dynamic_cast<DiagramObjectPoint*>(BaseClass_ptr2));
+			return true;
+		}
+	}
+	return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* DiagramObjectGluePoint_factory() {
@@ -49,5 +50,3 @@ const BaseClassDefiner DiagramObjectGluePoint::declare()
 {
 	return BaseClassDefiner(DiagramObjectGluePoint::addConstructToMap, DiagramObjectGluePoint::addPrimitiveAssignFnsToMap, DiagramObjectGluePoint::addClassAssignFnsToMap, DiagramObjectGluePoint::debugName);
 }
-
-

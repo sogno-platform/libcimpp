@@ -11,8 +11,8 @@
 namespace CIMPP {
 
 
-class ConformLoad;
 class ConformLoadSchedule;
+class ConformLoad;
 	/*
 	A group of loads conforming to an allocation pattern.
 	*/
@@ -20,16 +20,16 @@ class ConformLoadSchedule;
 	{
 
 	public:
-					std::list<CIMPP::ConformLoad*> EnergyConsumers; 	/* Conform loads assigned to this ConformLoadGroup. Default: 0 */
 					std::list<CIMPP::ConformLoadSchedule*> ConformLoadSchedules; 	/* The ConformLoadSchedules in the ConformLoadGroup. Default: 0 */
-				
+					std::list<CIMPP::ConformLoad*> EnergyConsumers; 	/* Conform loads assigned to this ConformLoadGroup. Default: 0 */
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		ConformLoadGroup();
 		virtual ~ConformLoadGroup();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

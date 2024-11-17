@@ -11,8 +11,6 @@ GroundingImpedance::GroundingImpedance() {};
 GroundingImpedance::~GroundingImpedance() {};
 
 
-
-
 bool assign_GroundingImpedance_x(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(GroundingImpedance* element = dynamic_cast<GroundingImpedance*>(BaseClass_ptr1)) {
                 buffer >> element->x;
@@ -24,6 +22,8 @@ bool assign_GroundingImpedance_x(std::stringstream &buffer, BaseClass* BaseClass
         else
                 return false;
 }
+
+
 
 namespace CIMPP {
 	BaseClass* GroundingImpedance_factory() {
@@ -52,5 +52,3 @@ const BaseClassDefiner GroundingImpedance::declare()
 {
 	return BaseClassDefiner(GroundingImpedance::addConstructToMap, GroundingImpedance::addPrimitiveAssignFnsToMap, GroundingImpedance::addClassAssignFnsToMap, GroundingImpedance::debugName);
 }
-
-

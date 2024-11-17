@@ -11,8 +11,8 @@
 namespace CIMPP {
 
 
-class RemoteInputSignal;
 class ExcitationSystemDynamics;
+class RemoteInputSignal;
 	/*
 	Power system stabilizer function block whose behaviour is described by reference to a standard model
 	*/
@@ -20,16 +20,16 @@ class ExcitationSystemDynamics;
 	{
 
 	public:
-					std::list<CIMPP::RemoteInputSignal*> RemoteInputSignal; 	/* Remote input signal used by this power system stabilizer model. Default: 0 */
 					CIMPP::ExcitationSystemDynamics* ExcitationSystemDynamics; 	/* Excitation system model with which this power system stabilizer model is associated. Default: 0 */
-				
+					std::list<CIMPP::RemoteInputSignal*> RemoteInputSignal; 	/* Remote input signal used by this power system stabilizer model. Default: 0 */
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		PowerSystemStabilizerDynamics();
 		virtual ~PowerSystemStabilizerDynamics();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

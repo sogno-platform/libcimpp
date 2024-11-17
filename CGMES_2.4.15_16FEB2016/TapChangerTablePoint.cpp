@@ -16,13 +16,6 @@ TapChangerTablePoint::TapChangerTablePoint() {};
 TapChangerTablePoint::~TapChangerTablePoint() {};
 
 
-
-
-
-
-
-
-
 bool assign_TapChangerTablePoint_b(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(TapChangerTablePoint* element = dynamic_cast<TapChangerTablePoint*>(BaseClass_ptr1)) {
                 buffer >> element->b;
@@ -95,6 +88,13 @@ bool assign_TapChangerTablePoint_x(std::stringstream &buffer, BaseClass* BaseCla
                 return false;
 }
 
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* TapChangerTablePoint_factory() {
 		return new TapChangerTablePoint;
@@ -127,5 +127,3 @@ const BaseClassDefiner TapChangerTablePoint::declare()
 {
 	return BaseClassDefiner(TapChangerTablePoint::addConstructToMap, TapChangerTablePoint::addPrimitiveAssignFnsToMap, TapChangerTablePoint::addClassAssignFnsToMap, TapChangerTablePoint::debugName);
 }
-
-

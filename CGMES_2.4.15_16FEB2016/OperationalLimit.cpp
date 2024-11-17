@@ -12,6 +12,9 @@ OperationalLimit::OperationalLimit(): OperationalLimitSet(nullptr), OperationalL
 OperationalLimit::~OperationalLimit() {};
 
 
+
+
+
 bool assign_OperationalLimitSet_OperationalLimitValue(BaseClass*, BaseClass*);
 bool assign_OperationalLimit_OperationalLimitSet(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(OperationalLimit* element = dynamic_cast<OperationalLimit*>(BaseClass_ptr1)) {
@@ -31,9 +34,6 @@ bool assign_OperationalLimit_OperationalLimitType(BaseClass* BaseClass_ptr1, Bas
         }
         return false;
 }
-
-
-
 
 namespace CIMPP {
 	BaseClass* OperationalLimit_factory() {
@@ -63,5 +63,3 @@ const BaseClassDefiner OperationalLimit::declare()
 {
 	return BaseClassDefiner(OperationalLimit::addConstructToMap, OperationalLimit::addPrimitiveAssignFnsToMap, OperationalLimit::addClassAssignFnsToMap, OperationalLimit::debugName);
 }
-
-

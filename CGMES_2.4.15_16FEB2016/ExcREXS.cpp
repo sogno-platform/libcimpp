@@ -46,43 +46,6 @@ ExcREXS::ExcREXS() {};
 ExcREXS::~ExcREXS() {};
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 bool assign_ExcREXS_e1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(ExcREXS* element = dynamic_cast<ExcREXS*>(BaseClass_ptr1)) {
                 buffer >> element->e1;
@@ -515,6 +478,43 @@ bool assign_ExcREXS_xc(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
                 return false;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* ExcREXS_factory() {
 		return new ExcREXS;
@@ -577,5 +577,3 @@ const BaseClassDefiner ExcREXS::declare()
 {
 	return BaseClassDefiner(ExcREXS::addConstructToMap, ExcREXS::addPrimitiveAssignFnsToMap, ExcREXS::addClassAssignFnsToMap, ExcREXS::debugName);
 }
-
-

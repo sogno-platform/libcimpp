@@ -11,6 +11,8 @@ EquipmentContainer::EquipmentContainer() {};
 EquipmentContainer::~EquipmentContainer() {};
 
 
+
+
 bool assign_EquipmentContainer_Equipments(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(EquipmentContainer* element = dynamic_cast<EquipmentContainer*>(BaseClass_ptr1)) {
 		if(dynamic_cast<Equipment*>(BaseClass_ptr2) != nullptr) {
@@ -20,8 +22,6 @@ bool assign_EquipmentContainer_Equipments(BaseClass* BaseClass_ptr1, BaseClass* 
 	}
 	return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* EquipmentContainer_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner EquipmentContainer::declare()
 {
 	return BaseClassDefiner(EquipmentContainer::addConstructToMap, EquipmentContainer::addPrimitiveAssignFnsToMap, EquipmentContainer::addClassAssignFnsToMap, EquipmentContainer::debugName);
 }
-
-

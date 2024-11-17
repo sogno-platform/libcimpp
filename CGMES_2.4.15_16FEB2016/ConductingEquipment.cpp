@@ -2,9 +2,9 @@
 #include "Equipment.hpp"
 #include "ConductingEquipment.hpp"
 
-#include "Terminal.hpp"
 #include "BaseVoltage.hpp"
 #include "SvStatus.hpp"
+#include "Terminal.hpp"
 
 using namespace CIMPP;
 
@@ -13,15 +13,9 @@ ConductingEquipment::ConductingEquipment(): BaseVoltage(nullptr), SvStatus(nullp
 ConductingEquipment::~ConductingEquipment() {};
 
 
-bool assign_ConductingEquipment_Terminals(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(ConductingEquipment* element = dynamic_cast<ConductingEquipment*>(BaseClass_ptr1)) {
-		if(dynamic_cast<Terminal*>(BaseClass_ptr2) != nullptr) {
-                        element->Terminals.push_back(dynamic_cast<Terminal*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
+
+
+
 
 bool assign_BaseVoltage_ConductingEquipment(BaseClass*, BaseClass*);
 bool assign_ConductingEquipment_BaseVoltage(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
@@ -42,9 +36,15 @@ bool assign_ConductingEquipment_SvStatus(BaseClass* BaseClass_ptr1, BaseClass* B
         return false;
 }
 
-
-
-
+bool assign_ConductingEquipment_Terminals(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(ConductingEquipment* element = dynamic_cast<ConductingEquipment*>(BaseClass_ptr1)) {
+		if(dynamic_cast<Terminal*>(BaseClass_ptr2) != nullptr) {
+                        element->Terminals.push_back(dynamic_cast<Terminal*>(BaseClass_ptr2));
+			return true;
+		}
+	}
+	return false;
+}
 
 namespace CIMPP {
 	BaseClass* ConductingEquipment_factory() {
@@ -60,9 +60,9 @@ void ConductingEquipment::addPrimitiveAssignFnsToMap(std::unordered_map<std::str
 			}
 
 void ConductingEquipment::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-	assign_map.insert(std::make_pair(std::string("cim:ConductingEquipment.Terminals"), &assign_ConductingEquipment_Terminals));
 	assign_map.insert(std::make_pair(std::string("cim:ConductingEquipment.BaseVoltage"), &assign_ConductingEquipment_BaseVoltage));
 	assign_map.insert(std::make_pair(std::string("cim:ConductingEquipment.SvStatus"), &assign_ConductingEquipment_SvStatus));
+	assign_map.insert(std::make_pair(std::string("cim:ConductingEquipment.Terminals"), &assign_ConductingEquipment_Terminals));
 }
 
 const char ConductingEquipment::debugName[] = "ConductingEquipment";
@@ -75,5 +75,3 @@ const BaseClassDefiner ConductingEquipment::declare()
 {
 	return BaseClassDefiner(ConductingEquipment::addConstructToMap, ConductingEquipment::addPrimitiveAssignFnsToMap, ConductingEquipment::addClassAssignFnsToMap, ConductingEquipment::debugName);
 }
-
-

@@ -12,6 +12,9 @@ DCBaseTerminal::DCBaseTerminal(): DCNode(nullptr), DCTopologicalNode(nullptr) {}
 DCBaseTerminal::~DCBaseTerminal() {};
 
 
+
+
+
 bool assign_DCNode_DCTerminals(BaseClass*, BaseClass*);
 bool assign_DCBaseTerminal_DCNode(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(DCBaseTerminal* element = dynamic_cast<DCBaseTerminal*>(BaseClass_ptr1)) {
@@ -31,9 +34,6 @@ bool assign_DCBaseTerminal_DCTopologicalNode(BaseClass* BaseClass_ptr1, BaseClas
         }
         return false;
 }
-
-
-
 
 namespace CIMPP {
 	BaseClass* DCBaseTerminal_factory() {
@@ -63,5 +63,3 @@ const BaseClassDefiner DCBaseTerminal::declare()
 {
 	return BaseClassDefiner(DCBaseTerminal::addConstructToMap, DCBaseTerminal::addPrimitiveAssignFnsToMap, DCBaseTerminal::addClassAssignFnsToMap, DCBaseTerminal::debugName);
 }
-
-

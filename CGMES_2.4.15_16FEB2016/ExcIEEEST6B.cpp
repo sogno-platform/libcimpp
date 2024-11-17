@@ -24,21 +24,6 @@ ExcIEEEST6B::ExcIEEEST6B() {};
 ExcIEEEST6B::~ExcIEEEST6B() {};
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 bool assign_ExcIEEEST6B_ilr(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(ExcIEEEST6B* element = dynamic_cast<ExcIEEEST6B*>(BaseClass_ptr1)) {
                 buffer >> element->ilr;
@@ -207,6 +192,21 @@ bool assign_ExcIEEEST6B_vrmin(std::stringstream &buffer, BaseClass* BaseClass_pt
                 return false;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* ExcIEEEST6B_factory() {
 		return new ExcIEEEST6B;
@@ -247,5 +247,3 @@ const BaseClassDefiner ExcIEEEST6B::declare()
 {
 	return BaseClassDefiner(ExcIEEEST6B::addConstructToMap, ExcIEEEST6B::addPrimitiveAssignFnsToMap, ExcIEEEST6B::addClassAssignFnsToMap, ExcIEEEST6B::debugName);
 }
-
-

@@ -2,9 +2,9 @@
 #include "IdentifiedObject.hpp"
 #include "BusNameMarker.hpp"
 
-#include "Integer.hpp"
 #include "ReportingGroup.hpp"
 #include "ACDCTerminal.hpp"
+#include "Integer.hpp"
 
 using namespace CIMPP;
 
@@ -12,6 +12,20 @@ BusNameMarker::BusNameMarker(): ReportingGroup(nullptr) {};
 
 BusNameMarker::~BusNameMarker() {};
 
+
+
+
+bool assign_BusNameMarker_priority(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
+	if(BusNameMarker* element = dynamic_cast<BusNameMarker*>(BaseClass_ptr1)) {
+                buffer >> element->priority;
+                if(buffer.fail())
+                        return false;
+                else
+                        return true;
+        }
+        else
+                return false;
+}
 
 
 bool assign_ReportingGroup_BusNameMarker(BaseClass*, BaseClass*);
@@ -35,20 +49,6 @@ bool assign_BusNameMarker_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseCla
 }
 
 
-bool assign_BusNameMarker_priority(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(BusNameMarker* element = dynamic_cast<BusNameMarker*>(BaseClass_ptr1)) {
-                buffer >> element->priority;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-
-
 namespace CIMPP {
 	BaseClass* BusNameMarker_factory() {
 		return new BusNameMarker;
@@ -60,13 +60,13 @@ void BusNameMarker::addConstructToMap(std::unordered_map<std::string, BaseClass*
 }
 
 void BusNameMarker::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
-	assign_map.insert(std::make_pair(std::string("cim:BusNameMarker.priority"), &assign_BusNameMarker_priority));
-		}
+			assign_map.insert(std::make_pair(std::string("cim:BusNameMarker.priority"), &assign_BusNameMarker_priority));
+}
 
 void BusNameMarker::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-		assign_map.insert(std::make_pair(std::string("cim:BusNameMarker.ReportingGroup"), &assign_BusNameMarker_ReportingGroup));
+	assign_map.insert(std::make_pair(std::string("cim:BusNameMarker.ReportingGroup"), &assign_BusNameMarker_ReportingGroup));
 	assign_map.insert(std::make_pair(std::string("cim:BusNameMarker.Terminal"), &assign_BusNameMarker_Terminal));
-}
+	}
 
 const char BusNameMarker::debugName[] = "BusNameMarker";
 const char* BusNameMarker::debugString()
@@ -78,5 +78,3 @@ const BaseClassDefiner BusNameMarker::declare()
 {
 	return BaseClassDefiner(BusNameMarker::addConstructToMap, BusNameMarker::addPrimitiveAssignFnsToMap, BusNameMarker::addClassAssignFnsToMap, BusNameMarker::debugName);
 }
-
-

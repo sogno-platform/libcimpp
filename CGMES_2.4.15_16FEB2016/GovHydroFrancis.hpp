@@ -12,6 +12,7 @@
 #include "Frequency.hpp"
 #include "FrancisGovernorControlKind.hpp"
 #include "Length.hpp"
+#include "VolumeFlowRate.hpp"
 #include "Seconds.hpp"
 #include "Simple_Float.hpp"
 #include "Boolean.hpp"
@@ -19,7 +20,6 @@
 namespace CIMPP {
 
 
-class VolumeFlowRate;
 	/*
 	Detailed hydro unit - Francis model.  This model can be used to represent three types of governors. A schematic of the hydraulic system of detailed hydro unit models, like Francis and Pelton, is provided in the DetailedHydroModelHydraulicSystem diagram.
 	*/
@@ -41,7 +41,7 @@ class VolumeFlowRate;
 					CIMPP::PU kg; 	/* Water tunnel and surge chamber loss coefficient (due to friction) (Kg).  Typical Value = 0.025. Default: nullptr */
 					CIMPP::PU kt; 	/* Washout gain (Kt).  Typical Value = 0.25. Default: nullptr */
 					CIMPP::PU qc0; 	/* No-load turbine flow at nominal head (Qc0).  Typical Value = 0.21. Default: nullptr */
-					CIMPP::VolumeFlowRate* qn; 	/* Rated flow (Q). Unit = m/s. Typical Value = 40. Default: nullptr */
+					CIMPP::VolumeFlowRate qn; 	/* Rated flow (Q). Unit = m/s. Typical Value = 40. Default: nullptr */
 					CIMPP::Seconds ta; 	/* Derivative gain (Ta).  Typical Value = 3. Default: nullptr */
 					CIMPP::Seconds td; 	/* Washout time constant (Td).  Typical Value = 3. Default: nullptr */
 					CIMPP::Seconds ts; 	/* Gate servo time constant (Ts).  Typical Value = 0.5. Default: nullptr */
@@ -54,14 +54,14 @@ class VolumeFlowRate;
 					CIMPP::Simple_Float vc; 	/* Maximum gate closing velocity (Vc).  Unit = PU/sec.  Typical Value = -0.011. Default: nullptr */
 					CIMPP::Boolean waterTunnelSurgeChamberSimulation; 	/* Water tunnel and surge chamber simulation (Tflag). true = enable of water tunnel and surge chamber simulation false = inhibit of water tunnel and surge chamber simulation. Typical Value = false. Default: false */
 					CIMPP::Length zsfc; 	/* Head of upper water level with respect to the level of penstock (Zsfc).  Unit = m.  Typical Value = 25. Default: nullptr */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		GovHydroFrancis();
 		virtual ~GovHydroFrancis();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

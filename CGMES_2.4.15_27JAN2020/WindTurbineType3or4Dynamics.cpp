@@ -13,6 +13,10 @@ WindTurbineType3or4Dynamics::WindTurbineType3or4Dynamics(): EnergySource(nullptr
 WindTurbineType3or4Dynamics::~WindTurbineType3or4Dynamics() {};
 
 
+
+
+
+
 bool assign_EnergySource_WindTurbineType3or4Dynamics(BaseClass*, BaseClass*);
 bool assign_WindTurbineType3or4Dynamics_EnergySource(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(WindTurbineType3or4Dynamics* element = dynamic_cast<WindTurbineType3or4Dynamics*>(BaseClass_ptr1)) {
@@ -43,10 +47,6 @@ bool assign_WindTurbineType3or4Dynamics_WindPlantDynamics(BaseClass* BaseClass_p
         return false;
 }
 
-
-
-
-
 namespace CIMPP {
 	BaseClass* WindTurbineType3or4Dynamics_factory() {
 		return new WindTurbineType3or4Dynamics;
@@ -76,5 +76,3 @@ const BaseClassDefiner WindTurbineType3or4Dynamics::declare()
 {
 	return BaseClassDefiner(WindTurbineType3or4Dynamics::addConstructToMap, WindTurbineType3or4Dynamics::addPrimitiveAssignFnsToMap, WindTurbineType3or4Dynamics::addClassAssignFnsToMap, WindTurbineType3or4Dynamics::debugName);
 }
-
-

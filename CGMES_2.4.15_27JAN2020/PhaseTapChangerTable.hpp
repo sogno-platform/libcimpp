@@ -22,14 +22,14 @@ class PhaseTapChangerTabular;
 	public:
 					std::list<CIMPP::PhaseTapChangerTablePoint*> PhaseTapChangerTablePoint; 	/* The points of this table. Default: 0 */
 					std::list<CIMPP::PhaseTapChangerTabular*> PhaseTapChangerTabular; 	/* The phase tap changers to which this phase tap table applies. Default: 0 */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		PhaseTapChangerTable();
 		virtual ~PhaseTapChangerTable();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

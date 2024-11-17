@@ -33,46 +33,9 @@
 
 using namespace CIMPP;
 
-GovHydroPelton::GovHydroPelton(): qn(nullptr) {};
+GovHydroPelton::GovHydroPelton() {};
 
 GovHydroPelton::~GovHydroPelton() {};
-
-
-
-
-
-
-
-
-
-
-
-
-
-bool assign_GovHydroPelton_qn(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                element->qn = dynamic_cast<VolumeFlowRate*>(BaseClass_ptr2);
-                if(element->qn != nullptr)
-                        return true;
-        }
-        return false;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 bool assign_GovHydroPelton_av0(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
@@ -207,6 +170,17 @@ bool assign_GovHydroPelton_qc0(std::stringstream &buffer, BaseClass* BaseClass_p
                 return false;
 }
 
+bool assign_GovHydroPelton_qn(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
+	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
+                buffer >> element->qn;
+                if(buffer.fail())
+                        return false;
+                else
+                        return true;
+        }
+        else
+                return false;
+}
 
 bool assign_GovHydroPelton_simplifiedPelton(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
@@ -400,6 +374,35 @@ bool assign_GovHydroPelton_zsfc(std::stringstream &buffer, BaseClass* BaseClass_
                 return false;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* GovHydroPelton_factory() {
 		return new GovHydroPelton;
@@ -422,7 +425,8 @@ void GovHydroPelton::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, 
 	assign_map.insert(std::make_pair(std::string("cim:GovHydroPelton.kc"), &assign_GovHydroPelton_kc));
 	assign_map.insert(std::make_pair(std::string("cim:GovHydroPelton.kg"), &assign_GovHydroPelton_kg));
 	assign_map.insert(std::make_pair(std::string("cim:GovHydroPelton.qc0"), &assign_GovHydroPelton_qc0));
-		assign_map.insert(std::make_pair(std::string("cim:GovHydroPelton.simplifiedPelton"), &assign_GovHydroPelton_simplifiedPelton));
+	assign_map.insert(std::make_pair(std::string("cim:GovHydroPelton.qn"), &assign_GovHydroPelton_qn));
+	assign_map.insert(std::make_pair(std::string("cim:GovHydroPelton.simplifiedPelton"), &assign_GovHydroPelton_simplifiedPelton));
 	assign_map.insert(std::make_pair(std::string("cim:GovHydroPelton.staticCompensating"), &assign_GovHydroPelton_staticCompensating));
 	assign_map.insert(std::make_pair(std::string("cim:GovHydroPelton.ta"), &assign_GovHydroPelton_ta));
 	assign_map.insert(std::make_pair(std::string("cim:GovHydroPelton.ts"), &assign_GovHydroPelton_ts));
@@ -441,8 +445,7 @@ void GovHydroPelton::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, 
 }
 
 void GovHydroPelton::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-												assign_map.insert(std::make_pair(std::string("cim:GovHydroPelton.qn"), &assign_GovHydroPelton_qn));
-																}
+																												}
 
 const char GovHydroPelton::debugName[] = "GovHydroPelton";
 const char* GovHydroPelton::debugString()
@@ -454,5 +457,3 @@ const BaseClassDefiner GovHydroPelton::declare()
 {
 	return BaseClassDefiner(GovHydroPelton::addConstructToMap, GovHydroPelton::addPrimitiveAssignFnsToMap, GovHydroPelton::addClassAssignFnsToMap, GovHydroPelton::debugName);
 }
-
-

@@ -13,6 +13,21 @@ DiscreteValue::DiscreteValue(): Command(nullptr), Discrete(nullptr) {};
 DiscreteValue::~DiscreteValue() {};
 
 
+
+
+bool assign_DiscreteValue_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
+	if(DiscreteValue* element = dynamic_cast<DiscreteValue*>(BaseClass_ptr1)) {
+                buffer >> element->value;
+                if(buffer.fail())
+                        return false;
+                else
+                        return true;
+        }
+        else
+                return false;
+}
+
+
 bool assign_DiscreteValue_Command(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(DiscreteValue* element = dynamic_cast<DiscreteValue*>(BaseClass_ptr1)) {
                 element->Command = dynamic_cast<Command*>(BaseClass_ptr2);
@@ -32,21 +47,6 @@ bool assign_DiscreteValue_Discrete(BaseClass* BaseClass_ptr1, BaseClass* BaseCla
         return false;
 }
 
-
-
-
-
-bool assign_DiscreteValue_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(DiscreteValue* element = dynamic_cast<DiscreteValue*>(BaseClass_ptr1)) {
-                buffer >> element->value;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
 
 namespace CIMPP {
 	BaseClass* DiscreteValue_factory() {
@@ -77,5 +77,3 @@ const BaseClassDefiner DiscreteValue::declare()
 {
 	return BaseClassDefiner(DiscreteValue::addConstructToMap, DiscreteValue::addPrimitiveAssignFnsToMap, DiscreteValue::addClassAssignFnsToMap, DiscreteValue::debugName);
 }
-
-

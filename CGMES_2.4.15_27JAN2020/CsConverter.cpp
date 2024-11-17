@@ -4,18 +4,18 @@
 
 #include "AngleDegrees.hpp"
 #include "AngleDegrees.hpp"
-#include "CurrentFlow.hpp"
 #include "AngleDegrees.hpp"
 #include "AngleDegrees.hpp"
 #include "CurrentFlow.hpp"
+#include "AngleDegrees.hpp"
+#include "AngleDegrees.hpp"
 #include "CurrentFlow.hpp"
 #include "CsOperatingModeKind.hpp"
 #include "CsPpccControlKind.hpp"
-#include "AngleDegrees.hpp"
-#include "AngleDegrees.hpp"
 #include "CurrentFlow.hpp"
 #include "AngleDegrees.hpp"
 #include "AngleDegrees.hpp"
+#include "CurrentFlow.hpp"
 
 using namespace CIMPP;
 
@@ -24,20 +24,29 @@ CsConverter::CsConverter() {};
 CsConverter::~CsConverter() {};
 
 
+bool assign_CsConverter_alpha(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
+	if(CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1)) {
+                buffer >> element->alpha;
+                if(buffer.fail())
+                        return false;
+                else
+                        return true;
+        }
+        else
+                return false;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+bool assign_CsConverter_gamma(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
+	if(CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1)) {
+                buffer >> element->gamma;
+                if(buffer.fail())
+                        return false;
+                else
+                        return true;
+        }
+        else
+                return false;
+}
 
 bool assign_CsConverter_maxAlpha(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1)) {
@@ -111,18 +120,6 @@ bool assign_CsConverter_minIdc(std::stringstream &buffer, BaseClass* BaseClass_p
                 return false;
 }
 
-bool assign_CsConverter_ratedIdc(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1)) {
-                buffer >> element->ratedIdc;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
 bool assign_CsConverter_operatingMode(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1)) {
                 buffer >> element->operatingMode;
@@ -138,6 +135,18 @@ bool assign_CsConverter_operatingMode(std::stringstream &buffer, BaseClass* Base
 bool assign_CsConverter_pPccControl(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1)) {
                 buffer >> element->pPccControl;
+                if(buffer.fail())
+                        return false;
+                else
+                        return true;
+        }
+        else
+                return false;
+}
+
+bool assign_CsConverter_ratedIdc(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
+	if(CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1)) {
+                buffer >> element->ratedIdc;
                 if(buffer.fail())
                         return false;
                 else
@@ -183,29 +192,20 @@ bool assign_CsConverter_targetIdc(std::stringstream &buffer, BaseClass* BaseClas
                 return false;
 }
 
-bool assign_CsConverter_alpha(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1)) {
-                buffer >> element->alpha;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
 
-bool assign_CsConverter_gamma(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1)) {
-                buffer >> element->gamma;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 namespace CIMPP {
 	BaseClass* CsConverter_factory() {
@@ -218,20 +218,20 @@ void CsConverter::addConstructToMap(std::unordered_map<std::string, BaseClass* (
 }
 
 void CsConverter::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
+	assign_map.insert(std::make_pair(std::string("cim:CsConverter.alpha"), &assign_CsConverter_alpha));
+	assign_map.insert(std::make_pair(std::string("cim:CsConverter.gamma"), &assign_CsConverter_gamma));
 	assign_map.insert(std::make_pair(std::string("cim:CsConverter.maxAlpha"), &assign_CsConverter_maxAlpha));
 	assign_map.insert(std::make_pair(std::string("cim:CsConverter.maxGamma"), &assign_CsConverter_maxGamma));
 	assign_map.insert(std::make_pair(std::string("cim:CsConverter.maxIdc"), &assign_CsConverter_maxIdc));
 	assign_map.insert(std::make_pair(std::string("cim:CsConverter.minAlpha"), &assign_CsConverter_minAlpha));
 	assign_map.insert(std::make_pair(std::string("cim:CsConverter.minGamma"), &assign_CsConverter_minGamma));
 	assign_map.insert(std::make_pair(std::string("cim:CsConverter.minIdc"), &assign_CsConverter_minIdc));
-	assign_map.insert(std::make_pair(std::string("cim:CsConverter.ratedIdc"), &assign_CsConverter_ratedIdc));
 	assign_map.insert(std::make_pair(std::string("cim:CsConverter.operatingMode"), &assign_CsConverter_operatingMode));
 	assign_map.insert(std::make_pair(std::string("cim:CsConverter.pPccControl"), &assign_CsConverter_pPccControl));
+	assign_map.insert(std::make_pair(std::string("cim:CsConverter.ratedIdc"), &assign_CsConverter_ratedIdc));
 	assign_map.insert(std::make_pair(std::string("cim:CsConverter.targetAlpha"), &assign_CsConverter_targetAlpha));
 	assign_map.insert(std::make_pair(std::string("cim:CsConverter.targetGamma"), &assign_CsConverter_targetGamma));
 	assign_map.insert(std::make_pair(std::string("cim:CsConverter.targetIdc"), &assign_CsConverter_targetIdc));
-	assign_map.insert(std::make_pair(std::string("cim:CsConverter.alpha"), &assign_CsConverter_alpha));
-	assign_map.insert(std::make_pair(std::string("cim:CsConverter.gamma"), &assign_CsConverter_gamma));
 }
 
 void CsConverter::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
@@ -247,5 +247,3 @@ const BaseClassDefiner CsConverter::declare()
 {
 	return BaseClassDefiner(CsConverter::addConstructToMap, CsConverter::addPrimitiveAssignFnsToMap, CsConverter::addClassAssignFnsToMap, CsConverter::debugName);
 }
-
-

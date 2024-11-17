@@ -3,17 +3,17 @@
 #include "WindPlantFreqPcontrolIEC.hpp"
 
 #include "WindDynamicsLookupTable.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Simple_Float.hpp"
-#include "Simple_Float.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
 #include "WindPlantIEC.hpp"
+#include "PU.hpp"
+#include "PU.hpp"
+#include "Simple_Float.hpp"
+#include "Simple_Float.hpp"
+#include "PU.hpp"
+#include "PU.hpp"
+#include "Seconds.hpp"
+#include "Seconds.hpp"
+#include "Seconds.hpp"
+#include "Seconds.hpp"
 
 using namespace CIMPP;
 
@@ -21,35 +21,6 @@ WindPlantFreqPcontrolIEC::WindPlantFreqPcontrolIEC(): WindPlantIEC(nullptr) {};
 
 WindPlantFreqPcontrolIEC::~WindPlantFreqPcontrolIEC() {};
 
-
-bool assign_WindPlantFreqPcontrolIEC_WindDynamicsLookupTable(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1)) {
-		if(dynamic_cast<WindDynamicsLookupTable*>(BaseClass_ptr2) != nullptr) {
-                        element->WindDynamicsLookupTable.push_back(dynamic_cast<WindDynamicsLookupTable*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
-
-
-
-
-
-
-
-
-
-
-
-bool assign_WindPlantFreqPcontrolIEC_WindPlantIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1)) {
-                element->WindPlantIEC = dynamic_cast<WindPlantIEC*>(BaseClass_ptr2);
-                if(element->WindPlantIEC != nullptr)
-                        return true;
-        }
-        return false;
-}
 
 
 
@@ -174,6 +145,35 @@ bool assign_WindPlantFreqPcontrolIEC_twppfilt(std::stringstream &buffer, BaseCla
 }
 
 
+bool assign_WindPlantFreqPcontrolIEC_WindDynamicsLookupTable(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1)) {
+		if(dynamic_cast<WindDynamicsLookupTable*>(BaseClass_ptr2) != nullptr) {
+                        element->WindDynamicsLookupTable.push_back(dynamic_cast<WindDynamicsLookupTable*>(BaseClass_ptr2));
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantFreqPcontrolIEC_WindPlantIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1)) {
+                element->WindPlantIEC = dynamic_cast<WindPlantIEC*>(BaseClass_ptr2);
+                if(element->WindPlantIEC != nullptr)
+                        return true;
+        }
+        return false;
+}
+
+
+
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* WindPlantFreqPcontrolIEC_factory() {
 		return new WindPlantFreqPcontrolIEC;
@@ -185,7 +185,7 @@ void WindPlantFreqPcontrolIEC::addConstructToMap(std::unordered_map<std::string,
 }
 
 void WindPlantFreqPcontrolIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
-		assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.dprefmax"), &assign_WindPlantFreqPcontrolIEC_dprefmax));
+			assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.dprefmax"), &assign_WindPlantFreqPcontrolIEC_dprefmax));
 	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.dprefmin"), &assign_WindPlantFreqPcontrolIEC_dprefmin));
 	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.kiwpp"), &assign_WindPlantFreqPcontrolIEC_kiwpp));
 	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.kpwpp"), &assign_WindPlantFreqPcontrolIEC_kpwpp));
@@ -195,12 +195,12 @@ void WindPlantFreqPcontrolIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std
 	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.tpfv"), &assign_WindPlantFreqPcontrolIEC_tpfv));
 	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.twpffilt"), &assign_WindPlantFreqPcontrolIEC_twpffilt));
 	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.twppfilt"), &assign_WindPlantFreqPcontrolIEC_twppfilt));
-	}
+}
 
 void WindPlantFreqPcontrolIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
 	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.WindDynamicsLookupTable"), &assign_WindPlantFreqPcontrolIEC_WindDynamicsLookupTable));
-											assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.WindPlantIEC"), &assign_WindPlantFreqPcontrolIEC_WindPlantIEC));
-}
+	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.WindPlantIEC"), &assign_WindPlantFreqPcontrolIEC_WindPlantIEC));
+										}
 
 const char WindPlantFreqPcontrolIEC::debugName[] = "WindPlantFreqPcontrolIEC";
 const char* WindPlantFreqPcontrolIEC::debugString()
@@ -212,5 +212,3 @@ const BaseClassDefiner WindPlantFreqPcontrolIEC::declare()
 {
 	return BaseClassDefiner(WindPlantFreqPcontrolIEC::addConstructToMap, WindPlantFreqPcontrolIEC::addPrimitiveAssignFnsToMap, WindPlantFreqPcontrolIEC::addClassAssignFnsToMap, WindPlantFreqPcontrolIEC::debugName);
 }
-
-

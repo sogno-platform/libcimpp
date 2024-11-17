@@ -22,14 +22,14 @@ class WindProtectionIEC;
 	public:
 					CIMPP::WindMechIEC* WindMechIEC; 	/* Wind mechanical model associated with this wind generator type 1 or 2 model. Default: 0 */
 					CIMPP::WindProtectionIEC* WindProtectionIEC; 	/* Wind turbune protection model associated with this wind generator type 1 or 2 model. Default: 0 */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		WindTurbineType1or2IEC();
 		virtual ~WindTurbineType1or2IEC();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

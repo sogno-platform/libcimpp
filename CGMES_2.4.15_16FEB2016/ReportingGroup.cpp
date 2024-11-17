@@ -12,6 +12,9 @@ ReportingGroup::ReportingGroup() {};
 ReportingGroup::~ReportingGroup() {};
 
 
+
+
+
 bool assign_ReportingGroup_BusNameMarker(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(ReportingGroup* element = dynamic_cast<ReportingGroup*>(BaseClass_ptr1)) {
 		if(dynamic_cast<BusNameMarker*>(BaseClass_ptr2) != nullptr) {
@@ -31,9 +34,6 @@ bool assign_ReportingGroup_TopologicalNode(BaseClass* BaseClass_ptr1, BaseClass*
 	}
 	return false;
 }
-
-
-
 
 namespace CIMPP {
 	BaseClass* ReportingGroup_factory() {
@@ -63,5 +63,3 @@ const BaseClassDefiner ReportingGroup::declare()
 {
 	return BaseClassDefiner(ReportingGroup::addConstructToMap, ReportingGroup::addPrimitiveAssignFnsToMap, ReportingGroup::addClassAssignFnsToMap, ReportingGroup::debugName);
 }
-
-

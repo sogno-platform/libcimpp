@@ -21,17 +21,17 @@ class HydroPump;
 	{
 
 	public:
-					CIMPP::HydroPlantStorageKind hydroPlantStorageType; 	/* The type of hydro power plant water storage. Default: 0 */
 					std::list<CIMPP::HydroGeneratingUnit*> HydroGeneratingUnits; 	/* The hydro generating unit belongs to a hydro power plant. Default: 0 */
 					std::list<CIMPP::HydroPump*> HydroPumps; 	/* The hydro pump may be a member of a pumped storage plant or a pump for distributing water. Default: 0 */
-				
+					CIMPP::HydroPlantStorageKind hydroPlantStorageType; 	/* The type of hydro power plant water storage. Default: 0 */
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		HydroPowerPlant();
 		virtual ~HydroPowerPlant();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

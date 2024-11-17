@@ -19,19 +19,19 @@ namespace CIMPP {
 	{
 
 	public:
-					CIMPP::PU xm; 	/* Magnetizing reactance. Default: nullptr */
 					CIMPP::PU rr1; 	/* Damper 1 winding resistance. Default: nullptr */
-					CIMPP::PU xlr1; 	/* Damper 1 winding leakage reactance. Default: nullptr */
 					CIMPP::PU rr2; 	/* Damper 2 winding resistance. Default: nullptr */
+					CIMPP::PU xlr1; 	/* Damper 1 winding leakage reactance. Default: nullptr */
 					CIMPP::PU xlr2; 	/* Damper 2 winding leakage reactance. Default: nullptr */
-				
+					CIMPP::PU xm; 	/* Magnetizing reactance. Default: nullptr */
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		AsynchronousMachineEquivalentCircuit();
 		virtual ~AsynchronousMachineEquivalentCircuit();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

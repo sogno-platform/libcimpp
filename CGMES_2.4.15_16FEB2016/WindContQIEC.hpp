@@ -23,6 +23,7 @@ class WindTurbineType3or4IEC;
 	{
 
 	public:
+					CIMPP::WindTurbineType3or4IEC* WindTurbineType3or4IEC; 	/* Wind turbine type 3 or 4 model with which this reactive control mode is associated. Default: 0 */
 					CIMPP::PU iqh1; 	/* Maximum reactive current injection during dip (i). It is type dependent parameter. Default: nullptr */
 					CIMPP::PU iqmax; 	/* Maximum reactive current injection (i). It is type dependent parameter. Default: nullptr */
 					CIMPP::PU iqmin; 	/* Minimum reactive current injection (i). It is type dependent parameter. Default: nullptr */
@@ -49,15 +50,14 @@ class WindTurbineType3or4IEC;
 					CIMPP::WindLVRTQcontrolModesKind windLVRTQcontrolModesType; 	/* Types of LVRT Q control modes (). It is project dependent parameter. Default: 0 */
 					CIMPP::WindQcontrolModesKind windQcontrolModesType; 	/* Types of general wind turbine Q control modes ().  It is project dependent parameter. Default: 0 */
 					CIMPP::PU xdroop; 	/* Inductive component of voltage drop impedance (). It is project dependent parameter. Default: nullptr */
-					CIMPP::WindTurbineType3or4IEC* WindTurbineType3or4IEC; 	/* Wind turbine type 3 or 4 model with which this reactive control mode is associated. Default: 0 */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		WindContQIEC();
 		virtual ~WindContQIEC();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

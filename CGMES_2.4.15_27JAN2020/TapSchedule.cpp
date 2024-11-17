@@ -11,6 +11,8 @@ TapSchedule::TapSchedule(): TapChanger(nullptr) {};
 TapSchedule::~TapSchedule() {};
 
 
+
+
 bool assign_TapChanger_TapSchedules(BaseClass*, BaseClass*);
 bool assign_TapSchedule_TapChanger(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(TapSchedule* element = dynamic_cast<TapSchedule*>(BaseClass_ptr1)) {
@@ -20,8 +22,6 @@ bool assign_TapSchedule_TapChanger(BaseClass* BaseClass_ptr1, BaseClass* BaseCla
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* TapSchedule_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner TapSchedule::declare()
 {
 	return BaseClassDefiner(TapSchedule::addConstructToMap, TapSchedule::addPrimitiveAssignFnsToMap, TapSchedule::addClassAssignFnsToMap, TapSchedule::debugName);
 }
-
-

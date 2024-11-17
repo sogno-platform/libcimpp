@@ -26,23 +26,6 @@ ExcIEEEDC2A::ExcIEEEDC2A() {};
 ExcIEEEDC2A::~ExcIEEEDC2A() {};
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 bool assign_ExcIEEEDC2A_efd1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(ExcIEEEDC2A* element = dynamic_cast<ExcIEEEDC2A*>(BaseClass_ptr1)) {
                 buffer >> element->efd1;
@@ -235,6 +218,23 @@ bool assign_ExcIEEEDC2A_vrmin(std::stringstream &buffer, BaseClass* BaseClass_pt
                 return false;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* ExcIEEEDC2A_factory() {
 		return new ExcIEEEDC2A;
@@ -277,5 +277,3 @@ const BaseClassDefiner ExcIEEEDC2A::declare()
 {
 	return BaseClassDefiner(ExcIEEEDC2A::addConstructToMap, ExcIEEEDC2A::addPrimitiveAssignFnsToMap, ExcIEEEDC2A::addClassAssignFnsToMap, ExcIEEEDC2A::debugName);
 }
-
-

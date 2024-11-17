@@ -22,28 +22,6 @@ LoadResponseCharacteristic::LoadResponseCharacteristic() {};
 LoadResponseCharacteristic::~LoadResponseCharacteristic() {};
 
 
-bool assign_LoadResponseCharacteristic_EnergyConsumer(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(LoadResponseCharacteristic* element = dynamic_cast<LoadResponseCharacteristic*>(BaseClass_ptr1)) {
-		if(dynamic_cast<EnergyConsumer*>(BaseClass_ptr2) != nullptr) {
-                        element->EnergyConsumer.push_back(dynamic_cast<EnergyConsumer*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 bool assign_LoadResponseCharacteristic_exponentModel(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(LoadResponseCharacteristic* element = dynamic_cast<LoadResponseCharacteristic*>(BaseClass_ptr1)) {
@@ -177,6 +155,28 @@ bool assign_LoadResponseCharacteristic_qVoltageExponent(std::stringstream &buffe
                 return false;
 }
 
+
+bool assign_LoadResponseCharacteristic_EnergyConsumer(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(LoadResponseCharacteristic* element = dynamic_cast<LoadResponseCharacteristic*>(BaseClass_ptr1)) {
+		if(dynamic_cast<EnergyConsumer*>(BaseClass_ptr2) != nullptr) {
+                        element->EnergyConsumer.push_back(dynamic_cast<EnergyConsumer*>(BaseClass_ptr2));
+			return true;
+		}
+	}
+	return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* LoadResponseCharacteristic_factory() {
 		return new LoadResponseCharacteristic;
@@ -215,5 +215,3 @@ const BaseClassDefiner LoadResponseCharacteristic::declare()
 {
 	return BaseClassDefiner(LoadResponseCharacteristic::addConstructToMap, LoadResponseCharacteristic::addPrimitiveAssignFnsToMap, LoadResponseCharacteristic::addClassAssignFnsToMap, LoadResponseCharacteristic::debugName);
 }
-
-

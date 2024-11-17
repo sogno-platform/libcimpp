@@ -8,8 +8,8 @@
 
 
 #include "Simple_Float.hpp"
-#include "PU.hpp"
 #include "Seconds.hpp"
+#include "PU.hpp"
 
 namespace CIMPP {
 
@@ -23,27 +23,27 @@ class LoadAggregate;
 
 	public:
 					CIMPP::LoadAggregate* LoadAggregate; 	/* Aggregate load to which this aggregate motor (dynamic) load belongs. Default: 0 */
-					CIMPP::Simple_Float pfrac; 	/* Fraction of constant-power load to be represented by this motor model (Pfrac) (&gt;=0.0 and &lt;=1.0).  Typical Value = 0.3. Default: nullptr */
+					CIMPP::Simple_Float d; 	/* Damping factor (D).  Unit = delta P/delta speed.  Typical Value = 2. Default: nullptr */
+					CIMPP::Seconds h; 	/* Inertia constant (H) (not=0).  Typical Value = 0.4. Default: nullptr */
 					CIMPP::Simple_Float lfac; 	/* Loading factor - ratio of initial P to motor MVA base (Lfac).  Typical Value = 0.8. Default: nullptr */
-					CIMPP::PU ls; 	/* Synchronous reactance (Ls).  Typical Value = 3.2. Default: nullptr */
 					CIMPP::PU lp; 	/* Transient reactance (Lp).  Typical Value = 0.15. Default: nullptr */
 					CIMPP::PU lpp; 	/* Subtransient reactance (Lpp).  Typical Value = 0.15. Default: nullptr */
+					CIMPP::PU ls; 	/* Synchronous reactance (Ls).  Typical Value = 3.2. Default: nullptr */
+					CIMPP::Simple_Float pfrac; 	/* Fraction of constant-power load to be represented by this motor model (Pfrac) (&gt;=0.0 and &lt;=1.0).  Typical Value = 0.3. Default: nullptr */
 					CIMPP::PU ra; 	/* Stator resistance (Ra).  Typical Value = 0. Default: nullptr */
+					CIMPP::Seconds tbkr; 	/* Circuit breaker operating time (Tbkr).  Typical Value = 0.08. Default: nullptr */
 					CIMPP::Seconds tpo; 	/* Transient rotor time constant (Tpo) (not=0).  Typical Value = 1. Default: nullptr */
 					CIMPP::Seconds tppo; 	/* Subtransient rotor time constant (Tppo).  Typical Value = 0.02. Default: nullptr */
-					CIMPP::Seconds h; 	/* Inertia constant (H) (not=0).  Typical Value = 0.4. Default: nullptr */
-					CIMPP::Simple_Float d; 	/* Damping factor (D).  Unit = delta P/delta speed.  Typical Value = 2. Default: nullptr */
-					CIMPP::PU vt; 	/* Voltage threshold for tripping (Vt).  Typical Value = 0.7. Default: nullptr */
 					CIMPP::Seconds tv; 	/* Voltage trip pickup time (Tv).  Typical Value = 0.1. Default: nullptr */
-					CIMPP::Seconds tbkr; 	/* Circuit breaker operating time (Tbkr).  Typical Value = 0.08. Default: nullptr */
-				
+					CIMPP::PU vt; 	/* Voltage threshold for tripping (Vt).  Typical Value = 0.7. Default: nullptr */
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		LoadMotor();
 		virtual ~LoadMotor();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

@@ -11,8 +11,6 @@ WindGeneratingUnit::WindGeneratingUnit() {};
 WindGeneratingUnit::~WindGeneratingUnit() {};
 
 
-
-
 bool assign_WindGeneratingUnit_windGenUnitType(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(WindGeneratingUnit* element = dynamic_cast<WindGeneratingUnit*>(BaseClass_ptr1)) {
                 buffer >> element->windGenUnitType;
@@ -24,6 +22,8 @@ bool assign_WindGeneratingUnit_windGenUnitType(std::stringstream &buffer, BaseCl
         else
                 return false;
 }
+
+
 
 namespace CIMPP {
 	BaseClass* WindGeneratingUnit_factory() {
@@ -52,5 +52,3 @@ const BaseClassDefiner WindGeneratingUnit::declare()
 {
 	return BaseClassDefiner(WindGeneratingUnit::addConstructToMap, WindGeneratingUnit::addPrimitiveAssignFnsToMap, WindGeneratingUnit::addClassAssignFnsToMap, WindGeneratingUnit::debugName);
 }
-
-

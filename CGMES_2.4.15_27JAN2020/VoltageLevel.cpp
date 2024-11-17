@@ -3,10 +3,10 @@
 #include "VoltageLevel.hpp"
 
 #include "BaseVoltage.hpp"
+#include "Bay.hpp"
 #include "Substation.hpp"
 #include "Voltage.hpp"
 #include "Voltage.hpp"
-#include "Bay.hpp"
 
 using namespace CIMPP;
 
@@ -14,38 +14,6 @@ VoltageLevel::VoltageLevel(): BaseVoltage(nullptr), Substation(nullptr) {};
 
 VoltageLevel::~VoltageLevel() {};
 
-
-bool assign_BaseVoltage_VoltageLevel(BaseClass*, BaseClass*);
-bool assign_VoltageLevel_BaseVoltage(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(VoltageLevel* element = dynamic_cast<VoltageLevel*>(BaseClass_ptr1)) {
-                element->BaseVoltage = dynamic_cast<BaseVoltage*>(BaseClass_ptr2);
-                if(element->BaseVoltage != nullptr)
-                        return assign_BaseVoltage_VoltageLevel(BaseClass_ptr2, BaseClass_ptr1);
-        }
-        return false;
-}
-
-bool assign_Substation_VoltageLevels(BaseClass*, BaseClass*);
-bool assign_VoltageLevel_Substation(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(VoltageLevel* element = dynamic_cast<VoltageLevel*>(BaseClass_ptr1)) {
-                element->Substation = dynamic_cast<Substation*>(BaseClass_ptr2);
-                if(element->Substation != nullptr)
-                        return assign_Substation_VoltageLevels(BaseClass_ptr2, BaseClass_ptr1);
-        }
-        return false;
-}
-
-
-
-bool assign_VoltageLevel_Bays(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(VoltageLevel* element = dynamic_cast<VoltageLevel*>(BaseClass_ptr1)) {
-		if(dynamic_cast<Bay*>(BaseClass_ptr2) != nullptr) {
-                        element->Bays.push_back(dynamic_cast<Bay*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
 
 
 
@@ -75,6 +43,38 @@ bool assign_VoltageLevel_lowVoltageLimit(std::stringstream &buffer, BaseClass* B
 }
 
 
+bool assign_BaseVoltage_VoltageLevel(BaseClass*, BaseClass*);
+bool assign_VoltageLevel_BaseVoltage(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(VoltageLevel* element = dynamic_cast<VoltageLevel*>(BaseClass_ptr1)) {
+                element->BaseVoltage = dynamic_cast<BaseVoltage*>(BaseClass_ptr2);
+                if(element->BaseVoltage != nullptr)
+                        return assign_BaseVoltage_VoltageLevel(BaseClass_ptr2, BaseClass_ptr1);
+        }
+        return false;
+}
+
+bool assign_VoltageLevel_Bays(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(VoltageLevel* element = dynamic_cast<VoltageLevel*>(BaseClass_ptr1)) {
+		if(dynamic_cast<Bay*>(BaseClass_ptr2) != nullptr) {
+                        element->Bays.push_back(dynamic_cast<Bay*>(BaseClass_ptr2));
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_Substation_VoltageLevels(BaseClass*, BaseClass*);
+bool assign_VoltageLevel_Substation(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(VoltageLevel* element = dynamic_cast<VoltageLevel*>(BaseClass_ptr1)) {
+                element->Substation = dynamic_cast<Substation*>(BaseClass_ptr2);
+                if(element->Substation != nullptr)
+                        return assign_Substation_VoltageLevels(BaseClass_ptr2, BaseClass_ptr1);
+        }
+        return false;
+}
+
+
+
 namespace CIMPP {
 	BaseClass* VoltageLevel_factory() {
 		return new VoltageLevel;
@@ -86,15 +86,15 @@ void VoltageLevel::addConstructToMap(std::unordered_map<std::string, BaseClass* 
 }
 
 void VoltageLevel::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
-			assign_map.insert(std::make_pair(std::string("cim:VoltageLevel.highVoltageLimit"), &assign_VoltageLevel_highVoltageLimit));
+				assign_map.insert(std::make_pair(std::string("cim:VoltageLevel.highVoltageLimit"), &assign_VoltageLevel_highVoltageLimit));
 	assign_map.insert(std::make_pair(std::string("cim:VoltageLevel.lowVoltageLimit"), &assign_VoltageLevel_lowVoltageLimit));
-	}
+}
 
 void VoltageLevel::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
 	assign_map.insert(std::make_pair(std::string("cim:VoltageLevel.BaseVoltage"), &assign_VoltageLevel_BaseVoltage));
+	assign_map.insert(std::make_pair(std::string("cim:VoltageLevel.Bays"), &assign_VoltageLevel_Bays));
 	assign_map.insert(std::make_pair(std::string("cim:VoltageLevel.Substation"), &assign_VoltageLevel_Substation));
-			assign_map.insert(std::make_pair(std::string("cim:VoltageLevel.Bays"), &assign_VoltageLevel_Bays));
-}
+		}
 
 const char VoltageLevel::debugName[] = "VoltageLevel";
 const char* VoltageLevel::debugString()
@@ -106,5 +106,3 @@ const BaseClassDefiner VoltageLevel::declare()
 {
 	return BaseClassDefiner(VoltageLevel::addConstructToMap, VoltageLevel::addPrimitiveAssignFnsToMap, VoltageLevel::addClassAssignFnsToMap, VoltageLevel::debugName);
 }
-
-

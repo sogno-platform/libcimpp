@@ -8,8 +8,8 @@
 
 
 #include "PU.hpp"
-#include "Seconds.hpp"
 #include "Simple_Float.hpp"
+#include "Seconds.hpp"
 
 namespace CIMPP {
 
@@ -22,35 +22,35 @@ namespace CIMPP {
 
 	public:
 					CIMPP::PU ka; 	/* Voltage regulator gain (K).  Typical Value = 536. Default: nullptr */
-					CIMPP::Seconds ta; 	/* Voltage regulator time constant (T).  Typical Value = 0.086. Default: nullptr */
-					CIMPP::Seconds tk; 	/* Voltage regulator time constant (T).  Typical Value = 0.18. Default: nullptr */
-					CIMPP::Seconds tb; 	/* Voltage regulator time constant (T).  Typical Value = 9. Default: nullptr */
-					CIMPP::Seconds tc; 	/* Voltage regulator time constant (T).  Typical Value = 3. Default: nullptr */
-					CIMPP::PU vamax; 	/* Maximum voltage regulator output (V).  Typical Value = 75. Default: nullptr */
-					CIMPP::PU vamin; 	/* Minimum voltage regulator output (V).  Typical Value = -75. Default: nullptr */
-					CIMPP::PU vrmax; 	/* Maximum voltage regulator output (V).  Typical Value = 44. Default: nullptr */
-					CIMPP::PU vrmin; 	/* Minimum voltage regulator output (V).  Typical Value = -36. Default: nullptr */
-					CIMPP::Seconds te; 	/* Exciter time constant, integration rate associated with exciter control (T).  Typical Value = 1. Default: nullptr */
-					CIMPP::PU kh; 	/* Exciter field current limiter gain (K).  Typical Value = 92. Default: nullptr */
-					CIMPP::Seconds tj; 	/* Exciter field current limiter time constant (T).  Typical Value = 0.02. Default: nullptr */
-					CIMPP::Seconds th; 	/* Exciter field current limiter time constant (T).  Typical Value = 0.08. Default: nullptr */
-					CIMPP::PU vfelim; 	/* Exciter field current limit reference (V).  Typical Value = 19. Default: nullptr */
-					CIMPP::PU vhmax; 	/* Maximum field current limiter signal reference (V).  Typical Value = 75. Default: nullptr */
 					CIMPP::PU kc; 	/* Rectifier loading factor proportional to commutating reactance (K). Typical Value = 0.173. Default: nullptr */
 					CIMPP::PU kd; 	/* Demagnetizing factor, a function of exciter alternator reactances (K).  Typical Value = 1.91. Default: nullptr */
 					CIMPP::PU ke; 	/* Exciter constant related to self-excited field (K).  Typical Value = 1.6. Default: nullptr */
-					CIMPP::PU ve1; 	/* Exciter alternator output voltages back of commutating reactance at which saturation is defined (V) equals V(V).  Typical Value = 7.4. Default: nullptr */
+					CIMPP::PU kh; 	/* Exciter field current limiter gain (K).  Typical Value = 92. Default: nullptr */
 					CIMPP::Simple_Float seve1; 	/* Exciter saturation function value at the corresponding exciter voltage, V, back of commutating reactance (S[V]).  Typical Value = 0.214. Default: nullptr */
-					CIMPP::PU ve2; 	/* Exciter alternator output voltages back of commutating reactance at which saturation is defined (V).  Typical Value = 5.55. Default: nullptr */
 					CIMPP::Simple_Float seve2; 	/* Exciter saturation function value at the corresponding exciter voltage, V, back of commutating reactance (S[V]).  Typical Value = 0.044. Default: nullptr */
-				
+					CIMPP::Seconds ta; 	/* Voltage regulator time constant (T).  Typical Value = 0.086. Default: nullptr */
+					CIMPP::Seconds tb; 	/* Voltage regulator time constant (T).  Typical Value = 9. Default: nullptr */
+					CIMPP::Seconds tc; 	/* Voltage regulator time constant (T).  Typical Value = 3. Default: nullptr */
+					CIMPP::Seconds te; 	/* Exciter time constant, integration rate associated with exciter control (T).  Typical Value = 1. Default: nullptr */
+					CIMPP::Seconds th; 	/* Exciter field current limiter time constant (T).  Typical Value = 0.08. Default: nullptr */
+					CIMPP::Seconds tj; 	/* Exciter field current limiter time constant (T).  Typical Value = 0.02. Default: nullptr */
+					CIMPP::Seconds tk; 	/* Voltage regulator time constant (T).  Typical Value = 0.18. Default: nullptr */
+					CIMPP::PU vamax; 	/* Maximum voltage regulator output (V).  Typical Value = 75. Default: nullptr */
+					CIMPP::PU vamin; 	/* Minimum voltage regulator output (V).  Typical Value = -75. Default: nullptr */
+					CIMPP::PU ve1; 	/* Exciter alternator output voltages back of commutating reactance at which saturation is defined (V) equals V(V).  Typical Value = 7.4. Default: nullptr */
+					CIMPP::PU ve2; 	/* Exciter alternator output voltages back of commutating reactance at which saturation is defined (V).  Typical Value = 5.55. Default: nullptr */
+					CIMPP::PU vfelim; 	/* Exciter field current limit reference (V).  Typical Value = 19. Default: nullptr */
+					CIMPP::PU vhmax; 	/* Maximum field current limiter signal reference (V).  Typical Value = 75. Default: nullptr */
+					CIMPP::PU vrmax; 	/* Maximum voltage regulator output (V).  Typical Value = 44. Default: nullptr */
+					CIMPP::PU vrmin; 	/* Minimum voltage regulator output (V).  Typical Value = -36. Default: nullptr */
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		ExcIEEEAC6A();
 		virtual ~ExcIEEEAC6A();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

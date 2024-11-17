@@ -29,14 +29,14 @@ namespace CIMPP {
 					CIMPP::Reactance xGroundMax; 	/* The maximum reactance. Default: nullptr */
 					CIMPP::Reactance xGroundMin; 	/* The minimum reactance. Default: nullptr */
 					CIMPP::Reactance xGroundNominal; 	/* The nominal reactance.  This is the operating point (normally over compensation) that is defined based on the resonance point in the healthy network condition.  The impedance is calculated based on nominal voltage divided by position current. Default: nullptr */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		PetersenCoil();
 		virtual ~PetersenCoil();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

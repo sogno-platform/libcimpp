@@ -2,24 +2,18 @@
 #include "DynamicsFunctionBlock.hpp"
 #include "UnderexcitationLimiterDynamics.hpp"
 
-#include "RemoteInputSignal.hpp"
 #include "ExcitationSystemDynamics.hpp"
+#include "RemoteInputSignal.hpp"
 
 using namespace CIMPP;
 
-UnderexcitationLimiterDynamics::UnderexcitationLimiterDynamics(): RemoteInputSignal(nullptr), ExcitationSystemDynamics(nullptr) {};
+UnderexcitationLimiterDynamics::UnderexcitationLimiterDynamics(): ExcitationSystemDynamics(nullptr), RemoteInputSignal(nullptr) {};
 
 UnderexcitationLimiterDynamics::~UnderexcitationLimiterDynamics() {};
 
 
-bool assign_UnderexcitationLimiterDynamics_RemoteInputSignal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(UnderexcitationLimiterDynamics* element = dynamic_cast<UnderexcitationLimiterDynamics*>(BaseClass_ptr1)) {
-                element->RemoteInputSignal = dynamic_cast<RemoteInputSignal*>(BaseClass_ptr2);
-                if(element->RemoteInputSignal != nullptr)
-                        return true;
-        }
-        return false;
-}
+
+
 
 bool assign_ExcitationSystemDynamics_UnderexcitationLimiterDynamics(BaseClass*, BaseClass*);
 bool assign_UnderexcitationLimiterDynamics_ExcitationSystemDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
@@ -31,8 +25,14 @@ bool assign_UnderexcitationLimiterDynamics_ExcitationSystemDynamics(BaseClass* B
         return false;
 }
 
-
-
+bool assign_UnderexcitationLimiterDynamics_RemoteInputSignal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(UnderexcitationLimiterDynamics* element = dynamic_cast<UnderexcitationLimiterDynamics*>(BaseClass_ptr1)) {
+                element->RemoteInputSignal = dynamic_cast<RemoteInputSignal*>(BaseClass_ptr2);
+                if(element->RemoteInputSignal != nullptr)
+                        return true;
+        }
+        return false;
+}
 
 namespace CIMPP {
 	BaseClass* UnderexcitationLimiterDynamics_factory() {
@@ -48,8 +48,8 @@ void UnderexcitationLimiterDynamics::addPrimitiveAssignFnsToMap(std::unordered_m
 		}
 
 void UnderexcitationLimiterDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-	assign_map.insert(std::make_pair(std::string("cim:UnderexcitationLimiterDynamics.RemoteInputSignal"), &assign_UnderexcitationLimiterDynamics_RemoteInputSignal));
 	assign_map.insert(std::make_pair(std::string("cim:UnderexcitationLimiterDynamics.ExcitationSystemDynamics"), &assign_UnderexcitationLimiterDynamics_ExcitationSystemDynamics));
+	assign_map.insert(std::make_pair(std::string("cim:UnderexcitationLimiterDynamics.RemoteInputSignal"), &assign_UnderexcitationLimiterDynamics_RemoteInputSignal));
 }
 
 const char UnderexcitationLimiterDynamics::debugName[] = "UnderexcitationLimiterDynamics";
@@ -62,5 +62,3 @@ const BaseClassDefiner UnderexcitationLimiterDynamics::declare()
 {
 	return BaseClassDefiner(UnderexcitationLimiterDynamics::addConstructToMap, UnderexcitationLimiterDynamics::addPrimitiveAssignFnsToMap, UnderexcitationLimiterDynamics::addClassAssignFnsToMap, UnderexcitationLimiterDynamics::debugName);
 }
-
-

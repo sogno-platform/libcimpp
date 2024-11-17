@@ -2,8 +2,8 @@
 #include "IdentifiedObject.hpp"
 #include "DCNode.hpp"
 
-#include "DCBaseTerminal.hpp"
 #include "DCEquipmentContainer.hpp"
+#include "DCBaseTerminal.hpp"
 #include "DCTopologicalNode.hpp"
 
 using namespace CIMPP;
@@ -13,15 +13,9 @@ DCNode::DCNode(): DCEquipmentContainer(nullptr), DCTopologicalNode(nullptr) {};
 DCNode::~DCNode() {};
 
 
-bool assign_DCNode_DCTerminals(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(DCNode* element = dynamic_cast<DCNode*>(BaseClass_ptr1)) {
-		if(dynamic_cast<DCBaseTerminal*>(BaseClass_ptr2) != nullptr) {
-                        element->DCTerminals.push_back(dynamic_cast<DCBaseTerminal*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
+
+
+
 
 bool assign_DCEquipmentContainer_DCNodes(BaseClass*, BaseClass*);
 bool assign_DCNode_DCEquipmentContainer(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
@@ -33,6 +27,16 @@ bool assign_DCNode_DCEquipmentContainer(BaseClass* BaseClass_ptr1, BaseClass* Ba
         return false;
 }
 
+bool assign_DCNode_DCTerminals(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(DCNode* element = dynamic_cast<DCNode*>(BaseClass_ptr1)) {
+		if(dynamic_cast<DCBaseTerminal*>(BaseClass_ptr2) != nullptr) {
+                        element->DCTerminals.push_back(dynamic_cast<DCBaseTerminal*>(BaseClass_ptr2));
+			return true;
+		}
+	}
+	return false;
+}
+
 bool assign_DCTopologicalNode_DCNodes(BaseClass*, BaseClass*);
 bool assign_DCNode_DCTopologicalNode(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(DCNode* element = dynamic_cast<DCNode*>(BaseClass_ptr1)) {
@@ -42,10 +46,6 @@ bool assign_DCNode_DCTopologicalNode(BaseClass* BaseClass_ptr1, BaseClass* BaseC
         }
         return false;
 }
-
-
-
-
 
 namespace CIMPP {
 	BaseClass* DCNode_factory() {
@@ -61,8 +61,8 @@ void DCNode::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_f
 			}
 
 void DCNode::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-	assign_map.insert(std::make_pair(std::string("cim:DCNode.DCTerminals"), &assign_DCNode_DCTerminals));
 	assign_map.insert(std::make_pair(std::string("cim:DCNode.DCEquipmentContainer"), &assign_DCNode_DCEquipmentContainer));
+	assign_map.insert(std::make_pair(std::string("cim:DCNode.DCTerminals"), &assign_DCNode_DCTerminals));
 	assign_map.insert(std::make_pair(std::string("cim:DCNode.DCTopologicalNode"), &assign_DCNode_DCTopologicalNode));
 }
 
@@ -76,5 +76,3 @@ const BaseClassDefiner DCNode::declare()
 {
 	return BaseClassDefiner(DCNode::addConstructToMap, DCNode::addPrimitiveAssignFnsToMap, DCNode::addClassAssignFnsToMap, DCNode::debugName);
 }
-
-

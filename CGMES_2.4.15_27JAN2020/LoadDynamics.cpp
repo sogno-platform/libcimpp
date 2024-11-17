@@ -11,6 +11,8 @@ LoadDynamics::LoadDynamics() {};
 LoadDynamics::~LoadDynamics() {};
 
 
+
+
 bool assign_LoadDynamics_EnergyConsumer(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(LoadDynamics* element = dynamic_cast<LoadDynamics*>(BaseClass_ptr1)) {
 		if(dynamic_cast<EnergyConsumer*>(BaseClass_ptr2) != nullptr) {
@@ -20,8 +22,6 @@ bool assign_LoadDynamics_EnergyConsumer(BaseClass* BaseClass_ptr1, BaseClass* Ba
 	}
 	return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* LoadDynamics_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner LoadDynamics::declare()
 {
 	return BaseClassDefiner(LoadDynamics::addConstructToMap, LoadDynamics::addPrimitiveAssignFnsToMap, LoadDynamics::addClassAssignFnsToMap, LoadDynamics::debugName);
 }
-
-

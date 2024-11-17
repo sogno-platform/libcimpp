@@ -11,8 +11,6 @@ VoltageLimit::VoltageLimit() {};
 VoltageLimit::~VoltageLimit() {};
 
 
-
-
 bool assign_VoltageLimit_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(VoltageLimit* element = dynamic_cast<VoltageLimit*>(BaseClass_ptr1)) {
                 buffer >> element->value;
@@ -24,6 +22,8 @@ bool assign_VoltageLimit_value(std::stringstream &buffer, BaseClass* BaseClass_p
         else
                 return false;
 }
+
+
 
 namespace CIMPP {
 	BaseClass* VoltageLimit_factory() {
@@ -52,5 +52,3 @@ const BaseClassDefiner VoltageLimit::declare()
 {
 	return BaseClassDefiner(VoltageLimit::addConstructToMap, VoltageLimit::addPrimitiveAssignFnsToMap, VoltageLimit::addClassAssignFnsToMap, VoltageLimit::debugName);
 }
-
-

@@ -11,6 +11,8 @@ ConformLoadSchedule::ConformLoadSchedule(): ConformLoadGroup(nullptr) {};
 ConformLoadSchedule::~ConformLoadSchedule() {};
 
 
+
+
 bool assign_ConformLoadGroup_ConformLoadSchedules(BaseClass*, BaseClass*);
 bool assign_ConformLoadSchedule_ConformLoadGroup(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(ConformLoadSchedule* element = dynamic_cast<ConformLoadSchedule*>(BaseClass_ptr1)) {
@@ -20,8 +22,6 @@ bool assign_ConformLoadSchedule_ConformLoadGroup(BaseClass* BaseClass_ptr1, Base
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* ConformLoadSchedule_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner ConformLoadSchedule::declare()
 {
 	return BaseClassDefiner(ConformLoadSchedule::addConstructToMap, ConformLoadSchedule::addPrimitiveAssignFnsToMap, ConformLoadSchedule::addClassAssignFnsToMap, ConformLoadSchedule::debugName);
 }
-
-

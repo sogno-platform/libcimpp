@@ -49,14 +49,14 @@ namespace CIMPP {
 					CIMPP::PU vrmax; 	/* Maximum voltage regulator output (Vrmax). Typical Value = 35. Default: nullptr */
 					CIMPP::PU vrmin; 	/* Minimum voltage regulator output (Vrmin).  Typical Value = 0. Default: nullptr */
 					CIMPP::Boolean vtmult; 	/* Multiply by generator`s terminal voltage indicator. true =the limits Vrmax and Vrmin are multiplied by the generator`s terminal voltage to represent a thyristor power stage fed from the generator terminals false = limits are not multiplied by generator`s terminal voltage.  Typical Value = false. Default: false */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		ExcAC8B();
 		virtual ~ExcAC8B();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);
