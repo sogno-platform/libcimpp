@@ -7,8 +7,8 @@
 #include "Float.hpp"
 
 
-#include "PU.hpp"
 #include "Seconds.hpp"
+#include "PU.hpp"
 
 namespace CIMPP {
 
@@ -20,16 +20,16 @@ namespace CIMPP {
 	{
 
 	public:
-					CIMPP::PU vtmin; 	/* Terminal undervoltage comparison level (). Default: nullptr */
 					CIMPP::Seconds tdr; 	/* Reset time delay (). Default: nullptr */
-				
+					CIMPP::PU vtmin; 	/* Terminal undervoltage comparison level (). Default: nullptr */
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		DiscExcContIEEEDEC3A();
 		virtual ~DiscExcContIEEEDEC3A();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

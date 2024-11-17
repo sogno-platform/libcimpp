@@ -12,18 +12,6 @@ SvStatus::SvStatus(): ConductingEquipment(nullptr) {};
 SvStatus::~SvStatus() {};
 
 
-bool assign_ConductingEquipment_SvStatus(BaseClass*, BaseClass*);
-bool assign_SvStatus_ConductingEquipment(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(SvStatus* element = dynamic_cast<SvStatus*>(BaseClass_ptr1)) {
-                element->ConductingEquipment = dynamic_cast<ConductingEquipment*>(BaseClass_ptr2);
-                if(element->ConductingEquipment != nullptr)
-                        return assign_ConductingEquipment_SvStatus(BaseClass_ptr2, BaseClass_ptr1);
-        }
-        return false;
-}
-
-
-
 
 bool assign_SvStatus_inService(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(SvStatus* element = dynamic_cast<SvStatus*>(BaseClass_ptr1)) {
@@ -36,6 +24,18 @@ bool assign_SvStatus_inService(std::stringstream &buffer, BaseClass* BaseClass_p
         else
                 return false;
 }
+
+
+bool assign_ConductingEquipment_SvStatus(BaseClass*, BaseClass*);
+bool assign_SvStatus_ConductingEquipment(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(SvStatus* element = dynamic_cast<SvStatus*>(BaseClass_ptr1)) {
+                element->ConductingEquipment = dynamic_cast<ConductingEquipment*>(BaseClass_ptr2);
+                if(element->ConductingEquipment != nullptr)
+                        return assign_ConductingEquipment_SvStatus(BaseClass_ptr2, BaseClass_ptr1);
+        }
+        return false;
+}
+
 
 namespace CIMPP {
 	BaseClass* SvStatus_factory() {
@@ -65,5 +65,3 @@ const BaseClassDefiner SvStatus::declare()
 {
 	return BaseClassDefiner(SvStatus::addConstructToMap, SvStatus::addPrimitiveAssignFnsToMap, SvStatus::addClassAssignFnsToMap, SvStatus::debugName);
 }
-
-

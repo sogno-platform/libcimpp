@@ -2,26 +2,20 @@
 #include "IdentifiedObject.hpp"
 #include "OperationalLimitSet.hpp"
 
-#include "ACDCTerminal.hpp"
 #include "Equipment.hpp"
 #include "OperationalLimit.hpp"
+#include "ACDCTerminal.hpp"
 
 using namespace CIMPP;
 
-OperationalLimitSet::OperationalLimitSet(): Terminal(nullptr), Equipment(nullptr) {};
+OperationalLimitSet::OperationalLimitSet(): Equipment(nullptr), Terminal(nullptr) {};
 
 OperationalLimitSet::~OperationalLimitSet() {};
 
 
-bool assign_ACDCTerminal_OperationalLimitSet(BaseClass*, BaseClass*);
-bool assign_OperationalLimitSet_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(OperationalLimitSet* element = dynamic_cast<OperationalLimitSet*>(BaseClass_ptr1)) {
-                element->Terminal = dynamic_cast<ACDCTerminal*>(BaseClass_ptr2);
-                if(element->Terminal != nullptr)
-                        return assign_ACDCTerminal_OperationalLimitSet(BaseClass_ptr2, BaseClass_ptr1);
-        }
-        return false;
-}
+
+
+
 
 bool assign_Equipment_OperationalLimitSet(BaseClass*, BaseClass*);
 bool assign_OperationalLimitSet_Equipment(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
@@ -43,9 +37,15 @@ bool assign_OperationalLimitSet_OperationalLimitValue(BaseClass* BaseClass_ptr1,
 	return false;
 }
 
-
-
-
+bool assign_ACDCTerminal_OperationalLimitSet(BaseClass*, BaseClass*);
+bool assign_OperationalLimitSet_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(OperationalLimitSet* element = dynamic_cast<OperationalLimitSet*>(BaseClass_ptr1)) {
+                element->Terminal = dynamic_cast<ACDCTerminal*>(BaseClass_ptr2);
+                if(element->Terminal != nullptr)
+                        return assign_ACDCTerminal_OperationalLimitSet(BaseClass_ptr2, BaseClass_ptr1);
+        }
+        return false;
+}
 
 namespace CIMPP {
 	BaseClass* OperationalLimitSet_factory() {
@@ -61,9 +61,9 @@ void OperationalLimitSet::addPrimitiveAssignFnsToMap(std::unordered_map<std::str
 			}
 
 void OperationalLimitSet::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-	assign_map.insert(std::make_pair(std::string("cim:OperationalLimitSet.Terminal"), &assign_OperationalLimitSet_Terminal));
 	assign_map.insert(std::make_pair(std::string("cim:OperationalLimitSet.Equipment"), &assign_OperationalLimitSet_Equipment));
 	assign_map.insert(std::make_pair(std::string("cim:OperationalLimitSet.OperationalLimitValue"), &assign_OperationalLimitSet_OperationalLimitValue));
+	assign_map.insert(std::make_pair(std::string("cim:OperationalLimitSet.Terminal"), &assign_OperationalLimitSet_Terminal));
 }
 
 const char OperationalLimitSet::debugName[] = "OperationalLimitSet";
@@ -76,5 +76,3 @@ const BaseClassDefiner OperationalLimitSet::declare()
 {
 	return BaseClassDefiner(OperationalLimitSet::addConstructToMap, OperationalLimitSet::addPrimitiveAssignFnsToMap, OperationalLimitSet::addClassAssignFnsToMap, OperationalLimitSet::debugName);
 }
-
-

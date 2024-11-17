@@ -20,14 +20,14 @@ class TapChanger;
 
 	public:
 					std::list<CIMPP::TapChanger*> TapChanger; 	/* The regulating control scheme in which this tap changer participates. Default: 0 */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		TapChangerControl();
 		virtual ~TapChangerControl();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

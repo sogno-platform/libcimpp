@@ -11,6 +11,8 @@ NonConformLoad::NonConformLoad(): LoadGroup(nullptr) {};
 NonConformLoad::~NonConformLoad() {};
 
 
+
+
 bool assign_NonConformLoadGroup_EnergyConsumers(BaseClass*, BaseClass*);
 bool assign_NonConformLoad_LoadGroup(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(NonConformLoad* element = dynamic_cast<NonConformLoad*>(BaseClass_ptr1)) {
@@ -20,8 +22,6 @@ bool assign_NonConformLoad_LoadGroup(BaseClass* BaseClass_ptr1, BaseClass* BaseC
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* NonConformLoad_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner NonConformLoad::declare()
 {
 	return BaseClassDefiner(NonConformLoad::addConstructToMap, NonConformLoad::addPrimitiveAssignFnsToMap, NonConformLoad::addClassAssignFnsToMap, NonConformLoad::debugName);
 }
-
-

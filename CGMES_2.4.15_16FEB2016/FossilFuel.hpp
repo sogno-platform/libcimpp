@@ -20,16 +20,16 @@ class ThermalGeneratingUnit;
 	{
 
 	public:
-					CIMPP::FuelType fossilFuelType; 	/* The type of fossil fuel, such as coal, oil, or gas. Default: 0 */
 					CIMPP::ThermalGeneratingUnit* ThermalGeneratingUnit; 	/* A thermal generating unit may have one or more fossil fuels. Default: 0 */
-				
+					CIMPP::FuelType fossilFuelType; 	/* The type of fossil fuel, such as coal, oil, or gas. Default: 0 */
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		FossilFuel();
 		virtual ~FossilFuel();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

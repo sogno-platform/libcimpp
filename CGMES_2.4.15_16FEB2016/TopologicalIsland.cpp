@@ -12,6 +12,9 @@ TopologicalIsland::TopologicalIsland(): AngleRefTopologicalNode(nullptr) {};
 TopologicalIsland::~TopologicalIsland() {};
 
 
+
+
+
 bool assign_TopologicalNode_AngleRefTopologicalIsland(BaseClass*, BaseClass*);
 bool assign_TopologicalIsland_AngleRefTopologicalNode(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(TopologicalIsland* element = dynamic_cast<TopologicalIsland*>(BaseClass_ptr1)) {
@@ -31,9 +34,6 @@ bool assign_TopologicalIsland_TopologicalNodes(BaseClass* BaseClass_ptr1, BaseCl
 	}
 	return false;
 }
-
-
-
 
 namespace CIMPP {
 	BaseClass* TopologicalIsland_factory() {
@@ -63,5 +63,3 @@ const BaseClassDefiner TopologicalIsland::declare()
 {
 	return BaseClassDefiner(TopologicalIsland::addConstructToMap, TopologicalIsland::addPrimitiveAssignFnsToMap, TopologicalIsland::addClassAssignFnsToMap, TopologicalIsland::debugName);
 }
-
-

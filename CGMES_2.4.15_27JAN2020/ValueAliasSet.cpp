@@ -14,6 +14,11 @@ ValueAliasSet::ValueAliasSet() {};
 ValueAliasSet::~ValueAliasSet() {};
 
 
+
+
+
+
+
 bool assign_ValueAliasSet_Commands(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(ValueAliasSet* element = dynamic_cast<ValueAliasSet*>(BaseClass_ptr1)) {
 		if(dynamic_cast<Command*>(BaseClass_ptr2) != nullptr) {
@@ -54,11 +59,6 @@ bool assign_ValueAliasSet_Values(BaseClass* BaseClass_ptr1, BaseClass* BaseClass
 	return false;
 }
 
-
-
-
-
-
 namespace CIMPP {
 	BaseClass* ValueAliasSet_factory() {
 		return new ValueAliasSet;
@@ -89,5 +89,3 @@ const BaseClassDefiner ValueAliasSet::declare()
 {
 	return BaseClassDefiner(ValueAliasSet::addConstructToMap, ValueAliasSet::addPrimitiveAssignFnsToMap, ValueAliasSet::addClassAssignFnsToMap, ValueAliasSet::debugName);
 }
-
-

@@ -12,6 +12,9 @@ SubLoadArea::SubLoadArea(): LoadArea(nullptr) {};
 SubLoadArea::~SubLoadArea() {};
 
 
+
+
+
 bool assign_LoadArea_SubLoadAreas(BaseClass*, BaseClass*);
 bool assign_SubLoadArea_LoadArea(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(SubLoadArea* element = dynamic_cast<SubLoadArea*>(BaseClass_ptr1)) {
@@ -31,9 +34,6 @@ bool assign_SubLoadArea_LoadGroups(BaseClass* BaseClass_ptr1, BaseClass* BaseCla
 	}
 	return false;
 }
-
-
-
 
 namespace CIMPP {
 	BaseClass* SubLoadArea_factory() {
@@ -63,5 +63,3 @@ const BaseClassDefiner SubLoadArea::declare()
 {
 	return BaseClassDefiner(SubLoadArea::addConstructToMap, SubLoadArea::addPrimitiveAssignFnsToMap, SubLoadArea::addClassAssignFnsToMap, SubLoadArea::debugName);
 }
-
-

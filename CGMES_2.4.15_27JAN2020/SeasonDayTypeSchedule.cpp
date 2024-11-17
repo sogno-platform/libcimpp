@@ -12,6 +12,9 @@ SeasonDayTypeSchedule::SeasonDayTypeSchedule(): DayType(nullptr), Season(nullptr
 SeasonDayTypeSchedule::~SeasonDayTypeSchedule() {};
 
 
+
+
+
 bool assign_DayType_SeasonDayTypeSchedules(BaseClass*, BaseClass*);
 bool assign_SeasonDayTypeSchedule_DayType(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(SeasonDayTypeSchedule* element = dynamic_cast<SeasonDayTypeSchedule*>(BaseClass_ptr1)) {
@@ -31,9 +34,6 @@ bool assign_SeasonDayTypeSchedule_Season(BaseClass* BaseClass_ptr1, BaseClass* B
         }
         return false;
 }
-
-
-
 
 namespace CIMPP {
 	BaseClass* SeasonDayTypeSchedule_factory() {
@@ -63,5 +63,3 @@ const BaseClassDefiner SeasonDayTypeSchedule::declare()
 {
 	return BaseClassDefiner(SeasonDayTypeSchedule::addConstructToMap, SeasonDayTypeSchedule::addPrimitiveAssignFnsToMap, SeasonDayTypeSchedule::addClassAssignFnsToMap, SeasonDayTypeSchedule::debugName);
 }
-
-

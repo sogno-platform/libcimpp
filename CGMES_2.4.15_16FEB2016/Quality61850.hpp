@@ -33,14 +33,14 @@ namespace CIMPP {
 					CIMPP::Boolean suspect; 	/* A correlation function has detected that the value is not consitent with other values. Typically set by a network State Estimator. Default: false */
 					CIMPP::Boolean test; 	/* Measurement value is transmitted for test purposes. Default: false */
 					CIMPP::Validity validity; 	/* Validity of the measurement value. Default: 0 */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		Quality61850();
 		virtual ~Quality61850();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

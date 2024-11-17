@@ -9,8 +9,8 @@
 
 #include "Capacitance.hpp"
 #include "Inductance.hpp"
-#include "Resistance.hpp"
 #include "Length.hpp"
+#include "Resistance.hpp"
 
 namespace CIMPP {
 
@@ -23,19 +23,19 @@ class PerLengthDCLineParameter;
 	{
 
 	public:
+					CIMPP::PerLengthDCLineParameter* PerLengthParameter; 	/* Set of per-length parameters for this line segment. Default: 0 */
 					CIMPP::Capacitance capacitance; 	/* Capacitance of the DC line segment. Significant for cables only. Default: nullptr */
 					CIMPP::Inductance inductance; 	/* Inductance of the DC line segment. Neglectable compared with DCSeriesDevice used for smoothing. Default: nullptr */
-					CIMPP::Resistance resistance; 	/* Resistance of the DC line segment. Default: nullptr */
 					CIMPP::Length length; 	/* Segment length for calculating line section capabilities. Default: nullptr */
-					CIMPP::PerLengthDCLineParameter* PerLengthParameter; 	/* Set of per-length parameters for this line segment. Default: 0 */
-				
+					CIMPP::Resistance resistance; 	/* Resistance of the DC line segment. Default: nullptr */
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		DCLineSegment();
 		virtual ~DCLineSegment();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

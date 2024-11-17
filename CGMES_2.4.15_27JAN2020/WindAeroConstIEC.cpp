@@ -11,6 +11,8 @@ WindAeroConstIEC::WindAeroConstIEC(): WindGenTurbineType1IEC(nullptr) {};
 WindAeroConstIEC::~WindAeroConstIEC() {};
 
 
+
+
 bool assign_WindAeroConstIEC_WindGenTurbineType1IEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(WindAeroConstIEC* element = dynamic_cast<WindAeroConstIEC*>(BaseClass_ptr1)) {
                 element->WindGenTurbineType1IEC = dynamic_cast<WindGenTurbineType1IEC*>(BaseClass_ptr2);
@@ -19,8 +21,6 @@ bool assign_WindAeroConstIEC_WindGenTurbineType1IEC(BaseClass* BaseClass_ptr1, B
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* WindAeroConstIEC_factory() {
@@ -49,5 +49,3 @@ const BaseClassDefiner WindAeroConstIEC::declare()
 {
 	return BaseClassDefiner(WindAeroConstIEC::addConstructToMap, WindAeroConstIEC::addPrimitiveAssignFnsToMap, WindAeroConstIEC::addClassAssignFnsToMap, WindAeroConstIEC::debugName);
 }
-
-

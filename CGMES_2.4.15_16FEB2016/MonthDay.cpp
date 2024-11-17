@@ -37,5 +37,3 @@ const BaseClassDefiner MonthDay::declare()
 {
 	return BaseClassDefiner(MonthDay::addConstructToMap, MonthDay::addPrimitiveAssignFnsToMap, MonthDay::addClassAssignFnsToMap, MonthDay::debugName);
 }
-
-

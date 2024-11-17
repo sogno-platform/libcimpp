@@ -20,20 +20,20 @@ namespace CIMPP {
 	{
 
 	public:
-					CIMPP::PU itfpu; 	/* OEL timed field current limiter pickup level (I).  Typical Value = 1.05. Default: nullptr */
-					CIMPP::PU ifdmax; 	/* OEL instantaneous field current limit (I).  Typical Value = 1.5. Default: nullptr */
-					CIMPP::PU ifdlim; 	/* OEL timed field current limit (I).  Typical Value = 1.05. Default: nullptr */
 					CIMPP::PU hyst; 	/* OEL pickup/drop-out hysteresis (HYST).  Typical Value = 0.03. Default: nullptr */
+					CIMPP::PU ifdlim; 	/* OEL timed field current limit (I).  Typical Value = 1.05. Default: nullptr */
+					CIMPP::PU ifdmax; 	/* OEL instantaneous field current limit (I).  Typical Value = 1.5. Default: nullptr */
+					CIMPP::PU itfpu; 	/* OEL timed field current limiter pickup level (I).  Typical Value = 1.05. Default: nullptr */
 					CIMPP::PU kcd; 	/* OEL cooldown gain (K).  Typical Value = 1. Default: nullptr */
 					CIMPP::Simple_Float kramp; 	/* OEL ramped limit rate (K).  Unit = PU/sec.  Typical Value = 10. Default: nullptr */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		OverexcLimIEEE();
 		virtual ~OverexcLimIEEE();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

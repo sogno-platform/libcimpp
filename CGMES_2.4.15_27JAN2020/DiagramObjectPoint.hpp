@@ -28,14 +28,14 @@ class DiagramObjectGluePoint;
 					CIMPP::Simple_Float xPosition; 	/* The X coordinate of this point. Default: nullptr */
 					CIMPP::Simple_Float yPosition; 	/* The Y coordinate of this point. Default: nullptr */
 					CIMPP::Simple_Float zPosition; 	/* The Z coordinate of this point. Default: nullptr */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		DiagramObjectPoint();
 		virtual ~DiagramObjectPoint();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

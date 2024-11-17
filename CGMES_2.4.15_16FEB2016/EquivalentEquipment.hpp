@@ -20,14 +20,14 @@ class EquivalentNetwork;
 
 	public:
 					CIMPP::EquivalentNetwork* EquivalentNetwork; 	/* The associated reduced equivalents. Default: 0 */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		EquivalentEquipment();
 		virtual ~EquivalentEquipment();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

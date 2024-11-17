@@ -11,6 +11,8 @@ PhaseTapChangerTabular::PhaseTapChangerTabular(): PhaseTapChangerTable(nullptr) 
 PhaseTapChangerTabular::~PhaseTapChangerTabular() {};
 
 
+
+
 bool assign_PhaseTapChangerTable_PhaseTapChangerTabular(BaseClass*, BaseClass*);
 bool assign_PhaseTapChangerTabular_PhaseTapChangerTable(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(PhaseTapChangerTabular* element = dynamic_cast<PhaseTapChangerTabular*>(BaseClass_ptr1)) {
@@ -20,8 +22,6 @@ bool assign_PhaseTapChangerTabular_PhaseTapChangerTable(BaseClass* BaseClass_ptr
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* PhaseTapChangerTabular_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner PhaseTapChangerTabular::declare()
 {
 	return BaseClassDefiner(PhaseTapChangerTabular::addConstructToMap, PhaseTapChangerTabular::addPrimitiveAssignFnsToMap, PhaseTapChangerTabular::addClassAssignFnsToMap, PhaseTapChangerTabular::debugName);
 }
-
-

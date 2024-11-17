@@ -16,29 +16,9 @@
 
 using namespace CIMPP;
 
-EquipmentBoundaryVersion::EquipmentBoundaryVersion(): date(nullptr) {};
+EquipmentBoundaryVersion::EquipmentBoundaryVersion() {};
 
 EquipmentBoundaryVersion::~EquipmentBoundaryVersion() {};
-
-
-
-
-bool assign_EquipmentBoundaryVersion_date(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1)) {
-                element->date = dynamic_cast<Date*>(BaseClass_ptr2);
-                if(element->date != nullptr)
-                        return true;
-        }
-        return false;
-}
-
-
-
-
-
-
-
-
 
 
 bool assign_EquipmentBoundaryVersion_baseUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
@@ -63,6 +43,17 @@ bool assign_EquipmentBoundaryVersion_baseURI(std::stringstream &buffer, BaseClas
 	return false;
 }
 
+bool assign_EquipmentBoundaryVersion_date(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
+	if(EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1)) {
+                buffer >> element->date;
+                if(buffer.fail())
+                        return false;
+                else
+                        return true;
+        }
+        else
+                return false;
+}
 
 bool assign_EquipmentBoundaryVersion_differenceModelURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1)) {
@@ -152,6 +143,18 @@ bool assign_EquipmentBoundaryVersion_shortName(std::stringstream &buffer, BaseCl
 	return false;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* EquipmentBoundaryVersion_factory() {
 		return new EquipmentBoundaryVersion;
@@ -165,7 +168,8 @@ void EquipmentBoundaryVersion::addConstructToMap(std::unordered_map<std::string,
 void EquipmentBoundaryVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
 	assign_map.insert(std::make_pair(std::string("cim:EquipmentBoundaryVersion.baseUML"), &assign_EquipmentBoundaryVersion_baseUML));
 	assign_map.insert(std::make_pair(std::string("cim:EquipmentBoundaryVersion.baseURI"), &assign_EquipmentBoundaryVersion_baseURI));
-		assign_map.insert(std::make_pair(std::string("cim:EquipmentBoundaryVersion.differenceModelURI"), &assign_EquipmentBoundaryVersion_differenceModelURI));
+	assign_map.insert(std::make_pair(std::string("cim:EquipmentBoundaryVersion.date"), &assign_EquipmentBoundaryVersion_date));
+	assign_map.insert(std::make_pair(std::string("cim:EquipmentBoundaryVersion.differenceModelURI"), &assign_EquipmentBoundaryVersion_differenceModelURI));
 	assign_map.insert(std::make_pair(std::string("cim:EquipmentBoundaryVersion.entsoeUML"), &assign_EquipmentBoundaryVersion_entsoeUML));
 	assign_map.insert(std::make_pair(std::string("cim:EquipmentBoundaryVersion.entsoeURIcore"), &assign_EquipmentBoundaryVersion_entsoeURIcore));
 	assign_map.insert(std::make_pair(std::string("cim:EquipmentBoundaryVersion.entsoeURIoperation"), &assign_EquipmentBoundaryVersion_entsoeURIoperation));
@@ -176,8 +180,7 @@ void EquipmentBoundaryVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std
 }
 
 void EquipmentBoundaryVersion::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-			assign_map.insert(std::make_pair(std::string("cim:EquipmentBoundaryVersion.date"), &assign_EquipmentBoundaryVersion_date));
-								}
+											}
 
 const char EquipmentBoundaryVersion::debugName[] = "EquipmentBoundaryVersion";
 const char* EquipmentBoundaryVersion::debugString()
@@ -189,5 +192,3 @@ const BaseClassDefiner EquipmentBoundaryVersion::declare()
 {
 	return BaseClassDefiner(EquipmentBoundaryVersion::addConstructToMap, EquipmentBoundaryVersion::addPrimitiveAssignFnsToMap, EquipmentBoundaryVersion::addClassAssignFnsToMap, EquipmentBoundaryVersion::debugName);
 }
-
-

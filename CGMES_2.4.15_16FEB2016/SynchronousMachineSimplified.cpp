@@ -37,5 +37,3 @@ const BaseClassDefiner SynchronousMachineSimplified::declare()
 {
 	return BaseClassDefiner(SynchronousMachineSimplified::addConstructToMap, SynchronousMachineSimplified::addPrimitiveAssignFnsToMap, SynchronousMachineSimplified::addClassAssignFnsToMap, SynchronousMachineSimplified::debugName);
 }
-
-

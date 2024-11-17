@@ -33,14 +33,14 @@ class EnergyConsumer;
 					CIMPP::Simple_Float qConstantPower; 	/* Portion of reactive power load modeled as constant power. Default: nullptr */
 					CIMPP::Simple_Float qFrequencyExponent; 	/* Exponent of per unit frequency effecting reactive power. Default: nullptr */
 					CIMPP::Simple_Float qVoltageExponent; 	/* Exponent of per unit voltage effecting reactive power. Default: nullptr */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		LoadResponseCharacteristic();
 		virtual ~LoadResponseCharacteristic();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

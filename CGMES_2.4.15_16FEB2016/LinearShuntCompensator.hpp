@@ -20,18 +20,18 @@ namespace CIMPP {
 	{
 
 	public:
-					CIMPP::Susceptance bPerSection; 	/* Positive sequence shunt (charging) susceptance per section Default: nullptr */
-					CIMPP::Conductance gPerSection; 	/* Positive sequence shunt (charging) conductance per section Default: nullptr */
 					CIMPP::Susceptance b0PerSection; 	/* Zero sequence shunt (charging) susceptance per section Default: nullptr */
+					CIMPP::Susceptance bPerSection; 	/* Positive sequence shunt (charging) susceptance per section Default: nullptr */
 					CIMPP::Conductance g0PerSection; 	/* Zero sequence shunt (charging) conductance per section Default: nullptr */
-				
+					CIMPP::Conductance gPerSection; 	/* Positive sequence shunt (charging) conductance per section Default: nullptr */
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		LinearShuntCompensator();
 		virtual ~LinearShuntCompensator();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

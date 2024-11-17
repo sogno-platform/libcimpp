@@ -8,8 +8,8 @@
 
 
 #include "Simple_Float.hpp"
-#include "Seconds.hpp"
 #include "Boolean.hpp"
+#include "Seconds.hpp"
 #include "PU.hpp"
 
 namespace CIMPP {
@@ -23,18 +23,18 @@ namespace CIMPP {
 
 	public:
 					CIMPP::Simple_Float fducw; 	/* Crowbar duration versus voltage variation look-up table (f()). It is case dependent parameter. Default: nullptr */
+					CIMPP::Boolean mwtcwp; 	/* Crowbar control mode ().   The parameter is case dependent parameter. Default: false */
 					CIMPP::Seconds tg; 	/* Current generation Time constant (). It is type dependent parameter. Default: nullptr */
 					CIMPP::Seconds two; 	/* Time constant for crowbar washout filter (). It is case dependent parameter. Default: nullptr */
-					CIMPP::Boolean mwtcwp; 	/* Crowbar control mode ().   The parameter is case dependent parameter. Default: false */
 					CIMPP::PU xs; 	/* Electromagnetic transient reactance (x). It is type dependent parameter. Default: nullptr */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		WindGenTurbineType3bIEC();
 		virtual ~WindGenTurbineType3bIEC();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

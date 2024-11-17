@@ -19,25 +19,25 @@ namespace CIMPP {
 	{
 
 	public:
-					CIMPP::PU xad; 	/* D-axis mutual reactance. Default: nullptr */
-					CIMPP::PU rfd; 	/* Field winding resistance. Default: nullptr */
-					CIMPP::PU xfd; 	/* Field winding leakage reactance. Default: nullptr */
 					CIMPP::PU r1d; 	/* D-axis damper 1 winding resistance. Default: nullptr */
-					CIMPP::PU x1d; 	/* D-axis damper 1 winding leakage reactance. Default: nullptr */
-					CIMPP::PU xf1d; 	/* Differential mutual (`Canay`) reactance. Default: nullptr */
-					CIMPP::PU xaq; 	/* Q-axis mutual reactance. Default: nullptr */
 					CIMPP::PU r1q; 	/* Q-axis damper 1 winding resistance. Default: nullptr */
-					CIMPP::PU x1q; 	/* Q-axis damper 1 winding leakage reactance. Default: nullptr */
 					CIMPP::PU r2q; 	/* Q-axis damper 2 winding resistance. Default: nullptr */
+					CIMPP::PU rfd; 	/* Field winding resistance. Default: nullptr */
+					CIMPP::PU x1d; 	/* D-axis damper 1 winding leakage reactance. Default: nullptr */
+					CIMPP::PU x1q; 	/* Q-axis damper 1 winding leakage reactance. Default: nullptr */
 					CIMPP::PU x2q; 	/* Q-axis damper 2 winding leakage reactance. Default: nullptr */
-				
+					CIMPP::PU xad; 	/* D-axis mutual reactance. Default: nullptr */
+					CIMPP::PU xaq; 	/* Q-axis mutual reactance. Default: nullptr */
+					CIMPP::PU xf1d; 	/* Differential mutual (`Canay`) reactance. Default: nullptr */
+					CIMPP::PU xfd; 	/* Field winding leakage reactance. Default: nullptr */
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		SynchronousMachineEquivalentCircuit();
 		virtual ~SynchronousMachineEquivalentCircuit();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

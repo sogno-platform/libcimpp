@@ -20,35 +20,6 @@ MutualCoupling::MutualCoupling(): First_Terminal(nullptr), Second_Terminal(nullp
 MutualCoupling::~MutualCoupling() {};
 
 
-bool assign_Terminal_HasFirstMutualCoupling(BaseClass*, BaseClass*);
-bool assign_MutualCoupling_First_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(MutualCoupling* element = dynamic_cast<MutualCoupling*>(BaseClass_ptr1)) {
-                element->First_Terminal = dynamic_cast<Terminal*>(BaseClass_ptr2);
-                if(element->First_Terminal != nullptr)
-                        return assign_Terminal_HasFirstMutualCoupling(BaseClass_ptr2, BaseClass_ptr1);
-        }
-        return false;
-}
-
-bool assign_Terminal_HasSecondMutualCoupling(BaseClass*, BaseClass*);
-bool assign_MutualCoupling_Second_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(MutualCoupling* element = dynamic_cast<MutualCoupling*>(BaseClass_ptr1)) {
-                element->Second_Terminal = dynamic_cast<Terminal*>(BaseClass_ptr2);
-                if(element->Second_Terminal != nullptr)
-                        return assign_Terminal_HasSecondMutualCoupling(BaseClass_ptr2, BaseClass_ptr1);
-        }
-        return false;
-}
-
-
-
-
-
-
-
-
-
-
 
 
 bool assign_MutualCoupling_b0ch(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
@@ -147,6 +118,35 @@ bool assign_MutualCoupling_x0(std::stringstream &buffer, BaseClass* BaseClass_pt
                 return false;
 }
 
+
+bool assign_Terminal_HasFirstMutualCoupling(BaseClass*, BaseClass*);
+bool assign_MutualCoupling_First_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(MutualCoupling* element = dynamic_cast<MutualCoupling*>(BaseClass_ptr1)) {
+                element->First_Terminal = dynamic_cast<Terminal*>(BaseClass_ptr2);
+                if(element->First_Terminal != nullptr)
+                        return assign_Terminal_HasFirstMutualCoupling(BaseClass_ptr2, BaseClass_ptr1);
+        }
+        return false;
+}
+
+bool assign_Terminal_HasSecondMutualCoupling(BaseClass*, BaseClass*);
+bool assign_MutualCoupling_Second_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(MutualCoupling* element = dynamic_cast<MutualCoupling*>(BaseClass_ptr1)) {
+                element->Second_Terminal = dynamic_cast<Terminal*>(BaseClass_ptr2);
+                if(element->Second_Terminal != nullptr)
+                        return assign_Terminal_HasSecondMutualCoupling(BaseClass_ptr2, BaseClass_ptr1);
+        }
+        return false;
+}
+
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* MutualCoupling_factory() {
 		return new MutualCoupling;
@@ -183,5 +183,3 @@ const BaseClassDefiner MutualCoupling::declare()
 {
 	return BaseClassDefiner(MutualCoupling::addConstructToMap, MutualCoupling::addPrimitiveAssignFnsToMap, MutualCoupling::addClassAssignFnsToMap, MutualCoupling::debugName);
 }
-
-

@@ -12,6 +12,9 @@ ConnectivityNodeContainer::ConnectivityNodeContainer() {};
 ConnectivityNodeContainer::~ConnectivityNodeContainer() {};
 
 
+
+
+
 bool assign_ConnectivityNodeContainer_ConnectivityNodes(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(ConnectivityNodeContainer* element = dynamic_cast<ConnectivityNodeContainer*>(BaseClass_ptr1)) {
 		if(dynamic_cast<ConnectivityNode*>(BaseClass_ptr2) != nullptr) {
@@ -31,9 +34,6 @@ bool assign_ConnectivityNodeContainer_TopologicalNode(BaseClass* BaseClass_ptr1,
 	}
 	return false;
 }
-
-
-
 
 namespace CIMPP {
 	BaseClass* ConnectivityNodeContainer_factory() {
@@ -63,5 +63,3 @@ const BaseClassDefiner ConnectivityNodeContainer::declare()
 {
 	return BaseClassDefiner(ConnectivityNodeContainer::addConstructToMap, ConnectivityNodeContainer::addPrimitiveAssignFnsToMap, ConnectivityNodeContainer::addClassAssignFnsToMap, ConnectivityNodeContainer::debugName);
 }
-
-

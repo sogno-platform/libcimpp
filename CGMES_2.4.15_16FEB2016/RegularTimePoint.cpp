@@ -14,20 +14,6 @@ RegularTimePoint::RegularTimePoint(): IntervalSchedule(nullptr) {};
 RegularTimePoint::~RegularTimePoint() {};
 
 
-bool assign_RegularIntervalSchedule_TimePoints(BaseClass*, BaseClass*);
-bool assign_RegularTimePoint_IntervalSchedule(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(RegularTimePoint* element = dynamic_cast<RegularTimePoint*>(BaseClass_ptr1)) {
-                element->IntervalSchedule = dynamic_cast<RegularIntervalSchedule*>(BaseClass_ptr2);
-                if(element->IntervalSchedule != nullptr)
-                        return assign_RegularIntervalSchedule_TimePoints(BaseClass_ptr2, BaseClass_ptr1);
-        }
-        return false;
-}
-
-
-
-
-
 
 bool assign_RegularTimePoint_sequenceNumber(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(RegularTimePoint* element = dynamic_cast<RegularTimePoint*>(BaseClass_ptr1)) {
@@ -65,6 +51,20 @@ bool assign_RegularTimePoint_value2(std::stringstream &buffer, BaseClass* BaseCl
                 return false;
 }
 
+
+bool assign_RegularIntervalSchedule_TimePoints(BaseClass*, BaseClass*);
+bool assign_RegularTimePoint_IntervalSchedule(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(RegularTimePoint* element = dynamic_cast<RegularTimePoint*>(BaseClass_ptr1)) {
+                element->IntervalSchedule = dynamic_cast<RegularIntervalSchedule*>(BaseClass_ptr2);
+                if(element->IntervalSchedule != nullptr)
+                        return assign_RegularIntervalSchedule_TimePoints(BaseClass_ptr2, BaseClass_ptr1);
+        }
+        return false;
+}
+
+
+
+
 namespace CIMPP {
 	BaseClass* RegularTimePoint_factory() {
 		return new RegularTimePoint;
@@ -95,5 +95,3 @@ const BaseClassDefiner RegularTimePoint::declare()
 {
 	return BaseClassDefiner(RegularTimePoint::addConstructToMap, RegularTimePoint::addPrimitiveAssignFnsToMap, RegularTimePoint::addClassAssignFnsToMap, RegularTimePoint::debugName);
 }
-
-

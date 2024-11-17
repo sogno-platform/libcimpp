@@ -14,11 +14,6 @@ MechLoad1::MechLoad1() {};
 MechLoad1::~MechLoad1() {};
 
 
-
-
-
-
-
 bool assign_MechLoad1_a(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(MechLoad1* element = dynamic_cast<MechLoad1*>(BaseClass_ptr1)) {
                 buffer >> element->a;
@@ -67,6 +62,11 @@ bool assign_MechLoad1_e(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
                 return false;
 }
 
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* MechLoad1_factory() {
 		return new MechLoad1;
@@ -97,5 +97,3 @@ const BaseClassDefiner MechLoad1::declare()
 {
 	return BaseClassDefiner(MechLoad1::addConstructToMap, MechLoad1::addPrimitiveAssignFnsToMap, MechLoad1::addClassAssignFnsToMap, MechLoad1::debugName);
 }
-
-

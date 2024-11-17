@@ -8,23 +8,22 @@
 
 using namespace CIMPP;
 
-BasicIntervalSchedule::BasicIntervalSchedule(): startTime(nullptr) {};
+BasicIntervalSchedule::BasicIntervalSchedule() {};
 
 BasicIntervalSchedule::~BasicIntervalSchedule() {};
 
 
-bool assign_BasicIntervalSchedule_startTime(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+bool assign_BasicIntervalSchedule_startTime(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(BasicIntervalSchedule* element = dynamic_cast<BasicIntervalSchedule*>(BaseClass_ptr1)) {
-                element->startTime = dynamic_cast<DateTime*>(BaseClass_ptr2);
-                if(element->startTime != nullptr)
+                buffer >> element->startTime;
+                if(buffer.fail())
+                        return false;
+                else
                         return true;
         }
-        return false;
+        else
+                return false;
 }
-
-
-
-
 
 bool assign_BasicIntervalSchedule_value1Unit(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(BasicIntervalSchedule* element = dynamic_cast<BasicIntervalSchedule*>(BaseClass_ptr1)) {
@@ -50,6 +49,10 @@ bool assign_BasicIntervalSchedule_value2Unit(std::stringstream &buffer, BaseClas
                 return false;
 }
 
+
+
+
+
 namespace CIMPP {
 	BaseClass* BasicIntervalSchedule_factory() {
 		return new BasicIntervalSchedule;
@@ -61,13 +64,13 @@ void BasicIntervalSchedule::addConstructToMap(std::unordered_map<std::string, Ba
 }
 
 void BasicIntervalSchedule::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
-		assign_map.insert(std::make_pair(std::string("cim:BasicIntervalSchedule.value1Unit"), &assign_BasicIntervalSchedule_value1Unit));
+	assign_map.insert(std::make_pair(std::string("cim:BasicIntervalSchedule.startTime"), &assign_BasicIntervalSchedule_startTime));
+	assign_map.insert(std::make_pair(std::string("cim:BasicIntervalSchedule.value1Unit"), &assign_BasicIntervalSchedule_value1Unit));
 	assign_map.insert(std::make_pair(std::string("cim:BasicIntervalSchedule.value2Unit"), &assign_BasicIntervalSchedule_value2Unit));
 }
 
 void BasicIntervalSchedule::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-	assign_map.insert(std::make_pair(std::string("cim:BasicIntervalSchedule.startTime"), &assign_BasicIntervalSchedule_startTime));
-		}
+			}
 
 const char BasicIntervalSchedule::debugName[] = "BasicIntervalSchedule";
 const char* BasicIntervalSchedule::debugString()
@@ -79,5 +82,3 @@ const BaseClassDefiner BasicIntervalSchedule::declare()
 {
 	return BaseClassDefiner(BasicIntervalSchedule::addConstructToMap, BasicIntervalSchedule::addPrimitiveAssignFnsToMap, BasicIntervalSchedule::addClassAssignFnsToMap, BasicIntervalSchedule::debugName);
 }
-
-

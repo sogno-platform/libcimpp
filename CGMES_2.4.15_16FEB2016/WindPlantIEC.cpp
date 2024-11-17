@@ -12,6 +12,9 @@ WindPlantIEC::WindPlantIEC(): WindPlantFreqPcontrolIEC(nullptr), WindPlantReacti
 WindPlantIEC::~WindPlantIEC() {};
 
 
+
+
+
 bool assign_WindPlantFreqPcontrolIEC_WindPlantIEC(BaseClass*, BaseClass*);
 bool assign_WindPlantIEC_WindPlantFreqPcontrolIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(WindPlantIEC* element = dynamic_cast<WindPlantIEC*>(BaseClass_ptr1)) {
@@ -31,9 +34,6 @@ bool assign_WindPlantIEC_WindPlantReactiveControlIEC(BaseClass* BaseClass_ptr1, 
         }
         return false;
 }
-
-
-
 
 namespace CIMPP {
 	BaseClass* WindPlantIEC_factory() {
@@ -63,5 +63,3 @@ const BaseClassDefiner WindPlantIEC::declare()
 {
 	return BaseClassDefiner(WindPlantIEC::addConstructToMap, WindPlantIEC::addPrimitiveAssignFnsToMap, WindPlantIEC::addClassAssignFnsToMap, WindPlantIEC::debugName);
 }
-
-

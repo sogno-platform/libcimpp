@@ -7,12 +7,12 @@
 #include "Float.hpp"
 
 
+#include "DateTime.hpp"
 #include "Seconds.hpp"
 
 namespace CIMPP {
 
 
-class DateTime;
 class RegularTimePoint;
 	/*
 	The schedule has time points where the time between them is constant.
@@ -21,17 +21,17 @@ class RegularTimePoint;
 	{
 
 	public:
-					CIMPP::Seconds timeStep; 	/* The time between each pair of subsequent regular time points in sequence order. Default: nullptr */
-					CIMPP::DateTime* endTime; 	/* The time for the last time point. Default: '' */
 					std::list<CIMPP::RegularTimePoint*> TimePoints; 	/* The regular interval time point data values that define this schedule. Default: 0 */
-				
+					CIMPP::DateTime endTime; 	/* The time for the last time point. Default: '' */
+					CIMPP::Seconds timeStep; 	/* The time between each pair of subsequent regular time points in sequence order. Default: nullptr */
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		RegularIntervalSchedule();
 		virtual ~RegularIntervalSchedule();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

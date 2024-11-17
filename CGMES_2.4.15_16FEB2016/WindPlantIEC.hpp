@@ -22,14 +22,14 @@ class WindPlantReactiveControlIEC;
 	public:
 					CIMPP::WindPlantFreqPcontrolIEC* WindPlantFreqPcontrolIEC; 	/* Wind plant frequency and active power control model associated with this wind plant. Default: 0 */
 					CIMPP::WindPlantReactiveControlIEC* WindPlantReactiveControlIEC; 	/* Wind plant reactive control model associated with this wind plant. Default: 0 */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		WindPlantIEC();
 		virtual ~WindPlantIEC();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

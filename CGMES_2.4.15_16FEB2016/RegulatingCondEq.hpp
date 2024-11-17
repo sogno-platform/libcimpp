@@ -22,14 +22,14 @@ class RegulatingControl;
 	public:
 					CIMPP::RegulatingControl* RegulatingControl; 	/* The regulating control scheme in which this equipment participates. Default: 0 */
 					CIMPP::Boolean controlEnabled; 	/* Specifies the regulation status of the equipment.  True is regulating, false is not regulating. Default: false */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		RegulatingCondEq();
 		virtual ~RegulatingCondEq();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

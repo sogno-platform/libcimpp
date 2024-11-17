@@ -11,6 +11,8 @@ DCTopologicalIsland::DCTopologicalIsland() {};
 DCTopologicalIsland::~DCTopologicalIsland() {};
 
 
+
+
 bool assign_DCTopologicalIsland_DCTopologicalNodes(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(DCTopologicalIsland* element = dynamic_cast<DCTopologicalIsland*>(BaseClass_ptr1)) {
 		if(dynamic_cast<DCTopologicalNode*>(BaseClass_ptr2) != nullptr) {
@@ -20,8 +22,6 @@ bool assign_DCTopologicalIsland_DCTopologicalNodes(BaseClass* BaseClass_ptr1, Ba
 	}
 	return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* DCTopologicalIsland_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner DCTopologicalIsland::declare()
 {
 	return BaseClassDefiner(DCTopologicalIsland::addConstructToMap, DCTopologicalIsland::addPrimitiveAssignFnsToMap, DCTopologicalIsland::addClassAssignFnsToMap, DCTopologicalIsland::debugName);
 }
-
-

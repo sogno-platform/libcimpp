@@ -13,6 +13,10 @@ Substation::Substation(): Region(nullptr) {};
 Substation::~Substation() {};
 
 
+
+
+
+
 bool assign_Substation_DCConverterUnit(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(Substation* element = dynamic_cast<Substation*>(BaseClass_ptr1)) {
 		if(dynamic_cast<DCConverterUnit*>(BaseClass_ptr2) != nullptr) {
@@ -43,10 +47,6 @@ bool assign_Substation_VoltageLevels(BaseClass* BaseClass_ptr1, BaseClass* BaseC
 	return false;
 }
 
-
-
-
-
 namespace CIMPP {
 	BaseClass* Substation_factory() {
 		return new Substation;
@@ -76,5 +76,3 @@ const BaseClassDefiner Substation::declare()
 {
 	return BaseClassDefiner(Substation::addConstructToMap, Substation::addPrimitiveAssignFnsToMap, Substation::addClassAssignFnsToMap, Substation::debugName);
 }
-
-

@@ -7,8 +7,8 @@
 #include "Float.hpp"
 
 
-#include "GenericNonLinearLoadModelKind.hpp"
 #include "Simple_Float.hpp"
+#include "GenericNonLinearLoadModelKind.hpp"
 #include "Seconds.hpp"
 
 namespace CIMPP {
@@ -21,23 +21,23 @@ namespace CIMPP {
 	{
 
 	public:
+					CIMPP::Simple_Float bs; 	/* Steady state voltage index for reactive power (BS). Default: nullptr */
+					CIMPP::Simple_Float bt; 	/* Transient voltage index for reactive power (BT). Default: nullptr */
 					CIMPP::GenericNonLinearLoadModelKind genericNonLinearLoadModelType; 	/* Type of generic non-linear load model. Default: 0 */
+					CIMPP::Simple_Float ls; 	/* Steady state voltage index for active power (LS). Default: nullptr */
+					CIMPP::Simple_Float lt; 	/* Transient voltage index for active power (LT). Default: nullptr */
 					CIMPP::Simple_Float pt; 	/* Dynamic portion of active load (P). Default: nullptr */
 					CIMPP::Simple_Float qt; 	/* Dynamic portion of reactive load (Q). Default: nullptr */
 					CIMPP::Seconds tp; 	/* Time constant of lag function of active power (T). Default: nullptr */
 					CIMPP::Seconds tq; 	/* Time constant of lag function of reactive power (T). Default: nullptr */
-					CIMPP::Simple_Float ls; 	/* Steady state voltage index for active power (LS). Default: nullptr */
-					CIMPP::Simple_Float lt; 	/* Transient voltage index for active power (LT). Default: nullptr */
-					CIMPP::Simple_Float bs; 	/* Steady state voltage index for reactive power (BS). Default: nullptr */
-					CIMPP::Simple_Float bt; 	/* Transient voltage index for reactive power (BT). Default: nullptr */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		LoadGenericNonLinear();
 		virtual ~LoadGenericNonLinear();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

@@ -26,23 +26,6 @@ ExcST7B::ExcST7B() {};
 ExcST7B::~ExcST7B() {};
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 bool assign_ExcST7B_kh(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(ExcST7B* element = dynamic_cast<ExcST7B*>(BaseClass_ptr1)) {
                 buffer >> element->kh;
@@ -235,6 +218,23 @@ bool assign_ExcST7B_vrmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) 
                 return false;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* ExcST7B_factory() {
 		return new ExcST7B;
@@ -277,5 +277,3 @@ const BaseClassDefiner ExcST7B::declare()
 {
 	return BaseClassDefiner(ExcST7B::addConstructToMap, ExcST7B::addPrimitiveAssignFnsToMap, ExcST7B::addClassAssignFnsToMap, ExcST7B::debugName);
 }
-
-

@@ -17,23 +17,6 @@ PowerTransformer::PowerTransformer() {};
 PowerTransformer::~PowerTransformer() {};
 
 
-bool assign_PowerTransformer_PowerTransformerEnd(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(PowerTransformer* element = dynamic_cast<PowerTransformer*>(BaseClass_ptr1)) {
-		if(dynamic_cast<PowerTransformerEnd*>(BaseClass_ptr2) != nullptr) {
-                        element->PowerTransformerEnd.push_back(dynamic_cast<PowerTransformerEnd*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
-
-
-
-
-
-
-
-
 
 bool assign_PowerTransformer_beforeShCircuitHighestOperatingCurrent(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(PowerTransformer* element = dynamic_cast<PowerTransformer*>(BaseClass_ptr1)) {
@@ -107,6 +90,23 @@ bool assign_PowerTransformer_operationalValuesConsidered(std::stringstream &buff
                 return false;
 }
 
+
+bool assign_PowerTransformer_PowerTransformerEnd(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(PowerTransformer* element = dynamic_cast<PowerTransformer*>(BaseClass_ptr1)) {
+		if(dynamic_cast<PowerTransformerEnd*>(BaseClass_ptr2) != nullptr) {
+                        element->PowerTransformerEnd.push_back(dynamic_cast<PowerTransformerEnd*>(BaseClass_ptr2));
+			return true;
+		}
+	}
+	return false;
+}
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* PowerTransformer_factory() {
 		return new PowerTransformer;
@@ -140,5 +140,3 @@ const BaseClassDefiner PowerTransformer::declare()
 {
 	return BaseClassDefiner(PowerTransformer::addConstructToMap, PowerTransformer::addPrimitiveAssignFnsToMap, PowerTransformer::addClassAssignFnsToMap, PowerTransformer::debugName);
 }
-
-

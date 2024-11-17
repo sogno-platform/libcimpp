@@ -37,5 +37,3 @@ const BaseClassDefiner DateTime::declare()
 {
 	return BaseClassDefiner(DateTime::addConstructToMap, DateTime::addPrimitiveAssignFnsToMap, DateTime::addClassAssignFnsToMap, DateTime::debugName);
 }
-
-

@@ -2,8 +2,8 @@
 #include "AsynchronousMachineDynamics.hpp"
 #include "AsynchronousMachineUserDefined.hpp"
 
-#include "Boolean.hpp"
 #include "ProprietaryParameterDynamics.hpp"
+#include "Boolean.hpp"
 
 using namespace CIMPP;
 
@@ -11,17 +11,6 @@ AsynchronousMachineUserDefined::AsynchronousMachineUserDefined() {};
 
 AsynchronousMachineUserDefined::~AsynchronousMachineUserDefined() {};
 
-
-
-bool assign_AsynchronousMachineUserDefined_ProprietaryParameterDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(AsynchronousMachineUserDefined* element = dynamic_cast<AsynchronousMachineUserDefined*>(BaseClass_ptr1)) {
-		if(dynamic_cast<ProprietaryParameterDynamics*>(BaseClass_ptr2) != nullptr) {
-                        element->ProprietaryParameterDynamics.push_back(dynamic_cast<ProprietaryParameterDynamics*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
 
 
 bool assign_AsynchronousMachineUserDefined_proprietary(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
@@ -37,6 +26,17 @@ bool assign_AsynchronousMachineUserDefined_proprietary(std::stringstream &buffer
 }
 
 
+bool assign_AsynchronousMachineUserDefined_ProprietaryParameterDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(AsynchronousMachineUserDefined* element = dynamic_cast<AsynchronousMachineUserDefined*>(BaseClass_ptr1)) {
+		if(dynamic_cast<ProprietaryParameterDynamics*>(BaseClass_ptr2) != nullptr) {
+                        element->ProprietaryParameterDynamics.push_back(dynamic_cast<ProprietaryParameterDynamics*>(BaseClass_ptr2));
+			return true;
+		}
+	}
+	return false;
+}
+
+
 namespace CIMPP {
 	BaseClass* AsynchronousMachineUserDefined_factory() {
 		return new AsynchronousMachineUserDefined;
@@ -48,12 +48,12 @@ void AsynchronousMachineUserDefined::addConstructToMap(std::unordered_map<std::s
 }
 
 void AsynchronousMachineUserDefined::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
-	assign_map.insert(std::make_pair(std::string("cim:AsynchronousMachineUserDefined.proprietary"), &assign_AsynchronousMachineUserDefined_proprietary));
-	}
+		assign_map.insert(std::make_pair(std::string("cim:AsynchronousMachineUserDefined.proprietary"), &assign_AsynchronousMachineUserDefined_proprietary));
+}
 
 void AsynchronousMachineUserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-		assign_map.insert(std::make_pair(std::string("cim:AsynchronousMachineUserDefined.ProprietaryParameterDynamics"), &assign_AsynchronousMachineUserDefined_ProprietaryParameterDynamics));
-}
+	assign_map.insert(std::make_pair(std::string("cim:AsynchronousMachineUserDefined.ProprietaryParameterDynamics"), &assign_AsynchronousMachineUserDefined_ProprietaryParameterDynamics));
+	}
 
 const char AsynchronousMachineUserDefined::debugName[] = "AsynchronousMachineUserDefined";
 const char* AsynchronousMachineUserDefined::debugString()
@@ -65,5 +65,3 @@ const BaseClassDefiner AsynchronousMachineUserDefined::declare()
 {
 	return BaseClassDefiner(AsynchronousMachineUserDefined::addConstructToMap, AsynchronousMachineUserDefined::addPrimitiveAssignFnsToMap, AsynchronousMachineUserDefined::addClassAssignFnsToMap, AsynchronousMachineUserDefined::debugName);
 }
-
-

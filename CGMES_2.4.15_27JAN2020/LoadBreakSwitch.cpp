@@ -37,5 +37,3 @@ const BaseClassDefiner LoadBreakSwitch::declare()
 {
 	return BaseClassDefiner(LoadBreakSwitch::addConstructToMap, LoadBreakSwitch::addPrimitiveAssignFnsToMap, LoadBreakSwitch::addClassAssignFnsToMap, LoadBreakSwitch::debugName);
 }
-
-

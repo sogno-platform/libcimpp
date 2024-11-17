@@ -23,14 +23,14 @@ namespace CIMPP {
 					CIMPP::PerCent voltageStepIncrement; 	/* The voltage step increment on the out of phase winding specified in percent of nominal voltage of the transformer end. Default: nullptr */
 					CIMPP::Reactance xMax; 	/* The reactance depend on the tap position according to a `u` shaped curve. The maximum reactance (xMax) appear at the low and high tap positions. Default: nullptr */
 					CIMPP::Reactance xMin; 	/* The reactance depend on the tap position according to a `u` shaped curve. The minimum reactance (xMin) appear at the mid tap position. Default: nullptr */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		PhaseTapChangerNonLinear();
 		virtual ~PhaseTapChangerNonLinear();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

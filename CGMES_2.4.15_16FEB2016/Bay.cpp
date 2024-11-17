@@ -11,6 +11,8 @@ Bay::Bay(): VoltageLevel(nullptr) {};
 Bay::~Bay() {};
 
 
+
+
 bool assign_VoltageLevel_Bays(BaseClass*, BaseClass*);
 bool assign_Bay_VoltageLevel(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(Bay* element = dynamic_cast<Bay*>(BaseClass_ptr1)) {
@@ -20,8 +22,6 @@ bool assign_Bay_VoltageLevel(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* Bay_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner Bay::declare()
 {
 	return BaseClassDefiner(Bay::addConstructToMap, Bay::addPrimitiveAssignFnsToMap, Bay::addClassAssignFnsToMap, Bay::debugName);
 }
-
-

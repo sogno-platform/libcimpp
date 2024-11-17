@@ -2,16 +2,16 @@
 #include "IdentifiedObject.hpp"
 #include "WindContRotorRIEC.hpp"
 
-#include "PU.hpp"
-#include "Simple_Float.hpp"
-#include "Simple_Float.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
 #include "WindDynamicsLookupTable.hpp"
 #include "WindGenTurbineType2IEC.hpp"
+#include "PU.hpp"
+#include "Simple_Float.hpp"
+#include "Simple_Float.hpp"
+#include "PU.hpp"
+#include "PU.hpp"
+#include "PU.hpp"
+#include "Seconds.hpp"
+#include "Seconds.hpp"
 
 using namespace CIMPP;
 
@@ -20,32 +20,6 @@ WindContRotorRIEC::WindContRotorRIEC(): WindGenTurbineType2IEC(nullptr) {};
 WindContRotorRIEC::~WindContRotorRIEC() {};
 
 
-
-
-
-
-
-
-
-
-bool assign_WindContRotorRIEC_WindDynamicsLookupTable(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(WindContRotorRIEC* element = dynamic_cast<WindContRotorRIEC*>(BaseClass_ptr1)) {
-		if(dynamic_cast<WindDynamicsLookupTable*>(BaseClass_ptr2) != nullptr) {
-                        element->WindDynamicsLookupTable.push_back(dynamic_cast<WindDynamicsLookupTable*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
-
-bool assign_WindContRotorRIEC_WindGenTurbineType2IEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(WindContRotorRIEC* element = dynamic_cast<WindContRotorRIEC*>(BaseClass_ptr1)) {
-                element->WindGenTurbineType2IEC = dynamic_cast<WindGenTurbineType2IEC*>(BaseClass_ptr2);
-                if(element->WindGenTurbineType2IEC != nullptr)
-                        return true;
-        }
-        return false;
-}
 
 
 bool assign_WindContRotorRIEC_kirr(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
@@ -145,6 +119,32 @@ bool assign_WindContRotorRIEC_tpfilt(std::stringstream &buffer, BaseClass* BaseC
 }
 
 
+bool assign_WindContRotorRIEC_WindDynamicsLookupTable(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(WindContRotorRIEC* element = dynamic_cast<WindContRotorRIEC*>(BaseClass_ptr1)) {
+		if(dynamic_cast<WindDynamicsLookupTable*>(BaseClass_ptr2) != nullptr) {
+                        element->WindDynamicsLookupTable.push_back(dynamic_cast<WindDynamicsLookupTable*>(BaseClass_ptr2));
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindContRotorRIEC_WindGenTurbineType2IEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(WindContRotorRIEC* element = dynamic_cast<WindContRotorRIEC*>(BaseClass_ptr1)) {
+                element->WindGenTurbineType2IEC = dynamic_cast<WindGenTurbineType2IEC*>(BaseClass_ptr2);
+                if(element->WindGenTurbineType2IEC != nullptr)
+                        return true;
+        }
+        return false;
+}
+
+
+
+
+
+
+
+
 
 namespace CIMPP {
 	BaseClass* WindContRotorRIEC_factory() {
@@ -157,7 +157,7 @@ void WindContRotorRIEC::addConstructToMap(std::unordered_map<std::string, BaseCl
 }
 
 void WindContRotorRIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
-	assign_map.insert(std::make_pair(std::string("cim:WindContRotorRIEC.kirr"), &assign_WindContRotorRIEC_kirr));
+			assign_map.insert(std::make_pair(std::string("cim:WindContRotorRIEC.kirr"), &assign_WindContRotorRIEC_kirr));
 	assign_map.insert(std::make_pair(std::string("cim:WindContRotorRIEC.komegafilt"), &assign_WindContRotorRIEC_komegafilt));
 	assign_map.insert(std::make_pair(std::string("cim:WindContRotorRIEC.kpfilt"), &assign_WindContRotorRIEC_kpfilt));
 	assign_map.insert(std::make_pair(std::string("cim:WindContRotorRIEC.kprr"), &assign_WindContRotorRIEC_kprr));
@@ -165,12 +165,12 @@ void WindContRotorRIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::strin
 	assign_map.insert(std::make_pair(std::string("cim:WindContRotorRIEC.rmin"), &assign_WindContRotorRIEC_rmin));
 	assign_map.insert(std::make_pair(std::string("cim:WindContRotorRIEC.tomegafilt"), &assign_WindContRotorRIEC_tomegafilt));
 	assign_map.insert(std::make_pair(std::string("cim:WindContRotorRIEC.tpfilt"), &assign_WindContRotorRIEC_tpfilt));
-		}
+}
 
 void WindContRotorRIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-									assign_map.insert(std::make_pair(std::string("cim:WindContRotorRIEC.WindDynamicsLookupTable"), &assign_WindContRotorRIEC_WindDynamicsLookupTable));
+	assign_map.insert(std::make_pair(std::string("cim:WindContRotorRIEC.WindDynamicsLookupTable"), &assign_WindContRotorRIEC_WindDynamicsLookupTable));
 	assign_map.insert(std::make_pair(std::string("cim:WindContRotorRIEC.WindGenTurbineType2IEC"), &assign_WindContRotorRIEC_WindGenTurbineType2IEC));
-}
+								}
 
 const char WindContRotorRIEC::debugName[] = "WindContRotorRIEC";
 const char* WindContRotorRIEC::debugString()
@@ -182,5 +182,3 @@ const BaseClassDefiner WindContRotorRIEC::declare()
 {
 	return BaseClassDefiner(WindContRotorRIEC::addConstructToMap, WindContRotorRIEC::addPrimitiveAssignFnsToMap, WindContRotorRIEC::addClassAssignFnsToMap, WindContRotorRIEC::debugName);
 }
-
-

@@ -23,6 +23,7 @@ class WindGenTurbineType3IEC;
 	{
 
 	public:
+					CIMPP::WindGenTurbineType3IEC* WindGenTurbineType3IEC; 	/* Wind turbine type 3 model with which this pitch control model is associated. Default: 0 */
 					CIMPP::Simple_Float dthetamax; 	/* Maximum pitch positive ramp rate (d). It is type dependent parameter. Unit = degrees/sec. Default: nullptr */
 					CIMPP::Simple_Float dthetamin; 	/* Maximum pitch negative ramp rate (d). It is type dependent parameter. Unit = degrees/sec. Default: nullptr */
 					CIMPP::PU kic; 	/* Power PI controller integration gain (). It is type dependent parameter. Default: nullptr */
@@ -33,15 +34,14 @@ class WindGenTurbineType3IEC;
 					CIMPP::AngleDegrees thetamax; 	/* Maximum pitch angle (). It is type dependent parameter. Default: nullptr */
 					CIMPP::AngleDegrees thetamin; 	/* Minimum pitch angle (). It is type dependent parameter. Default: nullptr */
 					CIMPP::Seconds ttheta; 	/* Pitch time constant (t). It is type dependent parameter. Default: nullptr */
-					CIMPP::WindGenTurbineType3IEC* WindGenTurbineType3IEC; 	/* Wind turbine type 3 model with which this pitch control model is associated. Default: 0 */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		WindContPitchAngleIEC();
 		virtual ~WindContPitchAngleIEC();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

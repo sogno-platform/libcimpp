@@ -11,6 +11,8 @@ WindTurbineType4aIEC::WindTurbineType4aIEC(): WindContPType4aIEC(nullptr) {};
 WindTurbineType4aIEC::~WindTurbineType4aIEC() {};
 
 
+
+
 bool assign_WindContPType4aIEC_WindTurbineType4aIEC(BaseClass*, BaseClass*);
 bool assign_WindTurbineType4aIEC_WindContPType4aIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(WindTurbineType4aIEC* element = dynamic_cast<WindTurbineType4aIEC*>(BaseClass_ptr1)) {
@@ -20,8 +22,6 @@ bool assign_WindTurbineType4aIEC_WindContPType4aIEC(BaseClass* BaseClass_ptr1, B
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* WindTurbineType4aIEC_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner WindTurbineType4aIEC::declare()
 {
 	return BaseClassDefiner(WindTurbineType4aIEC::addConstructToMap, WindTurbineType4aIEC::addPrimitiveAssignFnsToMap, WindTurbineType4aIEC::addClassAssignFnsToMap, WindTurbineType4aIEC::debugName);
 }
-
-

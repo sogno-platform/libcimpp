@@ -24,14 +24,14 @@ class Curve;
 					CIMPP::Simple_Float xvalue; 	/* The data value of the X-axis variable,  depending on the X-axis units. Default: nullptr */
 					CIMPP::Simple_Float y1value; 	/* The data value of the  first Y-axis variable, depending on the Y-axis units. Default: nullptr */
 					CIMPP::Simple_Float y2value; 	/* The data value of the second Y-axis variable (if present), depending on the Y-axis units. Default: nullptr */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		CurveData();
 		virtual ~CurveData();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

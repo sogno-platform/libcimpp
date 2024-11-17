@@ -33,14 +33,14 @@ class WindGenTurbineType2IEC;
 					CIMPP::Seconds t1; 	/* First time constant in pitch control lag (). It is type dependent parameter. Default: nullptr */
 					CIMPP::Seconds t2; 	/* Second time constant in pitch control lag (). It is type dependent parameter. Default: nullptr */
 					CIMPP::Seconds tpe; 	/* Time constant in generator air gap power lag (). It is type dependent parameter. Default: nullptr */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		WindPitchContEmulIEC();
 		virtual ~WindPitchContEmulIEC();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

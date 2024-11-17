@@ -2,8 +2,8 @@
 #include "IdentifiedObject.hpp"
 #include "ConnectivityNode.hpp"
 
-#include "Terminal.hpp"
 #include "ConnectivityNodeContainer.hpp"
+#include "Terminal.hpp"
 #include "TopologicalNode.hpp"
 #include "Boolean.hpp"
 #include "String.hpp"
@@ -18,44 +18,6 @@ using namespace CIMPP;
 ConnectivityNode::ConnectivityNode(): ConnectivityNodeContainer(nullptr), TopologicalNode(nullptr) {};
 
 ConnectivityNode::~ConnectivityNode() {};
-
-
-bool assign_ConnectivityNode_Terminals(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1)) {
-		if(dynamic_cast<Terminal*>(BaseClass_ptr2) != nullptr) {
-                        element->Terminals.push_back(dynamic_cast<Terminal*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
-
-bool assign_ConnectivityNodeContainer_ConnectivityNodes(BaseClass*, BaseClass*);
-bool assign_ConnectivityNode_ConnectivityNodeContainer(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1)) {
-                element->ConnectivityNodeContainer = dynamic_cast<ConnectivityNodeContainer*>(BaseClass_ptr2);
-                if(element->ConnectivityNodeContainer != nullptr)
-                        return assign_ConnectivityNodeContainer_ConnectivityNodes(BaseClass_ptr2, BaseClass_ptr1);
-        }
-        return false;
-}
-
-bool assign_TopologicalNode_ConnectivityNodes(BaseClass*, BaseClass*);
-bool assign_ConnectivityNode_TopologicalNode(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1)) {
-                element->TopologicalNode = dynamic_cast<TopologicalNode*>(BaseClass_ptr2);
-                if(element->TopologicalNode != nullptr)
-                        return assign_TopologicalNode_ConnectivityNodes(BaseClass_ptr2, BaseClass_ptr1);
-        }
-        return false;
-}
-
-
-
-
-
-
-
 
 
 
@@ -139,6 +101,44 @@ bool assign_ConnectivityNode_toEndNameTso(std::stringstream &buffer, BaseClass* 
 	return false;
 }
 
+
+bool assign_ConnectivityNodeContainer_ConnectivityNodes(BaseClass*, BaseClass*);
+bool assign_ConnectivityNode_ConnectivityNodeContainer(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1)) {
+                element->ConnectivityNodeContainer = dynamic_cast<ConnectivityNodeContainer*>(BaseClass_ptr2);
+                if(element->ConnectivityNodeContainer != nullptr)
+                        return assign_ConnectivityNodeContainer_ConnectivityNodes(BaseClass_ptr2, BaseClass_ptr1);
+        }
+        return false;
+}
+
+bool assign_ConnectivityNode_Terminals(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1)) {
+		if(dynamic_cast<Terminal*>(BaseClass_ptr2) != nullptr) {
+                        element->Terminals.push_back(dynamic_cast<Terminal*>(BaseClass_ptr2));
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_TopologicalNode_ConnectivityNodes(BaseClass*, BaseClass*);
+bool assign_ConnectivityNode_TopologicalNode(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1)) {
+                element->TopologicalNode = dynamic_cast<TopologicalNode*>(BaseClass_ptr2);
+                if(element->TopologicalNode != nullptr)
+                        return assign_TopologicalNode_ConnectivityNodes(BaseClass_ptr2, BaseClass_ptr1);
+        }
+        return false;
+}
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* ConnectivityNode_factory() {
 		return new ConnectivityNode;
@@ -160,8 +160,8 @@ void ConnectivityNode::addPrimitiveAssignFnsToMap(std::unordered_map<std::string
 }
 
 void ConnectivityNode::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-	assign_map.insert(std::make_pair(std::string("cim:ConnectivityNode.Terminals"), &assign_ConnectivityNode_Terminals));
 	assign_map.insert(std::make_pair(std::string("cim:ConnectivityNode.ConnectivityNodeContainer"), &assign_ConnectivityNode_ConnectivityNodeContainer));
+	assign_map.insert(std::make_pair(std::string("cim:ConnectivityNode.Terminals"), &assign_ConnectivityNode_Terminals));
 	assign_map.insert(std::make_pair(std::string("cim:ConnectivityNode.TopologicalNode"), &assign_ConnectivityNode_TopologicalNode));
 							}
 
@@ -175,5 +175,3 @@ const BaseClassDefiner ConnectivityNode::declare()
 {
 	return BaseClassDefiner(ConnectivityNode::addConstructToMap, ConnectivityNode::addPrimitiveAssignFnsToMap, ConnectivityNode::addClassAssignFnsToMap, ConnectivityNode::debugName);
 }
-
-

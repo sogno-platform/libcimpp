@@ -11,6 +11,8 @@ VoltageAdjusterDynamics::VoltageAdjusterDynamics(): PFVArControllerType1Dynamics
 VoltageAdjusterDynamics::~VoltageAdjusterDynamics() {};
 
 
+
+
 bool assign_PFVArControllerType1Dynamics_VoltageAdjusterDynamics(BaseClass*, BaseClass*);
 bool assign_VoltageAdjusterDynamics_PFVArControllerType1Dynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(VoltageAdjusterDynamics* element = dynamic_cast<VoltageAdjusterDynamics*>(BaseClass_ptr1)) {
@@ -20,8 +22,6 @@ bool assign_VoltageAdjusterDynamics_PFVArControllerType1Dynamics(BaseClass* Base
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* VoltageAdjusterDynamics_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner VoltageAdjusterDynamics::declare()
 {
 	return BaseClassDefiner(VoltageAdjusterDynamics::addConstructToMap, VoltageAdjusterDynamics::addPrimitiveAssignFnsToMap, VoltageAdjusterDynamics::addClassAssignFnsToMap, VoltageAdjusterDynamics::debugName);
 }
-
-

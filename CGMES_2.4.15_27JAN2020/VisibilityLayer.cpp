@@ -12,18 +12,6 @@ VisibilityLayer::VisibilityLayer() {};
 VisibilityLayer::~VisibilityLayer() {};
 
 
-bool assign_VisibilityLayer_VisibleObjects(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(VisibilityLayer* element = dynamic_cast<VisibilityLayer*>(BaseClass_ptr1)) {
-		if(dynamic_cast<DiagramObject*>(BaseClass_ptr2) != nullptr) {
-                        element->VisibleObjects.push_back(dynamic_cast<DiagramObject*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
-
-
-
 
 bool assign_VisibilityLayer_drawingOrder(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(VisibilityLayer* element = dynamic_cast<VisibilityLayer*>(BaseClass_ptr1)) {
@@ -36,6 +24,18 @@ bool assign_VisibilityLayer_drawingOrder(std::stringstream &buffer, BaseClass* B
         else
                 return false;
 }
+
+
+bool assign_VisibilityLayer_VisibleObjects(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(VisibilityLayer* element = dynamic_cast<VisibilityLayer*>(BaseClass_ptr1)) {
+		if(dynamic_cast<DiagramObject*>(BaseClass_ptr2) != nullptr) {
+                        element->VisibleObjects.push_back(dynamic_cast<DiagramObject*>(BaseClass_ptr2));
+			return true;
+		}
+	}
+	return false;
+}
+
 
 namespace CIMPP {
 	BaseClass* VisibilityLayer_factory() {
@@ -65,5 +65,3 @@ const BaseClassDefiner VisibilityLayer::declare()
 {
 	return BaseClassDefiner(VisibilityLayer::addConstructToMap, VisibilityLayer::addPrimitiveAssignFnsToMap, VisibilityLayer::addClassAssignFnsToMap, VisibilityLayer::debugName);
 }
-
-

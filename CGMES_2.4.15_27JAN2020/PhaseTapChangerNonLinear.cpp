@@ -13,10 +13,6 @@ PhaseTapChangerNonLinear::PhaseTapChangerNonLinear() {};
 PhaseTapChangerNonLinear::~PhaseTapChangerNonLinear() {};
 
 
-
-
-
-
 bool assign_PhaseTapChangerNonLinear_voltageStepIncrement(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(PhaseTapChangerNonLinear* element = dynamic_cast<PhaseTapChangerNonLinear*>(BaseClass_ptr1)) {
                 buffer >> element->voltageStepIncrement;
@@ -53,6 +49,10 @@ bool assign_PhaseTapChangerNonLinear_xMin(std::stringstream &buffer, BaseClass* 
                 return false;
 }
 
+
+
+
+
 namespace CIMPP {
 	BaseClass* PhaseTapChangerNonLinear_factory() {
 		return new PhaseTapChangerNonLinear;
@@ -82,5 +82,3 @@ const BaseClassDefiner PhaseTapChangerNonLinear::declare()
 {
 	return BaseClassDefiner(PhaseTapChangerNonLinear::addConstructToMap, PhaseTapChangerNonLinear::addPrimitiveAssignFnsToMap, PhaseTapChangerNonLinear::addClassAssignFnsToMap, PhaseTapChangerNonLinear::debugName);
 }
-
-

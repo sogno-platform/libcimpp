@@ -32,45 +32,9 @@
 
 using namespace CIMPP;
 
-GovHydroFrancis::GovHydroFrancis(): qn(nullptr) {};
+GovHydroFrancis::GovHydroFrancis() {};
 
 GovHydroFrancis::~GovHydroFrancis() {};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-bool assign_GovHydroFrancis_qn(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(GovHydroFrancis* element = dynamic_cast<GovHydroFrancis*>(BaseClass_ptr1)) {
-                element->qn = dynamic_cast<VolumeFlowRate*>(BaseClass_ptr2);
-                if(element->qn != nullptr)
-                        return true;
-        }
-        return false;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 bool assign_GovHydroFrancis_am(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
@@ -241,6 +205,17 @@ bool assign_GovHydroFrancis_qc0(std::stringstream &buffer, BaseClass* BaseClass_
                 return false;
 }
 
+bool assign_GovHydroFrancis_qn(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
+	if(GovHydroFrancis* element = dynamic_cast<GovHydroFrancis*>(BaseClass_ptr1)) {
+                buffer >> element->qn;
+                if(buffer.fail())
+                        return false;
+                else
+                        return true;
+        }
+        else
+                return false;
+}
 
 bool assign_GovHydroFrancis_ta(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(GovHydroFrancis* element = dynamic_cast<GovHydroFrancis*>(BaseClass_ptr1)) {
@@ -386,6 +361,34 @@ bool assign_GovHydroFrancis_zsfc(std::stringstream &buffer, BaseClass* BaseClass
                 return false;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* GovHydroFrancis_factory() {
 		return new GovHydroFrancis;
@@ -411,7 +414,8 @@ void GovHydroFrancis::addPrimitiveAssignFnsToMap(std::unordered_map<std::string,
 	assign_map.insert(std::make_pair(std::string("cim:GovHydroFrancis.kg"), &assign_GovHydroFrancis_kg));
 	assign_map.insert(std::make_pair(std::string("cim:GovHydroFrancis.kt"), &assign_GovHydroFrancis_kt));
 	assign_map.insert(std::make_pair(std::string("cim:GovHydroFrancis.qc0"), &assign_GovHydroFrancis_qc0));
-		assign_map.insert(std::make_pair(std::string("cim:GovHydroFrancis.ta"), &assign_GovHydroFrancis_ta));
+	assign_map.insert(std::make_pair(std::string("cim:GovHydroFrancis.qn"), &assign_GovHydroFrancis_qn));
+	assign_map.insert(std::make_pair(std::string("cim:GovHydroFrancis.ta"), &assign_GovHydroFrancis_ta));
 	assign_map.insert(std::make_pair(std::string("cim:GovHydroFrancis.td"), &assign_GovHydroFrancis_td));
 	assign_map.insert(std::make_pair(std::string("cim:GovHydroFrancis.ts"), &assign_GovHydroFrancis_ts));
 	assign_map.insert(std::make_pair(std::string("cim:GovHydroFrancis.twnc"), &assign_GovHydroFrancis_twnc));
@@ -426,8 +430,7 @@ void GovHydroFrancis::addPrimitiveAssignFnsToMap(std::unordered_map<std::string,
 }
 
 void GovHydroFrancis::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-															assign_map.insert(std::make_pair(std::string("cim:GovHydroFrancis.qn"), &assign_GovHydroFrancis_qn));
-												}
+																											}
 
 const char GovHydroFrancis::debugName[] = "GovHydroFrancis";
 const char* GovHydroFrancis::debugString()
@@ -439,5 +442,3 @@ const BaseClassDefiner GovHydroFrancis::declare()
 {
 	return BaseClassDefiner(GovHydroFrancis::addConstructToMap, GovHydroFrancis::addPrimitiveAssignFnsToMap, GovHydroFrancis::addClassAssignFnsToMap, GovHydroFrancis::debugName);
 }
-
-

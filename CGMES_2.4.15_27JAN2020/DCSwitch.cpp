@@ -37,5 +37,3 @@ const BaseClassDefiner DCSwitch::declare()
 {
 	return BaseClassDefiner(DCSwitch::addConstructToMap, DCSwitch::addPrimitiveAssignFnsToMap, DCSwitch::addClassAssignFnsToMap, DCSwitch::debugName);
 }
-
-

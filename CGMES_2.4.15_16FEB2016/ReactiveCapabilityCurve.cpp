@@ -12,6 +12,9 @@ ReactiveCapabilityCurve::ReactiveCapabilityCurve() {};
 ReactiveCapabilityCurve::~ReactiveCapabilityCurve() {};
 
 
+
+
+
 bool assign_ReactiveCapabilityCurve_EquivalentInjection(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(ReactiveCapabilityCurve* element = dynamic_cast<ReactiveCapabilityCurve*>(BaseClass_ptr1)) {
 		if(dynamic_cast<EquivalentInjection*>(BaseClass_ptr2) != nullptr) {
@@ -31,9 +34,6 @@ bool assign_ReactiveCapabilityCurve_InitiallyUsedBySynchronousMachines(BaseClass
 	}
 	return false;
 }
-
-
-
 
 namespace CIMPP {
 	BaseClass* ReactiveCapabilityCurve_factory() {
@@ -63,5 +63,3 @@ const BaseClassDefiner ReactiveCapabilityCurve::declare()
 {
 	return BaseClassDefiner(ReactiveCapabilityCurve::addConstructToMap, ReactiveCapabilityCurve::addPrimitiveAssignFnsToMap, ReactiveCapabilityCurve::addClassAssignFnsToMap, ReactiveCapabilityCurve::debugName);
 }
-
-
