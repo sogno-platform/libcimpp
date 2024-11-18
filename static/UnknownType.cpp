@@ -129,6 +129,9 @@ void UnknownType::addConstructToMap(std::unordered_map<std::string, BaseClass* (
 }
 
 const char UnknownType::debugName[] = "UnknownType";
+const char* UnknownType::debugString() const {
+	return UnknownType::debugName;
+}
 
 const BaseClassDefiner UnknownType::declare()
 {
