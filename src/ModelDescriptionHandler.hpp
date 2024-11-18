@@ -31,9 +31,9 @@ protected:
 	static std::string get_rdf_id(const AttributesT &properties);
 	static std::string get_rdf_resource(const AttributesT &properties);
 
-private: 
+private:
 	ModelDescription* modelDescription;
-	
+
 	std::stack<std::string> tagStack;
 
 };

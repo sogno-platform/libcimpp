@@ -12,6 +12,8 @@ namespace CIMPP {
 	{
 public:
 		static const char debugName[];
+		const char* debugString() const override;
+
 		UnknownType();
 		virtual ~UnknownType();
 
