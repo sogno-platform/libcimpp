@@ -1,18 +1,10 @@
 #include "ModelDescriptionHandler.hpp"
-#include "IEC61970/IEC61970CIMVersion.h"
 
-#ifndef CGMES_BUILD
-#include "IEC61970/Base/Domain/String.h"
-#include "CIMNamespaces.hpp"
-#else
-#include "String.hpp"
-#endif
-
-#include <stdexcept>
 #include <iostream>
 #include <string>
 
 #include "CIMExceptions.hpp"
+#include "IEC61970/IEC61970CIMVersion.h"
 
 using CIMPP::IEC61970CIMVersion;
 
@@ -36,8 +28,9 @@ void ModelDescriptionHandler::startPrefixMapping(const std::string &prefix, cons
 {
 	if(prefix == "cim")
 	{
-		std::size_t pos = IEC61970CIMVersion::version.find("CIM");
-		std::string versionParser = IEC61970CIMVersion::version.substr(pos+3,2);
+		std::string version = IEC61970CIMVersion::version;
+		std::size_t pos = version.find("CIM");
+		std::string versionParser = version.substr(pos+3, 2);
 
 		pos = uri.find("cim");
 		std::string versionFile = uri.substr(pos+3,2);
@@ -132,26 +125,26 @@ void ModelDescriptionHandler::skippedEntity(const std::string &name)
 
 std::string ModelDescriptionHandler::get_rdf_id(const AttributesT &attributes)
 {
- 	for(int i = 0; i < attributes.getLength(); i++)
- 	{
- 		if(attributes.getQName(i) == "rdf:ID")
- 			return attributes.getValue(i);
- 		if(attributes.getQName(i) == "rdf:about")
- 			return attributes.getValue(i).substr(0);
- 	}
- 	return std::string();
+	for(int i = 0; i < attributes.getLength(); i++)
+	{
+		if(attributes.getQName(i) == "rdf:ID")
+			return attributes.getValue(i);
+		if(attributes.getQName(i) == "rdf:about")
+			return attributes.getValue(i).substr(0);
+	}
+	return std::string();
 }
 
 std::string ModelDescriptionHandler::get_rdf_resource(const AttributesT &attributes) //TODO: Resource in get_rdf_id ?
 {
 	for(int i = 0; i < attributes.getLength(); i++)
- 	{
- 		if(attributes.getQName(i) == "rdf:resource")
- 		{
- 			return attributes.getValue(i).substr(0);
- 		}
- 	}
- 	return std::string();
+	{
+		if(attributes.getQName(i) == "rdf:resource")
+		{
+			return attributes.getValue(i).substr(0);
+		}
+	}
+	return std::string();
 }
 
 void ModelDescriptionHandler::setModelDescription(ModelDescription* mDesc)

@@ -1,8 +1,9 @@
+#include "Task.hpp"
+
 #include <iostream>
 
-#include "Folders.hpp"
+#include "IdentifiedObject.hpp"
 #include "CIMClassList.hpp"
-#include "Task.hpp"
 
 using namespace CIMPP;
 
@@ -30,15 +31,15 @@ bool Task::resolve(std::unordered_map<std::string, BaseClass*> *RDFMap)
 {
 	std::unordered_map<std::string, BaseClass*>::iterator it_id = RDFMap->find(_Value);
 	if(it_id == RDFMap->end()) {
-                std::cerr << "Couldn't find " << _CIMAttrName << " with value: " << _Value << " in RDFMap." << std::endl;
+		std::cerr << "Couldn't find " << _CIMAttrName << " with value: " << _Value << " in RDFMap." << std::endl;
 		return false;
 	}
 
 	std::unordered_map<std::string, bool (*)(BaseClass*, BaseClass*)>::iterator it_func = dynamic_switch.find(_CIMAttrName);
-        if(it_func == dynamic_switch.end()) {
-                std::cerr << "Couldn't find " << _CIMAttrName << " in dynamic_switch map." << std::endl;
-                return false;
-        }
+	if (it_func == dynamic_switch.end()) {
+		std::cerr << "Couldn't find " << _CIMAttrName << " in dynamic_switch map." << std::endl;
+		return false;
+	}
 
 	if((*it_func->second)(_CIMObj, it_id->second))
 		return true;
@@ -55,5 +56,3 @@ static std::unordered_map<std::string, class_assign_function> initialize()
 
 	return object_map;
 }
-
-
