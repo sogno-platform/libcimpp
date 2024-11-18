@@ -1,12 +1,8 @@
 #include <iostream>
 #include <string>
 #include "CIMModel.hpp"
-#include "IEC61970.hpp"
-#include "CIMExceptions.hpp"
-
-#ifndef CGMES_BUILD
-#include "CIMNamespaces.hpp"
-#endif
+#include "BaseClass.hpp"
+#include "IdentifiedObject.hpp"
 
 std::string formatName(std::string name) {
 	if (name.length() > 12) {
@@ -53,7 +49,8 @@ int main(int argc, char** argv)
 	{
 		if(CIMPP::IdentifiedObject* IdObj = dynamic_cast<CIMPP::IdentifiedObject*>(Object))
 		{
-			if(!IdObj->name.empty()) {
+			if (IdObj->name.initialized)
+			{
 				static unsigned int i = 0;
 				std::string outputName = formatName(IdObj->name);
 				std::cout << outputName;
