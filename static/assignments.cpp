@@ -38,4 +38,3 @@ std::unordered_map<std::string, assign_function> dynamic_switch_factory()
 
 	return assign_map;
 }
-
