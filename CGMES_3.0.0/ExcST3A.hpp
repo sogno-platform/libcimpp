@@ -1,0 +1,62 @@
+#ifndef ExcST3A_H
+#define ExcST3A_H
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
+
+#include <list>
+#include <string>
+#include <unordered_map>
+
+#include "ExcitationSystemDynamics.hpp"
+#include "BaseClassDefiner.hpp"
+#include "AngleDegrees.hpp"
+#include "PU.hpp"
+#include "Seconds.hpp"
+
+namespace CIMPP
+{
+
+	/*
+	Modified IEEE ST3A static excitation system with added speed multiplier.
+	*/
+	class ExcST3A : public ExcitationSystemDynamics
+	{
+	public:
+		/* constructor initialising all attributes to null */
+		ExcST3A();
+		~ExcST3A() override;
+
+		CIMPP::PU efdmax;  /* Maximum AVR output (&lt;i&gt;Efdmax&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 6,9. Default: nullptr */
+		CIMPP::PU kc;  /* Rectifier loading factor proportional to commutating reactance (&lt;i&gt;Kc&lt;/i&gt;) (&amp;gt;= 0). Typical value = 1,1. Default: nullptr */
+		CIMPP::PU kg;  /* Feedback gain constant of the inner loop field regulator (&lt;i&gt;Kg&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 1. Default: nullptr */
+		CIMPP::PU ki;  /* Potential circuit gain coefficient (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;i&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 4,83. Default: nullptr */
+		CIMPP::PU kj;  /* AVR gain (&lt;i&gt;Kj&lt;/i&gt;) (&amp;gt; 0).  Typical value = 200. Default: nullptr */
+		CIMPP::PU km;  /* Forward gain constant of the inner loop field regulator (&lt;i&gt;Km&lt;/i&gt;) (&amp;gt; 0).  Typical value = 7,04. Default: nullptr */
+		CIMPP::PU kp;  /* Potential source gain (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;p&lt;/sub&gt;&lt;/i&gt;) (&amp;gt; 0).  Typical value = 4,37. Default: nullptr */
+		CIMPP::PU ks;  /* Coefficient to allow different usage of the model-speed coefficient (&lt;i&gt;Ks&lt;/i&gt;).  Typical value = 0. Default: nullptr */
+		CIMPP::PU ks1;  /* Coefficient to allow different usage of the model-speed coefficient (&lt;i&gt;Ks1&lt;/i&gt;).  Typical value = 0. Default: nullptr */
+		CIMPP::Seconds tb;  /* Voltage regulator time constant (&lt;i&gt;Tb&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 6,67. Default: nullptr */
+		CIMPP::Seconds tc;  /* Voltage regulator time constant (&lt;i&gt;Tc&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 1. Default: nullptr */
+		CIMPP::AngleDegrees thetap;  /* Potential circuit phase angle (&lt;i&gt;theta&lt;/i&gt;&lt;i&gt;&lt;sub&gt;p&lt;/sub&gt;&lt;/i&gt;).  Typical value = 20. Default: nullptr */
+		CIMPP::Seconds tm;  /* Forward time constant of inner loop field regulator (&lt;i&gt;Tm&lt;/i&gt;) (&amp;gt; 0).  Typical value = 1. Default: nullptr */
+		CIMPP::PU vbmax;  /* Maximum excitation voltage (&lt;i&gt;Vbmax&lt;/i&gt;) (&amp;gt; 0).  Typical value = 8,63. Default: nullptr */
+		CIMPP::PU vgmax;  /* Maximum inner loop feedback voltage (&lt;i&gt;Vgmax&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 6,53. Default: nullptr */
+		CIMPP::PU vimax;  /* Maximum voltage regulator input limit (&lt;i&gt;Vimax&lt;/i&gt;) (&amp;gt; 0).  Typical value = 0,2. Default: nullptr */
+		CIMPP::PU vimin;  /* Minimum voltage regulator input limit (&lt;i&gt;Vimin&lt;/i&gt;) (&amp;lt; 0).  Typical value = -0,2. Default: nullptr */
+		CIMPP::PU vrmax;  /* Maximum voltage regulator output (&lt;i&gt;Vrmax&lt;/i&gt;) (&amp;gt; 0).  Typical value = 1. Default: nullptr */
+		CIMPP::PU vrmin;  /* Minimum voltage regulator output (&lt;i&gt;Vrmin&lt;/i&gt;) (&amp;lt; 0).  Typical value = -1. Default: nullptr */
+		CIMPP::PU xl;  /* Reactance associated with potential source (&lt;i&gt;Xl&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 0,09. Default: nullptr */
+
+		static const char debugName[];
+		const char* debugString() const override;
+
+		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
+		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map);
+		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map);
+		static const BaseClassDefiner declare();
+	};
+
+	BaseClass* ExcST3A_factory();
+}
+#endif
