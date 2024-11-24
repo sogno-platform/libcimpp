@@ -1,12 +1,43 @@
-#include <sstream>
-#include <iostream>
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "ExcREXSFeedbackSignalKind.hpp"
+
+#include <ios>
+#include <string>
+
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-namespace CIMPP {
-	std::istream& operator>>(std::istream& lop, CIMPP::ExcREXSFeedbackSignalKind& rop)
+ExcREXSFeedbackSignalKind& ExcREXSFeedbackSignalKind::operator=(ExcREXSFeedbackSignalKind_ENUM rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
+
+ExcREXSFeedbackSignalKind::operator ExcREXSFeedbackSignalKind_ENUM() const
+{
+	if (!initialized)
 	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
+
+const char ExcREXSFeedbackSignalKind::debugName[] = "ExcREXSFeedbackSignalKind";
+const char* ExcREXSFeedbackSignalKind::debugString() const
+{
+	return ExcREXSFeedbackSignalKind::debugName;
+}
+
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, ExcREXSFeedbackSignalKind& rop)
+	{
+		rop.initialized = false;
+
 		std::string EnumSymbol;
 		lop >> EnumSymbol;
 
@@ -37,5 +68,32 @@ namespace CIMPP {
 
 		lop.setstate(std::ios::failbit);
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const ExcREXSFeedbackSignalKind& obj)
+	{
+		if (obj.initialized)
+		{
+			std::string EnumSymbol;
+
+			if (obj.value == ExcREXSFeedbackSignalKind::fieldVoltage)
+			{
+				EnumSymbol = "fieldVoltage";
+			}
+			if (obj.value == ExcREXSFeedbackSignalKind::fieldCurrent)
+			{
+				EnumSymbol = "fieldCurrent";
+			}
+			if (obj.value == ExcREXSFeedbackSignalKind::outputVoltage)
+			{
+				EnumSymbol = "outputVoltage";
+			}
+
+			if (!EnumSymbol.empty())
+			{
+				os << "ExcREXSFeedbackSignalKind." << EnumSymbol;
+			}
+		}
+		return os;
 	}
 }

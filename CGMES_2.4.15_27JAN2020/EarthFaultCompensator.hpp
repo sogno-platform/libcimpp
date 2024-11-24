@@ -1,38 +1,39 @@
 #ifndef EarthFaultCompensator_H
 #define EarthFaultCompensator_H
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
+
+#include <list>
+#include <string>
+#include <unordered_map>
 
 #include "ConductingEquipment.hpp"
-#include <list>
-#include "Boolean.hpp"
-#include "Float.hpp"
-
-
+#include "BaseClassDefiner.hpp"
 #include "Resistance.hpp"
 
-namespace CIMPP {
-
+namespace CIMPP
+{
 
 	/*
 	A conducting equipment used to represent a connection to ground which is typically used to compensate earth faults..   An earth fault compensator device modeled with a single terminal implies a second terminal solidly connected to ground.  If two terminals are modeled, the ground is not assumed and normal connection rules apply.
 	*/
-	class EarthFaultCompensator: public ConductingEquipment
+	class EarthFaultCompensator : public ConductingEquipment
 	{
-
 	public:
-					CIMPP::Resistance r; 	/* Nominal resistance of device. Default: nullptr */
-		
-		static const char debugName[];
-		virtual const char* debugString();
-
 		/* constructor initialising all attributes to null */
 		EarthFaultCompensator();
-		virtual ~EarthFaultCompensator();
+		~EarthFaultCompensator() override;
+
+		CIMPP::Resistance r;  /* Nominal resistance of device. Default: nullptr */
+
+		static const char debugName[];
+		const char* debugString() const override;
 
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
-		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
-		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);
+		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map);
+		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map);
 		static const BaseClassDefiner declare();
-
 	};
 
 	BaseClass* EarthFaultCompensator_factory();

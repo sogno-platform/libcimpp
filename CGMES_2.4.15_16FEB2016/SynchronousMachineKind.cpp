@@ -1,12 +1,43 @@
-#include <sstream>
-#include <iostream>
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "SynchronousMachineKind.hpp"
+
+#include <ios>
+#include <string>
+
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-namespace CIMPP {
-	std::istream& operator>>(std::istream& lop, CIMPP::SynchronousMachineKind& rop)
+SynchronousMachineKind& SynchronousMachineKind::operator=(SynchronousMachineKind_ENUM rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
+
+SynchronousMachineKind::operator SynchronousMachineKind_ENUM() const
+{
+	if (!initialized)
 	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
+
+const char SynchronousMachineKind::debugName[] = "SynchronousMachineKind";
+const char* SynchronousMachineKind::debugString() const
+{
+	return SynchronousMachineKind::debugName;
+}
+
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, SynchronousMachineKind& rop)
+	{
+		rop.initialized = false;
+
 		std::string EnumSymbol;
 		lop >> EnumSymbol;
 
@@ -57,5 +88,48 @@ namespace CIMPP {
 
 		lop.setstate(std::ios::failbit);
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const SynchronousMachineKind& obj)
+	{
+		if (obj.initialized)
+		{
+			std::string EnumSymbol;
+
+			if (obj.value == SynchronousMachineKind::generator)
+			{
+				EnumSymbol = "generator";
+			}
+			if (obj.value == SynchronousMachineKind::condenser)
+			{
+				EnumSymbol = "condenser";
+			}
+			if (obj.value == SynchronousMachineKind::generatorOrCondenser)
+			{
+				EnumSymbol = "generatorOrCondenser";
+			}
+			if (obj.value == SynchronousMachineKind::motor)
+			{
+				EnumSymbol = "motor";
+			}
+			if (obj.value == SynchronousMachineKind::generatorOrMotor)
+			{
+				EnumSymbol = "generatorOrMotor";
+			}
+			if (obj.value == SynchronousMachineKind::motorOrCondenser)
+			{
+				EnumSymbol = "motorOrCondenser";
+			}
+			if (obj.value == SynchronousMachineKind::generatorOrCondenserOrMotor)
+			{
+				EnumSymbol = "generatorOrCondenserOrMotor";
+			}
+
+			if (!EnumSymbol.empty())
+			{
+				os << "SynchronousMachineKind." << EnumSymbol;
+			}
+		}
+		return os;
 	}
 }

@@ -1,12 +1,43 @@
-#include <sstream>
-#include <iostream>
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "UnitSymbol.hpp"
+
+#include <ios>
+#include <string>
+
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-namespace CIMPP {
-	std::istream& operator>>(std::istream& lop, CIMPP::UnitSymbol& rop)
+UnitSymbol& UnitSymbol::operator=(UnitSymbol_ENUM rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
+
+UnitSymbol::operator UnitSymbol_ENUM() const
+{
+	if (!initialized)
 	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
+
+const char UnitSymbol::debugName[] = "UnitSymbol";
+const char* UnitSymbol::debugString() const
+{
+	return UnitSymbol::debugName;
+}
+
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, UnitSymbol& rop)
+	{
+		rop.initialized = false;
+
 		std::string EnumSymbol;
 		lop >> EnumSymbol;
 
@@ -157,5 +188,128 @@ namespace CIMPP {
 
 		lop.setstate(std::ios::failbit);
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const UnitSymbol& obj)
+	{
+		if (obj.initialized)
+		{
+			std::string EnumSymbol;
+
+			if (obj.value == UnitSymbol::VA)
+			{
+				EnumSymbol = "VA";
+			}
+			if (obj.value == UnitSymbol::W)
+			{
+				EnumSymbol = "W";
+			}
+			if (obj.value == UnitSymbol::VAr)
+			{
+				EnumSymbol = "VAr";
+			}
+			if (obj.value == UnitSymbol::VAh)
+			{
+				EnumSymbol = "VAh";
+			}
+			if (obj.value == UnitSymbol::Wh)
+			{
+				EnumSymbol = "Wh";
+			}
+			if (obj.value == UnitSymbol::VArh)
+			{
+				EnumSymbol = "VArh";
+			}
+			if (obj.value == UnitSymbol::V)
+			{
+				EnumSymbol = "V";
+			}
+			if (obj.value == UnitSymbol::ohm)
+			{
+				EnumSymbol = "ohm";
+			}
+			if (obj.value == UnitSymbol::A)
+			{
+				EnumSymbol = "A";
+			}
+			if (obj.value == UnitSymbol::F)
+			{
+				EnumSymbol = "F";
+			}
+			if (obj.value == UnitSymbol::H)
+			{
+				EnumSymbol = "H";
+			}
+			if (obj.value == UnitSymbol::degC)
+			{
+				EnumSymbol = "degC";
+			}
+			if (obj.value == UnitSymbol::s)
+			{
+				EnumSymbol = "s";
+			}
+			if (obj.value == UnitSymbol::min)
+			{
+				EnumSymbol = "min";
+			}
+			if (obj.value == UnitSymbol::h)
+			{
+				EnumSymbol = "h";
+			}
+			if (obj.value == UnitSymbol::deg)
+			{
+				EnumSymbol = "deg";
+			}
+			if (obj.value == UnitSymbol::rad)
+			{
+				EnumSymbol = "rad";
+			}
+			if (obj.value == UnitSymbol::J)
+			{
+				EnumSymbol = "J";
+			}
+			if (obj.value == UnitSymbol::N)
+			{
+				EnumSymbol = "N";
+			}
+			if (obj.value == UnitSymbol::S)
+			{
+				EnumSymbol = "S";
+			}
+			if (obj.value == UnitSymbol::none)
+			{
+				EnumSymbol = "none";
+			}
+			if (obj.value == UnitSymbol::Hz)
+			{
+				EnumSymbol = "Hz";
+			}
+			if (obj.value == UnitSymbol::g)
+			{
+				EnumSymbol = "g";
+			}
+			if (obj.value == UnitSymbol::Pa)
+			{
+				EnumSymbol = "Pa";
+			}
+			if (obj.value == UnitSymbol::m)
+			{
+				EnumSymbol = "m";
+			}
+			if (obj.value == UnitSymbol::m2)
+			{
+				EnumSymbol = "m2";
+			}
+			if (obj.value == UnitSymbol::m3)
+			{
+				EnumSymbol = "m3";
+			}
+
+			if (!EnumSymbol.empty())
+			{
+				os << "UnitSymbol." << EnumSymbol;
+			}
+		}
+		return os;
 	}
 }

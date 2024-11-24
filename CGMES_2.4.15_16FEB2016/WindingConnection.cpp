@@ -1,12 +1,43 @@
-#include <sstream>
-#include <iostream>
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "WindingConnection.hpp"
+
+#include <ios>
+#include <string>
+
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-namespace CIMPP {
-	std::istream& operator>>(std::istream& lop, CIMPP::WindingConnection& rop)
+WindingConnection& WindingConnection::operator=(WindingConnection_ENUM rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
+
+WindingConnection::operator WindingConnection_ENUM() const
+{
+	if (!initialized)
 	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
+
+const char WindingConnection::debugName[] = "WindingConnection";
+const char* WindingConnection::debugString() const
+{
+	return WindingConnection::debugName;
+}
+
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, WindingConnection& rop)
+	{
+		rop.initialized = false;
+
 		std::string EnumSymbol;
 		lop >> EnumSymbol;
 
@@ -57,5 +88,48 @@ namespace CIMPP {
 
 		lop.setstate(std::ios::failbit);
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const WindingConnection& obj)
+	{
+		if (obj.initialized)
+		{
+			std::string EnumSymbol;
+
+			if (obj.value == WindingConnection::D)
+			{
+				EnumSymbol = "D";
+			}
+			if (obj.value == WindingConnection::Y)
+			{
+				EnumSymbol = "Y";
+			}
+			if (obj.value == WindingConnection::Z)
+			{
+				EnumSymbol = "Z";
+			}
+			if (obj.value == WindingConnection::Yn)
+			{
+				EnumSymbol = "Yn";
+			}
+			if (obj.value == WindingConnection::Zn)
+			{
+				EnumSymbol = "Zn";
+			}
+			if (obj.value == WindingConnection::A)
+			{
+				EnumSymbol = "A";
+			}
+			if (obj.value == WindingConnection::I)
+			{
+				EnumSymbol = "I";
+			}
+
+			if (!EnumSymbol.empty())
+			{
+				os << "WindingConnection." << EnumSymbol;
+			}
+		}
+		return os;
 	}
 }

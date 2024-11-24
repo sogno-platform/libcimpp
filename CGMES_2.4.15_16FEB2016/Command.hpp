@@ -1,43 +1,44 @@
 #ifndef Command_H
 #define Command_H
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
+
+#include <list>
+#include <string>
+#include <unordered_map>
 
 #include "Control.hpp"
-#include <list>
-#include "Boolean.hpp"
-#include "Float.hpp"
-
-
+#include "BaseClassDefiner.hpp"
 #include "Integer.hpp"
 
-namespace CIMPP {
+namespace CIMPP
+{
+	class DiscreteValue;
+	class ValueAliasSet;
 
-
-class DiscreteValue;
-class ValueAliasSet;
 	/*
 	A Command is a discrete control used for supervisory control.
 	*/
-	class Command: public Control
+	class Command : public Control
 	{
-
 	public:
-					CIMPP::DiscreteValue* DiscreteValue; 	/* The Control variable associated with the MeasurementValue. Default: 0 */
-					CIMPP::ValueAliasSet* ValueAliasSet; 	/* The ValueAliasSet used for translation of a Control value to a name. Default: 0 */
-					CIMPP::Integer normalValue; 	/* Normal value for Control.value e.g. used for percentage scaling. Default: 0 */
-					CIMPP::Integer value; 	/* The value representing the actuator output. Default: 0 */
-		
-		static const char debugName[];
-		virtual const char* debugString();
-
 		/* constructor initialising all attributes to null */
 		Command();
-		virtual ~Command();
+		~Command() override;
+
+		CIMPP::DiscreteValue* DiscreteValue;  /* The Control variable associated with the MeasurementValue. Default: 0 */
+		CIMPP::ValueAliasSet* ValueAliasSet;  /* The ValueAliasSet used for translation of a Control value to a name. Default: 0 */
+		CIMPP::Integer normalValue;  /* Normal value for Control.value e.g. used for percentage scaling. Default: 0 */
+		CIMPP::Integer value;  /* The value representing the actuator output. Default: 0 */
+
+		static const char debugName[];
+		const char* debugString() const override;
 
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
-		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
-		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);
+		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map);
+		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map);
 		static const BaseClassDefiner declare();
-
 	};
 
 	BaseClass* Command_factory();

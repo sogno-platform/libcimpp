@@ -1,38 +1,39 @@
 #ifndef Simple_Float_H
 #define Simple_Float_H
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 
-#include <string>
 #include <istream>
-
-#include "BaseClass.hpp"
+#include <ostream>
 
 namespace CIMPP
 {
-	class Simple_Float : public BaseClass
+	/*
+	A floating point number. The range is unspecified and not limited.
+	*/
+	class Simple_Float
 	{
-
 	public:
-		Simple_Float();
-		virtual ~Simple_Float();
-		Simple_Float(long double value);
-		static const BaseClassDefiner declare();
-		Simple_Float& operator=(long double &rop);
+		Simple_Float() : value(0.0), initialized(false) {}
+		Simple_Float(long double value) : value(value), initialized(true) {}
+
+		Simple_Float& operator=(long double rop);
+		operator long double() const;
+
+		long double value;
+		bool initialized;
+
+		static const char debugName[];
+		const char* debugString() const;
+
 		Simple_Float& operator+=(const Simple_Float& rhs);
 		Simple_Float& operator-=(const Simple_Float& rhs);
 		Simple_Float& operator*=(const Simple_Float& rhs);
 		Simple_Float& operator/=(const Simple_Float& rhs);
+
 		friend std::istream& operator>>(std::istream& lop, Simple_Float& rop);
-		operator long double();
-
-		long double value = 0.0;
-		bool initialized = false;
-
-		static const char debugName[];
-		virtual const char* debugString();
-
-		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
-		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
-		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);
+		friend std::ostream& operator<<(std::ostream& os, const Simple_Float& obj);
 	};
 }
 #endif

@@ -1,6 +1,10 @@
-#include <sstream>
-#include "ExcitationSystemDynamics.hpp"
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "ExcSK.hpp"
+
+#include <algorithm>
+#include <sstream>
 
 #include "PU.hpp"
 #include "PU.hpp"
@@ -38,438 +42,471 @@
 using namespace CIMPP;
 
 ExcSK::ExcSK() {};
-
 ExcSK::~ExcSK() {};
 
 
-bool assign_ExcSK_efdmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->efdmax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_efdmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->efdmin;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_emax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->emax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_emin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->emin;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_k(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->k;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_k1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->k1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_k2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->k2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_kc(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->kc;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_kce(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->kce;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_kd(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->kd;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_kgob(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->kgob;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_kp(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->kp;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_kqi(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->kqi;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_kqob(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->kqob;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_kqp(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->kqp;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_nq(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->nq;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_qconoff(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->qconoff;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_qz(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->qz;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_remote(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->remote;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_sbase(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->sbase;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_tc(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->tc;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_te(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->te;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_ti(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->ti;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_tp(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->tp;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_tr(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->tr;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_uimax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->uimax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_uimin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->uimin;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_urmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->urmax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_urmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->urmin;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_vtmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->vtmax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_vtmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->vtmin;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcSK_yp(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
-                buffer >> element->yp;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-namespace CIMPP {
-	BaseClass* ExcSK_factory() {
-		return new ExcSK;
+bool assign_ExcSK_efdmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->efdmax;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
 	}
+	return false;
 }
 
-void ExcSK::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {
+bool assign_ExcSK_efdmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->efdmin;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_emax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->emax;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_emin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->emin;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_k(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->k;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_k1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->k1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_k2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->k2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_kc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->kc;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_kce(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->kce;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_kd(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->kd;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_kgob(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->kgob;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_kp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->kp;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_kqi(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->kqi;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_kqob(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->kqob;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_kqp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->kqp;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_nq(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->nq;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_qconoff(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->qconoff;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_qz(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->qz;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_remote(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->remote;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_sbase(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->sbase;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_tc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->tc;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_te(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->te;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_ti(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->ti;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_tp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->tp;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_tr(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->tr;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_uimax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->uimax;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_uimin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->uimin;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_urmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->urmax;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_urmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->urmin;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_vtmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->vtmax;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_vtmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->vtmin;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcSK_yp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1))
+	{
+		buffer >> element->yp;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const char ExcSK::debugName[] = "ExcSK";
+const char* ExcSK::debugString() const
+{
+	return ExcSK::debugName;
+}
+
+void ExcSK::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
+{
 	factory_map.insert(std::make_pair(std::string("cim:ExcSK"), &ExcSK_factory));
 }
 
-void ExcSK::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
+void ExcSK::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
+{
 	assign_map.insert(std::make_pair(std::string("cim:ExcSK.efdmax"), &assign_ExcSK_efdmax));
 	assign_map.insert(std::make_pair(std::string("cim:ExcSK.efdmin"), &assign_ExcSK_efdmin));
 	assign_map.insert(std::make_pair(std::string("cim:ExcSK.emax"), &assign_ExcSK_emax));
@@ -504,16 +541,19 @@ void ExcSK::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_fu
 	assign_map.insert(std::make_pair(std::string("cim:ExcSK.yp"), &assign_ExcSK_yp));
 }
 
-void ExcSK::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-																																}
-
-const char ExcSK::debugName[] = "ExcSK";
-const char* ExcSK::debugString()
+void ExcSK::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	return ExcSK::debugName;
 }
 
 const BaseClassDefiner ExcSK::declare()
 {
 	return BaseClassDefiner(ExcSK::addConstructToMap, ExcSK::addPrimitiveAssignFnsToMap, ExcSK::addClassAssignFnsToMap, ExcSK::debugName);
+}
+
+namespace CIMPP
+{
+	BaseClass* ExcSK_factory()
+	{
+		return new ExcSK;
+	}
 }

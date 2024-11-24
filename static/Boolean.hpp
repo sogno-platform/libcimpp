@@ -1,38 +1,31 @@
 #ifndef BOOLEAN_H
 #define BOOLEAN_H
 
-#include <string>
-#include <iostream>
 #include <istream>
+#include <ostream>
 
-#include "BaseClass.hpp"
-
-namespace CIMPP {
+namespace CIMPP
+{
 	/**
 	 * A type with the value space "true" and "false".
 	 */
 	class Boolean
 	{
 	public:
-		Boolean();
-		virtual ~Boolean();
-		static const BaseClassDefiner declare();
+		Boolean() : value(false), initialized(false) {}
+		Boolean(bool value) : value(value), initialized(true) {}
 
-		Boolean(bool value);
-		Boolean& operator=(bool &rop);
-		friend std::istream& operator>>(std::istream& lop, Boolean& rop);
-		friend std::ostream& operator<<(std::ostream& os, Boolean& rop);
+		Boolean& operator=(bool rop);
 		operator bool();
 
-		bool value = false;
-		bool initialized = false;
+		bool value;
+		bool initialized;
 
 		static const char debugName[];
-		virtual const char* debugString();
+		const char* debugString() const;
 
-		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
-		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
-		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);
+		friend std::istream& operator>>(std::istream& lop, Boolean& rop);
+		friend std::ostream& operator<<(std::ostream& os, const Boolean& obj);
 	};
 }
-#endif
+#endif // BOOLEAN_H

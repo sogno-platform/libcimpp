@@ -1,12 +1,43 @@
-#include <sstream>
-#include <iostream>
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "WindLookupTableFunctionKind.hpp"
+
+#include <ios>
+#include <string>
+
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-namespace CIMPP {
-	std::istream& operator>>(std::istream& lop, CIMPP::WindLookupTableFunctionKind& rop)
+WindLookupTableFunctionKind& WindLookupTableFunctionKind::operator=(WindLookupTableFunctionKind_ENUM rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
+
+WindLookupTableFunctionKind::operator WindLookupTableFunctionKind_ENUM() const
+{
+	if (!initialized)
 	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
+
+const char WindLookupTableFunctionKind::debugName[] = "WindLookupTableFunctionKind";
+const char* WindLookupTableFunctionKind::debugString() const
+{
+	return WindLookupTableFunctionKind::debugName;
+}
+
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, WindLookupTableFunctionKind& rop)
+	{
+		rop.initialized = false;
+
 		std::string EnumSymbol;
 		lop >> EnumSymbol;
 
@@ -47,5 +78,40 @@ namespace CIMPP {
 
 		lop.setstate(std::ios::failbit);
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const WindLookupTableFunctionKind& obj)
+	{
+		if (obj.initialized)
+		{
+			std::string EnumSymbol;
+
+			if (obj.value == WindLookupTableFunctionKind::fpslip)
+			{
+				EnumSymbol = "fpslip";
+			}
+			if (obj.value == WindLookupTableFunctionKind::fpomega)
+			{
+				EnumSymbol = "fpomega";
+			}
+			if (obj.value == WindLookupTableFunctionKind::ipvdl)
+			{
+				EnumSymbol = "ipvdl";
+			}
+			if (obj.value == WindLookupTableFunctionKind::iqvdl)
+			{
+				EnumSymbol = "iqvdl";
+			}
+			if (obj.value == WindLookupTableFunctionKind::fdpf)
+			{
+				EnumSymbol = "fdpf";
+			}
+
+			if (!EnumSymbol.empty())
+			{
+				os << "WindLookupTableFunctionKind." << EnumSymbol;
+			}
+		}
+		return os;
 	}
 }

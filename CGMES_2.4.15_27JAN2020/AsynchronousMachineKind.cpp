@@ -1,12 +1,43 @@
-#include <sstream>
-#include <iostream>
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "AsynchronousMachineKind.hpp"
+
+#include <ios>
+#include <string>
+
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-namespace CIMPP {
-	std::istream& operator>>(std::istream& lop, CIMPP::AsynchronousMachineKind& rop)
+AsynchronousMachineKind& AsynchronousMachineKind::operator=(AsynchronousMachineKind_ENUM rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
+
+AsynchronousMachineKind::operator AsynchronousMachineKind_ENUM() const
+{
+	if (!initialized)
 	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
+
+const char AsynchronousMachineKind::debugName[] = "AsynchronousMachineKind";
+const char* AsynchronousMachineKind::debugString() const
+{
+	return AsynchronousMachineKind::debugName;
+}
+
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, AsynchronousMachineKind& rop)
+	{
+		rop.initialized = false;
+
 		std::string EnumSymbol;
 		lop >> EnumSymbol;
 
@@ -32,5 +63,28 @@ namespace CIMPP {
 
 		lop.setstate(std::ios::failbit);
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const AsynchronousMachineKind& obj)
+	{
+		if (obj.initialized)
+		{
+			std::string EnumSymbol;
+
+			if (obj.value == AsynchronousMachineKind::generator)
+			{
+				EnumSymbol = "generator";
+			}
+			if (obj.value == AsynchronousMachineKind::motor)
+			{
+				EnumSymbol = "motor";
+			}
+
+			if (!EnumSymbol.empty())
+			{
+				os << "AsynchronousMachineKind." << EnumSymbol;
+			}
+		}
+		return os;
 	}
 }
