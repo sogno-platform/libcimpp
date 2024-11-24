@@ -1,26 +1,35 @@
 #ifndef Date_H
 #define Date_H
-
-#include "BaseClass.hpp"
-#include "String.hpp"
-
-
 /*
-Date as "yyyy-mm-dd", which conforms with ISO 8601. UTC time zone is specified as "yyyy-mm-ddZ". A local timezone relative UTC is specified as "yyyy-mm-dd(+/-)hh:mm".
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
 */
-namespace CIMPP {
 
-	class Date: public BaseClass
+#include <string>
+#include <istream>
+#include <ostream>
+
+namespace CIMPP
+{
+	/*
+	Date as "yyyy-mm-dd", which conforms with ISO 8601. UTC time zone is specified as "yyyy-mm-ddZ". A local timezone relative UTC is specified as "yyyy-mm-dd(+/-)hh:mm".
+	*/
+	class Date
 	{
 	public:
-		Date();
-		Date(String);
-		virtual ~Date();
+		Date() : initialized(false) {}
+		Date(const std::string& value) : value(value), initialized(true) {}
 
-	private:
-		String value;
+		Date& operator=(const std::string &rop);
+		operator std::string() const;
+
+		std::string value;
+		bool initialized;
+
+		static const char debugName[];
+		const char* debugString() const;
+
+		friend std::istream& operator>>(std::istream& lop, Date& rop);
+		friend std::ostream& operator<<(std::ostream& os, const Date& obj);
 	};
-
-	BaseClass* Date_factory();
 }
 #endif

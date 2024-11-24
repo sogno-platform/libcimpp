@@ -1,41 +1,49 @@
-#include <sstream>
-#include "BaseClass.hpp"
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "MonthDay.hpp"
 
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-MonthDay::MonthDay() {};
+MonthDay& MonthDay::operator=(const std::string& rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
 
-MonthDay::~MonthDay() {};
-
-
-
-namespace CIMPP {
-	BaseClass* MonthDay_factory() {
-		return new MonthDay;
+MonthDay::operator std::string() const
+{
+	if (!initialized)
+	{
+		throw new ReadingUninitializedField();
 	}
-}
-
-void MonthDay::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {
-	factory_map.insert(std::make_pair(std::string("cim:MonthDay"), &MonthDay_factory));
-}
-
-void MonthDay::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
-}
-
-void MonthDay::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
+	return value;
 }
 
 const char MonthDay::debugName[] = "MonthDay";
-const char* MonthDay::debugString()
+const char* MonthDay::debugString() const
 {
 	return MonthDay::debugName;
 }
 
-const BaseClassDefiner MonthDay::declare()
+namespace CIMPP
 {
-	return BaseClassDefiner(MonthDay::addConstructToMap, MonthDay::addPrimitiveAssignFnsToMap, MonthDay::addClassAssignFnsToMap, MonthDay::debugName);
+	std::istream& operator>>(std::istream& lop, MonthDay& rop)
+	{
+		lop >> rop.value;
+		rop.initialized = true;
+		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const MonthDay& obj)
+	{
+		if (obj.initialized)
+		{
+			os << obj.value;
+		}
+		return os;
+	}
 }
-
-
