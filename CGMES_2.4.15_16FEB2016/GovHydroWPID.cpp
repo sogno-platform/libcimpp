@@ -1,6 +1,10 @@
-#include <sstream>
-#include "TurbineGovernorDynamics.hpp"
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "GovHydroWPID.hpp"
+
+#include <algorithm>
+#include <sstream>
 
 #include "PU.hpp"
 #include "PU.hpp"
@@ -28,308 +32,331 @@
 using namespace CIMPP;
 
 GovHydroWPID::GovHydroWPID() {};
-
 GovHydroWPID::~GovHydroWPID() {};
 
 
-bool assign_GovHydroWPID_d(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1)) {
-                buffer >> element->d;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroWPID_gatmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1)) {
-                buffer >> element->gatmax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroWPID_gatmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1)) {
-                buffer >> element->gatmin;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroWPID_gv1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1)) {
-                buffer >> element->gv1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroWPID_gv2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1)) {
-                buffer >> element->gv2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroWPID_gv3(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1)) {
-                buffer >> element->gv3;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroWPID_kd(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1)) {
-                buffer >> element->kd;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroWPID_ki(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1)) {
-                buffer >> element->ki;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroWPID_kp(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1)) {
-                buffer >> element->kp;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroWPID_mwbase(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1)) {
-                buffer >> element->mwbase;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroWPID_pgv1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1)) {
-                buffer >> element->pgv1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroWPID_pgv2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1)) {
-                buffer >> element->pgv2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroWPID_pgv3(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1)) {
-                buffer >> element->pgv3;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroWPID_pmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1)) {
-                buffer >> element->pmax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroWPID_pmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1)) {
-                buffer >> element->pmin;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroWPID_reg(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1)) {
-                buffer >> element->reg;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroWPID_ta(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1)) {
-                buffer >> element->ta;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroWPID_tb(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1)) {
-                buffer >> element->tb;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroWPID_treg(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1)) {
-                buffer >> element->treg;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroWPID_tw(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1)) {
-                buffer >> element->tw;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroWPID_velmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1)) {
-                buffer >> element->velmax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroWPID_velmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1)) {
-                buffer >> element->velmin;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-namespace CIMPP {
-	BaseClass* GovHydroWPID_factory() {
-		return new GovHydroWPID;
+bool assign_GovHydroWPID_d(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer >> element->d;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
 	}
+	return false;
 }
 
-void GovHydroWPID::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {
+bool assign_GovHydroWPID_gatmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer >> element->gatmax;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroWPID_gatmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer >> element->gatmin;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroWPID_gv1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer >> element->gv1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroWPID_gv2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer >> element->gv2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroWPID_gv3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer >> element->gv3;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroWPID_kd(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer >> element->kd;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroWPID_ki(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer >> element->ki;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroWPID_kp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer >> element->kp;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroWPID_mwbase(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer >> element->mwbase;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroWPID_pgv1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer >> element->pgv1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroWPID_pgv2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer >> element->pgv2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroWPID_pgv3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer >> element->pgv3;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroWPID_pmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer >> element->pmax;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroWPID_pmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer >> element->pmin;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroWPID_reg(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer >> element->reg;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroWPID_ta(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer >> element->ta;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroWPID_tb(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer >> element->tb;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroWPID_treg(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer >> element->treg;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroWPID_tw(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer >> element->tw;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroWPID_velmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer >> element->velmax;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroWPID_velmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroWPID* element = dynamic_cast<GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer >> element->velmin;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const char GovHydroWPID::debugName[] = "GovHydroWPID";
+const char* GovHydroWPID::debugString() const
+{
+	return GovHydroWPID::debugName;
+}
+
+void GovHydroWPID::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
+{
 	factory_map.insert(std::make_pair(std::string("cim:GovHydroWPID"), &GovHydroWPID_factory));
 }
 
-void GovHydroWPID::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
+void GovHydroWPID::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
+{
 	assign_map.insert(std::make_pair(std::string("cim:GovHydroWPID.d"), &assign_GovHydroWPID_d));
 	assign_map.insert(std::make_pair(std::string("cim:GovHydroWPID.gatmax"), &assign_GovHydroWPID_gatmax));
 	assign_map.insert(std::make_pair(std::string("cim:GovHydroWPID.gatmin"), &assign_GovHydroWPID_gatmin));
@@ -354,16 +381,19 @@ void GovHydroWPID::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, as
 	assign_map.insert(std::make_pair(std::string("cim:GovHydroWPID.velmin"), &assign_GovHydroWPID_velmin));
 }
 
-void GovHydroWPID::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-																						}
-
-const char GovHydroWPID::debugName[] = "GovHydroWPID";
-const char* GovHydroWPID::debugString()
+void GovHydroWPID::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	return GovHydroWPID::debugName;
 }
 
 const BaseClassDefiner GovHydroWPID::declare()
 {
 	return BaseClassDefiner(GovHydroWPID::addConstructToMap, GovHydroWPID::addPrimitiveAssignFnsToMap, GovHydroWPID::addClassAssignFnsToMap, GovHydroWPID::debugName);
+}
+
+namespace CIMPP
+{
+	BaseClass* GovHydroWPID_factory()
+	{
+		return new GovHydroWPID;
+	}
 }

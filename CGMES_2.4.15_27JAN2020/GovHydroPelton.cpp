@@ -1,6 +1,10 @@
-#include <sstream>
-#include "TurbineGovernorDynamics.hpp"
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "GovHydroPelton.hpp"
+
+#include <algorithm>
+#include <sstream>
 
 #include "Area.hpp"
 #include "Area.hpp"
@@ -34,386 +38,415 @@
 using namespace CIMPP;
 
 GovHydroPelton::GovHydroPelton() {};
-
 GovHydroPelton::~GovHydroPelton() {};
 
 
-bool assign_GovHydroPelton_av0(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->av0;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_av1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->av1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_bp(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->bp;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_db1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->db1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_db2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->db2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_h1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->h1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_h2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->h2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_hn(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->hn;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_kc(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->kc;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_kg(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->kg;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_qc0(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->qc0;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_qn(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->qn;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_simplifiedPelton(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->simplifiedPelton;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_staticCompensating(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->staticCompensating;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_ta(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->ta;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_ts(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->ts;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_tv(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->tv;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_twnc(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->twnc;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_twng(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->twng;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_tx(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->tx;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_va(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->va;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_valvmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->valvmax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_valvmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->valvmin;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_vav(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->vav;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_vc(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->vc;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_vcv(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->vcv;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_waterTunnelSurgeChamberSimulation(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->waterTunnelSurgeChamberSimulation;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroPelton_zsfc(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1)) {
-                buffer >> element->zsfc;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-namespace CIMPP {
-	BaseClass* GovHydroPelton_factory() {
-		return new GovHydroPelton;
+bool assign_GovHydroPelton_av0(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->av0;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
 	}
+	return false;
 }
 
-void GovHydroPelton::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {
+bool assign_GovHydroPelton_av1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->av1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_bp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->bp;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_db1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->db1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_db2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->db2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_h1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->h1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_h2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->h2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_hn(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->hn;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_kc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->kc;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_kg(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->kg;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_qc0(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->qc0;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_qn(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->qn;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_simplifiedPelton(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->simplifiedPelton;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_staticCompensating(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->staticCompensating;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_ta(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->ta;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_ts(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->ts;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_tv(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->tv;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_twnc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->twnc;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_twng(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->twng;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_tx(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->tx;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_va(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->va;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_valvmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->valvmax;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_valvmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->valvmin;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_vav(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->vav;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_vc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->vc;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_vcv(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->vcv;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_waterTunnelSurgeChamberSimulation(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->waterTunnelSurgeChamberSimulation;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroPelton_zsfc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroPelton* element = dynamic_cast<GovHydroPelton*>(BaseClass_ptr1))
+	{
+		buffer >> element->zsfc;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const char GovHydroPelton::debugName[] = "GovHydroPelton";
+const char* GovHydroPelton::debugString() const
+{
+	return GovHydroPelton::debugName;
+}
+
+void GovHydroPelton::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
+{
 	factory_map.insert(std::make_pair(std::string("cim:GovHydroPelton"), &GovHydroPelton_factory));
 }
 
-void GovHydroPelton::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
+void GovHydroPelton::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
+{
 	assign_map.insert(std::make_pair(std::string("cim:GovHydroPelton.av0"), &assign_GovHydroPelton_av0));
 	assign_map.insert(std::make_pair(std::string("cim:GovHydroPelton.av1"), &assign_GovHydroPelton_av1));
 	assign_map.insert(std::make_pair(std::string("cim:GovHydroPelton.bp"), &assign_GovHydroPelton_bp));
@@ -444,16 +477,19 @@ void GovHydroPelton::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, 
 	assign_map.insert(std::make_pair(std::string("cim:GovHydroPelton.zsfc"), &assign_GovHydroPelton_zsfc));
 }
 
-void GovHydroPelton::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-																												}
-
-const char GovHydroPelton::debugName[] = "GovHydroPelton";
-const char* GovHydroPelton::debugString()
+void GovHydroPelton::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	return GovHydroPelton::debugName;
 }
 
 const BaseClassDefiner GovHydroPelton::declare()
 {
 	return BaseClassDefiner(GovHydroPelton::addConstructToMap, GovHydroPelton::addPrimitiveAssignFnsToMap, GovHydroPelton::addClassAssignFnsToMap, GovHydroPelton::debugName);
+}
+
+namespace CIMPP
+{
+	BaseClass* GovHydroPelton_factory()
+	{
+		return new GovHydroPelton;
+	}
 }

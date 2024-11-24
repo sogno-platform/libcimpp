@@ -1,12 +1,43 @@
-#include <sstream>
-#include <iostream>
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "VsQpccControlKind.hpp"
+
+#include <ios>
+#include <string>
+
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-namespace CIMPP {
-	std::istream& operator>>(std::istream& lop, CIMPP::VsQpccControlKind& rop)
+VsQpccControlKind& VsQpccControlKind::operator=(VsQpccControlKind_ENUM rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
+
+VsQpccControlKind::operator VsQpccControlKind_ENUM() const
+{
+	if (!initialized)
 	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
+
+const char VsQpccControlKind::debugName[] = "VsQpccControlKind";
+const char* VsQpccControlKind::debugString() const
+{
+	return VsQpccControlKind::debugName;
+}
+
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, VsQpccControlKind& rop)
+	{
+		rop.initialized = false;
+
 		std::string EnumSymbol;
 		lop >> EnumSymbol;
 
@@ -37,5 +68,32 @@ namespace CIMPP {
 
 		lop.setstate(std::ios::failbit);
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const VsQpccControlKind& obj)
+	{
+		if (obj.initialized)
+		{
+			std::string EnumSymbol;
+
+			if (obj.value == VsQpccControlKind::reactivePcc)
+			{
+				EnumSymbol = "reactivePcc";
+			}
+			if (obj.value == VsQpccControlKind::voltagePcc)
+			{
+				EnumSymbol = "voltagePcc";
+			}
+			if (obj.value == VsQpccControlKind::powerFactorPcc)
+			{
+				EnumSymbol = "powerFactorPcc";
+			}
+
+			if (!EnumSymbol.empty())
+			{
+				os << "VsQpccControlKind." << EnumSymbol;
+			}
+		}
+		return os;
 	}
 }

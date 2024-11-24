@@ -1,6 +1,10 @@
-#include <sstream>
-#include "ExcitationSystemDynamics.hpp"
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "ExcIEEEAC1A.hpp"
+
+#include <algorithm>
+#include <sstream>
 
 #include "PU.hpp"
 #include "PU.hpp"
@@ -24,256 +28,275 @@
 using namespace CIMPP;
 
 ExcIEEEAC1A::ExcIEEEAC1A() {};
-
 ExcIEEEAC1A::~ExcIEEEAC1A() {};
 
 
-bool assign_ExcIEEEAC1A_ka(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1)) {
-                buffer >> element->ka;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEAC1A_kc(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1)) {
-                buffer >> element->kc;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEAC1A_kd(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1)) {
-                buffer >> element->kd;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEAC1A_ke(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1)) {
-                buffer >> element->ke;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEAC1A_kf(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1)) {
-                buffer >> element->kf;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEAC1A_seve1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1)) {
-                buffer >> element->seve1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEAC1A_seve2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1)) {
-                buffer >> element->seve2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEAC1A_ta(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1)) {
-                buffer >> element->ta;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEAC1A_tb(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1)) {
-                buffer >> element->tb;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEAC1A_tc(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1)) {
-                buffer >> element->tc;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEAC1A_te(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1)) {
-                buffer >> element->te;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEAC1A_tf(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1)) {
-                buffer >> element->tf;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEAC1A_vamax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1)) {
-                buffer >> element->vamax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEAC1A_vamin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1)) {
-                buffer >> element->vamin;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEAC1A_ve1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1)) {
-                buffer >> element->ve1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEAC1A_ve2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1)) {
-                buffer >> element->ve2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEAC1A_vrmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1)) {
-                buffer >> element->vrmax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEAC1A_vrmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1)) {
-                buffer >> element->vrmin;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-namespace CIMPP {
-	BaseClass* ExcIEEEAC1A_factory() {
-		return new ExcIEEEAC1A;
+bool assign_ExcIEEEAC1A_ka(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->ka;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
 	}
+	return false;
 }
 
-void ExcIEEEAC1A::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {
+bool assign_ExcIEEEAC1A_kc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->kc;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEAC1A_kd(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->kd;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEAC1A_ke(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->ke;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEAC1A_kf(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->kf;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEAC1A_seve1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->seve1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEAC1A_seve2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->seve2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEAC1A_ta(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->ta;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEAC1A_tb(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->tb;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEAC1A_tc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->tc;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEAC1A_te(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->te;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEAC1A_tf(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->tf;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEAC1A_vamax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->vamax;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEAC1A_vamin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->vamin;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEAC1A_ve1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->ve1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEAC1A_ve2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->ve2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEAC1A_vrmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->vrmax;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEAC1A_vrmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEAC1A* element = dynamic_cast<ExcIEEEAC1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->vrmin;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const char ExcIEEEAC1A::debugName[] = "ExcIEEEAC1A";
+const char* ExcIEEEAC1A::debugString() const
+{
+	return ExcIEEEAC1A::debugName;
+}
+
+void ExcIEEEAC1A::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
+{
 	factory_map.insert(std::make_pair(std::string("cim:ExcIEEEAC1A"), &ExcIEEEAC1A_factory));
 }
 
-void ExcIEEEAC1A::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
+void ExcIEEEAC1A::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
+{
 	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEAC1A.ka"), &assign_ExcIEEEAC1A_ka));
 	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEAC1A.kc"), &assign_ExcIEEEAC1A_kc));
 	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEAC1A.kd"), &assign_ExcIEEEAC1A_kd));
@@ -294,16 +317,19 @@ void ExcIEEEAC1A::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, ass
 	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEAC1A.vrmin"), &assign_ExcIEEEAC1A_vrmin));
 }
 
-void ExcIEEEAC1A::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-																		}
-
-const char ExcIEEEAC1A::debugName[] = "ExcIEEEAC1A";
-const char* ExcIEEEAC1A::debugString()
+void ExcIEEEAC1A::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	return ExcIEEEAC1A::debugName;
 }
 
 const BaseClassDefiner ExcIEEEAC1A::declare()
 {
 	return BaseClassDefiner(ExcIEEEAC1A::addConstructToMap, ExcIEEEAC1A::addPrimitiveAssignFnsToMap, ExcIEEEAC1A::addClassAssignFnsToMap, ExcIEEEAC1A::debugName);
+}
+
+namespace CIMPP
+{
+	BaseClass* ExcIEEEAC1A_factory()
+	{
+		return new ExcIEEEAC1A;
+	}
 }

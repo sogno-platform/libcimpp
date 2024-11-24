@@ -1,6 +1,10 @@
-#include <sstream>
-#include "ExcitationSystemDynamics.hpp"
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "ExcST1A.hpp"
+
+#include <algorithm>
+#include <sstream>
 
 #include "PU.hpp"
 #include "PU.hpp"
@@ -24,256 +28,275 @@
 using namespace CIMPP;
 
 ExcST1A::ExcST1A() {};
-
 ExcST1A::~ExcST1A() {};
 
 
-bool assign_ExcST1A_ilr(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1)) {
-                buffer >> element->ilr;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcST1A_ka(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1)) {
-                buffer >> element->ka;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcST1A_kc(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1)) {
-                buffer >> element->kc;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcST1A_kf(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1)) {
-                buffer >> element->kf;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcST1A_klr(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1)) {
-                buffer >> element->klr;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcST1A_ta(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1)) {
-                buffer >> element->ta;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcST1A_tb(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1)) {
-                buffer >> element->tb;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcST1A_tb1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1)) {
-                buffer >> element->tb1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcST1A_tc(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1)) {
-                buffer >> element->tc;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcST1A_tc1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1)) {
-                buffer >> element->tc1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcST1A_tf(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1)) {
-                buffer >> element->tf;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcST1A_vamax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1)) {
-                buffer >> element->vamax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcST1A_vamin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1)) {
-                buffer >> element->vamin;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcST1A_vimax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1)) {
-                buffer >> element->vimax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcST1A_vimin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1)) {
-                buffer >> element->vimin;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcST1A_vrmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1)) {
-                buffer >> element->vrmax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcST1A_vrmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1)) {
-                buffer >> element->vrmin;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcST1A_xe(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1)) {
-                buffer >> element->xe;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-namespace CIMPP {
-	BaseClass* ExcST1A_factory() {
-		return new ExcST1A;
+bool assign_ExcST1A_ilr(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->ilr;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
 	}
+	return false;
 }
 
-void ExcST1A::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {
+bool assign_ExcST1A_ka(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->ka;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcST1A_kc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->kc;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcST1A_kf(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->kf;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcST1A_klr(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->klr;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcST1A_ta(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->ta;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcST1A_tb(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->tb;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcST1A_tb1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->tb1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcST1A_tc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->tc;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcST1A_tc1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->tc1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcST1A_tf(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->tf;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcST1A_vamax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->vamax;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcST1A_vamin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->vamin;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcST1A_vimax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->vimax;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcST1A_vimin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->vimin;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcST1A_vrmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->vrmax;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcST1A_vrmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->vrmin;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcST1A_xe(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer >> element->xe;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const char ExcST1A::debugName[] = "ExcST1A";
+const char* ExcST1A::debugString() const
+{
+	return ExcST1A::debugName;
+}
+
+void ExcST1A::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
+{
 	factory_map.insert(std::make_pair(std::string("cim:ExcST1A"), &ExcST1A_factory));
 }
 
-void ExcST1A::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
+void ExcST1A::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
+{
 	assign_map.insert(std::make_pair(std::string("cim:ExcST1A.ilr"), &assign_ExcST1A_ilr));
 	assign_map.insert(std::make_pair(std::string("cim:ExcST1A.ka"), &assign_ExcST1A_ka));
 	assign_map.insert(std::make_pair(std::string("cim:ExcST1A.kc"), &assign_ExcST1A_kc));
@@ -294,16 +317,19 @@ void ExcST1A::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_
 	assign_map.insert(std::make_pair(std::string("cim:ExcST1A.xe"), &assign_ExcST1A_xe));
 }
 
-void ExcST1A::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-																		}
-
-const char ExcST1A::debugName[] = "ExcST1A";
-const char* ExcST1A::debugString()
+void ExcST1A::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	return ExcST1A::debugName;
 }
 
 const BaseClassDefiner ExcST1A::declare()
 {
 	return BaseClassDefiner(ExcST1A::addConstructToMap, ExcST1A::addPrimitiveAssignFnsToMap, ExcST1A::addClassAssignFnsToMap, ExcST1A::debugName);
+}
+
+namespace CIMPP
+{
+	BaseClass* ExcST1A_factory()
+	{
+		return new ExcST1A;
+	}
 }

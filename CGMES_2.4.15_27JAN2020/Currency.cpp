@@ -1,12 +1,43 @@
-#include <sstream>
-#include <iostream>
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "Currency.hpp"
+
+#include <ios>
+#include <string>
+
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-namespace CIMPP {
-	std::istream& operator>>(std::istream& lop, CIMPP::Currency& rop)
+Currency& Currency::operator=(Currency_ENUM rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
+
+Currency::operator Currency_ENUM() const
+{
+	if (!initialized)
 	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
+
+const char Currency::debugName[] = "Currency";
+const char* Currency::debugString() const
+{
+	return Currency::debugName;
+}
+
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, Currency& rop)
+	{
+		rop.initialized = false;
+
 		std::string EnumSymbol;
 		lop >> EnumSymbol;
 
@@ -92,5 +123,76 @@ namespace CIMPP {
 
 		lop.setstate(std::ios::failbit);
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const Currency& obj)
+	{
+		if (obj.initialized)
+		{
+			std::string EnumSymbol;
+
+			if (obj.value == Currency::USD)
+			{
+				EnumSymbol = "USD";
+			}
+			if (obj.value == Currency::EUR)
+			{
+				EnumSymbol = "EUR";
+			}
+			if (obj.value == Currency::AUD)
+			{
+				EnumSymbol = "AUD";
+			}
+			if (obj.value == Currency::CAD)
+			{
+				EnumSymbol = "CAD";
+			}
+			if (obj.value == Currency::CHF)
+			{
+				EnumSymbol = "CHF";
+			}
+			if (obj.value == Currency::CNY)
+			{
+				EnumSymbol = "CNY";
+			}
+			if (obj.value == Currency::DKK)
+			{
+				EnumSymbol = "DKK";
+			}
+			if (obj.value == Currency::GBP)
+			{
+				EnumSymbol = "GBP";
+			}
+			if (obj.value == Currency::JPY)
+			{
+				EnumSymbol = "JPY";
+			}
+			if (obj.value == Currency::NOK)
+			{
+				EnumSymbol = "NOK";
+			}
+			if (obj.value == Currency::RUR)
+			{
+				EnumSymbol = "RUR";
+			}
+			if (obj.value == Currency::SEK)
+			{
+				EnumSymbol = "SEK";
+			}
+			if (obj.value == Currency::INR)
+			{
+				EnumSymbol = "INR";
+			}
+			if (obj.value == Currency::other)
+			{
+				EnumSymbol = "other";
+			}
+
+			if (!EnumSymbol.empty())
+			{
+				os << "Currency." << EnumSymbol;
+			}
+		}
+		return os;
 	}
 }

@@ -1,6 +1,10 @@
-#include <sstream>
-#include "TurbineGovernorDynamics.hpp"
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "GovSteamSGO.hpp"
+
+#include <algorithm>
+#include <sstream>
 
 #include "PU.hpp"
 #include "PU.hpp"
@@ -18,178 +22,191 @@
 using namespace CIMPP;
 
 GovSteamSGO::GovSteamSGO() {};
-
 GovSteamSGO::~GovSteamSGO() {};
 
 
-bool assign_GovSteamSGO_k1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteamSGO* element = dynamic_cast<GovSteamSGO*>(BaseClass_ptr1)) {
-                buffer >> element->k1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteamSGO_k2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteamSGO* element = dynamic_cast<GovSteamSGO*>(BaseClass_ptr1)) {
-                buffer >> element->k2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteamSGO_k3(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteamSGO* element = dynamic_cast<GovSteamSGO*>(BaseClass_ptr1)) {
-                buffer >> element->k3;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteamSGO_mwbase(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteamSGO* element = dynamic_cast<GovSteamSGO*>(BaseClass_ptr1)) {
-                buffer >> element->mwbase;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteamSGO_pmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteamSGO* element = dynamic_cast<GovSteamSGO*>(BaseClass_ptr1)) {
-                buffer >> element->pmax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteamSGO_pmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteamSGO* element = dynamic_cast<GovSteamSGO*>(BaseClass_ptr1)) {
-                buffer >> element->pmin;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteamSGO_t1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteamSGO* element = dynamic_cast<GovSteamSGO*>(BaseClass_ptr1)) {
-                buffer >> element->t1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteamSGO_t2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteamSGO* element = dynamic_cast<GovSteamSGO*>(BaseClass_ptr1)) {
-                buffer >> element->t2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteamSGO_t3(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteamSGO* element = dynamic_cast<GovSteamSGO*>(BaseClass_ptr1)) {
-                buffer >> element->t3;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteamSGO_t4(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteamSGO* element = dynamic_cast<GovSteamSGO*>(BaseClass_ptr1)) {
-                buffer >> element->t4;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteamSGO_t5(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteamSGO* element = dynamic_cast<GovSteamSGO*>(BaseClass_ptr1)) {
-                buffer >> element->t5;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteamSGO_t6(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteamSGO* element = dynamic_cast<GovSteamSGO*>(BaseClass_ptr1)) {
-                buffer >> element->t6;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-namespace CIMPP {
-	BaseClass* GovSteamSGO_factory() {
-		return new GovSteamSGO;
+bool assign_GovSteamSGO_k1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteamSGO* element = dynamic_cast<GovSteamSGO*>(BaseClass_ptr1))
+	{
+		buffer >> element->k1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
 	}
+	return false;
 }
 
-void GovSteamSGO::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {
+bool assign_GovSteamSGO_k2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteamSGO* element = dynamic_cast<GovSteamSGO*>(BaseClass_ptr1))
+	{
+		buffer >> element->k2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteamSGO_k3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteamSGO* element = dynamic_cast<GovSteamSGO*>(BaseClass_ptr1))
+	{
+		buffer >> element->k3;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteamSGO_mwbase(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteamSGO* element = dynamic_cast<GovSteamSGO*>(BaseClass_ptr1))
+	{
+		buffer >> element->mwbase;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteamSGO_pmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteamSGO* element = dynamic_cast<GovSteamSGO*>(BaseClass_ptr1))
+	{
+		buffer >> element->pmax;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteamSGO_pmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteamSGO* element = dynamic_cast<GovSteamSGO*>(BaseClass_ptr1))
+	{
+		buffer >> element->pmin;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteamSGO_t1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteamSGO* element = dynamic_cast<GovSteamSGO*>(BaseClass_ptr1))
+	{
+		buffer >> element->t1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteamSGO_t2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteamSGO* element = dynamic_cast<GovSteamSGO*>(BaseClass_ptr1))
+	{
+		buffer >> element->t2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteamSGO_t3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteamSGO* element = dynamic_cast<GovSteamSGO*>(BaseClass_ptr1))
+	{
+		buffer >> element->t3;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteamSGO_t4(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteamSGO* element = dynamic_cast<GovSteamSGO*>(BaseClass_ptr1))
+	{
+		buffer >> element->t4;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteamSGO_t5(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteamSGO* element = dynamic_cast<GovSteamSGO*>(BaseClass_ptr1))
+	{
+		buffer >> element->t5;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteamSGO_t6(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteamSGO* element = dynamic_cast<GovSteamSGO*>(BaseClass_ptr1))
+	{
+		buffer >> element->t6;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const char GovSteamSGO::debugName[] = "GovSteamSGO";
+const char* GovSteamSGO::debugString() const
+{
+	return GovSteamSGO::debugName;
+}
+
+void GovSteamSGO::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
+{
 	factory_map.insert(std::make_pair(std::string("cim:GovSteamSGO"), &GovSteamSGO_factory));
 }
 
-void GovSteamSGO::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
+void GovSteamSGO::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
+{
 	assign_map.insert(std::make_pair(std::string("cim:GovSteamSGO.k1"), &assign_GovSteamSGO_k1));
 	assign_map.insert(std::make_pair(std::string("cim:GovSteamSGO.k2"), &assign_GovSteamSGO_k2));
 	assign_map.insert(std::make_pair(std::string("cim:GovSteamSGO.k3"), &assign_GovSteamSGO_k3));
@@ -204,16 +221,19 @@ void GovSteamSGO::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, ass
 	assign_map.insert(std::make_pair(std::string("cim:GovSteamSGO.t6"), &assign_GovSteamSGO_t6));
 }
 
-void GovSteamSGO::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-												}
-
-const char GovSteamSGO::debugName[] = "GovSteamSGO";
-const char* GovSteamSGO::debugString()
+void GovSteamSGO::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	return GovSteamSGO::debugName;
 }
 
 const BaseClassDefiner GovSteamSGO::declare()
 {
 	return BaseClassDefiner(GovSteamSGO::addConstructToMap, GovSteamSGO::addPrimitiveAssignFnsToMap, GovSteamSGO::addClassAssignFnsToMap, GovSteamSGO::debugName);
+}
+
+namespace CIMPP
+{
+	BaseClass* GovSteamSGO_factory()
+	{
+		return new GovSteamSGO;
+	}
 }

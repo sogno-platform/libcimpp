@@ -1,6 +1,10 @@
-#include <sstream>
-#include "TurbineGovernorDynamics.hpp"
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "GovGASTWD.hpp"
+
+#include <algorithm>
+#include <sstream>
 
 #include "Simple_Float.hpp"
 #include "PU.hpp"
@@ -39,451 +43,485 @@
 using namespace CIMPP;
 
 GovGASTWD::GovGASTWD() {};
-
 GovGASTWD::~GovGASTWD() {};
 
 
-bool assign_GovGASTWD_a(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->a;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_af1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->af1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_af2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->af2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_b(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->b;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_bf1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->bf1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_bf2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->bf2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_c(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->c;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_cf2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->cf2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_ecr(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->ecr;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_etd(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->etd;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_k3(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->k3;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_k4(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->k4;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_k5(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->k5;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_k6(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->k6;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_kd(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->kd;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_kdroop(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->kdroop;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_kf(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->kf;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_ki(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->ki;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_kp(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->kp;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_mwbase(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->mwbase;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_t(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->t;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_t3(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->t3;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_t4(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->t4;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_t5(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->t5;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_tc(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->tc;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_tcd(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->tcd;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_td(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->td;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_tf(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->tf;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_tmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->tmax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_tmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->tmin;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_tr(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->tr;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_trate(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->trate;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovGASTWD_tt(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1)) {
-                buffer >> element->tt;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-namespace CIMPP {
-	BaseClass* GovGASTWD_factory() {
-		return new GovGASTWD;
+bool assign_GovGASTWD_a(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->a;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
 	}
+	return false;
 }
 
-void GovGASTWD::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {
+bool assign_GovGASTWD_af1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->af1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_af2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->af2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_b(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->b;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_bf1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->bf1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_bf2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->bf2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_c(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->c;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_cf2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->cf2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_ecr(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->ecr;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_etd(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->etd;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_k3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->k3;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_k4(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->k4;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_k5(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->k5;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_k6(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->k6;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_kd(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->kd;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_kdroop(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->kdroop;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_kf(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->kf;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_ki(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->ki;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_kp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->kp;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_mwbase(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->mwbase;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_t(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->t;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_t3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->t3;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_t4(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->t4;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_t5(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->t5;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_tc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->tc;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_tcd(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->tcd;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_td(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->td;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_tf(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->tf;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_tmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->tmax;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_tmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->tmin;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_tr(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->tr;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_trate(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->trate;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovGASTWD_tt(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovGASTWD* element = dynamic_cast<GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer >> element->tt;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const char GovGASTWD::debugName[] = "GovGASTWD";
+const char* GovGASTWD::debugString() const
+{
+	return GovGASTWD::debugName;
+}
+
+void GovGASTWD::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
+{
 	factory_map.insert(std::make_pair(std::string("cim:GovGASTWD"), &GovGASTWD_factory));
 }
 
-void GovGASTWD::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
+void GovGASTWD::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
+{
 	assign_map.insert(std::make_pair(std::string("cim:GovGASTWD.a"), &assign_GovGASTWD_a));
 	assign_map.insert(std::make_pair(std::string("cim:GovGASTWD.af1"), &assign_GovGASTWD_af1));
 	assign_map.insert(std::make_pair(std::string("cim:GovGASTWD.af2"), &assign_GovGASTWD_af2));
@@ -519,16 +557,19 @@ void GovGASTWD::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assig
 	assign_map.insert(std::make_pair(std::string("cim:GovGASTWD.tt"), &assign_GovGASTWD_tt));
 }
 
-void GovGASTWD::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-																																	}
-
-const char GovGASTWD::debugName[] = "GovGASTWD";
-const char* GovGASTWD::debugString()
+void GovGASTWD::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	return GovGASTWD::debugName;
 }
 
 const BaseClassDefiner GovGASTWD::declare()
 {
 	return BaseClassDefiner(GovGASTWD::addConstructToMap, GovGASTWD::addPrimitiveAssignFnsToMap, GovGASTWD::addClassAssignFnsToMap, GovGASTWD::debugName);
+}
+
+namespace CIMPP
+{
+	BaseClass* GovGASTWD_factory()
+	{
+		return new GovGASTWD;
+	}
 }

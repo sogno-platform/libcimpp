@@ -1,21 +1,13 @@
 #include "Boolean.hpp"
-#include "CIMExceptions.hpp"
+
+#include <ios>
+#include <string>
+
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-Boolean::Boolean(){}
-
-Boolean::~Boolean(){}
-
-Boolean::Boolean(bool value)
-        : value(value), initialized(true) {}
-
-const BaseClassDefiner Boolean::declare()
-{
-	return BaseClassDefiner(Boolean::addConstructToMap, Boolean::addPrimitiveAssignFnsToMap, Boolean::addClassAssignFnsToMap, Boolean::debugName);
-}
-
-Boolean& Boolean::operator=(bool &rop)
+Boolean& Boolean::operator=(bool rop)
 {
 	value = rop;
 	initialized = true;
@@ -24,56 +16,57 @@ Boolean& Boolean::operator=(bool &rop)
 
 Boolean::operator bool()
 {
-	if(!initialized)
+	if (!initialized)
 	{
 		throw new ReadingUninitializedField();
 	}
 	return value;
 }
 
-void Boolean::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {}
-
-void Boolean::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {}
-
-void Boolean::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {}
-
 const char Boolean::debugName[] = "Boolean";
-const char* Boolean::debugString()
+const char* Boolean::debugString() const
 {
 	return Boolean::debugName;
 }
 
-namespace CIMPP {
+namespace CIMPP
+{
 	std::istream& operator>>(std::istream& lop, Boolean& rop)
 	{
+		rop.initialized = false;
+
 		std::string tmp;
 		lop >> tmp;
-		if(tmp == "true" || tmp == "True" || tmp == "TRUE")
+
+		if (tmp == "true" || tmp == "True" || tmp == "TRUE")
 		{
 			rop.value = true;
 			rop.initialized = true;
 			return lop;
 		}
-		if(tmp == "false" || tmp == "False" || tmp == "FALSE")
+		if (tmp == "false" || tmp == "False" || tmp == "FALSE")
 		{
 			rop.value = false;
 			rop.initialized = true;
 			return lop;
 		}
-		else
-		{
-			lop.setstate(std::ios::failbit);
-			return lop;
-		}
+
+		lop.setstate(std::ios::failbit);
+		return lop;
 	}
 
-	std::ostream& operator<<(std::ostream& os, Boolean& rop)
+	std::ostream& operator<<(std::ostream& os, const Boolean& obj)
 	{
-		if (rop) {
-			os << "true";
-		}
-		else {
-			os << "false";
+		if (obj.initialized)
+		{
+			if (obj.value)
+			{
+				os << "true";
+			}
+			else
+			{
+				os << "false";
+			}
 		}
 		return os;
 	}

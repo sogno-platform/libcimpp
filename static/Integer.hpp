@@ -1,41 +1,36 @@
 #ifndef INTEGER_H
 #define INTEGER_H
 
-#include <string>
-#include <iostream>
 #include <istream>
+#include <ostream>
 
-#include "BaseClass.hpp"
-
-namespace CIMPP {
-
+namespace CIMPP
+{
 	/**
-	* An Integer number. The range is unspecified and not limited.
-	*/
+	 * An Integer number. The range is unspecified and not limited.
+	 */
 	class Integer
 	{
 	public:
-		Integer();
-		Integer(long int value);
-		virtual ~Integer();
-		static const BaseClassDefiner declare();
-		Integer& operator=(long int &rop);
+		Integer() : value(0), initialized(false) {}
+		Integer(long int value) : value(value), initialized(true) {}
+
+		Integer& operator=(long int rop);
+		operator long int();
+
+		long int value;
+		bool initialized;
+
+		static const char debugName[];
+		const char* debugString() const;
+
 		Integer& operator+=(const Integer& rhs);
 		Integer& operator-=(const Integer& rhs);
 		Integer& operator*=(const Integer& rhs);
 		Integer& operator/=(const Integer& rhs);
+
 		friend std::istream& operator>>(std::istream& lop, Integer& rop);
-		operator long int();
-
-		long int value = 0;
-		bool initialized = false;
-
-		static const char debugName[];
-		virtual const char* debugString();
-
-		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
-		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
-		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);
+		friend std::ostream& operator<<(std::ostream& os, const Integer& obj);
 	};
 }
 #endif // INTEGER_H

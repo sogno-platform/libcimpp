@@ -1,6 +1,10 @@
-#include <sstream>
-#include "PowerSystemStabilizerDynamics.hpp"
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "PssWECC.hpp"
+
+#include <algorithm>
+#include <sstream>
 
 #include "InputSignalKind.hpp"
 #include "InputSignalKind.hpp"
@@ -24,256 +28,275 @@
 using namespace CIMPP;
 
 PssWECC::PssWECC() {};
-
 PssWECC::~PssWECC() {};
 
 
-bool assign_PssWECC_inputSignal1Type(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1)) {
-                buffer >> element->inputSignal1Type;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssWECC_inputSignal2Type(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1)) {
-                buffer >> element->inputSignal2Type;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssWECC_k1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1)) {
-                buffer >> element->k1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssWECC_k2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1)) {
-                buffer >> element->k2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssWECC_t1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1)) {
-                buffer >> element->t1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssWECC_t10(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1)) {
-                buffer >> element->t10;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssWECC_t2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1)) {
-                buffer >> element->t2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssWECC_t3(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1)) {
-                buffer >> element->t3;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssWECC_t4(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1)) {
-                buffer >> element->t4;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssWECC_t5(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1)) {
-                buffer >> element->t5;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssWECC_t6(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1)) {
-                buffer >> element->t6;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssWECC_t7(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1)) {
-                buffer >> element->t7;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssWECC_t8(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1)) {
-                buffer >> element->t8;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssWECC_t9(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1)) {
-                buffer >> element->t9;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssWECC_vcl(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1)) {
-                buffer >> element->vcl;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssWECC_vcu(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1)) {
-                buffer >> element->vcu;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssWECC_vsmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1)) {
-                buffer >> element->vsmax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssWECC_vsmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1)) {
-                buffer >> element->vsmin;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-namespace CIMPP {
-	BaseClass* PssWECC_factory() {
-		return new PssWECC;
+bool assign_PssWECC_inputSignal1Type(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1))
+	{
+		buffer >> element->inputSignal1Type;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
 	}
+	return false;
 }
 
-void PssWECC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {
+bool assign_PssWECC_inputSignal2Type(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1))
+	{
+		buffer >> element->inputSignal2Type;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssWECC_k1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1))
+	{
+		buffer >> element->k1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssWECC_k2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1))
+	{
+		buffer >> element->k2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssWECC_t1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1))
+	{
+		buffer >> element->t1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssWECC_t10(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1))
+	{
+		buffer >> element->t10;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssWECC_t2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1))
+	{
+		buffer >> element->t2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssWECC_t3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1))
+	{
+		buffer >> element->t3;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssWECC_t4(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1))
+	{
+		buffer >> element->t4;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssWECC_t5(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1))
+	{
+		buffer >> element->t5;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssWECC_t6(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1))
+	{
+		buffer >> element->t6;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssWECC_t7(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1))
+	{
+		buffer >> element->t7;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssWECC_t8(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1))
+	{
+		buffer >> element->t8;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssWECC_t9(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1))
+	{
+		buffer >> element->t9;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssWECC_vcl(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1))
+	{
+		buffer >> element->vcl;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssWECC_vcu(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1))
+	{
+		buffer >> element->vcu;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssWECC_vsmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1))
+	{
+		buffer >> element->vsmax;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssWECC_vsmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssWECC* element = dynamic_cast<PssWECC*>(BaseClass_ptr1))
+	{
+		buffer >> element->vsmin;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const char PssWECC::debugName[] = "PssWECC";
+const char* PssWECC::debugString() const
+{
+	return PssWECC::debugName;
+}
+
+void PssWECC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
+{
 	factory_map.insert(std::make_pair(std::string("cim:PssWECC"), &PssWECC_factory));
 }
 
-void PssWECC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
+void PssWECC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
+{
 	assign_map.insert(std::make_pair(std::string("cim:PssWECC.inputSignal1Type"), &assign_PssWECC_inputSignal1Type));
 	assign_map.insert(std::make_pair(std::string("cim:PssWECC.inputSignal2Type"), &assign_PssWECC_inputSignal2Type));
 	assign_map.insert(std::make_pair(std::string("cim:PssWECC.k1"), &assign_PssWECC_k1));
@@ -294,16 +317,19 @@ void PssWECC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_
 	assign_map.insert(std::make_pair(std::string("cim:PssWECC.vsmin"), &assign_PssWECC_vsmin));
 }
 
-void PssWECC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-																		}
-
-const char PssWECC::debugName[] = "PssWECC";
-const char* PssWECC::debugString()
+void PssWECC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	return PssWECC::debugName;
 }
 
 const BaseClassDefiner PssWECC::declare()
 {
 	return BaseClassDefiner(PssWECC::addConstructToMap, PssWECC::addPrimitiveAssignFnsToMap, PssWECC::addClassAssignFnsToMap, PssWECC::debugName);
+}
+
+namespace CIMPP
+{
+	BaseClass* PssWECC_factory()
+	{
+		return new PssWECC;
+	}
 }

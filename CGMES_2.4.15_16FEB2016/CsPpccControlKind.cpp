@@ -1,12 +1,43 @@
-#include <sstream>
-#include <iostream>
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "CsPpccControlKind.hpp"
+
+#include <ios>
+#include <string>
+
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-namespace CIMPP {
-	std::istream& operator>>(std::istream& lop, CIMPP::CsPpccControlKind& rop)
+CsPpccControlKind& CsPpccControlKind::operator=(CsPpccControlKind_ENUM rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
+
+CsPpccControlKind::operator CsPpccControlKind_ENUM() const
+{
+	if (!initialized)
 	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
+
+const char CsPpccControlKind::debugName[] = "CsPpccControlKind";
+const char* CsPpccControlKind::debugString() const
+{
+	return CsPpccControlKind::debugName;
+}
+
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, CsPpccControlKind& rop)
+	{
+		rop.initialized = false;
+
 		std::string EnumSymbol;
 		lop >> EnumSymbol;
 
@@ -37,5 +68,32 @@ namespace CIMPP {
 
 		lop.setstate(std::ios::failbit);
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const CsPpccControlKind& obj)
+	{
+		if (obj.initialized)
+		{
+			std::string EnumSymbol;
+
+			if (obj.value == CsPpccControlKind::activePower)
+			{
+				EnumSymbol = "activePower";
+			}
+			if (obj.value == CsPpccControlKind::dcVoltage)
+			{
+				EnumSymbol = "dcVoltage";
+			}
+			if (obj.value == CsPpccControlKind::dcCurrent)
+			{
+				EnumSymbol = "dcCurrent";
+			}
+
+			if (!EnumSymbol.empty())
+			{
+				os << "CsPpccControlKind." << EnumSymbol;
+			}
+		}
+		return os;
 	}
 }
