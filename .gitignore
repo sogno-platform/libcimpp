@@ -48,4 +48,9 @@ Doxyfile
 .idea
 cmake-build*
 
+# vscode development
+.vscode
+
 *.swp
+
+.cache

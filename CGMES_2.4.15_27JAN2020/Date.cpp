@@ -1,20 +1,49 @@
-
-#include "BaseClass.hpp"
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "Date.hpp"
-#include "String.hpp"
+
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-Date::Date() {}
-
-Date::Date(String s)
+Date& Date::operator=(const std::string& rop)
 {
-	value=s;
+	value = rop;
+	initialized = true;
+	return *this;
 }
 
-Date::~Date() {}
-
-BaseClass* Date_factory()
+Date::operator std::string() const
 {
-	return new Date;
+	if (!initialized)
+	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
+
+const char Date::debugName[] = "Date";
+const char* Date::debugString() const
+{
+	return Date::debugName;
+}
+
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, Date& rop)
+	{
+		lop >> rop.value;
+		rop.initialized = true;
+		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const Date& obj)
+	{
+		if (obj.initialized)
+		{
+			os << obj.value;
+		}
+		return os;
+	}
 }

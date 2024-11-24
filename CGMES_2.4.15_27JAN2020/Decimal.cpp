@@ -1,41 +1,77 @@
-#include <sstream>
-#include "BaseClass.hpp"
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "Decimal.hpp"
 
+#include <string>
+
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-Decimal::Decimal() {};
+Decimal& Decimal::operator=(long double rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
 
-Decimal::~Decimal() {};
-
-
-
-namespace CIMPP {
-	BaseClass* Decimal_factory() {
-		return new Decimal;
+Decimal::operator long double() const
+{
+	if (!initialized)
+	{
+		throw new ReadingUninitializedField();
 	}
-}
-
-void Decimal::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {
-	factory_map.insert(std::make_pair(std::string("cim:Decimal"), &Decimal_factory));
-}
-
-void Decimal::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
-}
-
-void Decimal::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
+	return value;
 }
 
 const char Decimal::debugName[] = "Decimal";
-const char* Decimal::debugString()
+const char* Decimal::debugString() const
 {
 	return Decimal::debugName;
 }
 
-const BaseClassDefiner Decimal::declare()
+Decimal& Decimal::operator+=(const Decimal& rhs)
 {
-	return BaseClassDefiner(Decimal::addConstructToMap, Decimal::addPrimitiveAssignFnsToMap, Decimal::addClassAssignFnsToMap, Decimal::debugName);
+	value += rhs.value;
+	return *this;
 }
 
+Decimal& Decimal::operator-=(const Decimal& rhs)
+{
+	value -= rhs.value;
+	return *this;
+}
 
+Decimal& Decimal::operator*=(const Decimal& rhs)
+{
+	value *= rhs.value;
+	return *this;
+}
+
+Decimal& Decimal::operator/=(const Decimal& rhs)
+{
+	value /= rhs.value;
+	return *this;
+}
+
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, Decimal& rop)
+	{
+		std::string tmp;
+		lop >> tmp;
+		rop.value = stold(tmp);
+		rop.initialized = true;
+		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const Decimal& obj)
+	{
+		if (obj.initialized)
+		{
+			os << obj.value;
+		}
+		return os;
+	}
+}

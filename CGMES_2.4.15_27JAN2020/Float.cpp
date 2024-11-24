@@ -1,67 +1,77 @@
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "Float.hpp"
-#include "CIMExceptions.hpp"
+
+#include <string>
+
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-Float::Float(){}
-
-Float::~Float(){}
-
-Float::Float(long double value) : value(value), initialized(true) {}
-
-void Float::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {}
-
-void Float::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {}
-
-void Float::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {}
-
-const char Float::debugName[] = "Float";
-const char* Float::debugString() {
-	return Float::debugName;
-}
-
-const BaseClassDefiner Float::declare() {
-	return BaseClassDefiner(Float::addConstructToMap, Float::addPrimitiveAssignFnsToMap, Float::addClassAssignFnsToMap, Float::debugName);
-}
-
-Float& Float::operator=(long double &rop) {
+Float& Float::operator=(long double rop)
+{
 	value = rop;
 	initialized = true;
 	return *this;
 }
 
-Float& Float::operator-=(const Float& rhs) {
-    value -= rhs.value;
-    return *this;
-}
-
-Float& Float::operator*=(const Float& rhs) {
-    value *= rhs.value;
-    return *this;
-}
-
-Float& Float::operator/=(const Float& rhs) {
-    value /= rhs.value;
-    return *this;
-}
-
-Float& Float::operator+=(const Float& rhs) {
-    value += rhs.value;
-    return *this;
-}
-
-Float::operator long double() {
-	if(!initialized)
+Float::operator long double() const
+{
+	if (!initialized)
 	{
 		throw new ReadingUninitializedField();
 	}
 	return value;
 }
 
-std::istream& operator>>(std::istream& lop, Float& rop) {
-	std::string tmp;
-	lop >> tmp;
-	rop.value = stold(tmp);
-	rop.initialized = true;
-	return lop;
+const char Float::debugName[] = "Float";
+const char* Float::debugString() const
+{
+	return Float::debugName;
+}
+
+Float& Float::operator+=(const Float& rhs)
+{
+	value += rhs.value;
+	return *this;
+}
+
+Float& Float::operator-=(const Float& rhs)
+{
+	value -= rhs.value;
+	return *this;
+}
+
+Float& Float::operator*=(const Float& rhs)
+{
+	value *= rhs.value;
+	return *this;
+}
+
+Float& Float::operator/=(const Float& rhs)
+{
+	value /= rhs.value;
+	return *this;
+}
+
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, Float& rop)
+	{
+		std::string tmp;
+		lop >> tmp;
+		rop.value = stold(tmp);
+		rop.initialized = true;
+		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const Float& obj)
+	{
+		if (obj.initialized)
+		{
+			os << obj.value;
+		}
+		return os;
+	}
 }
