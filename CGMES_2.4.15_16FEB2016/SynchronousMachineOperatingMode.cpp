@@ -1,12 +1,43 @@
-#include <sstream>
-#include <iostream>
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "SynchronousMachineOperatingMode.hpp"
+
+#include <ios>
+#include <string>
+
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-namespace CIMPP {
-	std::istream& operator>>(std::istream& lop, CIMPP::SynchronousMachineOperatingMode& rop)
+SynchronousMachineOperatingMode& SynchronousMachineOperatingMode::operator=(SynchronousMachineOperatingMode_ENUM rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
+
+SynchronousMachineOperatingMode::operator SynchronousMachineOperatingMode_ENUM() const
+{
+	if (!initialized)
 	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
+
+const char SynchronousMachineOperatingMode::debugName[] = "SynchronousMachineOperatingMode";
+const char* SynchronousMachineOperatingMode::debugString() const
+{
+	return SynchronousMachineOperatingMode::debugName;
+}
+
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, SynchronousMachineOperatingMode& rop)
+	{
+		rop.initialized = false;
+
 		std::string EnumSymbol;
 		lop >> EnumSymbol;
 
@@ -37,5 +68,32 @@ namespace CIMPP {
 
 		lop.setstate(std::ios::failbit);
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const SynchronousMachineOperatingMode& obj)
+	{
+		if (obj.initialized)
+		{
+			std::string EnumSymbol;
+
+			if (obj.value == SynchronousMachineOperatingMode::generator)
+			{
+				EnumSymbol = "generator";
+			}
+			if (obj.value == SynchronousMachineOperatingMode::condenser)
+			{
+				EnumSymbol = "condenser";
+			}
+			if (obj.value == SynchronousMachineOperatingMode::motor)
+			{
+				EnumSymbol = "motor";
+			}
+
+			if (!EnumSymbol.empty())
+			{
+				os << "SynchronousMachineOperatingMode." << EnumSymbol;
+			}
+		}
+		return os;
 	}
 }

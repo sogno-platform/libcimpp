@@ -1,12 +1,43 @@
-#include <sstream>
-#include <iostream>
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "InputSignalKind.hpp"
+
+#include <ios>
+#include <string>
+
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-namespace CIMPP {
-	std::istream& operator>>(std::istream& lop, CIMPP::InputSignalKind& rop)
+InputSignalKind& InputSignalKind::operator=(InputSignalKind_ENUM rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
+
+InputSignalKind::operator InputSignalKind_ENUM() const
+{
+	if (!initialized)
 	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
+
+const char InputSignalKind::debugName[] = "InputSignalKind";
+const char* InputSignalKind::debugString() const
+{
+	return InputSignalKind::debugName;
+}
+
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, InputSignalKind& rop)
+	{
+		rop.initialized = false;
+
 		std::string EnumSymbol;
 		lop >> EnumSymbol;
 
@@ -72,5 +103,60 @@ namespace CIMPP {
 
 		lop.setstate(std::ios::failbit);
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const InputSignalKind& obj)
+	{
+		if (obj.initialized)
+		{
+			std::string EnumSymbol;
+
+			if (obj.value == InputSignalKind::rotorSpeed)
+			{
+				EnumSymbol = "rotorSpeed";
+			}
+			if (obj.value == InputSignalKind::rotorAngularFrequencyDeviation)
+			{
+				EnumSymbol = "rotorAngularFrequencyDeviation";
+			}
+			if (obj.value == InputSignalKind::busFrequency)
+			{
+				EnumSymbol = "busFrequency";
+			}
+			if (obj.value == InputSignalKind::busFrequencyDeviation)
+			{
+				EnumSymbol = "busFrequencyDeviation";
+			}
+			if (obj.value == InputSignalKind::generatorElectricalPower)
+			{
+				EnumSymbol = "generatorElectricalPower";
+			}
+			if (obj.value == InputSignalKind::generatorAcceleratingPower)
+			{
+				EnumSymbol = "generatorAcceleratingPower";
+			}
+			if (obj.value == InputSignalKind::busVoltage)
+			{
+				EnumSymbol = "busVoltage";
+			}
+			if (obj.value == InputSignalKind::busVoltageDerivative)
+			{
+				EnumSymbol = "busVoltageDerivative";
+			}
+			if (obj.value == InputSignalKind::branchCurrent)
+			{
+				EnumSymbol = "branchCurrent";
+			}
+			if (obj.value == InputSignalKind::fieldCurrent)
+			{
+				EnumSymbol = "fieldCurrent";
+			}
+
+			if (!EnumSymbol.empty())
+			{
+				os << "InputSignalKind." << EnumSymbol;
+			}
+		}
+		return os;
 	}
 }

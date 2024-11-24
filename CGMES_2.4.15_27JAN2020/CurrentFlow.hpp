@@ -1,38 +1,39 @@
 #ifndef CurrentFlow_H
 #define CurrentFlow_H
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 
-#include <string>
 #include <istream>
-
-#include "BaseClass.hpp"
+#include <ostream>
 
 namespace CIMPP
 {
-	class CurrentFlow : public BaseClass
+	/*
+	Electrical current with sign convention: positive flow is out of the conducting equipment into the connectivity node. Can be both AC and DC.
+	*/
+	class CurrentFlow
 	{
-
 	public:
-		CurrentFlow();
-		virtual ~CurrentFlow();
-		CurrentFlow(long double value);
-		static const BaseClassDefiner declare();
-		CurrentFlow& operator=(long double &rop);
+		CurrentFlow() : value(0.0), initialized(false) {}
+		CurrentFlow(long double value) : value(value), initialized(true) {}
+
+		CurrentFlow& operator=(long double rop);
+		operator long double() const;
+
+		long double value;
+		bool initialized;
+
+		static const char debugName[];
+		const char* debugString() const;
+
 		CurrentFlow& operator+=(const CurrentFlow& rhs);
 		CurrentFlow& operator-=(const CurrentFlow& rhs);
 		CurrentFlow& operator*=(const CurrentFlow& rhs);
 		CurrentFlow& operator/=(const CurrentFlow& rhs);
+
 		friend std::istream& operator>>(std::istream& lop, CurrentFlow& rop);
-		operator long double();
-
-		long double value = 0.0;
-		bool initialized = false;
-
-		static const char debugName[];
-		virtual const char* debugString();
-
-		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
-		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
-		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);
+		friend std::ostream& operator<<(std::ostream& os, const CurrentFlow& obj);
 	};
 }
 #endif

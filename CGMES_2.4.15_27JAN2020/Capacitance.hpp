@@ -1,38 +1,39 @@
 #ifndef Capacitance_H
 #define Capacitance_H
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 
-#include <string>
 #include <istream>
-
-#include "BaseClass.hpp"
+#include <ostream>
 
 namespace CIMPP
 {
-	class Capacitance : public BaseClass
+	/*
+	Capacitive part of reactance (imaginary part of impedance), at rated frequency.
+	*/
+	class Capacitance
 	{
-
 	public:
-		Capacitance();
-		virtual ~Capacitance();
-		Capacitance(long double value);
-		static const BaseClassDefiner declare();
-		Capacitance& operator=(long double &rop);
+		Capacitance() : value(0.0), initialized(false) {}
+		Capacitance(long double value) : value(value), initialized(true) {}
+
+		Capacitance& operator=(long double rop);
+		operator long double() const;
+
+		long double value;
+		bool initialized;
+
+		static const char debugName[];
+		const char* debugString() const;
+
 		Capacitance& operator+=(const Capacitance& rhs);
 		Capacitance& operator-=(const Capacitance& rhs);
 		Capacitance& operator*=(const Capacitance& rhs);
 		Capacitance& operator/=(const Capacitance& rhs);
+
 		friend std::istream& operator>>(std::istream& lop, Capacitance& rop);
-		operator long double();
-
-		long double value = 0.0;
-		bool initialized = false;
-
-		static const char debugName[];
-		virtual const char* debugString();
-
-		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
-		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
-		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);
+		friend std::ostream& operator<<(std::ostream& os, const Capacitance& obj);
 	};
 }
 #endif

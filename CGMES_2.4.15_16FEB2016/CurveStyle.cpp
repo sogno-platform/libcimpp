@@ -1,12 +1,43 @@
-#include <sstream>
-#include <iostream>
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "CurveStyle.hpp"
+
+#include <ios>
+#include <string>
+
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-namespace CIMPP {
-	std::istream& operator>>(std::istream& lop, CIMPP::CurveStyle& rop)
+CurveStyle& CurveStyle::operator=(CurveStyle_ENUM rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
+
+CurveStyle::operator CurveStyle_ENUM() const
+{
+	if (!initialized)
 	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
+
+const char CurveStyle::debugName[] = "CurveStyle";
+const char* CurveStyle::debugString() const
+{
+	return CurveStyle::debugName;
+}
+
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, CurveStyle& rop)
+	{
+		rop.initialized = false;
+
 		std::string EnumSymbol;
 		lop >> EnumSymbol;
 
@@ -32,5 +63,28 @@ namespace CIMPP {
 
 		lop.setstate(std::ios::failbit);
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const CurveStyle& obj)
+	{
+		if (obj.initialized)
+		{
+			std::string EnumSymbol;
+
+			if (obj.value == CurveStyle::constantYValue)
+			{
+				EnumSymbol = "constantYValue";
+			}
+			if (obj.value == CurveStyle::straightLineYValues)
+			{
+				EnumSymbol = "straightLineYValues";
+			}
+
+			if (!EnumSymbol.empty())
+			{
+				os << "CurveStyle." << EnumSymbol;
+			}
+		}
+		return os;
 	}
 }

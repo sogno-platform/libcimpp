@@ -1,38 +1,39 @@
 #ifndef Length_H
 #define Length_H
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 
-#include <string>
 #include <istream>
-
-#include "BaseClass.hpp"
+#include <ostream>
 
 namespace CIMPP
 {
-	class Length : public BaseClass
+	/*
+	Unit of length. Never negative.
+	*/
+	class Length
 	{
-
 	public:
-		Length();
-		virtual ~Length();
-		Length(long double value);
-		static const BaseClassDefiner declare();
-		Length& operator=(long double &rop);
+		Length() : value(0.0), initialized(false) {}
+		Length(long double value) : value(value), initialized(true) {}
+
+		Length& operator=(long double rop);
+		operator long double() const;
+
+		long double value;
+		bool initialized;
+
+		static const char debugName[];
+		const char* debugString() const;
+
 		Length& operator+=(const Length& rhs);
 		Length& operator-=(const Length& rhs);
 		Length& operator*=(const Length& rhs);
 		Length& operator/=(const Length& rhs);
+
 		friend std::istream& operator>>(std::istream& lop, Length& rop);
-		operator long double();
-
-		long double value = 0.0;
-		bool initialized = false;
-
-		static const char debugName[];
-		virtual const char* debugString();
-
-		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
-		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
-		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);
+		friend std::ostream& operator<<(std::ostream& os, const Length& obj);
 	};
 }
 #endif

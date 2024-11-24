@@ -1,70 +1,77 @@
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "InductancePerLength.hpp"
+
+#include <string>
+
 #include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-InductancePerLength::InductancePerLength() {}
+InductancePerLength& InductancePerLength::operator=(long double rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
 
-InductancePerLength::~InductancePerLength(){}
-
-InductancePerLength::InductancePerLength(long double value) : value(value), initialized(true) {}
-
-void InductancePerLength::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {}
-
-void InductancePerLength::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {}
-
-void InductancePerLength::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {}
+InductancePerLength::operator long double() const
+{
+	if (!initialized)
+	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
 
 const char InductancePerLength::debugName[] = "InductancePerLength";
-const char* InductancePerLength::debugString() {
+const char* InductancePerLength::debugString() const
+{
 	return InductancePerLength::debugName;
 }
 
-
-const BaseClassDefiner InductancePerLength::declare() {
-	return BaseClassDefiner(InductancePerLength::addConstructToMap, InductancePerLength::addPrimitiveAssignFnsToMap, InductancePerLength::addClassAssignFnsToMap, InductancePerLength::debugName);
+InductancePerLength& InductancePerLength::operator+=(const InductancePerLength& rhs)
+{
+	value += rhs.value;
+	return *this;
 }
 
-namespace CIMPP {
-	InductancePerLength& InductancePerLength::operator=(long double &rop) {
-		value = rop;
-		initialized = true;
-		return *this;
-	}
+InductancePerLength& InductancePerLength::operator-=(const InductancePerLength& rhs)
+{
+	value -= rhs.value;
+	return *this;
+}
 
-	InductancePerLength& InductancePerLength::operator-=(const InductancePerLength& rhs) {
-	    value -= rhs.value;
-	    return *this;
-	}
+InductancePerLength& InductancePerLength::operator*=(const InductancePerLength& rhs)
+{
+	value *= rhs.value;
+	return *this;
+}
 
-	InductancePerLength& InductancePerLength::operator*=(const InductancePerLength& rhs) {
-	    value *= rhs.value;
-	    return *this;
-	}
+InductancePerLength& InductancePerLength::operator/=(const InductancePerLength& rhs)
+{
+	value /= rhs.value;
+	return *this;
+}
 
-	InductancePerLength& InductancePerLength::operator/=(const InductancePerLength& rhs) {
-	    value /= rhs.value;
-	    return *this;
-	}
-
-	InductancePerLength& InductancePerLength::operator+=(const InductancePerLength& rhs) {
-	    value += rhs.value;
-	    return *this;
-	}
-
-	InductancePerLength::operator long double() {
-		if(!initialized)
-		{
-			throw new ReadingUninitializedField();
-		}
-		return value;
-	}
-
-	std::istream& operator>>(std::istream& lop, InductancePerLength& rop) {
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, InductancePerLength& rop)
+	{
 		std::string tmp;
 		lop >> tmp;
 		rop.value = stold(tmp);
 		rop.initialized = true;
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const InductancePerLength& obj)
+	{
+		if (obj.initialized)
+		{
+			os << obj.value;
+		}
+		return os;
 	}
 }

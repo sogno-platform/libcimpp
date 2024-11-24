@@ -1,70 +1,77 @@
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "VolumeFlowRate.hpp"
+
+#include <string>
+
 #include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-VolumeFlowRate::VolumeFlowRate() {}
+VolumeFlowRate& VolumeFlowRate::operator=(long double rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
 
-VolumeFlowRate::~VolumeFlowRate(){}
-
-VolumeFlowRate::VolumeFlowRate(long double value) : value(value), initialized(true) {}
-
-void VolumeFlowRate::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {}
-
-void VolumeFlowRate::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {}
-
-void VolumeFlowRate::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {}
+VolumeFlowRate::operator long double() const
+{
+	if (!initialized)
+	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
 
 const char VolumeFlowRate::debugName[] = "VolumeFlowRate";
-const char* VolumeFlowRate::debugString() {
+const char* VolumeFlowRate::debugString() const
+{
 	return VolumeFlowRate::debugName;
 }
 
-
-const BaseClassDefiner VolumeFlowRate::declare() {
-	return BaseClassDefiner(VolumeFlowRate::addConstructToMap, VolumeFlowRate::addPrimitiveAssignFnsToMap, VolumeFlowRate::addClassAssignFnsToMap, VolumeFlowRate::debugName);
+VolumeFlowRate& VolumeFlowRate::operator+=(const VolumeFlowRate& rhs)
+{
+	value += rhs.value;
+	return *this;
 }
 
-namespace CIMPP {
-	VolumeFlowRate& VolumeFlowRate::operator=(long double &rop) {
-		value = rop;
-		initialized = true;
-		return *this;
-	}
+VolumeFlowRate& VolumeFlowRate::operator-=(const VolumeFlowRate& rhs)
+{
+	value -= rhs.value;
+	return *this;
+}
 
-	VolumeFlowRate& VolumeFlowRate::operator-=(const VolumeFlowRate& rhs) {
-	    value -= rhs.value;
-	    return *this;
-	}
+VolumeFlowRate& VolumeFlowRate::operator*=(const VolumeFlowRate& rhs)
+{
+	value *= rhs.value;
+	return *this;
+}
 
-	VolumeFlowRate& VolumeFlowRate::operator*=(const VolumeFlowRate& rhs) {
-	    value *= rhs.value;
-	    return *this;
-	}
+VolumeFlowRate& VolumeFlowRate::operator/=(const VolumeFlowRate& rhs)
+{
+	value /= rhs.value;
+	return *this;
+}
 
-	VolumeFlowRate& VolumeFlowRate::operator/=(const VolumeFlowRate& rhs) {
-	    value /= rhs.value;
-	    return *this;
-	}
-
-	VolumeFlowRate& VolumeFlowRate::operator+=(const VolumeFlowRate& rhs) {
-	    value += rhs.value;
-	    return *this;
-	}
-
-	VolumeFlowRate::operator long double() {
-		if(!initialized)
-		{
-			throw new ReadingUninitializedField();
-		}
-		return value;
-	}
-
-	std::istream& operator>>(std::istream& lop, VolumeFlowRate& rop) {
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, VolumeFlowRate& rop)
+	{
 		std::string tmp;
 		lop >> tmp;
 		rop.value = stold(tmp);
 		rop.initialized = true;
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const VolumeFlowRate& obj)
+	{
+		if (obj.initialized)
+		{
+			os << obj.value;
+		}
+		return os;
 	}
 }

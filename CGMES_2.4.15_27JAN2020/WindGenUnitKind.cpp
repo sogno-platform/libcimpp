@@ -1,12 +1,43 @@
-#include <sstream>
-#include <iostream>
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "WindGenUnitKind.hpp"
+
+#include <ios>
+#include <string>
+
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-namespace CIMPP {
-	std::istream& operator>>(std::istream& lop, CIMPP::WindGenUnitKind& rop)
+WindGenUnitKind& WindGenUnitKind::operator=(WindGenUnitKind_ENUM rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
+
+WindGenUnitKind::operator WindGenUnitKind_ENUM() const
+{
+	if (!initialized)
 	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
+
+const char WindGenUnitKind::debugName[] = "WindGenUnitKind";
+const char* WindGenUnitKind::debugString() const
+{
+	return WindGenUnitKind::debugName;
+}
+
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, WindGenUnitKind& rop)
+	{
+		rop.initialized = false;
+
 		std::string EnumSymbol;
 		lop >> EnumSymbol;
 
@@ -32,5 +63,28 @@ namespace CIMPP {
 
 		lop.setstate(std::ios::failbit);
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const WindGenUnitKind& obj)
+	{
+		if (obj.initialized)
+		{
+			std::string EnumSymbol;
+
+			if (obj.value == WindGenUnitKind::offshore)
+			{
+				EnumSymbol = "offshore";
+			}
+			if (obj.value == WindGenUnitKind::onshore)
+			{
+				EnumSymbol = "onshore";
+			}
+
+			if (!EnumSymbol.empty())
+			{
+				os << "WindGenUnitKind." << EnumSymbol;
+			}
+		}
+		return os;
 	}
 }
