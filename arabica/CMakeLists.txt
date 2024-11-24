@@ -129,15 +129,13 @@ target_include_directories(${LIB_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_
 # link backend
 target_link_libraries(${LIB_NAME} ${ADDITIONAL_LIB})
 
-set_target_properties(${LIB_NAME} PROPERTIES FOLDER "3rdparty/arabica")
-
 #
 # Install library
 #
 install(TARGETS ${LIB_NAME}
   RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
   LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-  ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}/static
+  ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
 
 install(DIRECTORY include/
