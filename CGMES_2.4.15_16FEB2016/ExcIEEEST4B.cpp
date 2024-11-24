@@ -1,6 +1,10 @@
-#include <sstream>
-#include "ExcitationSystemDynamics.hpp"
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "ExcIEEEST4B.hpp"
+
+#include <algorithm>
+#include <sstream>
 
 #include "PU.hpp"
 #include "PU.hpp"
@@ -22,230 +26,247 @@
 using namespace CIMPP;
 
 ExcIEEEST4B::ExcIEEEST4B() {};
-
 ExcIEEEST4B::~ExcIEEEST4B() {};
 
 
-bool assign_ExcIEEEST4B_kc(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1)) {
-                buffer >> element->kc;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEST4B_kg(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1)) {
-                buffer >> element->kg;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEST4B_ki(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1)) {
-                buffer >> element->ki;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEST4B_kim(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1)) {
-                buffer >> element->kim;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEST4B_kir(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1)) {
-                buffer >> element->kir;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEST4B_kp(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1)) {
-                buffer >> element->kp;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEST4B_kpm(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1)) {
-                buffer >> element->kpm;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEST4B_kpr(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1)) {
-                buffer >> element->kpr;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEST4B_ta(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1)) {
-                buffer >> element->ta;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEST4B_thetap(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1)) {
-                buffer >> element->thetap;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEST4B_vbmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1)) {
-                buffer >> element->vbmax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEST4B_vmmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1)) {
-                buffer >> element->vmmax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEST4B_vmmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1)) {
-                buffer >> element->vmmin;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEST4B_vrmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1)) {
-                buffer >> element->vrmax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEST4B_vrmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1)) {
-                buffer >> element->vrmin;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcIEEEST4B_xl(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1)) {
-                buffer >> element->xl;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-namespace CIMPP {
-	BaseClass* ExcIEEEST4B_factory() {
-		return new ExcIEEEST4B;
+bool assign_ExcIEEEST4B_kc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer >> element->kc;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
 	}
+	return false;
 }
 
-void ExcIEEEST4B::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {
+bool assign_ExcIEEEST4B_kg(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer >> element->kg;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEST4B_ki(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer >> element->ki;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEST4B_kim(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer >> element->kim;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEST4B_kir(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer >> element->kir;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEST4B_kp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer >> element->kp;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEST4B_kpm(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer >> element->kpm;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEST4B_kpr(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer >> element->kpr;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEST4B_ta(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer >> element->ta;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEST4B_thetap(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer >> element->thetap;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEST4B_vbmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer >> element->vbmax;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEST4B_vmmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer >> element->vmmax;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEST4B_vmmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer >> element->vmmin;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEST4B_vrmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer >> element->vrmax;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEST4B_vrmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer >> element->vrmin;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcIEEEST4B_xl(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer >> element->xl;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const char ExcIEEEST4B::debugName[] = "ExcIEEEST4B";
+const char* ExcIEEEST4B::debugString() const
+{
+	return ExcIEEEST4B::debugName;
+}
+
+void ExcIEEEST4B::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
+{
 	factory_map.insert(std::make_pair(std::string("cim:ExcIEEEST4B"), &ExcIEEEST4B_factory));
 }
 
-void ExcIEEEST4B::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
+void ExcIEEEST4B::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
+{
 	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEST4B.kc"), &assign_ExcIEEEST4B_kc));
 	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEST4B.kg"), &assign_ExcIEEEST4B_kg));
 	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEST4B.ki"), &assign_ExcIEEEST4B_ki));
@@ -264,16 +285,19 @@ void ExcIEEEST4B::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, ass
 	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEST4B.xl"), &assign_ExcIEEEST4B_xl));
 }
 
-void ExcIEEEST4B::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-																}
-
-const char ExcIEEEST4B::debugName[] = "ExcIEEEST4B";
-const char* ExcIEEEST4B::debugString()
+void ExcIEEEST4B::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	return ExcIEEEST4B::debugName;
 }
 
 const BaseClassDefiner ExcIEEEST4B::declare()
 {
 	return BaseClassDefiner(ExcIEEEST4B::addConstructToMap, ExcIEEEST4B::addPrimitiveAssignFnsToMap, ExcIEEEST4B::addClassAssignFnsToMap, ExcIEEEST4B::debugName);
+}
+
+namespace CIMPP
+{
+	BaseClass* ExcIEEEST4B_factory()
+	{
+		return new ExcIEEEST4B;
+	}
 }

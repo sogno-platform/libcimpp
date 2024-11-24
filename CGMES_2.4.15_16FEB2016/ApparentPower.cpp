@@ -1,70 +1,77 @@
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "ApparentPower.hpp"
+
+#include <string>
+
 #include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-ApparentPower::ApparentPower() {}
+ApparentPower& ApparentPower::operator=(long double rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
 
-ApparentPower::~ApparentPower(){}
-
-ApparentPower::ApparentPower(long double value) : value(value), initialized(true) {}
-
-void ApparentPower::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {}
-
-void ApparentPower::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {}
-
-void ApparentPower::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {}
+ApparentPower::operator long double() const
+{
+	if (!initialized)
+	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
 
 const char ApparentPower::debugName[] = "ApparentPower";
-const char* ApparentPower::debugString() {
+const char* ApparentPower::debugString() const
+{
 	return ApparentPower::debugName;
 }
 
-
-const BaseClassDefiner ApparentPower::declare() {
-	return BaseClassDefiner(ApparentPower::addConstructToMap, ApparentPower::addPrimitiveAssignFnsToMap, ApparentPower::addClassAssignFnsToMap, ApparentPower::debugName);
+ApparentPower& ApparentPower::operator+=(const ApparentPower& rhs)
+{
+	value += rhs.value;
+	return *this;
 }
 
-namespace CIMPP {
-	ApparentPower& ApparentPower::operator=(long double &rop) {
-		value = rop;
-		initialized = true;
-		return *this;
-	}
+ApparentPower& ApparentPower::operator-=(const ApparentPower& rhs)
+{
+	value -= rhs.value;
+	return *this;
+}
 
-	ApparentPower& ApparentPower::operator-=(const ApparentPower& rhs) {
-	    value -= rhs.value;
-	    return *this;
-	}
+ApparentPower& ApparentPower::operator*=(const ApparentPower& rhs)
+{
+	value *= rhs.value;
+	return *this;
+}
 
-	ApparentPower& ApparentPower::operator*=(const ApparentPower& rhs) {
-	    value *= rhs.value;
-	    return *this;
-	}
+ApparentPower& ApparentPower::operator/=(const ApparentPower& rhs)
+{
+	value /= rhs.value;
+	return *this;
+}
 
-	ApparentPower& ApparentPower::operator/=(const ApparentPower& rhs) {
-	    value /= rhs.value;
-	    return *this;
-	}
-
-	ApparentPower& ApparentPower::operator+=(const ApparentPower& rhs) {
-	    value += rhs.value;
-	    return *this;
-	}
-
-	ApparentPower::operator long double() {
-		if(!initialized)
-		{
-			throw new ReadingUninitializedField();
-		}
-		return value;
-	}
-
-	std::istream& operator>>(std::istream& lop, ApparentPower& rop) {
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, ApparentPower& rop)
+	{
 		std::string tmp;
 		lop >> tmp;
 		rop.value = stold(tmp);
 		rop.initialized = true;
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const ApparentPower& obj)
+	{
+		if (obj.initialized)
+		{
+			os << obj.value;
+		}
+		return os;
 	}
 }

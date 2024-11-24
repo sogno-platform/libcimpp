@@ -1,6 +1,10 @@
-#include <sstream>
-#include "TurbineGovernorDynamics.hpp"
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "GovHydroR.hpp"
+
+#include <algorithm>
+#include <sstream>
 
 #include "PU.hpp"
 #include "Frequency.hpp"
@@ -48,568 +52,611 @@
 using namespace CIMPP;
 
 GovHydroR::GovHydroR() {};
-
 GovHydroR::~GovHydroR() {};
 
 
-bool assign_GovHydroR_at(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->at;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_db1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->db1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_db2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->db2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_dturb(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->dturb;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_eps(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->eps;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_gmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->gmax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_gmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->gmin;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_gv1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->gv1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_gv2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->gv2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_gv3(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->gv3;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_gv4(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->gv4;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_gv5(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->gv5;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_gv6(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->gv6;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_h0(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->h0;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_inputSignal(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->inputSignal;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_kg(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->kg;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_ki(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->ki;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_mwbase(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->mwbase;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_pgv1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->pgv1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_pgv2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->pgv2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_pgv3(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->pgv3;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_pgv4(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->pgv4;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_pgv5(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->pgv5;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_pgv6(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->pgv6;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_pmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->pmax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_pmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->pmin;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_qnl(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->qnl;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_r(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->r;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_t1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->t1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_t2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->t2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_t3(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->t3;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_t4(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->t4;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_t5(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->t5;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_t6(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->t6;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_t7(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->t7;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_t8(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->t8;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_td(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->td;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_tp(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->tp;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_tt(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->tt;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_tw(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->tw;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_velcl(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->velcl;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovHydroR_velop(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1)) {
-                buffer >> element->velop;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-namespace CIMPP {
-	BaseClass* GovHydroR_factory() {
-		return new GovHydroR;
+bool assign_GovHydroR_at(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->at;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
 	}
+	return false;
 }
 
-void GovHydroR::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {
+bool assign_GovHydroR_db1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->db1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_db2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->db2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_dturb(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->dturb;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_eps(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->eps;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_gmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->gmax;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_gmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->gmin;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_gv1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->gv1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_gv2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->gv2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_gv3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->gv3;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_gv4(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->gv4;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_gv5(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->gv5;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_gv6(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->gv6;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_h0(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->h0;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_inputSignal(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->inputSignal;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_kg(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->kg;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_ki(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->ki;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_mwbase(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->mwbase;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_pgv1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->pgv1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_pgv2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->pgv2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_pgv3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->pgv3;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_pgv4(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->pgv4;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_pgv5(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->pgv5;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_pgv6(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->pgv6;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_pmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->pmax;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_pmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->pmin;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_qnl(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->qnl;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_r(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->r;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_t1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->t1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_t2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->t2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_t3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->t3;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_t4(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->t4;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_t5(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->t5;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_t6(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->t6;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_t7(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->t7;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_t8(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->t8;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_td(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->td;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_tp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->tp;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_tt(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->tt;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_tw(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->tw;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_velcl(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->velcl;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovHydroR_velop(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovHydroR* element = dynamic_cast<GovHydroR*>(BaseClass_ptr1))
+	{
+		buffer >> element->velop;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const char GovHydroR::debugName[] = "GovHydroR";
+const char* GovHydroR::debugString() const
+{
+	return GovHydroR::debugName;
+}
+
+void GovHydroR::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
+{
 	factory_map.insert(std::make_pair(std::string("cim:GovHydroR"), &GovHydroR_factory));
 }
 
-void GovHydroR::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
+void GovHydroR::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
+{
 	assign_map.insert(std::make_pair(std::string("cim:GovHydroR.at"), &assign_GovHydroR_at));
 	assign_map.insert(std::make_pair(std::string("cim:GovHydroR.db1"), &assign_GovHydroR_db1));
 	assign_map.insert(std::make_pair(std::string("cim:GovHydroR.db2"), &assign_GovHydroR_db2));
@@ -654,16 +701,19 @@ void GovHydroR::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assig
 	assign_map.insert(std::make_pair(std::string("cim:GovHydroR.velop"), &assign_GovHydroR_velop));
 }
 
-void GovHydroR::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-																																										}
-
-const char GovHydroR::debugName[] = "GovHydroR";
-const char* GovHydroR::debugString()
+void GovHydroR::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	return GovHydroR::debugName;
 }
 
 const BaseClassDefiner GovHydroR::declare()
 {
 	return BaseClassDefiner(GovHydroR::addConstructToMap, GovHydroR::addPrimitiveAssignFnsToMap, GovHydroR::addClassAssignFnsToMap, GovHydroR::debugName);
+}
+
+namespace CIMPP
+{
+	BaseClass* GovHydroR_factory()
+	{
+		return new GovHydroR;
+	}
 }

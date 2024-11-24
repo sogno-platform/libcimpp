@@ -1,70 +1,77 @@
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "AngleDegrees.hpp"
+
+#include <string>
+
 #include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-AngleDegrees::AngleDegrees() {}
+AngleDegrees& AngleDegrees::operator=(long double rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
 
-AngleDegrees::~AngleDegrees(){}
-
-AngleDegrees::AngleDegrees(long double value) : value(value), initialized(true) {}
-
-void AngleDegrees::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {}
-
-void AngleDegrees::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {}
-
-void AngleDegrees::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {}
+AngleDegrees::operator long double() const
+{
+	if (!initialized)
+	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
 
 const char AngleDegrees::debugName[] = "AngleDegrees";
-const char* AngleDegrees::debugString() {
+const char* AngleDegrees::debugString() const
+{
 	return AngleDegrees::debugName;
 }
 
-
-const BaseClassDefiner AngleDegrees::declare() {
-	return BaseClassDefiner(AngleDegrees::addConstructToMap, AngleDegrees::addPrimitiveAssignFnsToMap, AngleDegrees::addClassAssignFnsToMap, AngleDegrees::debugName);
+AngleDegrees& AngleDegrees::operator+=(const AngleDegrees& rhs)
+{
+	value += rhs.value;
+	return *this;
 }
 
-namespace CIMPP {
-	AngleDegrees& AngleDegrees::operator=(long double &rop) {
-		value = rop;
-		initialized = true;
-		return *this;
-	}
+AngleDegrees& AngleDegrees::operator-=(const AngleDegrees& rhs)
+{
+	value -= rhs.value;
+	return *this;
+}
 
-	AngleDegrees& AngleDegrees::operator-=(const AngleDegrees& rhs) {
-	    value -= rhs.value;
-	    return *this;
-	}
+AngleDegrees& AngleDegrees::operator*=(const AngleDegrees& rhs)
+{
+	value *= rhs.value;
+	return *this;
+}
 
-	AngleDegrees& AngleDegrees::operator*=(const AngleDegrees& rhs) {
-	    value *= rhs.value;
-	    return *this;
-	}
+AngleDegrees& AngleDegrees::operator/=(const AngleDegrees& rhs)
+{
+	value /= rhs.value;
+	return *this;
+}
 
-	AngleDegrees& AngleDegrees::operator/=(const AngleDegrees& rhs) {
-	    value /= rhs.value;
-	    return *this;
-	}
-
-	AngleDegrees& AngleDegrees::operator+=(const AngleDegrees& rhs) {
-	    value += rhs.value;
-	    return *this;
-	}
-
-	AngleDegrees::operator long double() {
-		if(!initialized)
-		{
-			throw new ReadingUninitializedField();
-		}
-		return value;
-	}
-
-	std::istream& operator>>(std::istream& lop, AngleDegrees& rop) {
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, AngleDegrees& rop)
+	{
 		std::string tmp;
 		lop >> tmp;
 		rop.value = stold(tmp);
 		rop.initialized = true;
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const AngleDegrees& obj)
+	{
+		if (obj.initialized)
+		{
+			os << obj.value;
+		}
+		return os;
 	}
 }

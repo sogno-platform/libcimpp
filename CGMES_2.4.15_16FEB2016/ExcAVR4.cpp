@@ -1,6 +1,10 @@
-#include <sstream>
-#include "ExcitationSystemDynamics.hpp"
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "ExcAVR4.hpp"
+
+#include <algorithm>
+#include <sstream>
 
 #include "Boolean.hpp"
 #include "Simple_Float.hpp"
@@ -20,204 +24,219 @@
 using namespace CIMPP;
 
 ExcAVR4::ExcAVR4() {};
-
 ExcAVR4::~ExcAVR4() {};
 
 
-bool assign_ExcAVR4_imul(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1)) {
-                buffer >> element->imul;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcAVR4_ka(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1)) {
-                buffer >> element->ka;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcAVR4_ke(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1)) {
-                buffer >> element->ke;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcAVR4_kif(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1)) {
-                buffer >> element->kif;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcAVR4_t1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1)) {
-                buffer >> element->t1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcAVR4_t1if(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1)) {
-                buffer >> element->t1if;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcAVR4_t2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1)) {
-                buffer >> element->t2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcAVR4_t3(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1)) {
-                buffer >> element->t3;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcAVR4_t4(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1)) {
-                buffer >> element->t4;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcAVR4_tif(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1)) {
-                buffer >> element->tif;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcAVR4_vfmn(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1)) {
-                buffer >> element->vfmn;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcAVR4_vfmx(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1)) {
-                buffer >> element->vfmx;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcAVR4_vrmn(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1)) {
-                buffer >> element->vrmn;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_ExcAVR4_vrmx(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1)) {
-                buffer >> element->vrmx;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-namespace CIMPP {
-	BaseClass* ExcAVR4_factory() {
-		return new ExcAVR4;
+bool assign_ExcAVR4_imul(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1))
+	{
+		buffer >> element->imul;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
 	}
+	return false;
 }
 
-void ExcAVR4::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {
+bool assign_ExcAVR4_ka(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1))
+	{
+		buffer >> element->ka;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcAVR4_ke(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1))
+	{
+		buffer >> element->ke;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcAVR4_kif(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1))
+	{
+		buffer >> element->kif;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcAVR4_t1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1))
+	{
+		buffer >> element->t1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcAVR4_t1if(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1))
+	{
+		buffer >> element->t1if;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcAVR4_t2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1))
+	{
+		buffer >> element->t2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcAVR4_t3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1))
+	{
+		buffer >> element->t3;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcAVR4_t4(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1))
+	{
+		buffer >> element->t4;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcAVR4_tif(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1))
+	{
+		buffer >> element->tif;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcAVR4_vfmn(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1))
+	{
+		buffer >> element->vfmn;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcAVR4_vfmx(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1))
+	{
+		buffer >> element->vfmx;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcAVR4_vrmn(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1))
+	{
+		buffer >> element->vrmn;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_ExcAVR4_vrmx(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (ExcAVR4* element = dynamic_cast<ExcAVR4*>(BaseClass_ptr1))
+	{
+		buffer >> element->vrmx;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const char ExcAVR4::debugName[] = "ExcAVR4";
+const char* ExcAVR4::debugString() const
+{
+	return ExcAVR4::debugName;
+}
+
+void ExcAVR4::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
+{
 	factory_map.insert(std::make_pair(std::string("cim:ExcAVR4"), &ExcAVR4_factory));
 }
 
-void ExcAVR4::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
+void ExcAVR4::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
+{
 	assign_map.insert(std::make_pair(std::string("cim:ExcAVR4.imul"), &assign_ExcAVR4_imul));
 	assign_map.insert(std::make_pair(std::string("cim:ExcAVR4.ka"), &assign_ExcAVR4_ka));
 	assign_map.insert(std::make_pair(std::string("cim:ExcAVR4.ke"), &assign_ExcAVR4_ke));
@@ -234,16 +253,19 @@ void ExcAVR4::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_
 	assign_map.insert(std::make_pair(std::string("cim:ExcAVR4.vrmx"), &assign_ExcAVR4_vrmx));
 }
 
-void ExcAVR4::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-														}
-
-const char ExcAVR4::debugName[] = "ExcAVR4";
-const char* ExcAVR4::debugString()
+void ExcAVR4::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	return ExcAVR4::debugName;
 }
 
 const BaseClassDefiner ExcAVR4::declare()
 {
 	return BaseClassDefiner(ExcAVR4::addConstructToMap, ExcAVR4::addPrimitiveAssignFnsToMap, ExcAVR4::addClassAssignFnsToMap, ExcAVR4::debugName);
+}
+
+namespace CIMPP
+{
+	BaseClass* ExcAVR4_factory()
+	{
+		return new ExcAVR4;
+	}
 }

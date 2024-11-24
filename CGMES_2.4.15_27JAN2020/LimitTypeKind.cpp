@@ -1,12 +1,43 @@
-#include <sstream>
-#include <iostream>
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "LimitTypeKind.hpp"
+
+#include <ios>
+#include <string>
+
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-namespace CIMPP {
-	std::istream& operator>>(std::istream& lop, CIMPP::LimitTypeKind& rop)
+LimitTypeKind& LimitTypeKind::operator=(LimitTypeKind_ENUM rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
+
+LimitTypeKind::operator LimitTypeKind_ENUM() const
+{
+	if (!initialized)
 	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
+
+const char LimitTypeKind::debugName[] = "LimitTypeKind";
+const char* LimitTypeKind::debugString() const
+{
+	return LimitTypeKind::debugName;
+}
+
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, LimitTypeKind& rop)
+	{
+		rop.initialized = false;
+
 		std::string EnumSymbol;
 		lop >> EnumSymbol;
 
@@ -57,5 +88,48 @@ namespace CIMPP {
 
 		lop.setstate(std::ios::failbit);
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const LimitTypeKind& obj)
+	{
+		if (obj.initialized)
+		{
+			std::string EnumSymbol;
+
+			if (obj.value == LimitTypeKind::patl)
+			{
+				EnumSymbol = "patl";
+			}
+			if (obj.value == LimitTypeKind::patlt)
+			{
+				EnumSymbol = "patlt";
+			}
+			if (obj.value == LimitTypeKind::tatl)
+			{
+				EnumSymbol = "tatl";
+			}
+			if (obj.value == LimitTypeKind::tc)
+			{
+				EnumSymbol = "tc";
+			}
+			if (obj.value == LimitTypeKind::tct)
+			{
+				EnumSymbol = "tct";
+			}
+			if (obj.value == LimitTypeKind::highVoltage)
+			{
+				EnumSymbol = "highVoltage";
+			}
+			if (obj.value == LimitTypeKind::lowVoltage)
+			{
+				EnumSymbol = "lowVoltage";
+			}
+
+			if (!EnumSymbol.empty())
+			{
+				os << "LimitTypeKind." << EnumSymbol;
+			}
+		}
+		return os;
 	}
 }

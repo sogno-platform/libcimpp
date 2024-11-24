@@ -1,12 +1,43 @@
-#include <sstream>
-#include <iostream>
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "ExcST7BOELselectorKind.hpp"
+
+#include <ios>
+#include <string>
+
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-namespace CIMPP {
-	std::istream& operator>>(std::istream& lop, CIMPP::ExcST7BOELselectorKind& rop)
+ExcST7BOELselectorKind& ExcST7BOELselectorKind::operator=(ExcST7BOELselectorKind_ENUM rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
+
+ExcST7BOELselectorKind::operator ExcST7BOELselectorKind_ENUM() const
+{
+	if (!initialized)
 	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
+
+const char ExcST7BOELselectorKind::debugName[] = "ExcST7BOELselectorKind";
+const char* ExcST7BOELselectorKind::debugString() const
+{
+	return ExcST7BOELselectorKind::debugName;
+}
+
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, ExcST7BOELselectorKind& rop)
+	{
+		rop.initialized = false;
+
 		std::string EnumSymbol;
 		lop >> EnumSymbol;
 
@@ -42,5 +73,36 @@ namespace CIMPP {
 
 		lop.setstate(std::ios::failbit);
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const ExcST7BOELselectorKind& obj)
+	{
+		if (obj.initialized)
+		{
+			std::string EnumSymbol;
+
+			if (obj.value == ExcST7BOELselectorKind::noOELinput)
+			{
+				EnumSymbol = "noOELinput";
+			}
+			if (obj.value == ExcST7BOELselectorKind::addVref)
+			{
+				EnumSymbol = "addVref";
+			}
+			if (obj.value == ExcST7BOELselectorKind::inputLVgate)
+			{
+				EnumSymbol = "inputLVgate";
+			}
+			if (obj.value == ExcST7BOELselectorKind::outputLVgate)
+			{
+				EnumSymbol = "outputLVgate";
+			}
+
+			if (!EnumSymbol.empty())
+			{
+				os << "ExcST7BOELselectorKind." << EnumSymbol;
+			}
+		}
+		return os;
 	}
 }

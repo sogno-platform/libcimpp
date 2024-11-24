@@ -1,70 +1,77 @@
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "Resistance.hpp"
+
+#include <string>
+
 #include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-Resistance::Resistance() {}
+Resistance& Resistance::operator=(long double rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
 
-Resistance::~Resistance(){}
-
-Resistance::Resistance(long double value) : value(value), initialized(true) {}
-
-void Resistance::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {}
-
-void Resistance::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {}
-
-void Resistance::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {}
+Resistance::operator long double() const
+{
+	if (!initialized)
+	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
 
 const char Resistance::debugName[] = "Resistance";
-const char* Resistance::debugString() {
+const char* Resistance::debugString() const
+{
 	return Resistance::debugName;
 }
 
-
-const BaseClassDefiner Resistance::declare() {
-	return BaseClassDefiner(Resistance::addConstructToMap, Resistance::addPrimitiveAssignFnsToMap, Resistance::addClassAssignFnsToMap, Resistance::debugName);
+Resistance& Resistance::operator+=(const Resistance& rhs)
+{
+	value += rhs.value;
+	return *this;
 }
 
-namespace CIMPP {
-	Resistance& Resistance::operator=(long double &rop) {
-		value = rop;
-		initialized = true;
-		return *this;
-	}
+Resistance& Resistance::operator-=(const Resistance& rhs)
+{
+	value -= rhs.value;
+	return *this;
+}
 
-	Resistance& Resistance::operator-=(const Resistance& rhs) {
-	    value -= rhs.value;
-	    return *this;
-	}
+Resistance& Resistance::operator*=(const Resistance& rhs)
+{
+	value *= rhs.value;
+	return *this;
+}
 
-	Resistance& Resistance::operator*=(const Resistance& rhs) {
-	    value *= rhs.value;
-	    return *this;
-	}
+Resistance& Resistance::operator/=(const Resistance& rhs)
+{
+	value /= rhs.value;
+	return *this;
+}
 
-	Resistance& Resistance::operator/=(const Resistance& rhs) {
-	    value /= rhs.value;
-	    return *this;
-	}
-
-	Resistance& Resistance::operator+=(const Resistance& rhs) {
-	    value += rhs.value;
-	    return *this;
-	}
-
-	Resistance::operator long double() {
-		if(!initialized)
-		{
-			throw new ReadingUninitializedField();
-		}
-		return value;
-	}
-
-	std::istream& operator>>(std::istream& lop, Resistance& rop) {
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, Resistance& rop)
+	{
 		std::string tmp;
 		lop >> tmp;
 		rop.value = stold(tmp);
 		rop.initialized = true;
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const Resistance& obj)
+	{
+		if (obj.initialized)
+		{
+			os << obj.value;
+		}
+		return os;
 	}
 }

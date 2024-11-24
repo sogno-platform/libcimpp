@@ -1,12 +1,43 @@
-#include <sstream>
-#include <iostream>
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "CsOperatingModeKind.hpp"
+
+#include <ios>
+#include <string>
+
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-namespace CIMPP {
-	std::istream& operator>>(std::istream& lop, CIMPP::CsOperatingModeKind& rop)
+CsOperatingModeKind& CsOperatingModeKind::operator=(CsOperatingModeKind_ENUM rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
+
+CsOperatingModeKind::operator CsOperatingModeKind_ENUM() const
+{
+	if (!initialized)
 	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
+
+const char CsOperatingModeKind::debugName[] = "CsOperatingModeKind";
+const char* CsOperatingModeKind::debugString() const
+{
+	return CsOperatingModeKind::debugName;
+}
+
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, CsOperatingModeKind& rop)
+	{
+		rop.initialized = false;
+
 		std::string EnumSymbol;
 		lop >> EnumSymbol;
 
@@ -32,5 +63,28 @@ namespace CIMPP {
 
 		lop.setstate(std::ios::failbit);
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const CsOperatingModeKind& obj)
+	{
+		if (obj.initialized)
+		{
+			std::string EnumSymbol;
+
+			if (obj.value == CsOperatingModeKind::inverter)
+			{
+				EnumSymbol = "inverter";
+			}
+			if (obj.value == CsOperatingModeKind::rectifier)
+			{
+				EnumSymbol = "rectifier";
+			}
+
+			if (!EnumSymbol.empty())
+			{
+				os << "CsOperatingModeKind." << EnumSymbol;
+			}
+		}
+		return os;
 	}
 }

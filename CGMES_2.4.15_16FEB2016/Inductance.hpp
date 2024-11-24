@@ -1,38 +1,39 @@
 #ifndef Inductance_H
 #define Inductance_H
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 
-#include <string>
 #include <istream>
-
-#include "BaseClass.hpp"
+#include <ostream>
 
 namespace CIMPP
 {
-	class Inductance : public BaseClass
+	/*
+	Inductive part of reactance (imaginary part of impedance), at rated frequency.
+	*/
+	class Inductance
 	{
-
 	public:
-		Inductance();
-		virtual ~Inductance();
-		Inductance(long double value);
-		static const BaseClassDefiner declare();
-		Inductance& operator=(long double &rop);
+		Inductance() : value(0.0), initialized(false) {}
+		Inductance(long double value) : value(value), initialized(true) {}
+
+		Inductance& operator=(long double rop);
+		operator long double() const;
+
+		long double value;
+		bool initialized;
+
+		static const char debugName[];
+		const char* debugString() const;
+
 		Inductance& operator+=(const Inductance& rhs);
 		Inductance& operator-=(const Inductance& rhs);
 		Inductance& operator*=(const Inductance& rhs);
 		Inductance& operator/=(const Inductance& rhs);
+
 		friend std::istream& operator>>(std::istream& lop, Inductance& rop);
-		operator long double();
-
-		long double value = 0.0;
-		bool initialized = false;
-
-		static const char debugName[];
-		virtual const char* debugString();
-
-		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
-		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
-		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);
+		friend std::ostream& operator<<(std::ostream& os, const Inductance& obj);
 	};
 }
 #endif
