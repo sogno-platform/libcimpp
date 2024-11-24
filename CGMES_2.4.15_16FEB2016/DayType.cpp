@@ -11,6 +11,8 @@ DayType::DayType() {};
 DayType::~DayType() {};
 
 
+
+
 bool assign_DayType_SeasonDayTypeSchedules(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(DayType* element = dynamic_cast<DayType*>(BaseClass_ptr1)) {
 		if(dynamic_cast<SeasonDayTypeSchedule*>(BaseClass_ptr2) != nullptr) {
@@ -20,8 +22,6 @@ bool assign_DayType_SeasonDayTypeSchedules(BaseClass* BaseClass_ptr1, BaseClass*
 	}
 	return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* DayType_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner DayType::declare()
 {
 	return BaseClassDefiner(DayType::addConstructToMap, DayType::addPrimitiveAssignFnsToMap, DayType::addClassAssignFnsToMap, DayType::debugName);
 }
-
-

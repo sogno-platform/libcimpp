@@ -11,6 +11,8 @@ GrossToNetActivePowerCurve::GrossToNetActivePowerCurve(): GeneratingUnit(nullptr
 GrossToNetActivePowerCurve::~GrossToNetActivePowerCurve() {};
 
 
+
+
 bool assign_GeneratingUnit_GrossToNetActivePowerCurves(BaseClass*, BaseClass*);
 bool assign_GrossToNetActivePowerCurve_GeneratingUnit(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(GrossToNetActivePowerCurve* element = dynamic_cast<GrossToNetActivePowerCurve*>(BaseClass_ptr1)) {
@@ -20,8 +22,6 @@ bool assign_GrossToNetActivePowerCurve_GeneratingUnit(BaseClass* BaseClass_ptr1,
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* GrossToNetActivePowerCurve_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner GrossToNetActivePowerCurve::declare()
 {
 	return BaseClassDefiner(GrossToNetActivePowerCurve::addConstructToMap, GrossToNetActivePowerCurve::addPrimitiveAssignFnsToMap, GrossToNetActivePowerCurve::addClassAssignFnsToMap, GrossToNetActivePowerCurve::debugName);
 }
-
-

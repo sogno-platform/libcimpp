@@ -7,8 +7,8 @@
 #include "Float.hpp"
 
 
-#include "InputSignalKind.hpp"
 #include "PU.hpp"
+#include "InputSignalKind.hpp"
 #include "Seconds.hpp"
 
 namespace CIMPP {
@@ -21,26 +21,26 @@ namespace CIMPP {
 	{
 
 	public:
-					CIMPP::InputSignalKind inputSignalType; 	/* Type of input signal.  Typical Value = rotorAngularFrequencyDeviation. Default: 0 */
 					CIMPP::PU a1; 	/* PSS signal conditioning frequency filter constant (A1).  Typical Value = 0.061. Default: nullptr */
 					CIMPP::PU a2; 	/* PSS signal conditioning frequency filter constant (A2).  Typical Value = 0.0017. Default: nullptr */
+					CIMPP::InputSignalKind inputSignalType; 	/* Type of input signal.  Typical Value = rotorAngularFrequencyDeviation. Default: 0 */
+					CIMPP::PU ks; 	/* Stabilizer gain (Ks).  Typical Value = 5. Default: nullptr */
 					CIMPP::Seconds t1; 	/* Lead/lag time constant (T1).  Typical Value = 0.3. Default: nullptr */
 					CIMPP::Seconds t2; 	/* Lead/lag time constant (T2).  Typical Value = 0.03. Default: nullptr */
 					CIMPP::Seconds t3; 	/* Lead/lag time constant (T3).  Typical Value = 0.3. Default: nullptr */
 					CIMPP::Seconds t4; 	/* Lead/lag time constant (T4).  Typical Value = 0.03. Default: nullptr */
 					CIMPP::Seconds t5; 	/* Washout time constant (T5).  Typical Value = 10. Default: nullptr */
 					CIMPP::Seconds t6; 	/* Transducer time constant (T6).  Typical Value = 0.01. Default: nullptr */
-					CIMPP::PU ks; 	/* Stabilizer gain (Ks).  Typical Value = 5. Default: nullptr */
 					CIMPP::PU vrmax; 	/* Maximum stabilizer output (Vrmax).  Typical Value = 0.05. Default: nullptr */
 					CIMPP::PU vrmin; 	/* Minimum stabilizer output (Vrmin).  Typical Value = -0.05. Default: nullptr */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		PssIEEE1A();
 		virtual ~PssIEEE1A();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

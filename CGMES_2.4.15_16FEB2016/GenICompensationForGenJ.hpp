@@ -25,14 +25,14 @@ class VCompIEEEType2;
 					CIMPP::VCompIEEEType2* VcompIEEEType2; 	/* The standard IEEE Type 2 voltage compensator of this compensation. Default: 0 */
 					CIMPP::PU rcij; 	/*  Default: nullptr */
 					CIMPP::PU xcij; 	/*  Default: nullptr */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		GenICompensationForGenJ();
 		virtual ~GenICompensationForGenJ();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

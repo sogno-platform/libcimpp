@@ -20,14 +20,14 @@ namespace CIMPP {
 
 	public:
 					CIMPP::CurrentFlow value; 	/* Limit on current flow. Default: nullptr */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		CurrentLimit();
 		virtual ~CurrentLimit();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

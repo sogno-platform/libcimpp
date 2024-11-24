@@ -12,9 +12,6 @@ EquivalentShunt::EquivalentShunt() {};
 EquivalentShunt::~EquivalentShunt() {};
 
 
-
-
-
 bool assign_EquivalentShunt_b(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(EquivalentShunt* element = dynamic_cast<EquivalentShunt*>(BaseClass_ptr1)) {
                 buffer >> element->b;
@@ -38,6 +35,9 @@ bool assign_EquivalentShunt_g(std::stringstream &buffer, BaseClass* BaseClass_pt
         else
                 return false;
 }
+
+
+
 
 namespace CIMPP {
 	BaseClass* EquivalentShunt_factory() {
@@ -67,5 +67,3 @@ const BaseClassDefiner EquivalentShunt::declare()
 {
 	return BaseClassDefiner(EquivalentShunt::addConstructToMap, EquivalentShunt::addPrimitiveAssignFnsToMap, EquivalentShunt::addClassAssignFnsToMap, EquivalentShunt::debugName);
 }
-
-

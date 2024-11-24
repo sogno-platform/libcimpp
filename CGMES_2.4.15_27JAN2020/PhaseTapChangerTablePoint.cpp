@@ -12,18 +12,6 @@ PhaseTapChangerTablePoint::PhaseTapChangerTablePoint(): PhaseTapChangerTable(nul
 PhaseTapChangerTablePoint::~PhaseTapChangerTablePoint() {};
 
 
-bool assign_PhaseTapChangerTable_PhaseTapChangerTablePoint(BaseClass*, BaseClass*);
-bool assign_PhaseTapChangerTablePoint_PhaseTapChangerTable(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(PhaseTapChangerTablePoint* element = dynamic_cast<PhaseTapChangerTablePoint*>(BaseClass_ptr1)) {
-                element->PhaseTapChangerTable = dynamic_cast<PhaseTapChangerTable*>(BaseClass_ptr2);
-                if(element->PhaseTapChangerTable != nullptr)
-                        return assign_PhaseTapChangerTable_PhaseTapChangerTablePoint(BaseClass_ptr2, BaseClass_ptr1);
-        }
-        return false;
-}
-
-
-
 
 bool assign_PhaseTapChangerTablePoint_angle(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(PhaseTapChangerTablePoint* element = dynamic_cast<PhaseTapChangerTablePoint*>(BaseClass_ptr1)) {
@@ -36,6 +24,18 @@ bool assign_PhaseTapChangerTablePoint_angle(std::stringstream &buffer, BaseClass
         else
                 return false;
 }
+
+
+bool assign_PhaseTapChangerTable_PhaseTapChangerTablePoint(BaseClass*, BaseClass*);
+bool assign_PhaseTapChangerTablePoint_PhaseTapChangerTable(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(PhaseTapChangerTablePoint* element = dynamic_cast<PhaseTapChangerTablePoint*>(BaseClass_ptr1)) {
+                element->PhaseTapChangerTable = dynamic_cast<PhaseTapChangerTable*>(BaseClass_ptr2);
+                if(element->PhaseTapChangerTable != nullptr)
+                        return assign_PhaseTapChangerTable_PhaseTapChangerTablePoint(BaseClass_ptr2, BaseClass_ptr1);
+        }
+        return false;
+}
+
 
 namespace CIMPP {
 	BaseClass* PhaseTapChangerTablePoint_factory() {
@@ -65,5 +65,3 @@ const BaseClassDefiner PhaseTapChangerTablePoint::declare()
 {
 	return BaseClassDefiner(PhaseTapChangerTablePoint::addConstructToMap, PhaseTapChangerTablePoint::addPrimitiveAssignFnsToMap, PhaseTapChangerTablePoint::addClassAssignFnsToMap, PhaseTapChangerTablePoint::debugName);
 }
-
-

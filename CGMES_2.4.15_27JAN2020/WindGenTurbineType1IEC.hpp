@@ -20,14 +20,14 @@ class WindAeroConstIEC;
 
 	public:
 					CIMPP::WindAeroConstIEC* WindAeroConstIEC; 	/* Wind aerodynamic model associated with this wind turbine type 1 model. Default: 0 */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		WindGenTurbineType1IEC();
 		virtual ~WindGenTurbineType1IEC();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

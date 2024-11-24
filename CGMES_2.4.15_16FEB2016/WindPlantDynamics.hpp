@@ -22,14 +22,14 @@ class WindTurbineType3or4Dynamics;
 	public:
 					CIMPP::RemoteInputSignal* RemoteInputSignal; 	/* The wind plant using the remote signal. Default: 0 */
 					std::list<CIMPP::WindTurbineType3or4Dynamics*> WindTurbineType3or4Dynamics; 	/* The wind turbine type 3 or 4 associated with this wind plant. Default: 0 */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		WindPlantDynamics();
 		virtual ~WindPlantDynamics();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

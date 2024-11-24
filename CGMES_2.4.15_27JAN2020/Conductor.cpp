@@ -11,8 +11,6 @@ Conductor::Conductor() {};
 Conductor::~Conductor() {};
 
 
-
-
 bool assign_Conductor_length(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(Conductor* element = dynamic_cast<Conductor*>(BaseClass_ptr1)) {
                 buffer >> element->length;
@@ -24,6 +22,8 @@ bool assign_Conductor_length(std::stringstream &buffer, BaseClass* BaseClass_ptr
         else
                 return false;
 }
+
+
 
 namespace CIMPP {
 	BaseClass* Conductor_factory() {
@@ -52,5 +52,3 @@ const BaseClassDefiner Conductor::declare()
 {
 	return BaseClassDefiner(Conductor::addConstructToMap, Conductor::addPrimitiveAssignFnsToMap, Conductor::addClassAssignFnsToMap, Conductor::debugName);
 }
-
-

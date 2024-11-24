@@ -11,6 +11,8 @@ MeasurementValueSource::MeasurementValueSource() {};
 MeasurementValueSource::~MeasurementValueSource() {};
 
 
+
+
 bool assign_MeasurementValueSource_MeasurementValues(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(MeasurementValueSource* element = dynamic_cast<MeasurementValueSource*>(BaseClass_ptr1)) {
 		if(dynamic_cast<MeasurementValue*>(BaseClass_ptr2) != nullptr) {
@@ -20,8 +22,6 @@ bool assign_MeasurementValueSource_MeasurementValues(BaseClass* BaseClass_ptr1, 
 	}
 	return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* MeasurementValueSource_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner MeasurementValueSource::declare()
 {
 	return BaseClassDefiner(MeasurementValueSource::addConstructToMap, MeasurementValueSource::addPrimitiveAssignFnsToMap, MeasurementValueSource::addClassAssignFnsToMap, MeasurementValueSource::debugName);
 }
-
-

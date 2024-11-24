@@ -54,14 +54,14 @@ namespace CIMPP {
 					CIMPP::PU vtmax; 	/* Maximum terminal voltage input (Vtmax).  Determines the range of voltage dead band.  Typical Value = 1.05. Default: nullptr */
 					CIMPP::PU vtmin; 	/* Minimum terminal voltage input (Vtmin).  Determines the range of voltage dead band.  Typical Value = 0.95. Default: nullptr */
 					CIMPP::PU yp; 	/* Maximum output (Yp).  Minimum output = 0.  Typical Value = 1. Default: nullptr */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		ExcSK();
 		virtual ~ExcSK();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

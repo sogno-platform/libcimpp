@@ -13,19 +13,6 @@ SvPowerFlow::SvPowerFlow(): Terminal(nullptr) {};
 SvPowerFlow::~SvPowerFlow() {};
 
 
-bool assign_Terminal_SvPowerFlow(BaseClass*, BaseClass*);
-bool assign_SvPowerFlow_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(SvPowerFlow* element = dynamic_cast<SvPowerFlow*>(BaseClass_ptr1)) {
-                element->Terminal = dynamic_cast<Terminal*>(BaseClass_ptr2);
-                if(element->Terminal != nullptr)
-                        return assign_Terminal_SvPowerFlow(BaseClass_ptr2, BaseClass_ptr1);
-        }
-        return false;
-}
-
-
-
-
 
 bool assign_SvPowerFlow_p(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(SvPowerFlow* element = dynamic_cast<SvPowerFlow*>(BaseClass_ptr1)) {
@@ -50,6 +37,19 @@ bool assign_SvPowerFlow_q(std::stringstream &buffer, BaseClass* BaseClass_ptr1) 
         else
                 return false;
 }
+
+
+bool assign_Terminal_SvPowerFlow(BaseClass*, BaseClass*);
+bool assign_SvPowerFlow_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(SvPowerFlow* element = dynamic_cast<SvPowerFlow*>(BaseClass_ptr1)) {
+                element->Terminal = dynamic_cast<Terminal*>(BaseClass_ptr2);
+                if(element->Terminal != nullptr)
+                        return assign_Terminal_SvPowerFlow(BaseClass_ptr2, BaseClass_ptr1);
+        }
+        return false;
+}
+
+
 
 namespace CIMPP {
 	BaseClass* SvPowerFlow_factory() {
@@ -80,5 +80,3 @@ const BaseClassDefiner SvPowerFlow::declare()
 {
 	return BaseClassDefiner(SvPowerFlow::addConstructToMap, SvPowerFlow::addPrimitiveAssignFnsToMap, SvPowerFlow::addClassAssignFnsToMap, SvPowerFlow::debugName);
 }
-
-

@@ -11,6 +11,8 @@ DiagramStyle::DiagramStyle() {};
 DiagramStyle::~DiagramStyle() {};
 
 
+
+
 bool assign_DiagramStyle_Diagram(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(DiagramStyle* element = dynamic_cast<DiagramStyle*>(BaseClass_ptr1)) {
 		if(dynamic_cast<Diagram*>(BaseClass_ptr2) != nullptr) {
@@ -20,8 +22,6 @@ bool assign_DiagramStyle_Diagram(BaseClass* BaseClass_ptr1, BaseClass* BaseClass
 	}
 	return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* DiagramStyle_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner DiagramStyle::declare()
 {
 	return BaseClassDefiner(DiagramStyle::addConstructToMap, DiagramStyle::addPrimitiveAssignFnsToMap, DiagramStyle::addClassAssignFnsToMap, DiagramStyle::debugName);
 }
-
-

@@ -59,4 +59,3 @@ namespace CIMPP {
 		return lop;
 	}
 }
-

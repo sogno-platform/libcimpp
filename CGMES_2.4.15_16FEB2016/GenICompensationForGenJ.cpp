@@ -14,29 +14,6 @@ GenICompensationForGenJ::GenICompensationForGenJ(): SynchronousMachineDynamics(n
 GenICompensationForGenJ::~GenICompensationForGenJ() {};
 
 
-bool assign_SynchronousMachineDynamics_GenICompensationForGenJ(BaseClass*, BaseClass*);
-bool assign_GenICompensationForGenJ_SynchronousMachineDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(GenICompensationForGenJ* element = dynamic_cast<GenICompensationForGenJ*>(BaseClass_ptr1)) {
-                element->SynchronousMachineDynamics = dynamic_cast<SynchronousMachineDynamics*>(BaseClass_ptr2);
-                if(element->SynchronousMachineDynamics != nullptr)
-                        return assign_SynchronousMachineDynamics_GenICompensationForGenJ(BaseClass_ptr2, BaseClass_ptr1);
-        }
-        return false;
-}
-
-bool assign_VCompIEEEType2_GenICompensationForGenJ(BaseClass*, BaseClass*);
-bool assign_GenICompensationForGenJ_VcompIEEEType2(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(GenICompensationForGenJ* element = dynamic_cast<GenICompensationForGenJ*>(BaseClass_ptr1)) {
-                element->VcompIEEEType2 = dynamic_cast<VCompIEEEType2*>(BaseClass_ptr2);
-                if(element->VcompIEEEType2 != nullptr)
-                        return assign_VCompIEEEType2_GenICompensationForGenJ(BaseClass_ptr2, BaseClass_ptr1);
-        }
-        return false;
-}
-
-
-
-
 
 
 bool assign_GenICompensationForGenJ_rcij(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
@@ -62,6 +39,29 @@ bool assign_GenICompensationForGenJ_xcij(std::stringstream &buffer, BaseClass* B
         else
                 return false;
 }
+
+
+bool assign_SynchronousMachineDynamics_GenICompensationForGenJ(BaseClass*, BaseClass*);
+bool assign_GenICompensationForGenJ_SynchronousMachineDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(GenICompensationForGenJ* element = dynamic_cast<GenICompensationForGenJ*>(BaseClass_ptr1)) {
+                element->SynchronousMachineDynamics = dynamic_cast<SynchronousMachineDynamics*>(BaseClass_ptr2);
+                if(element->SynchronousMachineDynamics != nullptr)
+                        return assign_SynchronousMachineDynamics_GenICompensationForGenJ(BaseClass_ptr2, BaseClass_ptr1);
+        }
+        return false;
+}
+
+bool assign_VCompIEEEType2_GenICompensationForGenJ(BaseClass*, BaseClass*);
+bool assign_GenICompensationForGenJ_VcompIEEEType2(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(GenICompensationForGenJ* element = dynamic_cast<GenICompensationForGenJ*>(BaseClass_ptr1)) {
+                element->VcompIEEEType2 = dynamic_cast<VCompIEEEType2*>(BaseClass_ptr2);
+                if(element->VcompIEEEType2 != nullptr)
+                        return assign_VCompIEEEType2_GenICompensationForGenJ(BaseClass_ptr2, BaseClass_ptr1);
+        }
+        return false;
+}
+
+
 
 namespace CIMPP {
 	BaseClass* GenICompensationForGenJ_factory() {
@@ -93,5 +93,3 @@ const BaseClassDefiner GenICompensationForGenJ::declare()
 {
 	return BaseClassDefiner(GenICompensationForGenJ::addConstructToMap, GenICompensationForGenJ::addPrimitiveAssignFnsToMap, GenICompensationForGenJ::addClassAssignFnsToMap, GenICompensationForGenJ::debugName);
 }
-
-

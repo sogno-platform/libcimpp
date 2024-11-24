@@ -11,6 +11,8 @@ LoadGroup::LoadGroup(): SubLoadArea(nullptr) {};
 LoadGroup::~LoadGroup() {};
 
 
+
+
 bool assign_SubLoadArea_LoadGroups(BaseClass*, BaseClass*);
 bool assign_LoadGroup_SubLoadArea(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(LoadGroup* element = dynamic_cast<LoadGroup*>(BaseClass_ptr1)) {
@@ -20,8 +22,6 @@ bool assign_LoadGroup_SubLoadArea(BaseClass* BaseClass_ptr1, BaseClass* BaseClas
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* LoadGroup_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner LoadGroup::declare()
 {
 	return BaseClassDefiner(LoadGroup::addConstructToMap, LoadGroup::addPrimitiveAssignFnsToMap, LoadGroup::addClassAssignFnsToMap, LoadGroup::debugName);
 }
-
-

@@ -13,10 +13,6 @@ PhaseTapChangerLinear::PhaseTapChangerLinear() {};
 PhaseTapChangerLinear::~PhaseTapChangerLinear() {};
 
 
-
-
-
-
 bool assign_PhaseTapChangerLinear_stepPhaseShiftIncrement(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(PhaseTapChangerLinear* element = dynamic_cast<PhaseTapChangerLinear*>(BaseClass_ptr1)) {
                 buffer >> element->stepPhaseShiftIncrement;
@@ -53,6 +49,10 @@ bool assign_PhaseTapChangerLinear_xMin(std::stringstream &buffer, BaseClass* Bas
                 return false;
 }
 
+
+
+
+
 namespace CIMPP {
 	BaseClass* PhaseTapChangerLinear_factory() {
 		return new PhaseTapChangerLinear;
@@ -82,5 +82,3 @@ const BaseClassDefiner PhaseTapChangerLinear::declare()
 {
 	return BaseClassDefiner(PhaseTapChangerLinear::addConstructToMap, PhaseTapChangerLinear::addPrimitiveAssignFnsToMap, PhaseTapChangerLinear::addClassAssignFnsToMap, PhaseTapChangerLinear::debugName);
 }
-
-

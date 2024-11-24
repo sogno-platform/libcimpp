@@ -12,18 +12,6 @@ StringMeasurementValue::StringMeasurementValue(): StringMeasurement(nullptr) {};
 StringMeasurementValue::~StringMeasurementValue() {};
 
 
-bool assign_StringMeasurement_StringMeasurementValues(BaseClass*, BaseClass*);
-bool assign_StringMeasurementValue_StringMeasurement(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(StringMeasurementValue* element = dynamic_cast<StringMeasurementValue*>(BaseClass_ptr1)) {
-                element->StringMeasurement = dynamic_cast<StringMeasurement*>(BaseClass_ptr2);
-                if(element->StringMeasurement != nullptr)
-                        return assign_StringMeasurement_StringMeasurementValues(BaseClass_ptr2, BaseClass_ptr1);
-        }
-        return false;
-}
-
-
-
 
 bool assign_StringMeasurementValue_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(StringMeasurementValue* element = dynamic_cast<StringMeasurementValue*>(BaseClass_ptr1)) {
@@ -35,6 +23,18 @@ bool assign_StringMeasurementValue_value(std::stringstream &buffer, BaseClass* B
 	}
 	return false;
 }
+
+
+bool assign_StringMeasurement_StringMeasurementValues(BaseClass*, BaseClass*);
+bool assign_StringMeasurementValue_StringMeasurement(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(StringMeasurementValue* element = dynamic_cast<StringMeasurementValue*>(BaseClass_ptr1)) {
+                element->StringMeasurement = dynamic_cast<StringMeasurement*>(BaseClass_ptr2);
+                if(element->StringMeasurement != nullptr)
+                        return assign_StringMeasurement_StringMeasurementValues(BaseClass_ptr2, BaseClass_ptr1);
+        }
+        return false;
+}
+
 
 namespace CIMPP {
 	BaseClass* StringMeasurementValue_factory() {
@@ -64,5 +64,3 @@ const BaseClassDefiner StringMeasurementValue::declare()
 {
 	return BaseClassDefiner(StringMeasurementValue::addConstructToMap, StringMeasurementValue::addPrimitiveAssignFnsToMap, StringMeasurementValue::addClassAssignFnsToMap, StringMeasurementValue::debugName);
 }
-
-

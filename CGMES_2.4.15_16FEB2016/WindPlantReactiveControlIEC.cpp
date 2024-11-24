@@ -24,29 +24,6 @@ WindPlantReactiveControlIEC::WindPlantReactiveControlIEC(): WindPlantIEC(nullptr
 WindPlantReactiveControlIEC::~WindPlantReactiveControlIEC() {};
 
 
-bool assign_WindPlantReactiveControlIEC_WindPlantIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1)) {
-                element->WindPlantIEC = dynamic_cast<WindPlantIEC*>(BaseClass_ptr2);
-                if(element->WindPlantIEC != nullptr)
-                        return true;
-        }
-        return false;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 bool assign_WindPlantReactiveControlIEC_kiwpx(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1)) {
@@ -204,6 +181,29 @@ bool assign_WindPlantReactiveControlIEC_xrefmin(std::stringstream &buffer, BaseC
                 return false;
 }
 
+
+bool assign_WindPlantReactiveControlIEC_WindPlantIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1)) {
+                element->WindPlantIEC = dynamic_cast<WindPlantIEC*>(BaseClass_ptr2);
+                if(element->WindPlantIEC != nullptr)
+                        return true;
+        }
+        return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* WindPlantReactiveControlIEC_factory() {
 		return new WindPlantReactiveControlIEC;
@@ -244,5 +244,3 @@ const BaseClassDefiner WindPlantReactiveControlIEC::declare()
 {
 	return BaseClassDefiner(WindPlantReactiveControlIEC::addConstructToMap, WindPlantReactiveControlIEC::addPrimitiveAssignFnsToMap, WindPlantReactiveControlIEC::addClassAssignFnsToMap, WindPlantReactiveControlIEC::debugName);
 }
-
-

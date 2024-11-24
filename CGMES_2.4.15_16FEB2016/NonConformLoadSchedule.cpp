@@ -11,6 +11,8 @@ NonConformLoadSchedule::NonConformLoadSchedule(): NonConformLoadGroup(nullptr) {
 NonConformLoadSchedule::~NonConformLoadSchedule() {};
 
 
+
+
 bool assign_NonConformLoadGroup_NonConformLoadSchedules(BaseClass*, BaseClass*);
 bool assign_NonConformLoadSchedule_NonConformLoadGroup(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(NonConformLoadSchedule* element = dynamic_cast<NonConformLoadSchedule*>(BaseClass_ptr1)) {
@@ -20,8 +22,6 @@ bool assign_NonConformLoadSchedule_NonConformLoadGroup(BaseClass* BaseClass_ptr1
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* NonConformLoadSchedule_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner NonConformLoadSchedule::declare()
 {
 	return BaseClassDefiner(NonConformLoadSchedule::addConstructToMap, NonConformLoadSchedule::addPrimitiveAssignFnsToMap, NonConformLoadSchedule::addClassAssignFnsToMap, NonConformLoadSchedule::debugName);
 }
-
-

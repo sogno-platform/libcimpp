@@ -11,6 +11,8 @@ RaiseLowerCommand::RaiseLowerCommand(): ValueAliasSet(nullptr) {};
 RaiseLowerCommand::~RaiseLowerCommand() {};
 
 
+
+
 bool assign_ValueAliasSet_RaiseLowerCommands(BaseClass*, BaseClass*);
 bool assign_RaiseLowerCommand_ValueAliasSet(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(RaiseLowerCommand* element = dynamic_cast<RaiseLowerCommand*>(BaseClass_ptr1)) {
@@ -20,8 +22,6 @@ bool assign_RaiseLowerCommand_ValueAliasSet(BaseClass* BaseClass_ptr1, BaseClass
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* RaiseLowerCommand_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner RaiseLowerCommand::declare()
 {
 	return BaseClassDefiner(RaiseLowerCommand::addConstructToMap, RaiseLowerCommand::addPrimitiveAssignFnsToMap, RaiseLowerCommand::addClassAssignFnsToMap, RaiseLowerCommand::debugName);
 }
-
-

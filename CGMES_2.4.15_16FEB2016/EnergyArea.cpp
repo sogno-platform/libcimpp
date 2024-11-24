@@ -11,6 +11,8 @@ EnergyArea::EnergyArea(): ControlArea(nullptr) {};
 EnergyArea::~EnergyArea() {};
 
 
+
+
 bool assign_EnergyArea_ControlArea(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(EnergyArea* element = dynamic_cast<EnergyArea*>(BaseClass_ptr1)) {
                 element->ControlArea = dynamic_cast<ControlArea*>(BaseClass_ptr2);
@@ -19,8 +21,6 @@ bool assign_EnergyArea_ControlArea(BaseClass* BaseClass_ptr1, BaseClass* BaseCla
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* EnergyArea_factory() {
@@ -49,5 +49,3 @@ const BaseClassDefiner EnergyArea::declare()
 {
 	return BaseClassDefiner(EnergyArea::addConstructToMap, EnergyArea::addPrimitiveAssignFnsToMap, EnergyArea::addClassAssignFnsToMap, EnergyArea::debugName);
 }
-
-

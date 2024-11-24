@@ -3,8 +3,8 @@
 #include "SubGeographicalRegion.hpp"
 
 #include "DCLine.hpp"
-#include "GeographicalRegion.hpp"
 #include "Line.hpp"
+#include "GeographicalRegion.hpp"
 #include "Substation.hpp"
 
 using namespace CIMPP;
@@ -14,10 +14,25 @@ SubGeographicalRegion::SubGeographicalRegion(): Region(nullptr) {};
 SubGeographicalRegion::~SubGeographicalRegion() {};
 
 
+
+
+
+
+
 bool assign_SubGeographicalRegion_DCLines(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(SubGeographicalRegion* element = dynamic_cast<SubGeographicalRegion*>(BaseClass_ptr1)) {
 		if(dynamic_cast<DCLine*>(BaseClass_ptr2) != nullptr) {
                         element->DCLines.push_back(dynamic_cast<DCLine*>(BaseClass_ptr2));
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_SubGeographicalRegion_Lines(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(SubGeographicalRegion* element = dynamic_cast<SubGeographicalRegion*>(BaseClass_ptr1)) {
+		if(dynamic_cast<Line*>(BaseClass_ptr2) != nullptr) {
+                        element->Lines.push_back(dynamic_cast<Line*>(BaseClass_ptr2));
 			return true;
 		}
 	}
@@ -34,16 +49,6 @@ bool assign_SubGeographicalRegion_Region(BaseClass* BaseClass_ptr1, BaseClass* B
         return false;
 }
 
-bool assign_SubGeographicalRegion_Lines(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(SubGeographicalRegion* element = dynamic_cast<SubGeographicalRegion*>(BaseClass_ptr1)) {
-		if(dynamic_cast<Line*>(BaseClass_ptr2) != nullptr) {
-                        element->Lines.push_back(dynamic_cast<Line*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
-
 bool assign_SubGeographicalRegion_Substations(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(SubGeographicalRegion* element = dynamic_cast<SubGeographicalRegion*>(BaseClass_ptr1)) {
 		if(dynamic_cast<Substation*>(BaseClass_ptr2) != nullptr) {
@@ -53,11 +58,6 @@ bool assign_SubGeographicalRegion_Substations(BaseClass* BaseClass_ptr1, BaseCla
 	}
 	return false;
 }
-
-
-
-
-
 
 namespace CIMPP {
 	BaseClass* SubGeographicalRegion_factory() {
@@ -74,8 +74,8 @@ void SubGeographicalRegion::addPrimitiveAssignFnsToMap(std::unordered_map<std::s
 
 void SubGeographicalRegion::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
 	assign_map.insert(std::make_pair(std::string("cim:SubGeographicalRegion.DCLines"), &assign_SubGeographicalRegion_DCLines));
-	assign_map.insert(std::make_pair(std::string("cim:SubGeographicalRegion.Region"), &assign_SubGeographicalRegion_Region));
 	assign_map.insert(std::make_pair(std::string("cim:SubGeographicalRegion.Lines"), &assign_SubGeographicalRegion_Lines));
+	assign_map.insert(std::make_pair(std::string("cim:SubGeographicalRegion.Region"), &assign_SubGeographicalRegion_Region));
 	assign_map.insert(std::make_pair(std::string("cim:SubGeographicalRegion.Substations"), &assign_SubGeographicalRegion_Substations));
 }
 
@@ -89,5 +89,3 @@ const BaseClassDefiner SubGeographicalRegion::declare()
 {
 	return BaseClassDefiner(SubGeographicalRegion::addConstructToMap, SubGeographicalRegion::addPrimitiveAssignFnsToMap, SubGeographicalRegion::addClassAssignFnsToMap, SubGeographicalRegion::debugName);
 }
-
-

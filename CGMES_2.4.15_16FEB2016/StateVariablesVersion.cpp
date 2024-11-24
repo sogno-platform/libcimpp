@@ -15,28 +15,9 @@
 
 using namespace CIMPP;
 
-StateVariablesVersion::StateVariablesVersion(): date(nullptr) {};
+StateVariablesVersion::StateVariablesVersion() {};
 
 StateVariablesVersion::~StateVariablesVersion() {};
-
-
-
-
-bool assign_StateVariablesVersion_date(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(StateVariablesVersion* element = dynamic_cast<StateVariablesVersion*>(BaseClass_ptr1)) {
-                element->date = dynamic_cast<Date*>(BaseClass_ptr2);
-                if(element->date != nullptr)
-                        return true;
-        }
-        return false;
-}
-
-
-
-
-
-
-
 
 
 bool assign_StateVariablesVersion_baseUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
@@ -61,6 +42,17 @@ bool assign_StateVariablesVersion_baseURI(std::stringstream &buffer, BaseClass* 
 	return false;
 }
 
+bool assign_StateVariablesVersion_date(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
+	if(StateVariablesVersion* element = dynamic_cast<StateVariablesVersion*>(BaseClass_ptr1)) {
+                buffer >> element->date;
+                if(buffer.fail())
+                        return false;
+                else
+                        return true;
+        }
+        else
+                return false;
+}
 
 bool assign_StateVariablesVersion_differenceModelURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(StateVariablesVersion* element = dynamic_cast<StateVariablesVersion*>(BaseClass_ptr1)) {
@@ -139,6 +131,17 @@ bool assign_StateVariablesVersion_shortName(std::stringstream &buffer, BaseClass
 	return false;
 }
 
+
+
+
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* StateVariablesVersion_factory() {
 		return new StateVariablesVersion;
@@ -152,7 +155,8 @@ void StateVariablesVersion::addConstructToMap(std::unordered_map<std::string, Ba
 void StateVariablesVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
 	assign_map.insert(std::make_pair(std::string("cim:StateVariablesVersion.baseUML"), &assign_StateVariablesVersion_baseUML));
 	assign_map.insert(std::make_pair(std::string("cim:StateVariablesVersion.baseURI"), &assign_StateVariablesVersion_baseURI));
-		assign_map.insert(std::make_pair(std::string("cim:StateVariablesVersion.differenceModelURI"), &assign_StateVariablesVersion_differenceModelURI));
+	assign_map.insert(std::make_pair(std::string("cim:StateVariablesVersion.date"), &assign_StateVariablesVersion_date));
+	assign_map.insert(std::make_pair(std::string("cim:StateVariablesVersion.differenceModelURI"), &assign_StateVariablesVersion_differenceModelURI));
 	assign_map.insert(std::make_pair(std::string("cim:StateVariablesVersion.entsoeUML"), &assign_StateVariablesVersion_entsoeUML));
 	assign_map.insert(std::make_pair(std::string("cim:StateVariablesVersion.entsoeURI"), &assign_StateVariablesVersion_entsoeURI));
 	assign_map.insert(std::make_pair(std::string("cim:StateVariablesVersion.modelDescriptionURI"), &assign_StateVariablesVersion_modelDescriptionURI));
@@ -162,8 +166,7 @@ void StateVariablesVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std::s
 }
 
 void StateVariablesVersion::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-			assign_map.insert(std::make_pair(std::string("cim:StateVariablesVersion.date"), &assign_StateVariablesVersion_date));
-							}
+										}
 
 const char StateVariablesVersion::debugName[] = "StateVariablesVersion";
 const char* StateVariablesVersion::debugString()
@@ -175,5 +178,3 @@ const BaseClassDefiner StateVariablesVersion::declare()
 {
 	return BaseClassDefiner(StateVariablesVersion::addConstructToMap, StateVariablesVersion::addPrimitiveAssignFnsToMap, StateVariablesVersion::addClassAssignFnsToMap, StateVariablesVersion::debugName);
 }
-
-

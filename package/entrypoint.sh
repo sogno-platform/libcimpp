@@ -1,7 +1,7 @@
 #!/bin/sh
 
 cd /github/workspace
-git submodule update --init
+rm -r build
 mkdir build
 cd build
 cmake -DBUILD_SHARED_LIBS=ON ..

@@ -11,8 +11,6 @@ ActivePowerLimit::ActivePowerLimit() {};
 ActivePowerLimit::~ActivePowerLimit() {};
 
 
-
-
 bool assign_ActivePowerLimit_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(ActivePowerLimit* element = dynamic_cast<ActivePowerLimit*>(BaseClass_ptr1)) {
                 buffer >> element->value;
@@ -24,6 +22,8 @@ bool assign_ActivePowerLimit_value(std::stringstream &buffer, BaseClass* BaseCla
         else
                 return false;
 }
+
+
 
 namespace CIMPP {
 	BaseClass* ActivePowerLimit_factory() {
@@ -52,5 +52,3 @@ const BaseClassDefiner ActivePowerLimit::declare()
 {
 	return BaseClassDefiner(ActivePowerLimit::addConstructToMap, ActivePowerLimit::addPrimitiveAssignFnsToMap, ActivePowerLimit::addClassAssignFnsToMap, ActivePowerLimit::debugName);
 }
-
-

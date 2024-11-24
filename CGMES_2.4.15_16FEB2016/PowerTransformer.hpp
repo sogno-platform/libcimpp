@@ -30,14 +30,14 @@ class PowerTransformerEnd;
 					CIMPP::Voltage highSideMinOperatingU; 	/* The minimum operating voltage (uQmin in the IEC 60909-0) at the high voltage side (Q side) of the unit transformer of the power station unit. A value well established from long-term operating experience of the system. It is used for calculation of the impedance correction factor KG defined in IEC 60909-0 Default: nullptr */
 					CIMPP::Boolean isPartOfGeneratorUnit; 	/* Indicates whether the machine is part of a power station unit. Used for short circuit data exchange according to IEC 60909 Default: false */
 					CIMPP::Boolean operationalValuesConsidered; 	/* It is used to define if the data (other attributes related to short circuit data exchange) defines long term operational conditions or not. Used for short circuit data exchange according to IEC 60909. Default: false */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		PowerTransformer();
 		virtual ~PowerTransformer();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

@@ -22,14 +22,14 @@ class TopologicalNode;
 	public:
 					std::list<CIMPP::ConnectivityNode*> ConnectivityNodes; 	/* Connectivity nodes which belong to this connectivity node container. Default: 0 */
 					std::list<CIMPP::TopologicalNode*> TopologicalNode; 	/* The topological nodes which belong to this connectivity node container. Default: 0 */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		ConnectivityNodeContainer();
 		virtual ~ConnectivityNodeContainer();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

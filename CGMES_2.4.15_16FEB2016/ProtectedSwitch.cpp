@@ -37,5 +37,3 @@ const BaseClassDefiner ProtectedSwitch::declare()
 {
 	return BaseClassDefiner(ProtectedSwitch::addConstructToMap, ProtectedSwitch::addPrimitiveAssignFnsToMap, ProtectedSwitch::addClassAssignFnsToMap, ProtectedSwitch::debugName);
 }
-
-

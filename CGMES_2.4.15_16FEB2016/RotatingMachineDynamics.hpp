@@ -27,14 +27,14 @@ namespace CIMPP {
 					CIMPP::Simple_Float saturationFactor120; 	/* Saturation factor at 120% of rated terminal voltage (S12) (&gt; or =S1). Not used by the simplified model, defined by S(E2) in the SynchronousMachineSaturationParameters diagram.  Typical Value = 0.12. Default: nullptr */
 					CIMPP::PU statorLeakageReactance; 	/* Stator leakage reactance (Xl) (&gt; or =0). Typical Value = 0.15. Default: nullptr */
 					CIMPP::PU statorResistance; 	/* Stator (armature) resistance (Rs) (&gt; or =0). Typical Value = 0.005. Default: nullptr */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		RotatingMachineDynamics();
 		virtual ~RotatingMachineDynamics();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

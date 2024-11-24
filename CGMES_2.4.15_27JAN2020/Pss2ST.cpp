@@ -6,18 +6,18 @@
 #include "InputSignalKind.hpp"
 #include "PU.hpp"
 #include "PU.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
 #include "PU.hpp"
 #include "PU.hpp"
+#include "Seconds.hpp"
+#include "Seconds.hpp"
+#include "Seconds.hpp"
+#include "Seconds.hpp"
+#include "Seconds.hpp"
+#include "Seconds.hpp"
+#include "Seconds.hpp"
+#include "Seconds.hpp"
+#include "Seconds.hpp"
+#include "Seconds.hpp"
 #include "PU.hpp"
 #include "PU.hpp"
 
@@ -26,25 +26,6 @@ using namespace CIMPP;
 Pss2ST::Pss2ST() {};
 
 Pss2ST::~Pss2ST() {};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 bool assign_Pss2ST_inputSignal1Type(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
@@ -95,9 +76,45 @@ bool assign_Pss2ST_k2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
                 return false;
 }
 
+bool assign_Pss2ST_lsmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
+	if(Pss2ST* element = dynamic_cast<Pss2ST*>(BaseClass_ptr1)) {
+                buffer >> element->lsmax;
+                if(buffer.fail())
+                        return false;
+                else
+                        return true;
+        }
+        else
+                return false;
+}
+
+bool assign_Pss2ST_lsmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
+	if(Pss2ST* element = dynamic_cast<Pss2ST*>(BaseClass_ptr1)) {
+                buffer >> element->lsmin;
+                if(buffer.fail())
+                        return false;
+                else
+                        return true;
+        }
+        else
+                return false;
+}
+
 bool assign_Pss2ST_t1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(Pss2ST* element = dynamic_cast<Pss2ST*>(BaseClass_ptr1)) {
                 buffer >> element->t1;
+                if(buffer.fail())
+                        return false;
+                else
+                        return true;
+        }
+        else
+                return false;
+}
+
+bool assign_Pss2ST_t10(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
+	if(Pss2ST* element = dynamic_cast<Pss2ST*>(BaseClass_ptr1)) {
+                buffer >> element->t10;
                 if(buffer.fail())
                         return false;
                 else
@@ -203,33 +220,9 @@ bool assign_Pss2ST_t9(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
                 return false;
 }
 
-bool assign_Pss2ST_t10(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
+bool assign_Pss2ST_vcl(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(Pss2ST* element = dynamic_cast<Pss2ST*>(BaseClass_ptr1)) {
-                buffer >> element->t10;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_Pss2ST_lsmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(Pss2ST* element = dynamic_cast<Pss2ST*>(BaseClass_ptr1)) {
-                buffer >> element->lsmax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_Pss2ST_lsmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(Pss2ST* element = dynamic_cast<Pss2ST*>(BaseClass_ptr1)) {
-                buffer >> element->lsmin;
+                buffer >> element->vcl;
                 if(buffer.fail())
                         return false;
                 else
@@ -251,17 +244,24 @@ bool assign_Pss2ST_vcu(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
                 return false;
 }
 
-bool assign_Pss2ST_vcl(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(Pss2ST* element = dynamic_cast<Pss2ST*>(BaseClass_ptr1)) {
-                buffer >> element->vcl;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 namespace CIMPP {
 	BaseClass* Pss2ST_factory() {
@@ -278,7 +278,10 @@ void Pss2ST::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_f
 	assign_map.insert(std::make_pair(std::string("cim:Pss2ST.inputSignal2Type"), &assign_Pss2ST_inputSignal2Type));
 	assign_map.insert(std::make_pair(std::string("cim:Pss2ST.k1"), &assign_Pss2ST_k1));
 	assign_map.insert(std::make_pair(std::string("cim:Pss2ST.k2"), &assign_Pss2ST_k2));
+	assign_map.insert(std::make_pair(std::string("cim:Pss2ST.lsmax"), &assign_Pss2ST_lsmax));
+	assign_map.insert(std::make_pair(std::string("cim:Pss2ST.lsmin"), &assign_Pss2ST_lsmin));
 	assign_map.insert(std::make_pair(std::string("cim:Pss2ST.t1"), &assign_Pss2ST_t1));
+	assign_map.insert(std::make_pair(std::string("cim:Pss2ST.t10"), &assign_Pss2ST_t10));
 	assign_map.insert(std::make_pair(std::string("cim:Pss2ST.t2"), &assign_Pss2ST_t2));
 	assign_map.insert(std::make_pair(std::string("cim:Pss2ST.t3"), &assign_Pss2ST_t3));
 	assign_map.insert(std::make_pair(std::string("cim:Pss2ST.t4"), &assign_Pss2ST_t4));
@@ -287,11 +290,8 @@ void Pss2ST::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_f
 	assign_map.insert(std::make_pair(std::string("cim:Pss2ST.t7"), &assign_Pss2ST_t7));
 	assign_map.insert(std::make_pair(std::string("cim:Pss2ST.t8"), &assign_Pss2ST_t8));
 	assign_map.insert(std::make_pair(std::string("cim:Pss2ST.t9"), &assign_Pss2ST_t9));
-	assign_map.insert(std::make_pair(std::string("cim:Pss2ST.t10"), &assign_Pss2ST_t10));
-	assign_map.insert(std::make_pair(std::string("cim:Pss2ST.lsmax"), &assign_Pss2ST_lsmax));
-	assign_map.insert(std::make_pair(std::string("cim:Pss2ST.lsmin"), &assign_Pss2ST_lsmin));
-	assign_map.insert(std::make_pair(std::string("cim:Pss2ST.vcu"), &assign_Pss2ST_vcu));
 	assign_map.insert(std::make_pair(std::string("cim:Pss2ST.vcl"), &assign_Pss2ST_vcl));
+	assign_map.insert(std::make_pair(std::string("cim:Pss2ST.vcu"), &assign_Pss2ST_vcu));
 }
 
 void Pss2ST::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
@@ -307,5 +307,3 @@ const BaseClassDefiner Pss2ST::declare()
 {
 	return BaseClassDefiner(Pss2ST::addConstructToMap, Pss2ST::addPrimitiveAssignFnsToMap, Pss2ST::addClassAssignFnsToMap, Pss2ST::debugName);
 }
-
-

@@ -13,6 +13,21 @@ AccumulatorValue::AccumulatorValue(): Accumulator(nullptr), AccumulatorReset(nul
 AccumulatorValue::~AccumulatorValue() {};
 
 
+
+
+bool assign_AccumulatorValue_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
+	if(AccumulatorValue* element = dynamic_cast<AccumulatorValue*>(BaseClass_ptr1)) {
+                buffer >> element->value;
+                if(buffer.fail())
+                        return false;
+                else
+                        return true;
+        }
+        else
+                return false;
+}
+
+
 bool assign_Accumulator_AccumulatorValues(BaseClass*, BaseClass*);
 bool assign_AccumulatorValue_Accumulator(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(AccumulatorValue* element = dynamic_cast<AccumulatorValue*>(BaseClass_ptr1)) {
@@ -32,21 +47,6 @@ bool assign_AccumulatorValue_AccumulatorReset(BaseClass* BaseClass_ptr1, BaseCla
         return false;
 }
 
-
-
-
-
-bool assign_AccumulatorValue_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(AccumulatorValue* element = dynamic_cast<AccumulatorValue*>(BaseClass_ptr1)) {
-                buffer >> element->value;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
 
 namespace CIMPP {
 	BaseClass* AccumulatorValue_factory() {
@@ -77,5 +77,3 @@ const BaseClassDefiner AccumulatorValue::declare()
 {
 	return BaseClassDefiner(AccumulatorValue::addConstructToMap, AccumulatorValue::addPrimitiveAssignFnsToMap, AccumulatorValue::addClassAssignFnsToMap, AccumulatorValue::debugName);
 }
-
-

@@ -11,8 +11,6 @@ LimitSet::LimitSet() {};
 LimitSet::~LimitSet() {};
 
 
-
-
 bool assign_LimitSet_isPercentageLimits(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(LimitSet* element = dynamic_cast<LimitSet*>(BaseClass_ptr1)) {
                 buffer >> element->isPercentageLimits;
@@ -24,6 +22,8 @@ bool assign_LimitSet_isPercentageLimits(std::stringstream &buffer, BaseClass* Ba
         else
                 return false;
 }
+
+
 
 namespace CIMPP {
 	BaseClass* LimitSet_factory() {
@@ -52,5 +52,3 @@ const BaseClassDefiner LimitSet::declare()
 {
 	return BaseClassDefiner(LimitSet::addConstructToMap, LimitSet::addPrimitiveAssignFnsToMap, LimitSet::addClassAssignFnsToMap, LimitSet::debugName);
 }
-
-

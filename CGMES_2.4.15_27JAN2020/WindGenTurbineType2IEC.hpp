@@ -22,14 +22,14 @@ class WindPitchContEmulIEC;
 	public:
 					CIMPP::WindContRotorRIEC* WindContRotorRIEC; 	/* Wind control rotor resistance model associated with wind turbine type 2 model. Default: 0 */
 					CIMPP::WindPitchContEmulIEC* WindPitchContEmulIEC; 	/* Pitch control emulator model associated with this wind turbine type 2 model. Default: 0 */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		WindGenTurbineType2IEC();
 		virtual ~WindGenTurbineType2IEC();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

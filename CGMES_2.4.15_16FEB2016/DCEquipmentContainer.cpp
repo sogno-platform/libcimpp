@@ -12,6 +12,9 @@ DCEquipmentContainer::DCEquipmentContainer() {};
 DCEquipmentContainer::~DCEquipmentContainer() {};
 
 
+
+
+
 bool assign_DCEquipmentContainer_DCNodes(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(DCEquipmentContainer* element = dynamic_cast<DCEquipmentContainer*>(BaseClass_ptr1)) {
 		if(dynamic_cast<DCNode*>(BaseClass_ptr2) != nullptr) {
@@ -31,9 +34,6 @@ bool assign_DCEquipmentContainer_DCTopologicalNode(BaseClass* BaseClass_ptr1, Ba
 	}
 	return false;
 }
-
-
-
 
 namespace CIMPP {
 	BaseClass* DCEquipmentContainer_factory() {
@@ -63,5 +63,3 @@ const BaseClassDefiner DCEquipmentContainer::declare()
 {
 	return BaseClassDefiner(DCEquipmentContainer::addConstructToMap, DCEquipmentContainer::addPrimitiveAssignFnsToMap, DCEquipmentContainer::addClassAssignFnsToMap, DCEquipmentContainer::debugName);
 }
-
-

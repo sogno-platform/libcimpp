@@ -11,8 +11,6 @@ BusbarSection::BusbarSection() {};
 BusbarSection::~BusbarSection() {};
 
 
-
-
 bool assign_BusbarSection_ipMax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(BusbarSection* element = dynamic_cast<BusbarSection*>(BaseClass_ptr1)) {
                 buffer >> element->ipMax;
@@ -24,6 +22,8 @@ bool assign_BusbarSection_ipMax(std::stringstream &buffer, BaseClass* BaseClass_
         else
                 return false;
 }
+
+
 
 namespace CIMPP {
 	BaseClass* BusbarSection_factory() {
@@ -52,5 +52,3 @@ const BaseClassDefiner BusbarSection::declare()
 {
 	return BaseClassDefiner(BusbarSection::addConstructToMap, BusbarSection::addPrimitiveAssignFnsToMap, BusbarSection::addClassAssignFnsToMap, BusbarSection::debugName);
 }
-
-

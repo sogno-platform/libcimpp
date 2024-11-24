@@ -27,14 +27,14 @@ namespace CIMPP {
 					CIMPP::Simple_Float ratio; 	/* The voltage ratio in per unit. Hence this is a value close to one. Default: nullptr */
 					CIMPP::Integer step; 	/* The tap step. Default: 0 */
 					CIMPP::PerCent x; 	/* The series reactance deviation in percent of nominal value. The actual reactance is calculated as follows: calculated reactance = x(nominal) * (1 + x(from this class)/100).   The x(nominal) is defined as the static series reactance on the associated power transformer end or ends.  This model assumes the star impedance (pi model) form. Default: nullptr */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		TapChangerTablePoint();
 		virtual ~TapChangerTablePoint();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

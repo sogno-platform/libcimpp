@@ -7,9 +7,9 @@
 #include "Float.hpp"
 
 
+#include "Boolean.hpp"
 #include "PU.hpp"
 #include "Simple_Float.hpp"
-#include "Boolean.hpp"
 
 namespace CIMPP {
 
@@ -21,21 +21,21 @@ namespace CIMPP {
 	{
 
 	public:
-					CIMPP::PU pfref; 	/* Power factor reference (). Default: nullptr */
-					CIMPP::PU vref; 	/* Voltage regulator reference (). Default: nullptr */
-					CIMPP::PU vclmt; 	/* Maximum output of the pf controller ().  Typical Value = 0.1. Default: nullptr */
-					CIMPP::PU kp; 	/* Proportional gain of the pf controller ().  Typical Value = 1. Default: nullptr */
-					CIMPP::PU ki; 	/* Integral gain of the pf controller ().  Typical Value = 1. Default: nullptr */
-					CIMPP::Simple_Float vs; 	/* Generator sensing voltage (). Default: nullptr */
 					CIMPP::Boolean exlon; 	/* Overexcitation or under excitation flag () true = 1 (not in the overexcitation or underexcitation state, integral action is active) false = 0 (in the overexcitation or underexcitation state, so integral action is disabled to allow the limiter to play its role). Default: false */
-				
+					CIMPP::PU ki; 	/* Integral gain of the pf controller ().  Typical Value = 1. Default: nullptr */
+					CIMPP::PU kp; 	/* Proportional gain of the pf controller ().  Typical Value = 1. Default: nullptr */
+					CIMPP::PU pfref; 	/* Power factor reference (). Default: nullptr */
+					CIMPP::PU vclmt; 	/* Maximum output of the pf controller ().  Typical Value = 0.1. Default: nullptr */
+					CIMPP::PU vref; 	/* Voltage regulator reference (). Default: nullptr */
+					CIMPP::Simple_Float vs; 	/* Generator sensing voltage (). Default: nullptr */
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		PFVArType2IEEEPFController();
 		virtual ~PFVArType2IEEEPFController();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);
