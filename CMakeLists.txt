@@ -4,6 +4,12 @@ project(libcimpp CXX)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake/" "${CMAKE_CURRENT_SOURCE_DIR}/../../cmake")
 
+if(NOT USE_CIM_VERSION)
+  set(USE_CIM_VERSION "CGMES_2.4.15_27JAN2020" CACHE STRING "Define CIM Version")
+endif()
+
+message(STATUS "Building ${PROJECT_NAME} with USE_CIM_VERSION=${USE_CIM_VERSION}")
+
 if(USE_CIM_VERSION STREQUAL "CGMES_2.4.15_27JAN2020")
   set(CGMES_BUILD ON)
   set(CIM_NAME "CGMES 2_4_15 27_01_2020")
@@ -28,14 +34,7 @@ if(CIMPP_BUILD_DOC)
   add_subdirectory(doc)
 endif()
 
-add_subdirectory(thirdparty)
-
-if(NOT USE_CIM_VERSION)
-	set(USE_CIM_VERSION "CGMES_2.4.15_27JAN2020" CACHE STRING "Define CIM Version")
-endif()
-
-message(STATUS "Building ${PROJECT_NAME} with USE_CIM_VERSION=${USE_CIM_VERSION}")
-
+add_subdirectory(arabica)
 
 # Uncomment this if you are developing on CIMgen and want to generate CIM c++
 #if(CGMES_BUILD)
@@ -57,16 +56,10 @@ include(GNUInstallDirs)
 install(TARGETS ${PROJECT_NAME}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}/static
+    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
 
-file(GLOB HEADERS "src/*.h" "src/*.hpp")
-install(FILES ${HEADERS}
-    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/cimpp/${USE_CIM_VERSION}
-    COMPONENT devel
-)
-
-install(DIRECTORY ${USE_CIM_VERSION}
+install(DIRECTORY ${USE_CIM_VERSION} src
     DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/cimpp
     COMPONENT devel
     FILES_MATCHING
@@ -87,4 +80,4 @@ endif()
 include(FeatureSummary)
 feature_summary(WHAT ALL VAR enabledFeaturesText)
 message(STATUS "${enabledFeaturesText}")
-message(STATUS "Building CIMpp with USE_CIM_VERSION=${USE_CIM_VERSION}")
+message(STATUS "Building ${PROJECT_NAME} with USE_CIM_VERSION=${USE_CIM_VERSION}")
