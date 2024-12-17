@@ -21,7 +21,7 @@ bool assign_Season_endDate(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
 {
 	if (Season* element = dynamic_cast<Season*>(BaseClass_ptr1))
 	{
-		buffer >> element->endDate;
+		element->endDate = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -34,7 +34,7 @@ bool assign_Season_startDate(std::stringstream &buffer, BaseClass* BaseClass_ptr
 {
 	if (Season* element = dynamic_cast<Season*>(BaseClass_ptr1))
 	{
-		buffer >> element->startDate;
+		element->startDate = buffer.str();
 		if (buffer.fail())
 			return false;
 		else

@@ -119,7 +119,7 @@ bool assign_ShuntCompensator_switchOnDate(std::stringstream &buffer, BaseClass* 
 {
 	if (ShuntCompensator* element = dynamic_cast<ShuntCompensator*>(BaseClass_ptr1))
 	{
-		buffer >> element->switchOnDate;
+		element->switchOnDate = buffer.str();
 		if (buffer.fail())
 			return false;
 		else

@@ -36,7 +36,7 @@ bool assign_PositionPoint_xPosition(std::stringstream &buffer, BaseClass* BaseCl
 {
 	if (PositionPoint* element = dynamic_cast<PositionPoint*>(BaseClass_ptr1))
 	{
-		buffer >> element->xPosition;
+		element->xPosition = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -49,7 +49,7 @@ bool assign_PositionPoint_yPosition(std::stringstream &buffer, BaseClass* BaseCl
 {
 	if (PositionPoint* element = dynamic_cast<PositionPoint*>(BaseClass_ptr1))
 	{
-		buffer >> element->yPosition;
+		element->yPosition = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -62,7 +62,7 @@ bool assign_PositionPoint_zPosition(std::stringstream &buffer, BaseClass* BaseCl
 {
 	if (PositionPoint* element = dynamic_cast<PositionPoint*>(BaseClass_ptr1))
 	{
-		buffer >> element->zPosition;
+		element->zPosition = buffer.str();
 		if (buffer.fail())
 			return false;
 		else

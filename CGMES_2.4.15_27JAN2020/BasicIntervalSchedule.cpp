@@ -20,7 +20,7 @@ bool assign_BasicIntervalSchedule_startTime(std::stringstream &buffer, BaseClass
 {
 	if (BasicIntervalSchedule* element = dynamic_cast<BasicIntervalSchedule*>(BaseClass_ptr1))
 	{
-		buffer >> element->startTime;
+		element->startTime = buffer.str();
 		if (buffer.fail())
 			return false;
 		else

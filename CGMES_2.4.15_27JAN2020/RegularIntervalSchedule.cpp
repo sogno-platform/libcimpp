@@ -21,7 +21,7 @@ bool assign_RegularIntervalSchedule_endTime(std::stringstream &buffer, BaseClass
 {
 	if (RegularIntervalSchedule* element = dynamic_cast<RegularIntervalSchedule*>(BaseClass_ptr1))
 	{
-		buffer >> element->endTime;
+		element->endTime = buffer.str();
 		if (buffer.fail())
 			return false;
 		else

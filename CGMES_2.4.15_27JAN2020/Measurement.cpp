@@ -25,7 +25,7 @@ bool assign_Measurement_measurementType(std::stringstream &buffer, BaseClass* Ba
 {
 	if (Measurement* element = dynamic_cast<Measurement*>(BaseClass_ptr1))
 	{
-		buffer >> element->measurementType;
+		element->measurementType = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
