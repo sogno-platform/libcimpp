@@ -31,7 +31,7 @@ bool assign_EquipmentVersion_baseUML(std::stringstream &buffer, BaseClass* BaseC
 {
 	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->baseUML;
+		element->baseUML = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -44,7 +44,7 @@ bool assign_EquipmentVersion_baseURIcore(std::stringstream &buffer, BaseClass* B
 {
 	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->baseURIcore;
+		element->baseURIcore = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -57,7 +57,7 @@ bool assign_EquipmentVersion_baseURIoperation(std::stringstream &buffer, BaseCla
 {
 	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->baseURIoperation;
+		element->baseURIoperation = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -70,7 +70,7 @@ bool assign_EquipmentVersion_baseURIshortCircuit(std::stringstream &buffer, Base
 {
 	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->baseURIshortCircuit;
+		element->baseURIshortCircuit = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -83,7 +83,7 @@ bool assign_EquipmentVersion_date(std::stringstream &buffer, BaseClass* BaseClas
 {
 	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->date;
+		element->date = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -96,7 +96,7 @@ bool assign_EquipmentVersion_differenceModelURI(std::stringstream &buffer, BaseC
 {
 	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->differenceModelURI;
+		element->differenceModelURI = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -109,7 +109,7 @@ bool assign_EquipmentVersion_entsoeUML(std::stringstream &buffer, BaseClass* Bas
 {
 	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->entsoeUML;
+		element->entsoeUML = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -122,7 +122,7 @@ bool assign_EquipmentVersion_entsoeURIcore(std::stringstream &buffer, BaseClass*
 {
 	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->entsoeURIcore;
+		element->entsoeURIcore = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -135,7 +135,7 @@ bool assign_EquipmentVersion_entsoeURIoperation(std::stringstream &buffer, BaseC
 {
 	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->entsoeURIoperation;
+		element->entsoeURIoperation = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -148,7 +148,7 @@ bool assign_EquipmentVersion_entsoeURIshortCircuit(std::stringstream &buffer, Ba
 {
 	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->entsoeURIshortCircuit;
+		element->entsoeURIshortCircuit = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -161,7 +161,7 @@ bool assign_EquipmentVersion_modelDescriptionURI(std::stringstream &buffer, Base
 {
 	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->modelDescriptionURI;
+		element->modelDescriptionURI = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -174,7 +174,7 @@ bool assign_EquipmentVersion_namespaceRDF(std::stringstream &buffer, BaseClass* 
 {
 	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->namespaceRDF;
+		element->namespaceRDF = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -187,7 +187,7 @@ bool assign_EquipmentVersion_namespaceUML(std::stringstream &buffer, BaseClass* 
 {
 	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->namespaceUML;
+		element->namespaceUML = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -200,7 +200,7 @@ bool assign_EquipmentVersion_shortName(std::stringstream &buffer, BaseClass* Bas
 {
 	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->shortName;
+		element->shortName = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
