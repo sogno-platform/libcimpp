@@ -24,7 +24,7 @@ bool assign_Control_controlType(std::stringstream &buffer, BaseClass* BaseClass_
 {
 	if (Control* element = dynamic_cast<Control*>(BaseClass_ptr1))
 	{
-		buffer >> element->controlType;
+		element->controlType = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -50,7 +50,7 @@ bool assign_Control_timeStamp(std::stringstream &buffer, BaseClass* BaseClass_pt
 {
 	if (Control* element = dynamic_cast<Control*>(BaseClass_ptr1))
 	{
-		buffer >> element->timeStamp;
+		element->timeStamp = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
