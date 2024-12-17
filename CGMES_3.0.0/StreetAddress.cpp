@@ -23,7 +23,7 @@ bool assign_StreetAddress_language(std::stringstream &buffer, BaseClass* BaseCla
 {
 	if (StreetAddress* element = dynamic_cast<StreetAddress*>(BaseClass_ptr1))
 	{
-		buffer >> element->language;
+		element->language = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -36,7 +36,7 @@ bool assign_StreetAddress_poBox(std::stringstream &buffer, BaseClass* BaseClass_
 {
 	if (StreetAddress* element = dynamic_cast<StreetAddress*>(BaseClass_ptr1))
 	{
-		buffer >> element->poBox;
+		element->poBox = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -49,7 +49,7 @@ bool assign_StreetAddress_postalCode(std::stringstream &buffer, BaseClass* BaseC
 {
 	if (StreetAddress* element = dynamic_cast<StreetAddress*>(BaseClass_ptr1))
 	{
-		buffer >> element->postalCode;
+		element->postalCode = buffer.str();
 		if (buffer.fail())
 			return false;
 		else

@@ -22,7 +22,7 @@ bool assign_TownDetail_code(std::stringstream &buffer, BaseClass* BaseClass_ptr1
 {
 	if (TownDetail* element = dynamic_cast<TownDetail*>(BaseClass_ptr1))
 	{
-		buffer >> element->code;
+		element->code = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -35,7 +35,7 @@ bool assign_TownDetail_country(std::stringstream &buffer, BaseClass* BaseClass_p
 {
 	if (TownDetail* element = dynamic_cast<TownDetail*>(BaseClass_ptr1))
 	{
-		buffer >> element->country;
+		element->country = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -48,7 +48,7 @@ bool assign_TownDetail_name(std::stringstream &buffer, BaseClass* BaseClass_ptr1
 {
 	if (TownDetail* element = dynamic_cast<TownDetail*>(BaseClass_ptr1))
 	{
-		buffer >> element->name;
+		element->name = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -61,7 +61,7 @@ bool assign_TownDetail_section(std::stringstream &buffer, BaseClass* BaseClass_p
 {
 	if (TownDetail* element = dynamic_cast<TownDetail*>(BaseClass_ptr1))
 	{
-		buffer >> element->section;
+		element->section = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -74,7 +74,7 @@ bool assign_TownDetail_stateOrProvince(std::stringstream &buffer, BaseClass* Bas
 {
 	if (TownDetail* element = dynamic_cast<TownDetail*>(BaseClass_ptr1))
 	{
-		buffer >> element->stateOrProvince;
+		element->stateOrProvince = buffer.str();
 		if (buffer.fail())
 			return false;
 		else

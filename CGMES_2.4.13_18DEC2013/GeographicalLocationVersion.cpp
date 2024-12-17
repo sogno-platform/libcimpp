@@ -27,7 +27,7 @@ bool assign_GeographicalLocationVersion_baseUML(std::stringstream &buffer, BaseC
 {
 	if (GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->baseUML;
+		element->baseUML = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -40,7 +40,7 @@ bool assign_GeographicalLocationVersion_baseURI(std::stringstream &buffer, BaseC
 {
 	if (GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->baseURI;
+		element->baseURI = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -53,7 +53,7 @@ bool assign_GeographicalLocationVersion_date(std::stringstream &buffer, BaseClas
 {
 	if (GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->date;
+		element->date = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -66,7 +66,7 @@ bool assign_GeographicalLocationVersion_differenceModelURI(std::stringstream &bu
 {
 	if (GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->differenceModelURI;
+		element->differenceModelURI = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -79,7 +79,7 @@ bool assign_GeographicalLocationVersion_entsoeUML(std::stringstream &buffer, Bas
 {
 	if (GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->entsoeUML;
+		element->entsoeUML = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -92,7 +92,7 @@ bool assign_GeographicalLocationVersion_entsoeURI(std::stringstream &buffer, Bas
 {
 	if (GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->entsoeURI;
+		element->entsoeURI = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -105,7 +105,7 @@ bool assign_GeographicalLocationVersion_modelDescriptionURI(std::stringstream &b
 {
 	if (GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->modelDescriptionURI;
+		element->modelDescriptionURI = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -118,7 +118,7 @@ bool assign_GeographicalLocationVersion_namespaceRDF(std::stringstream &buffer, 
 {
 	if (GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->namespaceRDF;
+		element->namespaceRDF = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -131,7 +131,7 @@ bool assign_GeographicalLocationVersion_namespaceUML(std::stringstream &buffer, 
 {
 	if (GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->namespaceUML;
+		element->namespaceUML = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -144,7 +144,7 @@ bool assign_GeographicalLocationVersion_shortName(std::stringstream &buffer, Bas
 {
 	if (GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->shortName;
+		element->shortName = buffer.str();
 		if (buffer.fail())
 			return false;
 		else

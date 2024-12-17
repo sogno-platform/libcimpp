@@ -27,7 +27,7 @@ bool assign_BoundaryPoint_fromEndIsoCode(std::stringstream &buffer, BaseClass* B
 {
 	if (BoundaryPoint* element = dynamic_cast<BoundaryPoint*>(BaseClass_ptr1))
 	{
-		buffer >> element->fromEndIsoCode;
+		element->fromEndIsoCode = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -40,7 +40,7 @@ bool assign_BoundaryPoint_fromEndName(std::stringstream &buffer, BaseClass* Base
 {
 	if (BoundaryPoint* element = dynamic_cast<BoundaryPoint*>(BaseClass_ptr1))
 	{
-		buffer >> element->fromEndName;
+		element->fromEndName = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -53,7 +53,7 @@ bool assign_BoundaryPoint_fromEndNameTso(std::stringstream &buffer, BaseClass* B
 {
 	if (BoundaryPoint* element = dynamic_cast<BoundaryPoint*>(BaseClass_ptr1))
 	{
-		buffer >> element->fromEndNameTso;
+		element->fromEndNameTso = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -92,7 +92,7 @@ bool assign_BoundaryPoint_toEndIsoCode(std::stringstream &buffer, BaseClass* Bas
 {
 	if (BoundaryPoint* element = dynamic_cast<BoundaryPoint*>(BaseClass_ptr1))
 	{
-		buffer >> element->toEndIsoCode;
+		element->toEndIsoCode = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -105,7 +105,7 @@ bool assign_BoundaryPoint_toEndName(std::stringstream &buffer, BaseClass* BaseCl
 {
 	if (BoundaryPoint* element = dynamic_cast<BoundaryPoint*>(BaseClass_ptr1))
 	{
-		buffer >> element->toEndName;
+		element->toEndName = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -118,7 +118,7 @@ bool assign_BoundaryPoint_toEndNameTso(std::stringstream &buffer, BaseClass* Bas
 {
 	if (BoundaryPoint* element = dynamic_cast<BoundaryPoint*>(BaseClass_ptr1))
 	{
-		buffer >> element->toEndNameTso;
+		element->toEndNameTso = buffer.str();
 		if (buffer.fail())
 			return false;
 		else

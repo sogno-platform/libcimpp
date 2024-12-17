@@ -36,7 +36,7 @@ bool assign_MeasurementValue_timeStamp(std::stringstream &buffer, BaseClass* Bas
 {
 	if (MeasurementValue* element = dynamic_cast<MeasurementValue*>(BaseClass_ptr1))
 	{
-		buffer >> element->timeStamp;
+		element->timeStamp = buffer.str();
 		if (buffer.fail())
 			return false;
 		else

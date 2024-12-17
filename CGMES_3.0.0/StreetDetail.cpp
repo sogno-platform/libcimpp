@@ -30,7 +30,7 @@ bool assign_StreetDetail_addressGeneral(std::stringstream &buffer, BaseClass* Ba
 {
 	if (StreetDetail* element = dynamic_cast<StreetDetail*>(BaseClass_ptr1))
 	{
-		buffer >> element->addressGeneral;
+		element->addressGeneral = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -43,7 +43,7 @@ bool assign_StreetDetail_addressGeneral2(std::stringstream &buffer, BaseClass* B
 {
 	if (StreetDetail* element = dynamic_cast<StreetDetail*>(BaseClass_ptr1))
 	{
-		buffer >> element->addressGeneral2;
+		element->addressGeneral2 = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -56,7 +56,7 @@ bool assign_StreetDetail_addressGeneral3(std::stringstream &buffer, BaseClass* B
 {
 	if (StreetDetail* element = dynamic_cast<StreetDetail*>(BaseClass_ptr1))
 	{
-		buffer >> element->addressGeneral3;
+		element->addressGeneral3 = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -69,7 +69,7 @@ bool assign_StreetDetail_buildingName(std::stringstream &buffer, BaseClass* Base
 {
 	if (StreetDetail* element = dynamic_cast<StreetDetail*>(BaseClass_ptr1))
 	{
-		buffer >> element->buildingName;
+		element->buildingName = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -82,7 +82,7 @@ bool assign_StreetDetail_code(std::stringstream &buffer, BaseClass* BaseClass_pt
 {
 	if (StreetDetail* element = dynamic_cast<StreetDetail*>(BaseClass_ptr1))
 	{
-		buffer >> element->code;
+		element->code = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -95,7 +95,7 @@ bool assign_StreetDetail_floorIdentification(std::stringstream &buffer, BaseClas
 {
 	if (StreetDetail* element = dynamic_cast<StreetDetail*>(BaseClass_ptr1))
 	{
-		buffer >> element->floorIdentification;
+		element->floorIdentification = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -108,7 +108,7 @@ bool assign_StreetDetail_name(std::stringstream &buffer, BaseClass* BaseClass_pt
 {
 	if (StreetDetail* element = dynamic_cast<StreetDetail*>(BaseClass_ptr1))
 	{
-		buffer >> element->name;
+		element->name = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -121,7 +121,7 @@ bool assign_StreetDetail_number(std::stringstream &buffer, BaseClass* BaseClass_
 {
 	if (StreetDetail* element = dynamic_cast<StreetDetail*>(BaseClass_ptr1))
 	{
-		buffer >> element->number;
+		element->number = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -134,7 +134,7 @@ bool assign_StreetDetail_prefix(std::stringstream &buffer, BaseClass* BaseClass_
 {
 	if (StreetDetail* element = dynamic_cast<StreetDetail*>(BaseClass_ptr1))
 	{
-		buffer >> element->prefix;
+		element->prefix = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -147,7 +147,7 @@ bool assign_StreetDetail_suffix(std::stringstream &buffer, BaseClass* BaseClass_
 {
 	if (StreetDetail* element = dynamic_cast<StreetDetail*>(BaseClass_ptr1))
 	{
-		buffer >> element->suffix;
+		element->suffix = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -160,7 +160,7 @@ bool assign_StreetDetail_suiteNumber(std::stringstream &buffer, BaseClass* BaseC
 {
 	if (StreetDetail* element = dynamic_cast<StreetDetail*>(BaseClass_ptr1))
 	{
-		buffer >> element->suiteNumber;
+		element->suiteNumber = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -173,7 +173,7 @@ bool assign_StreetDetail_type(std::stringstream &buffer, BaseClass* BaseClass_pt
 {
 	if (StreetDetail* element = dynamic_cast<StreetDetail*>(BaseClass_ptr1))
 	{
-		buffer >> element->type;
+		element->type = buffer.str();
 		if (buffer.fail())
 			return false;
 		else

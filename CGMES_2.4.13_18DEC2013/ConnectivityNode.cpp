@@ -43,7 +43,7 @@ bool assign_ConnectivityNode_fromEndIsoCode(std::stringstream &buffer, BaseClass
 {
 	if (ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1))
 	{
-		buffer >> element->fromEndIsoCode;
+		element->fromEndIsoCode = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -56,7 +56,7 @@ bool assign_ConnectivityNode_fromEndName(std::stringstream &buffer, BaseClass* B
 {
 	if (ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1))
 	{
-		buffer >> element->fromEndName;
+		element->fromEndName = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -69,7 +69,7 @@ bool assign_ConnectivityNode_fromEndNameTso(std::stringstream &buffer, BaseClass
 {
 	if (ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1))
 	{
-		buffer >> element->fromEndNameTso;
+		element->fromEndNameTso = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -82,7 +82,7 @@ bool assign_ConnectivityNode_toEndIsoCode(std::stringstream &buffer, BaseClass* 
 {
 	if (ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1))
 	{
-		buffer >> element->toEndIsoCode;
+		element->toEndIsoCode = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -95,7 +95,7 @@ bool assign_ConnectivityNode_toEndName(std::stringstream &buffer, BaseClass* Bas
 {
 	if (ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1))
 	{
-		buffer >> element->toEndName;
+		element->toEndName = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -108,7 +108,7 @@ bool assign_ConnectivityNode_toEndNameTso(std::stringstream &buffer, BaseClass* 
 {
 	if (ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1))
 	{
-		buffer >> element->toEndNameTso;
+		element->toEndNameTso = buffer.str();
 		if (buffer.fail())
 			return false;
 		else

@@ -21,7 +21,7 @@ bool assign_Status_dateTime(std::stringstream &buffer, BaseClass* BaseClass_ptr1
 {
 	if (Status* element = dynamic_cast<Status*>(BaseClass_ptr1))
 	{
-		buffer >> element->dateTime;
+		element->dateTime = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -34,7 +34,7 @@ bool assign_Status_reason(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
 {
 	if (Status* element = dynamic_cast<Status*>(BaseClass_ptr1))
 	{
-		buffer >> element->reason;
+		element->reason = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -47,7 +47,7 @@ bool assign_Status_remark(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
 {
 	if (Status* element = dynamic_cast<Status*>(BaseClass_ptr1))
 	{
-		buffer >> element->remark;
+		element->remark = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -60,7 +60,7 @@ bool assign_Status_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
 {
 	if (Status* element = dynamic_cast<Status*>(BaseClass_ptr1))
 	{
-		buffer >> element->value;
+		element->value = buffer.str();
 		if (buffer.fail())
 			return false;
 		else

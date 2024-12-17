@@ -27,7 +27,7 @@ bool assign_TopologyVersion_baseUML(std::stringstream &buffer, BaseClass* BaseCl
 {
 	if (TopologyVersion* element = dynamic_cast<TopologyVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->baseUML;
+		element->baseUML = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -40,7 +40,7 @@ bool assign_TopologyVersion_baseURI(std::stringstream &buffer, BaseClass* BaseCl
 {
 	if (TopologyVersion* element = dynamic_cast<TopologyVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->baseURI;
+		element->baseURI = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -53,7 +53,7 @@ bool assign_TopologyVersion_date(std::stringstream &buffer, BaseClass* BaseClass
 {
 	if (TopologyVersion* element = dynamic_cast<TopologyVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->date;
+		element->date = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -66,7 +66,7 @@ bool assign_TopologyVersion_differenceModelURI(std::stringstream &buffer, BaseCl
 {
 	if (TopologyVersion* element = dynamic_cast<TopologyVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->differenceModelURI;
+		element->differenceModelURI = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -79,7 +79,7 @@ bool assign_TopologyVersion_entsoeUML(std::stringstream &buffer, BaseClass* Base
 {
 	if (TopologyVersion* element = dynamic_cast<TopologyVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->entsoeUML;
+		element->entsoeUML = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -92,7 +92,7 @@ bool assign_TopologyVersion_entsoeURI(std::stringstream &buffer, BaseClass* Base
 {
 	if (TopologyVersion* element = dynamic_cast<TopologyVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->entsoeURI;
+		element->entsoeURI = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -105,7 +105,7 @@ bool assign_TopologyVersion_modelDescriptionURI(std::stringstream &buffer, BaseC
 {
 	if (TopologyVersion* element = dynamic_cast<TopologyVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->modelDescriptionURI;
+		element->modelDescriptionURI = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -118,7 +118,7 @@ bool assign_TopologyVersion_namespaceRDF(std::stringstream &buffer, BaseClass* B
 {
 	if (TopologyVersion* element = dynamic_cast<TopologyVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->namespaceRDF;
+		element->namespaceRDF = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -131,7 +131,7 @@ bool assign_TopologyVersion_namespaceUML(std::stringstream &buffer, BaseClass* B
 {
 	if (TopologyVersion* element = dynamic_cast<TopologyVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->namespaceUML;
+		element->namespaceUML = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -144,7 +144,7 @@ bool assign_TopologyVersion_shortName(std::stringstream &buffer, BaseClass* Base
 {
 	if (TopologyVersion* element = dynamic_cast<TopologyVersion*>(BaseClass_ptr1))
 	{
-		buffer >> element->shortName;
+		element->shortName = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
