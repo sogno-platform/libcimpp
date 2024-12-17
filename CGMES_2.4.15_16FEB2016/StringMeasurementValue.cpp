@@ -20,7 +20,7 @@ bool assign_StringMeasurementValue_value(std::stringstream &buffer, BaseClass* B
 {
 	if (StringMeasurementValue* element = dynamic_cast<StringMeasurementValue*>(BaseClass_ptr1))
 	{
-		buffer >> element->value;
+		element->value = buffer.str();
 		if (buffer.fail())
 			return false;
 		else

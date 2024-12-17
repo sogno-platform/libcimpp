@@ -20,7 +20,7 @@ bool assign_CoordinateSystem_crsUrn(std::stringstream &buffer, BaseClass* BaseCl
 {
 	if (CoordinateSystem* element = dynamic_cast<CoordinateSystem*>(BaseClass_ptr1))
 	{
-		buffer >> element->crsUrn;
+		element->crsUrn = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
