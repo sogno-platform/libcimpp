@@ -55,7 +55,7 @@ bool assign_TopologicalNode_fromEndIsoCode(std::stringstream &buffer, BaseClass*
 {
 	if (TopologicalNode* element = dynamic_cast<TopologicalNode*>(BaseClass_ptr1))
 	{
-		buffer >> element->fromEndIsoCode;
+		element->fromEndIsoCode = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -68,7 +68,7 @@ bool assign_TopologicalNode_fromEndName(std::stringstream &buffer, BaseClass* Ba
 {
 	if (TopologicalNode* element = dynamic_cast<TopologicalNode*>(BaseClass_ptr1))
 	{
-		buffer >> element->fromEndName;
+		element->fromEndName = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -81,7 +81,7 @@ bool assign_TopologicalNode_fromEndNameTso(std::stringstream &buffer, BaseClass*
 {
 	if (TopologicalNode* element = dynamic_cast<TopologicalNode*>(BaseClass_ptr1))
 	{
-		buffer >> element->fromEndNameTso;
+		element->fromEndNameTso = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -94,7 +94,7 @@ bool assign_TopologicalNode_toEndIsoCode(std::stringstream &buffer, BaseClass* B
 {
 	if (TopologicalNode* element = dynamic_cast<TopologicalNode*>(BaseClass_ptr1))
 	{
-		buffer >> element->toEndIsoCode;
+		element->toEndIsoCode = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -107,7 +107,7 @@ bool assign_TopologicalNode_toEndName(std::stringstream &buffer, BaseClass* Base
 {
 	if (TopologicalNode* element = dynamic_cast<TopologicalNode*>(BaseClass_ptr1))
 	{
-		buffer >> element->toEndName;
+		element->toEndName = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -120,7 +120,7 @@ bool assign_TopologicalNode_toEndNameTso(std::stringstream &buffer, BaseClass* B
 {
 	if (TopologicalNode* element = dynamic_cast<TopologicalNode*>(BaseClass_ptr1))
 	{
-		buffer >> element->toEndNameTso;
+		element->toEndNameTso = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
