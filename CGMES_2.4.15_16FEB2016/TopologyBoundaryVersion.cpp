@@ -15,28 +15,9 @@
 
 using namespace CIMPP;
 
-TopologyBoundaryVersion::TopologyBoundaryVersion(): date(nullptr) {};
+TopologyBoundaryVersion::TopologyBoundaryVersion() {};
 
 TopologyBoundaryVersion::~TopologyBoundaryVersion() {};
-
-
-
-
-bool assign_TopologyBoundaryVersion_date(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(TopologyBoundaryVersion* element = dynamic_cast<TopologyBoundaryVersion*>(BaseClass_ptr1)) {
-                element->date = dynamic_cast<Date*>(BaseClass_ptr2);
-                if(element->date != nullptr)
-                        return true;
-        }
-        return false;
-}
-
-
-
-
-
-
-
 
 
 bool assign_TopologyBoundaryVersion_baseUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
@@ -61,6 +42,17 @@ bool assign_TopologyBoundaryVersion_baseURI(std::stringstream &buffer, BaseClass
 	return false;
 }
 
+bool assign_TopologyBoundaryVersion_date(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
+	if(TopologyBoundaryVersion* element = dynamic_cast<TopologyBoundaryVersion*>(BaseClass_ptr1)) {
+                buffer >> element->date;
+                if(buffer.fail())
+                        return false;
+                else
+                        return true;
+        }
+        else
+                return false;
+}
 
 bool assign_TopologyBoundaryVersion_differenceModelURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(TopologyBoundaryVersion* element = dynamic_cast<TopologyBoundaryVersion*>(BaseClass_ptr1)) {
@@ -139,6 +131,17 @@ bool assign_TopologyBoundaryVersion_shortName(std::stringstream &buffer, BaseCla
 	return false;
 }
 
+
+
+
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* TopologyBoundaryVersion_factory() {
 		return new TopologyBoundaryVersion;
@@ -152,7 +155,8 @@ void TopologyBoundaryVersion::addConstructToMap(std::unordered_map<std::string, 
 void TopologyBoundaryVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
 	assign_map.insert(std::make_pair(std::string("cim:TopologyBoundaryVersion.baseUML"), &assign_TopologyBoundaryVersion_baseUML));
 	assign_map.insert(std::make_pair(std::string("cim:TopologyBoundaryVersion.baseURI"), &assign_TopologyBoundaryVersion_baseURI));
-		assign_map.insert(std::make_pair(std::string("cim:TopologyBoundaryVersion.differenceModelURI"), &assign_TopologyBoundaryVersion_differenceModelURI));
+	assign_map.insert(std::make_pair(std::string("cim:TopologyBoundaryVersion.date"), &assign_TopologyBoundaryVersion_date));
+	assign_map.insert(std::make_pair(std::string("cim:TopologyBoundaryVersion.differenceModelURI"), &assign_TopologyBoundaryVersion_differenceModelURI));
 	assign_map.insert(std::make_pair(std::string("cim:TopologyBoundaryVersion.entsoeUML"), &assign_TopologyBoundaryVersion_entsoeUML));
 	assign_map.insert(std::make_pair(std::string("cim:TopologyBoundaryVersion.entsoeURI"), &assign_TopologyBoundaryVersion_entsoeURI));
 	assign_map.insert(std::make_pair(std::string("cim:TopologyBoundaryVersion.modelDescriptionURI"), &assign_TopologyBoundaryVersion_modelDescriptionURI));
@@ -162,8 +166,7 @@ void TopologyBoundaryVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std:
 }
 
 void TopologyBoundaryVersion::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-			assign_map.insert(std::make_pair(std::string("cim:TopologyBoundaryVersion.date"), &assign_TopologyBoundaryVersion_date));
-							}
+										}
 
 const char TopologyBoundaryVersion::debugName[] = "TopologyBoundaryVersion";
 const char* TopologyBoundaryVersion::debugString()
@@ -175,5 +178,3 @@ const BaseClassDefiner TopologyBoundaryVersion::declare()
 {
 	return BaseClassDefiner(TopologyBoundaryVersion::addConstructToMap, TopologyBoundaryVersion::addPrimitiveAssignFnsToMap, TopologyBoundaryVersion::addClassAssignFnsToMap, TopologyBoundaryVersion::debugName);
 }
-
-

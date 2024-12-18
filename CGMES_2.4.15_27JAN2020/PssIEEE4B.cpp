@@ -77,74 +77,6 @@ PssIEEE4B::PssIEEE4B() {};
 PssIEEE4B::~PssIEEE4B() {};
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 bool assign_PssIEEE4B_bwh1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(PssIEEE4B* element = dynamic_cast<PssIEEE4B*>(BaseClass_ptr1)) {
                 buffer >> element->bwh1;
@@ -949,6 +881,74 @@ bool assign_PssIEEE4B_vstmin(std::stringstream &buffer, BaseClass* BaseClass_ptr
                 return false;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* PssIEEE4B_factory() {
 		return new PssIEEE4B;
@@ -1042,5 +1042,3 @@ const BaseClassDefiner PssIEEE4B::declare()
 {
 	return BaseClassDefiner(PssIEEE4B::addConstructToMap, PssIEEE4B::addPrimitiveAssignFnsToMap, PssIEEE4B::addClassAssignFnsToMap, PssIEEE4B::debugName);
 }
-
-

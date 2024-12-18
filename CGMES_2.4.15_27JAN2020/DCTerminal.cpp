@@ -11,6 +11,8 @@ DCTerminal::DCTerminal(): DCConductingEquipment(nullptr) {};
 DCTerminal::~DCTerminal() {};
 
 
+
+
 bool assign_DCConductingEquipment_DCTerminals(BaseClass*, BaseClass*);
 bool assign_DCTerminal_DCConductingEquipment(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(DCTerminal* element = dynamic_cast<DCTerminal*>(BaseClass_ptr1)) {
@@ -20,8 +22,6 @@ bool assign_DCTerminal_DCConductingEquipment(BaseClass* BaseClass_ptr1, BaseClas
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* DCTerminal_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner DCTerminal::declare()
 {
 	return BaseClassDefiner(DCTerminal::addConstructToMap, DCTerminal::addPrimitiveAssignFnsToMap, DCTerminal::addClassAssignFnsToMap, DCTerminal::debugName);
 }
-
-

@@ -11,6 +11,8 @@ LoadArea::LoadArea() {};
 LoadArea::~LoadArea() {};
 
 
+
+
 bool assign_LoadArea_SubLoadAreas(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(LoadArea* element = dynamic_cast<LoadArea*>(BaseClass_ptr1)) {
 		if(dynamic_cast<SubLoadArea*>(BaseClass_ptr2) != nullptr) {
@@ -20,8 +22,6 @@ bool assign_LoadArea_SubLoadAreas(BaseClass* BaseClass_ptr1, BaseClass* BaseClas
 	}
 	return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* LoadArea_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner LoadArea::declare()
 {
 	return BaseClassDefiner(LoadArea::addConstructToMap, LoadArea::addPrimitiveAssignFnsToMap, LoadArea::addClassAssignFnsToMap, LoadArea::debugName);
 }
-
-

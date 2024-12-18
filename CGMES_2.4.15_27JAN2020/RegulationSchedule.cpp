@@ -11,6 +11,8 @@ RegulationSchedule::RegulationSchedule(): RegulatingControl(nullptr) {};
 RegulationSchedule::~RegulationSchedule() {};
 
 
+
+
 bool assign_RegulatingControl_RegulationSchedule(BaseClass*, BaseClass*);
 bool assign_RegulationSchedule_RegulatingControl(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(RegulationSchedule* element = dynamic_cast<RegulationSchedule*>(BaseClass_ptr1)) {
@@ -20,8 +22,6 @@ bool assign_RegulationSchedule_RegulatingControl(BaseClass* BaseClass_ptr1, Base
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* RegulationSchedule_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner RegulationSchedule::declare()
 {
 	return BaseClassDefiner(RegulationSchedule::addConstructToMap, RegulationSchedule::addPrimitiveAssignFnsToMap, RegulationSchedule::addClassAssignFnsToMap, RegulationSchedule::debugName);
 }
-
-

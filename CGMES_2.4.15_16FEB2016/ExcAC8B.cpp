@@ -37,34 +37,6 @@ ExcAC8B::ExcAC8B() {};
 ExcAC8B::~ExcAC8B() {};
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 bool assign_ExcAC8B_inlim(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1)) {
                 buffer >> element->inlim;
@@ -389,6 +361,34 @@ bool assign_ExcAC8B_vtmult(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
                 return false;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* ExcAC8B_factory() {
 		return new ExcAC8B;
@@ -442,5 +442,3 @@ const BaseClassDefiner ExcAC8B::declare()
 {
 	return BaseClassDefiner(ExcAC8B::addConstructToMap, ExcAC8B::addPrimitiveAssignFnsToMap, ExcAC8B::addClassAssignFnsToMap, ExcAC8B::debugName);
 }
-
-

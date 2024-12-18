@@ -37,5 +37,3 @@ const BaseClassDefiner Disconnector::declare()
 {
 	return BaseClassDefiner(Disconnector::addConstructToMap, Disconnector::addPrimitiveAssignFnsToMap, Disconnector::addClassAssignFnsToMap, Disconnector::debugName);
 }
-
-

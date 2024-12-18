@@ -11,8 +11,6 @@ TextDiagramObject::TextDiagramObject() {};
 TextDiagramObject::~TextDiagramObject() {};
 
 
-
-
 bool assign_TextDiagramObject_text(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(TextDiagramObject* element = dynamic_cast<TextDiagramObject*>(BaseClass_ptr1)) {
 		element->text = buffer.str();
@@ -23,6 +21,8 @@ bool assign_TextDiagramObject_text(std::stringstream &buffer, BaseClass* BaseCla
 	}
 	return false;
 }
+
+
 
 namespace CIMPP {
 	BaseClass* TextDiagramObject_factory() {
@@ -51,5 +51,3 @@ const BaseClassDefiner TextDiagramObject::declare()
 {
 	return BaseClassDefiner(TextDiagramObject::addConstructToMap, TextDiagramObject::addPrimitiveAssignFnsToMap, TextDiagramObject::addClassAssignFnsToMap, TextDiagramObject::debugName);
 }
-
-

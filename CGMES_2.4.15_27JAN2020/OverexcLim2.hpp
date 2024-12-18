@@ -19,18 +19,18 @@ namespace CIMPP {
 	{
 
 	public:
+					CIMPP::PU ifdlim; 	/* Limit value of rated field current (I).  Typical Value = 1.05. Default: nullptr */
 					CIMPP::PU koi; 	/* Gain Over excitation limiter (K).  Typical Value = 0.1. Default: nullptr */
 					CIMPP::PU voimax; 	/* Maximum error signal (V).  Typical Value = 0. Default: nullptr */
 					CIMPP::PU voimin; 	/* Minimum error signal (V).  Typical Value = -9999. Default: nullptr */
-					CIMPP::PU ifdlim; 	/* Limit value of rated field current (I).  Typical Value = 1.05. Default: nullptr */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		OverexcLim2();
 		virtual ~OverexcLim2();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

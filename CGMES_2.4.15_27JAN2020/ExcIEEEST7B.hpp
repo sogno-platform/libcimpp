@@ -37,14 +37,14 @@ namespace CIMPP {
 					CIMPP::PU vmin; 	/* Minimum voltage reference signal (V).  Typical Value = 0.9. Default: nullptr */
 					CIMPP::PU vrmax; 	/* Maximum voltage regulator output (V).  Typical Value = 5. Default: nullptr */
 					CIMPP::PU vrmin; 	/* Minimum voltage regulator output (V).  Typical Value = -4.5. Default: nullptr */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		ExcIEEEST7B();
 		virtual ~ExcIEEEST7B();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

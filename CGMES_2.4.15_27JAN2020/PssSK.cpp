@@ -21,18 +21,6 @@ PssSK::PssSK() {};
 PssSK::~PssSK() {};
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 bool assign_PssSK_k1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(PssSK* element = dynamic_cast<PssSK*>(BaseClass_ptr1)) {
                 buffer >> element->k1;
@@ -165,6 +153,18 @@ bool assign_PssSK_vsmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
                 return false;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* PssSK_factory() {
 		return new PssSK;
@@ -202,5 +202,3 @@ const BaseClassDefiner PssSK::declare()
 {
 	return BaseClassDefiner(PssSK::addConstructToMap, PssSK::addPrimitiveAssignFnsToMap, PssSK::addClassAssignFnsToMap, PssSK::debugName);
 }
-
-

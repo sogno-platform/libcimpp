@@ -37,5 +37,3 @@ const BaseClassDefiner PhaseTapChangerSymmetrical::declare()
 {
 	return BaseClassDefiner(PhaseTapChangerSymmetrical::addConstructToMap, PhaseTapChangerSymmetrical::addPrimitiveAssignFnsToMap, PhaseTapChangerSymmetrical::addClassAssignFnsToMap, PhaseTapChangerSymmetrical::debugName);
 }
-
-

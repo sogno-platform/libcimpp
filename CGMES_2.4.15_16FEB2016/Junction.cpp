@@ -37,5 +37,3 @@ const BaseClassDefiner Junction::declare()
 {
 	return BaseClassDefiner(Junction::addConstructToMap, Junction::addPrimitiveAssignFnsToMap, Junction::addClassAssignFnsToMap, Junction::debugName);
 }
-
-

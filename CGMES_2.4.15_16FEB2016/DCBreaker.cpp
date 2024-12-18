@@ -37,5 +37,3 @@ const BaseClassDefiner DCBreaker::declare()
 {
 	return BaseClassDefiner(DCBreaker::addConstructToMap, DCBreaker::addPrimitiveAssignFnsToMap, DCBreaker::addClassAssignFnsToMap, DCBreaker::debugName);
 }
-
-

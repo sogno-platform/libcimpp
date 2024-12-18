@@ -11,8 +11,8 @@
 namespace CIMPP {
 
 
-class WindContCurrLimIEC;
 class WindContQIEC;
+class WindContCurrLimIEC;
 class WindProtectionIEC;
 	/*
 	Parent class supporting relationships to IEC wind turbines Type 3 and 4 and wind plant including their control models.
@@ -21,17 +21,17 @@ class WindProtectionIEC;
 	{
 
 	public:
-					CIMPP::WindContCurrLimIEC* WindContCurrLimIEC; 	/* Wind control current limitation model associated with this wind turbine type 3 or 4 model. Default: 0 */
 					CIMPP::WindContQIEC* WIndContQIEC; 	/* Wind control Q model associated with this wind turbine type 3 or 4 model. Default: 0 */
+					CIMPP::WindContCurrLimIEC* WindContCurrLimIEC; 	/* Wind control current limitation model associated with this wind turbine type 3 or 4 model. Default: 0 */
 					CIMPP::WindProtectionIEC* WindProtectionIEC; 	/* Wind turbune protection model associated with this wind generator type 3 or 4 model. Default: 0 */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		WindTurbineType3or4IEC();
 		virtual ~WindTurbineType3or4IEC();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

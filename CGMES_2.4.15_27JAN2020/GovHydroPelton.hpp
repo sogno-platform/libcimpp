@@ -11,6 +11,7 @@
 #include "PU.hpp"
 #include "Frequency.hpp"
 #include "Length.hpp"
+#include "VolumeFlowRate.hpp"
 #include "Boolean.hpp"
 #include "Seconds.hpp"
 #include "Simple_Float.hpp"
@@ -18,7 +19,6 @@
 namespace CIMPP {
 
 
-class VolumeFlowRate;
 	/*
 	Detailed hydro unit - Pelton model.  This model can be used to represent the dynamic related to water tunnel and surge chamber. A schematic of the hydraulic system of detailed hydro unit models, like Francis and Pelton, is located under the GovHydroFrancis class.
 	*/
@@ -37,7 +37,7 @@ class VolumeFlowRate;
 					CIMPP::PU kc; 	/* Penstock loss coefficient (due to friction) (Kc).  Typical Value = 0.025. Default: nullptr */
 					CIMPP::PU kg; 	/* Water tunnel and surge chamber loss coefficient (due to friction) (Kg).  Typical Value = -0.025. Default: nullptr */
 					CIMPP::PU qc0; 	/* No-load turbine flow at nominal head (Qc0).  Typical Value = 0.05. Default: nullptr */
-					CIMPP::VolumeFlowRate* qn; 	/* Rated flow (Q). Unit = m/s. Typical Value = 40. Default: nullptr */
+					CIMPP::VolumeFlowRate qn; 	/* Rated flow (Q). Unit = m/s. Typical Value = 40. Default: nullptr */
 					CIMPP::Boolean simplifiedPelton; 	/* Simplified Pelton model simulation (Sflag). true = enable of simplified Pelton model simulation false = enable of complete Pelton model simulation (non linear gain). Typical Value = false. Default: false */
 					CIMPP::Boolean staticCompensating; 	/* Static compensating characteristic (Cflag). true = enable of static compensating characteristic  false = inhibit of static compensating characteristic. Typical Value = false. Default: false */
 					CIMPP::Seconds ta; 	/* Derivative gain (accelerometer time constant) (Ta).  Typical Value = 3. Default: nullptr */
@@ -54,14 +54,14 @@ class VolumeFlowRate;
 					CIMPP::PU vcv; 	/* Maximum servomotor valve closing velocity (Vcv).  Typical Value = -0.017. Default: nullptr */
 					CIMPP::Boolean waterTunnelSurgeChamberSimulation; 	/* Water tunnel and surge chamber simulation (Tflag). true = enable of water tunnel and surge chamber simulation false = inhibit of water tunnel and surge chamber simulation. Typical Value = false. Default: false */
 					CIMPP::Length zsfc; 	/* Head of upper water level with respect to the level of penstock (Zsfc).  Unit = m. Typical Value = 25. Default: nullptr */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		GovHydroPelton();
 		virtual ~GovHydroPelton();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

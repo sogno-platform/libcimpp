@@ -11,6 +11,8 @@ ConformLoad::ConformLoad(): LoadGroup(nullptr) {};
 ConformLoad::~ConformLoad() {};
 
 
+
+
 bool assign_ConformLoadGroup_EnergyConsumers(BaseClass*, BaseClass*);
 bool assign_ConformLoad_LoadGroup(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(ConformLoad* element = dynamic_cast<ConformLoad*>(BaseClass_ptr1)) {
@@ -20,8 +22,6 @@ bool assign_ConformLoad_LoadGroup(BaseClass* BaseClass_ptr1, BaseClass* BaseClas
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* ConformLoad_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner ConformLoad::declare()
 {
 	return BaseClassDefiner(ConformLoad::addConstructToMap, ConformLoad::addPrimitiveAssignFnsToMap, ConformLoad::addClassAssignFnsToMap, ConformLoad::debugName);
 }
-
-

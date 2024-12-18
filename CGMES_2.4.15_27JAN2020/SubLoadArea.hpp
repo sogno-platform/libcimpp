@@ -22,14 +22,14 @@ class LoadGroup;
 	public:
 					CIMPP::LoadArea* LoadArea; 	/* The LoadArea where the SubLoadArea belongs. Default: 0 */
 					std::list<CIMPP::LoadGroup*> LoadGroups; 	/* The Loadgroups in the SubLoadArea. Default: 0 */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		SubLoadArea();
 		virtual ~SubLoadArea();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

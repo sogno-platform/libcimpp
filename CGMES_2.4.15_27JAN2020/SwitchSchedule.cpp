@@ -11,6 +11,8 @@ SwitchSchedule::SwitchSchedule(): Switch(nullptr) {};
 SwitchSchedule::~SwitchSchedule() {};
 
 
+
+
 bool assign_Switch_SwitchSchedules(BaseClass*, BaseClass*);
 bool assign_SwitchSchedule_Switch(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(SwitchSchedule* element = dynamic_cast<SwitchSchedule*>(BaseClass_ptr1)) {
@@ -20,8 +22,6 @@ bool assign_SwitchSchedule_Switch(BaseClass* BaseClass_ptr1, BaseClass* BaseClas
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* SwitchSchedule_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner SwitchSchedule::declare()
 {
 	return BaseClassDefiner(SwitchSchedule::addConstructToMap, SwitchSchedule::addPrimitiveAssignFnsToMap, SwitchSchedule::addClassAssignFnsToMap, SwitchSchedule::debugName);
 }
-
-

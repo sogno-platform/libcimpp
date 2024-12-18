@@ -11,6 +11,8 @@ ThermalGeneratingUnit::ThermalGeneratingUnit() {};
 ThermalGeneratingUnit::~ThermalGeneratingUnit() {};
 
 
+
+
 bool assign_ThermalGeneratingUnit_FossilFuels(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(ThermalGeneratingUnit* element = dynamic_cast<ThermalGeneratingUnit*>(BaseClass_ptr1)) {
 		if(dynamic_cast<FossilFuel*>(BaseClass_ptr2) != nullptr) {
@@ -20,8 +22,6 @@ bool assign_ThermalGeneratingUnit_FossilFuels(BaseClass* BaseClass_ptr1, BaseCla
 	}
 	return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* ThermalGeneratingUnit_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner ThermalGeneratingUnit::declare()
 {
 	return BaseClassDefiner(ThermalGeneratingUnit::addConstructToMap, ThermalGeneratingUnit::addPrimitiveAssignFnsToMap, ThermalGeneratingUnit::addClassAssignFnsToMap, ThermalGeneratingUnit::debugName);
 }
-
-

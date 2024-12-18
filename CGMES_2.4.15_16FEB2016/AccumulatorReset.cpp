@@ -11,6 +11,8 @@ AccumulatorReset::AccumulatorReset(): AccumulatorValue(nullptr) {};
 AccumulatorReset::~AccumulatorReset() {};
 
 
+
+
 bool assign_AccumulatorValue_AccumulatorReset(BaseClass*, BaseClass*);
 bool assign_AccumulatorReset_AccumulatorValue(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(AccumulatorReset* element = dynamic_cast<AccumulatorReset*>(BaseClass_ptr1)) {
@@ -20,8 +22,6 @@ bool assign_AccumulatorReset_AccumulatorValue(BaseClass* BaseClass_ptr1, BaseCla
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* AccumulatorReset_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner AccumulatorReset::declare()
 {
 	return BaseClassDefiner(AccumulatorReset::addConstructToMap, AccumulatorReset::addPrimitiveAssignFnsToMap, AccumulatorReset::addClassAssignFnsToMap, AccumulatorReset::debugName);
 }
-
-

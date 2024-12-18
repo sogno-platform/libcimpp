@@ -42,39 +42,6 @@ ExcSK::ExcSK() {};
 ExcSK::~ExcSK() {};
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 bool assign_ExcSK_efdmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(ExcSK* element = dynamic_cast<ExcSK*>(BaseClass_ptr1)) {
                 buffer >> element->efdmax;
@@ -459,6 +426,39 @@ bool assign_ExcSK_yp(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
                 return false;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* ExcSK_factory() {
 		return new ExcSK;
@@ -517,5 +517,3 @@ const BaseClassDefiner ExcSK::declare()
 {
 	return BaseClassDefiner(ExcSK::addConstructToMap, ExcSK::addPrimitiveAssignFnsToMap, ExcSK::addClassAssignFnsToMap, ExcSK::debugName);
 }
-
-

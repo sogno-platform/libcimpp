@@ -11,8 +11,6 @@ ApparentPowerLimit::ApparentPowerLimit() {};
 ApparentPowerLimit::~ApparentPowerLimit() {};
 
 
-
-
 bool assign_ApparentPowerLimit_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(ApparentPowerLimit* element = dynamic_cast<ApparentPowerLimit*>(BaseClass_ptr1)) {
                 buffer >> element->value;
@@ -24,6 +22,8 @@ bool assign_ApparentPowerLimit_value(std::stringstream &buffer, BaseClass* BaseC
         else
                 return false;
 }
+
+
 
 namespace CIMPP {
 	BaseClass* ApparentPowerLimit_factory() {
@@ -52,5 +52,3 @@ const BaseClassDefiner ApparentPowerLimit::declare()
 {
 	return BaseClassDefiner(ApparentPowerLimit::addConstructToMap, ApparentPowerLimit::addPrimitiveAssignFnsToMap, ApparentPowerLimit::addClassAssignFnsToMap, ApparentPowerLimit::debugName);
 }
-
-

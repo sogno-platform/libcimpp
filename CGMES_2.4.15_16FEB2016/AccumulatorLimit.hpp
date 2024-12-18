@@ -20,16 +20,16 @@ class AccumulatorLimitSet;
 	{
 
 	public:
-					CIMPP::Integer value; 	/* The value to supervise against. The value is positive. Default: 0 */
 					CIMPP::AccumulatorLimitSet* LimitSet; 	/* The limit values used for supervision of Measurements. Default: 0 */
-				
+					CIMPP::Integer value; 	/* The value to supervise against. The value is positive. Default: 0 */
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		AccumulatorLimit();
 		virtual ~AccumulatorLimit();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

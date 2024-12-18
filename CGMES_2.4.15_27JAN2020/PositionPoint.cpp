@@ -15,21 +15,6 @@ PositionPoint::PositionPoint(): Location(nullptr) {};
 PositionPoint::~PositionPoint() {};
 
 
-bool assign_Location_PositionPoints(BaseClass*, BaseClass*);
-bool assign_PositionPoint_Location(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(PositionPoint* element = dynamic_cast<PositionPoint*>(BaseClass_ptr1)) {
-                element->Location = dynamic_cast<Location*>(BaseClass_ptr2);
-                if(element->Location != nullptr)
-                        return assign_Location_PositionPoints(BaseClass_ptr2, BaseClass_ptr1);
-        }
-        return false;
-}
-
-
-
-
-
-
 
 bool assign_PositionPoint_sequenceNumber(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(PositionPoint* element = dynamic_cast<PositionPoint*>(BaseClass_ptr1)) {
@@ -76,6 +61,21 @@ bool assign_PositionPoint_zPosition(std::stringstream &buffer, BaseClass* BaseCl
 	return false;
 }
 
+
+bool assign_Location_PositionPoints(BaseClass*, BaseClass*);
+bool assign_PositionPoint_Location(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(PositionPoint* element = dynamic_cast<PositionPoint*>(BaseClass_ptr1)) {
+                element->Location = dynamic_cast<Location*>(BaseClass_ptr2);
+                if(element->Location != nullptr)
+                        return assign_Location_PositionPoints(BaseClass_ptr2, BaseClass_ptr1);
+        }
+        return false;
+}
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* PositionPoint_factory() {
 		return new PositionPoint;
@@ -107,5 +107,3 @@ const BaseClassDefiner PositionPoint::declare()
 {
 	return BaseClassDefiner(PositionPoint::addConstructToMap, PositionPoint::addPrimitiveAssignFnsToMap, PositionPoint::addClassAssignFnsToMap, PositionPoint::debugName);
 }
-
-

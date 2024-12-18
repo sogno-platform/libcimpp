@@ -12,9 +12,6 @@ DCGround::DCGround() {};
 DCGround::~DCGround() {};
 
 
-
-
-
 bool assign_DCGround_inductance(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(DCGround* element = dynamic_cast<DCGround*>(BaseClass_ptr1)) {
                 buffer >> element->inductance;
@@ -38,6 +35,9 @@ bool assign_DCGround_r(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
         else
                 return false;
 }
+
+
+
 
 namespace CIMPP {
 	BaseClass* DCGround_factory() {
@@ -67,5 +67,3 @@ const BaseClassDefiner DCGround::declare()
 {
 	return BaseClassDefiner(DCGround::addConstructToMap, DCGround::addPrimitiveAssignFnsToMap, DCGround::addClassAssignFnsToMap, DCGround::debugName);
 }
-
-

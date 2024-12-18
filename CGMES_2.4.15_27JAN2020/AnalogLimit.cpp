@@ -2,8 +2,8 @@
 #include "Limit.hpp"
 #include "AnalogLimit.hpp"
 
-#include "Simple_Float.hpp"
 #include "AnalogLimitSet.hpp"
+#include "Simple_Float.hpp"
 
 using namespace CIMPP;
 
@@ -11,17 +11,6 @@ AnalogLimit::AnalogLimit(): LimitSet(nullptr) {};
 
 AnalogLimit::~AnalogLimit() {};
 
-
-
-bool assign_AnalogLimitSet_Limits(BaseClass*, BaseClass*);
-bool assign_AnalogLimit_LimitSet(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(AnalogLimit* element = dynamic_cast<AnalogLimit*>(BaseClass_ptr1)) {
-                element->LimitSet = dynamic_cast<AnalogLimitSet*>(BaseClass_ptr2);
-                if(element->LimitSet != nullptr)
-                        return assign_AnalogLimitSet_Limits(BaseClass_ptr2, BaseClass_ptr1);
-        }
-        return false;
-}
 
 
 bool assign_AnalogLimit_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
@@ -37,6 +26,17 @@ bool assign_AnalogLimit_value(std::stringstream &buffer, BaseClass* BaseClass_pt
 }
 
 
+bool assign_AnalogLimitSet_Limits(BaseClass*, BaseClass*);
+bool assign_AnalogLimit_LimitSet(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(AnalogLimit* element = dynamic_cast<AnalogLimit*>(BaseClass_ptr1)) {
+                element->LimitSet = dynamic_cast<AnalogLimitSet*>(BaseClass_ptr2);
+                if(element->LimitSet != nullptr)
+                        return assign_AnalogLimitSet_Limits(BaseClass_ptr2, BaseClass_ptr1);
+        }
+        return false;
+}
+
+
 namespace CIMPP {
 	BaseClass* AnalogLimit_factory() {
 		return new AnalogLimit;
@@ -48,12 +48,12 @@ void AnalogLimit::addConstructToMap(std::unordered_map<std::string, BaseClass* (
 }
 
 void AnalogLimit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
-	assign_map.insert(std::make_pair(std::string("cim:AnalogLimit.value"), &assign_AnalogLimit_value));
-	}
+		assign_map.insert(std::make_pair(std::string("cim:AnalogLimit.value"), &assign_AnalogLimit_value));
+}
 
 void AnalogLimit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-		assign_map.insert(std::make_pair(std::string("cim:AnalogLimit.LimitSet"), &assign_AnalogLimit_LimitSet));
-}
+	assign_map.insert(std::make_pair(std::string("cim:AnalogLimit.LimitSet"), &assign_AnalogLimit_LimitSet));
+	}
 
 const char AnalogLimit::debugName[] = "AnalogLimit";
 const char* AnalogLimit::debugString()
@@ -65,5 +65,3 @@ const BaseClassDefiner AnalogLimit::declare()
 {
 	return BaseClassDefiner(AnalogLimit::addConstructToMap, AnalogLimit::addPrimitiveAssignFnsToMap, AnalogLimit::addClassAssignFnsToMap, AnalogLimit::debugName);
 }
-
-

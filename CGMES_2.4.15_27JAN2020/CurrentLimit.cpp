@@ -11,8 +11,6 @@ CurrentLimit::CurrentLimit() {};
 CurrentLimit::~CurrentLimit() {};
 
 
-
-
 bool assign_CurrentLimit_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(CurrentLimit* element = dynamic_cast<CurrentLimit*>(BaseClass_ptr1)) {
                 buffer >> element->value;
@@ -24,6 +22,8 @@ bool assign_CurrentLimit_value(std::stringstream &buffer, BaseClass* BaseClass_p
         else
                 return false;
 }
+
+
 
 namespace CIMPP {
 	BaseClass* CurrentLimit_factory() {
@@ -52,5 +52,3 @@ const BaseClassDefiner CurrentLimit::declare()
 {
 	return BaseClassDefiner(CurrentLimit::addConstructToMap, CurrentLimit::addPrimitiveAssignFnsToMap, CurrentLimit::addClassAssignFnsToMap, CurrentLimit::debugName);
 }
-
-

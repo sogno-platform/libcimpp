@@ -12,6 +12,9 @@ WindPlantDynamics::WindPlantDynamics(): RemoteInputSignal(nullptr) {};
 WindPlantDynamics::~WindPlantDynamics() {};
 
 
+
+
+
 bool assign_RemoteInputSignal_WindPlantDynamics(BaseClass*, BaseClass*);
 bool assign_WindPlantDynamics_RemoteInputSignal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(WindPlantDynamics* element = dynamic_cast<WindPlantDynamics*>(BaseClass_ptr1)) {
@@ -31,9 +34,6 @@ bool assign_WindPlantDynamics_WindTurbineType3or4Dynamics(BaseClass* BaseClass_p
 	}
 	return false;
 }
-
-
-
 
 namespace CIMPP {
 	BaseClass* WindPlantDynamics_factory() {
@@ -63,5 +63,3 @@ const BaseClassDefiner WindPlantDynamics::declare()
 {
 	return BaseClassDefiner(WindPlantDynamics::addConstructToMap, WindPlantDynamics::addPrimitiveAssignFnsToMap, WindPlantDynamics::addClassAssignFnsToMap, WindPlantDynamics::debugName);
 }
-
-

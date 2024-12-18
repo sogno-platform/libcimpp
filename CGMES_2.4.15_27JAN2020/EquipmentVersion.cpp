@@ -19,32 +19,9 @@
 
 using namespace CIMPP;
 
-EquipmentVersion::EquipmentVersion(): date(nullptr) {};
+EquipmentVersion::EquipmentVersion() {};
 
 EquipmentVersion::~EquipmentVersion() {};
-
-
-
-
-
-
-bool assign_EquipmentVersion_date(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1)) {
-                element->date = dynamic_cast<Date*>(BaseClass_ptr2);
-                if(element->date != nullptr)
-                        return true;
-        }
-        return false;
-}
-
-
-
-
-
-
-
-
-
 
 
 bool assign_EquipmentVersion_baseUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
@@ -91,6 +68,17 @@ bool assign_EquipmentVersion_baseURIshortCircuit(std::stringstream &buffer, Base
 	return false;
 }
 
+bool assign_EquipmentVersion_date(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
+	if(EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1)) {
+                buffer >> element->date;
+                if(buffer.fail())
+                        return false;
+                else
+                        return true;
+        }
+        else
+                return false;
+}
 
 bool assign_EquipmentVersion_differenceModelURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1)) {
@@ -191,6 +179,21 @@ bool assign_EquipmentVersion_shortName(std::stringstream &buffer, BaseClass* Bas
 	return false;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* EquipmentVersion_factory() {
 		return new EquipmentVersion;
@@ -206,7 +209,8 @@ void EquipmentVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std::string
 	assign_map.insert(std::make_pair(std::string("cim:EquipmentVersion.baseURIcore"), &assign_EquipmentVersion_baseURIcore));
 	assign_map.insert(std::make_pair(std::string("cim:EquipmentVersion.baseURIoperation"), &assign_EquipmentVersion_baseURIoperation));
 	assign_map.insert(std::make_pair(std::string("cim:EquipmentVersion.baseURIshortCircuit"), &assign_EquipmentVersion_baseURIshortCircuit));
-		assign_map.insert(std::make_pair(std::string("cim:EquipmentVersion.differenceModelURI"), &assign_EquipmentVersion_differenceModelURI));
+	assign_map.insert(std::make_pair(std::string("cim:EquipmentVersion.date"), &assign_EquipmentVersion_date));
+	assign_map.insert(std::make_pair(std::string("cim:EquipmentVersion.differenceModelURI"), &assign_EquipmentVersion_differenceModelURI));
 	assign_map.insert(std::make_pair(std::string("cim:EquipmentVersion.entsoeUML"), &assign_EquipmentVersion_entsoeUML));
 	assign_map.insert(std::make_pair(std::string("cim:EquipmentVersion.entsoeURIcore"), &assign_EquipmentVersion_entsoeURIcore));
 	assign_map.insert(std::make_pair(std::string("cim:EquipmentVersion.entsoeURIoperation"), &assign_EquipmentVersion_entsoeURIoperation));
@@ -218,8 +222,7 @@ void EquipmentVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std::string
 }
 
 void EquipmentVersion::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-					assign_map.insert(std::make_pair(std::string("cim:EquipmentVersion.date"), &assign_EquipmentVersion_date));
-									}
+														}
 
 const char EquipmentVersion::debugName[] = "EquipmentVersion";
 const char* EquipmentVersion::debugString()
@@ -231,5 +234,3 @@ const BaseClassDefiner EquipmentVersion::declare()
 {
 	return BaseClassDefiner(EquipmentVersion::addConstructToMap, EquipmentVersion::addPrimitiveAssignFnsToMap, EquipmentVersion::addClassAssignFnsToMap, EquipmentVersion::debugName);
 }
-
-

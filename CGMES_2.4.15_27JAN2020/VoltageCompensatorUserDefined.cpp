@@ -2,8 +2,8 @@
 #include "VoltageCompensatorDynamics.hpp"
 #include "VoltageCompensatorUserDefined.hpp"
 
-#include "Boolean.hpp"
 #include "ProprietaryParameterDynamics.hpp"
+#include "Boolean.hpp"
 
 using namespace CIMPP;
 
@@ -11,17 +11,6 @@ VoltageCompensatorUserDefined::VoltageCompensatorUserDefined() {};
 
 VoltageCompensatorUserDefined::~VoltageCompensatorUserDefined() {};
 
-
-
-bool assign_VoltageCompensatorUserDefined_ProprietaryParameterDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(VoltageCompensatorUserDefined* element = dynamic_cast<VoltageCompensatorUserDefined*>(BaseClass_ptr1)) {
-		if(dynamic_cast<ProprietaryParameterDynamics*>(BaseClass_ptr2) != nullptr) {
-                        element->ProprietaryParameterDynamics.push_back(dynamic_cast<ProprietaryParameterDynamics*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
 
 
 bool assign_VoltageCompensatorUserDefined_proprietary(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
@@ -37,6 +26,17 @@ bool assign_VoltageCompensatorUserDefined_proprietary(std::stringstream &buffer,
 }
 
 
+bool assign_VoltageCompensatorUserDefined_ProprietaryParameterDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(VoltageCompensatorUserDefined* element = dynamic_cast<VoltageCompensatorUserDefined*>(BaseClass_ptr1)) {
+		if(dynamic_cast<ProprietaryParameterDynamics*>(BaseClass_ptr2) != nullptr) {
+                        element->ProprietaryParameterDynamics.push_back(dynamic_cast<ProprietaryParameterDynamics*>(BaseClass_ptr2));
+			return true;
+		}
+	}
+	return false;
+}
+
+
 namespace CIMPP {
 	BaseClass* VoltageCompensatorUserDefined_factory() {
 		return new VoltageCompensatorUserDefined;
@@ -48,12 +48,12 @@ void VoltageCompensatorUserDefined::addConstructToMap(std::unordered_map<std::st
 }
 
 void VoltageCompensatorUserDefined::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
-	assign_map.insert(std::make_pair(std::string("cim:VoltageCompensatorUserDefined.proprietary"), &assign_VoltageCompensatorUserDefined_proprietary));
-	}
+		assign_map.insert(std::make_pair(std::string("cim:VoltageCompensatorUserDefined.proprietary"), &assign_VoltageCompensatorUserDefined_proprietary));
+}
 
 void VoltageCompensatorUserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-		assign_map.insert(std::make_pair(std::string("cim:VoltageCompensatorUserDefined.ProprietaryParameterDynamics"), &assign_VoltageCompensatorUserDefined_ProprietaryParameterDynamics));
-}
+	assign_map.insert(std::make_pair(std::string("cim:VoltageCompensatorUserDefined.ProprietaryParameterDynamics"), &assign_VoltageCompensatorUserDefined_ProprietaryParameterDynamics));
+	}
 
 const char VoltageCompensatorUserDefined::debugName[] = "VoltageCompensatorUserDefined";
 const char* VoltageCompensatorUserDefined::debugString()
@@ -65,5 +65,3 @@ const BaseClassDefiner VoltageCompensatorUserDefined::declare()
 {
 	return BaseClassDefiner(VoltageCompensatorUserDefined::addConstructToMap, VoltageCompensatorUserDefined::addPrimitiveAssignFnsToMap, VoltageCompensatorUserDefined::addClassAssignFnsToMap, VoltageCompensatorUserDefined::debugName);
 }
-
-

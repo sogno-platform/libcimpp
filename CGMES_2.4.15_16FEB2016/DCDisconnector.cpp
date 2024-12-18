@@ -37,5 +37,3 @@ const BaseClassDefiner DCDisconnector::declare()
 {
 	return BaseClassDefiner(DCDisconnector::addConstructToMap, DCDisconnector::addPrimitiveAssignFnsToMap, DCDisconnector::addClassAssignFnsToMap, DCDisconnector::debugName);
 }
-
-

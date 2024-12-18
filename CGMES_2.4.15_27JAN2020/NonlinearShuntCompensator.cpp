@@ -11,6 +11,8 @@ NonlinearShuntCompensator::NonlinearShuntCompensator() {};
 NonlinearShuntCompensator::~NonlinearShuntCompensator() {};
 
 
+
+
 bool assign_NonlinearShuntCompensator_NonlinearShuntCompensatorPoints(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(NonlinearShuntCompensator* element = dynamic_cast<NonlinearShuntCompensator*>(BaseClass_ptr1)) {
 		if(dynamic_cast<NonlinearShuntCompensatorPoint*>(BaseClass_ptr2) != nullptr) {
@@ -20,8 +22,6 @@ bool assign_NonlinearShuntCompensator_NonlinearShuntCompensatorPoints(BaseClass*
 	}
 	return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* NonlinearShuntCompensator_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner NonlinearShuntCompensator::declare()
 {
 	return BaseClassDefiner(NonlinearShuntCompensator::addConstructToMap, NonlinearShuntCompensator::addPrimitiveAssignFnsToMap, NonlinearShuntCompensator::addClassAssignFnsToMap, NonlinearShuntCompensator::debugName);
 }
-
-

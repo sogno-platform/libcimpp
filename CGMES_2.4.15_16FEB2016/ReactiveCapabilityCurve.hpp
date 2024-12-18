@@ -22,14 +22,14 @@ class SynchronousMachine;
 	public:
 					std::list<CIMPP::EquivalentInjection*> EquivalentInjection; 	/* The reactive capability curve used by this equivalent injection. Default: 0 */
 					std::list<CIMPP::SynchronousMachine*> InitiallyUsedBySynchronousMachines; 	/* The default reactive capability curve for use by a synchronous machine. Default: 0 */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		ReactiveCapabilityCurve();
 		virtual ~ReactiveCapabilityCurve();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

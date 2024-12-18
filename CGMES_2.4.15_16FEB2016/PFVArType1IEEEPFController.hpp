@@ -30,14 +30,14 @@ namespace CIMPP {
 					CIMPP::PU vpfref; 	/* PF controller reference (). Default: nullptr */
 					CIMPP::PU vvtmax; 	/* Maximum machine terminal voltage needed for pf/var controller to be enabled (). Default: nullptr */
 					CIMPP::PU vvtmin; 	/* Minimum machine terminal voltage needed to enable pf/var controller (). Default: nullptr */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		PFVArType1IEEEPFController();
 		virtual ~PFVArType1IEEEPFController();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

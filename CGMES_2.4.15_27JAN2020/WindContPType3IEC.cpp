@@ -2,6 +2,8 @@
 #include "IdentifiedObject.hpp"
 #include "WindContPType3IEC.hpp"
 
+#include "WindDynamicsLookupTable.hpp"
+#include "WindGenTurbineType3IEC.hpp"
 #include "PU.hpp"
 #include "PU.hpp"
 #include "PU.hpp"
@@ -23,54 +25,14 @@
 #include "PU.hpp"
 #include "PU.hpp"
 #include "Simple_Float.hpp"
-#include "WindGenTurbineType3IEC.hpp"
-#include "WindDynamicsLookupTable.hpp"
 
 using namespace CIMPP;
 
-WindContPType3IEC::WindContPType3IEC(): WindGenTurbineType3IEC(nullptr), WindDynamicsLookupTable(nullptr) {};
+WindContPType3IEC::WindContPType3IEC(): WindGenTurbineType3IEC(nullptr) {};
 
 WindContPType3IEC::~WindContPType3IEC() {};
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-bool assign_WindContPType3IEC_WindGenTurbineType3IEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(WindContPType3IEC* element = dynamic_cast<WindContPType3IEC*>(BaseClass_ptr1)) {
-                element->WindGenTurbineType3IEC = dynamic_cast<WindGenTurbineType3IEC*>(BaseClass_ptr2);
-                if(element->WindGenTurbineType3IEC != nullptr)
-                        return true;
-        }
-        return false;
-}
-
-bool assign_WindContPType3IEC_WindDynamicsLookupTable(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(WindContPType3IEC* element = dynamic_cast<WindContPType3IEC*>(BaseClass_ptr1)) {
-                element->WindDynamicsLookupTable = dynamic_cast<WindDynamicsLookupTable*>(BaseClass_ptr2);
-                if(element->WindDynamicsLookupTable != nullptr)
-                        return true;
-        }
-        return false;
-}
 
 
 bool assign_WindContPType3IEC_dpmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
@@ -326,6 +288,45 @@ bool assign_WindContPType3IEC_zeta(std::stringstream &buffer, BaseClass* BaseCla
 }
 
 
+bool assign_WindContPType3IEC_WindDynamicsLookupTable(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(WindContPType3IEC* element = dynamic_cast<WindContPType3IEC*>(BaseClass_ptr1)) {
+		if(dynamic_cast<WindDynamicsLookupTable*>(BaseClass_ptr2) != nullptr) {
+                        element->WindDynamicsLookupTable.push_back(dynamic_cast<WindDynamicsLookupTable*>(BaseClass_ptr2));
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindContPType3IEC_WindGenTurbineType3IEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(WindContPType3IEC* element = dynamic_cast<WindContPType3IEC*>(BaseClass_ptr1)) {
+                element->WindGenTurbineType3IEC = dynamic_cast<WindGenTurbineType3IEC*>(BaseClass_ptr2);
+                if(element->WindGenTurbineType3IEC != nullptr)
+                        return true;
+        }
+        return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 namespace CIMPP {
 	BaseClass* WindContPType3IEC_factory() {
@@ -338,7 +339,7 @@ void WindContPType3IEC::addConstructToMap(std::unordered_map<std::string, BaseCl
 }
 
 void WindContPType3IEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
-	assign_map.insert(std::make_pair(std::string("cim:WindContPType3IEC.dpmax"), &assign_WindContPType3IEC_dpmax));
+			assign_map.insert(std::make_pair(std::string("cim:WindContPType3IEC.dpmax"), &assign_WindContPType3IEC_dpmax));
 	assign_map.insert(std::make_pair(std::string("cim:WindContPType3IEC.dtrisemaxlvrt"), &assign_WindContPType3IEC_dtrisemaxlvrt));
 	assign_map.insert(std::make_pair(std::string("cim:WindContPType3IEC.kdtd"), &assign_WindContPType3IEC_kdtd));
 	assign_map.insert(std::make_pair(std::string("cim:WindContPType3IEC.kip"), &assign_WindContPType3IEC_kip));
@@ -359,12 +360,12 @@ void WindContPType3IEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::strin
 	assign_map.insert(std::make_pair(std::string("cim:WindContPType3IEC.updip"), &assign_WindContPType3IEC_updip));
 	assign_map.insert(std::make_pair(std::string("cim:WindContPType3IEC.wdtd"), &assign_WindContPType3IEC_wdtd));
 	assign_map.insert(std::make_pair(std::string("cim:WindContPType3IEC.zeta"), &assign_WindContPType3IEC_zeta));
-		}
+}
 
 void WindContPType3IEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-																						assign_map.insert(std::make_pair(std::string("cim:WindContPType3IEC.WindGenTurbineType3IEC"), &assign_WindContPType3IEC_WindGenTurbineType3IEC));
 	assign_map.insert(std::make_pair(std::string("cim:WindContPType3IEC.WindDynamicsLookupTable"), &assign_WindContPType3IEC_WindDynamicsLookupTable));
-}
+	assign_map.insert(std::make_pair(std::string("cim:WindContPType3IEC.WindGenTurbineType3IEC"), &assign_WindContPType3IEC_WindGenTurbineType3IEC));
+																					}
 
 const char WindContPType3IEC::debugName[] = "WindContPType3IEC";
 const char* WindContPType3IEC::debugString()
@@ -376,5 +377,3 @@ const BaseClassDefiner WindContPType3IEC::declare()
 {
 	return BaseClassDefiner(WindContPType3IEC::addConstructToMap, WindContPType3IEC::addPrimitiveAssignFnsToMap, WindContPType3IEC::addClassAssignFnsToMap, WindContPType3IEC::debugName);
 }
-
-

@@ -20,16 +20,16 @@ class ShuntCompensator;
 	{
 
 	public:
-					CIMPP::Simple_Float sections; 	/* The number of sections in service as a continous variable. To get integer value scale with ShuntCompensator.bPerSection. Default: nullptr */
 					CIMPP::ShuntCompensator* ShuntCompensator; 	/* The shunt compensator for which the state applies. Default: 0 */
-				
+					CIMPP::Simple_Float sections; 	/* The number of sections in service as a continous variable. To get integer value scale with ShuntCompensator.bPerSection. Default: nullptr */
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		SvShuntCompensatorSections();
 		virtual ~SvShuntCompensatorSections();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

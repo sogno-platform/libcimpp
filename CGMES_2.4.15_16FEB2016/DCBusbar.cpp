@@ -37,5 +37,3 @@ const BaseClassDefiner DCBusbar::declare()
 {
 	return BaseClassDefiner(DCBusbar::addConstructToMap, DCBusbar::addPrimitiveAssignFnsToMap, DCBusbar::addClassAssignFnsToMap, DCBusbar::debugName);
 }
-
-

@@ -11,6 +11,8 @@ EquivalentEquipment::EquivalentEquipment(): EquivalentNetwork(nullptr) {};
 EquivalentEquipment::~EquivalentEquipment() {};
 
 
+
+
 bool assign_EquivalentNetwork_EquivalentEquipments(BaseClass*, BaseClass*);
 bool assign_EquivalentEquipment_EquivalentNetwork(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(EquivalentEquipment* element = dynamic_cast<EquivalentEquipment*>(BaseClass_ptr1)) {
@@ -20,8 +22,6 @@ bool assign_EquivalentEquipment_EquivalentNetwork(BaseClass* BaseClass_ptr1, Bas
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* EquivalentEquipment_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner EquivalentEquipment::declare()
 {
 	return BaseClassDefiner(EquivalentEquipment::addConstructToMap, EquivalentEquipment::addPrimitiveAssignFnsToMap, EquivalentEquipment::addClassAssignFnsToMap, EquivalentEquipment::debugName);
 }
-
-

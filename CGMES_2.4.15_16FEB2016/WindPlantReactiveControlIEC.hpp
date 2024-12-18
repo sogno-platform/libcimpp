@@ -37,14 +37,14 @@ class WindPlantIEC;
 					CIMPP::PU uwpqdip; 	/* Voltage threshold for LVRT detection in q control (). It is type dependent parameter. Default: nullptr */
 					CIMPP::PU xrefmax; 	/* Maximum  ( or delta ) request from the plant controller (). It is project dependent parameter. Default: nullptr */
 					CIMPP::PU xrefmin; 	/* Minimum  ( or delta) request from the plant controller (). It is project dependent parameter. Default: nullptr */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		WindPlantReactiveControlIEC();
 		virtual ~WindPlantReactiveControlIEC();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

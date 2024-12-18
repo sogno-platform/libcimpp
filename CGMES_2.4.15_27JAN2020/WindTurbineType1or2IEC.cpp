@@ -12,6 +12,9 @@ WindTurbineType1or2IEC::WindTurbineType1or2IEC(): WindMechIEC(nullptr), WindProt
 WindTurbineType1or2IEC::~WindTurbineType1or2IEC() {};
 
 
+
+
+
 bool assign_WindMechIEC_WindTurbineType1or2IEC(BaseClass*, BaseClass*);
 bool assign_WindTurbineType1or2IEC_WindMechIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(WindTurbineType1or2IEC* element = dynamic_cast<WindTurbineType1or2IEC*>(BaseClass_ptr1)) {
@@ -31,9 +34,6 @@ bool assign_WindTurbineType1or2IEC_WindProtectionIEC(BaseClass* BaseClass_ptr1, 
         }
         return false;
 }
-
-
-
 
 namespace CIMPP {
 	BaseClass* WindTurbineType1or2IEC_factory() {
@@ -63,5 +63,3 @@ const BaseClassDefiner WindTurbineType1or2IEC::declare()
 {
 	return BaseClassDefiner(WindTurbineType1or2IEC::addConstructToMap, WindTurbineType1or2IEC::addPrimitiveAssignFnsToMap, WindTurbineType1or2IEC::addClassAssignFnsToMap, WindTurbineType1or2IEC::debugName);
 }
-
-

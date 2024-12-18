@@ -2,11 +2,11 @@
 #include "AsynchronousMachineDynamics.hpp"
 #include "AsynchronousMachineTimeConstantReactance.hpp"
 
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
 #include "Seconds.hpp"
 #include "Seconds.hpp"
+#include "PU.hpp"
+#include "PU.hpp"
+#include "PU.hpp"
 
 using namespace CIMPP;
 
@@ -15,15 +15,21 @@ AsynchronousMachineTimeConstantReactance::AsynchronousMachineTimeConstantReactan
 AsynchronousMachineTimeConstantReactance::~AsynchronousMachineTimeConstantReactance() {};
 
 
-
-
-
-
-
-
-bool assign_AsynchronousMachineTimeConstantReactance_xs(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
+bool assign_AsynchronousMachineTimeConstantReactance_tpo(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(AsynchronousMachineTimeConstantReactance* element = dynamic_cast<AsynchronousMachineTimeConstantReactance*>(BaseClass_ptr1)) {
-                buffer >> element->xs;
+                buffer >> element->tpo;
+                if(buffer.fail())
+                        return false;
+                else
+                        return true;
+        }
+        else
+                return false;
+}
+
+bool assign_AsynchronousMachineTimeConstantReactance_tppo(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
+	if(AsynchronousMachineTimeConstantReactance* element = dynamic_cast<AsynchronousMachineTimeConstantReactance*>(BaseClass_ptr1)) {
+                buffer >> element->tppo;
                 if(buffer.fail())
                         return false;
                 else
@@ -57,9 +63,9 @@ bool assign_AsynchronousMachineTimeConstantReactance_xpp(std::stringstream &buff
                 return false;
 }
 
-bool assign_AsynchronousMachineTimeConstantReactance_tpo(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
+bool assign_AsynchronousMachineTimeConstantReactance_xs(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(AsynchronousMachineTimeConstantReactance* element = dynamic_cast<AsynchronousMachineTimeConstantReactance*>(BaseClass_ptr1)) {
-                buffer >> element->tpo;
+                buffer >> element->xs;
                 if(buffer.fail())
                         return false;
                 else
@@ -69,17 +75,11 @@ bool assign_AsynchronousMachineTimeConstantReactance_tpo(std::stringstream &buff
                 return false;
 }
 
-bool assign_AsynchronousMachineTimeConstantReactance_tppo(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(AsynchronousMachineTimeConstantReactance* element = dynamic_cast<AsynchronousMachineTimeConstantReactance*>(BaseClass_ptr1)) {
-                buffer >> element->tppo;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
+
+
+
+
+
 
 namespace CIMPP {
 	BaseClass* AsynchronousMachineTimeConstantReactance_factory() {
@@ -92,11 +92,11 @@ void AsynchronousMachineTimeConstantReactance::addConstructToMap(std::unordered_
 }
 
 void AsynchronousMachineTimeConstantReactance::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
-	assign_map.insert(std::make_pair(std::string("cim:AsynchronousMachineTimeConstantReactance.xs"), &assign_AsynchronousMachineTimeConstantReactance_xs));
-	assign_map.insert(std::make_pair(std::string("cim:AsynchronousMachineTimeConstantReactance.xp"), &assign_AsynchronousMachineTimeConstantReactance_xp));
-	assign_map.insert(std::make_pair(std::string("cim:AsynchronousMachineTimeConstantReactance.xpp"), &assign_AsynchronousMachineTimeConstantReactance_xpp));
 	assign_map.insert(std::make_pair(std::string("cim:AsynchronousMachineTimeConstantReactance.tpo"), &assign_AsynchronousMachineTimeConstantReactance_tpo));
 	assign_map.insert(std::make_pair(std::string("cim:AsynchronousMachineTimeConstantReactance.tppo"), &assign_AsynchronousMachineTimeConstantReactance_tppo));
+	assign_map.insert(std::make_pair(std::string("cim:AsynchronousMachineTimeConstantReactance.xp"), &assign_AsynchronousMachineTimeConstantReactance_xp));
+	assign_map.insert(std::make_pair(std::string("cim:AsynchronousMachineTimeConstantReactance.xpp"), &assign_AsynchronousMachineTimeConstantReactance_xpp));
+	assign_map.insert(std::make_pair(std::string("cim:AsynchronousMachineTimeConstantReactance.xs"), &assign_AsynchronousMachineTimeConstantReactance_xs));
 }
 
 void AsynchronousMachineTimeConstantReactance::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
@@ -112,5 +112,3 @@ const BaseClassDefiner AsynchronousMachineTimeConstantReactance::declare()
 {
 	return BaseClassDefiner(AsynchronousMachineTimeConstantReactance::addConstructToMap, AsynchronousMachineTimeConstantReactance::addPrimitiveAssignFnsToMap, AsynchronousMachineTimeConstantReactance::addClassAssignFnsToMap, AsynchronousMachineTimeConstantReactance::debugName);
 }
-
-

@@ -11,8 +11,6 @@ EarthFaultCompensator::EarthFaultCompensator() {};
 EarthFaultCompensator::~EarthFaultCompensator() {};
 
 
-
-
 bool assign_EarthFaultCompensator_r(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(EarthFaultCompensator* element = dynamic_cast<EarthFaultCompensator*>(BaseClass_ptr1)) {
                 buffer >> element->r;
@@ -24,6 +22,8 @@ bool assign_EarthFaultCompensator_r(std::stringstream &buffer, BaseClass* BaseCl
         else
                 return false;
 }
+
+
 
 namespace CIMPP {
 	BaseClass* EarthFaultCompensator_factory() {
@@ -52,5 +52,3 @@ const BaseClassDefiner EarthFaultCompensator::declare()
 {
 	return BaseClassDefiner(EarthFaultCompensator::addConstructToMap, EarthFaultCompensator::addPrimitiveAssignFnsToMap, EarthFaultCompensator::addClassAssignFnsToMap, EarthFaultCompensator::debugName);
 }
-
-

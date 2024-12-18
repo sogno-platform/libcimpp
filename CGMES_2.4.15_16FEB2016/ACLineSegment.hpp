@@ -10,8 +10,8 @@
 #include "Susceptance.hpp"
 #include "Conductance.hpp"
 #include "Resistance.hpp"
-#include "Reactance.hpp"
 #include "Temperature.hpp"
+#include "Reactance.hpp"
 
 namespace CIMPP {
 
@@ -23,23 +23,23 @@ namespace CIMPP {
 	{
 
 	public:
+					CIMPP::Susceptance b0ch; 	/* Zero sequence shunt (charging) susceptance, uniformly distributed, of the entire line section. Default: nullptr */
 					CIMPP::Susceptance bch; 	/* Positive sequence shunt (charging) susceptance, uniformly distributed, of the entire line section.  This value represents the full charging over the full length of the line. Default: nullptr */
+					CIMPP::Conductance g0ch; 	/* Zero sequence shunt (charging) conductance, uniformly distributed, of the entire line section. Default: nullptr */
 					CIMPP::Conductance gch; 	/* Positive sequence shunt (charging) conductance, uniformly distributed, of the entire line section. Default: nullptr */
 					CIMPP::Resistance r; 	/* Positive sequence series resistance of the entire line section. Default: nullptr */
-					CIMPP::Reactance x; 	/* Positive sequence series reactance of the entire line section. Default: nullptr */
-					CIMPP::Susceptance b0ch; 	/* Zero sequence shunt (charging) susceptance, uniformly distributed, of the entire line section. Default: nullptr */
-					CIMPP::Conductance g0ch; 	/* Zero sequence shunt (charging) conductance, uniformly distributed, of the entire line section. Default: nullptr */
 					CIMPP::Resistance r0; 	/* Zero sequence series resistance of the entire line section. Default: nullptr */
 					CIMPP::Temperature shortCircuitEndTemperature; 	/* Maximum permitted temperature at the end of SC for the calculation of minimum short-circuit currents. Used for short circuit data exchange according to IEC 60909 Default: nullptr */
+					CIMPP::Reactance x; 	/* Positive sequence series reactance of the entire line section. Default: nullptr */
 					CIMPP::Reactance x0; 	/* Zero sequence series reactance of the entire line section. Default: nullptr */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		ACLineSegment();
 		virtual ~ACLineSegment();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

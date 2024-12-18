@@ -12,6 +12,9 @@ Discrete::Discrete(): ValueAliasSet(nullptr) {};
 Discrete::~Discrete() {};
 
 
+
+
+
 bool assign_Discrete_DiscreteValues(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(Discrete* element = dynamic_cast<Discrete*>(BaseClass_ptr1)) {
 		if(dynamic_cast<DiscreteValue*>(BaseClass_ptr2) != nullptr) {
@@ -31,9 +34,6 @@ bool assign_Discrete_ValueAliasSet(BaseClass* BaseClass_ptr1, BaseClass* BaseCla
         }
         return false;
 }
-
-
-
 
 namespace CIMPP {
 	BaseClass* Discrete_factory() {
@@ -63,5 +63,3 @@ const BaseClassDefiner Discrete::declare()
 {
 	return BaseClassDefiner(Discrete::addConstructToMap, Discrete::addPrimitiveAssignFnsToMap, Discrete::addClassAssignFnsToMap, Discrete::debugName);
 }
-
-

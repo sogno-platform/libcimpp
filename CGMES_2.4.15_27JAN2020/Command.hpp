@@ -21,18 +21,18 @@ class ValueAliasSet;
 	{
 
 	public:
-					CIMPP::Integer normalValue; 	/* Normal value for Control.value e.g. used for percentage scaling. Default: 0 */
-					CIMPP::Integer value; 	/* The value representing the actuator output. Default: 0 */
 					CIMPP::DiscreteValue* DiscreteValue; 	/* The Control variable associated with the MeasurementValue. Default: 0 */
 					CIMPP::ValueAliasSet* ValueAliasSet; 	/* The ValueAliasSet used for translation of a Control value to a name. Default: 0 */
-				
+					CIMPP::Integer normalValue; 	/* Normal value for Control.value e.g. used for percentage scaling. Default: 0 */
+					CIMPP::Integer value; 	/* The value representing the actuator output. Default: 0 */
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		Command();
 		virtual ~Command();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

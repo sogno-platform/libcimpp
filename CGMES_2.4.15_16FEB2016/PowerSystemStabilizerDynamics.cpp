@@ -2,8 +2,8 @@
 #include "DynamicsFunctionBlock.hpp"
 #include "PowerSystemStabilizerDynamics.hpp"
 
-#include "RemoteInputSignal.hpp"
 #include "ExcitationSystemDynamics.hpp"
+#include "RemoteInputSignal.hpp"
 
 using namespace CIMPP;
 
@@ -12,15 +12,8 @@ PowerSystemStabilizerDynamics::PowerSystemStabilizerDynamics(): ExcitationSystem
 PowerSystemStabilizerDynamics::~PowerSystemStabilizerDynamics() {};
 
 
-bool assign_PowerSystemStabilizerDynamics_RemoteInputSignal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(PowerSystemStabilizerDynamics* element = dynamic_cast<PowerSystemStabilizerDynamics*>(BaseClass_ptr1)) {
-		if(dynamic_cast<RemoteInputSignal*>(BaseClass_ptr2) != nullptr) {
-                        element->RemoteInputSignal.push_back(dynamic_cast<RemoteInputSignal*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
+
+
 
 bool assign_ExcitationSystemDynamics_PowerSystemStabilizerDynamics(BaseClass*, BaseClass*);
 bool assign_PowerSystemStabilizerDynamics_ExcitationSystemDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
@@ -32,8 +25,15 @@ bool assign_PowerSystemStabilizerDynamics_ExcitationSystemDynamics(BaseClass* Ba
         return false;
 }
 
-
-
+bool assign_PowerSystemStabilizerDynamics_RemoteInputSignal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(PowerSystemStabilizerDynamics* element = dynamic_cast<PowerSystemStabilizerDynamics*>(BaseClass_ptr1)) {
+		if(dynamic_cast<RemoteInputSignal*>(BaseClass_ptr2) != nullptr) {
+                        element->RemoteInputSignal.push_back(dynamic_cast<RemoteInputSignal*>(BaseClass_ptr2));
+			return true;
+		}
+	}
+	return false;
+}
 
 namespace CIMPP {
 	BaseClass* PowerSystemStabilizerDynamics_factory() {
@@ -49,8 +49,8 @@ void PowerSystemStabilizerDynamics::addPrimitiveAssignFnsToMap(std::unordered_ma
 		}
 
 void PowerSystemStabilizerDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-	assign_map.insert(std::make_pair(std::string("cim:PowerSystemStabilizerDynamics.RemoteInputSignal"), &assign_PowerSystemStabilizerDynamics_RemoteInputSignal));
 	assign_map.insert(std::make_pair(std::string("cim:PowerSystemStabilizerDynamics.ExcitationSystemDynamics"), &assign_PowerSystemStabilizerDynamics_ExcitationSystemDynamics));
+	assign_map.insert(std::make_pair(std::string("cim:PowerSystemStabilizerDynamics.RemoteInputSignal"), &assign_PowerSystemStabilizerDynamics_RemoteInputSignal));
 }
 
 const char PowerSystemStabilizerDynamics::debugName[] = "PowerSystemStabilizerDynamics";
@@ -63,5 +63,3 @@ const BaseClassDefiner PowerSystemStabilizerDynamics::declare()
 {
 	return BaseClassDefiner(PowerSystemStabilizerDynamics::addConstructToMap, PowerSystemStabilizerDynamics::addPrimitiveAssignFnsToMap, PowerSystemStabilizerDynamics::addClassAssignFnsToMap, PowerSystemStabilizerDynamics::debugName);
 }
-
-
