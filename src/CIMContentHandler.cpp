@@ -1,18 +1,11 @@
 #include "CIMContentHandler.hpp"
+
 #include <iostream>
-#include <sstream>
 #include <regex>
 
-#include <stdexcept>
-
-#include "Folders.hpp"
 #include "CIMFactory.hpp"
 #include "assignments.hpp"
 #include "CIMExceptions.hpp"
-
-#ifndef CGMES_BUILD
-#include "CIMNamespaces.hpp"
-#endif
 
 CIMContentHandler::CIMContentHandler() : Objects(nullptr), RDFMap(nullptr)
 {
@@ -133,7 +126,7 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 	}
 	// Create a task if the XML element is no CIM class and contains a RDF ID
 	std::string rdf_id = get_rdf_resource(atts);
-    if(!rdf_id.empty())
+	if (!rdf_id.empty())
 	{
 		taskQueue.push_back(Task(objectStack.top(), qName, rdf_id));
 		return;

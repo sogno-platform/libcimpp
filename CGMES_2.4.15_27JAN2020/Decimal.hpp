@@ -1,38 +1,39 @@
 #ifndef Decimal_H
 #define Decimal_H
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 
-#include "BaseClass.hpp"
-#include <list>
-#include "Boolean.hpp"
-#include "Float.hpp"
+#include <istream>
+#include <ostream>
 
-
-
-namespace CIMPP {
-
-
+namespace CIMPP
+{
 	/*
 	Decimal is the base-10 notational system for representing real numbers.
 	*/
-	class Decimal: public BaseClass
+	class Decimal
 	{
-
 	public:
-				
+		Decimal() : value(0.0), initialized(false) {}
+		Decimal(long double value) : value(value), initialized(true) {}
+
+		Decimal& operator=(long double rop);
+		operator long double() const;
+
+		long double value;
+		bool initialized;
+
 		static const char debugName[];
-		virtual const char* debugString();
-		
-		/* constructor initialising all attributes to null */
-		Decimal();
-		virtual ~Decimal();
-	
-		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
-		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
-		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);
-		static const BaseClassDefiner declare();
+		const char* debugString() const;
 
+		Decimal& operator+=(const Decimal& rhs);
+		Decimal& operator-=(const Decimal& rhs);
+		Decimal& operator*=(const Decimal& rhs);
+		Decimal& operator/=(const Decimal& rhs);
+
+		friend std::istream& operator>>(std::istream& lop, Decimal& rop);
+		friend std::ostream& operator<<(std::ostream& os, const Decimal& obj);
 	};
-
-	BaseClass* Decimal_factory();
 }
 #endif

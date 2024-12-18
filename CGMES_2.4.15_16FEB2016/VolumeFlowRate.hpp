@@ -1,46 +1,39 @@
 #ifndef VolumeFlowRate_H
 #define VolumeFlowRate_H
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 
-#include "BaseClass.hpp"
-#include <list>
-#include "Boolean.hpp"
-#include "Float.hpp"
+#include <istream>
+#include <ostream>
 
-
-#include "UnitMultiplier.hpp"
-#include "UnitSymbol.hpp"
-
-namespace CIMPP {
-
-
-class Float;
+namespace CIMPP
+{
 	/*
 	Volume per time.
 	*/
-	class VolumeFlowRate: public BaseClass
+	class VolumeFlowRate
 	{
-
 	public:
-					CIMPP::UnitMultiplier denominatorMultiplier; 	/*  Default: 0 */
-					CIMPP::UnitSymbol denominatorUnit; 	/*  Default: 0 */
-					CIMPP::UnitMultiplier multiplier; 	/*  Default: 0 */
-					CIMPP::UnitSymbol unit; 	/*  Default: 0 */
-					CIMPP::Float* value; 	/*  Default: nullptr */
-				
+		VolumeFlowRate() : value(0.0), initialized(false) {}
+		VolumeFlowRate(long double value) : value(value), initialized(true) {}
+
+		VolumeFlowRate& operator=(long double rop);
+		operator long double() const;
+
+		long double value;
+		bool initialized;
+
 		static const char debugName[];
-		virtual const char* debugString();
-		
-		/* constructor initialising all attributes to null */
-		VolumeFlowRate();
-		virtual ~VolumeFlowRate();
-	
-		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
-		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
-		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);
-		static const BaseClassDefiner declare();
+		const char* debugString() const;
 
+		VolumeFlowRate& operator+=(const VolumeFlowRate& rhs);
+		VolumeFlowRate& operator-=(const VolumeFlowRate& rhs);
+		VolumeFlowRate& operator*=(const VolumeFlowRate& rhs);
+		VolumeFlowRate& operator/=(const VolumeFlowRate& rhs);
+
+		friend std::istream& operator>>(std::istream& lop, VolumeFlowRate& rop);
+		friend std::ostream& operator<<(std::ostream& os, const VolumeFlowRate& obj);
 	};
-
-	BaseClass* VolumeFlowRate_factory();
 }
 #endif

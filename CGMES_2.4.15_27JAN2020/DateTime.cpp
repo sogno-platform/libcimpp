@@ -1,41 +1,49 @@
-#include <sstream>
-#include "BaseClass.hpp"
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "DateTime.hpp"
 
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-DateTime::DateTime() {};
+DateTime& DateTime::operator=(const std::string& rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
 
-DateTime::~DateTime() {};
-
-
-
-namespace CIMPP {
-	BaseClass* DateTime_factory() {
-		return new DateTime;
+DateTime::operator std::string() const
+{
+	if (!initialized)
+	{
+		throw new ReadingUninitializedField();
 	}
-}
-
-void DateTime::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {
-	factory_map.insert(std::make_pair(std::string("cim:DateTime"), &DateTime_factory));
-}
-
-void DateTime::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
-}
-
-void DateTime::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
+	return value;
 }
 
 const char DateTime::debugName[] = "DateTime";
-const char* DateTime::debugString()
+const char* DateTime::debugString() const
 {
 	return DateTime::debugName;
 }
 
-const BaseClassDefiner DateTime::declare()
+namespace CIMPP
 {
-	return BaseClassDefiner(DateTime::addConstructToMap, DateTime::addPrimitiveAssignFnsToMap, DateTime::addClassAssignFnsToMap, DateTime::debugName);
+	std::istream& operator>>(std::istream& lop, DateTime& rop)
+	{
+		lop >> rop.value;
+		rop.initialized = true;
+		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const DateTime& obj)
+	{
+		if (obj.initialized)
+		{
+			os << obj.value;
+		}
+		return os;
+	}
 }
-
-

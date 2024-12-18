@@ -1,6 +1,10 @@
-#include <sstream>
-#include "BaseClass.hpp"
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "TopologyBoundaryVersion.hpp"
+
+#include <algorithm>
+#include <sstream>
 
 #include "String.hpp"
 #include "String.hpp"
@@ -15,34 +19,16 @@
 
 using namespace CIMPP;
 
-TopologyBoundaryVersion::TopologyBoundaryVersion(): date(nullptr) {};
-
+TopologyBoundaryVersion::TopologyBoundaryVersion() {};
 TopologyBoundaryVersion::~TopologyBoundaryVersion() {};
 
 
-
-
-bool assign_TopologyBoundaryVersion_date(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(TopologyBoundaryVersion* element = dynamic_cast<TopologyBoundaryVersion*>(BaseClass_ptr1)) {
-                element->date = dynamic_cast<Date*>(BaseClass_ptr2);
-                if(element->date != nullptr)
-                        return true;
-        }
-        return false;
-}
-
-
-
-
-
-
-
-
-
-bool assign_TopologyBoundaryVersion_baseUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(TopologyBoundaryVersion* element = dynamic_cast<TopologyBoundaryVersion*>(BaseClass_ptr1)) {
+bool assign_TopologyBoundaryVersion_baseUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (TopologyBoundaryVersion* element = dynamic_cast<TopologyBoundaryVersion*>(BaseClass_ptr1))
+	{
 		element->baseUML = buffer.str();
-		if(buffer.fail())
+		if (buffer.fail())
 			return false;
 		else
 			return true;
@@ -50,10 +36,12 @@ bool assign_TopologyBoundaryVersion_baseUML(std::stringstream &buffer, BaseClass
 	return false;
 }
 
-bool assign_TopologyBoundaryVersion_baseURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(TopologyBoundaryVersion* element = dynamic_cast<TopologyBoundaryVersion*>(BaseClass_ptr1)) {
+bool assign_TopologyBoundaryVersion_baseURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (TopologyBoundaryVersion* element = dynamic_cast<TopologyBoundaryVersion*>(BaseClass_ptr1))
+	{
 		element->baseURI = buffer.str();
-		if(buffer.fail())
+		if (buffer.fail())
 			return false;
 		else
 			return true;
@@ -61,11 +49,25 @@ bool assign_TopologyBoundaryVersion_baseURI(std::stringstream &buffer, BaseClass
 	return false;
 }
 
+bool assign_TopologyBoundaryVersion_date(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (TopologyBoundaryVersion* element = dynamic_cast<TopologyBoundaryVersion*>(BaseClass_ptr1))
+	{
+		element->date = buffer.str();
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
 
-bool assign_TopologyBoundaryVersion_differenceModelURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(TopologyBoundaryVersion* element = dynamic_cast<TopologyBoundaryVersion*>(BaseClass_ptr1)) {
+bool assign_TopologyBoundaryVersion_differenceModelURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (TopologyBoundaryVersion* element = dynamic_cast<TopologyBoundaryVersion*>(BaseClass_ptr1))
+	{
 		element->differenceModelURI = buffer.str();
-		if(buffer.fail())
+		if (buffer.fail())
 			return false;
 		else
 			return true;
@@ -73,10 +75,12 @@ bool assign_TopologyBoundaryVersion_differenceModelURI(std::stringstream &buffer
 	return false;
 }
 
-bool assign_TopologyBoundaryVersion_entsoeUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(TopologyBoundaryVersion* element = dynamic_cast<TopologyBoundaryVersion*>(BaseClass_ptr1)) {
+bool assign_TopologyBoundaryVersion_entsoeUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (TopologyBoundaryVersion* element = dynamic_cast<TopologyBoundaryVersion*>(BaseClass_ptr1))
+	{
 		element->entsoeUML = buffer.str();
-		if(buffer.fail())
+		if (buffer.fail())
 			return false;
 		else
 			return true;
@@ -84,10 +88,12 @@ bool assign_TopologyBoundaryVersion_entsoeUML(std::stringstream &buffer, BaseCla
 	return false;
 }
 
-bool assign_TopologyBoundaryVersion_entsoeURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(TopologyBoundaryVersion* element = dynamic_cast<TopologyBoundaryVersion*>(BaseClass_ptr1)) {
+bool assign_TopologyBoundaryVersion_entsoeURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (TopologyBoundaryVersion* element = dynamic_cast<TopologyBoundaryVersion*>(BaseClass_ptr1))
+	{
 		element->entsoeURI = buffer.str();
-		if(buffer.fail())
+		if (buffer.fail())
 			return false;
 		else
 			return true;
@@ -95,10 +101,12 @@ bool assign_TopologyBoundaryVersion_entsoeURI(std::stringstream &buffer, BaseCla
 	return false;
 }
 
-bool assign_TopologyBoundaryVersion_modelDescriptionURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(TopologyBoundaryVersion* element = dynamic_cast<TopologyBoundaryVersion*>(BaseClass_ptr1)) {
+bool assign_TopologyBoundaryVersion_modelDescriptionURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (TopologyBoundaryVersion* element = dynamic_cast<TopologyBoundaryVersion*>(BaseClass_ptr1))
+	{
 		element->modelDescriptionURI = buffer.str();
-		if(buffer.fail())
+		if (buffer.fail())
 			return false;
 		else
 			return true;
@@ -106,10 +114,12 @@ bool assign_TopologyBoundaryVersion_modelDescriptionURI(std::stringstream &buffe
 	return false;
 }
 
-bool assign_TopologyBoundaryVersion_namespaceRDF(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(TopologyBoundaryVersion* element = dynamic_cast<TopologyBoundaryVersion*>(BaseClass_ptr1)) {
+bool assign_TopologyBoundaryVersion_namespaceRDF(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (TopologyBoundaryVersion* element = dynamic_cast<TopologyBoundaryVersion*>(BaseClass_ptr1))
+	{
 		element->namespaceRDF = buffer.str();
-		if(buffer.fail())
+		if (buffer.fail())
 			return false;
 		else
 			return true;
@@ -117,10 +127,12 @@ bool assign_TopologyBoundaryVersion_namespaceRDF(std::stringstream &buffer, Base
 	return false;
 }
 
-bool assign_TopologyBoundaryVersion_namespaceUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(TopologyBoundaryVersion* element = dynamic_cast<TopologyBoundaryVersion*>(BaseClass_ptr1)) {
+bool assign_TopologyBoundaryVersion_namespaceUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (TopologyBoundaryVersion* element = dynamic_cast<TopologyBoundaryVersion*>(BaseClass_ptr1))
+	{
 		element->namespaceUML = buffer.str();
-		if(buffer.fail())
+		if (buffer.fail())
 			return false;
 		else
 			return true;
@@ -128,10 +140,12 @@ bool assign_TopologyBoundaryVersion_namespaceUML(std::stringstream &buffer, Base
 	return false;
 }
 
-bool assign_TopologyBoundaryVersion_shortName(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(TopologyBoundaryVersion* element = dynamic_cast<TopologyBoundaryVersion*>(BaseClass_ptr1)) {
+bool assign_TopologyBoundaryVersion_shortName(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (TopologyBoundaryVersion* element = dynamic_cast<TopologyBoundaryVersion*>(BaseClass_ptr1))
+	{
 		element->shortName = buffer.str();
-		if(buffer.fail())
+		if (buffer.fail())
 			return false;
 		else
 			return true;
@@ -139,20 +153,34 @@ bool assign_TopologyBoundaryVersion_shortName(std::stringstream &buffer, BaseCla
 	return false;
 }
 
-namespace CIMPP {
-	BaseClass* TopologyBoundaryVersion_factory() {
-		return new TopologyBoundaryVersion;
-	}
+
+
+
+
+
+
+
+
+
+
+
+const char TopologyBoundaryVersion::debugName[] = "TopologyBoundaryVersion";
+const char* TopologyBoundaryVersion::debugString() const
+{
+	return TopologyBoundaryVersion::debugName;
 }
 
-void TopologyBoundaryVersion::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {
+void TopologyBoundaryVersion::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
+{
 	factory_map.insert(std::make_pair(std::string("cim:TopologyBoundaryVersion"), &TopologyBoundaryVersion_factory));
 }
 
-void TopologyBoundaryVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
+void TopologyBoundaryVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
+{
 	assign_map.insert(std::make_pair(std::string("cim:TopologyBoundaryVersion.baseUML"), &assign_TopologyBoundaryVersion_baseUML));
 	assign_map.insert(std::make_pair(std::string("cim:TopologyBoundaryVersion.baseURI"), &assign_TopologyBoundaryVersion_baseURI));
-		assign_map.insert(std::make_pair(std::string("cim:TopologyBoundaryVersion.differenceModelURI"), &assign_TopologyBoundaryVersion_differenceModelURI));
+	assign_map.insert(std::make_pair(std::string("cim:TopologyBoundaryVersion.date"), &assign_TopologyBoundaryVersion_date));
+	assign_map.insert(std::make_pair(std::string("cim:TopologyBoundaryVersion.differenceModelURI"), &assign_TopologyBoundaryVersion_differenceModelURI));
 	assign_map.insert(std::make_pair(std::string("cim:TopologyBoundaryVersion.entsoeUML"), &assign_TopologyBoundaryVersion_entsoeUML));
 	assign_map.insert(std::make_pair(std::string("cim:TopologyBoundaryVersion.entsoeURI"), &assign_TopologyBoundaryVersion_entsoeURI));
 	assign_map.insert(std::make_pair(std::string("cim:TopologyBoundaryVersion.modelDescriptionURI"), &assign_TopologyBoundaryVersion_modelDescriptionURI));
@@ -161,14 +189,8 @@ void TopologyBoundaryVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std:
 	assign_map.insert(std::make_pair(std::string("cim:TopologyBoundaryVersion.shortName"), &assign_TopologyBoundaryVersion_shortName));
 }
 
-void TopologyBoundaryVersion::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-			assign_map.insert(std::make_pair(std::string("cim:TopologyBoundaryVersion.date"), &assign_TopologyBoundaryVersion_date));
-							}
-
-const char TopologyBoundaryVersion::debugName[] = "TopologyBoundaryVersion";
-const char* TopologyBoundaryVersion::debugString()
+void TopologyBoundaryVersion::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	return TopologyBoundaryVersion::debugName;
 }
 
 const BaseClassDefiner TopologyBoundaryVersion::declare()
@@ -176,4 +198,10 @@ const BaseClassDefiner TopologyBoundaryVersion::declare()
 	return BaseClassDefiner(TopologyBoundaryVersion::addConstructToMap, TopologyBoundaryVersion::addPrimitiveAssignFnsToMap, TopologyBoundaryVersion::addClassAssignFnsToMap, TopologyBoundaryVersion::debugName);
 }
 
-
+namespace CIMPP
+{
+	BaseClass* TopologyBoundaryVersion_factory()
+	{
+		return new TopologyBoundaryVersion;
+	}
+}
