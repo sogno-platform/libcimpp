@@ -1,46 +1,36 @@
 #ifndef ActivePowerPerCurrentFlow_H
 #define ActivePowerPerCurrentFlow_H
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 
-#include "BaseClass.hpp"
-#include <list>
-#include "Boolean.hpp"
-#include "Float.hpp"
+#include <istream>
+#include <ostream>
 
-
-#include "UnitMultiplier.hpp"
-#include "UnitSymbol.hpp"
-
-namespace CIMPP {
-
-
-class Float;
-	/*
-	
-	*/
-	class ActivePowerPerCurrentFlow: public BaseClass
+namespace CIMPP
+{
+	class ActivePowerPerCurrentFlow
 	{
-
 	public:
-					CIMPP::UnitMultiplier denominatorMultiplier; 	/*  Default: 0 */
-					CIMPP::UnitSymbol denominatorUnit; 	/*  Default: 0 */
-					CIMPP::UnitMultiplier multiplier; 	/*  Default: 0 */
-					CIMPP::UnitSymbol unit; 	/*  Default: 0 */
-					CIMPP::Float* value; 	/*  Default: nullptr */
-				
+		ActivePowerPerCurrentFlow() : value(0.0), initialized(false) {}
+		ActivePowerPerCurrentFlow(long double value) : value(value), initialized(true) {}
+
+		ActivePowerPerCurrentFlow& operator=(long double rop);
+		operator long double() const;
+
+		long double value;
+		bool initialized;
+
 		static const char debugName[];
-		virtual const char* debugString();
-		
-		/* constructor initialising all attributes to null */
-		ActivePowerPerCurrentFlow();
-		virtual ~ActivePowerPerCurrentFlow();
-	
-		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
-		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
-		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);
-		static const BaseClassDefiner declare();
+		const char* debugString() const;
 
+		ActivePowerPerCurrentFlow& operator+=(const ActivePowerPerCurrentFlow& rhs);
+		ActivePowerPerCurrentFlow& operator-=(const ActivePowerPerCurrentFlow& rhs);
+		ActivePowerPerCurrentFlow& operator*=(const ActivePowerPerCurrentFlow& rhs);
+		ActivePowerPerCurrentFlow& operator/=(const ActivePowerPerCurrentFlow& rhs);
+
+		friend std::istream& operator>>(std::istream& lop, ActivePowerPerCurrentFlow& rop);
+		friend std::ostream& operator<<(std::ostream& os, const ActivePowerPerCurrentFlow& obj);
 	};
-
-	BaseClass* ActivePowerPerCurrentFlow_factory();
 }
 #endif
