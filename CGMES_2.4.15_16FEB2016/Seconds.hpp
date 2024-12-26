@@ -1,38 +1,39 @@
 #ifndef Seconds_H
 #define Seconds_H
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 
-#include <string>
 #include <istream>
-
-#include "BaseClass.hpp"
+#include <ostream>
 
 namespace CIMPP
 {
-	class Seconds : public BaseClass
+	/*
+	Time, in seconds.
+	*/
+	class Seconds
 	{
-
 	public:
-		Seconds();
-		virtual ~Seconds();
-		Seconds(long double value);
-		static const BaseClassDefiner declare();
-		Seconds& operator=(long double &rop);
+		Seconds() : value(0.0), initialized(false) {}
+		Seconds(long double value) : value(value), initialized(true) {}
+
+		Seconds& operator=(long double rop);
+		operator long double() const;
+
+		long double value;
+		bool initialized;
+
+		static const char debugName[];
+		const char* debugString() const;
+
 		Seconds& operator+=(const Seconds& rhs);
 		Seconds& operator-=(const Seconds& rhs);
 		Seconds& operator*=(const Seconds& rhs);
 		Seconds& operator/=(const Seconds& rhs);
+
 		friend std::istream& operator>>(std::istream& lop, Seconds& rop);
-		operator long double();
-
-		long double value = 0.0;
-		bool initialized = false;
-
-		static const char debugName[];
-		virtual const char* debugString();
-
-		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
-		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
-		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);
+		friend std::ostream& operator<<(std::ostream& os, const Seconds& obj);
 	};
 }
 #endif

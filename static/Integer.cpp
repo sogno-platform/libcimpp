@@ -1,72 +1,74 @@
 #include "Integer.hpp"
-#include "CIMExceptions.hpp"
+
+#include <string>
+
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-Integer::Integer(){}
+Integer& Integer::operator=(long int rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
 
-Integer::~Integer(){}
-
-Integer::Integer(long int value)
-	: value(value), initialized(true) {}
-
-const BaseClassDefiner Integer::declare() {
-	return BaseClassDefiner(Integer::addConstructToMap, Integer::addPrimitiveAssignFnsToMap, Integer::addClassAssignFnsToMap, Integer::debugName);
+Integer::operator long int()
+{
+	if (!initialized)
+	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
 }
 
 const char Integer::debugName[] = "Integer";
-const char* Integer::debugString() {
+const char* Integer::debugString() const
+{
 	return Integer::debugName;
 }
 
-void Integer::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {}
+Integer& Integer::operator+=(const Integer& rhs)
+{
+	value += rhs.value;
+	return *this;
+}
 
-void Integer::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {}
+Integer& Integer::operator-=(const Integer& rhs)
+{
+	value -= rhs.value;
+	return *this;
+}
 
-void Integer::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {}
+Integer& Integer::operator*=(const Integer& rhs)
+{
+	value *= rhs.value;
+	return *this;
+}
 
-namespace  CIMPP {
-	Integer& Integer::operator=(long int &rop){
-		value = rop;
-		initialized = true;
-		return *this;
-	}
+Integer& Integer::operator/=(const Integer& rhs)
+{
+	value /= rhs.value;
+	return *this;
+}
 
-	Integer& Integer::operator-=(const Integer& rhs){
-	    value -= rhs.value;
-	    return *this;
-	}
-
-	Integer& Integer::operator*=(const Integer& rhs){
-	    value *= rhs.value;
-	    return *this;
-	}
-
-	Integer& Integer::operator/=(const Integer& rhs){
-	    value /= rhs.value;
-	    return *this;
-	}
-
-	Integer& Integer::operator+=(const Integer& rhs){
-	    value += rhs.value;
-	    return *this;
-	}
-
-	Integer::operator long int(){
-		if(!initialized)
-		{
-			throw new ReadingUninitializedField();
-		}
-		return value;
-	}
-
+namespace CIMPP
+{
 	std::istream& operator>>(std::istream& lop, Integer& rop)
 	{
 		std::string tmp;
 		lop >> tmp;
-
 		rop.value = stol(tmp);
 		rop.initialized = true;
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const Integer& obj)
+	{
+		if (obj.initialized)
+		{
+			os << obj.value;
+		}
+		return os;
 	}
 }

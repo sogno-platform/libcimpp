@@ -1,3 +1,6 @@
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "DateTime.hpp"
 
 #include "../src/CIMExceptions.hpp"
@@ -21,7 +24,7 @@ DateTime::operator std::string() const
 }
 
 const char DateTime::debugName[] = "DateTime";
-const char* DateTime::debugString()
+const char* DateTime::debugString() const
 {
 	return DateTime::debugName;
 }

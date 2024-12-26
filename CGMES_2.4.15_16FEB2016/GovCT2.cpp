@@ -1,6 +1,10 @@
-#include <sstream>
-#include "TurbineGovernorDynamics.hpp"
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "GovCT2.hpp"
+
+#include <algorithm>
+#include <sstream>
 
 #include "Simple_Float.hpp"
 #include "PU.hpp"
@@ -62,750 +66,807 @@
 using namespace CIMPP;
 
 GovCT2::GovCT2() {};
-
 GovCT2::~GovCT2() {};
 
 
-bool assign_GovCT2_aset(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->aset;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_db(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->db;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_dm(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->dm;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_flim1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->flim1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_flim10(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->flim10;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_flim2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->flim2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_flim3(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->flim3;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_flim4(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->flim4;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_flim5(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->flim5;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_flim6(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->flim6;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_flim7(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->flim7;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_flim8(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->flim8;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_flim9(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->flim9;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_ka(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->ka;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_kdgov(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->kdgov;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_kigov(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->kigov;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_kiload(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->kiload;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_kimw(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->kimw;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_kpgov(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->kpgov;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_kpload(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->kpload;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_kturb(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->kturb;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_ldref(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->ldref;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_maxerr(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->maxerr;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_minerr(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->minerr;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_mwbase(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->mwbase;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_plim1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->plim1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_plim10(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->plim10;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_plim2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->plim2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_plim3(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->plim3;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_plim4(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->plim4;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_plim5(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->plim5;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_plim6(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->plim6;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_plim7(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->plim7;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_plim8(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->plim8;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_plim9(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->plim9;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_prate(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->prate;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_r(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->r;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_rclose(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->rclose;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_rdown(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->rdown;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_ropen(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->ropen;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_rselect(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->rselect;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_rup(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->rup;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_ta(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->ta;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_tact(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->tact;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_tb(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->tb;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_tc(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->tc;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_tdgov(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->tdgov;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_teng(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->teng;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_tfload(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->tfload;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_tpelec(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->tpelec;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_tsa(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->tsa;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_tsb(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->tsb;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_vmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->vmax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_vmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->vmin;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_wfnl(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->wfnl;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovCT2_wfspd(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1)) {
-                buffer >> element->wfspd;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-namespace CIMPP {
-	BaseClass* GovCT2_factory() {
-		return new GovCT2;
+bool assign_GovCT2_aset(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->aset;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
 	}
+	return false;
 }
 
-void GovCT2::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {
+bool assign_GovCT2_db(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->db;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_dm(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->dm;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_flim1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->flim1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_flim10(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->flim10;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_flim2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->flim2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_flim3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->flim3;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_flim4(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->flim4;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_flim5(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->flim5;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_flim6(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->flim6;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_flim7(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->flim7;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_flim8(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->flim8;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_flim9(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->flim9;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_ka(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->ka;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_kdgov(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->kdgov;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_kigov(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->kigov;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_kiload(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->kiload;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_kimw(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->kimw;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_kpgov(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->kpgov;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_kpload(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->kpload;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_kturb(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->kturb;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_ldref(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->ldref;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_maxerr(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->maxerr;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_minerr(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->minerr;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_mwbase(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->mwbase;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_plim1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->plim1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_plim10(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->plim10;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_plim2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->plim2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_plim3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->plim3;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_plim4(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->plim4;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_plim5(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->plim5;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_plim6(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->plim6;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_plim7(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->plim7;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_plim8(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->plim8;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_plim9(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->plim9;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_prate(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->prate;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_r(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->r;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_rclose(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->rclose;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_rdown(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->rdown;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_ropen(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->ropen;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_rselect(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->rselect;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_rup(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->rup;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_ta(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->ta;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_tact(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->tact;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_tb(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->tb;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_tc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->tc;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_tdgov(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->tdgov;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_teng(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->teng;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_tfload(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->tfload;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_tpelec(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->tpelec;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_tsa(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->tsa;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_tsb(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->tsb;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_vmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->vmax;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_vmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->vmin;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_wfnl(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->wfnl;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovCT2_wfspd(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovCT2* element = dynamic_cast<GovCT2*>(BaseClass_ptr1))
+	{
+		buffer >> element->wfspd;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const char GovCT2::debugName[] = "GovCT2";
+const char* GovCT2::debugString() const
+{
+	return GovCT2::debugName;
+}
+
+void GovCT2::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
+{
 	factory_map.insert(std::make_pair(std::string("cim:GovCT2"), &GovCT2_factory));
 }
 
-void GovCT2::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
+void GovCT2::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
+{
 	assign_map.insert(std::make_pair(std::string("cim:GovCT2.aset"), &assign_GovCT2_aset));
 	assign_map.insert(std::make_pair(std::string("cim:GovCT2.db"), &assign_GovCT2_db));
 	assign_map.insert(std::make_pair(std::string("cim:GovCT2.dm"), &assign_GovCT2_dm));
@@ -864,16 +925,19 @@ void GovCT2::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_f
 	assign_map.insert(std::make_pair(std::string("cim:GovCT2.wfspd"), &assign_GovCT2_wfspd));
 }
 
-void GovCT2::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-																																																								}
-
-const char GovCT2::debugName[] = "GovCT2";
-const char* GovCT2::debugString()
+void GovCT2::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	return GovCT2::debugName;
 }
 
 const BaseClassDefiner GovCT2::declare()
 {
 	return BaseClassDefiner(GovCT2::addConstructToMap, GovCT2::addPrimitiveAssignFnsToMap, GovCT2::addClassAssignFnsToMap, GovCT2::debugName);
+}
+
+namespace CIMPP
+{
+	BaseClass* GovCT2_factory()
+	{
+		return new GovCT2;
+	}
 }

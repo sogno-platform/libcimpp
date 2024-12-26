@@ -1,3 +1,6 @@
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "Date.hpp"
 
 #include "../src/CIMExceptions.hpp"
@@ -21,7 +24,7 @@ Date::operator std::string() const
 }
 
 const char Date::debugName[] = "Date";
-const char* Date::debugString()
+const char* Date::debugString() const
 {
 	return Date::debugName;
 }

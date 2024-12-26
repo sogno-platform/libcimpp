@@ -1,41 +1,45 @@
 #ifndef SynchronousMachineKind_H
 #define SynchronousMachineKind_H
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 
-namespace CIMPP {
+#include <istream>
+#include <ostream>
+
+namespace CIMPP
+{
 	/*
 	Synchronous machine type.
 	*/
-	enum class SynchronousMachineKind
+	class SynchronousMachineKind
 	{
-		/**
-		 * 
-		 */
-		generator,
-		/**
-		 * 
-		 */
-		condenser,
-		/**
-		 * 
-		 */
-		generatorOrCondenser,
-		/**
-		 * 
-		 */
-		motor,
-		/**
-		 * 
-		 */
-		generatorOrMotor,
-		/**
-		 * 
-		 */
-		motorOrCondenser,
-		/**
-		 * 
-		 */
-		generatorOrCondenserOrMotor,
+	public:
+		enum SynchronousMachineKind_ENUM
+		{
+			generator,
+			condenser,
+			generatorOrCondenser,
+			motor,
+			generatorOrMotor,
+			motorOrCondenser,
+			generatorOrCondenserOrMotor,
+		};
+
+		SynchronousMachineKind() : value(), initialized(false) {}
+		SynchronousMachineKind(SynchronousMachineKind_ENUM value) : value(value), initialized(true) {}
+
+		SynchronousMachineKind& operator=(SynchronousMachineKind_ENUM rop);
+		operator SynchronousMachineKind_ENUM() const;
+
+		SynchronousMachineKind_ENUM value;
+		bool initialized;
+
+		static const char debugName[];
+		const char* debugString() const;
+
+		friend std::istream& operator>>(std::istream& lop, SynchronousMachineKind& rop);
+		friend std::ostream& operator<<(std::ostream& os, const SynchronousMachineKind& obj);
 	};
-	std::istream& operator>>(std::istream& lop, CIMPP::SynchronousMachineKind& rop);
 }
 #endif

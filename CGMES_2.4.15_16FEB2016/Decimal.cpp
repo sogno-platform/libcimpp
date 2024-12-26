@@ -1,70 +1,77 @@
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "Decimal.hpp"
+
+#include <string>
+
 #include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-Decimal::Decimal() {}
+Decimal& Decimal::operator=(long double rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
 
-Decimal::~Decimal(){}
-
-Decimal::Decimal(long double value) : value(value), initialized(true) {}
-
-void Decimal::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {}
-
-void Decimal::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {}
-
-void Decimal::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {}
+Decimal::operator long double() const
+{
+	if (!initialized)
+	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
 
 const char Decimal::debugName[] = "Decimal";
-const char* Decimal::debugString() {
+const char* Decimal::debugString() const
+{
 	return Decimal::debugName;
 }
 
-
-const BaseClassDefiner Decimal::declare() {
-	return BaseClassDefiner(Decimal::addConstructToMap, Decimal::addPrimitiveAssignFnsToMap, Decimal::addClassAssignFnsToMap, Decimal::debugName);
+Decimal& Decimal::operator+=(const Decimal& rhs)
+{
+	value += rhs.value;
+	return *this;
 }
 
-namespace CIMPP {
-	Decimal& Decimal::operator=(long double &rop) {
-		value = rop;
-		initialized = true;
-		return *this;
-	}
+Decimal& Decimal::operator-=(const Decimal& rhs)
+{
+	value -= rhs.value;
+	return *this;
+}
 
-	Decimal& Decimal::operator-=(const Decimal& rhs) {
-	    value -= rhs.value;
-	    return *this;
-	}
+Decimal& Decimal::operator*=(const Decimal& rhs)
+{
+	value *= rhs.value;
+	return *this;
+}
 
-	Decimal& Decimal::operator*=(const Decimal& rhs) {
-	    value *= rhs.value;
-	    return *this;
-	}
+Decimal& Decimal::operator/=(const Decimal& rhs)
+{
+	value /= rhs.value;
+	return *this;
+}
 
-	Decimal& Decimal::operator/=(const Decimal& rhs) {
-	    value /= rhs.value;
-	    return *this;
-	}
-
-	Decimal& Decimal::operator+=(const Decimal& rhs) {
-	    value += rhs.value;
-	    return *this;
-	}
-
-	Decimal::operator long double() {
-		if(!initialized)
-		{
-			throw new ReadingUninitializedField();
-		}
-		return value;
-	}
-
-	std::istream& operator>>(std::istream& lop, Decimal& rop) {
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, Decimal& rop)
+	{
 		std::string tmp;
 		lop >> tmp;
 		rop.value = stold(tmp);
 		rop.initialized = true;
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const Decimal& obj)
+	{
+		if (obj.initialized)
+		{
+			os << obj.value;
+		}
+		return os;
 	}
 }

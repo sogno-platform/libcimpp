@@ -1,70 +1,77 @@
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "Conductance.hpp"
+
+#include <string>
+
 #include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-Conductance::Conductance() {}
+Conductance& Conductance::operator=(long double rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
 
-Conductance::~Conductance(){}
-
-Conductance::Conductance(long double value) : value(value), initialized(true) {}
-
-void Conductance::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {}
-
-void Conductance::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {}
-
-void Conductance::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {}
+Conductance::operator long double() const
+{
+	if (!initialized)
+	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
 
 const char Conductance::debugName[] = "Conductance";
-const char* Conductance::debugString() {
+const char* Conductance::debugString() const
+{
 	return Conductance::debugName;
 }
 
-
-const BaseClassDefiner Conductance::declare() {
-	return BaseClassDefiner(Conductance::addConstructToMap, Conductance::addPrimitiveAssignFnsToMap, Conductance::addClassAssignFnsToMap, Conductance::debugName);
+Conductance& Conductance::operator+=(const Conductance& rhs)
+{
+	value += rhs.value;
+	return *this;
 }
 
-namespace CIMPP {
-	Conductance& Conductance::operator=(long double &rop) {
-		value = rop;
-		initialized = true;
-		return *this;
-	}
+Conductance& Conductance::operator-=(const Conductance& rhs)
+{
+	value -= rhs.value;
+	return *this;
+}
 
-	Conductance& Conductance::operator-=(const Conductance& rhs) {
-	    value -= rhs.value;
-	    return *this;
-	}
+Conductance& Conductance::operator*=(const Conductance& rhs)
+{
+	value *= rhs.value;
+	return *this;
+}
 
-	Conductance& Conductance::operator*=(const Conductance& rhs) {
-	    value *= rhs.value;
-	    return *this;
-	}
+Conductance& Conductance::operator/=(const Conductance& rhs)
+{
+	value /= rhs.value;
+	return *this;
+}
 
-	Conductance& Conductance::operator/=(const Conductance& rhs) {
-	    value /= rhs.value;
-	    return *this;
-	}
-
-	Conductance& Conductance::operator+=(const Conductance& rhs) {
-	    value += rhs.value;
-	    return *this;
-	}
-
-	Conductance::operator long double() {
-		if(!initialized)
-		{
-			throw new ReadingUninitializedField();
-		}
-		return value;
-	}
-
-	std::istream& operator>>(std::istream& lop, Conductance& rop) {
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, Conductance& rop)
+	{
 		std::string tmp;
 		lop >> tmp;
 		rop.value = stold(tmp);
 		rop.initialized = true;
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const Conductance& obj)
+	{
+		if (obj.initialized)
+		{
+			os << obj.value;
+		}
+		return os;
 	}
 }

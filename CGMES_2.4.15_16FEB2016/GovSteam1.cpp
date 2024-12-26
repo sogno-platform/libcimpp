@@ -1,6 +1,10 @@
-#include <sstream>
-#include "TurbineGovernorDynamics.hpp"
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "GovSteam1.hpp"
+
+#include <algorithm>
+#include <sstream>
 
 #include "Frequency.hpp"
 #include "ActivePower.hpp"
@@ -45,529 +49,569 @@
 using namespace CIMPP;
 
 GovSteam1::GovSteam1() {};
-
 GovSteam1::~GovSteam1() {};
 
 
-bool assign_GovSteam1_db1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->db1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_db2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->db2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_eps(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->eps;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_gv1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->gv1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_gv2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->gv2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_gv3(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->gv3;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_gv4(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->gv4;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_gv5(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->gv5;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_gv6(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->gv6;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_k(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->k;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_k1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->k1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_k2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->k2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_k3(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->k3;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_k4(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->k4;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_k5(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->k5;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_k6(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->k6;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_k7(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->k7;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_k8(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->k8;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_mwbase(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->mwbase;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_pgv1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->pgv1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_pgv2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->pgv2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_pgv3(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->pgv3;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_pgv4(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->pgv4;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_pgv5(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->pgv5;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_pgv6(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->pgv6;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_pmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->pmax;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_pmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->pmin;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_sdb1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->sdb1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_sdb2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->sdb2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_t1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->t1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_t2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->t2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_t3(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->t3;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_t4(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->t4;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_t5(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->t5;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_t6(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->t6;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_t7(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->t7;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_uc(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->uc;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_uo(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->uo;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_GovSteam1_valve(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1)) {
-                buffer >> element->valve;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-namespace CIMPP {
-	BaseClass* GovSteam1_factory() {
-		return new GovSteam1;
+bool assign_GovSteam1_db1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->db1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
 	}
+	return false;
 }
 
-void GovSteam1::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {
+bool assign_GovSteam1_db2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->db2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_eps(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->eps;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_gv1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->gv1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_gv2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->gv2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_gv3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->gv3;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_gv4(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->gv4;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_gv5(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->gv5;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_gv6(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->gv6;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_k(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->k;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_k1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->k1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_k2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->k2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_k3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->k3;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_k4(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->k4;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_k5(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->k5;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_k6(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->k6;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_k7(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->k7;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_k8(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->k8;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_mwbase(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->mwbase;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_pgv1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->pgv1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_pgv2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->pgv2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_pgv3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->pgv3;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_pgv4(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->pgv4;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_pgv5(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->pgv5;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_pgv6(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->pgv6;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_pmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->pmax;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_pmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->pmin;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_sdb1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->sdb1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_sdb2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->sdb2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_t1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->t1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_t2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->t2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_t3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->t3;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_t4(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->t4;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_t5(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->t5;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_t6(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->t6;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_t7(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->t7;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_uc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->uc;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_uo(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->uo;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_GovSteam1_valve(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (GovSteam1* element = dynamic_cast<GovSteam1*>(BaseClass_ptr1))
+	{
+		buffer >> element->valve;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const char GovSteam1::debugName[] = "GovSteam1";
+const char* GovSteam1::debugString() const
+{
+	return GovSteam1::debugName;
+}
+
+void GovSteam1::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
+{
 	factory_map.insert(std::make_pair(std::string("cim:GovSteam1"), &GovSteam1_factory));
 }
 
-void GovSteam1::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
+void GovSteam1::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
+{
 	assign_map.insert(std::make_pair(std::string("cim:GovSteam1.db1"), &assign_GovSteam1_db1));
 	assign_map.insert(std::make_pair(std::string("cim:GovSteam1.db2"), &assign_GovSteam1_db2));
 	assign_map.insert(std::make_pair(std::string("cim:GovSteam1.eps"), &assign_GovSteam1_eps));
@@ -609,16 +653,19 @@ void GovSteam1::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assig
 	assign_map.insert(std::make_pair(std::string("cim:GovSteam1.valve"), &assign_GovSteam1_valve));
 }
 
-void GovSteam1::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-																																							}
-
-const char GovSteam1::debugName[] = "GovSteam1";
-const char* GovSteam1::debugString()
+void GovSteam1::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	return GovSteam1::debugName;
 }
 
 const BaseClassDefiner GovSteam1::declare()
 {
 	return BaseClassDefiner(GovSteam1::addConstructToMap, GovSteam1::addPrimitiveAssignFnsToMap, GovSteam1::addClassAssignFnsToMap, GovSteam1::debugName);
+}
+
+namespace CIMPP
+{
+	BaseClass* GovSteam1_factory()
+	{
+		return new GovSteam1;
+	}
 }

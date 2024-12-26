@@ -1,5 +1,8 @@
 #ifndef Date_H
 #define Date_H
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 
 #include <string>
 #include <istream>
@@ -23,7 +26,7 @@ namespace CIMPP
 		bool initialized;
 
 		static const char debugName[];
-		const char* debugString();
+		const char* debugString() const;
 
 		friend std::istream& operator>>(std::istream& lop, Date& rop);
 		friend std::ostream& operator<<(std::ostream& os, const Date& obj);

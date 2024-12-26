@@ -1,12 +1,43 @@
-#include <sstream>
-#include <iostream>
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "ShortCircuitRotorKind.hpp"
+
+#include <ios>
+#include <string>
+
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-namespace CIMPP {
-	std::istream& operator>>(std::istream& lop, CIMPP::ShortCircuitRotorKind& rop)
+ShortCircuitRotorKind& ShortCircuitRotorKind::operator=(ShortCircuitRotorKind_ENUM rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
+
+ShortCircuitRotorKind::operator ShortCircuitRotorKind_ENUM() const
+{
+	if (!initialized)
 	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
+
+const char ShortCircuitRotorKind::debugName[] = "ShortCircuitRotorKind";
+const char* ShortCircuitRotorKind::debugString() const
+{
+	return ShortCircuitRotorKind::debugName;
+}
+
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, ShortCircuitRotorKind& rop)
+	{
+		rop.initialized = false;
+
 		std::string EnumSymbol;
 		lop >> EnumSymbol;
 
@@ -42,5 +73,36 @@ namespace CIMPP {
 
 		lop.setstate(std::ios::failbit);
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const ShortCircuitRotorKind& obj)
+	{
+		if (obj.initialized)
+		{
+			std::string EnumSymbol;
+
+			if (obj.value == ShortCircuitRotorKind::salientPole1)
+			{
+				EnumSymbol = "salientPole1";
+			}
+			if (obj.value == ShortCircuitRotorKind::salientPole2)
+			{
+				EnumSymbol = "salientPole2";
+			}
+			if (obj.value == ShortCircuitRotorKind::turboSeries1)
+			{
+				EnumSymbol = "turboSeries1";
+			}
+			if (obj.value == ShortCircuitRotorKind::turboSeries2)
+			{
+				EnumSymbol = "turboSeries2";
+			}
+
+			if (!EnumSymbol.empty())
+			{
+				os << "ShortCircuitRotorKind." << EnumSymbol;
+			}
+		}
+		return os;
 	}
 }

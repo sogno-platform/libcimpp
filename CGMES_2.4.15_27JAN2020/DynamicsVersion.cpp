@@ -1,6 +1,10 @@
-#include <sstream>
-#include "BaseClass.hpp"
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "DynamicsVersion.hpp"
+
+#include <algorithm>
+#include <sstream>
 
 #include "String.hpp"
 #include "String.hpp"
@@ -16,14 +20,15 @@
 using namespace CIMPP;
 
 DynamicsVersion::DynamicsVersion() {};
-
 DynamicsVersion::~DynamicsVersion() {};
 
 
-bool assign_DynamicsVersion_baseUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(DynamicsVersion* element = dynamic_cast<DynamicsVersion*>(BaseClass_ptr1)) {
+bool assign_DynamicsVersion_baseUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (DynamicsVersion* element = dynamic_cast<DynamicsVersion*>(BaseClass_ptr1))
+	{
 		element->baseUML = buffer.str();
-		if(buffer.fail())
+		if (buffer.fail())
 			return false;
 		else
 			return true;
@@ -31,10 +36,12 @@ bool assign_DynamicsVersion_baseUML(std::stringstream &buffer, BaseClass* BaseCl
 	return false;
 }
 
-bool assign_DynamicsVersion_baseURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(DynamicsVersion* element = dynamic_cast<DynamicsVersion*>(BaseClass_ptr1)) {
+bool assign_DynamicsVersion_baseURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (DynamicsVersion* element = dynamic_cast<DynamicsVersion*>(BaseClass_ptr1))
+	{
 		element->baseURI = buffer.str();
-		if(buffer.fail())
+		if (buffer.fail())
 			return false;
 		else
 			return true;
@@ -42,22 +49,25 @@ bool assign_DynamicsVersion_baseURI(std::stringstream &buffer, BaseClass* BaseCl
 	return false;
 }
 
-bool assign_DynamicsVersion_date(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(DynamicsVersion* element = dynamic_cast<DynamicsVersion*>(BaseClass_ptr1)) {
-                buffer >> element->date;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
+bool assign_DynamicsVersion_date(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (DynamicsVersion* element = dynamic_cast<DynamicsVersion*>(BaseClass_ptr1))
+	{
+		element->date = buffer.str();
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
 }
 
-bool assign_DynamicsVersion_differenceModelURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(DynamicsVersion* element = dynamic_cast<DynamicsVersion*>(BaseClass_ptr1)) {
+bool assign_DynamicsVersion_differenceModelURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (DynamicsVersion* element = dynamic_cast<DynamicsVersion*>(BaseClass_ptr1))
+	{
 		element->differenceModelURI = buffer.str();
-		if(buffer.fail())
+		if (buffer.fail())
 			return false;
 		else
 			return true;
@@ -65,10 +75,12 @@ bool assign_DynamicsVersion_differenceModelURI(std::stringstream &buffer, BaseCl
 	return false;
 }
 
-bool assign_DynamicsVersion_entsoeUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(DynamicsVersion* element = dynamic_cast<DynamicsVersion*>(BaseClass_ptr1)) {
+bool assign_DynamicsVersion_entsoeUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (DynamicsVersion* element = dynamic_cast<DynamicsVersion*>(BaseClass_ptr1))
+	{
 		element->entsoeUML = buffer.str();
-		if(buffer.fail())
+		if (buffer.fail())
 			return false;
 		else
 			return true;
@@ -76,10 +88,12 @@ bool assign_DynamicsVersion_entsoeUML(std::stringstream &buffer, BaseClass* Base
 	return false;
 }
 
-bool assign_DynamicsVersion_entsoeURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(DynamicsVersion* element = dynamic_cast<DynamicsVersion*>(BaseClass_ptr1)) {
+bool assign_DynamicsVersion_entsoeURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (DynamicsVersion* element = dynamic_cast<DynamicsVersion*>(BaseClass_ptr1))
+	{
 		element->entsoeURI = buffer.str();
-		if(buffer.fail())
+		if (buffer.fail())
 			return false;
 		else
 			return true;
@@ -87,10 +101,12 @@ bool assign_DynamicsVersion_entsoeURI(std::stringstream &buffer, BaseClass* Base
 	return false;
 }
 
-bool assign_DynamicsVersion_modelDescriptionURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(DynamicsVersion* element = dynamic_cast<DynamicsVersion*>(BaseClass_ptr1)) {
+bool assign_DynamicsVersion_modelDescriptionURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (DynamicsVersion* element = dynamic_cast<DynamicsVersion*>(BaseClass_ptr1))
+	{
 		element->modelDescriptionURI = buffer.str();
-		if(buffer.fail())
+		if (buffer.fail())
 			return false;
 		else
 			return true;
@@ -98,10 +114,12 @@ bool assign_DynamicsVersion_modelDescriptionURI(std::stringstream &buffer, BaseC
 	return false;
 }
 
-bool assign_DynamicsVersion_namespaceRDF(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(DynamicsVersion* element = dynamic_cast<DynamicsVersion*>(BaseClass_ptr1)) {
+bool assign_DynamicsVersion_namespaceRDF(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (DynamicsVersion* element = dynamic_cast<DynamicsVersion*>(BaseClass_ptr1))
+	{
 		element->namespaceRDF = buffer.str();
-		if(buffer.fail())
+		if (buffer.fail())
 			return false;
 		else
 			return true;
@@ -109,10 +127,12 @@ bool assign_DynamicsVersion_namespaceRDF(std::stringstream &buffer, BaseClass* B
 	return false;
 }
 
-bool assign_DynamicsVersion_namespaceUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(DynamicsVersion* element = dynamic_cast<DynamicsVersion*>(BaseClass_ptr1)) {
+bool assign_DynamicsVersion_namespaceUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (DynamicsVersion* element = dynamic_cast<DynamicsVersion*>(BaseClass_ptr1))
+	{
 		element->namespaceUML = buffer.str();
-		if(buffer.fail())
+		if (buffer.fail())
 			return false;
 		else
 			return true;
@@ -120,10 +140,12 @@ bool assign_DynamicsVersion_namespaceUML(std::stringstream &buffer, BaseClass* B
 	return false;
 }
 
-bool assign_DynamicsVersion_shortName(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(DynamicsVersion* element = dynamic_cast<DynamicsVersion*>(BaseClass_ptr1)) {
+bool assign_DynamicsVersion_shortName(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (DynamicsVersion* element = dynamic_cast<DynamicsVersion*>(BaseClass_ptr1))
+	{
 		element->shortName = buffer.str();
-		if(buffer.fail())
+		if (buffer.fail())
 			return false;
 		else
 			return true;
@@ -142,17 +164,19 @@ bool assign_DynamicsVersion_shortName(std::stringstream &buffer, BaseClass* Base
 
 
 
-namespace CIMPP {
-	BaseClass* DynamicsVersion_factory() {
-		return new DynamicsVersion;
-	}
+const char DynamicsVersion::debugName[] = "DynamicsVersion";
+const char* DynamicsVersion::debugString() const
+{
+	return DynamicsVersion::debugName;
 }
 
-void DynamicsVersion::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {
+void DynamicsVersion::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
+{
 	factory_map.insert(std::make_pair(std::string("cim:DynamicsVersion"), &DynamicsVersion_factory));
 }
 
-void DynamicsVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
+void DynamicsVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
+{
 	assign_map.insert(std::make_pair(std::string("cim:DynamicsVersion.baseUML"), &assign_DynamicsVersion_baseUML));
 	assign_map.insert(std::make_pair(std::string("cim:DynamicsVersion.baseURI"), &assign_DynamicsVersion_baseURI));
 	assign_map.insert(std::make_pair(std::string("cim:DynamicsVersion.date"), &assign_DynamicsVersion_date));
@@ -165,16 +189,19 @@ void DynamicsVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std::string,
 	assign_map.insert(std::make_pair(std::string("cim:DynamicsVersion.shortName"), &assign_DynamicsVersion_shortName));
 }
 
-void DynamicsVersion::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-										}
-
-const char DynamicsVersion::debugName[] = "DynamicsVersion";
-const char* DynamicsVersion::debugString()
+void DynamicsVersion::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	return DynamicsVersion::debugName;
 }
 
 const BaseClassDefiner DynamicsVersion::declare()
 {
 	return BaseClassDefiner(DynamicsVersion::addConstructToMap, DynamicsVersion::addPrimitiveAssignFnsToMap, DynamicsVersion::addClassAssignFnsToMap, DynamicsVersion::debugName);
+}
+
+namespace CIMPP
+{
+	BaseClass* DynamicsVersion_factory()
+	{
+		return new DynamicsVersion;
+	}
 }

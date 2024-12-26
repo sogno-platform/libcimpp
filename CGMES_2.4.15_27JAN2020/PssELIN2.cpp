@@ -1,6 +1,10 @@
-#include <sstream>
-#include "PowerSystemStabilizerDynamics.hpp"
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "PssELIN2.hpp"
+
+#include <algorithm>
+#include <sstream>
 
 #include "PU.hpp"
 #include "PU.hpp"
@@ -17,165 +21,177 @@
 using namespace CIMPP;
 
 PssELIN2::PssELIN2() {};
-
 PssELIN2::~PssELIN2() {};
 
 
-bool assign_PssELIN2_apss(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssELIN2* element = dynamic_cast<PssELIN2*>(BaseClass_ptr1)) {
-                buffer >> element->apss;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssELIN2_ks1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssELIN2* element = dynamic_cast<PssELIN2*>(BaseClass_ptr1)) {
-                buffer >> element->ks1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssELIN2_ks2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssELIN2* element = dynamic_cast<PssELIN2*>(BaseClass_ptr1)) {
-                buffer >> element->ks2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssELIN2_ppss(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssELIN2* element = dynamic_cast<PssELIN2*>(BaseClass_ptr1)) {
-                buffer >> element->ppss;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssELIN2_psslim(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssELIN2* element = dynamic_cast<PssELIN2*>(BaseClass_ptr1)) {
-                buffer >> element->psslim;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssELIN2_ts1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssELIN2* element = dynamic_cast<PssELIN2*>(BaseClass_ptr1)) {
-                buffer >> element->ts1;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssELIN2_ts2(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssELIN2* element = dynamic_cast<PssELIN2*>(BaseClass_ptr1)) {
-                buffer >> element->ts2;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssELIN2_ts3(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssELIN2* element = dynamic_cast<PssELIN2*>(BaseClass_ptr1)) {
-                buffer >> element->ts3;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssELIN2_ts4(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssELIN2* element = dynamic_cast<PssELIN2*>(BaseClass_ptr1)) {
-                buffer >> element->ts4;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssELIN2_ts5(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssELIN2* element = dynamic_cast<PssELIN2*>(BaseClass_ptr1)) {
-                buffer >> element->ts5;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_PssELIN2_ts6(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssELIN2* element = dynamic_cast<PssELIN2*>(BaseClass_ptr1)) {
-                buffer >> element->ts6;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-namespace CIMPP {
-	BaseClass* PssELIN2_factory() {
-		return new PssELIN2;
+bool assign_PssELIN2_apss(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssELIN2* element = dynamic_cast<PssELIN2*>(BaseClass_ptr1))
+	{
+		buffer >> element->apss;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
 	}
+	return false;
 }
 
-void PssELIN2::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map) {
+bool assign_PssELIN2_ks1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssELIN2* element = dynamic_cast<PssELIN2*>(BaseClass_ptr1))
+	{
+		buffer >> element->ks1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssELIN2_ks2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssELIN2* element = dynamic_cast<PssELIN2*>(BaseClass_ptr1))
+	{
+		buffer >> element->ks2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssELIN2_ppss(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssELIN2* element = dynamic_cast<PssELIN2*>(BaseClass_ptr1))
+	{
+		buffer >> element->ppss;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssELIN2_psslim(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssELIN2* element = dynamic_cast<PssELIN2*>(BaseClass_ptr1))
+	{
+		buffer >> element->psslim;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssELIN2_ts1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssELIN2* element = dynamic_cast<PssELIN2*>(BaseClass_ptr1))
+	{
+		buffer >> element->ts1;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssELIN2_ts2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssELIN2* element = dynamic_cast<PssELIN2*>(BaseClass_ptr1))
+	{
+		buffer >> element->ts2;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssELIN2_ts3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssELIN2* element = dynamic_cast<PssELIN2*>(BaseClass_ptr1))
+	{
+		buffer >> element->ts3;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssELIN2_ts4(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssELIN2* element = dynamic_cast<PssELIN2*>(BaseClass_ptr1))
+	{
+		buffer >> element->ts4;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssELIN2_ts5(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssELIN2* element = dynamic_cast<PssELIN2*>(BaseClass_ptr1))
+	{
+		buffer >> element->ts5;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+bool assign_PssELIN2_ts6(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+{
+	if (PssELIN2* element = dynamic_cast<PssELIN2*>(BaseClass_ptr1))
+	{
+		buffer >> element->ts6;
+		if (buffer.fail())
+			return false;
+		else
+			return true;
+	}
+	return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+const char PssELIN2::debugName[] = "PssELIN2";
+const char* PssELIN2::debugString() const
+{
+	return PssELIN2::debugName;
+}
+
+void PssELIN2::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
+{
 	factory_map.insert(std::make_pair(std::string("cim:PssELIN2"), &PssELIN2_factory));
 }
 
-void PssELIN2::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
+void PssELIN2::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
+{
 	assign_map.insert(std::make_pair(std::string("cim:PssELIN2.apss"), &assign_PssELIN2_apss));
 	assign_map.insert(std::make_pair(std::string("cim:PssELIN2.ks1"), &assign_PssELIN2_ks1));
 	assign_map.insert(std::make_pair(std::string("cim:PssELIN2.ks2"), &assign_PssELIN2_ks2));
@@ -189,16 +205,19 @@ void PssELIN2::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign
 	assign_map.insert(std::make_pair(std::string("cim:PssELIN2.ts6"), &assign_PssELIN2_ts6));
 }
 
-void PssELIN2::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-											}
-
-const char PssELIN2::debugName[] = "PssELIN2";
-const char* PssELIN2::debugString()
+void PssELIN2::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	return PssELIN2::debugName;
 }
 
 const BaseClassDefiner PssELIN2::declare()
 {
 	return BaseClassDefiner(PssELIN2::addConstructToMap, PssELIN2::addPrimitiveAssignFnsToMap, PssELIN2::addClassAssignFnsToMap, PssELIN2::debugName);
+}
+
+namespace CIMPP
+{
+	BaseClass* PssELIN2_factory()
+	{
+		return new PssELIN2;
+	}
 }

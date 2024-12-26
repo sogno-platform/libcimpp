@@ -1,12 +1,43 @@
-#include <sstream>
-#include <iostream>
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "ExcIEEEST1AUELselectorKind.hpp"
+
+#include <ios>
+#include <string>
+
+#include "../src/CIMExceptions.hpp"
 
 using namespace CIMPP;
 
-namespace CIMPP {
-	std::istream& operator>>(std::istream& lop, CIMPP::ExcIEEEST1AUELselectorKind& rop)
+ExcIEEEST1AUELselectorKind& ExcIEEEST1AUELselectorKind::operator=(ExcIEEEST1AUELselectorKind_ENUM rop)
+{
+	value = rop;
+	initialized = true;
+	return *this;
+}
+
+ExcIEEEST1AUELselectorKind::operator ExcIEEEST1AUELselectorKind_ENUM() const
+{
+	if (!initialized)
 	{
+		throw new ReadingUninitializedField();
+	}
+	return value;
+}
+
+const char ExcIEEEST1AUELselectorKind::debugName[] = "ExcIEEEST1AUELselectorKind";
+const char* ExcIEEEST1AUELselectorKind::debugString() const
+{
+	return ExcIEEEST1AUELselectorKind::debugName;
+}
+
+namespace CIMPP
+{
+	std::istream& operator>>(std::istream& lop, ExcIEEEST1AUELselectorKind& rop)
+	{
+		rop.initialized = false;
+
 		std::string EnumSymbol;
 		lop >> EnumSymbol;
 
@@ -42,5 +73,36 @@ namespace CIMPP {
 
 		lop.setstate(std::ios::failbit);
 		return lop;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const ExcIEEEST1AUELselectorKind& obj)
+	{
+		if (obj.initialized)
+		{
+			std::string EnumSymbol;
+
+			if (obj.value == ExcIEEEST1AUELselectorKind::ignoreUELsignal)
+			{
+				EnumSymbol = "ignoreUELsignal";
+			}
+			if (obj.value == ExcIEEEST1AUELselectorKind::inputHVgateVoltageOutput)
+			{
+				EnumSymbol = "inputHVgateVoltageOutput";
+			}
+			if (obj.value == ExcIEEEST1AUELselectorKind::inputHVgateErrorSignal)
+			{
+				EnumSymbol = "inputHVgateErrorSignal";
+			}
+			if (obj.value == ExcIEEEST1AUELselectorKind::inputAddedToErrorSignal)
+			{
+				EnumSymbol = "inputAddedToErrorSignal";
+			}
+
+			if (!EnumSymbol.empty())
+			{
+				os << "ExcIEEEST1AUELselectorKind." << EnumSymbol;
+			}
+		}
+		return os;
 	}
 }

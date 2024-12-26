@@ -1,3 +1,6 @@
+/*
+Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
+*/
 #include "MonthDay.hpp"
 
 #include "../src/CIMExceptions.hpp"
@@ -21,7 +24,7 @@ MonthDay::operator std::string() const
 }
 
 const char MonthDay::debugName[] = "MonthDay";
-const char* MonthDay::debugString()
+const char* MonthDay::debugString() const
 {
 	return MonthDay::debugName;
 }

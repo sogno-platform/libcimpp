@@ -10,7 +10,7 @@ class ModelDescriptionHandler;
 class CIMContentHandler;
 
 class CIMException : public std::exception
-{	
+{
 public:
 	CIMException();
 protected:

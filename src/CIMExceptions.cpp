@@ -54,4 +54,3 @@ ReadingUninitializedField::ReadingUninitializedField()
 {
 	message = "Error: Uninitialized Field";
 }
-
