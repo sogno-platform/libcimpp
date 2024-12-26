@@ -2,24 +2,18 @@
 #include "DynamicsFunctionBlock.hpp"
 #include "DiscontinuousExcitationControlDynamics.hpp"
 
-#include "RemoteInputSignal.hpp"
 #include "ExcitationSystemDynamics.hpp"
+#include "RemoteInputSignal.hpp"
 
 using namespace CIMPP;
 
-DiscontinuousExcitationControlDynamics::DiscontinuousExcitationControlDynamics(): RemoteInputSignal(nullptr), ExcitationSystemDynamics(nullptr) {};
+DiscontinuousExcitationControlDynamics::DiscontinuousExcitationControlDynamics(): ExcitationSystemDynamics(nullptr), RemoteInputSignal(nullptr) {};
 
 DiscontinuousExcitationControlDynamics::~DiscontinuousExcitationControlDynamics() {};
 
 
-bool assign_DiscontinuousExcitationControlDynamics_RemoteInputSignal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(DiscontinuousExcitationControlDynamics* element = dynamic_cast<DiscontinuousExcitationControlDynamics*>(BaseClass_ptr1)) {
-                element->RemoteInputSignal = dynamic_cast<RemoteInputSignal*>(BaseClass_ptr2);
-                if(element->RemoteInputSignal != nullptr)
-                        return true;
-        }
-        return false;
-}
+
+
 
 bool assign_ExcitationSystemDynamics_DiscontinuousExcitationControlDynamics(BaseClass*, BaseClass*);
 bool assign_DiscontinuousExcitationControlDynamics_ExcitationSystemDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
@@ -31,8 +25,14 @@ bool assign_DiscontinuousExcitationControlDynamics_ExcitationSystemDynamics(Base
         return false;
 }
 
-
-
+bool assign_DiscontinuousExcitationControlDynamics_RemoteInputSignal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(DiscontinuousExcitationControlDynamics* element = dynamic_cast<DiscontinuousExcitationControlDynamics*>(BaseClass_ptr1)) {
+                element->RemoteInputSignal = dynamic_cast<RemoteInputSignal*>(BaseClass_ptr2);
+                if(element->RemoteInputSignal != nullptr)
+                        return true;
+        }
+        return false;
+}
 
 namespace CIMPP {
 	BaseClass* DiscontinuousExcitationControlDynamics_factory() {
@@ -48,8 +48,8 @@ void DiscontinuousExcitationControlDynamics::addPrimitiveAssignFnsToMap(std::uno
 		}
 
 void DiscontinuousExcitationControlDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-	assign_map.insert(std::make_pair(std::string("cim:DiscontinuousExcitationControlDynamics.RemoteInputSignal"), &assign_DiscontinuousExcitationControlDynamics_RemoteInputSignal));
 	assign_map.insert(std::make_pair(std::string("cim:DiscontinuousExcitationControlDynamics.ExcitationSystemDynamics"), &assign_DiscontinuousExcitationControlDynamics_ExcitationSystemDynamics));
+	assign_map.insert(std::make_pair(std::string("cim:DiscontinuousExcitationControlDynamics.RemoteInputSignal"), &assign_DiscontinuousExcitationControlDynamics_RemoteInputSignal));
 }
 
 const char DiscontinuousExcitationControlDynamics::debugName[] = "DiscontinuousExcitationControlDynamics";
@@ -62,5 +62,3 @@ const BaseClassDefiner DiscontinuousExcitationControlDynamics::declare()
 {
 	return BaseClassDefiner(DiscontinuousExcitationControlDynamics::addConstructToMap, DiscontinuousExcitationControlDynamics::addPrimitiveAssignFnsToMap, DiscontinuousExcitationControlDynamics::addClassAssignFnsToMap, DiscontinuousExcitationControlDynamics::debugName);
 }
-
-

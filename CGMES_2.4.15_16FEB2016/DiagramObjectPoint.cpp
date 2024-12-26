@@ -16,31 +16,6 @@ DiagramObjectPoint::DiagramObjectPoint(): DiagramObject(nullptr), DiagramObjectG
 DiagramObjectPoint::~DiagramObjectPoint() {};
 
 
-bool assign_DiagramObject_DiagramObjectPoints(BaseClass*, BaseClass*);
-bool assign_DiagramObjectPoint_DiagramObject(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(DiagramObjectPoint* element = dynamic_cast<DiagramObjectPoint*>(BaseClass_ptr1)) {
-                element->DiagramObject = dynamic_cast<DiagramObject*>(BaseClass_ptr2);
-                if(element->DiagramObject != nullptr)
-                        return assign_DiagramObject_DiagramObjectPoints(BaseClass_ptr2, BaseClass_ptr1);
-        }
-        return false;
-}
-
-bool assign_DiagramObjectGluePoint_DiagramObjectPoints(BaseClass*, BaseClass*);
-bool assign_DiagramObjectPoint_DiagramObjectGluePoint(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(DiagramObjectPoint* element = dynamic_cast<DiagramObjectPoint*>(BaseClass_ptr1)) {
-                element->DiagramObjectGluePoint = dynamic_cast<DiagramObjectGluePoint*>(BaseClass_ptr2);
-                if(element->DiagramObjectGluePoint != nullptr)
-                        return assign_DiagramObjectGluePoint_DiagramObjectPoints(BaseClass_ptr2, BaseClass_ptr1);
-        }
-        return false;
-}
-
-
-
-
-
-
 
 
 bool assign_DiagramObjectPoint_sequenceNumber(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
@@ -91,6 +66,31 @@ bool assign_DiagramObjectPoint_zPosition(std::stringstream &buffer, BaseClass* B
                 return false;
 }
 
+
+bool assign_DiagramObject_DiagramObjectPoints(BaseClass*, BaseClass*);
+bool assign_DiagramObjectPoint_DiagramObject(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(DiagramObjectPoint* element = dynamic_cast<DiagramObjectPoint*>(BaseClass_ptr1)) {
+                element->DiagramObject = dynamic_cast<DiagramObject*>(BaseClass_ptr2);
+                if(element->DiagramObject != nullptr)
+                        return assign_DiagramObject_DiagramObjectPoints(BaseClass_ptr2, BaseClass_ptr1);
+        }
+        return false;
+}
+
+bool assign_DiagramObjectGluePoint_DiagramObjectPoints(BaseClass*, BaseClass*);
+bool assign_DiagramObjectPoint_DiagramObjectGluePoint(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(DiagramObjectPoint* element = dynamic_cast<DiagramObjectPoint*>(BaseClass_ptr1)) {
+                element->DiagramObjectGluePoint = dynamic_cast<DiagramObjectGluePoint*>(BaseClass_ptr2);
+                if(element->DiagramObjectGluePoint != nullptr)
+                        return assign_DiagramObjectGluePoint_DiagramObjectPoints(BaseClass_ptr2, BaseClass_ptr1);
+        }
+        return false;
+}
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* DiagramObjectPoint_factory() {
 		return new DiagramObjectPoint;
@@ -123,5 +123,3 @@ const BaseClassDefiner DiagramObjectPoint::declare()
 {
 	return BaseClassDefiner(DiagramObjectPoint::addConstructToMap, DiagramObjectPoint::addPrimitiveAssignFnsToMap, DiagramObjectPoint::addClassAssignFnsToMap, DiagramObjectPoint::debugName);
 }
-
-

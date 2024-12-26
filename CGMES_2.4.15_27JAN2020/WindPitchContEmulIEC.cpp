@@ -21,26 +21,6 @@ WindPitchContEmulIEC::WindPitchContEmulIEC(): WindGenTurbineType2IEC(nullptr) {}
 WindPitchContEmulIEC::~WindPitchContEmulIEC() {};
 
 
-bool assign_WindPitchContEmulIEC_WindGenTurbineType2IEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(WindPitchContEmulIEC* element = dynamic_cast<WindPitchContEmulIEC*>(BaseClass_ptr1)) {
-                element->WindGenTurbineType2IEC = dynamic_cast<WindGenTurbineType2IEC*>(BaseClass_ptr2);
-                if(element->WindGenTurbineType2IEC != nullptr)
-                        return true;
-        }
-        return false;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 bool assign_WindPitchContEmulIEC_kdroop(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(WindPitchContEmulIEC* element = dynamic_cast<WindPitchContEmulIEC*>(BaseClass_ptr1)) {
@@ -162,6 +142,26 @@ bool assign_WindPitchContEmulIEC_tpe(std::stringstream &buffer, BaseClass* BaseC
                 return false;
 }
 
+
+bool assign_WindPitchContEmulIEC_WindGenTurbineType2IEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(WindPitchContEmulIEC* element = dynamic_cast<WindPitchContEmulIEC*>(BaseClass_ptr1)) {
+                element->WindGenTurbineType2IEC = dynamic_cast<WindGenTurbineType2IEC*>(BaseClass_ptr2);
+                if(element->WindGenTurbineType2IEC != nullptr)
+                        return true;
+        }
+        return false;
+}
+
+
+
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* WindPitchContEmulIEC_factory() {
 		return new WindPitchContEmulIEC;
@@ -199,5 +199,3 @@ const BaseClassDefiner WindPitchContEmulIEC::declare()
 {
 	return BaseClassDefiner(WindPitchContEmulIEC::addConstructToMap, WindPitchContEmulIEC::addPrimitiveAssignFnsToMap, WindPitchContEmulIEC::addClassAssignFnsToMap, WindPitchContEmulIEC::debugName);
 }
-
-

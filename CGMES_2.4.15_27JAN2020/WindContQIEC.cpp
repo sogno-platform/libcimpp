@@ -2,6 +2,7 @@
 #include "IdentifiedObject.hpp"
 #include "WindContQIEC.hpp"
 
+#include "WindTurbineType3or4IEC.hpp"
 #include "PU.hpp"
 #include "PU.hpp"
 #include "PU.hpp"
@@ -28,7 +29,6 @@
 #include "WindLVRTQcontrolModesKind.hpp"
 #include "WindQcontrolModesKind.hpp"
 #include "PU.hpp"
-#include "WindTurbineType3or4IEC.hpp"
 
 using namespace CIMPP;
 
@@ -36,41 +36,6 @@ WindContQIEC::WindContQIEC(): WindTurbineType3or4IEC(nullptr) {};
 
 WindContQIEC::~WindContQIEC() {};
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-bool assign_WindContQIEC_WindTurbineType3or4IEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(WindContQIEC* element = dynamic_cast<WindContQIEC*>(BaseClass_ptr1)) {
-                element->WindTurbineType3or4IEC = dynamic_cast<WindTurbineType3or4IEC*>(BaseClass_ptr2);
-                if(element->WindTurbineType3or4IEC != nullptr)
-                        return true;
-        }
-        return false;
-}
 
 
 bool assign_WindContQIEC_iqh1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
@@ -386,6 +351,41 @@ bool assign_WindContQIEC_xdroop(std::stringstream &buffer, BaseClass* BaseClass_
 }
 
 
+bool assign_WindContQIEC_WindTurbineType3or4IEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(WindContQIEC* element = dynamic_cast<WindContQIEC*>(BaseClass_ptr1)) {
+                element->WindTurbineType3or4IEC = dynamic_cast<WindTurbineType3or4IEC*>(BaseClass_ptr2);
+                if(element->WindTurbineType3or4IEC != nullptr)
+                        return true;
+        }
+        return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* WindContQIEC_factory() {
 		return new WindContQIEC;
@@ -397,7 +397,7 @@ void WindContQIEC::addConstructToMap(std::unordered_map<std::string, BaseClass* 
 }
 
 void WindContQIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
-	assign_map.insert(std::make_pair(std::string("cim:WindContQIEC.iqh1"), &assign_WindContQIEC_iqh1));
+		assign_map.insert(std::make_pair(std::string("cim:WindContQIEC.iqh1"), &assign_WindContQIEC_iqh1));
 	assign_map.insert(std::make_pair(std::string("cim:WindContQIEC.iqmax"), &assign_WindContQIEC_iqmax));
 	assign_map.insert(std::make_pair(std::string("cim:WindContQIEC.iqmin"), &assign_WindContQIEC_iqmin));
 	assign_map.insert(std::make_pair(std::string("cim:WindContQIEC.iqpost"), &assign_WindContQIEC_iqpost));
@@ -423,11 +423,11 @@ void WindContQIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, as
 	assign_map.insert(std::make_pair(std::string("cim:WindContQIEC.windLVRTQcontrolModesType"), &assign_WindContQIEC_windLVRTQcontrolModesType));
 	assign_map.insert(std::make_pair(std::string("cim:WindContQIEC.windQcontrolModesType"), &assign_WindContQIEC_windQcontrolModesType));
 	assign_map.insert(std::make_pair(std::string("cim:WindContQIEC.xdroop"), &assign_WindContQIEC_xdroop));
-	}
+}
 
 void WindContQIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-																											assign_map.insert(std::make_pair(std::string("cim:WindContQIEC.WindTurbineType3or4IEC"), &assign_WindContQIEC_WindTurbineType3or4IEC));
-}
+	assign_map.insert(std::make_pair(std::string("cim:WindContQIEC.WindTurbineType3or4IEC"), &assign_WindContQIEC_WindTurbineType3or4IEC));
+																										}
 
 const char WindContQIEC::debugName[] = "WindContQIEC";
 const char* WindContQIEC::debugString()
@@ -439,5 +439,3 @@ const BaseClassDefiner WindContQIEC::declare()
 {
 	return BaseClassDefiner(WindContQIEC::addConstructToMap, WindContQIEC::addPrimitiveAssignFnsToMap, WindContQIEC::addClassAssignFnsToMap, WindContQIEC::debugName);
 }
-
-

@@ -11,6 +11,8 @@ GeographicalRegion::GeographicalRegion() {};
 GeographicalRegion::~GeographicalRegion() {};
 
 
+
+
 bool assign_GeographicalRegion_Regions(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(GeographicalRegion* element = dynamic_cast<GeographicalRegion*>(BaseClass_ptr1)) {
 		if(dynamic_cast<SubGeographicalRegion*>(BaseClass_ptr2) != nullptr) {
@@ -20,8 +22,6 @@ bool assign_GeographicalRegion_Regions(BaseClass* BaseClass_ptr1, BaseClass* Bas
 	}
 	return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* GeographicalRegion_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner GeographicalRegion::declare()
 {
 	return BaseClassDefiner(GeographicalRegion::addConstructToMap, GeographicalRegion::addPrimitiveAssignFnsToMap, GeographicalRegion::addClassAssignFnsToMap, GeographicalRegion::debugName);
 }
-
-

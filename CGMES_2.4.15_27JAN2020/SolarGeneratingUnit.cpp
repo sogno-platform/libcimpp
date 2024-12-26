@@ -37,5 +37,3 @@ const BaseClassDefiner SolarGeneratingUnit::declare()
 {
 	return BaseClassDefiner(SolarGeneratingUnit::addConstructToMap, SolarGeneratingUnit::addPrimitiveAssignFnsToMap, SolarGeneratingUnit::addClassAssignFnsToMap, SolarGeneratingUnit::debugName);
 }
-
-

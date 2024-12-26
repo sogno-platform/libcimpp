@@ -12,6 +12,9 @@ HydroPump::HydroPump(): HydroPowerPlant(nullptr), RotatingMachine(nullptr) {};
 HydroPump::~HydroPump() {};
 
 
+
+
+
 bool assign_HydroPowerPlant_HydroPumps(BaseClass*, BaseClass*);
 bool assign_HydroPump_HydroPowerPlant(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(HydroPump* element = dynamic_cast<HydroPump*>(BaseClass_ptr1)) {
@@ -31,9 +34,6 @@ bool assign_HydroPump_RotatingMachine(BaseClass* BaseClass_ptr1, BaseClass* Base
         }
         return false;
 }
-
-
-
 
 namespace CIMPP {
 	BaseClass* HydroPump_factory() {
@@ -63,5 +63,3 @@ const BaseClassDefiner HydroPump::declare()
 {
 	return BaseClassDefiner(HydroPump::addConstructToMap, HydroPump::addPrimitiveAssignFnsToMap, HydroPump::addClassAssignFnsToMap, HydroPump::debugName);
 }
-
-

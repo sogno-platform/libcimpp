@@ -43,10 +43,12 @@ add_subdirectory(arabica)
 #endif()
 
 file(GLOB_RECURSE SRC src/*.cpp)
+file(GLOB_RECURSE CIM_STATIC static/*.cpp)
 file(GLOB_RECURSE CIM_SRC ${USE_CIM_VERSION}/*.cpp)
-add_library(${PROJECT_NAME} ${SRC} ${CIM_SRC})
+add_library(${PROJECT_NAME} ${SRC} ${CIM_STATIC} ${CIM_SRC})
 set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "cimpp${USE_CIM_VERSION}")
 target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/${USE_CIM_VERSION}>)
+target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/static>)
 target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>)
 target_link_libraries(${PROJECT_NAME} PUBLIC arabica)
 set_property(TARGET arabica PROPERTY POSITION_INDEPENDENT_CODE ON)
@@ -59,7 +61,7 @@ install(TARGETS ${PROJECT_NAME}
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
 
-install(DIRECTORY ${USE_CIM_VERSION} src
+install(DIRECTORY ${USE_CIM_VERSION} static src
     DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/cimpp
     COMPONENT devel
     FILES_MATCHING

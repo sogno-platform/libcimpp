@@ -37,5 +37,3 @@ const BaseClassDefiner StationSupply::declare()
 {
 	return BaseClassDefiner(StationSupply::addConstructToMap, StationSupply::addPrimitiveAssignFnsToMap, StationSupply::addClassAssignFnsToMap, StationSupply::debugName);
 }
-
-

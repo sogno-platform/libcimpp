@@ -37,5 +37,3 @@ const BaseClassDefiner Limit::declare()
 {
 	return BaseClassDefiner(Limit::addConstructToMap, Limit::addPrimitiveAssignFnsToMap, Limit::addClassAssignFnsToMap, Limit::debugName);
 }
-
-

@@ -37,5 +37,3 @@ const BaseClassDefiner Connector::declare()
 {
 	return BaseClassDefiner(Connector::addConstructToMap, Connector::addPrimitiveAssignFnsToMap, Connector::addClassAssignFnsToMap, Connector::debugName);
 }
-
-

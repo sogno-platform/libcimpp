@@ -12,18 +12,6 @@ ValueToAlias::ValueToAlias(): ValueAliasSet(nullptr) {};
 ValueToAlias::~ValueToAlias() {};
 
 
-bool assign_ValueAliasSet_Values(BaseClass*, BaseClass*);
-bool assign_ValueToAlias_ValueAliasSet(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(ValueToAlias* element = dynamic_cast<ValueToAlias*>(BaseClass_ptr1)) {
-                element->ValueAliasSet = dynamic_cast<ValueAliasSet*>(BaseClass_ptr2);
-                if(element->ValueAliasSet != nullptr)
-                        return assign_ValueAliasSet_Values(BaseClass_ptr2, BaseClass_ptr1);
-        }
-        return false;
-}
-
-
-
 
 bool assign_ValueToAlias_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(ValueToAlias* element = dynamic_cast<ValueToAlias*>(BaseClass_ptr1)) {
@@ -36,6 +24,18 @@ bool assign_ValueToAlias_value(std::stringstream &buffer, BaseClass* BaseClass_p
         else
                 return false;
 }
+
+
+bool assign_ValueAliasSet_Values(BaseClass*, BaseClass*);
+bool assign_ValueToAlias_ValueAliasSet(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(ValueToAlias* element = dynamic_cast<ValueToAlias*>(BaseClass_ptr1)) {
+                element->ValueAliasSet = dynamic_cast<ValueAliasSet*>(BaseClass_ptr2);
+                if(element->ValueAliasSet != nullptr)
+                        return assign_ValueAliasSet_Values(BaseClass_ptr2, BaseClass_ptr1);
+        }
+        return false;
+}
+
 
 namespace CIMPP {
 	BaseClass* ValueToAlias_factory() {
@@ -65,5 +65,3 @@ const BaseClassDefiner ValueToAlias::declare()
 {
 	return BaseClassDefiner(ValueToAlias::addConstructToMap, ValueToAlias::addPrimitiveAssignFnsToMap, ValueToAlias::addClassAssignFnsToMap, ValueToAlias::debugName);
 }
-
-

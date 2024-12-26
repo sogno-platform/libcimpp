@@ -1,17 +1,13 @@
-#ifndef FLOAT_H
-#define FLOAT_H
+#ifndef Float_H
+#define Float_H
 
 #include <string>
-#include <iostream>
 #include <istream>
 
 #include "BaseClass.hpp"
 
-namespace CIMPP {
-
-	/**
-	 * A floating point number. The range is unspecified and not limited.
-	 */
+namespace CIMPP
+{
 	class Float : public BaseClass
 	{
 
@@ -39,4 +35,4 @@ namespace CIMPP {
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);
 	};
 }
-#endif // FLOAT_H
+#endif

@@ -20,14 +20,14 @@ namespace CIMPP {
 
 	public:
 					CIMPP::Boolean isPercentageLimits; 	/* Tells if the limit values are in percentage of normalValue or the specified Unit for Measurements and Controls. Default: false */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		LimitSet();
 		virtual ~LimitSet();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

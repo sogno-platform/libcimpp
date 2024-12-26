@@ -21,17 +21,17 @@ class ACDCTerminal;
 	{
 
 	public:
-					CIMPP::Integer priority; 	/* Priority of bus name marker for use as topology bus name.  Use 0 for don t care.  Use 1 for highest priority.  Use 2 as priority is less than 1 and so on. Default: 0 */
 					CIMPP::ReportingGroup* ReportingGroup; 	/* The bus name markers that belong to this reporting group. Default: 0 */
 					std::list<CIMPP::ACDCTerminal*> Terminal; 	/* The terminals associated with this bus name marker. Default: 0 */
-				
+					CIMPP::Integer priority; 	/* Priority of bus name marker for use as topology bus name.  Use 0 for don t care.  Use 1 for highest priority.  Use 2 as priority is less than 1 and so on. Default: 0 */
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		BusNameMarker();
 		virtual ~BusNameMarker();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

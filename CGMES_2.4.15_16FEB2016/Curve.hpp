@@ -21,19 +21,19 @@ class CurveData;
 	{
 
 	public:
+					std::list<CIMPP::CurveData*> CurveDatas; 	/* The curve of  this curve data point. Default: 0 */
 					CIMPP::CurveStyle curveStyle; 	/* The style or shape of the curve. Default: 0 */
 					CIMPP::UnitSymbol xUnit; 	/* The X-axis units of measure. Default: 0 */
 					CIMPP::UnitSymbol y1Unit; 	/* The Y1-axis units of measure. Default: 0 */
 					CIMPP::UnitSymbol y2Unit; 	/* The Y2-axis units of measure. Default: 0 */
-					std::list<CIMPP::CurveData*> CurveDatas; 	/* The curve of  this curve data point. Default: 0 */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		Curve();
 		virtual ~Curve();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

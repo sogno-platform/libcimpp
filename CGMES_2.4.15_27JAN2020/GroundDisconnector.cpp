@@ -37,5 +37,3 @@ const BaseClassDefiner GroundDisconnector::declare()
 {
 	return BaseClassDefiner(GroundDisconnector::addConstructToMap, GroundDisconnector::addPrimitiveAssignFnsToMap, GroundDisconnector::addClassAssignFnsToMap, GroundDisconnector::debugName);
 }
-
-

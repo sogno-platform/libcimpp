@@ -11,6 +11,8 @@ VsCapabilityCurve::VsCapabilityCurve() {};
 VsCapabilityCurve::~VsCapabilityCurve() {};
 
 
+
+
 bool assign_VsCapabilityCurve_VsConverterDCSides(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(VsCapabilityCurve* element = dynamic_cast<VsCapabilityCurve*>(BaseClass_ptr1)) {
 		if(dynamic_cast<VsConverter*>(BaseClass_ptr2) != nullptr) {
@@ -20,8 +22,6 @@ bool assign_VsCapabilityCurve_VsConverterDCSides(BaseClass* BaseClass_ptr1, Base
 	}
 	return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* VsCapabilityCurve_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner VsCapabilityCurve::declare()
 {
 	return BaseClassDefiner(VsCapabilityCurve::addConstructToMap, VsCapabilityCurve::addPrimitiveAssignFnsToMap, VsCapabilityCurve::addClassAssignFnsToMap, VsCapabilityCurve::debugName);
 }
-
-

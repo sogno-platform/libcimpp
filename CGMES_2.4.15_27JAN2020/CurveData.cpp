@@ -14,20 +14,6 @@ CurveData::CurveData(): Curve(nullptr) {};
 CurveData::~CurveData() {};
 
 
-bool assign_Curve_CurveDatas(BaseClass*, BaseClass*);
-bool assign_CurveData_Curve(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(CurveData* element = dynamic_cast<CurveData*>(BaseClass_ptr1)) {
-                element->Curve = dynamic_cast<Curve*>(BaseClass_ptr2);
-                if(element->Curve != nullptr)
-                        return assign_Curve_CurveDatas(BaseClass_ptr2, BaseClass_ptr1);
-        }
-        return false;
-}
-
-
-
-
-
 
 bool assign_CurveData_xvalue(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(CurveData* element = dynamic_cast<CurveData*>(BaseClass_ptr1)) {
@@ -65,6 +51,20 @@ bool assign_CurveData_y2value(std::stringstream &buffer, BaseClass* BaseClass_pt
                 return false;
 }
 
+
+bool assign_Curve_CurveDatas(BaseClass*, BaseClass*);
+bool assign_CurveData_Curve(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(CurveData* element = dynamic_cast<CurveData*>(BaseClass_ptr1)) {
+                element->Curve = dynamic_cast<Curve*>(BaseClass_ptr2);
+                if(element->Curve != nullptr)
+                        return assign_Curve_CurveDatas(BaseClass_ptr2, BaseClass_ptr1);
+        }
+        return false;
+}
+
+
+
+
 namespace CIMPP {
 	BaseClass* CurveData_factory() {
 		return new CurveData;
@@ -95,5 +95,3 @@ const BaseClassDefiner CurveData::declare()
 {
 	return BaseClassDefiner(CurveData::addConstructToMap, CurveData::addPrimitiveAssignFnsToMap, CurveData::addClassAssignFnsToMap, CurveData::debugName);
 }
-
-

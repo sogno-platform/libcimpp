@@ -2,8 +2,8 @@
 #include "LoadGroup.hpp"
 #include "ConformLoadGroup.hpp"
 
-#include "ConformLoad.hpp"
 #include "ConformLoadSchedule.hpp"
+#include "ConformLoad.hpp"
 
 using namespace CIMPP;
 
@@ -12,15 +12,8 @@ ConformLoadGroup::ConformLoadGroup() {};
 ConformLoadGroup::~ConformLoadGroup() {};
 
 
-bool assign_ConformLoadGroup_EnergyConsumers(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(ConformLoadGroup* element = dynamic_cast<ConformLoadGroup*>(BaseClass_ptr1)) {
-		if(dynamic_cast<ConformLoad*>(BaseClass_ptr2) != nullptr) {
-                        element->EnergyConsumers.push_back(dynamic_cast<ConformLoad*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
+
+
 
 bool assign_ConformLoadGroup_ConformLoadSchedules(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(ConformLoadGroup* element = dynamic_cast<ConformLoadGroup*>(BaseClass_ptr1)) {
@@ -32,8 +25,15 @@ bool assign_ConformLoadGroup_ConformLoadSchedules(BaseClass* BaseClass_ptr1, Bas
 	return false;
 }
 
-
-
+bool assign_ConformLoadGroup_EnergyConsumers(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(ConformLoadGroup* element = dynamic_cast<ConformLoadGroup*>(BaseClass_ptr1)) {
+		if(dynamic_cast<ConformLoad*>(BaseClass_ptr2) != nullptr) {
+                        element->EnergyConsumers.push_back(dynamic_cast<ConformLoad*>(BaseClass_ptr2));
+			return true;
+		}
+	}
+	return false;
+}
 
 namespace CIMPP {
 	BaseClass* ConformLoadGroup_factory() {
@@ -49,8 +49,8 @@ void ConformLoadGroup::addPrimitiveAssignFnsToMap(std::unordered_map<std::string
 		}
 
 void ConformLoadGroup::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-	assign_map.insert(std::make_pair(std::string("cim:ConformLoadGroup.EnergyConsumers"), &assign_ConformLoadGroup_EnergyConsumers));
 	assign_map.insert(std::make_pair(std::string("cim:ConformLoadGroup.ConformLoadSchedules"), &assign_ConformLoadGroup_ConformLoadSchedules));
+	assign_map.insert(std::make_pair(std::string("cim:ConformLoadGroup.EnergyConsumers"), &assign_ConformLoadGroup_EnergyConsumers));
 }
 
 const char ConformLoadGroup::debugName[] = "ConformLoadGroup";
@@ -63,5 +63,3 @@ const BaseClassDefiner ConformLoadGroup::declare()
 {
 	return BaseClassDefiner(ConformLoadGroup::addConstructToMap, ConformLoadGroup::addPrimitiveAssignFnsToMap, ConformLoadGroup::addClassAssignFnsToMap, ConformLoadGroup::debugName);
 }
-
-

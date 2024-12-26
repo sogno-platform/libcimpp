@@ -15,8 +15,8 @@
 namespace CIMPP {
 
 
-class WindGenTurbineType3IEC;
 class WindDynamicsLookupTable;
+class WindGenTurbineType3IEC;
 	/*
 	P control model Type 3.  Reference: IEC Standard 61400-27-1 Section 6.6.5.3.
 	*/
@@ -24,6 +24,8 @@ class WindDynamicsLookupTable;
 	{
 
 	public:
+					std::list<CIMPP::WindDynamicsLookupTable*> WindDynamicsLookupTable; 	/* The P control type 3 model with which this wind dynamics lookup table is associated. Default: 0 */
+					CIMPP::WindGenTurbineType3IEC* WindGenTurbineType3IEC; 	/* Wind turbine type 3 model with which this Wind control P type 3 model is associated. Default: 0 */
 					CIMPP::PU dpmax; 	/* Maximum wind turbine power ramp rate (). It is project dependent parameter. Default: nullptr */
 					CIMPP::PU dtrisemaxlvrt; 	/* Limitation of torque rise rate during LVRT for S (d). It is project dependent parameter. Default: nullptr */
 					CIMPP::PU kdtd; 	/* Gain for active drive train damping (). It is type dependent parameter. Default: nullptr */
@@ -45,16 +47,14 @@ class WindDynamicsLookupTable;
 					CIMPP::PU updip; 	/* Voltage dip threshold for P-control ().  Part of turbine control, often different (e.g 0.8) from converter thresholds. It is project dependent parameter. Default: nullptr */
 					CIMPP::PU wdtd; 	/* Active drive train damping frequency (omega). It can be calculated from two mass model parameters. It is type dependent parameter. Default: nullptr */
 					CIMPP::Simple_Float zeta; 	/* Coefficient for active drive train damping (zeta). It is type dependent parameter. Default: nullptr */
-					CIMPP::WindGenTurbineType3IEC* WindGenTurbineType3IEC; 	/* Wind turbine type 3 model with which this Wind control P type 3 model is associated. Default: 0 */
-					CIMPP::WindDynamicsLookupTable* WindDynamicsLookupTable; 	/* The P control type 3 model with which this wind dynamics lookup table is associated. Default: 0 */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		WindContPType3IEC();
 		virtual ~WindContPType3IEC();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

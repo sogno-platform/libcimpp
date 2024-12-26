@@ -11,8 +11,6 @@ DynamicsFunctionBlock::DynamicsFunctionBlock() {};
 DynamicsFunctionBlock::~DynamicsFunctionBlock() {};
 
 
-
-
 bool assign_DynamicsFunctionBlock_enabled(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(DynamicsFunctionBlock* element = dynamic_cast<DynamicsFunctionBlock*>(BaseClass_ptr1)) {
                 buffer >> element->enabled;
@@ -24,6 +22,8 @@ bool assign_DynamicsFunctionBlock_enabled(std::stringstream &buffer, BaseClass* 
         else
                 return false;
 }
+
+
 
 namespace CIMPP {
 	BaseClass* DynamicsFunctionBlock_factory() {
@@ -52,5 +52,3 @@ const BaseClassDefiner DynamicsFunctionBlock::declare()
 {
 	return BaseClassDefiner(DynamicsFunctionBlock::addConstructToMap, DynamicsFunctionBlock::addPrimitiveAssignFnsToMap, DynamicsFunctionBlock::addClassAssignFnsToMap, DynamicsFunctionBlock::debugName);
 }
-
-

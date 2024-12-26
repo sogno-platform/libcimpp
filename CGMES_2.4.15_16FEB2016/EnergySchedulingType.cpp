@@ -11,6 +11,8 @@ EnergySchedulingType::EnergySchedulingType() {};
 EnergySchedulingType::~EnergySchedulingType() {};
 
 
+
+
 bool assign_EnergySchedulingType_EnergySource(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(EnergySchedulingType* element = dynamic_cast<EnergySchedulingType*>(BaseClass_ptr1)) {
 		if(dynamic_cast<EnergySource*>(BaseClass_ptr2) != nullptr) {
@@ -20,8 +22,6 @@ bool assign_EnergySchedulingType_EnergySource(BaseClass* BaseClass_ptr1, BaseCla
 	}
 	return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* EnergySchedulingType_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner EnergySchedulingType::declare()
 {
 	return BaseClassDefiner(EnergySchedulingType::addConstructToMap, EnergySchedulingType::addPrimitiveAssignFnsToMap, EnergySchedulingType::addClassAssignFnsToMap, EnergySchedulingType::debugName);
 }
-
-

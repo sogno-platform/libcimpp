@@ -2,6 +2,7 @@
 #include "IdentifiedObject.hpp"
 #include "WindContPitchAngleIEC.hpp"
 
+#include "WindGenTurbineType3IEC.hpp"
 #include "Simple_Float.hpp"
 #include "Simple_Float.hpp"
 #include "PU.hpp"
@@ -12,7 +13,6 @@
 #include "AngleDegrees.hpp"
 #include "AngleDegrees.hpp"
 #include "Seconds.hpp"
-#include "WindGenTurbineType3IEC.hpp"
 
 using namespace CIMPP;
 
@@ -20,25 +20,6 @@ WindContPitchAngleIEC::WindContPitchAngleIEC(): WindGenTurbineType3IEC(nullptr) 
 
 WindContPitchAngleIEC::~WindContPitchAngleIEC() {};
 
-
-
-
-
-
-
-
-
-
-
-
-bool assign_WindContPitchAngleIEC_WindGenTurbineType3IEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(WindContPitchAngleIEC* element = dynamic_cast<WindContPitchAngleIEC*>(BaseClass_ptr1)) {
-                element->WindGenTurbineType3IEC = dynamic_cast<WindGenTurbineType3IEC*>(BaseClass_ptr2);
-                if(element->WindGenTurbineType3IEC != nullptr)
-                        return true;
-        }
-        return false;
-}
 
 
 bool assign_WindContPitchAngleIEC_dthetamax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
@@ -162,6 +143,25 @@ bool assign_WindContPitchAngleIEC_ttheta(std::stringstream &buffer, BaseClass* B
 }
 
 
+bool assign_WindContPitchAngleIEC_WindGenTurbineType3IEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(WindContPitchAngleIEC* element = dynamic_cast<WindContPitchAngleIEC*>(BaseClass_ptr1)) {
+                element->WindGenTurbineType3IEC = dynamic_cast<WindGenTurbineType3IEC*>(BaseClass_ptr2);
+                if(element->WindGenTurbineType3IEC != nullptr)
+                        return true;
+        }
+        return false;
+}
+
+
+
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* WindContPitchAngleIEC_factory() {
 		return new WindContPitchAngleIEC;
@@ -173,7 +173,7 @@ void WindContPitchAngleIEC::addConstructToMap(std::unordered_map<std::string, Ba
 }
 
 void WindContPitchAngleIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
-	assign_map.insert(std::make_pair(std::string("cim:WindContPitchAngleIEC.dthetamax"), &assign_WindContPitchAngleIEC_dthetamax));
+		assign_map.insert(std::make_pair(std::string("cim:WindContPitchAngleIEC.dthetamax"), &assign_WindContPitchAngleIEC_dthetamax));
 	assign_map.insert(std::make_pair(std::string("cim:WindContPitchAngleIEC.dthetamin"), &assign_WindContPitchAngleIEC_dthetamin));
 	assign_map.insert(std::make_pair(std::string("cim:WindContPitchAngleIEC.kic"), &assign_WindContPitchAngleIEC_kic));
 	assign_map.insert(std::make_pair(std::string("cim:WindContPitchAngleIEC.kiomega"), &assign_WindContPitchAngleIEC_kiomega));
@@ -183,11 +183,11 @@ void WindContPitchAngleIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::s
 	assign_map.insert(std::make_pair(std::string("cim:WindContPitchAngleIEC.thetamax"), &assign_WindContPitchAngleIEC_thetamax));
 	assign_map.insert(std::make_pair(std::string("cim:WindContPitchAngleIEC.thetamin"), &assign_WindContPitchAngleIEC_thetamin));
 	assign_map.insert(std::make_pair(std::string("cim:WindContPitchAngleIEC.ttheta"), &assign_WindContPitchAngleIEC_ttheta));
-	}
+}
 
 void WindContPitchAngleIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-											assign_map.insert(std::make_pair(std::string("cim:WindContPitchAngleIEC.WindGenTurbineType3IEC"), &assign_WindContPitchAngleIEC_WindGenTurbineType3IEC));
-}
+	assign_map.insert(std::make_pair(std::string("cim:WindContPitchAngleIEC.WindGenTurbineType3IEC"), &assign_WindContPitchAngleIEC_WindGenTurbineType3IEC));
+										}
 
 const char WindContPitchAngleIEC::debugName[] = "WindContPitchAngleIEC";
 const char* WindContPitchAngleIEC::debugString()
@@ -199,5 +199,3 @@ const BaseClassDefiner WindContPitchAngleIEC::declare()
 {
 	return BaseClassDefiner(WindContPitchAngleIEC::addConstructToMap, WindContPitchAngleIEC::addPrimitiveAssignFnsToMap, WindContPitchAngleIEC::addClassAssignFnsToMap, WindContPitchAngleIEC::debugName);
 }
-
-

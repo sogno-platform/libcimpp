@@ -18,15 +18,6 @@ PFVArType1IEEEPFController::PFVArType1IEEEPFController() {};
 PFVArType1IEEEPFController::~PFVArType1IEEEPFController() {};
 
 
-
-
-
-
-
-
-
-
-
 bool assign_PFVArType1IEEEPFController_ovex(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(PFVArType1IEEEPFController* element = dynamic_cast<PFVArType1IEEEPFController*>(BaseClass_ptr1)) {
                 buffer >> element->ovex;
@@ -123,6 +114,15 @@ bool assign_PFVArType1IEEEPFController_vvtmin(std::stringstream &buffer, BaseCla
                 return false;
 }
 
+
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* PFVArType1IEEEPFController_factory() {
 		return new PFVArType1IEEEPFController;
@@ -157,5 +157,3 @@ const BaseClassDefiner PFVArType1IEEEPFController::declare()
 {
 	return BaseClassDefiner(PFVArType1IEEEPFController::addConstructToMap, PFVArType1IEEEPFController::addPrimitiveAssignFnsToMap, PFVArType1IEEEPFController::addClassAssignFnsToMap, PFVArType1IEEEPFController::debugName);
 }
-
-

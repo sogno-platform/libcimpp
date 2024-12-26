@@ -11,6 +11,8 @@ DCLine::DCLine(): Region(nullptr) {};
 DCLine::~DCLine() {};
 
 
+
+
 bool assign_SubGeographicalRegion_DCLines(BaseClass*, BaseClass*);
 bool assign_DCLine_Region(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(DCLine* element = dynamic_cast<DCLine*>(BaseClass_ptr1)) {
@@ -20,8 +22,6 @@ bool assign_DCLine_Region(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) 
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* DCLine_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner DCLine::declare()
 {
 	return BaseClassDefiner(DCLine::addConstructToMap, DCLine::addPrimitiveAssignFnsToMap, DCLine::addClassAssignFnsToMap, DCLine::debugName);
 }
-
-

@@ -22,19 +22,6 @@ Quality61850::Quality61850() {};
 Quality61850::~Quality61850() {};
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 bool assign_Quality61850_badReference(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1)) {
                 buffer >> element->badReference;
@@ -179,6 +166,19 @@ bool assign_Quality61850_validity(std::stringstream &buffer, BaseClass* BaseClas
                 return false;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* Quality61850_factory() {
 		return new Quality61850;
@@ -217,5 +217,3 @@ const BaseClassDefiner Quality61850::declare()
 {
 	return BaseClassDefiner(Quality61850::addConstructToMap, Quality61850::addPrimitiveAssignFnsToMap, Quality61850::addClassAssignFnsToMap, Quality61850::debugName);
 }
-
-

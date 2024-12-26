@@ -22,14 +22,14 @@ class Season;
 	public:
 					CIMPP::DayType* DayType; 	/* Schedules that use this DayType. Default: 0 */
 					CIMPP::Season* Season; 	/* Schedules that use this Season. Default: 0 */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		SeasonDayTypeSchedule();
 		virtual ~SeasonDayTypeSchedule();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

@@ -11,6 +11,8 @@ OverexcitationLimiterDynamics::OverexcitationLimiterDynamics(): ExcitationSystem
 OverexcitationLimiterDynamics::~OverexcitationLimiterDynamics() {};
 
 
+
+
 bool assign_ExcitationSystemDynamics_OverexcitationLimiterDynamics(BaseClass*, BaseClass*);
 bool assign_OverexcitationLimiterDynamics_ExcitationSystemDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(OverexcitationLimiterDynamics* element = dynamic_cast<OverexcitationLimiterDynamics*>(BaseClass_ptr1)) {
@@ -20,8 +22,6 @@ bool assign_OverexcitationLimiterDynamics_ExcitationSystemDynamics(BaseClass* Ba
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* OverexcitationLimiterDynamics_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner OverexcitationLimiterDynamics::declare()
 {
 	return BaseClassDefiner(OverexcitationLimiterDynamics::addConstructToMap, OverexcitationLimiterDynamics::addPrimitiveAssignFnsToMap, OverexcitationLimiterDynamics::addClassAssignFnsToMap, OverexcitationLimiterDynamics::debugName);
 }
-
-

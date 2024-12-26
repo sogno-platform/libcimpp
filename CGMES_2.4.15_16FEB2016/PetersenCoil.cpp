@@ -17,14 +17,6 @@ PetersenCoil::PetersenCoil() {};
 PetersenCoil::~PetersenCoil() {};
 
 
-
-
-
-
-
-
-
-
 bool assign_PetersenCoil_mode(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(PetersenCoil* element = dynamic_cast<PetersenCoil*>(BaseClass_ptr1)) {
                 buffer >> element->mode;
@@ -109,6 +101,14 @@ bool assign_PetersenCoil_xGroundNominal(std::stringstream &buffer, BaseClass* Ba
                 return false;
 }
 
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* PetersenCoil_factory() {
 		return new PetersenCoil;
@@ -142,5 +142,3 @@ const BaseClassDefiner PetersenCoil::declare()
 {
 	return BaseClassDefiner(PetersenCoil::addConstructToMap, PetersenCoil::addPrimitiveAssignFnsToMap, PetersenCoil::addClassAssignFnsToMap, PetersenCoil::debugName);
 }
-
-

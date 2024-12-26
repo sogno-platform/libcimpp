@@ -19,21 +19,21 @@ namespace CIMPP {
 	{
 
 	public:
-					CIMPP::PU q0; 	/* Segment Q initial point (Q0).  Typical Value = -0.31. Default: nullptr */
-					CIMPP::PU q1; 	/* Segment Q end point (Q1).  Typical Value = -0.1. Default: nullptr */
+					CIMPP::PU kui; 	/* Gain Under excitation limiter (Kui).  Typical Value = 0.1. Default: nullptr */
 					CIMPP::PU p0; 	/* Segment P initial point (P0).  Typical Value = 0. Default: nullptr */
 					CIMPP::PU p1; 	/* Segment P end point (P1).  Typical Value = 1. Default: nullptr */
-					CIMPP::PU kui; 	/* Gain Under excitation limiter (Kui).  Typical Value = 0.1. Default: nullptr */
-					CIMPP::PU vuimin; 	/* Minimum error signal (V).  Typical Value = 0. Default: nullptr */
+					CIMPP::PU q0; 	/* Segment Q initial point (Q0).  Typical Value = -0.31. Default: nullptr */
+					CIMPP::PU q1; 	/* Segment Q end point (Q1).  Typical Value = -0.1. Default: nullptr */
 					CIMPP::PU vuimax; 	/* Maximum error signal (V).  Typical Value = 1. Default: nullptr */
-				
+					CIMPP::PU vuimin; 	/* Minimum error signal (V).  Typical Value = 0. Default: nullptr */
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		UnderexcLim2Simplified();
 		virtual ~UnderexcLim2Simplified();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

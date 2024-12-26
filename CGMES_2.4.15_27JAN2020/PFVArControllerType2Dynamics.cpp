@@ -11,6 +11,8 @@ PFVArControllerType2Dynamics::PFVArControllerType2Dynamics(): ExcitationSystemDy
 PFVArControllerType2Dynamics::~PFVArControllerType2Dynamics() {};
 
 
+
+
 bool assign_ExcitationSystemDynamics_PFVArControllerType2Dynamics(BaseClass*, BaseClass*);
 bool assign_PFVArControllerType2Dynamics_ExcitationSystemDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(PFVArControllerType2Dynamics* element = dynamic_cast<PFVArControllerType2Dynamics*>(BaseClass_ptr1)) {
@@ -20,8 +22,6 @@ bool assign_PFVArControllerType2Dynamics_ExcitationSystemDynamics(BaseClass* Bas
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* PFVArControllerType2Dynamics_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner PFVArControllerType2Dynamics::declare()
 {
 	return BaseClassDefiner(PFVArControllerType2Dynamics::addConstructToMap, PFVArControllerType2Dynamics::addPrimitiveAssignFnsToMap, PFVArControllerType2Dynamics::addClassAssignFnsToMap, PFVArControllerType2Dynamics::debugName);
 }
-
-

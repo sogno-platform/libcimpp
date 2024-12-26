@@ -2,8 +2,8 @@
 #include "TurbineGovernorDynamics.hpp"
 #include "TurbineGovernorUserDefined.hpp"
 
-#include "Boolean.hpp"
 #include "ProprietaryParameterDynamics.hpp"
+#include "Boolean.hpp"
 
 using namespace CIMPP;
 
@@ -11,17 +11,6 @@ TurbineGovernorUserDefined::TurbineGovernorUserDefined() {};
 
 TurbineGovernorUserDefined::~TurbineGovernorUserDefined() {};
 
-
-
-bool assign_TurbineGovernorUserDefined_ProprietaryParameterDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(TurbineGovernorUserDefined* element = dynamic_cast<TurbineGovernorUserDefined*>(BaseClass_ptr1)) {
-		if(dynamic_cast<ProprietaryParameterDynamics*>(BaseClass_ptr2) != nullptr) {
-                        element->ProprietaryParameterDynamics.push_back(dynamic_cast<ProprietaryParameterDynamics*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
 
 
 bool assign_TurbineGovernorUserDefined_proprietary(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
@@ -37,6 +26,17 @@ bool assign_TurbineGovernorUserDefined_proprietary(std::stringstream &buffer, Ba
 }
 
 
+bool assign_TurbineGovernorUserDefined_ProprietaryParameterDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(TurbineGovernorUserDefined* element = dynamic_cast<TurbineGovernorUserDefined*>(BaseClass_ptr1)) {
+		if(dynamic_cast<ProprietaryParameterDynamics*>(BaseClass_ptr2) != nullptr) {
+                        element->ProprietaryParameterDynamics.push_back(dynamic_cast<ProprietaryParameterDynamics*>(BaseClass_ptr2));
+			return true;
+		}
+	}
+	return false;
+}
+
+
 namespace CIMPP {
 	BaseClass* TurbineGovernorUserDefined_factory() {
 		return new TurbineGovernorUserDefined;
@@ -48,12 +48,12 @@ void TurbineGovernorUserDefined::addConstructToMap(std::unordered_map<std::strin
 }
 
 void TurbineGovernorUserDefined::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
-	assign_map.insert(std::make_pair(std::string("cim:TurbineGovernorUserDefined.proprietary"), &assign_TurbineGovernorUserDefined_proprietary));
-	}
+		assign_map.insert(std::make_pair(std::string("cim:TurbineGovernorUserDefined.proprietary"), &assign_TurbineGovernorUserDefined_proprietary));
+}
 
 void TurbineGovernorUserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-		assign_map.insert(std::make_pair(std::string("cim:TurbineGovernorUserDefined.ProprietaryParameterDynamics"), &assign_TurbineGovernorUserDefined_ProprietaryParameterDynamics));
-}
+	assign_map.insert(std::make_pair(std::string("cim:TurbineGovernorUserDefined.ProprietaryParameterDynamics"), &assign_TurbineGovernorUserDefined_ProprietaryParameterDynamics));
+	}
 
 const char TurbineGovernorUserDefined::debugName[] = "TurbineGovernorUserDefined";
 const char* TurbineGovernorUserDefined::debugString()
@@ -65,5 +65,3 @@ const BaseClassDefiner TurbineGovernorUserDefined::declare()
 {
 	return BaseClassDefiner(TurbineGovernorUserDefined::addConstructToMap, TurbineGovernorUserDefined::addPrimitiveAssignFnsToMap, TurbineGovernorUserDefined::addClassAssignFnsToMap, TurbineGovernorUserDefined::debugName);
 }
-
-

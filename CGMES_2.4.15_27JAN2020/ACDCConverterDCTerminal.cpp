@@ -12,18 +12,6 @@ ACDCConverterDCTerminal::ACDCConverterDCTerminal(): DCConductingEquipment(nullpt
 ACDCConverterDCTerminal::~ACDCConverterDCTerminal() {};
 
 
-bool assign_ACDCConverter_DCTerminals(BaseClass*, BaseClass*);
-bool assign_ACDCConverterDCTerminal_DCConductingEquipment(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(ACDCConverterDCTerminal* element = dynamic_cast<ACDCConverterDCTerminal*>(BaseClass_ptr1)) {
-                element->DCConductingEquipment = dynamic_cast<ACDCConverter*>(BaseClass_ptr2);
-                if(element->DCConductingEquipment != nullptr)
-                        return assign_ACDCConverter_DCTerminals(BaseClass_ptr2, BaseClass_ptr1);
-        }
-        return false;
-}
-
-
-
 
 bool assign_ACDCConverterDCTerminal_polarity(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(ACDCConverterDCTerminal* element = dynamic_cast<ACDCConverterDCTerminal*>(BaseClass_ptr1)) {
@@ -36,6 +24,18 @@ bool assign_ACDCConverterDCTerminal_polarity(std::stringstream &buffer, BaseClas
         else
                 return false;
 }
+
+
+bool assign_ACDCConverter_DCTerminals(BaseClass*, BaseClass*);
+bool assign_ACDCConverterDCTerminal_DCConductingEquipment(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(ACDCConverterDCTerminal* element = dynamic_cast<ACDCConverterDCTerminal*>(BaseClass_ptr1)) {
+                element->DCConductingEquipment = dynamic_cast<ACDCConverter*>(BaseClass_ptr2);
+                if(element->DCConductingEquipment != nullptr)
+                        return assign_ACDCConverter_DCTerminals(BaseClass_ptr2, BaseClass_ptr1);
+        }
+        return false;
+}
+
 
 namespace CIMPP {
 	BaseClass* ACDCConverterDCTerminal_factory() {
@@ -65,5 +65,3 @@ const BaseClassDefiner ACDCConverterDCTerminal::declare()
 {
 	return BaseClassDefiner(ACDCConverterDCTerminal::addConstructToMap, ACDCConverterDCTerminal::addPrimitiveAssignFnsToMap, ACDCConverterDCTerminal::addClassAssignFnsToMap, ACDCConverterDCTerminal::debugName);
 }
-
-

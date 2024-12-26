@@ -11,8 +11,6 @@ PhaseTapChangerAsymmetrical::PhaseTapChangerAsymmetrical() {};
 PhaseTapChangerAsymmetrical::~PhaseTapChangerAsymmetrical() {};
 
 
-
-
 bool assign_PhaseTapChangerAsymmetrical_windingConnectionAngle(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(PhaseTapChangerAsymmetrical* element = dynamic_cast<PhaseTapChangerAsymmetrical*>(BaseClass_ptr1)) {
                 buffer >> element->windingConnectionAngle;
@@ -24,6 +22,8 @@ bool assign_PhaseTapChangerAsymmetrical_windingConnectionAngle(std::stringstream
         else
                 return false;
 }
+
+
 
 namespace CIMPP {
 	BaseClass* PhaseTapChangerAsymmetrical_factory() {
@@ -52,5 +52,3 @@ const BaseClassDefiner PhaseTapChangerAsymmetrical::declare()
 {
 	return BaseClassDefiner(PhaseTapChangerAsymmetrical::addConstructToMap, PhaseTapChangerAsymmetrical::addPrimitiveAssignFnsToMap, PhaseTapChangerAsymmetrical::addClassAssignFnsToMap, PhaseTapChangerAsymmetrical::debugName);
 }
-
-

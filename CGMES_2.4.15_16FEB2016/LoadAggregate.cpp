@@ -2,24 +2,18 @@
 #include "LoadDynamics.hpp"
 #include "LoadAggregate.hpp"
 
-#include "LoadStatic.hpp"
 #include "LoadMotor.hpp"
+#include "LoadStatic.hpp"
 
 using namespace CIMPP;
 
-LoadAggregate::LoadAggregate(): LoadStatic(nullptr), LoadMotor(nullptr) {};
+LoadAggregate::LoadAggregate(): LoadMotor(nullptr), LoadStatic(nullptr) {};
 
 LoadAggregate::~LoadAggregate() {};
 
 
-bool assign_LoadAggregate_LoadStatic(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(LoadAggregate* element = dynamic_cast<LoadAggregate*>(BaseClass_ptr1)) {
-                element->LoadStatic = dynamic_cast<LoadStatic*>(BaseClass_ptr2);
-                if(element->LoadStatic != nullptr)
-                        return true;
-        }
-        return false;
-}
+
+
 
 bool assign_LoadAggregate_LoadMotor(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(LoadAggregate* element = dynamic_cast<LoadAggregate*>(BaseClass_ptr1)) {
@@ -30,8 +24,14 @@ bool assign_LoadAggregate_LoadMotor(BaseClass* BaseClass_ptr1, BaseClass* BaseCl
         return false;
 }
 
-
-
+bool assign_LoadAggregate_LoadStatic(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(LoadAggregate* element = dynamic_cast<LoadAggregate*>(BaseClass_ptr1)) {
+                element->LoadStatic = dynamic_cast<LoadStatic*>(BaseClass_ptr2);
+                if(element->LoadStatic != nullptr)
+                        return true;
+        }
+        return false;
+}
 
 namespace CIMPP {
 	BaseClass* LoadAggregate_factory() {
@@ -47,8 +47,8 @@ void LoadAggregate::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, a
 		}
 
 void LoadAggregate::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-	assign_map.insert(std::make_pair(std::string("cim:LoadAggregate.LoadStatic"), &assign_LoadAggregate_LoadStatic));
 	assign_map.insert(std::make_pair(std::string("cim:LoadAggregate.LoadMotor"), &assign_LoadAggregate_LoadMotor));
+	assign_map.insert(std::make_pair(std::string("cim:LoadAggregate.LoadStatic"), &assign_LoadAggregate_LoadStatic));
 }
 
 const char LoadAggregate::debugName[] = "LoadAggregate";
@@ -61,5 +61,3 @@ const BaseClassDefiner LoadAggregate::declare()
 {
 	return BaseClassDefiner(LoadAggregate::addConstructToMap, LoadAggregate::addPrimitiveAssignFnsToMap, LoadAggregate::addClassAssignFnsToMap, LoadAggregate::debugName);
 }
-
-

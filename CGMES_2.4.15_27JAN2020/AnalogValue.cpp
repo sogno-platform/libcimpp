@@ -13,6 +13,21 @@ AnalogValue::AnalogValue(): Analog(nullptr), AnalogControl(nullptr) {};
 AnalogValue::~AnalogValue() {};
 
 
+
+
+bool assign_AnalogValue_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
+	if(AnalogValue* element = dynamic_cast<AnalogValue*>(BaseClass_ptr1)) {
+                buffer >> element->value;
+                if(buffer.fail())
+                        return false;
+                else
+                        return true;
+        }
+        else
+                return false;
+}
+
+
 bool assign_Analog_AnalogValues(BaseClass*, BaseClass*);
 bool assign_AnalogValue_Analog(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(AnalogValue* element = dynamic_cast<AnalogValue*>(BaseClass_ptr1)) {
@@ -32,21 +47,6 @@ bool assign_AnalogValue_AnalogControl(BaseClass* BaseClass_ptr1, BaseClass* Base
         return false;
 }
 
-
-
-
-
-bool assign_AnalogValue_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(AnalogValue* element = dynamic_cast<AnalogValue*>(BaseClass_ptr1)) {
-                buffer >> element->value;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
 
 namespace CIMPP {
 	BaseClass* AnalogValue_factory() {
@@ -77,5 +77,3 @@ const BaseClassDefiner AnalogValue::declare()
 {
 	return BaseClassDefiner(AnalogValue::addConstructToMap, AnalogValue::addPrimitiveAssignFnsToMap, AnalogValue::addClassAssignFnsToMap, AnalogValue::debugName);
 }
-
-

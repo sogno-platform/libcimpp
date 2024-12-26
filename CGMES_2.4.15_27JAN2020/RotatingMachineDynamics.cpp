@@ -16,13 +16,6 @@ RotatingMachineDynamics::RotatingMachineDynamics() {};
 RotatingMachineDynamics::~RotatingMachineDynamics() {};
 
 
-
-
-
-
-
-
-
 bool assign_RotatingMachineDynamics_damping(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(RotatingMachineDynamics* element = dynamic_cast<RotatingMachineDynamics*>(BaseClass_ptr1)) {
                 buffer >> element->damping;
@@ -95,6 +88,13 @@ bool assign_RotatingMachineDynamics_statorResistance(std::stringstream &buffer, 
                 return false;
 }
 
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* RotatingMachineDynamics_factory() {
 		return new RotatingMachineDynamics;
@@ -127,5 +127,3 @@ const BaseClassDefiner RotatingMachineDynamics::declare()
 {
 	return BaseClassDefiner(RotatingMachineDynamics::addConstructToMap, RotatingMachineDynamics::addPrimitiveAssignFnsToMap, RotatingMachineDynamics::addClassAssignFnsToMap, RotatingMachineDynamics::debugName);
 }
-
-

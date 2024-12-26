@@ -37,5 +37,3 @@ const BaseClassDefiner DCChopper::declare()
 {
 	return BaseClassDefiner(DCChopper::addConstructToMap, DCChopper::addPrimitiveAssignFnsToMap, DCChopper::addClassAssignFnsToMap, DCChopper::debugName);
 }
-
-

@@ -37,5 +37,3 @@ const BaseClassDefiner Ground::declare()
 {
 	return BaseClassDefiner(Ground::addConstructToMap, Ground::addPrimitiveAssignFnsToMap, Ground::addClassAssignFnsToMap, Ground::debugName);
 }
-
-

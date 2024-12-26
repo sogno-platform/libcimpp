@@ -11,6 +11,8 @@ TurbineLoadControllerDynamics::TurbineLoadControllerDynamics(): TurbineGovernorD
 TurbineLoadControllerDynamics::~TurbineLoadControllerDynamics() {};
 
 
+
+
 bool assign_TurbineGovernorDynamics_TurbineLoadControllerDynamics(BaseClass*, BaseClass*);
 bool assign_TurbineLoadControllerDynamics_TurbineGovernorDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(TurbineLoadControllerDynamics* element = dynamic_cast<TurbineLoadControllerDynamics*>(BaseClass_ptr1)) {
@@ -20,8 +22,6 @@ bool assign_TurbineLoadControllerDynamics_TurbineGovernorDynamics(BaseClass* Bas
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* TurbineLoadControllerDynamics_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner TurbineLoadControllerDynamics::declare()
 {
 	return BaseClassDefiner(TurbineLoadControllerDynamics::addConstructToMap, TurbineLoadControllerDynamics::addPrimitiveAssignFnsToMap, TurbineLoadControllerDynamics::addClassAssignFnsToMap, TurbineLoadControllerDynamics::debugName);
 }
-
-

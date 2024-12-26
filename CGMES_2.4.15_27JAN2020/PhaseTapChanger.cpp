@@ -11,6 +11,8 @@ PhaseTapChanger::PhaseTapChanger(): TransformerEnd(nullptr) {};
 PhaseTapChanger::~PhaseTapChanger() {};
 
 
+
+
 bool assign_TransformerEnd_PhaseTapChanger(BaseClass*, BaseClass*);
 bool assign_PhaseTapChanger_TransformerEnd(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(PhaseTapChanger* element = dynamic_cast<PhaseTapChanger*>(BaseClass_ptr1)) {
@@ -20,8 +22,6 @@ bool assign_PhaseTapChanger_TransformerEnd(BaseClass* BaseClass_ptr1, BaseClass*
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* PhaseTapChanger_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner PhaseTapChanger::declare()
 {
 	return BaseClassDefiner(PhaseTapChanger::addConstructToMap, PhaseTapChanger::addPrimitiveAssignFnsToMap, PhaseTapChanger::addClassAssignFnsToMap, PhaseTapChanger::debugName);
 }
-
-

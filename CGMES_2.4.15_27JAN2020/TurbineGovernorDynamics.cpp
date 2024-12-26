@@ -2,8 +2,8 @@
 #include "DynamicsFunctionBlock.hpp"
 #include "TurbineGovernorDynamics.hpp"
 
-#include "SynchronousMachineDynamics.hpp"
 #include "AsynchronousMachineDynamics.hpp"
+#include "SynchronousMachineDynamics.hpp"
 #include "TurbineLoadControllerDynamics.hpp"
 
 using namespace CIMPP;
@@ -13,15 +13,9 @@ TurbineGovernorDynamics::TurbineGovernorDynamics(): AsynchronousMachineDynamics(
 TurbineGovernorDynamics::~TurbineGovernorDynamics() {};
 
 
-bool assign_TurbineGovernorDynamics_SynchronousMachineDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(TurbineGovernorDynamics* element = dynamic_cast<TurbineGovernorDynamics*>(BaseClass_ptr1)) {
-		if(dynamic_cast<SynchronousMachineDynamics*>(BaseClass_ptr2) != nullptr) {
-                        element->SynchronousMachineDynamics.push_back(dynamic_cast<SynchronousMachineDynamics*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
+
+
+
 
 bool assign_AsynchronousMachineDynamics_TurbineGovernorDynamics(BaseClass*, BaseClass*);
 bool assign_TurbineGovernorDynamics_AsynchronousMachineDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
@@ -33,6 +27,16 @@ bool assign_TurbineGovernorDynamics_AsynchronousMachineDynamics(BaseClass* BaseC
         return false;
 }
 
+bool assign_TurbineGovernorDynamics_SynchronousMachineDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(TurbineGovernorDynamics* element = dynamic_cast<TurbineGovernorDynamics*>(BaseClass_ptr1)) {
+		if(dynamic_cast<SynchronousMachineDynamics*>(BaseClass_ptr2) != nullptr) {
+                        element->SynchronousMachineDynamics.push_back(dynamic_cast<SynchronousMachineDynamics*>(BaseClass_ptr2));
+			return true;
+		}
+	}
+	return false;
+}
+
 bool assign_TurbineGovernorDynamics_TurbineLoadControllerDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(TurbineGovernorDynamics* element = dynamic_cast<TurbineGovernorDynamics*>(BaseClass_ptr1)) {
                 element->TurbineLoadControllerDynamics = dynamic_cast<TurbineLoadControllerDynamics*>(BaseClass_ptr2);
@@ -41,10 +45,6 @@ bool assign_TurbineGovernorDynamics_TurbineLoadControllerDynamics(BaseClass* Bas
         }
         return false;
 }
-
-
-
-
 
 namespace CIMPP {
 	BaseClass* TurbineGovernorDynamics_factory() {
@@ -60,8 +60,8 @@ void TurbineGovernorDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std:
 			}
 
 void TurbineGovernorDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-	assign_map.insert(std::make_pair(std::string("cim:TurbineGovernorDynamics.SynchronousMachineDynamics"), &assign_TurbineGovernorDynamics_SynchronousMachineDynamics));
 	assign_map.insert(std::make_pair(std::string("cim:TurbineGovernorDynamics.AsynchronousMachineDynamics"), &assign_TurbineGovernorDynamics_AsynchronousMachineDynamics));
+	assign_map.insert(std::make_pair(std::string("cim:TurbineGovernorDynamics.SynchronousMachineDynamics"), &assign_TurbineGovernorDynamics_SynchronousMachineDynamics));
 	assign_map.insert(std::make_pair(std::string("cim:TurbineGovernorDynamics.TurbineLoadControllerDynamics"), &assign_TurbineGovernorDynamics_TurbineLoadControllerDynamics));
 }
 
@@ -75,5 +75,3 @@ const BaseClassDefiner TurbineGovernorDynamics::declare()
 {
 	return BaseClassDefiner(TurbineGovernorDynamics::addConstructToMap, TurbineGovernorDynamics::addPrimitiveAssignFnsToMap, TurbineGovernorDynamics::addClassAssignFnsToMap, TurbineGovernorDynamics::debugName);
 }
-
-

@@ -22,14 +22,14 @@ class DiagramObject;
 	public:
 					std::list<CIMPP::DiagramObject*> VisibleObjects; 	/* A visibility layer can contain one or more diagram objects. Default: 0 */
 					CIMPP::Integer drawingOrder; 	/* The drawing order for this layer.  The higher the number, the later the layer and the objects within it are rendered. Default: 0 */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		VisibilityLayer();
 		virtual ~VisibilityLayer();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

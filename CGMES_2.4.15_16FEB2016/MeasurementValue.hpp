@@ -8,11 +8,11 @@
 
 
 #include "PerCent.hpp"
+#include "DateTime.hpp"
 
 namespace CIMPP {
 
 
-class DateTime;
 class MeasurementValueQuality;
 class MeasurementValueSource;
 	/*
@@ -22,18 +22,18 @@ class MeasurementValueSource;
 	{
 
 	public:
-					CIMPP::DateTime* timeStamp; 	/* The time when the value was last updated Default: '' */
-					CIMPP::PerCent sensorAccuracy; 	/* The limit, expressed as a percentage of the sensor maximum, that errors will not exceed when the sensor is used under  reference conditions. Default: nullptr */
 					CIMPP::MeasurementValueQuality* MeasurementValueQuality; 	/* A MeasurementValue has a MeasurementValueQuality associated with it. Default: 0 */
 					CIMPP::MeasurementValueSource* MeasurementValueSource; 	/* The MeasurementValues updated by the source. Default: 0 */
-				
+					CIMPP::PerCent sensorAccuracy; 	/* The limit, expressed as a percentage of the sensor maximum, that errors will not exceed when the sensor is used under  reference conditions. Default: nullptr */
+					CIMPP::DateTime timeStamp; 	/* The time when the value was last updated Default: '' */
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		MeasurementValue();
 		virtual ~MeasurementValue();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

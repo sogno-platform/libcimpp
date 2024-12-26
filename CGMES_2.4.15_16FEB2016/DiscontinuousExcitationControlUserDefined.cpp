@@ -2,8 +2,8 @@
 #include "DiscontinuousExcitationControlDynamics.hpp"
 #include "DiscontinuousExcitationControlUserDefined.hpp"
 
-#include "Boolean.hpp"
 #include "ProprietaryParameterDynamics.hpp"
+#include "Boolean.hpp"
 
 using namespace CIMPP;
 
@@ -11,17 +11,6 @@ DiscontinuousExcitationControlUserDefined::DiscontinuousExcitationControlUserDef
 
 DiscontinuousExcitationControlUserDefined::~DiscontinuousExcitationControlUserDefined() {};
 
-
-
-bool assign_DiscontinuousExcitationControlUserDefined_ProprietaryParameterDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(DiscontinuousExcitationControlUserDefined* element = dynamic_cast<DiscontinuousExcitationControlUserDefined*>(BaseClass_ptr1)) {
-		if(dynamic_cast<ProprietaryParameterDynamics*>(BaseClass_ptr2) != nullptr) {
-                        element->ProprietaryParameterDynamics.push_back(dynamic_cast<ProprietaryParameterDynamics*>(BaseClass_ptr2));
-			return true;
-		}
-	}
-	return false;
-}
 
 
 bool assign_DiscontinuousExcitationControlUserDefined_proprietary(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
@@ -37,6 +26,17 @@ bool assign_DiscontinuousExcitationControlUserDefined_proprietary(std::stringstr
 }
 
 
+bool assign_DiscontinuousExcitationControlUserDefined_ProprietaryParameterDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(DiscontinuousExcitationControlUserDefined* element = dynamic_cast<DiscontinuousExcitationControlUserDefined*>(BaseClass_ptr1)) {
+		if(dynamic_cast<ProprietaryParameterDynamics*>(BaseClass_ptr2) != nullptr) {
+                        element->ProprietaryParameterDynamics.push_back(dynamic_cast<ProprietaryParameterDynamics*>(BaseClass_ptr2));
+			return true;
+		}
+	}
+	return false;
+}
+
+
 namespace CIMPP {
 	BaseClass* DiscontinuousExcitationControlUserDefined_factory() {
 		return new DiscontinuousExcitationControlUserDefined;
@@ -48,12 +48,12 @@ void DiscontinuousExcitationControlUserDefined::addConstructToMap(std::unordered
 }
 
 void DiscontinuousExcitationControlUserDefined::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
-	assign_map.insert(std::make_pair(std::string("cim:DiscontinuousExcitationControlUserDefined.proprietary"), &assign_DiscontinuousExcitationControlUserDefined_proprietary));
-	}
+		assign_map.insert(std::make_pair(std::string("cim:DiscontinuousExcitationControlUserDefined.proprietary"), &assign_DiscontinuousExcitationControlUserDefined_proprietary));
+}
 
 void DiscontinuousExcitationControlUserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-		assign_map.insert(std::make_pair(std::string("cim:DiscontinuousExcitationControlUserDefined.ProprietaryParameterDynamics"), &assign_DiscontinuousExcitationControlUserDefined_ProprietaryParameterDynamics));
-}
+	assign_map.insert(std::make_pair(std::string("cim:DiscontinuousExcitationControlUserDefined.ProprietaryParameterDynamics"), &assign_DiscontinuousExcitationControlUserDefined_ProprietaryParameterDynamics));
+	}
 
 const char DiscontinuousExcitationControlUserDefined::debugName[] = "DiscontinuousExcitationControlUserDefined";
 const char* DiscontinuousExcitationControlUserDefined::debugString()
@@ -65,5 +65,3 @@ const BaseClassDefiner DiscontinuousExcitationControlUserDefined::declare()
 {
 	return BaseClassDefiner(DiscontinuousExcitationControlUserDefined::addConstructToMap, DiscontinuousExcitationControlUserDefined::addPrimitiveAssignFnsToMap, DiscontinuousExcitationControlUserDefined::addClassAssignFnsToMap, DiscontinuousExcitationControlUserDefined::debugName);
 }
-
-

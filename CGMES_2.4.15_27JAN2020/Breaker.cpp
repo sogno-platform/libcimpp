@@ -37,5 +37,3 @@ const BaseClassDefiner Breaker::declare()
 {
 	return BaseClassDefiner(Breaker::addConstructToMap, Breaker::addPrimitiveAssignFnsToMap, Breaker::addClassAssignFnsToMap, Breaker::debugName);
 }
-
-

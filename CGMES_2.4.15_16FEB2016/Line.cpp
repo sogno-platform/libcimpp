@@ -11,6 +11,8 @@ Line::Line(): Region(nullptr) {};
 Line::~Line() {};
 
 
+
+
 bool assign_SubGeographicalRegion_Lines(BaseClass*, BaseClass*);
 bool assign_Line_Region(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(Line* element = dynamic_cast<Line*>(BaseClass_ptr1)) {
@@ -20,8 +22,6 @@ bool assign_Line_Region(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
         }
         return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* Line_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner Line::declare()
 {
 	return BaseClassDefiner(Line::addConstructToMap, Line::addPrimitiveAssignFnsToMap, Line::addClassAssignFnsToMap, Line::debugName);
 }
-
-

@@ -37,5 +37,3 @@ const BaseClassDefiner NuclearGeneratingUnit::declare()
 {
 	return BaseClassDefiner(NuclearGeneratingUnit::addConstructToMap, NuclearGeneratingUnit::addPrimitiveAssignFnsToMap, NuclearGeneratingUnit::addClassAssignFnsToMap, NuclearGeneratingUnit::debugName);
 }
-
-

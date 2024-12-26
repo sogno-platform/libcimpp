@@ -2,10 +2,10 @@
 #include "TapChanger.hpp"
 #include "RatioTapChanger.hpp"
 
-#include "TransformerControlMode.hpp"
-#include "PerCent.hpp"
 #include "RatioTapChangerTable.hpp"
 #include "TransformerEnd.hpp"
+#include "PerCent.hpp"
+#include "TransformerControlMode.hpp"
 
 using namespace CIMPP;
 
@@ -14,6 +14,31 @@ RatioTapChanger::RatioTapChanger(): RatioTapChangerTable(nullptr), TransformerEn
 RatioTapChanger::~RatioTapChanger() {};
 
 
+
+
+bool assign_RatioTapChanger_stepVoltageIncrement(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
+	if(RatioTapChanger* element = dynamic_cast<RatioTapChanger*>(BaseClass_ptr1)) {
+                buffer >> element->stepVoltageIncrement;
+                if(buffer.fail())
+                        return false;
+                else
+                        return true;
+        }
+        else
+                return false;
+}
+
+bool assign_RatioTapChanger_tculControlMode(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
+	if(RatioTapChanger* element = dynamic_cast<RatioTapChanger*>(BaseClass_ptr1)) {
+                buffer >> element->tculControlMode;
+                if(buffer.fail())
+                        return false;
+                else
+                        return true;
+        }
+        else
+                return false;
+}
 
 
 bool assign_RatioTapChangerTable_RatioTapChanger(BaseClass*, BaseClass*);
@@ -37,31 +62,6 @@ bool assign_RatioTapChanger_TransformerEnd(BaseClass* BaseClass_ptr1, BaseClass*
 }
 
 
-bool assign_RatioTapChanger_tculControlMode(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(RatioTapChanger* element = dynamic_cast<RatioTapChanger*>(BaseClass_ptr1)) {
-                buffer >> element->tculControlMode;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-bool assign_RatioTapChanger_stepVoltageIncrement(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(RatioTapChanger* element = dynamic_cast<RatioTapChanger*>(BaseClass_ptr1)) {
-                buffer >> element->stepVoltageIncrement;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
-
 
 namespace CIMPP {
 	BaseClass* RatioTapChanger_factory() {
@@ -74,14 +74,14 @@ void RatioTapChanger::addConstructToMap(std::unordered_map<std::string, BaseClas
 }
 
 void RatioTapChanger::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map) {
+			assign_map.insert(std::make_pair(std::string("cim:RatioTapChanger.stepVoltageIncrement"), &assign_RatioTapChanger_stepVoltageIncrement));
 	assign_map.insert(std::make_pair(std::string("cim:RatioTapChanger.tculControlMode"), &assign_RatioTapChanger_tculControlMode));
-	assign_map.insert(std::make_pair(std::string("cim:RatioTapChanger.stepVoltageIncrement"), &assign_RatioTapChanger_stepVoltageIncrement));
-		}
+}
 
 void RatioTapChanger::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-			assign_map.insert(std::make_pair(std::string("cim:RatioTapChanger.RatioTapChangerTable"), &assign_RatioTapChanger_RatioTapChangerTable));
+	assign_map.insert(std::make_pair(std::string("cim:RatioTapChanger.RatioTapChangerTable"), &assign_RatioTapChanger_RatioTapChangerTable));
 	assign_map.insert(std::make_pair(std::string("cim:RatioTapChanger.TransformerEnd"), &assign_RatioTapChanger_TransformerEnd));
-}
+		}
 
 const char RatioTapChanger::debugName[] = "RatioTapChanger";
 const char* RatioTapChanger::debugString()
@@ -93,5 +93,3 @@ const BaseClassDefiner RatioTapChanger::declare()
 {
 	return BaseClassDefiner(RatioTapChanger::addConstructToMap, RatioTapChanger::addPrimitiveAssignFnsToMap, RatioTapChanger::addClassAssignFnsToMap, RatioTapChanger::debugName);
 }
-
-

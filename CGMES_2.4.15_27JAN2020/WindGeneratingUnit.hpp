@@ -20,14 +20,14 @@ namespace CIMPP {
 
 	public:
 					CIMPP::WindGenUnitKind windGenUnitType; 	/* The kind of wind generating unit Default: 0 */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		WindGeneratingUnit();
 		virtual ~WindGeneratingUnit();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

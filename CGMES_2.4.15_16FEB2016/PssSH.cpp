@@ -23,20 +23,6 @@ PssSH::PssSH() {};
 PssSH::~PssSH() {};
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 bool assign_PssSH_k(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(PssSH* element = dynamic_cast<PssSH*>(BaseClass_ptr1)) {
                 buffer >> element->k;
@@ -109,18 +95,6 @@ bool assign_PssSH_k4(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
                 return false;
 }
 
-bool assign_PssSH_td(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
-	if(PssSH* element = dynamic_cast<PssSH*>(BaseClass_ptr1)) {
-                buffer >> element->td;
-                if(buffer.fail())
-                        return false;
-                else
-                        return true;
-        }
-        else
-                return false;
-}
-
 bool assign_PssSH_t1(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(PssSH* element = dynamic_cast<PssSH*>(BaseClass_ptr1)) {
                 buffer >> element->t1;
@@ -169,6 +143,18 @@ bool assign_PssSH_t4(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
                 return false;
 }
 
+bool assign_PssSH_td(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
+	if(PssSH* element = dynamic_cast<PssSH*>(BaseClass_ptr1)) {
+                buffer >> element->td;
+                if(buffer.fail())
+                        return false;
+                else
+                        return true;
+        }
+        else
+                return false;
+}
+
 bool assign_PssSH_vsmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(PssSH* element = dynamic_cast<PssSH*>(BaseClass_ptr1)) {
                 buffer >> element->vsmax;
@@ -193,6 +179,20 @@ bool assign_PssSH_vsmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
                 return false;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace CIMPP {
 	BaseClass* PssSH_factory() {
 		return new PssSH;
@@ -210,11 +210,11 @@ void PssSH::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_fu
 	assign_map.insert(std::make_pair(std::string("cim:PssSH.k2"), &assign_PssSH_k2));
 	assign_map.insert(std::make_pair(std::string("cim:PssSH.k3"), &assign_PssSH_k3));
 	assign_map.insert(std::make_pair(std::string("cim:PssSH.k4"), &assign_PssSH_k4));
-	assign_map.insert(std::make_pair(std::string("cim:PssSH.td"), &assign_PssSH_td));
 	assign_map.insert(std::make_pair(std::string("cim:PssSH.t1"), &assign_PssSH_t1));
 	assign_map.insert(std::make_pair(std::string("cim:PssSH.t2"), &assign_PssSH_t2));
 	assign_map.insert(std::make_pair(std::string("cim:PssSH.t3"), &assign_PssSH_t3));
 	assign_map.insert(std::make_pair(std::string("cim:PssSH.t4"), &assign_PssSH_t4));
+	assign_map.insert(std::make_pair(std::string("cim:PssSH.td"), &assign_PssSH_td));
 	assign_map.insert(std::make_pair(std::string("cim:PssSH.vsmax"), &assign_PssSH_vsmax));
 	assign_map.insert(std::make_pair(std::string("cim:PssSH.vsmin"), &assign_PssSH_vsmin));
 }
@@ -232,5 +232,3 @@ const BaseClassDefiner PssSH::declare()
 {
 	return BaseClassDefiner(PssSH::addConstructToMap, PssSH::addPrimitiveAssignFnsToMap, PssSH::addClassAssignFnsToMap, PssSH::debugName);
 }
-
-

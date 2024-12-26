@@ -12,6 +12,9 @@ RatioTapChangerTable::RatioTapChangerTable() {};
 RatioTapChangerTable::~RatioTapChangerTable() {};
 
 
+
+
+
 bool assign_RatioTapChangerTable_RatioTapChanger(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(RatioTapChangerTable* element = dynamic_cast<RatioTapChangerTable*>(BaseClass_ptr1)) {
 		if(dynamic_cast<RatioTapChanger*>(BaseClass_ptr2) != nullptr) {
@@ -31,9 +34,6 @@ bool assign_RatioTapChangerTable_RatioTapChangerTablePoint(BaseClass* BaseClass_
 	}
 	return false;
 }
-
-
-
 
 namespace CIMPP {
 	BaseClass* RatioTapChangerTable_factory() {
@@ -63,5 +63,3 @@ const BaseClassDefiner RatioTapChangerTable::declare()
 {
 	return BaseClassDefiner(RatioTapChangerTable::addConstructToMap, RatioTapChangerTable::addPrimitiveAssignFnsToMap, RatioTapChangerTable::addClassAssignFnsToMap, RatioTapChangerTable::debugName);
 }
-
-

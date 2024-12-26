@@ -12,6 +12,9 @@ WindGenTurbineType2IEC::WindGenTurbineType2IEC(): WindContRotorRIEC(nullptr), Wi
 WindGenTurbineType2IEC::~WindGenTurbineType2IEC() {};
 
 
+
+
+
 bool assign_WindContRotorRIEC_WindGenTurbineType2IEC(BaseClass*, BaseClass*);
 bool assign_WindGenTurbineType2IEC_WindContRotorRIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(WindGenTurbineType2IEC* element = dynamic_cast<WindGenTurbineType2IEC*>(BaseClass_ptr1)) {
@@ -31,9 +34,6 @@ bool assign_WindGenTurbineType2IEC_WindPitchContEmulIEC(BaseClass* BaseClass_ptr
         }
         return false;
 }
-
-
-
 
 namespace CIMPP {
 	BaseClass* WindGenTurbineType2IEC_factory() {
@@ -63,5 +63,3 @@ const BaseClassDefiner WindGenTurbineType2IEC::declare()
 {
 	return BaseClassDefiner(WindGenTurbineType2IEC::addConstructToMap, WindGenTurbineType2IEC::addPrimitiveAssignFnsToMap, WindGenTurbineType2IEC::addClassAssignFnsToMap, WindGenTurbineType2IEC::debugName);
 }
-
-

@@ -26,14 +26,14 @@ class ValueToAlias;
 					std::list<CIMPP::Discrete*> Discretes; 	/* The Measurements using the set for translation. Default: 0 */
 					std::list<CIMPP::RaiseLowerCommand*> RaiseLowerCommands; 	/* The Commands using the set for translation. Default: 0 */
 					std::list<CIMPP::ValueToAlias*> Values; 	/* The ValueAliasSet having the ValueToAlias mappings. Default: 0 */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		ValueAliasSet();
 		virtual ~ValueAliasSet();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

@@ -2,25 +2,18 @@
 #include "DynamicsFunctionBlock.hpp"
 #include "WindTurbineType1or2Dynamics.hpp"
 
-#include "RemoteInputSignal.hpp"
 #include "AsynchronousMachineDynamics.hpp"
+#include "RemoteInputSignal.hpp"
 
 using namespace CIMPP;
 
-WindTurbineType1or2Dynamics::WindTurbineType1or2Dynamics(): RemoteInputSignal(nullptr), AsynchronousMachineDynamics(nullptr) {};
+WindTurbineType1or2Dynamics::WindTurbineType1or2Dynamics(): AsynchronousMachineDynamics(nullptr), RemoteInputSignal(nullptr) {};
 
 WindTurbineType1or2Dynamics::~WindTurbineType1or2Dynamics() {};
 
 
-bool assign_RemoteInputSignal_WindTurbineType1or2Dynamics(BaseClass*, BaseClass*);
-bool assign_WindTurbineType1or2Dynamics_RemoteInputSignal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
-	if(WindTurbineType1or2Dynamics* element = dynamic_cast<WindTurbineType1or2Dynamics*>(BaseClass_ptr1)) {
-                element->RemoteInputSignal = dynamic_cast<RemoteInputSignal*>(BaseClass_ptr2);
-                if(element->RemoteInputSignal != nullptr)
-                        return assign_RemoteInputSignal_WindTurbineType1or2Dynamics(BaseClass_ptr2, BaseClass_ptr1);
-        }
-        return false;
-}
+
+
 
 bool assign_AsynchronousMachineDynamics_WindTurbineType1or2Dynamics(BaseClass*, BaseClass*);
 bool assign_WindTurbineType1or2Dynamics_AsynchronousMachineDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
@@ -32,8 +25,15 @@ bool assign_WindTurbineType1or2Dynamics_AsynchronousMachineDynamics(BaseClass* B
         return false;
 }
 
-
-
+bool assign_RemoteInputSignal_WindTurbineType1or2Dynamics(BaseClass*, BaseClass*);
+bool assign_WindTurbineType1or2Dynamics_RemoteInputSignal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
+	if(WindTurbineType1or2Dynamics* element = dynamic_cast<WindTurbineType1or2Dynamics*>(BaseClass_ptr1)) {
+                element->RemoteInputSignal = dynamic_cast<RemoteInputSignal*>(BaseClass_ptr2);
+                if(element->RemoteInputSignal != nullptr)
+                        return assign_RemoteInputSignal_WindTurbineType1or2Dynamics(BaseClass_ptr2, BaseClass_ptr1);
+        }
+        return false;
+}
 
 namespace CIMPP {
 	BaseClass* WindTurbineType1or2Dynamics_factory() {
@@ -49,8 +49,8 @@ void WindTurbineType1or2Dynamics::addPrimitiveAssignFnsToMap(std::unordered_map<
 		}
 
 void WindTurbineType1or2Dynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map) {
-	assign_map.insert(std::make_pair(std::string("cim:WindTurbineType1or2Dynamics.RemoteInputSignal"), &assign_WindTurbineType1or2Dynamics_RemoteInputSignal));
 	assign_map.insert(std::make_pair(std::string("cim:WindTurbineType1or2Dynamics.AsynchronousMachineDynamics"), &assign_WindTurbineType1or2Dynamics_AsynchronousMachineDynamics));
+	assign_map.insert(std::make_pair(std::string("cim:WindTurbineType1or2Dynamics.RemoteInputSignal"), &assign_WindTurbineType1or2Dynamics_RemoteInputSignal));
 }
 
 const char WindTurbineType1or2Dynamics::debugName[] = "WindTurbineType1or2Dynamics";
@@ -63,5 +63,3 @@ const BaseClassDefiner WindTurbineType1or2Dynamics::declare()
 {
 	return BaseClassDefiner(WindTurbineType1or2Dynamics::addConstructToMap, WindTurbineType1or2Dynamics::addPrimitiveAssignFnsToMap, WindTurbineType1or2Dynamics::addClassAssignFnsToMap, WindTurbineType1or2Dynamics::debugName);
 }
-
-

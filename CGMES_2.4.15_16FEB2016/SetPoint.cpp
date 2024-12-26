@@ -12,9 +12,6 @@ SetPoint::SetPoint() {};
 SetPoint::~SetPoint() {};
 
 
-
-
-
 bool assign_SetPoint_normalValue(std::stringstream &buffer, BaseClass* BaseClass_ptr1) {
 	if(SetPoint* element = dynamic_cast<SetPoint*>(BaseClass_ptr1)) {
                 buffer >> element->normalValue;
@@ -38,6 +35,9 @@ bool assign_SetPoint_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
         else
                 return false;
 }
+
+
+
 
 namespace CIMPP {
 	BaseClass* SetPoint_factory() {
@@ -67,5 +67,3 @@ const BaseClassDefiner SetPoint::declare()
 {
 	return BaseClassDefiner(SetPoint::addConstructToMap, SetPoint::addPrimitiveAssignFnsToMap, SetPoint::addClassAssignFnsToMap, SetPoint::debugName);
 }
-
-

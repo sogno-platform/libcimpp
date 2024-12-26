@@ -22,14 +22,14 @@ class WindMechIEC;
 	public:
 					CIMPP::WindContPType4bIEC* WindContPType4bIEC; 	/* Wind control P type 4B model associated with this wind turbine type 4B model. Default: 0 */
 					CIMPP::WindMechIEC* WindMechIEC; 	/* Wind mechanical model associated with this wind turbine Type 4B model. Default: 0 */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		WindTurbineType4bIEC();
 		virtual ~WindTurbineType4bIEC();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

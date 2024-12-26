@@ -21,14 +21,14 @@ class TopologicalNode;
 	public:
 					CIMPP::TopologicalNode* AngleRefTopologicalNode; 	/* The angle reference for the island.   Normally there is one TopologicalNode that is selected as the angle reference for each island.   Other reference schemes exist, so the association is typically optional. Default: 0 */
 					std::list<CIMPP::TopologicalNode*> TopologicalNodes; 	/* A topological node belongs to a topological island. Default: 0 */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		TopologicalIsland();
 		virtual ~TopologicalIsland();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);

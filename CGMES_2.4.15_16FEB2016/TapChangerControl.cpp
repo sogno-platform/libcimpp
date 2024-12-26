@@ -11,6 +11,8 @@ TapChangerControl::TapChangerControl() {};
 TapChangerControl::~TapChangerControl() {};
 
 
+
+
 bool assign_TapChangerControl_TapChanger(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2) {
 	if(TapChangerControl* element = dynamic_cast<TapChangerControl*>(BaseClass_ptr1)) {
 		if(dynamic_cast<TapChanger*>(BaseClass_ptr2) != nullptr) {
@@ -20,8 +22,6 @@ bool assign_TapChangerControl_TapChanger(BaseClass* BaseClass_ptr1, BaseClass* B
 	}
 	return false;
 }
-
-
 
 namespace CIMPP {
 	BaseClass* TapChangerControl_factory() {
@@ -50,5 +50,3 @@ const BaseClassDefiner TapChangerControl::declare()
 {
 	return BaseClassDefiner(TapChangerControl::addConstructToMap, TapChangerControl::addPrimitiveAssignFnsToMap, TapChangerControl::addClassAssignFnsToMap, TapChangerControl::debugName);
 }
-
-

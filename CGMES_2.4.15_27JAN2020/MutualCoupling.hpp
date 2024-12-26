@@ -34,14 +34,14 @@ class Terminal;
 					CIMPP::Conductance g0ch; 	/* Zero sequence mutual coupling shunt (charging) conductance, uniformly distributed, of the entire line section. Default: nullptr */
 					CIMPP::Resistance r0; 	/* Zero sequence branch-to-branch mutual impedance coupling, resistance. Default: nullptr */
 					CIMPP::Reactance x0; 	/* Zero sequence branch-to-branch mutual impedance coupling, reactance. Default: nullptr */
-				
+		
 		static const char debugName[];
 		virtual const char* debugString();
-		
+
 		/* constructor initialising all attributes to null */
 		MutualCoupling();
 		virtual ~MutualCoupling();
-	
+
 		static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 		static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>&);
 		static void addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>&);
