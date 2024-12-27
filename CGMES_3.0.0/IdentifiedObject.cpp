@@ -24,7 +24,7 @@ bool assign_IdentifiedObject_description(std::stringstream &buffer, BaseClass* B
 {
 	if (IdentifiedObject* element = dynamic_cast<IdentifiedObject*>(BaseClass_ptr1))
 	{
-		buffer >> element->description;
+		element->description = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -37,7 +37,7 @@ bool assign_IdentifiedObject_energyIdentCodeEic(std::stringstream &buffer, BaseC
 {
 	if (IdentifiedObject* element = dynamic_cast<IdentifiedObject*>(BaseClass_ptr1))
 	{
-		buffer >> element->energyIdentCodeEic;
+		element->energyIdentCodeEic = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -50,7 +50,7 @@ bool assign_IdentifiedObject_mRID(std::stringstream &buffer, BaseClass* BaseClas
 {
 	if (IdentifiedObject* element = dynamic_cast<IdentifiedObject*>(BaseClass_ptr1))
 	{
-		buffer >> element->mRID;
+		element->mRID = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -63,7 +63,7 @@ bool assign_IdentifiedObject_name(std::stringstream &buffer, BaseClass* BaseClas
 {
 	if (IdentifiedObject* element = dynamic_cast<IdentifiedObject*>(BaseClass_ptr1))
 	{
-		buffer >> element->name;
+		element->name = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
@@ -76,7 +76,7 @@ bool assign_IdentifiedObject_shortName(std::stringstream &buffer, BaseClass* Bas
 {
 	if (IdentifiedObject* element = dynamic_cast<IdentifiedObject*>(BaseClass_ptr1))
 	{
-		buffer >> element->shortName;
+		element->shortName = buffer.str();
 		if (buffer.fail())
 			return false;
 		else

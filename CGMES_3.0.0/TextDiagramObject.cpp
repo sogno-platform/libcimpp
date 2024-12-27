@@ -18,7 +18,7 @@ bool assign_TextDiagramObject_text(std::stringstream &buffer, BaseClass* BaseCla
 {
 	if (TextDiagramObject* element = dynamic_cast<TextDiagramObject*>(BaseClass_ptr1))
 	{
-		buffer >> element->text;
+		element->text = buffer.str();
 		if (buffer.fail())
 			return false;
 		else
