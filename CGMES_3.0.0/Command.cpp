@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "Command.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "DiscreteValue.hpp"
@@ -16,7 +18,33 @@ using namespace CIMPP;
 Command::Command() : DiscreteValue(nullptr), ValueAliasSet(nullptr) {};
 Command::~Command() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::OP,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:Command.DiscreteValue", { CGMESProfile::OP, } },
+	{ "cim:Command.ValueAliasSet", { CGMESProfile::OP, } },
+	{ "cim:Command.normalValue", { CGMESProfile::OP, } },
+	{ "cim:Command.value", { CGMESProfile::OP, } },
+};
+
+std::list<CGMESProfile>
+Command::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+Command::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = Control::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_Command_normalValue(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -62,7 +90,6 @@ bool assign_Command_DiscreteValue(BaseClass* BaseClass_ptr1, BaseClass* BaseClas
 	}
 	return false;
 }
-
 bool assign_ValueAliasSet_Commands(BaseClass*, BaseClass*);
 bool assign_Command_ValueAliasSet(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -80,6 +107,60 @@ bool assign_Command_ValueAliasSet(BaseClass* BaseClass_ptr1, BaseClass* BaseClas
 	return false;
 }
 
+bool get_Command_normalValue(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Command* element = dynamic_cast<const Command*>(BaseClass_ptr1))
+	{
+		buffer << element->normalValue;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Command_value(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Command* element = dynamic_cast<const Command*>(BaseClass_ptr1))
+	{
+		buffer << element->value;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+
+bool get_Command_DiscreteValue(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const Command* element = dynamic_cast<const Command*>(BaseClass_ptr1))
+	{
+		if (element->DiscreteValue != 0)
+		{
+			BaseClass_list.push_back(element->DiscreteValue);
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_Command_ValueAliasSet(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const Command* element = dynamic_cast<const Command*>(BaseClass_ptr1))
+	{
+		if (element->ValueAliasSet != 0)
+		{
+			BaseClass_list.push_back(element->ValueAliasSet);
+			return true;
+		}
+	}
+	return false;
+}
 
 
 const char Command::debugName[] = "Command";
@@ -103,6 +184,25 @@ void Command::addClassAssignFnsToMap(std::unordered_map<std::string, class_assig
 {
 	assign_map.insert(std::make_pair(std::string("cim:Command.DiscreteValue"), &assign_Command_DiscreteValue));
 	assign_map.insert(std::make_pair(std::string("cim:Command.ValueAliasSet"), &assign_Command_ValueAliasSet));
+}
+
+void Command::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	Control::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:Command.normalValue", &get_Command_normalValue);
+	get_map.emplace("cim:Command.value", &get_Command_value);
+}
+
+void Command::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	Control::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:Command.DiscreteValue", &get_Command_DiscreteValue);
+	get_map.emplace("cim:Command.ValueAliasSet", &get_Command_ValueAliasSet);
+}
+
+void Command::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	Control::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner Command::declare()

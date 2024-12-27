@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "GenICompensationForGenJ.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "SynchronousMachineDynamics.hpp"
@@ -16,7 +18,33 @@ using namespace CIMPP;
 GenICompensationForGenJ::GenICompensationForGenJ() : SynchronousMachineDynamics(nullptr), VcompIEEEType2(nullptr) {};
 GenICompensationForGenJ::~GenICompensationForGenJ() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:GenICompensationForGenJ.SynchronousMachineDynamics", { CGMESProfile::DY, } },
+	{ "cim:GenICompensationForGenJ.VcompIEEEType2", { CGMESProfile::DY, } },
+	{ "cim:GenICompensationForGenJ.rcij", { CGMESProfile::DY, } },
+	{ "cim:GenICompensationForGenJ.xcij", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+GenICompensationForGenJ::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+GenICompensationForGenJ::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_GenICompensationForGenJ_rcij(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -62,7 +90,6 @@ bool assign_GenICompensationForGenJ_SynchronousMachineDynamics(BaseClass* BaseCl
 	}
 	return false;
 }
-
 bool assign_VCompIEEEType2_GenICompensationForGenJ(BaseClass*, BaseClass*);
 bool assign_GenICompensationForGenJ_VcompIEEEType2(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -80,6 +107,60 @@ bool assign_GenICompensationForGenJ_VcompIEEEType2(BaseClass* BaseClass_ptr1, Ba
 	return false;
 }
 
+bool get_GenICompensationForGenJ_rcij(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GenICompensationForGenJ* element = dynamic_cast<const GenICompensationForGenJ*>(BaseClass_ptr1))
+	{
+		buffer << element->rcij;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GenICompensationForGenJ_xcij(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GenICompensationForGenJ* element = dynamic_cast<const GenICompensationForGenJ*>(BaseClass_ptr1))
+	{
+		buffer << element->xcij;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+
+bool get_GenICompensationForGenJ_SynchronousMachineDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const GenICompensationForGenJ* element = dynamic_cast<const GenICompensationForGenJ*>(BaseClass_ptr1))
+	{
+		if (element->SynchronousMachineDynamics != 0)
+		{
+			BaseClass_list.push_back(element->SynchronousMachineDynamics);
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_GenICompensationForGenJ_VcompIEEEType2(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const GenICompensationForGenJ* element = dynamic_cast<const GenICompensationForGenJ*>(BaseClass_ptr1))
+	{
+		if (element->VcompIEEEType2 != 0)
+		{
+			BaseClass_list.push_back(element->VcompIEEEType2);
+			return true;
+		}
+	}
+	return false;
+}
 
 
 const char GenICompensationForGenJ::debugName[] = "GenICompensationForGenJ";
@@ -103,6 +184,25 @@ void GenICompensationForGenJ::addClassAssignFnsToMap(std::unordered_map<std::str
 {
 	assign_map.insert(std::make_pair(std::string("cim:GenICompensationForGenJ.SynchronousMachineDynamics"), &assign_GenICompensationForGenJ_SynchronousMachineDynamics));
 	assign_map.insert(std::make_pair(std::string("cim:GenICompensationForGenJ.VcompIEEEType2"), &assign_GenICompensationForGenJ_VcompIEEEType2));
+}
+
+void GenICompensationForGenJ::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:GenICompensationForGenJ.rcij", &get_GenICompensationForGenJ_rcij);
+	get_map.emplace("cim:GenICompensationForGenJ.xcij", &get_GenICompensationForGenJ_xcij);
+}
+
+void GenICompensationForGenJ::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:GenICompensationForGenJ.SynchronousMachineDynamics", &get_GenICompensationForGenJ_SynchronousMachineDynamics);
+	get_map.emplace("cim:GenICompensationForGenJ.VcompIEEEType2", &get_GenICompensationForGenJ_VcompIEEEType2);
+}
+
+void GenICompensationForGenJ::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner GenICompensationForGenJ::declare()

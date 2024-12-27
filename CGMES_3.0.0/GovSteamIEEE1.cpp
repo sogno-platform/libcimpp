@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "GovSteamIEEE1.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PU.hpp"
@@ -32,6 +34,51 @@ using namespace CIMPP;
 
 GovSteamIEEE1::GovSteamIEEE1() {};
 GovSteamIEEE1::~GovSteamIEEE1() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:GovSteamIEEE1.k", { CGMESProfile::DY, } },
+	{ "cim:GovSteamIEEE1.k1", { CGMESProfile::DY, } },
+	{ "cim:GovSteamIEEE1.k2", { CGMESProfile::DY, } },
+	{ "cim:GovSteamIEEE1.k3", { CGMESProfile::DY, } },
+	{ "cim:GovSteamIEEE1.k4", { CGMESProfile::DY, } },
+	{ "cim:GovSteamIEEE1.k5", { CGMESProfile::DY, } },
+	{ "cim:GovSteamIEEE1.k6", { CGMESProfile::DY, } },
+	{ "cim:GovSteamIEEE1.k7", { CGMESProfile::DY, } },
+	{ "cim:GovSteamIEEE1.k8", { CGMESProfile::DY, } },
+	{ "cim:GovSteamIEEE1.mwbase", { CGMESProfile::DY, } },
+	{ "cim:GovSteamIEEE1.pmax", { CGMESProfile::DY, } },
+	{ "cim:GovSteamIEEE1.pmin", { CGMESProfile::DY, } },
+	{ "cim:GovSteamIEEE1.t1", { CGMESProfile::DY, } },
+	{ "cim:GovSteamIEEE1.t2", { CGMESProfile::DY, } },
+	{ "cim:GovSteamIEEE1.t3", { CGMESProfile::DY, } },
+	{ "cim:GovSteamIEEE1.t4", { CGMESProfile::DY, } },
+	{ "cim:GovSteamIEEE1.t5", { CGMESProfile::DY, } },
+	{ "cim:GovSteamIEEE1.t6", { CGMESProfile::DY, } },
+	{ "cim:GovSteamIEEE1.t7", { CGMESProfile::DY, } },
+	{ "cim:GovSteamIEEE1.uc", { CGMESProfile::DY, } },
+	{ "cim:GovSteamIEEE1.uo", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+GovSteamIEEE1::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+GovSteamIEEE1::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = TurbineGovernorDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_GovSteamIEEE1_k(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -309,23 +356,299 @@ bool assign_GovSteamIEEE1_uo(std::stringstream &buffer, BaseClass* BaseClass_ptr
 
 
 
+bool get_GovSteamIEEE1_k(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamIEEE1* element = dynamic_cast<const GovSteamIEEE1*>(BaseClass_ptr1))
+	{
+		buffer << element->k;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamIEEE1_k1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamIEEE1* element = dynamic_cast<const GovSteamIEEE1*>(BaseClass_ptr1))
+	{
+		buffer << element->k1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamIEEE1_k2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamIEEE1* element = dynamic_cast<const GovSteamIEEE1*>(BaseClass_ptr1))
+	{
+		buffer << element->k2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamIEEE1_k3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamIEEE1* element = dynamic_cast<const GovSteamIEEE1*>(BaseClass_ptr1))
+	{
+		buffer << element->k3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamIEEE1_k4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamIEEE1* element = dynamic_cast<const GovSteamIEEE1*>(BaseClass_ptr1))
+	{
+		buffer << element->k4;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamIEEE1_k5(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamIEEE1* element = dynamic_cast<const GovSteamIEEE1*>(BaseClass_ptr1))
+	{
+		buffer << element->k5;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamIEEE1_k6(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamIEEE1* element = dynamic_cast<const GovSteamIEEE1*>(BaseClass_ptr1))
+	{
+		buffer << element->k6;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamIEEE1_k7(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamIEEE1* element = dynamic_cast<const GovSteamIEEE1*>(BaseClass_ptr1))
+	{
+		buffer << element->k7;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamIEEE1_k8(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamIEEE1* element = dynamic_cast<const GovSteamIEEE1*>(BaseClass_ptr1))
+	{
+		buffer << element->k8;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamIEEE1_mwbase(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamIEEE1* element = dynamic_cast<const GovSteamIEEE1*>(BaseClass_ptr1))
+	{
+		buffer << element->mwbase;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamIEEE1_pmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamIEEE1* element = dynamic_cast<const GovSteamIEEE1*>(BaseClass_ptr1))
+	{
+		buffer << element->pmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamIEEE1_pmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamIEEE1* element = dynamic_cast<const GovSteamIEEE1*>(BaseClass_ptr1))
+	{
+		buffer << element->pmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamIEEE1_t1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamIEEE1* element = dynamic_cast<const GovSteamIEEE1*>(BaseClass_ptr1))
+	{
+		buffer << element->t1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamIEEE1_t2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamIEEE1* element = dynamic_cast<const GovSteamIEEE1*>(BaseClass_ptr1))
+	{
+		buffer << element->t2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamIEEE1_t3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamIEEE1* element = dynamic_cast<const GovSteamIEEE1*>(BaseClass_ptr1))
+	{
+		buffer << element->t3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamIEEE1_t4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamIEEE1* element = dynamic_cast<const GovSteamIEEE1*>(BaseClass_ptr1))
+	{
+		buffer << element->t4;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamIEEE1_t5(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamIEEE1* element = dynamic_cast<const GovSteamIEEE1*>(BaseClass_ptr1))
+	{
+		buffer << element->t5;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamIEEE1_t6(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamIEEE1* element = dynamic_cast<const GovSteamIEEE1*>(BaseClass_ptr1))
+	{
+		buffer << element->t6;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovSteamIEEE1_t7(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamIEEE1* element = dynamic_cast<const GovSteamIEEE1*>(BaseClass_ptr1))
+	{
+		buffer << element->t7;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovSteamIEEE1_uc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamIEEE1* element = dynamic_cast<const GovSteamIEEE1*>(BaseClass_ptr1))
+	{
+		buffer << element->uc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovSteamIEEE1_uo(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamIEEE1* element = dynamic_cast<const GovSteamIEEE1*>(BaseClass_ptr1))
+	{
+		buffer << element->uo;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -367,6 +690,42 @@ void GovSteamIEEE1::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, a
 
 void GovSteamIEEE1::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void GovSteamIEEE1::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:GovSteamIEEE1.k", &get_GovSteamIEEE1_k);
+	get_map.emplace("cim:GovSteamIEEE1.k1", &get_GovSteamIEEE1_k1);
+	get_map.emplace("cim:GovSteamIEEE1.k2", &get_GovSteamIEEE1_k2);
+	get_map.emplace("cim:GovSteamIEEE1.k3", &get_GovSteamIEEE1_k3);
+	get_map.emplace("cim:GovSteamIEEE1.k4", &get_GovSteamIEEE1_k4);
+	get_map.emplace("cim:GovSteamIEEE1.k5", &get_GovSteamIEEE1_k5);
+	get_map.emplace("cim:GovSteamIEEE1.k6", &get_GovSteamIEEE1_k6);
+	get_map.emplace("cim:GovSteamIEEE1.k7", &get_GovSteamIEEE1_k7);
+	get_map.emplace("cim:GovSteamIEEE1.k8", &get_GovSteamIEEE1_k8);
+	get_map.emplace("cim:GovSteamIEEE1.mwbase", &get_GovSteamIEEE1_mwbase);
+	get_map.emplace("cim:GovSteamIEEE1.pmax", &get_GovSteamIEEE1_pmax);
+	get_map.emplace("cim:GovSteamIEEE1.pmin", &get_GovSteamIEEE1_pmin);
+	get_map.emplace("cim:GovSteamIEEE1.t1", &get_GovSteamIEEE1_t1);
+	get_map.emplace("cim:GovSteamIEEE1.t2", &get_GovSteamIEEE1_t2);
+	get_map.emplace("cim:GovSteamIEEE1.t3", &get_GovSteamIEEE1_t3);
+	get_map.emplace("cim:GovSteamIEEE1.t4", &get_GovSteamIEEE1_t4);
+	get_map.emplace("cim:GovSteamIEEE1.t5", &get_GovSteamIEEE1_t5);
+	get_map.emplace("cim:GovSteamIEEE1.t6", &get_GovSteamIEEE1_t6);
+	get_map.emplace("cim:GovSteamIEEE1.t7", &get_GovSteamIEEE1_t7);
+	get_map.emplace("cim:GovSteamIEEE1.uc", &get_GovSteamIEEE1_uc);
+	get_map.emplace("cim:GovSteamIEEE1.uo", &get_GovSteamIEEE1_uo);
+}
+
+void GovSteamIEEE1::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addClassGetFnsToMap(get_map);
+}
+
+void GovSteamIEEE1::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner GovSteamIEEE1::declare()

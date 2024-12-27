@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "WindContPType4bIEC.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "WindTurbineType4bIEC.hpp"
@@ -17,6 +19,34 @@ using namespace CIMPP;
 WindContPType4bIEC::WindContPType4bIEC() : WindTurbineType4bIEC(nullptr) {};
 WindContPType4bIEC::~WindContPType4bIEC() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:WindContPType4bIEC.WindTurbineType4bIEC", { CGMESProfile::DY, } },
+	{ "cim:WindContPType4bIEC.dpmax", { CGMESProfile::DY, } },
+	{ "cim:WindContPType4bIEC.tpaero", { CGMESProfile::DY, } },
+	{ "cim:WindContPType4bIEC.tpord", { CGMESProfile::DY, } },
+	{ "cim:WindContPType4bIEC.tufilt", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+WindContPType4bIEC::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+WindContPType4bIEC::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_WindContPType4bIEC_dpmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -89,7 +119,61 @@ bool assign_WindContPType4bIEC_WindTurbineType4bIEC(BaseClass* BaseClass_ptr1, B
 	return false;
 }
 
+bool get_WindContPType4bIEC_dpmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType4bIEC* element = dynamic_cast<const WindContPType4bIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->dpmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContPType4bIEC_tpaero(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType4bIEC* element = dynamic_cast<const WindContPType4bIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->tpaero;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_WindContPType4bIEC_tpord(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType4bIEC* element = dynamic_cast<const WindContPType4bIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->tpord;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_WindContPType4bIEC_tufilt(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType4bIEC* element = dynamic_cast<const WindContPType4bIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->tufilt;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -115,6 +199,25 @@ void WindContPType4bIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::stri
 void WindContPType4bIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:WindContPType4bIEC.WindTurbineType4bIEC"), &assign_WindContPType4bIEC_WindTurbineType4bIEC));
+}
+
+void WindContPType4bIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:WindContPType4bIEC.dpmax", &get_WindContPType4bIEC_dpmax);
+	get_map.emplace("cim:WindContPType4bIEC.tpaero", &get_WindContPType4bIEC_tpaero);
+	get_map.emplace("cim:WindContPType4bIEC.tpord", &get_WindContPType4bIEC_tpord);
+	get_map.emplace("cim:WindContPType4bIEC.tufilt", &get_WindContPType4bIEC_tufilt);
+}
+
+void WindContPType4bIEC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+}
+
+void WindContPType4bIEC::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner WindContPType4bIEC::declare()

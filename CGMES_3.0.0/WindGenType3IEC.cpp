@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "WindGenType3IEC.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "WindTurbineType3IEC.hpp"
@@ -16,6 +18,33 @@ using namespace CIMPP;
 WindGenType3IEC::WindGenType3IEC() : WindTurbineType3IEC(nullptr) {};
 WindGenType3IEC::~WindGenType3IEC() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:WindGenType3IEC.WindTurbineType3IEC", { CGMESProfile::DY, } },
+	{ "cim:WindGenType3IEC.dipmax", { CGMESProfile::DY, } },
+	{ "cim:WindGenType3IEC.diqmax", { CGMESProfile::DY, } },
+	{ "cim:WindGenType3IEC.xs", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+WindGenType3IEC::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+WindGenType3IEC::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_WindGenType3IEC_dipmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -75,6 +104,47 @@ bool assign_WindGenType3IEC_WindTurbineType3IEC(BaseClass* BaseClass_ptr1, BaseC
 	return false;
 }
 
+bool get_WindGenType3IEC_dipmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindGenType3IEC* element = dynamic_cast<const WindGenType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->dipmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_WindGenType3IEC_diqmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindGenType3IEC* element = dynamic_cast<const WindGenType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->diqmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_WindGenType3IEC_xs(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindGenType3IEC* element = dynamic_cast<const WindGenType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->xs;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -99,6 +169,24 @@ void WindGenType3IEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string,
 void WindGenType3IEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:WindGenType3IEC.WindTurbineType3IEC"), &assign_WindGenType3IEC_WindTurbineType3IEC));
+}
+
+void WindGenType3IEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:WindGenType3IEC.dipmax", &get_WindGenType3IEC_dipmax);
+	get_map.emplace("cim:WindGenType3IEC.diqmax", &get_WindGenType3IEC_diqmax);
+	get_map.emplace("cim:WindGenType3IEC.xs", &get_WindGenType3IEC_xs);
+}
+
+void WindGenType3IEC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+}
+
+void WindGenType3IEC::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner WindGenType3IEC::declare()

@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "GovHydroWPID.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PU.hpp"
@@ -33,6 +35,52 @@ using namespace CIMPP;
 
 GovHydroWPID::GovHydroWPID() {};
 GovHydroWPID::~GovHydroWPID() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:GovHydroWPID.d", { CGMESProfile::DY, } },
+	{ "cim:GovHydroWPID.gatmax", { CGMESProfile::DY, } },
+	{ "cim:GovHydroWPID.gatmin", { CGMESProfile::DY, } },
+	{ "cim:GovHydroWPID.gv1", { CGMESProfile::DY, } },
+	{ "cim:GovHydroWPID.gv2", { CGMESProfile::DY, } },
+	{ "cim:GovHydroWPID.gv3", { CGMESProfile::DY, } },
+	{ "cim:GovHydroWPID.kd", { CGMESProfile::DY, } },
+	{ "cim:GovHydroWPID.ki", { CGMESProfile::DY, } },
+	{ "cim:GovHydroWPID.kp", { CGMESProfile::DY, } },
+	{ "cim:GovHydroWPID.mwbase", { CGMESProfile::DY, } },
+	{ "cim:GovHydroWPID.pgv1", { CGMESProfile::DY, } },
+	{ "cim:GovHydroWPID.pgv2", { CGMESProfile::DY, } },
+	{ "cim:GovHydroWPID.pgv3", { CGMESProfile::DY, } },
+	{ "cim:GovHydroWPID.pmax", { CGMESProfile::DY, } },
+	{ "cim:GovHydroWPID.pmin", { CGMESProfile::DY, } },
+	{ "cim:GovHydroWPID.reg", { CGMESProfile::DY, } },
+	{ "cim:GovHydroWPID.ta", { CGMESProfile::DY, } },
+	{ "cim:GovHydroWPID.tb", { CGMESProfile::DY, } },
+	{ "cim:GovHydroWPID.treg", { CGMESProfile::DY, } },
+	{ "cim:GovHydroWPID.tw", { CGMESProfile::DY, } },
+	{ "cim:GovHydroWPID.velmax", { CGMESProfile::DY, } },
+	{ "cim:GovHydroWPID.velmin", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+GovHydroWPID::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+GovHydroWPID::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = TurbineGovernorDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_GovHydroWPID_d(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -323,24 +371,313 @@ bool assign_GovHydroWPID_velmin(std::stringstream &buffer, BaseClass* BaseClass_
 
 
 
+bool get_GovHydroWPID_d(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroWPID* element = dynamic_cast<const GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer << element->d;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydroWPID_gatmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroWPID* element = dynamic_cast<const GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer << element->gatmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydroWPID_gatmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroWPID* element = dynamic_cast<const GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer << element->gatmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydroWPID_gv1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroWPID* element = dynamic_cast<const GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer << element->gv1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydroWPID_gv2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroWPID* element = dynamic_cast<const GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer << element->gv2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydroWPID_gv3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroWPID* element = dynamic_cast<const GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer << element->gv3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydroWPID_kd(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroWPID* element = dynamic_cast<const GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer << element->kd;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydroWPID_ki(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroWPID* element = dynamic_cast<const GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer << element->ki;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydroWPID_kp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroWPID* element = dynamic_cast<const GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer << element->kp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydroWPID_mwbase(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroWPID* element = dynamic_cast<const GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer << element->mwbase;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydroWPID_pgv1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroWPID* element = dynamic_cast<const GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer << element->pgv1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydroWPID_pgv2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroWPID* element = dynamic_cast<const GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer << element->pgv2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydroWPID_pgv3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroWPID* element = dynamic_cast<const GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer << element->pgv3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydroWPID_pmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroWPID* element = dynamic_cast<const GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer << element->pmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydroWPID_pmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroWPID* element = dynamic_cast<const GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer << element->pmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydroWPID_reg(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroWPID* element = dynamic_cast<const GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer << element->reg;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydroWPID_ta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroWPID* element = dynamic_cast<const GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer << element->ta;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydroWPID_tb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroWPID* element = dynamic_cast<const GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer << element->tb;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydroWPID_treg(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroWPID* element = dynamic_cast<const GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer << element->treg;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroWPID_tw(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroWPID* element = dynamic_cast<const GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer << element->tw;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroWPID_velmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroWPID* element = dynamic_cast<const GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer << element->velmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroWPID_velmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroWPID* element = dynamic_cast<const GovHydroWPID*>(BaseClass_ptr1))
+	{
+		buffer << element->velmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -383,6 +720,43 @@ void GovHydroWPID::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, as
 
 void GovHydroWPID::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void GovHydroWPID::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:GovHydroWPID.d", &get_GovHydroWPID_d);
+	get_map.emplace("cim:GovHydroWPID.gatmax", &get_GovHydroWPID_gatmax);
+	get_map.emplace("cim:GovHydroWPID.gatmin", &get_GovHydroWPID_gatmin);
+	get_map.emplace("cim:GovHydroWPID.gv1", &get_GovHydroWPID_gv1);
+	get_map.emplace("cim:GovHydroWPID.gv2", &get_GovHydroWPID_gv2);
+	get_map.emplace("cim:GovHydroWPID.gv3", &get_GovHydroWPID_gv3);
+	get_map.emplace("cim:GovHydroWPID.kd", &get_GovHydroWPID_kd);
+	get_map.emplace("cim:GovHydroWPID.ki", &get_GovHydroWPID_ki);
+	get_map.emplace("cim:GovHydroWPID.kp", &get_GovHydroWPID_kp);
+	get_map.emplace("cim:GovHydroWPID.mwbase", &get_GovHydroWPID_mwbase);
+	get_map.emplace("cim:GovHydroWPID.pgv1", &get_GovHydroWPID_pgv1);
+	get_map.emplace("cim:GovHydroWPID.pgv2", &get_GovHydroWPID_pgv2);
+	get_map.emplace("cim:GovHydroWPID.pgv3", &get_GovHydroWPID_pgv3);
+	get_map.emplace("cim:GovHydroWPID.pmax", &get_GovHydroWPID_pmax);
+	get_map.emplace("cim:GovHydroWPID.pmin", &get_GovHydroWPID_pmin);
+	get_map.emplace("cim:GovHydroWPID.reg", &get_GovHydroWPID_reg);
+	get_map.emplace("cim:GovHydroWPID.ta", &get_GovHydroWPID_ta);
+	get_map.emplace("cim:GovHydroWPID.tb", &get_GovHydroWPID_tb);
+	get_map.emplace("cim:GovHydroWPID.treg", &get_GovHydroWPID_treg);
+	get_map.emplace("cim:GovHydroWPID.tw", &get_GovHydroWPID_tw);
+	get_map.emplace("cim:GovHydroWPID.velmax", &get_GovHydroWPID_velmax);
+	get_map.emplace("cim:GovHydroWPID.velmin", &get_GovHydroWPID_velmin);
+}
+
+void GovHydroWPID::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addClassGetFnsToMap(get_map);
+}
+
+void GovHydroWPID::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner GovHydroWPID::declare()

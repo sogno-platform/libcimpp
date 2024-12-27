@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "CsConverter.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "AngleDegrees.hpp"
@@ -25,6 +27,46 @@ using namespace CIMPP;
 
 CsConverter::CsConverter() {};
 CsConverter::~CsConverter() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+	CGMESProfile::SV,
+	CGMESProfile::SSH,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:CsConverter.alpha", { CGMESProfile::SV, } },
+	{ "cim:CsConverter.gamma", { CGMESProfile::SV, } },
+	{ "cim:CsConverter.maxAlpha", { CGMESProfile::EQ, } },
+	{ "cim:CsConverter.maxGamma", { CGMESProfile::EQ, } },
+	{ "cim:CsConverter.maxIdc", { CGMESProfile::EQ, } },
+	{ "cim:CsConverter.minAlpha", { CGMESProfile::EQ, } },
+	{ "cim:CsConverter.minGamma", { CGMESProfile::EQ, } },
+	{ "cim:CsConverter.minIdc", { CGMESProfile::EQ, } },
+	{ "cim:CsConverter.operatingMode", { CGMESProfile::SSH, } },
+	{ "cim:CsConverter.pPccControl", { CGMESProfile::SSH, } },
+	{ "cim:CsConverter.ratedIdc", { CGMESProfile::EQ, } },
+	{ "cim:CsConverter.targetAlpha", { CGMESProfile::SSH, } },
+	{ "cim:CsConverter.targetGamma", { CGMESProfile::SSH, } },
+	{ "cim:CsConverter.targetIdc", { CGMESProfile::SSH, } },
+};
+
+std::list<CGMESProfile>
+CsConverter::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+CsConverter::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = ACDCConverter::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_CsConverter_alpha(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -211,18 +253,203 @@ bool assign_CsConverter_targetIdc(std::stringstream &buffer, BaseClass* BaseClas
 
 
 
+bool get_CsConverter_alpha(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->alpha;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_CsConverter_gamma(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->gamma;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_CsConverter_maxAlpha(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->maxAlpha;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_CsConverter_maxGamma(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->maxGamma;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_CsConverter_maxIdc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->maxIdc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_CsConverter_minAlpha(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->minAlpha;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_CsConverter_minGamma(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->minGamma;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_CsConverter_minIdc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->minIdc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_CsConverter_ratedIdc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->ratedIdc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_CsConverter_targetAlpha(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->targetAlpha;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_CsConverter_targetGamma(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->targetGamma;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_CsConverter_targetIdc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->targetIdc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
+bool get_CsConverter_operatingMode(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->operatingMode;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
-
-
-
-
-
-
-
-
+bool get_CsConverter_pPccControl(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->pPccControl;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 const char CsConverter::debugName[] = "CsConverter";
 const char* CsConverter::debugString() const
@@ -255,6 +482,35 @@ void CsConverter::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, ass
 
 void CsConverter::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void CsConverter::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ACDCConverter::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:CsConverter.alpha", &get_CsConverter_alpha);
+	get_map.emplace("cim:CsConverter.gamma", &get_CsConverter_gamma);
+	get_map.emplace("cim:CsConverter.maxAlpha", &get_CsConverter_maxAlpha);
+	get_map.emplace("cim:CsConverter.maxGamma", &get_CsConverter_maxGamma);
+	get_map.emplace("cim:CsConverter.maxIdc", &get_CsConverter_maxIdc);
+	get_map.emplace("cim:CsConverter.minAlpha", &get_CsConverter_minAlpha);
+	get_map.emplace("cim:CsConverter.minGamma", &get_CsConverter_minGamma);
+	get_map.emplace("cim:CsConverter.minIdc", &get_CsConverter_minIdc);
+	get_map.emplace("cim:CsConverter.ratedIdc", &get_CsConverter_ratedIdc);
+	get_map.emplace("cim:CsConverter.targetAlpha", &get_CsConverter_targetAlpha);
+	get_map.emplace("cim:CsConverter.targetGamma", &get_CsConverter_targetGamma);
+	get_map.emplace("cim:CsConverter.targetIdc", &get_CsConverter_targetIdc);
+}
+
+void CsConverter::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	ACDCConverter::addClassGetFnsToMap(get_map);
+}
+
+void CsConverter::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ACDCConverter::addEnumGetFnsToMap(get_map);
+	get_map.emplace("cim:CsConverter.operatingMode", &get_CsConverter_operatingMode);
+	get_map.emplace("cim:CsConverter.pPccControl", &get_CsConverter_pPccControl);
 }
 
 const BaseClassDefiner CsConverter::declare()

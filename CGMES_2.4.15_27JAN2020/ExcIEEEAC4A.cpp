@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "ExcIEEEAC4A.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PU.hpp"
@@ -20,6 +22,39 @@ using namespace CIMPP;
 
 ExcIEEEAC4A::ExcIEEEAC4A() {};
 ExcIEEEAC4A::~ExcIEEEAC4A() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:ExcIEEEAC4A.ka", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC4A.kc", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC4A.ta", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC4A.tb", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC4A.tc", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC4A.vimax", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC4A.vimin", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC4A.vrmax", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC4A.vrmin", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+ExcIEEEAC4A::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+ExcIEEEAC4A::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_ExcIEEEAC4A_ka(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -141,11 +176,131 @@ bool assign_ExcIEEEAC4A_vrmin(std::stringstream &buffer, BaseClass* BaseClass_pt
 
 
 
+bool get_ExcIEEEAC4A_ka(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC4A* element = dynamic_cast<const ExcIEEEAC4A*>(BaseClass_ptr1))
+	{
+		buffer << element->ka;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC4A_kc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC4A* element = dynamic_cast<const ExcIEEEAC4A*>(BaseClass_ptr1))
+	{
+		buffer << element->kc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC4A_ta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC4A* element = dynamic_cast<const ExcIEEEAC4A*>(BaseClass_ptr1))
+	{
+		buffer << element->ta;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC4A_tb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC4A* element = dynamic_cast<const ExcIEEEAC4A*>(BaseClass_ptr1))
+	{
+		buffer << element->tb;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC4A_tc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC4A* element = dynamic_cast<const ExcIEEEAC4A*>(BaseClass_ptr1))
+	{
+		buffer << element->tc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC4A_vimax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC4A* element = dynamic_cast<const ExcIEEEAC4A*>(BaseClass_ptr1))
+	{
+		buffer << element->vimax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcIEEEAC4A_vimin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC4A* element = dynamic_cast<const ExcIEEEAC4A*>(BaseClass_ptr1))
+	{
+		buffer << element->vimin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcIEEEAC4A_vrmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC4A* element = dynamic_cast<const ExcIEEEAC4A*>(BaseClass_ptr1))
+	{
+		buffer << element->vrmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcIEEEAC4A_vrmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC4A* element = dynamic_cast<const ExcIEEEAC4A*>(BaseClass_ptr1))
+	{
+		buffer << element->vrmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -175,6 +330,30 @@ void ExcIEEEAC4A::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, ass
 
 void ExcIEEEAC4A::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void ExcIEEEAC4A::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:ExcIEEEAC4A.ka", &get_ExcIEEEAC4A_ka);
+	get_map.emplace("cim:ExcIEEEAC4A.kc", &get_ExcIEEEAC4A_kc);
+	get_map.emplace("cim:ExcIEEEAC4A.ta", &get_ExcIEEEAC4A_ta);
+	get_map.emplace("cim:ExcIEEEAC4A.tb", &get_ExcIEEEAC4A_tb);
+	get_map.emplace("cim:ExcIEEEAC4A.tc", &get_ExcIEEEAC4A_tc);
+	get_map.emplace("cim:ExcIEEEAC4A.vimax", &get_ExcIEEEAC4A_vimax);
+	get_map.emplace("cim:ExcIEEEAC4A.vimin", &get_ExcIEEEAC4A_vimin);
+	get_map.emplace("cim:ExcIEEEAC4A.vrmax", &get_ExcIEEEAC4A_vrmax);
+	get_map.emplace("cim:ExcIEEEAC4A.vrmin", &get_ExcIEEEAC4A_vrmin);
+}
+
+void ExcIEEEAC4A::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addClassGetFnsToMap(get_map);
+}
+
+void ExcIEEEAC4A::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner ExcIEEEAC4A::declare()

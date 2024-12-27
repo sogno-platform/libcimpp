@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "DiscExcContIEEEDEC2A.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "Seconds.hpp"
@@ -16,6 +18,35 @@ using namespace CIMPP;
 
 DiscExcContIEEEDEC2A::DiscExcContIEEEDEC2A() {};
 DiscExcContIEEEDEC2A::~DiscExcContIEEEDEC2A() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:DiscExcContIEEEDEC2A.td1", { CGMESProfile::DY, } },
+	{ "cim:DiscExcContIEEEDEC2A.td2", { CGMESProfile::DY, } },
+	{ "cim:DiscExcContIEEEDEC2A.vdmax", { CGMESProfile::DY, } },
+	{ "cim:DiscExcContIEEEDEC2A.vdmin", { CGMESProfile::DY, } },
+	{ "cim:DiscExcContIEEEDEC2A.vk", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+DiscExcContIEEEDEC2A::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+DiscExcContIEEEDEC2A::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = DiscontinuousExcitationControlDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_DiscExcContIEEEDEC2A_td1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -85,7 +116,75 @@ bool assign_DiscExcContIEEEDEC2A_vk(std::stringstream &buffer, BaseClass* BaseCl
 
 
 
+bool get_DiscExcContIEEEDEC2A_td1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const DiscExcContIEEEDEC2A* element = dynamic_cast<const DiscExcContIEEEDEC2A*>(BaseClass_ptr1))
+	{
+		buffer << element->td1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_DiscExcContIEEEDEC2A_td2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const DiscExcContIEEEDEC2A* element = dynamic_cast<const DiscExcContIEEEDEC2A*>(BaseClass_ptr1))
+	{
+		buffer << element->td2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_DiscExcContIEEEDEC2A_vdmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const DiscExcContIEEEDEC2A* element = dynamic_cast<const DiscExcContIEEEDEC2A*>(BaseClass_ptr1))
+	{
+		buffer << element->vdmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_DiscExcContIEEEDEC2A_vdmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const DiscExcContIEEEDEC2A* element = dynamic_cast<const DiscExcContIEEEDEC2A*>(BaseClass_ptr1))
+	{
+		buffer << element->vdmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_DiscExcContIEEEDEC2A_vk(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const DiscExcContIEEEDEC2A* element = dynamic_cast<const DiscExcContIEEEDEC2A*>(BaseClass_ptr1))
+	{
+		buffer << element->vk;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -111,6 +210,26 @@ void DiscExcContIEEEDEC2A::addPrimitiveAssignFnsToMap(std::unordered_map<std::st
 
 void DiscExcContIEEEDEC2A::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void DiscExcContIEEEDEC2A::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	DiscontinuousExcitationControlDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:DiscExcContIEEEDEC2A.td1", &get_DiscExcContIEEEDEC2A_td1);
+	get_map.emplace("cim:DiscExcContIEEEDEC2A.td2", &get_DiscExcContIEEEDEC2A_td2);
+	get_map.emplace("cim:DiscExcContIEEEDEC2A.vdmax", &get_DiscExcContIEEEDEC2A_vdmax);
+	get_map.emplace("cim:DiscExcContIEEEDEC2A.vdmin", &get_DiscExcContIEEEDEC2A_vdmin);
+	get_map.emplace("cim:DiscExcContIEEEDEC2A.vk", &get_DiscExcContIEEEDEC2A_vk);
+}
+
+void DiscExcContIEEEDEC2A::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	DiscontinuousExcitationControlDynamics::addClassGetFnsToMap(get_map);
+}
+
+void DiscExcContIEEEDEC2A::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	DiscontinuousExcitationControlDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner DiscExcContIEEEDEC2A::declare()

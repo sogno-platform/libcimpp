@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "AsynchronousMachine.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "AsynchronousMachineDynamics.hpp"
@@ -23,6 +25,43 @@ using namespace CIMPP;
 AsynchronousMachine::AsynchronousMachine() : AsynchronousMachineDynamics(nullptr) {};
 AsynchronousMachine::~AsynchronousMachine() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+	CGMESProfile::EQ,
+	CGMESProfile::SC,
+	CGMESProfile::SSH,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:AsynchronousMachine.AsynchronousMachineDynamics", { CGMESProfile::DY, } },
+	{ "cim:AsynchronousMachine.asynchronousMachineType", { CGMESProfile::SSH, } },
+	{ "cim:AsynchronousMachine.converterFedDrive", { CGMESProfile::SC, } },
+	{ "cim:AsynchronousMachine.efficiency", { CGMESProfile::SC, } },
+	{ "cim:AsynchronousMachine.iaIrRatio", { CGMESProfile::SC, } },
+	{ "cim:AsynchronousMachine.nominalFrequency", { CGMESProfile::EQ, } },
+	{ "cim:AsynchronousMachine.nominalSpeed", { CGMESProfile::EQ, } },
+	{ "cim:AsynchronousMachine.polePairNumber", { CGMESProfile::SC, } },
+	{ "cim:AsynchronousMachine.ratedMechanicalPower", { CGMESProfile::SC, } },
+	{ "cim:AsynchronousMachine.reversible", { CGMESProfile::SC, } },
+	{ "cim:AsynchronousMachine.rxLockedRotorRatio", { CGMESProfile::SC, } },
+};
+
+std::list<CGMESProfile>
+AsynchronousMachine::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+AsynchronousMachine::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = RotatingMachine::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_AsynchronousMachine_asynchronousMachineType(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -173,15 +212,147 @@ bool assign_AsynchronousMachine_AsynchronousMachineDynamics(BaseClass* BaseClass
 	return false;
 }
 
+bool get_AsynchronousMachine_converterFedDrive(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const AsynchronousMachine* element = dynamic_cast<const AsynchronousMachine*>(BaseClass_ptr1))
+	{
+		buffer << element->converterFedDrive;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_AsynchronousMachine_efficiency(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const AsynchronousMachine* element = dynamic_cast<const AsynchronousMachine*>(BaseClass_ptr1))
+	{
+		buffer << element->efficiency;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_AsynchronousMachine_iaIrRatio(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const AsynchronousMachine* element = dynamic_cast<const AsynchronousMachine*>(BaseClass_ptr1))
+	{
+		buffer << element->iaIrRatio;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_AsynchronousMachine_nominalFrequency(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const AsynchronousMachine* element = dynamic_cast<const AsynchronousMachine*>(BaseClass_ptr1))
+	{
+		buffer << element->nominalFrequency;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_AsynchronousMachine_nominalSpeed(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const AsynchronousMachine* element = dynamic_cast<const AsynchronousMachine*>(BaseClass_ptr1))
+	{
+		buffer << element->nominalSpeed;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_AsynchronousMachine_polePairNumber(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const AsynchronousMachine* element = dynamic_cast<const AsynchronousMachine*>(BaseClass_ptr1))
+	{
+		buffer << element->polePairNumber;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_AsynchronousMachine_ratedMechanicalPower(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const AsynchronousMachine* element = dynamic_cast<const AsynchronousMachine*>(BaseClass_ptr1))
+	{
+		buffer << element->ratedMechanicalPower;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_AsynchronousMachine_reversible(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const AsynchronousMachine* element = dynamic_cast<const AsynchronousMachine*>(BaseClass_ptr1))
+	{
+		buffer << element->reversible;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_AsynchronousMachine_rxLockedRotorRatio(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const AsynchronousMachine* element = dynamic_cast<const AsynchronousMachine*>(BaseClass_ptr1))
+	{
+		buffer << element->rxLockedRotorRatio;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
-
-
-
-
-
-
+bool get_AsynchronousMachine_asynchronousMachineType(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const AsynchronousMachine* element = dynamic_cast<const AsynchronousMachine*>(BaseClass_ptr1))
+	{
+		buffer << element->asynchronousMachineType;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 const char AsynchronousMachine::debugName[] = "AsynchronousMachine";
 const char* AsynchronousMachine::debugString() const
@@ -211,6 +382,31 @@ void AsynchronousMachine::addPrimitiveAssignFnsToMap(std::unordered_map<std::str
 void AsynchronousMachine::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:AsynchronousMachine.AsynchronousMachineDynamics"), &assign_AsynchronousMachine_AsynchronousMachineDynamics));
+}
+
+void AsynchronousMachine::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	RotatingMachine::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:AsynchronousMachine.converterFedDrive", &get_AsynchronousMachine_converterFedDrive);
+	get_map.emplace("cim:AsynchronousMachine.efficiency", &get_AsynchronousMachine_efficiency);
+	get_map.emplace("cim:AsynchronousMachine.iaIrRatio", &get_AsynchronousMachine_iaIrRatio);
+	get_map.emplace("cim:AsynchronousMachine.nominalFrequency", &get_AsynchronousMachine_nominalFrequency);
+	get_map.emplace("cim:AsynchronousMachine.nominalSpeed", &get_AsynchronousMachine_nominalSpeed);
+	get_map.emplace("cim:AsynchronousMachine.polePairNumber", &get_AsynchronousMachine_polePairNumber);
+	get_map.emplace("cim:AsynchronousMachine.ratedMechanicalPower", &get_AsynchronousMachine_ratedMechanicalPower);
+	get_map.emplace("cim:AsynchronousMachine.reversible", &get_AsynchronousMachine_reversible);
+	get_map.emplace("cim:AsynchronousMachine.rxLockedRotorRatio", &get_AsynchronousMachine_rxLockedRotorRatio);
+}
+
+void AsynchronousMachine::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	RotatingMachine::addClassGetFnsToMap(get_map);
+}
+
+void AsynchronousMachine::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	RotatingMachine::addEnumGetFnsToMap(get_map);
+	get_map.emplace("cim:AsynchronousMachine.asynchronousMachineType", &get_AsynchronousMachine_asynchronousMachineType);
 }
 
 const BaseClassDefiner AsynchronousMachine::declare()

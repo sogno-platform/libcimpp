@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "RatioTapChangerTablePoint.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "RatioTapChangerTable.hpp"
@@ -13,6 +15,30 @@ using namespace CIMPP;
 RatioTapChangerTablePoint::RatioTapChangerTablePoint() : RatioTapChangerTable(nullptr) {};
 RatioTapChangerTablePoint::~RatioTapChangerTablePoint() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:RatioTapChangerTablePoint.RatioTapChangerTable", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+RatioTapChangerTablePoint::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+RatioTapChangerTablePoint::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = TapChangerTablePoint::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -33,6 +59,21 @@ bool assign_RatioTapChangerTablePoint_RatioTapChangerTable(BaseClass* BaseClass_
 	return false;
 }
 
+
+bool get_RatioTapChangerTablePoint_RatioTapChangerTable(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const RatioTapChangerTablePoint* element = dynamic_cast<const RatioTapChangerTablePoint*>(BaseClass_ptr1))
+	{
+		if (element->RatioTapChangerTable != 0)
+		{
+			BaseClass_list.push_back(element->RatioTapChangerTable);
+			return true;
+		}
+	}
+	return false;
+}
+
+
 const char RatioTapChangerTablePoint::debugName[] = "RatioTapChangerTablePoint";
 const char* RatioTapChangerTablePoint::debugString() const
 {
@@ -51,6 +92,22 @@ void RatioTapChangerTablePoint::addPrimitiveAssignFnsToMap(std::unordered_map<st
 void RatioTapChangerTablePoint::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:RatioTapChangerTablePoint.RatioTapChangerTable"), &assign_RatioTapChangerTablePoint_RatioTapChangerTable));
+}
+
+void RatioTapChangerTablePoint::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TapChangerTablePoint::addPrimitiveGetFnsToMap(get_map);
+}
+
+void RatioTapChangerTablePoint::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	TapChangerTablePoint::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:RatioTapChangerTablePoint.RatioTapChangerTable", &get_RatioTapChangerTablePoint_RatioTapChangerTable);
+}
+
+void RatioTapChangerTablePoint::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TapChangerTablePoint::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner RatioTapChangerTablePoint::declare()

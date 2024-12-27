@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "LimitSet.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "Boolean.hpp"
@@ -12,6 +14,31 @@ using namespace CIMPP;
 
 LimitSet::LimitSet() {};
 LimitSet::~LimitSet() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::OP,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:LimitSet.isPercentageLimits", { CGMESProfile::OP, } },
+};
+
+std::list<CGMESProfile>
+LimitSet::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+LimitSet::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_LimitSet_isPercentageLimits(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -24,6 +51,22 @@ bool assign_LimitSet_isPercentageLimits(std::stringstream &buffer, BaseClass* Ba
 		else
 			return true;
 	}
+	return false;
+}
+
+
+
+bool get_LimitSet_isPercentageLimits(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const LimitSet* element = dynamic_cast<const LimitSet*>(BaseClass_ptr1))
+	{
+		buffer << element->isPercentageLimits;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
 	return false;
 }
 
@@ -47,6 +90,22 @@ void LimitSet::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign
 
 void LimitSet::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void LimitSet::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:LimitSet.isPercentageLimits", &get_LimitSet_isPercentageLimits);
+}
+
+void LimitSet::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+}
+
+void LimitSet::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner LimitSet::declare()

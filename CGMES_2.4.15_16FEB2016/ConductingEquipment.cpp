@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "ConductingEquipment.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "BaseVoltage.hpp"
@@ -15,8 +17,36 @@ using namespace CIMPP;
 ConductingEquipment::ConductingEquipment() : BaseVoltage(nullptr), SvStatus(nullptr) {};
 ConductingEquipment::~ConductingEquipment() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+	CGMESProfile::EQ_BD,
+	CGMESProfile::EQ,
+	CGMESProfile::SV,
+	CGMESProfile::SSH,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:ConductingEquipment.BaseVoltage", { CGMESProfile::EQ, } },
+	{ "cim:ConductingEquipment.SvStatus", { CGMESProfile::SV, } },
+	{ "cim:ConductingEquipment.Terminals", { CGMESProfile::DY, CGMESProfile::EQ_BD, CGMESProfile::EQ, } },
+};
 
+std::list<CGMESProfile>
+ConductingEquipment::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+ConductingEquipment::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = Equipment::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -36,7 +66,6 @@ bool assign_ConductingEquipment_BaseVoltage(BaseClass* BaseClass_ptr1, BaseClass
 	}
 	return false;
 }
-
 bool assign_SvStatus_ConductingEquipment(BaseClass*, BaseClass*);
 bool assign_ConductingEquipment_SvStatus(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -53,7 +82,6 @@ bool assign_ConductingEquipment_SvStatus(BaseClass* BaseClass_ptr1, BaseClass* B
 	}
 	return false;
 }
-
 bool assign_Terminal_ConductingEquipment(BaseClass*, BaseClass*);
 bool assign_ConductingEquipment_Terminals(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -70,6 +98,21 @@ bool assign_ConductingEquipment_Terminals(BaseClass* BaseClass_ptr1, BaseClass* 
 	}
 	return false;
 }
+
+
+bool get_ConductingEquipment_BaseVoltage(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const ConductingEquipment* element = dynamic_cast<const ConductingEquipment*>(BaseClass_ptr1))
+	{
+		if (element->BaseVoltage != 0)
+		{
+			BaseClass_list.push_back(element->BaseVoltage);
+			return true;
+		}
+	}
+	return false;
+}
+
 
 const char ConductingEquipment::debugName[] = "ConductingEquipment";
 const char* ConductingEquipment::debugString() const
@@ -91,6 +134,22 @@ void ConductingEquipment::addClassAssignFnsToMap(std::unordered_map<std::string,
 	assign_map.insert(std::make_pair(std::string("cim:ConductingEquipment.BaseVoltage"), &assign_ConductingEquipment_BaseVoltage));
 	assign_map.insert(std::make_pair(std::string("cim:ConductingEquipment.SvStatus"), &assign_ConductingEquipment_SvStatus));
 	assign_map.insert(std::make_pair(std::string("cim:ConductingEquipment.Terminals"), &assign_ConductingEquipment_Terminals));
+}
+
+void ConductingEquipment::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	Equipment::addPrimitiveGetFnsToMap(get_map);
+}
+
+void ConductingEquipment::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	Equipment::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:ConductingEquipment.BaseVoltage", &get_ConductingEquipment_BaseVoltage);
+}
+
+void ConductingEquipment::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	Equipment::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner ConductingEquipment::declare()

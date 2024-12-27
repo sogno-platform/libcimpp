@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "MechanicalLoadDynamics.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "AsynchronousMachineDynamics.hpp"
@@ -14,7 +16,31 @@ using namespace CIMPP;
 MechanicalLoadDynamics::MechanicalLoadDynamics() : AsynchronousMachineDynamics(nullptr), SynchronousMachineDynamics(nullptr) {};
 MechanicalLoadDynamics::~MechanicalLoadDynamics() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:MechanicalLoadDynamics.AsynchronousMachineDynamics", { CGMESProfile::DY, } },
+	{ "cim:MechanicalLoadDynamics.SynchronousMachineDynamics", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+MechanicalLoadDynamics::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+MechanicalLoadDynamics::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = DynamicsFunctionBlock::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -34,7 +60,6 @@ bool assign_MechanicalLoadDynamics_AsynchronousMachineDynamics(BaseClass* BaseCl
 	}
 	return false;
 }
-
 bool assign_SynchronousMachineDynamics_MechanicalLoadDynamics(BaseClass*, BaseClass*);
 bool assign_MechanicalLoadDynamics_SynchronousMachineDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -51,6 +76,34 @@ bool assign_MechanicalLoadDynamics_SynchronousMachineDynamics(BaseClass* BaseCla
 	}
 	return false;
 }
+
+
+bool get_MechanicalLoadDynamics_AsynchronousMachineDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const MechanicalLoadDynamics* element = dynamic_cast<const MechanicalLoadDynamics*>(BaseClass_ptr1))
+	{
+		if (element->AsynchronousMachineDynamics != 0)
+		{
+			BaseClass_list.push_back(element->AsynchronousMachineDynamics);
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_MechanicalLoadDynamics_SynchronousMachineDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const MechanicalLoadDynamics* element = dynamic_cast<const MechanicalLoadDynamics*>(BaseClass_ptr1))
+	{
+		if (element->SynchronousMachineDynamics != 0)
+		{
+			BaseClass_list.push_back(element->SynchronousMachineDynamics);
+			return true;
+		}
+	}
+	return false;
+}
+
 
 const char MechanicalLoadDynamics::debugName[] = "MechanicalLoadDynamics";
 const char* MechanicalLoadDynamics::debugString() const
@@ -71,6 +124,23 @@ void MechanicalLoadDynamics::addClassAssignFnsToMap(std::unordered_map<std::stri
 {
 	assign_map.insert(std::make_pair(std::string("cim:MechanicalLoadDynamics.AsynchronousMachineDynamics"), &assign_MechanicalLoadDynamics_AsynchronousMachineDynamics));
 	assign_map.insert(std::make_pair(std::string("cim:MechanicalLoadDynamics.SynchronousMachineDynamics"), &assign_MechanicalLoadDynamics_SynchronousMachineDynamics));
+}
+
+void MechanicalLoadDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	DynamicsFunctionBlock::addPrimitiveGetFnsToMap(get_map);
+}
+
+void MechanicalLoadDynamics::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	DynamicsFunctionBlock::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:MechanicalLoadDynamics.AsynchronousMachineDynamics", &get_MechanicalLoadDynamics_AsynchronousMachineDynamics);
+	get_map.emplace("cim:MechanicalLoadDynamics.SynchronousMachineDynamics", &get_MechanicalLoadDynamics_SynchronousMachineDynamics);
+}
+
+void MechanicalLoadDynamics::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	DynamicsFunctionBlock::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner MechanicalLoadDynamics::declare()

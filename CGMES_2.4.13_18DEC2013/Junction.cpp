@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "Junction.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 
@@ -11,6 +13,34 @@ using namespace CIMPP;
 
 Junction::Junction() {};
 Junction::~Junction() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ_BD,
+	CGMESProfile::EQ,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+};
+
+std::list<CGMESProfile>
+Junction::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+Junction::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = Connector::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
+
+
+
 
 
 
@@ -31,6 +61,21 @@ void Junction::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign
 
 void Junction::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void Junction::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	Connector::addPrimitiveGetFnsToMap(get_map);
+}
+
+void Junction::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	Connector::addClassGetFnsToMap(get_map);
+}
+
+void Junction::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	Connector::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner Junction::declare()

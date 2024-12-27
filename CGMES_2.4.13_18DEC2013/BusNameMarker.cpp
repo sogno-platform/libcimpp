@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "BusNameMarker.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "ReportingGroup.hpp"
@@ -15,7 +17,32 @@ using namespace CIMPP;
 BusNameMarker::BusNameMarker() : ReportingGroup(nullptr) {};
 BusNameMarker::~BusNameMarker() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:BusNameMarker.ReportingGroup", { CGMESProfile::EQ, } },
+	{ "cim:BusNameMarker.Terminal", { CGMESProfile::EQ, } },
+	{ "cim:BusNameMarker.priority", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+BusNameMarker::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+BusNameMarker::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_BusNameMarker_priority(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -48,7 +75,6 @@ bool assign_BusNameMarker_ReportingGroup(BaseClass* BaseClass_ptr1, BaseClass* B
 	}
 	return false;
 }
-
 bool assign_ACDCTerminal_BusNameMarker(BaseClass*, BaseClass*);
 bool assign_BusNameMarker_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -62,6 +88,34 @@ bool assign_BusNameMarker_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseCla
 			return assign_ACDCTerminal_BusNameMarker(BaseClass_ptr2, BaseClass_ptr1);
 		}
 		return true;
+	}
+	return false;
+}
+
+bool get_BusNameMarker_priority(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const BusNameMarker* element = dynamic_cast<const BusNameMarker*>(BaseClass_ptr1))
+	{
+		buffer << element->priority;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+
+bool get_BusNameMarker_ReportingGroup(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const BusNameMarker* element = dynamic_cast<const BusNameMarker*>(BaseClass_ptr1))
+	{
+		if (element->ReportingGroup != 0)
+		{
+			BaseClass_list.push_back(element->ReportingGroup);
+			return true;
+		}
 	}
 	return false;
 }
@@ -87,6 +141,23 @@ void BusNameMarker::addClassAssignFnsToMap(std::unordered_map<std::string, class
 {
 	assign_map.insert(std::make_pair(std::string("cim:BusNameMarker.ReportingGroup"), &assign_BusNameMarker_ReportingGroup));
 	assign_map.insert(std::make_pair(std::string("cim:BusNameMarker.Terminal"), &assign_BusNameMarker_Terminal));
+}
+
+void BusNameMarker::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:BusNameMarker.priority", &get_BusNameMarker_priority);
+}
+
+void BusNameMarker::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:BusNameMarker.ReportingGroup", &get_BusNameMarker_ReportingGroup);
+}
+
+void BusNameMarker::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner BusNameMarker::declare()

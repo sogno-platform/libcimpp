@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "DynamicsVersion.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "String.hpp"
@@ -21,6 +23,40 @@ using namespace CIMPP;
 
 DynamicsVersion::DynamicsVersion() {};
 DynamicsVersion::~DynamicsVersion() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:DynamicsVersion.baseUML", { CGMESProfile::DY, } },
+	{ "cim:DynamicsVersion.baseURI", { CGMESProfile::DY, } },
+	{ "cim:DynamicsVersion.date", { CGMESProfile::DY, } },
+	{ "cim:DynamicsVersion.differenceModelURI", { CGMESProfile::DY, } },
+	{ "cim:DynamicsVersion.entsoeUML", { CGMESProfile::DY, } },
+	{ "cim:DynamicsVersion.entsoeURI", { CGMESProfile::DY, } },
+	{ "cim:DynamicsVersion.modelDescriptionURI", { CGMESProfile::DY, } },
+	{ "cim:DynamicsVersion.namespaceRDF", { CGMESProfile::DY, } },
+	{ "cim:DynamicsVersion.namespaceUML", { CGMESProfile::DY, } },
+	{ "cim:DynamicsVersion.shortName", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+DynamicsVersion::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+DynamicsVersion::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_DynamicsVersion_baseUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -155,12 +191,145 @@ bool assign_DynamicsVersion_shortName(std::stringstream &buffer, BaseClass* Base
 
 
 
+bool get_DynamicsVersion_baseUML(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const DynamicsVersion* element = dynamic_cast<const DynamicsVersion*>(BaseClass_ptr1))
+	{
+		buffer << element->baseUML;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_DynamicsVersion_baseURI(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const DynamicsVersion* element = dynamic_cast<const DynamicsVersion*>(BaseClass_ptr1))
+	{
+		buffer << element->baseURI;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_DynamicsVersion_date(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const DynamicsVersion* element = dynamic_cast<const DynamicsVersion*>(BaseClass_ptr1))
+	{
+		buffer << element->date;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_DynamicsVersion_differenceModelURI(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const DynamicsVersion* element = dynamic_cast<const DynamicsVersion*>(BaseClass_ptr1))
+	{
+		buffer << element->differenceModelURI;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_DynamicsVersion_entsoeUML(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const DynamicsVersion* element = dynamic_cast<const DynamicsVersion*>(BaseClass_ptr1))
+	{
+		buffer << element->entsoeUML;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_DynamicsVersion_entsoeURI(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const DynamicsVersion* element = dynamic_cast<const DynamicsVersion*>(BaseClass_ptr1))
+	{
+		buffer << element->entsoeURI;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_DynamicsVersion_modelDescriptionURI(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const DynamicsVersion* element = dynamic_cast<const DynamicsVersion*>(BaseClass_ptr1))
+	{
+		buffer << element->modelDescriptionURI;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_DynamicsVersion_namespaceRDF(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const DynamicsVersion* element = dynamic_cast<const DynamicsVersion*>(BaseClass_ptr1))
+	{
+		buffer << element->namespaceRDF;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_DynamicsVersion_namespaceUML(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const DynamicsVersion* element = dynamic_cast<const DynamicsVersion*>(BaseClass_ptr1))
+	{
+		buffer << element->namespaceUML;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_DynamicsVersion_shortName(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const DynamicsVersion* element = dynamic_cast<const DynamicsVersion*>(BaseClass_ptr1))
+	{
+		buffer << element->shortName;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -191,6 +360,31 @@ void DynamicsVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std::string,
 
 void DynamicsVersion::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void DynamicsVersion::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	BaseClass::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:DynamicsVersion.baseUML", &get_DynamicsVersion_baseUML);
+	get_map.emplace("cim:DynamicsVersion.baseURI", &get_DynamicsVersion_baseURI);
+	get_map.emplace("cim:DynamicsVersion.date", &get_DynamicsVersion_date);
+	get_map.emplace("cim:DynamicsVersion.differenceModelURI", &get_DynamicsVersion_differenceModelURI);
+	get_map.emplace("cim:DynamicsVersion.entsoeUML", &get_DynamicsVersion_entsoeUML);
+	get_map.emplace("cim:DynamicsVersion.entsoeURI", &get_DynamicsVersion_entsoeURI);
+	get_map.emplace("cim:DynamicsVersion.modelDescriptionURI", &get_DynamicsVersion_modelDescriptionURI);
+	get_map.emplace("cim:DynamicsVersion.namespaceRDF", &get_DynamicsVersion_namespaceRDF);
+	get_map.emplace("cim:DynamicsVersion.namespaceUML", &get_DynamicsVersion_namespaceUML);
+	get_map.emplace("cim:DynamicsVersion.shortName", &get_DynamicsVersion_shortName);
+}
+
+void DynamicsVersion::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	BaseClass::addClassGetFnsToMap(get_map);
+}
+
+void DynamicsVersion::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner DynamicsVersion::declare()

@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "OverexcLim2.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PU.hpp"
@@ -15,6 +17,34 @@ using namespace CIMPP;
 
 OverexcLim2::OverexcLim2() {};
 OverexcLim2::~OverexcLim2() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:OverexcLim2.ifdlim", { CGMESProfile::DY, } },
+	{ "cim:OverexcLim2.koi", { CGMESProfile::DY, } },
+	{ "cim:OverexcLim2.voimax", { CGMESProfile::DY, } },
+	{ "cim:OverexcLim2.voimin", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+OverexcLim2::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+OverexcLim2::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = OverexcitationLimiterDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_OverexcLim2_ifdlim(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -71,6 +101,61 @@ bool assign_OverexcLim2_voimin(std::stringstream &buffer, BaseClass* BaseClass_p
 
 
 
+bool get_OverexcLim2_ifdlim(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const OverexcLim2* element = dynamic_cast<const OverexcLim2*>(BaseClass_ptr1))
+	{
+		buffer << element->ifdlim;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_OverexcLim2_koi(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const OverexcLim2* element = dynamic_cast<const OverexcLim2*>(BaseClass_ptr1))
+	{
+		buffer << element->koi;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_OverexcLim2_voimax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const OverexcLim2* element = dynamic_cast<const OverexcLim2*>(BaseClass_ptr1))
+	{
+		buffer << element->voimax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_OverexcLim2_voimin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const OverexcLim2* element = dynamic_cast<const OverexcLim2*>(BaseClass_ptr1))
+	{
+		buffer << element->voimin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -95,6 +180,25 @@ void OverexcLim2::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, ass
 
 void OverexcLim2::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void OverexcLim2::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	OverexcitationLimiterDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:OverexcLim2.ifdlim", &get_OverexcLim2_ifdlim);
+	get_map.emplace("cim:OverexcLim2.koi", &get_OverexcLim2_koi);
+	get_map.emplace("cim:OverexcLim2.voimax", &get_OverexcLim2_voimax);
+	get_map.emplace("cim:OverexcLim2.voimin", &get_OverexcLim2_voimin);
+}
+
+void OverexcLim2::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	OverexcitationLimiterDynamics::addClassGetFnsToMap(get_map);
+}
+
+void OverexcLim2::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	OverexcitationLimiterDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner OverexcLim2::declare()

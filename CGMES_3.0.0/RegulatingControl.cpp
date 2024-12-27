@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "RegulatingControl.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "RegulatingCondEq.hpp"
@@ -23,8 +25,41 @@ using namespace CIMPP;
 RegulatingControl::RegulatingControl() : Terminal(nullptr) {};
 RegulatingControl::~RegulatingControl() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+	CGMESProfile::SSH,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:RegulatingControl.RegulatingCondEq", { CGMESProfile::EQ, } },
+	{ "cim:RegulatingControl.RegulationSchedule", { CGMESProfile::EQ, } },
+	{ "cim:RegulatingControl.Terminal", { CGMESProfile::EQ, } },
+	{ "cim:RegulatingControl.discrete", { CGMESProfile::SSH, } },
+	{ "cim:RegulatingControl.enabled", { CGMESProfile::SSH, } },
+	{ "cim:RegulatingControl.maxAllowedTargetValue", { CGMESProfile::SSH, } },
+	{ "cim:RegulatingControl.minAllowedTargetValue", { CGMESProfile::SSH, } },
+	{ "cim:RegulatingControl.mode", { CGMESProfile::EQ, } },
+	{ "cim:RegulatingControl.targetDeadband", { CGMESProfile::SSH, } },
+	{ "cim:RegulatingControl.targetValue", { CGMESProfile::SSH, } },
+	{ "cim:RegulatingControl.targetValueUnitMultiplier", { CGMESProfile::SSH, } },
+};
 
+std::list<CGMESProfile>
+RegulatingControl::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+RegulatingControl::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = PowerSystemResource::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_RegulatingControl_discrete(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -148,7 +183,6 @@ bool assign_RegulatingControl_RegulatingCondEq(BaseClass* BaseClass_ptr1, BaseCl
 	}
 	return false;
 }
-
 bool assign_RegulationSchedule_RegulatingControl(BaseClass*, BaseClass*);
 bool assign_RegulatingControl_RegulationSchedule(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -165,7 +199,6 @@ bool assign_RegulatingControl_RegulationSchedule(BaseClass* BaseClass_ptr1, Base
 	}
 	return false;
 }
-
 bool assign_Terminal_RegulatingControl(BaseClass*, BaseClass*);
 bool assign_RegulatingControl_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -183,13 +216,132 @@ bool assign_RegulatingControl_Terminal(BaseClass* BaseClass_ptr1, BaseClass* Bas
 	return false;
 }
 
+bool get_RegulatingControl_discrete(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const RegulatingControl* element = dynamic_cast<const RegulatingControl*>(BaseClass_ptr1))
+	{
+		buffer << element->discrete;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_RegulatingControl_enabled(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const RegulatingControl* element = dynamic_cast<const RegulatingControl*>(BaseClass_ptr1))
+	{
+		buffer << element->enabled;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_RegulatingControl_maxAllowedTargetValue(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const RegulatingControl* element = dynamic_cast<const RegulatingControl*>(BaseClass_ptr1))
+	{
+		buffer << element->maxAllowedTargetValue;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_RegulatingControl_minAllowedTargetValue(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const RegulatingControl* element = dynamic_cast<const RegulatingControl*>(BaseClass_ptr1))
+	{
+		buffer << element->minAllowedTargetValue;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_RegulatingControl_targetDeadband(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const RegulatingControl* element = dynamic_cast<const RegulatingControl*>(BaseClass_ptr1))
+	{
+		buffer << element->targetDeadband;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_RegulatingControl_targetValue(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const RegulatingControl* element = dynamic_cast<const RegulatingControl*>(BaseClass_ptr1))
+	{
+		buffer << element->targetValue;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
+bool get_RegulatingControl_Terminal(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const RegulatingControl* element = dynamic_cast<const RegulatingControl*>(BaseClass_ptr1))
+	{
+		if (element->Terminal != 0)
+		{
+			BaseClass_list.push_back(element->Terminal);
+			return true;
+		}
+	}
+	return false;
+}
 
 
+bool get_RegulatingControl_mode(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const RegulatingControl* element = dynamic_cast<const RegulatingControl*>(BaseClass_ptr1))
+	{
+		buffer << element->mode;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
-
-
+bool get_RegulatingControl_targetValueUnitMultiplier(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const RegulatingControl* element = dynamic_cast<const RegulatingControl*>(BaseClass_ptr1))
+	{
+		buffer << element->targetValueUnitMultiplier;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 const char RegulatingControl::debugName[] = "RegulatingControl";
 const char* RegulatingControl::debugString() const
@@ -219,6 +371,30 @@ void RegulatingControl::addClassAssignFnsToMap(std::unordered_map<std::string, c
 	assign_map.insert(std::make_pair(std::string("cim:RegulatingControl.RegulatingCondEq"), &assign_RegulatingControl_RegulatingCondEq));
 	assign_map.insert(std::make_pair(std::string("cim:RegulatingControl.RegulationSchedule"), &assign_RegulatingControl_RegulationSchedule));
 	assign_map.insert(std::make_pair(std::string("cim:RegulatingControl.Terminal"), &assign_RegulatingControl_Terminal));
+}
+
+void RegulatingControl::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemResource::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:RegulatingControl.discrete", &get_RegulatingControl_discrete);
+	get_map.emplace("cim:RegulatingControl.enabled", &get_RegulatingControl_enabled);
+	get_map.emplace("cim:RegulatingControl.maxAllowedTargetValue", &get_RegulatingControl_maxAllowedTargetValue);
+	get_map.emplace("cim:RegulatingControl.minAllowedTargetValue", &get_RegulatingControl_minAllowedTargetValue);
+	get_map.emplace("cim:RegulatingControl.targetDeadband", &get_RegulatingControl_targetDeadband);
+	get_map.emplace("cim:RegulatingControl.targetValue", &get_RegulatingControl_targetValue);
+}
+
+void RegulatingControl::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	PowerSystemResource::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:RegulatingControl.Terminal", &get_RegulatingControl_Terminal);
+}
+
+void RegulatingControl::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemResource::addEnumGetFnsToMap(get_map);
+	get_map.emplace("cim:RegulatingControl.mode", &get_RegulatingControl_mode);
+	get_map.emplace("cim:RegulatingControl.targetValueUnitMultiplier", &get_RegulatingControl_targetValueUnitMultiplier);
 }
 
 const BaseClassDefiner RegulatingControl::declare()

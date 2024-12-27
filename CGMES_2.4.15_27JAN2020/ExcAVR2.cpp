@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "ExcAVR2.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PU.hpp"
@@ -24,6 +26,43 @@ using namespace CIMPP;
 
 ExcAVR2::ExcAVR2() {};
 ExcAVR2::~ExcAVR2() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:ExcAVR2.e1", { CGMESProfile::DY, } },
+	{ "cim:ExcAVR2.e2", { CGMESProfile::DY, } },
+	{ "cim:ExcAVR2.ka", { CGMESProfile::DY, } },
+	{ "cim:ExcAVR2.kf", { CGMESProfile::DY, } },
+	{ "cim:ExcAVR2.se1", { CGMESProfile::DY, } },
+	{ "cim:ExcAVR2.se2", { CGMESProfile::DY, } },
+	{ "cim:ExcAVR2.ta", { CGMESProfile::DY, } },
+	{ "cim:ExcAVR2.tb", { CGMESProfile::DY, } },
+	{ "cim:ExcAVR2.te", { CGMESProfile::DY, } },
+	{ "cim:ExcAVR2.tf1", { CGMESProfile::DY, } },
+	{ "cim:ExcAVR2.tf2", { CGMESProfile::DY, } },
+	{ "cim:ExcAVR2.vrmn", { CGMESProfile::DY, } },
+	{ "cim:ExcAVR2.vrmx", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+ExcAVR2::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+ExcAVR2::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_ExcAVR2_e1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -197,15 +236,187 @@ bool assign_ExcAVR2_vrmx(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
 
 
 
+bool get_ExcAVR2_e1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcAVR2* element = dynamic_cast<const ExcAVR2*>(BaseClass_ptr1))
+	{
+		buffer << element->e1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcAVR2_e2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcAVR2* element = dynamic_cast<const ExcAVR2*>(BaseClass_ptr1))
+	{
+		buffer << element->e2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcAVR2_ka(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcAVR2* element = dynamic_cast<const ExcAVR2*>(BaseClass_ptr1))
+	{
+		buffer << element->ka;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcAVR2_kf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcAVR2* element = dynamic_cast<const ExcAVR2*>(BaseClass_ptr1))
+	{
+		buffer << element->kf;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcAVR2_se1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcAVR2* element = dynamic_cast<const ExcAVR2*>(BaseClass_ptr1))
+	{
+		buffer << element->se1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcAVR2_se2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcAVR2* element = dynamic_cast<const ExcAVR2*>(BaseClass_ptr1))
+	{
+		buffer << element->se2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcAVR2_ta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcAVR2* element = dynamic_cast<const ExcAVR2*>(BaseClass_ptr1))
+	{
+		buffer << element->ta;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcAVR2_tb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcAVR2* element = dynamic_cast<const ExcAVR2*>(BaseClass_ptr1))
+	{
+		buffer << element->tb;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcAVR2_te(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcAVR2* element = dynamic_cast<const ExcAVR2*>(BaseClass_ptr1))
+	{
+		buffer << element->te;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcAVR2_tf1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcAVR2* element = dynamic_cast<const ExcAVR2*>(BaseClass_ptr1))
+	{
+		buffer << element->tf1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcAVR2_tf2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcAVR2* element = dynamic_cast<const ExcAVR2*>(BaseClass_ptr1))
+	{
+		buffer << element->tf2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcAVR2_vrmn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcAVR2* element = dynamic_cast<const ExcAVR2*>(BaseClass_ptr1))
+	{
+		buffer << element->vrmn;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcAVR2_vrmx(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcAVR2* element = dynamic_cast<const ExcAVR2*>(BaseClass_ptr1))
+	{
+		buffer << element->vrmx;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -239,6 +450,34 @@ void ExcAVR2::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_
 
 void ExcAVR2::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void ExcAVR2::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:ExcAVR2.e1", &get_ExcAVR2_e1);
+	get_map.emplace("cim:ExcAVR2.e2", &get_ExcAVR2_e2);
+	get_map.emplace("cim:ExcAVR2.ka", &get_ExcAVR2_ka);
+	get_map.emplace("cim:ExcAVR2.kf", &get_ExcAVR2_kf);
+	get_map.emplace("cim:ExcAVR2.se1", &get_ExcAVR2_se1);
+	get_map.emplace("cim:ExcAVR2.se2", &get_ExcAVR2_se2);
+	get_map.emplace("cim:ExcAVR2.ta", &get_ExcAVR2_ta);
+	get_map.emplace("cim:ExcAVR2.tb", &get_ExcAVR2_tb);
+	get_map.emplace("cim:ExcAVR2.te", &get_ExcAVR2_te);
+	get_map.emplace("cim:ExcAVR2.tf1", &get_ExcAVR2_tf1);
+	get_map.emplace("cim:ExcAVR2.tf2", &get_ExcAVR2_tf2);
+	get_map.emplace("cim:ExcAVR2.vrmn", &get_ExcAVR2_vrmn);
+	get_map.emplace("cim:ExcAVR2.vrmx", &get_ExcAVR2_vrmx);
+}
+
+void ExcAVR2::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addClassGetFnsToMap(get_map);
+}
+
+void ExcAVR2::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner ExcAVR2::declare()

@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "WindGenTurbineType2IEC.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "WindContRotorRIEC.hpp"
@@ -14,7 +16,31 @@ using namespace CIMPP;
 WindGenTurbineType2IEC::WindGenTurbineType2IEC() : WindContRotorRIEC(nullptr), WindPitchContEmulIEC(nullptr) {};
 WindGenTurbineType2IEC::~WindGenTurbineType2IEC() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:WindGenTurbineType2IEC.WindContRotorRIEC", { CGMESProfile::DY, } },
+	{ "cim:WindGenTurbineType2IEC.WindPitchContEmulIEC", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+WindGenTurbineType2IEC::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+WindGenTurbineType2IEC::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = WindTurbineType1or2IEC::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -34,7 +60,6 @@ bool assign_WindGenTurbineType2IEC_WindContRotorRIEC(BaseClass* BaseClass_ptr1, 
 	}
 	return false;
 }
-
 bool assign_WindPitchContEmulIEC_WindGenTurbineType2IEC(BaseClass*, BaseClass*);
 bool assign_WindGenTurbineType2IEC_WindPitchContEmulIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -51,6 +76,34 @@ bool assign_WindGenTurbineType2IEC_WindPitchContEmulIEC(BaseClass* BaseClass_ptr
 	}
 	return false;
 }
+
+
+bool get_WindGenTurbineType2IEC_WindContRotorRIEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const WindGenTurbineType2IEC* element = dynamic_cast<const WindGenTurbineType2IEC*>(BaseClass_ptr1))
+	{
+		if (element->WindContRotorRIEC != 0)
+		{
+			BaseClass_list.push_back(element->WindContRotorRIEC);
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_WindGenTurbineType2IEC_WindPitchContEmulIEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const WindGenTurbineType2IEC* element = dynamic_cast<const WindGenTurbineType2IEC*>(BaseClass_ptr1))
+	{
+		if (element->WindPitchContEmulIEC != 0)
+		{
+			BaseClass_list.push_back(element->WindPitchContEmulIEC);
+			return true;
+		}
+	}
+	return false;
+}
+
 
 const char WindGenTurbineType2IEC::debugName[] = "WindGenTurbineType2IEC";
 const char* WindGenTurbineType2IEC::debugString() const
@@ -71,6 +124,23 @@ void WindGenTurbineType2IEC::addClassAssignFnsToMap(std::unordered_map<std::stri
 {
 	assign_map.insert(std::make_pair(std::string("cim:WindGenTurbineType2IEC.WindContRotorRIEC"), &assign_WindGenTurbineType2IEC_WindContRotorRIEC));
 	assign_map.insert(std::make_pair(std::string("cim:WindGenTurbineType2IEC.WindPitchContEmulIEC"), &assign_WindGenTurbineType2IEC_WindPitchContEmulIEC));
+}
+
+void WindGenTurbineType2IEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	WindTurbineType1or2IEC::addPrimitiveGetFnsToMap(get_map);
+}
+
+void WindGenTurbineType2IEC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	WindTurbineType1or2IEC::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:WindGenTurbineType2IEC.WindContRotorRIEC", &get_WindGenTurbineType2IEC_WindContRotorRIEC);
+	get_map.emplace("cim:WindGenTurbineType2IEC.WindPitchContEmulIEC", &get_WindGenTurbineType2IEC_WindPitchContEmulIEC);
+}
+
+void WindGenTurbineType2IEC::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	WindTurbineType1or2IEC::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner WindGenTurbineType2IEC::declare()

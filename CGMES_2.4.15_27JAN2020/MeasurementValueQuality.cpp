@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "MeasurementValueQuality.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "MeasurementValue.hpp"
@@ -13,6 +15,30 @@ using namespace CIMPP;
 MeasurementValueQuality::MeasurementValueQuality() : MeasurementValue(nullptr) {};
 MeasurementValueQuality::~MeasurementValueQuality() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:MeasurementValueQuality.MeasurementValue", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+MeasurementValueQuality::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+MeasurementValueQuality::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = Quality61850::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -33,6 +59,21 @@ bool assign_MeasurementValueQuality_MeasurementValue(BaseClass* BaseClass_ptr1, 
 	return false;
 }
 
+
+bool get_MeasurementValueQuality_MeasurementValue(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const MeasurementValueQuality* element = dynamic_cast<const MeasurementValueQuality*>(BaseClass_ptr1))
+	{
+		if (element->MeasurementValue != 0)
+		{
+			BaseClass_list.push_back(element->MeasurementValue);
+			return true;
+		}
+	}
+	return false;
+}
+
+
 const char MeasurementValueQuality::debugName[] = "MeasurementValueQuality";
 const char* MeasurementValueQuality::debugString() const
 {
@@ -51,6 +92,22 @@ void MeasurementValueQuality::addPrimitiveAssignFnsToMap(std::unordered_map<std:
 void MeasurementValueQuality::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:MeasurementValueQuality.MeasurementValue"), &assign_MeasurementValueQuality_MeasurementValue));
+}
+
+void MeasurementValueQuality::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	Quality61850::addPrimitiveGetFnsToMap(get_map);
+}
+
+void MeasurementValueQuality::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	Quality61850::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:MeasurementValueQuality.MeasurementValue", &get_MeasurementValueQuality_MeasurementValue);
+}
+
+void MeasurementValueQuality::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	Quality61850::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner MeasurementValueQuality::declare()

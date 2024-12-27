@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "SetPoint.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "Float.hpp"
@@ -13,6 +15,32 @@ using namespace CIMPP;
 
 SetPoint::SetPoint() {};
 SetPoint::~SetPoint() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::OP,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:SetPoint.normalValue", { CGMESProfile::OP, } },
+	{ "cim:SetPoint.value", { CGMESProfile::OP, } },
+};
+
+std::list<CGMESProfile>
+SetPoint::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+SetPoint::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = AnalogControl::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_SetPoint_normalValue(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -43,6 +71,35 @@ bool assign_SetPoint_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
 
 
 
+bool get_SetPoint_normalValue(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const SetPoint* element = dynamic_cast<const SetPoint*>(BaseClass_ptr1))
+	{
+		buffer << element->normalValue;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_SetPoint_value(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const SetPoint* element = dynamic_cast<const SetPoint*>(BaseClass_ptr1))
+	{
+		buffer << element->value;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+
 
 const char SetPoint::debugName[] = "SetPoint";
 const char* SetPoint::debugString() const
@@ -63,6 +120,23 @@ void SetPoint::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign
 
 void SetPoint::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void SetPoint::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	AnalogControl::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:SetPoint.normalValue", &get_SetPoint_normalValue);
+	get_map.emplace("cim:SetPoint.value", &get_SetPoint_value);
+}
+
+void SetPoint::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	AnalogControl::addClassGetFnsToMap(get_map);
+}
+
+void SetPoint::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	AnalogControl::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner SetPoint::declare()

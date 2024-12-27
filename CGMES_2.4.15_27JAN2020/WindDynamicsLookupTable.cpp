@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "WindDynamicsLookupTable.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "WindContCurrLimIEC.hpp"
@@ -20,9 +22,37 @@ using namespace CIMPP;
 WindDynamicsLookupTable::WindDynamicsLookupTable() : WindContCurrLimIEC(nullptr), WindContPType3IEC(nullptr), WindContRotorRIEC(nullptr), WindPlantFreqPcontrolIEC(nullptr) {};
 WindDynamicsLookupTable::~WindDynamicsLookupTable() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:WindDynamicsLookupTable.WindContCurrLimIEC", { CGMESProfile::DY, } },
+	{ "cim:WindDynamicsLookupTable.WindContPType3IEC", { CGMESProfile::DY, } },
+	{ "cim:WindDynamicsLookupTable.WindContRotorRIEC", { CGMESProfile::DY, } },
+	{ "cim:WindDynamicsLookupTable.WindPlantFreqPcontrolIEC", { CGMESProfile::DY, } },
+	{ "cim:WindDynamicsLookupTable.input", { CGMESProfile::DY, } },
+	{ "cim:WindDynamicsLookupTable.lookupTableFunctionType", { CGMESProfile::DY, } },
+	{ "cim:WindDynamicsLookupTable.output", { CGMESProfile::DY, } },
+	{ "cim:WindDynamicsLookupTable.sequence", { CGMESProfile::DY, } },
+};
 
+std::list<CGMESProfile>
+WindDynamicsLookupTable::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
 
+std::map<std::string, std::list<CGMESProfile>>
+WindDynamicsLookupTable::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_WindDynamicsLookupTable_input(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -94,7 +124,6 @@ bool assign_WindDynamicsLookupTable_WindContCurrLimIEC(BaseClass* BaseClass_ptr1
 	}
 	return false;
 }
-
 bool assign_WindContPType3IEC_WindDynamicsLookupTable(BaseClass*, BaseClass*);
 bool assign_WindDynamicsLookupTable_WindContPType3IEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -111,7 +140,6 @@ bool assign_WindDynamicsLookupTable_WindContPType3IEC(BaseClass* BaseClass_ptr1,
 	}
 	return false;
 }
-
 bool assign_WindContRotorRIEC_WindDynamicsLookupTable(BaseClass*, BaseClass*);
 bool assign_WindDynamicsLookupTable_WindContRotorRIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -128,7 +156,6 @@ bool assign_WindDynamicsLookupTable_WindContRotorRIEC(BaseClass* BaseClass_ptr1,
 	}
 	return false;
 }
-
 bool assign_WindPlantFreqPcontrolIEC_WindDynamicsLookupTable(BaseClass*, BaseClass*);
 bool assign_WindDynamicsLookupTable_WindPlantFreqPcontrolIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -146,9 +173,115 @@ bool assign_WindDynamicsLookupTable_WindPlantFreqPcontrolIEC(BaseClass* BaseClas
 	return false;
 }
 
+bool get_WindDynamicsLookupTable_input(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindDynamicsLookupTable* element = dynamic_cast<const WindDynamicsLookupTable*>(BaseClass_ptr1))
+	{
+		buffer << element->input;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_WindDynamicsLookupTable_output(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindDynamicsLookupTable* element = dynamic_cast<const WindDynamicsLookupTable*>(BaseClass_ptr1))
+	{
+		buffer << element->output;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_WindDynamicsLookupTable_sequence(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindDynamicsLookupTable* element = dynamic_cast<const WindDynamicsLookupTable*>(BaseClass_ptr1))
+	{
+		buffer << element->sequence;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
+bool get_WindDynamicsLookupTable_WindContCurrLimIEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const WindDynamicsLookupTable* element = dynamic_cast<const WindDynamicsLookupTable*>(BaseClass_ptr1))
+	{
+		if (element->WindContCurrLimIEC != 0)
+		{
+			BaseClass_list.push_back(element->WindContCurrLimIEC);
+			return true;
+		}
+	}
+	return false;
+}
 
+bool get_WindDynamicsLookupTable_WindContPType3IEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const WindDynamicsLookupTable* element = dynamic_cast<const WindDynamicsLookupTable*>(BaseClass_ptr1))
+	{
+		if (element->WindContPType3IEC != 0)
+		{
+			BaseClass_list.push_back(element->WindContPType3IEC);
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_WindDynamicsLookupTable_WindContRotorRIEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const WindDynamicsLookupTable* element = dynamic_cast<const WindDynamicsLookupTable*>(BaseClass_ptr1))
+	{
+		if (element->WindContRotorRIEC != 0)
+		{
+			BaseClass_list.push_back(element->WindContRotorRIEC);
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_WindDynamicsLookupTable_WindPlantFreqPcontrolIEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const WindDynamicsLookupTable* element = dynamic_cast<const WindDynamicsLookupTable*>(BaseClass_ptr1))
+	{
+		if (element->WindPlantFreqPcontrolIEC != 0)
+		{
+			BaseClass_list.push_back(element->WindPlantFreqPcontrolIEC);
+			return true;
+		}
+	}
+	return false;
+}
+
+
+bool get_WindDynamicsLookupTable_lookupTableFunctionType(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindDynamicsLookupTable* element = dynamic_cast<const WindDynamicsLookupTable*>(BaseClass_ptr1))
+	{
+		buffer << element->lookupTableFunctionType;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 const char WindDynamicsLookupTable::debugName[] = "WindDynamicsLookupTable";
 const char* WindDynamicsLookupTable::debugString() const
@@ -175,6 +308,29 @@ void WindDynamicsLookupTable::addClassAssignFnsToMap(std::unordered_map<std::str
 	assign_map.insert(std::make_pair(std::string("cim:WindDynamicsLookupTable.WindContPType3IEC"), &assign_WindDynamicsLookupTable_WindContPType3IEC));
 	assign_map.insert(std::make_pair(std::string("cim:WindDynamicsLookupTable.WindContRotorRIEC"), &assign_WindDynamicsLookupTable_WindContRotorRIEC));
 	assign_map.insert(std::make_pair(std::string("cim:WindDynamicsLookupTable.WindPlantFreqPcontrolIEC"), &assign_WindDynamicsLookupTable_WindPlantFreqPcontrolIEC));
+}
+
+void WindDynamicsLookupTable::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:WindDynamicsLookupTable.input", &get_WindDynamicsLookupTable_input);
+	get_map.emplace("cim:WindDynamicsLookupTable.output", &get_WindDynamicsLookupTable_output);
+	get_map.emplace("cim:WindDynamicsLookupTable.sequence", &get_WindDynamicsLookupTable_sequence);
+}
+
+void WindDynamicsLookupTable::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:WindDynamicsLookupTable.WindContCurrLimIEC", &get_WindDynamicsLookupTable_WindContCurrLimIEC);
+	get_map.emplace("cim:WindDynamicsLookupTable.WindContPType3IEC", &get_WindDynamicsLookupTable_WindContPType3IEC);
+	get_map.emplace("cim:WindDynamicsLookupTable.WindContRotorRIEC", &get_WindDynamicsLookupTable_WindContRotorRIEC);
+	get_map.emplace("cim:WindDynamicsLookupTable.WindPlantFreqPcontrolIEC", &get_WindDynamicsLookupTable_WindPlantFreqPcontrolIEC);
+}
+
+void WindDynamicsLookupTable::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
+	get_map.emplace("cim:WindDynamicsLookupTable.lookupTableFunctionType", &get_WindDynamicsLookupTable_lookupTableFunctionType);
 }
 
 const BaseClassDefiner WindDynamicsLookupTable::declare()

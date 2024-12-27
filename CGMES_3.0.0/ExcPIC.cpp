@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "ExcPIC.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PU.hpp"
@@ -34,6 +36,53 @@ using namespace CIMPP;
 
 ExcPIC::ExcPIC() {};
 ExcPIC::~ExcPIC() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:ExcPIC.e1", { CGMESProfile::DY, } },
+	{ "cim:ExcPIC.e2", { CGMESProfile::DY, } },
+	{ "cim:ExcPIC.efdmax", { CGMESProfile::DY, } },
+	{ "cim:ExcPIC.efdmin", { CGMESProfile::DY, } },
+	{ "cim:ExcPIC.ka", { CGMESProfile::DY, } },
+	{ "cim:ExcPIC.kc", { CGMESProfile::DY, } },
+	{ "cim:ExcPIC.ke", { CGMESProfile::DY, } },
+	{ "cim:ExcPIC.kf", { CGMESProfile::DY, } },
+	{ "cim:ExcPIC.ki", { CGMESProfile::DY, } },
+	{ "cim:ExcPIC.kp", { CGMESProfile::DY, } },
+	{ "cim:ExcPIC.se1", { CGMESProfile::DY, } },
+	{ "cim:ExcPIC.se2", { CGMESProfile::DY, } },
+	{ "cim:ExcPIC.ta1", { CGMESProfile::DY, } },
+	{ "cim:ExcPIC.ta2", { CGMESProfile::DY, } },
+	{ "cim:ExcPIC.ta3", { CGMESProfile::DY, } },
+	{ "cim:ExcPIC.ta4", { CGMESProfile::DY, } },
+	{ "cim:ExcPIC.te", { CGMESProfile::DY, } },
+	{ "cim:ExcPIC.tf1", { CGMESProfile::DY, } },
+	{ "cim:ExcPIC.tf2", { CGMESProfile::DY, } },
+	{ "cim:ExcPIC.vr1", { CGMESProfile::DY, } },
+	{ "cim:ExcPIC.vr2", { CGMESProfile::DY, } },
+	{ "cim:ExcPIC.vrmax", { CGMESProfile::DY, } },
+	{ "cim:ExcPIC.vrmin", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+ExcPIC::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+ExcPIC::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_ExcPIC_e1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -337,25 +386,327 @@ bool assign_ExcPIC_vrmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
 
 
 
+bool get_ExcPIC_e1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcPIC* element = dynamic_cast<const ExcPIC*>(BaseClass_ptr1))
+	{
+		buffer << element->e1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcPIC_e2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcPIC* element = dynamic_cast<const ExcPIC*>(BaseClass_ptr1))
+	{
+		buffer << element->e2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcPIC_efdmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcPIC* element = dynamic_cast<const ExcPIC*>(BaseClass_ptr1))
+	{
+		buffer << element->efdmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcPIC_efdmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcPIC* element = dynamic_cast<const ExcPIC*>(BaseClass_ptr1))
+	{
+		buffer << element->efdmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcPIC_ka(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcPIC* element = dynamic_cast<const ExcPIC*>(BaseClass_ptr1))
+	{
+		buffer << element->ka;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcPIC_kc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcPIC* element = dynamic_cast<const ExcPIC*>(BaseClass_ptr1))
+	{
+		buffer << element->kc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcPIC_ke(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcPIC* element = dynamic_cast<const ExcPIC*>(BaseClass_ptr1))
+	{
+		buffer << element->ke;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcPIC_kf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcPIC* element = dynamic_cast<const ExcPIC*>(BaseClass_ptr1))
+	{
+		buffer << element->kf;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcPIC_ki(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcPIC* element = dynamic_cast<const ExcPIC*>(BaseClass_ptr1))
+	{
+		buffer << element->ki;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcPIC_kp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcPIC* element = dynamic_cast<const ExcPIC*>(BaseClass_ptr1))
+	{
+		buffer << element->kp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcPIC_se1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcPIC* element = dynamic_cast<const ExcPIC*>(BaseClass_ptr1))
+	{
+		buffer << element->se1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcPIC_se2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcPIC* element = dynamic_cast<const ExcPIC*>(BaseClass_ptr1))
+	{
+		buffer << element->se2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcPIC_ta1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcPIC* element = dynamic_cast<const ExcPIC*>(BaseClass_ptr1))
+	{
+		buffer << element->ta1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcPIC_ta2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcPIC* element = dynamic_cast<const ExcPIC*>(BaseClass_ptr1))
+	{
+		buffer << element->ta2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcPIC_ta3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcPIC* element = dynamic_cast<const ExcPIC*>(BaseClass_ptr1))
+	{
+		buffer << element->ta3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcPIC_ta4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcPIC* element = dynamic_cast<const ExcPIC*>(BaseClass_ptr1))
+	{
+		buffer << element->ta4;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcPIC_te(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcPIC* element = dynamic_cast<const ExcPIC*>(BaseClass_ptr1))
+	{
+		buffer << element->te;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcPIC_tf1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcPIC* element = dynamic_cast<const ExcPIC*>(BaseClass_ptr1))
+	{
+		buffer << element->tf1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcPIC_tf2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcPIC* element = dynamic_cast<const ExcPIC*>(BaseClass_ptr1))
+	{
+		buffer << element->tf2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcPIC_vr1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcPIC* element = dynamic_cast<const ExcPIC*>(BaseClass_ptr1))
+	{
+		buffer << element->vr1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcPIC_vr2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcPIC* element = dynamic_cast<const ExcPIC*>(BaseClass_ptr1))
+	{
+		buffer << element->vr2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcPIC_vrmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcPIC* element = dynamic_cast<const ExcPIC*>(BaseClass_ptr1))
+	{
+		buffer << element->vrmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcPIC_vrmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcPIC* element = dynamic_cast<const ExcPIC*>(BaseClass_ptr1))
+	{
+		buffer << element->vrmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -399,6 +750,44 @@ void ExcPIC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_f
 
 void ExcPIC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void ExcPIC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:ExcPIC.e1", &get_ExcPIC_e1);
+	get_map.emplace("cim:ExcPIC.e2", &get_ExcPIC_e2);
+	get_map.emplace("cim:ExcPIC.efdmax", &get_ExcPIC_efdmax);
+	get_map.emplace("cim:ExcPIC.efdmin", &get_ExcPIC_efdmin);
+	get_map.emplace("cim:ExcPIC.ka", &get_ExcPIC_ka);
+	get_map.emplace("cim:ExcPIC.kc", &get_ExcPIC_kc);
+	get_map.emplace("cim:ExcPIC.ke", &get_ExcPIC_ke);
+	get_map.emplace("cim:ExcPIC.kf", &get_ExcPIC_kf);
+	get_map.emplace("cim:ExcPIC.ki", &get_ExcPIC_ki);
+	get_map.emplace("cim:ExcPIC.kp", &get_ExcPIC_kp);
+	get_map.emplace("cim:ExcPIC.se1", &get_ExcPIC_se1);
+	get_map.emplace("cim:ExcPIC.se2", &get_ExcPIC_se2);
+	get_map.emplace("cim:ExcPIC.ta1", &get_ExcPIC_ta1);
+	get_map.emplace("cim:ExcPIC.ta2", &get_ExcPIC_ta2);
+	get_map.emplace("cim:ExcPIC.ta3", &get_ExcPIC_ta3);
+	get_map.emplace("cim:ExcPIC.ta4", &get_ExcPIC_ta4);
+	get_map.emplace("cim:ExcPIC.te", &get_ExcPIC_te);
+	get_map.emplace("cim:ExcPIC.tf1", &get_ExcPIC_tf1);
+	get_map.emplace("cim:ExcPIC.tf2", &get_ExcPIC_tf2);
+	get_map.emplace("cim:ExcPIC.vr1", &get_ExcPIC_vr1);
+	get_map.emplace("cim:ExcPIC.vr2", &get_ExcPIC_vr2);
+	get_map.emplace("cim:ExcPIC.vrmax", &get_ExcPIC_vrmax);
+	get_map.emplace("cim:ExcPIC.vrmin", &get_ExcPIC_vrmin);
+}
+
+void ExcPIC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addClassGetFnsToMap(get_map);
+}
+
+void ExcPIC::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner ExcPIC::declare()

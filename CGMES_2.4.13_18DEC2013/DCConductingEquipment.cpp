@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "DCConductingEquipment.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "DCTerminal.hpp"
@@ -13,6 +15,31 @@ using namespace CIMPP;
 DCConductingEquipment::DCConductingEquipment() {};
 DCConductingEquipment::~DCConductingEquipment() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+	CGMESProfile::TP,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:DCConductingEquipment.DCTerminals", { CGMESProfile::EQ, CGMESProfile::TP, } },
+};
+
+std::list<CGMESProfile>
+DCConductingEquipment::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+DCConductingEquipment::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = Equipment::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -33,6 +60,8 @@ bool assign_DCConductingEquipment_DCTerminals(BaseClass* BaseClass_ptr1, BaseCla
 	return false;
 }
 
+
+
 const char DCConductingEquipment::debugName[] = "DCConductingEquipment";
 const char* DCConductingEquipment::debugString() const
 {
@@ -51,6 +80,21 @@ void DCConductingEquipment::addPrimitiveAssignFnsToMap(std::unordered_map<std::s
 void DCConductingEquipment::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:DCConductingEquipment.DCTerminals"), &assign_DCConductingEquipment_DCTerminals));
+}
+
+void DCConductingEquipment::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	Equipment::addPrimitiveGetFnsToMap(get_map);
+}
+
+void DCConductingEquipment::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	Equipment::addClassGetFnsToMap(get_map);
+}
+
+void DCConductingEquipment::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	Equipment::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner DCConductingEquipment::declare()

@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "PFVArControllerType2UserDefined.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "ProprietaryParameterDynamics.hpp"
@@ -14,6 +16,31 @@ using namespace CIMPP;
 PFVArControllerType2UserDefined::PFVArControllerType2UserDefined() {};
 PFVArControllerType2UserDefined::~PFVArControllerType2UserDefined() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:PFVArControllerType2UserDefined.ProprietaryParameterDynamics", { CGMESProfile::DY, } },
+	{ "cim:PFVArControllerType2UserDefined.proprietary", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+PFVArControllerType2UserDefined::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+PFVArControllerType2UserDefined::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = PFVArControllerType2Dynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_PFVArControllerType2UserDefined_proprietary(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -47,6 +74,21 @@ bool assign_PFVArControllerType2UserDefined_ProprietaryParameterDynamics(BaseCla
 	return false;
 }
 
+bool get_PFVArControllerType2UserDefined_proprietary(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PFVArControllerType2UserDefined* element = dynamic_cast<const PFVArControllerType2UserDefined*>(BaseClass_ptr1))
+	{
+		buffer << element->proprietary;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+
 
 const char PFVArControllerType2UserDefined::debugName[] = "PFVArControllerType2UserDefined";
 const char* PFVArControllerType2UserDefined::debugString() const
@@ -67,6 +109,22 @@ void PFVArControllerType2UserDefined::addPrimitiveAssignFnsToMap(std::unordered_
 void PFVArControllerType2UserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:PFVArControllerType2UserDefined.ProprietaryParameterDynamics"), &assign_PFVArControllerType2UserDefined_ProprietaryParameterDynamics));
+}
+
+void PFVArControllerType2UserDefined::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PFVArControllerType2Dynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:PFVArControllerType2UserDefined.proprietary", &get_PFVArControllerType2UserDefined_proprietary);
+}
+
+void PFVArControllerType2UserDefined::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	PFVArControllerType2Dynamics::addClassGetFnsToMap(get_map);
+}
+
+void PFVArControllerType2UserDefined::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PFVArControllerType2Dynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner PFVArControllerType2UserDefined::declare()

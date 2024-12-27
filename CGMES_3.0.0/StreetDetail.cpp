@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "StreetDetail.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "String.hpp"
@@ -24,6 +26,43 @@ using namespace CIMPP;
 
 StreetDetail::StreetDetail() {};
 StreetDetail::~StreetDetail() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::GL,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:StreetDetail.addressGeneral", { CGMESProfile::GL, } },
+	{ "cim:StreetDetail.addressGeneral2", { CGMESProfile::GL, } },
+	{ "cim:StreetDetail.addressGeneral3", { CGMESProfile::GL, } },
+	{ "cim:StreetDetail.buildingName", { CGMESProfile::GL, } },
+	{ "cim:StreetDetail.code", { CGMESProfile::GL, } },
+	{ "cim:StreetDetail.floorIdentification", { CGMESProfile::GL, } },
+	{ "cim:StreetDetail.name", { CGMESProfile::GL, } },
+	{ "cim:StreetDetail.number", { CGMESProfile::GL, } },
+	{ "cim:StreetDetail.prefix", { CGMESProfile::GL, } },
+	{ "cim:StreetDetail.suffix", { CGMESProfile::GL, } },
+	{ "cim:StreetDetail.suiteNumber", { CGMESProfile::GL, } },
+	{ "cim:StreetDetail.type", { CGMESProfile::GL, } },
+	{ "cim:StreetDetail.withinTownLimits", { CGMESProfile::GL, } },
+};
+
+std::list<CGMESProfile>
+StreetDetail::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+StreetDetail::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_StreetDetail_addressGeneral(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -197,15 +236,187 @@ bool assign_StreetDetail_withinTownLimits(std::stringstream &buffer, BaseClass* 
 
 
 
+bool get_StreetDetail_addressGeneral(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const StreetDetail* element = dynamic_cast<const StreetDetail*>(BaseClass_ptr1))
+	{
+		buffer << element->addressGeneral;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_StreetDetail_addressGeneral2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const StreetDetail* element = dynamic_cast<const StreetDetail*>(BaseClass_ptr1))
+	{
+		buffer << element->addressGeneral2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_StreetDetail_addressGeneral3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const StreetDetail* element = dynamic_cast<const StreetDetail*>(BaseClass_ptr1))
+	{
+		buffer << element->addressGeneral3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_StreetDetail_buildingName(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const StreetDetail* element = dynamic_cast<const StreetDetail*>(BaseClass_ptr1))
+	{
+		buffer << element->buildingName;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_StreetDetail_code(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const StreetDetail* element = dynamic_cast<const StreetDetail*>(BaseClass_ptr1))
+	{
+		buffer << element->code;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_StreetDetail_floorIdentification(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const StreetDetail* element = dynamic_cast<const StreetDetail*>(BaseClass_ptr1))
+	{
+		buffer << element->floorIdentification;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_StreetDetail_name(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const StreetDetail* element = dynamic_cast<const StreetDetail*>(BaseClass_ptr1))
+	{
+		buffer << element->name;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_StreetDetail_number(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const StreetDetail* element = dynamic_cast<const StreetDetail*>(BaseClass_ptr1))
+	{
+		buffer << element->number;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_StreetDetail_prefix(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const StreetDetail* element = dynamic_cast<const StreetDetail*>(BaseClass_ptr1))
+	{
+		buffer << element->prefix;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_StreetDetail_suffix(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const StreetDetail* element = dynamic_cast<const StreetDetail*>(BaseClass_ptr1))
+	{
+		buffer << element->suffix;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_StreetDetail_suiteNumber(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const StreetDetail* element = dynamic_cast<const StreetDetail*>(BaseClass_ptr1))
+	{
+		buffer << element->suiteNumber;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_StreetDetail_type(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const StreetDetail* element = dynamic_cast<const StreetDetail*>(BaseClass_ptr1))
+	{
+		buffer << element->type;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_StreetDetail_withinTownLimits(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const StreetDetail* element = dynamic_cast<const StreetDetail*>(BaseClass_ptr1))
+	{
+		buffer << element->withinTownLimits;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -239,6 +450,34 @@ void StreetDetail::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, as
 
 void StreetDetail::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void StreetDetail::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	BaseClass::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:StreetDetail.addressGeneral", &get_StreetDetail_addressGeneral);
+	get_map.emplace("cim:StreetDetail.addressGeneral2", &get_StreetDetail_addressGeneral2);
+	get_map.emplace("cim:StreetDetail.addressGeneral3", &get_StreetDetail_addressGeneral3);
+	get_map.emplace("cim:StreetDetail.buildingName", &get_StreetDetail_buildingName);
+	get_map.emplace("cim:StreetDetail.code", &get_StreetDetail_code);
+	get_map.emplace("cim:StreetDetail.floorIdentification", &get_StreetDetail_floorIdentification);
+	get_map.emplace("cim:StreetDetail.name", &get_StreetDetail_name);
+	get_map.emplace("cim:StreetDetail.number", &get_StreetDetail_number);
+	get_map.emplace("cim:StreetDetail.prefix", &get_StreetDetail_prefix);
+	get_map.emplace("cim:StreetDetail.suffix", &get_StreetDetail_suffix);
+	get_map.emplace("cim:StreetDetail.suiteNumber", &get_StreetDetail_suiteNumber);
+	get_map.emplace("cim:StreetDetail.type", &get_StreetDetail_type);
+	get_map.emplace("cim:StreetDetail.withinTownLimits", &get_StreetDetail_withinTownLimits);
+}
+
+void StreetDetail::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	BaseClass::addClassGetFnsToMap(get_map);
+}
+
+void StreetDetail::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner StreetDetail::declare()

@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "OverexcLimX2.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PU.hpp"
@@ -22,6 +24,41 @@ using namespace CIMPP;
 
 OverexcLimX2::OverexcLimX2() {};
 OverexcLimX2::~OverexcLimX2() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:OverexcLimX2.efd1", { CGMESProfile::DY, } },
+	{ "cim:OverexcLimX2.efd2", { CGMESProfile::DY, } },
+	{ "cim:OverexcLimX2.efd3", { CGMESProfile::DY, } },
+	{ "cim:OverexcLimX2.efddes", { CGMESProfile::DY, } },
+	{ "cim:OverexcLimX2.efdrated", { CGMESProfile::DY, } },
+	{ "cim:OverexcLimX2.kmx", { CGMESProfile::DY, } },
+	{ "cim:OverexcLimX2.m", { CGMESProfile::DY, } },
+	{ "cim:OverexcLimX2.t1", { CGMESProfile::DY, } },
+	{ "cim:OverexcLimX2.t2", { CGMESProfile::DY, } },
+	{ "cim:OverexcLimX2.t3", { CGMESProfile::DY, } },
+	{ "cim:OverexcLimX2.vlow", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+OverexcLimX2::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+OverexcLimX2::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = OverexcitationLimiterDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_OverexcLimX2_efd1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -169,13 +206,159 @@ bool assign_OverexcLimX2_vlow(std::stringstream &buffer, BaseClass* BaseClass_pt
 
 
 
+bool get_OverexcLimX2_efd1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const OverexcLimX2* element = dynamic_cast<const OverexcLimX2*>(BaseClass_ptr1))
+	{
+		buffer << element->efd1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_OverexcLimX2_efd2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const OverexcLimX2* element = dynamic_cast<const OverexcLimX2*>(BaseClass_ptr1))
+	{
+		buffer << element->efd2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_OverexcLimX2_efd3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const OverexcLimX2* element = dynamic_cast<const OverexcLimX2*>(BaseClass_ptr1))
+	{
+		buffer << element->efd3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_OverexcLimX2_efddes(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const OverexcLimX2* element = dynamic_cast<const OverexcLimX2*>(BaseClass_ptr1))
+	{
+		buffer << element->efddes;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_OverexcLimX2_efdrated(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const OverexcLimX2* element = dynamic_cast<const OverexcLimX2*>(BaseClass_ptr1))
+	{
+		buffer << element->efdrated;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_OverexcLimX2_kmx(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const OverexcLimX2* element = dynamic_cast<const OverexcLimX2*>(BaseClass_ptr1))
+	{
+		buffer << element->kmx;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_OverexcLimX2_m(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const OverexcLimX2* element = dynamic_cast<const OverexcLimX2*>(BaseClass_ptr1))
+	{
+		buffer << element->m;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_OverexcLimX2_t1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const OverexcLimX2* element = dynamic_cast<const OverexcLimX2*>(BaseClass_ptr1))
+	{
+		buffer << element->t1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_OverexcLimX2_t2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const OverexcLimX2* element = dynamic_cast<const OverexcLimX2*>(BaseClass_ptr1))
+	{
+		buffer << element->t2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_OverexcLimX2_t3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const OverexcLimX2* element = dynamic_cast<const OverexcLimX2*>(BaseClass_ptr1))
+	{
+		buffer << element->t3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_OverexcLimX2_vlow(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const OverexcLimX2* element = dynamic_cast<const OverexcLimX2*>(BaseClass_ptr1))
+	{
+		buffer << element->vlow;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -207,6 +390,32 @@ void OverexcLimX2::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, as
 
 void OverexcLimX2::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void OverexcLimX2::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	OverexcitationLimiterDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:OverexcLimX2.efd1", &get_OverexcLimX2_efd1);
+	get_map.emplace("cim:OverexcLimX2.efd2", &get_OverexcLimX2_efd2);
+	get_map.emplace("cim:OverexcLimX2.efd3", &get_OverexcLimX2_efd3);
+	get_map.emplace("cim:OverexcLimX2.efddes", &get_OverexcLimX2_efddes);
+	get_map.emplace("cim:OverexcLimX2.efdrated", &get_OverexcLimX2_efdrated);
+	get_map.emplace("cim:OverexcLimX2.kmx", &get_OverexcLimX2_kmx);
+	get_map.emplace("cim:OverexcLimX2.m", &get_OverexcLimX2_m);
+	get_map.emplace("cim:OverexcLimX2.t1", &get_OverexcLimX2_t1);
+	get_map.emplace("cim:OverexcLimX2.t2", &get_OverexcLimX2_t2);
+	get_map.emplace("cim:OverexcLimX2.t3", &get_OverexcLimX2_t3);
+	get_map.emplace("cim:OverexcLimX2.vlow", &get_OverexcLimX2_vlow);
+}
+
+void OverexcLimX2::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	OverexcitationLimiterDynamics::addClassGetFnsToMap(get_map);
+}
+
+void OverexcLimX2::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	OverexcitationLimiterDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner OverexcLimX2::declare()

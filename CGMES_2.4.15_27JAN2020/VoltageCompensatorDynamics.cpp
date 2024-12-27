@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "VoltageCompensatorDynamics.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "ExcitationSystemDynamics.hpp"
@@ -14,7 +16,31 @@ using namespace CIMPP;
 VoltageCompensatorDynamics::VoltageCompensatorDynamics() : ExcitationSystemDynamics(nullptr), RemoteInputSignal(nullptr) {};
 VoltageCompensatorDynamics::~VoltageCompensatorDynamics() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:VoltageCompensatorDynamics.ExcitationSystemDynamics", { CGMESProfile::DY, } },
+	{ "cim:VoltageCompensatorDynamics.RemoteInputSignal", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+VoltageCompensatorDynamics::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+VoltageCompensatorDynamics::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = DynamicsFunctionBlock::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -34,7 +60,6 @@ bool assign_VoltageCompensatorDynamics_ExcitationSystemDynamics(BaseClass* BaseC
 	}
 	return false;
 }
-
 bool assign_RemoteInputSignal_VoltageCompensatorDynamics(BaseClass*, BaseClass*);
 bool assign_VoltageCompensatorDynamics_RemoteInputSignal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -51,6 +76,21 @@ bool assign_VoltageCompensatorDynamics_RemoteInputSignal(BaseClass* BaseClass_pt
 	}
 	return false;
 }
+
+
+bool get_VoltageCompensatorDynamics_ExcitationSystemDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const VoltageCompensatorDynamics* element = dynamic_cast<const VoltageCompensatorDynamics*>(BaseClass_ptr1))
+	{
+		if (element->ExcitationSystemDynamics != 0)
+		{
+			BaseClass_list.push_back(element->ExcitationSystemDynamics);
+			return true;
+		}
+	}
+	return false;
+}
+
 
 const char VoltageCompensatorDynamics::debugName[] = "VoltageCompensatorDynamics";
 const char* VoltageCompensatorDynamics::debugString() const
@@ -71,6 +111,22 @@ void VoltageCompensatorDynamics::addClassAssignFnsToMap(std::unordered_map<std::
 {
 	assign_map.insert(std::make_pair(std::string("cim:VoltageCompensatorDynamics.ExcitationSystemDynamics"), &assign_VoltageCompensatorDynamics_ExcitationSystemDynamics));
 	assign_map.insert(std::make_pair(std::string("cim:VoltageCompensatorDynamics.RemoteInputSignal"), &assign_VoltageCompensatorDynamics_RemoteInputSignal));
+}
+
+void VoltageCompensatorDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	DynamicsFunctionBlock::addPrimitiveGetFnsToMap(get_map);
+}
+
+void VoltageCompensatorDynamics::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	DynamicsFunctionBlock::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:VoltageCompensatorDynamics.ExcitationSystemDynamics", &get_VoltageCompensatorDynamics_ExcitationSystemDynamics);
+}
+
+void VoltageCompensatorDynamics::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	DynamicsFunctionBlock::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner VoltageCompensatorDynamics::declare()

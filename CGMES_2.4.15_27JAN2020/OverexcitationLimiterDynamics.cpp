@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "OverexcitationLimiterDynamics.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "ExcitationSystemDynamics.hpp"
@@ -13,6 +15,30 @@ using namespace CIMPP;
 OverexcitationLimiterDynamics::OverexcitationLimiterDynamics() : ExcitationSystemDynamics(nullptr) {};
 OverexcitationLimiterDynamics::~OverexcitationLimiterDynamics() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:OverexcitationLimiterDynamics.ExcitationSystemDynamics", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+OverexcitationLimiterDynamics::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+OverexcitationLimiterDynamics::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = DynamicsFunctionBlock::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -33,6 +59,21 @@ bool assign_OverexcitationLimiterDynamics_ExcitationSystemDynamics(BaseClass* Ba
 	return false;
 }
 
+
+bool get_OverexcitationLimiterDynamics_ExcitationSystemDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const OverexcitationLimiterDynamics* element = dynamic_cast<const OverexcitationLimiterDynamics*>(BaseClass_ptr1))
+	{
+		if (element->ExcitationSystemDynamics != 0)
+		{
+			BaseClass_list.push_back(element->ExcitationSystemDynamics);
+			return true;
+		}
+	}
+	return false;
+}
+
+
 const char OverexcitationLimiterDynamics::debugName[] = "OverexcitationLimiterDynamics";
 const char* OverexcitationLimiterDynamics::debugString() const
 {
@@ -51,6 +92,22 @@ void OverexcitationLimiterDynamics::addPrimitiveAssignFnsToMap(std::unordered_ma
 void OverexcitationLimiterDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:OverexcitationLimiterDynamics.ExcitationSystemDynamics"), &assign_OverexcitationLimiterDynamics_ExcitationSystemDynamics));
+}
+
+void OverexcitationLimiterDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	DynamicsFunctionBlock::addPrimitiveGetFnsToMap(get_map);
+}
+
+void OverexcitationLimiterDynamics::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	DynamicsFunctionBlock::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:OverexcitationLimiterDynamics.ExcitationSystemDynamics", &get_OverexcitationLimiterDynamics_ExcitationSystemDynamics);
+}
+
+void OverexcitationLimiterDynamics::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	DynamicsFunctionBlock::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner OverexcitationLimiterDynamics::declare()

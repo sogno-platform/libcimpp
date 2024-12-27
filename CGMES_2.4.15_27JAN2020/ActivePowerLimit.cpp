@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "ActivePowerLimit.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "ActivePower.hpp"
@@ -12,6 +14,31 @@ using namespace CIMPP;
 
 ActivePowerLimit::ActivePowerLimit() {};
 ActivePowerLimit::~ActivePowerLimit() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:ActivePowerLimit.value", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+ActivePowerLimit::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+ActivePowerLimit::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = OperationalLimit::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_ActivePowerLimit_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -24,6 +51,22 @@ bool assign_ActivePowerLimit_value(std::stringstream &buffer, BaseClass* BaseCla
 		else
 			return true;
 	}
+	return false;
+}
+
+
+
+bool get_ActivePowerLimit_value(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ActivePowerLimit* element = dynamic_cast<const ActivePowerLimit*>(BaseClass_ptr1))
+	{
+		buffer << element->value;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
 	return false;
 }
 
@@ -47,6 +90,22 @@ void ActivePowerLimit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string
 
 void ActivePowerLimit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void ActivePowerLimit::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	OperationalLimit::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:ActivePowerLimit.value", &get_ActivePowerLimit_value);
+}
+
+void ActivePowerLimit::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	OperationalLimit::addClassGetFnsToMap(get_map);
+}
+
+void ActivePowerLimit::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	OperationalLimit::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner ActivePowerLimit::declare()

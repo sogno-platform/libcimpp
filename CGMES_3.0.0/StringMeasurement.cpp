@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "StringMeasurement.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "StringMeasurementValue.hpp"
@@ -13,6 +15,30 @@ using namespace CIMPP;
 StringMeasurement::StringMeasurement() {};
 StringMeasurement::~StringMeasurement() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::OP,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:StringMeasurement.StringMeasurementValues", { CGMESProfile::OP, } },
+};
+
+std::list<CGMESProfile>
+StringMeasurement::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+StringMeasurement::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = Measurement::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -33,6 +59,8 @@ bool assign_StringMeasurement_StringMeasurementValues(BaseClass* BaseClass_ptr1,
 	return false;
 }
 
+
+
 const char StringMeasurement::debugName[] = "StringMeasurement";
 const char* StringMeasurement::debugString() const
 {
@@ -51,6 +79,21 @@ void StringMeasurement::addPrimitiveAssignFnsToMap(std::unordered_map<std::strin
 void StringMeasurement::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:StringMeasurement.StringMeasurementValues"), &assign_StringMeasurement_StringMeasurementValues));
+}
+
+void StringMeasurement::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	Measurement::addPrimitiveGetFnsToMap(get_map);
+}
+
+void StringMeasurement::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	Measurement::addClassGetFnsToMap(get_map);
+}
+
+void StringMeasurement::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	Measurement::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner StringMeasurement::declare()

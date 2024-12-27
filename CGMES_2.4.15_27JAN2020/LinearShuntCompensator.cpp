@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "LinearShuntCompensator.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "Susceptance.hpp"
@@ -15,6 +17,35 @@ using namespace CIMPP;
 
 LinearShuntCompensator::LinearShuntCompensator() {};
 LinearShuntCompensator::~LinearShuntCompensator() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+	CGMESProfile::SSH,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:LinearShuntCompensator.b0PerSection", { CGMESProfile::EQ, } },
+	{ "cim:LinearShuntCompensator.bPerSection", { CGMESProfile::EQ, } },
+	{ "cim:LinearShuntCompensator.g0PerSection", { CGMESProfile::EQ, } },
+	{ "cim:LinearShuntCompensator.gPerSection", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+LinearShuntCompensator::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+LinearShuntCompensator::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = ShuntCompensator::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_LinearShuntCompensator_b0PerSection(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -71,6 +102,61 @@ bool assign_LinearShuntCompensator_gPerSection(std::stringstream &buffer, BaseCl
 
 
 
+bool get_LinearShuntCompensator_b0PerSection(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const LinearShuntCompensator* element = dynamic_cast<const LinearShuntCompensator*>(BaseClass_ptr1))
+	{
+		buffer << element->b0PerSection;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_LinearShuntCompensator_bPerSection(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const LinearShuntCompensator* element = dynamic_cast<const LinearShuntCompensator*>(BaseClass_ptr1))
+	{
+		buffer << element->bPerSection;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_LinearShuntCompensator_g0PerSection(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const LinearShuntCompensator* element = dynamic_cast<const LinearShuntCompensator*>(BaseClass_ptr1))
+	{
+		buffer << element->g0PerSection;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_LinearShuntCompensator_gPerSection(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const LinearShuntCompensator* element = dynamic_cast<const LinearShuntCompensator*>(BaseClass_ptr1))
+	{
+		buffer << element->gPerSection;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -95,6 +181,25 @@ void LinearShuntCompensator::addPrimitiveAssignFnsToMap(std::unordered_map<std::
 
 void LinearShuntCompensator::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void LinearShuntCompensator::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ShuntCompensator::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:LinearShuntCompensator.b0PerSection", &get_LinearShuntCompensator_b0PerSection);
+	get_map.emplace("cim:LinearShuntCompensator.bPerSection", &get_LinearShuntCompensator_bPerSection);
+	get_map.emplace("cim:LinearShuntCompensator.g0PerSection", &get_LinearShuntCompensator_g0PerSection);
+	get_map.emplace("cim:LinearShuntCompensator.gPerSection", &get_LinearShuntCompensator_gPerSection);
+}
+
+void LinearShuntCompensator::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	ShuntCompensator::addClassGetFnsToMap(get_map);
+}
+
+void LinearShuntCompensator::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ShuntCompensator::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner LinearShuntCompensator::declare()

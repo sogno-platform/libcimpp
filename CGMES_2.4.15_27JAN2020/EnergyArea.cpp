@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "EnergyArea.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "ControlArea.hpp"
@@ -13,6 +15,30 @@ using namespace CIMPP;
 EnergyArea::EnergyArea() : ControlArea(nullptr) {};
 EnergyArea::~EnergyArea() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:EnergyArea.ControlArea", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+EnergyArea::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+EnergyArea::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -33,6 +59,8 @@ bool assign_EnergyArea_ControlArea(BaseClass* BaseClass_ptr1, BaseClass* BaseCla
 	return false;
 }
 
+
+
 const char EnergyArea::debugName[] = "EnergyArea";
 const char* EnergyArea::debugString() const
 {
@@ -51,6 +79,21 @@ void EnergyArea::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assi
 void EnergyArea::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:EnergyArea.ControlArea"), &assign_EnergyArea_ControlArea));
+}
+
+void EnergyArea::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+}
+
+void EnergyArea::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+}
+
+void EnergyArea::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner EnergyArea::declare()

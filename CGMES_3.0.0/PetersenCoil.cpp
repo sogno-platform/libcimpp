@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "PetersenCoil.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PetersenCoilModeKind.hpp"
@@ -18,6 +20,38 @@ using namespace CIMPP;
 
 PetersenCoil::PetersenCoil() {};
 PetersenCoil::~PetersenCoil() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+	CGMESProfile::SC,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:PetersenCoil.mode", { CGMESProfile::SC, } },
+	{ "cim:PetersenCoil.nominalU", { CGMESProfile::SC, } },
+	{ "cim:PetersenCoil.offsetCurrent", { CGMESProfile::SC, } },
+	{ "cim:PetersenCoil.positionCurrent", { CGMESProfile::SC, } },
+	{ "cim:PetersenCoil.xGroundMax", { CGMESProfile::SC, } },
+	{ "cim:PetersenCoil.xGroundMin", { CGMESProfile::SC, } },
+	{ "cim:PetersenCoil.xGroundNominal", { CGMESProfile::SC, } },
+};
+
+std::list<CGMESProfile>
+PetersenCoil::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+PetersenCoil::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = EarthFaultCompensator::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_PetersenCoil_mode(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -113,11 +147,105 @@ bool assign_PetersenCoil_xGroundNominal(std::stringstream &buffer, BaseClass* Ba
 
 
 
+bool get_PetersenCoil_nominalU(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PetersenCoil* element = dynamic_cast<const PetersenCoil*>(BaseClass_ptr1))
+	{
+		buffer << element->nominalU;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PetersenCoil_offsetCurrent(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PetersenCoil* element = dynamic_cast<const PetersenCoil*>(BaseClass_ptr1))
+	{
+		buffer << element->offsetCurrent;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PetersenCoil_positionCurrent(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PetersenCoil* element = dynamic_cast<const PetersenCoil*>(BaseClass_ptr1))
+	{
+		buffer << element->positionCurrent;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PetersenCoil_xGroundMax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PetersenCoil* element = dynamic_cast<const PetersenCoil*>(BaseClass_ptr1))
+	{
+		buffer << element->xGroundMax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PetersenCoil_xGroundMin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PetersenCoil* element = dynamic_cast<const PetersenCoil*>(BaseClass_ptr1))
+	{
+		buffer << element->xGroundMin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PetersenCoil_xGroundNominal(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PetersenCoil* element = dynamic_cast<const PetersenCoil*>(BaseClass_ptr1))
+	{
+		buffer << element->xGroundNominal;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
-
-
+bool get_PetersenCoil_mode(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PetersenCoil* element = dynamic_cast<const PetersenCoil*>(BaseClass_ptr1))
+	{
+		buffer << element->mode;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 const char PetersenCoil::debugName[] = "PetersenCoil";
 const char* PetersenCoil::debugString() const
@@ -143,6 +271,28 @@ void PetersenCoil::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, as
 
 void PetersenCoil::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void PetersenCoil::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	EarthFaultCompensator::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:PetersenCoil.nominalU", &get_PetersenCoil_nominalU);
+	get_map.emplace("cim:PetersenCoil.offsetCurrent", &get_PetersenCoil_offsetCurrent);
+	get_map.emplace("cim:PetersenCoil.positionCurrent", &get_PetersenCoil_positionCurrent);
+	get_map.emplace("cim:PetersenCoil.xGroundMax", &get_PetersenCoil_xGroundMax);
+	get_map.emplace("cim:PetersenCoil.xGroundMin", &get_PetersenCoil_xGroundMin);
+	get_map.emplace("cim:PetersenCoil.xGroundNominal", &get_PetersenCoil_xGroundNominal);
+}
+
+void PetersenCoil::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	EarthFaultCompensator::addClassGetFnsToMap(get_map);
+}
+
+void PetersenCoil::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	EarthFaultCompensator::addEnumGetFnsToMap(get_map);
+	get_map.emplace("cim:PetersenCoil.mode", &get_PetersenCoil_mode);
 }
 
 const BaseClassDefiner PetersenCoil::declare()

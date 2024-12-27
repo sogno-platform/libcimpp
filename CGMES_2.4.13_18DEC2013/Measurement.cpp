@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "Measurement.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PowerSystemResource.hpp"
@@ -18,7 +20,35 @@ using namespace CIMPP;
 Measurement::Measurement() : PowerSystemResource(nullptr), Terminal(nullptr) {};
 Measurement::~Measurement() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:Measurement.PowerSystemResource", { CGMESProfile::EQ, } },
+	{ "cim:Measurement.Terminal", { CGMESProfile::EQ, } },
+	{ "cim:Measurement.measurementType", { CGMESProfile::EQ, } },
+	{ "cim:Measurement.phases", { CGMESProfile::EQ, } },
+	{ "cim:Measurement.unitMultiplier", { CGMESProfile::EQ, } },
+	{ "cim:Measurement.unitSymbol", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+Measurement::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+Measurement::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_Measurement_measurementType(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -90,7 +120,6 @@ bool assign_Measurement_PowerSystemResource(BaseClass* BaseClass_ptr1, BaseClass
 	}
 	return false;
 }
-
 bool assign_ACDCTerminal_Measurements(BaseClass*, BaseClass*);
 bool assign_Measurement_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -108,9 +137,89 @@ bool assign_Measurement_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass
 	return false;
 }
 
+bool get_Measurement_measurementType(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Measurement* element = dynamic_cast<const Measurement*>(BaseClass_ptr1))
+	{
+		buffer << element->measurementType;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
+bool get_Measurement_PowerSystemResource(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const Measurement* element = dynamic_cast<const Measurement*>(BaseClass_ptr1))
+	{
+		if (element->PowerSystemResource != 0)
+		{
+			BaseClass_list.push_back(element->PowerSystemResource);
+			return true;
+		}
+	}
+	return false;
+}
 
+bool get_Measurement_Terminal(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const Measurement* element = dynamic_cast<const Measurement*>(BaseClass_ptr1))
+	{
+		if (element->Terminal != 0)
+		{
+			BaseClass_list.push_back(element->Terminal);
+			return true;
+		}
+	}
+	return false;
+}
+
+
+bool get_Measurement_phases(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Measurement* element = dynamic_cast<const Measurement*>(BaseClass_ptr1))
+	{
+		buffer << element->phases;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Measurement_unitMultiplier(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Measurement* element = dynamic_cast<const Measurement*>(BaseClass_ptr1))
+	{
+		buffer << element->unitMultiplier;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Measurement_unitSymbol(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Measurement* element = dynamic_cast<const Measurement*>(BaseClass_ptr1))
+	{
+		buffer << element->unitSymbol;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 const char Measurement::debugName[] = "Measurement";
 const char* Measurement::debugString() const
@@ -135,6 +244,27 @@ void Measurement::addClassAssignFnsToMap(std::unordered_map<std::string, class_a
 {
 	assign_map.insert(std::make_pair(std::string("cim:Measurement.PowerSystemResource"), &assign_Measurement_PowerSystemResource));
 	assign_map.insert(std::make_pair(std::string("cim:Measurement.Terminal"), &assign_Measurement_Terminal));
+}
+
+void Measurement::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:Measurement.measurementType", &get_Measurement_measurementType);
+}
+
+void Measurement::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:Measurement.PowerSystemResource", &get_Measurement_PowerSystemResource);
+	get_map.emplace("cim:Measurement.Terminal", &get_Measurement_Terminal);
+}
+
+void Measurement::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
+	get_map.emplace("cim:Measurement.phases", &get_Measurement_phases);
+	get_map.emplace("cim:Measurement.unitMultiplier", &get_Measurement_unitMultiplier);
+	get_map.emplace("cim:Measurement.unitSymbol", &get_Measurement_unitSymbol);
 }
 
 const BaseClassDefiner Measurement::declare()

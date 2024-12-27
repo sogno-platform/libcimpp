@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "AccumulatorLimit.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "AccumulatorLimitSet.hpp"
@@ -14,6 +16,31 @@ using namespace CIMPP;
 AccumulatorLimit::AccumulatorLimit() : LimitSet(nullptr) {};
 AccumulatorLimit::~AccumulatorLimit() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::OP,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:AccumulatorLimit.LimitSet", { CGMESProfile::OP, } },
+	{ "cim:AccumulatorLimit.value", { CGMESProfile::OP, } },
+};
+
+std::list<CGMESProfile>
+AccumulatorLimit::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+AccumulatorLimit::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = Limit::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_AccumulatorLimit_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -47,6 +74,34 @@ bool assign_AccumulatorLimit_LimitSet(BaseClass* BaseClass_ptr1, BaseClass* Base
 	return false;
 }
 
+bool get_AccumulatorLimit_value(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const AccumulatorLimit* element = dynamic_cast<const AccumulatorLimit*>(BaseClass_ptr1))
+	{
+		buffer << element->value;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+
+bool get_AccumulatorLimit_LimitSet(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const AccumulatorLimit* element = dynamic_cast<const AccumulatorLimit*>(BaseClass_ptr1))
+	{
+		if (element->LimitSet != 0)
+		{
+			BaseClass_list.push_back(element->LimitSet);
+			return true;
+		}
+	}
+	return false;
+}
+
 
 const char AccumulatorLimit::debugName[] = "AccumulatorLimit";
 const char* AccumulatorLimit::debugString() const
@@ -67,6 +122,23 @@ void AccumulatorLimit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string
 void AccumulatorLimit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:AccumulatorLimit.LimitSet"), &assign_AccumulatorLimit_LimitSet));
+}
+
+void AccumulatorLimit::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	Limit::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:AccumulatorLimit.value", &get_AccumulatorLimit_value);
+}
+
+void AccumulatorLimit::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	Limit::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:AccumulatorLimit.LimitSet", &get_AccumulatorLimit_LimitSet);
+}
+
+void AccumulatorLimit::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	Limit::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner AccumulatorLimit::declare()

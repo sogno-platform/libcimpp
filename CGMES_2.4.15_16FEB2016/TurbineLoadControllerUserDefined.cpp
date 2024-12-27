@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "TurbineLoadControllerUserDefined.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "ProprietaryParameterDynamics.hpp"
@@ -14,6 +16,31 @@ using namespace CIMPP;
 TurbineLoadControllerUserDefined::TurbineLoadControllerUserDefined() {};
 TurbineLoadControllerUserDefined::~TurbineLoadControllerUserDefined() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:TurbineLoadControllerUserDefined.ProprietaryParameterDynamics", { CGMESProfile::DY, } },
+	{ "cim:TurbineLoadControllerUserDefined.proprietary", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+TurbineLoadControllerUserDefined::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+TurbineLoadControllerUserDefined::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = TurbineLoadControllerDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_TurbineLoadControllerUserDefined_proprietary(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -47,6 +74,21 @@ bool assign_TurbineLoadControllerUserDefined_ProprietaryParameterDynamics(BaseCl
 	return false;
 }
 
+bool get_TurbineLoadControllerUserDefined_proprietary(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TurbineLoadControllerUserDefined* element = dynamic_cast<const TurbineLoadControllerUserDefined*>(BaseClass_ptr1))
+	{
+		buffer << element->proprietary;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+
 
 const char TurbineLoadControllerUserDefined::debugName[] = "TurbineLoadControllerUserDefined";
 const char* TurbineLoadControllerUserDefined::debugString() const
@@ -67,6 +109,22 @@ void TurbineLoadControllerUserDefined::addPrimitiveAssignFnsToMap(std::unordered
 void TurbineLoadControllerUserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:TurbineLoadControllerUserDefined.ProprietaryParameterDynamics"), &assign_TurbineLoadControllerUserDefined_ProprietaryParameterDynamics));
+}
+
+void TurbineLoadControllerUserDefined::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TurbineLoadControllerDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:TurbineLoadControllerUserDefined.proprietary", &get_TurbineLoadControllerUserDefined_proprietary);
+}
+
+void TurbineLoadControllerUserDefined::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	TurbineLoadControllerDynamics::addClassGetFnsToMap(get_map);
+}
+
+void TurbineLoadControllerUserDefined::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TurbineLoadControllerDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner TurbineLoadControllerUserDefined::declare()

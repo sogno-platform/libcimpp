@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "ExcST1A.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PU.hpp"
@@ -29,6 +31,48 @@ using namespace CIMPP;
 
 ExcST1A::ExcST1A() {};
 ExcST1A::~ExcST1A() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:ExcST1A.ilr", { CGMESProfile::DY, } },
+	{ "cim:ExcST1A.ka", { CGMESProfile::DY, } },
+	{ "cim:ExcST1A.kc", { CGMESProfile::DY, } },
+	{ "cim:ExcST1A.kf", { CGMESProfile::DY, } },
+	{ "cim:ExcST1A.klr", { CGMESProfile::DY, } },
+	{ "cim:ExcST1A.ta", { CGMESProfile::DY, } },
+	{ "cim:ExcST1A.tb", { CGMESProfile::DY, } },
+	{ "cim:ExcST1A.tb1", { CGMESProfile::DY, } },
+	{ "cim:ExcST1A.tc", { CGMESProfile::DY, } },
+	{ "cim:ExcST1A.tc1", { CGMESProfile::DY, } },
+	{ "cim:ExcST1A.tf", { CGMESProfile::DY, } },
+	{ "cim:ExcST1A.vamax", { CGMESProfile::DY, } },
+	{ "cim:ExcST1A.vamin", { CGMESProfile::DY, } },
+	{ "cim:ExcST1A.vimax", { CGMESProfile::DY, } },
+	{ "cim:ExcST1A.vimin", { CGMESProfile::DY, } },
+	{ "cim:ExcST1A.vrmax", { CGMESProfile::DY, } },
+	{ "cim:ExcST1A.vrmin", { CGMESProfile::DY, } },
+	{ "cim:ExcST1A.xe", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+ExcST1A::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+ExcST1A::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_ExcST1A_ilr(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -267,20 +311,257 @@ bool assign_ExcST1A_xe(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
 
 
 
+bool get_ExcST1A_ilr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer << element->ilr;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcST1A_ka(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer << element->ka;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcST1A_kc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer << element->kc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcST1A_kf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer << element->kf;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcST1A_klr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer << element->klr;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcST1A_ta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer << element->ta;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcST1A_tb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer << element->tb;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcST1A_tb1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer << element->tb1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcST1A_tc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer << element->tc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcST1A_tc1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer << element->tc1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcST1A_tf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer << element->tf;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcST1A_vamax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer << element->vamax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcST1A_vamin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer << element->vamin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcST1A_vimax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer << element->vimax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcST1A_vimin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer << element->vimin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcST1A_vrmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer << element->vrmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcST1A_vrmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer << element->vrmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcST1A_xe(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	{
+		buffer << element->xe;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -319,6 +600,39 @@ void ExcST1A::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_
 
 void ExcST1A::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void ExcST1A::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:ExcST1A.ilr", &get_ExcST1A_ilr);
+	get_map.emplace("cim:ExcST1A.ka", &get_ExcST1A_ka);
+	get_map.emplace("cim:ExcST1A.kc", &get_ExcST1A_kc);
+	get_map.emplace("cim:ExcST1A.kf", &get_ExcST1A_kf);
+	get_map.emplace("cim:ExcST1A.klr", &get_ExcST1A_klr);
+	get_map.emplace("cim:ExcST1A.ta", &get_ExcST1A_ta);
+	get_map.emplace("cim:ExcST1A.tb", &get_ExcST1A_tb);
+	get_map.emplace("cim:ExcST1A.tb1", &get_ExcST1A_tb1);
+	get_map.emplace("cim:ExcST1A.tc", &get_ExcST1A_tc);
+	get_map.emplace("cim:ExcST1A.tc1", &get_ExcST1A_tc1);
+	get_map.emplace("cim:ExcST1A.tf", &get_ExcST1A_tf);
+	get_map.emplace("cim:ExcST1A.vamax", &get_ExcST1A_vamax);
+	get_map.emplace("cim:ExcST1A.vamin", &get_ExcST1A_vamin);
+	get_map.emplace("cim:ExcST1A.vimax", &get_ExcST1A_vimax);
+	get_map.emplace("cim:ExcST1A.vimin", &get_ExcST1A_vimin);
+	get_map.emplace("cim:ExcST1A.vrmax", &get_ExcST1A_vrmax);
+	get_map.emplace("cim:ExcST1A.vrmin", &get_ExcST1A_vrmin);
+	get_map.emplace("cim:ExcST1A.xe", &get_ExcST1A_xe);
+}
+
+void ExcST1A::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addClassGetFnsToMap(get_map);
+}
+
+void ExcST1A::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner ExcST1A::declare()

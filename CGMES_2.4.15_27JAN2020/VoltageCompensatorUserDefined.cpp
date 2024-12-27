@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "VoltageCompensatorUserDefined.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "ProprietaryParameterDynamics.hpp"
@@ -14,6 +16,31 @@ using namespace CIMPP;
 VoltageCompensatorUserDefined::VoltageCompensatorUserDefined() {};
 VoltageCompensatorUserDefined::~VoltageCompensatorUserDefined() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:VoltageCompensatorUserDefined.ProprietaryParameterDynamics", { CGMESProfile::DY, } },
+	{ "cim:VoltageCompensatorUserDefined.proprietary", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+VoltageCompensatorUserDefined::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+VoltageCompensatorUserDefined::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = VoltageCompensatorDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_VoltageCompensatorUserDefined_proprietary(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -47,6 +74,21 @@ bool assign_VoltageCompensatorUserDefined_ProprietaryParameterDynamics(BaseClass
 	return false;
 }
 
+bool get_VoltageCompensatorUserDefined_proprietary(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const VoltageCompensatorUserDefined* element = dynamic_cast<const VoltageCompensatorUserDefined*>(BaseClass_ptr1))
+	{
+		buffer << element->proprietary;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+
 
 const char VoltageCompensatorUserDefined::debugName[] = "VoltageCompensatorUserDefined";
 const char* VoltageCompensatorUserDefined::debugString() const
@@ -67,6 +109,22 @@ void VoltageCompensatorUserDefined::addPrimitiveAssignFnsToMap(std::unordered_ma
 void VoltageCompensatorUserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:VoltageCompensatorUserDefined.ProprietaryParameterDynamics"), &assign_VoltageCompensatorUserDefined_ProprietaryParameterDynamics));
+}
+
+void VoltageCompensatorUserDefined::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	VoltageCompensatorDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:VoltageCompensatorUserDefined.proprietary", &get_VoltageCompensatorUserDefined_proprietary);
+}
+
+void VoltageCompensatorUserDefined::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	VoltageCompensatorDynamics::addClassGetFnsToMap(get_map);
+}
+
+void VoltageCompensatorUserDefined::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	VoltageCompensatorDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner VoltageCompensatorUserDefined::declare()

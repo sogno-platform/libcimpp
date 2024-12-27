@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "GovHydro2.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PU.hpp"
@@ -40,6 +42,59 @@ using namespace CIMPP;
 
 GovHydro2::GovHydro2() {};
 GovHydro2::~GovHydro2() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:GovHydro2.aturb", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.bturb", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.db1", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.db2", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.eps", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.gv1", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.gv2", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.gv3", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.gv4", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.gv5", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.gv6", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.kturb", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.mwbase", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.pgv1", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.pgv2", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.pgv3", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.pgv4", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.pgv5", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.pgv6", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.pmax", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.pmin", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.rperm", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.rtemp", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.tg", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.tp", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.tr", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.tw", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.uc", { CGMESProfile::DY, } },
+	{ "cim:GovHydro2.uo", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+GovHydro2::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+GovHydro2::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = TurbineGovernorDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_GovHydro2_aturb(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -421,31 +476,411 @@ bool assign_GovHydro2_uo(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
 
 
 
+bool get_GovHydro2_aturb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->aturb;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_bturb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->bturb;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_db1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->db1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_db2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->db2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_eps(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->eps;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_gv1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->gv1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_gv2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->gv2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_gv3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->gv3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_gv4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->gv4;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_gv5(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->gv5;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_gv6(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->gv6;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_kturb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->kturb;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_mwbase(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->mwbase;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_pgv1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->pgv1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_pgv2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->pgv2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_pgv3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->pgv3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_pgv4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->pgv4;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_pgv5(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->pgv5;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_pgv6(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->pgv6;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_pmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->pmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_pmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->pmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_rperm(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->rperm;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_rtemp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->rtemp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_tg(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->tg;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_tp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->tp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovHydro2_tr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->tr;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydro2_tw(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->tw;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydro2_uc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->uc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydro2_uo(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydro2* element = dynamic_cast<const GovHydro2*>(BaseClass_ptr1))
+	{
+		buffer << element->uo;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -495,6 +930,50 @@ void GovHydro2::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assig
 
 void GovHydro2::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void GovHydro2::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:GovHydro2.aturb", &get_GovHydro2_aturb);
+	get_map.emplace("cim:GovHydro2.bturb", &get_GovHydro2_bturb);
+	get_map.emplace("cim:GovHydro2.db1", &get_GovHydro2_db1);
+	get_map.emplace("cim:GovHydro2.db2", &get_GovHydro2_db2);
+	get_map.emplace("cim:GovHydro2.eps", &get_GovHydro2_eps);
+	get_map.emplace("cim:GovHydro2.gv1", &get_GovHydro2_gv1);
+	get_map.emplace("cim:GovHydro2.gv2", &get_GovHydro2_gv2);
+	get_map.emplace("cim:GovHydro2.gv3", &get_GovHydro2_gv3);
+	get_map.emplace("cim:GovHydro2.gv4", &get_GovHydro2_gv4);
+	get_map.emplace("cim:GovHydro2.gv5", &get_GovHydro2_gv5);
+	get_map.emplace("cim:GovHydro2.gv6", &get_GovHydro2_gv6);
+	get_map.emplace("cim:GovHydro2.kturb", &get_GovHydro2_kturb);
+	get_map.emplace("cim:GovHydro2.mwbase", &get_GovHydro2_mwbase);
+	get_map.emplace("cim:GovHydro2.pgv1", &get_GovHydro2_pgv1);
+	get_map.emplace("cim:GovHydro2.pgv2", &get_GovHydro2_pgv2);
+	get_map.emplace("cim:GovHydro2.pgv3", &get_GovHydro2_pgv3);
+	get_map.emplace("cim:GovHydro2.pgv4", &get_GovHydro2_pgv4);
+	get_map.emplace("cim:GovHydro2.pgv5", &get_GovHydro2_pgv5);
+	get_map.emplace("cim:GovHydro2.pgv6", &get_GovHydro2_pgv6);
+	get_map.emplace("cim:GovHydro2.pmax", &get_GovHydro2_pmax);
+	get_map.emplace("cim:GovHydro2.pmin", &get_GovHydro2_pmin);
+	get_map.emplace("cim:GovHydro2.rperm", &get_GovHydro2_rperm);
+	get_map.emplace("cim:GovHydro2.rtemp", &get_GovHydro2_rtemp);
+	get_map.emplace("cim:GovHydro2.tg", &get_GovHydro2_tg);
+	get_map.emplace("cim:GovHydro2.tp", &get_GovHydro2_tp);
+	get_map.emplace("cim:GovHydro2.tr", &get_GovHydro2_tr);
+	get_map.emplace("cim:GovHydro2.tw", &get_GovHydro2_tw);
+	get_map.emplace("cim:GovHydro2.uc", &get_GovHydro2_uc);
+	get_map.emplace("cim:GovHydro2.uo", &get_GovHydro2_uo);
+}
+
+void GovHydro2::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addClassGetFnsToMap(get_map);
+}
+
+void GovHydro2::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner GovHydro2::declare()

@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "AccumulatorValue.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "Accumulator.hpp"
@@ -15,7 +17,32 @@ using namespace CIMPP;
 AccumulatorValue::AccumulatorValue() : Accumulator(nullptr), AccumulatorReset(nullptr) {};
 AccumulatorValue::~AccumulatorValue() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:AccumulatorValue.Accumulator", { CGMESProfile::EQ, } },
+	{ "cim:AccumulatorValue.AccumulatorReset", { CGMESProfile::EQ, } },
+	{ "cim:AccumulatorValue.value", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+AccumulatorValue::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+AccumulatorValue::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = MeasurementValue::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_AccumulatorValue_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -48,7 +75,6 @@ bool assign_AccumulatorValue_Accumulator(BaseClass* BaseClass_ptr1, BaseClass* B
 	}
 	return false;
 }
-
 bool assign_AccumulatorReset_AccumulatorValue(BaseClass*, BaseClass*);
 bool assign_AccumulatorValue_AccumulatorReset(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -62,6 +88,34 @@ bool assign_AccumulatorValue_AccumulatorReset(BaseClass* BaseClass_ptr1, BaseCla
 			return assign_AccumulatorReset_AccumulatorValue(BaseClass_ptr2, BaseClass_ptr1);
 		}
 		return true;
+	}
+	return false;
+}
+
+bool get_AccumulatorValue_value(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const AccumulatorValue* element = dynamic_cast<const AccumulatorValue*>(BaseClass_ptr1))
+	{
+		buffer << element->value;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+
+bool get_AccumulatorValue_Accumulator(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const AccumulatorValue* element = dynamic_cast<const AccumulatorValue*>(BaseClass_ptr1))
+	{
+		if (element->Accumulator != 0)
+		{
+			BaseClass_list.push_back(element->Accumulator);
+			return true;
+		}
 	}
 	return false;
 }
@@ -87,6 +141,23 @@ void AccumulatorValue::addClassAssignFnsToMap(std::unordered_map<std::string, cl
 {
 	assign_map.insert(std::make_pair(std::string("cim:AccumulatorValue.Accumulator"), &assign_AccumulatorValue_Accumulator));
 	assign_map.insert(std::make_pair(std::string("cim:AccumulatorValue.AccumulatorReset"), &assign_AccumulatorValue_AccumulatorReset));
+}
+
+void AccumulatorValue::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	MeasurementValue::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:AccumulatorValue.value", &get_AccumulatorValue_value);
+}
+
+void AccumulatorValue::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	MeasurementValue::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:AccumulatorValue.Accumulator", &get_AccumulatorValue_Accumulator);
+}
+
+void AccumulatorValue::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	MeasurementValue::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner AccumulatorValue::declare()

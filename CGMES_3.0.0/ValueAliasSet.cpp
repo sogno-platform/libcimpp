@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "ValueAliasSet.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "Command.hpp"
@@ -16,9 +18,33 @@ using namespace CIMPP;
 ValueAliasSet::ValueAliasSet() {};
 ValueAliasSet::~ValueAliasSet() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::OP,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:ValueAliasSet.Commands", { CGMESProfile::OP, } },
+	{ "cim:ValueAliasSet.Discretes", { CGMESProfile::OP, } },
+	{ "cim:ValueAliasSet.RaiseLowerCommands", { CGMESProfile::OP, } },
+	{ "cim:ValueAliasSet.Values", { CGMESProfile::OP, } },
+};
 
+std::list<CGMESProfile>
+ValueAliasSet::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
 
+std::map<std::string, std::list<CGMESProfile>>
+ValueAliasSet::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -38,7 +64,6 @@ bool assign_ValueAliasSet_Commands(BaseClass* BaseClass_ptr1, BaseClass* BaseCla
 	}
 	return false;
 }
-
 bool assign_Discrete_ValueAliasSet(BaseClass*, BaseClass*);
 bool assign_ValueAliasSet_Discretes(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -55,7 +80,6 @@ bool assign_ValueAliasSet_Discretes(BaseClass* BaseClass_ptr1, BaseClass* BaseCl
 	}
 	return false;
 }
-
 bool assign_RaiseLowerCommand_ValueAliasSet(BaseClass*, BaseClass*);
 bool assign_ValueAliasSet_RaiseLowerCommands(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -72,7 +96,6 @@ bool assign_ValueAliasSet_RaiseLowerCommands(BaseClass* BaseClass_ptr1, BaseClas
 	}
 	return false;
 }
-
 bool assign_ValueToAlias_ValueAliasSet(BaseClass*, BaseClass*);
 bool assign_ValueAliasSet_Values(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -89,6 +112,8 @@ bool assign_ValueAliasSet_Values(BaseClass* BaseClass_ptr1, BaseClass* BaseClass
 	}
 	return false;
 }
+
+
 
 const char ValueAliasSet::debugName[] = "ValueAliasSet";
 const char* ValueAliasSet::debugString() const
@@ -111,6 +136,21 @@ void ValueAliasSet::addClassAssignFnsToMap(std::unordered_map<std::string, class
 	assign_map.insert(std::make_pair(std::string("cim:ValueAliasSet.Discretes"), &assign_ValueAliasSet_Discretes));
 	assign_map.insert(std::make_pair(std::string("cim:ValueAliasSet.RaiseLowerCommands"), &assign_ValueAliasSet_RaiseLowerCommands));
 	assign_map.insert(std::make_pair(std::string("cim:ValueAliasSet.Values"), &assign_ValueAliasSet_Values));
+}
+
+void ValueAliasSet::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+}
+
+void ValueAliasSet::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+}
+
+void ValueAliasSet::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner ValueAliasSet::declare()

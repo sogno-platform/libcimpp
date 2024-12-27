@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "TransformerEnd.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "BaseVoltage.hpp"
@@ -20,9 +22,38 @@ using namespace CIMPP;
 TransformerEnd::TransformerEnd() : BaseVoltage(nullptr), PhaseTapChanger(nullptr), RatioTapChanger(nullptr), Terminal(nullptr) {};
 TransformerEnd::~TransformerEnd() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+	CGMESProfile::SC,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:TransformerEnd.BaseVoltage", { CGMESProfile::EQ, } },
+	{ "cim:TransformerEnd.PhaseTapChanger", { CGMESProfile::EQ, } },
+	{ "cim:TransformerEnd.RatioTapChanger", { CGMESProfile::EQ, } },
+	{ "cim:TransformerEnd.Terminal", { CGMESProfile::EQ, } },
+	{ "cim:TransformerEnd.endNumber", { CGMESProfile::EQ, } },
+	{ "cim:TransformerEnd.grounded", { CGMESProfile::SC, } },
+	{ "cim:TransformerEnd.rground", { CGMESProfile::SC, } },
+	{ "cim:TransformerEnd.xground", { CGMESProfile::SC, } },
+};
 
+std::list<CGMESProfile>
+TransformerEnd::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
 
+std::map<std::string, std::list<CGMESProfile>>
+TransformerEnd::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_TransformerEnd_endNumber(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -94,7 +125,6 @@ bool assign_TransformerEnd_BaseVoltage(BaseClass* BaseClass_ptr1, BaseClass* Bas
 	}
 	return false;
 }
-
 bool assign_PhaseTapChanger_TransformerEnd(BaseClass*, BaseClass*);
 bool assign_TransformerEnd_PhaseTapChanger(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -111,7 +141,6 @@ bool assign_TransformerEnd_PhaseTapChanger(BaseClass* BaseClass_ptr1, BaseClass*
 	}
 	return false;
 }
-
 bool assign_RatioTapChanger_TransformerEnd(BaseClass*, BaseClass*);
 bool assign_TransformerEnd_RatioTapChanger(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -128,7 +157,6 @@ bool assign_TransformerEnd_RatioTapChanger(BaseClass* BaseClass_ptr1, BaseClass*
 	}
 	return false;
 }
-
 bool assign_Terminal_TransformerEnd(BaseClass*, BaseClass*);
 bool assign_TransformerEnd_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -146,8 +174,88 @@ bool assign_TransformerEnd_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseCl
 	return false;
 }
 
+bool get_TransformerEnd_endNumber(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TransformerEnd* element = dynamic_cast<const TransformerEnd*>(BaseClass_ptr1))
+	{
+		buffer << element->endNumber;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_TransformerEnd_grounded(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TransformerEnd* element = dynamic_cast<const TransformerEnd*>(BaseClass_ptr1))
+	{
+		buffer << element->grounded;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_TransformerEnd_rground(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TransformerEnd* element = dynamic_cast<const TransformerEnd*>(BaseClass_ptr1))
+	{
+		buffer << element->rground;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_TransformerEnd_xground(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TransformerEnd* element = dynamic_cast<const TransformerEnd*>(BaseClass_ptr1))
+	{
+		buffer << element->xground;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
+bool get_TransformerEnd_BaseVoltage(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const TransformerEnd* element = dynamic_cast<const TransformerEnd*>(BaseClass_ptr1))
+	{
+		if (element->BaseVoltage != 0)
+		{
+			BaseClass_list.push_back(element->BaseVoltage);
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_TransformerEnd_Terminal(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const TransformerEnd* element = dynamic_cast<const TransformerEnd*>(BaseClass_ptr1))
+	{
+		if (element->Terminal != 0)
+		{
+			BaseClass_list.push_back(element->Terminal);
+			return true;
+		}
+	}
+	return false;
+}
 
 
 const char TransformerEnd::debugName[] = "TransformerEnd";
@@ -175,6 +283,27 @@ void TransformerEnd::addClassAssignFnsToMap(std::unordered_map<std::string, clas
 	assign_map.insert(std::make_pair(std::string("cim:TransformerEnd.PhaseTapChanger"), &assign_TransformerEnd_PhaseTapChanger));
 	assign_map.insert(std::make_pair(std::string("cim:TransformerEnd.RatioTapChanger"), &assign_TransformerEnd_RatioTapChanger));
 	assign_map.insert(std::make_pair(std::string("cim:TransformerEnd.Terminal"), &assign_TransformerEnd_Terminal));
+}
+
+void TransformerEnd::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:TransformerEnd.endNumber", &get_TransformerEnd_endNumber);
+	get_map.emplace("cim:TransformerEnd.grounded", &get_TransformerEnd_grounded);
+	get_map.emplace("cim:TransformerEnd.rground", &get_TransformerEnd_rground);
+	get_map.emplace("cim:TransformerEnd.xground", &get_TransformerEnd_xground);
+}
+
+void TransformerEnd::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:TransformerEnd.BaseVoltage", &get_TransformerEnd_BaseVoltage);
+	get_map.emplace("cim:TransformerEnd.Terminal", &get_TransformerEnd_Terminal);
+}
+
+void TransformerEnd::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner TransformerEnd::declare()

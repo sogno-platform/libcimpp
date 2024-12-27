@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "SynchronousMachineDynamics.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "ExcitationSystemDynamics.hpp"
@@ -17,10 +19,34 @@ using namespace CIMPP;
 SynchronousMachineDynamics::SynchronousMachineDynamics() : ExcitationSystemDynamics(nullptr), MechanicalLoadDynamics(nullptr), SynchronousMachine(nullptr) {};
 SynchronousMachineDynamics::~SynchronousMachineDynamics() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:SynchronousMachineDynamics.ExcitationSystemDynamics", { CGMESProfile::DY, } },
+	{ "cim:SynchronousMachineDynamics.GenICompensationForGenJ", { CGMESProfile::DY, } },
+	{ "cim:SynchronousMachineDynamics.MechanicalLoadDynamics", { CGMESProfile::DY, } },
+	{ "cim:SynchronousMachineDynamics.SynchronousMachine", { CGMESProfile::DY, } },
+	{ "cim:SynchronousMachineDynamics.TurbineGovernorDynamics", { CGMESProfile::DY, } },
+};
 
+std::list<CGMESProfile>
+SynchronousMachineDynamics::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
 
-
+std::map<std::string, std::list<CGMESProfile>>
+SynchronousMachineDynamics::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = RotatingMachineDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -40,7 +66,6 @@ bool assign_SynchronousMachineDynamics_ExcitationSystemDynamics(BaseClass* BaseC
 	}
 	return false;
 }
-
 bool assign_GenICompensationForGenJ_SynchronousMachineDynamics(BaseClass*, BaseClass*);
 bool assign_SynchronousMachineDynamics_GenICompensationForGenJ(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -57,7 +82,6 @@ bool assign_SynchronousMachineDynamics_GenICompensationForGenJ(BaseClass* BaseCl
 	}
 	return false;
 }
-
 bool assign_MechanicalLoadDynamics_SynchronousMachineDynamics(BaseClass*, BaseClass*);
 bool assign_SynchronousMachineDynamics_MechanicalLoadDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,7 +98,6 @@ bool assign_SynchronousMachineDynamics_MechanicalLoadDynamics(BaseClass* BaseCla
 	}
 	return false;
 }
-
 bool assign_SynchronousMachine_SynchronousMachineDynamics(BaseClass*, BaseClass*);
 bool assign_SynchronousMachineDynamics_SynchronousMachine(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -91,7 +114,6 @@ bool assign_SynchronousMachineDynamics_SynchronousMachine(BaseClass* BaseClass_p
 	}
 	return false;
 }
-
 bool assign_TurbineGovernorDynamics_SynchronousMachineDynamics(BaseClass*, BaseClass*);
 bool assign_SynchronousMachineDynamics_TurbineGovernorDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -108,6 +130,21 @@ bool assign_SynchronousMachineDynamics_TurbineGovernorDynamics(BaseClass* BaseCl
 	}
 	return false;
 }
+
+
+bool get_SynchronousMachineDynamics_SynchronousMachine(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const SynchronousMachineDynamics* element = dynamic_cast<const SynchronousMachineDynamics*>(BaseClass_ptr1))
+	{
+		if (element->SynchronousMachine != 0)
+		{
+			BaseClass_list.push_back(element->SynchronousMachine);
+			return true;
+		}
+	}
+	return false;
+}
+
 
 const char SynchronousMachineDynamics::debugName[] = "SynchronousMachineDynamics";
 const char* SynchronousMachineDynamics::debugString() const
@@ -131,6 +168,22 @@ void SynchronousMachineDynamics::addClassAssignFnsToMap(std::unordered_map<std::
 	assign_map.insert(std::make_pair(std::string("cim:SynchronousMachineDynamics.MechanicalLoadDynamics"), &assign_SynchronousMachineDynamics_MechanicalLoadDynamics));
 	assign_map.insert(std::make_pair(std::string("cim:SynchronousMachineDynamics.SynchronousMachine"), &assign_SynchronousMachineDynamics_SynchronousMachine));
 	assign_map.insert(std::make_pair(std::string("cim:SynchronousMachineDynamics.TurbineGovernorDynamics"), &assign_SynchronousMachineDynamics_TurbineGovernorDynamics));
+}
+
+void SynchronousMachineDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	RotatingMachineDynamics::addPrimitiveGetFnsToMap(get_map);
+}
+
+void SynchronousMachineDynamics::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	RotatingMachineDynamics::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:SynchronousMachineDynamics.SynchronousMachine", &get_SynchronousMachineDynamics_SynchronousMachine);
+}
+
+void SynchronousMachineDynamics::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	RotatingMachineDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner SynchronousMachineDynamics::declare()

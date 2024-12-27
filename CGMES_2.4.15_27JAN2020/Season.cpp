@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "Season.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "SeasonDayTypeSchedule.hpp"
@@ -15,6 +17,32 @@ using namespace CIMPP;
 Season::Season() {};
 Season::~Season() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:Season.SeasonDayTypeSchedules", { CGMESProfile::EQ, } },
+	{ "cim:Season.endDate", { CGMESProfile::EQ, } },
+	{ "cim:Season.startDate", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+Season::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+Season::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_Season_endDate(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -61,6 +89,34 @@ bool assign_Season_SeasonDayTypeSchedules(BaseClass* BaseClass_ptr1, BaseClass* 
 	return false;
 }
 
+bool get_Season_endDate(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Season* element = dynamic_cast<const Season*>(BaseClass_ptr1))
+	{
+		buffer << element->endDate;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Season_startDate(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Season* element = dynamic_cast<const Season*>(BaseClass_ptr1))
+	{
+		buffer << element->startDate;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
 
 
 const char Season::debugName[] = "Season";
@@ -83,6 +139,23 @@ void Season::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_f
 void Season::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:Season.SeasonDayTypeSchedules"), &assign_Season_SeasonDayTypeSchedules));
+}
+
+void Season::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:Season.endDate", &get_Season_endDate);
+	get_map.emplace("cim:Season.startDate", &get_Season_startDate);
+}
+
+void Season::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+}
+
+void Season::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner Season::declare()

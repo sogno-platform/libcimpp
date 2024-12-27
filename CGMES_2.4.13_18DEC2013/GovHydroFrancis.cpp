@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "GovHydroFrancis.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PU.hpp"
@@ -38,6 +40,57 @@ using namespace CIMPP;
 
 GovHydroFrancis::GovHydroFrancis() {};
 GovHydroFrancis::~GovHydroFrancis() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:GovHydroFrancis.am", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.av0", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.av1", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.bp", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.db1", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.etamax", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.governorControl", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.h1", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.h2", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.hn", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.kc", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.kg", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.kt", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.qc0", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.qn", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.ta", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.td", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.ts", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.twnc", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.twng", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.tx", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.va", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.valvmax", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.valvmin", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.vc", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.waterTunnelSurgeChamberSimulation", { CGMESProfile::DY, } },
+	{ "cim:GovHydroFrancis.zsfc", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+GovHydroFrancis::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+GovHydroFrancis::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = TurbineGovernorDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_GovHydroFrancis_am(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -393,31 +446,385 @@ bool assign_GovHydroFrancis_zsfc(std::stringstream &buffer, BaseClass* BaseClass
 
 
 
+bool get_GovHydroFrancis_am(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->am;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_av0(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->av0;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_av1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->av1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_bp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->bp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_db1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->db1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_etamax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->etamax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_h1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->h1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_h2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->h2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_hn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->hn;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_kc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->kc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_kg(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->kg;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_kt(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->kt;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_qc0(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->qc0;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_qn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->qn;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_ta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->ta;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_td(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->td;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_ts(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->ts;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_twnc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->twnc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_twng(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->twng;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_tx(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->tx;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_va(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->va;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_valvmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->valvmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_valvmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->valvmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_vc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->vc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_waterTunnelSurgeChamberSimulation(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->waterTunnelSurgeChamberSimulation;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovHydroFrancis_zsfc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->zsfc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+bool get_GovHydroFrancis_governorControl(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovHydroFrancis* element = dynamic_cast<const GovHydroFrancis*>(BaseClass_ptr1))
+	{
+		buffer << element->governorControl;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 const char GovHydroFrancis::debugName[] = "GovHydroFrancis";
 const char* GovHydroFrancis::debugString() const
@@ -463,6 +870,48 @@ void GovHydroFrancis::addPrimitiveAssignFnsToMap(std::unordered_map<std::string,
 
 void GovHydroFrancis::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void GovHydroFrancis::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:GovHydroFrancis.am", &get_GovHydroFrancis_am);
+	get_map.emplace("cim:GovHydroFrancis.av0", &get_GovHydroFrancis_av0);
+	get_map.emplace("cim:GovHydroFrancis.av1", &get_GovHydroFrancis_av1);
+	get_map.emplace("cim:GovHydroFrancis.bp", &get_GovHydroFrancis_bp);
+	get_map.emplace("cim:GovHydroFrancis.db1", &get_GovHydroFrancis_db1);
+	get_map.emplace("cim:GovHydroFrancis.etamax", &get_GovHydroFrancis_etamax);
+	get_map.emplace("cim:GovHydroFrancis.h1", &get_GovHydroFrancis_h1);
+	get_map.emplace("cim:GovHydroFrancis.h2", &get_GovHydroFrancis_h2);
+	get_map.emplace("cim:GovHydroFrancis.hn", &get_GovHydroFrancis_hn);
+	get_map.emplace("cim:GovHydroFrancis.kc", &get_GovHydroFrancis_kc);
+	get_map.emplace("cim:GovHydroFrancis.kg", &get_GovHydroFrancis_kg);
+	get_map.emplace("cim:GovHydroFrancis.kt", &get_GovHydroFrancis_kt);
+	get_map.emplace("cim:GovHydroFrancis.qc0", &get_GovHydroFrancis_qc0);
+	get_map.emplace("cim:GovHydroFrancis.qn", &get_GovHydroFrancis_qn);
+	get_map.emplace("cim:GovHydroFrancis.ta", &get_GovHydroFrancis_ta);
+	get_map.emplace("cim:GovHydroFrancis.td", &get_GovHydroFrancis_td);
+	get_map.emplace("cim:GovHydroFrancis.ts", &get_GovHydroFrancis_ts);
+	get_map.emplace("cim:GovHydroFrancis.twnc", &get_GovHydroFrancis_twnc);
+	get_map.emplace("cim:GovHydroFrancis.twng", &get_GovHydroFrancis_twng);
+	get_map.emplace("cim:GovHydroFrancis.tx", &get_GovHydroFrancis_tx);
+	get_map.emplace("cim:GovHydroFrancis.va", &get_GovHydroFrancis_va);
+	get_map.emplace("cim:GovHydroFrancis.valvmax", &get_GovHydroFrancis_valvmax);
+	get_map.emplace("cim:GovHydroFrancis.valvmin", &get_GovHydroFrancis_valvmin);
+	get_map.emplace("cim:GovHydroFrancis.vc", &get_GovHydroFrancis_vc);
+	get_map.emplace("cim:GovHydroFrancis.waterTunnelSurgeChamberSimulation", &get_GovHydroFrancis_waterTunnelSurgeChamberSimulation);
+	get_map.emplace("cim:GovHydroFrancis.zsfc", &get_GovHydroFrancis_zsfc);
+}
+
+void GovHydroFrancis::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addClassGetFnsToMap(get_map);
+}
+
+void GovHydroFrancis::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addEnumGetFnsToMap(get_map);
+	get_map.emplace("cim:GovHydroFrancis.governorControl", &get_GovHydroFrancis_governorControl);
 }
 
 const BaseClassDefiner GovHydroFrancis::declare()

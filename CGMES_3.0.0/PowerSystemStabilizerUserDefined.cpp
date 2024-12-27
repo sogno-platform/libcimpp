@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "PowerSystemStabilizerUserDefined.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "ProprietaryParameterDynamics.hpp"
@@ -14,6 +16,31 @@ using namespace CIMPP;
 PowerSystemStabilizerUserDefined::PowerSystemStabilizerUserDefined() {};
 PowerSystemStabilizerUserDefined::~PowerSystemStabilizerUserDefined() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:PowerSystemStabilizerUserDefined.ProprietaryParameterDynamics", { CGMESProfile::DY, } },
+	{ "cim:PowerSystemStabilizerUserDefined.proprietary", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+PowerSystemStabilizerUserDefined::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+PowerSystemStabilizerUserDefined::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = PowerSystemStabilizerDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_PowerSystemStabilizerUserDefined_proprietary(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -47,6 +74,21 @@ bool assign_PowerSystemStabilizerUserDefined_ProprietaryParameterDynamics(BaseCl
 	return false;
 }
 
+bool get_PowerSystemStabilizerUserDefined_proprietary(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PowerSystemStabilizerUserDefined* element = dynamic_cast<const PowerSystemStabilizerUserDefined*>(BaseClass_ptr1))
+	{
+		buffer << element->proprietary;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+
 
 const char PowerSystemStabilizerUserDefined::debugName[] = "PowerSystemStabilizerUserDefined";
 const char* PowerSystemStabilizerUserDefined::debugString() const
@@ -67,6 +109,22 @@ void PowerSystemStabilizerUserDefined::addPrimitiveAssignFnsToMap(std::unordered
 void PowerSystemStabilizerUserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:PowerSystemStabilizerUserDefined.ProprietaryParameterDynamics"), &assign_PowerSystemStabilizerUserDefined_ProprietaryParameterDynamics));
+}
+
+void PowerSystemStabilizerUserDefined::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemStabilizerDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:PowerSystemStabilizerUserDefined.proprietary", &get_PowerSystemStabilizerUserDefined_proprietary);
+}
+
+void PowerSystemStabilizerUserDefined::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	PowerSystemStabilizerDynamics::addClassGetFnsToMap(get_map);
+}
+
+void PowerSystemStabilizerUserDefined::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemStabilizerDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner PowerSystemStabilizerUserDefined::declare()

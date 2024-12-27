@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "MutualCoupling.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "Terminal.hpp"
@@ -22,7 +24,39 @@ using namespace CIMPP;
 MutualCoupling::MutualCoupling() : First_Terminal(nullptr), Second_Terminal(nullptr) {};
 MutualCoupling::~MutualCoupling() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:MutualCoupling.First_Terminal", { CGMESProfile::EQ, } },
+	{ "cim:MutualCoupling.Second_Terminal", { CGMESProfile::EQ, } },
+	{ "cim:MutualCoupling.b0ch", { CGMESProfile::EQ, } },
+	{ "cim:MutualCoupling.distance11", { CGMESProfile::EQ, } },
+	{ "cim:MutualCoupling.distance12", { CGMESProfile::EQ, } },
+	{ "cim:MutualCoupling.distance21", { CGMESProfile::EQ, } },
+	{ "cim:MutualCoupling.distance22", { CGMESProfile::EQ, } },
+	{ "cim:MutualCoupling.g0ch", { CGMESProfile::EQ, } },
+	{ "cim:MutualCoupling.r0", { CGMESProfile::EQ, } },
+	{ "cim:MutualCoupling.x0", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+MutualCoupling::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+MutualCoupling::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_MutualCoupling_b0ch(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -146,7 +180,6 @@ bool assign_MutualCoupling_First_Terminal(BaseClass* BaseClass_ptr1, BaseClass* 
 	}
 	return false;
 }
-
 bool assign_Terminal_HasSecondMutualCoupling(BaseClass*, BaseClass*);
 bool assign_MutualCoupling_Second_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -164,12 +197,144 @@ bool assign_MutualCoupling_Second_Terminal(BaseClass* BaseClass_ptr1, BaseClass*
 	return false;
 }
 
+bool get_MutualCoupling_b0ch(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const MutualCoupling* element = dynamic_cast<const MutualCoupling*>(BaseClass_ptr1))
+	{
+		buffer << element->b0ch;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_MutualCoupling_distance11(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const MutualCoupling* element = dynamic_cast<const MutualCoupling*>(BaseClass_ptr1))
+	{
+		buffer << element->distance11;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_MutualCoupling_distance12(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const MutualCoupling* element = dynamic_cast<const MutualCoupling*>(BaseClass_ptr1))
+	{
+		buffer << element->distance12;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_MutualCoupling_distance21(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const MutualCoupling* element = dynamic_cast<const MutualCoupling*>(BaseClass_ptr1))
+	{
+		buffer << element->distance21;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_MutualCoupling_distance22(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const MutualCoupling* element = dynamic_cast<const MutualCoupling*>(BaseClass_ptr1))
+	{
+		buffer << element->distance22;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_MutualCoupling_g0ch(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const MutualCoupling* element = dynamic_cast<const MutualCoupling*>(BaseClass_ptr1))
+	{
+		buffer << element->g0ch;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_MutualCoupling_r0(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const MutualCoupling* element = dynamic_cast<const MutualCoupling*>(BaseClass_ptr1))
+	{
+		buffer << element->r0;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_MutualCoupling_x0(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const MutualCoupling* element = dynamic_cast<const MutualCoupling*>(BaseClass_ptr1))
+	{
+		buffer << element->x0;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
+bool get_MutualCoupling_First_Terminal(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const MutualCoupling* element = dynamic_cast<const MutualCoupling*>(BaseClass_ptr1))
+	{
+		if (element->First_Terminal != 0)
+		{
+			BaseClass_list.push_back(element->First_Terminal);
+			return true;
+		}
+	}
+	return false;
+}
 
-
-
-
+bool get_MutualCoupling_Second_Terminal(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const MutualCoupling* element = dynamic_cast<const MutualCoupling*>(BaseClass_ptr1))
+	{
+		if (element->Second_Terminal != 0)
+		{
+			BaseClass_list.push_back(element->Second_Terminal);
+			return true;
+		}
+	}
+	return false;
+}
 
 
 const char MutualCoupling::debugName[] = "MutualCoupling";
@@ -199,6 +364,31 @@ void MutualCoupling::addClassAssignFnsToMap(std::unordered_map<std::string, clas
 {
 	assign_map.insert(std::make_pair(std::string("cim:MutualCoupling.First_Terminal"), &assign_MutualCoupling_First_Terminal));
 	assign_map.insert(std::make_pair(std::string("cim:MutualCoupling.Second_Terminal"), &assign_MutualCoupling_Second_Terminal));
+}
+
+void MutualCoupling::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:MutualCoupling.b0ch", &get_MutualCoupling_b0ch);
+	get_map.emplace("cim:MutualCoupling.distance11", &get_MutualCoupling_distance11);
+	get_map.emplace("cim:MutualCoupling.distance12", &get_MutualCoupling_distance12);
+	get_map.emplace("cim:MutualCoupling.distance21", &get_MutualCoupling_distance21);
+	get_map.emplace("cim:MutualCoupling.distance22", &get_MutualCoupling_distance22);
+	get_map.emplace("cim:MutualCoupling.g0ch", &get_MutualCoupling_g0ch);
+	get_map.emplace("cim:MutualCoupling.r0", &get_MutualCoupling_r0);
+	get_map.emplace("cim:MutualCoupling.x0", &get_MutualCoupling_x0);
+}
+
+void MutualCoupling::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:MutualCoupling.First_Terminal", &get_MutualCoupling_First_Terminal);
+	get_map.emplace("cim:MutualCoupling.Second_Terminal", &get_MutualCoupling_Second_Terminal);
+}
+
+void MutualCoupling::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner MutualCoupling::declare()

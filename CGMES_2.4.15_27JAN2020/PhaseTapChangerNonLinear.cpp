@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "PhaseTapChangerNonLinear.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PerCent.hpp"
@@ -14,6 +16,34 @@ using namespace CIMPP;
 
 PhaseTapChangerNonLinear::PhaseTapChangerNonLinear() {};
 PhaseTapChangerNonLinear::~PhaseTapChangerNonLinear() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+	CGMESProfile::SSH,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:PhaseTapChangerNonLinear.voltageStepIncrement", { CGMESProfile::EQ, } },
+	{ "cim:PhaseTapChangerNonLinear.xMax", { CGMESProfile::EQ, } },
+	{ "cim:PhaseTapChangerNonLinear.xMin", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+PhaseTapChangerNonLinear::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+PhaseTapChangerNonLinear::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = PhaseTapChanger::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_PhaseTapChangerNonLinear_voltageStepIncrement(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -57,6 +87,48 @@ bool assign_PhaseTapChangerNonLinear_xMin(std::stringstream &buffer, BaseClass* 
 
 
 
+bool get_PhaseTapChangerNonLinear_voltageStepIncrement(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PhaseTapChangerNonLinear* element = dynamic_cast<const PhaseTapChangerNonLinear*>(BaseClass_ptr1))
+	{
+		buffer << element->voltageStepIncrement;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PhaseTapChangerNonLinear_xMax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PhaseTapChangerNonLinear* element = dynamic_cast<const PhaseTapChangerNonLinear*>(BaseClass_ptr1))
+	{
+		buffer << element->xMax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PhaseTapChangerNonLinear_xMin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PhaseTapChangerNonLinear* element = dynamic_cast<const PhaseTapChangerNonLinear*>(BaseClass_ptr1))
+	{
+		buffer << element->xMin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
 
 
 const char PhaseTapChangerNonLinear::debugName[] = "PhaseTapChangerNonLinear";
@@ -79,6 +151,24 @@ void PhaseTapChangerNonLinear::addPrimitiveAssignFnsToMap(std::unordered_map<std
 
 void PhaseTapChangerNonLinear::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void PhaseTapChangerNonLinear::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PhaseTapChanger::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:PhaseTapChangerNonLinear.voltageStepIncrement", &get_PhaseTapChangerNonLinear_voltageStepIncrement);
+	get_map.emplace("cim:PhaseTapChangerNonLinear.xMax", &get_PhaseTapChangerNonLinear_xMax);
+	get_map.emplace("cim:PhaseTapChangerNonLinear.xMin", &get_PhaseTapChangerNonLinear_xMin);
+}
+
+void PhaseTapChangerNonLinear::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	PhaseTapChanger::addClassGetFnsToMap(get_map);
+}
+
+void PhaseTapChangerNonLinear::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PhaseTapChanger::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner PhaseTapChangerNonLinear::declare()

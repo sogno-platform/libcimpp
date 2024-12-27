@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "EnergySchedulingType.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "EnergySource.hpp"
@@ -13,6 +15,31 @@ using namespace CIMPP;
 EnergySchedulingType::EnergySchedulingType() {};
 EnergySchedulingType::~EnergySchedulingType() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+	CGMESProfile::EQBD,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:EnergySchedulingType.EnergySource", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+EnergySchedulingType::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+EnergySchedulingType::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -33,6 +60,8 @@ bool assign_EnergySchedulingType_EnergySource(BaseClass* BaseClass_ptr1, BaseCla
 	return false;
 }
 
+
+
 const char EnergySchedulingType::debugName[] = "EnergySchedulingType";
 const char* EnergySchedulingType::debugString() const
 {
@@ -51,6 +80,21 @@ void EnergySchedulingType::addPrimitiveAssignFnsToMap(std::unordered_map<std::st
 void EnergySchedulingType::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:EnergySchedulingType.EnergySource"), &assign_EnergySchedulingType_EnergySource));
+}
+
+void EnergySchedulingType::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+}
+
+void EnergySchedulingType::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+}
+
+void EnergySchedulingType::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner EnergySchedulingType::declare()

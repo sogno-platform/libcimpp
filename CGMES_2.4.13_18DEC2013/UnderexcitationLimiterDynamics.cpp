@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "UnderexcitationLimiterDynamics.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "ExcitationSystemDynamics.hpp"
@@ -14,7 +16,31 @@ using namespace CIMPP;
 UnderexcitationLimiterDynamics::UnderexcitationLimiterDynamics() : ExcitationSystemDynamics(nullptr), RemoteInputSignal(nullptr) {};
 UnderexcitationLimiterDynamics::~UnderexcitationLimiterDynamics() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:UnderexcitationLimiterDynamics.ExcitationSystemDynamics", { CGMESProfile::DY, } },
+	{ "cim:UnderexcitationLimiterDynamics.RemoteInputSignal", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+UnderexcitationLimiterDynamics::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+UnderexcitationLimiterDynamics::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = DynamicsFunctionBlock::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -34,7 +60,6 @@ bool assign_UnderexcitationLimiterDynamics_ExcitationSystemDynamics(BaseClass* B
 	}
 	return false;
 }
-
 bool assign_RemoteInputSignal_UnderexcitationLimiterDynamics(BaseClass*, BaseClass*);
 bool assign_UnderexcitationLimiterDynamics_RemoteInputSignal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -51,6 +76,21 @@ bool assign_UnderexcitationLimiterDynamics_RemoteInputSignal(BaseClass* BaseClas
 	}
 	return false;
 }
+
+
+bool get_UnderexcitationLimiterDynamics_ExcitationSystemDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const UnderexcitationLimiterDynamics* element = dynamic_cast<const UnderexcitationLimiterDynamics*>(BaseClass_ptr1))
+	{
+		if (element->ExcitationSystemDynamics != 0)
+		{
+			BaseClass_list.push_back(element->ExcitationSystemDynamics);
+			return true;
+		}
+	}
+	return false;
+}
+
 
 const char UnderexcitationLimiterDynamics::debugName[] = "UnderexcitationLimiterDynamics";
 const char* UnderexcitationLimiterDynamics::debugString() const
@@ -71,6 +111,22 @@ void UnderexcitationLimiterDynamics::addClassAssignFnsToMap(std::unordered_map<s
 {
 	assign_map.insert(std::make_pair(std::string("cim:UnderexcitationLimiterDynamics.ExcitationSystemDynamics"), &assign_UnderexcitationLimiterDynamics_ExcitationSystemDynamics));
 	assign_map.insert(std::make_pair(std::string("cim:UnderexcitationLimiterDynamics.RemoteInputSignal"), &assign_UnderexcitationLimiterDynamics_RemoteInputSignal));
+}
+
+void UnderexcitationLimiterDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	DynamicsFunctionBlock::addPrimitiveGetFnsToMap(get_map);
+}
+
+void UnderexcitationLimiterDynamics::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	DynamicsFunctionBlock::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:UnderexcitationLimiterDynamics.ExcitationSystemDynamics", &get_UnderexcitationLimiterDynamics_ExcitationSystemDynamics);
+}
+
+void UnderexcitationLimiterDynamics::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	DynamicsFunctionBlock::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner UnderexcitationLimiterDynamics::declare()

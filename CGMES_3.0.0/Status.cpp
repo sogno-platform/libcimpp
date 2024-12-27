@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "Status.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "DateTime.hpp"
@@ -15,6 +17,34 @@ using namespace CIMPP;
 
 Status::Status() {};
 Status::~Status() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::GL,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:Status.dateTime", { CGMESProfile::GL, } },
+	{ "cim:Status.reason", { CGMESProfile::GL, } },
+	{ "cim:Status.remark", { CGMESProfile::GL, } },
+	{ "cim:Status.value", { CGMESProfile::GL, } },
+};
+
+std::list<CGMESProfile>
+Status::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+Status::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_Status_dateTime(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -71,6 +101,61 @@ bool assign_Status_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
 
 
 
+bool get_Status_dateTime(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Status* element = dynamic_cast<const Status*>(BaseClass_ptr1))
+	{
+		buffer << element->dateTime;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Status_reason(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Status* element = dynamic_cast<const Status*>(BaseClass_ptr1))
+	{
+		buffer << element->reason;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Status_remark(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Status* element = dynamic_cast<const Status*>(BaseClass_ptr1))
+	{
+		buffer << element->remark;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Status_value(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Status* element = dynamic_cast<const Status*>(BaseClass_ptr1))
+	{
+		buffer << element->value;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -95,6 +180,25 @@ void Status::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_f
 
 void Status::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void Status::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	BaseClass::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:Status.dateTime", &get_Status_dateTime);
+	get_map.emplace("cim:Status.reason", &get_Status_reason);
+	get_map.emplace("cim:Status.remark", &get_Status_remark);
+	get_map.emplace("cim:Status.value", &get_Status_value);
+}
+
+void Status::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	BaseClass::addClassGetFnsToMap(get_map);
+}
+
+void Status::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner Status::declare()

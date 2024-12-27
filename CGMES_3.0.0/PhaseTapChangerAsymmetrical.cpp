@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "PhaseTapChangerAsymmetrical.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "AngleDegrees.hpp"
@@ -12,6 +14,32 @@ using namespace CIMPP;
 
 PhaseTapChangerAsymmetrical::PhaseTapChangerAsymmetrical() {};
 PhaseTapChangerAsymmetrical::~PhaseTapChangerAsymmetrical() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+	CGMESProfile::SSH,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:PhaseTapChangerAsymmetrical.windingConnectionAngle", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+PhaseTapChangerAsymmetrical::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+PhaseTapChangerAsymmetrical::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = PhaseTapChangerNonLinear::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_PhaseTapChangerAsymmetrical_windingConnectionAngle(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -24,6 +52,22 @@ bool assign_PhaseTapChangerAsymmetrical_windingConnectionAngle(std::stringstream
 		else
 			return true;
 	}
+	return false;
+}
+
+
+
+bool get_PhaseTapChangerAsymmetrical_windingConnectionAngle(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PhaseTapChangerAsymmetrical* element = dynamic_cast<const PhaseTapChangerAsymmetrical*>(BaseClass_ptr1))
+	{
+		buffer << element->windingConnectionAngle;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
 	return false;
 }
 
@@ -47,6 +91,22 @@ void PhaseTapChangerAsymmetrical::addPrimitiveAssignFnsToMap(std::unordered_map<
 
 void PhaseTapChangerAsymmetrical::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void PhaseTapChangerAsymmetrical::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PhaseTapChangerNonLinear::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:PhaseTapChangerAsymmetrical.windingConnectionAngle", &get_PhaseTapChangerAsymmetrical_windingConnectionAngle);
+}
+
+void PhaseTapChangerAsymmetrical::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	PhaseTapChangerNonLinear::addClassGetFnsToMap(get_map);
+}
+
+void PhaseTapChangerAsymmetrical::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PhaseTapChangerNonLinear::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner PhaseTapChangerAsymmetrical::declare()

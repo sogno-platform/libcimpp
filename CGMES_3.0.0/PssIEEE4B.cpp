@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "PssIEEE4B.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "Float.hpp"
@@ -78,6 +80,97 @@ using namespace CIMPP;
 
 PssIEEE4B::PssIEEE4B() {};
 PssIEEE4B::~PssIEEE4B() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:PssIEEE4B.bwh1", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.bwh2", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.bwl1", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.bwl2", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.kh", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.kh1", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.kh11", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.kh17", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.kh2", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.ki", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.ki1", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.ki11", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.ki17", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.ki2", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.kl", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.kl1", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.kl11", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.kl17", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.kl2", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.omeganh1", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.omeganh2", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.omeganl1", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.omeganl2", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.th1", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.th10", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.th11", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.th12", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.th2", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.th3", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.th4", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.th5", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.th6", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.th7", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.th8", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.th9", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.ti1", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.ti10", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.ti11", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.ti12", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.ti2", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.ti3", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.ti4", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.ti5", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.ti6", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.ti7", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.ti8", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.ti9", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.tl1", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.tl10", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.tl11", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.tl12", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.tl2", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.tl3", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.tl4", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.tl5", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.tl6", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.tl7", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.tl8", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.tl9", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.vhmax", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.vhmin", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.vimax", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.vimin", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.vlmax", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.vlmin", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.vstmax", { CGMESProfile::DY, } },
+	{ "cim:PssIEEE4B.vstmin", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+PssIEEE4B::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+PssIEEE4B::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = PowerSystemStabilizerDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_PssIEEE4B_bwh1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -953,69 +1046,943 @@ bool assign_PssIEEE4B_vstmin(std::stringstream &buffer, BaseClass* BaseClass_ptr
 
 
 
+bool get_PssIEEE4B_bwh1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->bwh1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_bwh2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->bwh2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_bwl1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->bwl1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_bwl2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->bwl2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_kh(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->kh;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_kh1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->kh1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_kh11(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->kh11;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_kh17(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->kh17;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_kh2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->kh2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_ki(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->ki;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_ki1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->ki1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_ki11(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->ki11;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_ki17(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->ki17;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_ki2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->ki2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_kl(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->kl;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_kl1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->kl1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_kl11(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->kl11;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_kl17(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->kl17;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_kl2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->kl2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_omeganh1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->omeganh1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_omeganh2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->omeganh2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_omeganl1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->omeganl1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_omeganl2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->omeganl2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_th1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->th1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_th10(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->th10;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_th11(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->th11;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_th12(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->th12;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_th2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->th2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_th3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->th3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_th4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->th4;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_th5(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->th5;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_th6(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->th6;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_th7(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->th7;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_th8(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->th8;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_th9(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->th9;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_ti1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->ti1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_ti10(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->ti10;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_ti11(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->ti11;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_ti12(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->ti12;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_ti2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->ti2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_ti3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->ti3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_ti4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->ti4;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_ti5(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->ti5;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_ti6(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->ti6;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_ti7(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->ti7;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_ti8(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->ti8;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_ti9(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->ti9;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_tl1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->tl1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_tl10(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->tl10;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_tl11(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->tl11;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_tl12(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->tl12;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_tl2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->tl2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_tl3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->tl3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_tl4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->tl4;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_tl5(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->tl5;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_tl6(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->tl6;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_tl7(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->tl7;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_tl8(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->tl8;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_tl9(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->tl9;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_vhmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->vhmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_vhmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->vhmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_vimax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->vimax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_vimin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->vimin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssIEEE4B_vlmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->vlmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PssIEEE4B_vlmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->vlmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PssIEEE4B_vstmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->vstmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PssIEEE4B_vstmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssIEEE4B* element = dynamic_cast<const PssIEEE4B*>(BaseClass_ptr1))
+	{
+		buffer << element->vstmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -1103,6 +2070,88 @@ void PssIEEE4B::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assig
 
 void PssIEEE4B::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void PssIEEE4B::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemStabilizerDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:PssIEEE4B.bwh1", &get_PssIEEE4B_bwh1);
+	get_map.emplace("cim:PssIEEE4B.bwh2", &get_PssIEEE4B_bwh2);
+	get_map.emplace("cim:PssIEEE4B.bwl1", &get_PssIEEE4B_bwl1);
+	get_map.emplace("cim:PssIEEE4B.bwl2", &get_PssIEEE4B_bwl2);
+	get_map.emplace("cim:PssIEEE4B.kh", &get_PssIEEE4B_kh);
+	get_map.emplace("cim:PssIEEE4B.kh1", &get_PssIEEE4B_kh1);
+	get_map.emplace("cim:PssIEEE4B.kh11", &get_PssIEEE4B_kh11);
+	get_map.emplace("cim:PssIEEE4B.kh17", &get_PssIEEE4B_kh17);
+	get_map.emplace("cim:PssIEEE4B.kh2", &get_PssIEEE4B_kh2);
+	get_map.emplace("cim:PssIEEE4B.ki", &get_PssIEEE4B_ki);
+	get_map.emplace("cim:PssIEEE4B.ki1", &get_PssIEEE4B_ki1);
+	get_map.emplace("cim:PssIEEE4B.ki11", &get_PssIEEE4B_ki11);
+	get_map.emplace("cim:PssIEEE4B.ki17", &get_PssIEEE4B_ki17);
+	get_map.emplace("cim:PssIEEE4B.ki2", &get_PssIEEE4B_ki2);
+	get_map.emplace("cim:PssIEEE4B.kl", &get_PssIEEE4B_kl);
+	get_map.emplace("cim:PssIEEE4B.kl1", &get_PssIEEE4B_kl1);
+	get_map.emplace("cim:PssIEEE4B.kl11", &get_PssIEEE4B_kl11);
+	get_map.emplace("cim:PssIEEE4B.kl17", &get_PssIEEE4B_kl17);
+	get_map.emplace("cim:PssIEEE4B.kl2", &get_PssIEEE4B_kl2);
+	get_map.emplace("cim:PssIEEE4B.omeganh1", &get_PssIEEE4B_omeganh1);
+	get_map.emplace("cim:PssIEEE4B.omeganh2", &get_PssIEEE4B_omeganh2);
+	get_map.emplace("cim:PssIEEE4B.omeganl1", &get_PssIEEE4B_omeganl1);
+	get_map.emplace("cim:PssIEEE4B.omeganl2", &get_PssIEEE4B_omeganl2);
+	get_map.emplace("cim:PssIEEE4B.th1", &get_PssIEEE4B_th1);
+	get_map.emplace("cim:PssIEEE4B.th10", &get_PssIEEE4B_th10);
+	get_map.emplace("cim:PssIEEE4B.th11", &get_PssIEEE4B_th11);
+	get_map.emplace("cim:PssIEEE4B.th12", &get_PssIEEE4B_th12);
+	get_map.emplace("cim:PssIEEE4B.th2", &get_PssIEEE4B_th2);
+	get_map.emplace("cim:PssIEEE4B.th3", &get_PssIEEE4B_th3);
+	get_map.emplace("cim:PssIEEE4B.th4", &get_PssIEEE4B_th4);
+	get_map.emplace("cim:PssIEEE4B.th5", &get_PssIEEE4B_th5);
+	get_map.emplace("cim:PssIEEE4B.th6", &get_PssIEEE4B_th6);
+	get_map.emplace("cim:PssIEEE4B.th7", &get_PssIEEE4B_th7);
+	get_map.emplace("cim:PssIEEE4B.th8", &get_PssIEEE4B_th8);
+	get_map.emplace("cim:PssIEEE4B.th9", &get_PssIEEE4B_th9);
+	get_map.emplace("cim:PssIEEE4B.ti1", &get_PssIEEE4B_ti1);
+	get_map.emplace("cim:PssIEEE4B.ti10", &get_PssIEEE4B_ti10);
+	get_map.emplace("cim:PssIEEE4B.ti11", &get_PssIEEE4B_ti11);
+	get_map.emplace("cim:PssIEEE4B.ti12", &get_PssIEEE4B_ti12);
+	get_map.emplace("cim:PssIEEE4B.ti2", &get_PssIEEE4B_ti2);
+	get_map.emplace("cim:PssIEEE4B.ti3", &get_PssIEEE4B_ti3);
+	get_map.emplace("cim:PssIEEE4B.ti4", &get_PssIEEE4B_ti4);
+	get_map.emplace("cim:PssIEEE4B.ti5", &get_PssIEEE4B_ti5);
+	get_map.emplace("cim:PssIEEE4B.ti6", &get_PssIEEE4B_ti6);
+	get_map.emplace("cim:PssIEEE4B.ti7", &get_PssIEEE4B_ti7);
+	get_map.emplace("cim:PssIEEE4B.ti8", &get_PssIEEE4B_ti8);
+	get_map.emplace("cim:PssIEEE4B.ti9", &get_PssIEEE4B_ti9);
+	get_map.emplace("cim:PssIEEE4B.tl1", &get_PssIEEE4B_tl1);
+	get_map.emplace("cim:PssIEEE4B.tl10", &get_PssIEEE4B_tl10);
+	get_map.emplace("cim:PssIEEE4B.tl11", &get_PssIEEE4B_tl11);
+	get_map.emplace("cim:PssIEEE4B.tl12", &get_PssIEEE4B_tl12);
+	get_map.emplace("cim:PssIEEE4B.tl2", &get_PssIEEE4B_tl2);
+	get_map.emplace("cim:PssIEEE4B.tl3", &get_PssIEEE4B_tl3);
+	get_map.emplace("cim:PssIEEE4B.tl4", &get_PssIEEE4B_tl4);
+	get_map.emplace("cim:PssIEEE4B.tl5", &get_PssIEEE4B_tl5);
+	get_map.emplace("cim:PssIEEE4B.tl6", &get_PssIEEE4B_tl6);
+	get_map.emplace("cim:PssIEEE4B.tl7", &get_PssIEEE4B_tl7);
+	get_map.emplace("cim:PssIEEE4B.tl8", &get_PssIEEE4B_tl8);
+	get_map.emplace("cim:PssIEEE4B.tl9", &get_PssIEEE4B_tl9);
+	get_map.emplace("cim:PssIEEE4B.vhmax", &get_PssIEEE4B_vhmax);
+	get_map.emplace("cim:PssIEEE4B.vhmin", &get_PssIEEE4B_vhmin);
+	get_map.emplace("cim:PssIEEE4B.vimax", &get_PssIEEE4B_vimax);
+	get_map.emplace("cim:PssIEEE4B.vimin", &get_PssIEEE4B_vimin);
+	get_map.emplace("cim:PssIEEE4B.vlmax", &get_PssIEEE4B_vlmax);
+	get_map.emplace("cim:PssIEEE4B.vlmin", &get_PssIEEE4B_vlmin);
+	get_map.emplace("cim:PssIEEE4B.vstmax", &get_PssIEEE4B_vstmax);
+	get_map.emplace("cim:PssIEEE4B.vstmin", &get_PssIEEE4B_vstmin);
+}
+
+void PssIEEE4B::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	PowerSystemStabilizerDynamics::addClassGetFnsToMap(get_map);
+}
+
+void PssIEEE4B::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemStabilizerDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner PssIEEE4B::declare()

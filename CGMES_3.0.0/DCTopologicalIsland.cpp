@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "DCTopologicalIsland.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "DCTopologicalNode.hpp"
@@ -13,6 +15,30 @@ using namespace CIMPP;
 DCTopologicalIsland::DCTopologicalIsland() {};
 DCTopologicalIsland::~DCTopologicalIsland() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::SV,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:DCTopologicalIsland.DCTopologicalNodes", { CGMESProfile::SV, } },
+};
+
+std::list<CGMESProfile>
+DCTopologicalIsland::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+DCTopologicalIsland::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -33,6 +59,18 @@ bool assign_DCTopologicalIsland_DCTopologicalNodes(BaseClass* BaseClass_ptr1, Ba
 	return false;
 }
 
+
+bool get_DCTopologicalIsland_DCTopologicalNodes(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const DCTopologicalIsland* element = dynamic_cast<const DCTopologicalIsland*>(BaseClass_ptr1))
+	{
+		std::copy(element->DCTopologicalNodes.begin(), element->DCTopologicalNodes.end(), std::back_inserter(BaseClass_list));
+		return !BaseClass_list.empty();
+	}
+	return false;
+}
+
+
 const char DCTopologicalIsland::debugName[] = "DCTopologicalIsland";
 const char* DCTopologicalIsland::debugString() const
 {
@@ -51,6 +89,22 @@ void DCTopologicalIsland::addPrimitiveAssignFnsToMap(std::unordered_map<std::str
 void DCTopologicalIsland::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:DCTopologicalIsland.DCTopologicalNodes"), &assign_DCTopologicalIsland_DCTopologicalNodes));
+}
+
+void DCTopologicalIsland::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+}
+
+void DCTopologicalIsland::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:DCTopologicalIsland.DCTopologicalNodes", &get_DCTopologicalIsland_DCTopologicalNodes);
+}
+
+void DCTopologicalIsland::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner DCTopologicalIsland::declare()

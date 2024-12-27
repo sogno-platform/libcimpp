@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "ServiceLocation.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 
@@ -11,6 +13,33 @@ using namespace CIMPP;
 
 ServiceLocation::ServiceLocation() {};
 ServiceLocation::~ServiceLocation() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::GL,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+};
+
+std::list<CGMESProfile>
+ServiceLocation::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+ServiceLocation::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = WorkLocation::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
+
+
+
 
 
 
@@ -31,6 +60,21 @@ void ServiceLocation::addPrimitiveAssignFnsToMap(std::unordered_map<std::string,
 
 void ServiceLocation::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void ServiceLocation::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	WorkLocation::addPrimitiveGetFnsToMap(get_map);
+}
+
+void ServiceLocation::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	WorkLocation::addClassGetFnsToMap(get_map);
+}
+
+void ServiceLocation::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	WorkLocation::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner ServiceLocation::declare()

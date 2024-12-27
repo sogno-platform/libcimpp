@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "ExcANS.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "Integer.hpp"
@@ -25,6 +27,44 @@ using namespace CIMPP;
 
 ExcANS::ExcANS() {};
 ExcANS::~ExcANS() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:ExcANS.blint", { CGMESProfile::DY, } },
+	{ "cim:ExcANS.ifmn", { CGMESProfile::DY, } },
+	{ "cim:ExcANS.ifmx", { CGMESProfile::DY, } },
+	{ "cim:ExcANS.k2", { CGMESProfile::DY, } },
+	{ "cim:ExcANS.k3", { CGMESProfile::DY, } },
+	{ "cim:ExcANS.kce", { CGMESProfile::DY, } },
+	{ "cim:ExcANS.krvecc", { CGMESProfile::DY, } },
+	{ "cim:ExcANS.kvfif", { CGMESProfile::DY, } },
+	{ "cim:ExcANS.t1", { CGMESProfile::DY, } },
+	{ "cim:ExcANS.t2", { CGMESProfile::DY, } },
+	{ "cim:ExcANS.t3", { CGMESProfile::DY, } },
+	{ "cim:ExcANS.tb", { CGMESProfile::DY, } },
+	{ "cim:ExcANS.vrmn", { CGMESProfile::DY, } },
+	{ "cim:ExcANS.vrmx", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+ExcANS::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+ExcANS::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_ExcANS_blint(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -211,16 +251,201 @@ bool assign_ExcANS_vrmx(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
 
 
 
+bool get_ExcANS_blint(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcANS* element = dynamic_cast<const ExcANS*>(BaseClass_ptr1))
+	{
+		buffer << element->blint;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcANS_ifmn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcANS* element = dynamic_cast<const ExcANS*>(BaseClass_ptr1))
+	{
+		buffer << element->ifmn;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcANS_ifmx(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcANS* element = dynamic_cast<const ExcANS*>(BaseClass_ptr1))
+	{
+		buffer << element->ifmx;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcANS_k2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcANS* element = dynamic_cast<const ExcANS*>(BaseClass_ptr1))
+	{
+		buffer << element->k2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcANS_k3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcANS* element = dynamic_cast<const ExcANS*>(BaseClass_ptr1))
+	{
+		buffer << element->k3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcANS_kce(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcANS* element = dynamic_cast<const ExcANS*>(BaseClass_ptr1))
+	{
+		buffer << element->kce;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcANS_krvecc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcANS* element = dynamic_cast<const ExcANS*>(BaseClass_ptr1))
+	{
+		buffer << element->krvecc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcANS_kvfif(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcANS* element = dynamic_cast<const ExcANS*>(BaseClass_ptr1))
+	{
+		buffer << element->kvfif;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcANS_t1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcANS* element = dynamic_cast<const ExcANS*>(BaseClass_ptr1))
+	{
+		buffer << element->t1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcANS_t2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcANS* element = dynamic_cast<const ExcANS*>(BaseClass_ptr1))
+	{
+		buffer << element->t2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcANS_t3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcANS* element = dynamic_cast<const ExcANS*>(BaseClass_ptr1))
+	{
+		buffer << element->t3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcANS_tb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcANS* element = dynamic_cast<const ExcANS*>(BaseClass_ptr1))
+	{
+		buffer << element->tb;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcANS_vrmn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcANS* element = dynamic_cast<const ExcANS*>(BaseClass_ptr1))
+	{
+		buffer << element->vrmn;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcANS_vrmx(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcANS* element = dynamic_cast<const ExcANS*>(BaseClass_ptr1))
+	{
+		buffer << element->vrmx;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -255,6 +480,35 @@ void ExcANS::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_f
 
 void ExcANS::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void ExcANS::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:ExcANS.blint", &get_ExcANS_blint);
+	get_map.emplace("cim:ExcANS.ifmn", &get_ExcANS_ifmn);
+	get_map.emplace("cim:ExcANS.ifmx", &get_ExcANS_ifmx);
+	get_map.emplace("cim:ExcANS.k2", &get_ExcANS_k2);
+	get_map.emplace("cim:ExcANS.k3", &get_ExcANS_k3);
+	get_map.emplace("cim:ExcANS.kce", &get_ExcANS_kce);
+	get_map.emplace("cim:ExcANS.krvecc", &get_ExcANS_krvecc);
+	get_map.emplace("cim:ExcANS.kvfif", &get_ExcANS_kvfif);
+	get_map.emplace("cim:ExcANS.t1", &get_ExcANS_t1);
+	get_map.emplace("cim:ExcANS.t2", &get_ExcANS_t2);
+	get_map.emplace("cim:ExcANS.t3", &get_ExcANS_t3);
+	get_map.emplace("cim:ExcANS.tb", &get_ExcANS_tb);
+	get_map.emplace("cim:ExcANS.vrmn", &get_ExcANS_vrmn);
+	get_map.emplace("cim:ExcANS.vrmx", &get_ExcANS_vrmx);
+}
+
+void ExcANS::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addClassGetFnsToMap(get_map);
+}
+
+void ExcANS::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner ExcANS::declare()

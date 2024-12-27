@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "WindPitchContEmulIEC.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "WindGenTurbineType2IEC.hpp"
@@ -23,6 +25,40 @@ using namespace CIMPP;
 WindPitchContEmulIEC::WindPitchContEmulIEC() : WindGenTurbineType2IEC(nullptr) {};
 WindPitchContEmulIEC::~WindPitchContEmulIEC() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:WindPitchContEmulIEC.WindGenTurbineType2IEC", { CGMESProfile::DY, } },
+	{ "cim:WindPitchContEmulIEC.kdroop", { CGMESProfile::DY, } },
+	{ "cim:WindPitchContEmulIEC.kipce", { CGMESProfile::DY, } },
+	{ "cim:WindPitchContEmulIEC.komegaaero", { CGMESProfile::DY, } },
+	{ "cim:WindPitchContEmulIEC.kppce", { CGMESProfile::DY, } },
+	{ "cim:WindPitchContEmulIEC.omegaref", { CGMESProfile::DY, } },
+	{ "cim:WindPitchContEmulIEC.pimax", { CGMESProfile::DY, } },
+	{ "cim:WindPitchContEmulIEC.pimin", { CGMESProfile::DY, } },
+	{ "cim:WindPitchContEmulIEC.t1", { CGMESProfile::DY, } },
+	{ "cim:WindPitchContEmulIEC.t2", { CGMESProfile::DY, } },
+	{ "cim:WindPitchContEmulIEC.tpe", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+WindPitchContEmulIEC::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+WindPitchContEmulIEC::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_WindPitchContEmulIEC_kdroop(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -173,13 +209,145 @@ bool assign_WindPitchContEmulIEC_WindGenTurbineType2IEC(BaseClass* BaseClass_ptr
 	return false;
 }
 
+bool get_WindPitchContEmulIEC_kdroop(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindPitchContEmulIEC* element = dynamic_cast<const WindPitchContEmulIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->kdroop;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindPitchContEmulIEC_kipce(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindPitchContEmulIEC* element = dynamic_cast<const WindPitchContEmulIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->kipce;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindPitchContEmulIEC_komegaaero(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindPitchContEmulIEC* element = dynamic_cast<const WindPitchContEmulIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->komegaaero;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindPitchContEmulIEC_kppce(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindPitchContEmulIEC* element = dynamic_cast<const WindPitchContEmulIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->kppce;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindPitchContEmulIEC_omegaref(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindPitchContEmulIEC* element = dynamic_cast<const WindPitchContEmulIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->omegaref;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindPitchContEmulIEC_pimax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindPitchContEmulIEC* element = dynamic_cast<const WindPitchContEmulIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->pimax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindPitchContEmulIEC_pimin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindPitchContEmulIEC* element = dynamic_cast<const WindPitchContEmulIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->pimin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindPitchContEmulIEC_t1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindPitchContEmulIEC* element = dynamic_cast<const WindPitchContEmulIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->t1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_WindPitchContEmulIEC_t2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindPitchContEmulIEC* element = dynamic_cast<const WindPitchContEmulIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->t2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_WindPitchContEmulIEC_tpe(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindPitchContEmulIEC* element = dynamic_cast<const WindPitchContEmulIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->tpe;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -211,6 +379,31 @@ void WindPitchContEmulIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::st
 void WindPitchContEmulIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:WindPitchContEmulIEC.WindGenTurbineType2IEC"), &assign_WindPitchContEmulIEC_WindGenTurbineType2IEC));
+}
+
+void WindPitchContEmulIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:WindPitchContEmulIEC.kdroop", &get_WindPitchContEmulIEC_kdroop);
+	get_map.emplace("cim:WindPitchContEmulIEC.kipce", &get_WindPitchContEmulIEC_kipce);
+	get_map.emplace("cim:WindPitchContEmulIEC.komegaaero", &get_WindPitchContEmulIEC_komegaaero);
+	get_map.emplace("cim:WindPitchContEmulIEC.kppce", &get_WindPitchContEmulIEC_kppce);
+	get_map.emplace("cim:WindPitchContEmulIEC.omegaref", &get_WindPitchContEmulIEC_omegaref);
+	get_map.emplace("cim:WindPitchContEmulIEC.pimax", &get_WindPitchContEmulIEC_pimax);
+	get_map.emplace("cim:WindPitchContEmulIEC.pimin", &get_WindPitchContEmulIEC_pimin);
+	get_map.emplace("cim:WindPitchContEmulIEC.t1", &get_WindPitchContEmulIEC_t1);
+	get_map.emplace("cim:WindPitchContEmulIEC.t2", &get_WindPitchContEmulIEC_t2);
+	get_map.emplace("cim:WindPitchContEmulIEC.tpe", &get_WindPitchContEmulIEC_tpe);
+}
+
+void WindPitchContEmulIEC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+}
+
+void WindPitchContEmulIEC::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner WindPitchContEmulIEC::declare()

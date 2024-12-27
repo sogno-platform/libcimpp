@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "GovGAST4.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PU.hpp"
@@ -22,6 +24,41 @@ using namespace CIMPP;
 
 GovGAST4::GovGAST4() {};
 GovGAST4::~GovGAST4() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:GovGAST4.bp", { CGMESProfile::DY, } },
+	{ "cim:GovGAST4.ktm", { CGMESProfile::DY, } },
+	{ "cim:GovGAST4.mnef", { CGMESProfile::DY, } },
+	{ "cim:GovGAST4.mxef", { CGMESProfile::DY, } },
+	{ "cim:GovGAST4.rymn", { CGMESProfile::DY, } },
+	{ "cim:GovGAST4.rymx", { CGMESProfile::DY, } },
+	{ "cim:GovGAST4.ta", { CGMESProfile::DY, } },
+	{ "cim:GovGAST4.tc", { CGMESProfile::DY, } },
+	{ "cim:GovGAST4.tcm", { CGMESProfile::DY, } },
+	{ "cim:GovGAST4.tm", { CGMESProfile::DY, } },
+	{ "cim:GovGAST4.tv", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+GovGAST4::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+GovGAST4::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = TurbineGovernorDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_GovGAST4_bp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -169,13 +206,159 @@ bool assign_GovGAST4_tv(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
 
 
 
+bool get_GovGAST4_bp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGAST4* element = dynamic_cast<const GovGAST4*>(BaseClass_ptr1))
+	{
+		buffer << element->bp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGAST4_ktm(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGAST4* element = dynamic_cast<const GovGAST4*>(BaseClass_ptr1))
+	{
+		buffer << element->ktm;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGAST4_mnef(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGAST4* element = dynamic_cast<const GovGAST4*>(BaseClass_ptr1))
+	{
+		buffer << element->mnef;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGAST4_mxef(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGAST4* element = dynamic_cast<const GovGAST4*>(BaseClass_ptr1))
+	{
+		buffer << element->mxef;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGAST4_rymn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGAST4* element = dynamic_cast<const GovGAST4*>(BaseClass_ptr1))
+	{
+		buffer << element->rymn;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGAST4_rymx(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGAST4* element = dynamic_cast<const GovGAST4*>(BaseClass_ptr1))
+	{
+		buffer << element->rymx;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGAST4_ta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGAST4* element = dynamic_cast<const GovGAST4*>(BaseClass_ptr1))
+	{
+		buffer << element->ta;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGAST4_tc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGAST4* element = dynamic_cast<const GovGAST4*>(BaseClass_ptr1))
+	{
+		buffer << element->tc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovGAST4_tcm(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGAST4* element = dynamic_cast<const GovGAST4*>(BaseClass_ptr1))
+	{
+		buffer << element->tcm;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovGAST4_tm(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGAST4* element = dynamic_cast<const GovGAST4*>(BaseClass_ptr1))
+	{
+		buffer << element->tm;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovGAST4_tv(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGAST4* element = dynamic_cast<const GovGAST4*>(BaseClass_ptr1))
+	{
+		buffer << element->tv;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -207,6 +390,32 @@ void GovGAST4::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign
 
 void GovGAST4::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void GovGAST4::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:GovGAST4.bp", &get_GovGAST4_bp);
+	get_map.emplace("cim:GovGAST4.ktm", &get_GovGAST4_ktm);
+	get_map.emplace("cim:GovGAST4.mnef", &get_GovGAST4_mnef);
+	get_map.emplace("cim:GovGAST4.mxef", &get_GovGAST4_mxef);
+	get_map.emplace("cim:GovGAST4.rymn", &get_GovGAST4_rymn);
+	get_map.emplace("cim:GovGAST4.rymx", &get_GovGAST4_rymx);
+	get_map.emplace("cim:GovGAST4.ta", &get_GovGAST4_ta);
+	get_map.emplace("cim:GovGAST4.tc", &get_GovGAST4_tc);
+	get_map.emplace("cim:GovGAST4.tcm", &get_GovGAST4_tcm);
+	get_map.emplace("cim:GovGAST4.tm", &get_GovGAST4_tm);
+	get_map.emplace("cim:GovGAST4.tv", &get_GovGAST4_tv);
+}
+
+void GovGAST4::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addClassGetFnsToMap(get_map);
+}
+
+void GovGAST4::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner GovGAST4::declare()

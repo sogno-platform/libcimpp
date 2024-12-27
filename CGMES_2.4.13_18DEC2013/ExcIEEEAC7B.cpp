@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "ExcIEEEAC7B.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PU.hpp"
@@ -37,6 +39,56 @@ using namespace CIMPP;
 
 ExcIEEEAC7B::ExcIEEEAC7B() {};
 ExcIEEEAC7B::~ExcIEEEAC7B() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:ExcIEEEAC7B.kc", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.kd", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.kdr", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.ke", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.kf1", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.kf2", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.kf3", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.kia", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.kir", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.kl", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.kp", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.kpa", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.kpr", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.seve1", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.seve2", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.tdr", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.te", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.tf", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.vamax", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.vamin", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.ve1", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.ve2", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.vemin", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.vfemax", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.vrmax", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC7B.vrmin", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+ExcIEEEAC7B::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+ExcIEEEAC7B::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_ExcIEEEAC7B_kc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -379,28 +431,369 @@ bool assign_ExcIEEEAC7B_vrmin(std::stringstream &buffer, BaseClass* BaseClass_pt
 
 
 
+bool get_ExcIEEEAC7B_kc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->kc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC7B_kd(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->kd;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC7B_kdr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->kdr;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC7B_ke(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->ke;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC7B_kf1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->kf1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC7B_kf2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->kf2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC7B_kf3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->kf3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC7B_kia(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->kia;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC7B_kir(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->kir;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC7B_kl(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->kl;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC7B_kp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->kp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC7B_kpa(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->kpa;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC7B_kpr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->kpr;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC7B_seve1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->seve1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC7B_seve2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->seve2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC7B_tdr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->tdr;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC7B_te(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->te;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC7B_tf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->tf;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC7B_vamax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->vamax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC7B_vamin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->vamin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC7B_ve1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->ve1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC7B_ve2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->ve2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC7B_vemin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->vemin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcIEEEAC7B_vfemax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->vfemax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcIEEEAC7B_vrmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->vrmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcIEEEAC7B_vrmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC7B* element = dynamic_cast<const ExcIEEEAC7B*>(BaseClass_ptr1))
+	{
+		buffer << element->vrmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -447,6 +840,47 @@ void ExcIEEEAC7B::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, ass
 
 void ExcIEEEAC7B::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void ExcIEEEAC7B::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:ExcIEEEAC7B.kc", &get_ExcIEEEAC7B_kc);
+	get_map.emplace("cim:ExcIEEEAC7B.kd", &get_ExcIEEEAC7B_kd);
+	get_map.emplace("cim:ExcIEEEAC7B.kdr", &get_ExcIEEEAC7B_kdr);
+	get_map.emplace("cim:ExcIEEEAC7B.ke", &get_ExcIEEEAC7B_ke);
+	get_map.emplace("cim:ExcIEEEAC7B.kf1", &get_ExcIEEEAC7B_kf1);
+	get_map.emplace("cim:ExcIEEEAC7B.kf2", &get_ExcIEEEAC7B_kf2);
+	get_map.emplace("cim:ExcIEEEAC7B.kf3", &get_ExcIEEEAC7B_kf3);
+	get_map.emplace("cim:ExcIEEEAC7B.kia", &get_ExcIEEEAC7B_kia);
+	get_map.emplace("cim:ExcIEEEAC7B.kir", &get_ExcIEEEAC7B_kir);
+	get_map.emplace("cim:ExcIEEEAC7B.kl", &get_ExcIEEEAC7B_kl);
+	get_map.emplace("cim:ExcIEEEAC7B.kp", &get_ExcIEEEAC7B_kp);
+	get_map.emplace("cim:ExcIEEEAC7B.kpa", &get_ExcIEEEAC7B_kpa);
+	get_map.emplace("cim:ExcIEEEAC7B.kpr", &get_ExcIEEEAC7B_kpr);
+	get_map.emplace("cim:ExcIEEEAC7B.seve1", &get_ExcIEEEAC7B_seve1);
+	get_map.emplace("cim:ExcIEEEAC7B.seve2", &get_ExcIEEEAC7B_seve2);
+	get_map.emplace("cim:ExcIEEEAC7B.tdr", &get_ExcIEEEAC7B_tdr);
+	get_map.emplace("cim:ExcIEEEAC7B.te", &get_ExcIEEEAC7B_te);
+	get_map.emplace("cim:ExcIEEEAC7B.tf", &get_ExcIEEEAC7B_tf);
+	get_map.emplace("cim:ExcIEEEAC7B.vamax", &get_ExcIEEEAC7B_vamax);
+	get_map.emplace("cim:ExcIEEEAC7B.vamin", &get_ExcIEEEAC7B_vamin);
+	get_map.emplace("cim:ExcIEEEAC7B.ve1", &get_ExcIEEEAC7B_ve1);
+	get_map.emplace("cim:ExcIEEEAC7B.ve2", &get_ExcIEEEAC7B_ve2);
+	get_map.emplace("cim:ExcIEEEAC7B.vemin", &get_ExcIEEEAC7B_vemin);
+	get_map.emplace("cim:ExcIEEEAC7B.vfemax", &get_ExcIEEEAC7B_vfemax);
+	get_map.emplace("cim:ExcIEEEAC7B.vrmax", &get_ExcIEEEAC7B_vrmax);
+	get_map.emplace("cim:ExcIEEEAC7B.vrmin", &get_ExcIEEEAC7B_vrmin);
+}
+
+void ExcIEEEAC7B::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addClassGetFnsToMap(get_map);
+}
+
+void ExcIEEEAC7B::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner ExcIEEEAC7B::declare()

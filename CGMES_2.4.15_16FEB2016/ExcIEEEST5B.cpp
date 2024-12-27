@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "ExcIEEEST5B.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PU.hpp"
@@ -28,6 +30,47 @@ using namespace CIMPP;
 
 ExcIEEEST5B::ExcIEEEST5B() {};
 ExcIEEEST5B::~ExcIEEEST5B() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:ExcIEEEST5B.kc", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST5B.kr", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST5B.t1", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST5B.tb1", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST5B.tb2", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST5B.tc1", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST5B.tc2", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST5B.tob1", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST5B.tob2", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST5B.toc1", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST5B.toc2", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST5B.tub1", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST5B.tub2", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST5B.tuc1", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST5B.tuc2", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST5B.vrmax", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST5B.vrmin", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+ExcIEEEST5B::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+ExcIEEEST5B::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_ExcIEEEST5B_kc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -253,19 +296,243 @@ bool assign_ExcIEEEST5B_vrmin(std::stringstream &buffer, BaseClass* BaseClass_pt
 
 
 
+bool get_ExcIEEEST5B_kc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST5B* element = dynamic_cast<const ExcIEEEST5B*>(BaseClass_ptr1))
+	{
+		buffer << element->kc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST5B_kr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST5B* element = dynamic_cast<const ExcIEEEST5B*>(BaseClass_ptr1))
+	{
+		buffer << element->kr;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST5B_t1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST5B* element = dynamic_cast<const ExcIEEEST5B*>(BaseClass_ptr1))
+	{
+		buffer << element->t1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST5B_tb1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST5B* element = dynamic_cast<const ExcIEEEST5B*>(BaseClass_ptr1))
+	{
+		buffer << element->tb1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST5B_tb2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST5B* element = dynamic_cast<const ExcIEEEST5B*>(BaseClass_ptr1))
+	{
+		buffer << element->tb2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST5B_tc1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST5B* element = dynamic_cast<const ExcIEEEST5B*>(BaseClass_ptr1))
+	{
+		buffer << element->tc1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST5B_tc2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST5B* element = dynamic_cast<const ExcIEEEST5B*>(BaseClass_ptr1))
+	{
+		buffer << element->tc2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST5B_tob1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST5B* element = dynamic_cast<const ExcIEEEST5B*>(BaseClass_ptr1))
+	{
+		buffer << element->tob1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST5B_tob2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST5B* element = dynamic_cast<const ExcIEEEST5B*>(BaseClass_ptr1))
+	{
+		buffer << element->tob2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST5B_toc1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST5B* element = dynamic_cast<const ExcIEEEST5B*>(BaseClass_ptr1))
+	{
+		buffer << element->toc1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST5B_toc2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST5B* element = dynamic_cast<const ExcIEEEST5B*>(BaseClass_ptr1))
+	{
+		buffer << element->toc2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST5B_tub1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST5B* element = dynamic_cast<const ExcIEEEST5B*>(BaseClass_ptr1))
+	{
+		buffer << element->tub1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST5B_tub2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST5B* element = dynamic_cast<const ExcIEEEST5B*>(BaseClass_ptr1))
+	{
+		buffer << element->tub2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST5B_tuc1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST5B* element = dynamic_cast<const ExcIEEEST5B*>(BaseClass_ptr1))
+	{
+		buffer << element->tuc1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcIEEEST5B_tuc2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST5B* element = dynamic_cast<const ExcIEEEST5B*>(BaseClass_ptr1))
+	{
+		buffer << element->tuc2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcIEEEST5B_vrmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST5B* element = dynamic_cast<const ExcIEEEST5B*>(BaseClass_ptr1))
+	{
+		buffer << element->vrmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcIEEEST5B_vrmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST5B* element = dynamic_cast<const ExcIEEEST5B*>(BaseClass_ptr1))
+	{
+		buffer << element->vrmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -303,6 +570,38 @@ void ExcIEEEST5B::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, ass
 
 void ExcIEEEST5B::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void ExcIEEEST5B::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:ExcIEEEST5B.kc", &get_ExcIEEEST5B_kc);
+	get_map.emplace("cim:ExcIEEEST5B.kr", &get_ExcIEEEST5B_kr);
+	get_map.emplace("cim:ExcIEEEST5B.t1", &get_ExcIEEEST5B_t1);
+	get_map.emplace("cim:ExcIEEEST5B.tb1", &get_ExcIEEEST5B_tb1);
+	get_map.emplace("cim:ExcIEEEST5B.tb2", &get_ExcIEEEST5B_tb2);
+	get_map.emplace("cim:ExcIEEEST5B.tc1", &get_ExcIEEEST5B_tc1);
+	get_map.emplace("cim:ExcIEEEST5B.tc2", &get_ExcIEEEST5B_tc2);
+	get_map.emplace("cim:ExcIEEEST5B.tob1", &get_ExcIEEEST5B_tob1);
+	get_map.emplace("cim:ExcIEEEST5B.tob2", &get_ExcIEEEST5B_tob2);
+	get_map.emplace("cim:ExcIEEEST5B.toc1", &get_ExcIEEEST5B_toc1);
+	get_map.emplace("cim:ExcIEEEST5B.toc2", &get_ExcIEEEST5B_toc2);
+	get_map.emplace("cim:ExcIEEEST5B.tub1", &get_ExcIEEEST5B_tub1);
+	get_map.emplace("cim:ExcIEEEST5B.tub2", &get_ExcIEEEST5B_tub2);
+	get_map.emplace("cim:ExcIEEEST5B.tuc1", &get_ExcIEEEST5B_tuc1);
+	get_map.emplace("cim:ExcIEEEST5B.tuc2", &get_ExcIEEEST5B_tuc2);
+	get_map.emplace("cim:ExcIEEEST5B.vrmax", &get_ExcIEEEST5B_vrmax);
+	get_map.emplace("cim:ExcIEEEST5B.vrmin", &get_ExcIEEEST5B_vrmin);
+}
+
+void ExcIEEEST5B::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addClassGetFnsToMap(get_map);
+}
+
+void ExcIEEEST5B::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner ExcIEEEST5B::declare()

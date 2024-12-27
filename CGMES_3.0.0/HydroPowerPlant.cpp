@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "HydroPowerPlant.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "HydroGeneratingUnit.hpp"
@@ -15,7 +17,32 @@ using namespace CIMPP;
 HydroPowerPlant::HydroPowerPlant() {};
 HydroPowerPlant::~HydroPowerPlant() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:HydroPowerPlant.HydroGeneratingUnits", { CGMESProfile::EQ, } },
+	{ "cim:HydroPowerPlant.HydroPumps", { CGMESProfile::EQ, } },
+	{ "cim:HydroPowerPlant.hydroPlantStorageType", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+HydroPowerPlant::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+HydroPowerPlant::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = PowerSystemResource::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_HydroPowerPlant_hydroPlantStorageType(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -48,7 +75,6 @@ bool assign_HydroPowerPlant_HydroGeneratingUnits(BaseClass* BaseClass_ptr1, Base
 	}
 	return false;
 }
-
 bool assign_HydroPump_HydroPowerPlant(BaseClass*, BaseClass*);
 bool assign_HydroPowerPlant_HydroPumps(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -66,6 +92,21 @@ bool assign_HydroPowerPlant_HydroPumps(BaseClass* BaseClass_ptr1, BaseClass* Bas
 	return false;
 }
 
+
+
+bool get_HydroPowerPlant_hydroPlantStorageType(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const HydroPowerPlant* element = dynamic_cast<const HydroPowerPlant*>(BaseClass_ptr1))
+	{
+		buffer << element->hydroPlantStorageType;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 const char HydroPowerPlant::debugName[] = "HydroPowerPlant";
 const char* HydroPowerPlant::debugString() const
@@ -87,6 +128,22 @@ void HydroPowerPlant::addClassAssignFnsToMap(std::unordered_map<std::string, cla
 {
 	assign_map.insert(std::make_pair(std::string("cim:HydroPowerPlant.HydroGeneratingUnits"), &assign_HydroPowerPlant_HydroGeneratingUnits));
 	assign_map.insert(std::make_pair(std::string("cim:HydroPowerPlant.HydroPumps"), &assign_HydroPowerPlant_HydroPumps));
+}
+
+void HydroPowerPlant::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemResource::addPrimitiveGetFnsToMap(get_map);
+}
+
+void HydroPowerPlant::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	PowerSystemResource::addClassGetFnsToMap(get_map);
+}
+
+void HydroPowerPlant::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemResource::addEnumGetFnsToMap(get_map);
+	get_map.emplace("cim:HydroPowerPlant.hydroPlantStorageType", &get_HydroPowerPlant_hydroPlantStorageType);
 }
 
 const BaseClassDefiner HydroPowerPlant::declare()

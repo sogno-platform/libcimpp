@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "Pss5.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "Boolean.hpp"
@@ -28,6 +30,47 @@ using namespace CIMPP;
 
 Pss5::Pss5() {};
 Pss5::~Pss5() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:Pss5.ctw2", { CGMESProfile::DY, } },
+	{ "cim:Pss5.deadband", { CGMESProfile::DY, } },
+	{ "cim:Pss5.isfreq", { CGMESProfile::DY, } },
+	{ "cim:Pss5.kf", { CGMESProfile::DY, } },
+	{ "cim:Pss5.kpe", { CGMESProfile::DY, } },
+	{ "cim:Pss5.kpss", { CGMESProfile::DY, } },
+	{ "cim:Pss5.pmin", { CGMESProfile::DY, } },
+	{ "cim:Pss5.tl1", { CGMESProfile::DY, } },
+	{ "cim:Pss5.tl2", { CGMESProfile::DY, } },
+	{ "cim:Pss5.tl3", { CGMESProfile::DY, } },
+	{ "cim:Pss5.tl4", { CGMESProfile::DY, } },
+	{ "cim:Pss5.tpe", { CGMESProfile::DY, } },
+	{ "cim:Pss5.tw1", { CGMESProfile::DY, } },
+	{ "cim:Pss5.tw2", { CGMESProfile::DY, } },
+	{ "cim:Pss5.vadat", { CGMESProfile::DY, } },
+	{ "cim:Pss5.vsmn", { CGMESProfile::DY, } },
+	{ "cim:Pss5.vsmx", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+Pss5::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+Pss5::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = PowerSystemStabilizerDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_Pss5_ctw2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -253,19 +296,243 @@ bool assign_Pss5_vsmx(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
 
 
 
+bool get_Pss5_ctw2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	{
+		buffer << element->ctw2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_Pss5_deadband(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	{
+		buffer << element->deadband;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_Pss5_isfreq(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	{
+		buffer << element->isfreq;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_Pss5_kf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	{
+		buffer << element->kf;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_Pss5_kpe(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	{
+		buffer << element->kpe;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_Pss5_kpss(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	{
+		buffer << element->kpss;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_Pss5_pmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	{
+		buffer << element->pmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_Pss5_tl1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	{
+		buffer << element->tl1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_Pss5_tl2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	{
+		buffer << element->tl2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_Pss5_tl3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	{
+		buffer << element->tl3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_Pss5_tl4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	{
+		buffer << element->tl4;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_Pss5_tpe(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	{
+		buffer << element->tpe;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_Pss5_tw1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	{
+		buffer << element->tw1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_Pss5_tw2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	{
+		buffer << element->tw2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Pss5_vadat(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	{
+		buffer << element->vadat;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Pss5_vsmn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	{
+		buffer << element->vsmn;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Pss5_vsmx(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	{
+		buffer << element->vsmx;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -303,6 +570,38 @@ void Pss5::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_fun
 
 void Pss5::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void Pss5::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemStabilizerDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:Pss5.ctw2", &get_Pss5_ctw2);
+	get_map.emplace("cim:Pss5.deadband", &get_Pss5_deadband);
+	get_map.emplace("cim:Pss5.isfreq", &get_Pss5_isfreq);
+	get_map.emplace("cim:Pss5.kf", &get_Pss5_kf);
+	get_map.emplace("cim:Pss5.kpe", &get_Pss5_kpe);
+	get_map.emplace("cim:Pss5.kpss", &get_Pss5_kpss);
+	get_map.emplace("cim:Pss5.pmin", &get_Pss5_pmin);
+	get_map.emplace("cim:Pss5.tl1", &get_Pss5_tl1);
+	get_map.emplace("cim:Pss5.tl2", &get_Pss5_tl2);
+	get_map.emplace("cim:Pss5.tl3", &get_Pss5_tl3);
+	get_map.emplace("cim:Pss5.tl4", &get_Pss5_tl4);
+	get_map.emplace("cim:Pss5.tpe", &get_Pss5_tpe);
+	get_map.emplace("cim:Pss5.tw1", &get_Pss5_tw1);
+	get_map.emplace("cim:Pss5.tw2", &get_Pss5_tw2);
+	get_map.emplace("cim:Pss5.vadat", &get_Pss5_vadat);
+	get_map.emplace("cim:Pss5.vsmn", &get_Pss5_vsmn);
+	get_map.emplace("cim:Pss5.vsmx", &get_Pss5_vsmx);
+}
+
+void Pss5::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	PowerSystemStabilizerDynamics::addClassGetFnsToMap(get_map);
+}
+
+void Pss5::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemStabilizerDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner Pss5::declare()

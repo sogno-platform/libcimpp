@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "DCNode.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "DCBaseTerminal.hpp"
@@ -14,7 +16,32 @@ using namespace CIMPP;
 DCNode::DCNode() : DCTopologicalNode(nullptr) {};
 DCNode::~DCNode() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+	CGMESProfile::TP,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:DCNode.DCTerminals", { CGMESProfile::EQ, CGMESProfile::TP, } },
+	{ "cim:DCNode.DCTopologicalNode", { CGMESProfile::TP, } },
+};
+
+std::list<CGMESProfile>
+DCNode::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+DCNode::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -34,7 +61,6 @@ bool assign_DCNode_DCTerminals(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_p
 	}
 	return false;
 }
-
 bool assign_DCTopologicalNode_DCNodes(BaseClass*, BaseClass*);
 bool assign_DCNode_DCTopologicalNode(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -51,6 +77,8 @@ bool assign_DCNode_DCTopologicalNode(BaseClass* BaseClass_ptr1, BaseClass* BaseC
 	}
 	return false;
 }
+
+
 
 const char DCNode::debugName[] = "DCNode";
 const char* DCNode::debugString() const
@@ -71,6 +99,21 @@ void DCNode::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign
 {
 	assign_map.insert(std::make_pair(std::string("cim:DCNode.DCTerminals"), &assign_DCNode_DCTerminals));
 	assign_map.insert(std::make_pair(std::string("cim:DCNode.DCTopologicalNode"), &assign_DCNode_DCTopologicalNode));
+}
+
+void DCNode::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+}
+
+void DCNode::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+}
+
+void DCNode::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner DCNode::declare()

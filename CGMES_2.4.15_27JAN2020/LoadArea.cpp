@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "LoadArea.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "SubLoadArea.hpp"
@@ -13,6 +15,30 @@ using namespace CIMPP;
 LoadArea::LoadArea() {};
 LoadArea::~LoadArea() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:LoadArea.SubLoadAreas", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+LoadArea::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+LoadArea::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = EnergyArea::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -33,6 +59,8 @@ bool assign_LoadArea_SubLoadAreas(BaseClass* BaseClass_ptr1, BaseClass* BaseClas
 	return false;
 }
 
+
+
 const char LoadArea::debugName[] = "LoadArea";
 const char* LoadArea::debugString() const
 {
@@ -51,6 +79,21 @@ void LoadArea::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign
 void LoadArea::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:LoadArea.SubLoadAreas"), &assign_LoadArea_SubLoadAreas));
+}
+
+void LoadArea::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	EnergyArea::addPrimitiveGetFnsToMap(get_map);
+}
+
+void LoadArea::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	EnergyArea::addClassGetFnsToMap(get_map);
+}
+
+void LoadArea::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	EnergyArea::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner LoadArea::declare()

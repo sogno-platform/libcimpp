@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "ExcRQB.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "Float.hpp"
@@ -24,6 +26,43 @@ using namespace CIMPP;
 
 ExcRQB::ExcRQB() {};
 ExcRQB::~ExcRQB() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:ExcRQB.ki0", { CGMESProfile::DY, } },
+	{ "cim:ExcRQB.ki1", { CGMESProfile::DY, } },
+	{ "cim:ExcRQB.klir", { CGMESProfile::DY, } },
+	{ "cim:ExcRQB.klus", { CGMESProfile::DY, } },
+	{ "cim:ExcRQB.lsat", { CGMESProfile::DY, } },
+	{ "cim:ExcRQB.lus", { CGMESProfile::DY, } },
+	{ "cim:ExcRQB.mesu", { CGMESProfile::DY, } },
+	{ "cim:ExcRQB.t4m", { CGMESProfile::DY, } },
+	{ "cim:ExcRQB.tc", { CGMESProfile::DY, } },
+	{ "cim:ExcRQB.te", { CGMESProfile::DY, } },
+	{ "cim:ExcRQB.tf", { CGMESProfile::DY, } },
+	{ "cim:ExcRQB.ucmax", { CGMESProfile::DY, } },
+	{ "cim:ExcRQB.ucmin", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+ExcRQB::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+ExcRQB::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_ExcRQB_ki0(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -197,15 +236,187 @@ bool assign_ExcRQB_ucmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
 
 
 
+bool get_ExcRQB_ki0(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	{
+		buffer << element->ki0;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcRQB_ki1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	{
+		buffer << element->ki1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcRQB_klir(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	{
+		buffer << element->klir;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcRQB_klus(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	{
+		buffer << element->klus;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcRQB_lsat(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	{
+		buffer << element->lsat;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcRQB_lus(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	{
+		buffer << element->lus;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcRQB_mesu(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	{
+		buffer << element->mesu;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcRQB_t4m(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	{
+		buffer << element->t4m;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcRQB_tc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	{
+		buffer << element->tc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcRQB_te(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	{
+		buffer << element->te;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcRQB_tf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	{
+		buffer << element->tf;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcRQB_ucmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	{
+		buffer << element->ucmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcRQB_ucmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	{
+		buffer << element->ucmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -239,6 +450,34 @@ void ExcRQB::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_f
 
 void ExcRQB::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void ExcRQB::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:ExcRQB.ki0", &get_ExcRQB_ki0);
+	get_map.emplace("cim:ExcRQB.ki1", &get_ExcRQB_ki1);
+	get_map.emplace("cim:ExcRQB.klir", &get_ExcRQB_klir);
+	get_map.emplace("cim:ExcRQB.klus", &get_ExcRQB_klus);
+	get_map.emplace("cim:ExcRQB.lsat", &get_ExcRQB_lsat);
+	get_map.emplace("cim:ExcRQB.lus", &get_ExcRQB_lus);
+	get_map.emplace("cim:ExcRQB.mesu", &get_ExcRQB_mesu);
+	get_map.emplace("cim:ExcRQB.t4m", &get_ExcRQB_t4m);
+	get_map.emplace("cim:ExcRQB.tc", &get_ExcRQB_tc);
+	get_map.emplace("cim:ExcRQB.te", &get_ExcRQB_te);
+	get_map.emplace("cim:ExcRQB.tf", &get_ExcRQB_tf);
+	get_map.emplace("cim:ExcRQB.ucmax", &get_ExcRQB_ucmax);
+	get_map.emplace("cim:ExcRQB.ucmin", &get_ExcRQB_ucmin);
+}
+
+void ExcRQB::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addClassGetFnsToMap(get_map);
+}
+
+void ExcRQB::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner ExcRQB::declare()

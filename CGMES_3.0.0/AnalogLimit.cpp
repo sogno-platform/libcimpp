@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "AnalogLimit.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "AnalogLimitSet.hpp"
@@ -14,6 +16,31 @@ using namespace CIMPP;
 AnalogLimit::AnalogLimit() : LimitSet(nullptr) {};
 AnalogLimit::~AnalogLimit() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::OP,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:AnalogLimit.LimitSet", { CGMESProfile::OP, } },
+	{ "cim:AnalogLimit.value", { CGMESProfile::OP, } },
+};
+
+std::list<CGMESProfile>
+AnalogLimit::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+AnalogLimit::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = Limit::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_AnalogLimit_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -47,6 +74,34 @@ bool assign_AnalogLimit_LimitSet(BaseClass* BaseClass_ptr1, BaseClass* BaseClass
 	return false;
 }
 
+bool get_AnalogLimit_value(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const AnalogLimit* element = dynamic_cast<const AnalogLimit*>(BaseClass_ptr1))
+	{
+		buffer << element->value;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+
+bool get_AnalogLimit_LimitSet(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const AnalogLimit* element = dynamic_cast<const AnalogLimit*>(BaseClass_ptr1))
+	{
+		if (element->LimitSet != 0)
+		{
+			BaseClass_list.push_back(element->LimitSet);
+			return true;
+		}
+	}
+	return false;
+}
+
 
 const char AnalogLimit::debugName[] = "AnalogLimit";
 const char* AnalogLimit::debugString() const
@@ -67,6 +122,23 @@ void AnalogLimit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, ass
 void AnalogLimit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:AnalogLimit.LimitSet"), &assign_AnalogLimit_LimitSet));
+}
+
+void AnalogLimit::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	Limit::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:AnalogLimit.value", &get_AnalogLimit_value);
+}
+
+void AnalogLimit::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	Limit::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:AnalogLimit.LimitSet", &get_AnalogLimit_LimitSet);
+}
+
+void AnalogLimit::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	Limit::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner AnalogLimit::declare()
