@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "ACDCConverter.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "ACDCConverterDCTerminal.hpp"
@@ -33,7 +35,53 @@ using namespace CIMPP;
 ACDCConverter::ACDCConverter() : PccTerminal(nullptr) {};
 ACDCConverter::~ACDCConverter() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+	CGMESProfile::EQ,
+	CGMESProfile::SSH,
+	CGMESProfile::SV,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:ACDCConverter.DCTerminals", { CGMESProfile::EQ, } },
+	{ "cim:ACDCConverter.PccTerminal", { CGMESProfile::EQ, } },
+	{ "cim:ACDCConverter.baseS", { CGMESProfile::EQ, } },
+	{ "cim:ACDCConverter.idc", { CGMESProfile::SV, } },
+	{ "cim:ACDCConverter.idleLoss", { CGMESProfile::EQ, } },
+	{ "cim:ACDCConverter.maxP", { CGMESProfile::EQ, } },
+	{ "cim:ACDCConverter.maxUdc", { CGMESProfile::EQ, } },
+	{ "cim:ACDCConverter.minP", { CGMESProfile::EQ, } },
+	{ "cim:ACDCConverter.minUdc", { CGMESProfile::EQ, } },
+	{ "cim:ACDCConverter.numberOfValves", { CGMESProfile::EQ, } },
+	{ "cim:ACDCConverter.p", { CGMESProfile::SSH, } },
+	{ "cim:ACDCConverter.poleLossP", { CGMESProfile::SV, } },
+	{ "cim:ACDCConverter.q", { CGMESProfile::SSH, } },
+	{ "cim:ACDCConverter.ratedUdc", { CGMESProfile::EQ, } },
+	{ "cim:ACDCConverter.resistiveLoss", { CGMESProfile::EQ, } },
+	{ "cim:ACDCConverter.switchingLoss", { CGMESProfile::EQ, } },
+	{ "cim:ACDCConverter.targetPpcc", { CGMESProfile::SSH, } },
+	{ "cim:ACDCConverter.targetUdc", { CGMESProfile::SSH, } },
+	{ "cim:ACDCConverter.uc", { CGMESProfile::SV, } },
+	{ "cim:ACDCConverter.udc", { CGMESProfile::SV, } },
+	{ "cim:ACDCConverter.valveU0", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+ACDCConverter::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+ACDCConverter::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = ConductingEquipment::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_ACDCConverter_baseS(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -300,7 +348,6 @@ bool assign_ACDCConverter_DCTerminals(BaseClass* BaseClass_ptr1, BaseClass* Base
 	}
 	return false;
 }
-
 bool assign_Terminal_ConverterDCSides(BaseClass*, BaseClass*);
 bool assign_ACDCConverter_PccTerminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -318,23 +365,285 @@ bool assign_ACDCConverter_PccTerminal(BaseClass* BaseClass_ptr1, BaseClass* Base
 	return false;
 }
 
+bool get_ACDCConverter_baseS(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->baseS;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ACDCConverter_idc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->idc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ACDCConverter_idleLoss(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->idleLoss;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ACDCConverter_maxP(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->maxP;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ACDCConverter_maxUdc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->maxUdc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ACDCConverter_minP(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->minP;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ACDCConverter_minUdc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->minUdc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ACDCConverter_numberOfValves(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->numberOfValves;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ACDCConverter_p(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->p;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ACDCConverter_poleLossP(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->poleLossP;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ACDCConverter_q(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->q;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ACDCConverter_ratedUdc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->ratedUdc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ACDCConverter_resistiveLoss(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->resistiveLoss;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ACDCConverter_switchingLoss(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->switchingLoss;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ACDCConverter_targetPpcc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->targetPpcc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ACDCConverter_targetUdc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->targetUdc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ACDCConverter_uc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->uc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ACDCConverter_udc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->udc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ACDCConverter_valveU0(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	{
+		buffer << element->valveU0;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+bool get_ACDCConverter_PccTerminal(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	{
+		if (element->PccTerminal != 0)
+		{
+			BaseClass_list.push_back(element->PccTerminal);
+			return true;
+		}
+	}
+	return false;
+}
 
 
 const char ACDCConverter::debugName[] = "ACDCConverter";
@@ -375,6 +684,41 @@ void ACDCConverter::addClassAssignFnsToMap(std::unordered_map<std::string, class
 {
 	assign_map.insert(std::make_pair(std::string("cim:ACDCConverter.DCTerminals"), &assign_ACDCConverter_DCTerminals));
 	assign_map.insert(std::make_pair(std::string("cim:ACDCConverter.PccTerminal"), &assign_ACDCConverter_PccTerminal));
+}
+
+void ACDCConverter::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ConductingEquipment::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:ACDCConverter.baseS", &get_ACDCConverter_baseS);
+	get_map.emplace("cim:ACDCConverter.idc", &get_ACDCConverter_idc);
+	get_map.emplace("cim:ACDCConverter.idleLoss", &get_ACDCConverter_idleLoss);
+	get_map.emplace("cim:ACDCConverter.maxP", &get_ACDCConverter_maxP);
+	get_map.emplace("cim:ACDCConverter.maxUdc", &get_ACDCConverter_maxUdc);
+	get_map.emplace("cim:ACDCConverter.minP", &get_ACDCConverter_minP);
+	get_map.emplace("cim:ACDCConverter.minUdc", &get_ACDCConverter_minUdc);
+	get_map.emplace("cim:ACDCConverter.numberOfValves", &get_ACDCConverter_numberOfValves);
+	get_map.emplace("cim:ACDCConverter.p", &get_ACDCConverter_p);
+	get_map.emplace("cim:ACDCConverter.poleLossP", &get_ACDCConverter_poleLossP);
+	get_map.emplace("cim:ACDCConverter.q", &get_ACDCConverter_q);
+	get_map.emplace("cim:ACDCConverter.ratedUdc", &get_ACDCConverter_ratedUdc);
+	get_map.emplace("cim:ACDCConverter.resistiveLoss", &get_ACDCConverter_resistiveLoss);
+	get_map.emplace("cim:ACDCConverter.switchingLoss", &get_ACDCConverter_switchingLoss);
+	get_map.emplace("cim:ACDCConverter.targetPpcc", &get_ACDCConverter_targetPpcc);
+	get_map.emplace("cim:ACDCConverter.targetUdc", &get_ACDCConverter_targetUdc);
+	get_map.emplace("cim:ACDCConverter.uc", &get_ACDCConverter_uc);
+	get_map.emplace("cim:ACDCConverter.udc", &get_ACDCConverter_udc);
+	get_map.emplace("cim:ACDCConverter.valveU0", &get_ACDCConverter_valveU0);
+}
+
+void ACDCConverter::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	ConductingEquipment::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:ACDCConverter.PccTerminal", &get_ACDCConverter_PccTerminal);
+}
+
+void ACDCConverter::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ConductingEquipment::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner ACDCConverter::declare()

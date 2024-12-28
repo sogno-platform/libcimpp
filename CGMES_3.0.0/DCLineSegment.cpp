@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "DCLineSegment.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "Capacitance.hpp"
@@ -15,6 +17,34 @@ using namespace CIMPP;
 
 DCLineSegment::DCLineSegment() {};
 DCLineSegment::~DCLineSegment() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:DCLineSegment.capacitance", { CGMESProfile::EQ, } },
+	{ "cim:DCLineSegment.inductance", { CGMESProfile::EQ, } },
+	{ "cim:DCLineSegment.length", { CGMESProfile::EQ, } },
+	{ "cim:DCLineSegment.resistance", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+DCLineSegment::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+DCLineSegment::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = DCConductingEquipment::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_DCLineSegment_capacitance(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -71,6 +101,61 @@ bool assign_DCLineSegment_resistance(std::stringstream &buffer, BaseClass* BaseC
 
 
 
+bool get_DCLineSegment_capacitance(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const DCLineSegment* element = dynamic_cast<const DCLineSegment*>(BaseClass_ptr1))
+	{
+		buffer << element->capacitance;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_DCLineSegment_inductance(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const DCLineSegment* element = dynamic_cast<const DCLineSegment*>(BaseClass_ptr1))
+	{
+		buffer << element->inductance;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_DCLineSegment_length(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const DCLineSegment* element = dynamic_cast<const DCLineSegment*>(BaseClass_ptr1))
+	{
+		buffer << element->length;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_DCLineSegment_resistance(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const DCLineSegment* element = dynamic_cast<const DCLineSegment*>(BaseClass_ptr1))
+	{
+		buffer << element->resistance;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -95,6 +180,25 @@ void DCLineSegment::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, a
 
 void DCLineSegment::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void DCLineSegment::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	DCConductingEquipment::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:DCLineSegment.capacitance", &get_DCLineSegment_capacitance);
+	get_map.emplace("cim:DCLineSegment.inductance", &get_DCLineSegment_inductance);
+	get_map.emplace("cim:DCLineSegment.length", &get_DCLineSegment_length);
+	get_map.emplace("cim:DCLineSegment.resistance", &get_DCLineSegment_resistance);
+}
+
+void DCLineSegment::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	DCConductingEquipment::addClassGetFnsToMap(get_map);
+}
+
+void DCLineSegment::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	DCConductingEquipment::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner DCLineSegment::declare()

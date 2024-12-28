@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "RegularIntervalSchedule.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "RegularTimePoint.hpp"
@@ -15,6 +17,32 @@ using namespace CIMPP;
 RegularIntervalSchedule::RegularIntervalSchedule() {};
 RegularIntervalSchedule::~RegularIntervalSchedule() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:RegularIntervalSchedule.TimePoints", { CGMESProfile::EQ, } },
+	{ "cim:RegularIntervalSchedule.endTime", { CGMESProfile::EQ, } },
+	{ "cim:RegularIntervalSchedule.timeStep", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+RegularIntervalSchedule::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+RegularIntervalSchedule::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = BasicIntervalSchedule::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_RegularIntervalSchedule_endTime(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -61,6 +89,34 @@ bool assign_RegularIntervalSchedule_TimePoints(BaseClass* BaseClass_ptr1, BaseCl
 	return false;
 }
 
+bool get_RegularIntervalSchedule_endTime(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const RegularIntervalSchedule* element = dynamic_cast<const RegularIntervalSchedule*>(BaseClass_ptr1))
+	{
+		buffer << element->endTime;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_RegularIntervalSchedule_timeStep(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const RegularIntervalSchedule* element = dynamic_cast<const RegularIntervalSchedule*>(BaseClass_ptr1))
+	{
+		buffer << element->timeStep;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
 
 
 const char RegularIntervalSchedule::debugName[] = "RegularIntervalSchedule";
@@ -83,6 +139,23 @@ void RegularIntervalSchedule::addPrimitiveAssignFnsToMap(std::unordered_map<std:
 void RegularIntervalSchedule::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:RegularIntervalSchedule.TimePoints"), &assign_RegularIntervalSchedule_TimePoints));
+}
+
+void RegularIntervalSchedule::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	BasicIntervalSchedule::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:RegularIntervalSchedule.endTime", &get_RegularIntervalSchedule_endTime);
+	get_map.emplace("cim:RegularIntervalSchedule.timeStep", &get_RegularIntervalSchedule_timeStep);
+}
+
+void RegularIntervalSchedule::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	BasicIntervalSchedule::addClassGetFnsToMap(get_map);
+}
+
+void RegularIntervalSchedule::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	BasicIntervalSchedule::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner RegularIntervalSchedule::declare()

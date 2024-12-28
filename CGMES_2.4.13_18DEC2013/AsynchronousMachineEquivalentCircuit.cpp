@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "AsynchronousMachineEquivalentCircuit.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PU.hpp"
@@ -16,6 +18,35 @@ using namespace CIMPP;
 
 AsynchronousMachineEquivalentCircuit::AsynchronousMachineEquivalentCircuit() {};
 AsynchronousMachineEquivalentCircuit::~AsynchronousMachineEquivalentCircuit() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:AsynchronousMachineEquivalentCircuit.rr1", { CGMESProfile::DY, } },
+	{ "cim:AsynchronousMachineEquivalentCircuit.rr2", { CGMESProfile::DY, } },
+	{ "cim:AsynchronousMachineEquivalentCircuit.xlr1", { CGMESProfile::DY, } },
+	{ "cim:AsynchronousMachineEquivalentCircuit.xlr2", { CGMESProfile::DY, } },
+	{ "cim:AsynchronousMachineEquivalentCircuit.xm", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+AsynchronousMachineEquivalentCircuit::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+AsynchronousMachineEquivalentCircuit::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = AsynchronousMachineDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_AsynchronousMachineEquivalentCircuit_rr1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -85,7 +116,75 @@ bool assign_AsynchronousMachineEquivalentCircuit_xm(std::stringstream &buffer, B
 
 
 
+bool get_AsynchronousMachineEquivalentCircuit_rr1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const AsynchronousMachineEquivalentCircuit* element = dynamic_cast<const AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1))
+	{
+		buffer << element->rr1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_AsynchronousMachineEquivalentCircuit_rr2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const AsynchronousMachineEquivalentCircuit* element = dynamic_cast<const AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1))
+	{
+		buffer << element->rr2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_AsynchronousMachineEquivalentCircuit_xlr1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const AsynchronousMachineEquivalentCircuit* element = dynamic_cast<const AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1))
+	{
+		buffer << element->xlr1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_AsynchronousMachineEquivalentCircuit_xlr2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const AsynchronousMachineEquivalentCircuit* element = dynamic_cast<const AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1))
+	{
+		buffer << element->xlr2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_AsynchronousMachineEquivalentCircuit_xm(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const AsynchronousMachineEquivalentCircuit* element = dynamic_cast<const AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1))
+	{
+		buffer << element->xm;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -111,6 +210,26 @@ void AsynchronousMachineEquivalentCircuit::addPrimitiveAssignFnsToMap(std::unord
 
 void AsynchronousMachineEquivalentCircuit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void AsynchronousMachineEquivalentCircuit::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	AsynchronousMachineDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:AsynchronousMachineEquivalentCircuit.rr1", &get_AsynchronousMachineEquivalentCircuit_rr1);
+	get_map.emplace("cim:AsynchronousMachineEquivalentCircuit.rr2", &get_AsynchronousMachineEquivalentCircuit_rr2);
+	get_map.emplace("cim:AsynchronousMachineEquivalentCircuit.xlr1", &get_AsynchronousMachineEquivalentCircuit_xlr1);
+	get_map.emplace("cim:AsynchronousMachineEquivalentCircuit.xlr2", &get_AsynchronousMachineEquivalentCircuit_xlr2);
+	get_map.emplace("cim:AsynchronousMachineEquivalentCircuit.xm", &get_AsynchronousMachineEquivalentCircuit_xm);
+}
+
+void AsynchronousMachineEquivalentCircuit::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	AsynchronousMachineDynamics::addClassGetFnsToMap(get_map);
+}
+
+void AsynchronousMachineEquivalentCircuit::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	AsynchronousMachineDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner AsynchronousMachineEquivalentCircuit::declare()

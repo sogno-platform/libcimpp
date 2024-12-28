@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "PssPTIST1.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "Seconds.hpp"
@@ -22,6 +24,41 @@ using namespace CIMPP;
 
 PssPTIST1::PssPTIST1() {};
 PssPTIST1::~PssPTIST1() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:PssPTIST1.dtc", { CGMESProfile::DY, } },
+	{ "cim:PssPTIST1.dtf", { CGMESProfile::DY, } },
+	{ "cim:PssPTIST1.dtp", { CGMESProfile::DY, } },
+	{ "cim:PssPTIST1.k", { CGMESProfile::DY, } },
+	{ "cim:PssPTIST1.m", { CGMESProfile::DY, } },
+	{ "cim:PssPTIST1.t1", { CGMESProfile::DY, } },
+	{ "cim:PssPTIST1.t2", { CGMESProfile::DY, } },
+	{ "cim:PssPTIST1.t3", { CGMESProfile::DY, } },
+	{ "cim:PssPTIST1.t4", { CGMESProfile::DY, } },
+	{ "cim:PssPTIST1.tf", { CGMESProfile::DY, } },
+	{ "cim:PssPTIST1.tp", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+PssPTIST1::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+PssPTIST1::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = PowerSystemStabilizerDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_PssPTIST1_dtc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -169,13 +206,159 @@ bool assign_PssPTIST1_tp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
 
 
 
+bool get_PssPTIST1_dtc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssPTIST1* element = dynamic_cast<const PssPTIST1*>(BaseClass_ptr1))
+	{
+		buffer << element->dtc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssPTIST1_dtf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssPTIST1* element = dynamic_cast<const PssPTIST1*>(BaseClass_ptr1))
+	{
+		buffer << element->dtf;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssPTIST1_dtp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssPTIST1* element = dynamic_cast<const PssPTIST1*>(BaseClass_ptr1))
+	{
+		buffer << element->dtp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssPTIST1_k(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssPTIST1* element = dynamic_cast<const PssPTIST1*>(BaseClass_ptr1))
+	{
+		buffer << element->k;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssPTIST1_m(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssPTIST1* element = dynamic_cast<const PssPTIST1*>(BaseClass_ptr1))
+	{
+		buffer << element->m;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssPTIST1_t1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssPTIST1* element = dynamic_cast<const PssPTIST1*>(BaseClass_ptr1))
+	{
+		buffer << element->t1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssPTIST1_t2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssPTIST1* element = dynamic_cast<const PssPTIST1*>(BaseClass_ptr1))
+	{
+		buffer << element->t2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssPTIST1_t3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssPTIST1* element = dynamic_cast<const PssPTIST1*>(BaseClass_ptr1))
+	{
+		buffer << element->t3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PssPTIST1_t4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssPTIST1* element = dynamic_cast<const PssPTIST1*>(BaseClass_ptr1))
+	{
+		buffer << element->t4;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PssPTIST1_tf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssPTIST1* element = dynamic_cast<const PssPTIST1*>(BaseClass_ptr1))
+	{
+		buffer << element->tf;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PssPTIST1_tp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssPTIST1* element = dynamic_cast<const PssPTIST1*>(BaseClass_ptr1))
+	{
+		buffer << element->tp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -207,6 +390,32 @@ void PssPTIST1::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assig
 
 void PssPTIST1::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void PssPTIST1::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemStabilizerDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:PssPTIST1.dtc", &get_PssPTIST1_dtc);
+	get_map.emplace("cim:PssPTIST1.dtf", &get_PssPTIST1_dtf);
+	get_map.emplace("cim:PssPTIST1.dtp", &get_PssPTIST1_dtp);
+	get_map.emplace("cim:PssPTIST1.k", &get_PssPTIST1_k);
+	get_map.emplace("cim:PssPTIST1.m", &get_PssPTIST1_m);
+	get_map.emplace("cim:PssPTIST1.t1", &get_PssPTIST1_t1);
+	get_map.emplace("cim:PssPTIST1.t2", &get_PssPTIST1_t2);
+	get_map.emplace("cim:PssPTIST1.t3", &get_PssPTIST1_t3);
+	get_map.emplace("cim:PssPTIST1.t4", &get_PssPTIST1_t4);
+	get_map.emplace("cim:PssPTIST1.tf", &get_PssPTIST1_tf);
+	get_map.emplace("cim:PssPTIST1.tp", &get_PssPTIST1_tp);
+}
+
+void PssPTIST1::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	PowerSystemStabilizerDynamics::addClassGetFnsToMap(get_map);
+}
+
+void PssPTIST1::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemStabilizerDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner PssPTIST1::declare()

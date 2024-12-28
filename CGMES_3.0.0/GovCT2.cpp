@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "GovCT2.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "Float.hpp"
@@ -67,6 +69,86 @@ using namespace CIMPP;
 
 GovCT2::GovCT2() {};
 GovCT2::~GovCT2() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:GovCT2.aset", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.db", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.dm", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.flim1", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.flim10", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.flim2", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.flim3", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.flim4", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.flim5", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.flim6", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.flim7", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.flim8", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.flim9", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.ka", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.kdgov", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.kigov", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.kiload", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.kimw", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.kpgov", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.kpload", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.kturb", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.ldref", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.maxerr", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.minerr", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.mwbase", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.plim1", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.plim10", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.plim2", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.plim3", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.plim4", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.plim5", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.plim6", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.plim7", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.plim8", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.plim9", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.prate", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.r", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.rclose", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.rdown", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.ropen", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.rselect", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.rup", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.ta", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.tact", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.tb", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.tc", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.tdgov", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.teng", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.tfload", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.tpelec", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.tsa", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.tsb", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.vmax", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.vmin", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.wfnl", { CGMESProfile::DY, } },
+	{ "cim:GovCT2.wfspd", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+GovCT2::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+GovCT2::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = TurbineGovernorDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_GovCT2_aset(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -799,60 +881,791 @@ bool assign_GovCT2_wfspd(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
 
 
 
+bool get_GovCT2_aset(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->aset;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_db(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->db;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_dm(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->dm;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_flim1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->flim1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_flim10(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->flim10;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_flim2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->flim2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_flim3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->flim3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_flim4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->flim4;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_flim5(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->flim5;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_flim6(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->flim6;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_flim7(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->flim7;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_flim8(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->flim8;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_flim9(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->flim9;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_ka(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->ka;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_kdgov(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->kdgov;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_kigov(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->kigov;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_kiload(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->kiload;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_kimw(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->kimw;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_kpgov(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->kpgov;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_kpload(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->kpload;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_kturb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->kturb;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_ldref(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->ldref;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_maxerr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->maxerr;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_minerr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->minerr;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_mwbase(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->mwbase;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_plim1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->plim1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_plim10(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->plim10;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_plim2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->plim2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_plim3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->plim3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_plim4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->plim4;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_plim5(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->plim5;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_plim6(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->plim6;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_plim7(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->plim7;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_plim8(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->plim8;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_plim9(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->plim9;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_prate(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->prate;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_r(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->r;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_rclose(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->rclose;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_rdown(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->rdown;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_ropen(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->ropen;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_rup(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->rup;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_ta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->ta;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_tact(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->tact;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_tb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->tb;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_tc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->tc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_tdgov(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->tdgov;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_teng(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->teng;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_tfload(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->tfload;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_tpelec(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->tpelec;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_tsa(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->tsa;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_tsb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->tsb;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_vmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->vmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_vmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->vmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_wfnl(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->wfnl;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovCT2_wfspd(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->wfspd;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+bool get_GovCT2_rselect(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovCT2* element = dynamic_cast<const GovCT2*>(BaseClass_ptr1))
+	{
+		buffer << element->rselect;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 const char GovCT2::debugName[] = "GovCT2";
 const char* GovCT2::debugString() const
@@ -927,6 +1740,77 @@ void GovCT2::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_f
 
 void GovCT2::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void GovCT2::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:GovCT2.aset", &get_GovCT2_aset);
+	get_map.emplace("cim:GovCT2.db", &get_GovCT2_db);
+	get_map.emplace("cim:GovCT2.dm", &get_GovCT2_dm);
+	get_map.emplace("cim:GovCT2.flim1", &get_GovCT2_flim1);
+	get_map.emplace("cim:GovCT2.flim10", &get_GovCT2_flim10);
+	get_map.emplace("cim:GovCT2.flim2", &get_GovCT2_flim2);
+	get_map.emplace("cim:GovCT2.flim3", &get_GovCT2_flim3);
+	get_map.emplace("cim:GovCT2.flim4", &get_GovCT2_flim4);
+	get_map.emplace("cim:GovCT2.flim5", &get_GovCT2_flim5);
+	get_map.emplace("cim:GovCT2.flim6", &get_GovCT2_flim6);
+	get_map.emplace("cim:GovCT2.flim7", &get_GovCT2_flim7);
+	get_map.emplace("cim:GovCT2.flim8", &get_GovCT2_flim8);
+	get_map.emplace("cim:GovCT2.flim9", &get_GovCT2_flim9);
+	get_map.emplace("cim:GovCT2.ka", &get_GovCT2_ka);
+	get_map.emplace("cim:GovCT2.kdgov", &get_GovCT2_kdgov);
+	get_map.emplace("cim:GovCT2.kigov", &get_GovCT2_kigov);
+	get_map.emplace("cim:GovCT2.kiload", &get_GovCT2_kiload);
+	get_map.emplace("cim:GovCT2.kimw", &get_GovCT2_kimw);
+	get_map.emplace("cim:GovCT2.kpgov", &get_GovCT2_kpgov);
+	get_map.emplace("cim:GovCT2.kpload", &get_GovCT2_kpload);
+	get_map.emplace("cim:GovCT2.kturb", &get_GovCT2_kturb);
+	get_map.emplace("cim:GovCT2.ldref", &get_GovCT2_ldref);
+	get_map.emplace("cim:GovCT2.maxerr", &get_GovCT2_maxerr);
+	get_map.emplace("cim:GovCT2.minerr", &get_GovCT2_minerr);
+	get_map.emplace("cim:GovCT2.mwbase", &get_GovCT2_mwbase);
+	get_map.emplace("cim:GovCT2.plim1", &get_GovCT2_plim1);
+	get_map.emplace("cim:GovCT2.plim10", &get_GovCT2_plim10);
+	get_map.emplace("cim:GovCT2.plim2", &get_GovCT2_plim2);
+	get_map.emplace("cim:GovCT2.plim3", &get_GovCT2_plim3);
+	get_map.emplace("cim:GovCT2.plim4", &get_GovCT2_plim4);
+	get_map.emplace("cim:GovCT2.plim5", &get_GovCT2_plim5);
+	get_map.emplace("cim:GovCT2.plim6", &get_GovCT2_plim6);
+	get_map.emplace("cim:GovCT2.plim7", &get_GovCT2_plim7);
+	get_map.emplace("cim:GovCT2.plim8", &get_GovCT2_plim8);
+	get_map.emplace("cim:GovCT2.plim9", &get_GovCT2_plim9);
+	get_map.emplace("cim:GovCT2.prate", &get_GovCT2_prate);
+	get_map.emplace("cim:GovCT2.r", &get_GovCT2_r);
+	get_map.emplace("cim:GovCT2.rclose", &get_GovCT2_rclose);
+	get_map.emplace("cim:GovCT2.rdown", &get_GovCT2_rdown);
+	get_map.emplace("cim:GovCT2.ropen", &get_GovCT2_ropen);
+	get_map.emplace("cim:GovCT2.rup", &get_GovCT2_rup);
+	get_map.emplace("cim:GovCT2.ta", &get_GovCT2_ta);
+	get_map.emplace("cim:GovCT2.tact", &get_GovCT2_tact);
+	get_map.emplace("cim:GovCT2.tb", &get_GovCT2_tb);
+	get_map.emplace("cim:GovCT2.tc", &get_GovCT2_tc);
+	get_map.emplace("cim:GovCT2.tdgov", &get_GovCT2_tdgov);
+	get_map.emplace("cim:GovCT2.teng", &get_GovCT2_teng);
+	get_map.emplace("cim:GovCT2.tfload", &get_GovCT2_tfload);
+	get_map.emplace("cim:GovCT2.tpelec", &get_GovCT2_tpelec);
+	get_map.emplace("cim:GovCT2.tsa", &get_GovCT2_tsa);
+	get_map.emplace("cim:GovCT2.tsb", &get_GovCT2_tsb);
+	get_map.emplace("cim:GovCT2.vmax", &get_GovCT2_vmax);
+	get_map.emplace("cim:GovCT2.vmin", &get_GovCT2_vmin);
+	get_map.emplace("cim:GovCT2.wfnl", &get_GovCT2_wfnl);
+	get_map.emplace("cim:GovCT2.wfspd", &get_GovCT2_wfspd);
+}
+
+void GovCT2::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addClassGetFnsToMap(get_map);
+}
+
+void GovCT2::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addEnumGetFnsToMap(get_map);
+	get_map.emplace("cim:GovCT2.rselect", &get_GovCT2_rselect);
 }
 
 const BaseClassDefiner GovCT2::declare()

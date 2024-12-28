@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "Accumulator.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "AccumulatorValue.hpp"
@@ -14,7 +16,31 @@ using namespace CIMPP;
 Accumulator::Accumulator() {};
 Accumulator::~Accumulator() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:Accumulator.AccumulatorValues", { CGMESProfile::EQ, } },
+	{ "cim:Accumulator.LimitSets", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+Accumulator::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+Accumulator::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = Measurement::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -34,7 +60,6 @@ bool assign_Accumulator_AccumulatorValues(BaseClass* BaseClass_ptr1, BaseClass* 
 	}
 	return false;
 }
-
 bool assign_AccumulatorLimitSet_Measurements(BaseClass*, BaseClass*);
 bool assign_Accumulator_LimitSets(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -51,6 +76,8 @@ bool assign_Accumulator_LimitSets(BaseClass* BaseClass_ptr1, BaseClass* BaseClas
 	}
 	return false;
 }
+
+
 
 const char Accumulator::debugName[] = "Accumulator";
 const char* Accumulator::debugString() const
@@ -71,6 +98,21 @@ void Accumulator::addClassAssignFnsToMap(std::unordered_map<std::string, class_a
 {
 	assign_map.insert(std::make_pair(std::string("cim:Accumulator.AccumulatorValues"), &assign_Accumulator_AccumulatorValues));
 	assign_map.insert(std::make_pair(std::string("cim:Accumulator.LimitSets"), &assign_Accumulator_LimitSets));
+}
+
+void Accumulator::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	Measurement::addPrimitiveGetFnsToMap(get_map);
+}
+
+void Accumulator::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	Measurement::addClassGetFnsToMap(get_map);
+}
+
+void Accumulator::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	Measurement::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner Accumulator::declare()

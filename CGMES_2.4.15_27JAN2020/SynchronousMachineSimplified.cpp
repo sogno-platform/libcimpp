@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "SynchronousMachineSimplified.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 
@@ -11,6 +13,33 @@ using namespace CIMPP;
 
 SynchronousMachineSimplified::SynchronousMachineSimplified() {};
 SynchronousMachineSimplified::~SynchronousMachineSimplified() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+};
+
+std::list<CGMESProfile>
+SynchronousMachineSimplified::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+SynchronousMachineSimplified::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = SynchronousMachineDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
+
+
+
 
 
 
@@ -31,6 +60,21 @@ void SynchronousMachineSimplified::addPrimitiveAssignFnsToMap(std::unordered_map
 
 void SynchronousMachineSimplified::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void SynchronousMachineSimplified::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	SynchronousMachineDynamics::addPrimitiveGetFnsToMap(get_map);
+}
+
+void SynchronousMachineSimplified::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	SynchronousMachineDynamics::addClassGetFnsToMap(get_map);
+}
+
+void SynchronousMachineSimplified::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	SynchronousMachineDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner SynchronousMachineSimplified::declare()

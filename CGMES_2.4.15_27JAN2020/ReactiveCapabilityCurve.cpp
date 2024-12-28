@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "ReactiveCapabilityCurve.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "EquivalentInjection.hpp"
@@ -14,7 +16,31 @@ using namespace CIMPP;
 ReactiveCapabilityCurve::ReactiveCapabilityCurve() {};
 ReactiveCapabilityCurve::~ReactiveCapabilityCurve() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:ReactiveCapabilityCurve.EquivalentInjection", { CGMESProfile::EQ, } },
+	{ "cim:ReactiveCapabilityCurve.InitiallyUsedBySynchronousMachines", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+ReactiveCapabilityCurve::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+ReactiveCapabilityCurve::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = Curve::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -34,7 +60,6 @@ bool assign_ReactiveCapabilityCurve_EquivalentInjection(BaseClass* BaseClass_ptr
 	}
 	return false;
 }
-
 bool assign_SynchronousMachine_InitialReactiveCapabilityCurve(BaseClass*, BaseClass*);
 bool assign_ReactiveCapabilityCurve_InitiallyUsedBySynchronousMachines(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -51,6 +76,8 @@ bool assign_ReactiveCapabilityCurve_InitiallyUsedBySynchronousMachines(BaseClass
 	}
 	return false;
 }
+
+
 
 const char ReactiveCapabilityCurve::debugName[] = "ReactiveCapabilityCurve";
 const char* ReactiveCapabilityCurve::debugString() const
@@ -71,6 +98,21 @@ void ReactiveCapabilityCurve::addClassAssignFnsToMap(std::unordered_map<std::str
 {
 	assign_map.insert(std::make_pair(std::string("cim:ReactiveCapabilityCurve.EquivalentInjection"), &assign_ReactiveCapabilityCurve_EquivalentInjection));
 	assign_map.insert(std::make_pair(std::string("cim:ReactiveCapabilityCurve.InitiallyUsedBySynchronousMachines"), &assign_ReactiveCapabilityCurve_InitiallyUsedBySynchronousMachines));
+}
+
+void ReactiveCapabilityCurve::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	Curve::addPrimitiveGetFnsToMap(get_map);
+}
+
+void ReactiveCapabilityCurve::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	Curve::addClassGetFnsToMap(get_map);
+}
+
+void ReactiveCapabilityCurve::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	Curve::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner ReactiveCapabilityCurve::declare()

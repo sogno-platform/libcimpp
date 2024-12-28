@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "Analog.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "AnalogValue.hpp"
@@ -15,7 +17,32 @@ using namespace CIMPP;
 Analog::Analog() {};
 Analog::~Analog() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::OP,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:Analog.AnalogValues", { CGMESProfile::OP, } },
+	{ "cim:Analog.LimitSets", { CGMESProfile::OP, } },
+	{ "cim:Analog.positiveFlowIn", { CGMESProfile::OP, } },
+};
+
+std::list<CGMESProfile>
+Analog::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+Analog::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = Measurement::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_Analog_positiveFlowIn(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -48,7 +75,6 @@ bool assign_Analog_AnalogValues(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_
 	}
 	return false;
 }
-
 bool assign_AnalogLimitSet_Measurements(BaseClass*, BaseClass*);
 bool assign_Analog_LimitSets(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -65,6 +91,21 @@ bool assign_Analog_LimitSets(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr
 	}
 	return false;
 }
+
+bool get_Analog_positiveFlowIn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Analog* element = dynamic_cast<const Analog*>(BaseClass_ptr1))
+	{
+		buffer << element->positiveFlowIn;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
 
 
 const char Analog::debugName[] = "Analog";
@@ -87,6 +128,22 @@ void Analog::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign
 {
 	assign_map.insert(std::make_pair(std::string("cim:Analog.AnalogValues"), &assign_Analog_AnalogValues));
 	assign_map.insert(std::make_pair(std::string("cim:Analog.LimitSets"), &assign_Analog_LimitSets));
+}
+
+void Analog::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	Measurement::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:Analog.positiveFlowIn", &get_Analog_positiveFlowIn);
+}
+
+void Analog::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	Measurement::addClassGetFnsToMap(get_map);
+}
+
+void Analog::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	Measurement::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner Analog::declare()

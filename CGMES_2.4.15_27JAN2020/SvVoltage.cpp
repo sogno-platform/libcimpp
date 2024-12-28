@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "SvVoltage.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "TopologicalNode.hpp"
@@ -15,6 +17,32 @@ using namespace CIMPP;
 SvVoltage::SvVoltage() : TopologicalNode(nullptr) {};
 SvVoltage::~SvVoltage() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::SV,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:SvVoltage.TopologicalNode", { CGMESProfile::SV, } },
+	{ "cim:SvVoltage.angle", { CGMESProfile::SV, } },
+	{ "cim:SvVoltage.v", { CGMESProfile::SV, } },
+};
+
+std::list<CGMESProfile>
+SvVoltage::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+SvVoltage::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_SvVoltage_angle(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -61,6 +89,47 @@ bool assign_SvVoltage_TopologicalNode(BaseClass* BaseClass_ptr1, BaseClass* Base
 	return false;
 }
 
+bool get_SvVoltage_angle(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const SvVoltage* element = dynamic_cast<const SvVoltage*>(BaseClass_ptr1))
+	{
+		buffer << element->angle;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_SvVoltage_v(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const SvVoltage* element = dynamic_cast<const SvVoltage*>(BaseClass_ptr1))
+	{
+		buffer << element->v;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+
+bool get_SvVoltage_TopologicalNode(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const SvVoltage* element = dynamic_cast<const SvVoltage*>(BaseClass_ptr1))
+	{
+		if (element->TopologicalNode != 0)
+		{
+			BaseClass_list.push_back(element->TopologicalNode);
+			return true;
+		}
+	}
+	return false;
+}
 
 
 const char SvVoltage::debugName[] = "SvVoltage";
@@ -83,6 +152,24 @@ void SvVoltage::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assig
 void SvVoltage::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:SvVoltage.TopologicalNode"), &assign_SvVoltage_TopologicalNode));
+}
+
+void SvVoltage::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	BaseClass::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:SvVoltage.angle", &get_SvVoltage_angle);
+	get_map.emplace("cim:SvVoltage.v", &get_SvVoltage_v);
+}
+
+void SvVoltage::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	BaseClass::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:SvVoltage.TopologicalNode", &get_SvVoltage_TopologicalNode);
+}
+
+void SvVoltage::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner SvVoltage::declare()

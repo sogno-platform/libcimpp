@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "CogenerationPlant.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "ThermalGeneratingUnit.hpp"
@@ -13,6 +15,30 @@ using namespace CIMPP;
 CogenerationPlant::CogenerationPlant() {};
 CogenerationPlant::~CogenerationPlant() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:CogenerationPlant.ThermalGeneratingUnits", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+CogenerationPlant::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+CogenerationPlant::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = PowerSystemResource::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -33,6 +59,8 @@ bool assign_CogenerationPlant_ThermalGeneratingUnits(BaseClass* BaseClass_ptr1, 
 	return false;
 }
 
+
+
 const char CogenerationPlant::debugName[] = "CogenerationPlant";
 const char* CogenerationPlant::debugString() const
 {
@@ -51,6 +79,21 @@ void CogenerationPlant::addPrimitiveAssignFnsToMap(std::unordered_map<std::strin
 void CogenerationPlant::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:CogenerationPlant.ThermalGeneratingUnits"), &assign_CogenerationPlant_ThermalGeneratingUnits));
+}
+
+void CogenerationPlant::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemResource::addPrimitiveGetFnsToMap(get_map);
+}
+
+void CogenerationPlant::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	PowerSystemResource::addClassGetFnsToMap(get_map);
+}
+
+void CogenerationPlant::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemResource::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner CogenerationPlant::declare()

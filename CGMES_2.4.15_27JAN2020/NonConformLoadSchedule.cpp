@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "NonConformLoadSchedule.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "NonConformLoadGroup.hpp"
@@ -13,6 +15,30 @@ using namespace CIMPP;
 NonConformLoadSchedule::NonConformLoadSchedule() : NonConformLoadGroup(nullptr) {};
 NonConformLoadSchedule::~NonConformLoadSchedule() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:NonConformLoadSchedule.NonConformLoadGroup", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+NonConformLoadSchedule::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+NonConformLoadSchedule::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = SeasonDayTypeSchedule::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -33,6 +59,21 @@ bool assign_NonConformLoadSchedule_NonConformLoadGroup(BaseClass* BaseClass_ptr1
 	return false;
 }
 
+
+bool get_NonConformLoadSchedule_NonConformLoadGroup(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const NonConformLoadSchedule* element = dynamic_cast<const NonConformLoadSchedule*>(BaseClass_ptr1))
+	{
+		if (element->NonConformLoadGroup != 0)
+		{
+			BaseClass_list.push_back(element->NonConformLoadGroup);
+			return true;
+		}
+	}
+	return false;
+}
+
+
 const char NonConformLoadSchedule::debugName[] = "NonConformLoadSchedule";
 const char* NonConformLoadSchedule::debugString() const
 {
@@ -51,6 +92,22 @@ void NonConformLoadSchedule::addPrimitiveAssignFnsToMap(std::unordered_map<std::
 void NonConformLoadSchedule::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:NonConformLoadSchedule.NonConformLoadGroup"), &assign_NonConformLoadSchedule_NonConformLoadGroup));
+}
+
+void NonConformLoadSchedule::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	SeasonDayTypeSchedule::addPrimitiveGetFnsToMap(get_map);
+}
+
+void NonConformLoadSchedule::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	SeasonDayTypeSchedule::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:NonConformLoadSchedule.NonConformLoadGroup", &get_NonConformLoadSchedule_NonConformLoadGroup);
+}
+
+void NonConformLoadSchedule::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	SeasonDayTypeSchedule::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner NonConformLoadSchedule::declare()

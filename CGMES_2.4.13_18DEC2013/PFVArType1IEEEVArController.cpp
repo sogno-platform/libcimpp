@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "PFVArType1IEEEVArController.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "Seconds.hpp"
@@ -17,6 +19,36 @@ using namespace CIMPP;
 
 PFVArType1IEEEVArController::PFVArType1IEEEVArController() {};
 PFVArType1IEEEVArController::~PFVArType1IEEEVArController() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:PFVArType1IEEEVArController.tvarc", { CGMESProfile::DY, } },
+	{ "cim:PFVArType1IEEEVArController.vvar", { CGMESProfile::DY, } },
+	{ "cim:PFVArType1IEEEVArController.vvarcbw", { CGMESProfile::DY, } },
+	{ "cim:PFVArType1IEEEVArController.vvarref", { CGMESProfile::DY, } },
+	{ "cim:PFVArType1IEEEVArController.vvtmax", { CGMESProfile::DY, } },
+	{ "cim:PFVArType1IEEEVArController.vvtmin", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+PFVArType1IEEEVArController::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+PFVArType1IEEEVArController::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = PFVArControllerType1Dynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_PFVArType1IEEEVArController_tvarc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -99,8 +131,89 @@ bool assign_PFVArType1IEEEVArController_vvtmin(std::stringstream &buffer, BaseCl
 
 
 
+bool get_PFVArType1IEEEVArController_tvarc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PFVArType1IEEEVArController* element = dynamic_cast<const PFVArType1IEEEVArController*>(BaseClass_ptr1))
+	{
+		buffer << element->tvarc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PFVArType1IEEEVArController_vvar(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PFVArType1IEEEVArController* element = dynamic_cast<const PFVArType1IEEEVArController*>(BaseClass_ptr1))
+	{
+		buffer << element->vvar;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PFVArType1IEEEVArController_vvarcbw(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PFVArType1IEEEVArController* element = dynamic_cast<const PFVArType1IEEEVArController*>(BaseClass_ptr1))
+	{
+		buffer << element->vvarcbw;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PFVArType1IEEEVArController_vvarref(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PFVArType1IEEEVArController* element = dynamic_cast<const PFVArType1IEEEVArController*>(BaseClass_ptr1))
+	{
+		buffer << element->vvarref;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PFVArType1IEEEVArController_vvtmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PFVArType1IEEEVArController* element = dynamic_cast<const PFVArType1IEEEVArController*>(BaseClass_ptr1))
+	{
+		buffer << element->vvtmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PFVArType1IEEEVArController_vvtmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PFVArType1IEEEVArController* element = dynamic_cast<const PFVArType1IEEEVArController*>(BaseClass_ptr1))
+	{
+		buffer << element->vvtmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -127,6 +240,27 @@ void PFVArType1IEEEVArController::addPrimitiveAssignFnsToMap(std::unordered_map<
 
 void PFVArType1IEEEVArController::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void PFVArType1IEEEVArController::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PFVArControllerType1Dynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:PFVArType1IEEEVArController.tvarc", &get_PFVArType1IEEEVArController_tvarc);
+	get_map.emplace("cim:PFVArType1IEEEVArController.vvar", &get_PFVArType1IEEEVArController_vvar);
+	get_map.emplace("cim:PFVArType1IEEEVArController.vvarcbw", &get_PFVArType1IEEEVArController_vvarcbw);
+	get_map.emplace("cim:PFVArType1IEEEVArController.vvarref", &get_PFVArType1IEEEVArController_vvarref);
+	get_map.emplace("cim:PFVArType1IEEEVArController.vvtmax", &get_PFVArType1IEEEVArController_vvtmax);
+	get_map.emplace("cim:PFVArType1IEEEVArController.vvtmin", &get_PFVArType1IEEEVArController_vvtmin);
+}
+
+void PFVArType1IEEEVArController::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	PFVArControllerType1Dynamics::addClassGetFnsToMap(get_map);
+}
+
+void PFVArType1IEEEVArController::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PFVArControllerType1Dynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner PFVArType1IEEEVArController::declare()

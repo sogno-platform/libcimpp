@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "Substation.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "DCConverterUnit.hpp"
@@ -15,8 +17,33 @@ using namespace CIMPP;
 Substation::Substation() : Region(nullptr) {};
 Substation::~Substation() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+	CGMESProfile::EQBD,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:Substation.DCConverterUnit", { CGMESProfile::EQ, } },
+	{ "cim:Substation.Region", { CGMESProfile::EQ, CGMESProfile::EQBD, } },
+	{ "cim:Substation.VoltageLevels", { CGMESProfile::EQ, CGMESProfile::EQBD, } },
+};
 
+std::list<CGMESProfile>
+Substation::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+Substation::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = EquipmentContainer::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -36,7 +63,6 @@ bool assign_Substation_DCConverterUnit(BaseClass* BaseClass_ptr1, BaseClass* Bas
 	}
 	return false;
 }
-
 bool assign_SubGeographicalRegion_Substations(BaseClass*, BaseClass*);
 bool assign_Substation_Region(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -53,7 +79,6 @@ bool assign_Substation_Region(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_pt
 	}
 	return false;
 }
-
 bool assign_VoltageLevel_Substation(BaseClass*, BaseClass*);
 bool assign_Substation_VoltageLevels(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -70,6 +95,21 @@ bool assign_Substation_VoltageLevels(BaseClass* BaseClass_ptr1, BaseClass* BaseC
 	}
 	return false;
 }
+
+
+bool get_Substation_Region(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const Substation* element = dynamic_cast<const Substation*>(BaseClass_ptr1))
+	{
+		if (element->Region != 0)
+		{
+			BaseClass_list.push_back(element->Region);
+			return true;
+		}
+	}
+	return false;
+}
+
 
 const char Substation::debugName[] = "Substation";
 const char* Substation::debugString() const
@@ -91,6 +131,22 @@ void Substation::addClassAssignFnsToMap(std::unordered_map<std::string, class_as
 	assign_map.insert(std::make_pair(std::string("cim:Substation.DCConverterUnit"), &assign_Substation_DCConverterUnit));
 	assign_map.insert(std::make_pair(std::string("cim:Substation.Region"), &assign_Substation_Region));
 	assign_map.insert(std::make_pair(std::string("cim:Substation.VoltageLevels"), &assign_Substation_VoltageLevels));
+}
+
+void Substation::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	EquipmentContainer::addPrimitiveGetFnsToMap(get_map);
+}
+
+void Substation::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	EquipmentContainer::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:Substation.Region", &get_Substation_Region);
+}
+
+void Substation::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	EquipmentContainer::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner Substation::declare()

@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "Curve.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "CurveData.hpp"
@@ -17,6 +19,34 @@ using namespace CIMPP;
 Curve::Curve() {};
 Curve::~Curve() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:Curve.CurveDatas", { CGMESProfile::EQ, } },
+	{ "cim:Curve.curveStyle", { CGMESProfile::EQ, } },
+	{ "cim:Curve.xUnit", { CGMESProfile::EQ, } },
+	{ "cim:Curve.y1Unit", { CGMESProfile::EQ, } },
+	{ "cim:Curve.y2Unit", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+Curve::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+Curve::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_Curve_curveStyle(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -91,7 +121,61 @@ bool assign_Curve_CurveDatas(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr
 
 
 
+bool get_Curve_curveStyle(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Curve* element = dynamic_cast<const Curve*>(BaseClass_ptr1))
+	{
+		buffer << element->curveStyle;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_Curve_xUnit(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Curve* element = dynamic_cast<const Curve*>(BaseClass_ptr1))
+	{
+		buffer << element->xUnit;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Curve_y1Unit(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Curve* element = dynamic_cast<const Curve*>(BaseClass_ptr1))
+	{
+		buffer << element->y1Unit;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Curve_y2Unit(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Curve* element = dynamic_cast<const Curve*>(BaseClass_ptr1))
+	{
+		buffer << element->y2Unit;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 const char Curve::debugName[] = "Curve";
 const char* Curve::debugString() const
@@ -115,6 +199,25 @@ void Curve::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_fu
 void Curve::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:Curve.CurveDatas"), &assign_Curve_CurveDatas));
+}
+
+void Curve::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+}
+
+void Curve::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+}
+
+void Curve::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
+	get_map.emplace("cim:Curve.curveStyle", &get_Curve_curveStyle);
+	get_map.emplace("cim:Curve.xUnit", &get_Curve_xUnit);
+	get_map.emplace("cim:Curve.y1Unit", &get_Curve_y1Unit);
+	get_map.emplace("cim:Curve.y2Unit", &get_Curve_y2Unit);
 }
 
 const BaseClassDefiner Curve::declare()

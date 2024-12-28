@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "PssSK.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PU.hpp"
@@ -22,6 +24,41 @@ using namespace CIMPP;
 
 PssSK::PssSK() {};
 PssSK::~PssSK() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:PssSK.k1", { CGMESProfile::DY, } },
+	{ "cim:PssSK.k2", { CGMESProfile::DY, } },
+	{ "cim:PssSK.k3", { CGMESProfile::DY, } },
+	{ "cim:PssSK.t1", { CGMESProfile::DY, } },
+	{ "cim:PssSK.t2", { CGMESProfile::DY, } },
+	{ "cim:PssSK.t3", { CGMESProfile::DY, } },
+	{ "cim:PssSK.t4", { CGMESProfile::DY, } },
+	{ "cim:PssSK.t5", { CGMESProfile::DY, } },
+	{ "cim:PssSK.t6", { CGMESProfile::DY, } },
+	{ "cim:PssSK.vsmax", { CGMESProfile::DY, } },
+	{ "cim:PssSK.vsmin", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+PssSK::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+PssSK::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = PowerSystemStabilizerDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_PssSK_k1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -169,13 +206,159 @@ bool assign_PssSK_vsmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
 
 
 
+bool get_PssSK_k1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1))
+	{
+		buffer << element->k1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssSK_k2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1))
+	{
+		buffer << element->k2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssSK_k3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1))
+	{
+		buffer << element->k3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssSK_t1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1))
+	{
+		buffer << element->t1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssSK_t2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1))
+	{
+		buffer << element->t2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssSK_t3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1))
+	{
+		buffer << element->t3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssSK_t4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1))
+	{
+		buffer << element->t4;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssSK_t5(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1))
+	{
+		buffer << element->t5;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PssSK_t6(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1))
+	{
+		buffer << element->t6;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PssSK_vsmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1))
+	{
+		buffer << element->vsmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PssSK_vsmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1))
+	{
+		buffer << element->vsmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -207,6 +390,32 @@ void PssSK::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_fu
 
 void PssSK::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void PssSK::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemStabilizerDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:PssSK.k1", &get_PssSK_k1);
+	get_map.emplace("cim:PssSK.k2", &get_PssSK_k2);
+	get_map.emplace("cim:PssSK.k3", &get_PssSK_k3);
+	get_map.emplace("cim:PssSK.t1", &get_PssSK_t1);
+	get_map.emplace("cim:PssSK.t2", &get_PssSK_t2);
+	get_map.emplace("cim:PssSK.t3", &get_PssSK_t3);
+	get_map.emplace("cim:PssSK.t4", &get_PssSK_t4);
+	get_map.emplace("cim:PssSK.t5", &get_PssSK_t5);
+	get_map.emplace("cim:PssSK.t6", &get_PssSK_t6);
+	get_map.emplace("cim:PssSK.vsmax", &get_PssSK_vsmax);
+	get_map.emplace("cim:PssSK.vsmin", &get_PssSK_vsmin);
+}
+
+void PssSK::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	PowerSystemStabilizerDynamics::addClassGetFnsToMap(get_map);
+}
+
+void PssSK::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemStabilizerDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner PssSK::declare()

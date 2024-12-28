@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "GovGASTWD.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "Simple_Float.hpp"
@@ -44,6 +46,63 @@ using namespace CIMPP;
 
 GovGASTWD::GovGASTWD() {};
 GovGASTWD::~GovGASTWD() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:GovGASTWD.a", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.af1", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.af2", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.b", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.bf1", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.bf2", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.c", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.cf2", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.ecr", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.etd", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.k3", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.k4", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.k5", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.k6", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.kd", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.kdroop", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.kf", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.ki", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.kp", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.mwbase", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.t", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.t3", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.t4", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.t5", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.tc", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.tcd", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.td", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.tf", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.tmax", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.tmin", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.tr", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.trate", { CGMESProfile::DY, } },
+	{ "cim:GovGASTWD.tt", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+GovGASTWD::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+GovGASTWD::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = TurbineGovernorDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_GovGASTWD_a(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -477,35 +536,467 @@ bool assign_GovGASTWD_tt(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
 
 
 
+bool get_GovGASTWD_a(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->a;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_af1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->af1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_af2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->af2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_b(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->b;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_bf1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->bf1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_bf2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->bf2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_c(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->c;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_cf2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->cf2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_ecr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->ecr;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_etd(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->etd;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_k3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->k3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_k4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->k4;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_k5(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->k5;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_k6(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->k6;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_kd(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->kd;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_kdroop(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->kdroop;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_kf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->kf;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_ki(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->ki;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_kp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->kp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_mwbase(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->mwbase;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_t(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->t;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_t3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->t3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_t4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->t4;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_t5(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->t5;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_tc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->tc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_tcd(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->tcd;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_td(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->td;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_tf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->tf;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_tmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->tmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovGASTWD_tmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->tmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovGASTWD_tr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->tr;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovGASTWD_trate(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->trate;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovGASTWD_tt(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovGASTWD* element = dynamic_cast<const GovGASTWD*>(BaseClass_ptr1))
+	{
+		buffer << element->tt;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -559,6 +1050,54 @@ void GovGASTWD::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assig
 
 void GovGASTWD::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void GovGASTWD::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:GovGASTWD.a", &get_GovGASTWD_a);
+	get_map.emplace("cim:GovGASTWD.af1", &get_GovGASTWD_af1);
+	get_map.emplace("cim:GovGASTWD.af2", &get_GovGASTWD_af2);
+	get_map.emplace("cim:GovGASTWD.b", &get_GovGASTWD_b);
+	get_map.emplace("cim:GovGASTWD.bf1", &get_GovGASTWD_bf1);
+	get_map.emplace("cim:GovGASTWD.bf2", &get_GovGASTWD_bf2);
+	get_map.emplace("cim:GovGASTWD.c", &get_GovGASTWD_c);
+	get_map.emplace("cim:GovGASTWD.cf2", &get_GovGASTWD_cf2);
+	get_map.emplace("cim:GovGASTWD.ecr", &get_GovGASTWD_ecr);
+	get_map.emplace("cim:GovGASTWD.etd", &get_GovGASTWD_etd);
+	get_map.emplace("cim:GovGASTWD.k3", &get_GovGASTWD_k3);
+	get_map.emplace("cim:GovGASTWD.k4", &get_GovGASTWD_k4);
+	get_map.emplace("cim:GovGASTWD.k5", &get_GovGASTWD_k5);
+	get_map.emplace("cim:GovGASTWD.k6", &get_GovGASTWD_k6);
+	get_map.emplace("cim:GovGASTWD.kd", &get_GovGASTWD_kd);
+	get_map.emplace("cim:GovGASTWD.kdroop", &get_GovGASTWD_kdroop);
+	get_map.emplace("cim:GovGASTWD.kf", &get_GovGASTWD_kf);
+	get_map.emplace("cim:GovGASTWD.ki", &get_GovGASTWD_ki);
+	get_map.emplace("cim:GovGASTWD.kp", &get_GovGASTWD_kp);
+	get_map.emplace("cim:GovGASTWD.mwbase", &get_GovGASTWD_mwbase);
+	get_map.emplace("cim:GovGASTWD.t", &get_GovGASTWD_t);
+	get_map.emplace("cim:GovGASTWD.t3", &get_GovGASTWD_t3);
+	get_map.emplace("cim:GovGASTWD.t4", &get_GovGASTWD_t4);
+	get_map.emplace("cim:GovGASTWD.t5", &get_GovGASTWD_t5);
+	get_map.emplace("cim:GovGASTWD.tc", &get_GovGASTWD_tc);
+	get_map.emplace("cim:GovGASTWD.tcd", &get_GovGASTWD_tcd);
+	get_map.emplace("cim:GovGASTWD.td", &get_GovGASTWD_td);
+	get_map.emplace("cim:GovGASTWD.tf", &get_GovGASTWD_tf);
+	get_map.emplace("cim:GovGASTWD.tmax", &get_GovGASTWD_tmax);
+	get_map.emplace("cim:GovGASTWD.tmin", &get_GovGASTWD_tmin);
+	get_map.emplace("cim:GovGASTWD.tr", &get_GovGASTWD_tr);
+	get_map.emplace("cim:GovGASTWD.trate", &get_GovGASTWD_trate);
+	get_map.emplace("cim:GovGASTWD.tt", &get_GovGASTWD_tt);
+}
+
+void GovGASTWD::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addClassGetFnsToMap(get_map);
+}
+
+void GovGASTWD::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner GovGASTWD::declare()

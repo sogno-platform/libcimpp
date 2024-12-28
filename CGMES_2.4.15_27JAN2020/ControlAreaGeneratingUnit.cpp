@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "ControlAreaGeneratingUnit.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "ControlArea.hpp"
@@ -14,7 +16,31 @@ using namespace CIMPP;
 ControlAreaGeneratingUnit::ControlAreaGeneratingUnit() : ControlArea(nullptr), GeneratingUnit(nullptr) {};
 ControlAreaGeneratingUnit::~ControlAreaGeneratingUnit() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:ControlAreaGeneratingUnit.ControlArea", { CGMESProfile::EQ, } },
+	{ "cim:ControlAreaGeneratingUnit.GeneratingUnit", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+ControlAreaGeneratingUnit::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+ControlAreaGeneratingUnit::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -34,7 +60,6 @@ bool assign_ControlAreaGeneratingUnit_ControlArea(BaseClass* BaseClass_ptr1, Bas
 	}
 	return false;
 }
-
 bool assign_GeneratingUnit_ControlAreaGeneratingUnit(BaseClass*, BaseClass*);
 bool assign_ControlAreaGeneratingUnit_GeneratingUnit(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -51,6 +76,34 @@ bool assign_ControlAreaGeneratingUnit_GeneratingUnit(BaseClass* BaseClass_ptr1, 
 	}
 	return false;
 }
+
+
+bool get_ControlAreaGeneratingUnit_ControlArea(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const ControlAreaGeneratingUnit* element = dynamic_cast<const ControlAreaGeneratingUnit*>(BaseClass_ptr1))
+	{
+		if (element->ControlArea != 0)
+		{
+			BaseClass_list.push_back(element->ControlArea);
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_ControlAreaGeneratingUnit_GeneratingUnit(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const ControlAreaGeneratingUnit* element = dynamic_cast<const ControlAreaGeneratingUnit*>(BaseClass_ptr1))
+	{
+		if (element->GeneratingUnit != 0)
+		{
+			BaseClass_list.push_back(element->GeneratingUnit);
+			return true;
+		}
+	}
+	return false;
+}
+
 
 const char ControlAreaGeneratingUnit::debugName[] = "ControlAreaGeneratingUnit";
 const char* ControlAreaGeneratingUnit::debugString() const
@@ -71,6 +124,23 @@ void ControlAreaGeneratingUnit::addClassAssignFnsToMap(std::unordered_map<std::s
 {
 	assign_map.insert(std::make_pair(std::string("cim:ControlAreaGeneratingUnit.ControlArea"), &assign_ControlAreaGeneratingUnit_ControlArea));
 	assign_map.insert(std::make_pair(std::string("cim:ControlAreaGeneratingUnit.GeneratingUnit"), &assign_ControlAreaGeneratingUnit_GeneratingUnit));
+}
+
+void ControlAreaGeneratingUnit::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+}
+
+void ControlAreaGeneratingUnit::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:ControlAreaGeneratingUnit.ControlArea", &get_ControlAreaGeneratingUnit_ControlArea);
+	get_map.emplace("cim:ControlAreaGeneratingUnit.GeneratingUnit", &get_ControlAreaGeneratingUnit_GeneratingUnit);
+}
+
+void ControlAreaGeneratingUnit::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner ControlAreaGeneratingUnit::declare()

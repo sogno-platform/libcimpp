@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "DCTopologicalNode.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "DCEquipmentContainer.hpp"
@@ -16,9 +18,34 @@ using namespace CIMPP;
 DCTopologicalNode::DCTopologicalNode() : DCEquipmentContainer(nullptr), DCTopologicalIsland(nullptr) {};
 DCTopologicalNode::~DCTopologicalNode() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::SV,
+	CGMESProfile::TP,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:DCTopologicalNode.DCEquipmentContainer", { CGMESProfile::TP, } },
+	{ "cim:DCTopologicalNode.DCNodes", { CGMESProfile::TP, } },
+	{ "cim:DCTopologicalNode.DCTerminals", { CGMESProfile::TP, } },
+	{ "cim:DCTopologicalNode.DCTopologicalIsland", { CGMESProfile::SV, } },
+};
 
+std::list<CGMESProfile>
+DCTopologicalNode::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
 
+std::map<std::string, std::list<CGMESProfile>>
+DCTopologicalNode::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -38,7 +65,6 @@ bool assign_DCTopologicalNode_DCEquipmentContainer(BaseClass* BaseClass_ptr1, Ba
 	}
 	return false;
 }
-
 bool assign_DCNode_DCTopologicalNode(BaseClass*, BaseClass*);
 bool assign_DCTopologicalNode_DCNodes(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -55,7 +81,6 @@ bool assign_DCTopologicalNode_DCNodes(BaseClass* BaseClass_ptr1, BaseClass* Base
 	}
 	return false;
 }
-
 bool assign_DCBaseTerminal_DCTopologicalNode(BaseClass*, BaseClass*);
 bool assign_DCTopologicalNode_DCTerminals(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -72,7 +97,6 @@ bool assign_DCTopologicalNode_DCTerminals(BaseClass* BaseClass_ptr1, BaseClass* 
 	}
 	return false;
 }
-
 bool assign_DCTopologicalIsland_DCTopologicalNodes(BaseClass*, BaseClass*);
 bool assign_DCTopologicalNode_DCTopologicalIsland(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -89,6 +113,31 @@ bool assign_DCTopologicalNode_DCTopologicalIsland(BaseClass* BaseClass_ptr1, Bas
 	}
 	return false;
 }
+
+
+bool get_DCTopologicalNode_DCEquipmentContainer(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const DCTopologicalNode* element = dynamic_cast<const DCTopologicalNode*>(BaseClass_ptr1))
+	{
+		if (element->DCEquipmentContainer != 0)
+		{
+			BaseClass_list.push_back(element->DCEquipmentContainer);
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_DCTopologicalNode_DCNodes(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const DCTopologicalNode* element = dynamic_cast<const DCTopologicalNode*>(BaseClass_ptr1))
+	{
+		std::copy(element->DCNodes.begin(), element->DCNodes.end(), std::back_inserter(BaseClass_list));
+		return !BaseClass_list.empty();
+	}
+	return false;
+}
+
 
 const char DCTopologicalNode::debugName[] = "DCTopologicalNode";
 const char* DCTopologicalNode::debugString() const
@@ -111,6 +160,23 @@ void DCTopologicalNode::addClassAssignFnsToMap(std::unordered_map<std::string, c
 	assign_map.insert(std::make_pair(std::string("cim:DCTopologicalNode.DCNodes"), &assign_DCTopologicalNode_DCNodes));
 	assign_map.insert(std::make_pair(std::string("cim:DCTopologicalNode.DCTerminals"), &assign_DCTopologicalNode_DCTerminals));
 	assign_map.insert(std::make_pair(std::string("cim:DCTopologicalNode.DCTopologicalIsland"), &assign_DCTopologicalNode_DCTopologicalIsland));
+}
+
+void DCTopologicalNode::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+}
+
+void DCTopologicalNode::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:DCTopologicalNode.DCEquipmentContainer", &get_DCTopologicalNode_DCEquipmentContainer);
+	get_map.emplace("cim:DCTopologicalNode.DCNodes", &get_DCTopologicalNode_DCNodes);
+}
+
+void DCTopologicalNode::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner DCTopologicalNode::declare()

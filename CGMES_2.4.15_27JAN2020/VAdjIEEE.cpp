@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "VAdjIEEE.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "Simple_Float.hpp"
@@ -17,6 +19,36 @@ using namespace CIMPP;
 
 VAdjIEEE::VAdjIEEE() {};
 VAdjIEEE::~VAdjIEEE() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:VAdjIEEE.adjslew", { CGMESProfile::DY, } },
+	{ "cim:VAdjIEEE.taoff", { CGMESProfile::DY, } },
+	{ "cim:VAdjIEEE.taon", { CGMESProfile::DY, } },
+	{ "cim:VAdjIEEE.vadjf", { CGMESProfile::DY, } },
+	{ "cim:VAdjIEEE.vadjmax", { CGMESProfile::DY, } },
+	{ "cim:VAdjIEEE.vadjmin", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+VAdjIEEE::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+VAdjIEEE::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = VoltageAdjusterDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_VAdjIEEE_adjslew(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -99,8 +131,89 @@ bool assign_VAdjIEEE_vadjmin(std::stringstream &buffer, BaseClass* BaseClass_ptr
 
 
 
+bool get_VAdjIEEE_adjslew(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const VAdjIEEE* element = dynamic_cast<const VAdjIEEE*>(BaseClass_ptr1))
+	{
+		buffer << element->adjslew;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_VAdjIEEE_taoff(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const VAdjIEEE* element = dynamic_cast<const VAdjIEEE*>(BaseClass_ptr1))
+	{
+		buffer << element->taoff;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_VAdjIEEE_taon(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const VAdjIEEE* element = dynamic_cast<const VAdjIEEE*>(BaseClass_ptr1))
+	{
+		buffer << element->taon;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_VAdjIEEE_vadjf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const VAdjIEEE* element = dynamic_cast<const VAdjIEEE*>(BaseClass_ptr1))
+	{
+		buffer << element->vadjf;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_VAdjIEEE_vadjmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const VAdjIEEE* element = dynamic_cast<const VAdjIEEE*>(BaseClass_ptr1))
+	{
+		buffer << element->vadjmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_VAdjIEEE_vadjmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const VAdjIEEE* element = dynamic_cast<const VAdjIEEE*>(BaseClass_ptr1))
+	{
+		buffer << element->vadjmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -127,6 +240,27 @@ void VAdjIEEE::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign
 
 void VAdjIEEE::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void VAdjIEEE::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	VoltageAdjusterDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:VAdjIEEE.adjslew", &get_VAdjIEEE_adjslew);
+	get_map.emplace("cim:VAdjIEEE.taoff", &get_VAdjIEEE_taoff);
+	get_map.emplace("cim:VAdjIEEE.taon", &get_VAdjIEEE_taon);
+	get_map.emplace("cim:VAdjIEEE.vadjf", &get_VAdjIEEE_vadjf);
+	get_map.emplace("cim:VAdjIEEE.vadjmax", &get_VAdjIEEE_vadjmax);
+	get_map.emplace("cim:VAdjIEEE.vadjmin", &get_VAdjIEEE_vadjmin);
+}
+
+void VAdjIEEE::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	VoltageAdjusterDynamics::addClassGetFnsToMap(get_map);
+}
+
+void VAdjIEEE::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	VoltageAdjusterDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner VAdjIEEE::declare()

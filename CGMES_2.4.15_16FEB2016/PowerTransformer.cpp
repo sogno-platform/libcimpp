@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "PowerTransformer.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PowerTransformerEnd.hpp"
@@ -19,6 +21,36 @@ using namespace CIMPP;
 PowerTransformer::PowerTransformer() {};
 PowerTransformer::~PowerTransformer() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:PowerTransformer.PowerTransformerEnd", { CGMESProfile::EQ, } },
+	{ "cim:PowerTransformer.beforeShCircuitHighestOperatingCurrent", { CGMESProfile::EQ, } },
+	{ "cim:PowerTransformer.beforeShCircuitHighestOperatingVoltage", { CGMESProfile::EQ, } },
+	{ "cim:PowerTransformer.beforeShortCircuitAnglePf", { CGMESProfile::EQ, } },
+	{ "cim:PowerTransformer.highSideMinOperatingU", { CGMESProfile::EQ, } },
+	{ "cim:PowerTransformer.isPartOfGeneratorUnit", { CGMESProfile::EQ, } },
+	{ "cim:PowerTransformer.operationalValuesConsidered", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+PowerTransformer::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+PowerTransformer::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = ConductingEquipment::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_PowerTransformer_beforeShCircuitHighestOperatingCurrent(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -117,9 +149,89 @@ bool assign_PowerTransformer_PowerTransformerEnd(BaseClass* BaseClass_ptr1, Base
 	return false;
 }
 
+bool get_PowerTransformer_beforeShCircuitHighestOperatingCurrent(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PowerTransformer* element = dynamic_cast<const PowerTransformer*>(BaseClass_ptr1))
+	{
+		buffer << element->beforeShCircuitHighestOperatingCurrent;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PowerTransformer_beforeShCircuitHighestOperatingVoltage(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PowerTransformer* element = dynamic_cast<const PowerTransformer*>(BaseClass_ptr1))
+	{
+		buffer << element->beforeShCircuitHighestOperatingVoltage;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PowerTransformer_beforeShortCircuitAnglePf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PowerTransformer* element = dynamic_cast<const PowerTransformer*>(BaseClass_ptr1))
+	{
+		buffer << element->beforeShortCircuitAnglePf;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PowerTransformer_highSideMinOperatingU(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PowerTransformer* element = dynamic_cast<const PowerTransformer*>(BaseClass_ptr1))
+	{
+		buffer << element->highSideMinOperatingU;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PowerTransformer_isPartOfGeneratorUnit(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PowerTransformer* element = dynamic_cast<const PowerTransformer*>(BaseClass_ptr1))
+	{
+		buffer << element->isPartOfGeneratorUnit;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PowerTransformer_operationalValuesConsidered(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PowerTransformer* element = dynamic_cast<const PowerTransformer*>(BaseClass_ptr1))
+	{
+		buffer << element->operationalValuesConsidered;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -147,6 +259,27 @@ void PowerTransformer::addPrimitiveAssignFnsToMap(std::unordered_map<std::string
 void PowerTransformer::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:PowerTransformer.PowerTransformerEnd"), &assign_PowerTransformer_PowerTransformerEnd));
+}
+
+void PowerTransformer::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ConductingEquipment::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:PowerTransformer.beforeShCircuitHighestOperatingCurrent", &get_PowerTransformer_beforeShCircuitHighestOperatingCurrent);
+	get_map.emplace("cim:PowerTransformer.beforeShCircuitHighestOperatingVoltage", &get_PowerTransformer_beforeShCircuitHighestOperatingVoltage);
+	get_map.emplace("cim:PowerTransformer.beforeShortCircuitAnglePf", &get_PowerTransformer_beforeShortCircuitAnglePf);
+	get_map.emplace("cim:PowerTransformer.highSideMinOperatingU", &get_PowerTransformer_highSideMinOperatingU);
+	get_map.emplace("cim:PowerTransformer.isPartOfGeneratorUnit", &get_PowerTransformer_isPartOfGeneratorUnit);
+	get_map.emplace("cim:PowerTransformer.operationalValuesConsidered", &get_PowerTransformer_operationalValuesConsidered);
+}
+
+void PowerTransformer::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	ConductingEquipment::addClassGetFnsToMap(get_map);
+}
+
+void PowerTransformer::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ConductingEquipment::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner PowerTransformer::declare()

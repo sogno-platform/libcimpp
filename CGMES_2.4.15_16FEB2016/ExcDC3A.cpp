@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "ExcDC3A.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PU.hpp"
@@ -27,6 +29,46 @@ using namespace CIMPP;
 
 ExcDC3A::ExcDC3A() {};
 ExcDC3A::~ExcDC3A() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:ExcDC3A.edfmax", { CGMESProfile::DY, } },
+	{ "cim:ExcDC3A.efd1", { CGMESProfile::DY, } },
+	{ "cim:ExcDC3A.efd2", { CGMESProfile::DY, } },
+	{ "cim:ExcDC3A.efdlim", { CGMESProfile::DY, } },
+	{ "cim:ExcDC3A.efdmin", { CGMESProfile::DY, } },
+	{ "cim:ExcDC3A.exclim", { CGMESProfile::DY, } },
+	{ "cim:ExcDC3A.ke", { CGMESProfile::DY, } },
+	{ "cim:ExcDC3A.kr", { CGMESProfile::DY, } },
+	{ "cim:ExcDC3A.ks", { CGMESProfile::DY, } },
+	{ "cim:ExcDC3A.kv", { CGMESProfile::DY, } },
+	{ "cim:ExcDC3A.seefd1", { CGMESProfile::DY, } },
+	{ "cim:ExcDC3A.seefd2", { CGMESProfile::DY, } },
+	{ "cim:ExcDC3A.te", { CGMESProfile::DY, } },
+	{ "cim:ExcDC3A.trh", { CGMESProfile::DY, } },
+	{ "cim:ExcDC3A.vrmax", { CGMESProfile::DY, } },
+	{ "cim:ExcDC3A.vrmin", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+ExcDC3A::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+ExcDC3A::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_ExcDC3A_edfmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -239,18 +281,229 @@ bool assign_ExcDC3A_vrmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
 
 
 
+bool get_ExcDC3A_edfmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcDC3A* element = dynamic_cast<const ExcDC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->edfmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcDC3A_efd1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcDC3A* element = dynamic_cast<const ExcDC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->efd1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcDC3A_efd2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcDC3A* element = dynamic_cast<const ExcDC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->efd2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcDC3A_efdlim(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcDC3A* element = dynamic_cast<const ExcDC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->efdlim;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcDC3A_efdmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcDC3A* element = dynamic_cast<const ExcDC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->efdmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcDC3A_exclim(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcDC3A* element = dynamic_cast<const ExcDC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->exclim;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcDC3A_ke(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcDC3A* element = dynamic_cast<const ExcDC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->ke;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcDC3A_kr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcDC3A* element = dynamic_cast<const ExcDC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->kr;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcDC3A_ks(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcDC3A* element = dynamic_cast<const ExcDC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->ks;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcDC3A_kv(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcDC3A* element = dynamic_cast<const ExcDC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->kv;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcDC3A_seefd1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcDC3A* element = dynamic_cast<const ExcDC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->seefd1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcDC3A_seefd2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcDC3A* element = dynamic_cast<const ExcDC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->seefd2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcDC3A_te(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcDC3A* element = dynamic_cast<const ExcDC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->te;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcDC3A_trh(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcDC3A* element = dynamic_cast<const ExcDC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->trh;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcDC3A_vrmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcDC3A* element = dynamic_cast<const ExcDC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->vrmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcDC3A_vrmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcDC3A* element = dynamic_cast<const ExcDC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->vrmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -287,6 +540,37 @@ void ExcDC3A::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_
 
 void ExcDC3A::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void ExcDC3A::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:ExcDC3A.edfmax", &get_ExcDC3A_edfmax);
+	get_map.emplace("cim:ExcDC3A.efd1", &get_ExcDC3A_efd1);
+	get_map.emplace("cim:ExcDC3A.efd2", &get_ExcDC3A_efd2);
+	get_map.emplace("cim:ExcDC3A.efdlim", &get_ExcDC3A_efdlim);
+	get_map.emplace("cim:ExcDC3A.efdmin", &get_ExcDC3A_efdmin);
+	get_map.emplace("cim:ExcDC3A.exclim", &get_ExcDC3A_exclim);
+	get_map.emplace("cim:ExcDC3A.ke", &get_ExcDC3A_ke);
+	get_map.emplace("cim:ExcDC3A.kr", &get_ExcDC3A_kr);
+	get_map.emplace("cim:ExcDC3A.ks", &get_ExcDC3A_ks);
+	get_map.emplace("cim:ExcDC3A.kv", &get_ExcDC3A_kv);
+	get_map.emplace("cim:ExcDC3A.seefd1", &get_ExcDC3A_seefd1);
+	get_map.emplace("cim:ExcDC3A.seefd2", &get_ExcDC3A_seefd2);
+	get_map.emplace("cim:ExcDC3A.te", &get_ExcDC3A_te);
+	get_map.emplace("cim:ExcDC3A.trh", &get_ExcDC3A_trh);
+	get_map.emplace("cim:ExcDC3A.vrmax", &get_ExcDC3A_vrmax);
+	get_map.emplace("cim:ExcDC3A.vrmin", &get_ExcDC3A_vrmin);
+}
+
+void ExcDC3A::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addClassGetFnsToMap(get_map);
+}
+
+void ExcDC3A::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner ExcDC3A::declare()

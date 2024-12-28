@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "SwitchSchedule.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "Switch.hpp"
@@ -13,6 +15,30 @@ using namespace CIMPP;
 SwitchSchedule::SwitchSchedule() : Switch(nullptr) {};
 SwitchSchedule::~SwitchSchedule() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:SwitchSchedule.Switch", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+SwitchSchedule::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+SwitchSchedule::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = SeasonDayTypeSchedule::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -33,6 +59,21 @@ bool assign_SwitchSchedule_Switch(BaseClass* BaseClass_ptr1, BaseClass* BaseClas
 	return false;
 }
 
+
+bool get_SwitchSchedule_Switch(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const SwitchSchedule* element = dynamic_cast<const SwitchSchedule*>(BaseClass_ptr1))
+	{
+		if (element->Switch != 0)
+		{
+			BaseClass_list.push_back(element->Switch);
+			return true;
+		}
+	}
+	return false;
+}
+
+
 const char SwitchSchedule::debugName[] = "SwitchSchedule";
 const char* SwitchSchedule::debugString() const
 {
@@ -51,6 +92,22 @@ void SwitchSchedule::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, 
 void SwitchSchedule::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:SwitchSchedule.Switch"), &assign_SwitchSchedule_Switch));
+}
+
+void SwitchSchedule::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	SeasonDayTypeSchedule::addPrimitiveGetFnsToMap(get_map);
+}
+
+void SwitchSchedule::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	SeasonDayTypeSchedule::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:SwitchSchedule.Switch", &get_SwitchSchedule_Switch);
+}
+
+void SwitchSchedule::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	SeasonDayTypeSchedule::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner SwitchSchedule::declare()

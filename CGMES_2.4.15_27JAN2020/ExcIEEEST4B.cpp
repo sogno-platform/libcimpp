@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "ExcIEEEST4B.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PU.hpp"
@@ -27,6 +29,46 @@ using namespace CIMPP;
 
 ExcIEEEST4B::ExcIEEEST4B() {};
 ExcIEEEST4B::~ExcIEEEST4B() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:ExcIEEEST4B.kc", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST4B.kg", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST4B.ki", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST4B.kim", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST4B.kir", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST4B.kp", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST4B.kpm", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST4B.kpr", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST4B.ta", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST4B.thetap", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST4B.vbmax", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST4B.vmmax", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST4B.vmmin", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST4B.vrmax", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST4B.vrmin", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEST4B.xl", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+ExcIEEEST4B::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+ExcIEEEST4B::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_ExcIEEEST4B_kc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -239,18 +281,229 @@ bool assign_ExcIEEEST4B_xl(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
 
 
 
+bool get_ExcIEEEST4B_kc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer << element->kc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST4B_kg(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer << element->kg;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST4B_ki(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer << element->ki;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST4B_kim(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer << element->kim;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST4B_kir(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer << element->kir;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST4B_kp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer << element->kp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST4B_kpm(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer << element->kpm;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST4B_kpr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer << element->kpr;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST4B_ta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer << element->ta;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST4B_thetap(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer << element->thetap;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST4B_vbmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer << element->vbmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST4B_vmmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer << element->vmmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEST4B_vmmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer << element->vmmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcIEEEST4B_vrmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer << element->vrmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcIEEEST4B_vrmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer << element->vrmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcIEEEST4B_xl(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	{
+		buffer << element->xl;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -287,6 +540,37 @@ void ExcIEEEST4B::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, ass
 
 void ExcIEEEST4B::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void ExcIEEEST4B::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:ExcIEEEST4B.kc", &get_ExcIEEEST4B_kc);
+	get_map.emplace("cim:ExcIEEEST4B.kg", &get_ExcIEEEST4B_kg);
+	get_map.emplace("cim:ExcIEEEST4B.ki", &get_ExcIEEEST4B_ki);
+	get_map.emplace("cim:ExcIEEEST4B.kim", &get_ExcIEEEST4B_kim);
+	get_map.emplace("cim:ExcIEEEST4B.kir", &get_ExcIEEEST4B_kir);
+	get_map.emplace("cim:ExcIEEEST4B.kp", &get_ExcIEEEST4B_kp);
+	get_map.emplace("cim:ExcIEEEST4B.kpm", &get_ExcIEEEST4B_kpm);
+	get_map.emplace("cim:ExcIEEEST4B.kpr", &get_ExcIEEEST4B_kpr);
+	get_map.emplace("cim:ExcIEEEST4B.ta", &get_ExcIEEEST4B_ta);
+	get_map.emplace("cim:ExcIEEEST4B.thetap", &get_ExcIEEEST4B_thetap);
+	get_map.emplace("cim:ExcIEEEST4B.vbmax", &get_ExcIEEEST4B_vbmax);
+	get_map.emplace("cim:ExcIEEEST4B.vmmax", &get_ExcIEEEST4B_vmmax);
+	get_map.emplace("cim:ExcIEEEST4B.vmmin", &get_ExcIEEEST4B_vmmin);
+	get_map.emplace("cim:ExcIEEEST4B.vrmax", &get_ExcIEEEST4B_vrmax);
+	get_map.emplace("cim:ExcIEEEST4B.vrmin", &get_ExcIEEEST4B_vrmin);
+	get_map.emplace("cim:ExcIEEEST4B.xl", &get_ExcIEEEST4B_xl);
+}
+
+void ExcIEEEST4B::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addClassGetFnsToMap(get_map);
+}
+
+void ExcIEEEST4B::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner ExcIEEEST4B::declare()

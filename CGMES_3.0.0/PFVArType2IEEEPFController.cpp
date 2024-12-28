@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "PFVArType2IEEEPFController.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "Boolean.hpp"
@@ -18,6 +20,37 @@ using namespace CIMPP;
 
 PFVArType2IEEEPFController::PFVArType2IEEEPFController() {};
 PFVArType2IEEEPFController::~PFVArType2IEEEPFController() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:PFVArType2IEEEPFController.exlon", { CGMESProfile::DY, } },
+	{ "cim:PFVArType2IEEEPFController.ki", { CGMESProfile::DY, } },
+	{ "cim:PFVArType2IEEEPFController.kp", { CGMESProfile::DY, } },
+	{ "cim:PFVArType2IEEEPFController.pfref", { CGMESProfile::DY, } },
+	{ "cim:PFVArType2IEEEPFController.vclmt", { CGMESProfile::DY, } },
+	{ "cim:PFVArType2IEEEPFController.vref", { CGMESProfile::DY, } },
+	{ "cim:PFVArType2IEEEPFController.vs", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+PFVArType2IEEEPFController::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+PFVArType2IEEEPFController::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = PFVArControllerType2Dynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_PFVArType2IEEEPFController_exlon(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -113,9 +146,103 @@ bool assign_PFVArType2IEEEPFController_vs(std::stringstream &buffer, BaseClass* 
 
 
 
+bool get_PFVArType2IEEEPFController_exlon(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PFVArType2IEEEPFController* element = dynamic_cast<const PFVArType2IEEEPFController*>(BaseClass_ptr1))
+	{
+		buffer << element->exlon;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PFVArType2IEEEPFController_ki(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PFVArType2IEEEPFController* element = dynamic_cast<const PFVArType2IEEEPFController*>(BaseClass_ptr1))
+	{
+		buffer << element->ki;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PFVArType2IEEEPFController_kp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PFVArType2IEEEPFController* element = dynamic_cast<const PFVArType2IEEEPFController*>(BaseClass_ptr1))
+	{
+		buffer << element->kp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PFVArType2IEEEPFController_pfref(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PFVArType2IEEEPFController* element = dynamic_cast<const PFVArType2IEEEPFController*>(BaseClass_ptr1))
+	{
+		buffer << element->pfref;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PFVArType2IEEEPFController_vclmt(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PFVArType2IEEEPFController* element = dynamic_cast<const PFVArType2IEEEPFController*>(BaseClass_ptr1))
+	{
+		buffer << element->vclmt;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PFVArType2IEEEPFController_vref(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PFVArType2IEEEPFController* element = dynamic_cast<const PFVArType2IEEEPFController*>(BaseClass_ptr1))
+	{
+		buffer << element->vref;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PFVArType2IEEEPFController_vs(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PFVArType2IEEEPFController* element = dynamic_cast<const PFVArType2IEEEPFController*>(BaseClass_ptr1))
+	{
+		buffer << element->vs;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -143,6 +270,28 @@ void PFVArType2IEEEPFController::addPrimitiveAssignFnsToMap(std::unordered_map<s
 
 void PFVArType2IEEEPFController::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void PFVArType2IEEEPFController::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PFVArControllerType2Dynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:PFVArType2IEEEPFController.exlon", &get_PFVArType2IEEEPFController_exlon);
+	get_map.emplace("cim:PFVArType2IEEEPFController.ki", &get_PFVArType2IEEEPFController_ki);
+	get_map.emplace("cim:PFVArType2IEEEPFController.kp", &get_PFVArType2IEEEPFController_kp);
+	get_map.emplace("cim:PFVArType2IEEEPFController.pfref", &get_PFVArType2IEEEPFController_pfref);
+	get_map.emplace("cim:PFVArType2IEEEPFController.vclmt", &get_PFVArType2IEEEPFController_vclmt);
+	get_map.emplace("cim:PFVArType2IEEEPFController.vref", &get_PFVArType2IEEEPFController_vref);
+	get_map.emplace("cim:PFVArType2IEEEPFController.vs", &get_PFVArType2IEEEPFController_vs);
+}
+
+void PFVArType2IEEEPFController::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	PFVArControllerType2Dynamics::addClassGetFnsToMap(get_map);
+}
+
+void PFVArType2IEEEPFController::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PFVArControllerType2Dynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner PFVArType2IEEEPFController::declare()

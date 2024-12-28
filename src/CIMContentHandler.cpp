@@ -118,6 +118,7 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 			{
 				(*idOb).mRID = rdf_id;
 			}
+			BaseClass_ptr->setRdfid(rdf_id);
 			RDFMap->emplace(rdf_id, BaseClass_ptr);
 			objectStack.push(BaseClass_ptr);
 			Objects->push_back(BaseClass_ptr);

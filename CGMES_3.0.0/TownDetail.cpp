@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "TownDetail.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "String.hpp"
@@ -16,6 +18,35 @@ using namespace CIMPP;
 
 TownDetail::TownDetail() {};
 TownDetail::~TownDetail() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::GL,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:TownDetail.code", { CGMESProfile::GL, } },
+	{ "cim:TownDetail.country", { CGMESProfile::GL, } },
+	{ "cim:TownDetail.name", { CGMESProfile::GL, } },
+	{ "cim:TownDetail.section", { CGMESProfile::GL, } },
+	{ "cim:TownDetail.stateOrProvince", { CGMESProfile::GL, } },
+};
+
+std::list<CGMESProfile>
+TownDetail::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+TownDetail::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_TownDetail_code(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -85,7 +116,75 @@ bool assign_TownDetail_stateOrProvince(std::stringstream &buffer, BaseClass* Bas
 
 
 
+bool get_TownDetail_code(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TownDetail* element = dynamic_cast<const TownDetail*>(BaseClass_ptr1))
+	{
+		buffer << element->code;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_TownDetail_country(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TownDetail* element = dynamic_cast<const TownDetail*>(BaseClass_ptr1))
+	{
+		buffer << element->country;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_TownDetail_name(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TownDetail* element = dynamic_cast<const TownDetail*>(BaseClass_ptr1))
+	{
+		buffer << element->name;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_TownDetail_section(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TownDetail* element = dynamic_cast<const TownDetail*>(BaseClass_ptr1))
+	{
+		buffer << element->section;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_TownDetail_stateOrProvince(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TownDetail* element = dynamic_cast<const TownDetail*>(BaseClass_ptr1))
+	{
+		buffer << element->stateOrProvince;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -111,6 +210,26 @@ void TownDetail::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assi
 
 void TownDetail::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void TownDetail::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	BaseClass::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:TownDetail.code", &get_TownDetail_code);
+	get_map.emplace("cim:TownDetail.country", &get_TownDetail_country);
+	get_map.emplace("cim:TownDetail.name", &get_TownDetail_name);
+	get_map.emplace("cim:TownDetail.section", &get_TownDetail_section);
+	get_map.emplace("cim:TownDetail.stateOrProvince", &get_TownDetail_stateOrProvince);
+}
+
+void TownDetail::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	BaseClass::addClassGetFnsToMap(get_map);
+}
+
+void TownDetail::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner TownDetail::declare()

@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "WindTurbineType4bIEC.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "WindContPType4bIEC.hpp"
@@ -14,7 +16,31 @@ using namespace CIMPP;
 WindTurbineType4bIEC::WindTurbineType4bIEC() : WindContPType4bIEC(nullptr), WindMechIEC(nullptr) {};
 WindTurbineType4bIEC::~WindTurbineType4bIEC() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:WindTurbineType4bIEC.WindContPType4bIEC", { CGMESProfile::DY, } },
+	{ "cim:WindTurbineType4bIEC.WindMechIEC", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+WindTurbineType4bIEC::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+WindTurbineType4bIEC::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = WindGenType4IEC::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -34,7 +60,6 @@ bool assign_WindTurbineType4bIEC_WindContPType4bIEC(BaseClass* BaseClass_ptr1, B
 	}
 	return false;
 }
-
 bool assign_WindMechIEC_WindTurbineType4bIEC(BaseClass*, BaseClass*);
 bool assign_WindTurbineType4bIEC_WindMechIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -51,6 +76,34 @@ bool assign_WindTurbineType4bIEC_WindMechIEC(BaseClass* BaseClass_ptr1, BaseClas
 	}
 	return false;
 }
+
+
+bool get_WindTurbineType4bIEC_WindContPType4bIEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const WindTurbineType4bIEC* element = dynamic_cast<const WindTurbineType4bIEC*>(BaseClass_ptr1))
+	{
+		if (element->WindContPType4bIEC != 0)
+		{
+			BaseClass_list.push_back(element->WindContPType4bIEC);
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_WindTurbineType4bIEC_WindMechIEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const WindTurbineType4bIEC* element = dynamic_cast<const WindTurbineType4bIEC*>(BaseClass_ptr1))
+	{
+		if (element->WindMechIEC != 0)
+		{
+			BaseClass_list.push_back(element->WindMechIEC);
+			return true;
+		}
+	}
+	return false;
+}
+
 
 const char WindTurbineType4bIEC::debugName[] = "WindTurbineType4bIEC";
 const char* WindTurbineType4bIEC::debugString() const
@@ -71,6 +124,23 @@ void WindTurbineType4bIEC::addClassAssignFnsToMap(std::unordered_map<std::string
 {
 	assign_map.insert(std::make_pair(std::string("cim:WindTurbineType4bIEC.WindContPType4bIEC"), &assign_WindTurbineType4bIEC_WindContPType4bIEC));
 	assign_map.insert(std::make_pair(std::string("cim:WindTurbineType4bIEC.WindMechIEC"), &assign_WindTurbineType4bIEC_WindMechIEC));
+}
+
+void WindTurbineType4bIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	WindGenType4IEC::addPrimitiveGetFnsToMap(get_map);
+}
+
+void WindTurbineType4bIEC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	WindGenType4IEC::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:WindTurbineType4bIEC.WindContPType4bIEC", &get_WindTurbineType4bIEC_WindContPType4bIEC);
+	get_map.emplace("cim:WindTurbineType4bIEC.WindMechIEC", &get_WindTurbineType4bIEC_WindMechIEC);
+}
+
+void WindTurbineType4bIEC::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	WindGenType4IEC::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner WindTurbineType4bIEC::declare()

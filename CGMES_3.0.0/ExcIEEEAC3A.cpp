@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "ExcIEEEAC3A.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PU.hpp"
@@ -32,6 +34,51 @@ using namespace CIMPP;
 
 ExcIEEEAC3A::ExcIEEEAC3A() {};
 ExcIEEEAC3A::~ExcIEEEAC3A() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:ExcIEEEAC3A.efdn", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC3A.ka", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC3A.kc", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC3A.kd", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC3A.ke", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC3A.kf", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC3A.kn", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC3A.kr", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC3A.seve1", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC3A.seve2", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC3A.ta", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC3A.tb", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC3A.tc", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC3A.te", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC3A.tf", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC3A.vamax", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC3A.vamin", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC3A.ve1", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC3A.ve2", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC3A.vemin", { CGMESProfile::DY, } },
+	{ "cim:ExcIEEEAC3A.vfemax", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+ExcIEEEAC3A::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+ExcIEEEAC3A::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_ExcIEEEAC3A_efdn(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -309,23 +356,299 @@ bool assign_ExcIEEEAC3A_vfemax(std::stringstream &buffer, BaseClass* BaseClass_p
 
 
 
+bool get_ExcIEEEAC3A_efdn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC3A* element = dynamic_cast<const ExcIEEEAC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->efdn;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC3A_ka(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC3A* element = dynamic_cast<const ExcIEEEAC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->ka;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC3A_kc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC3A* element = dynamic_cast<const ExcIEEEAC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->kc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC3A_kd(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC3A* element = dynamic_cast<const ExcIEEEAC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->kd;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC3A_ke(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC3A* element = dynamic_cast<const ExcIEEEAC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->ke;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC3A_kf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC3A* element = dynamic_cast<const ExcIEEEAC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->kf;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC3A_kn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC3A* element = dynamic_cast<const ExcIEEEAC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->kn;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC3A_kr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC3A* element = dynamic_cast<const ExcIEEEAC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->kr;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC3A_seve1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC3A* element = dynamic_cast<const ExcIEEEAC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->seve1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC3A_seve2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC3A* element = dynamic_cast<const ExcIEEEAC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->seve2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC3A_ta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC3A* element = dynamic_cast<const ExcIEEEAC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->ta;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC3A_tb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC3A* element = dynamic_cast<const ExcIEEEAC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->tb;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC3A_tc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC3A* element = dynamic_cast<const ExcIEEEAC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->tc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC3A_te(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC3A* element = dynamic_cast<const ExcIEEEAC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->te;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC3A_tf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC3A* element = dynamic_cast<const ExcIEEEAC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->tf;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC3A_vamax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC3A* element = dynamic_cast<const ExcIEEEAC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->vamax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC3A_vamin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC3A* element = dynamic_cast<const ExcIEEEAC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->vamin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcIEEEAC3A_ve1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC3A* element = dynamic_cast<const ExcIEEEAC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->ve1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcIEEEAC3A_ve2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC3A* element = dynamic_cast<const ExcIEEEAC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->ve2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcIEEEAC3A_vemin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC3A* element = dynamic_cast<const ExcIEEEAC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->vemin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcIEEEAC3A_vfemax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcIEEEAC3A* element = dynamic_cast<const ExcIEEEAC3A*>(BaseClass_ptr1))
+	{
+		buffer << element->vfemax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -367,6 +690,42 @@ void ExcIEEEAC3A::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, ass
 
 void ExcIEEEAC3A::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void ExcIEEEAC3A::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:ExcIEEEAC3A.efdn", &get_ExcIEEEAC3A_efdn);
+	get_map.emplace("cim:ExcIEEEAC3A.ka", &get_ExcIEEEAC3A_ka);
+	get_map.emplace("cim:ExcIEEEAC3A.kc", &get_ExcIEEEAC3A_kc);
+	get_map.emplace("cim:ExcIEEEAC3A.kd", &get_ExcIEEEAC3A_kd);
+	get_map.emplace("cim:ExcIEEEAC3A.ke", &get_ExcIEEEAC3A_ke);
+	get_map.emplace("cim:ExcIEEEAC3A.kf", &get_ExcIEEEAC3A_kf);
+	get_map.emplace("cim:ExcIEEEAC3A.kn", &get_ExcIEEEAC3A_kn);
+	get_map.emplace("cim:ExcIEEEAC3A.kr", &get_ExcIEEEAC3A_kr);
+	get_map.emplace("cim:ExcIEEEAC3A.seve1", &get_ExcIEEEAC3A_seve1);
+	get_map.emplace("cim:ExcIEEEAC3A.seve2", &get_ExcIEEEAC3A_seve2);
+	get_map.emplace("cim:ExcIEEEAC3A.ta", &get_ExcIEEEAC3A_ta);
+	get_map.emplace("cim:ExcIEEEAC3A.tb", &get_ExcIEEEAC3A_tb);
+	get_map.emplace("cim:ExcIEEEAC3A.tc", &get_ExcIEEEAC3A_tc);
+	get_map.emplace("cim:ExcIEEEAC3A.te", &get_ExcIEEEAC3A_te);
+	get_map.emplace("cim:ExcIEEEAC3A.tf", &get_ExcIEEEAC3A_tf);
+	get_map.emplace("cim:ExcIEEEAC3A.vamax", &get_ExcIEEEAC3A_vamax);
+	get_map.emplace("cim:ExcIEEEAC3A.vamin", &get_ExcIEEEAC3A_vamin);
+	get_map.emplace("cim:ExcIEEEAC3A.ve1", &get_ExcIEEEAC3A_ve1);
+	get_map.emplace("cim:ExcIEEEAC3A.ve2", &get_ExcIEEEAC3A_ve2);
+	get_map.emplace("cim:ExcIEEEAC3A.vemin", &get_ExcIEEEAC3A_vemin);
+	get_map.emplace("cim:ExcIEEEAC3A.vfemax", &get_ExcIEEEAC3A_vfemax);
+}
+
+void ExcIEEEAC3A::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addClassGetFnsToMap(get_map);
+}
+
+void ExcIEEEAC3A::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner ExcIEEEAC3A::declare()

@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "GovSteamFV4.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PU.hpp"
@@ -62,6 +64,81 @@ using namespace CIMPP;
 
 GovSteamFV4::GovSteamFV4() {};
 GovSteamFV4::~GovSteamFV4() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:GovSteamFV4.cpsmn", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.cpsmx", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.crmn", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.crmx", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.kdc", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.kf1", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.kf3", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.khp", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.kic", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.kip", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.kit", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.kmp1", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.kmp2", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.kpc", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.kpp", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.kpt", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.krc", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.ksh", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.lpi", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.lps", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.mnef", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.mxef", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.pr1", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.pr2", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.psmn", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.rsmimn", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.rsmimx", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.rvgmn", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.rvgmx", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.srmn", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.srmx", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.srsmp", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.svmn", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.svmx", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.ta", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.tam", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.tc", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.tcm", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.tdc", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.tf1", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.tf2", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.thp", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.tmp", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.trh", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.tv", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.ty", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.y", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.yhpmn", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.yhpmx", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.ympmn", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV4.ympmx", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+GovSteamFV4::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+GovSteamFV4::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = TurbineGovernorDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_GovSteamFV4_cpsmn(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -729,53 +806,719 @@ bool assign_GovSteamFV4_ympmx(std::stringstream &buffer, BaseClass* BaseClass_pt
 
 
 
+bool get_GovSteamFV4_cpsmn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->cpsmn;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_cpsmx(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->cpsmx;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_crmn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->crmn;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_crmx(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->crmx;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_kdc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->kdc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_kf1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->kf1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_kf3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->kf3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_khp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->khp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_kic(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->kic;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_kip(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->kip;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_kit(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->kit;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_kmp1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->kmp1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_kmp2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->kmp2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_kpc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->kpc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_kpp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->kpp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_kpt(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->kpt;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_krc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->krc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_ksh(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->ksh;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_lpi(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->lpi;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_lps(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->lps;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_mnef(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->mnef;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_mxef(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->mxef;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_pr1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->pr1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_pr2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->pr2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_psmn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->psmn;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_rsmimn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->rsmimn;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_rsmimx(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->rsmimx;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_rvgmn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->rvgmn;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_rvgmx(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->rvgmx;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_srmn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->srmn;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_srmx(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->srmx;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_srsmp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->srsmp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_svmn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->svmn;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_svmx(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->svmx;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_ta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->ta;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_tam(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->tam;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_tc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->tc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_tcm(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->tcm;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_tdc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->tdc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_tf1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->tf1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_tf2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->tf2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_thp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->thp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_tmp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->tmp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_trh(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->trh;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_tv(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->tv;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_ty(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->ty;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_y(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->y;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV4_yhpmn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->yhpmn;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovSteamFV4_yhpmx(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->yhpmx;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovSteamFV4_ympmn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->ympmn;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovSteamFV4_ympmx(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV4* element = dynamic_cast<const GovSteamFV4*>(BaseClass_ptr1))
+	{
+		buffer << element->ympmx;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -847,6 +1590,72 @@ void GovSteamFV4::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, ass
 
 void GovSteamFV4::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void GovSteamFV4::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:GovSteamFV4.cpsmn", &get_GovSteamFV4_cpsmn);
+	get_map.emplace("cim:GovSteamFV4.cpsmx", &get_GovSteamFV4_cpsmx);
+	get_map.emplace("cim:GovSteamFV4.crmn", &get_GovSteamFV4_crmn);
+	get_map.emplace("cim:GovSteamFV4.crmx", &get_GovSteamFV4_crmx);
+	get_map.emplace("cim:GovSteamFV4.kdc", &get_GovSteamFV4_kdc);
+	get_map.emplace("cim:GovSteamFV4.kf1", &get_GovSteamFV4_kf1);
+	get_map.emplace("cim:GovSteamFV4.kf3", &get_GovSteamFV4_kf3);
+	get_map.emplace("cim:GovSteamFV4.khp", &get_GovSteamFV4_khp);
+	get_map.emplace("cim:GovSteamFV4.kic", &get_GovSteamFV4_kic);
+	get_map.emplace("cim:GovSteamFV4.kip", &get_GovSteamFV4_kip);
+	get_map.emplace("cim:GovSteamFV4.kit", &get_GovSteamFV4_kit);
+	get_map.emplace("cim:GovSteamFV4.kmp1", &get_GovSteamFV4_kmp1);
+	get_map.emplace("cim:GovSteamFV4.kmp2", &get_GovSteamFV4_kmp2);
+	get_map.emplace("cim:GovSteamFV4.kpc", &get_GovSteamFV4_kpc);
+	get_map.emplace("cim:GovSteamFV4.kpp", &get_GovSteamFV4_kpp);
+	get_map.emplace("cim:GovSteamFV4.kpt", &get_GovSteamFV4_kpt);
+	get_map.emplace("cim:GovSteamFV4.krc", &get_GovSteamFV4_krc);
+	get_map.emplace("cim:GovSteamFV4.ksh", &get_GovSteamFV4_ksh);
+	get_map.emplace("cim:GovSteamFV4.lpi", &get_GovSteamFV4_lpi);
+	get_map.emplace("cim:GovSteamFV4.lps", &get_GovSteamFV4_lps);
+	get_map.emplace("cim:GovSteamFV4.mnef", &get_GovSteamFV4_mnef);
+	get_map.emplace("cim:GovSteamFV4.mxef", &get_GovSteamFV4_mxef);
+	get_map.emplace("cim:GovSteamFV4.pr1", &get_GovSteamFV4_pr1);
+	get_map.emplace("cim:GovSteamFV4.pr2", &get_GovSteamFV4_pr2);
+	get_map.emplace("cim:GovSteamFV4.psmn", &get_GovSteamFV4_psmn);
+	get_map.emplace("cim:GovSteamFV4.rsmimn", &get_GovSteamFV4_rsmimn);
+	get_map.emplace("cim:GovSteamFV4.rsmimx", &get_GovSteamFV4_rsmimx);
+	get_map.emplace("cim:GovSteamFV4.rvgmn", &get_GovSteamFV4_rvgmn);
+	get_map.emplace("cim:GovSteamFV4.rvgmx", &get_GovSteamFV4_rvgmx);
+	get_map.emplace("cim:GovSteamFV4.srmn", &get_GovSteamFV4_srmn);
+	get_map.emplace("cim:GovSteamFV4.srmx", &get_GovSteamFV4_srmx);
+	get_map.emplace("cim:GovSteamFV4.srsmp", &get_GovSteamFV4_srsmp);
+	get_map.emplace("cim:GovSteamFV4.svmn", &get_GovSteamFV4_svmn);
+	get_map.emplace("cim:GovSteamFV4.svmx", &get_GovSteamFV4_svmx);
+	get_map.emplace("cim:GovSteamFV4.ta", &get_GovSteamFV4_ta);
+	get_map.emplace("cim:GovSteamFV4.tam", &get_GovSteamFV4_tam);
+	get_map.emplace("cim:GovSteamFV4.tc", &get_GovSteamFV4_tc);
+	get_map.emplace("cim:GovSteamFV4.tcm", &get_GovSteamFV4_tcm);
+	get_map.emplace("cim:GovSteamFV4.tdc", &get_GovSteamFV4_tdc);
+	get_map.emplace("cim:GovSteamFV4.tf1", &get_GovSteamFV4_tf1);
+	get_map.emplace("cim:GovSteamFV4.tf2", &get_GovSteamFV4_tf2);
+	get_map.emplace("cim:GovSteamFV4.thp", &get_GovSteamFV4_thp);
+	get_map.emplace("cim:GovSteamFV4.tmp", &get_GovSteamFV4_tmp);
+	get_map.emplace("cim:GovSteamFV4.trh", &get_GovSteamFV4_trh);
+	get_map.emplace("cim:GovSteamFV4.tv", &get_GovSteamFV4_tv);
+	get_map.emplace("cim:GovSteamFV4.ty", &get_GovSteamFV4_ty);
+	get_map.emplace("cim:GovSteamFV4.y", &get_GovSteamFV4_y);
+	get_map.emplace("cim:GovSteamFV4.yhpmn", &get_GovSteamFV4_yhpmn);
+	get_map.emplace("cim:GovSteamFV4.yhpmx", &get_GovSteamFV4_yhpmx);
+	get_map.emplace("cim:GovSteamFV4.ympmn", &get_GovSteamFV4_ympmn);
+	get_map.emplace("cim:GovSteamFV4.ympmx", &get_GovSteamFV4_ympmx);
+}
+
+void GovSteamFV4::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addClassGetFnsToMap(get_map);
+}
+
+void GovSteamFV4::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner GovSteamFV4::declare()

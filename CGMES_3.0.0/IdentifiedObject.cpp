@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "IdentifiedObject.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "DiagramObject.hpp"
@@ -18,6 +20,44 @@ using namespace CIMPP;
 IdentifiedObject::IdentifiedObject() {};
 IdentifiedObject::~IdentifiedObject() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DL,
+	CGMESProfile::DY,
+	CGMESProfile::EQ,
+	CGMESProfile::EQBD,
+	CGMESProfile::GL,
+	CGMESProfile::OP,
+	CGMESProfile::SC,
+	CGMESProfile::SSH,
+	CGMESProfile::SV,
+	CGMESProfile::TP,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:IdentifiedObject.DiagramObjects", { CGMESProfile::DL, } },
+	{ "cim:IdentifiedObject.description", { CGMESProfile::DL, CGMESProfile::DY, CGMESProfile::EQ, CGMESProfile::EQBD, CGMESProfile::OP, CGMESProfile::TP, } },
+	{ "cim:IdentifiedObject.energyIdentCodeEic", { CGMESProfile::EQ, CGMESProfile::EQBD, CGMESProfile::TP, } },
+	{ "cim:IdentifiedObject.mRID", { CGMESProfile::DL, CGMESProfile::DY, CGMESProfile::EQ, CGMESProfile::EQBD, CGMESProfile::GL, CGMESProfile::OP, CGMESProfile::SC, CGMESProfile::SSH, CGMESProfile::SV, CGMESProfile::TP, } },
+	{ "cim:IdentifiedObject.name", { CGMESProfile::DL, CGMESProfile::DY, CGMESProfile::EQ, CGMESProfile::EQBD, CGMESProfile::GL, CGMESProfile::OP, CGMESProfile::SV, CGMESProfile::TP, } },
+	{ "cim:IdentifiedObject.shortName", { CGMESProfile::EQ, CGMESProfile::EQBD, CGMESProfile::TP, } },
+};
+
+std::list<CGMESProfile>
+IdentifiedObject::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+IdentifiedObject::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_IdentifiedObject_description(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -103,8 +143,75 @@ bool assign_IdentifiedObject_DiagramObjects(BaseClass* BaseClass_ptr1, BaseClass
 	return false;
 }
 
+bool get_IdentifiedObject_description(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const IdentifiedObject* element = dynamic_cast<const IdentifiedObject*>(BaseClass_ptr1))
+	{
+		buffer << element->description;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_IdentifiedObject_energyIdentCodeEic(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const IdentifiedObject* element = dynamic_cast<const IdentifiedObject*>(BaseClass_ptr1))
+	{
+		buffer << element->energyIdentCodeEic;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_IdentifiedObject_mRID(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const IdentifiedObject* element = dynamic_cast<const IdentifiedObject*>(BaseClass_ptr1))
+	{
+		buffer << element->mRID;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_IdentifiedObject_name(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const IdentifiedObject* element = dynamic_cast<const IdentifiedObject*>(BaseClass_ptr1))
+	{
+		buffer << element->name;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_IdentifiedObject_shortName(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const IdentifiedObject* element = dynamic_cast<const IdentifiedObject*>(BaseClass_ptr1))
+	{
+		buffer << element->shortName;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -131,6 +238,26 @@ void IdentifiedObject::addPrimitiveAssignFnsToMap(std::unordered_map<std::string
 void IdentifiedObject::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:IdentifiedObject.DiagramObjects"), &assign_IdentifiedObject_DiagramObjects));
+}
+
+void IdentifiedObject::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	BaseClass::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:IdentifiedObject.description", &get_IdentifiedObject_description);
+	get_map.emplace("cim:IdentifiedObject.energyIdentCodeEic", &get_IdentifiedObject_energyIdentCodeEic);
+	get_map.emplace("cim:IdentifiedObject.mRID", &get_IdentifiedObject_mRID);
+	get_map.emplace("cim:IdentifiedObject.name", &get_IdentifiedObject_name);
+	get_map.emplace("cim:IdentifiedObject.shortName", &get_IdentifiedObject_shortName);
+}
+
+void IdentifiedObject::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	BaseClass::addClassGetFnsToMap(get_map);
+}
+
+void IdentifiedObject::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner IdentifiedObject::declare()

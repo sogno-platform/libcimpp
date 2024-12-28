@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "TurbineLoadControllerDynamics.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "TurbineGovernorDynamics.hpp"
@@ -13,6 +15,30 @@ using namespace CIMPP;
 TurbineLoadControllerDynamics::TurbineLoadControllerDynamics() : TurbineGovernorDynamics(nullptr) {};
 TurbineLoadControllerDynamics::~TurbineLoadControllerDynamics() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:TurbineLoadControllerDynamics.TurbineGovernorDynamics", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+TurbineLoadControllerDynamics::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+TurbineLoadControllerDynamics::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = DynamicsFunctionBlock::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -33,6 +59,21 @@ bool assign_TurbineLoadControllerDynamics_TurbineGovernorDynamics(BaseClass* Bas
 	return false;
 }
 
+
+bool get_TurbineLoadControllerDynamics_TurbineGovernorDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const TurbineLoadControllerDynamics* element = dynamic_cast<const TurbineLoadControllerDynamics*>(BaseClass_ptr1))
+	{
+		if (element->TurbineGovernorDynamics != 0)
+		{
+			BaseClass_list.push_back(element->TurbineGovernorDynamics);
+			return true;
+		}
+	}
+	return false;
+}
+
+
 const char TurbineLoadControllerDynamics::debugName[] = "TurbineLoadControllerDynamics";
 const char* TurbineLoadControllerDynamics::debugString() const
 {
@@ -51,6 +92,22 @@ void TurbineLoadControllerDynamics::addPrimitiveAssignFnsToMap(std::unordered_ma
 void TurbineLoadControllerDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:TurbineLoadControllerDynamics.TurbineGovernorDynamics"), &assign_TurbineLoadControllerDynamics_TurbineGovernorDynamics));
+}
+
+void TurbineLoadControllerDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	DynamicsFunctionBlock::addPrimitiveGetFnsToMap(get_map);
+}
+
+void TurbineLoadControllerDynamics::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	DynamicsFunctionBlock::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:TurbineLoadControllerDynamics.TurbineGovernorDynamics", &get_TurbineLoadControllerDynamics_TurbineGovernorDynamics);
+}
+
+void TurbineLoadControllerDynamics::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	DynamicsFunctionBlock::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner TurbineLoadControllerDynamics::declare()

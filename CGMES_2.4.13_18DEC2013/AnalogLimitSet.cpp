@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "AnalogLimitSet.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "AnalogLimit.hpp"
@@ -15,7 +17,32 @@ using namespace CIMPP;
 AnalogLimitSet::AnalogLimitSet() {};
 AnalogLimitSet::~AnalogLimitSet() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:AnalogLimitSet.Limits", { CGMESProfile::EQ, } },
+	{ "cim:AnalogLimitSet.Measurements", { CGMESProfile::EQ, } },
+	{ "cim:AnalogLimitSet.isPercentageLimits", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+AnalogLimitSet::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+AnalogLimitSet::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = LimitSet::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_AnalogLimitSet_isPercentageLimits(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -48,7 +75,6 @@ bool assign_AnalogLimitSet_Limits(BaseClass* BaseClass_ptr1, BaseClass* BaseClas
 	}
 	return false;
 }
-
 bool assign_Analog_LimitSets(BaseClass*, BaseClass*);
 bool assign_AnalogLimitSet_Measurements(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -62,6 +88,31 @@ bool assign_AnalogLimitSet_Measurements(BaseClass* BaseClass_ptr1, BaseClass* Ba
 			return assign_Analog_LimitSets(BaseClass_ptr2, BaseClass_ptr1);
 		}
 		return true;
+	}
+	return false;
+}
+
+bool get_AnalogLimitSet_isPercentageLimits(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const AnalogLimitSet* element = dynamic_cast<const AnalogLimitSet*>(BaseClass_ptr1))
+	{
+		buffer << element->isPercentageLimits;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+
+bool get_AnalogLimitSet_Measurements(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const AnalogLimitSet* element = dynamic_cast<const AnalogLimitSet*>(BaseClass_ptr1))
+	{
+		std::copy(element->Measurements.begin(), element->Measurements.end(), std::back_inserter(BaseClass_list));
+		return !BaseClass_list.empty();
 	}
 	return false;
 }
@@ -87,6 +138,23 @@ void AnalogLimitSet::addClassAssignFnsToMap(std::unordered_map<std::string, clas
 {
 	assign_map.insert(std::make_pair(std::string("cim:AnalogLimitSet.Limits"), &assign_AnalogLimitSet_Limits));
 	assign_map.insert(std::make_pair(std::string("cim:AnalogLimitSet.Measurements"), &assign_AnalogLimitSet_Measurements));
+}
+
+void AnalogLimitSet::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	LimitSet::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:AnalogLimitSet.isPercentageLimits", &get_AnalogLimitSet_isPercentageLimits);
+}
+
+void AnalogLimitSet::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	LimitSet::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:AnalogLimitSet.Measurements", &get_AnalogLimitSet_Measurements);
+}
+
+void AnalogLimitSet::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	LimitSet::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner AnalogLimitSet::declare()

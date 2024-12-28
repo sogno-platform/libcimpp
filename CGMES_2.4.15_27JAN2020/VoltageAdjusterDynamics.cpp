@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "VoltageAdjusterDynamics.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PFVArControllerType1Dynamics.hpp"
@@ -13,6 +15,30 @@ using namespace CIMPP;
 VoltageAdjusterDynamics::VoltageAdjusterDynamics() : PFVArControllerType1Dynamics(nullptr) {};
 VoltageAdjusterDynamics::~VoltageAdjusterDynamics() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:VoltageAdjusterDynamics.PFVArControllerType1Dynamics", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+VoltageAdjusterDynamics::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+VoltageAdjusterDynamics::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = DynamicsFunctionBlock::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -33,6 +59,21 @@ bool assign_VoltageAdjusterDynamics_PFVArControllerType1Dynamics(BaseClass* Base
 	return false;
 }
 
+
+bool get_VoltageAdjusterDynamics_PFVArControllerType1Dynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const VoltageAdjusterDynamics* element = dynamic_cast<const VoltageAdjusterDynamics*>(BaseClass_ptr1))
+	{
+		if (element->PFVArControllerType1Dynamics != 0)
+		{
+			BaseClass_list.push_back(element->PFVArControllerType1Dynamics);
+			return true;
+		}
+	}
+	return false;
+}
+
+
 const char VoltageAdjusterDynamics::debugName[] = "VoltageAdjusterDynamics";
 const char* VoltageAdjusterDynamics::debugString() const
 {
@@ -51,6 +92,22 @@ void VoltageAdjusterDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std:
 void VoltageAdjusterDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:VoltageAdjusterDynamics.PFVArControllerType1Dynamics"), &assign_VoltageAdjusterDynamics_PFVArControllerType1Dynamics));
+}
+
+void VoltageAdjusterDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	DynamicsFunctionBlock::addPrimitiveGetFnsToMap(get_map);
+}
+
+void VoltageAdjusterDynamics::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	DynamicsFunctionBlock::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:VoltageAdjusterDynamics.PFVArControllerType1Dynamics", &get_VoltageAdjusterDynamics_PFVArControllerType1Dynamics);
+}
+
+void VoltageAdjusterDynamics::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	DynamicsFunctionBlock::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner VoltageAdjusterDynamics::declare()

@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "WindContRotorRIEC.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "WindDynamicsLookupTable.hpp"
@@ -22,7 +24,39 @@ using namespace CIMPP;
 WindContRotorRIEC::WindContRotorRIEC() : WindGenTurbineType2IEC(nullptr) {};
 WindContRotorRIEC::~WindContRotorRIEC() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:WindContRotorRIEC.WindDynamicsLookupTable", { CGMESProfile::DY, } },
+	{ "cim:WindContRotorRIEC.WindGenTurbineType2IEC", { CGMESProfile::DY, } },
+	{ "cim:WindContRotorRIEC.kirr", { CGMESProfile::DY, } },
+	{ "cim:WindContRotorRIEC.komegafilt", { CGMESProfile::DY, } },
+	{ "cim:WindContRotorRIEC.kpfilt", { CGMESProfile::DY, } },
+	{ "cim:WindContRotorRIEC.kprr", { CGMESProfile::DY, } },
+	{ "cim:WindContRotorRIEC.rmax", { CGMESProfile::DY, } },
+	{ "cim:WindContRotorRIEC.rmin", { CGMESProfile::DY, } },
+	{ "cim:WindContRotorRIEC.tomegafilt", { CGMESProfile::DY, } },
+	{ "cim:WindContRotorRIEC.tpfilt", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+WindContRotorRIEC::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+WindContRotorRIEC::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_WindContRotorRIEC_kirr(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -146,7 +180,6 @@ bool assign_WindContRotorRIEC_WindDynamicsLookupTable(BaseClass* BaseClass_ptr1,
 	}
 	return false;
 }
-
 bool assign_WindGenTurbineType2IEC_WindContRotorRIEC(BaseClass*, BaseClass*);
 bool assign_WindContRotorRIEC_WindGenTurbineType2IEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -164,11 +197,117 @@ bool assign_WindContRotorRIEC_WindGenTurbineType2IEC(BaseClass* BaseClass_ptr1, 
 	return false;
 }
 
+bool get_WindContRotorRIEC_kirr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContRotorRIEC* element = dynamic_cast<const WindContRotorRIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->kirr;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContRotorRIEC_komegafilt(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContRotorRIEC* element = dynamic_cast<const WindContRotorRIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->komegafilt;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContRotorRIEC_kpfilt(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContRotorRIEC* element = dynamic_cast<const WindContRotorRIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->kpfilt;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContRotorRIEC_kprr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContRotorRIEC* element = dynamic_cast<const WindContRotorRIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->kprr;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContRotorRIEC_rmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContRotorRIEC* element = dynamic_cast<const WindContRotorRIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->rmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContRotorRIEC_rmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContRotorRIEC* element = dynamic_cast<const WindContRotorRIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->rmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_WindContRotorRIEC_tomegafilt(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContRotorRIEC* element = dynamic_cast<const WindContRotorRIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->tomegafilt;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_WindContRotorRIEC_tpfilt(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContRotorRIEC* element = dynamic_cast<const WindContRotorRIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->tpfilt;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -199,6 +338,29 @@ void WindContRotorRIEC::addClassAssignFnsToMap(std::unordered_map<std::string, c
 {
 	assign_map.insert(std::make_pair(std::string("cim:WindContRotorRIEC.WindDynamicsLookupTable"), &assign_WindContRotorRIEC_WindDynamicsLookupTable));
 	assign_map.insert(std::make_pair(std::string("cim:WindContRotorRIEC.WindGenTurbineType2IEC"), &assign_WindContRotorRIEC_WindGenTurbineType2IEC));
+}
+
+void WindContRotorRIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:WindContRotorRIEC.kirr", &get_WindContRotorRIEC_kirr);
+	get_map.emplace("cim:WindContRotorRIEC.komegafilt", &get_WindContRotorRIEC_komegafilt);
+	get_map.emplace("cim:WindContRotorRIEC.kpfilt", &get_WindContRotorRIEC_kpfilt);
+	get_map.emplace("cim:WindContRotorRIEC.kprr", &get_WindContRotorRIEC_kprr);
+	get_map.emplace("cim:WindContRotorRIEC.rmax", &get_WindContRotorRIEC_rmax);
+	get_map.emplace("cim:WindContRotorRIEC.rmin", &get_WindContRotorRIEC_rmin);
+	get_map.emplace("cim:WindContRotorRIEC.tomegafilt", &get_WindContRotorRIEC_tomegafilt);
+	get_map.emplace("cim:WindContRotorRIEC.tpfilt", &get_WindContRotorRIEC_tpfilt);
+}
+
+void WindContRotorRIEC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+}
+
+void WindContRotorRIEC::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner WindContRotorRIEC::declare()

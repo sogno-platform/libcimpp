@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "ConnectivityNodeContainer.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "ConnectivityNode.hpp"
@@ -14,7 +16,34 @@ using namespace CIMPP;
 ConnectivityNodeContainer::ConnectivityNodeContainer() {};
 ConnectivityNodeContainer::~ConnectivityNodeContainer() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ_BD,
+	CGMESProfile::EQ,
+	CGMESProfile::TP_BD,
+	CGMESProfile::TP,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:ConnectivityNodeContainer.ConnectivityNodes", { CGMESProfile::EQ_BD, CGMESProfile::EQ, } },
+	{ "cim:ConnectivityNodeContainer.TopologicalNode", { CGMESProfile::TP_BD, CGMESProfile::TP, } },
+};
+
+std::list<CGMESProfile>
+ConnectivityNodeContainer::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+ConnectivityNodeContainer::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = PowerSystemResource::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -34,7 +63,6 @@ bool assign_ConnectivityNodeContainer_ConnectivityNodes(BaseClass* BaseClass_ptr
 	}
 	return false;
 }
-
 bool assign_TopologicalNode_ConnectivityNodeContainer(BaseClass*, BaseClass*);
 bool assign_ConnectivityNodeContainer_TopologicalNode(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -51,6 +79,8 @@ bool assign_ConnectivityNodeContainer_TopologicalNode(BaseClass* BaseClass_ptr1,
 	}
 	return false;
 }
+
+
 
 const char ConnectivityNodeContainer::debugName[] = "ConnectivityNodeContainer";
 const char* ConnectivityNodeContainer::debugString() const
@@ -71,6 +101,21 @@ void ConnectivityNodeContainer::addClassAssignFnsToMap(std::unordered_map<std::s
 {
 	assign_map.insert(std::make_pair(std::string("cim:ConnectivityNodeContainer.ConnectivityNodes"), &assign_ConnectivityNodeContainer_ConnectivityNodes));
 	assign_map.insert(std::make_pair(std::string("cim:ConnectivityNodeContainer.TopologicalNode"), &assign_ConnectivityNodeContainer_TopologicalNode));
+}
+
+void ConnectivityNodeContainer::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemResource::addPrimitiveGetFnsToMap(get_map);
+}
+
+void ConnectivityNodeContainer::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	PowerSystemResource::addClassGetFnsToMap(get_map);
+}
+
+void ConnectivityNodeContainer::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemResource::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner ConnectivityNodeContainer::declare()

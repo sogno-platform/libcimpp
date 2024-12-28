@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "TapChanger.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "SvTapStep.hpp"
@@ -23,8 +25,42 @@ using namespace CIMPP;
 TapChanger::TapChanger() : SvTapStep(nullptr), TapChangerControl(nullptr) {};
 TapChanger::~TapChanger() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+	CGMESProfile::SSH,
+	CGMESProfile::SV,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:TapChanger.SvTapStep", { CGMESProfile::SV, } },
+	{ "cim:TapChanger.TapChangerControl", { CGMESProfile::EQ, } },
+	{ "cim:TapChanger.TapSchedules", { CGMESProfile::EQ, } },
+	{ "cim:TapChanger.controlEnabled", { CGMESProfile::SSH, } },
+	{ "cim:TapChanger.highStep", { CGMESProfile::EQ, } },
+	{ "cim:TapChanger.lowStep", { CGMESProfile::EQ, } },
+	{ "cim:TapChanger.ltcFlag", { CGMESProfile::EQ, } },
+	{ "cim:TapChanger.neutralStep", { CGMESProfile::EQ, } },
+	{ "cim:TapChanger.neutralU", { CGMESProfile::EQ, } },
+	{ "cim:TapChanger.normalStep", { CGMESProfile::EQ, } },
+	{ "cim:TapChanger.step", { CGMESProfile::SSH, } },
+};
 
+std::list<CGMESProfile>
+TapChanger::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+TapChanger::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = PowerSystemResource::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_TapChanger_controlEnabled(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -148,7 +184,6 @@ bool assign_TapChanger_SvTapStep(BaseClass* BaseClass_ptr1, BaseClass* BaseClass
 	}
 	return false;
 }
-
 bool assign_TapChangerControl_TapChanger(BaseClass*, BaseClass*);
 bool assign_TapChanger_TapChangerControl(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -165,7 +200,6 @@ bool assign_TapChanger_TapChangerControl(BaseClass* BaseClass_ptr1, BaseClass* B
 	}
 	return false;
 }
-
 bool assign_TapSchedule_TapChanger(BaseClass*, BaseClass*);
 bool assign_TapChanger_TapSchedules(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -183,12 +217,131 @@ bool assign_TapChanger_TapSchedules(BaseClass* BaseClass_ptr1, BaseClass* BaseCl
 	return false;
 }
 
+bool get_TapChanger_controlEnabled(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TapChanger* element = dynamic_cast<const TapChanger*>(BaseClass_ptr1))
+	{
+		buffer << element->controlEnabled;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_TapChanger_highStep(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TapChanger* element = dynamic_cast<const TapChanger*>(BaseClass_ptr1))
+	{
+		buffer << element->highStep;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_TapChanger_lowStep(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TapChanger* element = dynamic_cast<const TapChanger*>(BaseClass_ptr1))
+	{
+		buffer << element->lowStep;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_TapChanger_ltcFlag(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TapChanger* element = dynamic_cast<const TapChanger*>(BaseClass_ptr1))
+	{
+		buffer << element->ltcFlag;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_TapChanger_neutralStep(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TapChanger* element = dynamic_cast<const TapChanger*>(BaseClass_ptr1))
+	{
+		buffer << element->neutralStep;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_TapChanger_neutralU(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TapChanger* element = dynamic_cast<const TapChanger*>(BaseClass_ptr1))
+	{
+		buffer << element->neutralU;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_TapChanger_normalStep(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TapChanger* element = dynamic_cast<const TapChanger*>(BaseClass_ptr1))
+	{
+		buffer << element->normalStep;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_TapChanger_step(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TapChanger* element = dynamic_cast<const TapChanger*>(BaseClass_ptr1))
+	{
+		buffer << element->step;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
-
-
-
-
+bool get_TapChanger_TapChangerControl(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const TapChanger* element = dynamic_cast<const TapChanger*>(BaseClass_ptr1))
+	{
+		if (element->TapChangerControl != 0)
+		{
+			BaseClass_list.push_back(element->TapChangerControl);
+			return true;
+		}
+	}
+	return false;
+}
 
 
 const char TapChanger::debugName[] = "TapChanger";
@@ -219,6 +372,30 @@ void TapChanger::addClassAssignFnsToMap(std::unordered_map<std::string, class_as
 	assign_map.insert(std::make_pair(std::string("cim:TapChanger.SvTapStep"), &assign_TapChanger_SvTapStep));
 	assign_map.insert(std::make_pair(std::string("cim:TapChanger.TapChangerControl"), &assign_TapChanger_TapChangerControl));
 	assign_map.insert(std::make_pair(std::string("cim:TapChanger.TapSchedules"), &assign_TapChanger_TapSchedules));
+}
+
+void TapChanger::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemResource::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:TapChanger.controlEnabled", &get_TapChanger_controlEnabled);
+	get_map.emplace("cim:TapChanger.highStep", &get_TapChanger_highStep);
+	get_map.emplace("cim:TapChanger.lowStep", &get_TapChanger_lowStep);
+	get_map.emplace("cim:TapChanger.ltcFlag", &get_TapChanger_ltcFlag);
+	get_map.emplace("cim:TapChanger.neutralStep", &get_TapChanger_neutralStep);
+	get_map.emplace("cim:TapChanger.neutralU", &get_TapChanger_neutralU);
+	get_map.emplace("cim:TapChanger.normalStep", &get_TapChanger_normalStep);
+	get_map.emplace("cim:TapChanger.step", &get_TapChanger_step);
+}
+
+void TapChanger::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	PowerSystemResource::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:TapChanger.TapChangerControl", &get_TapChanger_TapChangerControl);
+}
+
+void TapChanger::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemResource::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner TapChanger::declare()

@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "GovSteamEU.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "Simple_Float.hpp"
@@ -46,6 +48,65 @@ using namespace CIMPP;
 
 GovSteamEU::GovSteamEU() {};
 GovSteamEU::~GovSteamEU() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:GovSteamEU.chc", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.cho", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.cic", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.cio", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.db1", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.db2", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.hhpmax", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.ke", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.kfcor", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.khp", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.klp", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.kwcor", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.mwbase", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.pmax", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.prhmax", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.simx", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.tb", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.tdp", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.ten", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.tf", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.tfp", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.thp", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.tip", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.tlp", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.tp", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.trh", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.tvhp", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.tvip", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.tw", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.wfmax", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.wfmin", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.wmax1", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.wmax2", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.wwmax", { CGMESProfile::DY, } },
+	{ "cim:GovSteamEU.wwmin", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+GovSteamEU::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+GovSteamEU::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = TurbineGovernorDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_GovSteamEU_chc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -505,37 +566,495 @@ bool assign_GovSteamEU_wwmin(std::stringstream &buffer, BaseClass* BaseClass_ptr
 
 
 
+bool get_GovSteamEU_chc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->chc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_cho(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->cho;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_cic(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->cic;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_cio(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->cio;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_db1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->db1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_db2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->db2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_hhpmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->hhpmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_ke(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->ke;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_kfcor(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->kfcor;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_khp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->khp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_klp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->klp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_kwcor(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->kwcor;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_mwbase(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->mwbase;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_pmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->pmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_prhmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->prhmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_simx(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->simx;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_tb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->tb;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_tdp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->tdp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_ten(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->ten;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_tf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->tf;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_tfp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->tfp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_thp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->thp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_tip(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->tip;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_tlp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->tlp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_tp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->tp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_trh(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->trh;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_tvhp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->tvhp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_tvip(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->tvip;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_tw(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->tw;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_wfmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->wfmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_wfmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->wfmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamEU_wmax1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->wmax1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovSteamEU_wmax2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->wmax2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovSteamEU_wwmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->wwmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovSteamEU_wwmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamEU* element = dynamic_cast<const GovSteamEU*>(BaseClass_ptr1))
+	{
+		buffer << element->wwmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -591,6 +1110,56 @@ void GovSteamEU::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assi
 
 void GovSteamEU::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void GovSteamEU::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:GovSteamEU.chc", &get_GovSteamEU_chc);
+	get_map.emplace("cim:GovSteamEU.cho", &get_GovSteamEU_cho);
+	get_map.emplace("cim:GovSteamEU.cic", &get_GovSteamEU_cic);
+	get_map.emplace("cim:GovSteamEU.cio", &get_GovSteamEU_cio);
+	get_map.emplace("cim:GovSteamEU.db1", &get_GovSteamEU_db1);
+	get_map.emplace("cim:GovSteamEU.db2", &get_GovSteamEU_db2);
+	get_map.emplace("cim:GovSteamEU.hhpmax", &get_GovSteamEU_hhpmax);
+	get_map.emplace("cim:GovSteamEU.ke", &get_GovSteamEU_ke);
+	get_map.emplace("cim:GovSteamEU.kfcor", &get_GovSteamEU_kfcor);
+	get_map.emplace("cim:GovSteamEU.khp", &get_GovSteamEU_khp);
+	get_map.emplace("cim:GovSteamEU.klp", &get_GovSteamEU_klp);
+	get_map.emplace("cim:GovSteamEU.kwcor", &get_GovSteamEU_kwcor);
+	get_map.emplace("cim:GovSteamEU.mwbase", &get_GovSteamEU_mwbase);
+	get_map.emplace("cim:GovSteamEU.pmax", &get_GovSteamEU_pmax);
+	get_map.emplace("cim:GovSteamEU.prhmax", &get_GovSteamEU_prhmax);
+	get_map.emplace("cim:GovSteamEU.simx", &get_GovSteamEU_simx);
+	get_map.emplace("cim:GovSteamEU.tb", &get_GovSteamEU_tb);
+	get_map.emplace("cim:GovSteamEU.tdp", &get_GovSteamEU_tdp);
+	get_map.emplace("cim:GovSteamEU.ten", &get_GovSteamEU_ten);
+	get_map.emplace("cim:GovSteamEU.tf", &get_GovSteamEU_tf);
+	get_map.emplace("cim:GovSteamEU.tfp", &get_GovSteamEU_tfp);
+	get_map.emplace("cim:GovSteamEU.thp", &get_GovSteamEU_thp);
+	get_map.emplace("cim:GovSteamEU.tip", &get_GovSteamEU_tip);
+	get_map.emplace("cim:GovSteamEU.tlp", &get_GovSteamEU_tlp);
+	get_map.emplace("cim:GovSteamEU.tp", &get_GovSteamEU_tp);
+	get_map.emplace("cim:GovSteamEU.trh", &get_GovSteamEU_trh);
+	get_map.emplace("cim:GovSteamEU.tvhp", &get_GovSteamEU_tvhp);
+	get_map.emplace("cim:GovSteamEU.tvip", &get_GovSteamEU_tvip);
+	get_map.emplace("cim:GovSteamEU.tw", &get_GovSteamEU_tw);
+	get_map.emplace("cim:GovSteamEU.wfmax", &get_GovSteamEU_wfmax);
+	get_map.emplace("cim:GovSteamEU.wfmin", &get_GovSteamEU_wfmin);
+	get_map.emplace("cim:GovSteamEU.wmax1", &get_GovSteamEU_wmax1);
+	get_map.emplace("cim:GovSteamEU.wmax2", &get_GovSteamEU_wmax2);
+	get_map.emplace("cim:GovSteamEU.wwmax", &get_GovSteamEU_wwmax);
+	get_map.emplace("cim:GovSteamEU.wwmin", &get_GovSteamEU_wwmin);
+}
+
+void GovSteamEU::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addClassGetFnsToMap(get_map);
+}
+
+void GovSteamEU::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner GovSteamEU::declare()

@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "Switch.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "SvSwitch.hpp"
@@ -19,7 +21,38 @@ using namespace CIMPP;
 Switch::Switch() {};
 Switch::~Switch() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+	CGMESProfile::SSH,
+	CGMESProfile::SV,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:Switch.SvSwitch", { CGMESProfile::SV, } },
+	{ "cim:Switch.SwitchSchedules", { CGMESProfile::EQ, } },
+	{ "cim:Switch.locked", { CGMESProfile::SSH, } },
+	{ "cim:Switch.normalOpen", { CGMESProfile::EQ, } },
+	{ "cim:Switch.open", { CGMESProfile::SSH, } },
+	{ "cim:Switch.ratedCurrent", { CGMESProfile::EQ, } },
+	{ "cim:Switch.retained", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+Switch::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+Switch::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = ConductingEquipment::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_Switch_locked(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -104,7 +137,6 @@ bool assign_Switch_SvSwitch(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2
 	}
 	return false;
 }
-
 bool assign_SwitchSchedule_Switch(BaseClass*, BaseClass*);
 bool assign_Switch_SwitchSchedules(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -122,8 +154,75 @@ bool assign_Switch_SwitchSchedules(BaseClass* BaseClass_ptr1, BaseClass* BaseCla
 	return false;
 }
 
+bool get_Switch_locked(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Switch* element = dynamic_cast<const Switch*>(BaseClass_ptr1))
+	{
+		buffer << element->locked;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_Switch_normalOpen(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Switch* element = dynamic_cast<const Switch*>(BaseClass_ptr1))
+	{
+		buffer << element->normalOpen;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_Switch_open(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Switch* element = dynamic_cast<const Switch*>(BaseClass_ptr1))
+	{
+		buffer << element->open;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Switch_ratedCurrent(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Switch* element = dynamic_cast<const Switch*>(BaseClass_ptr1))
+	{
+		buffer << element->ratedCurrent;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Switch_retained(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Switch* element = dynamic_cast<const Switch*>(BaseClass_ptr1))
+	{
+		buffer << element->retained;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -151,6 +250,26 @@ void Switch::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign
 {
 	assign_map.insert(std::make_pair(std::string("cim:Switch.SvSwitch"), &assign_Switch_SvSwitch));
 	assign_map.insert(std::make_pair(std::string("cim:Switch.SwitchSchedules"), &assign_Switch_SwitchSchedules));
+}
+
+void Switch::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ConductingEquipment::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:Switch.locked", &get_Switch_locked);
+	get_map.emplace("cim:Switch.normalOpen", &get_Switch_normalOpen);
+	get_map.emplace("cim:Switch.open", &get_Switch_open);
+	get_map.emplace("cim:Switch.ratedCurrent", &get_Switch_ratedCurrent);
+	get_map.emplace("cim:Switch.retained", &get_Switch_retained);
+}
+
+void Switch::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	ConductingEquipment::addClassGetFnsToMap(get_map);
+}
+
+void Switch::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ConductingEquipment::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner Switch::declare()

@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "SolarGeneratingUnit.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "SolarPowerPlant.hpp"
@@ -13,6 +15,31 @@ using namespace CIMPP;
 SolarGeneratingUnit::SolarGeneratingUnit() : SolarPowerPlant(nullptr) {};
 SolarGeneratingUnit::~SolarGeneratingUnit() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+	CGMESProfile::SSH,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:SolarGeneratingUnit.SolarPowerPlant", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+SolarGeneratingUnit::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+SolarGeneratingUnit::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = GeneratingUnit::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -33,6 +60,21 @@ bool assign_SolarGeneratingUnit_SolarPowerPlant(BaseClass* BaseClass_ptr1, BaseC
 	return false;
 }
 
+
+bool get_SolarGeneratingUnit_SolarPowerPlant(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const SolarGeneratingUnit* element = dynamic_cast<const SolarGeneratingUnit*>(BaseClass_ptr1))
+	{
+		if (element->SolarPowerPlant != 0)
+		{
+			BaseClass_list.push_back(element->SolarPowerPlant);
+			return true;
+		}
+	}
+	return false;
+}
+
+
 const char SolarGeneratingUnit::debugName[] = "SolarGeneratingUnit";
 const char* SolarGeneratingUnit::debugString() const
 {
@@ -51,6 +93,22 @@ void SolarGeneratingUnit::addPrimitiveAssignFnsToMap(std::unordered_map<std::str
 void SolarGeneratingUnit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:SolarGeneratingUnit.SolarPowerPlant"), &assign_SolarGeneratingUnit_SolarPowerPlant));
+}
+
+void SolarGeneratingUnit::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	GeneratingUnit::addPrimitiveGetFnsToMap(get_map);
+}
+
+void SolarGeneratingUnit::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	GeneratingUnit::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:SolarGeneratingUnit.SolarPowerPlant", &get_SolarGeneratingUnit_SolarPowerPlant);
+}
+
+void SolarGeneratingUnit::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	GeneratingUnit::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner SolarGeneratingUnit::declare()

@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "GovSteamFV2.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PU.hpp"
@@ -23,6 +25,42 @@ using namespace CIMPP;
 
 GovSteamFV2::GovSteamFV2() {};
 GovSteamFV2::~GovSteamFV2() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:GovSteamFV2.dt", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV2.k", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV2.mwbase", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV2.r", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV2.t1", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV2.t3", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV2.ta", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV2.tb", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV2.tc", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV2.tt", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV2.vmax", { CGMESProfile::DY, } },
+	{ "cim:GovSteamFV2.vmin", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+GovSteamFV2::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+GovSteamFV2::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = TurbineGovernorDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_GovSteamFV2_dt(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -183,14 +221,173 @@ bool assign_GovSteamFV2_vmin(std::stringstream &buffer, BaseClass* BaseClass_ptr
 
 
 
+bool get_GovSteamFV2_dt(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV2* element = dynamic_cast<const GovSteamFV2*>(BaseClass_ptr1))
+	{
+		buffer << element->dt;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV2_k(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV2* element = dynamic_cast<const GovSteamFV2*>(BaseClass_ptr1))
+	{
+		buffer << element->k;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV2_mwbase(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV2* element = dynamic_cast<const GovSteamFV2*>(BaseClass_ptr1))
+	{
+		buffer << element->mwbase;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV2_r(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV2* element = dynamic_cast<const GovSteamFV2*>(BaseClass_ptr1))
+	{
+		buffer << element->r;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV2_t1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV2* element = dynamic_cast<const GovSteamFV2*>(BaseClass_ptr1))
+	{
+		buffer << element->t1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV2_t3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV2* element = dynamic_cast<const GovSteamFV2*>(BaseClass_ptr1))
+	{
+		buffer << element->t3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV2_ta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV2* element = dynamic_cast<const GovSteamFV2*>(BaseClass_ptr1))
+	{
+		buffer << element->ta;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV2_tb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV2* element = dynamic_cast<const GovSteamFV2*>(BaseClass_ptr1))
+	{
+		buffer << element->tb;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_GovSteamFV2_tc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV2* element = dynamic_cast<const GovSteamFV2*>(BaseClass_ptr1))
+	{
+		buffer << element->tc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovSteamFV2_tt(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV2* element = dynamic_cast<const GovSteamFV2*>(BaseClass_ptr1))
+	{
+		buffer << element->tt;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovSteamFV2_vmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV2* element = dynamic_cast<const GovSteamFV2*>(BaseClass_ptr1))
+	{
+		buffer << element->vmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_GovSteamFV2_vmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const GovSteamFV2* element = dynamic_cast<const GovSteamFV2*>(BaseClass_ptr1))
+	{
+		buffer << element->vmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -223,6 +420,33 @@ void GovSteamFV2::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, ass
 
 void GovSteamFV2::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void GovSteamFV2::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:GovSteamFV2.dt", &get_GovSteamFV2_dt);
+	get_map.emplace("cim:GovSteamFV2.k", &get_GovSteamFV2_k);
+	get_map.emplace("cim:GovSteamFV2.mwbase", &get_GovSteamFV2_mwbase);
+	get_map.emplace("cim:GovSteamFV2.r", &get_GovSteamFV2_r);
+	get_map.emplace("cim:GovSteamFV2.t1", &get_GovSteamFV2_t1);
+	get_map.emplace("cim:GovSteamFV2.t3", &get_GovSteamFV2_t3);
+	get_map.emplace("cim:GovSteamFV2.ta", &get_GovSteamFV2_ta);
+	get_map.emplace("cim:GovSteamFV2.tb", &get_GovSteamFV2_tb);
+	get_map.emplace("cim:GovSteamFV2.tc", &get_GovSteamFV2_tc);
+	get_map.emplace("cim:GovSteamFV2.tt", &get_GovSteamFV2_tt);
+	get_map.emplace("cim:GovSteamFV2.vmax", &get_GovSteamFV2_vmax);
+	get_map.emplace("cim:GovSteamFV2.vmin", &get_GovSteamFV2_vmin);
+}
+
+void GovSteamFV2::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addClassGetFnsToMap(get_map);
+}
+
+void GovSteamFV2::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TurbineGovernorDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner GovSteamFV2::declare()

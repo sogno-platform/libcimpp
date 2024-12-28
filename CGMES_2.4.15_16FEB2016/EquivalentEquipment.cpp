@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "EquivalentEquipment.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "EquivalentNetwork.hpp"
@@ -13,6 +15,31 @@ using namespace CIMPP;
 EquivalentEquipment::EquivalentEquipment() : EquivalentNetwork(nullptr) {};
 EquivalentEquipment::~EquivalentEquipment() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+	CGMESProfile::SSH,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:EquivalentEquipment.EquivalentNetwork", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+EquivalentEquipment::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+EquivalentEquipment::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = ConductingEquipment::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -33,6 +60,21 @@ bool assign_EquivalentEquipment_EquivalentNetwork(BaseClass* BaseClass_ptr1, Bas
 	return false;
 }
 
+
+bool get_EquivalentEquipment_EquivalentNetwork(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const EquivalentEquipment* element = dynamic_cast<const EquivalentEquipment*>(BaseClass_ptr1))
+	{
+		if (element->EquivalentNetwork != 0)
+		{
+			BaseClass_list.push_back(element->EquivalentNetwork);
+			return true;
+		}
+	}
+	return false;
+}
+
+
 const char EquivalentEquipment::debugName[] = "EquivalentEquipment";
 const char* EquivalentEquipment::debugString() const
 {
@@ -51,6 +93,22 @@ void EquivalentEquipment::addPrimitiveAssignFnsToMap(std::unordered_map<std::str
 void EquivalentEquipment::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:EquivalentEquipment.EquivalentNetwork"), &assign_EquivalentEquipment_EquivalentNetwork));
+}
+
+void EquivalentEquipment::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ConductingEquipment::addPrimitiveGetFnsToMap(get_map);
+}
+
+void EquivalentEquipment::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	ConductingEquipment::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:EquivalentEquipment.EquivalentNetwork", &get_EquivalentEquipment_EquivalentNetwork);
+}
+
+void EquivalentEquipment::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ConductingEquipment::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner EquivalentEquipment::declare()

@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "PssSH.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PU.hpp"
@@ -24,6 +26,43 @@ using namespace CIMPP;
 
 PssSH::PssSH() {};
 PssSH::~PssSH() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:PssSH.k", { CGMESProfile::DY, } },
+	{ "cim:PssSH.k0", { CGMESProfile::DY, } },
+	{ "cim:PssSH.k1", { CGMESProfile::DY, } },
+	{ "cim:PssSH.k2", { CGMESProfile::DY, } },
+	{ "cim:PssSH.k3", { CGMESProfile::DY, } },
+	{ "cim:PssSH.k4", { CGMESProfile::DY, } },
+	{ "cim:PssSH.t1", { CGMESProfile::DY, } },
+	{ "cim:PssSH.t2", { CGMESProfile::DY, } },
+	{ "cim:PssSH.t3", { CGMESProfile::DY, } },
+	{ "cim:PssSH.t4", { CGMESProfile::DY, } },
+	{ "cim:PssSH.td", { CGMESProfile::DY, } },
+	{ "cim:PssSH.vsmax", { CGMESProfile::DY, } },
+	{ "cim:PssSH.vsmin", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+PssSH::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+PssSH::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = PowerSystemStabilizerDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_PssSH_k(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -197,15 +236,187 @@ bool assign_PssSH_vsmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
 
 
 
+bool get_PssSH_k(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSH* element = dynamic_cast<const PssSH*>(BaseClass_ptr1))
+	{
+		buffer << element->k;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssSH_k0(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSH* element = dynamic_cast<const PssSH*>(BaseClass_ptr1))
+	{
+		buffer << element->k0;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssSH_k1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSH* element = dynamic_cast<const PssSH*>(BaseClass_ptr1))
+	{
+		buffer << element->k1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssSH_k2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSH* element = dynamic_cast<const PssSH*>(BaseClass_ptr1))
+	{
+		buffer << element->k2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssSH_k3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSH* element = dynamic_cast<const PssSH*>(BaseClass_ptr1))
+	{
+		buffer << element->k3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssSH_k4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSH* element = dynamic_cast<const PssSH*>(BaseClass_ptr1))
+	{
+		buffer << element->k4;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssSH_t1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSH* element = dynamic_cast<const PssSH*>(BaseClass_ptr1))
+	{
+		buffer << element->t1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssSH_t2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSH* element = dynamic_cast<const PssSH*>(BaseClass_ptr1))
+	{
+		buffer << element->t2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssSH_t3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSH* element = dynamic_cast<const PssSH*>(BaseClass_ptr1))
+	{
+		buffer << element->t3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssSH_t4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSH* element = dynamic_cast<const PssSH*>(BaseClass_ptr1))
+	{
+		buffer << element->t4;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PssSH_td(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSH* element = dynamic_cast<const PssSH*>(BaseClass_ptr1))
+	{
+		buffer << element->td;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PssSH_vsmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSH* element = dynamic_cast<const PssSH*>(BaseClass_ptr1))
+	{
+		buffer << element->vsmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PssSH_vsmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSH* element = dynamic_cast<const PssSH*>(BaseClass_ptr1))
+	{
+		buffer << element->vsmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -239,6 +450,34 @@ void PssSH::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_fu
 
 void PssSH::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void PssSH::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemStabilizerDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:PssSH.k", &get_PssSH_k);
+	get_map.emplace("cim:PssSH.k0", &get_PssSH_k0);
+	get_map.emplace("cim:PssSH.k1", &get_PssSH_k1);
+	get_map.emplace("cim:PssSH.k2", &get_PssSH_k2);
+	get_map.emplace("cim:PssSH.k3", &get_PssSH_k3);
+	get_map.emplace("cim:PssSH.k4", &get_PssSH_k4);
+	get_map.emplace("cim:PssSH.t1", &get_PssSH_t1);
+	get_map.emplace("cim:PssSH.t2", &get_PssSH_t2);
+	get_map.emplace("cim:PssSH.t3", &get_PssSH_t3);
+	get_map.emplace("cim:PssSH.t4", &get_PssSH_t4);
+	get_map.emplace("cim:PssSH.td", &get_PssSH_td);
+	get_map.emplace("cim:PssSH.vsmax", &get_PssSH_vsmax);
+	get_map.emplace("cim:PssSH.vsmin", &get_PssSH_vsmin);
+}
+
+void PssSH::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	PowerSystemStabilizerDynamics::addClassGetFnsToMap(get_map);
+}
+
+void PssSH::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemStabilizerDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner PssSH::declare()

@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "BasicIntervalSchedule.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "DateTime.hpp"
@@ -14,6 +16,33 @@ using namespace CIMPP;
 
 BasicIntervalSchedule::BasicIntervalSchedule() {};
 BasicIntervalSchedule::~BasicIntervalSchedule() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:BasicIntervalSchedule.startTime", { CGMESProfile::EQ, } },
+	{ "cim:BasicIntervalSchedule.value1Unit", { CGMESProfile::EQ, } },
+	{ "cim:BasicIntervalSchedule.value2Unit", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+BasicIntervalSchedule::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+BasicIntervalSchedule::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_BasicIntervalSchedule_startTime(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -57,7 +86,49 @@ bool assign_BasicIntervalSchedule_value2Unit(std::stringstream &buffer, BaseClas
 
 
 
+bool get_BasicIntervalSchedule_startTime(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const BasicIntervalSchedule* element = dynamic_cast<const BasicIntervalSchedule*>(BaseClass_ptr1))
+	{
+		buffer << element->startTime;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+
+
+bool get_BasicIntervalSchedule_value1Unit(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const BasicIntervalSchedule* element = dynamic_cast<const BasicIntervalSchedule*>(BaseClass_ptr1))
+	{
+		buffer << element->value1Unit;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_BasicIntervalSchedule_value2Unit(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const BasicIntervalSchedule* element = dynamic_cast<const BasicIntervalSchedule*>(BaseClass_ptr1))
+	{
+		buffer << element->value2Unit;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 const char BasicIntervalSchedule::debugName[] = "BasicIntervalSchedule";
 const char* BasicIntervalSchedule::debugString() const
@@ -79,6 +150,24 @@ void BasicIntervalSchedule::addPrimitiveAssignFnsToMap(std::unordered_map<std::s
 
 void BasicIntervalSchedule::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void BasicIntervalSchedule::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:BasicIntervalSchedule.startTime", &get_BasicIntervalSchedule_startTime);
+}
+
+void BasicIntervalSchedule::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+}
+
+void BasicIntervalSchedule::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
+	get_map.emplace("cim:BasicIntervalSchedule.value1Unit", &get_BasicIntervalSchedule_value1Unit);
+	get_map.emplace("cim:BasicIntervalSchedule.value2Unit", &get_BasicIntervalSchedule_value2Unit);
 }
 
 const BaseClassDefiner BasicIntervalSchedule::declare()

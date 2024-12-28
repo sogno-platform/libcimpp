@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "WindContPType3IEC.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "WindDynamicsLookupTable.hpp"
@@ -37,7 +39,54 @@ using namespace CIMPP;
 WindContPType3IEC::WindContPType3IEC() : WindTurbineType3IEC(nullptr) {};
 WindContPType3IEC::~WindContPType3IEC() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:WindContPType3IEC.WindDynamicsLookupTable", { CGMESProfile::DY, } },
+	{ "cim:WindContPType3IEC.WindTurbineType3IEC", { CGMESProfile::DY, } },
+	{ "cim:WindContPType3IEC.dpmax", { CGMESProfile::DY, } },
+	{ "cim:WindContPType3IEC.dprefmax", { CGMESProfile::DY, } },
+	{ "cim:WindContPType3IEC.dprefmin", { CGMESProfile::DY, } },
+	{ "cim:WindContPType3IEC.dthetamax", { CGMESProfile::DY, } },
+	{ "cim:WindContPType3IEC.dthetamaxuvrt", { CGMESProfile::DY, } },
+	{ "cim:WindContPType3IEC.kdtd", { CGMESProfile::DY, } },
+	{ "cim:WindContPType3IEC.kip", { CGMESProfile::DY, } },
+	{ "cim:WindContPType3IEC.kpp", { CGMESProfile::DY, } },
+	{ "cim:WindContPType3IEC.mpuvrt", { CGMESProfile::DY, } },
+	{ "cim:WindContPType3IEC.omegadtd", { CGMESProfile::DY, } },
+	{ "cim:WindContPType3IEC.omegaoffset", { CGMESProfile::DY, } },
+	{ "cim:WindContPType3IEC.pdtdmax", { CGMESProfile::DY, } },
+	{ "cim:WindContPType3IEC.tdvs", { CGMESProfile::DY, } },
+	{ "cim:WindContPType3IEC.thetaemin", { CGMESProfile::DY, } },
+	{ "cim:WindContPType3IEC.thetauscale", { CGMESProfile::DY, } },
+	{ "cim:WindContPType3IEC.tomegafiltp3", { CGMESProfile::DY, } },
+	{ "cim:WindContPType3IEC.tomegaref", { CGMESProfile::DY, } },
+	{ "cim:WindContPType3IEC.tpfiltp3", { CGMESProfile::DY, } },
+	{ "cim:WindContPType3IEC.tpord", { CGMESProfile::DY, } },
+	{ "cim:WindContPType3IEC.tufiltp3", { CGMESProfile::DY, } },
+	{ "cim:WindContPType3IEC.udvs", { CGMESProfile::DY, } },
+	{ "cim:WindContPType3IEC.updip", { CGMESProfile::DY, } },
+	{ "cim:WindContPType3IEC.zeta", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+WindContPType3IEC::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+WindContPType3IEC::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_WindContPType3IEC_dpmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -356,7 +405,6 @@ bool assign_WindContPType3IEC_WindDynamicsLookupTable(BaseClass* BaseClass_ptr1,
 	}
 	return false;
 }
-
 bool assign_WindTurbineType3IEC_WindContPType3IEC(BaseClass*, BaseClass*);
 bool assign_WindContPType3IEC_WindTurbineType3IEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -374,26 +422,327 @@ bool assign_WindContPType3IEC_WindTurbineType3IEC(BaseClass* BaseClass_ptr1, Bas
 	return false;
 }
 
+bool get_WindContPType3IEC_dpmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType3IEC* element = dynamic_cast<const WindContPType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->dpmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContPType3IEC_dprefmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType3IEC* element = dynamic_cast<const WindContPType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->dprefmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContPType3IEC_dprefmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType3IEC* element = dynamic_cast<const WindContPType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->dprefmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContPType3IEC_dthetamax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType3IEC* element = dynamic_cast<const WindContPType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->dthetamax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContPType3IEC_dthetamaxuvrt(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType3IEC* element = dynamic_cast<const WindContPType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->dthetamaxuvrt;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContPType3IEC_kdtd(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType3IEC* element = dynamic_cast<const WindContPType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->kdtd;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContPType3IEC_kip(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType3IEC* element = dynamic_cast<const WindContPType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->kip;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContPType3IEC_kpp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType3IEC* element = dynamic_cast<const WindContPType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->kpp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContPType3IEC_mpuvrt(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType3IEC* element = dynamic_cast<const WindContPType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->mpuvrt;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContPType3IEC_omegadtd(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType3IEC* element = dynamic_cast<const WindContPType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->omegadtd;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContPType3IEC_omegaoffset(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType3IEC* element = dynamic_cast<const WindContPType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->omegaoffset;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContPType3IEC_pdtdmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType3IEC* element = dynamic_cast<const WindContPType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->pdtdmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContPType3IEC_tdvs(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType3IEC* element = dynamic_cast<const WindContPType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->tdvs;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContPType3IEC_thetaemin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType3IEC* element = dynamic_cast<const WindContPType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->thetaemin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContPType3IEC_thetauscale(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType3IEC* element = dynamic_cast<const WindContPType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->thetauscale;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContPType3IEC_tomegafiltp3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType3IEC* element = dynamic_cast<const WindContPType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->tomegafiltp3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContPType3IEC_tomegaref(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType3IEC* element = dynamic_cast<const WindContPType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->tomegaref;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContPType3IEC_tpfiltp3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType3IEC* element = dynamic_cast<const WindContPType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->tpfiltp3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContPType3IEC_tpord(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType3IEC* element = dynamic_cast<const WindContPType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->tpord;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContPType3IEC_tufiltp3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType3IEC* element = dynamic_cast<const WindContPType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->tufiltp3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindContPType3IEC_udvs(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType3IEC* element = dynamic_cast<const WindContPType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->udvs;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_WindContPType3IEC_updip(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType3IEC* element = dynamic_cast<const WindContPType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->updip;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_WindContPType3IEC_zeta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindContPType3IEC* element = dynamic_cast<const WindContPType3IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->zeta;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -439,6 +788,44 @@ void WindContPType3IEC::addClassAssignFnsToMap(std::unordered_map<std::string, c
 {
 	assign_map.insert(std::make_pair(std::string("cim:WindContPType3IEC.WindDynamicsLookupTable"), &assign_WindContPType3IEC_WindDynamicsLookupTable));
 	assign_map.insert(std::make_pair(std::string("cim:WindContPType3IEC.WindTurbineType3IEC"), &assign_WindContPType3IEC_WindTurbineType3IEC));
+}
+
+void WindContPType3IEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:WindContPType3IEC.dpmax", &get_WindContPType3IEC_dpmax);
+	get_map.emplace("cim:WindContPType3IEC.dprefmax", &get_WindContPType3IEC_dprefmax);
+	get_map.emplace("cim:WindContPType3IEC.dprefmin", &get_WindContPType3IEC_dprefmin);
+	get_map.emplace("cim:WindContPType3IEC.dthetamax", &get_WindContPType3IEC_dthetamax);
+	get_map.emplace("cim:WindContPType3IEC.dthetamaxuvrt", &get_WindContPType3IEC_dthetamaxuvrt);
+	get_map.emplace("cim:WindContPType3IEC.kdtd", &get_WindContPType3IEC_kdtd);
+	get_map.emplace("cim:WindContPType3IEC.kip", &get_WindContPType3IEC_kip);
+	get_map.emplace("cim:WindContPType3IEC.kpp", &get_WindContPType3IEC_kpp);
+	get_map.emplace("cim:WindContPType3IEC.mpuvrt", &get_WindContPType3IEC_mpuvrt);
+	get_map.emplace("cim:WindContPType3IEC.omegadtd", &get_WindContPType3IEC_omegadtd);
+	get_map.emplace("cim:WindContPType3IEC.omegaoffset", &get_WindContPType3IEC_omegaoffset);
+	get_map.emplace("cim:WindContPType3IEC.pdtdmax", &get_WindContPType3IEC_pdtdmax);
+	get_map.emplace("cim:WindContPType3IEC.tdvs", &get_WindContPType3IEC_tdvs);
+	get_map.emplace("cim:WindContPType3IEC.thetaemin", &get_WindContPType3IEC_thetaemin);
+	get_map.emplace("cim:WindContPType3IEC.thetauscale", &get_WindContPType3IEC_thetauscale);
+	get_map.emplace("cim:WindContPType3IEC.tomegafiltp3", &get_WindContPType3IEC_tomegafiltp3);
+	get_map.emplace("cim:WindContPType3IEC.tomegaref", &get_WindContPType3IEC_tomegaref);
+	get_map.emplace("cim:WindContPType3IEC.tpfiltp3", &get_WindContPType3IEC_tpfiltp3);
+	get_map.emplace("cim:WindContPType3IEC.tpord", &get_WindContPType3IEC_tpord);
+	get_map.emplace("cim:WindContPType3IEC.tufiltp3", &get_WindContPType3IEC_tufiltp3);
+	get_map.emplace("cim:WindContPType3IEC.udvs", &get_WindContPType3IEC_udvs);
+	get_map.emplace("cim:WindContPType3IEC.updip", &get_WindContPType3IEC_updip);
+	get_map.emplace("cim:WindContPType3IEC.zeta", &get_WindContPType3IEC_zeta);
+}
+
+void WindContPType3IEC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+}
+
+void WindContPType3IEC::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner WindContPType3IEC::declare()

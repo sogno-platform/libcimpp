@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "EquivalentInjection.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "ReactiveCapabilityCurve.hpp"
@@ -28,6 +30,46 @@ using namespace CIMPP;
 EquivalentInjection::EquivalentInjection() : ReactiveCapabilityCurve(nullptr) {};
 EquivalentInjection::~EquivalentInjection() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ,
+	CGMESProfile::SSH,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:EquivalentInjection.ReactiveCapabilityCurve", { CGMESProfile::EQ, } },
+	{ "cim:EquivalentInjection.maxP", { CGMESProfile::EQ, } },
+	{ "cim:EquivalentInjection.maxQ", { CGMESProfile::EQ, } },
+	{ "cim:EquivalentInjection.minP", { CGMESProfile::EQ, } },
+	{ "cim:EquivalentInjection.minQ", { CGMESProfile::EQ, } },
+	{ "cim:EquivalentInjection.p", { CGMESProfile::SSH, } },
+	{ "cim:EquivalentInjection.q", { CGMESProfile::SSH, } },
+	{ "cim:EquivalentInjection.r", { CGMESProfile::EQ, } },
+	{ "cim:EquivalentInjection.r0", { CGMESProfile::EQ, } },
+	{ "cim:EquivalentInjection.r2", { CGMESProfile::EQ, } },
+	{ "cim:EquivalentInjection.regulationCapability", { CGMESProfile::EQ, } },
+	{ "cim:EquivalentInjection.regulationStatus", { CGMESProfile::SSH, } },
+	{ "cim:EquivalentInjection.regulationTarget", { CGMESProfile::SSH, } },
+	{ "cim:EquivalentInjection.x", { CGMESProfile::EQ, } },
+	{ "cim:EquivalentInjection.x0", { CGMESProfile::EQ, } },
+	{ "cim:EquivalentInjection.x2", { CGMESProfile::EQ, } },
+};
+
+std::list<CGMESProfile>
+EquivalentInjection::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+EquivalentInjection::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = EquivalentEquipment::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_EquivalentInjection_maxP(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -243,19 +285,229 @@ bool assign_EquivalentInjection_ReactiveCapabilityCurve(BaseClass* BaseClass_ptr
 	return false;
 }
 
+bool get_EquivalentInjection_maxP(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const EquivalentInjection* element = dynamic_cast<const EquivalentInjection*>(BaseClass_ptr1))
+	{
+		buffer << element->maxP;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_EquivalentInjection_maxQ(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const EquivalentInjection* element = dynamic_cast<const EquivalentInjection*>(BaseClass_ptr1))
+	{
+		buffer << element->maxQ;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_EquivalentInjection_minP(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const EquivalentInjection* element = dynamic_cast<const EquivalentInjection*>(BaseClass_ptr1))
+	{
+		buffer << element->minP;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_EquivalentInjection_minQ(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const EquivalentInjection* element = dynamic_cast<const EquivalentInjection*>(BaseClass_ptr1))
+	{
+		buffer << element->minQ;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_EquivalentInjection_p(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const EquivalentInjection* element = dynamic_cast<const EquivalentInjection*>(BaseClass_ptr1))
+	{
+		buffer << element->p;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_EquivalentInjection_q(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const EquivalentInjection* element = dynamic_cast<const EquivalentInjection*>(BaseClass_ptr1))
+	{
+		buffer << element->q;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_EquivalentInjection_r(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const EquivalentInjection* element = dynamic_cast<const EquivalentInjection*>(BaseClass_ptr1))
+	{
+		buffer << element->r;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_EquivalentInjection_r0(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const EquivalentInjection* element = dynamic_cast<const EquivalentInjection*>(BaseClass_ptr1))
+	{
+		buffer << element->r0;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_EquivalentInjection_r2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const EquivalentInjection* element = dynamic_cast<const EquivalentInjection*>(BaseClass_ptr1))
+	{
+		buffer << element->r2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_EquivalentInjection_regulationCapability(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const EquivalentInjection* element = dynamic_cast<const EquivalentInjection*>(BaseClass_ptr1))
+	{
+		buffer << element->regulationCapability;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_EquivalentInjection_regulationStatus(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const EquivalentInjection* element = dynamic_cast<const EquivalentInjection*>(BaseClass_ptr1))
+	{
+		buffer << element->regulationStatus;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_EquivalentInjection_regulationTarget(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const EquivalentInjection* element = dynamic_cast<const EquivalentInjection*>(BaseClass_ptr1))
+	{
+		buffer << element->regulationTarget;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_EquivalentInjection_x(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const EquivalentInjection* element = dynamic_cast<const EquivalentInjection*>(BaseClass_ptr1))
+	{
+		buffer << element->x;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_EquivalentInjection_x0(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const EquivalentInjection* element = dynamic_cast<const EquivalentInjection*>(BaseClass_ptr1))
+	{
+		buffer << element->x0;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_EquivalentInjection_x2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const EquivalentInjection* element = dynamic_cast<const EquivalentInjection*>(BaseClass_ptr1))
+	{
+		buffer << element->x2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
+bool get_EquivalentInjection_ReactiveCapabilityCurve(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const EquivalentInjection* element = dynamic_cast<const EquivalentInjection*>(BaseClass_ptr1))
+	{
+		if (element->ReactiveCapabilityCurve != 0)
+		{
+			BaseClass_list.push_back(element->ReactiveCapabilityCurve);
+			return true;
+		}
+	}
+	return false;
+}
 
 
 const char EquivalentInjection::debugName[] = "EquivalentInjection";
@@ -291,6 +543,37 @@ void EquivalentInjection::addPrimitiveAssignFnsToMap(std::unordered_map<std::str
 void EquivalentInjection::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:EquivalentInjection.ReactiveCapabilityCurve"), &assign_EquivalentInjection_ReactiveCapabilityCurve));
+}
+
+void EquivalentInjection::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	EquivalentEquipment::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:EquivalentInjection.maxP", &get_EquivalentInjection_maxP);
+	get_map.emplace("cim:EquivalentInjection.maxQ", &get_EquivalentInjection_maxQ);
+	get_map.emplace("cim:EquivalentInjection.minP", &get_EquivalentInjection_minP);
+	get_map.emplace("cim:EquivalentInjection.minQ", &get_EquivalentInjection_minQ);
+	get_map.emplace("cim:EquivalentInjection.p", &get_EquivalentInjection_p);
+	get_map.emplace("cim:EquivalentInjection.q", &get_EquivalentInjection_q);
+	get_map.emplace("cim:EquivalentInjection.r", &get_EquivalentInjection_r);
+	get_map.emplace("cim:EquivalentInjection.r0", &get_EquivalentInjection_r0);
+	get_map.emplace("cim:EquivalentInjection.r2", &get_EquivalentInjection_r2);
+	get_map.emplace("cim:EquivalentInjection.regulationCapability", &get_EquivalentInjection_regulationCapability);
+	get_map.emplace("cim:EquivalentInjection.regulationStatus", &get_EquivalentInjection_regulationStatus);
+	get_map.emplace("cim:EquivalentInjection.regulationTarget", &get_EquivalentInjection_regulationTarget);
+	get_map.emplace("cim:EquivalentInjection.x", &get_EquivalentInjection_x);
+	get_map.emplace("cim:EquivalentInjection.x0", &get_EquivalentInjection_x0);
+	get_map.emplace("cim:EquivalentInjection.x2", &get_EquivalentInjection_x2);
+}
+
+void EquivalentInjection::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	EquivalentEquipment::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:EquivalentInjection.ReactiveCapabilityCurve", &get_EquivalentInjection_ReactiveCapabilityCurve);
+}
+
+void EquivalentInjection::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	EquivalentEquipment::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner EquivalentInjection::declare()

@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "PssSB4.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PU.hpp"
@@ -22,6 +24,41 @@ using namespace CIMPP;
 
 PssSB4::PssSB4() {};
 PssSB4::~PssSB4() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:PssSB4.kx", { CGMESProfile::DY, } },
+	{ "cim:PssSB4.ta", { CGMESProfile::DY, } },
+	{ "cim:PssSB4.tb", { CGMESProfile::DY, } },
+	{ "cim:PssSB4.tc", { CGMESProfile::DY, } },
+	{ "cim:PssSB4.td", { CGMESProfile::DY, } },
+	{ "cim:PssSB4.te", { CGMESProfile::DY, } },
+	{ "cim:PssSB4.tt", { CGMESProfile::DY, } },
+	{ "cim:PssSB4.tx1", { CGMESProfile::DY, } },
+	{ "cim:PssSB4.tx2", { CGMESProfile::DY, } },
+	{ "cim:PssSB4.vsmax", { CGMESProfile::DY, } },
+	{ "cim:PssSB4.vsmin", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+PssSB4::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+PssSB4::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = PowerSystemStabilizerDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_PssSB4_kx(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -169,13 +206,159 @@ bool assign_PssSB4_vsmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
 
 
 
+bool get_PssSB4_kx(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSB4* element = dynamic_cast<const PssSB4*>(BaseClass_ptr1))
+	{
+		buffer << element->kx;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssSB4_ta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSB4* element = dynamic_cast<const PssSB4*>(BaseClass_ptr1))
+	{
+		buffer << element->ta;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssSB4_tb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSB4* element = dynamic_cast<const PssSB4*>(BaseClass_ptr1))
+	{
+		buffer << element->tb;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssSB4_tc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSB4* element = dynamic_cast<const PssSB4*>(BaseClass_ptr1))
+	{
+		buffer << element->tc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssSB4_td(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSB4* element = dynamic_cast<const PssSB4*>(BaseClass_ptr1))
+	{
+		buffer << element->td;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssSB4_te(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSB4* element = dynamic_cast<const PssSB4*>(BaseClass_ptr1))
+	{
+		buffer << element->te;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssSB4_tt(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSB4* element = dynamic_cast<const PssSB4*>(BaseClass_ptr1))
+	{
+		buffer << element->tt;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_PssSB4_tx1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSB4* element = dynamic_cast<const PssSB4*>(BaseClass_ptr1))
+	{
+		buffer << element->tx1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PssSB4_tx2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSB4* element = dynamic_cast<const PssSB4*>(BaseClass_ptr1))
+	{
+		buffer << element->tx2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PssSB4_vsmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSB4* element = dynamic_cast<const PssSB4*>(BaseClass_ptr1))
+	{
+		buffer << element->vsmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_PssSB4_vsmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const PssSB4* element = dynamic_cast<const PssSB4*>(BaseClass_ptr1))
+	{
+		buffer << element->vsmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -207,6 +390,32 @@ void PssSB4::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_f
 
 void PssSB4::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void PssSB4::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemStabilizerDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:PssSB4.kx", &get_PssSB4_kx);
+	get_map.emplace("cim:PssSB4.ta", &get_PssSB4_ta);
+	get_map.emplace("cim:PssSB4.tb", &get_PssSB4_tb);
+	get_map.emplace("cim:PssSB4.tc", &get_PssSB4_tc);
+	get_map.emplace("cim:PssSB4.td", &get_PssSB4_td);
+	get_map.emplace("cim:PssSB4.te", &get_PssSB4_te);
+	get_map.emplace("cim:PssSB4.tt", &get_PssSB4_tt);
+	get_map.emplace("cim:PssSB4.tx1", &get_PssSB4_tx1);
+	get_map.emplace("cim:PssSB4.tx2", &get_PssSB4_tx2);
+	get_map.emplace("cim:PssSB4.vsmax", &get_PssSB4_vsmax);
+	get_map.emplace("cim:PssSB4.vsmin", &get_PssSB4_vsmin);
+}
+
+void PssSB4::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	PowerSystemStabilizerDynamics::addClassGetFnsToMap(get_map);
+}
+
+void PssSB4::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemStabilizerDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner PssSB4::declare()

@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "VSCUserDefined.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "ProprietaryParameterDynamics.hpp"
@@ -14,6 +16,31 @@ using namespace CIMPP;
 VSCUserDefined::VSCUserDefined() {};
 VSCUserDefined::~VSCUserDefined() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:VSCUserDefined.ProprietaryParameterDynamics", { CGMESProfile::DY, } },
+	{ "cim:VSCUserDefined.proprietary", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+VSCUserDefined::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+VSCUserDefined::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = VSCDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_VSCUserDefined_proprietary(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -47,6 +74,21 @@ bool assign_VSCUserDefined_ProprietaryParameterDynamics(BaseClass* BaseClass_ptr
 	return false;
 }
 
+bool get_VSCUserDefined_proprietary(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const VSCUserDefined* element = dynamic_cast<const VSCUserDefined*>(BaseClass_ptr1))
+	{
+		buffer << element->proprietary;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+
 
 const char VSCUserDefined::debugName[] = "VSCUserDefined";
 const char* VSCUserDefined::debugString() const
@@ -67,6 +109,22 @@ void VSCUserDefined::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, 
 void VSCUserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:VSCUserDefined.ProprietaryParameterDynamics"), &assign_VSCUserDefined_ProprietaryParameterDynamics));
+}
+
+void VSCUserDefined::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	VSCDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:VSCUserDefined.proprietary", &get_VSCUserDefined_proprietary);
+}
+
+void VSCUserDefined::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	VSCDynamics::addClassGetFnsToMap(get_map);
+}
+
+void VSCUserDefined::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	VSCDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner VSCUserDefined::declare()

@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "WindProtectionIEC.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "WindTurbineType1or2IEC.hpp"
@@ -22,7 +24,39 @@ using namespace CIMPP;
 WindProtectionIEC::WindProtectionIEC() : WindTurbineType1or2IEC(nullptr), WindTurbineType3or4IEC(nullptr) {};
 WindProtectionIEC::~WindProtectionIEC() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:WindProtectionIEC.WindTurbineType1or2IEC", { CGMESProfile::DY, } },
+	{ "cim:WindProtectionIEC.WindTurbineType3or4IEC", { CGMESProfile::DY, } },
+	{ "cim:WindProtectionIEC.fover", { CGMESProfile::DY, } },
+	{ "cim:WindProtectionIEC.funder", { CGMESProfile::DY, } },
+	{ "cim:WindProtectionIEC.tfover", { CGMESProfile::DY, } },
+	{ "cim:WindProtectionIEC.tfunder", { CGMESProfile::DY, } },
+	{ "cim:WindProtectionIEC.tuover", { CGMESProfile::DY, } },
+	{ "cim:WindProtectionIEC.tuunder", { CGMESProfile::DY, } },
+	{ "cim:WindProtectionIEC.uover", { CGMESProfile::DY, } },
+	{ "cim:WindProtectionIEC.uunder", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+WindProtectionIEC::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+WindProtectionIEC::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_WindProtectionIEC_fover(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -146,7 +180,6 @@ bool assign_WindProtectionIEC_WindTurbineType1or2IEC(BaseClass* BaseClass_ptr1, 
 	}
 	return false;
 }
-
 bool assign_WindTurbineType3or4IEC_WindProtectionIEC(BaseClass*, BaseClass*);
 bool assign_WindProtectionIEC_WindTurbineType3or4IEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -164,11 +197,117 @@ bool assign_WindProtectionIEC_WindTurbineType3or4IEC(BaseClass* BaseClass_ptr1, 
 	return false;
 }
 
+bool get_WindProtectionIEC_fover(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindProtectionIEC* element = dynamic_cast<const WindProtectionIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->fover;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindProtectionIEC_funder(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindProtectionIEC* element = dynamic_cast<const WindProtectionIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->funder;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindProtectionIEC_tfover(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindProtectionIEC* element = dynamic_cast<const WindProtectionIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->tfover;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindProtectionIEC_tfunder(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindProtectionIEC* element = dynamic_cast<const WindProtectionIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->tfunder;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindProtectionIEC_tuover(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindProtectionIEC* element = dynamic_cast<const WindProtectionIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->tuover;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindProtectionIEC_tuunder(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindProtectionIEC* element = dynamic_cast<const WindProtectionIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->tuunder;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_WindProtectionIEC_uover(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindProtectionIEC* element = dynamic_cast<const WindProtectionIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->uover;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_WindProtectionIEC_uunder(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindProtectionIEC* element = dynamic_cast<const WindProtectionIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->uunder;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -199,6 +338,29 @@ void WindProtectionIEC::addClassAssignFnsToMap(std::unordered_map<std::string, c
 {
 	assign_map.insert(std::make_pair(std::string("cim:WindProtectionIEC.WindTurbineType1or2IEC"), &assign_WindProtectionIEC_WindTurbineType1or2IEC));
 	assign_map.insert(std::make_pair(std::string("cim:WindProtectionIEC.WindTurbineType3or4IEC"), &assign_WindProtectionIEC_WindTurbineType3or4IEC));
+}
+
+void WindProtectionIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:WindProtectionIEC.fover", &get_WindProtectionIEC_fover);
+	get_map.emplace("cim:WindProtectionIEC.funder", &get_WindProtectionIEC_funder);
+	get_map.emplace("cim:WindProtectionIEC.tfover", &get_WindProtectionIEC_tfover);
+	get_map.emplace("cim:WindProtectionIEC.tfunder", &get_WindProtectionIEC_tfunder);
+	get_map.emplace("cim:WindProtectionIEC.tuover", &get_WindProtectionIEC_tuover);
+	get_map.emplace("cim:WindProtectionIEC.tuunder", &get_WindProtectionIEC_tuunder);
+	get_map.emplace("cim:WindProtectionIEC.uover", &get_WindProtectionIEC_uover);
+	get_map.emplace("cim:WindProtectionIEC.uunder", &get_WindProtectionIEC_uunder);
+}
+
+void WindProtectionIEC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+}
+
+void WindProtectionIEC::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner WindProtectionIEC::declare()

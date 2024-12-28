@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "MeasurementValue.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "MeasurementValueQuality.hpp"
@@ -16,7 +18,33 @@ using namespace CIMPP;
 MeasurementValue::MeasurementValue() : MeasurementValueQuality(nullptr), MeasurementValueSource(nullptr) {};
 MeasurementValue::~MeasurementValue() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::OP,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:MeasurementValue.MeasurementValueQuality", { CGMESProfile::OP, } },
+	{ "cim:MeasurementValue.MeasurementValueSource", { CGMESProfile::OP, } },
+	{ "cim:MeasurementValue.sensorAccuracy", { CGMESProfile::OP, } },
+	{ "cim:MeasurementValue.timeStamp", { CGMESProfile::OP, } },
+};
+
+std::list<CGMESProfile>
+MeasurementValue::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+MeasurementValue::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IOPoint::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_MeasurementValue_sensorAccuracy(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -62,7 +90,6 @@ bool assign_MeasurementValue_MeasurementValueQuality(BaseClass* BaseClass_ptr1, 
 	}
 	return false;
 }
-
 bool assign_MeasurementValueSource_MeasurementValues(BaseClass*, BaseClass*);
 bool assign_MeasurementValue_MeasurementValueSource(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -80,6 +107,47 @@ bool assign_MeasurementValue_MeasurementValueSource(BaseClass* BaseClass_ptr1, B
 	return false;
 }
 
+bool get_MeasurementValue_sensorAccuracy(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const MeasurementValue* element = dynamic_cast<const MeasurementValue*>(BaseClass_ptr1))
+	{
+		buffer << element->sensorAccuracy;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_MeasurementValue_timeStamp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const MeasurementValue* element = dynamic_cast<const MeasurementValue*>(BaseClass_ptr1))
+	{
+		buffer << element->timeStamp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+
+bool get_MeasurementValue_MeasurementValueSource(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	if (const MeasurementValue* element = dynamic_cast<const MeasurementValue*>(BaseClass_ptr1))
+	{
+		if (element->MeasurementValueSource != 0)
+		{
+			BaseClass_list.push_back(element->MeasurementValueSource);
+			return true;
+		}
+	}
+	return false;
+}
 
 
 const char MeasurementValue::debugName[] = "MeasurementValue";
@@ -103,6 +171,24 @@ void MeasurementValue::addClassAssignFnsToMap(std::unordered_map<std::string, cl
 {
 	assign_map.insert(std::make_pair(std::string("cim:MeasurementValue.MeasurementValueQuality"), &assign_MeasurementValue_MeasurementValueQuality));
 	assign_map.insert(std::make_pair(std::string("cim:MeasurementValue.MeasurementValueSource"), &assign_MeasurementValue_MeasurementValueSource));
+}
+
+void MeasurementValue::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IOPoint::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:MeasurementValue.sensorAccuracy", &get_MeasurementValue_sensorAccuracy);
+	get_map.emplace("cim:MeasurementValue.timeStamp", &get_MeasurementValue_timeStamp);
+}
+
+void MeasurementValue::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IOPoint::addClassGetFnsToMap(get_map);
+	get_map.emplace("cim:MeasurementValue.MeasurementValueSource", &get_MeasurementValue_MeasurementValueSource);
+}
+
+void MeasurementValue::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IOPoint::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner MeasurementValue::declare()

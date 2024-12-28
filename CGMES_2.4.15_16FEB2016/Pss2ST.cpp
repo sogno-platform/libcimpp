@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "Pss2ST.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "InputSignalKind.hpp"
@@ -29,6 +31,48 @@ using namespace CIMPP;
 
 Pss2ST::Pss2ST() {};
 Pss2ST::~Pss2ST() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:Pss2ST.inputSignal1Type", { CGMESProfile::DY, } },
+	{ "cim:Pss2ST.inputSignal2Type", { CGMESProfile::DY, } },
+	{ "cim:Pss2ST.k1", { CGMESProfile::DY, } },
+	{ "cim:Pss2ST.k2", { CGMESProfile::DY, } },
+	{ "cim:Pss2ST.lsmax", { CGMESProfile::DY, } },
+	{ "cim:Pss2ST.lsmin", { CGMESProfile::DY, } },
+	{ "cim:Pss2ST.t1", { CGMESProfile::DY, } },
+	{ "cim:Pss2ST.t10", { CGMESProfile::DY, } },
+	{ "cim:Pss2ST.t2", { CGMESProfile::DY, } },
+	{ "cim:Pss2ST.t3", { CGMESProfile::DY, } },
+	{ "cim:Pss2ST.t4", { CGMESProfile::DY, } },
+	{ "cim:Pss2ST.t5", { CGMESProfile::DY, } },
+	{ "cim:Pss2ST.t6", { CGMESProfile::DY, } },
+	{ "cim:Pss2ST.t7", { CGMESProfile::DY, } },
+	{ "cim:Pss2ST.t8", { CGMESProfile::DY, } },
+	{ "cim:Pss2ST.t9", { CGMESProfile::DY, } },
+	{ "cim:Pss2ST.vcl", { CGMESProfile::DY, } },
+	{ "cim:Pss2ST.vcu", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+Pss2ST::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+Pss2ST::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = PowerSystemStabilizerDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_Pss2ST_inputSignal1Type(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -267,22 +311,259 @@ bool assign_Pss2ST_vcu(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
 
 
 
+bool get_Pss2ST_k1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss2ST* element = dynamic_cast<const Pss2ST*>(BaseClass_ptr1))
+	{
+		buffer << element->k1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Pss2ST_k2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss2ST* element = dynamic_cast<const Pss2ST*>(BaseClass_ptr1))
+	{
+		buffer << element->k2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Pss2ST_lsmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss2ST* element = dynamic_cast<const Pss2ST*>(BaseClass_ptr1))
+	{
+		buffer << element->lsmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Pss2ST_lsmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss2ST* element = dynamic_cast<const Pss2ST*>(BaseClass_ptr1))
+	{
+		buffer << element->lsmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Pss2ST_t1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss2ST* element = dynamic_cast<const Pss2ST*>(BaseClass_ptr1))
+	{
+		buffer << element->t1;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Pss2ST_t10(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss2ST* element = dynamic_cast<const Pss2ST*>(BaseClass_ptr1))
+	{
+		buffer << element->t10;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Pss2ST_t2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss2ST* element = dynamic_cast<const Pss2ST*>(BaseClass_ptr1))
+	{
+		buffer << element->t2;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Pss2ST_t3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss2ST* element = dynamic_cast<const Pss2ST*>(BaseClass_ptr1))
+	{
+		buffer << element->t3;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Pss2ST_t4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss2ST* element = dynamic_cast<const Pss2ST*>(BaseClass_ptr1))
+	{
+		buffer << element->t4;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Pss2ST_t5(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss2ST* element = dynamic_cast<const Pss2ST*>(BaseClass_ptr1))
+	{
+		buffer << element->t5;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Pss2ST_t6(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss2ST* element = dynamic_cast<const Pss2ST*>(BaseClass_ptr1))
+	{
+		buffer << element->t6;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Pss2ST_t7(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss2ST* element = dynamic_cast<const Pss2ST*>(BaseClass_ptr1))
+	{
+		buffer << element->t7;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Pss2ST_t8(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss2ST* element = dynamic_cast<const Pss2ST*>(BaseClass_ptr1))
+	{
+		buffer << element->t8;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Pss2ST_t9(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss2ST* element = dynamic_cast<const Pss2ST*>(BaseClass_ptr1))
+	{
+		buffer << element->t9;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Pss2ST_vcl(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss2ST* element = dynamic_cast<const Pss2ST*>(BaseClass_ptr1))
+	{
+		buffer << element->vcl;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_Pss2ST_vcu(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss2ST* element = dynamic_cast<const Pss2ST*>(BaseClass_ptr1))
+	{
+		buffer << element->vcu;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
+bool get_Pss2ST_inputSignal1Type(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss2ST* element = dynamic_cast<const Pss2ST*>(BaseClass_ptr1))
+	{
+		buffer << element->inputSignal1Type;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+bool get_Pss2ST_inputSignal2Type(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const Pss2ST* element = dynamic_cast<const Pss2ST*>(BaseClass_ptr1))
+	{
+		buffer << element->inputSignal2Type;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 const char Pss2ST::debugName[] = "Pss2ST";
 const char* Pss2ST::debugString() const
@@ -319,6 +600,39 @@ void Pss2ST::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_f
 
 void Pss2ST::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void Pss2ST::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemStabilizerDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:Pss2ST.k1", &get_Pss2ST_k1);
+	get_map.emplace("cim:Pss2ST.k2", &get_Pss2ST_k2);
+	get_map.emplace("cim:Pss2ST.lsmax", &get_Pss2ST_lsmax);
+	get_map.emplace("cim:Pss2ST.lsmin", &get_Pss2ST_lsmin);
+	get_map.emplace("cim:Pss2ST.t1", &get_Pss2ST_t1);
+	get_map.emplace("cim:Pss2ST.t10", &get_Pss2ST_t10);
+	get_map.emplace("cim:Pss2ST.t2", &get_Pss2ST_t2);
+	get_map.emplace("cim:Pss2ST.t3", &get_Pss2ST_t3);
+	get_map.emplace("cim:Pss2ST.t4", &get_Pss2ST_t4);
+	get_map.emplace("cim:Pss2ST.t5", &get_Pss2ST_t5);
+	get_map.emplace("cim:Pss2ST.t6", &get_Pss2ST_t6);
+	get_map.emplace("cim:Pss2ST.t7", &get_Pss2ST_t7);
+	get_map.emplace("cim:Pss2ST.t8", &get_Pss2ST_t8);
+	get_map.emplace("cim:Pss2ST.t9", &get_Pss2ST_t9);
+	get_map.emplace("cim:Pss2ST.vcl", &get_Pss2ST_vcl);
+	get_map.emplace("cim:Pss2ST.vcu", &get_Pss2ST_vcu);
+}
+
+void Pss2ST::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	PowerSystemStabilizerDynamics::addClassGetFnsToMap(get_map);
+}
+
+void Pss2ST::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	PowerSystemStabilizerDynamics::addEnumGetFnsToMap(get_map);
+	get_map.emplace("cim:Pss2ST.inputSignal1Type", &get_Pss2ST_inputSignal1Type);
+	get_map.emplace("cim:Pss2ST.inputSignal2Type", &get_Pss2ST_inputSignal2Type);
 }
 
 const BaseClassDefiner Pss2ST::declare()

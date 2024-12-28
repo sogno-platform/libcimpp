@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "WindAeroOneDimIEC.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "WindTurbineType3IEC.hpp"
@@ -15,6 +17,32 @@ using namespace CIMPP;
 WindAeroOneDimIEC::WindAeroOneDimIEC() : WindTurbineType3IEC(nullptr) {};
 WindAeroOneDimIEC::~WindAeroOneDimIEC() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:WindAeroOneDimIEC.WindTurbineType3IEC", { CGMESProfile::DY, } },
+	{ "cim:WindAeroOneDimIEC.ka", { CGMESProfile::DY, } },
+	{ "cim:WindAeroOneDimIEC.thetaomega", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+WindAeroOneDimIEC::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+WindAeroOneDimIEC::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_WindAeroOneDimIEC_ka(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -61,6 +89,34 @@ bool assign_WindAeroOneDimIEC_WindTurbineType3IEC(BaseClass* BaseClass_ptr1, Bas
 	return false;
 }
 
+bool get_WindAeroOneDimIEC_ka(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindAeroOneDimIEC* element = dynamic_cast<const WindAeroOneDimIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->ka;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_WindAeroOneDimIEC_thetaomega(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindAeroOneDimIEC* element = dynamic_cast<const WindAeroOneDimIEC*>(BaseClass_ptr1))
+	{
+		buffer << element->thetaomega;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
 
 
 const char WindAeroOneDimIEC::debugName[] = "WindAeroOneDimIEC";
@@ -83,6 +139,23 @@ void WindAeroOneDimIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::strin
 void WindAeroOneDimIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:WindAeroOneDimIEC.WindTurbineType3IEC"), &assign_WindAeroOneDimIEC_WindTurbineType3IEC));
+}
+
+void WindAeroOneDimIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:WindAeroOneDimIEC.ka", &get_WindAeroOneDimIEC_ka);
+	get_map.emplace("cim:WindAeroOneDimIEC.thetaomega", &get_WindAeroOneDimIEC_thetaomega);
+}
+
+void WindAeroOneDimIEC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+}
+
+void WindAeroOneDimIEC::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner WindAeroOneDimIEC::declare()

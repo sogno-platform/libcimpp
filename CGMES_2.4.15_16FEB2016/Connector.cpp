@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "Connector.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 
@@ -11,6 +13,34 @@ using namespace CIMPP;
 
 Connector::Connector() {};
 Connector::~Connector() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::EQ_BD,
+	CGMESProfile::EQ,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+};
+
+std::list<CGMESProfile>
+Connector::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+Connector::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = ConductingEquipment::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
+
+
+
 
 
 
@@ -31,6 +61,21 @@ void Connector::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assig
 
 void Connector::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void Connector::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ConductingEquipment::addPrimitiveGetFnsToMap(get_map);
+}
+
+void Connector::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	ConductingEquipment::addClassGetFnsToMap(get_map);
+}
+
+void Connector::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ConductingEquipment::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner Connector::declare()

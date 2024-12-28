@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "TurbLCFB1.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PU.hpp"
@@ -23,6 +25,42 @@ using namespace CIMPP;
 
 TurbLCFB1::TurbLCFB1() {};
 TurbLCFB1::~TurbLCFB1() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:TurbLCFB1.db", { CGMESProfile::DY, } },
+	{ "cim:TurbLCFB1.emax", { CGMESProfile::DY, } },
+	{ "cim:TurbLCFB1.fb", { CGMESProfile::DY, } },
+	{ "cim:TurbLCFB1.fbf", { CGMESProfile::DY, } },
+	{ "cim:TurbLCFB1.irmax", { CGMESProfile::DY, } },
+	{ "cim:TurbLCFB1.ki", { CGMESProfile::DY, } },
+	{ "cim:TurbLCFB1.kp", { CGMESProfile::DY, } },
+	{ "cim:TurbLCFB1.mwbase", { CGMESProfile::DY, } },
+	{ "cim:TurbLCFB1.pbf", { CGMESProfile::DY, } },
+	{ "cim:TurbLCFB1.pmwset", { CGMESProfile::DY, } },
+	{ "cim:TurbLCFB1.speedReferenceGovernor", { CGMESProfile::DY, } },
+	{ "cim:TurbLCFB1.tpelec", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+TurbLCFB1::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+TurbLCFB1::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = TurbineLoadControllerDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_TurbLCFB1_db(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -183,14 +221,173 @@ bool assign_TurbLCFB1_tpelec(std::stringstream &buffer, BaseClass* BaseClass_ptr
 
 
 
+bool get_TurbLCFB1_db(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TurbLCFB1* element = dynamic_cast<const TurbLCFB1*>(BaseClass_ptr1))
+	{
+		buffer << element->db;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_TurbLCFB1_emax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TurbLCFB1* element = dynamic_cast<const TurbLCFB1*>(BaseClass_ptr1))
+	{
+		buffer << element->emax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_TurbLCFB1_fb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TurbLCFB1* element = dynamic_cast<const TurbLCFB1*>(BaseClass_ptr1))
+	{
+		buffer << element->fb;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_TurbLCFB1_fbf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TurbLCFB1* element = dynamic_cast<const TurbLCFB1*>(BaseClass_ptr1))
+	{
+		buffer << element->fbf;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_TurbLCFB1_irmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TurbLCFB1* element = dynamic_cast<const TurbLCFB1*>(BaseClass_ptr1))
+	{
+		buffer << element->irmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_TurbLCFB1_ki(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TurbLCFB1* element = dynamic_cast<const TurbLCFB1*>(BaseClass_ptr1))
+	{
+		buffer << element->ki;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_TurbLCFB1_kp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TurbLCFB1* element = dynamic_cast<const TurbLCFB1*>(BaseClass_ptr1))
+	{
+		buffer << element->kp;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_TurbLCFB1_mwbase(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TurbLCFB1* element = dynamic_cast<const TurbLCFB1*>(BaseClass_ptr1))
+	{
+		buffer << element->mwbase;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_TurbLCFB1_pbf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TurbLCFB1* element = dynamic_cast<const TurbLCFB1*>(BaseClass_ptr1))
+	{
+		buffer << element->pbf;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_TurbLCFB1_pmwset(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TurbLCFB1* element = dynamic_cast<const TurbLCFB1*>(BaseClass_ptr1))
+	{
+		buffer << element->pmwset;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_TurbLCFB1_speedReferenceGovernor(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TurbLCFB1* element = dynamic_cast<const TurbLCFB1*>(BaseClass_ptr1))
+	{
+		buffer << element->speedReferenceGovernor;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_TurbLCFB1_tpelec(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const TurbLCFB1* element = dynamic_cast<const TurbLCFB1*>(BaseClass_ptr1))
+	{
+		buffer << element->tpelec;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -223,6 +420,33 @@ void TurbLCFB1::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assig
 
 void TurbLCFB1::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void TurbLCFB1::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TurbineLoadControllerDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:TurbLCFB1.db", &get_TurbLCFB1_db);
+	get_map.emplace("cim:TurbLCFB1.emax", &get_TurbLCFB1_emax);
+	get_map.emplace("cim:TurbLCFB1.fb", &get_TurbLCFB1_fb);
+	get_map.emplace("cim:TurbLCFB1.fbf", &get_TurbLCFB1_fbf);
+	get_map.emplace("cim:TurbLCFB1.irmax", &get_TurbLCFB1_irmax);
+	get_map.emplace("cim:TurbLCFB1.ki", &get_TurbLCFB1_ki);
+	get_map.emplace("cim:TurbLCFB1.kp", &get_TurbLCFB1_kp);
+	get_map.emplace("cim:TurbLCFB1.mwbase", &get_TurbLCFB1_mwbase);
+	get_map.emplace("cim:TurbLCFB1.pbf", &get_TurbLCFB1_pbf);
+	get_map.emplace("cim:TurbLCFB1.pmwset", &get_TurbLCFB1_pmwset);
+	get_map.emplace("cim:TurbLCFB1.speedReferenceGovernor", &get_TurbLCFB1_speedReferenceGovernor);
+	get_map.emplace("cim:TurbLCFB1.tpelec", &get_TurbLCFB1_tpelec);
+}
+
+void TurbLCFB1::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	TurbineLoadControllerDynamics::addClassGetFnsToMap(get_map);
+}
+
+void TurbLCFB1::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	TurbineLoadControllerDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner TurbLCFB1::declare()

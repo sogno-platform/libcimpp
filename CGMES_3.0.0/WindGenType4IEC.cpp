@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "WindGenType4IEC.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "WindTurbineType4aIEC.hpp"
@@ -18,7 +20,35 @@ using namespace CIMPP;
 WindGenType4IEC::WindGenType4IEC() : WindTurbineType4aIEC(nullptr), WindTurbineType4bIEC(nullptr) {};
 WindGenType4IEC::~WindGenType4IEC() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
 
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:WindGenType4IEC.WindTurbineType4aIEC", { CGMESProfile::DY, } },
+	{ "cim:WindGenType4IEC.WindTurbineType4bIEC", { CGMESProfile::DY, } },
+	{ "cim:WindGenType4IEC.dipmax", { CGMESProfile::DY, } },
+	{ "cim:WindGenType4IEC.diqmax", { CGMESProfile::DY, } },
+	{ "cim:WindGenType4IEC.diqmin", { CGMESProfile::DY, } },
+	{ "cim:WindGenType4IEC.tg", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+WindGenType4IEC::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+WindGenType4IEC::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_WindGenType4IEC_dipmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -90,7 +120,6 @@ bool assign_WindGenType4IEC_WindTurbineType4aIEC(BaseClass* BaseClass_ptr1, Base
 	}
 	return false;
 }
-
 bool assign_WindTurbineType4bIEC_WindGenType4IEC(BaseClass*, BaseClass*);
 bool assign_WindGenType4IEC_WindTurbineType4bIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -108,7 +137,61 @@ bool assign_WindGenType4IEC_WindTurbineType4bIEC(BaseClass* BaseClass_ptr1, Base
 	return false;
 }
 
+bool get_WindGenType4IEC_dipmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindGenType4IEC* element = dynamic_cast<const WindGenType4IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->dipmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_WindGenType4IEC_diqmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindGenType4IEC* element = dynamic_cast<const WindGenType4IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->diqmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_WindGenType4IEC_diqmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindGenType4IEC* element = dynamic_cast<const WindGenType4IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->diqmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_WindGenType4IEC_tg(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const WindGenType4IEC* element = dynamic_cast<const WindGenType4IEC*>(BaseClass_ptr1))
+	{
+		buffer << element->tg;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -135,6 +218,25 @@ void WindGenType4IEC::addClassAssignFnsToMap(std::unordered_map<std::string, cla
 {
 	assign_map.insert(std::make_pair(std::string("cim:WindGenType4IEC.WindTurbineType4aIEC"), &assign_WindGenType4IEC_WindTurbineType4aIEC));
 	assign_map.insert(std::make_pair(std::string("cim:WindGenType4IEC.WindTurbineType4bIEC"), &assign_WindGenType4IEC_WindTurbineType4bIEC));
+}
+
+void WindGenType4IEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:WindGenType4IEC.dipmax", &get_WindGenType4IEC_dipmax);
+	get_map.emplace("cim:WindGenType4IEC.diqmax", &get_WindGenType4IEC_diqmax);
+	get_map.emplace("cim:WindGenType4IEC.diqmin", &get_WindGenType4IEC_diqmin);
+	get_map.emplace("cim:WindGenType4IEC.tg", &get_WindGenType4IEC_tg);
+}
+
+void WindGenType4IEC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+}
+
+void WindGenType4IEC::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner WindGenType4IEC::declare()

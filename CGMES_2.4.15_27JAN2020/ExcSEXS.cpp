@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "ExcSEXS.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "PU.hpp"
@@ -21,6 +23,40 @@ using namespace CIMPP;
 
 ExcSEXS::ExcSEXS() {};
 ExcSEXS::~ExcSEXS() {};
+
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::DY,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:ExcSEXS.efdmax", { CGMESProfile::DY, } },
+	{ "cim:ExcSEXS.efdmin", { CGMESProfile::DY, } },
+	{ "cim:ExcSEXS.emax", { CGMESProfile::DY, } },
+	{ "cim:ExcSEXS.emin", { CGMESProfile::DY, } },
+	{ "cim:ExcSEXS.k", { CGMESProfile::DY, } },
+	{ "cim:ExcSEXS.kc", { CGMESProfile::DY, } },
+	{ "cim:ExcSEXS.tatb", { CGMESProfile::DY, } },
+	{ "cim:ExcSEXS.tb", { CGMESProfile::DY, } },
+	{ "cim:ExcSEXS.tc", { CGMESProfile::DY, } },
+	{ "cim:ExcSEXS.te", { CGMESProfile::DY, } },
+};
+
+std::list<CGMESProfile>
+ExcSEXS::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+ExcSEXS::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 bool assign_ExcSEXS_efdmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
@@ -155,12 +191,145 @@ bool assign_ExcSEXS_te(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
 
 
 
+bool get_ExcSEXS_efdmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcSEXS* element = dynamic_cast<const ExcSEXS*>(BaseClass_ptr1))
+	{
+		buffer << element->efdmax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcSEXS_efdmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcSEXS* element = dynamic_cast<const ExcSEXS*>(BaseClass_ptr1))
+	{
+		buffer << element->efdmin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcSEXS_emax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcSEXS* element = dynamic_cast<const ExcSEXS*>(BaseClass_ptr1))
+	{
+		buffer << element->emax;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcSEXS_emin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcSEXS* element = dynamic_cast<const ExcSEXS*>(BaseClass_ptr1))
+	{
+		buffer << element->emin;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcSEXS_k(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcSEXS* element = dynamic_cast<const ExcSEXS*>(BaseClass_ptr1))
+	{
+		buffer << element->k;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcSEXS_kc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcSEXS* element = dynamic_cast<const ExcSEXS*>(BaseClass_ptr1))
+	{
+		buffer << element->kc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
+bool get_ExcSEXS_tatb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcSEXS* element = dynamic_cast<const ExcSEXS*>(BaseClass_ptr1))
+	{
+		buffer << element->tatb;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcSEXS_tb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcSEXS* element = dynamic_cast<const ExcSEXS*>(BaseClass_ptr1))
+	{
+		buffer << element->tb;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcSEXS_tc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcSEXS* element = dynamic_cast<const ExcSEXS*>(BaseClass_ptr1))
+	{
+		buffer << element->tc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_ExcSEXS_te(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	if (const ExcSEXS* element = dynamic_cast<const ExcSEXS*>(BaseClass_ptr1))
+	{
+		buffer << element->te;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 
 
@@ -191,6 +360,31 @@ void ExcSEXS::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_
 
 void ExcSEXS::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
+}
+
+void ExcSEXS::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
+	get_map.emplace("cim:ExcSEXS.efdmax", &get_ExcSEXS_efdmax);
+	get_map.emplace("cim:ExcSEXS.efdmin", &get_ExcSEXS_efdmin);
+	get_map.emplace("cim:ExcSEXS.emax", &get_ExcSEXS_emax);
+	get_map.emplace("cim:ExcSEXS.emin", &get_ExcSEXS_emin);
+	get_map.emplace("cim:ExcSEXS.k", &get_ExcSEXS_k);
+	get_map.emplace("cim:ExcSEXS.kc", &get_ExcSEXS_kc);
+	get_map.emplace("cim:ExcSEXS.tatb", &get_ExcSEXS_tatb);
+	get_map.emplace("cim:ExcSEXS.tb", &get_ExcSEXS_tb);
+	get_map.emplace("cim:ExcSEXS.tc", &get_ExcSEXS_tc);
+	get_map.emplace("cim:ExcSEXS.te", &get_ExcSEXS_te);
+}
+
+void ExcSEXS::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addClassGetFnsToMap(get_map);
+}
+
+void ExcSEXS::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner ExcSEXS::declare()

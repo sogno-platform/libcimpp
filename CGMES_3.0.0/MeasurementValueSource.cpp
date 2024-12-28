@@ -4,6 +4,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "MeasurementValueSource.hpp"
 
 #include <algorithm>
+#include <ios>
+#include <iterator>
 #include <sstream>
 
 #include "MeasurementValue.hpp"
@@ -13,6 +15,30 @@ using namespace CIMPP;
 MeasurementValueSource::MeasurementValueSource() {};
 MeasurementValueSource::~MeasurementValueSource() {};
 
+static const std::list<CGMESProfile> PossibleProfilesForClass =
+{
+	CGMESProfile::OP,
+};
+
+static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
+{
+	{ "cim:MeasurementValueSource.MeasurementValues", { CGMESProfile::OP, } },
+};
+
+std::list<CGMESProfile>
+MeasurementValueSource::getPossibleProfilesForClass() const
+{
+	return PossibleProfilesForClass;
+}
+
+std::map<std::string, std::list<CGMESProfile>>
+MeasurementValueSource::getPossibleProfilesForAttributes() const
+{
+	auto map = PossibleProfilesForAttributes;
+	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
+}
 
 
 
@@ -33,6 +59,8 @@ bool assign_MeasurementValueSource_MeasurementValues(BaseClass* BaseClass_ptr1, 
 	return false;
 }
 
+
+
 const char MeasurementValueSource::debugName[] = "MeasurementValueSource";
 const char* MeasurementValueSource::debugString() const
 {
@@ -51,6 +79,21 @@ void MeasurementValueSource::addPrimitiveAssignFnsToMap(std::unordered_map<std::
 void MeasurementValueSource::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
 	assign_map.insert(std::make_pair(std::string("cim:MeasurementValueSource.MeasurementValues"), &assign_MeasurementValueSource_MeasurementValues));
+}
+
+void MeasurementValueSource::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
+}
+
+void MeasurementValueSource::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
+{
+	IdentifiedObject::addClassGetFnsToMap(get_map);
+}
+
+void MeasurementValueSource::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
+{
+	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
 const BaseClassDefiner MeasurementValueSource::declare()
