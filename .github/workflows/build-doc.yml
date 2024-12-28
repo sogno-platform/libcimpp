@@ -3,32 +3,34 @@ name: build-doc
 on: push
 
 jobs:
-
-  build-doc-CGMES_2-4-15_27JAN2020:
+  build-doc:
     runs-on: ubuntu-latest
-    env:
-      USE_CIM_VERSION: CGMES_2.4.15_27JAN2020
+    strategy:
+      matrix:
+        schema:
+        - CGMES_2.4.13_18DEC2013
+        - CGMES_2.4.15_16FEB2016
+        - CGMES_2.4.15_27JAN2020
+        - CGMES_3.0.0
     steps:
-    - uses: actions/checkout@v3   
-    - name: Checkout submodules
-      run: git submodule update --init --recursive
+    - name: Checkout Repository
+      uses: actions/checkout@v4
     - name: Install Doxygen
-      run: sudo apt-get install doxygen 
-      shell: bash 
+      run: sudo apt-get install doxygen
+      shell: bash
     - name: Install Graphviz
       run: sudo apt-get install graphviz
-      shell: bash 
+      shell: bash
     - name: Create Build Environment
-      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}}
-      
+      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/${{matrix.schema}}
     - name: Configure CMake and compile
       shell: bash
-      working-directory: ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}}/
+      working-directory: ${{runner.workspace}}/libcimpp/build/${{matrix.schema}}/
       run: |
-          cd ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}} 
-          cmake ../.. -DUSE_CIM_VERSION=${{env.USE_CIM_VERSION}}
-          make doc
-    - uses: actions/upload-artifact@v3
+          cmake ../.. -DUSE_CIM_VERSION=${{matrix.schema}}
+          make -j4 doc
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
       with:
-        name: doc_${{env.USE_CIM_VERSION}}
-        path: ${{runner.workspace}}/libcimpp/build/${{env.USE_CIM_VERSION}}/doc/html
+        name: doc_${{matrix.schema}}
+        path: ${{runner.workspace}}/libcimpp/build/${{matrix.schema}}/doc/html
