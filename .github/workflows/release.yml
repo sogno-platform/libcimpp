@@ -1,4 +1,4 @@
-name: Package build workflow
+name: Release packages
 
 on:
   push:
@@ -11,17 +11,17 @@ jobs:
     name: A job to build the packages
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Build
       id:   build-it-now
       uses: ./package/
     - name: UploadRPM
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: rpm
         path: ${{ github.workspace }}/build/*.rpm
     - name: UploadDEB
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: deb
         path: ${{ github.workspace }}/build/*.deb
@@ -30,9 +30,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: GetArtifact
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
     - name: Release
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@v2
       with:
         files: |
           rpm/*
