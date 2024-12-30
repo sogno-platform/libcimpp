@@ -1,4 +1,4 @@
-set(CPACK_PACKAGE_NAME "libcimpp${USE_CIM_VERSION}")
+set(CPACK_PACKAGE_NAME "libcimpp_${USE_CIM_VERSION}")
 set(CPACK_PACKAGE_VENDOR "Institute for Automation of Complex Power Systems, RWTH Aachen University")
 set(CPACK_PACKAGE_CONTACT "Lukas Razik <lrazik@eonerc.rwth-aachen.de>")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "CIM++ is deserialiser library for C++ objects from XML/RDF documents based on CIM standards")
