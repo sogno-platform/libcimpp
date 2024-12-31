@@ -1,4 +1,4 @@
-set(CPACK_PACKAGE_NAME "libcimpp${CIM_FOLDER}")
+set(CPACK_PACKAGE_NAME "libcimpp_${USE_CIM_VERSION}")
 set(CPACK_PACKAGE_VENDOR "Institute for Automation of Complex Power Systems, RWTH Aachen University")
 set(CPACK_PACKAGE_CONTACT "Lukas Razik <lrazik@eonerc.rwth-aachen.de>")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "CIM++ is deserialiser library for C++ objects from XML/RDF documents based on CIM standards")
@@ -7,11 +7,11 @@ set(CPACK_PACKAGE_VERSION_MINOR ${libcimpp_MINOR_VERSION})
 set(CPACK_PACKAGE_VERSION_PATCH ${libcimpp_PATCH_VERSION})
 
 set(CPACK_DEBIAN_PACKAGE_SECTION "devel")
-set(CPACK_DEBIAN_PACKAGE_HOMEPAGE "http://www.fein-aachen.org/projects/cimpp/")
+set(CPACK_DEBIAN_PACKAGE_HOMEPAGE "https://github.com/sogno-platform/libcimpp")
 set(CPACK_DEBIAN_PACKAGE_ARCHITECTURE "amd64")
 
-set(CPACK_RPM_PACKAGE_LICENSE "MPL 2.0")
-set(CPACK_RPM_PACKAGE_URL "http://www.fein-aachen.org/projects/cimpp/")
+set(CPACK_RPM_PACKAGE_LICENSE "Apache-2.0")
+set(CPACK_RPM_PACKAGE_URL "https://github.com/sogno-platform/libcimpp")
 set(CPACK_RPM_PACKAGE_GROUP "Development/Libraries")
 
 set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")

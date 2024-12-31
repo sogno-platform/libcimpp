@@ -1,4 +1,4 @@
-name: Package build workflow
+name: Release packages
 
 on:
   push:
@@ -9,33 +9,42 @@ jobs:
   package:
     runs-on: ubuntu-latest
     name: A job to build the packages
+    strategy:
+      matrix:
+        schema:
+        - CGMES_2.4.13_18DEC2013
+        - CGMES_2.4.15_16FEB2016
+        - CGMES_2.4.15_27JAN2020
+        - CGMES_3.0.0
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Build
-      id:   build-it-now
       uses: ./package/
+      env:
+        USE_CIM_VERSION: ${{matrix.schema}}
     - name: UploadRPM
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
-        name: rpm
+        name: rpm_${{matrix.schema}}
         path: ${{ github.workspace }}/build/*.rpm
     - name: UploadDEB
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
-        name: deb
+        name: deb_${{matrix.schema}}
         path: ${{ github.workspace }}/build/*.deb
   release:
     needs: package
     runs-on: ubuntu-latest
     steps:
     - name: GetArtifact
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
     - name: Release
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@v2
       with:
         files: |
-          rpm/*
-          deb/*
+          */*.rpm
+          */*.deb
+        fail_on_unmatched_files: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
