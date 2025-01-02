@@ -1,6 +1,6 @@
 # libcimpp
 
-libcimpp is a deserialiser library for C++ objects from XML/RDF documents based on the Common Information Model (CIM) standards (i.e. IEC61970/61968/62325) and CGMES for the energy sector.
+libcimpp is a serialiser & deserialiser library for C++ objects from XML/RDF documents based on the Common Information Model (CIM) standards (i.e. IEC61970/61968/62325) and CGMES for the energy sector.
 It is part of the CIM++ project. More on CIM++ can be found [here](http://rdcu.be/vOop).
 
 Supported CIM / CGMES versions:
