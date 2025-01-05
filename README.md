@@ -5,8 +5,8 @@ It is part of the CIM++ project. More on CIM++ can be found [here](http://rdcu.b
 
 Supported CIM / CGMES versions:
 
-+ [CGMES_2.4.13_18DEC2013](https://sogno-platform.github.io/libcimpp/CGMES_2.4.13_18DEC2013/annotated.html)
-+ [CGMES_2.4.15_16FEB2016](https://sogno-platform.github.io/libcimpp/CGMES_2.4.15_16FEB2016/annotated.html)
++ CGMES_2.4.13_18DEC2013
++ CGMES_2.4.15_16FEB2016
 + [CGMES_2.4.15_27JAN2020](https://sogno-platform.github.io/libcimpp/CGMES_2.4.15_27JAN2020/annotated.html)
 + [CGMES_3.0.0](https://sogno-platform.github.io/libcimpp/CGMES_3.0.0/annotated.html)
 
