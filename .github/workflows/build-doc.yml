@@ -11,8 +11,6 @@ jobs:
     strategy:
       matrix:
         schema:
-        - CGMES_2.4.13_18DEC2013
-        - CGMES_2.4.15_16FEB2016
         - CGMES_2.4.15_27JAN2020
         - CGMES_3.0.0
     steps:
@@ -45,13 +43,9 @@ jobs:
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     env:
-      CIM_1: CGMES_2.4.13_18DEC2013
-      CIM_2: CGMES_2.4.15_16FEB2016
-      CIM_3: CGMES_2.4.15_27JAN2020
-      CIM_4: CGMES_3.0.0
+      CIM_1: CGMES_2.4.15_27JAN2020
+      CIM_2: CGMES_3.0.0
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
     - name: Download
       uses: actions/download-artifact@v4
     - name: Copy
@@ -60,9 +54,7 @@ jobs:
           mkdir -p ./copy_files/docs
           cp -r ./doc_${{env.CIM_1}} ./copy_files/docs/${{env.CIM_1}}
           cp -r ./doc_${{env.CIM_2}} ./copy_files/docs/${{env.CIM_2}}
-          cp -r ./doc_${{env.CIM_3}} ./copy_files/docs/${{env.CIM_3}}
-          cp -r ./doc_${{env.CIM_4}} ./copy_files/docs/${{env.CIM_4}}
-          cp ./README.md ./copy_files/docs/README.md
+          echo "<html><head><meta http-equiv='refresh' content='0; url=${{env.CIM_1}}/index.html' /></head></html>" >./copy_files/docs/index.html
     - name: Upload Artifact github-pages
       uses: actions/upload-pages-artifact@v3
       with:
