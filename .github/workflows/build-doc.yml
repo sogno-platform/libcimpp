@@ -1,11 +1,12 @@
-name: build-doc
-
+name: Documentation
 on:
+  pull_request:
   push:
-  workflow_call:
+    branches: [master]
 
 jobs:
-  build-doc:
+  build-doc-artifacts:
+    name: Build and Upload doc Artifacts
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -18,12 +19,13 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
     - name: Install Doxygen
+      shell: bash
       run: sudo apt-get install doxygen
-      shell: bash
     - name: Install Graphviz
-      run: sudo apt-get install graphviz
       shell: bash
+      run: sudo apt-get install graphviz
     - name: Create Build Environment
+      shell: bash
       run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/${{matrix.schema}}
     - name: Configure CMake and compile
       shell: bash
@@ -36,3 +38,48 @@ jobs:
       with:
         name: doc_${{matrix.schema}}
         path: ${{runner.workspace}}/libcimpp/build/${{matrix.schema}}/doc/html
+
+  build-gh-pages-artifact:
+    name: Build and Upload Artifact github-pages
+    needs: build-doc-artifacts
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    env:
+      CIM_1: CGMES_2.4.13_18DEC2013
+      CIM_2: CGMES_2.4.15_16FEB2016
+      CIM_3: CGMES_2.4.15_27JAN2020
+      CIM_4: CGMES_3.0.0
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+    - name: Download
+      uses: actions/download-artifact@v4
+    - name: Copy
+      shell: bash
+      run: |
+          mkdir -p ./copy_files/docs
+          cp -r ./doc_${{env.CIM_1}} ./copy_files/docs/${{env.CIM_1}}
+          cp -r ./doc_${{env.CIM_2}} ./copy_files/docs/${{env.CIM_2}}
+          cp -r ./doc_${{env.CIM_3}} ./copy_files/docs/${{env.CIM_3}}
+          cp -r ./doc_${{env.CIM_4}} ./copy_files/docs/${{env.CIM_4}}
+          cp ./README.md ./copy_files/docs/README.md
+    - name: Upload Artifact github-pages
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./copy_files/docs
+
+  deploy-gh-pages:
+    name: Deploy github-pages
+    needs: build-gh-pages-artifact
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{steps.deployment.outputs.page_url}}
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
