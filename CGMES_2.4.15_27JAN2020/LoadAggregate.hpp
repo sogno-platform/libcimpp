@@ -18,9 +18,7 @@ namespace CIMPP
 	class LoadMotor;
 	class LoadStatic;
 
-	/*
-	Standard aggregate load model comprised of static and/or dynamic components.  A static load model represents the sensitivity of the real and reactive power consumed by the load to the amplitude and frequency of the bus voltage. A dynamic load model can used to represent the aggregate response of the motor components of the load.
-	*/
+	/** \brief Standard aggregate load model comprised of static and/or dynamic components.  A static load model represents the sensitivity of the real and reactive power consumed by the load to the amplitude and frequency of the bus voltage. A dynamic load model can used to represent the aggregate response of the motor components of the load. */
 	class LoadAggregate : public LoadDynamics
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		LoadAggregate();
 		~LoadAggregate() override;
 
-		CIMPP::LoadMotor* LoadMotor;  /* Aggregate motor (dynamic) load associated with this aggregate load. Default: 0 */
-		CIMPP::LoadStatic* LoadStatic;  /* Aggregate static load associated with this aggregate load. Default: 0 */
+		/** \brief Aggregate motor (dynamic) load associated with this aggregate load. Default: 0 */
+		CIMPP::LoadMotor* LoadMotor;
+
+		/** \brief Aggregate static load associated with this aggregate load. Default: 0 */
+		CIMPP::LoadStatic* LoadStatic;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-AuxiliaryEquipment::AuxiliaryEquipment() : Terminal(nullptr) {};
-AuxiliaryEquipment::~AuxiliaryEquipment() {};
+AuxiliaryEquipment::AuxiliaryEquipment() : Terminal(nullptr) {}
+AuxiliaryEquipment::~AuxiliaryEquipment() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ AuxiliaryEquipment::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_Terminal_AuxiliaryEquipment(BaseClass*, BaseClass*);
 bool assign_AuxiliaryEquipment_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -59,10 +57,10 @@ bool assign_AuxiliaryEquipment_Terminal(BaseClass* BaseClass_ptr1, BaseClass* Ba
 	return false;
 }
 
-
 bool get_AuxiliaryEquipment_Terminal(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const AuxiliaryEquipment* element = dynamic_cast<const AuxiliaryEquipment*>(BaseClass_ptr1))
+	const AuxiliaryEquipment* element = dynamic_cast<const AuxiliaryEquipment*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->Terminal != 0)
 		{
@@ -73,7 +71,6 @@ bool get_AuxiliaryEquipment_Terminal(const BaseClass* BaseClass_ptr1, std::list<
 	return false;
 }
 
-
 const char AuxiliaryEquipment::debugName[] = "AuxiliaryEquipment";
 const char* AuxiliaryEquipment::debugString() const
 {
@@ -82,7 +79,7 @@ const char* AuxiliaryEquipment::debugString() const
 
 void AuxiliaryEquipment::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:AuxiliaryEquipment"), &AuxiliaryEquipment_factory));
+	factory_map.emplace("cim:AuxiliaryEquipment", &AuxiliaryEquipment_factory);
 }
 
 void AuxiliaryEquipment::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -91,7 +88,7 @@ void AuxiliaryEquipment::addPrimitiveAssignFnsToMap(std::unordered_map<std::stri
 
 void AuxiliaryEquipment::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:AuxiliaryEquipment.Terminal"), &assign_AuxiliaryEquipment_Terminal));
+	assign_map.emplace("cim:AuxiliaryEquipment.Terminal", &assign_AuxiliaryEquipment_Terminal);
 }
 
 void AuxiliaryEquipment::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

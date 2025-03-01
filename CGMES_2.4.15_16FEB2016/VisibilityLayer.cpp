@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "DiagramObject.hpp"
-#include "Integer.hpp"
 
 using namespace CIMPP;
 
-VisibilityLayer::VisibilityLayer() {};
-VisibilityLayer::~VisibilityLayer() {};
+VisibilityLayer::VisibilityLayer() {}
+VisibilityLayer::~VisibilityLayer() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,21 +41,6 @@ VisibilityLayer::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_VisibilityLayer_drawingOrder(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (VisibilityLayer* element = dynamic_cast<VisibilityLayer*>(BaseClass_ptr1))
-	{
-		buffer >> element->drawingOrder;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_DiagramObject_VisibilityLayers(BaseClass*, BaseClass*);
 bool assign_VisibilityLayer_VisibleObjects(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,9 +58,35 @@ bool assign_VisibilityLayer_VisibleObjects(BaseClass* BaseClass_ptr1, BaseClass*
 	return false;
 }
 
+bool assign_VisibilityLayer_drawingOrder(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	VisibilityLayer* element = dynamic_cast<VisibilityLayer*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->drawingOrder;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_VisibilityLayer_VisibleObjects(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const VisibilityLayer* element = dynamic_cast<const VisibilityLayer*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		std::copy(element->VisibleObjects.begin(), element->VisibleObjects.end(), std::back_inserter(BaseClass_list));
+		return !BaseClass_list.empty();
+	}
+	return false;
+}
+
 bool get_VisibilityLayer_drawingOrder(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const VisibilityLayer* element = dynamic_cast<const VisibilityLayer*>(BaseClass_ptr1))
+	const VisibilityLayer* element = dynamic_cast<const VisibilityLayer*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->drawingOrder;
 		if (!buffer.str().empty())
@@ -88,18 +98,6 @@ bool get_VisibilityLayer_drawingOrder(const BaseClass* BaseClass_ptr1, std::stri
 	return false;
 }
 
-
-bool get_VisibilityLayer_VisibleObjects(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const VisibilityLayer* element = dynamic_cast<const VisibilityLayer*>(BaseClass_ptr1))
-	{
-		std::copy(element->VisibleObjects.begin(), element->VisibleObjects.end(), std::back_inserter(BaseClass_list));
-		return !BaseClass_list.empty();
-	}
-	return false;
-}
-
-
 const char VisibilityLayer::debugName[] = "VisibilityLayer";
 const char* VisibilityLayer::debugString() const
 {
@@ -108,17 +106,17 @@ const char* VisibilityLayer::debugString() const
 
 void VisibilityLayer::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:VisibilityLayer"), &VisibilityLayer_factory));
+	factory_map.emplace("cim:VisibilityLayer", &VisibilityLayer_factory);
 }
 
 void VisibilityLayer::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:VisibilityLayer.drawingOrder"), &assign_VisibilityLayer_drawingOrder));
+	assign_map.emplace("cim:VisibilityLayer.drawingOrder", &assign_VisibilityLayer_drawingOrder);
 }
 
 void VisibilityLayer::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:VisibilityLayer.VisibleObjects"), &assign_VisibilityLayer_VisibleObjects));
+	assign_map.emplace("cim:VisibilityLayer.VisibleObjects", &assign_VisibilityLayer_VisibleObjects);
 }
 
 void VisibilityLayer::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

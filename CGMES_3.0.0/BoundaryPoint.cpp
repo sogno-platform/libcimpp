@@ -9,19 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "ConnectivityNode.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "Boolean.hpp"
-#include "Boolean.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
 
 using namespace CIMPP;
 
-BoundaryPoint::BoundaryPoint() : ConnectivityNode(nullptr) {};
-BoundaryPoint::~BoundaryPoint() {};
+BoundaryPoint::BoundaryPoint() : ConnectivityNode(nullptr) {}
+BoundaryPoint::~BoundaryPoint() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -57,112 +49,6 @@ BoundaryPoint::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_BoundaryPoint_fromEndIsoCode(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (BoundaryPoint* element = dynamic_cast<BoundaryPoint*>(BaseClass_ptr1))
-	{
-		element->fromEndIsoCode = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_BoundaryPoint_fromEndName(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (BoundaryPoint* element = dynamic_cast<BoundaryPoint*>(BaseClass_ptr1))
-	{
-		element->fromEndName = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_BoundaryPoint_fromEndNameTso(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (BoundaryPoint* element = dynamic_cast<BoundaryPoint*>(BaseClass_ptr1))
-	{
-		element->fromEndNameTso = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_BoundaryPoint_isDirectCurrent(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (BoundaryPoint* element = dynamic_cast<BoundaryPoint*>(BaseClass_ptr1))
-	{
-		buffer >> element->isDirectCurrent;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_BoundaryPoint_isExcludedFromAreaInterchange(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (BoundaryPoint* element = dynamic_cast<BoundaryPoint*>(BaseClass_ptr1))
-	{
-		buffer >> element->isExcludedFromAreaInterchange;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_BoundaryPoint_toEndIsoCode(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (BoundaryPoint* element = dynamic_cast<BoundaryPoint*>(BaseClass_ptr1))
-	{
-		element->toEndIsoCode = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_BoundaryPoint_toEndName(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (BoundaryPoint* element = dynamic_cast<BoundaryPoint*>(BaseClass_ptr1))
-	{
-		element->toEndName = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_BoundaryPoint_toEndNameTso(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (BoundaryPoint* element = dynamic_cast<BoundaryPoint*>(BaseClass_ptr1))
-	{
-		element->toEndNameTso = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_ConnectivityNode_BoundaryPoint(BaseClass*, BaseClass*);
 bool assign_BoundaryPoint_ConnectivityNode(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -180,9 +66,136 @@ bool assign_BoundaryPoint_ConnectivityNode(BaseClass* BaseClass_ptr1, BaseClass*
 	return false;
 }
 
+bool assign_BoundaryPoint_fromEndIsoCode(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	BoundaryPoint* element = dynamic_cast<BoundaryPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->fromEndIsoCode = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_BoundaryPoint_fromEndName(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	BoundaryPoint* element = dynamic_cast<BoundaryPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->fromEndName = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_BoundaryPoint_fromEndNameTso(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	BoundaryPoint* element = dynamic_cast<BoundaryPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->fromEndNameTso = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_BoundaryPoint_isDirectCurrent(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	BoundaryPoint* element = dynamic_cast<BoundaryPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->isDirectCurrent;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_BoundaryPoint_isExcludedFromAreaInterchange(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	BoundaryPoint* element = dynamic_cast<BoundaryPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->isExcludedFromAreaInterchange;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_BoundaryPoint_toEndIsoCode(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	BoundaryPoint* element = dynamic_cast<BoundaryPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->toEndIsoCode = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_BoundaryPoint_toEndName(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	BoundaryPoint* element = dynamic_cast<BoundaryPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->toEndName = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_BoundaryPoint_toEndNameTso(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	BoundaryPoint* element = dynamic_cast<BoundaryPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->toEndNameTso = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_BoundaryPoint_ConnectivityNode(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const BoundaryPoint* element = dynamic_cast<const BoundaryPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->ConnectivityNode != 0)
+		{
+			BaseClass_list.push_back(element->ConnectivityNode);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_BoundaryPoint_fromEndIsoCode(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const BoundaryPoint* element = dynamic_cast<const BoundaryPoint*>(BaseClass_ptr1))
+	const BoundaryPoint* element = dynamic_cast<const BoundaryPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->fromEndIsoCode;
 		if (!buffer.str().empty())
@@ -196,7 +209,8 @@ bool get_BoundaryPoint_fromEndIsoCode(const BaseClass* BaseClass_ptr1, std::stri
 
 bool get_BoundaryPoint_fromEndName(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const BoundaryPoint* element = dynamic_cast<const BoundaryPoint*>(BaseClass_ptr1))
+	const BoundaryPoint* element = dynamic_cast<const BoundaryPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->fromEndName;
 		if (!buffer.str().empty())
@@ -210,7 +224,8 @@ bool get_BoundaryPoint_fromEndName(const BaseClass* BaseClass_ptr1, std::strings
 
 bool get_BoundaryPoint_fromEndNameTso(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const BoundaryPoint* element = dynamic_cast<const BoundaryPoint*>(BaseClass_ptr1))
+	const BoundaryPoint* element = dynamic_cast<const BoundaryPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->fromEndNameTso;
 		if (!buffer.str().empty())
@@ -224,7 +239,8 @@ bool get_BoundaryPoint_fromEndNameTso(const BaseClass* BaseClass_ptr1, std::stri
 
 bool get_BoundaryPoint_isDirectCurrent(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const BoundaryPoint* element = dynamic_cast<const BoundaryPoint*>(BaseClass_ptr1))
+	const BoundaryPoint* element = dynamic_cast<const BoundaryPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->isDirectCurrent;
 		if (!buffer.str().empty())
@@ -238,7 +254,8 @@ bool get_BoundaryPoint_isDirectCurrent(const BaseClass* BaseClass_ptr1, std::str
 
 bool get_BoundaryPoint_isExcludedFromAreaInterchange(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const BoundaryPoint* element = dynamic_cast<const BoundaryPoint*>(BaseClass_ptr1))
+	const BoundaryPoint* element = dynamic_cast<const BoundaryPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->isExcludedFromAreaInterchange;
 		if (!buffer.str().empty())
@@ -252,7 +269,8 @@ bool get_BoundaryPoint_isExcludedFromAreaInterchange(const BaseClass* BaseClass_
 
 bool get_BoundaryPoint_toEndIsoCode(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const BoundaryPoint* element = dynamic_cast<const BoundaryPoint*>(BaseClass_ptr1))
+	const BoundaryPoint* element = dynamic_cast<const BoundaryPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->toEndIsoCode;
 		if (!buffer.str().empty())
@@ -266,7 +284,8 @@ bool get_BoundaryPoint_toEndIsoCode(const BaseClass* BaseClass_ptr1, std::string
 
 bool get_BoundaryPoint_toEndName(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const BoundaryPoint* element = dynamic_cast<const BoundaryPoint*>(BaseClass_ptr1))
+	const BoundaryPoint* element = dynamic_cast<const BoundaryPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->toEndName;
 		if (!buffer.str().empty())
@@ -280,7 +299,8 @@ bool get_BoundaryPoint_toEndName(const BaseClass* BaseClass_ptr1, std::stringstr
 
 bool get_BoundaryPoint_toEndNameTso(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const BoundaryPoint* element = dynamic_cast<const BoundaryPoint*>(BaseClass_ptr1))
+	const BoundaryPoint* element = dynamic_cast<const BoundaryPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->toEndNameTso;
 		if (!buffer.str().empty())
@@ -292,21 +312,6 @@ bool get_BoundaryPoint_toEndNameTso(const BaseClass* BaseClass_ptr1, std::string
 	return false;
 }
 
-
-bool get_BoundaryPoint_ConnectivityNode(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const BoundaryPoint* element = dynamic_cast<const BoundaryPoint*>(BaseClass_ptr1))
-	{
-		if (element->ConnectivityNode != 0)
-		{
-			BaseClass_list.push_back(element->ConnectivityNode);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char BoundaryPoint::debugName[] = "BoundaryPoint";
 const char* BoundaryPoint::debugString() const
 {
@@ -315,24 +320,24 @@ const char* BoundaryPoint::debugString() const
 
 void BoundaryPoint::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:BoundaryPoint"), &BoundaryPoint_factory));
+	factory_map.emplace("cim:BoundaryPoint", &BoundaryPoint_factory);
 }
 
 void BoundaryPoint::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:BoundaryPoint.fromEndIsoCode"), &assign_BoundaryPoint_fromEndIsoCode));
-	assign_map.insert(std::make_pair(std::string("cim:BoundaryPoint.fromEndName"), &assign_BoundaryPoint_fromEndName));
-	assign_map.insert(std::make_pair(std::string("cim:BoundaryPoint.fromEndNameTso"), &assign_BoundaryPoint_fromEndNameTso));
-	assign_map.insert(std::make_pair(std::string("cim:BoundaryPoint.isDirectCurrent"), &assign_BoundaryPoint_isDirectCurrent));
-	assign_map.insert(std::make_pair(std::string("cim:BoundaryPoint.isExcludedFromAreaInterchange"), &assign_BoundaryPoint_isExcludedFromAreaInterchange));
-	assign_map.insert(std::make_pair(std::string("cim:BoundaryPoint.toEndIsoCode"), &assign_BoundaryPoint_toEndIsoCode));
-	assign_map.insert(std::make_pair(std::string("cim:BoundaryPoint.toEndName"), &assign_BoundaryPoint_toEndName));
-	assign_map.insert(std::make_pair(std::string("cim:BoundaryPoint.toEndNameTso"), &assign_BoundaryPoint_toEndNameTso));
+	assign_map.emplace("cim:BoundaryPoint.fromEndIsoCode", &assign_BoundaryPoint_fromEndIsoCode);
+	assign_map.emplace("cim:BoundaryPoint.fromEndName", &assign_BoundaryPoint_fromEndName);
+	assign_map.emplace("cim:BoundaryPoint.fromEndNameTso", &assign_BoundaryPoint_fromEndNameTso);
+	assign_map.emplace("cim:BoundaryPoint.isDirectCurrent", &assign_BoundaryPoint_isDirectCurrent);
+	assign_map.emplace("cim:BoundaryPoint.isExcludedFromAreaInterchange", &assign_BoundaryPoint_isExcludedFromAreaInterchange);
+	assign_map.emplace("cim:BoundaryPoint.toEndIsoCode", &assign_BoundaryPoint_toEndIsoCode);
+	assign_map.emplace("cim:BoundaryPoint.toEndName", &assign_BoundaryPoint_toEndName);
+	assign_map.emplace("cim:BoundaryPoint.toEndNameTso", &assign_BoundaryPoint_toEndNameTso);
 }
 
 void BoundaryPoint::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:BoundaryPoint.ConnectivityNode"), &assign_BoundaryPoint_ConnectivityNode));
+	assign_map.emplace("cim:BoundaryPoint.ConnectivityNode", &assign_BoundaryPoint_ConnectivityNode);
 }
 
 void BoundaryPoint::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

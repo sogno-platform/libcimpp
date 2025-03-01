@@ -8,17 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Simple_Float.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Simple_Float.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
 
 using namespace CIMPP;
 
-VAdjIEEE::VAdjIEEE() {};
-VAdjIEEE::~VAdjIEEE() {};
+VAdjIEEE::VAdjIEEE() {}
+VAdjIEEE::~VAdjIEEE() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -50,90 +44,94 @@ VAdjIEEE::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_VAdjIEEE_adjslew(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_VAdjIEEE_adjslew(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (VAdjIEEE* element = dynamic_cast<VAdjIEEE*>(BaseClass_ptr1))
+	VAdjIEEE* element = dynamic_cast<VAdjIEEE*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->adjslew;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_VAdjIEEE_taoff(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_VAdjIEEE_taoff(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (VAdjIEEE* element = dynamic_cast<VAdjIEEE*>(BaseClass_ptr1))
+	VAdjIEEE* element = dynamic_cast<VAdjIEEE*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->taoff;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_VAdjIEEE_taon(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_VAdjIEEE_taon(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (VAdjIEEE* element = dynamic_cast<VAdjIEEE*>(BaseClass_ptr1))
+	VAdjIEEE* element = dynamic_cast<VAdjIEEE*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->taon;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_VAdjIEEE_vadjf(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_VAdjIEEE_vadjf(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (VAdjIEEE* element = dynamic_cast<VAdjIEEE*>(BaseClass_ptr1))
+	VAdjIEEE* element = dynamic_cast<VAdjIEEE*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vadjf;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_VAdjIEEE_vadjmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_VAdjIEEE_vadjmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (VAdjIEEE* element = dynamic_cast<VAdjIEEE*>(BaseClass_ptr1))
+	VAdjIEEE* element = dynamic_cast<VAdjIEEE*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vadjmax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_VAdjIEEE_vadjmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_VAdjIEEE_vadjmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (VAdjIEEE* element = dynamic_cast<VAdjIEEE*>(BaseClass_ptr1))
+	VAdjIEEE* element = dynamic_cast<VAdjIEEE*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vadjmin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_VAdjIEEE_adjslew(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const VAdjIEEE* element = dynamic_cast<const VAdjIEEE*>(BaseClass_ptr1))
+	const VAdjIEEE* element = dynamic_cast<const VAdjIEEE*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->adjslew;
 		if (!buffer.str().empty())
@@ -147,7 +145,8 @@ bool get_VAdjIEEE_adjslew(const BaseClass* BaseClass_ptr1, std::stringstream& bu
 
 bool get_VAdjIEEE_taoff(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const VAdjIEEE* element = dynamic_cast<const VAdjIEEE*>(BaseClass_ptr1))
+	const VAdjIEEE* element = dynamic_cast<const VAdjIEEE*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->taoff;
 		if (!buffer.str().empty())
@@ -161,7 +160,8 @@ bool get_VAdjIEEE_taoff(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_VAdjIEEE_taon(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const VAdjIEEE* element = dynamic_cast<const VAdjIEEE*>(BaseClass_ptr1))
+	const VAdjIEEE* element = dynamic_cast<const VAdjIEEE*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->taon;
 		if (!buffer.str().empty())
@@ -175,7 +175,8 @@ bool get_VAdjIEEE_taon(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_VAdjIEEE_vadjf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const VAdjIEEE* element = dynamic_cast<const VAdjIEEE*>(BaseClass_ptr1))
+	const VAdjIEEE* element = dynamic_cast<const VAdjIEEE*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vadjf;
 		if (!buffer.str().empty())
@@ -189,7 +190,8 @@ bool get_VAdjIEEE_vadjf(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_VAdjIEEE_vadjmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const VAdjIEEE* element = dynamic_cast<const VAdjIEEE*>(BaseClass_ptr1))
+	const VAdjIEEE* element = dynamic_cast<const VAdjIEEE*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vadjmax;
 		if (!buffer.str().empty())
@@ -203,7 +205,8 @@ bool get_VAdjIEEE_vadjmax(const BaseClass* BaseClass_ptr1, std::stringstream& bu
 
 bool get_VAdjIEEE_vadjmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const VAdjIEEE* element = dynamic_cast<const VAdjIEEE*>(BaseClass_ptr1))
+	const VAdjIEEE* element = dynamic_cast<const VAdjIEEE*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vadjmin;
 		if (!buffer.str().empty())
@@ -215,8 +218,6 @@ bool get_VAdjIEEE_vadjmin(const BaseClass* BaseClass_ptr1, std::stringstream& bu
 	return false;
 }
 
-
-
 const char VAdjIEEE::debugName[] = "VAdjIEEE";
 const char* VAdjIEEE::debugString() const
 {
@@ -225,17 +226,17 @@ const char* VAdjIEEE::debugString() const
 
 void VAdjIEEE::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:VAdjIEEE"), &VAdjIEEE_factory));
+	factory_map.emplace("cim:VAdjIEEE", &VAdjIEEE_factory);
 }
 
 void VAdjIEEE::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:VAdjIEEE.adjslew"), &assign_VAdjIEEE_adjslew));
-	assign_map.insert(std::make_pair(std::string("cim:VAdjIEEE.taoff"), &assign_VAdjIEEE_taoff));
-	assign_map.insert(std::make_pair(std::string("cim:VAdjIEEE.taon"), &assign_VAdjIEEE_taon));
-	assign_map.insert(std::make_pair(std::string("cim:VAdjIEEE.vadjf"), &assign_VAdjIEEE_vadjf));
-	assign_map.insert(std::make_pair(std::string("cim:VAdjIEEE.vadjmax"), &assign_VAdjIEEE_vadjmax));
-	assign_map.insert(std::make_pair(std::string("cim:VAdjIEEE.vadjmin"), &assign_VAdjIEEE_vadjmin));
+	assign_map.emplace("cim:VAdjIEEE.adjslew", &assign_VAdjIEEE_adjslew);
+	assign_map.emplace("cim:VAdjIEEE.taoff", &assign_VAdjIEEE_taoff);
+	assign_map.emplace("cim:VAdjIEEE.taon", &assign_VAdjIEEE_taon);
+	assign_map.emplace("cim:VAdjIEEE.vadjf", &assign_VAdjIEEE_vadjf);
+	assign_map.emplace("cim:VAdjIEEE.vadjmax", &assign_VAdjIEEE_vadjmax);
+	assign_map.emplace("cim:VAdjIEEE.vadjmin", &assign_VAdjIEEE_vadjmin);
 }
 
 void VAdjIEEE::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

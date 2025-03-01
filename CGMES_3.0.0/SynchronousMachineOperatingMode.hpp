@@ -9,25 +9,17 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Synchronous machine operating mode.
-	*/
+	/** \brief Synchronous machine operating mode. */
 	class SynchronousMachineOperatingMode
 	{
 	public:
 		enum SynchronousMachineOperatingMode_ENUM
 		{
-			/**
-			 * Operating as generator.
-			 */
+			/** Operating as generator. */
 			generator,
-			/**
-			 * Operating as condenser.
-			 */
+			/** Operating as condenser. */
 			condenser,
-			/**
-			 * Operating as motor.
-			 */
+			/** Operating as motor. */
 			motor,
 		};
 

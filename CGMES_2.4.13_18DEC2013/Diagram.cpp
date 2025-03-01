@@ -10,16 +10,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 #include "DiagramObject.hpp"
 #include "DiagramStyle.hpp"
-#include "OrientationKind.hpp"
-#include "Simple_Float.hpp"
-#include "Simple_Float.hpp"
-#include "Simple_Float.hpp"
-#include "Simple_Float.hpp"
 
 using namespace CIMPP;
 
-Diagram::Diagram() : DiagramStyle(nullptr) {};
-Diagram::~Diagram() {};
+Diagram::Diagram() : DiagramStyle(nullptr) {}
+Diagram::~Diagram() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -52,73 +47,6 @@ Diagram::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_Diagram_orientation(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (Diagram* element = dynamic_cast<Diagram*>(BaseClass_ptr1))
-	{
-		buffer >> element->orientation;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_Diagram_x1InitialView(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (Diagram* element = dynamic_cast<Diagram*>(BaseClass_ptr1))
-	{
-		buffer >> element->x1InitialView;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_Diagram_x2InitialView(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (Diagram* element = dynamic_cast<Diagram*>(BaseClass_ptr1))
-	{
-		buffer >> element->x2InitialView;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_Diagram_y1InitialView(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (Diagram* element = dynamic_cast<Diagram*>(BaseClass_ptr1))
-	{
-		buffer >> element->y1InitialView;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_Diagram_y2InitialView(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (Diagram* element = dynamic_cast<Diagram*>(BaseClass_ptr1))
-	{
-		buffer >> element->y2InitialView;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_DiagramObject_Diagram(BaseClass*, BaseClass*);
 bool assign_Diagram_DiagramElements(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -135,6 +63,7 @@ bool assign_Diagram_DiagramElements(BaseClass* BaseClass_ptr1, BaseClass* BaseCl
 	}
 	return false;
 }
+
 bool assign_DiagramStyle_Diagram(BaseClass*, BaseClass*);
 bool assign_Diagram_DiagramStyle(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -152,9 +81,110 @@ bool assign_Diagram_DiagramStyle(BaseClass* BaseClass_ptr1, BaseClass* BaseClass
 	return false;
 }
 
+bool assign_Diagram_orientation(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	Diagram* element = dynamic_cast<Diagram*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->orientation;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_Diagram_x1InitialView(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	Diagram* element = dynamic_cast<Diagram*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->x1InitialView;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_Diagram_x2InitialView(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	Diagram* element = dynamic_cast<Diagram*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->x2InitialView;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_Diagram_y1InitialView(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	Diagram* element = dynamic_cast<Diagram*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->y1InitialView;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_Diagram_y2InitialView(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	Diagram* element = dynamic_cast<Diagram*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->y2InitialView;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
+bool get_Diagram_DiagramStyle(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const Diagram* element = dynamic_cast<const Diagram*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->DiagramStyle != 0)
+		{
+			BaseClass_list.push_back(element->DiagramStyle);
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_Diagram_orientation(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	const Diagram* element = dynamic_cast<const Diagram*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer << element->orientation;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
 bool get_Diagram_x1InitialView(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Diagram* element = dynamic_cast<const Diagram*>(BaseClass_ptr1))
+	const Diagram* element = dynamic_cast<const Diagram*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->x1InitialView;
 		if (!buffer.str().empty())
@@ -168,7 +198,8 @@ bool get_Diagram_x1InitialView(const BaseClass* BaseClass_ptr1, std::stringstrea
 
 bool get_Diagram_x2InitialView(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Diagram* element = dynamic_cast<const Diagram*>(BaseClass_ptr1))
+	const Diagram* element = dynamic_cast<const Diagram*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->x2InitialView;
 		if (!buffer.str().empty())
@@ -182,7 +213,8 @@ bool get_Diagram_x2InitialView(const BaseClass* BaseClass_ptr1, std::stringstrea
 
 bool get_Diagram_y1InitialView(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Diagram* element = dynamic_cast<const Diagram*>(BaseClass_ptr1))
+	const Diagram* element = dynamic_cast<const Diagram*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->y1InitialView;
 		if (!buffer.str().empty())
@@ -196,38 +228,10 @@ bool get_Diagram_y1InitialView(const BaseClass* BaseClass_ptr1, std::stringstrea
 
 bool get_Diagram_y2InitialView(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Diagram* element = dynamic_cast<const Diagram*>(BaseClass_ptr1))
+	const Diagram* element = dynamic_cast<const Diagram*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->y2InitialView;
-		if (!buffer.str().empty())
-		{
-			return true;
-		}
-	}
-	buffer.setstate(std::ios::failbit);
-	return false;
-}
-
-
-bool get_Diagram_DiagramStyle(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const Diagram* element = dynamic_cast<const Diagram*>(BaseClass_ptr1))
-	{
-		if (element->DiagramStyle != 0)
-		{
-			BaseClass_list.push_back(element->DiagramStyle);
-			return true;
-		}
-	}
-	return false;
-}
-
-
-bool get_Diagram_orientation(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
-{
-	if (const Diagram* element = dynamic_cast<const Diagram*>(BaseClass_ptr1))
-	{
-		buffer << element->orientation;
 		if (!buffer.str().empty())
 		{
 			return true;
@@ -245,22 +249,22 @@ const char* Diagram::debugString() const
 
 void Diagram::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:Diagram"), &Diagram_factory));
+	factory_map.emplace("cim:Diagram", &Diagram_factory);
 }
 
 void Diagram::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Diagram.orientation"), &assign_Diagram_orientation));
-	assign_map.insert(std::make_pair(std::string("cim:Diagram.x1InitialView"), &assign_Diagram_x1InitialView));
-	assign_map.insert(std::make_pair(std::string("cim:Diagram.x2InitialView"), &assign_Diagram_x2InitialView));
-	assign_map.insert(std::make_pair(std::string("cim:Diagram.y1InitialView"), &assign_Diagram_y1InitialView));
-	assign_map.insert(std::make_pair(std::string("cim:Diagram.y2InitialView"), &assign_Diagram_y2InitialView));
+	assign_map.emplace("cim:Diagram.orientation", &assign_Diagram_orientation);
+	assign_map.emplace("cim:Diagram.x1InitialView", &assign_Diagram_x1InitialView);
+	assign_map.emplace("cim:Diagram.x2InitialView", &assign_Diagram_x2InitialView);
+	assign_map.emplace("cim:Diagram.y1InitialView", &assign_Diagram_y1InitialView);
+	assign_map.emplace("cim:Diagram.y2InitialView", &assign_Diagram_y2InitialView);
 }
 
 void Diagram::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Diagram.DiagramElements"), &assign_Diagram_DiagramElements));
-	assign_map.insert(std::make_pair(std::string("cim:Diagram.DiagramStyle"), &assign_Diagram_DiagramStyle));
+	assign_map.emplace("cim:Diagram.DiagramElements", &assign_Diagram_DiagramElements);
+	assign_map.emplace("cim:Diagram.DiagramStyle", &assign_Diagram_DiagramStyle);
 }
 
 void Diagram::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

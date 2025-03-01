@@ -8,23 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Boolean.hpp"
-#include "Boolean.hpp"
-#include "Boolean.hpp"
-#include "Boolean.hpp"
-#include "Boolean.hpp"
-#include "Boolean.hpp"
-#include "Boolean.hpp"
-#include "Boolean.hpp"
-#include "Source.hpp"
-#include "Boolean.hpp"
-#include "Boolean.hpp"
-#include "Validity.hpp"
 
 using namespace CIMPP;
 
-Quality61850::Quality61850() {};
-Quality61850::~Quality61850() {};
+Quality61850::Quality61850() {}
+Quality61850::~Quality61850() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -62,168 +50,178 @@ Quality61850::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_Quality61850_badReference(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Quality61850_badReference(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1))
+	Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->badReference;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Quality61850_estimatorReplaced(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Quality61850_estimatorReplaced(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1))
+	Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->estimatorReplaced;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Quality61850_failure(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Quality61850_failure(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1))
+	Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->failure;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Quality61850_oldData(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Quality61850_oldData(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1))
+	Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->oldData;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Quality61850_operatorBlocked(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Quality61850_operatorBlocked(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1))
+	Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->operatorBlocked;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Quality61850_oscillatory(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Quality61850_oscillatory(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1))
+	Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->oscillatory;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Quality61850_outOfRange(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Quality61850_outOfRange(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1))
+	Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->outOfRange;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Quality61850_overFlow(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Quality61850_overFlow(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1))
+	Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->overFlow;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Quality61850_source(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Quality61850_source(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1))
+	Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->source;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Quality61850_suspect(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Quality61850_suspect(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1))
+	Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->suspect;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Quality61850_test(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Quality61850_test(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1))
+	Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->test;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Quality61850_validity(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Quality61850_validity(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1))
+	Quality61850* element = dynamic_cast<Quality61850*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->validity;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_Quality61850_badReference(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Quality61850* element = dynamic_cast<const Quality61850*>(BaseClass_ptr1))
+	const Quality61850* element = dynamic_cast<const Quality61850*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->badReference;
 		if (!buffer.str().empty())
@@ -237,7 +235,8 @@ bool get_Quality61850_badReference(const BaseClass* BaseClass_ptr1, std::strings
 
 bool get_Quality61850_estimatorReplaced(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Quality61850* element = dynamic_cast<const Quality61850*>(BaseClass_ptr1))
+	const Quality61850* element = dynamic_cast<const Quality61850*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->estimatorReplaced;
 		if (!buffer.str().empty())
@@ -251,7 +250,8 @@ bool get_Quality61850_estimatorReplaced(const BaseClass* BaseClass_ptr1, std::st
 
 bool get_Quality61850_failure(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Quality61850* element = dynamic_cast<const Quality61850*>(BaseClass_ptr1))
+	const Quality61850* element = dynamic_cast<const Quality61850*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->failure;
 		if (!buffer.str().empty())
@@ -265,7 +265,8 @@ bool get_Quality61850_failure(const BaseClass* BaseClass_ptr1, std::stringstream
 
 bool get_Quality61850_oldData(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Quality61850* element = dynamic_cast<const Quality61850*>(BaseClass_ptr1))
+	const Quality61850* element = dynamic_cast<const Quality61850*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->oldData;
 		if (!buffer.str().empty())
@@ -279,7 +280,8 @@ bool get_Quality61850_oldData(const BaseClass* BaseClass_ptr1, std::stringstream
 
 bool get_Quality61850_operatorBlocked(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Quality61850* element = dynamic_cast<const Quality61850*>(BaseClass_ptr1))
+	const Quality61850* element = dynamic_cast<const Quality61850*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->operatorBlocked;
 		if (!buffer.str().empty())
@@ -293,7 +295,8 @@ bool get_Quality61850_operatorBlocked(const BaseClass* BaseClass_ptr1, std::stri
 
 bool get_Quality61850_oscillatory(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Quality61850* element = dynamic_cast<const Quality61850*>(BaseClass_ptr1))
+	const Quality61850* element = dynamic_cast<const Quality61850*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->oscillatory;
 		if (!buffer.str().empty())
@@ -307,7 +310,8 @@ bool get_Quality61850_oscillatory(const BaseClass* BaseClass_ptr1, std::stringst
 
 bool get_Quality61850_outOfRange(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Quality61850* element = dynamic_cast<const Quality61850*>(BaseClass_ptr1))
+	const Quality61850* element = dynamic_cast<const Quality61850*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->outOfRange;
 		if (!buffer.str().empty())
@@ -321,7 +325,8 @@ bool get_Quality61850_outOfRange(const BaseClass* BaseClass_ptr1, std::stringstr
 
 bool get_Quality61850_overFlow(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Quality61850* element = dynamic_cast<const Quality61850*>(BaseClass_ptr1))
+	const Quality61850* element = dynamic_cast<const Quality61850*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->overFlow;
 		if (!buffer.str().empty())
@@ -333,9 +338,25 @@ bool get_Quality61850_overFlow(const BaseClass* BaseClass_ptr1, std::stringstrea
 	return false;
 }
 
+bool get_Quality61850_source(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	const Quality61850* element = dynamic_cast<const Quality61850*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer << element->source;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
 bool get_Quality61850_suspect(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Quality61850* element = dynamic_cast<const Quality61850*>(BaseClass_ptr1))
+	const Quality61850* element = dynamic_cast<const Quality61850*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->suspect;
 		if (!buffer.str().empty())
@@ -349,7 +370,8 @@ bool get_Quality61850_suspect(const BaseClass* BaseClass_ptr1, std::stringstream
 
 bool get_Quality61850_test(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Quality61850* element = dynamic_cast<const Quality61850*>(BaseClass_ptr1))
+	const Quality61850* element = dynamic_cast<const Quality61850*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->test;
 		if (!buffer.str().empty())
@@ -361,25 +383,10 @@ bool get_Quality61850_test(const BaseClass* BaseClass_ptr1, std::stringstream& b
 	return false;
 }
 
-
-
-bool get_Quality61850_source(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
-{
-	if (const Quality61850* element = dynamic_cast<const Quality61850*>(BaseClass_ptr1))
-	{
-		buffer << element->source;
-		if (!buffer.str().empty())
-		{
-			return true;
-		}
-	}
-	buffer.setstate(std::ios::failbit);
-	return false;
-}
-
 bool get_Quality61850_validity(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Quality61850* element = dynamic_cast<const Quality61850*>(BaseClass_ptr1))
+	const Quality61850* element = dynamic_cast<const Quality61850*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->validity;
 		if (!buffer.str().empty())
@@ -399,23 +406,23 @@ const char* Quality61850::debugString() const
 
 void Quality61850::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:Quality61850"), &Quality61850_factory));
+	factory_map.emplace("cim:Quality61850", &Quality61850_factory);
 }
 
 void Quality61850::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Quality61850.badReference"), &assign_Quality61850_badReference));
-	assign_map.insert(std::make_pair(std::string("cim:Quality61850.estimatorReplaced"), &assign_Quality61850_estimatorReplaced));
-	assign_map.insert(std::make_pair(std::string("cim:Quality61850.failure"), &assign_Quality61850_failure));
-	assign_map.insert(std::make_pair(std::string("cim:Quality61850.oldData"), &assign_Quality61850_oldData));
-	assign_map.insert(std::make_pair(std::string("cim:Quality61850.operatorBlocked"), &assign_Quality61850_operatorBlocked));
-	assign_map.insert(std::make_pair(std::string("cim:Quality61850.oscillatory"), &assign_Quality61850_oscillatory));
-	assign_map.insert(std::make_pair(std::string("cim:Quality61850.outOfRange"), &assign_Quality61850_outOfRange));
-	assign_map.insert(std::make_pair(std::string("cim:Quality61850.overFlow"), &assign_Quality61850_overFlow));
-	assign_map.insert(std::make_pair(std::string("cim:Quality61850.source"), &assign_Quality61850_source));
-	assign_map.insert(std::make_pair(std::string("cim:Quality61850.suspect"), &assign_Quality61850_suspect));
-	assign_map.insert(std::make_pair(std::string("cim:Quality61850.test"), &assign_Quality61850_test));
-	assign_map.insert(std::make_pair(std::string("cim:Quality61850.validity"), &assign_Quality61850_validity));
+	assign_map.emplace("cim:Quality61850.badReference", &assign_Quality61850_badReference);
+	assign_map.emplace("cim:Quality61850.estimatorReplaced", &assign_Quality61850_estimatorReplaced);
+	assign_map.emplace("cim:Quality61850.failure", &assign_Quality61850_failure);
+	assign_map.emplace("cim:Quality61850.oldData", &assign_Quality61850_oldData);
+	assign_map.emplace("cim:Quality61850.operatorBlocked", &assign_Quality61850_operatorBlocked);
+	assign_map.emplace("cim:Quality61850.oscillatory", &assign_Quality61850_oscillatory);
+	assign_map.emplace("cim:Quality61850.outOfRange", &assign_Quality61850_outOfRange);
+	assign_map.emplace("cim:Quality61850.overFlow", &assign_Quality61850_overFlow);
+	assign_map.emplace("cim:Quality61850.source", &assign_Quality61850_source);
+	assign_map.emplace("cim:Quality61850.suspect", &assign_Quality61850_suspect);
+	assign_map.emplace("cim:Quality61850.test", &assign_Quality61850_test);
+	assign_map.emplace("cim:Quality61850.validity", &assign_Quality61850_validity);
 }
 
 void Quality61850::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

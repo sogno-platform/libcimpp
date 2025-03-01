@@ -20,9 +20,7 @@ namespace CIMPP
 	class Terminal;
 	class TopologicalNode;
 
-	/*
-	Connectivity nodes are points where terminals of AC conducting equipment are connected together with zero impedance.
-	*/
+	/** \brief Connectivity nodes are points where terminals of AC conducting equipment are connected together with zero impedance. */
 	class ConnectivityNode : public IdentifiedObject
 	{
 	public:
@@ -30,10 +28,17 @@ namespace CIMPP
 		ConnectivityNode();
 		~ConnectivityNode() override;
 
-		CIMPP::BoundaryPoint* BoundaryPoint;  /* The boundary point associated with the connectivity node. Default: 0 */
-		CIMPP::ConnectivityNodeContainer* ConnectivityNodeContainer;  /* Container of this connectivity node. Default: 0 */
-		std::list<CIMPP::Terminal*> Terminals;  /* Terminals interconnected with zero impedance at a this connectivity node. Default: 0 */
-		CIMPP::TopologicalNode* TopologicalNode;  /* The topological node to which this connectivity node is assigned.  May depend on the current state of switches in the network. Default: 0 */
+		/** \brief The boundary point associated with the connectivity node. Default: 0 */
+		CIMPP::BoundaryPoint* BoundaryPoint;
+
+		/** \brief Container of this connectivity node. Default: 0 */
+		CIMPP::ConnectivityNodeContainer* ConnectivityNodeContainer;
+
+		/** \brief Terminals interconnected with zero impedance at a this connectivity node. Default: 0 */
+		std::list<CIMPP::Terminal*> Terminals;
+
+		/** \brief The topological node to which this connectivity node is assigned.  May depend on the current state of switches in the network. Default: 0 */
+		CIMPP::TopologicalNode* TopologicalNode;
 
 		static const char debugName[];
 		const char* debugString() const override;

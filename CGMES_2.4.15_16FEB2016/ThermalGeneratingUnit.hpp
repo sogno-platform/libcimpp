@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class FossilFuel;
 
-	/*
-	A generating unit whose prime mover could be a steam turbine, combustion turbine, or diesel engine.
-	*/
+	/** \brief A generating unit whose prime mover could be a steam turbine, combustion turbine, or diesel engine. */
 	class ThermalGeneratingUnit : public GeneratingUnit
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		ThermalGeneratingUnit();
 		~ThermalGeneratingUnit() override;
 
-		std::list<CIMPP::FossilFuel*> FossilFuels;  /* A thermal generating unit may have one or more fossil fuels. Default: 0 */
+		/** \brief A thermal generating unit may have one or more fossil fuels. Default: 0 */
+		std::list<CIMPP::FossilFuel*> FossilFuels;
 
 		static const char debugName[];
 		const char* debugString() const override;

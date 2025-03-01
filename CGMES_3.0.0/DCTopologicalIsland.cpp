@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-DCTopologicalIsland::DCTopologicalIsland() {};
-DCTopologicalIsland::~DCTopologicalIsland() {};
+DCTopologicalIsland::DCTopologicalIsland() {}
+DCTopologicalIsland::~DCTopologicalIsland() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ DCTopologicalIsland::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_DCTopologicalNode_DCTopologicalIsland(BaseClass*, BaseClass*);
 bool assign_DCTopologicalIsland_DCTopologicalNodes(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -59,17 +57,16 @@ bool assign_DCTopologicalIsland_DCTopologicalNodes(BaseClass* BaseClass_ptr1, Ba
 	return false;
 }
 
-
 bool get_DCTopologicalIsland_DCTopologicalNodes(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const DCTopologicalIsland* element = dynamic_cast<const DCTopologicalIsland*>(BaseClass_ptr1))
+	const DCTopologicalIsland* element = dynamic_cast<const DCTopologicalIsland*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		std::copy(element->DCTopologicalNodes.begin(), element->DCTopologicalNodes.end(), std::back_inserter(BaseClass_list));
 		return !BaseClass_list.empty();
 	}
 	return false;
 }
-
 
 const char DCTopologicalIsland::debugName[] = "DCTopologicalIsland";
 const char* DCTopologicalIsland::debugString() const
@@ -79,7 +76,7 @@ const char* DCTopologicalIsland::debugString() const
 
 void DCTopologicalIsland::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:DCTopologicalIsland"), &DCTopologicalIsland_factory));
+	factory_map.emplace("cim:DCTopologicalIsland", &DCTopologicalIsland_factory);
 }
 
 void DCTopologicalIsland::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -88,7 +85,7 @@ void DCTopologicalIsland::addPrimitiveAssignFnsToMap(std::unordered_map<std::str
 
 void DCTopologicalIsland::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:DCTopologicalIsland.DCTopologicalNodes"), &assign_DCTopologicalIsland_DCTopologicalNodes));
+	assign_map.emplace("cim:DCTopologicalIsland.DCTopologicalNodes", &assign_DCTopologicalIsland_DCTopologicalNodes);
 }
 
 void DCTopologicalIsland::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

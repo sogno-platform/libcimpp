@@ -8,12 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Resistance.hpp"
 
 using namespace CIMPP;
 
-EarthFaultCompensator::EarthFaultCompensator() {};
-EarthFaultCompensator::~EarthFaultCompensator() {};
+EarthFaultCompensator::EarthFaultCompensator() {}
+EarthFaultCompensator::~EarthFaultCompensator() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -41,25 +40,24 @@ EarthFaultCompensator::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_EarthFaultCompensator_r(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EarthFaultCompensator_r(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EarthFaultCompensator* element = dynamic_cast<EarthFaultCompensator*>(BaseClass_ptr1))
+	EarthFaultCompensator* element = dynamic_cast<EarthFaultCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->r;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-
-
 bool get_EarthFaultCompensator_r(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EarthFaultCompensator* element = dynamic_cast<const EarthFaultCompensator*>(BaseClass_ptr1))
+	const EarthFaultCompensator* element = dynamic_cast<const EarthFaultCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->r;
 		if (!buffer.str().empty())
@@ -71,8 +69,6 @@ bool get_EarthFaultCompensator_r(const BaseClass* BaseClass_ptr1, std::stringstr
 	return false;
 }
 
-
-
 const char EarthFaultCompensator::debugName[] = "EarthFaultCompensator";
 const char* EarthFaultCompensator::debugString() const
 {
@@ -81,12 +77,12 @@ const char* EarthFaultCompensator::debugString() const
 
 void EarthFaultCompensator::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:EarthFaultCompensator"), &EarthFaultCompensator_factory));
+	factory_map.emplace("cim:EarthFaultCompensator", &EarthFaultCompensator_factory);
 }
 
 void EarthFaultCompensator::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:EarthFaultCompensator.r"), &assign_EarthFaultCompensator_r));
+	assign_map.emplace("cim:EarthFaultCompensator.r", &assign_EarthFaultCompensator_r);
 }
 
 void EarthFaultCompensator::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

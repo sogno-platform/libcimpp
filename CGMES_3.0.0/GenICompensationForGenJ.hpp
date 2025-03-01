@@ -19,9 +19,7 @@ namespace CIMPP
 	class SynchronousMachineDynamics;
 	class VCompIEEEType2;
 
-	/*
-	Resistive and reactive components of compensation for generator associated with IEEE type 2 voltage compensator for current flow out of another generator in the interconnection.
-	*/
+	/** \brief Resistive and reactive components of compensation for generator associated with IEEE type 2 voltage compensator for current flow out of another generator in the interconnection. */
 	class GenICompensationForGenJ : public IdentifiedObject
 	{
 	public:
@@ -29,10 +27,17 @@ namespace CIMPP
 		GenICompensationForGenJ();
 		~GenICompensationForGenJ() override;
 
-		CIMPP::SynchronousMachineDynamics* SynchronousMachineDynamics;  /* Standard synchronous machine out of which current flow is being compensated for. Default: 0 */
-		CIMPP::VCompIEEEType2* VcompIEEEType2;  /* The standard IEEE type 2 voltage compensator of this compensation. Default: 0 */
-		CIMPP::PU rcij;  /* &lt;font color=`#0f0f0f`&gt;Resistive component of compensation of generator associated with this IEEE type 2 voltage compensator for current flow out of another generator (&lt;i&gt;Rcij&lt;/i&gt;).&lt;/font&gt; Default: nullptr */
-		CIMPP::PU xcij;  /* &lt;font color=`#0f0f0f`&gt;Reactive component of compensation of generator associated with this IEEE type 2 voltage compensator for current flow out of another generator (&lt;i&gt;Xcij&lt;/i&gt;).&lt;/font&gt; Default: nullptr */
+		/** \brief Standard synchronous machine out of which current flow is being compensated for. Default: 0 */
+		CIMPP::SynchronousMachineDynamics* SynchronousMachineDynamics;
+
+		/** \brief The standard IEEE type 2 voltage compensator of this compensation. Default: 0 */
+		CIMPP::VCompIEEEType2* VcompIEEEType2;
+
+		/** \brief &lt;font color=`#0f0f0f`&gt;Resistive component of compensation of generator associated with this IEEE type 2 voltage compensator for current flow out of another generator (&lt;i&gt;Rcij&lt;/i&gt;).&lt;/font&gt; Default: nullptr */
+		CIMPP::PU rcij;
+
+		/** \brief &lt;font color=`#0f0f0f`&gt;Reactive component of compensation of generator associated with this IEEE type 2 voltage compensator for current flow out of another generator (&lt;i&gt;Xcij&lt;/i&gt;).&lt;/font&gt; Default: nullptr */
+		CIMPP::PU xcij;
 
 		static const char debugName[];
 		const char* debugString() const override;

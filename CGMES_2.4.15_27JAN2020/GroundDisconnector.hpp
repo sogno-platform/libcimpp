@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A manually operated or motor operated mechanical switching device used for isolating a circuit or equipment from ground.
-	*/
+	/** \brief A manually operated or motor operated mechanical switching device used for isolating a circuit or equipment from ground. */
 	class GroundDisconnector : public Switch
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		GroundDisconnector();
 		~GroundDisconnector() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

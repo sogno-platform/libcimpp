@@ -9,14 +9,14 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "DCLine.hpp"
-#include "Line.hpp"
 #include "GeographicalRegion.hpp"
+#include "Line.hpp"
 #include "Substation.hpp"
 
 using namespace CIMPP;
 
-SubGeographicalRegion::SubGeographicalRegion() : Region(nullptr) {};
-SubGeographicalRegion::~SubGeographicalRegion() {};
+SubGeographicalRegion::SubGeographicalRegion() : Region(nullptr) {}
+SubGeographicalRegion::~SubGeographicalRegion() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -47,8 +47,6 @@ SubGeographicalRegion::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_DCLine_Region(BaseClass*, BaseClass*);
 bool assign_SubGeographicalRegion_DCLines(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -65,6 +63,7 @@ bool assign_SubGeographicalRegion_DCLines(BaseClass* BaseClass_ptr1, BaseClass* 
 	}
 	return false;
 }
+
 bool assign_Line_Region(BaseClass*, BaseClass*);
 bool assign_SubGeographicalRegion_Lines(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -81,6 +80,7 @@ bool assign_SubGeographicalRegion_Lines(BaseClass* BaseClass_ptr1, BaseClass* Ba
 	}
 	return false;
 }
+
 bool assign_GeographicalRegion_Regions(BaseClass*, BaseClass*);
 bool assign_SubGeographicalRegion_Region(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -97,6 +97,7 @@ bool assign_SubGeographicalRegion_Region(BaseClass* BaseClass_ptr1, BaseClass* B
 	}
 	return false;
 }
+
 bool assign_Substation_Region(BaseClass*, BaseClass*);
 bool assign_SubGeographicalRegion_Substations(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -115,9 +116,11 @@ bool assign_SubGeographicalRegion_Substations(BaseClass* BaseClass_ptr1, BaseCla
 }
 
 
+
 bool get_SubGeographicalRegion_Region(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const SubGeographicalRegion* element = dynamic_cast<const SubGeographicalRegion*>(BaseClass_ptr1))
+	const SubGeographicalRegion* element = dynamic_cast<const SubGeographicalRegion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->Region != 0)
 		{
@@ -137,7 +140,7 @@ const char* SubGeographicalRegion::debugString() const
 
 void SubGeographicalRegion::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:SubGeographicalRegion"), &SubGeographicalRegion_factory));
+	factory_map.emplace("cim:SubGeographicalRegion", &SubGeographicalRegion_factory);
 }
 
 void SubGeographicalRegion::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -146,10 +149,10 @@ void SubGeographicalRegion::addPrimitiveAssignFnsToMap(std::unordered_map<std::s
 
 void SubGeographicalRegion::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:SubGeographicalRegion.DCLines"), &assign_SubGeographicalRegion_DCLines));
-	assign_map.insert(std::make_pair(std::string("cim:SubGeographicalRegion.Lines"), &assign_SubGeographicalRegion_Lines));
-	assign_map.insert(std::make_pair(std::string("cim:SubGeographicalRegion.Region"), &assign_SubGeographicalRegion_Region));
-	assign_map.insert(std::make_pair(std::string("cim:SubGeographicalRegion.Substations"), &assign_SubGeographicalRegion_Substations));
+	assign_map.emplace("cim:SubGeographicalRegion.DCLines", &assign_SubGeographicalRegion_DCLines);
+	assign_map.emplace("cim:SubGeographicalRegion.Lines", &assign_SubGeographicalRegion_Lines);
+	assign_map.emplace("cim:SubGeographicalRegion.Region", &assign_SubGeographicalRegion_Region);
+	assign_map.emplace("cim:SubGeographicalRegion.Substations", &assign_SubGeographicalRegion_Substations);
 }
 
 void SubGeographicalRegion::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

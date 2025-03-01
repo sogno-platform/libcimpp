@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class ConductingEquipment;
 
-	/*
-	State variable for status.
-	*/
+	/** \brief State variable for status. */
 	class SvStatus : public BaseClass
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		SvStatus();
 		~SvStatus() override;
 
-		CIMPP::ConductingEquipment* ConductingEquipment;  /* The conducting equipment associated with the status state variable. Default: 0 */
-		CIMPP::Boolean inService;  /* The in service status as a result of topology processing. Default: false */
+		/** \brief The conducting equipment associated with the status state variable. Default: 0 */
+		CIMPP::ConductingEquipment* ConductingEquipment;
+
+		/** \brief The in service status as a result of topology processing. Default: false */
+		CIMPP::Boolean inService;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "ExcST6BOELselectorKind")
+		if (EnumSymbol.substr(0, pos) != "ExcST6BOELselectorKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,17 +50,17 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "noOELinput")
+		if (EnumSymbol == "noOELinput")
 		{
 			rop = ExcST6BOELselectorKind::noOELinput;
 			return lop;
 		}
-		if(EnumSymbol == "beforeUEL")
+		if (EnumSymbol == "beforeUEL")
 		{
 			rop = ExcST6BOELselectorKind::beforeUEL;
 			return lop;
 		}
-		if(EnumSymbol == "afterUEL")
+		if (EnumSymbol == "afterUEL")
 		{
 			rop = ExcST6BOELselectorKind::afterUEL;
 			return lop;

@@ -11,8 +11,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-DCChopper::DCChopper() {};
-DCChopper::~DCChopper() {};
+DCChopper::DCChopper() {}
+DCChopper::~DCChopper() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -38,11 +38,6 @@ DCChopper::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
-
-
-
 const char DCChopper::debugName[] = "DCChopper";
 const char* DCChopper::debugString() const
 {
@@ -51,7 +46,7 @@ const char* DCChopper::debugString() const
 
 void DCChopper::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:DCChopper"), &DCChopper_factory));
+	factory_map.emplace("cim:DCChopper", &DCChopper_factory);
 }
 
 void DCChopper::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)

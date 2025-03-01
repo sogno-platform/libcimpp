@@ -20,9 +20,7 @@ namespace CIMPP
 	class DiagramObject;
 	class DiagramObjectGluePoint;
 
-	/*
-	A point in a given space defined by 3 coordinates and associated to a diagram object.  The coordinates may be positive or negative as the origin does not have to be in the corner of a diagram.
-	*/
+	/** \brief A point in a given space defined by 3 coordinates and associated to a diagram object.  The coordinates may be positive or negative as the origin does not have to be in the corner of a diagram. */
 	class DiagramObjectPoint : public BaseClass
 	{
 	public:
@@ -30,12 +28,23 @@ namespace CIMPP
 		DiagramObjectPoint();
 		~DiagramObjectPoint() override;
 
-		CIMPP::DiagramObject* DiagramObject;  /* The diagram object with which the points are associated. Default: 0 */
-		CIMPP::DiagramObjectGluePoint* DiagramObjectGluePoint;  /* A diagram object glue point is associated with 2 or more object points that are considered to be `glued` together. Default: 0 */
-		CIMPP::Integer sequenceNumber;  /* The sequence position of the point, used for defining the order of points for diagram objects acting as a polyline or polygon with more than one point. Default: 0 */
-		CIMPP::Simple_Float xPosition;  /* The X coordinate of this point. Default: nullptr */
-		CIMPP::Simple_Float yPosition;  /* The Y coordinate of this point. Default: nullptr */
-		CIMPP::Simple_Float zPosition;  /* The Z coordinate of this point. Default: nullptr */
+		/** \brief The diagram object with which the points are associated. Default: 0 */
+		CIMPP::DiagramObject* DiagramObject;
+
+		/** \brief A diagram object glue point is associated with 2 or more object points that are considered to be `glued` together. Default: 0 */
+		CIMPP::DiagramObjectGluePoint* DiagramObjectGluePoint;
+
+		/** \brief The sequence position of the point, used for defining the order of points for diagram objects acting as a polyline or polygon with more than one point. Default: 0 */
+		CIMPP::Integer sequenceNumber;
+
+		/** \brief The X coordinate of this point. Default: nullptr */
+		CIMPP::Simple_Float xPosition;
+
+		/** \brief The Y coordinate of this point. Default: nullptr */
+		CIMPP::Simple_Float yPosition;
+
+		/** \brief The Z coordinate of this point. Default: nullptr */
+		CIMPP::Simple_Float zPosition;
 
 		static const char debugName[];
 		const char* debugString() const override;

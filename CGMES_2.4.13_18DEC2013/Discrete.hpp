@@ -18,9 +18,7 @@ namespace CIMPP
 	class DiscreteValue;
 	class ValueAliasSet;
 
-	/*
-	Discrete represents a discrete Measurement, i.e. a Measurement representing discrete values, e.g. a Breaker position.
-	*/
+	/** \brief Discrete represents a discrete Measurement, i.e. a Measurement representing discrete values, e.g. a Breaker position. */
 	class Discrete : public Measurement
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		Discrete();
 		~Discrete() override;
 
-		std::list<CIMPP::DiscreteValue*> DiscreteValues;  /* Measurement to which this value is connected. Default: 0 */
-		CIMPP::ValueAliasSet* ValueAliasSet;  /* The ValueAliasSet used for translation of a MeasurementValue.value to a name. Default: 0 */
+		/** \brief Measurement to which this value is connected. Default: 0 */
+		std::list<CIMPP::DiscreteValue*> DiscreteValues;
+
+		/** \brief The ValueAliasSet used for translation of a MeasurementValue.value to a name. Default: 0 */
+		CIMPP::ValueAliasSet* ValueAliasSet;
 
 		static const char debugName[];
 		const char* debugString() const override;

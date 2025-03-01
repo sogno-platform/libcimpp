@@ -18,9 +18,7 @@ namespace CIMPP
 	class LoadArea;
 	class LoadGroup;
 
-	/*
-	The class is the second level in a hierarchical structure for grouping of loads for the purpose of load flow load scaling.
-	*/
+	/** \brief The class is the second level in a hierarchical structure for grouping of loads for the purpose of load flow load scaling. */
 	class SubLoadArea : public EnergyArea
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		SubLoadArea();
 		~SubLoadArea() override;
 
-		CIMPP::LoadArea* LoadArea;  /* The LoadArea where the SubLoadArea belongs. Default: 0 */
-		std::list<CIMPP::LoadGroup*> LoadGroups;  /* The Loadgroups in the SubLoadArea. Default: 0 */
+		/** \brief The LoadArea where the SubLoadArea belongs. Default: 0 */
+		CIMPP::LoadArea* LoadArea;
+
+		/** \brief The Loadgroups in the SubLoadArea. Default: 0 */
+		std::list<CIMPP::LoadGroup*> LoadGroups;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -8,16 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
 
 using namespace CIMPP;
 
-DiscExcContIEEEDEC2A::DiscExcContIEEEDEC2A() {};
-DiscExcContIEEEDEC2A::~DiscExcContIEEEDEC2A() {};
+DiscExcContIEEEDEC2A::DiscExcContIEEEDEC2A() {}
+DiscExcContIEEEDEC2A::~DiscExcContIEEEDEC2A() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -48,77 +43,80 @@ DiscExcContIEEEDEC2A::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_DiscExcContIEEEDEC2A_td1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DiscExcContIEEEDEC2A_td1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DiscExcContIEEEDEC2A* element = dynamic_cast<DiscExcContIEEEDEC2A*>(BaseClass_ptr1))
+	DiscExcContIEEEDEC2A* element = dynamic_cast<DiscExcContIEEEDEC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->td1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_DiscExcContIEEEDEC2A_td2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DiscExcContIEEEDEC2A_td2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DiscExcContIEEEDEC2A* element = dynamic_cast<DiscExcContIEEEDEC2A*>(BaseClass_ptr1))
+	DiscExcContIEEEDEC2A* element = dynamic_cast<DiscExcContIEEEDEC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->td2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_DiscExcContIEEEDEC2A_vdmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DiscExcContIEEEDEC2A_vdmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DiscExcContIEEEDEC2A* element = dynamic_cast<DiscExcContIEEEDEC2A*>(BaseClass_ptr1))
+	DiscExcContIEEEDEC2A* element = dynamic_cast<DiscExcContIEEEDEC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vdmax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_DiscExcContIEEEDEC2A_vdmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DiscExcContIEEEDEC2A_vdmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DiscExcContIEEEDEC2A* element = dynamic_cast<DiscExcContIEEEDEC2A*>(BaseClass_ptr1))
+	DiscExcContIEEEDEC2A* element = dynamic_cast<DiscExcContIEEEDEC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vdmin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_DiscExcContIEEEDEC2A_vk(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DiscExcContIEEEDEC2A_vk(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DiscExcContIEEEDEC2A* element = dynamic_cast<DiscExcContIEEEDEC2A*>(BaseClass_ptr1))
+	DiscExcContIEEEDEC2A* element = dynamic_cast<DiscExcContIEEEDEC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vk;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_DiscExcContIEEEDEC2A_td1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DiscExcContIEEEDEC2A* element = dynamic_cast<const DiscExcContIEEEDEC2A*>(BaseClass_ptr1))
+	const DiscExcContIEEEDEC2A* element = dynamic_cast<const DiscExcContIEEEDEC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->td1;
 		if (!buffer.str().empty())
@@ -132,7 +130,8 @@ bool get_DiscExcContIEEEDEC2A_td1(const BaseClass* BaseClass_ptr1, std::stringst
 
 bool get_DiscExcContIEEEDEC2A_td2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DiscExcContIEEEDEC2A* element = dynamic_cast<const DiscExcContIEEEDEC2A*>(BaseClass_ptr1))
+	const DiscExcContIEEEDEC2A* element = dynamic_cast<const DiscExcContIEEEDEC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->td2;
 		if (!buffer.str().empty())
@@ -146,7 +145,8 @@ bool get_DiscExcContIEEEDEC2A_td2(const BaseClass* BaseClass_ptr1, std::stringst
 
 bool get_DiscExcContIEEEDEC2A_vdmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DiscExcContIEEEDEC2A* element = dynamic_cast<const DiscExcContIEEEDEC2A*>(BaseClass_ptr1))
+	const DiscExcContIEEEDEC2A* element = dynamic_cast<const DiscExcContIEEEDEC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vdmax;
 		if (!buffer.str().empty())
@@ -160,7 +160,8 @@ bool get_DiscExcContIEEEDEC2A_vdmax(const BaseClass* BaseClass_ptr1, std::string
 
 bool get_DiscExcContIEEEDEC2A_vdmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DiscExcContIEEEDEC2A* element = dynamic_cast<const DiscExcContIEEEDEC2A*>(BaseClass_ptr1))
+	const DiscExcContIEEEDEC2A* element = dynamic_cast<const DiscExcContIEEEDEC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vdmin;
 		if (!buffer.str().empty())
@@ -174,7 +175,8 @@ bool get_DiscExcContIEEEDEC2A_vdmin(const BaseClass* BaseClass_ptr1, std::string
 
 bool get_DiscExcContIEEEDEC2A_vk(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DiscExcContIEEEDEC2A* element = dynamic_cast<const DiscExcContIEEEDEC2A*>(BaseClass_ptr1))
+	const DiscExcContIEEEDEC2A* element = dynamic_cast<const DiscExcContIEEEDEC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vk;
 		if (!buffer.str().empty())
@@ -186,8 +188,6 @@ bool get_DiscExcContIEEEDEC2A_vk(const BaseClass* BaseClass_ptr1, std::stringstr
 	return false;
 }
 
-
-
 const char DiscExcContIEEEDEC2A::debugName[] = "DiscExcContIEEEDEC2A";
 const char* DiscExcContIEEEDEC2A::debugString() const
 {
@@ -196,16 +196,16 @@ const char* DiscExcContIEEEDEC2A::debugString() const
 
 void DiscExcContIEEEDEC2A::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:DiscExcContIEEEDEC2A"), &DiscExcContIEEEDEC2A_factory));
+	factory_map.emplace("cim:DiscExcContIEEEDEC2A", &DiscExcContIEEEDEC2A_factory);
 }
 
 void DiscExcContIEEEDEC2A::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:DiscExcContIEEEDEC2A.td1"), &assign_DiscExcContIEEEDEC2A_td1));
-	assign_map.insert(std::make_pair(std::string("cim:DiscExcContIEEEDEC2A.td2"), &assign_DiscExcContIEEEDEC2A_td2));
-	assign_map.insert(std::make_pair(std::string("cim:DiscExcContIEEEDEC2A.vdmax"), &assign_DiscExcContIEEEDEC2A_vdmax));
-	assign_map.insert(std::make_pair(std::string("cim:DiscExcContIEEEDEC2A.vdmin"), &assign_DiscExcContIEEEDEC2A_vdmin));
-	assign_map.insert(std::make_pair(std::string("cim:DiscExcContIEEEDEC2A.vk"), &assign_DiscExcContIEEEDEC2A_vk));
+	assign_map.emplace("cim:DiscExcContIEEEDEC2A.td1", &assign_DiscExcContIEEEDEC2A_td1);
+	assign_map.emplace("cim:DiscExcContIEEEDEC2A.td2", &assign_DiscExcContIEEEDEC2A_td2);
+	assign_map.emplace("cim:DiscExcContIEEEDEC2A.vdmax", &assign_DiscExcContIEEEDEC2A_vdmax);
+	assign_map.emplace("cim:DiscExcContIEEEDEC2A.vdmin", &assign_DiscExcContIEEEDEC2A_vdmin);
+	assign_map.emplace("cim:DiscExcContIEEEDEC2A.vk", &assign_DiscExcContIEEEDEC2A_vk);
 }
 
 void DiscExcContIEEEDEC2A::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

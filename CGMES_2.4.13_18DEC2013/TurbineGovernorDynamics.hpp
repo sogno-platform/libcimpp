@@ -19,9 +19,7 @@ namespace CIMPP
 	class SynchronousMachineDynamics;
 	class TurbineLoadControllerDynamics;
 
-	/*
-	Turbine-governor function block whose behavior is described by reference to a standard model
-	*/
+	/** \brief Turbine-governor function block whose behavior is described by reference to a standard model */
 	class TurbineGovernorDynamics : public DynamicsFunctionBlock
 	{
 	public:
@@ -29,9 +27,14 @@ namespace CIMPP
 		TurbineGovernorDynamics();
 		~TurbineGovernorDynamics() override;
 
-		CIMPP::AsynchronousMachineDynamics* AsynchronousMachineDynamics;  /* Asynchronous machine model with which this turbine-governor model is associated. Default: 0 */
-		std::list<CIMPP::SynchronousMachineDynamics*> SynchronousMachineDynamics;  /* Turbine-governor model associated with this synchronous machine model. Default: 0 */
-		CIMPP::TurbineLoadControllerDynamics* TurbineLoadControllerDynamics;  /* Turbine load controller providing input to this turbine-governor. Default: 0 */
+		/** \brief Asynchronous machine model with which this turbine-governor model is associated. Default: 0 */
+		CIMPP::AsynchronousMachineDynamics* AsynchronousMachineDynamics;
+
+		/** \brief Turbine-governor model associated with this synchronous machine model. Default: 0 */
+		std::list<CIMPP::SynchronousMachineDynamics*> SynchronousMachineDynamics;
+
+		/** \brief Turbine load controller providing input to this turbine-governor. Default: 0 */
+		CIMPP::TurbineLoadControllerDynamics* TurbineLoadControllerDynamics;
 
 		static const char debugName[];
 		const char* debugString() const override;

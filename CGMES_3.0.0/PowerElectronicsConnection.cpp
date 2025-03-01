@@ -10,17 +10,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 #include "PowerElectronicsUnit.hpp"
 #include "WindTurbineType3or4Dynamics.hpp"
-#include "ReactivePower.hpp"
-#include "ReactivePower.hpp"
-#include "ActivePower.hpp"
-#include "ReactivePower.hpp"
-#include "ApparentPower.hpp"
-#include "Voltage.hpp"
 
 using namespace CIMPP;
 
-PowerElectronicsConnection::PowerElectronicsConnection() : PowerElectronicsUnit(nullptr), WindTurbineType3or4Dynamics(nullptr) {};
-PowerElectronicsConnection::~PowerElectronicsConnection() {};
+PowerElectronicsConnection::PowerElectronicsConnection() : PowerElectronicsUnit(nullptr), WindTurbineType3or4Dynamics(nullptr) {}
+PowerElectronicsConnection::~PowerElectronicsConnection() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -56,86 +50,6 @@ PowerElectronicsConnection::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_PowerElectronicsConnection_maxQ(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (PowerElectronicsConnection* element = dynamic_cast<PowerElectronicsConnection*>(BaseClass_ptr1))
-	{
-		buffer >> element->maxQ;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_PowerElectronicsConnection_minQ(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (PowerElectronicsConnection* element = dynamic_cast<PowerElectronicsConnection*>(BaseClass_ptr1))
-	{
-		buffer >> element->minQ;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_PowerElectronicsConnection_p(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (PowerElectronicsConnection* element = dynamic_cast<PowerElectronicsConnection*>(BaseClass_ptr1))
-	{
-		buffer >> element->p;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_PowerElectronicsConnection_q(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (PowerElectronicsConnection* element = dynamic_cast<PowerElectronicsConnection*>(BaseClass_ptr1))
-	{
-		buffer >> element->q;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_PowerElectronicsConnection_ratedS(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (PowerElectronicsConnection* element = dynamic_cast<PowerElectronicsConnection*>(BaseClass_ptr1))
-	{
-		buffer >> element->ratedS;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_PowerElectronicsConnection_ratedU(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (PowerElectronicsConnection* element = dynamic_cast<PowerElectronicsConnection*>(BaseClass_ptr1))
-	{
-		buffer >> element->ratedU;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_PowerElectronicsUnit_PowerElectronicsConnection(BaseClass*, BaseClass*);
 bool assign_PowerElectronicsConnection_PowerElectronicsUnit(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -152,6 +66,7 @@ bool assign_PowerElectronicsConnection_PowerElectronicsUnit(BaseClass* BaseClass
 	}
 	return false;
 }
+
 bool assign_WindTurbineType3or4Dynamics_PowerElectronicsConnection(BaseClass*, BaseClass*);
 bool assign_PowerElectronicsConnection_WindTurbineType3or4Dynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -169,9 +84,109 @@ bool assign_PowerElectronicsConnection_WindTurbineType3or4Dynamics(BaseClass* Ba
 	return false;
 }
 
+bool assign_PowerElectronicsConnection_maxQ(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	PowerElectronicsConnection* element = dynamic_cast<PowerElectronicsConnection*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->maxQ;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_PowerElectronicsConnection_minQ(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	PowerElectronicsConnection* element = dynamic_cast<PowerElectronicsConnection*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->minQ;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_PowerElectronicsConnection_p(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	PowerElectronicsConnection* element = dynamic_cast<PowerElectronicsConnection*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->p;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_PowerElectronicsConnection_q(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	PowerElectronicsConnection* element = dynamic_cast<PowerElectronicsConnection*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->q;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_PowerElectronicsConnection_ratedS(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	PowerElectronicsConnection* element = dynamic_cast<PowerElectronicsConnection*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->ratedS;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_PowerElectronicsConnection_ratedU(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	PowerElectronicsConnection* element = dynamic_cast<PowerElectronicsConnection*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->ratedU;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_PowerElectronicsConnection_PowerElectronicsUnit(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const PowerElectronicsConnection* element = dynamic_cast<const PowerElectronicsConnection*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->PowerElectronicsUnit != 0)
+		{
+			BaseClass_list.push_back(element->PowerElectronicsUnit);
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_PowerElectronicsConnection_maxQ(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PowerElectronicsConnection* element = dynamic_cast<const PowerElectronicsConnection*>(BaseClass_ptr1))
+	const PowerElectronicsConnection* element = dynamic_cast<const PowerElectronicsConnection*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->maxQ;
 		if (!buffer.str().empty())
@@ -185,7 +200,8 @@ bool get_PowerElectronicsConnection_maxQ(const BaseClass* BaseClass_ptr1, std::s
 
 bool get_PowerElectronicsConnection_minQ(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PowerElectronicsConnection* element = dynamic_cast<const PowerElectronicsConnection*>(BaseClass_ptr1))
+	const PowerElectronicsConnection* element = dynamic_cast<const PowerElectronicsConnection*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->minQ;
 		if (!buffer.str().empty())
@@ -199,7 +215,8 @@ bool get_PowerElectronicsConnection_minQ(const BaseClass* BaseClass_ptr1, std::s
 
 bool get_PowerElectronicsConnection_p(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PowerElectronicsConnection* element = dynamic_cast<const PowerElectronicsConnection*>(BaseClass_ptr1))
+	const PowerElectronicsConnection* element = dynamic_cast<const PowerElectronicsConnection*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->p;
 		if (!buffer.str().empty())
@@ -213,7 +230,8 @@ bool get_PowerElectronicsConnection_p(const BaseClass* BaseClass_ptr1, std::stri
 
 bool get_PowerElectronicsConnection_q(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PowerElectronicsConnection* element = dynamic_cast<const PowerElectronicsConnection*>(BaseClass_ptr1))
+	const PowerElectronicsConnection* element = dynamic_cast<const PowerElectronicsConnection*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->q;
 		if (!buffer.str().empty())
@@ -227,7 +245,8 @@ bool get_PowerElectronicsConnection_q(const BaseClass* BaseClass_ptr1, std::stri
 
 bool get_PowerElectronicsConnection_ratedS(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PowerElectronicsConnection* element = dynamic_cast<const PowerElectronicsConnection*>(BaseClass_ptr1))
+	const PowerElectronicsConnection* element = dynamic_cast<const PowerElectronicsConnection*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ratedS;
 		if (!buffer.str().empty())
@@ -241,7 +260,8 @@ bool get_PowerElectronicsConnection_ratedS(const BaseClass* BaseClass_ptr1, std:
 
 bool get_PowerElectronicsConnection_ratedU(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PowerElectronicsConnection* element = dynamic_cast<const PowerElectronicsConnection*>(BaseClass_ptr1))
+	const PowerElectronicsConnection* element = dynamic_cast<const PowerElectronicsConnection*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ratedU;
 		if (!buffer.str().empty())
@@ -253,21 +273,6 @@ bool get_PowerElectronicsConnection_ratedU(const BaseClass* BaseClass_ptr1, std:
 	return false;
 }
 
-
-bool get_PowerElectronicsConnection_PowerElectronicsUnit(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const PowerElectronicsConnection* element = dynamic_cast<const PowerElectronicsConnection*>(BaseClass_ptr1))
-	{
-		if (element->PowerElectronicsUnit != 0)
-		{
-			BaseClass_list.push_back(element->PowerElectronicsUnit);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char PowerElectronicsConnection::debugName[] = "PowerElectronicsConnection";
 const char* PowerElectronicsConnection::debugString() const
 {
@@ -276,23 +281,23 @@ const char* PowerElectronicsConnection::debugString() const
 
 void PowerElectronicsConnection::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:PowerElectronicsConnection"), &PowerElectronicsConnection_factory));
+	factory_map.emplace("cim:PowerElectronicsConnection", &PowerElectronicsConnection_factory);
 }
 
 void PowerElectronicsConnection::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:PowerElectronicsConnection.maxQ"), &assign_PowerElectronicsConnection_maxQ));
-	assign_map.insert(std::make_pair(std::string("cim:PowerElectronicsConnection.minQ"), &assign_PowerElectronicsConnection_minQ));
-	assign_map.insert(std::make_pair(std::string("cim:PowerElectronicsConnection.p"), &assign_PowerElectronicsConnection_p));
-	assign_map.insert(std::make_pair(std::string("cim:PowerElectronicsConnection.q"), &assign_PowerElectronicsConnection_q));
-	assign_map.insert(std::make_pair(std::string("cim:PowerElectronicsConnection.ratedS"), &assign_PowerElectronicsConnection_ratedS));
-	assign_map.insert(std::make_pair(std::string("cim:PowerElectronicsConnection.ratedU"), &assign_PowerElectronicsConnection_ratedU));
+	assign_map.emplace("cim:PowerElectronicsConnection.maxQ", &assign_PowerElectronicsConnection_maxQ);
+	assign_map.emplace("cim:PowerElectronicsConnection.minQ", &assign_PowerElectronicsConnection_minQ);
+	assign_map.emplace("cim:PowerElectronicsConnection.p", &assign_PowerElectronicsConnection_p);
+	assign_map.emplace("cim:PowerElectronicsConnection.q", &assign_PowerElectronicsConnection_q);
+	assign_map.emplace("cim:PowerElectronicsConnection.ratedS", &assign_PowerElectronicsConnection_ratedS);
+	assign_map.emplace("cim:PowerElectronicsConnection.ratedU", &assign_PowerElectronicsConnection_ratedU);
 }
 
 void PowerElectronicsConnection::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:PowerElectronicsConnection.PowerElectronicsUnit"), &assign_PowerElectronicsConnection_PowerElectronicsUnit));
-	assign_map.insert(std::make_pair(std::string("cim:PowerElectronicsConnection.WindTurbineType3or4Dynamics"), &assign_PowerElectronicsConnection_WindTurbineType3or4Dynamics));
+	assign_map.emplace("cim:PowerElectronicsConnection.PowerElectronicsUnit", &assign_PowerElectronicsConnection_PowerElectronicsUnit);
+	assign_map.emplace("cim:PowerElectronicsConnection.WindTurbineType3or4Dynamics", &assign_PowerElectronicsConnection_WindTurbineType3or4Dynamics);
 }
 
 void PowerElectronicsConnection::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

@@ -13,8 +13,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-DiscontinuousExcitationControlDynamics::DiscontinuousExcitationControlDynamics() : ExcitationSystemDynamics(nullptr), RemoteInputSignal(nullptr) {};
-DiscontinuousExcitationControlDynamics::~DiscontinuousExcitationControlDynamics() {};
+DiscontinuousExcitationControlDynamics::DiscontinuousExcitationControlDynamics() : ExcitationSystemDynamics(nullptr), RemoteInputSignal(nullptr) {}
+DiscontinuousExcitationControlDynamics::~DiscontinuousExcitationControlDynamics() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,8 +42,6 @@ DiscontinuousExcitationControlDynamics::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_ExcitationSystemDynamics_DiscontinuousExcitationControlDynamics(BaseClass*, BaseClass*);
 bool assign_DiscontinuousExcitationControlDynamics_ExcitationSystemDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,6 +58,7 @@ bool assign_DiscontinuousExcitationControlDynamics_ExcitationSystemDynamics(Base
 	}
 	return false;
 }
+
 bool assign_RemoteInputSignal_DiscontinuousExcitationControlDynamics(BaseClass*, BaseClass*);
 bool assign_DiscontinuousExcitationControlDynamics_RemoteInputSignal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -77,10 +76,10 @@ bool assign_DiscontinuousExcitationControlDynamics_RemoteInputSignal(BaseClass* 
 	return false;
 }
 
-
 bool get_DiscontinuousExcitationControlDynamics_ExcitationSystemDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const DiscontinuousExcitationControlDynamics* element = dynamic_cast<const DiscontinuousExcitationControlDynamics*>(BaseClass_ptr1))
+	const DiscontinuousExcitationControlDynamics* element = dynamic_cast<const DiscontinuousExcitationControlDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->ExcitationSystemDynamics != 0)
 		{
@@ -100,7 +99,7 @@ const char* DiscontinuousExcitationControlDynamics::debugString() const
 
 void DiscontinuousExcitationControlDynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:DiscontinuousExcitationControlDynamics"), &DiscontinuousExcitationControlDynamics_factory));
+	factory_map.emplace("cim:DiscontinuousExcitationControlDynamics", &DiscontinuousExcitationControlDynamics_factory);
 }
 
 void DiscontinuousExcitationControlDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -109,8 +108,8 @@ void DiscontinuousExcitationControlDynamics::addPrimitiveAssignFnsToMap(std::uno
 
 void DiscontinuousExcitationControlDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:DiscontinuousExcitationControlDynamics.ExcitationSystemDynamics"), &assign_DiscontinuousExcitationControlDynamics_ExcitationSystemDynamics));
-	assign_map.insert(std::make_pair(std::string("cim:DiscontinuousExcitationControlDynamics.RemoteInputSignal"), &assign_DiscontinuousExcitationControlDynamics_RemoteInputSignal));
+	assign_map.emplace("cim:DiscontinuousExcitationControlDynamics.ExcitationSystemDynamics", &assign_DiscontinuousExcitationControlDynamics_ExcitationSystemDynamics);
+	assign_map.emplace("cim:DiscontinuousExcitationControlDynamics.RemoteInputSignal", &assign_DiscontinuousExcitationControlDynamics_RemoteInputSignal);
 }
 
 void DiscontinuousExcitationControlDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A sensor used mainly in overhead distribution networks as the source of both current and voltage measurements.
-	*/
+	/** \brief A sensor used mainly in overhead distribution networks as the source of both current and voltage measurements. */
 	class PostLineSensor : public Sensor
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		PostLineSensor();
 		~PostLineSensor() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

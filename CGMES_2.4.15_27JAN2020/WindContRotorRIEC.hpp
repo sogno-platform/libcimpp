@@ -21,9 +21,7 @@ namespace CIMPP
 	class WindDynamicsLookupTable;
 	class WindGenTurbineType2IEC;
 
-	/*
-	Rotor resistance control model.  Reference: IEC Standard 61400-27-1 Section 6.6.5.2.
-	*/
+	/** \brief Rotor resistance control model.  Reference: IEC Standard 61400-27-1 Section 6.6.5.2. */
 	class WindContRotorRIEC : public IdentifiedObject
 	{
 	public:
@@ -31,16 +29,35 @@ namespace CIMPP
 		WindContRotorRIEC();
 		~WindContRotorRIEC() override;
 
-		std::list<CIMPP::WindDynamicsLookupTable*> WindDynamicsLookupTable;  /* The wind dynamics lookup table associated with this rotor resistance control model. Default: 0 */
-		CIMPP::WindGenTurbineType2IEC* WindGenTurbineType2IEC;  /* Wind turbine type 2 model with whitch this wind control rotor resistance model is associated. Default: 0 */
-		CIMPP::PU kirr;  /* Integral gain in rotor resistance PI controller (). It is type dependent parameter. Default: nullptr */
-		CIMPP::Simple_Float komegafilt;  /* Filter gain for generator speed measurement (K). It is type dependent parameter. Default: nullptr */
-		CIMPP::Simple_Float kpfilt;  /* Filter gain for power measurement (). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU kprr;  /* Proportional gain in rotor resistance PI controller (). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU rmax;  /* Maximum rotor resistance (). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU rmin;  /* Minimum rotor resistance (). It is type dependent parameter. Default: nullptr */
-		CIMPP::Seconds tomegafilt;  /* Filter time constant for generator speed measurement (). It is type dependent parameter. Default: nullptr */
-		CIMPP::Seconds tpfilt;  /* Filter time constant for power measurement (). It is type dependent parameter. Default: nullptr */
+		/** \brief The wind dynamics lookup table associated with this rotor resistance control model. Default: 0 */
+		std::list<CIMPP::WindDynamicsLookupTable*> WindDynamicsLookupTable;
+
+		/** \brief Wind turbine type 2 model with whitch this wind control rotor resistance model is associated. Default: 0 */
+		CIMPP::WindGenTurbineType2IEC* WindGenTurbineType2IEC;
+
+		/** \brief Integral gain in rotor resistance PI controller (). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU kirr;
+
+		/** \brief Filter gain for generator speed measurement (K). It is type dependent parameter. Default: nullptr */
+		CIMPP::Simple_Float komegafilt;
+
+		/** \brief Filter gain for power measurement (). It is type dependent parameter. Default: nullptr */
+		CIMPP::Simple_Float kpfilt;
+
+		/** \brief Proportional gain in rotor resistance PI controller (). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU kprr;
+
+		/** \brief Maximum rotor resistance (). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU rmax;
+
+		/** \brief Minimum rotor resistance (). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU rmin;
+
+		/** \brief Filter time constant for generator speed measurement (). It is type dependent parameter. Default: nullptr */
+		CIMPP::Seconds tomegafilt;
+
+		/** \brief Filter time constant for power measurement (). It is type dependent parameter. Default: nullptr */
+		CIMPP::Seconds tpfilt;
 
 		static const char debugName[];
 		const char* debugString() const override;

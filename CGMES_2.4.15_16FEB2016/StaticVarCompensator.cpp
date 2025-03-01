@@ -8,17 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Reactance.hpp"
-#include "Reactance.hpp"
-#include "ReactivePower.hpp"
-#include "SVCControlMode.hpp"
-#include "VoltagePerReactivePower.hpp"
-#include "Voltage.hpp"
 
 using namespace CIMPP;
 
-StaticVarCompensator::StaticVarCompensator() {};
-StaticVarCompensator::~StaticVarCompensator() {};
+StaticVarCompensator::StaticVarCompensator() {}
+StaticVarCompensator::~StaticVarCompensator() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -51,90 +45,94 @@ StaticVarCompensator::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_StaticVarCompensator_capacitiveRating(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_StaticVarCompensator_capacitiveRating(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (StaticVarCompensator* element = dynamic_cast<StaticVarCompensator*>(BaseClass_ptr1))
+	StaticVarCompensator* element = dynamic_cast<StaticVarCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->capacitiveRating;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_StaticVarCompensator_inductiveRating(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_StaticVarCompensator_inductiveRating(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (StaticVarCompensator* element = dynamic_cast<StaticVarCompensator*>(BaseClass_ptr1))
+	StaticVarCompensator* element = dynamic_cast<StaticVarCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->inductiveRating;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_StaticVarCompensator_q(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_StaticVarCompensator_q(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (StaticVarCompensator* element = dynamic_cast<StaticVarCompensator*>(BaseClass_ptr1))
+	StaticVarCompensator* element = dynamic_cast<StaticVarCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->q;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_StaticVarCompensator_sVCControlMode(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_StaticVarCompensator_sVCControlMode(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (StaticVarCompensator* element = dynamic_cast<StaticVarCompensator*>(BaseClass_ptr1))
+	StaticVarCompensator* element = dynamic_cast<StaticVarCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->sVCControlMode;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_StaticVarCompensator_slope(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_StaticVarCompensator_slope(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (StaticVarCompensator* element = dynamic_cast<StaticVarCompensator*>(BaseClass_ptr1))
+	StaticVarCompensator* element = dynamic_cast<StaticVarCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->slope;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_StaticVarCompensator_voltageSetPoint(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_StaticVarCompensator_voltageSetPoint(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (StaticVarCompensator* element = dynamic_cast<StaticVarCompensator*>(BaseClass_ptr1))
+	StaticVarCompensator* element = dynamic_cast<StaticVarCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->voltageSetPoint;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_StaticVarCompensator_capacitiveRating(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const StaticVarCompensator* element = dynamic_cast<const StaticVarCompensator*>(BaseClass_ptr1))
+	const StaticVarCompensator* element = dynamic_cast<const StaticVarCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->capacitiveRating;
 		if (!buffer.str().empty())
@@ -148,7 +146,8 @@ bool get_StaticVarCompensator_capacitiveRating(const BaseClass* BaseClass_ptr1, 
 
 bool get_StaticVarCompensator_inductiveRating(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const StaticVarCompensator* element = dynamic_cast<const StaticVarCompensator*>(BaseClass_ptr1))
+	const StaticVarCompensator* element = dynamic_cast<const StaticVarCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->inductiveRating;
 		if (!buffer.str().empty())
@@ -162,7 +161,8 @@ bool get_StaticVarCompensator_inductiveRating(const BaseClass* BaseClass_ptr1, s
 
 bool get_StaticVarCompensator_q(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const StaticVarCompensator* element = dynamic_cast<const StaticVarCompensator*>(BaseClass_ptr1))
+	const StaticVarCompensator* element = dynamic_cast<const StaticVarCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->q;
 		if (!buffer.str().empty())
@@ -174,9 +174,25 @@ bool get_StaticVarCompensator_q(const BaseClass* BaseClass_ptr1, std::stringstre
 	return false;
 }
 
+bool get_StaticVarCompensator_sVCControlMode(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	const StaticVarCompensator* element = dynamic_cast<const StaticVarCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer << element->sVCControlMode;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
 bool get_StaticVarCompensator_slope(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const StaticVarCompensator* element = dynamic_cast<const StaticVarCompensator*>(BaseClass_ptr1))
+	const StaticVarCompensator* element = dynamic_cast<const StaticVarCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->slope;
 		if (!buffer.str().empty())
@@ -190,25 +206,10 @@ bool get_StaticVarCompensator_slope(const BaseClass* BaseClass_ptr1, std::string
 
 bool get_StaticVarCompensator_voltageSetPoint(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const StaticVarCompensator* element = dynamic_cast<const StaticVarCompensator*>(BaseClass_ptr1))
+	const StaticVarCompensator* element = dynamic_cast<const StaticVarCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->voltageSetPoint;
-		if (!buffer.str().empty())
-		{
-			return true;
-		}
-	}
-	buffer.setstate(std::ios::failbit);
-	return false;
-}
-
-
-
-bool get_StaticVarCompensator_sVCControlMode(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
-{
-	if (const StaticVarCompensator* element = dynamic_cast<const StaticVarCompensator*>(BaseClass_ptr1))
-	{
-		buffer << element->sVCControlMode;
 		if (!buffer.str().empty())
 		{
 			return true;
@@ -226,17 +227,17 @@ const char* StaticVarCompensator::debugString() const
 
 void StaticVarCompensator::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:StaticVarCompensator"), &StaticVarCompensator_factory));
+	factory_map.emplace("cim:StaticVarCompensator", &StaticVarCompensator_factory);
 }
 
 void StaticVarCompensator::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:StaticVarCompensator.capacitiveRating"), &assign_StaticVarCompensator_capacitiveRating));
-	assign_map.insert(std::make_pair(std::string("cim:StaticVarCompensator.inductiveRating"), &assign_StaticVarCompensator_inductiveRating));
-	assign_map.insert(std::make_pair(std::string("cim:StaticVarCompensator.q"), &assign_StaticVarCompensator_q));
-	assign_map.insert(std::make_pair(std::string("cim:StaticVarCompensator.sVCControlMode"), &assign_StaticVarCompensator_sVCControlMode));
-	assign_map.insert(std::make_pair(std::string("cim:StaticVarCompensator.slope"), &assign_StaticVarCompensator_slope));
-	assign_map.insert(std::make_pair(std::string("cim:StaticVarCompensator.voltageSetPoint"), &assign_StaticVarCompensator_voltageSetPoint));
+	assign_map.emplace("cim:StaticVarCompensator.capacitiveRating", &assign_StaticVarCompensator_capacitiveRating);
+	assign_map.emplace("cim:StaticVarCompensator.inductiveRating", &assign_StaticVarCompensator_inductiveRating);
+	assign_map.emplace("cim:StaticVarCompensator.q", &assign_StaticVarCompensator_q);
+	assign_map.emplace("cim:StaticVarCompensator.sVCControlMode", &assign_StaticVarCompensator_sVCControlMode);
+	assign_map.emplace("cim:StaticVarCompensator.slope", &assign_StaticVarCompensator_slope);
+	assign_map.emplace("cim:StaticVarCompensator.voltageSetPoint", &assign_StaticVarCompensator_voltageSetPoint);
 }
 
 void StaticVarCompensator::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

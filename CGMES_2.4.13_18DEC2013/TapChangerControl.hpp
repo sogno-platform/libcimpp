@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class TapChanger;
 
-	/*
-	Describes behavior specific to tap changers, e.g. how the voltage at the end of a line varies with the load level and compensation of the voltage drop by tap adjustment.
-	*/
+	/** \brief Describes behavior specific to tap changers, e.g. how the voltage at the end of a line varies with the load level and compensation of the voltage drop by tap adjustment. */
 	class TapChangerControl : public RegulatingControl
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		TapChangerControl();
 		~TapChangerControl() override;
 
-		std::list<CIMPP::TapChanger*> TapChanger;  /* The regulating control scheme in which this tap changer participates. Default: 0 */
+		/** \brief The regulating control scheme in which this tap changer participates. Default: 0 */
+		std::list<CIMPP::TapChanger*> TapChanger;
 
 		static const char debugName[];
 		const char* debugString() const override;

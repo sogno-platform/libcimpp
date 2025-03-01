@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class WindPitchContPowerIEC;
 
-	/*
-	Wind turbine IEC type 1B.  Reference: IEC 61400-27-1:2015, 5.5.2.3.
-	*/
+	/** \brief Wind turbine IEC type 1B.  Reference: IEC 61400-27-1:2015, 5.5.2.3. */
 	class WindGenTurbineType1bIEC : public WindTurbineType1or2IEC
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		WindGenTurbineType1bIEC();
 		~WindGenTurbineType1bIEC() override;
 
-		CIMPP::WindPitchContPowerIEC* WindPitchContPowerIEC;  /* Pitch control power model associated with this wind turbine type 1B model. Default: 0 */
+		/** \brief Pitch control power model associated with this wind turbine type 1B model. Default: 0 */
+		CIMPP::WindPitchContPowerIEC* WindPitchContPowerIEC;
 
 		static const char debugName[];
 		const char* debugString() const override;

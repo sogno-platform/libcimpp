@@ -18,9 +18,7 @@ namespace CIMPP
 	class ExcitationSystemDynamics;
 	class RemoteInputSignal;
 
-	/*
-	Voltage compensator function block whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font>
-	*/
+	/** \brief Voltage compensator function block whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font> */
 	class VoltageCompensatorDynamics : public DynamicsFunctionBlock
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		VoltageCompensatorDynamics();
 		~VoltageCompensatorDynamics() override;
 
-		CIMPP::ExcitationSystemDynamics* ExcitationSystemDynamics;  /* Excitation system model with which this voltage compensator is associated. Default: 0 */
-		CIMPP::RemoteInputSignal* RemoteInputSignal;  /* Remote input signal used by this voltage compensator model. Default: 0 */
+		/** \brief Excitation system model with which this voltage compensator is associated. Default: 0 */
+		CIMPP::ExcitationSystemDynamics* ExcitationSystemDynamics;
+
+		/** \brief Remote input signal used by this voltage compensator model. Default: 0 */
+		CIMPP::RemoteInputSignal* RemoteInputSignal;
 
 		static const char debugName[];
 		const char* debugString() const override;

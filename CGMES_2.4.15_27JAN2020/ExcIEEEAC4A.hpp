@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	The class represents IEEE Std 421.5-2005 type AC4A model. The model represents type AC4A alternator-supplied controlled-rectifier excitation system which is quite different from the other type ac systems. This high initial response excitation system utilizes a full thyristor bridge in the exciter output circuit.  The voltage regulator controls the firing of the thyristor bridges. The exciter alternator uses an independent voltage regulator to control its output voltage to a constant value. These effects are not modeled; however, transient loading effects on the exciter alternator are included.   Reference: IEEE Standard 421.5-2005 Section 6.4.
-	*/
+	/** \brief The class represents IEEE Std 421.5-2005 type AC4A model. The model represents type AC4A alternator-supplied controlled-rectifier excitation system which is quite different from the other type ac systems. This high initial response excitation system utilizes a full thyristor bridge in the exciter output circuit.  The voltage regulator controls the firing of the thyristor bridges. The exciter alternator uses an independent voltage regulator to control its output voltage to a constant value. These effects are not modeled; however, transient loading effects on the exciter alternator are included.   Reference: IEEE Standard 421.5-2005 Section 6.4. */
 	class ExcIEEEAC4A : public ExcitationSystemDynamics
 	{
 	public:
@@ -28,15 +26,32 @@ namespace CIMPP
 		ExcIEEEAC4A();
 		~ExcIEEEAC4A() override;
 
-		CIMPP::PU ka;  /* Voltage regulator gain (K).  Typical Value = 200. Default: nullptr */
-		CIMPP::PU kc;  /* Rectifier loading factor proportional to commutating reactance (K).  Typical Value = 0. Default: nullptr */
-		CIMPP::Seconds ta;  /* Voltage regulator time constant (T).  Typical Value = 0.015. Default: nullptr */
-		CIMPP::Seconds tb;  /* Voltage regulator time constant (T).  Typical Value = 10. Default: nullptr */
-		CIMPP::Seconds tc;  /* Voltage regulator time constant (T).  Typical Value = 1. Default: nullptr */
-		CIMPP::PU vimax;  /* Maximum voltage regulator input limit (V).  Typical Value = 10. Default: nullptr */
-		CIMPP::PU vimin;  /* Minimum voltage regulator input limit (V).  Typical Value = -10. Default: nullptr */
-		CIMPP::PU vrmax;  /* Maximum voltage regulator output (V).  Typical Value = 5.64. Default: nullptr */
-		CIMPP::PU vrmin;  /* Minimum voltage regulator output (V).  Typical Value = -4.53. Default: nullptr */
+		/** \brief Voltage regulator gain (K).  Typical Value = 200. Default: nullptr */
+		CIMPP::PU ka;
+
+		/** \brief Rectifier loading factor proportional to commutating reactance (K).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU kc;
+
+		/** \brief Voltage regulator time constant (T).  Typical Value = 0.015. Default: nullptr */
+		CIMPP::Seconds ta;
+
+		/** \brief Voltage regulator time constant (T).  Typical Value = 10. Default: nullptr */
+		CIMPP::Seconds tb;
+
+		/** \brief Voltage regulator time constant (T).  Typical Value = 1. Default: nullptr */
+		CIMPP::Seconds tc;
+
+		/** \brief Maximum voltage regulator input limit (V).  Typical Value = 10. Default: nullptr */
+		CIMPP::PU vimax;
+
+		/** \brief Minimum voltage regulator input limit (V).  Typical Value = -10. Default: nullptr */
+		CIMPP::PU vimin;
+
+		/** \brief Maximum voltage regulator output (V).  Typical Value = 5.64. Default: nullptr */
+		CIMPP::PU vrmax;
+
+		/** \brief Minimum voltage regulator output (V).  Typical Value = -4.53. Default: nullptr */
+		CIMPP::PU vrmin;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "OperationalLimitDirectionKind")
+		if (EnumSymbol.substr(0, pos) != "OperationalLimitDirectionKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,17 +50,17 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "high")
+		if (EnumSymbol == "high")
 		{
 			rop = OperationalLimitDirectionKind::high;
 			return lop;
 		}
-		if(EnumSymbol == "low")
+		if (EnumSymbol == "low")
 		{
 			rop = OperationalLimitDirectionKind::low;
 			return lop;
 		}
-		if(EnumSymbol == "absoluteValue")
+		if (EnumSymbol == "absoluteValue")
 		{
 			rop = OperationalLimitDirectionKind::absoluteValue;
 			return lop;

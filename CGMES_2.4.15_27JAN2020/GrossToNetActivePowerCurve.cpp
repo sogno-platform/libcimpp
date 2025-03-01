@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-GrossToNetActivePowerCurve::GrossToNetActivePowerCurve() : GeneratingUnit(nullptr) {};
-GrossToNetActivePowerCurve::~GrossToNetActivePowerCurve() {};
+GrossToNetActivePowerCurve::GrossToNetActivePowerCurve() : GeneratingUnit(nullptr) {}
+GrossToNetActivePowerCurve::~GrossToNetActivePowerCurve() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ GrossToNetActivePowerCurve::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_GeneratingUnit_GrossToNetActivePowerCurves(BaseClass*, BaseClass*);
 bool assign_GrossToNetActivePowerCurve_GeneratingUnit(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -59,10 +57,10 @@ bool assign_GrossToNetActivePowerCurve_GeneratingUnit(BaseClass* BaseClass_ptr1,
 	return false;
 }
 
-
 bool get_GrossToNetActivePowerCurve_GeneratingUnit(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const GrossToNetActivePowerCurve* element = dynamic_cast<const GrossToNetActivePowerCurve*>(BaseClass_ptr1))
+	const GrossToNetActivePowerCurve* element = dynamic_cast<const GrossToNetActivePowerCurve*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->GeneratingUnit != 0)
 		{
@@ -73,7 +71,6 @@ bool get_GrossToNetActivePowerCurve_GeneratingUnit(const BaseClass* BaseClass_pt
 	return false;
 }
 
-
 const char GrossToNetActivePowerCurve::debugName[] = "GrossToNetActivePowerCurve";
 const char* GrossToNetActivePowerCurve::debugString() const
 {
@@ -82,7 +79,7 @@ const char* GrossToNetActivePowerCurve::debugString() const
 
 void GrossToNetActivePowerCurve::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:GrossToNetActivePowerCurve"), &GrossToNetActivePowerCurve_factory));
+	factory_map.emplace("cim:GrossToNetActivePowerCurve", &GrossToNetActivePowerCurve_factory);
 }
 
 void GrossToNetActivePowerCurve::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -91,7 +88,7 @@ void GrossToNetActivePowerCurve::addPrimitiveAssignFnsToMap(std::unordered_map<s
 
 void GrossToNetActivePowerCurve::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:GrossToNetActivePowerCurve.GeneratingUnit"), &assign_GrossToNetActivePowerCurve_GeneratingUnit));
+	assign_map.emplace("cim:GrossToNetActivePowerCurve.GeneratingUnit", &assign_GrossToNetActivePowerCurve_GeneratingUnit);
 }
 
 void GrossToNetActivePowerCurve::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

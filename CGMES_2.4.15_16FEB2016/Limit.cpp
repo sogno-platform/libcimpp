@@ -11,8 +11,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-Limit::Limit() {};
-Limit::~Limit() {};
+Limit::Limit() {}
+Limit::~Limit() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -38,11 +38,6 @@ Limit::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
-
-
-
 const char Limit::debugName[] = "Limit";
 const char* Limit::debugString() const
 {
@@ -51,7 +46,7 @@ const char* Limit::debugString() const
 
 void Limit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:Limit"), &Limit_factory));
+	factory_map.emplace("cim:Limit", &Limit_factory);
 }
 
 void Limit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)

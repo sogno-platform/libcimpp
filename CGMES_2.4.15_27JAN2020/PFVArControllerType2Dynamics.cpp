@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-PFVArControllerType2Dynamics::PFVArControllerType2Dynamics() : ExcitationSystemDynamics(nullptr) {};
-PFVArControllerType2Dynamics::~PFVArControllerType2Dynamics() {};
+PFVArControllerType2Dynamics::PFVArControllerType2Dynamics() : ExcitationSystemDynamics(nullptr) {}
+PFVArControllerType2Dynamics::~PFVArControllerType2Dynamics() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ PFVArControllerType2Dynamics::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_ExcitationSystemDynamics_PFVArControllerType2Dynamics(BaseClass*, BaseClass*);
 bool assign_PFVArControllerType2Dynamics_ExcitationSystemDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -59,10 +57,10 @@ bool assign_PFVArControllerType2Dynamics_ExcitationSystemDynamics(BaseClass* Bas
 	return false;
 }
 
-
 bool get_PFVArControllerType2Dynamics_ExcitationSystemDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const PFVArControllerType2Dynamics* element = dynamic_cast<const PFVArControllerType2Dynamics*>(BaseClass_ptr1))
+	const PFVArControllerType2Dynamics* element = dynamic_cast<const PFVArControllerType2Dynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->ExcitationSystemDynamics != 0)
 		{
@@ -73,7 +71,6 @@ bool get_PFVArControllerType2Dynamics_ExcitationSystemDynamics(const BaseClass* 
 	return false;
 }
 
-
 const char PFVArControllerType2Dynamics::debugName[] = "PFVArControllerType2Dynamics";
 const char* PFVArControllerType2Dynamics::debugString() const
 {
@@ -82,7 +79,7 @@ const char* PFVArControllerType2Dynamics::debugString() const
 
 void PFVArControllerType2Dynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:PFVArControllerType2Dynamics"), &PFVArControllerType2Dynamics_factory));
+	factory_map.emplace("cim:PFVArControllerType2Dynamics", &PFVArControllerType2Dynamics_factory);
 }
 
 void PFVArControllerType2Dynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -91,7 +88,7 @@ void PFVArControllerType2Dynamics::addPrimitiveAssignFnsToMap(std::unordered_map
 
 void PFVArControllerType2Dynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:PFVArControllerType2Dynamics.ExcitationSystemDynamics"), &assign_PFVArControllerType2Dynamics_ExcitationSystemDynamics));
+	assign_map.emplace("cim:PFVArControllerType2Dynamics.ExcitationSystemDynamics", &assign_PFVArControllerType2Dynamics_ExcitationSystemDynamics);
 }
 
 void PFVArControllerType2Dynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

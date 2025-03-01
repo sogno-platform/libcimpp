@@ -19,9 +19,7 @@ namespace CIMPP
 	class DiscreteValue;
 	class ValueAliasSet;
 
-	/*
-	A Command is a discrete control used for supervisory control.
-	*/
+	/** \brief A Command is a discrete control used for supervisory control. */
 	class Command : public Control
 	{
 	public:
@@ -29,10 +27,17 @@ namespace CIMPP
 		Command();
 		~Command() override;
 
-		CIMPP::DiscreteValue* DiscreteValue;  /* The MeasurementValue that is controlled. Default: 0 */
-		CIMPP::ValueAliasSet* ValueAliasSet;  /* The ValueAliasSet used for translation of a Control value to a name. Default: 0 */
-		CIMPP::Integer normalValue;  /* Normal value for Control.value e.g. used for percentage scaling. Default: 0 */
-		CIMPP::Integer value;  /* The value representing the actuator output. Default: 0 */
+		/** \brief The MeasurementValue that is controlled. Default: 0 */
+		CIMPP::DiscreteValue* DiscreteValue;
+
+		/** \brief The ValueAliasSet used for translation of a Control value to a name. Default: 0 */
+		CIMPP::ValueAliasSet* ValueAliasSet;
+
+		/** \brief Normal value for Control.value e.g. used for percentage scaling. Default: 0 */
+		CIMPP::Integer normalValue;
+
+		/** \brief The value representing the actuator output. Default: 0 */
+		CIMPP::Integer value;
 
 		static const char debugName[];
 		const char* debugString() const override;

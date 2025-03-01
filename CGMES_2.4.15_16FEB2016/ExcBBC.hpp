@@ -19,9 +19,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Transformer fed static excitation system (static with ABB regulator). This model represents a static excitation system in which a gated thyristor bridge fed by a transformer at the main generator terminals feeds the main generator directly.
-	*/
+	/** \brief Transformer fed static excitation system (static with ABB regulator). This model represents a static excitation system in which a gated thyristor bridge fed by a transformer at the main generator terminals feeds the main generator directly. */
 	class ExcBBC : public ExcitationSystemDynamics
 	{
 	public:
@@ -29,17 +27,38 @@ namespace CIMPP
 		ExcBBC();
 		~ExcBBC() override;
 
-		CIMPP::PU efdmax;  /* Maximum open circuit exciter voltage (Efdmax).  Typical Value = 5. Default: nullptr */
-		CIMPP::PU efdmin;  /* Minimum open circuit exciter voltage (Efdmin).  Typical Value = -5. Default: nullptr */
-		CIMPP::PU k;  /* Steady state gain (K).  Typical Value = 300. Default: nullptr */
-		CIMPP::Boolean _switch;  /* Supplementary signal routing selector (switch). true = Vs connected to 3rd summing point false =  Vs connected to 1st summing point (see diagram). Typical Value = true. Default: false */
-		CIMPP::Seconds t1;  /* Controller time constant (T1).  Typical Value = 6. Default: nullptr */
-		CIMPP::Seconds t2;  /* Controller time constant (T2).  Typical Value = 1. Default: nullptr */
-		CIMPP::Seconds t3;  /* Lead/lag time constant (T3).  Typical Value = 0.05. Default: nullptr */
-		CIMPP::Seconds t4;  /* Lead/lag time constant (T4).  Typical Value = 0.01. Default: nullptr */
-		CIMPP::PU vrmax;  /* Maximum control element output (Vrmax).  Typical Value = 5. Default: nullptr */
-		CIMPP::PU vrmin;  /* Minimum control element output (Vrmin).  Typical Value = -5. Default: nullptr */
-		CIMPP::PU xe;  /* Effective excitation transformer reactance (Xe).  Typical Value = 0.05. Default: nullptr */
+		/** \brief Maximum open circuit exciter voltage (Efdmax).  Typical Value = 5. Default: nullptr */
+		CIMPP::PU efdmax;
+
+		/** \brief Minimum open circuit exciter voltage (Efdmin).  Typical Value = -5. Default: nullptr */
+		CIMPP::PU efdmin;
+
+		/** \brief Steady state gain (K).  Typical Value = 300. Default: nullptr */
+		CIMPP::PU k;
+
+		/** \brief Supplementary signal routing selector (switch). true = Vs connected to 3rd summing point false =  Vs connected to 1st summing point (see diagram). Typical Value = true. Default: false */
+		CIMPP::Boolean _switch;
+
+		/** \brief Controller time constant (T1).  Typical Value = 6. Default: nullptr */
+		CIMPP::Seconds t1;
+
+		/** \brief Controller time constant (T2).  Typical Value = 1. Default: nullptr */
+		CIMPP::Seconds t2;
+
+		/** \brief Lead/lag time constant (T3).  Typical Value = 0.05. Default: nullptr */
+		CIMPP::Seconds t3;
+
+		/** \brief Lead/lag time constant (T4).  Typical Value = 0.01. Default: nullptr */
+		CIMPP::Seconds t4;
+
+		/** \brief Maximum control element output (Vrmax).  Typical Value = 5. Default: nullptr */
+		CIMPP::PU vrmax;
+
+		/** \brief Minimum control element output (Vrmin).  Typical Value = -5. Default: nullptr */
+		CIMPP::PU vrmin;
+
+		/** \brief Effective excitation transformer reactance (Xe).  Typical Value = 0.05. Default: nullptr */
+		CIMPP::PU xe;
 
 		static const char debugName[];
 		const char* debugString() const override;

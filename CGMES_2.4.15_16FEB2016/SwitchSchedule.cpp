@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-SwitchSchedule::SwitchSchedule() : Switch(nullptr) {};
-SwitchSchedule::~SwitchSchedule() {};
+SwitchSchedule::SwitchSchedule() : Switch(nullptr) {}
+SwitchSchedule::~SwitchSchedule() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ SwitchSchedule::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_Switch_SwitchSchedules(BaseClass*, BaseClass*);
 bool assign_SwitchSchedule_Switch(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -59,10 +57,10 @@ bool assign_SwitchSchedule_Switch(BaseClass* BaseClass_ptr1, BaseClass* BaseClas
 	return false;
 }
 
-
 bool get_SwitchSchedule_Switch(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const SwitchSchedule* element = dynamic_cast<const SwitchSchedule*>(BaseClass_ptr1))
+	const SwitchSchedule* element = dynamic_cast<const SwitchSchedule*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->Switch != 0)
 		{
@@ -73,7 +71,6 @@ bool get_SwitchSchedule_Switch(const BaseClass* BaseClass_ptr1, std::list<const 
 	return false;
 }
 
-
 const char SwitchSchedule::debugName[] = "SwitchSchedule";
 const char* SwitchSchedule::debugString() const
 {
@@ -82,7 +79,7 @@ const char* SwitchSchedule::debugString() const
 
 void SwitchSchedule::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:SwitchSchedule"), &SwitchSchedule_factory));
+	factory_map.emplace("cim:SwitchSchedule", &SwitchSchedule_factory);
 }
 
 void SwitchSchedule::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -91,7 +88,7 @@ void SwitchSchedule::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, 
 
 void SwitchSchedule::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:SwitchSchedule.Switch"), &assign_SwitchSchedule_Switch));
+	assign_map.emplace("cim:SwitchSchedule.Switch", &assign_SwitchSchedule_Switch);
 }
 
 void SwitchSchedule::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

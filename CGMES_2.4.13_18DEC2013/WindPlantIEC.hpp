@@ -18,9 +18,7 @@ namespace CIMPP
 	class WindPlantFreqPcontrolIEC;
 	class WindPlantReactiveControlIEC;
 
-	/*
-	Simplified IEC type plant level model.   Reference: IEC 61400-27-1, AnnexE.
-	*/
+	/** \brief Simplified IEC type plant level model.   Reference: IEC 61400-27-1, AnnexE. */
 	class WindPlantIEC : public WindPlantDynamics
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		WindPlantIEC();
 		~WindPlantIEC() override;
 
-		CIMPP::WindPlantFreqPcontrolIEC* WindPlantFreqPcontrolIEC;  /* Wind plant frequency and active power control model associated with this wind plant. Default: 0 */
-		CIMPP::WindPlantReactiveControlIEC* WindPlantReactiveControlIEC;  /* Wind plant reactive control model associated with this wind plant. Default: 0 */
+		/** \brief Wind plant frequency and active power control model associated with this wind plant. Default: 0 */
+		CIMPP::WindPlantFreqPcontrolIEC* WindPlantFreqPcontrolIEC;
+
+		/** \brief Wind plant reactive control model associated with this wind plant. Default: 0 */
+		CIMPP::WindPlantReactiveControlIEC* WindPlantReactiveControlIEC;
 
 		static const char debugName[];
 		const char* debugString() const override;

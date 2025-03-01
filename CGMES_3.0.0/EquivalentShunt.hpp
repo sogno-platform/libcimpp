@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	The class represents equivalent shunts.
-	*/
+	/** \brief The class represents equivalent shunts. */
 	class EquivalentShunt : public EquivalentEquipment
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		EquivalentShunt();
 		~EquivalentShunt() override;
 
-		CIMPP::Susceptance b;  /* Positive sequence shunt susceptance. Default: nullptr */
-		CIMPP::Conductance g;  /* Positive sequence shunt conductance. Default: nullptr */
+		/** \brief Positive sequence shunt susceptance. Default: nullptr */
+		CIMPP::Susceptance b;
+
+		/** \brief Positive sequence shunt conductance. Default: nullptr */
+		CIMPP::Conductance g;
 
 		static const char debugName[];
 		const char* debugString() const override;

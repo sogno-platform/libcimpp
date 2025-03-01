@@ -9,25 +9,17 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Type of connection for the OEL input used for static excitation systems type 6B.
-	*/
+	/** \brief Type of connection for the OEL input used for static excitation systems type 6B. */
 	class ExcST6BOELselectorKind
 	{
 	public:
 		enum ExcST6BOELselectorKind_ENUM
 		{
-			/**
-			 * No OEL input is used.
-			 */
+			/** No OEL input is used. */
 			noOELinput,
-			/**
-			 * The connection is before UEL.
-			 */
+			/** The connection is before UEL. */
 			beforeUEL,
-			/**
-			 * The connection is after UEL.
-			 */
+			/** The connection is after UEL. */
 			afterUEL,
 		};
 

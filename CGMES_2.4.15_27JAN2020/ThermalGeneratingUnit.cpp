@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-ThermalGeneratingUnit::ThermalGeneratingUnit() {};
-ThermalGeneratingUnit::~ThermalGeneratingUnit() {};
+ThermalGeneratingUnit::ThermalGeneratingUnit() {}
+ThermalGeneratingUnit::~ThermalGeneratingUnit() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -41,8 +41,6 @@ ThermalGeneratingUnit::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_FossilFuel_ThermalGeneratingUnit(BaseClass*, BaseClass*);
 bool assign_ThermalGeneratingUnit_FossilFuels(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -61,7 +59,6 @@ bool assign_ThermalGeneratingUnit_FossilFuels(BaseClass* BaseClass_ptr1, BaseCla
 }
 
 
-
 const char ThermalGeneratingUnit::debugName[] = "ThermalGeneratingUnit";
 const char* ThermalGeneratingUnit::debugString() const
 {
@@ -70,7 +67,7 @@ const char* ThermalGeneratingUnit::debugString() const
 
 void ThermalGeneratingUnit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ThermalGeneratingUnit"), &ThermalGeneratingUnit_factory));
+	factory_map.emplace("cim:ThermalGeneratingUnit", &ThermalGeneratingUnit_factory);
 }
 
 void ThermalGeneratingUnit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -79,7 +76,7 @@ void ThermalGeneratingUnit::addPrimitiveAssignFnsToMap(std::unordered_map<std::s
 
 void ThermalGeneratingUnit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ThermalGeneratingUnit.FossilFuels"), &assign_ThermalGeneratingUnit_FossilFuels));
+	assign_map.emplace("cim:ThermalGeneratingUnit.FossilFuels", &assign_ThermalGeneratingUnit_FossilFuels);
 }
 
 void ThermalGeneratingUnit::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

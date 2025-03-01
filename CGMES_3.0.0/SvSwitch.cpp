@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "Switch.hpp"
-#include "Boolean.hpp"
 
 using namespace CIMPP;
 
-SvSwitch::SvSwitch() : Switch(nullptr) {};
-SvSwitch::~SvSwitch() {};
+SvSwitch::SvSwitch() : Switch(nullptr) {}
+SvSwitch::~SvSwitch() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,21 +41,6 @@ SvSwitch::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_SvSwitch_open(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (SvSwitch* element = dynamic_cast<SvSwitch*>(BaseClass_ptr1))
-	{
-		buffer >> element->open;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_Switch_SvSwitch(BaseClass*, BaseClass*);
 bool assign_SvSwitch_Switch(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,9 +58,38 @@ bool assign_SvSwitch_Switch(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2
 	return false;
 }
 
+bool assign_SvSwitch_open(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	SvSwitch* element = dynamic_cast<SvSwitch*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->open;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_SvSwitch_Switch(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const SvSwitch* element = dynamic_cast<const SvSwitch*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->Switch != 0)
+		{
+			BaseClass_list.push_back(element->Switch);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_SvSwitch_open(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SvSwitch* element = dynamic_cast<const SvSwitch*>(BaseClass_ptr1))
+	const SvSwitch* element = dynamic_cast<const SvSwitch*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->open;
 		if (!buffer.str().empty())
@@ -88,21 +101,6 @@ bool get_SvSwitch_open(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 	return false;
 }
 
-
-bool get_SvSwitch_Switch(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const SvSwitch* element = dynamic_cast<const SvSwitch*>(BaseClass_ptr1))
-	{
-		if (element->Switch != 0)
-		{
-			BaseClass_list.push_back(element->Switch);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char SvSwitch::debugName[] = "SvSwitch";
 const char* SvSwitch::debugString() const
 {
@@ -111,17 +109,17 @@ const char* SvSwitch::debugString() const
 
 void SvSwitch::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:SvSwitch"), &SvSwitch_factory));
+	factory_map.emplace("cim:SvSwitch", &SvSwitch_factory);
 }
 
 void SvSwitch::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:SvSwitch.open"), &assign_SvSwitch_open));
+	assign_map.emplace("cim:SvSwitch.open", &assign_SvSwitch_open);
 }
 
 void SvSwitch::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:SvSwitch.Switch"), &assign_SvSwitch_Switch));
+	assign_map.emplace("cim:SvSwitch.Switch", &assign_SvSwitch_Switch);
 }
 
 void SvSwitch::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

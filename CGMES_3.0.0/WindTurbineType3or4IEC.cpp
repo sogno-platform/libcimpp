@@ -8,8 +8,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "WindContQIEC.hpp"
 #include "WindContCurrLimIEC.hpp"
+#include "WindContQIEC.hpp"
 #include "WindContQLimIEC.hpp"
 #include "WindContQPQULimIEC.hpp"
 #include "WindProtectionIEC.hpp"
@@ -17,8 +17,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-WindTurbineType3or4IEC::WindTurbineType3or4IEC() : WIndContQIEC(nullptr), WindContCurrLimIEC(nullptr), WindContQLimIEC(nullptr), WindContQPQULimIEC(nullptr), WindProtectionIEC(nullptr), WindRefFrameRotIEC(nullptr) {};
-WindTurbineType3or4IEC::~WindTurbineType3or4IEC() {};
+WindTurbineType3or4IEC::WindTurbineType3or4IEC() : WIndContQIEC(nullptr), WindContCurrLimIEC(nullptr), WindContQLimIEC(nullptr), WindContQPQULimIEC(nullptr), WindProtectionIEC(nullptr), WindRefFrameRotIEC(nullptr) {}
+WindTurbineType3or4IEC::~WindTurbineType3or4IEC() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -50,8 +50,6 @@ WindTurbineType3or4IEC::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_WindContQIEC_WindTurbineType3or4IEC(BaseClass*, BaseClass*);
 bool assign_WindTurbineType3or4IEC_WIndContQIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -68,6 +66,7 @@ bool assign_WindTurbineType3or4IEC_WIndContQIEC(BaseClass* BaseClass_ptr1, BaseC
 	}
 	return false;
 }
+
 bool assign_WindContCurrLimIEC_WindTurbineType3or4IEC(BaseClass*, BaseClass*);
 bool assign_WindTurbineType3or4IEC_WindContCurrLimIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -84,6 +83,7 @@ bool assign_WindTurbineType3or4IEC_WindContCurrLimIEC(BaseClass* BaseClass_ptr1,
 	}
 	return false;
 }
+
 bool assign_WindContQLimIEC_WindTurbineType3or4IEC(BaseClass*, BaseClass*);
 bool assign_WindTurbineType3or4IEC_WindContQLimIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -100,6 +100,7 @@ bool assign_WindTurbineType3or4IEC_WindContQLimIEC(BaseClass* BaseClass_ptr1, Ba
 	}
 	return false;
 }
+
 bool assign_WindContQPQULimIEC_WindTurbineType3or4IEC(BaseClass*, BaseClass*);
 bool assign_WindTurbineType3or4IEC_WindContQPQULimIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -116,6 +117,7 @@ bool assign_WindTurbineType3or4IEC_WindContQPQULimIEC(BaseClass* BaseClass_ptr1,
 	}
 	return false;
 }
+
 bool assign_WindProtectionIEC_WindTurbineType3or4IEC(BaseClass*, BaseClass*);
 bool assign_WindTurbineType3or4IEC_WindProtectionIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -132,6 +134,7 @@ bool assign_WindTurbineType3or4IEC_WindProtectionIEC(BaseClass* BaseClass_ptr1, 
 	}
 	return false;
 }
+
 bool assign_WindRefFrameRotIEC_WindTurbineType3or4IEC(BaseClass*, BaseClass*);
 bool assign_WindTurbineType3or4IEC_WindRefFrameRotIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -149,10 +152,10 @@ bool assign_WindTurbineType3or4IEC_WindRefFrameRotIEC(BaseClass* BaseClass_ptr1,
 	return false;
 }
 
-
 bool get_WindTurbineType3or4IEC_WIndContQIEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const WindTurbineType3or4IEC* element = dynamic_cast<const WindTurbineType3or4IEC*>(BaseClass_ptr1))
+	const WindTurbineType3or4IEC* element = dynamic_cast<const WindTurbineType3or4IEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->WIndContQIEC != 0)
 		{
@@ -165,7 +168,8 @@ bool get_WindTurbineType3or4IEC_WIndContQIEC(const BaseClass* BaseClass_ptr1, st
 
 bool get_WindTurbineType3or4IEC_WindContCurrLimIEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const WindTurbineType3or4IEC* element = dynamic_cast<const WindTurbineType3or4IEC*>(BaseClass_ptr1))
+	const WindTurbineType3or4IEC* element = dynamic_cast<const WindTurbineType3or4IEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->WindContCurrLimIEC != 0)
 		{
@@ -178,7 +182,8 @@ bool get_WindTurbineType3or4IEC_WindContCurrLimIEC(const BaseClass* BaseClass_pt
 
 bool get_WindTurbineType3or4IEC_WindContQLimIEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const WindTurbineType3or4IEC* element = dynamic_cast<const WindTurbineType3or4IEC*>(BaseClass_ptr1))
+	const WindTurbineType3or4IEC* element = dynamic_cast<const WindTurbineType3or4IEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->WindContQLimIEC != 0)
 		{
@@ -191,7 +196,8 @@ bool get_WindTurbineType3or4IEC_WindContQLimIEC(const BaseClass* BaseClass_ptr1,
 
 bool get_WindTurbineType3or4IEC_WindContQPQULimIEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const WindTurbineType3or4IEC* element = dynamic_cast<const WindTurbineType3or4IEC*>(BaseClass_ptr1))
+	const WindTurbineType3or4IEC* element = dynamic_cast<const WindTurbineType3or4IEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->WindContQPQULimIEC != 0)
 		{
@@ -204,7 +210,8 @@ bool get_WindTurbineType3or4IEC_WindContQPQULimIEC(const BaseClass* BaseClass_pt
 
 bool get_WindTurbineType3or4IEC_WindProtectionIEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const WindTurbineType3or4IEC* element = dynamic_cast<const WindTurbineType3or4IEC*>(BaseClass_ptr1))
+	const WindTurbineType3or4IEC* element = dynamic_cast<const WindTurbineType3or4IEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->WindProtectionIEC != 0)
 		{
@@ -217,7 +224,8 @@ bool get_WindTurbineType3or4IEC_WindProtectionIEC(const BaseClass* BaseClass_ptr
 
 bool get_WindTurbineType3or4IEC_WindRefFrameRotIEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const WindTurbineType3or4IEC* element = dynamic_cast<const WindTurbineType3or4IEC*>(BaseClass_ptr1))
+	const WindTurbineType3or4IEC* element = dynamic_cast<const WindTurbineType3or4IEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->WindRefFrameRotIEC != 0)
 		{
@@ -228,7 +236,6 @@ bool get_WindTurbineType3or4IEC_WindRefFrameRotIEC(const BaseClass* BaseClass_pt
 	return false;
 }
 
-
 const char WindTurbineType3or4IEC::debugName[] = "WindTurbineType3or4IEC";
 const char* WindTurbineType3or4IEC::debugString() const
 {
@@ -237,7 +244,7 @@ const char* WindTurbineType3or4IEC::debugString() const
 
 void WindTurbineType3or4IEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:WindTurbineType3or4IEC"), &WindTurbineType3or4IEC_factory));
+	factory_map.emplace("cim:WindTurbineType3or4IEC", &WindTurbineType3or4IEC_factory);
 }
 
 void WindTurbineType3or4IEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -246,12 +253,12 @@ void WindTurbineType3or4IEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::
 
 void WindTurbineType3or4IEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindTurbineType3or4IEC.WIndContQIEC"), &assign_WindTurbineType3or4IEC_WIndContQIEC));
-	assign_map.insert(std::make_pair(std::string("cim:WindTurbineType3or4IEC.WindContCurrLimIEC"), &assign_WindTurbineType3or4IEC_WindContCurrLimIEC));
-	assign_map.insert(std::make_pair(std::string("cim:WindTurbineType3or4IEC.WindContQLimIEC"), &assign_WindTurbineType3or4IEC_WindContQLimIEC));
-	assign_map.insert(std::make_pair(std::string("cim:WindTurbineType3or4IEC.WindContQPQULimIEC"), &assign_WindTurbineType3or4IEC_WindContQPQULimIEC));
-	assign_map.insert(std::make_pair(std::string("cim:WindTurbineType3or4IEC.WindProtectionIEC"), &assign_WindTurbineType3or4IEC_WindProtectionIEC));
-	assign_map.insert(std::make_pair(std::string("cim:WindTurbineType3or4IEC.WindRefFrameRotIEC"), &assign_WindTurbineType3or4IEC_WindRefFrameRotIEC));
+	assign_map.emplace("cim:WindTurbineType3or4IEC.WIndContQIEC", &assign_WindTurbineType3or4IEC_WIndContQIEC);
+	assign_map.emplace("cim:WindTurbineType3or4IEC.WindContCurrLimIEC", &assign_WindTurbineType3or4IEC_WindContCurrLimIEC);
+	assign_map.emplace("cim:WindTurbineType3or4IEC.WindContQLimIEC", &assign_WindTurbineType3or4IEC_WindContQLimIEC);
+	assign_map.emplace("cim:WindTurbineType3or4IEC.WindContQPQULimIEC", &assign_WindTurbineType3or4IEC_WindContQPQULimIEC);
+	assign_map.emplace("cim:WindTurbineType3or4IEC.WindProtectionIEC", &assign_WindTurbineType3or4IEC_WindProtectionIEC);
+	assign_map.emplace("cim:WindTurbineType3or4IEC.WindRefFrameRotIEC", &assign_WindTurbineType3or4IEC_WindRefFrameRotIEC);
 }
 
 void WindTurbineType3or4IEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

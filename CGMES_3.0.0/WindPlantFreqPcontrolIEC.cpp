@@ -10,26 +10,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 #include "WindDynamicsLookupTable.hpp"
 #include "WindPlantIEC.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Float.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Float.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
 
 using namespace CIMPP;
 
-WindPlantFreqPcontrolIEC::WindPlantFreqPcontrolIEC() : WindPlantIEC(nullptr) {};
-WindPlantFreqPcontrolIEC::~WindPlantFreqPcontrolIEC() {};
+WindPlantFreqPcontrolIEC::WindPlantFreqPcontrolIEC() : WindPlantIEC(nullptr) {}
+WindPlantFreqPcontrolIEC::~WindPlantFreqPcontrolIEC() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -72,203 +57,6 @@ WindPlantFreqPcontrolIEC::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_WindPlantFreqPcontrolIEC_dprefmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->dprefmax;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantFreqPcontrolIEC_dprefmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->dprefmin;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantFreqPcontrolIEC_dpwprefmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->dpwprefmax;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantFreqPcontrolIEC_dpwprefmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->dpwprefmin;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantFreqPcontrolIEC_kiwpp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->kiwpp;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantFreqPcontrolIEC_kiwppmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->kiwppmax;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantFreqPcontrolIEC_kiwppmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->kiwppmin;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantFreqPcontrolIEC_kpwpp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->kpwpp;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantFreqPcontrolIEC_kwppref(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->kwppref;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantFreqPcontrolIEC_prefmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->prefmax;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantFreqPcontrolIEC_prefmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->prefmin;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantFreqPcontrolIEC_tpft(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->tpft;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantFreqPcontrolIEC_tpfv(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->tpfv;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantFreqPcontrolIEC_twpffiltp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->twpffiltp;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantFreqPcontrolIEC_twppfiltp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->twppfiltp;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_WindDynamicsLookupTable_WindPlantFreqPcontrolIEC(BaseClass*, BaseClass*);
 bool assign_WindPlantFreqPcontrolIEC_WindDynamicsLookupTable(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -285,6 +73,7 @@ bool assign_WindPlantFreqPcontrolIEC_WindDynamicsLookupTable(BaseClass* BaseClas
 	}
 	return false;
 }
+
 bool assign_WindPlantIEC_WindPlantFreqPcontrolIEC(BaseClass*, BaseClass*);
 bool assign_WindPlantFreqPcontrolIEC_WindPlantIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -302,9 +91,222 @@ bool assign_WindPlantFreqPcontrolIEC_WindPlantIEC(BaseClass* BaseClass_ptr1, Bas
 	return false;
 }
 
+bool assign_WindPlantFreqPcontrolIEC_dprefmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->dprefmax;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantFreqPcontrolIEC_dprefmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->dprefmin;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantFreqPcontrolIEC_dpwprefmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->dpwprefmax;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantFreqPcontrolIEC_dpwprefmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->dpwprefmin;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantFreqPcontrolIEC_kiwpp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->kiwpp;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantFreqPcontrolIEC_kiwppmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->kiwppmax;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantFreqPcontrolIEC_kiwppmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->kiwppmin;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantFreqPcontrolIEC_kpwpp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->kpwpp;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantFreqPcontrolIEC_kwppref(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->kwppref;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantFreqPcontrolIEC_prefmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->prefmax;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantFreqPcontrolIEC_prefmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->prefmin;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantFreqPcontrolIEC_tpft(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->tpft;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantFreqPcontrolIEC_tpfv(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->tpfv;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantFreqPcontrolIEC_twpffiltp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->twpffiltp;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantFreqPcontrolIEC_twppfiltp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantFreqPcontrolIEC* element = dynamic_cast<WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->twppfiltp;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
+
 bool get_WindPlantFreqPcontrolIEC_dprefmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
+	const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->dprefmax;
 		if (!buffer.str().empty())
@@ -318,7 +320,8 @@ bool get_WindPlantFreqPcontrolIEC_dprefmax(const BaseClass* BaseClass_ptr1, std:
 
 bool get_WindPlantFreqPcontrolIEC_dprefmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
+	const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->dprefmin;
 		if (!buffer.str().empty())
@@ -332,7 +335,8 @@ bool get_WindPlantFreqPcontrolIEC_dprefmin(const BaseClass* BaseClass_ptr1, std:
 
 bool get_WindPlantFreqPcontrolIEC_dpwprefmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
+	const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->dpwprefmax;
 		if (!buffer.str().empty())
@@ -346,7 +350,8 @@ bool get_WindPlantFreqPcontrolIEC_dpwprefmax(const BaseClass* BaseClass_ptr1, st
 
 bool get_WindPlantFreqPcontrolIEC_dpwprefmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
+	const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->dpwprefmin;
 		if (!buffer.str().empty())
@@ -360,7 +365,8 @@ bool get_WindPlantFreqPcontrolIEC_dpwprefmin(const BaseClass* BaseClass_ptr1, st
 
 bool get_WindPlantFreqPcontrolIEC_kiwpp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
+	const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kiwpp;
 		if (!buffer.str().empty())
@@ -374,7 +380,8 @@ bool get_WindPlantFreqPcontrolIEC_kiwpp(const BaseClass* BaseClass_ptr1, std::st
 
 bool get_WindPlantFreqPcontrolIEC_kiwppmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
+	const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kiwppmax;
 		if (!buffer.str().empty())
@@ -388,7 +395,8 @@ bool get_WindPlantFreqPcontrolIEC_kiwppmax(const BaseClass* BaseClass_ptr1, std:
 
 bool get_WindPlantFreqPcontrolIEC_kiwppmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
+	const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kiwppmin;
 		if (!buffer.str().empty())
@@ -402,7 +410,8 @@ bool get_WindPlantFreqPcontrolIEC_kiwppmin(const BaseClass* BaseClass_ptr1, std:
 
 bool get_WindPlantFreqPcontrolIEC_kpwpp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
+	const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kpwpp;
 		if (!buffer.str().empty())
@@ -416,7 +425,8 @@ bool get_WindPlantFreqPcontrolIEC_kpwpp(const BaseClass* BaseClass_ptr1, std::st
 
 bool get_WindPlantFreqPcontrolIEC_kwppref(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
+	const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kwppref;
 		if (!buffer.str().empty())
@@ -430,7 +440,8 @@ bool get_WindPlantFreqPcontrolIEC_kwppref(const BaseClass* BaseClass_ptr1, std::
 
 bool get_WindPlantFreqPcontrolIEC_prefmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
+	const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->prefmax;
 		if (!buffer.str().empty())
@@ -444,7 +455,8 @@ bool get_WindPlantFreqPcontrolIEC_prefmax(const BaseClass* BaseClass_ptr1, std::
 
 bool get_WindPlantFreqPcontrolIEC_prefmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
+	const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->prefmin;
 		if (!buffer.str().empty())
@@ -458,7 +470,8 @@ bool get_WindPlantFreqPcontrolIEC_prefmin(const BaseClass* BaseClass_ptr1, std::
 
 bool get_WindPlantFreqPcontrolIEC_tpft(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
+	const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tpft;
 		if (!buffer.str().empty())
@@ -472,7 +485,8 @@ bool get_WindPlantFreqPcontrolIEC_tpft(const BaseClass* BaseClass_ptr1, std::str
 
 bool get_WindPlantFreqPcontrolIEC_tpfv(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
+	const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tpfv;
 		if (!buffer.str().empty())
@@ -486,7 +500,8 @@ bool get_WindPlantFreqPcontrolIEC_tpfv(const BaseClass* BaseClass_ptr1, std::str
 
 bool get_WindPlantFreqPcontrolIEC_twpffiltp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
+	const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->twpffiltp;
 		if (!buffer.str().empty())
@@ -500,7 +515,8 @@ bool get_WindPlantFreqPcontrolIEC_twpffiltp(const BaseClass* BaseClass_ptr1, std
 
 bool get_WindPlantFreqPcontrolIEC_twppfiltp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1))
+	const WindPlantFreqPcontrolIEC* element = dynamic_cast<const WindPlantFreqPcontrolIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->twppfiltp;
 		if (!buffer.str().empty())
@@ -512,8 +528,6 @@ bool get_WindPlantFreqPcontrolIEC_twppfiltp(const BaseClass* BaseClass_ptr1, std
 	return false;
 }
 
-
-
 const char WindPlantFreqPcontrolIEC::debugName[] = "WindPlantFreqPcontrolIEC";
 const char* WindPlantFreqPcontrolIEC::debugString() const
 {
@@ -522,32 +536,32 @@ const char* WindPlantFreqPcontrolIEC::debugString() const
 
 void WindPlantFreqPcontrolIEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC"), &WindPlantFreqPcontrolIEC_factory));
+	factory_map.emplace("cim:WindPlantFreqPcontrolIEC", &WindPlantFreqPcontrolIEC_factory);
 }
 
 void WindPlantFreqPcontrolIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.dprefmax"), &assign_WindPlantFreqPcontrolIEC_dprefmax));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.dprefmin"), &assign_WindPlantFreqPcontrolIEC_dprefmin));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.dpwprefmax"), &assign_WindPlantFreqPcontrolIEC_dpwprefmax));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.dpwprefmin"), &assign_WindPlantFreqPcontrolIEC_dpwprefmin));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.kiwpp"), &assign_WindPlantFreqPcontrolIEC_kiwpp));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.kiwppmax"), &assign_WindPlantFreqPcontrolIEC_kiwppmax));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.kiwppmin"), &assign_WindPlantFreqPcontrolIEC_kiwppmin));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.kpwpp"), &assign_WindPlantFreqPcontrolIEC_kpwpp));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.kwppref"), &assign_WindPlantFreqPcontrolIEC_kwppref));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.prefmax"), &assign_WindPlantFreqPcontrolIEC_prefmax));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.prefmin"), &assign_WindPlantFreqPcontrolIEC_prefmin));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.tpft"), &assign_WindPlantFreqPcontrolIEC_tpft));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.tpfv"), &assign_WindPlantFreqPcontrolIEC_tpfv));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.twpffiltp"), &assign_WindPlantFreqPcontrolIEC_twpffiltp));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.twppfiltp"), &assign_WindPlantFreqPcontrolIEC_twppfiltp));
+	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.dprefmax", &assign_WindPlantFreqPcontrolIEC_dprefmax);
+	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.dprefmin", &assign_WindPlantFreqPcontrolIEC_dprefmin);
+	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.dpwprefmax", &assign_WindPlantFreqPcontrolIEC_dpwprefmax);
+	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.dpwprefmin", &assign_WindPlantFreqPcontrolIEC_dpwprefmin);
+	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.kiwpp", &assign_WindPlantFreqPcontrolIEC_kiwpp);
+	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.kiwppmax", &assign_WindPlantFreqPcontrolIEC_kiwppmax);
+	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.kiwppmin", &assign_WindPlantFreqPcontrolIEC_kiwppmin);
+	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.kpwpp", &assign_WindPlantFreqPcontrolIEC_kpwpp);
+	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.kwppref", &assign_WindPlantFreqPcontrolIEC_kwppref);
+	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.prefmax", &assign_WindPlantFreqPcontrolIEC_prefmax);
+	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.prefmin", &assign_WindPlantFreqPcontrolIEC_prefmin);
+	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.tpft", &assign_WindPlantFreqPcontrolIEC_tpft);
+	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.tpfv", &assign_WindPlantFreqPcontrolIEC_tpfv);
+	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.twpffiltp", &assign_WindPlantFreqPcontrolIEC_twpffiltp);
+	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.twppfiltp", &assign_WindPlantFreqPcontrolIEC_twppfiltp);
 }
 
 void WindPlantFreqPcontrolIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.WindDynamicsLookupTable"), &assign_WindPlantFreqPcontrolIEC_WindDynamicsLookupTable));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantFreqPcontrolIEC.WindPlantIEC"), &assign_WindPlantFreqPcontrolIEC_WindPlantIEC));
+	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.WindDynamicsLookupTable", &assign_WindPlantFreqPcontrolIEC_WindDynamicsLookupTable);
+	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.WindPlantIEC", &assign_WindPlantFreqPcontrolIEC_WindPlantIEC);
 }
 
 void WindPlantFreqPcontrolIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

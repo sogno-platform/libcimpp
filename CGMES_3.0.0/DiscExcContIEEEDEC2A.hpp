@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	IEEE type DEC2A model for discontinuous excitation control. This system provides transient excitation boosting via an open-loop control as initiated by a trigger signal generated remotely. Reference: IEEE 421.5-2005 12.3.
-	*/
+	/** \brief IEEE type DEC2A model for discontinuous excitation control. This system provides transient excitation boosting via an open-loop control as initiated by a trigger signal generated remotely. Reference: IEEE 421.5-2005 12.3. */
 	class DiscExcContIEEEDEC2A : public DiscontinuousExcitationControlDynamics
 	{
 	public:
@@ -28,11 +26,20 @@ namespace CIMPP
 		DiscExcContIEEEDEC2A();
 		~DiscExcContIEEEDEC2A() override;
 
-		CIMPP::Seconds td1;  /* Discontinuous controller time constant (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;D1&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). Default: nullptr */
-		CIMPP::Seconds td2;  /* Discontinuous controller washout time constant (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;D2&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). Default: nullptr */
-		CIMPP::PU vdmax;  /* Limiter (&lt;i&gt;V&lt;/i&gt;&lt;i&gt;&lt;sub&gt;DMAX&lt;/sub&gt;&lt;/i&gt;) (&amp;gt; DiscExcContIEEEDEC2A.vdmin). Default: nullptr */
-		CIMPP::PU vdmin;  /* Limiter (&lt;i&gt;V&lt;/i&gt;&lt;i&gt;&lt;sub&gt;DMIN&lt;/sub&gt;&lt;/i&gt;) (&amp;lt; DiscExcContIEEEDEC2A.vdmax). Default: nullptr */
-		CIMPP::PU vk;  /* Discontinuous controller input reference (&lt;i&gt;V&lt;/i&gt;&lt;i&gt;&lt;sub&gt;K&lt;/sub&gt;&lt;/i&gt;). Default: nullptr */
+		/** \brief Discontinuous controller time constant (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;D1&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). Default: nullptr */
+		CIMPP::Seconds td1;
+
+		/** \brief Discontinuous controller washout time constant (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;D2&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). Default: nullptr */
+		CIMPP::Seconds td2;
+
+		/** \brief Limiter (&lt;i&gt;V&lt;/i&gt;&lt;i&gt;&lt;sub&gt;DMAX&lt;/sub&gt;&lt;/i&gt;) (&amp;gt; DiscExcContIEEEDEC2A.vdmin). Default: nullptr */
+		CIMPP::PU vdmax;
+
+		/** \brief Limiter (&lt;i&gt;V&lt;/i&gt;&lt;i&gt;&lt;sub&gt;DMIN&lt;/sub&gt;&lt;/i&gt;) (&amp;lt; DiscExcContIEEEDEC2A.vdmax). Default: nullptr */
+		CIMPP::PU vdmin;
+
+		/** \brief Discontinuous controller input reference (&lt;i&gt;V&lt;/i&gt;&lt;i&gt;&lt;sub&gt;K&lt;/sub&gt;&lt;/i&gt;). Default: nullptr */
+		CIMPP::PU vk;
 
 		static const char debugName[];
 		const char* debugString() const override;

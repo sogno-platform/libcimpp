@@ -8,21 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
 
 using namespace CIMPP;
 
-ExcCZ::ExcCZ() {};
-ExcCZ::~ExcCZ() {};
+ExcCZ::ExcCZ() {}
+ExcCZ::~ExcCZ() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -58,142 +48,150 @@ ExcCZ::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_ExcCZ_efdmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcCZ_efdmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcCZ* element = dynamic_cast<ExcCZ*>(BaseClass_ptr1))
+	ExcCZ* element = dynamic_cast<ExcCZ*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->efdmax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcCZ_efdmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcCZ_efdmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcCZ* element = dynamic_cast<ExcCZ*>(BaseClass_ptr1))
+	ExcCZ* element = dynamic_cast<ExcCZ*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->efdmin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcCZ_ka(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcCZ_ka(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcCZ* element = dynamic_cast<ExcCZ*>(BaseClass_ptr1))
+	ExcCZ* element = dynamic_cast<ExcCZ*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ka;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcCZ_ke(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcCZ_ke(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcCZ* element = dynamic_cast<ExcCZ*>(BaseClass_ptr1))
+	ExcCZ* element = dynamic_cast<ExcCZ*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ke;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcCZ_kp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcCZ_kp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcCZ* element = dynamic_cast<ExcCZ*>(BaseClass_ptr1))
+	ExcCZ* element = dynamic_cast<ExcCZ*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kp;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcCZ_ta(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcCZ_ta(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcCZ* element = dynamic_cast<ExcCZ*>(BaseClass_ptr1))
+	ExcCZ* element = dynamic_cast<ExcCZ*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ta;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcCZ_tc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcCZ_tc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcCZ* element = dynamic_cast<ExcCZ*>(BaseClass_ptr1))
+	ExcCZ* element = dynamic_cast<ExcCZ*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tc;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcCZ_te(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcCZ_te(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcCZ* element = dynamic_cast<ExcCZ*>(BaseClass_ptr1))
+	ExcCZ* element = dynamic_cast<ExcCZ*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->te;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcCZ_vrmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcCZ_vrmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcCZ* element = dynamic_cast<ExcCZ*>(BaseClass_ptr1))
+	ExcCZ* element = dynamic_cast<ExcCZ*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vrmax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcCZ_vrmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcCZ_vrmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcCZ* element = dynamic_cast<ExcCZ*>(BaseClass_ptr1))
+	ExcCZ* element = dynamic_cast<ExcCZ*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vrmin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_ExcCZ_efdmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcCZ* element = dynamic_cast<const ExcCZ*>(BaseClass_ptr1))
+	const ExcCZ* element = dynamic_cast<const ExcCZ*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->efdmax;
 		if (!buffer.str().empty())
@@ -207,7 +205,8 @@ bool get_ExcCZ_efdmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer
 
 bool get_ExcCZ_efdmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcCZ* element = dynamic_cast<const ExcCZ*>(BaseClass_ptr1))
+	const ExcCZ* element = dynamic_cast<const ExcCZ*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->efdmin;
 		if (!buffer.str().empty())
@@ -221,7 +220,8 @@ bool get_ExcCZ_efdmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer
 
 bool get_ExcCZ_ka(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcCZ* element = dynamic_cast<const ExcCZ*>(BaseClass_ptr1))
+	const ExcCZ* element = dynamic_cast<const ExcCZ*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ka;
 		if (!buffer.str().empty())
@@ -235,7 +235,8 @@ bool get_ExcCZ_ka(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcCZ_ke(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcCZ* element = dynamic_cast<const ExcCZ*>(BaseClass_ptr1))
+	const ExcCZ* element = dynamic_cast<const ExcCZ*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ke;
 		if (!buffer.str().empty())
@@ -249,7 +250,8 @@ bool get_ExcCZ_ke(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcCZ_kp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcCZ* element = dynamic_cast<const ExcCZ*>(BaseClass_ptr1))
+	const ExcCZ* element = dynamic_cast<const ExcCZ*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kp;
 		if (!buffer.str().empty())
@@ -263,7 +265,8 @@ bool get_ExcCZ_kp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcCZ_ta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcCZ* element = dynamic_cast<const ExcCZ*>(BaseClass_ptr1))
+	const ExcCZ* element = dynamic_cast<const ExcCZ*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ta;
 		if (!buffer.str().empty())
@@ -277,7 +280,8 @@ bool get_ExcCZ_ta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcCZ_tc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcCZ* element = dynamic_cast<const ExcCZ*>(BaseClass_ptr1))
+	const ExcCZ* element = dynamic_cast<const ExcCZ*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tc;
 		if (!buffer.str().empty())
@@ -291,7 +295,8 @@ bool get_ExcCZ_tc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcCZ_te(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcCZ* element = dynamic_cast<const ExcCZ*>(BaseClass_ptr1))
+	const ExcCZ* element = dynamic_cast<const ExcCZ*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->te;
 		if (!buffer.str().empty())
@@ -305,7 +310,8 @@ bool get_ExcCZ_te(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcCZ_vrmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcCZ* element = dynamic_cast<const ExcCZ*>(BaseClass_ptr1))
+	const ExcCZ* element = dynamic_cast<const ExcCZ*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vrmax;
 		if (!buffer.str().empty())
@@ -319,7 +325,8 @@ bool get_ExcCZ_vrmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcCZ_vrmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcCZ* element = dynamic_cast<const ExcCZ*>(BaseClass_ptr1))
+	const ExcCZ* element = dynamic_cast<const ExcCZ*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vrmin;
 		if (!buffer.str().empty())
@@ -331,8 +338,6 @@ bool get_ExcCZ_vrmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 	return false;
 }
 
-
-
 const char ExcCZ::debugName[] = "ExcCZ";
 const char* ExcCZ::debugString() const
 {
@@ -341,21 +346,21 @@ const char* ExcCZ::debugString() const
 
 void ExcCZ::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ExcCZ"), &ExcCZ_factory));
+	factory_map.emplace("cim:ExcCZ", &ExcCZ_factory);
 }
 
 void ExcCZ::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ExcCZ.efdmax"), &assign_ExcCZ_efdmax));
-	assign_map.insert(std::make_pair(std::string("cim:ExcCZ.efdmin"), &assign_ExcCZ_efdmin));
-	assign_map.insert(std::make_pair(std::string("cim:ExcCZ.ka"), &assign_ExcCZ_ka));
-	assign_map.insert(std::make_pair(std::string("cim:ExcCZ.ke"), &assign_ExcCZ_ke));
-	assign_map.insert(std::make_pair(std::string("cim:ExcCZ.kp"), &assign_ExcCZ_kp));
-	assign_map.insert(std::make_pair(std::string("cim:ExcCZ.ta"), &assign_ExcCZ_ta));
-	assign_map.insert(std::make_pair(std::string("cim:ExcCZ.tc"), &assign_ExcCZ_tc));
-	assign_map.insert(std::make_pair(std::string("cim:ExcCZ.te"), &assign_ExcCZ_te));
-	assign_map.insert(std::make_pair(std::string("cim:ExcCZ.vrmax"), &assign_ExcCZ_vrmax));
-	assign_map.insert(std::make_pair(std::string("cim:ExcCZ.vrmin"), &assign_ExcCZ_vrmin));
+	assign_map.emplace("cim:ExcCZ.efdmax", &assign_ExcCZ_efdmax);
+	assign_map.emplace("cim:ExcCZ.efdmin", &assign_ExcCZ_efdmin);
+	assign_map.emplace("cim:ExcCZ.ka", &assign_ExcCZ_ka);
+	assign_map.emplace("cim:ExcCZ.ke", &assign_ExcCZ_ke);
+	assign_map.emplace("cim:ExcCZ.kp", &assign_ExcCZ_kp);
+	assign_map.emplace("cim:ExcCZ.ta", &assign_ExcCZ_ta);
+	assign_map.emplace("cim:ExcCZ.tc", &assign_ExcCZ_tc);
+	assign_map.emplace("cim:ExcCZ.te", &assign_ExcCZ_te);
+	assign_map.emplace("cim:ExcCZ.vrmax", &assign_ExcCZ_vrmax);
+	assign_map.emplace("cim:ExcCZ.vrmin", &assign_ExcCZ_vrmin);
 }
 
 void ExcCZ::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

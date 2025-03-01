@@ -8,19 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Boolean.hpp"
-#include "Seconds.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Simple_Float.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
 
 using namespace CIMPP;
 
-PFVArType1IEEEPFController::PFVArType1IEEEPFController() {};
-PFVArType1IEEEPFController::~PFVArType1IEEEPFController() {};
+PFVArType1IEEEPFController::PFVArType1IEEEPFController() {}
+PFVArType1IEEEPFController::~PFVArType1IEEEPFController() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -54,116 +46,122 @@ PFVArType1IEEEPFController::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_PFVArType1IEEEPFController_ovex(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PFVArType1IEEEPFController_ovex(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PFVArType1IEEEPFController* element = dynamic_cast<PFVArType1IEEEPFController*>(BaseClass_ptr1))
+	PFVArType1IEEEPFController* element = dynamic_cast<PFVArType1IEEEPFController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ovex;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PFVArType1IEEEPFController_tpfc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PFVArType1IEEEPFController_tpfc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PFVArType1IEEEPFController* element = dynamic_cast<PFVArType1IEEEPFController*>(BaseClass_ptr1))
+	PFVArType1IEEEPFController* element = dynamic_cast<PFVArType1IEEEPFController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tpfc;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PFVArType1IEEEPFController_vitmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PFVArType1IEEEPFController_vitmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PFVArType1IEEEPFController* element = dynamic_cast<PFVArType1IEEEPFController*>(BaseClass_ptr1))
+	PFVArType1IEEEPFController* element = dynamic_cast<PFVArType1IEEEPFController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vitmin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PFVArType1IEEEPFController_vpf(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PFVArType1IEEEPFController_vpf(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PFVArType1IEEEPFController* element = dynamic_cast<PFVArType1IEEEPFController*>(BaseClass_ptr1))
+	PFVArType1IEEEPFController* element = dynamic_cast<PFVArType1IEEEPFController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vpf;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PFVArType1IEEEPFController_vpfcbw(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PFVArType1IEEEPFController_vpfcbw(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PFVArType1IEEEPFController* element = dynamic_cast<PFVArType1IEEEPFController*>(BaseClass_ptr1))
+	PFVArType1IEEEPFController* element = dynamic_cast<PFVArType1IEEEPFController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vpfcbw;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PFVArType1IEEEPFController_vpfref(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PFVArType1IEEEPFController_vpfref(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PFVArType1IEEEPFController* element = dynamic_cast<PFVArType1IEEEPFController*>(BaseClass_ptr1))
+	PFVArType1IEEEPFController* element = dynamic_cast<PFVArType1IEEEPFController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vpfref;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PFVArType1IEEEPFController_vvtmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PFVArType1IEEEPFController_vvtmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PFVArType1IEEEPFController* element = dynamic_cast<PFVArType1IEEEPFController*>(BaseClass_ptr1))
+	PFVArType1IEEEPFController* element = dynamic_cast<PFVArType1IEEEPFController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vvtmax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PFVArType1IEEEPFController_vvtmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PFVArType1IEEEPFController_vvtmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PFVArType1IEEEPFController* element = dynamic_cast<PFVArType1IEEEPFController*>(BaseClass_ptr1))
+	PFVArType1IEEEPFController* element = dynamic_cast<PFVArType1IEEEPFController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vvtmin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_PFVArType1IEEEPFController_ovex(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PFVArType1IEEEPFController* element = dynamic_cast<const PFVArType1IEEEPFController*>(BaseClass_ptr1))
+	const PFVArType1IEEEPFController* element = dynamic_cast<const PFVArType1IEEEPFController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ovex;
 		if (!buffer.str().empty())
@@ -177,7 +175,8 @@ bool get_PFVArType1IEEEPFController_ovex(const BaseClass* BaseClass_ptr1, std::s
 
 bool get_PFVArType1IEEEPFController_tpfc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PFVArType1IEEEPFController* element = dynamic_cast<const PFVArType1IEEEPFController*>(BaseClass_ptr1))
+	const PFVArType1IEEEPFController* element = dynamic_cast<const PFVArType1IEEEPFController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tpfc;
 		if (!buffer.str().empty())
@@ -191,7 +190,8 @@ bool get_PFVArType1IEEEPFController_tpfc(const BaseClass* BaseClass_ptr1, std::s
 
 bool get_PFVArType1IEEEPFController_vitmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PFVArType1IEEEPFController* element = dynamic_cast<const PFVArType1IEEEPFController*>(BaseClass_ptr1))
+	const PFVArType1IEEEPFController* element = dynamic_cast<const PFVArType1IEEEPFController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vitmin;
 		if (!buffer.str().empty())
@@ -205,7 +205,8 @@ bool get_PFVArType1IEEEPFController_vitmin(const BaseClass* BaseClass_ptr1, std:
 
 bool get_PFVArType1IEEEPFController_vpf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PFVArType1IEEEPFController* element = dynamic_cast<const PFVArType1IEEEPFController*>(BaseClass_ptr1))
+	const PFVArType1IEEEPFController* element = dynamic_cast<const PFVArType1IEEEPFController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vpf;
 		if (!buffer.str().empty())
@@ -219,7 +220,8 @@ bool get_PFVArType1IEEEPFController_vpf(const BaseClass* BaseClass_ptr1, std::st
 
 bool get_PFVArType1IEEEPFController_vpfcbw(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PFVArType1IEEEPFController* element = dynamic_cast<const PFVArType1IEEEPFController*>(BaseClass_ptr1))
+	const PFVArType1IEEEPFController* element = dynamic_cast<const PFVArType1IEEEPFController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vpfcbw;
 		if (!buffer.str().empty())
@@ -233,7 +235,8 @@ bool get_PFVArType1IEEEPFController_vpfcbw(const BaseClass* BaseClass_ptr1, std:
 
 bool get_PFVArType1IEEEPFController_vpfref(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PFVArType1IEEEPFController* element = dynamic_cast<const PFVArType1IEEEPFController*>(BaseClass_ptr1))
+	const PFVArType1IEEEPFController* element = dynamic_cast<const PFVArType1IEEEPFController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vpfref;
 		if (!buffer.str().empty())
@@ -247,7 +250,8 @@ bool get_PFVArType1IEEEPFController_vpfref(const BaseClass* BaseClass_ptr1, std:
 
 bool get_PFVArType1IEEEPFController_vvtmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PFVArType1IEEEPFController* element = dynamic_cast<const PFVArType1IEEEPFController*>(BaseClass_ptr1))
+	const PFVArType1IEEEPFController* element = dynamic_cast<const PFVArType1IEEEPFController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vvtmax;
 		if (!buffer.str().empty())
@@ -261,7 +265,8 @@ bool get_PFVArType1IEEEPFController_vvtmax(const BaseClass* BaseClass_ptr1, std:
 
 bool get_PFVArType1IEEEPFController_vvtmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PFVArType1IEEEPFController* element = dynamic_cast<const PFVArType1IEEEPFController*>(BaseClass_ptr1))
+	const PFVArType1IEEEPFController* element = dynamic_cast<const PFVArType1IEEEPFController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vvtmin;
 		if (!buffer.str().empty())
@@ -273,8 +278,6 @@ bool get_PFVArType1IEEEPFController_vvtmin(const BaseClass* BaseClass_ptr1, std:
 	return false;
 }
 
-
-
 const char PFVArType1IEEEPFController::debugName[] = "PFVArType1IEEEPFController";
 const char* PFVArType1IEEEPFController::debugString() const
 {
@@ -283,19 +286,19 @@ const char* PFVArType1IEEEPFController::debugString() const
 
 void PFVArType1IEEEPFController::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:PFVArType1IEEEPFController"), &PFVArType1IEEEPFController_factory));
+	factory_map.emplace("cim:PFVArType1IEEEPFController", &PFVArType1IEEEPFController_factory);
 }
 
 void PFVArType1IEEEPFController::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:PFVArType1IEEEPFController.ovex"), &assign_PFVArType1IEEEPFController_ovex));
-	assign_map.insert(std::make_pair(std::string("cim:PFVArType1IEEEPFController.tpfc"), &assign_PFVArType1IEEEPFController_tpfc));
-	assign_map.insert(std::make_pair(std::string("cim:PFVArType1IEEEPFController.vitmin"), &assign_PFVArType1IEEEPFController_vitmin));
-	assign_map.insert(std::make_pair(std::string("cim:PFVArType1IEEEPFController.vpf"), &assign_PFVArType1IEEEPFController_vpf));
-	assign_map.insert(std::make_pair(std::string("cim:PFVArType1IEEEPFController.vpfcbw"), &assign_PFVArType1IEEEPFController_vpfcbw));
-	assign_map.insert(std::make_pair(std::string("cim:PFVArType1IEEEPFController.vpfref"), &assign_PFVArType1IEEEPFController_vpfref));
-	assign_map.insert(std::make_pair(std::string("cim:PFVArType1IEEEPFController.vvtmax"), &assign_PFVArType1IEEEPFController_vvtmax));
-	assign_map.insert(std::make_pair(std::string("cim:PFVArType1IEEEPFController.vvtmin"), &assign_PFVArType1IEEEPFController_vvtmin));
+	assign_map.emplace("cim:PFVArType1IEEEPFController.ovex", &assign_PFVArType1IEEEPFController_ovex);
+	assign_map.emplace("cim:PFVArType1IEEEPFController.tpfc", &assign_PFVArType1IEEEPFController_tpfc);
+	assign_map.emplace("cim:PFVArType1IEEEPFController.vitmin", &assign_PFVArType1IEEEPFController_vitmin);
+	assign_map.emplace("cim:PFVArType1IEEEPFController.vpf", &assign_PFVArType1IEEEPFController_vpf);
+	assign_map.emplace("cim:PFVArType1IEEEPFController.vpfcbw", &assign_PFVArType1IEEEPFController_vpfcbw);
+	assign_map.emplace("cim:PFVArType1IEEEPFController.vpfref", &assign_PFVArType1IEEEPFController_vpfref);
+	assign_map.emplace("cim:PFVArType1IEEEPFController.vvtmax", &assign_PFVArType1IEEEPFController_vvtmax);
+	assign_map.emplace("cim:PFVArType1IEEEPFController.vvtmin", &assign_PFVArType1IEEEPFController_vvtmin);
 }
 
 void PFVArType1IEEEPFController::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

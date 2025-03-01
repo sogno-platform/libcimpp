@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-RegulationSchedule::RegulationSchedule() : RegulatingControl(nullptr) {};
-RegulationSchedule::~RegulationSchedule() {};
+RegulationSchedule::RegulationSchedule() : RegulatingControl(nullptr) {}
+RegulationSchedule::~RegulationSchedule() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ RegulationSchedule::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_RegulatingControl_RegulationSchedule(BaseClass*, BaseClass*);
 bool assign_RegulationSchedule_RegulatingControl(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -59,10 +57,10 @@ bool assign_RegulationSchedule_RegulatingControl(BaseClass* BaseClass_ptr1, Base
 	return false;
 }
 
-
 bool get_RegulationSchedule_RegulatingControl(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const RegulationSchedule* element = dynamic_cast<const RegulationSchedule*>(BaseClass_ptr1))
+	const RegulationSchedule* element = dynamic_cast<const RegulationSchedule*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->RegulatingControl != 0)
 		{
@@ -73,7 +71,6 @@ bool get_RegulationSchedule_RegulatingControl(const BaseClass* BaseClass_ptr1, s
 	return false;
 }
 
-
 const char RegulationSchedule::debugName[] = "RegulationSchedule";
 const char* RegulationSchedule::debugString() const
 {
@@ -82,7 +79,7 @@ const char* RegulationSchedule::debugString() const
 
 void RegulationSchedule::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:RegulationSchedule"), &RegulationSchedule_factory));
+	factory_map.emplace("cim:RegulationSchedule", &RegulationSchedule_factory);
 }
 
 void RegulationSchedule::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -91,7 +88,7 @@ void RegulationSchedule::addPrimitiveAssignFnsToMap(std::unordered_map<std::stri
 
 void RegulationSchedule::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:RegulationSchedule.RegulatingControl"), &assign_RegulationSchedule_RegulatingControl));
+	assign_map.emplace("cim:RegulationSchedule.RegulatingControl", &assign_RegulationSchedule_RegulatingControl);
 }
 
 void RegulationSchedule::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

@@ -19,9 +19,7 @@ namespace CIMPP
 {
 	class WindTurbineType4IEC;
 
-	/*
-	IEC type 3A generator set model. Reference: IEC 61400-27-1:2015, 5.6.3.2.
-	*/
+	/** \brief IEC type 3A generator set model. Reference: IEC 61400-27-1:2015, 5.6.3.2. */
 	class WindGenType3aIEC : public WindGenType3IEC
 	{
 	public:
@@ -29,9 +27,14 @@ namespace CIMPP
 		WindGenType3aIEC();
 		~WindGenType3aIEC() override;
 
-		CIMPP::WindTurbineType4IEC* WindTurbineType4IEC;  /* Wind turbine type 4 model with which this wind generator type 3A model is associated. Default: 0 */
-		CIMPP::Float kpc;  /* Current PI controller proportional gain (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;Pc&lt;/sub&gt;&lt;/i&gt;). It is a type-dependent parameter. Default: 0.0 */
-		CIMPP::Seconds tic;  /* Current PI controller integration time constant (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;Ic&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). It is a type-dependent parameter. Default: nullptr */
+		/** \brief Wind turbine type 4 model with which this wind generator type 3A model is associated. Default: 0 */
+		CIMPP::WindTurbineType4IEC* WindTurbineType4IEC;
+
+		/** \brief Current PI controller proportional gain (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;Pc&lt;/sub&gt;&lt;/i&gt;). It is a type-dependent parameter. Default: 0.0 */
+		CIMPP::Float kpc;
+
+		/** \brief Current PI controller integration time constant (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;Ic&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). It is a type-dependent parameter. Default: nullptr */
+		CIMPP::Seconds tic;
 
 		static const char debugName[];
 		const char* debugString() const override;

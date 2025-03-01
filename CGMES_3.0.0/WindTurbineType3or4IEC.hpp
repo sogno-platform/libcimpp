@@ -22,9 +22,7 @@ namespace CIMPP
 	class WindProtectionIEC;
 	class WindRefFrameRotIEC;
 
-	/*
-	Parent class supporting relationships to IEC wind turbines type 3 and type 4 including their control models.
-	*/
+	/** \brief Parent class supporting relationships to IEC wind turbines type 3 and type 4 including their control models. */
 	class WindTurbineType3or4IEC : public WindTurbineType3or4Dynamics
 	{
 	public:
@@ -32,12 +30,23 @@ namespace CIMPP
 		WindTurbineType3or4IEC();
 		~WindTurbineType3or4IEC() override;
 
-		CIMPP::WindContQIEC* WIndContQIEC;  /* Wind control Q model associated with this wind turbine type 3 or type 4 model. Default: 0 */
-		CIMPP::WindContCurrLimIEC* WindContCurrLimIEC;  /* Wind control current limitation model associated with this wind turbine type 3 or type 4 model. Default: 0 */
-		CIMPP::WindContQLimIEC* WindContQLimIEC;  /* Constant Q limitation model associated with this wind generator type 3 or type 4 model. Default: 0 */
-		CIMPP::WindContQPQULimIEC* WindContQPQULimIEC;  /* QP and QU limitation model associated with this wind generator type 3 or type 4 model. Default: 0 */
-		CIMPP::WindProtectionIEC* WindProtectionIEC;  /* Wind turbune protection model associated with this wind generator type 3 or type 4 model. Default: 0 */
-		CIMPP::WindRefFrameRotIEC* WindRefFrameRotIEC;  /* Reference frame rotation model associated with this wind turbine type 3 or type 4 model. Default: 0 */
+		/** \brief Wind control Q model associated with this wind turbine type 3 or type 4 model. Default: 0 */
+		CIMPP::WindContQIEC* WIndContQIEC;
+
+		/** \brief Wind control current limitation model associated with this wind turbine type 3 or type 4 model. Default: 0 */
+		CIMPP::WindContCurrLimIEC* WindContCurrLimIEC;
+
+		/** \brief Constant Q limitation model associated with this wind generator type 3 or type 4 model. Default: 0 */
+		CIMPP::WindContQLimIEC* WindContQLimIEC;
+
+		/** \brief QP and QU limitation model associated with this wind generator type 3 or type 4 model. Default: 0 */
+		CIMPP::WindContQPQULimIEC* WindContQPQULimIEC;
+
+		/** \brief Wind turbune protection model associated with this wind generator type 3 or type 4 model. Default: 0 */
+		CIMPP::WindProtectionIEC* WindProtectionIEC;
+
+		/** \brief Reference frame rotation model associated with this wind turbine type 3 or type 4 model. Default: 0 */
+		CIMPP::WindRefFrameRotIEC* WindRefFrameRotIEC;
 
 		static const char debugName[];
 		const char* debugString() const override;

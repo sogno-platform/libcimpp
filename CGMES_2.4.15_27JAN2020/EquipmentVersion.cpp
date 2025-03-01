@@ -8,25 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "Date.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
 
 using namespace CIMPP;
 
-EquipmentVersion::EquipmentVersion() {};
-EquipmentVersion::~EquipmentVersion() {};
+EquipmentVersion::EquipmentVersion() {}
+EquipmentVersion::~EquipmentVersion() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -66,194 +52,206 @@ EquipmentVersion::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_EquipmentVersion_baseUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentVersion_baseUML(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
+	EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->baseUML = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_EquipmentVersion_baseURIcore(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentVersion_baseURIcore(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
+	EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->baseURIcore = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_EquipmentVersion_baseURIoperation(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentVersion_baseURIoperation(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
+	EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->baseURIoperation = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_EquipmentVersion_baseURIshortCircuit(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentVersion_baseURIshortCircuit(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
+	EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->baseURIshortCircuit = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_EquipmentVersion_date(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentVersion_date(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
+	EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->date = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_EquipmentVersion_differenceModelURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentVersion_differenceModelURI(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
+	EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->differenceModelURI = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_EquipmentVersion_entsoeUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentVersion_entsoeUML(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
+	EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->entsoeUML = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_EquipmentVersion_entsoeURIcore(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentVersion_entsoeURIcore(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
+	EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->entsoeURIcore = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_EquipmentVersion_entsoeURIoperation(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentVersion_entsoeURIoperation(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
+	EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->entsoeURIoperation = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_EquipmentVersion_entsoeURIshortCircuit(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentVersion_entsoeURIshortCircuit(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
+	EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->entsoeURIshortCircuit = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_EquipmentVersion_modelDescriptionURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentVersion_modelDescriptionURI(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
+	EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->modelDescriptionURI = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_EquipmentVersion_namespaceRDF(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentVersion_namespaceRDF(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
+	EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->namespaceRDF = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_EquipmentVersion_namespaceUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentVersion_namespaceUML(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
+	EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->namespaceUML = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_EquipmentVersion_shortName(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentVersion_shortName(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1))
+	EquipmentVersion* element = dynamic_cast<EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->shortName = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_EquipmentVersion_baseUML(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1))
+	const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->baseUML;
 		if (!buffer.str().empty())
@@ -267,7 +265,8 @@ bool get_EquipmentVersion_baseUML(const BaseClass* BaseClass_ptr1, std::stringst
 
 bool get_EquipmentVersion_baseURIcore(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1))
+	const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->baseURIcore;
 		if (!buffer.str().empty())
@@ -281,7 +280,8 @@ bool get_EquipmentVersion_baseURIcore(const BaseClass* BaseClass_ptr1, std::stri
 
 bool get_EquipmentVersion_baseURIoperation(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1))
+	const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->baseURIoperation;
 		if (!buffer.str().empty())
@@ -295,7 +295,8 @@ bool get_EquipmentVersion_baseURIoperation(const BaseClass* BaseClass_ptr1, std:
 
 bool get_EquipmentVersion_baseURIshortCircuit(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1))
+	const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->baseURIshortCircuit;
 		if (!buffer.str().empty())
@@ -309,7 +310,8 @@ bool get_EquipmentVersion_baseURIshortCircuit(const BaseClass* BaseClass_ptr1, s
 
 bool get_EquipmentVersion_date(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1))
+	const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->date;
 		if (!buffer.str().empty())
@@ -323,7 +325,8 @@ bool get_EquipmentVersion_date(const BaseClass* BaseClass_ptr1, std::stringstrea
 
 bool get_EquipmentVersion_differenceModelURI(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1))
+	const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->differenceModelURI;
 		if (!buffer.str().empty())
@@ -337,7 +340,8 @@ bool get_EquipmentVersion_differenceModelURI(const BaseClass* BaseClass_ptr1, st
 
 bool get_EquipmentVersion_entsoeUML(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1))
+	const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->entsoeUML;
 		if (!buffer.str().empty())
@@ -351,7 +355,8 @@ bool get_EquipmentVersion_entsoeUML(const BaseClass* BaseClass_ptr1, std::string
 
 bool get_EquipmentVersion_entsoeURIcore(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1))
+	const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->entsoeURIcore;
 		if (!buffer.str().empty())
@@ -365,7 +370,8 @@ bool get_EquipmentVersion_entsoeURIcore(const BaseClass* BaseClass_ptr1, std::st
 
 bool get_EquipmentVersion_entsoeURIoperation(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1))
+	const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->entsoeURIoperation;
 		if (!buffer.str().empty())
@@ -379,7 +385,8 @@ bool get_EquipmentVersion_entsoeURIoperation(const BaseClass* BaseClass_ptr1, st
 
 bool get_EquipmentVersion_entsoeURIshortCircuit(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1))
+	const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->entsoeURIshortCircuit;
 		if (!buffer.str().empty())
@@ -393,7 +400,8 @@ bool get_EquipmentVersion_entsoeURIshortCircuit(const BaseClass* BaseClass_ptr1,
 
 bool get_EquipmentVersion_modelDescriptionURI(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1))
+	const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->modelDescriptionURI;
 		if (!buffer.str().empty())
@@ -407,7 +415,8 @@ bool get_EquipmentVersion_modelDescriptionURI(const BaseClass* BaseClass_ptr1, s
 
 bool get_EquipmentVersion_namespaceRDF(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1))
+	const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->namespaceRDF;
 		if (!buffer.str().empty())
@@ -421,7 +430,8 @@ bool get_EquipmentVersion_namespaceRDF(const BaseClass* BaseClass_ptr1, std::str
 
 bool get_EquipmentVersion_namespaceUML(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1))
+	const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->namespaceUML;
 		if (!buffer.str().empty())
@@ -435,7 +445,8 @@ bool get_EquipmentVersion_namespaceUML(const BaseClass* BaseClass_ptr1, std::str
 
 bool get_EquipmentVersion_shortName(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1))
+	const EquipmentVersion* element = dynamic_cast<const EquipmentVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->shortName;
 		if (!buffer.str().empty())
@@ -447,8 +458,6 @@ bool get_EquipmentVersion_shortName(const BaseClass* BaseClass_ptr1, std::string
 	return false;
 }
 
-
-
 const char EquipmentVersion::debugName[] = "EquipmentVersion";
 const char* EquipmentVersion::debugString() const
 {
@@ -457,25 +466,25 @@ const char* EquipmentVersion::debugString() const
 
 void EquipmentVersion::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:EquipmentVersion"), &EquipmentVersion_factory));
+	factory_map.emplace("cim:EquipmentVersion", &EquipmentVersion_factory);
 }
 
 void EquipmentVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentVersion.baseUML"), &assign_EquipmentVersion_baseUML));
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentVersion.baseURIcore"), &assign_EquipmentVersion_baseURIcore));
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentVersion.baseURIoperation"), &assign_EquipmentVersion_baseURIoperation));
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentVersion.baseURIshortCircuit"), &assign_EquipmentVersion_baseURIshortCircuit));
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentVersion.date"), &assign_EquipmentVersion_date));
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentVersion.differenceModelURI"), &assign_EquipmentVersion_differenceModelURI));
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentVersion.entsoeUML"), &assign_EquipmentVersion_entsoeUML));
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentVersion.entsoeURIcore"), &assign_EquipmentVersion_entsoeURIcore));
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentVersion.entsoeURIoperation"), &assign_EquipmentVersion_entsoeURIoperation));
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentVersion.entsoeURIshortCircuit"), &assign_EquipmentVersion_entsoeURIshortCircuit));
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentVersion.modelDescriptionURI"), &assign_EquipmentVersion_modelDescriptionURI));
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentVersion.namespaceRDF"), &assign_EquipmentVersion_namespaceRDF));
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentVersion.namespaceUML"), &assign_EquipmentVersion_namespaceUML));
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentVersion.shortName"), &assign_EquipmentVersion_shortName));
+	assign_map.emplace("cim:EquipmentVersion.baseUML", &assign_EquipmentVersion_baseUML);
+	assign_map.emplace("cim:EquipmentVersion.baseURIcore", &assign_EquipmentVersion_baseURIcore);
+	assign_map.emplace("cim:EquipmentVersion.baseURIoperation", &assign_EquipmentVersion_baseURIoperation);
+	assign_map.emplace("cim:EquipmentVersion.baseURIshortCircuit", &assign_EquipmentVersion_baseURIshortCircuit);
+	assign_map.emplace("cim:EquipmentVersion.date", &assign_EquipmentVersion_date);
+	assign_map.emplace("cim:EquipmentVersion.differenceModelURI", &assign_EquipmentVersion_differenceModelURI);
+	assign_map.emplace("cim:EquipmentVersion.entsoeUML", &assign_EquipmentVersion_entsoeUML);
+	assign_map.emplace("cim:EquipmentVersion.entsoeURIcore", &assign_EquipmentVersion_entsoeURIcore);
+	assign_map.emplace("cim:EquipmentVersion.entsoeURIoperation", &assign_EquipmentVersion_entsoeURIoperation);
+	assign_map.emplace("cim:EquipmentVersion.entsoeURIshortCircuit", &assign_EquipmentVersion_entsoeURIshortCircuit);
+	assign_map.emplace("cim:EquipmentVersion.modelDescriptionURI", &assign_EquipmentVersion_modelDescriptionURI);
+	assign_map.emplace("cim:EquipmentVersion.namespaceRDF", &assign_EquipmentVersion_namespaceRDF);
+	assign_map.emplace("cim:EquipmentVersion.namespaceUML", &assign_EquipmentVersion_namespaceUML);
+	assign_map.emplace("cim:EquipmentVersion.shortName", &assign_EquipmentVersion_shortName);
 }
 
 void EquipmentVersion::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-DCLine::DCLine() : Region(nullptr) {};
-DCLine::~DCLine() {};
+DCLine::DCLine() : Region(nullptr) {}
+DCLine::~DCLine() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ DCLine::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_SubGeographicalRegion_DCLines(BaseClass*, BaseClass*);
 bool assign_DCLine_Region(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -59,10 +57,10 @@ bool assign_DCLine_Region(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 	return false;
 }
 
-
 bool get_DCLine_Region(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const DCLine* element = dynamic_cast<const DCLine*>(BaseClass_ptr1))
+	const DCLine* element = dynamic_cast<const DCLine*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->Region != 0)
 		{
@@ -73,7 +71,6 @@ bool get_DCLine_Region(const BaseClass* BaseClass_ptr1, std::list<const BaseClas
 	return false;
 }
 
-
 const char DCLine::debugName[] = "DCLine";
 const char* DCLine::debugString() const
 {
@@ -82,7 +79,7 @@ const char* DCLine::debugString() const
 
 void DCLine::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:DCLine"), &DCLine_factory));
+	factory_map.emplace("cim:DCLine", &DCLine_factory);
 }
 
 void DCLine::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -91,7 +88,7 @@ void DCLine::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_f
 
 void DCLine::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:DCLine.Region"), &assign_DCLine_Region));
+	assign_map.emplace("cim:DCLine.Region", &assign_DCLine_Region);
 }
 
 void DCLine::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

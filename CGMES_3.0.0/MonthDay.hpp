@@ -4,22 +4,20 @@
 Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
 */
 
-#include <string>
 #include <istream>
 #include <ostream>
+#include <string>
 
 namespace CIMPP
 {
-	/*
-	MonthDay format as "--mm-dd", which conforms with XSD data type gMonthDay.
-	*/
+	/** \brief MonthDay format as "--mm-dd", which conforms with XSD data type gMonthDay. */
 	class MonthDay
 	{
 	public:
 		MonthDay() : initialized(false) {}
 		MonthDay(const std::string& value) : value(value), initialized(true) {}
 
-		MonthDay& operator=(const std::string &rop);
+		MonthDay& operator=(const std::string& rop);
 		operator std::string() const;
 
 		std::string value;

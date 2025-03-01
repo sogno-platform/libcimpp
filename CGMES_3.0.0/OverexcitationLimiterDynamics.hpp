@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class ExcitationSystemDynamics;
 
-	/*
-	Overexcitation limiter function block whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font>
-	*/
+	/** \brief Overexcitation limiter function block whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font> */
 	class OverexcitationLimiterDynamics : public DynamicsFunctionBlock
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		OverexcitationLimiterDynamics();
 		~OverexcitationLimiterDynamics() override;
 
-		CIMPP::ExcitationSystemDynamics* ExcitationSystemDynamics;  /* Excitation system model with which this overexcitation limiter model is associated. Default: 0 */
+		/** \brief Excitation system model with which this overexcitation limiter model is associated. Default: 0 */
+		CIMPP::ExcitationSystemDynamics* ExcitationSystemDynamics;
 
 		static const char debugName[];
 		const char* debugString() const override;

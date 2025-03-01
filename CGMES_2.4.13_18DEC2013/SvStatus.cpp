@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "ConductingEquipment.hpp"
-#include "Boolean.hpp"
 
 using namespace CIMPP;
 
-SvStatus::SvStatus() : ConductingEquipment(nullptr) {};
-SvStatus::~SvStatus() {};
+SvStatus::SvStatus() : ConductingEquipment(nullptr) {}
+SvStatus::~SvStatus() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,21 +41,6 @@ SvStatus::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_SvStatus_inService(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (SvStatus* element = dynamic_cast<SvStatus*>(BaseClass_ptr1))
-	{
-		buffer >> element->inService;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_ConductingEquipment_SvStatus(BaseClass*, BaseClass*);
 bool assign_SvStatus_ConductingEquipment(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,9 +58,38 @@ bool assign_SvStatus_ConductingEquipment(BaseClass* BaseClass_ptr1, BaseClass* B
 	return false;
 }
 
+bool assign_SvStatus_inService(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	SvStatus* element = dynamic_cast<SvStatus*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->inService;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_SvStatus_ConductingEquipment(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const SvStatus* element = dynamic_cast<const SvStatus*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->ConductingEquipment != 0)
+		{
+			BaseClass_list.push_back(element->ConductingEquipment);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_SvStatus_inService(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SvStatus* element = dynamic_cast<const SvStatus*>(BaseClass_ptr1))
+	const SvStatus* element = dynamic_cast<const SvStatus*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->inService;
 		if (!buffer.str().empty())
@@ -88,21 +101,6 @@ bool get_SvStatus_inService(const BaseClass* BaseClass_ptr1, std::stringstream& 
 	return false;
 }
 
-
-bool get_SvStatus_ConductingEquipment(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const SvStatus* element = dynamic_cast<const SvStatus*>(BaseClass_ptr1))
-	{
-		if (element->ConductingEquipment != 0)
-		{
-			BaseClass_list.push_back(element->ConductingEquipment);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char SvStatus::debugName[] = "SvStatus";
 const char* SvStatus::debugString() const
 {
@@ -111,17 +109,17 @@ const char* SvStatus::debugString() const
 
 void SvStatus::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:SvStatus"), &SvStatus_factory));
+	factory_map.emplace("cim:SvStatus", &SvStatus_factory);
 }
 
 void SvStatus::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:SvStatus.inService"), &assign_SvStatus_inService));
+	assign_map.emplace("cim:SvStatus.inService", &assign_SvStatus_inService);
 }
 
 void SvStatus::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:SvStatus.ConductingEquipment"), &assign_SvStatus_ConductingEquipment));
+	assign_map.emplace("cim:SvStatus.ConductingEquipment", &assign_SvStatus_ConductingEquipment);
 }
 
 void SvStatus::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

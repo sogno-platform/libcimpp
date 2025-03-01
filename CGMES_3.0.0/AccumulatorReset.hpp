@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class AccumulatorValue;
 
-	/*
-	This command resets the counter value to zero.
-	*/
+	/** \brief This command resets the counter value to zero. */
 	class AccumulatorReset : public Control
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		AccumulatorReset();
 		~AccumulatorReset() override;
 
-		CIMPP::AccumulatorValue* AccumulatorValue;  /* The accumulator value that is reset by the command. Default: 0 */
+		/** \brief The accumulator value that is reset by the command. Default: 0 */
+		CIMPP::AccumulatorValue* AccumulatorValue;
 
 		static const char debugName[];
 		const char* debugString() const override;

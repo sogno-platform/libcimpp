@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A mechanical switching device capable of making, carrying, and breaking currents under normal operating conditions.
-	*/
+	/** \brief A mechanical switching device capable of making, carrying, and breaking currents under normal operating conditions. */
 	class LoadBreakSwitch : public ProtectedSwitch
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		LoadBreakSwitch();
 		~LoadBreakSwitch() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

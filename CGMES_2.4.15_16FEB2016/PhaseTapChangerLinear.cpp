@@ -8,14 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "AngleDegrees.hpp"
-#include "Reactance.hpp"
-#include "Reactance.hpp"
 
 using namespace CIMPP;
 
-PhaseTapChangerLinear::PhaseTapChangerLinear() {};
-PhaseTapChangerLinear::~PhaseTapChangerLinear() {};
+PhaseTapChangerLinear::PhaseTapChangerLinear() {}
+PhaseTapChangerLinear::~PhaseTapChangerLinear() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -45,51 +42,52 @@ PhaseTapChangerLinear::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_PhaseTapChangerLinear_stepPhaseShiftIncrement(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PhaseTapChangerLinear_stepPhaseShiftIncrement(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PhaseTapChangerLinear* element = dynamic_cast<PhaseTapChangerLinear*>(BaseClass_ptr1))
+	PhaseTapChangerLinear* element = dynamic_cast<PhaseTapChangerLinear*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->stepPhaseShiftIncrement;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PhaseTapChangerLinear_xMax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PhaseTapChangerLinear_xMax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PhaseTapChangerLinear* element = dynamic_cast<PhaseTapChangerLinear*>(BaseClass_ptr1))
+	PhaseTapChangerLinear* element = dynamic_cast<PhaseTapChangerLinear*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->xMax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PhaseTapChangerLinear_xMin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PhaseTapChangerLinear_xMin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PhaseTapChangerLinear* element = dynamic_cast<PhaseTapChangerLinear*>(BaseClass_ptr1))
+	PhaseTapChangerLinear* element = dynamic_cast<PhaseTapChangerLinear*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->xMin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_PhaseTapChangerLinear_stepPhaseShiftIncrement(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PhaseTapChangerLinear* element = dynamic_cast<const PhaseTapChangerLinear*>(BaseClass_ptr1))
+	const PhaseTapChangerLinear* element = dynamic_cast<const PhaseTapChangerLinear*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->stepPhaseShiftIncrement;
 		if (!buffer.str().empty())
@@ -103,7 +101,8 @@ bool get_PhaseTapChangerLinear_stepPhaseShiftIncrement(const BaseClass* BaseClas
 
 bool get_PhaseTapChangerLinear_xMax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PhaseTapChangerLinear* element = dynamic_cast<const PhaseTapChangerLinear*>(BaseClass_ptr1))
+	const PhaseTapChangerLinear* element = dynamic_cast<const PhaseTapChangerLinear*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->xMax;
 		if (!buffer.str().empty())
@@ -117,7 +116,8 @@ bool get_PhaseTapChangerLinear_xMax(const BaseClass* BaseClass_ptr1, std::string
 
 bool get_PhaseTapChangerLinear_xMin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PhaseTapChangerLinear* element = dynamic_cast<const PhaseTapChangerLinear*>(BaseClass_ptr1))
+	const PhaseTapChangerLinear* element = dynamic_cast<const PhaseTapChangerLinear*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->xMin;
 		if (!buffer.str().empty())
@@ -129,8 +129,6 @@ bool get_PhaseTapChangerLinear_xMin(const BaseClass* BaseClass_ptr1, std::string
 	return false;
 }
 
-
-
 const char PhaseTapChangerLinear::debugName[] = "PhaseTapChangerLinear";
 const char* PhaseTapChangerLinear::debugString() const
 {
@@ -139,14 +137,14 @@ const char* PhaseTapChangerLinear::debugString() const
 
 void PhaseTapChangerLinear::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:PhaseTapChangerLinear"), &PhaseTapChangerLinear_factory));
+	factory_map.emplace("cim:PhaseTapChangerLinear", &PhaseTapChangerLinear_factory);
 }
 
 void PhaseTapChangerLinear::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:PhaseTapChangerLinear.stepPhaseShiftIncrement"), &assign_PhaseTapChangerLinear_stepPhaseShiftIncrement));
-	assign_map.insert(std::make_pair(std::string("cim:PhaseTapChangerLinear.xMax"), &assign_PhaseTapChangerLinear_xMax));
-	assign_map.insert(std::make_pair(std::string("cim:PhaseTapChangerLinear.xMin"), &assign_PhaseTapChangerLinear_xMin));
+	assign_map.emplace("cim:PhaseTapChangerLinear.stepPhaseShiftIncrement", &assign_PhaseTapChangerLinear_stepPhaseShiftIncrement);
+	assign_map.emplace("cim:PhaseTapChangerLinear.xMax", &assign_PhaseTapChangerLinear_xMax);
+	assign_map.emplace("cim:PhaseTapChangerLinear.xMin", &assign_PhaseTapChangerLinear_xMin);
 }
 
 void PhaseTapChangerLinear::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

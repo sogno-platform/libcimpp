@@ -18,9 +18,7 @@ namespace CIMPP
 	class NonConformLoad;
 	class NonConformLoadSchedule;
 
-	/*
-	Loads that do not follow a daily and seasonal load variation pattern.
-	*/
+	/** \brief Loads that do not follow a daily and seasonal load variation pattern. */
 	class NonConformLoadGroup : public LoadGroup
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		NonConformLoadGroup();
 		~NonConformLoadGroup() override;
 
-		std::list<CIMPP::NonConformLoad*> EnergyConsumers;  /* Group of this ConformLoad. Default: 0 */
-		std::list<CIMPP::NonConformLoadSchedule*> NonConformLoadSchedules;  /* The NonConformLoadSchedules in the NonConformLoadGroup. Default: 0 */
+		/** \brief Group of this ConformLoad. Default: 0 */
+		std::list<CIMPP::NonConformLoad*> EnergyConsumers;
+
+		/** \brief The NonConformLoadSchedules in the NonConformLoadGroup. Default: 0 */
+		std::list<CIMPP::NonConformLoadSchedule*> NonConformLoadSchedules;
 
 		static const char debugName[];
 		const char* debugString() const override;

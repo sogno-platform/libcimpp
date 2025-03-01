@@ -11,8 +11,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-ServiceLocation::ServiceLocation() {};
-ServiceLocation::~ServiceLocation() {};
+ServiceLocation::ServiceLocation() {}
+ServiceLocation::~ServiceLocation() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -38,11 +38,6 @@ ServiceLocation::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
-
-
-
 const char ServiceLocation::debugName[] = "ServiceLocation";
 const char* ServiceLocation::debugString() const
 {
@@ -51,7 +46,7 @@ const char* ServiceLocation::debugString() const
 
 void ServiceLocation::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ServiceLocation"), &ServiceLocation_factory));
+	factory_map.emplace("cim:ServiceLocation", &ServiceLocation_factory);
 }
 
 void ServiceLocation::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)

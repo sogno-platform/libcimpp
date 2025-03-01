@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "WindPlantQcontrolModeKind")
+		if (EnumSymbol.substr(0, pos) != "WindPlantQcontrolModeKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,22 +50,22 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "reactivePower")
+		if (EnumSymbol == "reactivePower")
 		{
 			rop = WindPlantQcontrolModeKind::reactivePower;
 			return lop;
 		}
-		if(EnumSymbol == "powerFactor")
+		if (EnumSymbol == "powerFactor")
 		{
 			rop = WindPlantQcontrolModeKind::powerFactor;
 			return lop;
 		}
-		if(EnumSymbol == "uqStatic")
+		if (EnumSymbol == "uqStatic")
 		{
 			rop = WindPlantQcontrolModeKind::uqStatic;
 			return lop;
 		}
-		if(EnumSymbol == "voltageControl")
+		if (EnumSymbol == "voltageControl")
 		{
 			rop = WindPlantQcontrolModeKind::voltageControl;
 			return lop;

@@ -20,9 +20,7 @@ namespace CIMPP
 	class DCNode;
 	class DCTopologicalIsland;
 
-	/*
-	DC bus.
-	*/
+	/** \brief DC bus. */
 	class DCTopologicalNode : public IdentifiedObject
 	{
 	public:
@@ -30,10 +28,17 @@ namespace CIMPP
 		DCTopologicalNode();
 		~DCTopologicalNode() override;
 
-		CIMPP::DCEquipmentContainer* DCEquipmentContainer;  /*  Default: 0 */
-		std::list<CIMPP::DCNode*> DCNodes;  /* See association end ConnectivityNode.TopologicalNode. Default: 0 */
-		std::list<CIMPP::DCBaseTerminal*> DCTerminals;  /* See association end Terminal.TopologicalNode. Default: 0 */
-		CIMPP::DCTopologicalIsland* DCTopologicalIsland;  /*  Default: 0 */
+		/** \brief  Default: 0 */
+		CIMPP::DCEquipmentContainer* DCEquipmentContainer;
+
+		/** \brief See association end ConnectivityNode.TopologicalNode. Default: 0 */
+		std::list<CIMPP::DCNode*> DCNodes;
+
+		/** \brief See association end Terminal.TopologicalNode. Default: 0 */
+		std::list<CIMPP::DCBaseTerminal*> DCTerminals;
+
+		/** \brief  Default: 0 */
+		CIMPP::DCTopologicalIsland* DCTopologicalIsland;
 
 		static const char debugName[];
 		const char* debugString() const override;

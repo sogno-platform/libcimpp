@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "ShortCircuitRotorKind")
+		if (EnumSymbol.substr(0, pos) != "ShortCircuitRotorKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,22 +50,22 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "salientPole1")
+		if (EnumSymbol == "salientPole1")
 		{
 			rop = ShortCircuitRotorKind::salientPole1;
 			return lop;
 		}
-		if(EnumSymbol == "salientPole2")
+		if (EnumSymbol == "salientPole2")
 		{
 			rop = ShortCircuitRotorKind::salientPole2;
 			return lop;
 		}
-		if(EnumSymbol == "turboSeries1")
+		if (EnumSymbol == "turboSeries1")
 		{
 			rop = ShortCircuitRotorKind::turboSeries1;
 			return lop;
 		}
-		if(EnumSymbol == "turboSeries2")
+		if (EnumSymbol == "turboSeries2")
 		{
 			rop = ShortCircuitRotorKind::turboSeries2;
 			return lop;

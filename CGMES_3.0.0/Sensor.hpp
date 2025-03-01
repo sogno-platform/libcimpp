@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	This class describe devices that transform a measured quantity into signals that can be presented at displays, used in control or be recorded.
-	*/
+	/** \brief This class describe devices that transform a measured quantity into signals that can be presented at displays, used in control or be recorded. */
 	class Sensor : public AuxiliaryEquipment
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		Sensor();
 		~Sensor() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

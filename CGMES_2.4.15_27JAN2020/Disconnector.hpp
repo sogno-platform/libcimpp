@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A manually operated or motor operated mechanical switching device used for changing the connections in a circuit, or for isolating a circuit or equipment from a source of power. It is required to open or close circuits when negligible current is broken or made.
-	*/
+	/** \brief A manually operated or motor operated mechanical switching device used for changing the connections in a circuit, or for isolating a circuit or equipment from a source of power. It is required to open or close circuits when negligible current is broken or made. */
 	class Disconnector : public Switch
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		Disconnector();
 		~Disconnector() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

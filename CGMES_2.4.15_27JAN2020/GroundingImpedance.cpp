@@ -8,12 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Reactance.hpp"
 
 using namespace CIMPP;
 
-GroundingImpedance::GroundingImpedance() {};
-GroundingImpedance::~GroundingImpedance() {};
+GroundingImpedance::GroundingImpedance() {}
+GroundingImpedance::~GroundingImpedance() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,25 +39,24 @@ GroundingImpedance::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_GroundingImpedance_x(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GroundingImpedance_x(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GroundingImpedance* element = dynamic_cast<GroundingImpedance*>(BaseClass_ptr1))
+	GroundingImpedance* element = dynamic_cast<GroundingImpedance*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->x;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-
-
 bool get_GroundingImpedance_x(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GroundingImpedance* element = dynamic_cast<const GroundingImpedance*>(BaseClass_ptr1))
+	const GroundingImpedance* element = dynamic_cast<const GroundingImpedance*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->x;
 		if (!buffer.str().empty())
@@ -70,8 +68,6 @@ bool get_GroundingImpedance_x(const BaseClass* BaseClass_ptr1, std::stringstream
 	return false;
 }
 
-
-
 const char GroundingImpedance::debugName[] = "GroundingImpedance";
 const char* GroundingImpedance::debugString() const
 {
@@ -80,12 +76,12 @@ const char* GroundingImpedance::debugString() const
 
 void GroundingImpedance::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:GroundingImpedance"), &GroundingImpedance_factory));
+	factory_map.emplace("cim:GroundingImpedance", &GroundingImpedance_factory);
 }
 
 void GroundingImpedance::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:GroundingImpedance.x"), &assign_GroundingImpedance_x));
+	assign_map.emplace("cim:GroundingImpedance.x", &assign_GroundingImpedance_x);
 }
 
 void GroundingImpedance::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

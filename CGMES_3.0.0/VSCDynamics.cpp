@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-VSCDynamics::VSCDynamics() : VsConverter(nullptr) {};
-VSCDynamics::~VSCDynamics() {};
+VSCDynamics::VSCDynamics() : VsConverter(nullptr) {}
+VSCDynamics::~VSCDynamics() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ VSCDynamics::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_VsConverter_VSCDynamics(BaseClass*, BaseClass*);
 bool assign_VSCDynamics_VsConverter(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -59,10 +57,10 @@ bool assign_VSCDynamics_VsConverter(BaseClass* BaseClass_ptr1, BaseClass* BaseCl
 	return false;
 }
 
-
 bool get_VSCDynamics_VsConverter(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const VSCDynamics* element = dynamic_cast<const VSCDynamics*>(BaseClass_ptr1))
+	const VSCDynamics* element = dynamic_cast<const VSCDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->VsConverter != 0)
 		{
@@ -73,7 +71,6 @@ bool get_VSCDynamics_VsConverter(const BaseClass* BaseClass_ptr1, std::list<cons
 	return false;
 }
 
-
 const char VSCDynamics::debugName[] = "VSCDynamics";
 const char* VSCDynamics::debugString() const
 {
@@ -82,7 +79,7 @@ const char* VSCDynamics::debugString() const
 
 void VSCDynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:VSCDynamics"), &VSCDynamics_factory));
+	factory_map.emplace("cim:VSCDynamics", &VSCDynamics_factory);
 }
 
 void VSCDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -91,7 +88,7 @@ void VSCDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, ass
 
 void VSCDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:VSCDynamics.VsConverter"), &assign_VSCDynamics_VsConverter));
+	assign_map.emplace("cim:VSCDynamics.VsConverter", &assign_VSCDynamics_VsConverter);
 }
 
 void VSCDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

@@ -19,9 +19,7 @@ namespace CIMPP
 	class RemoteInputSignal;
 	class VoltageAdjusterDynamics;
 
-	/*
-	Power Factor or VAr controller Type I function block whose behaviour is described by reference to a standard model
-	*/
+	/** \brief Power Factor or VAr controller Type I function block whose behaviour is described by reference to a standard model */
 	class PFVArControllerType1Dynamics : public DynamicsFunctionBlock
 	{
 	public:
@@ -29,9 +27,14 @@ namespace CIMPP
 		PFVArControllerType1Dynamics();
 		~PFVArControllerType1Dynamics() override;
 
-		CIMPP::ExcitationSystemDynamics* ExcitationSystemDynamics;  /* Excitation system model with which this Power Factor or VAr controller Type I model is associated. Default: 0 */
-		CIMPP::RemoteInputSignal* RemoteInputSignal;  /* Remote input signal used by this Power Factor or VAr controller Type I model. Default: 0 */
-		CIMPP::VoltageAdjusterDynamics* VoltageAdjusterDynamics;  /* Voltage adjuster model associated with this Power Factor or VA controller Type I model. Default: 0 */
+		/** \brief Excitation system model with which this Power Factor or VAr controller Type I model is associated. Default: 0 */
+		CIMPP::ExcitationSystemDynamics* ExcitationSystemDynamics;
+
+		/** \brief Remote input signal used by this Power Factor or VAr controller Type I model. Default: 0 */
+		CIMPP::RemoteInputSignal* RemoteInputSignal;
+
+		/** \brief Voltage adjuster model associated with this Power Factor or VA controller Type I model. Default: 0 */
+		CIMPP::VoltageAdjusterDynamics* VoltageAdjusterDynamics;
 
 		static const char debugName[];
 		const char* debugString() const override;

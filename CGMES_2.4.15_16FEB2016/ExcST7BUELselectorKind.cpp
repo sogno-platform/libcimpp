@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "ExcST7BUELselectorKind")
+		if (EnumSymbol.substr(0, pos) != "ExcST7BUELselectorKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,22 +50,22 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "noUELinput")
+		if (EnumSymbol == "noUELinput")
 		{
 			rop = ExcST7BUELselectorKind::noUELinput;
 			return lop;
 		}
-		if(EnumSymbol == "addVref")
+		if (EnumSymbol == "addVref")
 		{
 			rop = ExcST7BUELselectorKind::addVref;
 			return lop;
 		}
-		if(EnumSymbol == "inputHVgate")
+		if (EnumSymbol == "inputHVgate")
 		{
 			rop = ExcST7BUELselectorKind::inputHVgate;
 			return lop;
 		}
-		if(EnumSymbol == "outputHVgate")
+		if (EnumSymbol == "outputHVgate")
 		{
 			rop = ExcST7BUELselectorKind::outputHVgate;
 			return lop;

@@ -9,9 +9,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	A floating point number. The range is unspecified and not limited.
-	*/
+	/** \brief A floating point number. The range is unspecified and not limited. */
 	class Float
 	{
 	public:

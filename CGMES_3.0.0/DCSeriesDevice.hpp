@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A series device within the DC system, typically a reactor used for filtering or smoothing.  Needed for transient and short circuit studies.
-	*/
+	/** \brief A series device within the DC system, typically a reactor used for filtering or smoothing.  Needed for transient and short circuit studies. */
 	class DCSeriesDevice : public DCConductingEquipment
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		DCSeriesDevice();
 		~DCSeriesDevice() override;
 
-		CIMPP::Inductance inductance;  /* Inductance of the device. Default: nullptr */
-		CIMPP::Resistance resistance;  /* Resistance of the DC device. Default: nullptr */
+		/** \brief Inductance of the device. Default: nullptr */
+		CIMPP::Inductance inductance;
+
+		/** \brief Resistance of the DC device. Default: nullptr */
+		CIMPP::Resistance resistance;
 
 		static const char debugName[];
 		const char* debugString() const override;

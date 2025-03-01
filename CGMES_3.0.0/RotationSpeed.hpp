@@ -9,9 +9,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Number of revolutions per second.
-	*/
+	/** \brief Number of revolutions per second. */
 	class RotationSpeed
 	{
 	public:

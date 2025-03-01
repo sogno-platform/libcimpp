@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "RegulatingControl.hpp"
-#include "Boolean.hpp"
 
 using namespace CIMPP;
 
-RegulatingCondEq::RegulatingCondEq() : RegulatingControl(nullptr) {};
-RegulatingCondEq::~RegulatingCondEq() {};
+RegulatingCondEq::RegulatingCondEq() : RegulatingControl(nullptr) {}
+RegulatingCondEq::~RegulatingCondEq() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -44,21 +43,6 @@ RegulatingCondEq::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_RegulatingCondEq_controlEnabled(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (RegulatingCondEq* element = dynamic_cast<RegulatingCondEq*>(BaseClass_ptr1))
-	{
-		buffer >> element->controlEnabled;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_RegulatingControl_RegulatingCondEq(BaseClass*, BaseClass*);
 bool assign_RegulatingCondEq_RegulatingControl(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -76,9 +60,38 @@ bool assign_RegulatingCondEq_RegulatingControl(BaseClass* BaseClass_ptr1, BaseCl
 	return false;
 }
 
+bool assign_RegulatingCondEq_controlEnabled(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	RegulatingCondEq* element = dynamic_cast<RegulatingCondEq*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->controlEnabled;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_RegulatingCondEq_RegulatingControl(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const RegulatingCondEq* element = dynamic_cast<const RegulatingCondEq*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->RegulatingControl != 0)
+		{
+			BaseClass_list.push_back(element->RegulatingControl);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_RegulatingCondEq_controlEnabled(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const RegulatingCondEq* element = dynamic_cast<const RegulatingCondEq*>(BaseClass_ptr1))
+	const RegulatingCondEq* element = dynamic_cast<const RegulatingCondEq*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->controlEnabled;
 		if (!buffer.str().empty())
@@ -90,21 +103,6 @@ bool get_RegulatingCondEq_controlEnabled(const BaseClass* BaseClass_ptr1, std::s
 	return false;
 }
 
-
-bool get_RegulatingCondEq_RegulatingControl(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const RegulatingCondEq* element = dynamic_cast<const RegulatingCondEq*>(BaseClass_ptr1))
-	{
-		if (element->RegulatingControl != 0)
-		{
-			BaseClass_list.push_back(element->RegulatingControl);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char RegulatingCondEq::debugName[] = "RegulatingCondEq";
 const char* RegulatingCondEq::debugString() const
 {
@@ -113,17 +111,17 @@ const char* RegulatingCondEq::debugString() const
 
 void RegulatingCondEq::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:RegulatingCondEq"), &RegulatingCondEq_factory));
+	factory_map.emplace("cim:RegulatingCondEq", &RegulatingCondEq_factory);
 }
 
 void RegulatingCondEq::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:RegulatingCondEq.controlEnabled"), &assign_RegulatingCondEq_controlEnabled));
+	assign_map.emplace("cim:RegulatingCondEq.controlEnabled", &assign_RegulatingCondEq_controlEnabled);
 }
 
 void RegulatingCondEq::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:RegulatingCondEq.RegulatingControl"), &assign_RegulatingCondEq_RegulatingControl));
+	assign_map.emplace("cim:RegulatingCondEq.RegulatingControl", &assign_RegulatingCondEq_RegulatingControl);
 }
 
 void RegulatingCondEq::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

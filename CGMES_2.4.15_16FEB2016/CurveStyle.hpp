@@ -9,21 +9,15 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Style or shape of curve.
-	*/
+	/** \brief Style or shape of curve. */
 	class CurveStyle
 	{
 	public:
 		enum CurveStyle_ENUM
 		{
-			/**
-			 * The Y-axis values are assumed constant until the next curve point and prior to the first curve point.
-			 */
+			/** The Y-axis values are assumed constant until the next curve point and prior to the first curve point. */
 			constantYValue,
-			/**
-			 * The Y-axis values are assumed to be a straight line between values.  Also known as linear interpolation.
-			 */
+			/** The Y-axis values are assumed to be a straight line between values.  Also known as linear interpolation. */
 			straightLineYValues,
 		};
 

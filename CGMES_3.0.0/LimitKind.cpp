@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "LimitKind")
+		if (EnumSymbol.substr(0, pos) != "LimitKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,57 +50,57 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "patl")
+		if (EnumSymbol == "patl")
 		{
 			rop = LimitKind::patl;
 			return lop;
 		}
-		if(EnumSymbol == "patlt")
+		if (EnumSymbol == "patlt")
 		{
 			rop = LimitKind::patlt;
 			return lop;
 		}
-		if(EnumSymbol == "tatl")
+		if (EnumSymbol == "tatl")
 		{
 			rop = LimitKind::tatl;
 			return lop;
 		}
-		if(EnumSymbol == "tc")
+		if (EnumSymbol == "tc")
 		{
 			rop = LimitKind::tc;
 			return lop;
 		}
-		if(EnumSymbol == "tct")
+		if (EnumSymbol == "tct")
 		{
 			rop = LimitKind::tct;
 			return lop;
 		}
-		if(EnumSymbol == "highVoltage")
+		if (EnumSymbol == "highVoltage")
 		{
 			rop = LimitKind::highVoltage;
 			return lop;
 		}
-		if(EnumSymbol == "lowVoltage")
+		if (EnumSymbol == "lowVoltage")
 		{
 			rop = LimitKind::lowVoltage;
 			return lop;
 		}
-		if(EnumSymbol == "operationalVoltageLimit")
+		if (EnumSymbol == "operationalVoltageLimit")
 		{
 			rop = LimitKind::operationalVoltageLimit;
 			return lop;
 		}
-		if(EnumSymbol == "alarmVoltage")
+		if (EnumSymbol == "alarmVoltage")
 		{
 			rop = LimitKind::alarmVoltage;
 			return lop;
 		}
-		if(EnumSymbol == "warningVoltage")
+		if (EnumSymbol == "warningVoltage")
 		{
 			rop = LimitKind::warningVoltage;
 			return lop;
 		}
-		if(EnumSymbol == "stability")
+		if (EnumSymbol == "stability")
 		{
 			rop = LimitKind::stability;
 			return lop;

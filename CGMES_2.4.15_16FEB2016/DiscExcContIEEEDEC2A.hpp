@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	The class represents IEEE Type DEC2A model for the discontinuous excitation control. This system provides transient excitation boosting via an open-loop control as initiated by a trigger signal generated remotely.  Reference: IEEE Standard 421.5-2005 Section 12.3.
-	*/
+	/** \brief The class represents IEEE Type DEC2A model for the discontinuous excitation control. This system provides transient excitation boosting via an open-loop control as initiated by a trigger signal generated remotely.  Reference: IEEE Standard 421.5-2005 Section 12.3. */
 	class DiscExcContIEEEDEC2A : public DiscontinuousExcitationControlDynamics
 	{
 	public:
@@ -28,11 +26,20 @@ namespace CIMPP
 		DiscExcContIEEEDEC2A();
 		~DiscExcContIEEEDEC2A() override;
 
-		CIMPP::Seconds td1;  /* Discontinuous controller time constant (). Default: nullptr */
-		CIMPP::Seconds td2;  /* Discontinuous controller washout time constant (). Default: nullptr */
-		CIMPP::PU vdmax;  /* Limiter (). Default: nullptr */
-		CIMPP::PU vdmin;  /* Limiter (). Default: nullptr */
-		CIMPP::PU vk;  /* Discontinuous controller input reference (). Default: nullptr */
+		/** \brief Discontinuous controller time constant (). Default: nullptr */
+		CIMPP::Seconds td1;
+
+		/** \brief Discontinuous controller washout time constant (). Default: nullptr */
+		CIMPP::Seconds td2;
+
+		/** \brief Limiter (). Default: nullptr */
+		CIMPP::PU vdmax;
+
+		/** \brief Limiter (). Default: nullptr */
+		CIMPP::PU vdmin;
+
+		/** \brief Discontinuous controller input reference (). Default: nullptr */
+		CIMPP::PU vk;
 
 		static const char debugName[];
 		const char* debugString() const override;

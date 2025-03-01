@@ -8,14 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Capacitance.hpp"
-#include "Voltage.hpp"
-#include "Resistance.hpp"
 
 using namespace CIMPP;
 
-DCShunt::DCShunt() {};
-DCShunt::~DCShunt() {};
+DCShunt::DCShunt() {}
+DCShunt::~DCShunt() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -44,51 +41,52 @@ DCShunt::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_DCShunt_capacitance(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DCShunt_capacitance(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DCShunt* element = dynamic_cast<DCShunt*>(BaseClass_ptr1))
+	DCShunt* element = dynamic_cast<DCShunt*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->capacitance;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_DCShunt_ratedUdc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DCShunt_ratedUdc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DCShunt* element = dynamic_cast<DCShunt*>(BaseClass_ptr1))
+	DCShunt* element = dynamic_cast<DCShunt*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ratedUdc;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_DCShunt_resistance(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DCShunt_resistance(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DCShunt* element = dynamic_cast<DCShunt*>(BaseClass_ptr1))
+	DCShunt* element = dynamic_cast<DCShunt*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->resistance;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_DCShunt_capacitance(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DCShunt* element = dynamic_cast<const DCShunt*>(BaseClass_ptr1))
+	const DCShunt* element = dynamic_cast<const DCShunt*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->capacitance;
 		if (!buffer.str().empty())
@@ -102,7 +100,8 @@ bool get_DCShunt_capacitance(const BaseClass* BaseClass_ptr1, std::stringstream&
 
 bool get_DCShunt_ratedUdc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DCShunt* element = dynamic_cast<const DCShunt*>(BaseClass_ptr1))
+	const DCShunt* element = dynamic_cast<const DCShunt*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ratedUdc;
 		if (!buffer.str().empty())
@@ -116,7 +115,8 @@ bool get_DCShunt_ratedUdc(const BaseClass* BaseClass_ptr1, std::stringstream& bu
 
 bool get_DCShunt_resistance(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DCShunt* element = dynamic_cast<const DCShunt*>(BaseClass_ptr1))
+	const DCShunt* element = dynamic_cast<const DCShunt*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->resistance;
 		if (!buffer.str().empty())
@@ -128,8 +128,6 @@ bool get_DCShunt_resistance(const BaseClass* BaseClass_ptr1, std::stringstream& 
 	return false;
 }
 
-
-
 const char DCShunt::debugName[] = "DCShunt";
 const char* DCShunt::debugString() const
 {
@@ -138,14 +136,14 @@ const char* DCShunt::debugString() const
 
 void DCShunt::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:DCShunt"), &DCShunt_factory));
+	factory_map.emplace("cim:DCShunt", &DCShunt_factory);
 }
 
 void DCShunt::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:DCShunt.capacitance"), &assign_DCShunt_capacitance));
-	assign_map.insert(std::make_pair(std::string("cim:DCShunt.ratedUdc"), &assign_DCShunt_ratedUdc));
-	assign_map.insert(std::make_pair(std::string("cim:DCShunt.resistance"), &assign_DCShunt_resistance));
+	assign_map.emplace("cim:DCShunt.capacitance", &assign_DCShunt_capacitance);
+	assign_map.emplace("cim:DCShunt.ratedUdc", &assign_DCShunt_ratedUdc);
+	assign_map.emplace("cim:DCShunt.resistance", &assign_DCShunt_resistance);
 }
 
 void DCShunt::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

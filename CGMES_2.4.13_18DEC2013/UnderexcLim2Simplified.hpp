@@ -17,9 +17,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	This model can be derived from UnderexcLimIEEE2. The limit characteristic (look -up table) is a single straight-line, the same as UnderexcLimIEEE2 (see Figure 10.4 (p 32), IEEE 421.5-2005 Section 10.2).
-	*/
+	/** \brief This model can be derived from UnderexcLimIEEE2. The limit characteristic (look -up table) is a single straight-line, the same as UnderexcLimIEEE2 (see Figure 10.4 (p 32), IEEE 421.5-2005 Section 10.2). */
 	class UnderexcLim2Simplified : public UnderexcitationLimiterDynamics
 	{
 	public:
@@ -27,13 +25,26 @@ namespace CIMPP
 		UnderexcLim2Simplified();
 		~UnderexcLim2Simplified() override;
 
-		CIMPP::PU kui;  /* Gain Under excitation limiter (Kui).  Typical Value = 0.1. Default: nullptr */
-		CIMPP::PU p0;  /* Segment P initial point (P0).  Typical Value = 0. Default: nullptr */
-		CIMPP::PU p1;  /* Segment P end point (P1).  Typical Value = 1. Default: nullptr */
-		CIMPP::PU q0;  /* Segment Q initial point (Q0).  Typical Value = -0.31. Default: nullptr */
-		CIMPP::PU q1;  /* Segment Q end point (Q1).  Typical Value = -0.1. Default: nullptr */
-		CIMPP::PU vuimax;  /* Maximum error signal (V).  Typical Value = 1. Default: nullptr */
-		CIMPP::PU vuimin;  /* Minimum error signal (V).  Typical Value = 0. Default: nullptr */
+		/** \brief Gain Under excitation limiter (Kui).  Typical Value = 0.1. Default: nullptr */
+		CIMPP::PU kui;
+
+		/** \brief Segment P initial point (P0).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU p0;
+
+		/** \brief Segment P end point (P1).  Typical Value = 1. Default: nullptr */
+		CIMPP::PU p1;
+
+		/** \brief Segment Q initial point (Q0).  Typical Value = -0.31. Default: nullptr */
+		CIMPP::PU q0;
+
+		/** \brief Segment Q end point (Q1).  Typical Value = -0.1. Default: nullptr */
+		CIMPP::PU q1;
+
+		/** \brief Maximum error signal (V).  Typical Value = 1. Default: nullptr */
+		CIMPP::PU vuimax;
+
+		/** \brief Minimum error signal (V).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU vuimin;
 
 		static const char debugName[];
 		const char* debugString() const override;

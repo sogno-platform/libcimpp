@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A ground within a DC system.
-	*/
+	/** \brief A ground within a DC system. */
 	class DCGround : public DCConductingEquipment
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		DCGround();
 		~DCGround() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

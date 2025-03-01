@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class SubLoadArea;
 
-	/*
-	The class is the root or first level in a hierarchical structure for grouping of loads for the purpose of load flow load scaling.
-	*/
+	/** \brief The class is the root or first level in a hierarchical structure for grouping of loads for the purpose of load flow load scaling. */
 	class LoadArea : public EnergyArea
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		LoadArea();
 		~LoadArea() override;
 
-		std::list<CIMPP::SubLoadArea*> SubLoadAreas;  /* The SubLoadAreas in the LoadArea. Default: 0 */
+		/** \brief The SubLoadAreas in the LoadArea. Default: 0 */
+		std::list<CIMPP::SubLoadArea*> SubLoadAreas;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -9,69 +9,39 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Monetary currencies. Apologies for this list not being exhaustive.
-	*/
+	/** \brief Monetary currencies. Apologies for this list not being exhaustive. */
 	class Currency
 	{
 	public:
 		enum Currency_ENUM
 		{
-			/**
-			 * US dollar
-			 */
+			/** US dollar */
 			USD,
-			/**
-			 * European euro
-			 */
+			/** European euro */
 			EUR,
-			/**
-			 * Australian dollar
-			 */
+			/** Australian dollar */
 			AUD,
-			/**
-			 * Canadian dollar
-			 */
+			/** Canadian dollar */
 			CAD,
-			/**
-			 * Swiss francs
-			 */
+			/** Swiss francs */
 			CHF,
-			/**
-			 * Chinese yuan renminbi
-			 */
+			/** Chinese yuan renminbi */
 			CNY,
-			/**
-			 * Danish crown
-			 */
+			/** Danish crown */
 			DKK,
-			/**
-			 * British pound
-			 */
+			/** British pound */
 			GBP,
-			/**
-			 * Japanese yen
-			 */
+			/** Japanese yen */
 			JPY,
-			/**
-			 * Norwegian crown
-			 */
+			/** Norwegian crown */
 			NOK,
-			/**
-			 * Russian ruble
-			 */
+			/** Russian ruble */
 			RUR,
-			/**
-			 * Swedish crown
-			 */
+			/** Swedish crown */
 			SEK,
-			/**
-			 * India rupees
-			 */
+			/** India rupees */
 			INR,
-			/**
-			 * Another type of currency.
-			 */
+			/** Another type of currency. */
 			other,
 		};
 

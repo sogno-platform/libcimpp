@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-GeographicalRegion::GeographicalRegion() {};
-GeographicalRegion::~GeographicalRegion() {};
+GeographicalRegion::GeographicalRegion() {}
+GeographicalRegion::~GeographicalRegion() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -41,8 +41,6 @@ GeographicalRegion::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_SubGeographicalRegion_Region(BaseClass*, BaseClass*);
 bool assign_GeographicalRegion_Regions(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -61,7 +59,6 @@ bool assign_GeographicalRegion_Regions(BaseClass* BaseClass_ptr1, BaseClass* Bas
 }
 
 
-
 const char GeographicalRegion::debugName[] = "GeographicalRegion";
 const char* GeographicalRegion::debugString() const
 {
@@ -70,7 +67,7 @@ const char* GeographicalRegion::debugString() const
 
 void GeographicalRegion::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:GeographicalRegion"), &GeographicalRegion_factory));
+	factory_map.emplace("cim:GeographicalRegion", &GeographicalRegion_factory);
 }
 
 void GeographicalRegion::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -79,7 +76,7 @@ void GeographicalRegion::addPrimitiveAssignFnsToMap(std::unordered_map<std::stri
 
 void GeographicalRegion::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:GeographicalRegion.Regions"), &assign_GeographicalRegion_Regions));
+	assign_map.emplace("cim:GeographicalRegion.Regions", &assign_GeographicalRegion_Regions);
 }
 
 void GeographicalRegion::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

@@ -8,29 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Boolean.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Simple_Float.hpp"
-#include "Simple_Float.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Boolean.hpp"
 
 using namespace CIMPP;
 
-ExcDC2A::ExcDC2A() {};
-ExcDC2A::~ExcDC2A() {};
+ExcDC2A::ExcDC2A() {}
+ExcDC2A::~ExcDC2A() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -74,246 +56,262 @@ ExcDC2A::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_ExcDC2A_efd1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcDC2A_efd1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1))
+	ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->efd1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcDC2A_efd2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcDC2A_efd2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1))
+	ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->efd2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcDC2A_exclim(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcDC2A_exclim(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1))
+	ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->exclim;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcDC2A_ka(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcDC2A_ka(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1))
+	ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ka;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcDC2A_ke(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcDC2A_ke(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1))
+	ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ke;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcDC2A_kf(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcDC2A_kf(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1))
+	ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kf;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcDC2A_ks(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcDC2A_ks(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1))
+	ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ks;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcDC2A_seefd1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcDC2A_seefd1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1))
+	ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->seefd1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcDC2A_seefd2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcDC2A_seefd2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1))
+	ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->seefd2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcDC2A_ta(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcDC2A_ta(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1))
+	ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ta;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcDC2A_tb(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcDC2A_tb(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1))
+	ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tb;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcDC2A_tc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcDC2A_tc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1))
+	ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tc;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcDC2A_te(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcDC2A_te(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1))
+	ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->te;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcDC2A_tf(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcDC2A_tf(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1))
+	ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tf;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcDC2A_tf1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcDC2A_tf1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1))
+	ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tf1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcDC2A_vrmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcDC2A_vrmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1))
+	ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vrmax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcDC2A_vrmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcDC2A_vrmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1))
+	ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vrmin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcDC2A_vtlim(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcDC2A_vtlim(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1))
+	ExcDC2A* element = dynamic_cast<ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vtlim;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_ExcDC2A_efd1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1))
+	const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->efd1;
 		if (!buffer.str().empty())
@@ -327,7 +325,8 @@ bool get_ExcDC2A_efd1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer
 
 bool get_ExcDC2A_efd2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1))
+	const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->efd2;
 		if (!buffer.str().empty())
@@ -341,7 +340,8 @@ bool get_ExcDC2A_efd2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer
 
 bool get_ExcDC2A_exclim(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1))
+	const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->exclim;
 		if (!buffer.str().empty())
@@ -355,7 +355,8 @@ bool get_ExcDC2A_exclim(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_ExcDC2A_ka(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1))
+	const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ka;
 		if (!buffer.str().empty())
@@ -369,7 +370,8 @@ bool get_ExcDC2A_ka(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcDC2A_ke(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1))
+	const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ke;
 		if (!buffer.str().empty())
@@ -383,7 +385,8 @@ bool get_ExcDC2A_ke(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcDC2A_kf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1))
+	const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kf;
 		if (!buffer.str().empty())
@@ -397,7 +400,8 @@ bool get_ExcDC2A_kf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcDC2A_ks(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1))
+	const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ks;
 		if (!buffer.str().empty())
@@ -411,7 +415,8 @@ bool get_ExcDC2A_ks(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcDC2A_seefd1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1))
+	const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->seefd1;
 		if (!buffer.str().empty())
@@ -425,7 +430,8 @@ bool get_ExcDC2A_seefd1(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_ExcDC2A_seefd2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1))
+	const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->seefd2;
 		if (!buffer.str().empty())
@@ -439,7 +445,8 @@ bool get_ExcDC2A_seefd2(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_ExcDC2A_ta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1))
+	const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ta;
 		if (!buffer.str().empty())
@@ -453,7 +460,8 @@ bool get_ExcDC2A_ta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcDC2A_tb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1))
+	const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tb;
 		if (!buffer.str().empty())
@@ -467,7 +475,8 @@ bool get_ExcDC2A_tb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcDC2A_tc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1))
+	const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tc;
 		if (!buffer.str().empty())
@@ -481,7 +490,8 @@ bool get_ExcDC2A_tc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcDC2A_te(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1))
+	const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->te;
 		if (!buffer.str().empty())
@@ -495,7 +505,8 @@ bool get_ExcDC2A_te(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcDC2A_tf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1))
+	const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tf;
 		if (!buffer.str().empty())
@@ -509,7 +520,8 @@ bool get_ExcDC2A_tf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcDC2A_tf1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1))
+	const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tf1;
 		if (!buffer.str().empty())
@@ -523,7 +535,8 @@ bool get_ExcDC2A_tf1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcDC2A_vrmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1))
+	const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vrmax;
 		if (!buffer.str().empty())
@@ -537,7 +550,8 @@ bool get_ExcDC2A_vrmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_ExcDC2A_vrmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1))
+	const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vrmin;
 		if (!buffer.str().empty())
@@ -551,7 +565,8 @@ bool get_ExcDC2A_vrmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_ExcDC2A_vtlim(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1))
+	const ExcDC2A* element = dynamic_cast<const ExcDC2A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vtlim;
 		if (!buffer.str().empty())
@@ -563,8 +578,6 @@ bool get_ExcDC2A_vtlim(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 	return false;
 }
 
-
-
 const char ExcDC2A::debugName[] = "ExcDC2A";
 const char* ExcDC2A::debugString() const
 {
@@ -573,29 +586,29 @@ const char* ExcDC2A::debugString() const
 
 void ExcDC2A::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ExcDC2A"), &ExcDC2A_factory));
+	factory_map.emplace("cim:ExcDC2A", &ExcDC2A_factory);
 }
 
 void ExcDC2A::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ExcDC2A.efd1"), &assign_ExcDC2A_efd1));
-	assign_map.insert(std::make_pair(std::string("cim:ExcDC2A.efd2"), &assign_ExcDC2A_efd2));
-	assign_map.insert(std::make_pair(std::string("cim:ExcDC2A.exclim"), &assign_ExcDC2A_exclim));
-	assign_map.insert(std::make_pair(std::string("cim:ExcDC2A.ka"), &assign_ExcDC2A_ka));
-	assign_map.insert(std::make_pair(std::string("cim:ExcDC2A.ke"), &assign_ExcDC2A_ke));
-	assign_map.insert(std::make_pair(std::string("cim:ExcDC2A.kf"), &assign_ExcDC2A_kf));
-	assign_map.insert(std::make_pair(std::string("cim:ExcDC2A.ks"), &assign_ExcDC2A_ks));
-	assign_map.insert(std::make_pair(std::string("cim:ExcDC2A.seefd1"), &assign_ExcDC2A_seefd1));
-	assign_map.insert(std::make_pair(std::string("cim:ExcDC2A.seefd2"), &assign_ExcDC2A_seefd2));
-	assign_map.insert(std::make_pair(std::string("cim:ExcDC2A.ta"), &assign_ExcDC2A_ta));
-	assign_map.insert(std::make_pair(std::string("cim:ExcDC2A.tb"), &assign_ExcDC2A_tb));
-	assign_map.insert(std::make_pair(std::string("cim:ExcDC2A.tc"), &assign_ExcDC2A_tc));
-	assign_map.insert(std::make_pair(std::string("cim:ExcDC2A.te"), &assign_ExcDC2A_te));
-	assign_map.insert(std::make_pair(std::string("cim:ExcDC2A.tf"), &assign_ExcDC2A_tf));
-	assign_map.insert(std::make_pair(std::string("cim:ExcDC2A.tf1"), &assign_ExcDC2A_tf1));
-	assign_map.insert(std::make_pair(std::string("cim:ExcDC2A.vrmax"), &assign_ExcDC2A_vrmax));
-	assign_map.insert(std::make_pair(std::string("cim:ExcDC2A.vrmin"), &assign_ExcDC2A_vrmin));
-	assign_map.insert(std::make_pair(std::string("cim:ExcDC2A.vtlim"), &assign_ExcDC2A_vtlim));
+	assign_map.emplace("cim:ExcDC2A.efd1", &assign_ExcDC2A_efd1);
+	assign_map.emplace("cim:ExcDC2A.efd2", &assign_ExcDC2A_efd2);
+	assign_map.emplace("cim:ExcDC2A.exclim", &assign_ExcDC2A_exclim);
+	assign_map.emplace("cim:ExcDC2A.ka", &assign_ExcDC2A_ka);
+	assign_map.emplace("cim:ExcDC2A.ke", &assign_ExcDC2A_ke);
+	assign_map.emplace("cim:ExcDC2A.kf", &assign_ExcDC2A_kf);
+	assign_map.emplace("cim:ExcDC2A.ks", &assign_ExcDC2A_ks);
+	assign_map.emplace("cim:ExcDC2A.seefd1", &assign_ExcDC2A_seefd1);
+	assign_map.emplace("cim:ExcDC2A.seefd2", &assign_ExcDC2A_seefd2);
+	assign_map.emplace("cim:ExcDC2A.ta", &assign_ExcDC2A_ta);
+	assign_map.emplace("cim:ExcDC2A.tb", &assign_ExcDC2A_tb);
+	assign_map.emplace("cim:ExcDC2A.tc", &assign_ExcDC2A_tc);
+	assign_map.emplace("cim:ExcDC2A.te", &assign_ExcDC2A_te);
+	assign_map.emplace("cim:ExcDC2A.tf", &assign_ExcDC2A_tf);
+	assign_map.emplace("cim:ExcDC2A.tf1", &assign_ExcDC2A_tf1);
+	assign_map.emplace("cim:ExcDC2A.vrmax", &assign_ExcDC2A_vrmax);
+	assign_map.emplace("cim:ExcDC2A.vrmin", &assign_ExcDC2A_vrmin);
+	assign_map.emplace("cim:ExcDC2A.vtlim", &assign_ExcDC2A_vtlim);
 }
 
 void ExcDC2A::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

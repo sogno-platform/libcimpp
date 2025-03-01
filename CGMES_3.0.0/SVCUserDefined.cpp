@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "ProprietaryParameterDynamics.hpp"
-#include "Boolean.hpp"
 
 using namespace CIMPP;
 
-SVCUserDefined::SVCUserDefined() {};
-SVCUserDefined::~SVCUserDefined() {};
+SVCUserDefined::SVCUserDefined() {}
+SVCUserDefined::~SVCUserDefined() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,21 +41,6 @@ SVCUserDefined::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_SVCUserDefined_proprietary(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (SVCUserDefined* element = dynamic_cast<SVCUserDefined*>(BaseClass_ptr1))
-	{
-		buffer >> element->proprietary;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_ProprietaryParameterDynamics_SVCUserDefined(BaseClass*, BaseClass*);
 bool assign_SVCUserDefined_ProprietaryParameterDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,9 +58,25 @@ bool assign_SVCUserDefined_ProprietaryParameterDynamics(BaseClass* BaseClass_ptr
 	return false;
 }
 
+bool assign_SVCUserDefined_proprietary(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	SVCUserDefined* element = dynamic_cast<SVCUserDefined*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->proprietary;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_SVCUserDefined_proprietary(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SVCUserDefined* element = dynamic_cast<const SVCUserDefined*>(BaseClass_ptr1))
+	const SVCUserDefined* element = dynamic_cast<const SVCUserDefined*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->proprietary;
 		if (!buffer.str().empty())
@@ -88,8 +88,6 @@ bool get_SVCUserDefined_proprietary(const BaseClass* BaseClass_ptr1, std::string
 	return false;
 }
 
-
-
 const char SVCUserDefined::debugName[] = "SVCUserDefined";
 const char* SVCUserDefined::debugString() const
 {
@@ -98,17 +96,17 @@ const char* SVCUserDefined::debugString() const
 
 void SVCUserDefined::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:SVCUserDefined"), &SVCUserDefined_factory));
+	factory_map.emplace("cim:SVCUserDefined", &SVCUserDefined_factory);
 }
 
 void SVCUserDefined::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:SVCUserDefined.proprietary"), &assign_SVCUserDefined_proprietary));
+	assign_map.emplace("cim:SVCUserDefined.proprietary", &assign_SVCUserDefined_proprietary);
 }
 
 void SVCUserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:SVCUserDefined.ProprietaryParameterDynamics"), &assign_SVCUserDefined_ProprietaryParameterDynamics));
+	assign_map.emplace("cim:SVCUserDefined.ProprietaryParameterDynamics", &assign_SVCUserDefined_ProprietaryParameterDynamics);
 }
 
 void SVCUserDefined::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

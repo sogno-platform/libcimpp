@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "DCConverterOperatingModeKind")
+		if (EnumSymbol.substr(0, pos) != "DCConverterOperatingModeKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,17 +50,17 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "bipolar")
+		if (EnumSymbol == "bipolar")
 		{
 			rop = DCConverterOperatingModeKind::bipolar;
 			return lop;
 		}
-		if(EnumSymbol == "monopolarMetallicReturn")
+		if (EnumSymbol == "monopolarMetallicReturn")
 		{
 			rop = DCConverterOperatingModeKind::monopolarMetallicReturn;
 			return lop;
 		}
-		if(EnumSymbol == "monopolarGroundReturn")
+		if (EnumSymbol == "monopolarGroundReturn")
 		{
 			rop = DCConverterOperatingModeKind::monopolarGroundReturn;
 			return lop;

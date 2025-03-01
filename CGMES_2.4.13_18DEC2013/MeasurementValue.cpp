@@ -10,13 +10,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 #include "MeasurementValueQuality.hpp"
 #include "MeasurementValueSource.hpp"
-#include "PerCent.hpp"
-#include "DateTime.hpp"
 
 using namespace CIMPP;
 
-MeasurementValue::MeasurementValue() : MeasurementValueQuality(nullptr), MeasurementValueSource(nullptr) {};
-MeasurementValue::~MeasurementValue() {};
+MeasurementValue::MeasurementValue() : MeasurementValueQuality(nullptr), MeasurementValueSource(nullptr) {}
+MeasurementValue::~MeasurementValue() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -46,34 +44,6 @@ MeasurementValue::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_MeasurementValue_sensorAccuracy(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (MeasurementValue* element = dynamic_cast<MeasurementValue*>(BaseClass_ptr1))
-	{
-		buffer >> element->sensorAccuracy;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_MeasurementValue_timeStamp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (MeasurementValue* element = dynamic_cast<MeasurementValue*>(BaseClass_ptr1))
-	{
-		element->timeStamp = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_MeasurementValueQuality_MeasurementValue(BaseClass*, BaseClass*);
 bool assign_MeasurementValue_MeasurementValueQuality(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -90,6 +60,7 @@ bool assign_MeasurementValue_MeasurementValueQuality(BaseClass* BaseClass_ptr1, 
 	}
 	return false;
 }
+
 bool assign_MeasurementValueSource_MeasurementValues(BaseClass*, BaseClass*);
 bool assign_MeasurementValue_MeasurementValueSource(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -107,9 +78,53 @@ bool assign_MeasurementValue_MeasurementValueSource(BaseClass* BaseClass_ptr1, B
 	return false;
 }
 
+bool assign_MeasurementValue_sensorAccuracy(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	MeasurementValue* element = dynamic_cast<MeasurementValue*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->sensorAccuracy;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_MeasurementValue_timeStamp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	MeasurementValue* element = dynamic_cast<MeasurementValue*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->timeStamp = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
+bool get_MeasurementValue_MeasurementValueSource(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const MeasurementValue* element = dynamic_cast<const MeasurementValue*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->MeasurementValueSource != 0)
+		{
+			BaseClass_list.push_back(element->MeasurementValueSource);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_MeasurementValue_sensorAccuracy(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const MeasurementValue* element = dynamic_cast<const MeasurementValue*>(BaseClass_ptr1))
+	const MeasurementValue* element = dynamic_cast<const MeasurementValue*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->sensorAccuracy;
 		if (!buffer.str().empty())
@@ -123,7 +138,8 @@ bool get_MeasurementValue_sensorAccuracy(const BaseClass* BaseClass_ptr1, std::s
 
 bool get_MeasurementValue_timeStamp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const MeasurementValue* element = dynamic_cast<const MeasurementValue*>(BaseClass_ptr1))
+	const MeasurementValue* element = dynamic_cast<const MeasurementValue*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->timeStamp;
 		if (!buffer.str().empty())
@@ -135,21 +151,6 @@ bool get_MeasurementValue_timeStamp(const BaseClass* BaseClass_ptr1, std::string
 	return false;
 }
 
-
-bool get_MeasurementValue_MeasurementValueSource(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const MeasurementValue* element = dynamic_cast<const MeasurementValue*>(BaseClass_ptr1))
-	{
-		if (element->MeasurementValueSource != 0)
-		{
-			BaseClass_list.push_back(element->MeasurementValueSource);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char MeasurementValue::debugName[] = "MeasurementValue";
 const char* MeasurementValue::debugString() const
 {
@@ -158,19 +159,19 @@ const char* MeasurementValue::debugString() const
 
 void MeasurementValue::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:MeasurementValue"), &MeasurementValue_factory));
+	factory_map.emplace("cim:MeasurementValue", &MeasurementValue_factory);
 }
 
 void MeasurementValue::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:MeasurementValue.sensorAccuracy"), &assign_MeasurementValue_sensorAccuracy));
-	assign_map.insert(std::make_pair(std::string("cim:MeasurementValue.timeStamp"), &assign_MeasurementValue_timeStamp));
+	assign_map.emplace("cim:MeasurementValue.sensorAccuracy", &assign_MeasurementValue_sensorAccuracy);
+	assign_map.emplace("cim:MeasurementValue.timeStamp", &assign_MeasurementValue_timeStamp);
 }
 
 void MeasurementValue::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:MeasurementValue.MeasurementValueQuality"), &assign_MeasurementValue_MeasurementValueQuality));
-	assign_map.insert(std::make_pair(std::string("cim:MeasurementValue.MeasurementValueSource"), &assign_MeasurementValue_MeasurementValueSource));
+	assign_map.emplace("cim:MeasurementValue.MeasurementValueQuality", &assign_MeasurementValue_MeasurementValueQuality);
+	assign_map.emplace("cim:MeasurementValue.MeasurementValueSource", &assign_MeasurementValue_MeasurementValueSource);
 }
 
 void MeasurementValue::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

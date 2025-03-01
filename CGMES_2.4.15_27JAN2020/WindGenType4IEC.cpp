@@ -8,15 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Seconds.hpp"
 
 using namespace CIMPP;
 
-WindGenType4IEC::WindGenType4IEC() {};
-WindGenType4IEC::~WindGenType4IEC() {};
+WindGenType4IEC::WindGenType4IEC() {}
+WindGenType4IEC::~WindGenType4IEC() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -46,64 +42,66 @@ WindGenType4IEC::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_WindGenType4IEC_dipmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_WindGenType4IEC_dipmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (WindGenType4IEC* element = dynamic_cast<WindGenType4IEC*>(BaseClass_ptr1))
+	WindGenType4IEC* element = dynamic_cast<WindGenType4IEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->dipmax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_WindGenType4IEC_diqmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_WindGenType4IEC_diqmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (WindGenType4IEC* element = dynamic_cast<WindGenType4IEC*>(BaseClass_ptr1))
+	WindGenType4IEC* element = dynamic_cast<WindGenType4IEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->diqmax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_WindGenType4IEC_diqmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_WindGenType4IEC_diqmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (WindGenType4IEC* element = dynamic_cast<WindGenType4IEC*>(BaseClass_ptr1))
+	WindGenType4IEC* element = dynamic_cast<WindGenType4IEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->diqmin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_WindGenType4IEC_tg(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_WindGenType4IEC_tg(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (WindGenType4IEC* element = dynamic_cast<WindGenType4IEC*>(BaseClass_ptr1))
+	WindGenType4IEC* element = dynamic_cast<WindGenType4IEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tg;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_WindGenType4IEC_dipmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindGenType4IEC* element = dynamic_cast<const WindGenType4IEC*>(BaseClass_ptr1))
+	const WindGenType4IEC* element = dynamic_cast<const WindGenType4IEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->dipmax;
 		if (!buffer.str().empty())
@@ -117,7 +115,8 @@ bool get_WindGenType4IEC_dipmax(const BaseClass* BaseClass_ptr1, std::stringstre
 
 bool get_WindGenType4IEC_diqmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindGenType4IEC* element = dynamic_cast<const WindGenType4IEC*>(BaseClass_ptr1))
+	const WindGenType4IEC* element = dynamic_cast<const WindGenType4IEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->diqmax;
 		if (!buffer.str().empty())
@@ -131,7 +130,8 @@ bool get_WindGenType4IEC_diqmax(const BaseClass* BaseClass_ptr1, std::stringstre
 
 bool get_WindGenType4IEC_diqmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindGenType4IEC* element = dynamic_cast<const WindGenType4IEC*>(BaseClass_ptr1))
+	const WindGenType4IEC* element = dynamic_cast<const WindGenType4IEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->diqmin;
 		if (!buffer.str().empty())
@@ -145,7 +145,8 @@ bool get_WindGenType4IEC_diqmin(const BaseClass* BaseClass_ptr1, std::stringstre
 
 bool get_WindGenType4IEC_tg(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindGenType4IEC* element = dynamic_cast<const WindGenType4IEC*>(BaseClass_ptr1))
+	const WindGenType4IEC* element = dynamic_cast<const WindGenType4IEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tg;
 		if (!buffer.str().empty())
@@ -157,8 +158,6 @@ bool get_WindGenType4IEC_tg(const BaseClass* BaseClass_ptr1, std::stringstream& 
 	return false;
 }
 
-
-
 const char WindGenType4IEC::debugName[] = "WindGenType4IEC";
 const char* WindGenType4IEC::debugString() const
 {
@@ -167,15 +166,15 @@ const char* WindGenType4IEC::debugString() const
 
 void WindGenType4IEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:WindGenType4IEC"), &WindGenType4IEC_factory));
+	factory_map.emplace("cim:WindGenType4IEC", &WindGenType4IEC_factory);
 }
 
 void WindGenType4IEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindGenType4IEC.dipmax"), &assign_WindGenType4IEC_dipmax));
-	assign_map.insert(std::make_pair(std::string("cim:WindGenType4IEC.diqmax"), &assign_WindGenType4IEC_diqmax));
-	assign_map.insert(std::make_pair(std::string("cim:WindGenType4IEC.diqmin"), &assign_WindGenType4IEC_diqmin));
-	assign_map.insert(std::make_pair(std::string("cim:WindGenType4IEC.tg"), &assign_WindGenType4IEC_tg));
+	assign_map.emplace("cim:WindGenType4IEC.dipmax", &assign_WindGenType4IEC_dipmax);
+	assign_map.emplace("cim:WindGenType4IEC.diqmax", &assign_WindGenType4IEC_diqmax);
+	assign_map.emplace("cim:WindGenType4IEC.diqmin", &assign_WindGenType4IEC_diqmin);
+	assign_map.emplace("cim:WindGenType4IEC.tg", &assign_WindGenType4IEC_tg);
 }
 
 void WindGenType4IEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

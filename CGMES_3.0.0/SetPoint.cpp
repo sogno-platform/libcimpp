@@ -8,13 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Float.hpp"
-#include "Float.hpp"
 
 using namespace CIMPP;
 
-SetPoint::SetPoint() {};
-SetPoint::~SetPoint() {};
+SetPoint::SetPoint() {}
+SetPoint::~SetPoint() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,38 +40,38 @@ SetPoint::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_SetPoint_normalValue(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_SetPoint_normalValue(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (SetPoint* element = dynamic_cast<SetPoint*>(BaseClass_ptr1))
+	SetPoint* element = dynamic_cast<SetPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->normalValue;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_SetPoint_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_SetPoint_value(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (SetPoint* element = dynamic_cast<SetPoint*>(BaseClass_ptr1))
+	SetPoint* element = dynamic_cast<SetPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->value;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_SetPoint_normalValue(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SetPoint* element = dynamic_cast<const SetPoint*>(BaseClass_ptr1))
+	const SetPoint* element = dynamic_cast<const SetPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->normalValue;
 		if (!buffer.str().empty())
@@ -87,7 +85,8 @@ bool get_SetPoint_normalValue(const BaseClass* BaseClass_ptr1, std::stringstream
 
 bool get_SetPoint_value(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SetPoint* element = dynamic_cast<const SetPoint*>(BaseClass_ptr1))
+	const SetPoint* element = dynamic_cast<const SetPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->value;
 		if (!buffer.str().empty())
@@ -99,8 +98,6 @@ bool get_SetPoint_value(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 	return false;
 }
 
-
-
 const char SetPoint::debugName[] = "SetPoint";
 const char* SetPoint::debugString() const
 {
@@ -109,13 +106,13 @@ const char* SetPoint::debugString() const
 
 void SetPoint::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:SetPoint"), &SetPoint_factory));
+	factory_map.emplace("cim:SetPoint", &SetPoint_factory);
 }
 
 void SetPoint::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:SetPoint.normalValue"), &assign_SetPoint_normalValue));
-	assign_map.insert(std::make_pair(std::string("cim:SetPoint.value"), &assign_SetPoint_value));
+	assign_map.emplace("cim:SetPoint.normalValue", &assign_SetPoint_normalValue);
+	assign_map.emplace("cim:SetPoint.value", &assign_SetPoint_value);
 }
 
 void SetPoint::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

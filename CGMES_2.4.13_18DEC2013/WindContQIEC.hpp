@@ -21,9 +21,7 @@ namespace CIMPP
 {
 	class WindTurbineType3or4IEC;
 
-	/*
-	Q control model.  Reference: IEC Standard 61400-27-1 Section 6.6.5.6.
-	*/
+	/** \brief Q control model.  Reference: IEC Standard 61400-27-1 Section 6.6.5.6. */
 	class WindContQIEC : public IdentifiedObject
 	{
 	public:
@@ -31,33 +29,86 @@ namespace CIMPP
 		WindContQIEC();
 		~WindContQIEC() override;
 
-		CIMPP::WindTurbineType3or4IEC* WindTurbineType3or4IEC;  /* Wind turbine type 3 or 4 model with which this reactive control mode is associated. Default: 0 */
-		CIMPP::PU iqh1;  /* Maximum reactive current injection during dip (i). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU iqmax;  /* Maximum reactive current injection (i). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU iqmin;  /* Minimum reactive current injection (i). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU iqpost;  /* Post fault reactive current injection (). It is project dependent parameter. Default: nullptr */
-		CIMPP::PU kiq;  /* Reactive power PI controller integration gain (). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU kiu;  /* Voltage PI controller integration gain (). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU kpq;  /* Reactive power PI controller proportional gain (). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU kpu;  /* Voltage PI controller proportional gain (). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU kqv;  /* Voltage scaling factor for LVRT current (). It is project dependent parameter. Default: nullptr */
-		CIMPP::PU qmax;  /* Maximum reactive power (q). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU qmin;  /* Minimum reactive power (q). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU rdroop;  /* Resistive component of voltage drop impedance (). It is project dependent parameter. Default: nullptr */
-		CIMPP::Seconds tiq;  /* Time constant in reactive current lag (T). It is type dependent parameter. Default: nullptr */
-		CIMPP::Seconds tpfilt;  /* Power measurement filter time constant (). It is type dependent parameter. Default: nullptr */
-		CIMPP::Seconds tpost;  /* Length of time period where post fault reactive power is injected (). It is project dependent parameter. Default: nullptr */
-		CIMPP::Seconds tqord;  /* Time constant in reactive power order lag (). It is type dependent parameter. Default: nullptr */
-		CIMPP::Seconds tufilt;  /* Voltage measurement filter time constant (). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU udb1;  /* Voltage dead band lower limit (). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU udb2;  /* Voltage dead band upper limit (). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU umax;  /* Maximum voltage in voltage PI controller integral term (u). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU umin;  /* Minimum voltage in voltage PI controller integral term (u). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU uqdip;  /* Voltage threshold for LVRT detection in q control (). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU uref0;  /* User defined bias in voltage reference (), used when  =. It is case dependent parameter. Default: nullptr */
-		CIMPP::WindLVRTQcontrolModesKind windLVRTQcontrolModesType;  /* Types of LVRT Q control modes (). It is project dependent parameter. Default: 0 */
-		CIMPP::WindQcontrolModesKind windQcontrolModesType;  /* Types of general wind turbine Q control modes ().  It is project dependent parameter. Default: 0 */
-		CIMPP::PU xdroop;  /* Inductive component of voltage drop impedance (). It is project dependent parameter. Default: nullptr */
+		/** \brief Wind turbine type 3 or 4 model with which this reactive control mode is associated. Default: 0 */
+		CIMPP::WindTurbineType3or4IEC* WindTurbineType3or4IEC;
+
+		/** \brief Maximum reactive current injection during dip (i). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU iqh1;
+
+		/** \brief Maximum reactive current injection (i). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU iqmax;
+
+		/** \brief Minimum reactive current injection (i). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU iqmin;
+
+		/** \brief Post fault reactive current injection (). It is project dependent parameter. Default: nullptr */
+		CIMPP::PU iqpost;
+
+		/** \brief Reactive power PI controller integration gain (). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU kiq;
+
+		/** \brief Voltage PI controller integration gain (). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU kiu;
+
+		/** \brief Reactive power PI controller proportional gain (). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU kpq;
+
+		/** \brief Voltage PI controller proportional gain (). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU kpu;
+
+		/** \brief Voltage scaling factor for LVRT current (). It is project dependent parameter. Default: nullptr */
+		CIMPP::PU kqv;
+
+		/** \brief Maximum reactive power (q). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU qmax;
+
+		/** \brief Minimum reactive power (q). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU qmin;
+
+		/** \brief Resistive component of voltage drop impedance (). It is project dependent parameter. Default: nullptr */
+		CIMPP::PU rdroop;
+
+		/** \brief Time constant in reactive current lag (T). It is type dependent parameter. Default: nullptr */
+		CIMPP::Seconds tiq;
+
+		/** \brief Power measurement filter time constant (). It is type dependent parameter. Default: nullptr */
+		CIMPP::Seconds tpfilt;
+
+		/** \brief Length of time period where post fault reactive power is injected (). It is project dependent parameter. Default: nullptr */
+		CIMPP::Seconds tpost;
+
+		/** \brief Time constant in reactive power order lag (). It is type dependent parameter. Default: nullptr */
+		CIMPP::Seconds tqord;
+
+		/** \brief Voltage measurement filter time constant (). It is type dependent parameter. Default: nullptr */
+		CIMPP::Seconds tufilt;
+
+		/** \brief Voltage dead band lower limit (). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU udb1;
+
+		/** \brief Voltage dead band upper limit (). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU udb2;
+
+		/** \brief Maximum voltage in voltage PI controller integral term (u). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU umax;
+
+		/** \brief Minimum voltage in voltage PI controller integral term (u). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU umin;
+
+		/** \brief Voltage threshold for LVRT detection in q control (). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU uqdip;
+
+		/** \brief User defined bias in voltage reference (), used when  =. It is case dependent parameter. Default: nullptr */
+		CIMPP::PU uref0;
+
+		/** \brief Types of LVRT Q control modes (). It is project dependent parameter. Default: 0 */
+		CIMPP::WindLVRTQcontrolModesKind windLVRTQcontrolModesType;
+
+		/** \brief Types of general wind turbine Q control modes ().  It is project dependent parameter. Default: 0 */
+		CIMPP::WindQcontrolModesKind windQcontrolModesType;
+
+		/** \brief Inductive component of voltage drop impedance (). It is project dependent parameter. Default: nullptr */
+		CIMPP::PU xdroop;
 
 		static const char debugName[];
 		const char* debugString() const override;

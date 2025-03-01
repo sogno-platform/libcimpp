@@ -11,8 +11,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-GroundDisconnector::GroundDisconnector() {};
-GroundDisconnector::~GroundDisconnector() {};
+GroundDisconnector::GroundDisconnector() {}
+GroundDisconnector::~GroundDisconnector() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -39,11 +39,6 @@ GroundDisconnector::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
-
-
-
 const char GroundDisconnector::debugName[] = "GroundDisconnector";
 const char* GroundDisconnector::debugString() const
 {
@@ -52,7 +47,7 @@ const char* GroundDisconnector::debugString() const
 
 void GroundDisconnector::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:GroundDisconnector"), &GroundDisconnector_factory));
+	factory_map.emplace("cim:GroundDisconnector", &GroundDisconnector_factory);
 }
 
 void GroundDisconnector::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)

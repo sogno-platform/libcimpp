@@ -9,14 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "WindTurbineType3or4IEC.hpp"
-#include "Seconds.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
 
 using namespace CIMPP;
 
-WindRefFrameRotIEC::WindRefFrameRotIEC() : WindTurbineType3or4IEC(nullptr) {};
-WindRefFrameRotIEC::~WindRefFrameRotIEC() {};
+WindRefFrameRotIEC::WindRefFrameRotIEC() : WindTurbineType3or4IEC(nullptr) {}
+WindRefFrameRotIEC::~WindRefFrameRotIEC() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -46,47 +43,6 @@ WindRefFrameRotIEC::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_WindRefFrameRotIEC_tpll(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindRefFrameRotIEC* element = dynamic_cast<WindRefFrameRotIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->tpll;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindRefFrameRotIEC_upll1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindRefFrameRotIEC* element = dynamic_cast<WindRefFrameRotIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->upll1;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindRefFrameRotIEC_upll2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindRefFrameRotIEC* element = dynamic_cast<WindRefFrameRotIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->upll2;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_WindTurbineType3or4IEC_WindRefFrameRotIEC(BaseClass*, BaseClass*);
 bool assign_WindRefFrameRotIEC_WindTurbineType3or4IEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -104,9 +60,53 @@ bool assign_WindRefFrameRotIEC_WindTurbineType3or4IEC(BaseClass* BaseClass_ptr1,
 	return false;
 }
 
+bool assign_WindRefFrameRotIEC_tpll(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindRefFrameRotIEC* element = dynamic_cast<WindRefFrameRotIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->tpll;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindRefFrameRotIEC_upll1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindRefFrameRotIEC* element = dynamic_cast<WindRefFrameRotIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->upll1;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindRefFrameRotIEC_upll2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindRefFrameRotIEC* element = dynamic_cast<WindRefFrameRotIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->upll2;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_WindRefFrameRotIEC_tpll(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindRefFrameRotIEC* element = dynamic_cast<const WindRefFrameRotIEC*>(BaseClass_ptr1))
+	const WindRefFrameRotIEC* element = dynamic_cast<const WindRefFrameRotIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tpll;
 		if (!buffer.str().empty())
@@ -120,7 +120,8 @@ bool get_WindRefFrameRotIEC_tpll(const BaseClass* BaseClass_ptr1, std::stringstr
 
 bool get_WindRefFrameRotIEC_upll1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindRefFrameRotIEC* element = dynamic_cast<const WindRefFrameRotIEC*>(BaseClass_ptr1))
+	const WindRefFrameRotIEC* element = dynamic_cast<const WindRefFrameRotIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->upll1;
 		if (!buffer.str().empty())
@@ -134,7 +135,8 @@ bool get_WindRefFrameRotIEC_upll1(const BaseClass* BaseClass_ptr1, std::stringst
 
 bool get_WindRefFrameRotIEC_upll2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindRefFrameRotIEC* element = dynamic_cast<const WindRefFrameRotIEC*>(BaseClass_ptr1))
+	const WindRefFrameRotIEC* element = dynamic_cast<const WindRefFrameRotIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->upll2;
 		if (!buffer.str().empty())
@@ -146,8 +148,6 @@ bool get_WindRefFrameRotIEC_upll2(const BaseClass* BaseClass_ptr1, std::stringst
 	return false;
 }
 
-
-
 const char WindRefFrameRotIEC::debugName[] = "WindRefFrameRotIEC";
 const char* WindRefFrameRotIEC::debugString() const
 {
@@ -156,19 +156,19 @@ const char* WindRefFrameRotIEC::debugString() const
 
 void WindRefFrameRotIEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:WindRefFrameRotIEC"), &WindRefFrameRotIEC_factory));
+	factory_map.emplace("cim:WindRefFrameRotIEC", &WindRefFrameRotIEC_factory);
 }
 
 void WindRefFrameRotIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindRefFrameRotIEC.tpll"), &assign_WindRefFrameRotIEC_tpll));
-	assign_map.insert(std::make_pair(std::string("cim:WindRefFrameRotIEC.upll1"), &assign_WindRefFrameRotIEC_upll1));
-	assign_map.insert(std::make_pair(std::string("cim:WindRefFrameRotIEC.upll2"), &assign_WindRefFrameRotIEC_upll2));
+	assign_map.emplace("cim:WindRefFrameRotIEC.tpll", &assign_WindRefFrameRotIEC_tpll);
+	assign_map.emplace("cim:WindRefFrameRotIEC.upll1", &assign_WindRefFrameRotIEC_upll1);
+	assign_map.emplace("cim:WindRefFrameRotIEC.upll2", &assign_WindRefFrameRotIEC_upll2);
 }
 
 void WindRefFrameRotIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindRefFrameRotIEC.WindTurbineType3or4IEC"), &assign_WindRefFrameRotIEC_WindTurbineType3or4IEC));
+	assign_map.emplace("cim:WindRefFrameRotIEC.WindTurbineType3or4IEC", &assign_WindRefFrameRotIEC_WindTurbineType3or4IEC);
 }
 
 void WindRefFrameRotIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

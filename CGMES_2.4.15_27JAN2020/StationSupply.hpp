@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Station supply with load derived from the station output.
-	*/
+	/** \brief Station supply with load derived from the station output. */
 	class StationSupply : public EnergyConsumer
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		StationSupply();
 		~StationSupply() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

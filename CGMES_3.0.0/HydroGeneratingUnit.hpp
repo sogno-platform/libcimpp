@@ -20,9 +20,7 @@ namespace CIMPP
 {
 	class HydroPowerPlant;
 
-	/*
-	A generating unit whose prime mover is a hydraulic turbine (e.g., Francis, Pelton, Kaplan).
-	*/
+	/** \brief A generating unit whose prime mover is a hydraulic turbine (e.g., Francis, Pelton, Kaplan). */
 	class HydroGeneratingUnit : public GeneratingUnit
 	{
 	public:
@@ -30,10 +28,17 @@ namespace CIMPP
 		HydroGeneratingUnit();
 		~HydroGeneratingUnit() override;
 
-		CIMPP::HydroPowerPlant* HydroPowerPlant;  /* The hydro generating unit belongs to a hydro power plant. Default: 0 */
-		CIMPP::Length dropHeight;  /* The height water drops from the reservoir mid-point to the turbine. Default: nullptr */
-		CIMPP::HydroEnergyConversionKind energyConversionCapability;  /* Energy conversion capability for generating. Default: 0 */
-		CIMPP::HydroTurbineKind turbineType;  /* Type of turbine. Default: 0 */
+		/** \brief The hydro generating unit belongs to a hydro power plant. Default: 0 */
+		CIMPP::HydroPowerPlant* HydroPowerPlant;
+
+		/** \brief The height water drops from the reservoir mid-point to the turbine. Default: nullptr */
+		CIMPP::Length dropHeight;
+
+		/** \brief Energy conversion capability for generating. Default: 0 */
+		CIMPP::HydroEnergyConversionKind energyConversionCapability;
+
+		/** \brief Type of turbine. Default: 0 */
+		CIMPP::HydroTurbineKind turbineType;
 
 		static const char debugName[];
 		const char* debugString() const override;

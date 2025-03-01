@@ -9,21 +9,15 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Static VAr Compensator control mode.
-	*/
+	/** \brief Static VAr Compensator control mode. */
 	class SVCControlMode
 	{
 	public:
 		enum SVCControlMode_ENUM
 		{
-			/**
-			 * Reactive power control.
-			 */
+			/** Reactive power control. */
 			reactivePower,
-			/**
-			 * Voltage control.
-			 */
+			/** Voltage control. */
 			voltage,
 		};
 

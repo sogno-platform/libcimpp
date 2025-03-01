@@ -8,21 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Float.hpp"
-#include "Float.hpp"
-#include "Float.hpp"
-#include "Float.hpp"
-#include "PU.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
 
 using namespace CIMPP;
 
-PssRQB::PssRQB() {};
-PssRQB::~PssRQB() {};
+PssRQB::PssRQB() {}
+PssRQB::~PssRQB() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -58,142 +48,150 @@ PssRQB::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_PssRQB_kdpm(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PssRQB_kdpm(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PssRQB* element = dynamic_cast<PssRQB*>(BaseClass_ptr1))
+	PssRQB* element = dynamic_cast<PssRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kdpm;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PssRQB_ki2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PssRQB_ki2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PssRQB* element = dynamic_cast<PssRQB*>(BaseClass_ptr1))
+	PssRQB* element = dynamic_cast<PssRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ki2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PssRQB_ki3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PssRQB_ki3(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PssRQB* element = dynamic_cast<PssRQB*>(BaseClass_ptr1))
+	PssRQB* element = dynamic_cast<PssRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ki3;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PssRQB_ki4(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PssRQB_ki4(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PssRQB* element = dynamic_cast<PssRQB*>(BaseClass_ptr1))
+	PssRQB* element = dynamic_cast<PssRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ki4;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PssRQB_sibv(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PssRQB_sibv(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PssRQB* element = dynamic_cast<PssRQB*>(BaseClass_ptr1))
+	PssRQB* element = dynamic_cast<PssRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->sibv;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PssRQB_t4f(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PssRQB_t4f(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PssRQB* element = dynamic_cast<PssRQB*>(BaseClass_ptr1))
+	PssRQB* element = dynamic_cast<PssRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t4f;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PssRQB_t4m(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PssRQB_t4m(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PssRQB* element = dynamic_cast<PssRQB*>(BaseClass_ptr1))
+	PssRQB* element = dynamic_cast<PssRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t4m;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PssRQB_t4mom(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PssRQB_t4mom(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PssRQB* element = dynamic_cast<PssRQB*>(BaseClass_ptr1))
+	PssRQB* element = dynamic_cast<PssRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t4mom;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PssRQB_tomd(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PssRQB_tomd(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PssRQB* element = dynamic_cast<PssRQB*>(BaseClass_ptr1))
+	PssRQB* element = dynamic_cast<PssRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tomd;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PssRQB_tomsl(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PssRQB_tomsl(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PssRQB* element = dynamic_cast<PssRQB*>(BaseClass_ptr1))
+	PssRQB* element = dynamic_cast<PssRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tomsl;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_PssRQB_kdpm(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PssRQB* element = dynamic_cast<const PssRQB*>(BaseClass_ptr1))
+	const PssRQB* element = dynamic_cast<const PssRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kdpm;
 		if (!buffer.str().empty())
@@ -207,7 +205,8 @@ bool get_PssRQB_kdpm(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_PssRQB_ki2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PssRQB* element = dynamic_cast<const PssRQB*>(BaseClass_ptr1))
+	const PssRQB* element = dynamic_cast<const PssRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ki2;
 		if (!buffer.str().empty())
@@ -221,7 +220,8 @@ bool get_PssRQB_ki2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_PssRQB_ki3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PssRQB* element = dynamic_cast<const PssRQB*>(BaseClass_ptr1))
+	const PssRQB* element = dynamic_cast<const PssRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ki3;
 		if (!buffer.str().empty())
@@ -235,7 +235,8 @@ bool get_PssRQB_ki3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_PssRQB_ki4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PssRQB* element = dynamic_cast<const PssRQB*>(BaseClass_ptr1))
+	const PssRQB* element = dynamic_cast<const PssRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ki4;
 		if (!buffer.str().empty())
@@ -249,7 +250,8 @@ bool get_PssRQB_ki4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_PssRQB_sibv(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PssRQB* element = dynamic_cast<const PssRQB*>(BaseClass_ptr1))
+	const PssRQB* element = dynamic_cast<const PssRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->sibv;
 		if (!buffer.str().empty())
@@ -263,7 +265,8 @@ bool get_PssRQB_sibv(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_PssRQB_t4f(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PssRQB* element = dynamic_cast<const PssRQB*>(BaseClass_ptr1))
+	const PssRQB* element = dynamic_cast<const PssRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t4f;
 		if (!buffer.str().empty())
@@ -277,7 +280,8 @@ bool get_PssRQB_t4f(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_PssRQB_t4m(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PssRQB* element = dynamic_cast<const PssRQB*>(BaseClass_ptr1))
+	const PssRQB* element = dynamic_cast<const PssRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t4m;
 		if (!buffer.str().empty())
@@ -291,7 +295,8 @@ bool get_PssRQB_t4m(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_PssRQB_t4mom(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PssRQB* element = dynamic_cast<const PssRQB*>(BaseClass_ptr1))
+	const PssRQB* element = dynamic_cast<const PssRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t4mom;
 		if (!buffer.str().empty())
@@ -305,7 +310,8 @@ bool get_PssRQB_t4mom(const BaseClass* BaseClass_ptr1, std::stringstream& buffer
 
 bool get_PssRQB_tomd(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PssRQB* element = dynamic_cast<const PssRQB*>(BaseClass_ptr1))
+	const PssRQB* element = dynamic_cast<const PssRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tomd;
 		if (!buffer.str().empty())
@@ -319,7 +325,8 @@ bool get_PssRQB_tomd(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_PssRQB_tomsl(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PssRQB* element = dynamic_cast<const PssRQB*>(BaseClass_ptr1))
+	const PssRQB* element = dynamic_cast<const PssRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tomsl;
 		if (!buffer.str().empty())
@@ -331,8 +338,6 @@ bool get_PssRQB_tomsl(const BaseClass* BaseClass_ptr1, std::stringstream& buffer
 	return false;
 }
 
-
-
 const char PssRQB::debugName[] = "PssRQB";
 const char* PssRQB::debugString() const
 {
@@ -341,21 +346,21 @@ const char* PssRQB::debugString() const
 
 void PssRQB::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:PssRQB"), &PssRQB_factory));
+	factory_map.emplace("cim:PssRQB", &PssRQB_factory);
 }
 
 void PssRQB::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:PssRQB.kdpm"), &assign_PssRQB_kdpm));
-	assign_map.insert(std::make_pair(std::string("cim:PssRQB.ki2"), &assign_PssRQB_ki2));
-	assign_map.insert(std::make_pair(std::string("cim:PssRQB.ki3"), &assign_PssRQB_ki3));
-	assign_map.insert(std::make_pair(std::string("cim:PssRQB.ki4"), &assign_PssRQB_ki4));
-	assign_map.insert(std::make_pair(std::string("cim:PssRQB.sibv"), &assign_PssRQB_sibv));
-	assign_map.insert(std::make_pair(std::string("cim:PssRQB.t4f"), &assign_PssRQB_t4f));
-	assign_map.insert(std::make_pair(std::string("cim:PssRQB.t4m"), &assign_PssRQB_t4m));
-	assign_map.insert(std::make_pair(std::string("cim:PssRQB.t4mom"), &assign_PssRQB_t4mom));
-	assign_map.insert(std::make_pair(std::string("cim:PssRQB.tomd"), &assign_PssRQB_tomd));
-	assign_map.insert(std::make_pair(std::string("cim:PssRQB.tomsl"), &assign_PssRQB_tomsl));
+	assign_map.emplace("cim:PssRQB.kdpm", &assign_PssRQB_kdpm);
+	assign_map.emplace("cim:PssRQB.ki2", &assign_PssRQB_ki2);
+	assign_map.emplace("cim:PssRQB.ki3", &assign_PssRQB_ki3);
+	assign_map.emplace("cim:PssRQB.ki4", &assign_PssRQB_ki4);
+	assign_map.emplace("cim:PssRQB.sibv", &assign_PssRQB_sibv);
+	assign_map.emplace("cim:PssRQB.t4f", &assign_PssRQB_t4f);
+	assign_map.emplace("cim:PssRQB.t4m", &assign_PssRQB_t4m);
+	assign_map.emplace("cim:PssRQB.t4mom", &assign_PssRQB_t4mom);
+	assign_map.emplace("cim:PssRQB.tomd", &assign_PssRQB_tomd);
+	assign_map.emplace("cim:PssRQB.tomsl", &assign_PssRQB_tomsl);
 }
 
 void PssRQB::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

@@ -9,25 +9,17 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	The mode of operation for a Petersen coil.
-	*/
+	/** \brief The mode of operation for a Petersen coil. */
 	class PetersenCoilModeKind
 	{
 	public:
 		enum PetersenCoilModeKind_ENUM
 		{
-			/**
-			 * Fixed position.
-			 */
+			/** Fixed position. */
 			fixed,
-			/**
-			 * Manual positioning.
-			 */
+			/** Manual positioning. */
 			manual,
-			/**
-			 * Automatic positioning.
-			 */
+			/** Automatic positioning. */
 			automaticPositioning,
 		};
 

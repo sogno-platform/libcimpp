@@ -10,29 +10,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 #include "WindDynamicsLookupTable.hpp"
 #include "WindPlantIEC.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Float.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Float.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "PU.hpp"
-#include "WindPlantQcontrolModeKind.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
 
 using namespace CIMPP;
 
-WindPlantReactiveControlIEC::WindPlantReactiveControlIEC() : WindPlantIEC(nullptr) {};
-WindPlantReactiveControlIEC::~WindPlantReactiveControlIEC() {};
+WindPlantReactiveControlIEC::WindPlantReactiveControlIEC() : WindPlantIEC(nullptr) {}
+WindPlantReactiveControlIEC::~WindPlantReactiveControlIEC() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -78,242 +60,6 @@ WindPlantReactiveControlIEC::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_WindPlantReactiveControlIEC_dxrefmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->dxrefmax;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantReactiveControlIEC_dxrefmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->dxrefmin;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantReactiveControlIEC_kiwpx(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->kiwpx;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantReactiveControlIEC_kiwpxmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->kiwpxmax;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantReactiveControlIEC_kiwpxmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->kiwpxmin;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantReactiveControlIEC_kpwpx(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->kpwpx;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantReactiveControlIEC_kwpqref(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->kwpqref;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantReactiveControlIEC_kwpqu(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->kwpqu;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantReactiveControlIEC_tuqfilt(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->tuqfilt;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantReactiveControlIEC_twppfiltq(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->twppfiltq;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantReactiveControlIEC_twpqfiltq(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->twpqfiltq;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantReactiveControlIEC_twpufiltq(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->twpufiltq;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantReactiveControlIEC_txft(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->txft;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantReactiveControlIEC_txfv(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->txfv;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantReactiveControlIEC_uwpqdip(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->uwpqdip;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantReactiveControlIEC_windPlantQcontrolModesType(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->windPlantQcontrolModesType;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantReactiveControlIEC_xrefmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->xrefmax;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindPlantReactiveControlIEC_xrefmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->xrefmin;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_WindDynamicsLookupTable_WindPlantReactiveControlIEC(BaseClass*, BaseClass*);
 bool assign_WindPlantReactiveControlIEC_WindDynamicsLookupTable(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -330,6 +76,7 @@ bool assign_WindPlantReactiveControlIEC_WindDynamicsLookupTable(BaseClass* BaseC
 	}
 	return false;
 }
+
 bool assign_WindPlantIEC_WindPlantReactiveControlIEC(BaseClass*, BaseClass*);
 bool assign_WindPlantReactiveControlIEC_WindPlantIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -347,9 +94,264 @@ bool assign_WindPlantReactiveControlIEC_WindPlantIEC(BaseClass* BaseClass_ptr1, 
 	return false;
 }
 
+bool assign_WindPlantReactiveControlIEC_dxrefmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->dxrefmax;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantReactiveControlIEC_dxrefmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->dxrefmin;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantReactiveControlIEC_kiwpx(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->kiwpx;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantReactiveControlIEC_kiwpxmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->kiwpxmax;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantReactiveControlIEC_kiwpxmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->kiwpxmin;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantReactiveControlIEC_kpwpx(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->kpwpx;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantReactiveControlIEC_kwpqref(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->kwpqref;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantReactiveControlIEC_kwpqu(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->kwpqu;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantReactiveControlIEC_tuqfilt(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->tuqfilt;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantReactiveControlIEC_twppfiltq(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->twppfiltq;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantReactiveControlIEC_twpqfiltq(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->twpqfiltq;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantReactiveControlIEC_twpufiltq(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->twpufiltq;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantReactiveControlIEC_txft(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->txft;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantReactiveControlIEC_txfv(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->txfv;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantReactiveControlIEC_uwpqdip(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->uwpqdip;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantReactiveControlIEC_windPlantQcontrolModesType(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->windPlantQcontrolModesType;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantReactiveControlIEC_xrefmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->xrefmax;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindPlantReactiveControlIEC_xrefmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindPlantReactiveControlIEC* element = dynamic_cast<WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->xrefmin;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
+
 bool get_WindPlantReactiveControlIEC_dxrefmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1))
+	const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->dxrefmax;
 		if (!buffer.str().empty())
@@ -363,7 +365,8 @@ bool get_WindPlantReactiveControlIEC_dxrefmax(const BaseClass* BaseClass_ptr1, s
 
 bool get_WindPlantReactiveControlIEC_dxrefmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1))
+	const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->dxrefmin;
 		if (!buffer.str().empty())
@@ -377,7 +380,8 @@ bool get_WindPlantReactiveControlIEC_dxrefmin(const BaseClass* BaseClass_ptr1, s
 
 bool get_WindPlantReactiveControlIEC_kiwpx(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1))
+	const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kiwpx;
 		if (!buffer.str().empty())
@@ -391,7 +395,8 @@ bool get_WindPlantReactiveControlIEC_kiwpx(const BaseClass* BaseClass_ptr1, std:
 
 bool get_WindPlantReactiveControlIEC_kiwpxmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1))
+	const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kiwpxmax;
 		if (!buffer.str().empty())
@@ -405,7 +410,8 @@ bool get_WindPlantReactiveControlIEC_kiwpxmax(const BaseClass* BaseClass_ptr1, s
 
 bool get_WindPlantReactiveControlIEC_kiwpxmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1))
+	const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kiwpxmin;
 		if (!buffer.str().empty())
@@ -419,7 +425,8 @@ bool get_WindPlantReactiveControlIEC_kiwpxmin(const BaseClass* BaseClass_ptr1, s
 
 bool get_WindPlantReactiveControlIEC_kpwpx(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1))
+	const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kpwpx;
 		if (!buffer.str().empty())
@@ -433,7 +440,8 @@ bool get_WindPlantReactiveControlIEC_kpwpx(const BaseClass* BaseClass_ptr1, std:
 
 bool get_WindPlantReactiveControlIEC_kwpqref(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1))
+	const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kwpqref;
 		if (!buffer.str().empty())
@@ -447,7 +455,8 @@ bool get_WindPlantReactiveControlIEC_kwpqref(const BaseClass* BaseClass_ptr1, st
 
 bool get_WindPlantReactiveControlIEC_kwpqu(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1))
+	const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kwpqu;
 		if (!buffer.str().empty())
@@ -461,7 +470,8 @@ bool get_WindPlantReactiveControlIEC_kwpqu(const BaseClass* BaseClass_ptr1, std:
 
 bool get_WindPlantReactiveControlIEC_tuqfilt(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1))
+	const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tuqfilt;
 		if (!buffer.str().empty())
@@ -475,7 +485,8 @@ bool get_WindPlantReactiveControlIEC_tuqfilt(const BaseClass* BaseClass_ptr1, st
 
 bool get_WindPlantReactiveControlIEC_twppfiltq(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1))
+	const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->twppfiltq;
 		if (!buffer.str().empty())
@@ -489,7 +500,8 @@ bool get_WindPlantReactiveControlIEC_twppfiltq(const BaseClass* BaseClass_ptr1, 
 
 bool get_WindPlantReactiveControlIEC_twpqfiltq(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1))
+	const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->twpqfiltq;
 		if (!buffer.str().empty())
@@ -503,7 +515,8 @@ bool get_WindPlantReactiveControlIEC_twpqfiltq(const BaseClass* BaseClass_ptr1, 
 
 bool get_WindPlantReactiveControlIEC_twpufiltq(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1))
+	const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->twpufiltq;
 		if (!buffer.str().empty())
@@ -517,7 +530,8 @@ bool get_WindPlantReactiveControlIEC_twpufiltq(const BaseClass* BaseClass_ptr1, 
 
 bool get_WindPlantReactiveControlIEC_txft(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1))
+	const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->txft;
 		if (!buffer.str().empty())
@@ -531,7 +545,8 @@ bool get_WindPlantReactiveControlIEC_txft(const BaseClass* BaseClass_ptr1, std::
 
 bool get_WindPlantReactiveControlIEC_txfv(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1))
+	const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->txfv;
 		if (!buffer.str().empty())
@@ -545,7 +560,8 @@ bool get_WindPlantReactiveControlIEC_txfv(const BaseClass* BaseClass_ptr1, std::
 
 bool get_WindPlantReactiveControlIEC_uwpqdip(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1))
+	const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->uwpqdip;
 		if (!buffer.str().empty())
@@ -557,9 +573,25 @@ bool get_WindPlantReactiveControlIEC_uwpqdip(const BaseClass* BaseClass_ptr1, st
 	return false;
 }
 
+bool get_WindPlantReactiveControlIEC_windPlantQcontrolModesType(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer << element->windPlantQcontrolModesType;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
 bool get_WindPlantReactiveControlIEC_xrefmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1))
+	const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->xrefmax;
 		if (!buffer.str().empty())
@@ -573,25 +605,10 @@ bool get_WindPlantReactiveControlIEC_xrefmax(const BaseClass* BaseClass_ptr1, st
 
 bool get_WindPlantReactiveControlIEC_xrefmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1))
+	const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->xrefmin;
-		if (!buffer.str().empty())
-		{
-			return true;
-		}
-	}
-	buffer.setstate(std::ios::failbit);
-	return false;
-}
-
-
-
-bool get_WindPlantReactiveControlIEC_windPlantQcontrolModesType(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
-{
-	if (const WindPlantReactiveControlIEC* element = dynamic_cast<const WindPlantReactiveControlIEC*>(BaseClass_ptr1))
-	{
-		buffer << element->windPlantQcontrolModesType;
 		if (!buffer.str().empty())
 		{
 			return true;
@@ -609,35 +626,35 @@ const char* WindPlantReactiveControlIEC::debugString() const
 
 void WindPlantReactiveControlIEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:WindPlantReactiveControlIEC"), &WindPlantReactiveControlIEC_factory));
+	factory_map.emplace("cim:WindPlantReactiveControlIEC", &WindPlantReactiveControlIEC_factory);
 }
 
 void WindPlantReactiveControlIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantReactiveControlIEC.dxrefmax"), &assign_WindPlantReactiveControlIEC_dxrefmax));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantReactiveControlIEC.dxrefmin"), &assign_WindPlantReactiveControlIEC_dxrefmin));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantReactiveControlIEC.kiwpx"), &assign_WindPlantReactiveControlIEC_kiwpx));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantReactiveControlIEC.kiwpxmax"), &assign_WindPlantReactiveControlIEC_kiwpxmax));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantReactiveControlIEC.kiwpxmin"), &assign_WindPlantReactiveControlIEC_kiwpxmin));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantReactiveControlIEC.kpwpx"), &assign_WindPlantReactiveControlIEC_kpwpx));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantReactiveControlIEC.kwpqref"), &assign_WindPlantReactiveControlIEC_kwpqref));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantReactiveControlIEC.kwpqu"), &assign_WindPlantReactiveControlIEC_kwpqu));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantReactiveControlIEC.tuqfilt"), &assign_WindPlantReactiveControlIEC_tuqfilt));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantReactiveControlIEC.twppfiltq"), &assign_WindPlantReactiveControlIEC_twppfiltq));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantReactiveControlIEC.twpqfiltq"), &assign_WindPlantReactiveControlIEC_twpqfiltq));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantReactiveControlIEC.twpufiltq"), &assign_WindPlantReactiveControlIEC_twpufiltq));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantReactiveControlIEC.txft"), &assign_WindPlantReactiveControlIEC_txft));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantReactiveControlIEC.txfv"), &assign_WindPlantReactiveControlIEC_txfv));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantReactiveControlIEC.uwpqdip"), &assign_WindPlantReactiveControlIEC_uwpqdip));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantReactiveControlIEC.windPlantQcontrolModesType"), &assign_WindPlantReactiveControlIEC_windPlantQcontrolModesType));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantReactiveControlIEC.xrefmax"), &assign_WindPlantReactiveControlIEC_xrefmax));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantReactiveControlIEC.xrefmin"), &assign_WindPlantReactiveControlIEC_xrefmin));
+	assign_map.emplace("cim:WindPlantReactiveControlIEC.dxrefmax", &assign_WindPlantReactiveControlIEC_dxrefmax);
+	assign_map.emplace("cim:WindPlantReactiveControlIEC.dxrefmin", &assign_WindPlantReactiveControlIEC_dxrefmin);
+	assign_map.emplace("cim:WindPlantReactiveControlIEC.kiwpx", &assign_WindPlantReactiveControlIEC_kiwpx);
+	assign_map.emplace("cim:WindPlantReactiveControlIEC.kiwpxmax", &assign_WindPlantReactiveControlIEC_kiwpxmax);
+	assign_map.emplace("cim:WindPlantReactiveControlIEC.kiwpxmin", &assign_WindPlantReactiveControlIEC_kiwpxmin);
+	assign_map.emplace("cim:WindPlantReactiveControlIEC.kpwpx", &assign_WindPlantReactiveControlIEC_kpwpx);
+	assign_map.emplace("cim:WindPlantReactiveControlIEC.kwpqref", &assign_WindPlantReactiveControlIEC_kwpqref);
+	assign_map.emplace("cim:WindPlantReactiveControlIEC.kwpqu", &assign_WindPlantReactiveControlIEC_kwpqu);
+	assign_map.emplace("cim:WindPlantReactiveControlIEC.tuqfilt", &assign_WindPlantReactiveControlIEC_tuqfilt);
+	assign_map.emplace("cim:WindPlantReactiveControlIEC.twppfiltq", &assign_WindPlantReactiveControlIEC_twppfiltq);
+	assign_map.emplace("cim:WindPlantReactiveControlIEC.twpqfiltq", &assign_WindPlantReactiveControlIEC_twpqfiltq);
+	assign_map.emplace("cim:WindPlantReactiveControlIEC.twpufiltq", &assign_WindPlantReactiveControlIEC_twpufiltq);
+	assign_map.emplace("cim:WindPlantReactiveControlIEC.txft", &assign_WindPlantReactiveControlIEC_txft);
+	assign_map.emplace("cim:WindPlantReactiveControlIEC.txfv", &assign_WindPlantReactiveControlIEC_txfv);
+	assign_map.emplace("cim:WindPlantReactiveControlIEC.uwpqdip", &assign_WindPlantReactiveControlIEC_uwpqdip);
+	assign_map.emplace("cim:WindPlantReactiveControlIEC.windPlantQcontrolModesType", &assign_WindPlantReactiveControlIEC_windPlantQcontrolModesType);
+	assign_map.emplace("cim:WindPlantReactiveControlIEC.xrefmax", &assign_WindPlantReactiveControlIEC_xrefmax);
+	assign_map.emplace("cim:WindPlantReactiveControlIEC.xrefmin", &assign_WindPlantReactiveControlIEC_xrefmin);
 }
 
 void WindPlantReactiveControlIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantReactiveControlIEC.WindDynamicsLookupTable"), &assign_WindPlantReactiveControlIEC_WindDynamicsLookupTable));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantReactiveControlIEC.WindPlantIEC"), &assign_WindPlantReactiveControlIEC_WindPlantIEC));
+	assign_map.emplace("cim:WindPlantReactiveControlIEC.WindDynamicsLookupTable", &assign_WindPlantReactiveControlIEC_WindDynamicsLookupTable);
+	assign_map.emplace("cim:WindPlantReactiveControlIEC.WindPlantIEC", &assign_WindPlantReactiveControlIEC_WindPlantIEC);
 }
 
 void WindPlantReactiveControlIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

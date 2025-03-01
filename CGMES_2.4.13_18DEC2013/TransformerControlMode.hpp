@@ -9,21 +9,15 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Control modes for a transformer.
-	*/
+	/** \brief Control modes for a transformer. */
 	class TransformerControlMode
 	{
 	public:
 		enum TransformerControlMode_ENUM
 		{
-			/**
-			 * Voltage control
-			 */
+			/** Voltage control */
 			volt,
-			/**
-			 * Reactive power flow control
-			 */
+			/** Reactive power flow control */
 			reactive,
 		};
 

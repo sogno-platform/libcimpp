@@ -9,25 +9,17 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	The type of control area.
-	*/
+	/** \brief The type of control area. */
 	class ControlAreaTypeKind
 	{
 	public:
 		enum ControlAreaTypeKind_ENUM
 		{
-			/**
-			 * Used for automatic generation control.
-			 */
+			/** Used for automatic generation control. */
 			AGC,
-			/**
-			 * Used for load forecast.
-			 */
+			/** Used for load forecast. */
 			Forecast,
-			/**
-			 * Used for interchange specification or control.
-			 */
+			/** Used for interchange specification or control. */
 			Interchange,
 		};
 

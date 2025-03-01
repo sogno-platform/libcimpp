@@ -9,9 +9,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Time, in seconds.
-	*/
+	/** \brief Time, in seconds. */
 	class Seconds
 	{
 	public:

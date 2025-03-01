@@ -18,9 +18,7 @@ namespace CIMPP
 	class WindContPType4aIEC;
 	class WindGenType4IEC;
 
-	/*
-	Wind turbine IEC type 4A. Reference: IEC 61400-27-1:2015, 5.5.5.2.
-	*/
+	/** \brief Wind turbine IEC type 4A. Reference: IEC 61400-27-1:2015, 5.5.5.2. */
 	class WindTurbineType4aIEC : public WindTurbineType4IEC
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		WindTurbineType4aIEC();
 		~WindTurbineType4aIEC() override;
 
-		CIMPP::WindContPType4aIEC* WindContPType4aIEC;  /* Wind control P type 4A model associated with this wind turbine type 4A model. Default: 0 */
-		CIMPP::WindGenType4IEC* WindGenType4IEC;  /* Wind generator type 4 model associated with this wind turbine type 4A model. Default: 0 */
+		/** \brief Wind control P type 4A model associated with this wind turbine type 4A model. Default: 0 */
+		CIMPP::WindContPType4aIEC* WindContPType4aIEC;
+
+		/** \brief Wind generator type 4 model associated with this wind turbine type 4A model. Default: 0 */
+		CIMPP::WindGenType4IEC* WindGenType4IEC;
 
 		static const char debugName[];
 		const char* debugString() const override;

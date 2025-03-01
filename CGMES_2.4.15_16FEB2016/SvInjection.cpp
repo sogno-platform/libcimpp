@@ -9,13 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "TopologicalNode.hpp"
-#include "ActivePower.hpp"
-#include "ReactivePower.hpp"
 
 using namespace CIMPP;
 
-SvInjection::SvInjection() : TopologicalNode(nullptr) {};
-SvInjection::~SvInjection() {};
+SvInjection::SvInjection() : TopologicalNode(nullptr) {}
+SvInjection::~SvInjection() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -44,34 +42,6 @@ SvInjection::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_SvInjection_pInjection(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (SvInjection* element = dynamic_cast<SvInjection*>(BaseClass_ptr1))
-	{
-		buffer >> element->pInjection;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_SvInjection_qInjection(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (SvInjection* element = dynamic_cast<SvInjection*>(BaseClass_ptr1))
-	{
-		buffer >> element->qInjection;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_TopologicalNode_SvInjection(BaseClass*, BaseClass*);
 bool assign_SvInjection_TopologicalNode(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -89,9 +59,52 @@ bool assign_SvInjection_TopologicalNode(BaseClass* BaseClass_ptr1, BaseClass* Ba
 	return false;
 }
 
+bool assign_SvInjection_pInjection(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	SvInjection* element = dynamic_cast<SvInjection*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->pInjection;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_SvInjection_qInjection(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	SvInjection* element = dynamic_cast<SvInjection*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->qInjection;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_SvInjection_TopologicalNode(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const SvInjection* element = dynamic_cast<const SvInjection*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->TopologicalNode != 0)
+		{
+			BaseClass_list.push_back(element->TopologicalNode);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_SvInjection_pInjection(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SvInjection* element = dynamic_cast<const SvInjection*>(BaseClass_ptr1))
+	const SvInjection* element = dynamic_cast<const SvInjection*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pInjection;
 		if (!buffer.str().empty())
@@ -105,7 +118,8 @@ bool get_SvInjection_pInjection(const BaseClass* BaseClass_ptr1, std::stringstre
 
 bool get_SvInjection_qInjection(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SvInjection* element = dynamic_cast<const SvInjection*>(BaseClass_ptr1))
+	const SvInjection* element = dynamic_cast<const SvInjection*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->qInjection;
 		if (!buffer.str().empty())
@@ -117,21 +131,6 @@ bool get_SvInjection_qInjection(const BaseClass* BaseClass_ptr1, std::stringstre
 	return false;
 }
 
-
-bool get_SvInjection_TopologicalNode(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const SvInjection* element = dynamic_cast<const SvInjection*>(BaseClass_ptr1))
-	{
-		if (element->TopologicalNode != 0)
-		{
-			BaseClass_list.push_back(element->TopologicalNode);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char SvInjection::debugName[] = "SvInjection";
 const char* SvInjection::debugString() const
 {
@@ -140,18 +139,18 @@ const char* SvInjection::debugString() const
 
 void SvInjection::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:SvInjection"), &SvInjection_factory));
+	factory_map.emplace("cim:SvInjection", &SvInjection_factory);
 }
 
 void SvInjection::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:SvInjection.pInjection"), &assign_SvInjection_pInjection));
-	assign_map.insert(std::make_pair(std::string("cim:SvInjection.qInjection"), &assign_SvInjection_qInjection));
+	assign_map.emplace("cim:SvInjection.pInjection", &assign_SvInjection_pInjection);
+	assign_map.emplace("cim:SvInjection.qInjection", &assign_SvInjection_qInjection);
 }
 
 void SvInjection::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:SvInjection.TopologicalNode"), &assign_SvInjection_TopologicalNode));
+	assign_map.emplace("cim:SvInjection.TopologicalNode", &assign_SvInjection_TopologicalNode);
 }
 
 void SvInjection::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

@@ -11,8 +11,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-CurrentTransformer::CurrentTransformer() {};
-CurrentTransformer::~CurrentTransformer() {};
+CurrentTransformer::CurrentTransformer() {}
+CurrentTransformer::~CurrentTransformer() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -38,11 +38,6 @@ CurrentTransformer::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
-
-
-
 const char CurrentTransformer::debugName[] = "CurrentTransformer";
 const char* CurrentTransformer::debugString() const
 {
@@ -51,7 +46,7 @@ const char* CurrentTransformer::debugString() const
 
 void CurrentTransformer::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:CurrentTransformer"), &CurrentTransformer_factory));
+	factory_map.emplace("cim:CurrentTransformer", &CurrentTransformer_factory);
 }
 
 void CurrentTransformer::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)

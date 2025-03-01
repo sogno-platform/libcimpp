@@ -19,9 +19,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Simplified governor model.
-	*/
+	/** \brief Simplified governor model. */
 	class GovSteam2 : public TurbineGovernorDynamics
 	{
 	public:
@@ -29,14 +27,29 @@ namespace CIMPP
 		GovSteam2();
 		~GovSteam2() override;
 
-		CIMPP::PU dbf;  /* Frequency dead band (DBF).  Typical Value = 0. Default: nullptr */
-		CIMPP::Simple_Float k;  /* Governor gain (reciprocal of droop) (K).  Typical Value = 20. Default: nullptr */
-		CIMPP::PU mnef;  /* Fuel flow maximum negative error value (MN).  Typical Value = -1. Default: nullptr */
-		CIMPP::PU mxef;  /* Fuel flow maximum positive error value (MX).  Typical Value = 1. Default: nullptr */
-		CIMPP::PU pmax;  /* Maximum fuel flow (P).  Typical Value = 1. Default: nullptr */
-		CIMPP::PU pmin;  /* Minimum fuel flow (P).  Typical Value = 0. Default: nullptr */
-		CIMPP::Seconds t1;  /* Governor lag time constant (T) (&gt;0).  Typical Value = 0.45. Default: nullptr */
-		CIMPP::Seconds t2;  /* Governor lead time constant (T) (may be 0).  Typical Value = 0. Default: nullptr */
+		/** \brief Frequency dead band (DBF).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU dbf;
+
+		/** \brief Governor gain (reciprocal of droop) (K).  Typical Value = 20. Default: nullptr */
+		CIMPP::Simple_Float k;
+
+		/** \brief Fuel flow maximum negative error value (MN).  Typical Value = -1. Default: nullptr */
+		CIMPP::PU mnef;
+
+		/** \brief Fuel flow maximum positive error value (MX).  Typical Value = 1. Default: nullptr */
+		CIMPP::PU mxef;
+
+		/** \brief Maximum fuel flow (P).  Typical Value = 1. Default: nullptr */
+		CIMPP::PU pmax;
+
+		/** \brief Minimum fuel flow (P).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU pmin;
+
+		/** \brief Governor lag time constant (T) (&gt;0).  Typical Value = 0.45. Default: nullptr */
+		CIMPP::Seconds t1;
+
+		/** \brief Governor lead time constant (T) (may be 0).  Typical Value = 0. Default: nullptr */
+		CIMPP::Seconds t2;
 
 		static const char debugName[];
 		const char* debugString() const override;

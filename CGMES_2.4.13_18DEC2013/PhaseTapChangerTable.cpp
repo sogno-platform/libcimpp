@@ -13,8 +13,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-PhaseTapChangerTable::PhaseTapChangerTable() {};
-PhaseTapChangerTable::~PhaseTapChangerTable() {};
+PhaseTapChangerTable::PhaseTapChangerTable() {}
+PhaseTapChangerTable::~PhaseTapChangerTable() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,8 +42,6 @@ PhaseTapChangerTable::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_PhaseTapChangerTablePoint_PhaseTapChangerTable(BaseClass*, BaseClass*);
 bool assign_PhaseTapChangerTable_PhaseTapChangerTablePoint(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,6 +58,7 @@ bool assign_PhaseTapChangerTable_PhaseTapChangerTablePoint(BaseClass* BaseClass_
 	}
 	return false;
 }
+
 bool assign_PhaseTapChangerTabular_PhaseTapChangerTable(BaseClass*, BaseClass*);
 bool assign_PhaseTapChangerTable_PhaseTapChangerTabular(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -87,7 +86,7 @@ const char* PhaseTapChangerTable::debugString() const
 
 void PhaseTapChangerTable::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:PhaseTapChangerTable"), &PhaseTapChangerTable_factory));
+	factory_map.emplace("cim:PhaseTapChangerTable", &PhaseTapChangerTable_factory);
 }
 
 void PhaseTapChangerTable::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -96,8 +95,8 @@ void PhaseTapChangerTable::addPrimitiveAssignFnsToMap(std::unordered_map<std::st
 
 void PhaseTapChangerTable::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:PhaseTapChangerTable.PhaseTapChangerTablePoint"), &assign_PhaseTapChangerTable_PhaseTapChangerTablePoint));
-	assign_map.insert(std::make_pair(std::string("cim:PhaseTapChangerTable.PhaseTapChangerTabular"), &assign_PhaseTapChangerTable_PhaseTapChangerTabular));
+	assign_map.emplace("cim:PhaseTapChangerTable.PhaseTapChangerTablePoint", &assign_PhaseTapChangerTable_PhaseTapChangerTablePoint);
+	assign_map.emplace("cim:PhaseTapChangerTable.PhaseTapChangerTabular", &assign_PhaseTapChangerTable_PhaseTapChangerTabular);
 }
 
 void PhaseTapChangerTable::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

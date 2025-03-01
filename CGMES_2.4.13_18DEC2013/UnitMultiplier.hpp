@@ -9,57 +9,33 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	The unit multipliers defined for the CIM.
-	*/
+	/** \brief The unit multipliers defined for the CIM. */
 	class UnitMultiplier
 	{
 	public:
 		enum UnitMultiplier_ENUM
 		{
-			/**
-			 * Pico 10**-12.
-			 */
+			/** Pico 10**-12. */
 			p,
-			/**
-			 * Nano 10**-9.
-			 */
+			/** Nano 10**-9. */
 			n,
-			/**
-			 * Micro 10**-6.
-			 */
+			/** Micro 10**-6. */
 			micro,
-			/**
-			 * Milli 10**-3.
-			 */
+			/** Milli 10**-3. */
 			m,
-			/**
-			 * Centi 10**-2.
-			 */
+			/** Centi 10**-2. */
 			c,
-			/**
-			 * Deci 10**-1.
-			 */
+			/** Deci 10**-1. */
 			d,
-			/**
-			 * Kilo 10**3.
-			 */
+			/** Kilo 10**3. */
 			k,
-			/**
-			 * Mega 10**6.
-			 */
+			/** Mega 10**6. */
 			M,
-			/**
-			 * Giga 10**9.
-			 */
+			/** Giga 10**9. */
 			G,
-			/**
-			 * Tera 10**12.
-			 */
+			/** Tera 10**12. */
 			T,
-			/**
-			 * No multiplier or equivalently multiply by 1.
-			 */
+			/** No multiplier or equivalently multiply by 1. */
 			none,
 		};
 

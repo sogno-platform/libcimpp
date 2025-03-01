@@ -8,28 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Boolean.hpp"
-#include "PU.hpp"
-#include "Boolean.hpp"
-#include "Simple_Float.hpp"
-#include "Simple_Float.hpp"
-#include "Simple_Float.hpp"
-#include "PU.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Boolean.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
 
 using namespace CIMPP;
 
-Pss5::Pss5() {};
-Pss5::~Pss5() {};
+Pss5::Pss5() {}
+Pss5::~Pss5() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -72,233 +55,248 @@ Pss5::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_Pss5_ctw2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Pss5_ctw2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1))
+	Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ctw2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Pss5_deadband(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Pss5_deadband(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1))
+	Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->deadband;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Pss5_isfreq(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Pss5_isfreq(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1))
+	Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->isfreq;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Pss5_kf(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Pss5_kf(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1))
+	Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kf;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Pss5_kpe(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Pss5_kpe(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1))
+	Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kpe;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Pss5_kpss(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Pss5_kpss(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1))
+	Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kpss;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Pss5_pmm(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Pss5_pmm(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1))
+	Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->pmm;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Pss5_tl1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Pss5_tl1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1))
+	Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tl1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Pss5_tl2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Pss5_tl2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1))
+	Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tl2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Pss5_tl3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Pss5_tl3(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1))
+	Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tl3;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Pss5_tl4(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Pss5_tl4(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1))
+	Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tl4;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Pss5_tpe(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Pss5_tpe(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1))
+	Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tpe;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Pss5_tw1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Pss5_tw1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1))
+	Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tw1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Pss5_tw2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Pss5_tw2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1))
+	Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tw2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Pss5_vadat(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Pss5_vadat(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1))
+	Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vadat;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Pss5_vsmn(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Pss5_vsmn(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1))
+	Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vsmn;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Pss5_vsmx(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Pss5_vsmx(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1))
+	Pss5* element = dynamic_cast<Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vsmx;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_Pss5_ctw2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ctw2;
 		if (!buffer.str().empty())
@@ -312,7 +310,8 @@ bool get_Pss5_ctw2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_Pss5_deadband(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->deadband;
 		if (!buffer.str().empty())
@@ -326,7 +325,8 @@ bool get_Pss5_deadband(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_Pss5_isfreq(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->isfreq;
 		if (!buffer.str().empty())
@@ -340,7 +340,8 @@ bool get_Pss5_isfreq(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_Pss5_kf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kf;
 		if (!buffer.str().empty())
@@ -354,7 +355,8 @@ bool get_Pss5_kf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_Pss5_kpe(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kpe;
 		if (!buffer.str().empty())
@@ -368,7 +370,8 @@ bool get_Pss5_kpe(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_Pss5_kpss(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kpss;
 		if (!buffer.str().empty())
@@ -382,7 +385,8 @@ bool get_Pss5_kpss(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_Pss5_pmm(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pmm;
 		if (!buffer.str().empty())
@@ -396,7 +400,8 @@ bool get_Pss5_pmm(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_Pss5_tl1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tl1;
 		if (!buffer.str().empty())
@@ -410,7 +415,8 @@ bool get_Pss5_tl1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_Pss5_tl2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tl2;
 		if (!buffer.str().empty())
@@ -424,7 +430,8 @@ bool get_Pss5_tl2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_Pss5_tl3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tl3;
 		if (!buffer.str().empty())
@@ -438,7 +445,8 @@ bool get_Pss5_tl3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_Pss5_tl4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tl4;
 		if (!buffer.str().empty())
@@ -452,7 +460,8 @@ bool get_Pss5_tl4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_Pss5_tpe(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tpe;
 		if (!buffer.str().empty())
@@ -466,7 +475,8 @@ bool get_Pss5_tpe(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_Pss5_tw1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tw1;
 		if (!buffer.str().empty())
@@ -480,7 +490,8 @@ bool get_Pss5_tw1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_Pss5_tw2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tw2;
 		if (!buffer.str().empty())
@@ -494,7 +505,8 @@ bool get_Pss5_tw2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_Pss5_vadat(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vadat;
 		if (!buffer.str().empty())
@@ -508,7 +520,8 @@ bool get_Pss5_vadat(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_Pss5_vsmn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vsmn;
 		if (!buffer.str().empty())
@@ -522,7 +535,8 @@ bool get_Pss5_vsmn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_Pss5_vsmx(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1))
+	const Pss5* element = dynamic_cast<const Pss5*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vsmx;
 		if (!buffer.str().empty())
@@ -534,8 +548,6 @@ bool get_Pss5_vsmx(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 	return false;
 }
 
-
-
 const char Pss5::debugName[] = "Pss5";
 const char* Pss5::debugString() const
 {
@@ -544,28 +556,28 @@ const char* Pss5::debugString() const
 
 void Pss5::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:Pss5"), &Pss5_factory));
+	factory_map.emplace("cim:Pss5", &Pss5_factory);
 }
 
 void Pss5::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Pss5.ctw2"), &assign_Pss5_ctw2));
-	assign_map.insert(std::make_pair(std::string("cim:Pss5.deadband"), &assign_Pss5_deadband));
-	assign_map.insert(std::make_pair(std::string("cim:Pss5.isfreq"), &assign_Pss5_isfreq));
-	assign_map.insert(std::make_pair(std::string("cim:Pss5.kf"), &assign_Pss5_kf));
-	assign_map.insert(std::make_pair(std::string("cim:Pss5.kpe"), &assign_Pss5_kpe));
-	assign_map.insert(std::make_pair(std::string("cim:Pss5.kpss"), &assign_Pss5_kpss));
-	assign_map.insert(std::make_pair(std::string("cim:Pss5.pmm"), &assign_Pss5_pmm));
-	assign_map.insert(std::make_pair(std::string("cim:Pss5.tl1"), &assign_Pss5_tl1));
-	assign_map.insert(std::make_pair(std::string("cim:Pss5.tl2"), &assign_Pss5_tl2));
-	assign_map.insert(std::make_pair(std::string("cim:Pss5.tl3"), &assign_Pss5_tl3));
-	assign_map.insert(std::make_pair(std::string("cim:Pss5.tl4"), &assign_Pss5_tl4));
-	assign_map.insert(std::make_pair(std::string("cim:Pss5.tpe"), &assign_Pss5_tpe));
-	assign_map.insert(std::make_pair(std::string("cim:Pss5.tw1"), &assign_Pss5_tw1));
-	assign_map.insert(std::make_pair(std::string("cim:Pss5.tw2"), &assign_Pss5_tw2));
-	assign_map.insert(std::make_pair(std::string("cim:Pss5.vadat"), &assign_Pss5_vadat));
-	assign_map.insert(std::make_pair(std::string("cim:Pss5.vsmn"), &assign_Pss5_vsmn));
-	assign_map.insert(std::make_pair(std::string("cim:Pss5.vsmx"), &assign_Pss5_vsmx));
+	assign_map.emplace("cim:Pss5.ctw2", &assign_Pss5_ctw2);
+	assign_map.emplace("cim:Pss5.deadband", &assign_Pss5_deadband);
+	assign_map.emplace("cim:Pss5.isfreq", &assign_Pss5_isfreq);
+	assign_map.emplace("cim:Pss5.kf", &assign_Pss5_kf);
+	assign_map.emplace("cim:Pss5.kpe", &assign_Pss5_kpe);
+	assign_map.emplace("cim:Pss5.kpss", &assign_Pss5_kpss);
+	assign_map.emplace("cim:Pss5.pmm", &assign_Pss5_pmm);
+	assign_map.emplace("cim:Pss5.tl1", &assign_Pss5_tl1);
+	assign_map.emplace("cim:Pss5.tl2", &assign_Pss5_tl2);
+	assign_map.emplace("cim:Pss5.tl3", &assign_Pss5_tl3);
+	assign_map.emplace("cim:Pss5.tl4", &assign_Pss5_tl4);
+	assign_map.emplace("cim:Pss5.tpe", &assign_Pss5_tpe);
+	assign_map.emplace("cim:Pss5.tw1", &assign_Pss5_tw1);
+	assign_map.emplace("cim:Pss5.tw2", &assign_Pss5_tw2);
+	assign_map.emplace("cim:Pss5.vadat", &assign_Pss5_vadat);
+	assign_map.emplace("cim:Pss5.vsmn", &assign_Pss5_vsmn);
+	assign_map.emplace("cim:Pss5.vsmx", &assign_Pss5_vsmx);
 }
 
 void Pss5::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

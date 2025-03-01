@@ -8,24 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Float.hpp"
-#include "Float.hpp"
-#include "Float.hpp"
-#include "Float.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
 
 using namespace CIMPP;
 
-ExcRQB::ExcRQB() {};
-ExcRQB::~ExcRQB() {};
+ExcRQB::ExcRQB() {}
+ExcRQB::~ExcRQB() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -64,181 +51,192 @@ ExcRQB::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_ExcRQB_ki0(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcRQB_ki0(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1))
+	ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ki0;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcRQB_ki1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcRQB_ki1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1))
+	ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ki1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcRQB_klir(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcRQB_klir(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1))
+	ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->klir;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcRQB_klus(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcRQB_klus(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1))
+	ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->klus;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcRQB_lsat(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcRQB_lsat(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1))
+	ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->lsat;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcRQB_lus(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcRQB_lus(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1))
+	ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->lus;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcRQB_mesu(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcRQB_mesu(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1))
+	ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->mesu;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcRQB_t4m(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcRQB_t4m(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1))
+	ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t4m;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcRQB_tc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcRQB_tc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1))
+	ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tc;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcRQB_te(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcRQB_te(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1))
+	ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->te;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcRQB_tf(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcRQB_tf(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1))
+	ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tf;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcRQB_ucmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcRQB_ucmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1))
+	ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ucmax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcRQB_ucmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcRQB_ucmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1))
+	ExcRQB* element = dynamic_cast<ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ucmin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_ExcRQB_ki0(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ki0;
 		if (!buffer.str().empty())
@@ -252,7 +250,8 @@ bool get_ExcRQB_ki0(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcRQB_ki1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ki1;
 		if (!buffer.str().empty())
@@ -266,7 +265,8 @@ bool get_ExcRQB_ki1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcRQB_klir(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->klir;
 		if (!buffer.str().empty())
@@ -280,7 +280,8 @@ bool get_ExcRQB_klir(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcRQB_klus(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->klus;
 		if (!buffer.str().empty())
@@ -294,7 +295,8 @@ bool get_ExcRQB_klus(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcRQB_lsat(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->lsat;
 		if (!buffer.str().empty())
@@ -308,7 +310,8 @@ bool get_ExcRQB_lsat(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcRQB_lus(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->lus;
 		if (!buffer.str().empty())
@@ -322,7 +325,8 @@ bool get_ExcRQB_lus(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcRQB_mesu(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->mesu;
 		if (!buffer.str().empty())
@@ -336,7 +340,8 @@ bool get_ExcRQB_mesu(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcRQB_t4m(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t4m;
 		if (!buffer.str().empty())
@@ -350,7 +355,8 @@ bool get_ExcRQB_t4m(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcRQB_tc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tc;
 		if (!buffer.str().empty())
@@ -364,7 +370,8 @@ bool get_ExcRQB_tc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcRQB_te(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->te;
 		if (!buffer.str().empty())
@@ -378,7 +385,8 @@ bool get_ExcRQB_te(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcRQB_tf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tf;
 		if (!buffer.str().empty())
@@ -392,7 +400,8 @@ bool get_ExcRQB_tf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcRQB_ucmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ucmax;
 		if (!buffer.str().empty())
@@ -406,7 +415,8 @@ bool get_ExcRQB_ucmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer
 
 bool get_ExcRQB_ucmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1))
+	const ExcRQB* element = dynamic_cast<const ExcRQB*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ucmin;
 		if (!buffer.str().empty())
@@ -418,8 +428,6 @@ bool get_ExcRQB_ucmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer
 	return false;
 }
 
-
-
 const char ExcRQB::debugName[] = "ExcRQB";
 const char* ExcRQB::debugString() const
 {
@@ -428,24 +436,24 @@ const char* ExcRQB::debugString() const
 
 void ExcRQB::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ExcRQB"), &ExcRQB_factory));
+	factory_map.emplace("cim:ExcRQB", &ExcRQB_factory);
 }
 
 void ExcRQB::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ExcRQB.ki0"), &assign_ExcRQB_ki0));
-	assign_map.insert(std::make_pair(std::string("cim:ExcRQB.ki1"), &assign_ExcRQB_ki1));
-	assign_map.insert(std::make_pair(std::string("cim:ExcRQB.klir"), &assign_ExcRQB_klir));
-	assign_map.insert(std::make_pair(std::string("cim:ExcRQB.klus"), &assign_ExcRQB_klus));
-	assign_map.insert(std::make_pair(std::string("cim:ExcRQB.lsat"), &assign_ExcRQB_lsat));
-	assign_map.insert(std::make_pair(std::string("cim:ExcRQB.lus"), &assign_ExcRQB_lus));
-	assign_map.insert(std::make_pair(std::string("cim:ExcRQB.mesu"), &assign_ExcRQB_mesu));
-	assign_map.insert(std::make_pair(std::string("cim:ExcRQB.t4m"), &assign_ExcRQB_t4m));
-	assign_map.insert(std::make_pair(std::string("cim:ExcRQB.tc"), &assign_ExcRQB_tc));
-	assign_map.insert(std::make_pair(std::string("cim:ExcRQB.te"), &assign_ExcRQB_te));
-	assign_map.insert(std::make_pair(std::string("cim:ExcRQB.tf"), &assign_ExcRQB_tf));
-	assign_map.insert(std::make_pair(std::string("cim:ExcRQB.ucmax"), &assign_ExcRQB_ucmax));
-	assign_map.insert(std::make_pair(std::string("cim:ExcRQB.ucmin"), &assign_ExcRQB_ucmin));
+	assign_map.emplace("cim:ExcRQB.ki0", &assign_ExcRQB_ki0);
+	assign_map.emplace("cim:ExcRQB.ki1", &assign_ExcRQB_ki1);
+	assign_map.emplace("cim:ExcRQB.klir", &assign_ExcRQB_klir);
+	assign_map.emplace("cim:ExcRQB.klus", &assign_ExcRQB_klus);
+	assign_map.emplace("cim:ExcRQB.lsat", &assign_ExcRQB_lsat);
+	assign_map.emplace("cim:ExcRQB.lus", &assign_ExcRQB_lus);
+	assign_map.emplace("cim:ExcRQB.mesu", &assign_ExcRQB_mesu);
+	assign_map.emplace("cim:ExcRQB.t4m", &assign_ExcRQB_t4m);
+	assign_map.emplace("cim:ExcRQB.tc", &assign_ExcRQB_tc);
+	assign_map.emplace("cim:ExcRQB.te", &assign_ExcRQB_te);
+	assign_map.emplace("cim:ExcRQB.tf", &assign_ExcRQB_tf);
+	assign_map.emplace("cim:ExcRQB.ucmax", &assign_ExcRQB_ucmax);
+	assign_map.emplace("cim:ExcRQB.ucmin", &assign_ExcRQB_ucmin);
 }
 
 void ExcRQB::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

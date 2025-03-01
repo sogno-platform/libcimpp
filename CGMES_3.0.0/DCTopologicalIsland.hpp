@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class DCTopologicalNode;
 
-	/*
-	An electrically connected subset of the network. DC topological islands can change as the current network state changes, e.g. due to:  - disconnect switches or breakers changing state in a SCADA/EMS. - manual creation, change or deletion of topological nodes in a planning tool. Only energised TopologicalNode-s shall be part of the topological island.
-	*/
+	/** \brief An electrically connected subset of the network. DC topological islands can change as the current network state changes, e.g. due to:  - disconnect switches or breakers changing state in a SCADA/EMS. - manual creation, change or deletion of topological nodes in a planning tool. Only energised TopologicalNode-s shall be part of the topological island. */
 	class DCTopologicalIsland : public IdentifiedObject
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		DCTopologicalIsland();
 		~DCTopologicalIsland() override;
 
-		std::list<CIMPP::DCTopologicalNode*> DCTopologicalNodes;  /* The DC topological nodes in a DC topological island. Default: 0 */
+		/** \brief The DC topological nodes in a DC topological island. Default: 0 */
+		std::list<CIMPP::DCTopologicalNode*> DCTopologicalNodes;
 
 		static const char debugName[];
 		const char* debugString() const override;

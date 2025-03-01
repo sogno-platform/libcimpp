@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class Switch;
 
-	/*
-	A schedule of switch positions.  If RegularTimePoint.value1 is 0, the switch is open.  If 1, the switch is closed.
-	*/
+	/** \brief A schedule of switch positions.  If RegularTimePoint.value1 is 0, the switch is open.  If 1, the switch is closed. */
 	class SwitchSchedule : public SeasonDayTypeSchedule
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		SwitchSchedule();
 		~SwitchSchedule() override;
 
-		CIMPP::Switch* Switch;  /* A SwitchSchedule is associated with a Switch. Default: 0 */
+		/** \brief A SwitchSchedule is associated with a Switch. Default: 0 */
+		CIMPP::Switch* Switch;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "ProprietaryParameterDynamics.hpp"
-#include "Boolean.hpp"
 
 using namespace CIMPP;
 
-MechanicalLoadUserDefined::MechanicalLoadUserDefined() {};
-MechanicalLoadUserDefined::~MechanicalLoadUserDefined() {};
+MechanicalLoadUserDefined::MechanicalLoadUserDefined() {}
+MechanicalLoadUserDefined::~MechanicalLoadUserDefined() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,21 +41,6 @@ MechanicalLoadUserDefined::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_MechanicalLoadUserDefined_proprietary(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (MechanicalLoadUserDefined* element = dynamic_cast<MechanicalLoadUserDefined*>(BaseClass_ptr1))
-	{
-		buffer >> element->proprietary;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_ProprietaryParameterDynamics_MechanicalLoadUserDefined(BaseClass*, BaseClass*);
 bool assign_MechanicalLoadUserDefined_ProprietaryParameterDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,9 +58,25 @@ bool assign_MechanicalLoadUserDefined_ProprietaryParameterDynamics(BaseClass* Ba
 	return false;
 }
 
+bool assign_MechanicalLoadUserDefined_proprietary(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	MechanicalLoadUserDefined* element = dynamic_cast<MechanicalLoadUserDefined*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->proprietary;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_MechanicalLoadUserDefined_proprietary(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const MechanicalLoadUserDefined* element = dynamic_cast<const MechanicalLoadUserDefined*>(BaseClass_ptr1))
+	const MechanicalLoadUserDefined* element = dynamic_cast<const MechanicalLoadUserDefined*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->proprietary;
 		if (!buffer.str().empty())
@@ -88,8 +88,6 @@ bool get_MechanicalLoadUserDefined_proprietary(const BaseClass* BaseClass_ptr1, 
 	return false;
 }
 
-
-
 const char MechanicalLoadUserDefined::debugName[] = "MechanicalLoadUserDefined";
 const char* MechanicalLoadUserDefined::debugString() const
 {
@@ -98,17 +96,17 @@ const char* MechanicalLoadUserDefined::debugString() const
 
 void MechanicalLoadUserDefined::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:MechanicalLoadUserDefined"), &MechanicalLoadUserDefined_factory));
+	factory_map.emplace("cim:MechanicalLoadUserDefined", &MechanicalLoadUserDefined_factory);
 }
 
 void MechanicalLoadUserDefined::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:MechanicalLoadUserDefined.proprietary"), &assign_MechanicalLoadUserDefined_proprietary));
+	assign_map.emplace("cim:MechanicalLoadUserDefined.proprietary", &assign_MechanicalLoadUserDefined_proprietary);
 }
 
 void MechanicalLoadUserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:MechanicalLoadUserDefined.ProprietaryParameterDynamics"), &assign_MechanicalLoadUserDefined_ProprietaryParameterDynamics));
+	assign_map.emplace("cim:MechanicalLoadUserDefined.ProprietaryParameterDynamics", &assign_MechanicalLoadUserDefined_ProprietaryParameterDynamics);
 }
 
 void MechanicalLoadUserDefined::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "InputSignalKind")
+		if (EnumSymbol.substr(0, pos) != "InputSignalKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,52 +50,52 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "rotorSpeed")
+		if (EnumSymbol == "rotorSpeed")
 		{
 			rop = InputSignalKind::rotorSpeed;
 			return lop;
 		}
-		if(EnumSymbol == "rotorAngularFrequencyDeviation")
+		if (EnumSymbol == "rotorAngularFrequencyDeviation")
 		{
 			rop = InputSignalKind::rotorAngularFrequencyDeviation;
 			return lop;
 		}
-		if(EnumSymbol == "busFrequency")
+		if (EnumSymbol == "busFrequency")
 		{
 			rop = InputSignalKind::busFrequency;
 			return lop;
 		}
-		if(EnumSymbol == "busFrequencyDeviation")
+		if (EnumSymbol == "busFrequencyDeviation")
 		{
 			rop = InputSignalKind::busFrequencyDeviation;
 			return lop;
 		}
-		if(EnumSymbol == "generatorElectricalPower")
+		if (EnumSymbol == "generatorElectricalPower")
 		{
 			rop = InputSignalKind::generatorElectricalPower;
 			return lop;
 		}
-		if(EnumSymbol == "generatorAcceleratingPower")
+		if (EnumSymbol == "generatorAcceleratingPower")
 		{
 			rop = InputSignalKind::generatorAcceleratingPower;
 			return lop;
 		}
-		if(EnumSymbol == "busVoltage")
+		if (EnumSymbol == "busVoltage")
 		{
 			rop = InputSignalKind::busVoltage;
 			return lop;
 		}
-		if(EnumSymbol == "busVoltageDerivative")
+		if (EnumSymbol == "busVoltageDerivative")
 		{
 			rop = InputSignalKind::busVoltageDerivative;
 			return lop;
 		}
-		if(EnumSymbol == "branchCurrent")
+		if (EnumSymbol == "branchCurrent")
 		{
 			rop = InputSignalKind::branchCurrent;
 			return lop;
 		}
-		if(EnumSymbol == "fieldCurrent")
+		if (EnumSymbol == "fieldCurrent")
 		{
 			rop = InputSignalKind::fieldCurrent;
 			return lop;

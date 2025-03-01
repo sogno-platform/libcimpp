@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class ConformLoadGroup;
 
-	/*
-	A curve of load  versus time (X-axis) showing the active power values (Y1-axis) and reactive power (Y2-axis) for each unit of the period covered. This curve represents a typical pattern of load over the time period for a given day type and season.
-	*/
+	/** \brief A curve of load  versus time (X-axis) showing the active power values (Y1-axis) and reactive power (Y2-axis) for each unit of the period covered. This curve represents a typical pattern of load over the time period for a given day type and season. */
 	class ConformLoadSchedule : public SeasonDayTypeSchedule
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		ConformLoadSchedule();
 		~ConformLoadSchedule() override;
 
-		CIMPP::ConformLoadGroup* ConformLoadGroup;  /* The ConformLoadGroup where the ConformLoadSchedule belongs. Default: 0 */
+		/** \brief The ConformLoadGroup where the ConformLoadSchedule belongs. Default: 0 */
+		CIMPP::ConformLoadGroup* ConformLoadGroup;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -13,8 +13,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-Discrete::Discrete() : ValueAliasSet(nullptr) {};
-Discrete::~Discrete() {};
+Discrete::Discrete() : ValueAliasSet(nullptr) {}
+Discrete::~Discrete() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,8 +42,6 @@ Discrete::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_DiscreteValue_Discrete(BaseClass*, BaseClass*);
 bool assign_Discrete_DiscreteValues(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,6 +58,7 @@ bool assign_Discrete_DiscreteValues(BaseClass* BaseClass_ptr1, BaseClass* BaseCl
 	}
 	return false;
 }
+
 bool assign_ValueAliasSet_Discretes(BaseClass*, BaseClass*);
 bool assign_Discrete_ValueAliasSet(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -80,7 +79,8 @@ bool assign_Discrete_ValueAliasSet(BaseClass* BaseClass_ptr1, BaseClass* BaseCla
 
 bool get_Discrete_ValueAliasSet(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const Discrete* element = dynamic_cast<const Discrete*>(BaseClass_ptr1))
+	const Discrete* element = dynamic_cast<const Discrete*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->ValueAliasSet != 0)
 		{
@@ -91,7 +91,6 @@ bool get_Discrete_ValueAliasSet(const BaseClass* BaseClass_ptr1, std::list<const
 	return false;
 }
 
-
 const char Discrete::debugName[] = "Discrete";
 const char* Discrete::debugString() const
 {
@@ -100,7 +99,7 @@ const char* Discrete::debugString() const
 
 void Discrete::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:Discrete"), &Discrete_factory));
+	factory_map.emplace("cim:Discrete", &Discrete_factory);
 }
 
 void Discrete::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -109,8 +108,8 @@ void Discrete::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign
 
 void Discrete::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Discrete.DiscreteValues"), &assign_Discrete_DiscreteValues));
-	assign_map.insert(std::make_pair(std::string("cim:Discrete.ValueAliasSet"), &assign_Discrete_ValueAliasSet));
+	assign_map.emplace("cim:Discrete.DiscreteValues", &assign_Discrete_DiscreteValues);
+	assign_map.emplace("cim:Discrete.ValueAliasSet", &assign_Discrete_ValueAliasSet);
 }
 
 void Discrete::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

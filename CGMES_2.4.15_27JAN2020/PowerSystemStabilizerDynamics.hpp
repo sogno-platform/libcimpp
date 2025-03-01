@@ -18,9 +18,7 @@ namespace CIMPP
 	class ExcitationSystemDynamics;
 	class RemoteInputSignal;
 
-	/*
-	Power system stabilizer function block whose behaviour is described by reference to a standard model
-	*/
+	/** \brief Power system stabilizer function block whose behaviour is described by reference to a standard model */
 	class PowerSystemStabilizerDynamics : public DynamicsFunctionBlock
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		PowerSystemStabilizerDynamics();
 		~PowerSystemStabilizerDynamics() override;
 
-		CIMPP::ExcitationSystemDynamics* ExcitationSystemDynamics;  /* Excitation system model with which this power system stabilizer model is associated. Default: 0 */
-		std::list<CIMPP::RemoteInputSignal*> RemoteInputSignal;  /* Remote input signal used by this power system stabilizer model. Default: 0 */
+		/** \brief Excitation system model with which this power system stabilizer model is associated. Default: 0 */
+		CIMPP::ExcitationSystemDynamics* ExcitationSystemDynamics;
+
+		/** \brief Remote input signal used by this power system stabilizer model. Default: 0 */
+		std::list<CIMPP::RemoteInputSignal*> RemoteInputSignal;
 
 		static const char debugName[];
 		const char* debugString() const override;

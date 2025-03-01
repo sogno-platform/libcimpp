@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "WindPowerPlant.hpp"
-#include "WindGenUnitKind.hpp"
 
 using namespace CIMPP;
 
-WindGeneratingUnit::WindGeneratingUnit() : WindPowerPlant(nullptr) {};
-WindGeneratingUnit::~WindGeneratingUnit() {};
+WindGeneratingUnit::WindGeneratingUnit() : WindPowerPlant(nullptr) {}
+WindGeneratingUnit::~WindGeneratingUnit() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -43,21 +42,6 @@ WindGeneratingUnit::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_WindGeneratingUnit_windGenUnitType(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindGeneratingUnit* element = dynamic_cast<WindGeneratingUnit*>(BaseClass_ptr1))
-	{
-		buffer >> element->windGenUnitType;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_WindPowerPlant_WindGeneratingUnits(BaseClass*, BaseClass*);
 bool assign_WindGeneratingUnit_WindPowerPlant(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -75,10 +59,24 @@ bool assign_WindGeneratingUnit_WindPowerPlant(BaseClass* BaseClass_ptr1, BaseCla
 	return false;
 }
 
+bool assign_WindGeneratingUnit_windGenUnitType(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindGeneratingUnit* element = dynamic_cast<WindGeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->windGenUnitType;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
 
 bool get_WindGeneratingUnit_WindPowerPlant(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const WindGeneratingUnit* element = dynamic_cast<const WindGeneratingUnit*>(BaseClass_ptr1))
+	const WindGeneratingUnit* element = dynamic_cast<const WindGeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->WindPowerPlant != 0)
 		{
@@ -89,10 +87,10 @@ bool get_WindGeneratingUnit_WindPowerPlant(const BaseClass* BaseClass_ptr1, std:
 	return false;
 }
 
-
 bool get_WindGeneratingUnit_windGenUnitType(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindGeneratingUnit* element = dynamic_cast<const WindGeneratingUnit*>(BaseClass_ptr1))
+	const WindGeneratingUnit* element = dynamic_cast<const WindGeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->windGenUnitType;
 		if (!buffer.str().empty())
@@ -112,17 +110,17 @@ const char* WindGeneratingUnit::debugString() const
 
 void WindGeneratingUnit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:WindGeneratingUnit"), &WindGeneratingUnit_factory));
+	factory_map.emplace("cim:WindGeneratingUnit", &WindGeneratingUnit_factory);
 }
 
 void WindGeneratingUnit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindGeneratingUnit.windGenUnitType"), &assign_WindGeneratingUnit_windGenUnitType));
+	assign_map.emplace("cim:WindGeneratingUnit.windGenUnitType", &assign_WindGeneratingUnit_windGenUnitType);
 }
 
 void WindGeneratingUnit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindGeneratingUnit.WindPowerPlant"), &assign_WindGeneratingUnit_WindPowerPlant));
+	assign_map.emplace("cim:WindGeneratingUnit.WindPowerPlant", &assign_WindGeneratingUnit_WindPowerPlant);
 }
 
 void WindGeneratingUnit::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-DCEquipmentContainer::DCEquipmentContainer() {};
-DCEquipmentContainer::~DCEquipmentContainer() {};
+DCEquipmentContainer::DCEquipmentContainer() {}
+DCEquipmentContainer::~DCEquipmentContainer() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -41,8 +41,6 @@ DCEquipmentContainer::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_DCTopologicalNode_DCEquipmentContainer(BaseClass*, BaseClass*);
 bool assign_DCEquipmentContainer_DCTopologicalNode(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -61,7 +59,6 @@ bool assign_DCEquipmentContainer_DCTopologicalNode(BaseClass* BaseClass_ptr1, Ba
 }
 
 
-
 const char DCEquipmentContainer::debugName[] = "DCEquipmentContainer";
 const char* DCEquipmentContainer::debugString() const
 {
@@ -70,7 +67,7 @@ const char* DCEquipmentContainer::debugString() const
 
 void DCEquipmentContainer::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:DCEquipmentContainer"), &DCEquipmentContainer_factory));
+	factory_map.emplace("cim:DCEquipmentContainer", &DCEquipmentContainer_factory);
 }
 
 void DCEquipmentContainer::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -79,7 +76,7 @@ void DCEquipmentContainer::addPrimitiveAssignFnsToMap(std::unordered_map<std::st
 
 void DCEquipmentContainer::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:DCEquipmentContainer.DCTopologicalNode"), &assign_DCEquipmentContainer_DCTopologicalNode));
+	assign_map.emplace("cim:DCEquipmentContainer.DCTopologicalNode", &assign_DCEquipmentContainer_DCTopologicalNode);
 }
 
 void DCEquipmentContainer::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

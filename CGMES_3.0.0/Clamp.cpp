@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "ACLineSegment.hpp"
-#include "Length.hpp"
 
 using namespace CIMPP;
 
-Clamp::Clamp() : ACLineSegment(nullptr) {};
-Clamp::~Clamp() {};
+Clamp::Clamp() : ACLineSegment(nullptr) {}
+Clamp::~Clamp() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,21 +41,6 @@ Clamp::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_Clamp_lengthFromTerminal1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (Clamp* element = dynamic_cast<Clamp*>(BaseClass_ptr1))
-	{
-		buffer >> element->lengthFromTerminal1;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_ACLineSegment_Clamp(BaseClass*, BaseClass*);
 bool assign_Clamp_ACLineSegment(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,9 +58,38 @@ bool assign_Clamp_ACLineSegment(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_
 	return false;
 }
 
+bool assign_Clamp_lengthFromTerminal1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	Clamp* element = dynamic_cast<Clamp*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->lengthFromTerminal1;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_Clamp_ACLineSegment(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const Clamp* element = dynamic_cast<const Clamp*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->ACLineSegment != 0)
+		{
+			BaseClass_list.push_back(element->ACLineSegment);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_Clamp_lengthFromTerminal1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Clamp* element = dynamic_cast<const Clamp*>(BaseClass_ptr1))
+	const Clamp* element = dynamic_cast<const Clamp*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->lengthFromTerminal1;
 		if (!buffer.str().empty())
@@ -88,21 +101,6 @@ bool get_Clamp_lengthFromTerminal1(const BaseClass* BaseClass_ptr1, std::strings
 	return false;
 }
 
-
-bool get_Clamp_ACLineSegment(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const Clamp* element = dynamic_cast<const Clamp*>(BaseClass_ptr1))
-	{
-		if (element->ACLineSegment != 0)
-		{
-			BaseClass_list.push_back(element->ACLineSegment);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char Clamp::debugName[] = "Clamp";
 const char* Clamp::debugString() const
 {
@@ -111,17 +109,17 @@ const char* Clamp::debugString() const
 
 void Clamp::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:Clamp"), &Clamp_factory));
+	factory_map.emplace("cim:Clamp", &Clamp_factory);
 }
 
 void Clamp::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Clamp.lengthFromTerminal1"), &assign_Clamp_lengthFromTerminal1));
+	assign_map.emplace("cim:Clamp.lengthFromTerminal1", &assign_Clamp_lengthFromTerminal1);
 }
 
 void Clamp::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Clamp.ACLineSegment"), &assign_Clamp_ACLineSegment));
+	assign_map.emplace("cim:Clamp.ACLineSegment", &assign_Clamp_ACLineSegment);
 }
 
 void Clamp::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class DiagramObject;
 
-	/*
-	A reference to a style used by the originating system for a diagram object.  A diagram object style describes information such as line thickness, shape such as circle or rectangle etc, and color.
-	*/
+	/** \brief A reference to a style used by the originating system for a diagram object.  A diagram object style describes information such as line thickness, shape such as circle or rectangle etc, and color. */
 	class DiagramObjectStyle : public IdentifiedObject
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		DiagramObjectStyle();
 		~DiagramObjectStyle() override;
 
-		std::list<CIMPP::DiagramObject*> StyledObjects;  /* A style can be assigned to multiple diagram objects. Default: 0 */
+		/** \brief A style can be assigned to multiple diagram objects. Default: 0 */
+		std::list<CIMPP::DiagramObject*> StyledObjects;
 
 		static const char debugName[];
 		const char* debugString() const override;

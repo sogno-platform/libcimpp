@@ -9,13 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "AnalogValue.hpp"
-#include "Float.hpp"
-#include "Float.hpp"
 
 using namespace CIMPP;
 
-AnalogControl::AnalogControl() : AnalogValue(nullptr) {};
-AnalogControl::~AnalogControl() {};
+AnalogControl::AnalogControl() : AnalogValue(nullptr) {}
+AnalogControl::~AnalogControl() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -44,34 +42,6 @@ AnalogControl::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_AnalogControl_maxValue(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (AnalogControl* element = dynamic_cast<AnalogControl*>(BaseClass_ptr1))
-	{
-		buffer >> element->maxValue;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_AnalogControl_minValue(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (AnalogControl* element = dynamic_cast<AnalogControl*>(BaseClass_ptr1))
-	{
-		buffer >> element->minValue;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_AnalogValue_AnalogControl(BaseClass*, BaseClass*);
 bool assign_AnalogControl_AnalogValue(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -89,9 +59,52 @@ bool assign_AnalogControl_AnalogValue(BaseClass* BaseClass_ptr1, BaseClass* Base
 	return false;
 }
 
+bool assign_AnalogControl_maxValue(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	AnalogControl* element = dynamic_cast<AnalogControl*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->maxValue;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_AnalogControl_minValue(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	AnalogControl* element = dynamic_cast<AnalogControl*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->minValue;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_AnalogControl_AnalogValue(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const AnalogControl* element = dynamic_cast<const AnalogControl*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->AnalogValue != 0)
+		{
+			BaseClass_list.push_back(element->AnalogValue);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_AnalogControl_maxValue(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const AnalogControl* element = dynamic_cast<const AnalogControl*>(BaseClass_ptr1))
+	const AnalogControl* element = dynamic_cast<const AnalogControl*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->maxValue;
 		if (!buffer.str().empty())
@@ -105,7 +118,8 @@ bool get_AnalogControl_maxValue(const BaseClass* BaseClass_ptr1, std::stringstre
 
 bool get_AnalogControl_minValue(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const AnalogControl* element = dynamic_cast<const AnalogControl*>(BaseClass_ptr1))
+	const AnalogControl* element = dynamic_cast<const AnalogControl*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->minValue;
 		if (!buffer.str().empty())
@@ -117,21 +131,6 @@ bool get_AnalogControl_minValue(const BaseClass* BaseClass_ptr1, std::stringstre
 	return false;
 }
 
-
-bool get_AnalogControl_AnalogValue(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const AnalogControl* element = dynamic_cast<const AnalogControl*>(BaseClass_ptr1))
-	{
-		if (element->AnalogValue != 0)
-		{
-			BaseClass_list.push_back(element->AnalogValue);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char AnalogControl::debugName[] = "AnalogControl";
 const char* AnalogControl::debugString() const
 {
@@ -140,18 +139,18 @@ const char* AnalogControl::debugString() const
 
 void AnalogControl::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:AnalogControl"), &AnalogControl_factory));
+	factory_map.emplace("cim:AnalogControl", &AnalogControl_factory);
 }
 
 void AnalogControl::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:AnalogControl.maxValue"), &assign_AnalogControl_maxValue));
-	assign_map.insert(std::make_pair(std::string("cim:AnalogControl.minValue"), &assign_AnalogControl_minValue));
+	assign_map.emplace("cim:AnalogControl.maxValue", &assign_AnalogControl_maxValue);
+	assign_map.emplace("cim:AnalogControl.minValue", &assign_AnalogControl_minValue);
 }
 
 void AnalogControl::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:AnalogControl.AnalogValue"), &assign_AnalogControl_AnalogValue));
+	assign_map.emplace("cim:AnalogControl.AnalogValue", &assign_AnalogControl_AnalogValue);
 }
 
 void AnalogControl::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

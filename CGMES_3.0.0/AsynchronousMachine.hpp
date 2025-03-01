@@ -25,9 +25,7 @@ namespace CIMPP
 {
 	class AsynchronousMachineDynamics;
 
-	/*
-	A rotating machine whose shaft rotates asynchronously with the electrical field.  Also known as an induction machine with no external connection to the rotor windings, e.g. squirrel-cage induction machine.
-	*/
+	/** \brief A rotating machine whose shaft rotates asynchronously with the electrical field.  Also known as an induction machine with no external connection to the rotor windings, e.g. squirrel-cage induction machine. */
 	class AsynchronousMachine : public RotatingMachine
 	{
 	public:
@@ -35,17 +33,38 @@ namespace CIMPP
 		AsynchronousMachine();
 		~AsynchronousMachine() override;
 
-		CIMPP::AsynchronousMachineDynamics* AsynchronousMachineDynamics;  /* Asynchronous machine dynamics model used to describe dynamic behaviour of this asynchronous machine. Default: 0 */
-		CIMPP::AsynchronousMachineKind asynchronousMachineType;  /* Indicates the type of Asynchronous Machine (motor or generator). Default: 0 */
-		CIMPP::Boolean converterFedDrive;  /* Indicates whether the machine is a converter fed drive. Used for short circuit data exchange according to IEC 60909. Default: false */
-		CIMPP::PerCent efficiency;  /* Efficiency of the asynchronous machine at nominal operation as a percentage. Indicator for converter drive motors. Used for short circuit data exchange according to IEC 60909. Default: nullptr */
-		CIMPP::Float iaIrRatio;  /* Ratio of locked-rotor current to the rated current of the motor (Ia/Ir). Used for short circuit data exchange according to IEC 60909. Default: 0.0 */
-		CIMPP::Frequency nominalFrequency;  /* Nameplate data indicates if the machine is 50 Hz or 60 Hz. Default: nullptr */
-		CIMPP::RotationSpeed nominalSpeed;  /* Nameplate data.  Depends on the slip and number of pole pairs. Default: nullptr */
-		CIMPP::Integer polePairNumber;  /* Number of pole pairs of stator. Used for short circuit data exchange according to IEC 60909. Default: 0 */
-		CIMPP::ActivePower ratedMechanicalPower;  /* Rated mechanical power (Pr in IEC 60909-0). Used for short circuit data exchange according to IEC 60909. Default: nullptr */
-		CIMPP::Boolean reversible;  /* Indicates for converter drive motors if the power can be reversible. Used for short circuit data exchange according to IEC 60909. Default: false */
-		CIMPP::Float rxLockedRotorRatio;  /* Locked rotor ratio (R/X). Used for short circuit data exchange according to IEC 60909. Default: 0.0 */
+		/** \brief Asynchronous machine dynamics model used to describe dynamic behaviour of this asynchronous machine. Default: 0 */
+		CIMPP::AsynchronousMachineDynamics* AsynchronousMachineDynamics;
+
+		/** \brief Indicates the type of Asynchronous Machine (motor or generator). Default: 0 */
+		CIMPP::AsynchronousMachineKind asynchronousMachineType;
+
+		/** \brief Indicates whether the machine is a converter fed drive. Used for short circuit data exchange according to IEC 60909. Default: false */
+		CIMPP::Boolean converterFedDrive;
+
+		/** \brief Efficiency of the asynchronous machine at nominal operation as a percentage. Indicator for converter drive motors. Used for short circuit data exchange according to IEC 60909. Default: nullptr */
+		CIMPP::PerCent efficiency;
+
+		/** \brief Ratio of locked-rotor current to the rated current of the motor (Ia/Ir). Used for short circuit data exchange according to IEC 60909. Default: 0.0 */
+		CIMPP::Float iaIrRatio;
+
+		/** \brief Nameplate data indicates if the machine is 50 Hz or 60 Hz. Default: nullptr */
+		CIMPP::Frequency nominalFrequency;
+
+		/** \brief Nameplate data.  Depends on the slip and number of pole pairs. Default: nullptr */
+		CIMPP::RotationSpeed nominalSpeed;
+
+		/** \brief Number of pole pairs of stator. Used for short circuit data exchange according to IEC 60909. Default: 0 */
+		CIMPP::Integer polePairNumber;
+
+		/** \brief Rated mechanical power (Pr in IEC 60909-0). Used for short circuit data exchange according to IEC 60909. Default: nullptr */
+		CIMPP::ActivePower ratedMechanicalPower;
+
+		/** \brief Indicates for converter drive motors if the power can be reversible. Used for short circuit data exchange according to IEC 60909. Default: false */
+		CIMPP::Boolean reversible;
+
+		/** \brief Locked rotor ratio (R/X). Used for short circuit data exchange according to IEC 60909. Default: 0.0 */
+		CIMPP::Float rxLockedRotorRatio;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "HydroPowerPlant.hpp"
-#include "HydroEnergyConversionKind.hpp"
 
 using namespace CIMPP;
 
-HydroGeneratingUnit::HydroGeneratingUnit() : HydroPowerPlant(nullptr) {};
-HydroGeneratingUnit::~HydroGeneratingUnit() {};
+HydroGeneratingUnit::HydroGeneratingUnit() : HydroPowerPlant(nullptr) {}
+HydroGeneratingUnit::~HydroGeneratingUnit() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -43,21 +42,6 @@ HydroGeneratingUnit::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_HydroGeneratingUnit_energyConversionCapability(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (HydroGeneratingUnit* element = dynamic_cast<HydroGeneratingUnit*>(BaseClass_ptr1))
-	{
-		buffer >> element->energyConversionCapability;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_HydroPowerPlant_HydroGeneratingUnits(BaseClass*, BaseClass*);
 bool assign_HydroGeneratingUnit_HydroPowerPlant(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -75,10 +59,24 @@ bool assign_HydroGeneratingUnit_HydroPowerPlant(BaseClass* BaseClass_ptr1, BaseC
 	return false;
 }
 
+bool assign_HydroGeneratingUnit_energyConversionCapability(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	HydroGeneratingUnit* element = dynamic_cast<HydroGeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->energyConversionCapability;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
 
 bool get_HydroGeneratingUnit_HydroPowerPlant(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const HydroGeneratingUnit* element = dynamic_cast<const HydroGeneratingUnit*>(BaseClass_ptr1))
+	const HydroGeneratingUnit* element = dynamic_cast<const HydroGeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->HydroPowerPlant != 0)
 		{
@@ -89,10 +87,10 @@ bool get_HydroGeneratingUnit_HydroPowerPlant(const BaseClass* BaseClass_ptr1, st
 	return false;
 }
 
-
 bool get_HydroGeneratingUnit_energyConversionCapability(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const HydroGeneratingUnit* element = dynamic_cast<const HydroGeneratingUnit*>(BaseClass_ptr1))
+	const HydroGeneratingUnit* element = dynamic_cast<const HydroGeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->energyConversionCapability;
 		if (!buffer.str().empty())
@@ -112,17 +110,17 @@ const char* HydroGeneratingUnit::debugString() const
 
 void HydroGeneratingUnit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:HydroGeneratingUnit"), &HydroGeneratingUnit_factory));
+	factory_map.emplace("cim:HydroGeneratingUnit", &HydroGeneratingUnit_factory);
 }
 
 void HydroGeneratingUnit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:HydroGeneratingUnit.energyConversionCapability"), &assign_HydroGeneratingUnit_energyConversionCapability));
+	assign_map.emplace("cim:HydroGeneratingUnit.energyConversionCapability", &assign_HydroGeneratingUnit_energyConversionCapability);
 }
 
 void HydroGeneratingUnit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:HydroGeneratingUnit.HydroPowerPlant"), &assign_HydroGeneratingUnit_HydroPowerPlant));
+	assign_map.emplace("cim:HydroGeneratingUnit.HydroPowerPlant", &assign_HydroGeneratingUnit_HydroPowerPlant);
 }
 
 void HydroGeneratingUnit::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

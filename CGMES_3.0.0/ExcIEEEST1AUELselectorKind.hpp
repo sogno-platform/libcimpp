@@ -9,29 +9,19 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Types of connections for the UEL input used in ExcIEEEST1A.
-	*/
+	/** \brief Types of connections for the UEL input used in ExcIEEEST1A. */
 	class ExcIEEEST1AUELselectorKind
 	{
 	public:
 		enum ExcIEEEST1AUELselectorKind_ENUM
 		{
-			/**
-			 * Ignore UEL signal.
-			 */
+			/** Ignore UEL signal. */
 			ignoreUELsignal,
-			/**
-			 * UEL input HV gate with voltage regulator output.
-			 */
+			/** UEL input HV gate with voltage regulator output. */
 			inputHVgateVoltageOutput,
-			/**
-			 * UEL input HV gate with error signal.
-			 */
+			/** UEL input HV gate with error signal. */
 			inputHVgateErrorSignal,
-			/**
-			 * UEL input added to error signal.
-			 */
+			/** UEL input added to error signal. */
 			inputAddedToErrorSignal,
 		};
 

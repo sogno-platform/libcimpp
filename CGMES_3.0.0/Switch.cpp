@@ -10,16 +10,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 #include "SvSwitch.hpp"
 #include "SwitchSchedule.hpp"
-#include "Boolean.hpp"
-#include "Boolean.hpp"
-#include "Boolean.hpp"
-#include "CurrentFlow.hpp"
-#include "Boolean.hpp"
 
 using namespace CIMPP;
 
-Switch::Switch() {};
-Switch::~Switch() {};
+Switch::Switch() {}
+Switch::~Switch() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -54,73 +49,6 @@ Switch::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_Switch_locked(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (Switch* element = dynamic_cast<Switch*>(BaseClass_ptr1))
-	{
-		buffer >> element->locked;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_Switch_normalOpen(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (Switch* element = dynamic_cast<Switch*>(BaseClass_ptr1))
-	{
-		buffer >> element->normalOpen;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_Switch_open(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (Switch* element = dynamic_cast<Switch*>(BaseClass_ptr1))
-	{
-		buffer >> element->open;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_Switch_ratedCurrent(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (Switch* element = dynamic_cast<Switch*>(BaseClass_ptr1))
-	{
-		buffer >> element->ratedCurrent;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_Switch_retained(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (Switch* element = dynamic_cast<Switch*>(BaseClass_ptr1))
-	{
-		buffer >> element->retained;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_SvSwitch_Switch(BaseClass*, BaseClass*);
 bool assign_Switch_SvSwitch(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -137,6 +65,7 @@ bool assign_Switch_SvSwitch(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2
 	}
 	return false;
 }
+
 bool assign_SwitchSchedule_Switch(BaseClass*, BaseClass*);
 bool assign_Switch_SwitchSchedules(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -154,9 +83,82 @@ bool assign_Switch_SwitchSchedules(BaseClass* BaseClass_ptr1, BaseClass* BaseCla
 	return false;
 }
 
+bool assign_Switch_locked(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	Switch* element = dynamic_cast<Switch*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->locked;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_Switch_normalOpen(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	Switch* element = dynamic_cast<Switch*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->normalOpen;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_Switch_open(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	Switch* element = dynamic_cast<Switch*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->open;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_Switch_ratedCurrent(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	Switch* element = dynamic_cast<Switch*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->ratedCurrent;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_Switch_retained(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	Switch* element = dynamic_cast<Switch*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->retained;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
+
 bool get_Switch_locked(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Switch* element = dynamic_cast<const Switch*>(BaseClass_ptr1))
+	const Switch* element = dynamic_cast<const Switch*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->locked;
 		if (!buffer.str().empty())
@@ -170,7 +172,8 @@ bool get_Switch_locked(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_Switch_normalOpen(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Switch* element = dynamic_cast<const Switch*>(BaseClass_ptr1))
+	const Switch* element = dynamic_cast<const Switch*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->normalOpen;
 		if (!buffer.str().empty())
@@ -184,7 +187,8 @@ bool get_Switch_normalOpen(const BaseClass* BaseClass_ptr1, std::stringstream& b
 
 bool get_Switch_open(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Switch* element = dynamic_cast<const Switch*>(BaseClass_ptr1))
+	const Switch* element = dynamic_cast<const Switch*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->open;
 		if (!buffer.str().empty())
@@ -198,7 +202,8 @@ bool get_Switch_open(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_Switch_ratedCurrent(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Switch* element = dynamic_cast<const Switch*>(BaseClass_ptr1))
+	const Switch* element = dynamic_cast<const Switch*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ratedCurrent;
 		if (!buffer.str().empty())
@@ -212,7 +217,8 @@ bool get_Switch_ratedCurrent(const BaseClass* BaseClass_ptr1, std::stringstream&
 
 bool get_Switch_retained(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Switch* element = dynamic_cast<const Switch*>(BaseClass_ptr1))
+	const Switch* element = dynamic_cast<const Switch*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->retained;
 		if (!buffer.str().empty())
@@ -224,8 +230,6 @@ bool get_Switch_retained(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 	return false;
 }
 
-
-
 const char Switch::debugName[] = "Switch";
 const char* Switch::debugString() const
 {
@@ -234,22 +238,22 @@ const char* Switch::debugString() const
 
 void Switch::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:Switch"), &Switch_factory));
+	factory_map.emplace("cim:Switch", &Switch_factory);
 }
 
 void Switch::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Switch.locked"), &assign_Switch_locked));
-	assign_map.insert(std::make_pair(std::string("cim:Switch.normalOpen"), &assign_Switch_normalOpen));
-	assign_map.insert(std::make_pair(std::string("cim:Switch.open"), &assign_Switch_open));
-	assign_map.insert(std::make_pair(std::string("cim:Switch.ratedCurrent"), &assign_Switch_ratedCurrent));
-	assign_map.insert(std::make_pair(std::string("cim:Switch.retained"), &assign_Switch_retained));
+	assign_map.emplace("cim:Switch.locked", &assign_Switch_locked);
+	assign_map.emplace("cim:Switch.normalOpen", &assign_Switch_normalOpen);
+	assign_map.emplace("cim:Switch.open", &assign_Switch_open);
+	assign_map.emplace("cim:Switch.ratedCurrent", &assign_Switch_ratedCurrent);
+	assign_map.emplace("cim:Switch.retained", &assign_Switch_retained);
 }
 
 void Switch::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Switch.SvSwitch"), &assign_Switch_SvSwitch));
-	assign_map.insert(std::make_pair(std::string("cim:Switch.SwitchSchedules"), &assign_Switch_SwitchSchedules));
+	assign_map.emplace("cim:Switch.SvSwitch", &assign_Switch_SvSwitch);
+	assign_map.emplace("cim:Switch.SwitchSchedules", &assign_Switch_SwitchSchedules);
 }
 
 void Switch::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

@@ -20,9 +20,7 @@ namespace CIMPP
 	class StreetDetail;
 	class TownDetail;
 
-	/*
-	General purpose street and postal address information.
-	*/
+	/** \brief General purpose street and postal address information. */
 	class StreetAddress : public BaseClass
 	{
 	public:
@@ -30,12 +28,23 @@ namespace CIMPP
 		StreetAddress();
 		~StreetAddress() override;
 
-		CIMPP::String language;  /* The language in which the address is specified, using ISO 639-1 two digit language code. Default: '' */
-		CIMPP::String poBox;  /* Post office box. Default: '' */
-		CIMPP::String postalCode;  /* Postal code for the address. Default: '' */
-		CIMPP::Status* status;  /* Status of this address. Default: nullptr */
-		CIMPP::StreetDetail* streetDetail;  /* Street detail. Default: nullptr */
-		CIMPP::TownDetail* townDetail;  /* Town detail. Default: nullptr */
+		/** \brief The language in which the address is specified, using ISO 639-1 two digit language code. Default: '' */
+		CIMPP::String language;
+
+		/** \brief Post office box. Default: '' */
+		CIMPP::String poBox;
+
+		/** \brief Postal code for the address. Default: '' */
+		CIMPP::String postalCode;
+
+		/** \brief Status of this address. Default: nullptr */
+		CIMPP::Status* status;
+
+		/** \brief Street detail. Default: nullptr */
+		CIMPP::StreetDetail* streetDetail;
+
+		/** \brief Town detail. Default: nullptr */
+		CIMPP::TownDetail* townDetail;
 
 		static const char debugName[];
 		const char* debugString() const override;

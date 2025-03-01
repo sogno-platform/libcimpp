@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class ACLineSegment;
 
-	/*
-	A Clamp is a galvanic connection at a line segment where other equipment is connected. A Clamp does not cut the line segment.  A Clamp is ConductingEquipment and has one Terminal with an associated ConnectivityNode. Any other ConductingEquipment can be connected to the Clamp ConnectivityNode.
-	*/
+	/** \brief A Clamp is a galvanic connection at a line segment where other equipment is connected. A Clamp does not cut the line segment.  A Clamp is ConductingEquipment and has one Terminal with an associated ConnectivityNode. Any other ConductingEquipment can be connected to the Clamp ConnectivityNode. */
 	class Clamp : public ConductingEquipment
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		Clamp();
 		~Clamp() override;
 
-		CIMPP::ACLineSegment* ACLineSegment;  /* The line segment to which the clamp is connected. Default: 0 */
-		CIMPP::Length lengthFromTerminal1;  /* The length to the place where the clamp is located starting from side one of the line segment, i.e. the line segment terminal with sequence number equal to 1. Default: nullptr */
+		/** \brief The line segment to which the clamp is connected. Default: 0 */
+		CIMPP::ACLineSegment* ACLineSegment;
+
+		/** \brief The length to the place where the clamp is located starting from side one of the line segment, i.e. the line segment terminal with sequence number equal to 1. Default: nullptr */
+		CIMPP::Length lengthFromTerminal1;
 
 		static const char debugName[];
 		const char* debugString() const override;

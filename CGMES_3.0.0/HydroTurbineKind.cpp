@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "HydroTurbineKind")
+		if (EnumSymbol.substr(0, pos) != "HydroTurbineKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,17 +50,17 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "francis")
+		if (EnumSymbol == "francis")
 		{
 			rop = HydroTurbineKind::francis;
 			return lop;
 		}
-		if(EnumSymbol == "pelton")
+		if (EnumSymbol == "pelton")
 		{
 			rop = HydroTurbineKind::pelton;
 			return lop;
 		}
-		if(EnumSymbol == "kaplan")
+		if (EnumSymbol == "kaplan")
 		{
 			rop = HydroTurbineKind::kaplan;
 			return lop;

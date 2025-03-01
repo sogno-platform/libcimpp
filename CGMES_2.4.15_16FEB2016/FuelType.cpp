@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "FuelType")
+		if (EnumSymbol.substr(0, pos) != "FuelType")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,32 +50,32 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "coal")
+		if (EnumSymbol == "coal")
 		{
 			rop = FuelType::coal;
 			return lop;
 		}
-		if(EnumSymbol == "oil")
+		if (EnumSymbol == "oil")
 		{
 			rop = FuelType::oil;
 			return lop;
 		}
-		if(EnumSymbol == "gas")
+		if (EnumSymbol == "gas")
 		{
 			rop = FuelType::gas;
 			return lop;
 		}
-		if(EnumSymbol == "lignite")
+		if (EnumSymbol == "lignite")
 		{
 			rop = FuelType::lignite;
 			return lop;
 		}
-		if(EnumSymbol == "hardCoal")
+		if (EnumSymbol == "hardCoal")
 		{
 			rop = FuelType::hardCoal;
 			return lop;
 		}
-		if(EnumSymbol == "oilShale")
+		if (EnumSymbol == "oilShale")
 		{
 			rop = FuelType::oilShale;
 			return lop;

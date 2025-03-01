@@ -24,7 +24,8 @@ namespace CIMPP
 		PhaseTapChangerTabular();
 		~PhaseTapChangerTabular() override;
 
-		CIMPP::PhaseTapChangerTable* PhaseTapChangerTable;  /* The phase tap changer table for this phase tap changer. Default: 0 */
+		/** \brief The phase tap changer table for this phase tap changer. Default: 0 */
+		CIMPP::PhaseTapChangerTable* PhaseTapChangerTable;
 
 		static const char debugName[];
 		const char* debugString() const override;

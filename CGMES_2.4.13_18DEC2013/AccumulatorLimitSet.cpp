@@ -8,14 +8,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "AccumulatorLimit.hpp"
 #include "Accumulator.hpp"
-#include "Boolean.hpp"
+#include "AccumulatorLimit.hpp"
 
 using namespace CIMPP;
 
-AccumulatorLimitSet::AccumulatorLimitSet() {};
-AccumulatorLimitSet::~AccumulatorLimitSet() {};
+AccumulatorLimitSet::AccumulatorLimitSet() {}
+AccumulatorLimitSet::~AccumulatorLimitSet() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -44,21 +43,6 @@ AccumulatorLimitSet::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_AccumulatorLimitSet_isPercentageLimits(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (AccumulatorLimitSet* element = dynamic_cast<AccumulatorLimitSet*>(BaseClass_ptr1))
-	{
-		buffer >> element->isPercentageLimits;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_AccumulatorLimit_LimitSet(BaseClass*, BaseClass*);
 bool assign_AccumulatorLimitSet_Limits(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -75,6 +59,7 @@ bool assign_AccumulatorLimitSet_Limits(BaseClass* BaseClass_ptr1, BaseClass* Bas
 	}
 	return false;
 }
+
 bool assign_Accumulator_LimitSets(BaseClass*, BaseClass*);
 bool assign_AccumulatorLimitSet_Measurements(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -92,9 +77,36 @@ bool assign_AccumulatorLimitSet_Measurements(BaseClass* BaseClass_ptr1, BaseClas
 	return false;
 }
 
+bool assign_AccumulatorLimitSet_isPercentageLimits(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	AccumulatorLimitSet* element = dynamic_cast<AccumulatorLimitSet*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->isPercentageLimits;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
+bool get_AccumulatorLimitSet_Measurements(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const AccumulatorLimitSet* element = dynamic_cast<const AccumulatorLimitSet*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		std::copy(element->Measurements.begin(), element->Measurements.end(), std::back_inserter(BaseClass_list));
+		return !BaseClass_list.empty();
+	}
+	return false;
+}
+
 bool get_AccumulatorLimitSet_isPercentageLimits(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const AccumulatorLimitSet* element = dynamic_cast<const AccumulatorLimitSet*>(BaseClass_ptr1))
+	const AccumulatorLimitSet* element = dynamic_cast<const AccumulatorLimitSet*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->isPercentageLimits;
 		if (!buffer.str().empty())
@@ -106,18 +118,6 @@ bool get_AccumulatorLimitSet_isPercentageLimits(const BaseClass* BaseClass_ptr1,
 	return false;
 }
 
-
-bool get_AccumulatorLimitSet_Measurements(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const AccumulatorLimitSet* element = dynamic_cast<const AccumulatorLimitSet*>(BaseClass_ptr1))
-	{
-		std::copy(element->Measurements.begin(), element->Measurements.end(), std::back_inserter(BaseClass_list));
-		return !BaseClass_list.empty();
-	}
-	return false;
-}
-
-
 const char AccumulatorLimitSet::debugName[] = "AccumulatorLimitSet";
 const char* AccumulatorLimitSet::debugString() const
 {
@@ -126,18 +126,18 @@ const char* AccumulatorLimitSet::debugString() const
 
 void AccumulatorLimitSet::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:AccumulatorLimitSet"), &AccumulatorLimitSet_factory));
+	factory_map.emplace("cim:AccumulatorLimitSet", &AccumulatorLimitSet_factory);
 }
 
 void AccumulatorLimitSet::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:AccumulatorLimitSet.isPercentageLimits"), &assign_AccumulatorLimitSet_isPercentageLimits));
+	assign_map.emplace("cim:AccumulatorLimitSet.isPercentageLimits", &assign_AccumulatorLimitSet_isPercentageLimits);
 }
 
 void AccumulatorLimitSet::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:AccumulatorLimitSet.Limits"), &assign_AccumulatorLimitSet_Limits));
-	assign_map.insert(std::make_pair(std::string("cim:AccumulatorLimitSet.Measurements"), &assign_AccumulatorLimitSet_Measurements));
+	assign_map.emplace("cim:AccumulatorLimitSet.Limits", &assign_AccumulatorLimitSet_Limits);
+	assign_map.emplace("cim:AccumulatorLimitSet.Measurements", &assign_AccumulatorLimitSet_Measurements);
 }
 
 void AccumulatorLimitSet::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

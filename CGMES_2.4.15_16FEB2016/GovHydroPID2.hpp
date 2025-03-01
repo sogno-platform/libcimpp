@@ -21,9 +21,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Hydro turbine and governor. Represents plants with straight forward penstock configurations and "three term" electro-hydraulic governors (i.e. Woodard electronic).
-	*/
+	/** \brief Hydro turbine and governor. Represents plants with straight forward penstock configurations and "three term" electro-hydraulic governors (i.e. Woodard electronic). */
 	class GovHydroPID2 : public TurbineGovernorDynamics
 	{
 	public:
@@ -31,28 +29,71 @@ namespace CIMPP
 		GovHydroPID2();
 		~GovHydroPID2() override;
 
-		CIMPP::PU atw;  /* Factor multiplying Tw (Atw).  Typical Value = 0. Default: nullptr */
-		CIMPP::PU d;  /* Turbine damping factor (D).  Unit = delta P / delta speed.  Typical Value = 0. Default: nullptr */
-		CIMPP::Boolean feedbackSignal;  /* Feedback signal type flag (Flag). true = use gate position feedback signal false = use Pe. Default: false */
-		CIMPP::PU g0;  /* Gate opening at speed no load (G0).  Typical Value = 0. Default: nullptr */
-		CIMPP::PU g1;  /* Intermediate gate opening (G1).  Typical Value = 0. Default: nullptr */
-		CIMPP::PU g2;  /* Intermediate gate opening (G2).  Typical Value = 0. Default: nullptr */
-		CIMPP::PU gmax;  /* Maximum gate opening (Gmax).  Typical Value = 0. Default: nullptr */
-		CIMPP::PU gmin;  /* Minimum gate opening (Gmin).  Typical Value = 0. Default: nullptr */
-		CIMPP::PU kd;  /* Derivative gain (Kd).  Typical Value = 0. Default: nullptr */
-		CIMPP::Simple_Float ki;  /* Reset gain (Ki).  Unit = PU/ sec.  Typical Value = 0. Default: nullptr */
-		CIMPP::PU kp;  /* Proportional gain (Kp).  Typical Value = 0. Default: nullptr */
-		CIMPP::ActivePower mwbase;  /* Base for power values (MWbase) (&gt;0).  Unit = MW. Default: nullptr */
-		CIMPP::PU p1;  /* Power at gate opening G1 (P1).  Typical Value = 0. Default: nullptr */
-		CIMPP::PU p2;  /* Power at gate opening G2 (P2).  Typical Value = 0. Default: nullptr */
-		CIMPP::PU p3;  /* Power at full opened gate (P3).  Typical Value = 0. Default: nullptr */
-		CIMPP::PU rperm;  /* Permanent drop (Rperm).  Typical Value = 0. Default: nullptr */
-		CIMPP::Seconds ta;  /* Controller time constant (Ta) (&gt;0).  Typical Value = 0. Default: nullptr */
-		CIMPP::Seconds tb;  /* Gate servo time constant (Tb) (&gt;0).  Typical Value = 0. Default: nullptr */
-		CIMPP::Seconds treg;  /* Speed detector time constant (Treg).  Typical Value = 0. Default: nullptr */
-		CIMPP::Seconds tw;  /* Water inertia time constant (Tw) (&gt;0).  Typical Value = 0. Default: nullptr */
-		CIMPP::Simple_Float velmax;  /* Maximum gate opening velocity (Velmax).  Unit = PU/sec.  Typical Value = 0. Default: nullptr */
-		CIMPP::Simple_Float velmin;  /* Maximum gate closing velocity (Velmin).  Unit = PU/sec.  Typical Value = 0. Default: nullptr */
+		/** \brief Factor multiplying Tw (Atw).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU atw;
+
+		/** \brief Turbine damping factor (D).  Unit = delta P / delta speed.  Typical Value = 0. Default: nullptr */
+		CIMPP::PU d;
+
+		/** \brief Feedback signal type flag (Flag). true = use gate position feedback signal false = use Pe. Default: false */
+		CIMPP::Boolean feedbackSignal;
+
+		/** \brief Gate opening at speed no load (G0).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU g0;
+
+		/** \brief Intermediate gate opening (G1).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU g1;
+
+		/** \brief Intermediate gate opening (G2).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU g2;
+
+		/** \brief Maximum gate opening (Gmax).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU gmax;
+
+		/** \brief Minimum gate opening (Gmin).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU gmin;
+
+		/** \brief Derivative gain (Kd).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU kd;
+
+		/** \brief Reset gain (Ki).  Unit = PU/ sec.  Typical Value = 0. Default: nullptr */
+		CIMPP::Simple_Float ki;
+
+		/** \brief Proportional gain (Kp).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU kp;
+
+		/** \brief Base for power values (MWbase) (&gt;0).  Unit = MW. Default: nullptr */
+		CIMPP::ActivePower mwbase;
+
+		/** \brief Power at gate opening G1 (P1).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU p1;
+
+		/** \brief Power at gate opening G2 (P2).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU p2;
+
+		/** \brief Power at full opened gate (P3).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU p3;
+
+		/** \brief Permanent drop (Rperm).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU rperm;
+
+		/** \brief Controller time constant (Ta) (&gt;0).  Typical Value = 0. Default: nullptr */
+		CIMPP::Seconds ta;
+
+		/** \brief Gate servo time constant (Tb) (&gt;0).  Typical Value = 0. Default: nullptr */
+		CIMPP::Seconds tb;
+
+		/** \brief Speed detector time constant (Treg).  Typical Value = 0. Default: nullptr */
+		CIMPP::Seconds treg;
+
+		/** \brief Water inertia time constant (Tw) (&gt;0).  Typical Value = 0. Default: nullptr */
+		CIMPP::Seconds tw;
+
+		/** \brief Maximum gate opening velocity (Velmax).  Unit = PU/sec.  Typical Value = 0. Default: nullptr */
+		CIMPP::Simple_Float velmax;
+
+		/** \brief Maximum gate closing velocity (Velmin).  Unit = PU/sec.  Typical Value = 0. Default: nullptr */
+		CIMPP::Simple_Float velmin;
 
 		static const char debugName[];
 		const char* debugString() const override;

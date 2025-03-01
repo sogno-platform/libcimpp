@@ -9,33 +9,21 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	The state of the battery unit.
-	*/
+	/** \brief The state of the battery unit. */
 	class BatteryStateKind
 	{
 	public:
 		enum BatteryStateKind_ENUM
 		{
-			/**
-			 * Stored energy is decreasing.
-			 */
+			/** Stored energy is decreasing. */
 			discharging,
-			/**
-			 * Unable to charge, and not discharging.
-			 */
+			/** Unable to charge, and not discharging. */
 			full,
-			/**
-			 * Neither charging nor discharging, but able to do so.
-			 */
+			/** Neither charging nor discharging, but able to do so. */
 			waiting,
-			/**
-			 * Stored energy is increasing.
-			 */
+			/** Stored energy is increasing. */
 			charging,
-			/**
-			 * Unable to discharge, and not charging.
-			 */
+			/** Unable to discharge, and not charging. */
 			empty,
 		};
 

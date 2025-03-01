@@ -18,9 +18,7 @@ namespace CIMPP
 	class WindContRotorRIEC;
 	class WindPitchContPowerIEC;
 
-	/*
-	Wind turbine IEC type 2.  Reference: IEC 61400-27-1:2015, 5.5.3.
-	*/
+	/** \brief Wind turbine IEC type 2.  Reference: IEC 61400-27-1:2015, 5.5.3. */
 	class WindGenTurbineType2IEC : public WindTurbineType1or2IEC
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		WindGenTurbineType2IEC();
 		~WindGenTurbineType2IEC() override;
 
-		CIMPP::WindContRotorRIEC* WindContRotorRIEC;  /* Wind control rotor resistance model associated with wind turbine type 2 model. Default: 0 */
-		CIMPP::WindPitchContPowerIEC* WindPitchContPowerIEC;  /* Pitch control power model associated with this wind turbine type 2 model. Default: 0 */
+		/** \brief Wind control rotor resistance model associated with wind turbine type 2 model. Default: 0 */
+		CIMPP::WindContRotorRIEC* WindContRotorRIEC;
+
+		/** \brief Pitch control power model associated with this wind turbine type 2 model. Default: 0 */
+		CIMPP::WindPitchContPowerIEC* WindPitchContPowerIEC;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -20,9 +20,7 @@ namespace CIMPP
 	class RatioTapChangerTable;
 	class TransformerEnd;
 
-	/*
-	A tap changer that changes the voltage ratio impacting the voltage magnitude but not the phase angle across the transformer.
-	*/
+	/** \brief A tap changer that changes the voltage ratio impacting the voltage magnitude but not the phase angle across the transformer. */
 	class RatioTapChanger : public TapChanger
 	{
 	public:
@@ -30,10 +28,17 @@ namespace CIMPP
 		RatioTapChanger();
 		~RatioTapChanger() override;
 
-		CIMPP::RatioTapChangerTable* RatioTapChangerTable;  /* The ratio tap changer of this tap ratio table. Default: 0 */
-		CIMPP::TransformerEnd* TransformerEnd;  /* Ratio tap changer associated with this transformer end. Default: 0 */
-		CIMPP::PerCent stepVoltageIncrement;  /* Tap step increment, in per cent of nominal voltage, per step position. Default: nullptr */
-		CIMPP::TransformerControlMode tculControlMode;  /* Specifies the regulation control mode (voltage or reactive) of the RatioTapChanger. Default: 0 */
+		/** \brief The ratio tap changer of this tap ratio table. Default: 0 */
+		CIMPP::RatioTapChangerTable* RatioTapChangerTable;
+
+		/** \brief Ratio tap changer associated with this transformer end. Default: 0 */
+		CIMPP::TransformerEnd* TransformerEnd;
+
+		/** \brief Tap step increment, in per cent of nominal voltage, per step position. Default: nullptr */
+		CIMPP::PerCent stepVoltageIncrement;
+
+		/** \brief Specifies the regulation control mode (voltage or reactive) of the RatioTapChanger. Default: 0 */
+		CIMPP::TransformerControlMode tculControlMode;
 
 		static const char debugName[];
 		const char* debugString() const override;

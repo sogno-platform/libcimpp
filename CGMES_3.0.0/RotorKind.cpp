@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "RotorKind")
+		if (EnumSymbol.substr(0, pos) != "RotorKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,12 +50,12 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "roundRotor")
+		if (EnumSymbol == "roundRotor")
 		{
 			rop = RotorKind::roundRotor;
 			return lop;
 		}
-		if(EnumSymbol == "salientPole")
+		if (EnumSymbol == "salientPole")
 		{
 			rop = RotorKind::salientPole;
 			return lop;

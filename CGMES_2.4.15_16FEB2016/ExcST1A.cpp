@@ -8,29 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
 
 using namespace CIMPP;
 
-ExcST1A::ExcST1A() {};
-ExcST1A::~ExcST1A() {};
+ExcST1A::ExcST1A() {}
+ExcST1A::~ExcST1A() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -74,246 +56,262 @@ ExcST1A::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_ExcST1A_ilr(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcST1A_ilr(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ilr;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcST1A_ka(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcST1A_ka(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ka;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcST1A_kc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcST1A_kc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kc;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcST1A_kf(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcST1A_kf(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kf;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcST1A_klr(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcST1A_klr(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->klr;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcST1A_ta(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcST1A_ta(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ta;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcST1A_tb(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcST1A_tb(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tb;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcST1A_tb1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcST1A_tb1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tb1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcST1A_tc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcST1A_tc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tc;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcST1A_tc1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcST1A_tc1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tc1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcST1A_tf(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcST1A_tf(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tf;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcST1A_vamax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcST1A_vamax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vamax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcST1A_vamin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcST1A_vamin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vamin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcST1A_vimax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcST1A_vimax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vimax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcST1A_vimin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcST1A_vimin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vimin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcST1A_vrmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcST1A_vrmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vrmax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcST1A_vrmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcST1A_vrmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vrmin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcST1A_xe(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcST1A_xe(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1))
+	ExcST1A* element = dynamic_cast<ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->xe;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_ExcST1A_ilr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ilr;
 		if (!buffer.str().empty())
@@ -327,7 +325,8 @@ bool get_ExcST1A_ilr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcST1A_ka(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ka;
 		if (!buffer.str().empty())
@@ -341,7 +340,8 @@ bool get_ExcST1A_ka(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcST1A_kc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kc;
 		if (!buffer.str().empty())
@@ -355,7 +355,8 @@ bool get_ExcST1A_kc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcST1A_kf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kf;
 		if (!buffer.str().empty())
@@ -369,7 +370,8 @@ bool get_ExcST1A_kf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcST1A_klr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->klr;
 		if (!buffer.str().empty())
@@ -383,7 +385,8 @@ bool get_ExcST1A_klr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcST1A_ta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ta;
 		if (!buffer.str().empty())
@@ -397,7 +400,8 @@ bool get_ExcST1A_ta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcST1A_tb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tb;
 		if (!buffer.str().empty())
@@ -411,7 +415,8 @@ bool get_ExcST1A_tb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcST1A_tb1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tb1;
 		if (!buffer.str().empty())
@@ -425,7 +430,8 @@ bool get_ExcST1A_tb1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcST1A_tc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tc;
 		if (!buffer.str().empty())
@@ -439,7 +445,8 @@ bool get_ExcST1A_tc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcST1A_tc1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tc1;
 		if (!buffer.str().empty())
@@ -453,7 +460,8 @@ bool get_ExcST1A_tc1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcST1A_tf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tf;
 		if (!buffer.str().empty())
@@ -467,7 +475,8 @@ bool get_ExcST1A_tf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcST1A_vamax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vamax;
 		if (!buffer.str().empty())
@@ -481,7 +490,8 @@ bool get_ExcST1A_vamax(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_ExcST1A_vamin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vamin;
 		if (!buffer.str().empty())
@@ -495,7 +505,8 @@ bool get_ExcST1A_vamin(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_ExcST1A_vimax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vimax;
 		if (!buffer.str().empty())
@@ -509,7 +520,8 @@ bool get_ExcST1A_vimax(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_ExcST1A_vimin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vimin;
 		if (!buffer.str().empty())
@@ -523,7 +535,8 @@ bool get_ExcST1A_vimin(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_ExcST1A_vrmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vrmax;
 		if (!buffer.str().empty())
@@ -537,7 +550,8 @@ bool get_ExcST1A_vrmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_ExcST1A_vrmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vrmin;
 		if (!buffer.str().empty())
@@ -551,7 +565,8 @@ bool get_ExcST1A_vrmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_ExcST1A_xe(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1))
+	const ExcST1A* element = dynamic_cast<const ExcST1A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->xe;
 		if (!buffer.str().empty())
@@ -563,8 +578,6 @@ bool get_ExcST1A_xe(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 	return false;
 }
 
-
-
 const char ExcST1A::debugName[] = "ExcST1A";
 const char* ExcST1A::debugString() const
 {
@@ -573,29 +586,29 @@ const char* ExcST1A::debugString() const
 
 void ExcST1A::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ExcST1A"), &ExcST1A_factory));
+	factory_map.emplace("cim:ExcST1A", &ExcST1A_factory);
 }
 
 void ExcST1A::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ExcST1A.ilr"), &assign_ExcST1A_ilr));
-	assign_map.insert(std::make_pair(std::string("cim:ExcST1A.ka"), &assign_ExcST1A_ka));
-	assign_map.insert(std::make_pair(std::string("cim:ExcST1A.kc"), &assign_ExcST1A_kc));
-	assign_map.insert(std::make_pair(std::string("cim:ExcST1A.kf"), &assign_ExcST1A_kf));
-	assign_map.insert(std::make_pair(std::string("cim:ExcST1A.klr"), &assign_ExcST1A_klr));
-	assign_map.insert(std::make_pair(std::string("cim:ExcST1A.ta"), &assign_ExcST1A_ta));
-	assign_map.insert(std::make_pair(std::string("cim:ExcST1A.tb"), &assign_ExcST1A_tb));
-	assign_map.insert(std::make_pair(std::string("cim:ExcST1A.tb1"), &assign_ExcST1A_tb1));
-	assign_map.insert(std::make_pair(std::string("cim:ExcST1A.tc"), &assign_ExcST1A_tc));
-	assign_map.insert(std::make_pair(std::string("cim:ExcST1A.tc1"), &assign_ExcST1A_tc1));
-	assign_map.insert(std::make_pair(std::string("cim:ExcST1A.tf"), &assign_ExcST1A_tf));
-	assign_map.insert(std::make_pair(std::string("cim:ExcST1A.vamax"), &assign_ExcST1A_vamax));
-	assign_map.insert(std::make_pair(std::string("cim:ExcST1A.vamin"), &assign_ExcST1A_vamin));
-	assign_map.insert(std::make_pair(std::string("cim:ExcST1A.vimax"), &assign_ExcST1A_vimax));
-	assign_map.insert(std::make_pair(std::string("cim:ExcST1A.vimin"), &assign_ExcST1A_vimin));
-	assign_map.insert(std::make_pair(std::string("cim:ExcST1A.vrmax"), &assign_ExcST1A_vrmax));
-	assign_map.insert(std::make_pair(std::string("cim:ExcST1A.vrmin"), &assign_ExcST1A_vrmin));
-	assign_map.insert(std::make_pair(std::string("cim:ExcST1A.xe"), &assign_ExcST1A_xe));
+	assign_map.emplace("cim:ExcST1A.ilr", &assign_ExcST1A_ilr);
+	assign_map.emplace("cim:ExcST1A.ka", &assign_ExcST1A_ka);
+	assign_map.emplace("cim:ExcST1A.kc", &assign_ExcST1A_kc);
+	assign_map.emplace("cim:ExcST1A.kf", &assign_ExcST1A_kf);
+	assign_map.emplace("cim:ExcST1A.klr", &assign_ExcST1A_klr);
+	assign_map.emplace("cim:ExcST1A.ta", &assign_ExcST1A_ta);
+	assign_map.emplace("cim:ExcST1A.tb", &assign_ExcST1A_tb);
+	assign_map.emplace("cim:ExcST1A.tb1", &assign_ExcST1A_tb1);
+	assign_map.emplace("cim:ExcST1A.tc", &assign_ExcST1A_tc);
+	assign_map.emplace("cim:ExcST1A.tc1", &assign_ExcST1A_tc1);
+	assign_map.emplace("cim:ExcST1A.tf", &assign_ExcST1A_tf);
+	assign_map.emplace("cim:ExcST1A.vamax", &assign_ExcST1A_vamax);
+	assign_map.emplace("cim:ExcST1A.vamin", &assign_ExcST1A_vamin);
+	assign_map.emplace("cim:ExcST1A.vimax", &assign_ExcST1A_vimax);
+	assign_map.emplace("cim:ExcST1A.vimin", &assign_ExcST1A_vimin);
+	assign_map.emplace("cim:ExcST1A.vrmax", &assign_ExcST1A_vrmax);
+	assign_map.emplace("cim:ExcST1A.vrmin", &assign_ExcST1A_vrmin);
+	assign_map.emplace("cim:ExcST1A.xe", &assign_ExcST1A_xe);
 }
 
 void ExcST1A::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

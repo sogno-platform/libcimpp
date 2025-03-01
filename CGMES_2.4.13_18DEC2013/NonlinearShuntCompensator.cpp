@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-NonlinearShuntCompensator::NonlinearShuntCompensator() {};
-NonlinearShuntCompensator::~NonlinearShuntCompensator() {};
+NonlinearShuntCompensator::NonlinearShuntCompensator() {}
+NonlinearShuntCompensator::~NonlinearShuntCompensator() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -41,8 +41,6 @@ NonlinearShuntCompensator::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_NonlinearShuntCompensatorPoint_NonlinearShuntCompensator(BaseClass*, BaseClass*);
 bool assign_NonlinearShuntCompensator_NonlinearShuntCompensatorPoints(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -61,7 +59,6 @@ bool assign_NonlinearShuntCompensator_NonlinearShuntCompensatorPoints(BaseClass*
 }
 
 
-
 const char NonlinearShuntCompensator::debugName[] = "NonlinearShuntCompensator";
 const char* NonlinearShuntCompensator::debugString() const
 {
@@ -70,7 +67,7 @@ const char* NonlinearShuntCompensator::debugString() const
 
 void NonlinearShuntCompensator::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:NonlinearShuntCompensator"), &NonlinearShuntCompensator_factory));
+	factory_map.emplace("cim:NonlinearShuntCompensator", &NonlinearShuntCompensator_factory);
 }
 
 void NonlinearShuntCompensator::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -79,7 +76,7 @@ void NonlinearShuntCompensator::addPrimitiveAssignFnsToMap(std::unordered_map<st
 
 void NonlinearShuntCompensator::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:NonlinearShuntCompensator.NonlinearShuntCompensatorPoints"), &assign_NonlinearShuntCompensator_NonlinearShuntCompensatorPoints));
+	assign_map.emplace("cim:NonlinearShuntCompensator.NonlinearShuntCompensatorPoints", &assign_NonlinearShuntCompensator_NonlinearShuntCompensatorPoints);
 }
 
 void NonlinearShuntCompensator::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

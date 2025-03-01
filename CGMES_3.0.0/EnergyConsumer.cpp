@@ -10,17 +10,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 #include "LoadDynamics.hpp"
 #include "LoadResponseCharacteristic.hpp"
-#include "ActivePower.hpp"
-#include "ActivePower.hpp"
-#include "PerCent.hpp"
-#include "ReactivePower.hpp"
-#include "ReactivePower.hpp"
-#include "PerCent.hpp"
 
 using namespace CIMPP;
 
-EnergyConsumer::EnergyConsumer() : LoadDynamics(nullptr), LoadResponse(nullptr) {};
-EnergyConsumer::~EnergyConsumer() {};
+EnergyConsumer::EnergyConsumer() : LoadDynamics(nullptr), LoadResponse(nullptr) {}
+EnergyConsumer::~EnergyConsumer() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -56,86 +50,6 @@ EnergyConsumer::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_EnergyConsumer_p(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (EnergyConsumer* element = dynamic_cast<EnergyConsumer*>(BaseClass_ptr1))
-	{
-		buffer >> element->p;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_EnergyConsumer_pfixed(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (EnergyConsumer* element = dynamic_cast<EnergyConsumer*>(BaseClass_ptr1))
-	{
-		buffer >> element->pfixed;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_EnergyConsumer_pfixedPct(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (EnergyConsumer* element = dynamic_cast<EnergyConsumer*>(BaseClass_ptr1))
-	{
-		buffer >> element->pfixedPct;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_EnergyConsumer_q(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (EnergyConsumer* element = dynamic_cast<EnergyConsumer*>(BaseClass_ptr1))
-	{
-		buffer >> element->q;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_EnergyConsumer_qfixed(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (EnergyConsumer* element = dynamic_cast<EnergyConsumer*>(BaseClass_ptr1))
-	{
-		buffer >> element->qfixed;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_EnergyConsumer_qfixedPct(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (EnergyConsumer* element = dynamic_cast<EnergyConsumer*>(BaseClass_ptr1))
-	{
-		buffer >> element->qfixedPct;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_LoadDynamics_EnergyConsumer(BaseClass*, BaseClass*);
 bool assign_EnergyConsumer_LoadDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -152,6 +66,7 @@ bool assign_EnergyConsumer_LoadDynamics(BaseClass* BaseClass_ptr1, BaseClass* Ba
 	}
 	return false;
 }
+
 bool assign_LoadResponseCharacteristic_EnergyConsumer(BaseClass*, BaseClass*);
 bool assign_EnergyConsumer_LoadResponse(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -169,9 +84,122 @@ bool assign_EnergyConsumer_LoadResponse(BaseClass* BaseClass_ptr1, BaseClass* Ba
 	return false;
 }
 
+bool assign_EnergyConsumer_p(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	EnergyConsumer* element = dynamic_cast<EnergyConsumer*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->p;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_EnergyConsumer_pfixed(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	EnergyConsumer* element = dynamic_cast<EnergyConsumer*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->pfixed;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_EnergyConsumer_pfixedPct(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	EnergyConsumer* element = dynamic_cast<EnergyConsumer*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->pfixedPct;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_EnergyConsumer_q(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	EnergyConsumer* element = dynamic_cast<EnergyConsumer*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->q;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_EnergyConsumer_qfixed(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	EnergyConsumer* element = dynamic_cast<EnergyConsumer*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->qfixed;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_EnergyConsumer_qfixedPct(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	EnergyConsumer* element = dynamic_cast<EnergyConsumer*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->qfixedPct;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_EnergyConsumer_LoadDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const EnergyConsumer* element = dynamic_cast<const EnergyConsumer*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->LoadDynamics != 0)
+		{
+			BaseClass_list.push_back(element->LoadDynamics);
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_EnergyConsumer_LoadResponse(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const EnergyConsumer* element = dynamic_cast<const EnergyConsumer*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->LoadResponse != 0)
+		{
+			BaseClass_list.push_back(element->LoadResponse);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_EnergyConsumer_p(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EnergyConsumer* element = dynamic_cast<const EnergyConsumer*>(BaseClass_ptr1))
+	const EnergyConsumer* element = dynamic_cast<const EnergyConsumer*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->p;
 		if (!buffer.str().empty())
@@ -185,7 +213,8 @@ bool get_EnergyConsumer_p(const BaseClass* BaseClass_ptr1, std::stringstream& bu
 
 bool get_EnergyConsumer_pfixed(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EnergyConsumer* element = dynamic_cast<const EnergyConsumer*>(BaseClass_ptr1))
+	const EnergyConsumer* element = dynamic_cast<const EnergyConsumer*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pfixed;
 		if (!buffer.str().empty())
@@ -199,7 +228,8 @@ bool get_EnergyConsumer_pfixed(const BaseClass* BaseClass_ptr1, std::stringstrea
 
 bool get_EnergyConsumer_pfixedPct(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EnergyConsumer* element = dynamic_cast<const EnergyConsumer*>(BaseClass_ptr1))
+	const EnergyConsumer* element = dynamic_cast<const EnergyConsumer*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pfixedPct;
 		if (!buffer.str().empty())
@@ -213,7 +243,8 @@ bool get_EnergyConsumer_pfixedPct(const BaseClass* BaseClass_ptr1, std::stringst
 
 bool get_EnergyConsumer_q(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EnergyConsumer* element = dynamic_cast<const EnergyConsumer*>(BaseClass_ptr1))
+	const EnergyConsumer* element = dynamic_cast<const EnergyConsumer*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->q;
 		if (!buffer.str().empty())
@@ -227,7 +258,8 @@ bool get_EnergyConsumer_q(const BaseClass* BaseClass_ptr1, std::stringstream& bu
 
 bool get_EnergyConsumer_qfixed(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EnergyConsumer* element = dynamic_cast<const EnergyConsumer*>(BaseClass_ptr1))
+	const EnergyConsumer* element = dynamic_cast<const EnergyConsumer*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->qfixed;
 		if (!buffer.str().empty())
@@ -241,7 +273,8 @@ bool get_EnergyConsumer_qfixed(const BaseClass* BaseClass_ptr1, std::stringstrea
 
 bool get_EnergyConsumer_qfixedPct(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EnergyConsumer* element = dynamic_cast<const EnergyConsumer*>(BaseClass_ptr1))
+	const EnergyConsumer* element = dynamic_cast<const EnergyConsumer*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->qfixedPct;
 		if (!buffer.str().empty())
@@ -253,34 +286,6 @@ bool get_EnergyConsumer_qfixedPct(const BaseClass* BaseClass_ptr1, std::stringst
 	return false;
 }
 
-
-bool get_EnergyConsumer_LoadDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const EnergyConsumer* element = dynamic_cast<const EnergyConsumer*>(BaseClass_ptr1))
-	{
-		if (element->LoadDynamics != 0)
-		{
-			BaseClass_list.push_back(element->LoadDynamics);
-			return true;
-		}
-	}
-	return false;
-}
-
-bool get_EnergyConsumer_LoadResponse(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const EnergyConsumer* element = dynamic_cast<const EnergyConsumer*>(BaseClass_ptr1))
-	{
-		if (element->LoadResponse != 0)
-		{
-			BaseClass_list.push_back(element->LoadResponse);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char EnergyConsumer::debugName[] = "EnergyConsumer";
 const char* EnergyConsumer::debugString() const
 {
@@ -289,23 +294,23 @@ const char* EnergyConsumer::debugString() const
 
 void EnergyConsumer::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:EnergyConsumer"), &EnergyConsumer_factory));
+	factory_map.emplace("cim:EnergyConsumer", &EnergyConsumer_factory);
 }
 
 void EnergyConsumer::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:EnergyConsumer.p"), &assign_EnergyConsumer_p));
-	assign_map.insert(std::make_pair(std::string("cim:EnergyConsumer.pfixed"), &assign_EnergyConsumer_pfixed));
-	assign_map.insert(std::make_pair(std::string("cim:EnergyConsumer.pfixedPct"), &assign_EnergyConsumer_pfixedPct));
-	assign_map.insert(std::make_pair(std::string("cim:EnergyConsumer.q"), &assign_EnergyConsumer_q));
-	assign_map.insert(std::make_pair(std::string("cim:EnergyConsumer.qfixed"), &assign_EnergyConsumer_qfixed));
-	assign_map.insert(std::make_pair(std::string("cim:EnergyConsumer.qfixedPct"), &assign_EnergyConsumer_qfixedPct));
+	assign_map.emplace("cim:EnergyConsumer.p", &assign_EnergyConsumer_p);
+	assign_map.emplace("cim:EnergyConsumer.pfixed", &assign_EnergyConsumer_pfixed);
+	assign_map.emplace("cim:EnergyConsumer.pfixedPct", &assign_EnergyConsumer_pfixedPct);
+	assign_map.emplace("cim:EnergyConsumer.q", &assign_EnergyConsumer_q);
+	assign_map.emplace("cim:EnergyConsumer.qfixed", &assign_EnergyConsumer_qfixed);
+	assign_map.emplace("cim:EnergyConsumer.qfixedPct", &assign_EnergyConsumer_qfixedPct);
 }
 
 void EnergyConsumer::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:EnergyConsumer.LoadDynamics"), &assign_EnergyConsumer_LoadDynamics));
-	assign_map.insert(std::make_pair(std::string("cim:EnergyConsumer.LoadResponse"), &assign_EnergyConsumer_LoadResponse));
+	assign_map.emplace("cim:EnergyConsumer.LoadDynamics", &assign_EnergyConsumer_LoadDynamics);
+	assign_map.emplace("cim:EnergyConsumer.LoadResponse", &assign_EnergyConsumer_LoadResponse);
 }
 
 void EnergyConsumer::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

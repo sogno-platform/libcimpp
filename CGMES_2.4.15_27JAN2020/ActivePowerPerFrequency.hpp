@@ -9,9 +9,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Active power variation with frequency.
-	*/
+	/** \brief Active power variation with frequency. */
 	class ActivePowerPerFrequency
 	{
 	public:

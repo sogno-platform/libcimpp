@@ -18,9 +18,7 @@ namespace CIMPP
 	class PhaseTapChangerTablePoint;
 	class PhaseTapChangerTabular;
 
-	/*
-	Describes a tabular curve for how the phase angle difference and impedance varies with the tap step.
-	*/
+	/** \brief Describes a tabular curve for how the phase angle difference and impedance varies with the tap step. */
 	class PhaseTapChangerTable : public IdentifiedObject
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		PhaseTapChangerTable();
 		~PhaseTapChangerTable() override;
 
-		std::list<CIMPP::PhaseTapChangerTablePoint*> PhaseTapChangerTablePoint;  /* The points of this table. Default: 0 */
-		std::list<CIMPP::PhaseTapChangerTabular*> PhaseTapChangerTabular;  /* The phase tap changers to which this phase tap table applies. Default: 0 */
+		/** \brief The points of this table. Default: 0 */
+		std::list<CIMPP::PhaseTapChangerTablePoint*> PhaseTapChangerTablePoint;
+
+		/** \brief The phase tap changers to which this phase tap table applies. Default: 0 */
+		std::list<CIMPP::PhaseTapChangerTabular*> PhaseTapChangerTabular;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -37,9 +37,7 @@ namespace CIMPP
 	class WindType1or2UserDefined;
 	class WindType3or4UserDefined;
 
-	/*
-	Supports definition of one or more parameters of several different datatypes for use by proprietary user-defined models.  NOTE: This class does not inherit from IdentifiedObject since it is not intended that a single instance of it be referenced by more than one proprietary user-defined model instance.
-	*/
+	/** \brief Supports definition of one or more parameters of several different datatypes for use by proprietary user-defined models.  NOTE: This class does not inherit from IdentifiedObject since it is not intended that a single instance of it be referenced by more than one proprietary user-defined model instance. */
 	class ProprietaryParameterDynamics : public BaseClass
 	{
 	public:
@@ -47,28 +45,71 @@ namespace CIMPP
 		ProprietaryParameterDynamics();
 		~ProprietaryParameterDynamics() override;
 
-		CIMPP::AsynchronousMachineUserDefined* AsynchronousMachineUserDefined;  /* Proprietary user-defined model with which this parameter is associated. Default: 0 */
-		CIMPP::DiscontinuousExcitationControlUserDefined* DiscontinuousExcitationControlUserDefined;  /* Proprietary user-defined model with which this parameter is associated. Default: 0 */
-		CIMPP::ExcitationSystemUserDefined* ExcitationSystemUserDefined;  /* Proprietary user-defined model with which this parameter is associated. Default: 0 */
-		CIMPP::LoadUserDefined* LoadUserDefined;  /* Proprietary user-defined model with which this parameter is associated. Default: 0 */
-		CIMPP::MechanicalLoadUserDefined* MechanicalLoadUserDefined;  /* Proprietary user-defined model with which this parameter is associated. Default: 0 */
-		CIMPP::OverexcitationLimiterUserDefined* OverexcitationLimiterUserDefined;  /* Proprietary user-defined model with which this parameter is associated. Default: 0 */
-		CIMPP::PFVArControllerType1UserDefined* PFVArControllerType1UserDefined;  /* Proprietary user-defined model with which this parameter is associated. Default: 0 */
-		CIMPP::PFVArControllerType2UserDefined* PFVArControllerType2UserDefined;  /* Proprietary user-defined model with which this parameter is associated. Default: 0 */
-		CIMPP::PowerSystemStabilizerUserDefined* PowerSystemStabilizerUserDefined;  /* Proprietary user-defined model with which this parameter is associated. Default: 0 */
-		CIMPP::SynchronousMachineUserDefined* SynchronousMachineUserDefined;  /* Proprietary user-defined model with which this parameter is associated. Default: 0 */
-		CIMPP::TurbineGovernorUserDefined* TurbineGovernorUserDefined;  /* Proprietary user-defined model with which this parameter is associated. Default: 0 */
-		CIMPP::TurbineLoadControllerUserDefined* TurbineLoadControllerUserDefined;  /* Proprietary user-defined model with which this parameter is associated. Default: 0 */
-		CIMPP::UnderexcitationLimiterUserDefined* UnderexcitationLimiterUserDefined;  /* Proprietary user-defined model with which this parameter is associated. Default: 0 */
-		CIMPP::VoltageAdjusterUserDefined* VoltageAdjusterUserDefined;  /* Proprietary user-defined model with which this parameter is associated. Default: 0 */
-		CIMPP::VoltageCompensatorUserDefined* VoltageCompensatorUserDefined;  /* Proprietary user-defined model with which this parameter is associated. Default: 0 */
-		CIMPP::WindPlantUserDefined* WindPlantUserDefined;  /* Proprietary user-defined model with which this parameter is associated. Default: 0 */
-		CIMPP::WindType1or2UserDefined* WindType1or2UserDefined;  /* Proprietary user-defined model with which this parameter is associated. Default: 0 */
-		CIMPP::WindType3or4UserDefined* WindType3or4UserDefined;  /* Proprietary user-defined model with which this parameter is associated. Default: 0 */
-		CIMPP::Boolean booleanParameterValue;  /* Used for boolean parameter value. If this attribute is populated, integerParameterValue and floatParameterValue will not be. Default: false */
-		CIMPP::Simple_Float floatParameterValue;  /* Used for floating point parameter value.  If this attribute is populated, booleanParameterValue and integerParameterValue will not be. Default: nullptr */
-		CIMPP::Integer integerParameterValue;  /* Used for integer parameter value.  If this attribute is populated, booleanParameterValue and floatParameterValue will not be. Default: 0 */
-		CIMPP::Integer parameterNumber;  /* Sequence number of the parameter among the set of parameters associated with the related proprietary user-defined model. Default: 0 */
+		/** \brief Proprietary user-defined model with which this parameter is associated. Default: 0 */
+		CIMPP::AsynchronousMachineUserDefined* AsynchronousMachineUserDefined;
+
+		/** \brief Proprietary user-defined model with which this parameter is associated. Default: 0 */
+		CIMPP::DiscontinuousExcitationControlUserDefined* DiscontinuousExcitationControlUserDefined;
+
+		/** \brief Proprietary user-defined model with which this parameter is associated. Default: 0 */
+		CIMPP::ExcitationSystemUserDefined* ExcitationSystemUserDefined;
+
+		/** \brief Proprietary user-defined model with which this parameter is associated. Default: 0 */
+		CIMPP::LoadUserDefined* LoadUserDefined;
+
+		/** \brief Proprietary user-defined model with which this parameter is associated. Default: 0 */
+		CIMPP::MechanicalLoadUserDefined* MechanicalLoadUserDefined;
+
+		/** \brief Proprietary user-defined model with which this parameter is associated. Default: 0 */
+		CIMPP::OverexcitationLimiterUserDefined* OverexcitationLimiterUserDefined;
+
+		/** \brief Proprietary user-defined model with which this parameter is associated. Default: 0 */
+		CIMPP::PFVArControllerType1UserDefined* PFVArControllerType1UserDefined;
+
+		/** \brief Proprietary user-defined model with which this parameter is associated. Default: 0 */
+		CIMPP::PFVArControllerType2UserDefined* PFVArControllerType2UserDefined;
+
+		/** \brief Proprietary user-defined model with which this parameter is associated. Default: 0 */
+		CIMPP::PowerSystemStabilizerUserDefined* PowerSystemStabilizerUserDefined;
+
+		/** \brief Proprietary user-defined model with which this parameter is associated. Default: 0 */
+		CIMPP::SynchronousMachineUserDefined* SynchronousMachineUserDefined;
+
+		/** \brief Proprietary user-defined model with which this parameter is associated. Default: 0 */
+		CIMPP::TurbineGovernorUserDefined* TurbineGovernorUserDefined;
+
+		/** \brief Proprietary user-defined model with which this parameter is associated. Default: 0 */
+		CIMPP::TurbineLoadControllerUserDefined* TurbineLoadControllerUserDefined;
+
+		/** \brief Proprietary user-defined model with which this parameter is associated. Default: 0 */
+		CIMPP::UnderexcitationLimiterUserDefined* UnderexcitationLimiterUserDefined;
+
+		/** \brief Proprietary user-defined model with which this parameter is associated. Default: 0 */
+		CIMPP::VoltageAdjusterUserDefined* VoltageAdjusterUserDefined;
+
+		/** \brief Proprietary user-defined model with which this parameter is associated. Default: 0 */
+		CIMPP::VoltageCompensatorUserDefined* VoltageCompensatorUserDefined;
+
+		/** \brief Proprietary user-defined model with which this parameter is associated. Default: 0 */
+		CIMPP::WindPlantUserDefined* WindPlantUserDefined;
+
+		/** \brief Proprietary user-defined model with which this parameter is associated. Default: 0 */
+		CIMPP::WindType1or2UserDefined* WindType1or2UserDefined;
+
+		/** \brief Proprietary user-defined model with which this parameter is associated. Default: 0 */
+		CIMPP::WindType3or4UserDefined* WindType3or4UserDefined;
+
+		/** \brief Used for boolean parameter value. If this attribute is populated, integerParameterValue and floatParameterValue will not be. Default: false */
+		CIMPP::Boolean booleanParameterValue;
+
+		/** \brief Used for floating point parameter value.  If this attribute is populated, booleanParameterValue and integerParameterValue will not be. Default: nullptr */
+		CIMPP::Simple_Float floatParameterValue;
+
+		/** \brief Used for integer parameter value.  If this attribute is populated, booleanParameterValue and floatParameterValue will not be. Default: 0 */
+		CIMPP::Integer integerParameterValue;
+
+		/** \brief Sequence number of the parameter among the set of parameters associated with the related proprietary user-defined model. Default: 0 */
+		CIMPP::Integer parameterNumber;
 
 		static const char debugName[];
 		const char* debugString() const override;

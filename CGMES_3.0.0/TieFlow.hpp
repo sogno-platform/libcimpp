@@ -19,9 +19,7 @@ namespace CIMPP
 	class ControlArea;
 	class Terminal;
 
-	/*
-	Defines the structure (in terms of location and direction) of the net interchange constraint for a control area. This constraint may be used by either AGC or power flow.
-	*/
+	/** \brief Defines the structure (in terms of location and direction) of the net interchange constraint for a control area. This constraint may be used by either AGC or power flow. */
 	class TieFlow : public IdentifiedObject
 	{
 	public:
@@ -29,9 +27,14 @@ namespace CIMPP
 		TieFlow();
 		~TieFlow() override;
 
-		CIMPP::ControlArea* ControlArea;  /* The control area of the tie flows. Default: 0 */
-		CIMPP::Terminal* Terminal;  /* The terminal to which this tie flow belongs. Default: 0 */
-		CIMPP::Boolean positiveFlowIn;  /* Specifies the sign of the tie flow associated with a control area. True if positive flow into the terminal (load convention) is also positive flow into the control area.  See the description of ControlArea for further explanation of how TieFlow.positiveFlowIn is used. Default: false */
+		/** \brief The control area of the tie flows. Default: 0 */
+		CIMPP::ControlArea* ControlArea;
+
+		/** \brief The terminal to which this tie flow belongs. Default: 0 */
+		CIMPP::Terminal* Terminal;
+
+		/** \brief Specifies the sign of the tie flow associated with a control area. True if positive flow into the terminal (load convention) is also positive flow into the control area.  See the description of ControlArea for further explanation of how TieFlow.positiveFlowIn is used. Default: false */
+		CIMPP::Boolean positiveFlowIn;
 
 		static const char debugName[];
 		const char* debugString() const override;

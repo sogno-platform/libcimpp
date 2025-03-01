@@ -14,8 +14,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-PFVArControllerType1Dynamics::PFVArControllerType1Dynamics() : ExcitationSystemDynamics(nullptr), RemoteInputSignal(nullptr), VoltageAdjusterDynamics(nullptr) {};
-PFVArControllerType1Dynamics::~PFVArControllerType1Dynamics() {};
+PFVArControllerType1Dynamics::PFVArControllerType1Dynamics() : ExcitationSystemDynamics(nullptr), RemoteInputSignal(nullptr), VoltageAdjusterDynamics(nullptr) {}
+PFVArControllerType1Dynamics::~PFVArControllerType1Dynamics() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -44,8 +44,6 @@ PFVArControllerType1Dynamics::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_ExcitationSystemDynamics_PFVArControllerType1Dynamics(BaseClass*, BaseClass*);
 bool assign_PFVArControllerType1Dynamics_ExcitationSystemDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -62,6 +60,7 @@ bool assign_PFVArControllerType1Dynamics_ExcitationSystemDynamics(BaseClass* Bas
 	}
 	return false;
 }
+
 bool assign_RemoteInputSignal_PFVArControllerType1Dynamics(BaseClass*, BaseClass*);
 bool assign_PFVArControllerType1Dynamics_RemoteInputSignal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -78,6 +77,7 @@ bool assign_PFVArControllerType1Dynamics_RemoteInputSignal(BaseClass* BaseClass_
 	}
 	return false;
 }
+
 bool assign_VoltageAdjusterDynamics_PFVArControllerType1Dynamics(BaseClass*, BaseClass*);
 bool assign_PFVArControllerType1Dynamics_VoltageAdjusterDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -95,10 +95,10 @@ bool assign_PFVArControllerType1Dynamics_VoltageAdjusterDynamics(BaseClass* Base
 	return false;
 }
 
-
 bool get_PFVArControllerType1Dynamics_ExcitationSystemDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const PFVArControllerType1Dynamics* element = dynamic_cast<const PFVArControllerType1Dynamics*>(BaseClass_ptr1))
+	const PFVArControllerType1Dynamics* element = dynamic_cast<const PFVArControllerType1Dynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->ExcitationSystemDynamics != 0)
 		{
@@ -110,6 +110,7 @@ bool get_PFVArControllerType1Dynamics_ExcitationSystemDynamics(const BaseClass* 
 }
 
 
+
 const char PFVArControllerType1Dynamics::debugName[] = "PFVArControllerType1Dynamics";
 const char* PFVArControllerType1Dynamics::debugString() const
 {
@@ -118,7 +119,7 @@ const char* PFVArControllerType1Dynamics::debugString() const
 
 void PFVArControllerType1Dynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:PFVArControllerType1Dynamics"), &PFVArControllerType1Dynamics_factory));
+	factory_map.emplace("cim:PFVArControllerType1Dynamics", &PFVArControllerType1Dynamics_factory);
 }
 
 void PFVArControllerType1Dynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -127,9 +128,9 @@ void PFVArControllerType1Dynamics::addPrimitiveAssignFnsToMap(std::unordered_map
 
 void PFVArControllerType1Dynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:PFVArControllerType1Dynamics.ExcitationSystemDynamics"), &assign_PFVArControllerType1Dynamics_ExcitationSystemDynamics));
-	assign_map.insert(std::make_pair(std::string("cim:PFVArControllerType1Dynamics.RemoteInputSignal"), &assign_PFVArControllerType1Dynamics_RemoteInputSignal));
-	assign_map.insert(std::make_pair(std::string("cim:PFVArControllerType1Dynamics.VoltageAdjusterDynamics"), &assign_PFVArControllerType1Dynamics_VoltageAdjusterDynamics));
+	assign_map.emplace("cim:PFVArControllerType1Dynamics.ExcitationSystemDynamics", &assign_PFVArControllerType1Dynamics_ExcitationSystemDynamics);
+	assign_map.emplace("cim:PFVArControllerType1Dynamics.RemoteInputSignal", &assign_PFVArControllerType1Dynamics_RemoteInputSignal);
+	assign_map.emplace("cim:PFVArControllerType1Dynamics.VoltageAdjusterDynamics", &assign_PFVArControllerType1Dynamics_VoltageAdjusterDynamics);
 }
 
 void PFVArControllerType1Dynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

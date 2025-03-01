@@ -8,14 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "DateTime.hpp"
-#include "UnitSymbol.hpp"
-#include "UnitSymbol.hpp"
 
 using namespace CIMPP;
 
-BasicIntervalSchedule::BasicIntervalSchedule() {};
-BasicIntervalSchedule::~BasicIntervalSchedule() {};
+BasicIntervalSchedule::BasicIntervalSchedule() {}
+BasicIntervalSchedule::~BasicIntervalSchedule() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -44,51 +41,52 @@ BasicIntervalSchedule::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_BasicIntervalSchedule_startTime(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_BasicIntervalSchedule_startTime(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (BasicIntervalSchedule* element = dynamic_cast<BasicIntervalSchedule*>(BaseClass_ptr1))
+	BasicIntervalSchedule* element = dynamic_cast<BasicIntervalSchedule*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->startTime = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_BasicIntervalSchedule_value1Unit(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_BasicIntervalSchedule_value1Unit(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (BasicIntervalSchedule* element = dynamic_cast<BasicIntervalSchedule*>(BaseClass_ptr1))
+	BasicIntervalSchedule* element = dynamic_cast<BasicIntervalSchedule*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->value1Unit;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_BasicIntervalSchedule_value2Unit(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_BasicIntervalSchedule_value2Unit(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (BasicIntervalSchedule* element = dynamic_cast<BasicIntervalSchedule*>(BaseClass_ptr1))
+	BasicIntervalSchedule* element = dynamic_cast<BasicIntervalSchedule*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->value2Unit;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_BasicIntervalSchedule_startTime(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const BasicIntervalSchedule* element = dynamic_cast<const BasicIntervalSchedule*>(BaseClass_ptr1))
+	const BasicIntervalSchedule* element = dynamic_cast<const BasicIntervalSchedule*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->startTime;
 		if (!buffer.str().empty())
@@ -100,11 +98,10 @@ bool get_BasicIntervalSchedule_startTime(const BaseClass* BaseClass_ptr1, std::s
 	return false;
 }
 
-
-
 bool get_BasicIntervalSchedule_value1Unit(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const BasicIntervalSchedule* element = dynamic_cast<const BasicIntervalSchedule*>(BaseClass_ptr1))
+	const BasicIntervalSchedule* element = dynamic_cast<const BasicIntervalSchedule*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->value1Unit;
 		if (!buffer.str().empty())
@@ -118,7 +115,8 @@ bool get_BasicIntervalSchedule_value1Unit(const BaseClass* BaseClass_ptr1, std::
 
 bool get_BasicIntervalSchedule_value2Unit(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const BasicIntervalSchedule* element = dynamic_cast<const BasicIntervalSchedule*>(BaseClass_ptr1))
+	const BasicIntervalSchedule* element = dynamic_cast<const BasicIntervalSchedule*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->value2Unit;
 		if (!buffer.str().empty())
@@ -138,14 +136,14 @@ const char* BasicIntervalSchedule::debugString() const
 
 void BasicIntervalSchedule::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:BasicIntervalSchedule"), &BasicIntervalSchedule_factory));
+	factory_map.emplace("cim:BasicIntervalSchedule", &BasicIntervalSchedule_factory);
 }
 
 void BasicIntervalSchedule::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:BasicIntervalSchedule.startTime"), &assign_BasicIntervalSchedule_startTime));
-	assign_map.insert(std::make_pair(std::string("cim:BasicIntervalSchedule.value1Unit"), &assign_BasicIntervalSchedule_value1Unit));
-	assign_map.insert(std::make_pair(std::string("cim:BasicIntervalSchedule.value2Unit"), &assign_BasicIntervalSchedule_value2Unit));
+	assign_map.emplace("cim:BasicIntervalSchedule.startTime", &assign_BasicIntervalSchedule_startTime);
+	assign_map.emplace("cim:BasicIntervalSchedule.value1Unit", &assign_BasicIntervalSchedule_value1Unit);
+	assign_map.emplace("cim:BasicIntervalSchedule.value2Unit", &assign_BasicIntervalSchedule_value2Unit);
 }
 
 void BasicIntervalSchedule::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

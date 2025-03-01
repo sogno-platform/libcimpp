@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "LimitTypeKind")
+		if (EnumSymbol.substr(0, pos) != "LimitTypeKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,37 +50,37 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "patl")
+		if (EnumSymbol == "patl")
 		{
 			rop = LimitTypeKind::patl;
 			return lop;
 		}
-		if(EnumSymbol == "patlt")
+		if (EnumSymbol == "patlt")
 		{
 			rop = LimitTypeKind::patlt;
 			return lop;
 		}
-		if(EnumSymbol == "tatl")
+		if (EnumSymbol == "tatl")
 		{
 			rop = LimitTypeKind::tatl;
 			return lop;
 		}
-		if(EnumSymbol == "tc")
+		if (EnumSymbol == "tc")
 		{
 			rop = LimitTypeKind::tc;
 			return lop;
 		}
-		if(EnumSymbol == "tct")
+		if (EnumSymbol == "tct")
 		{
 			rop = LimitTypeKind::tct;
 			return lop;
 		}
-		if(EnumSymbol == "highVoltage")
+		if (EnumSymbol == "highVoltage")
 		{
 			rop = LimitTypeKind::highVoltage;
 			return lop;
 		}
-		if(EnumSymbol == "lowVoltage")
+		if (EnumSymbol == "lowVoltage")
 		{
 			rop = LimitTypeKind::lowVoltage;
 			return lop;

@@ -8,12 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "AngleDegrees.hpp"
 
 using namespace CIMPP;
 
-PhaseTapChangerAsymmetrical::PhaseTapChangerAsymmetrical() {};
-PhaseTapChangerAsymmetrical::~PhaseTapChangerAsymmetrical() {};
+PhaseTapChangerAsymmetrical::PhaseTapChangerAsymmetrical() {}
+PhaseTapChangerAsymmetrical::~PhaseTapChangerAsymmetrical() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,25 +39,24 @@ PhaseTapChangerAsymmetrical::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_PhaseTapChangerAsymmetrical_windingConnectionAngle(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PhaseTapChangerAsymmetrical_windingConnectionAngle(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PhaseTapChangerAsymmetrical* element = dynamic_cast<PhaseTapChangerAsymmetrical*>(BaseClass_ptr1))
+	PhaseTapChangerAsymmetrical* element = dynamic_cast<PhaseTapChangerAsymmetrical*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->windingConnectionAngle;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-
-
 bool get_PhaseTapChangerAsymmetrical_windingConnectionAngle(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PhaseTapChangerAsymmetrical* element = dynamic_cast<const PhaseTapChangerAsymmetrical*>(BaseClass_ptr1))
+	const PhaseTapChangerAsymmetrical* element = dynamic_cast<const PhaseTapChangerAsymmetrical*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->windingConnectionAngle;
 		if (!buffer.str().empty())
@@ -70,8 +68,6 @@ bool get_PhaseTapChangerAsymmetrical_windingConnectionAngle(const BaseClass* Bas
 	return false;
 }
 
-
-
 const char PhaseTapChangerAsymmetrical::debugName[] = "PhaseTapChangerAsymmetrical";
 const char* PhaseTapChangerAsymmetrical::debugString() const
 {
@@ -80,12 +76,12 @@ const char* PhaseTapChangerAsymmetrical::debugString() const
 
 void PhaseTapChangerAsymmetrical::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:PhaseTapChangerAsymmetrical"), &PhaseTapChangerAsymmetrical_factory));
+	factory_map.emplace("cim:PhaseTapChangerAsymmetrical", &PhaseTapChangerAsymmetrical_factory);
 }
 
 void PhaseTapChangerAsymmetrical::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:PhaseTapChangerAsymmetrical.windingConnectionAngle"), &assign_PhaseTapChangerAsymmetrical_windingConnectionAngle));
+	assign_map.emplace("cim:PhaseTapChangerAsymmetrical.windingConnectionAngle", &assign_PhaseTapChangerAsymmetrical_windingConnectionAngle);
 }
 
 void PhaseTapChangerAsymmetrical::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

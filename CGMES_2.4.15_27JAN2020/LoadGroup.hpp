@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class SubLoadArea;
 
-	/*
-	The class is the third level in a hierarchical structure for grouping of loads for the purpose of load flow load scaling.
-	*/
+	/** \brief The class is the third level in a hierarchical structure for grouping of loads for the purpose of load flow load scaling. */
 	class LoadGroup : public IdentifiedObject
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		LoadGroup();
 		~LoadGroup() override;
 
-		CIMPP::SubLoadArea* SubLoadArea;  /* The SubLoadArea where the Loadgroup belongs. Default: 0 */
+		/** \brief The SubLoadArea where the Loadgroup belongs. Default: 0 */
+		CIMPP::SubLoadArea* SubLoadArea;
 
 		static const char debugName[];
 		const char* debugString() const override;

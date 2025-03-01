@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-AccumulatorReset::AccumulatorReset() : AccumulatorValue(nullptr) {};
-AccumulatorReset::~AccumulatorReset() {};
+AccumulatorReset::AccumulatorReset() : AccumulatorValue(nullptr) {}
+AccumulatorReset::~AccumulatorReset() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ AccumulatorReset::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_AccumulatorValue_AccumulatorReset(BaseClass*, BaseClass*);
 bool assign_AccumulatorReset_AccumulatorValue(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -59,10 +57,10 @@ bool assign_AccumulatorReset_AccumulatorValue(BaseClass* BaseClass_ptr1, BaseCla
 	return false;
 }
 
-
 bool get_AccumulatorReset_AccumulatorValue(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const AccumulatorReset* element = dynamic_cast<const AccumulatorReset*>(BaseClass_ptr1))
+	const AccumulatorReset* element = dynamic_cast<const AccumulatorReset*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->AccumulatorValue != 0)
 		{
@@ -73,7 +71,6 @@ bool get_AccumulatorReset_AccumulatorValue(const BaseClass* BaseClass_ptr1, std:
 	return false;
 }
 
-
 const char AccumulatorReset::debugName[] = "AccumulatorReset";
 const char* AccumulatorReset::debugString() const
 {
@@ -82,7 +79,7 @@ const char* AccumulatorReset::debugString() const
 
 void AccumulatorReset::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:AccumulatorReset"), &AccumulatorReset_factory));
+	factory_map.emplace("cim:AccumulatorReset", &AccumulatorReset_factory);
 }
 
 void AccumulatorReset::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -91,7 +88,7 @@ void AccumulatorReset::addPrimitiveAssignFnsToMap(std::unordered_map<std::string
 
 void AccumulatorReset::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:AccumulatorReset.AccumulatorValue"), &assign_AccumulatorReset_AccumulatorValue));
+	assign_map.emplace("cim:AccumulatorReset.AccumulatorValue", &assign_AccumulatorReset_AccumulatorValue);
 }
 
 void AccumulatorReset::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

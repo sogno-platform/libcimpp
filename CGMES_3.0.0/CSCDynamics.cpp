@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-CSCDynamics::CSCDynamics() : CSConverter(nullptr) {};
-CSCDynamics::~CSCDynamics() {};
+CSCDynamics::CSCDynamics() : CSConverter(nullptr) {}
+CSCDynamics::~CSCDynamics() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ CSCDynamics::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_CsConverter_CSCDynamics(BaseClass*, BaseClass*);
 bool assign_CSCDynamics_CSConverter(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -59,10 +57,10 @@ bool assign_CSCDynamics_CSConverter(BaseClass* BaseClass_ptr1, BaseClass* BaseCl
 	return false;
 }
 
-
 bool get_CSCDynamics_CSConverter(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const CSCDynamics* element = dynamic_cast<const CSCDynamics*>(BaseClass_ptr1))
+	const CSCDynamics* element = dynamic_cast<const CSCDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->CSConverter != 0)
 		{
@@ -73,7 +71,6 @@ bool get_CSCDynamics_CSConverter(const BaseClass* BaseClass_ptr1, std::list<cons
 	return false;
 }
 
-
 const char CSCDynamics::debugName[] = "CSCDynamics";
 const char* CSCDynamics::debugString() const
 {
@@ -82,7 +79,7 @@ const char* CSCDynamics::debugString() const
 
 void CSCDynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:CSCDynamics"), &CSCDynamics_factory));
+	factory_map.emplace("cim:CSCDynamics", &CSCDynamics_factory);
 }
 
 void CSCDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -91,7 +88,7 @@ void CSCDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, ass
 
 void CSCDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:CSCDynamics.CSConverter"), &assign_CSCDynamics_CSConverter));
+	assign_map.emplace("cim:CSCDynamics.CSConverter", &assign_CSCDynamics_CSConverter);
 }
 
 void CSCDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-SolarPowerPlant::SolarPowerPlant() {};
-SolarPowerPlant::~SolarPowerPlant() {};
+SolarPowerPlant::SolarPowerPlant() {}
+SolarPowerPlant::~SolarPowerPlant() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ SolarPowerPlant::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_SolarGeneratingUnit_SolarPowerPlant(BaseClass*, BaseClass*);
 bool assign_SolarPowerPlant_SolarGeneratingUnits(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,7 +58,6 @@ bool assign_SolarPowerPlant_SolarGeneratingUnits(BaseClass* BaseClass_ptr1, Base
 }
 
 
-
 const char SolarPowerPlant::debugName[] = "SolarPowerPlant";
 const char* SolarPowerPlant::debugString() const
 {
@@ -69,7 +66,7 @@ const char* SolarPowerPlant::debugString() const
 
 void SolarPowerPlant::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:SolarPowerPlant"), &SolarPowerPlant_factory));
+	factory_map.emplace("cim:SolarPowerPlant", &SolarPowerPlant_factory);
 }
 
 void SolarPowerPlant::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -78,7 +75,7 @@ void SolarPowerPlant::addPrimitiveAssignFnsToMap(std::unordered_map<std::string,
 
 void SolarPowerPlant::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:SolarPowerPlant.SolarGeneratingUnits"), &assign_SolarPowerPlant_SolarGeneratingUnits));
+	assign_map.emplace("cim:SolarPowerPlant.SolarGeneratingUnits", &assign_SolarPowerPlant_SolarGeneratingUnits);
 }
 
 void SolarPowerPlant::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

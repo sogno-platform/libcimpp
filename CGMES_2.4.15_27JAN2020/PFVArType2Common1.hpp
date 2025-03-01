@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Power factor / Reactive power regulator. This model represents the power factor or reactive power controller such as the Basler SCP-250. The controller measures power factor or reactive power (PU on generator rated power) and compares it with the operator's set point.
-	*/
+	/** \brief Power factor / Reactive power regulator. This model represents the power factor or reactive power controller such as the Basler SCP-250. The controller measures power factor or reactive power (PU on generator rated power) and compares it with the operator's set point. */
 	class PFVArType2Common1 : public PFVArControllerType2Dynamics
 	{
 	public:
@@ -28,11 +26,20 @@ namespace CIMPP
 		PFVArType2Common1();
 		~PFVArType2Common1() override;
 
-		CIMPP::Boolean j;  /* Selector (J). true = control mode for reactive power false = control mode for power factor. Default: false */
-		CIMPP::PU ki;  /* Reset gain (Ki). Default: nullptr */
-		CIMPP::PU kp;  /* Proportional gain (Kp). Default: nullptr */
-		CIMPP::PU max;  /* Output limit (max). Default: nullptr */
-		CIMPP::PU ref;  /* Reference value of reactive power or power factor (Ref). The reference value is initialised by this model. This initialisation may override the value exchanged by this attribute to represent a plant operator`s change of the reference setting. Default: nullptr */
+		/** \brief Selector (J). true = control mode for reactive power false = control mode for power factor. Default: false */
+		CIMPP::Boolean j;
+
+		/** \brief Reset gain (Ki). Default: nullptr */
+		CIMPP::PU ki;
+
+		/** \brief Proportional gain (Kp). Default: nullptr */
+		CIMPP::PU kp;
+
+		/** \brief Output limit (max). Default: nullptr */
+		CIMPP::PU max;
+
+		/** \brief Reference value of reactive power or power factor (Ref). The reference value is initialised by this model. This initialisation may override the value exchanged by this attribute to represent a plant operator`s change of the reference setting. Default: nullptr */
+		CIMPP::PU ref;
 
 		static const char debugName[];
 		const char* debugString() const override;

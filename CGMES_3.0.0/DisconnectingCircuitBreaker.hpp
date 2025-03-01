@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A circuit breaking device including disconnecting function, eliminating the need for separate disconnectors.
-	*/
+	/** \brief A circuit breaking device including disconnecting function, eliminating the need for separate disconnectors. */
 	class DisconnectingCircuitBreaker : public Breaker
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		DisconnectingCircuitBreaker();
 		~DisconnectingCircuitBreaker() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

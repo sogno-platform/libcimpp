@@ -19,9 +19,7 @@ namespace CIMPP
 	class ControlArea;
 	class Terminal;
 
-	/*
-	A flow specification in terms of location and direction for a control area.
-	*/
+	/** \brief A flow specification in terms of location and direction for a control area. */
 	class TieFlow : public BaseClass
 	{
 	public:
@@ -29,9 +27,14 @@ namespace CIMPP
 		TieFlow();
 		~TieFlow() override;
 
-		CIMPP::ControlArea* ControlArea;  /* The control area of the tie flows. Default: 0 */
-		CIMPP::Terminal* Terminal;  /* The terminal to which this tie flow belongs. Default: 0 */
-		CIMPP::Boolean positiveFlowIn;  /* True if the flow into the terminal (load convention) is also flow into the control area.  For example, this attribute should be true if using the tie line terminal further away from the control area. For example to represent a tie to a shunt component (like a load or generator) in another area, this is the near end of a branch and this attribute would be specified as false. Default: false */
+		/** \brief The control area of the tie flows. Default: 0 */
+		CIMPP::ControlArea* ControlArea;
+
+		/** \brief The terminal to which this tie flow belongs. Default: 0 */
+		CIMPP::Terminal* Terminal;
+
+		/** \brief True if the flow into the terminal (load convention) is also flow into the control area.  For example, this attribute should be true if using the tie line terminal further away from the control area. For example to represent a tie to a shunt component (like a load or generator) in another area, this is the near end of a branch and this attribute would be specified as false. Default: false */
+		CIMPP::Boolean positiveFlowIn;
 
 		static const char debugName[];
 		const char* debugString() const override;

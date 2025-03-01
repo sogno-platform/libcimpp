@@ -20,9 +20,7 @@ namespace CIMPP
 	class DCNode;
 	class DCTopologicalIsland;
 
-	/*
-	DC bus.
-	*/
+	/** \brief DC bus. */
 	class DCTopologicalNode : public IdentifiedObject
 	{
 	public:
@@ -30,10 +28,17 @@ namespace CIMPP
 		DCTopologicalNode();
 		~DCTopologicalNode() override;
 
-		CIMPP::DCEquipmentContainer* DCEquipmentContainer;  /* The connectivity node container to which the topological node belongs. Default: 0 */
-		std::list<CIMPP::DCNode*> DCNodes;  /* The DC connectivity nodes combined together to form this DC topological node.  May depend on the current state of switches in the network. Default: 0 */
-		std::list<CIMPP::DCBaseTerminal*> DCTerminals;  /* See association end TopologicalNode.Terminal. Default: 0 */
-		CIMPP::DCTopologicalIsland* DCTopologicalIsland;  /* A DC topological node belongs to a DC topological island. Default: 0 */
+		/** \brief The connectivity node container to which the topological node belongs. Default: 0 */
+		CIMPP::DCEquipmentContainer* DCEquipmentContainer;
+
+		/** \brief The DC connectivity nodes combined together to form this DC topological node.  May depend on the current state of switches in the network. Default: 0 */
+		std::list<CIMPP::DCNode*> DCNodes;
+
+		/** \brief See association end TopologicalNode.Terminal. Default: 0 */
+		std::list<CIMPP::DCBaseTerminal*> DCTerminals;
+
+		/** \brief A DC topological node belongs to a DC topological island. Default: 0 */
+		CIMPP::DCTopologicalIsland* DCTopologicalIsland;
 
 		static const char debugName[];
 		const char* debugString() const override;

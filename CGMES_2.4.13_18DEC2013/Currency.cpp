@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "Currency")
+		if (EnumSymbol.substr(0, pos) != "Currency")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,72 +50,72 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "USD")
+		if (EnumSymbol == "USD")
 		{
 			rop = Currency::USD;
 			return lop;
 		}
-		if(EnumSymbol == "EUR")
+		if (EnumSymbol == "EUR")
 		{
 			rop = Currency::EUR;
 			return lop;
 		}
-		if(EnumSymbol == "AUD")
+		if (EnumSymbol == "AUD")
 		{
 			rop = Currency::AUD;
 			return lop;
 		}
-		if(EnumSymbol == "CAD")
+		if (EnumSymbol == "CAD")
 		{
 			rop = Currency::CAD;
 			return lop;
 		}
-		if(EnumSymbol == "CHF")
+		if (EnumSymbol == "CHF")
 		{
 			rop = Currency::CHF;
 			return lop;
 		}
-		if(EnumSymbol == "CNY")
+		if (EnumSymbol == "CNY")
 		{
 			rop = Currency::CNY;
 			return lop;
 		}
-		if(EnumSymbol == "DKK")
+		if (EnumSymbol == "DKK")
 		{
 			rop = Currency::DKK;
 			return lop;
 		}
-		if(EnumSymbol == "GBP")
+		if (EnumSymbol == "GBP")
 		{
 			rop = Currency::GBP;
 			return lop;
 		}
-		if(EnumSymbol == "JPY")
+		if (EnumSymbol == "JPY")
 		{
 			rop = Currency::JPY;
 			return lop;
 		}
-		if(EnumSymbol == "NOK")
+		if (EnumSymbol == "NOK")
 		{
 			rop = Currency::NOK;
 			return lop;
 		}
-		if(EnumSymbol == "RUR")
+		if (EnumSymbol == "RUR")
 		{
 			rop = Currency::RUR;
 			return lop;
 		}
-		if(EnumSymbol == "SEK")
+		if (EnumSymbol == "SEK")
 		{
 			rop = Currency::SEK;
 			return lop;
 		}
-		if(EnumSymbol == "INR")
+		if (EnumSymbol == "INR")
 		{
 			rop = Currency::INR;
 			return lop;
 		}
-		if(EnumSymbol == "other")
+		if (EnumSymbol == "other")
 		{
 			rop = Currency::other;
 			return lop;

@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class DCTerminal;
 
-	/*
-	The parts of the DC power system that are designed to carry current or that are conductively connected through DC terminals.
-	*/
+	/** \brief The parts of the DC power system that are designed to carry current or that are conductively connected through DC terminals. */
 	class DCConductingEquipment : public Equipment
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		DCConductingEquipment();
 		~DCConductingEquipment() override;
 
-		std::list<CIMPP::DCTerminal*> DCTerminals;  /*  Default: 0 */
+		/** \brief  Default: 0 */
+		std::list<CIMPP::DCTerminal*> DCTerminals;
 
 		static const char debugName[];
 		const char* debugString() const override;

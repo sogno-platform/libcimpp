@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "WindLookupTableFunctionKind")
+		if (EnumSymbol.substr(0, pos) != "WindLookupTableFunctionKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,82 +50,82 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "prr")
+		if (EnumSymbol == "prr")
 		{
 			rop = WindLookupTableFunctionKind::prr;
 			return lop;
 		}
-		if(EnumSymbol == "omegap")
+		if (EnumSymbol == "omegap")
 		{
 			rop = WindLookupTableFunctionKind::omegap;
 			return lop;
 		}
-		if(EnumSymbol == "ipmax")
+		if (EnumSymbol == "ipmax")
 		{
 			rop = WindLookupTableFunctionKind::ipmax;
 			return lop;
 		}
-		if(EnumSymbol == "iqmax")
+		if (EnumSymbol == "iqmax")
 		{
 			rop = WindLookupTableFunctionKind::iqmax;
 			return lop;
 		}
-		if(EnumSymbol == "pwp")
+		if (EnumSymbol == "pwp")
 		{
 			rop = WindLookupTableFunctionKind::pwp;
 			return lop;
 		}
-		if(EnumSymbol == "tcwdu")
+		if (EnumSymbol == "tcwdu")
 		{
 			rop = WindLookupTableFunctionKind::tcwdu;
 			return lop;
 		}
-		if(EnumSymbol == "tduwt")
+		if (EnumSymbol == "tduwt")
 		{
 			rop = WindLookupTableFunctionKind::tduwt;
 			return lop;
 		}
-		if(EnumSymbol == "qmaxp")
+		if (EnumSymbol == "qmaxp")
 		{
 			rop = WindLookupTableFunctionKind::qmaxp;
 			return lop;
 		}
-		if(EnumSymbol == "qminp")
+		if (EnumSymbol == "qminp")
 		{
 			rop = WindLookupTableFunctionKind::qminp;
 			return lop;
 		}
-		if(EnumSymbol == "qmaxu")
+		if (EnumSymbol == "qmaxu")
 		{
 			rop = WindLookupTableFunctionKind::qmaxu;
 			return lop;
 		}
-		if(EnumSymbol == "qminu")
+		if (EnumSymbol == "qminu")
 		{
 			rop = WindLookupTableFunctionKind::qminu;
 			return lop;
 		}
-		if(EnumSymbol == "tuover")
+		if (EnumSymbol == "tuover")
 		{
 			rop = WindLookupTableFunctionKind::tuover;
 			return lop;
 		}
-		if(EnumSymbol == "tuunder")
+		if (EnumSymbol == "tuunder")
 		{
 			rop = WindLookupTableFunctionKind::tuunder;
 			return lop;
 		}
-		if(EnumSymbol == "tfover")
+		if (EnumSymbol == "tfover")
 		{
 			rop = WindLookupTableFunctionKind::tfover;
 			return lop;
 		}
-		if(EnumSymbol == "tfunder")
+		if (EnumSymbol == "tfunder")
 		{
 			rop = WindLookupTableFunctionKind::tfunder;
 			return lop;
 		}
-		if(EnumSymbol == "qwp")
+		if (EnumSymbol == "qwp")
 		{
 			rop = WindLookupTableFunctionKind::qwp;
 			return lop;

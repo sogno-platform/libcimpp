@@ -18,9 +18,7 @@ namespace CIMPP
 	class BusNameMarker;
 	class TopologicalNode;
 
-	/*
-	A reporting group is used for various ad-hoc groupings used for reporting.
-	*/
+	/** \brief A reporting group is used for various ad-hoc groupings used for reporting. */
 	class ReportingGroup : public IdentifiedObject
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		ReportingGroup();
 		~ReportingGroup() override;
 
-		std::list<CIMPP::BusNameMarker*> BusNameMarker;  /* The bus name markers that belong to this reporting group. Default: 0 */
-		std::list<CIMPP::TopologicalNode*> TopologicalNode;  /* The topological nodes that belong to the reporting group. Default: 0 */
+		/** \brief The bus name markers that belong to this reporting group. Default: 0 */
+		std::list<CIMPP::BusNameMarker*> BusNameMarker;
+
+		/** \brief The topological nodes that belong to the reporting group. Default: 0 */
+		std::list<CIMPP::TopologicalNode*> TopologicalNode;
 
 		static const char debugName[];
 		const char* debugString() const override;

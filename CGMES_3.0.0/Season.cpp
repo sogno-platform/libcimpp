@@ -9,13 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "SeasonDayTypeSchedule.hpp"
-#include "MonthDay.hpp"
-#include "MonthDay.hpp"
 
 using namespace CIMPP;
 
-Season::Season() {};
-Season::~Season() {};
+Season::Season() {}
+Season::~Season() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -44,34 +42,6 @@ Season::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_Season_endDate(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (Season* element = dynamic_cast<Season*>(BaseClass_ptr1))
-	{
-		element->endDate = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_Season_startDate(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (Season* element = dynamic_cast<Season*>(BaseClass_ptr1))
-	{
-		element->startDate = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_SeasonDayTypeSchedule_Season(BaseClass*, BaseClass*);
 bool assign_Season_SeasonDayTypeSchedules(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -89,9 +59,39 @@ bool assign_Season_SeasonDayTypeSchedules(BaseClass* BaseClass_ptr1, BaseClass* 
 	return false;
 }
 
+bool assign_Season_endDate(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	Season* element = dynamic_cast<Season*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->endDate = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_Season_startDate(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	Season* element = dynamic_cast<Season*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->startDate = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_Season_endDate(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Season* element = dynamic_cast<const Season*>(BaseClass_ptr1))
+	const Season* element = dynamic_cast<const Season*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->endDate;
 		if (!buffer.str().empty())
@@ -105,7 +105,8 @@ bool get_Season_endDate(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_Season_startDate(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Season* element = dynamic_cast<const Season*>(BaseClass_ptr1))
+	const Season* element = dynamic_cast<const Season*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->startDate;
 		if (!buffer.str().empty())
@@ -117,8 +118,6 @@ bool get_Season_startDate(const BaseClass* BaseClass_ptr1, std::stringstream& bu
 	return false;
 }
 
-
-
 const char Season::debugName[] = "Season";
 const char* Season::debugString() const
 {
@@ -127,18 +126,18 @@ const char* Season::debugString() const
 
 void Season::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:Season"), &Season_factory));
+	factory_map.emplace("cim:Season", &Season_factory);
 }
 
 void Season::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Season.endDate"), &assign_Season_endDate));
-	assign_map.insert(std::make_pair(std::string("cim:Season.startDate"), &assign_Season_startDate));
+	assign_map.emplace("cim:Season.endDate", &assign_Season_endDate);
+	assign_map.emplace("cim:Season.startDate", &assign_Season_startDate);
 }
 
 void Season::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Season.SeasonDayTypeSchedules"), &assign_Season_SeasonDayTypeSchedules));
+	assign_map.emplace("cim:Season.SeasonDayTypeSchedules", &assign_Season_SeasonDayTypeSchedules);
 }
 
 void Season::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

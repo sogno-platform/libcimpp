@@ -17,9 +17,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Limit on active power flow.
-	*/
+	/** \brief Limit on active power flow. */
 	class ActivePowerLimit : public OperationalLimit
 	{
 	public:
@@ -27,8 +25,11 @@ namespace CIMPP
 		ActivePowerLimit();
 		~ActivePowerLimit() override;
 
-		CIMPP::ActivePower normalValue;  /* The normal value of active power limit. The attribute shall be a positive value or zero. Default: nullptr */
-		CIMPP::ActivePower value;  /* Value of active power limit. The attribute shall be a positive value or zero. Default: nullptr */
+		/** \brief The normal value of active power limit. The attribute shall be a positive value or zero. Default: nullptr */
+		CIMPP::ActivePower normalValue;
+
+		/** \brief Value of active power limit. The attribute shall be a positive value or zero. Default: nullptr */
+		CIMPP::ActivePower value;
 
 		static const char debugName[];
 		const char* debugString() const override;

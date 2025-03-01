@@ -8,13 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Seconds.hpp"
-#include "PU.hpp"
 
 using namespace CIMPP;
 
-DiscExcContIEEEDEC3A::DiscExcContIEEEDEC3A() {};
-DiscExcContIEEEDEC3A::~DiscExcContIEEEDEC3A() {};
+DiscExcContIEEEDEC3A::DiscExcContIEEEDEC3A() {}
+DiscExcContIEEEDEC3A::~DiscExcContIEEEDEC3A() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,38 +40,38 @@ DiscExcContIEEEDEC3A::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_DiscExcContIEEEDEC3A_tdr(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DiscExcContIEEEDEC3A_tdr(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DiscExcContIEEEDEC3A* element = dynamic_cast<DiscExcContIEEEDEC3A*>(BaseClass_ptr1))
+	DiscExcContIEEEDEC3A* element = dynamic_cast<DiscExcContIEEEDEC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tdr;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_DiscExcContIEEEDEC3A_vtmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DiscExcContIEEEDEC3A_vtmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DiscExcContIEEEDEC3A* element = dynamic_cast<DiscExcContIEEEDEC3A*>(BaseClass_ptr1))
+	DiscExcContIEEEDEC3A* element = dynamic_cast<DiscExcContIEEEDEC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vtmin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_DiscExcContIEEEDEC3A_tdr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DiscExcContIEEEDEC3A* element = dynamic_cast<const DiscExcContIEEEDEC3A*>(BaseClass_ptr1))
+	const DiscExcContIEEEDEC3A* element = dynamic_cast<const DiscExcContIEEEDEC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tdr;
 		if (!buffer.str().empty())
@@ -87,7 +85,8 @@ bool get_DiscExcContIEEEDEC3A_tdr(const BaseClass* BaseClass_ptr1, std::stringst
 
 bool get_DiscExcContIEEEDEC3A_vtmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DiscExcContIEEEDEC3A* element = dynamic_cast<const DiscExcContIEEEDEC3A*>(BaseClass_ptr1))
+	const DiscExcContIEEEDEC3A* element = dynamic_cast<const DiscExcContIEEEDEC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vtmin;
 		if (!buffer.str().empty())
@@ -99,8 +98,6 @@ bool get_DiscExcContIEEEDEC3A_vtmin(const BaseClass* BaseClass_ptr1, std::string
 	return false;
 }
 
-
-
 const char DiscExcContIEEEDEC3A::debugName[] = "DiscExcContIEEEDEC3A";
 const char* DiscExcContIEEEDEC3A::debugString() const
 {
@@ -109,13 +106,13 @@ const char* DiscExcContIEEEDEC3A::debugString() const
 
 void DiscExcContIEEEDEC3A::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:DiscExcContIEEEDEC3A"), &DiscExcContIEEEDEC3A_factory));
+	factory_map.emplace("cim:DiscExcContIEEEDEC3A", &DiscExcContIEEEDEC3A_factory);
 }
 
 void DiscExcContIEEEDEC3A::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:DiscExcContIEEEDEC3A.tdr"), &assign_DiscExcContIEEEDEC3A_tdr));
-	assign_map.insert(std::make_pair(std::string("cim:DiscExcContIEEEDEC3A.vtmin"), &assign_DiscExcContIEEEDEC3A_vtmin));
+	assign_map.emplace("cim:DiscExcContIEEEDEC3A.tdr", &assign_DiscExcContIEEEDEC3A_tdr);
+	assign_map.emplace("cim:DiscExcContIEEEDEC3A.vtmin", &assign_DiscExcContIEEEDEC3A_vtmin);
 }
 
 void DiscExcContIEEEDEC3A::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

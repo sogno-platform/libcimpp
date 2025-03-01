@@ -20,9 +20,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Modified IEEE ST7B static excitation system without stator current limiter (SCL) and current compensator (DROOP) inputs.
-	*/
+	/** \brief Modified IEEE ST7B static excitation system without stator current limiter (SCL) and current compensator (DROOP) inputs. */
 	class ExcST7B : public ExcitationSystemDynamics
 	{
 	public:
@@ -30,22 +28,53 @@ namespace CIMPP
 		ExcST7B();
 		~ExcST7B() override;
 
-		CIMPP::PU kh;  /* High-value gate feedback gain (&lt;i&gt;Kh&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 1. Default: nullptr */
-		CIMPP::PU kia;  /* Voltage regulator integral gain (&lt;i&gt;Kia&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 1. Default: nullptr */
-		CIMPP::PU kl;  /* Low-value gate feedback gain (&lt;i&gt;Kl&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 1. Default: nullptr */
-		CIMPP::PU kpa;  /* Voltage regulator proportional gain (&lt;i&gt;Kpa&lt;/i&gt;) (&amp;gt; 0).  Typical value = 40. Default: nullptr */
-		CIMPP::ExcST7BOELselectorKind oelin;  /* OEL input selector (&lt;i&gt;OELin&lt;/i&gt;). Typical value = noOELinput. Default: 0 */
-		CIMPP::Seconds tb;  /* Regulator lag time constant (&lt;i&gt;Tb&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 1. Default: nullptr */
-		CIMPP::Seconds tc;  /* Regulator lead time constant (&lt;i&gt;Tc&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 1. Default: nullptr */
-		CIMPP::Seconds tf;  /* Excitation control system stabilizer time constant (&lt;i&gt;Tf&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 1. Default: nullptr */
-		CIMPP::Seconds tg;  /* Feedback time constant of inner loop field voltage regulator (&lt;i&gt;Tg&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 1. Default: nullptr */
-		CIMPP::Seconds tia;  /* Feedback time constant (&lt;i&gt;Tia&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 3. Default: nullptr */
-		CIMPP::Seconds ts;  /* Rectifier firing time constant (&lt;i&gt;Ts&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 0. Default: nullptr */
-		CIMPP::ExcST7BUELselectorKind uelin;  /* UEL input selector (&lt;i&gt;UELin&lt;/i&gt;). Typical value = noUELinput. Default: 0 */
-		CIMPP::PU vmax;  /* Maximum voltage reference signal (&lt;i&gt;Vmax&lt;/i&gt;) (&amp;gt; 0 and &amp;gt; ExcST7B.vmin)).  Typical value = 1,1. Default: nullptr */
-		CIMPP::PU vmin;  /* Minimum voltage reference signal (&lt;i&gt;Vmin&lt;/i&gt;) (&amp;gt; 0 and &amp;lt; ExcST7B.vmax).  Typical value = 0,9. Default: nullptr */
-		CIMPP::PU vrmax;  /* Maximum voltage regulator output (&lt;i&gt;Vrmax&lt;/i&gt;) (&amp;gt; 0).  Typical value = 5. Default: nullptr */
-		CIMPP::PU vrmin;  /* Minimum voltage regulator output (&lt;i&gt;Vrmin&lt;/i&gt;) (&amp;lt; 0).  Typical value = -4,5. Default: nullptr */
+		/** \brief High-value gate feedback gain (&lt;i&gt;Kh&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 1. Default: nullptr */
+		CIMPP::PU kh;
+
+		/** \brief Voltage regulator integral gain (&lt;i&gt;Kia&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 1. Default: nullptr */
+		CIMPP::PU kia;
+
+		/** \brief Low-value gate feedback gain (&lt;i&gt;Kl&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 1. Default: nullptr */
+		CIMPP::PU kl;
+
+		/** \brief Voltage regulator proportional gain (&lt;i&gt;Kpa&lt;/i&gt;) (&amp;gt; 0).  Typical value = 40. Default: nullptr */
+		CIMPP::PU kpa;
+
+		/** \brief OEL input selector (&lt;i&gt;OELin&lt;/i&gt;). Typical value = noOELinput. Default: 0 */
+		CIMPP::ExcST7BOELselectorKind oelin;
+
+		/** \brief Regulator lag time constant (&lt;i&gt;Tb&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 1. Default: nullptr */
+		CIMPP::Seconds tb;
+
+		/** \brief Regulator lead time constant (&lt;i&gt;Tc&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 1. Default: nullptr */
+		CIMPP::Seconds tc;
+
+		/** \brief Excitation control system stabilizer time constant (&lt;i&gt;Tf&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 1. Default: nullptr */
+		CIMPP::Seconds tf;
+
+		/** \brief Feedback time constant of inner loop field voltage regulator (&lt;i&gt;Tg&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 1. Default: nullptr */
+		CIMPP::Seconds tg;
+
+		/** \brief Feedback time constant (&lt;i&gt;Tia&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 3. Default: nullptr */
+		CIMPP::Seconds tia;
+
+		/** \brief Rectifier firing time constant (&lt;i&gt;Ts&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 0. Default: nullptr */
+		CIMPP::Seconds ts;
+
+		/** \brief UEL input selector (&lt;i&gt;UELin&lt;/i&gt;). Typical value = noUELinput. Default: 0 */
+		CIMPP::ExcST7BUELselectorKind uelin;
+
+		/** \brief Maximum voltage reference signal (&lt;i&gt;Vmax&lt;/i&gt;) (&amp;gt; 0 and &amp;gt; ExcST7B.vmin)).  Typical value = 1,1. Default: nullptr */
+		CIMPP::PU vmax;
+
+		/** \brief Minimum voltage reference signal (&lt;i&gt;Vmin&lt;/i&gt;) (&amp;gt; 0 and &amp;lt; ExcST7B.vmax).  Typical value = 0,9. Default: nullptr */
+		CIMPP::PU vmin;
+
+		/** \brief Maximum voltage regulator output (&lt;i&gt;Vrmax&lt;/i&gt;) (&amp;gt; 0).  Typical value = 5. Default: nullptr */
+		CIMPP::PU vrmax;
+
+		/** \brief Minimum voltage regulator output (&lt;i&gt;Vrmin&lt;/i&gt;) (&amp;lt; 0).  Typical value = -4,5. Default: nullptr */
+		CIMPP::PU vrmin;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "ProprietaryParameterDynamics.hpp"
-#include "Boolean.hpp"
 
 using namespace CIMPP;
 
-VSCUserDefined::VSCUserDefined() {};
-VSCUserDefined::~VSCUserDefined() {};
+VSCUserDefined::VSCUserDefined() {}
+VSCUserDefined::~VSCUserDefined() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,21 +41,6 @@ VSCUserDefined::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_VSCUserDefined_proprietary(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (VSCUserDefined* element = dynamic_cast<VSCUserDefined*>(BaseClass_ptr1))
-	{
-		buffer >> element->proprietary;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_ProprietaryParameterDynamics_VSCUserDefined(BaseClass*, BaseClass*);
 bool assign_VSCUserDefined_ProprietaryParameterDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,9 +58,25 @@ bool assign_VSCUserDefined_ProprietaryParameterDynamics(BaseClass* BaseClass_ptr
 	return false;
 }
 
+bool assign_VSCUserDefined_proprietary(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	VSCUserDefined* element = dynamic_cast<VSCUserDefined*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->proprietary;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_VSCUserDefined_proprietary(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const VSCUserDefined* element = dynamic_cast<const VSCUserDefined*>(BaseClass_ptr1))
+	const VSCUserDefined* element = dynamic_cast<const VSCUserDefined*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->proprietary;
 		if (!buffer.str().empty())
@@ -88,8 +88,6 @@ bool get_VSCUserDefined_proprietary(const BaseClass* BaseClass_ptr1, std::string
 	return false;
 }
 
-
-
 const char VSCUserDefined::debugName[] = "VSCUserDefined";
 const char* VSCUserDefined::debugString() const
 {
@@ -98,17 +96,17 @@ const char* VSCUserDefined::debugString() const
 
 void VSCUserDefined::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:VSCUserDefined"), &VSCUserDefined_factory));
+	factory_map.emplace("cim:VSCUserDefined", &VSCUserDefined_factory);
 }
 
 void VSCUserDefined::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:VSCUserDefined.proprietary"), &assign_VSCUserDefined_proprietary));
+	assign_map.emplace("cim:VSCUserDefined.proprietary", &assign_VSCUserDefined_proprietary);
 }
 
 void VSCUserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:VSCUserDefined.ProprietaryParameterDynamics"), &assign_VSCUserDefined_ProprietaryParameterDynamics));
+	assign_map.emplace("cim:VSCUserDefined.ProprietaryParameterDynamics", &assign_VSCUserDefined_ProprietaryParameterDynamics);
 }
 
 void VSCUserDefined::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

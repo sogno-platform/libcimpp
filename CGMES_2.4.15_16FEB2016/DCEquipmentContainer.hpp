@@ -18,9 +18,7 @@ namespace CIMPP
 	class DCNode;
 	class DCTopologicalNode;
 
-	/*
-	A modeling construct to provide a root class for containment of DC as well as AC equipment. The class differ from the EquipmentContaner for AC in that it may also contain DCNodes. Hence it can contain both AC and DC equipment.
-	*/
+	/** \brief A modeling construct to provide a root class for containment of DC as well as AC equipment. The class differ from the EquipmentContaner for AC in that it may also contain DCNodes. Hence it can contain both AC and DC equipment. */
 	class DCEquipmentContainer : public EquipmentContainer
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		DCEquipmentContainer();
 		~DCEquipmentContainer() override;
 
-		std::list<CIMPP::DCNode*> DCNodes;  /*  Default: 0 */
-		std::list<CIMPP::DCTopologicalNode*> DCTopologicalNode;  /*  Default: 0 */
+		/** \brief  Default: 0 */
+		std::list<CIMPP::DCNode*> DCNodes;
+
+		/** \brief  Default: 0 */
+		std::list<CIMPP::DCTopologicalNode*> DCTopologicalNode;
 
 		static const char debugName[];
 		const char* debugString() const override;

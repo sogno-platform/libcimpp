@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	IVO excitation system.
-	*/
+	/** \brief IVO excitation system. */
 	class ExcAVR7 : public ExcitationSystemDynamics
 	{
 	public:
@@ -28,27 +26,68 @@ namespace CIMPP
 		ExcAVR7();
 		~ExcAVR7() override;
 
-		CIMPP::PU a1;  /* Lead coefficient (A1).  Typical Value = 0.5. Default: nullptr */
-		CIMPP::PU a2;  /* Lag coefficient (A2).  Typical Value = 0.5. Default: nullptr */
-		CIMPP::PU a3;  /* Lead coefficient (A3).  Typical Value = 0.5. Default: nullptr */
-		CIMPP::PU a4;  /* Lag coefficient (A4).  Typical Value = 0.5. Default: nullptr */
-		CIMPP::PU a5;  /* Lead coefficient (A5).  Typical Value = 0.5. Default: nullptr */
-		CIMPP::PU a6;  /* Lag coefficient (A6).  Typical Value = 0.5. Default: nullptr */
-		CIMPP::PU k1;  /* Gain (K1).  Typical Value = 1. Default: nullptr */
-		CIMPP::PU k3;  /* Gain (K3).  Typical Value = 3. Default: nullptr */
-		CIMPP::PU k5;  /* Gain (K5).  Typical Value = 1. Default: nullptr */
-		CIMPP::Seconds t1;  /* Lead time constant (T1).  Typical Value = 0.05. Default: nullptr */
-		CIMPP::Seconds t2;  /* Lag time constant (T2).  Typical Value = 0.1. Default: nullptr */
-		CIMPP::Seconds t3;  /* Lead time constant (T3).  Typical Value = 0.1. Default: nullptr */
-		CIMPP::Seconds t4;  /* Lag time constant (T4).  Typical Value = 0.1. Default: nullptr */
-		CIMPP::Seconds t5;  /* Lead time constant (T5).  Typical Value = 0.1. Default: nullptr */
-		CIMPP::Seconds t6;  /* Lag time constant (T6).  Typical Value = 0.1. Default: nullptr */
-		CIMPP::PU vmax1;  /* Lead-lag max. limit (Vmax1).  Typical Value = 5. Default: nullptr */
-		CIMPP::PU vmax3;  /* Lead-lag max. limit (Vmax3).  Typical Value = 5. Default: nullptr */
-		CIMPP::PU vmax5;  /* Lead-lag max. limit (Vmax5).  Typical Value = 5. Default: nullptr */
-		CIMPP::PU vmin1;  /* Lead-lag min. limit (Vmin1).  Typical Value = -5. Default: nullptr */
-		CIMPP::PU vmin3;  /* Lead-lag min. limit (Vmin3).  Typical Value = -5. Default: nullptr */
-		CIMPP::PU vmin5;  /* Lead-lag min. limit (Vmin5).  Typical Value = -2. Default: nullptr */
+		/** \brief Lead coefficient (A1).  Typical Value = 0.5. Default: nullptr */
+		CIMPP::PU a1;
+
+		/** \brief Lag coefficient (A2).  Typical Value = 0.5. Default: nullptr */
+		CIMPP::PU a2;
+
+		/** \brief Lead coefficient (A3).  Typical Value = 0.5. Default: nullptr */
+		CIMPP::PU a3;
+
+		/** \brief Lag coefficient (A4).  Typical Value = 0.5. Default: nullptr */
+		CIMPP::PU a4;
+
+		/** \brief Lead coefficient (A5).  Typical Value = 0.5. Default: nullptr */
+		CIMPP::PU a5;
+
+		/** \brief Lag coefficient (A6).  Typical Value = 0.5. Default: nullptr */
+		CIMPP::PU a6;
+
+		/** \brief Gain (K1).  Typical Value = 1. Default: nullptr */
+		CIMPP::PU k1;
+
+		/** \brief Gain (K3).  Typical Value = 3. Default: nullptr */
+		CIMPP::PU k3;
+
+		/** \brief Gain (K5).  Typical Value = 1. Default: nullptr */
+		CIMPP::PU k5;
+
+		/** \brief Lead time constant (T1).  Typical Value = 0.05. Default: nullptr */
+		CIMPP::Seconds t1;
+
+		/** \brief Lag time constant (T2).  Typical Value = 0.1. Default: nullptr */
+		CIMPP::Seconds t2;
+
+		/** \brief Lead time constant (T3).  Typical Value = 0.1. Default: nullptr */
+		CIMPP::Seconds t3;
+
+		/** \brief Lag time constant (T4).  Typical Value = 0.1. Default: nullptr */
+		CIMPP::Seconds t4;
+
+		/** \brief Lead time constant (T5).  Typical Value = 0.1. Default: nullptr */
+		CIMPP::Seconds t5;
+
+		/** \brief Lag time constant (T6).  Typical Value = 0.1. Default: nullptr */
+		CIMPP::Seconds t6;
+
+		/** \brief Lead-lag max. limit (Vmax1).  Typical Value = 5. Default: nullptr */
+		CIMPP::PU vmax1;
+
+		/** \brief Lead-lag max. limit (Vmax3).  Typical Value = 5. Default: nullptr */
+		CIMPP::PU vmax3;
+
+		/** \brief Lead-lag max. limit (Vmax5).  Typical Value = 5. Default: nullptr */
+		CIMPP::PU vmax5;
+
+		/** \brief Lead-lag min. limit (Vmin1).  Typical Value = -5. Default: nullptr */
+		CIMPP::PU vmin1;
+
+		/** \brief Lead-lag min. limit (Vmin3).  Typical Value = -5. Default: nullptr */
+		CIMPP::PU vmin3;
+
+		/** \brief Lead-lag min. limit (Vmin5).  Typical Value = -2. Default: nullptr */
+		CIMPP::PU vmin5;
 
 		static const char debugName[];
 		const char* debugString() const override;

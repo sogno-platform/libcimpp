@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-VsCapabilityCurve::VsCapabilityCurve() {};
-VsCapabilityCurve::~VsCapabilityCurve() {};
+VsCapabilityCurve::VsCapabilityCurve() {}
+VsCapabilityCurve::~VsCapabilityCurve() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ VsCapabilityCurve::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_VsConverter_CapabilityCurve(BaseClass*, BaseClass*);
 bool assign_VsCapabilityCurve_VsConverterDCSides(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,7 +58,6 @@ bool assign_VsCapabilityCurve_VsConverterDCSides(BaseClass* BaseClass_ptr1, Base
 }
 
 
-
 const char VsCapabilityCurve::debugName[] = "VsCapabilityCurve";
 const char* VsCapabilityCurve::debugString() const
 {
@@ -69,7 +66,7 @@ const char* VsCapabilityCurve::debugString() const
 
 void VsCapabilityCurve::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:VsCapabilityCurve"), &VsCapabilityCurve_factory));
+	factory_map.emplace("cim:VsCapabilityCurve", &VsCapabilityCurve_factory);
 }
 
 void VsCapabilityCurve::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -78,7 +75,7 @@ void VsCapabilityCurve::addPrimitiveAssignFnsToMap(std::unordered_map<std::strin
 
 void VsCapabilityCurve::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:VsCapabilityCurve.VsConverterDCSides"), &assign_VsCapabilityCurve_VsConverterDCSides));
+	assign_map.emplace("cim:VsCapabilityCurve.VsConverterDCSides", &assign_VsCapabilityCurve_VsConverterDCSides);
 }
 
 void VsCapabilityCurve::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

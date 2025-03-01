@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-DayType::DayType() {};
-DayType::~DayType() {};
+DayType::DayType() {}
+DayType::~DayType() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ DayType::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_SeasonDayTypeSchedule_DayType(BaseClass*, BaseClass*);
 bool assign_DayType_SeasonDayTypeSchedules(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,7 +58,6 @@ bool assign_DayType_SeasonDayTypeSchedules(BaseClass* BaseClass_ptr1, BaseClass*
 }
 
 
-
 const char DayType::debugName[] = "DayType";
 const char* DayType::debugString() const
 {
@@ -69,7 +66,7 @@ const char* DayType::debugString() const
 
 void DayType::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:DayType"), &DayType_factory));
+	factory_map.emplace("cim:DayType", &DayType_factory);
 }
 
 void DayType::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -78,7 +75,7 @@ void DayType::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_
 
 void DayType::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:DayType.SeasonDayTypeSchedules"), &assign_DayType_SeasonDayTypeSchedules));
+	assign_map.emplace("cim:DayType.SeasonDayTypeSchedules", &assign_DayType_SeasonDayTypeSchedules);
 }
 
 void DayType::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

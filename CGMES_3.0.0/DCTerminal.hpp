@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class DCConductingEquipment;
 
-	/*
-	An electrical connection point to generic DC conducting equipment.
-	*/
+	/** \brief An electrical connection point to generic DC conducting equipment. */
 	class DCTerminal : public DCBaseTerminal
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		DCTerminal();
 		~DCTerminal() override;
 
-		CIMPP::DCConductingEquipment* DCConductingEquipment;  /* An DC  terminal belong to a DC conducting equipment. Default: 0 */
+		/** \brief An DC  terminal belong to a DC conducting equipment. Default: 0 */
+		CIMPP::DCConductingEquipment* DCConductingEquipment;
 
 		static const char debugName[];
 		const char* debugString() const override;

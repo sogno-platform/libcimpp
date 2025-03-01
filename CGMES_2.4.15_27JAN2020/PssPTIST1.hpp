@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	PTI Microprocessor-Based Stabilizer type 1.
-	*/
+	/** \brief PTI Microprocessor-Based Stabilizer type 1. */
 	class PssPTIST1 : public PowerSystemStabilizerDynamics
 	{
 	public:
@@ -28,17 +26,38 @@ namespace CIMPP
 		PssPTIST1();
 		~PssPTIST1() override;
 
-		CIMPP::Seconds dtc;  /* Time step related to activation of controls (Dtc).  Typical Value = 0.025. Default: nullptr */
-		CIMPP::Seconds dtf;  /* Time step frequency calculation (Dtf).  Typical Value = 0.025. Default: nullptr */
-		CIMPP::Seconds dtp;  /* Time step active power calculation (Dtp).  Typical Value = 0.0125. Default: nullptr */
-		CIMPP::PU k;  /* Gain (K).  Typical Value = 9. Default: nullptr */
-		CIMPP::PU m;  /* (M).  M=2*H.  Typical Value = 5. Default: nullptr */
-		CIMPP::Seconds t1;  /* Time constant (T1).  Typical Value = 0.3. Default: nullptr */
-		CIMPP::Seconds t2;  /* Time constant (T2).  Typical Value = 1. Default: nullptr */
-		CIMPP::Seconds t3;  /* Time constant (T3).  Typical Value = 0.2. Default: nullptr */
-		CIMPP::Seconds t4;  /* Time constant (T4).  Typical Value = 0.05. Default: nullptr */
-		CIMPP::Seconds tf;  /* Time constant (Tf).  Typical Value = 0.2. Default: nullptr */
-		CIMPP::Seconds tp;  /* Time constant (Tp).  Typical Value = 0.2. Default: nullptr */
+		/** \brief Time step related to activation of controls (Dtc).  Typical Value = 0.025. Default: nullptr */
+		CIMPP::Seconds dtc;
+
+		/** \brief Time step frequency calculation (Dtf).  Typical Value = 0.025. Default: nullptr */
+		CIMPP::Seconds dtf;
+
+		/** \brief Time step active power calculation (Dtp).  Typical Value = 0.0125. Default: nullptr */
+		CIMPP::Seconds dtp;
+
+		/** \brief Gain (K).  Typical Value = 9. Default: nullptr */
+		CIMPP::PU k;
+
+		/** \brief (M).  M=2*H.  Typical Value = 5. Default: nullptr */
+		CIMPP::PU m;
+
+		/** \brief Time constant (T1).  Typical Value = 0.3. Default: nullptr */
+		CIMPP::Seconds t1;
+
+		/** \brief Time constant (T2).  Typical Value = 1. Default: nullptr */
+		CIMPP::Seconds t2;
+
+		/** \brief Time constant (T3).  Typical Value = 0.2. Default: nullptr */
+		CIMPP::Seconds t3;
+
+		/** \brief Time constant (T4).  Typical Value = 0.05. Default: nullptr */
+		CIMPP::Seconds t4;
+
+		/** \brief Time constant (Tf).  Typical Value = 0.2. Default: nullptr */
+		CIMPP::Seconds tf;
+
+		/** \brief Time constant (Tp).  Typical Value = 0.2. Default: nullptr */
+		CIMPP::Seconds tp;
 
 		static const char debugName[];
 		const char* debugString() const override;

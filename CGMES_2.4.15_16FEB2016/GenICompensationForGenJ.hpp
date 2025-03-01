@@ -19,9 +19,7 @@ namespace CIMPP
 	class SynchronousMachineDynamics;
 	class VCompIEEEType2;
 
-	/*
-	This class provides the resistive and reactive components of compensation for the generator associated with the IEEE Type 2 voltage compensator for current flow out of one of the other generators in the interconnection.
-	*/
+	/** \brief This class provides the resistive and reactive components of compensation for the generator associated with the IEEE Type 2 voltage compensator for current flow out of one of the other generators in the interconnection. */
 	class GenICompensationForGenJ : public IdentifiedObject
 	{
 	public:
@@ -29,10 +27,17 @@ namespace CIMPP
 		GenICompensationForGenJ();
 		~GenICompensationForGenJ() override;
 
-		CIMPP::SynchronousMachineDynamics* SynchronousMachineDynamics;  /* Standard synchronous machine out of which current flow is being compensated for. Default: 0 */
-		CIMPP::VCompIEEEType2* VcompIEEEType2;  /* The standard IEEE Type 2 voltage compensator of this compensation. Default: 0 */
-		CIMPP::PU rcij;  /*  Default: nullptr */
-		CIMPP::PU xcij;  /*  Default: nullptr */
+		/** \brief Standard synchronous machine out of which current flow is being compensated for. Default: 0 */
+		CIMPP::SynchronousMachineDynamics* SynchronousMachineDynamics;
+
+		/** \brief The standard IEEE Type 2 voltage compensator of this compensation. Default: 0 */
+		CIMPP::VCompIEEEType2* VcompIEEEType2;
+
+		/** \brief  Default: nullptr */
+		CIMPP::PU rcij;
+
+		/** \brief  Default: nullptr */
+		CIMPP::PU xcij;
 
 		static const char debugName[];
 		const char* debugString() const override;

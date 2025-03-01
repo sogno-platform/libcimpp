@@ -9,45 +9,27 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	The kind of regulation model.   For example regulating voltage, reactive power, active power, etc.
-	*/
+	/** \brief The kind of regulation model.   For example regulating voltage, reactive power, active power, etc. */
 	class RegulatingControlModeKind
 	{
 	public:
 		enum RegulatingControlModeKind_ENUM
 		{
-			/**
-			 * Voltage is specified.
-			 */
+			/** Voltage is specified. */
 			voltage,
-			/**
-			 * Active power is specified.
-			 */
+			/** Active power is specified. */
 			activePower,
-			/**
-			 * Reactive power is specified.
-			 */
+			/** Reactive power is specified. */
 			reactivePower,
-			/**
-			 * Current flow is specified.
-			 */
+			/** Current flow is specified. */
 			currentFlow,
-			/**
-			 * Admittance is specified.
-			 */
+			/** Admittance is specified. */
 			admittance,
-			/**
-			 * Control switches on/off by time of day. The times may change on the weekend, or in different seasons.
-			 */
+			/** Control switches on/off by time of day. The times may change on the weekend, or in different seasons. */
 			timeScheduled,
-			/**
-			 * Control switches on/off based on the local temperature (i.e., a thermostat).
-			 */
+			/** Control switches on/off based on the local temperature (i.e., a thermostat). */
 			temperature,
-			/**
-			 * Power factor is specified.
-			 */
+			/** Power factor is specified. */
 			powerFactor,
 		};
 

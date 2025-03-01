@@ -9,25 +9,17 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Excitation base system mode.
-	*/
+	/** \brief Excitation base system mode. */
 	class IfdBaseKind
 	{
 	public:
 		enum IfdBaseKind_ENUM
 		{
-			/**
-			 * Air gap line mode.
-			 */
+			/** Air gap line mode. */
 			ifag,
-			/**
-			 * No load system with saturation mode.
-			 */
+			/** No load system with saturation mode. */
 			ifnl,
-			/**
-			 * Full load system mode.
-			 */
+			/** Full load system mode. */
 			iffl,
 		};
 

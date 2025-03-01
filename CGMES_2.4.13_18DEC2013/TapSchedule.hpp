@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class TapChanger;
 
-	/*
-	A pre-established pattern over time for a tap step.
-	*/
+	/** \brief A pre-established pattern over time for a tap step. */
 	class TapSchedule : public SeasonDayTypeSchedule
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		TapSchedule();
 		~TapSchedule() override;
 
-		CIMPP::TapChanger* TapChanger;  /* A TapChanger can have TapSchedules. Default: 0 */
+		/** \brief A TapChanger can have TapSchedules. Default: 0 */
+		CIMPP::TapChanger* TapChanger;
 
 		static const char debugName[];
 		const char* debugString() const override;

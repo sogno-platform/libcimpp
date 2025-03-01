@@ -8,13 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "ActivePower.hpp"
-#include "ActivePower.hpp"
 
 using namespace CIMPP;
 
-ActivePowerLimit::ActivePowerLimit() {};
-ActivePowerLimit::~ActivePowerLimit() {};
+ActivePowerLimit::ActivePowerLimit() {}
+ActivePowerLimit::~ActivePowerLimit() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -43,38 +41,38 @@ ActivePowerLimit::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_ActivePowerLimit_normalValue(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ActivePowerLimit_normalValue(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ActivePowerLimit* element = dynamic_cast<ActivePowerLimit*>(BaseClass_ptr1))
+	ActivePowerLimit* element = dynamic_cast<ActivePowerLimit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->normalValue;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ActivePowerLimit_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ActivePowerLimit_value(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ActivePowerLimit* element = dynamic_cast<ActivePowerLimit*>(BaseClass_ptr1))
+	ActivePowerLimit* element = dynamic_cast<ActivePowerLimit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->value;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_ActivePowerLimit_normalValue(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ActivePowerLimit* element = dynamic_cast<const ActivePowerLimit*>(BaseClass_ptr1))
+	const ActivePowerLimit* element = dynamic_cast<const ActivePowerLimit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->normalValue;
 		if (!buffer.str().empty())
@@ -88,7 +86,8 @@ bool get_ActivePowerLimit_normalValue(const BaseClass* BaseClass_ptr1, std::stri
 
 bool get_ActivePowerLimit_value(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ActivePowerLimit* element = dynamic_cast<const ActivePowerLimit*>(BaseClass_ptr1))
+	const ActivePowerLimit* element = dynamic_cast<const ActivePowerLimit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->value;
 		if (!buffer.str().empty())
@@ -100,8 +99,6 @@ bool get_ActivePowerLimit_value(const BaseClass* BaseClass_ptr1, std::stringstre
 	return false;
 }
 
-
-
 const char ActivePowerLimit::debugName[] = "ActivePowerLimit";
 const char* ActivePowerLimit::debugString() const
 {
@@ -110,13 +107,13 @@ const char* ActivePowerLimit::debugString() const
 
 void ActivePowerLimit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ActivePowerLimit"), &ActivePowerLimit_factory));
+	factory_map.emplace("cim:ActivePowerLimit", &ActivePowerLimit_factory);
 }
 
 void ActivePowerLimit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ActivePowerLimit.normalValue"), &assign_ActivePowerLimit_normalValue));
-	assign_map.insert(std::make_pair(std::string("cim:ActivePowerLimit.value"), &assign_ActivePowerLimit_value));
+	assign_map.emplace("cim:ActivePowerLimit.normalValue", &assign_ActivePowerLimit_normalValue);
+	assign_map.emplace("cim:ActivePowerLimit.value", &assign_ActivePowerLimit_value);
 }
 
 void ActivePowerLimit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

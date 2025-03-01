@@ -26,9 +26,7 @@ namespace CIMPP
 	class WindTurbineType1or2Dynamics;
 	class WindTurbineType3or4Dynamics;
 
-	/*
-	Supports connection to a terminal associated with a remote bus from which an input signal of a specific type is coming.
-	*/
+	/** \brief Supports connection to a terminal associated with a remote bus from which an input signal of a specific type is coming. */
 	class RemoteInputSignal : public IdentifiedObject
 	{
 	public:
@@ -36,16 +34,35 @@ namespace CIMPP
 		RemoteInputSignal();
 		~RemoteInputSignal() override;
 
-		CIMPP::DiscontinuousExcitationControlDynamics* DiscontinuousExcitationControlDynamics;  /* Discontinuous excitation control model using this remote input signal. Default: 0 */
-		CIMPP::PFVArControllerType1Dynamics* PFVArControllerType1Dynamics;  /* Power factor or VAr controller type 1 model using this remote input signal. Default: 0 */
-		CIMPP::PowerSystemStabilizerDynamics* PowerSystemStabilizerDynamics;  /* Power system stabilizer model using this remote input signal. Default: 0 */
-		CIMPP::Terminal* Terminal;  /* Remote terminal with which this input signal is associated. Default: 0 */
-		CIMPP::UnderexcitationLimiterDynamics* UnderexcitationLimiterDynamics;  /* Underexcitation limiter model using this remote input signal. Default: 0 */
-		CIMPP::VoltageCompensatorDynamics* VoltageCompensatorDynamics;  /* Voltage compensator model using this remote input signal. Default: 0 */
-		CIMPP::WindPlantDynamics* WindPlantDynamics;  /* The wind plant using the remote signal. Default: 0 */
-		CIMPP::WindTurbineType1or2Dynamics* WindTurbineType1or2Dynamics;  /* Wind generator type 1 or type 2 model using this remote input signal. Default: 0 */
-		CIMPP::WindTurbineType3or4Dynamics* WindTurbineType3or4Dynamics;  /* Wind turbine type 3 or type 4 models using this remote input signal. Default: 0 */
-		CIMPP::RemoteSignalKind remoteSignalType;  /* Type of input signal. Default: 0 */
+		/** \brief Discontinuous excitation control model using this remote input signal. Default: 0 */
+		CIMPP::DiscontinuousExcitationControlDynamics* DiscontinuousExcitationControlDynamics;
+
+		/** \brief Power factor or VAr controller type 1 model using this remote input signal. Default: 0 */
+		CIMPP::PFVArControllerType1Dynamics* PFVArControllerType1Dynamics;
+
+		/** \brief Power system stabilizer model using this remote input signal. Default: 0 */
+		CIMPP::PowerSystemStabilizerDynamics* PowerSystemStabilizerDynamics;
+
+		/** \brief Remote terminal with which this input signal is associated. Default: 0 */
+		CIMPP::Terminal* Terminal;
+
+		/** \brief Underexcitation limiter model using this remote input signal. Default: 0 */
+		CIMPP::UnderexcitationLimiterDynamics* UnderexcitationLimiterDynamics;
+
+		/** \brief Voltage compensator model using this remote input signal. Default: 0 */
+		CIMPP::VoltageCompensatorDynamics* VoltageCompensatorDynamics;
+
+		/** \brief The wind plant using the remote signal. Default: 0 */
+		CIMPP::WindPlantDynamics* WindPlantDynamics;
+
+		/** \brief Wind generator type 1 or type 2 model using this remote input signal. Default: 0 */
+		CIMPP::WindTurbineType1or2Dynamics* WindTurbineType1or2Dynamics;
+
+		/** \brief Wind turbine type 3 or type 4 models using this remote input signal. Default: 0 */
+		CIMPP::WindTurbineType3or4Dynamics* WindTurbineType3or4Dynamics;
+
+		/** \brief Type of input signal. Default: 0 */
+		CIMPP::RemoteSignalKind remoteSignalType;
 
 		static const char debugName[];
 		const char* debugString() const override;

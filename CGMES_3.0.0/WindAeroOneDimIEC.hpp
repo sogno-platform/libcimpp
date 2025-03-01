@@ -19,9 +19,7 @@ namespace CIMPP
 {
 	class WindTurbineType3IEC;
 
-	/*
-	One-dimensional aerodynamic model.   Reference: IEC 61400-27-1:2015, 5.6.1.2.
-	*/
+	/** \brief One-dimensional aerodynamic model.   Reference: IEC 61400-27-1:2015, 5.6.1.2. */
 	class WindAeroOneDimIEC : public IdentifiedObject
 	{
 	public:
@@ -29,9 +27,14 @@ namespace CIMPP
 		WindAeroOneDimIEC();
 		~WindAeroOneDimIEC() override;
 
-		CIMPP::WindTurbineType3IEC* WindTurbineType3IEC;  /* Wind turbine type 3 model with which this wind aerodynamic model is associated. Default: 0 */
-		CIMPP::Float ka;  /* Aerodynamic gain (&lt;i&gt;k&lt;/i&gt;&lt;i&gt;&lt;sub&gt;a&lt;/sub&gt;&lt;/i&gt;). It is a type-dependent parameter. Default: 0.0 */
-		CIMPP::AngleDegrees thetaomega;  /* Initial pitch angle (&lt;i&gt;theta&lt;/i&gt;&lt;i&gt;&lt;sub&gt;omega0&lt;/sub&gt;&lt;/i&gt;). It is a case-dependent parameter. Default: nullptr */
+		/** \brief Wind turbine type 3 model with which this wind aerodynamic model is associated. Default: 0 */
+		CIMPP::WindTurbineType3IEC* WindTurbineType3IEC;
+
+		/** \brief Aerodynamic gain (&lt;i&gt;k&lt;/i&gt;&lt;i&gt;&lt;sub&gt;a&lt;/sub&gt;&lt;/i&gt;). It is a type-dependent parameter. Default: 0.0 */
+		CIMPP::Float ka;
+
+		/** \brief Initial pitch angle (&lt;i&gt;theta&lt;/i&gt;&lt;i&gt;&lt;sub&gt;omega0&lt;/sub&gt;&lt;/i&gt;). It is a case-dependent parameter. Default: nullptr */
+		CIMPP::AngleDegrees thetaomega;
 
 		static const char debugName[];
 		const char* debugString() const override;

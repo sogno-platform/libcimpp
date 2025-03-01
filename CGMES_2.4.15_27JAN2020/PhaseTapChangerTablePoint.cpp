@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "PhaseTapChangerTable.hpp"
-#include "AngleDegrees.hpp"
 
 using namespace CIMPP;
 
-PhaseTapChangerTablePoint::PhaseTapChangerTablePoint() : PhaseTapChangerTable(nullptr) {};
-PhaseTapChangerTablePoint::~PhaseTapChangerTablePoint() {};
+PhaseTapChangerTablePoint::PhaseTapChangerTablePoint() : PhaseTapChangerTable(nullptr) {}
+PhaseTapChangerTablePoint::~PhaseTapChangerTablePoint() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,21 +41,6 @@ PhaseTapChangerTablePoint::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_PhaseTapChangerTablePoint_angle(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (PhaseTapChangerTablePoint* element = dynamic_cast<PhaseTapChangerTablePoint*>(BaseClass_ptr1))
-	{
-		buffer >> element->angle;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_PhaseTapChangerTable_PhaseTapChangerTablePoint(BaseClass*, BaseClass*);
 bool assign_PhaseTapChangerTablePoint_PhaseTapChangerTable(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,9 +58,38 @@ bool assign_PhaseTapChangerTablePoint_PhaseTapChangerTable(BaseClass* BaseClass_
 	return false;
 }
 
+bool assign_PhaseTapChangerTablePoint_angle(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	PhaseTapChangerTablePoint* element = dynamic_cast<PhaseTapChangerTablePoint*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->angle;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_PhaseTapChangerTablePoint_PhaseTapChangerTable(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const PhaseTapChangerTablePoint* element = dynamic_cast<const PhaseTapChangerTablePoint*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->PhaseTapChangerTable != 0)
+		{
+			BaseClass_list.push_back(element->PhaseTapChangerTable);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_PhaseTapChangerTablePoint_angle(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PhaseTapChangerTablePoint* element = dynamic_cast<const PhaseTapChangerTablePoint*>(BaseClass_ptr1))
+	const PhaseTapChangerTablePoint* element = dynamic_cast<const PhaseTapChangerTablePoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->angle;
 		if (!buffer.str().empty())
@@ -88,21 +101,6 @@ bool get_PhaseTapChangerTablePoint_angle(const BaseClass* BaseClass_ptr1, std::s
 	return false;
 }
 
-
-bool get_PhaseTapChangerTablePoint_PhaseTapChangerTable(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const PhaseTapChangerTablePoint* element = dynamic_cast<const PhaseTapChangerTablePoint*>(BaseClass_ptr1))
-	{
-		if (element->PhaseTapChangerTable != 0)
-		{
-			BaseClass_list.push_back(element->PhaseTapChangerTable);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char PhaseTapChangerTablePoint::debugName[] = "PhaseTapChangerTablePoint";
 const char* PhaseTapChangerTablePoint::debugString() const
 {
@@ -111,17 +109,17 @@ const char* PhaseTapChangerTablePoint::debugString() const
 
 void PhaseTapChangerTablePoint::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:PhaseTapChangerTablePoint"), &PhaseTapChangerTablePoint_factory));
+	factory_map.emplace("cim:PhaseTapChangerTablePoint", &PhaseTapChangerTablePoint_factory);
 }
 
 void PhaseTapChangerTablePoint::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:PhaseTapChangerTablePoint.angle"), &assign_PhaseTapChangerTablePoint_angle));
+	assign_map.emplace("cim:PhaseTapChangerTablePoint.angle", &assign_PhaseTapChangerTablePoint_angle);
 }
 
 void PhaseTapChangerTablePoint::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:PhaseTapChangerTablePoint.PhaseTapChangerTable"), &assign_PhaseTapChangerTablePoint_PhaseTapChangerTable));
+	assign_map.emplace("cim:PhaseTapChangerTablePoint.PhaseTapChangerTable", &assign_PhaseTapChangerTablePoint_PhaseTapChangerTable);
 }
 
 void PhaseTapChangerTablePoint::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

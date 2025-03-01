@@ -21,9 +21,7 @@ namespace CIMPP
 	class WindContPitchAngleIEC;
 	class WindMechIEC;
 
-	/*
-	Generator model for wind turbines of IEC type 3A and 3B.
-	*/
+	/** \brief Generator model for wind turbines of IEC type 3A and 3B. */
 	class WindGenTurbineType3IEC : public WindTurbineType3or4IEC
 	{
 	public:
@@ -31,12 +29,23 @@ namespace CIMPP
 		WindGenTurbineType3IEC();
 		~WindGenTurbineType3IEC() override;
 
-		CIMPP::WindAeroLinearIEC* WindAeroLinearIEC;  /* Wind aerodynamic model associated with this wind generator type 3 model. Default: 0 */
-		CIMPP::WindContPType3IEC* WindContPType3IEC;  /* Wind control P type 3 model associated with this wind turbine type 3 model. Default: 0 */
-		CIMPP::WindContPitchAngleIEC* WindContPitchAngleIEC;  /* Wind control pitch angle model associated with this wind turbine type 3. Default: 0 */
-		CIMPP::WindMechIEC* WindMechIEC;  /* Wind mechanical model associated with this wind turbine Type 3 model. Default: 0 */
-		CIMPP::PU dipmax;  /* Maximum active current ramp rate (di). It is project dependent parameter. Default: nullptr */
-		CIMPP::PU diqmax;  /* Maximum reactive current ramp rate (di). It is project dependent parameter. Default: nullptr */
+		/** \brief Wind aerodynamic model associated with this wind generator type 3 model. Default: 0 */
+		CIMPP::WindAeroLinearIEC* WindAeroLinearIEC;
+
+		/** \brief Wind control P type 3 model associated with this wind turbine type 3 model. Default: 0 */
+		CIMPP::WindContPType3IEC* WindContPType3IEC;
+
+		/** \brief Wind control pitch angle model associated with this wind turbine type 3. Default: 0 */
+		CIMPP::WindContPitchAngleIEC* WindContPitchAngleIEC;
+
+		/** \brief Wind mechanical model associated with this wind turbine Type 3 model. Default: 0 */
+		CIMPP::WindMechIEC* WindMechIEC;
+
+		/** \brief Maximum active current ramp rate (di). It is project dependent parameter. Default: nullptr */
+		CIMPP::PU dipmax;
+
+		/** \brief Maximum reactive current ramp rate (di). It is project dependent parameter. Default: nullptr */
+		CIMPP::PU diqmax;
 
 		static const char debugName[];
 		const char* debugString() const override;

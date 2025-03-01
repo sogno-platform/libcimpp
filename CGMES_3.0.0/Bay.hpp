@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class VoltageLevel;
 
-	/*
-	A collection of power system resources (within a given substation) including conducting equipment, protection relays, measurements, and telemetry.  A bay typically represents a physical grouping related to modularization of equipment.
-	*/
+	/** \brief A collection of power system resources (within a given substation) including conducting equipment, protection relays, measurements, and telemetry.  A bay typically represents a physical grouping related to modularization of equipment. */
 	class Bay : public EquipmentContainer
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		Bay();
 		~Bay() override;
 
-		CIMPP::VoltageLevel* VoltageLevel;  /* The voltage level containing this bay. Default: 0 */
+		/** \brief The voltage level containing this bay. Default: 0 */
+		CIMPP::VoltageLevel* VoltageLevel;
 
 		static const char debugName[];
 		const char* debugString() const override;

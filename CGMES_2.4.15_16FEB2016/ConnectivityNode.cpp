@@ -11,18 +11,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "ConnectivityNodeContainer.hpp"
 #include "Terminal.hpp"
 #include "TopologicalNode.hpp"
-#include "Boolean.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
 
 using namespace CIMPP;
 
-ConnectivityNode::ConnectivityNode() : ConnectivityNodeContainer(nullptr), TopologicalNode(nullptr) {};
-ConnectivityNode::~ConnectivityNode() {};
+ConnectivityNode::ConnectivityNode() : ConnectivityNodeContainer(nullptr), TopologicalNode(nullptr) {}
+ConnectivityNode::~ConnectivityNode() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -61,99 +54,6 @@ ConnectivityNode::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_ConnectivityNode_boundaryPoint(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1))
-	{
-		buffer >> element->boundaryPoint;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ConnectivityNode_fromEndIsoCode(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1))
-	{
-		element->fromEndIsoCode = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ConnectivityNode_fromEndName(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1))
-	{
-		element->fromEndName = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ConnectivityNode_fromEndNameTso(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1))
-	{
-		element->fromEndNameTso = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ConnectivityNode_toEndIsoCode(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1))
-	{
-		element->toEndIsoCode = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ConnectivityNode_toEndName(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1))
-	{
-		element->toEndName = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ConnectivityNode_toEndNameTso(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1))
-	{
-		element->toEndNameTso = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_ConnectivityNodeContainer_ConnectivityNodes(BaseClass*, BaseClass*);
 bool assign_ConnectivityNode_ConnectivityNodeContainer(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -170,6 +70,7 @@ bool assign_ConnectivityNode_ConnectivityNodeContainer(BaseClass* BaseClass_ptr1
 	}
 	return false;
 }
+
 bool assign_Terminal_ConnectivityNode(BaseClass*, BaseClass*);
 bool assign_ConnectivityNode_Terminals(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -186,6 +87,7 @@ bool assign_ConnectivityNode_Terminals(BaseClass* BaseClass_ptr1, BaseClass* Bas
 	}
 	return false;
 }
+
 bool assign_TopologicalNode_ConnectivityNodes(BaseClass*, BaseClass*);
 bool assign_ConnectivityNode_TopologicalNode(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -203,9 +105,137 @@ bool assign_ConnectivityNode_TopologicalNode(BaseClass* BaseClass_ptr1, BaseClas
 	return false;
 }
 
+bool assign_ConnectivityNode_boundaryPoint(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->boundaryPoint;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ConnectivityNode_fromEndIsoCode(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->fromEndIsoCode = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ConnectivityNode_fromEndName(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->fromEndName = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ConnectivityNode_fromEndNameTso(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->fromEndNameTso = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ConnectivityNode_toEndIsoCode(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->toEndIsoCode = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ConnectivityNode_toEndName(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->toEndName = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ConnectivityNode_toEndNameTso(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ConnectivityNode* element = dynamic_cast<ConnectivityNode*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->toEndNameTso = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_ConnectivityNode_ConnectivityNodeContainer(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const ConnectivityNode* element = dynamic_cast<const ConnectivityNode*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->ConnectivityNodeContainer != 0)
+		{
+			BaseClass_list.push_back(element->ConnectivityNodeContainer);
+			return true;
+		}
+	}
+	return false;
+}
+
+
+bool get_ConnectivityNode_TopologicalNode(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const ConnectivityNode* element = dynamic_cast<const ConnectivityNode*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->TopologicalNode != 0)
+		{
+			BaseClass_list.push_back(element->TopologicalNode);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_ConnectivityNode_boundaryPoint(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ConnectivityNode* element = dynamic_cast<const ConnectivityNode*>(BaseClass_ptr1))
+	const ConnectivityNode* element = dynamic_cast<const ConnectivityNode*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->boundaryPoint;
 		if (!buffer.str().empty())
@@ -219,7 +249,8 @@ bool get_ConnectivityNode_boundaryPoint(const BaseClass* BaseClass_ptr1, std::st
 
 bool get_ConnectivityNode_fromEndIsoCode(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ConnectivityNode* element = dynamic_cast<const ConnectivityNode*>(BaseClass_ptr1))
+	const ConnectivityNode* element = dynamic_cast<const ConnectivityNode*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->fromEndIsoCode;
 		if (!buffer.str().empty())
@@ -233,7 +264,8 @@ bool get_ConnectivityNode_fromEndIsoCode(const BaseClass* BaseClass_ptr1, std::s
 
 bool get_ConnectivityNode_fromEndName(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ConnectivityNode* element = dynamic_cast<const ConnectivityNode*>(BaseClass_ptr1))
+	const ConnectivityNode* element = dynamic_cast<const ConnectivityNode*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->fromEndName;
 		if (!buffer.str().empty())
@@ -247,7 +279,8 @@ bool get_ConnectivityNode_fromEndName(const BaseClass* BaseClass_ptr1, std::stri
 
 bool get_ConnectivityNode_fromEndNameTso(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ConnectivityNode* element = dynamic_cast<const ConnectivityNode*>(BaseClass_ptr1))
+	const ConnectivityNode* element = dynamic_cast<const ConnectivityNode*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->fromEndNameTso;
 		if (!buffer.str().empty())
@@ -261,7 +294,8 @@ bool get_ConnectivityNode_fromEndNameTso(const BaseClass* BaseClass_ptr1, std::s
 
 bool get_ConnectivityNode_toEndIsoCode(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ConnectivityNode* element = dynamic_cast<const ConnectivityNode*>(BaseClass_ptr1))
+	const ConnectivityNode* element = dynamic_cast<const ConnectivityNode*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->toEndIsoCode;
 		if (!buffer.str().empty())
@@ -275,7 +309,8 @@ bool get_ConnectivityNode_toEndIsoCode(const BaseClass* BaseClass_ptr1, std::str
 
 bool get_ConnectivityNode_toEndName(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ConnectivityNode* element = dynamic_cast<const ConnectivityNode*>(BaseClass_ptr1))
+	const ConnectivityNode* element = dynamic_cast<const ConnectivityNode*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->toEndName;
 		if (!buffer.str().empty())
@@ -289,7 +324,8 @@ bool get_ConnectivityNode_toEndName(const BaseClass* BaseClass_ptr1, std::string
 
 bool get_ConnectivityNode_toEndNameTso(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ConnectivityNode* element = dynamic_cast<const ConnectivityNode*>(BaseClass_ptr1))
+	const ConnectivityNode* element = dynamic_cast<const ConnectivityNode*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->toEndNameTso;
 		if (!buffer.str().empty())
@@ -301,34 +337,6 @@ bool get_ConnectivityNode_toEndNameTso(const BaseClass* BaseClass_ptr1, std::str
 	return false;
 }
 
-
-bool get_ConnectivityNode_ConnectivityNodeContainer(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const ConnectivityNode* element = dynamic_cast<const ConnectivityNode*>(BaseClass_ptr1))
-	{
-		if (element->ConnectivityNodeContainer != 0)
-		{
-			BaseClass_list.push_back(element->ConnectivityNodeContainer);
-			return true;
-		}
-	}
-	return false;
-}
-
-bool get_ConnectivityNode_TopologicalNode(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const ConnectivityNode* element = dynamic_cast<const ConnectivityNode*>(BaseClass_ptr1))
-	{
-		if (element->TopologicalNode != 0)
-		{
-			BaseClass_list.push_back(element->TopologicalNode);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char ConnectivityNode::debugName[] = "ConnectivityNode";
 const char* ConnectivityNode::debugString() const
 {
@@ -337,25 +345,25 @@ const char* ConnectivityNode::debugString() const
 
 void ConnectivityNode::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ConnectivityNode"), &ConnectivityNode_factory));
+	factory_map.emplace("cim:ConnectivityNode", &ConnectivityNode_factory);
 }
 
 void ConnectivityNode::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ConnectivityNode.boundaryPoint"), &assign_ConnectivityNode_boundaryPoint));
-	assign_map.insert(std::make_pair(std::string("cim:ConnectivityNode.fromEndIsoCode"), &assign_ConnectivityNode_fromEndIsoCode));
-	assign_map.insert(std::make_pair(std::string("cim:ConnectivityNode.fromEndName"), &assign_ConnectivityNode_fromEndName));
-	assign_map.insert(std::make_pair(std::string("cim:ConnectivityNode.fromEndNameTso"), &assign_ConnectivityNode_fromEndNameTso));
-	assign_map.insert(std::make_pair(std::string("cim:ConnectivityNode.toEndIsoCode"), &assign_ConnectivityNode_toEndIsoCode));
-	assign_map.insert(std::make_pair(std::string("cim:ConnectivityNode.toEndName"), &assign_ConnectivityNode_toEndName));
-	assign_map.insert(std::make_pair(std::string("cim:ConnectivityNode.toEndNameTso"), &assign_ConnectivityNode_toEndNameTso));
+	assign_map.emplace("cim:ConnectivityNode.boundaryPoint", &assign_ConnectivityNode_boundaryPoint);
+	assign_map.emplace("cim:ConnectivityNode.fromEndIsoCode", &assign_ConnectivityNode_fromEndIsoCode);
+	assign_map.emplace("cim:ConnectivityNode.fromEndName", &assign_ConnectivityNode_fromEndName);
+	assign_map.emplace("cim:ConnectivityNode.fromEndNameTso", &assign_ConnectivityNode_fromEndNameTso);
+	assign_map.emplace("cim:ConnectivityNode.toEndIsoCode", &assign_ConnectivityNode_toEndIsoCode);
+	assign_map.emplace("cim:ConnectivityNode.toEndName", &assign_ConnectivityNode_toEndName);
+	assign_map.emplace("cim:ConnectivityNode.toEndNameTso", &assign_ConnectivityNode_toEndNameTso);
 }
 
 void ConnectivityNode::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ConnectivityNode.ConnectivityNodeContainer"), &assign_ConnectivityNode_ConnectivityNodeContainer));
-	assign_map.insert(std::make_pair(std::string("cim:ConnectivityNode.Terminals"), &assign_ConnectivityNode_Terminals));
-	assign_map.insert(std::make_pair(std::string("cim:ConnectivityNode.TopologicalNode"), &assign_ConnectivityNode_TopologicalNode));
+	assign_map.emplace("cim:ConnectivityNode.ConnectivityNodeContainer", &assign_ConnectivityNode_ConnectivityNodeContainer);
+	assign_map.emplace("cim:ConnectivityNode.Terminals", &assign_ConnectivityNode_Terminals);
+	assign_map.emplace("cim:ConnectivityNode.TopologicalNode", &assign_ConnectivityNode_TopologicalNode);
 }
 
 void ConnectivityNode::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

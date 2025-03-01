@@ -19,9 +19,7 @@ namespace CIMPP
 	class EquipmentContainer;
 	class OperationalLimitSet;
 
-	/*
-	The parts of a power system that are physical devices, electronic or mechanical.
-	*/
+	/** \brief The parts of a power system that are physical devices, electronic or mechanical. */
 	class Equipment : public PowerSystemResource
 	{
 	public:
@@ -29,9 +27,14 @@ namespace CIMPP
 		Equipment();
 		~Equipment() override;
 
-		CIMPP::EquipmentContainer* EquipmentContainer;  /* Container of this equipment. Default: 0 */
-		std::list<CIMPP::OperationalLimitSet*> OperationalLimitSet;  /* The operational limit sets associated with this equipment. Default: 0 */
-		CIMPP::Boolean aggregate;  /* The single instance of equipment represents multiple pieces of equipment that have been modeled together as an aggregate.  Examples would be power transformers or synchronous machines operating in parallel modeled as a single aggregate power transformer or aggregate synchronous machine.  This is not to be used to indicate equipment that is part of a group of interdependent equipment produced by a network production program. Default: false */
+		/** \brief Container of this equipment. Default: 0 */
+		CIMPP::EquipmentContainer* EquipmentContainer;
+
+		/** \brief The operational limit sets associated with this equipment. Default: 0 */
+		std::list<CIMPP::OperationalLimitSet*> OperationalLimitSet;
+
+		/** \brief The single instance of equipment represents multiple pieces of equipment that have been modeled together as an aggregate.  Examples would be power transformers or synchronous machines operating in parallel modeled as a single aggregate power transformer or aggregate synchronous machine.  This is not to be used to indicate equipment that is part of a group of interdependent equipment produced by a network production program. Default: false */
+		CIMPP::Boolean aggregate;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -8,17 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "PerCent.hpp"
-#include "PerCent.hpp"
-#include "PerCent.hpp"
-#include "Float.hpp"
-#include "Integer.hpp"
-#include "PerCent.hpp"
 
 using namespace CIMPP;
 
-TapChangerTablePoint::TapChangerTablePoint() {};
-TapChangerTablePoint::~TapChangerTablePoint() {};
+TapChangerTablePoint::TapChangerTablePoint() {}
+TapChangerTablePoint::~TapChangerTablePoint() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -50,90 +44,94 @@ TapChangerTablePoint::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_TapChangerTablePoint_b(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_TapChangerTablePoint_b(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (TapChangerTablePoint* element = dynamic_cast<TapChangerTablePoint*>(BaseClass_ptr1))
+	TapChangerTablePoint* element = dynamic_cast<TapChangerTablePoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->b;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_TapChangerTablePoint_g(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_TapChangerTablePoint_g(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (TapChangerTablePoint* element = dynamic_cast<TapChangerTablePoint*>(BaseClass_ptr1))
+	TapChangerTablePoint* element = dynamic_cast<TapChangerTablePoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->g;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_TapChangerTablePoint_r(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_TapChangerTablePoint_r(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (TapChangerTablePoint* element = dynamic_cast<TapChangerTablePoint*>(BaseClass_ptr1))
+	TapChangerTablePoint* element = dynamic_cast<TapChangerTablePoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->r;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_TapChangerTablePoint_ratio(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_TapChangerTablePoint_ratio(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (TapChangerTablePoint* element = dynamic_cast<TapChangerTablePoint*>(BaseClass_ptr1))
+	TapChangerTablePoint* element = dynamic_cast<TapChangerTablePoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ratio;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_TapChangerTablePoint_step(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_TapChangerTablePoint_step(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (TapChangerTablePoint* element = dynamic_cast<TapChangerTablePoint*>(BaseClass_ptr1))
+	TapChangerTablePoint* element = dynamic_cast<TapChangerTablePoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->step;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_TapChangerTablePoint_x(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_TapChangerTablePoint_x(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (TapChangerTablePoint* element = dynamic_cast<TapChangerTablePoint*>(BaseClass_ptr1))
+	TapChangerTablePoint* element = dynamic_cast<TapChangerTablePoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->x;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_TapChangerTablePoint_b(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TapChangerTablePoint* element = dynamic_cast<const TapChangerTablePoint*>(BaseClass_ptr1))
+	const TapChangerTablePoint* element = dynamic_cast<const TapChangerTablePoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->b;
 		if (!buffer.str().empty())
@@ -147,7 +145,8 @@ bool get_TapChangerTablePoint_b(const BaseClass* BaseClass_ptr1, std::stringstre
 
 bool get_TapChangerTablePoint_g(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TapChangerTablePoint* element = dynamic_cast<const TapChangerTablePoint*>(BaseClass_ptr1))
+	const TapChangerTablePoint* element = dynamic_cast<const TapChangerTablePoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->g;
 		if (!buffer.str().empty())
@@ -161,7 +160,8 @@ bool get_TapChangerTablePoint_g(const BaseClass* BaseClass_ptr1, std::stringstre
 
 bool get_TapChangerTablePoint_r(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TapChangerTablePoint* element = dynamic_cast<const TapChangerTablePoint*>(BaseClass_ptr1))
+	const TapChangerTablePoint* element = dynamic_cast<const TapChangerTablePoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->r;
 		if (!buffer.str().empty())
@@ -175,7 +175,8 @@ bool get_TapChangerTablePoint_r(const BaseClass* BaseClass_ptr1, std::stringstre
 
 bool get_TapChangerTablePoint_ratio(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TapChangerTablePoint* element = dynamic_cast<const TapChangerTablePoint*>(BaseClass_ptr1))
+	const TapChangerTablePoint* element = dynamic_cast<const TapChangerTablePoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ratio;
 		if (!buffer.str().empty())
@@ -189,7 +190,8 @@ bool get_TapChangerTablePoint_ratio(const BaseClass* BaseClass_ptr1, std::string
 
 bool get_TapChangerTablePoint_step(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TapChangerTablePoint* element = dynamic_cast<const TapChangerTablePoint*>(BaseClass_ptr1))
+	const TapChangerTablePoint* element = dynamic_cast<const TapChangerTablePoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->step;
 		if (!buffer.str().empty())
@@ -203,7 +205,8 @@ bool get_TapChangerTablePoint_step(const BaseClass* BaseClass_ptr1, std::strings
 
 bool get_TapChangerTablePoint_x(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TapChangerTablePoint* element = dynamic_cast<const TapChangerTablePoint*>(BaseClass_ptr1))
+	const TapChangerTablePoint* element = dynamic_cast<const TapChangerTablePoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->x;
 		if (!buffer.str().empty())
@@ -215,8 +218,6 @@ bool get_TapChangerTablePoint_x(const BaseClass* BaseClass_ptr1, std::stringstre
 	return false;
 }
 
-
-
 const char TapChangerTablePoint::debugName[] = "TapChangerTablePoint";
 const char* TapChangerTablePoint::debugString() const
 {
@@ -225,17 +226,17 @@ const char* TapChangerTablePoint::debugString() const
 
 void TapChangerTablePoint::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:TapChangerTablePoint"), &TapChangerTablePoint_factory));
+	factory_map.emplace("cim:TapChangerTablePoint", &TapChangerTablePoint_factory);
 }
 
 void TapChangerTablePoint::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:TapChangerTablePoint.b"), &assign_TapChangerTablePoint_b));
-	assign_map.insert(std::make_pair(std::string("cim:TapChangerTablePoint.g"), &assign_TapChangerTablePoint_g));
-	assign_map.insert(std::make_pair(std::string("cim:TapChangerTablePoint.r"), &assign_TapChangerTablePoint_r));
-	assign_map.insert(std::make_pair(std::string("cim:TapChangerTablePoint.ratio"), &assign_TapChangerTablePoint_ratio));
-	assign_map.insert(std::make_pair(std::string("cim:TapChangerTablePoint.step"), &assign_TapChangerTablePoint_step));
-	assign_map.insert(std::make_pair(std::string("cim:TapChangerTablePoint.x"), &assign_TapChangerTablePoint_x));
+	assign_map.emplace("cim:TapChangerTablePoint.b", &assign_TapChangerTablePoint_b);
+	assign_map.emplace("cim:TapChangerTablePoint.g", &assign_TapChangerTablePoint_g);
+	assign_map.emplace("cim:TapChangerTablePoint.r", &assign_TapChangerTablePoint_r);
+	assign_map.emplace("cim:TapChangerTablePoint.ratio", &assign_TapChangerTablePoint_ratio);
+	assign_map.emplace("cim:TapChangerTablePoint.step", &assign_TapChangerTablePoint_step);
+	assign_map.emplace("cim:TapChangerTablePoint.x", &assign_TapChangerTablePoint_x);
 }
 
 void TapChangerTablePoint::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

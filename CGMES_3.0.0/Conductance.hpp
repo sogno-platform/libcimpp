@@ -9,9 +9,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Factor by which voltage must be multiplied to give corresponding power lost from a circuit. Real part of admittance.
-	*/
+	/** \brief Factor by which voltage must be multiplied to give corresponding power lost from a circuit. Real part of admittance. */
 	class Conductance
 	{
 	public:

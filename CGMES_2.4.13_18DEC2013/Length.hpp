@@ -9,9 +9,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Unit of length. Never negative.
-	*/
+	/** \brief Unit of length. Never negative. */
 	class Length
 	{
 	public:

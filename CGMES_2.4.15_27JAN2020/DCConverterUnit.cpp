@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "Substation.hpp"
-#include "DCConverterOperatingModeKind.hpp"
 
 using namespace CIMPP;
 
-DCConverterUnit::DCConverterUnit() : Substation(nullptr) {};
-DCConverterUnit::~DCConverterUnit() {};
+DCConverterUnit::DCConverterUnit() : Substation(nullptr) {}
+DCConverterUnit::~DCConverterUnit() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,21 +41,6 @@ DCConverterUnit::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_DCConverterUnit_operationMode(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (DCConverterUnit* element = dynamic_cast<DCConverterUnit*>(BaseClass_ptr1))
-	{
-		buffer >> element->operationMode;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_Substation_DCConverterUnit(BaseClass*, BaseClass*);
 bool assign_DCConverterUnit_Substation(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,10 +58,24 @@ bool assign_DCConverterUnit_Substation(BaseClass* BaseClass_ptr1, BaseClass* Bas
 	return false;
 }
 
+bool assign_DCConverterUnit_operationMode(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	DCConverterUnit* element = dynamic_cast<DCConverterUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->operationMode;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
 
 bool get_DCConverterUnit_Substation(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const DCConverterUnit* element = dynamic_cast<const DCConverterUnit*>(BaseClass_ptr1))
+	const DCConverterUnit* element = dynamic_cast<const DCConverterUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->Substation != 0)
 		{
@@ -88,10 +86,10 @@ bool get_DCConverterUnit_Substation(const BaseClass* BaseClass_ptr1, std::list<c
 	return false;
 }
 
-
 bool get_DCConverterUnit_operationMode(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DCConverterUnit* element = dynamic_cast<const DCConverterUnit*>(BaseClass_ptr1))
+	const DCConverterUnit* element = dynamic_cast<const DCConverterUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->operationMode;
 		if (!buffer.str().empty())
@@ -111,17 +109,17 @@ const char* DCConverterUnit::debugString() const
 
 void DCConverterUnit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:DCConverterUnit"), &DCConverterUnit_factory));
+	factory_map.emplace("cim:DCConverterUnit", &DCConverterUnit_factory);
 }
 
 void DCConverterUnit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:DCConverterUnit.operationMode"), &assign_DCConverterUnit_operationMode));
+	assign_map.emplace("cim:DCConverterUnit.operationMode", &assign_DCConverterUnit_operationMode);
 }
 
 void DCConverterUnit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:DCConverterUnit.Substation"), &assign_DCConverterUnit_Substation));
+	assign_map.emplace("cim:DCConverterUnit.Substation", &assign_DCConverterUnit_Substation);
 }
 
 void DCConverterUnit::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

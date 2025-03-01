@@ -8,17 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Simple_Float.hpp"
 
 using namespace CIMPP;
 
-OverexcLimIEEE::OverexcLimIEEE() {};
-OverexcLimIEEE::~OverexcLimIEEE() {};
+OverexcLimIEEE::OverexcLimIEEE() {}
+OverexcLimIEEE::~OverexcLimIEEE() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -50,90 +44,94 @@ OverexcLimIEEE::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_OverexcLimIEEE_hyst(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_OverexcLimIEEE_hyst(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (OverexcLimIEEE* element = dynamic_cast<OverexcLimIEEE*>(BaseClass_ptr1))
+	OverexcLimIEEE* element = dynamic_cast<OverexcLimIEEE*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->hyst;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_OverexcLimIEEE_ifdlim(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_OverexcLimIEEE_ifdlim(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (OverexcLimIEEE* element = dynamic_cast<OverexcLimIEEE*>(BaseClass_ptr1))
+	OverexcLimIEEE* element = dynamic_cast<OverexcLimIEEE*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ifdlim;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_OverexcLimIEEE_ifdmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_OverexcLimIEEE_ifdmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (OverexcLimIEEE* element = dynamic_cast<OverexcLimIEEE*>(BaseClass_ptr1))
+	OverexcLimIEEE* element = dynamic_cast<OverexcLimIEEE*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ifdmax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_OverexcLimIEEE_itfpu(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_OverexcLimIEEE_itfpu(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (OverexcLimIEEE* element = dynamic_cast<OverexcLimIEEE*>(BaseClass_ptr1))
+	OverexcLimIEEE* element = dynamic_cast<OverexcLimIEEE*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->itfpu;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_OverexcLimIEEE_kcd(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_OverexcLimIEEE_kcd(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (OverexcLimIEEE* element = dynamic_cast<OverexcLimIEEE*>(BaseClass_ptr1))
+	OverexcLimIEEE* element = dynamic_cast<OverexcLimIEEE*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kcd;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_OverexcLimIEEE_kramp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_OverexcLimIEEE_kramp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (OverexcLimIEEE* element = dynamic_cast<OverexcLimIEEE*>(BaseClass_ptr1))
+	OverexcLimIEEE* element = dynamic_cast<OverexcLimIEEE*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kramp;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_OverexcLimIEEE_hyst(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const OverexcLimIEEE* element = dynamic_cast<const OverexcLimIEEE*>(BaseClass_ptr1))
+	const OverexcLimIEEE* element = dynamic_cast<const OverexcLimIEEE*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->hyst;
 		if (!buffer.str().empty())
@@ -147,7 +145,8 @@ bool get_OverexcLimIEEE_hyst(const BaseClass* BaseClass_ptr1, std::stringstream&
 
 bool get_OverexcLimIEEE_ifdlim(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const OverexcLimIEEE* element = dynamic_cast<const OverexcLimIEEE*>(BaseClass_ptr1))
+	const OverexcLimIEEE* element = dynamic_cast<const OverexcLimIEEE*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ifdlim;
 		if (!buffer.str().empty())
@@ -161,7 +160,8 @@ bool get_OverexcLimIEEE_ifdlim(const BaseClass* BaseClass_ptr1, std::stringstrea
 
 bool get_OverexcLimIEEE_ifdmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const OverexcLimIEEE* element = dynamic_cast<const OverexcLimIEEE*>(BaseClass_ptr1))
+	const OverexcLimIEEE* element = dynamic_cast<const OverexcLimIEEE*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ifdmax;
 		if (!buffer.str().empty())
@@ -175,7 +175,8 @@ bool get_OverexcLimIEEE_ifdmax(const BaseClass* BaseClass_ptr1, std::stringstrea
 
 bool get_OverexcLimIEEE_itfpu(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const OverexcLimIEEE* element = dynamic_cast<const OverexcLimIEEE*>(BaseClass_ptr1))
+	const OverexcLimIEEE* element = dynamic_cast<const OverexcLimIEEE*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->itfpu;
 		if (!buffer.str().empty())
@@ -189,7 +190,8 @@ bool get_OverexcLimIEEE_itfpu(const BaseClass* BaseClass_ptr1, std::stringstream
 
 bool get_OverexcLimIEEE_kcd(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const OverexcLimIEEE* element = dynamic_cast<const OverexcLimIEEE*>(BaseClass_ptr1))
+	const OverexcLimIEEE* element = dynamic_cast<const OverexcLimIEEE*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kcd;
 		if (!buffer.str().empty())
@@ -203,7 +205,8 @@ bool get_OverexcLimIEEE_kcd(const BaseClass* BaseClass_ptr1, std::stringstream& 
 
 bool get_OverexcLimIEEE_kramp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const OverexcLimIEEE* element = dynamic_cast<const OverexcLimIEEE*>(BaseClass_ptr1))
+	const OverexcLimIEEE* element = dynamic_cast<const OverexcLimIEEE*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kramp;
 		if (!buffer.str().empty())
@@ -215,8 +218,6 @@ bool get_OverexcLimIEEE_kramp(const BaseClass* BaseClass_ptr1, std::stringstream
 	return false;
 }
 
-
-
 const char OverexcLimIEEE::debugName[] = "OverexcLimIEEE";
 const char* OverexcLimIEEE::debugString() const
 {
@@ -225,17 +226,17 @@ const char* OverexcLimIEEE::debugString() const
 
 void OverexcLimIEEE::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:OverexcLimIEEE"), &OverexcLimIEEE_factory));
+	factory_map.emplace("cim:OverexcLimIEEE", &OverexcLimIEEE_factory);
 }
 
 void OverexcLimIEEE::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:OverexcLimIEEE.hyst"), &assign_OverexcLimIEEE_hyst));
-	assign_map.insert(std::make_pair(std::string("cim:OverexcLimIEEE.ifdlim"), &assign_OverexcLimIEEE_ifdlim));
-	assign_map.insert(std::make_pair(std::string("cim:OverexcLimIEEE.ifdmax"), &assign_OverexcLimIEEE_ifdmax));
-	assign_map.insert(std::make_pair(std::string("cim:OverexcLimIEEE.itfpu"), &assign_OverexcLimIEEE_itfpu));
-	assign_map.insert(std::make_pair(std::string("cim:OverexcLimIEEE.kcd"), &assign_OverexcLimIEEE_kcd));
-	assign_map.insert(std::make_pair(std::string("cim:OverexcLimIEEE.kramp"), &assign_OverexcLimIEEE_kramp));
+	assign_map.emplace("cim:OverexcLimIEEE.hyst", &assign_OverexcLimIEEE_hyst);
+	assign_map.emplace("cim:OverexcLimIEEE.ifdlim", &assign_OverexcLimIEEE_ifdlim);
+	assign_map.emplace("cim:OverexcLimIEEE.ifdmax", &assign_OverexcLimIEEE_ifdmax);
+	assign_map.emplace("cim:OverexcLimIEEE.itfpu", &assign_OverexcLimIEEE_itfpu);
+	assign_map.emplace("cim:OverexcLimIEEE.kcd", &assign_OverexcLimIEEE_kcd);
+	assign_map.emplace("cim:OverexcLimIEEE.kramp", &assign_OverexcLimIEEE_kramp);
 }
 
 void OverexcLimIEEE::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

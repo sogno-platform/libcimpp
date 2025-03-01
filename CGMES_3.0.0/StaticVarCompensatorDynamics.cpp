@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-StaticVarCompensatorDynamics::StaticVarCompensatorDynamics() : StaticVarCompensator(nullptr) {};
-StaticVarCompensatorDynamics::~StaticVarCompensatorDynamics() {};
+StaticVarCompensatorDynamics::StaticVarCompensatorDynamics() : StaticVarCompensator(nullptr) {}
+StaticVarCompensatorDynamics::~StaticVarCompensatorDynamics() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ StaticVarCompensatorDynamics::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_StaticVarCompensator_StaticVarCompensatorDynamics(BaseClass*, BaseClass*);
 bool assign_StaticVarCompensatorDynamics_StaticVarCompensator(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -59,10 +57,10 @@ bool assign_StaticVarCompensatorDynamics_StaticVarCompensator(BaseClass* BaseCla
 	return false;
 }
 
-
 bool get_StaticVarCompensatorDynamics_StaticVarCompensator(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const StaticVarCompensatorDynamics* element = dynamic_cast<const StaticVarCompensatorDynamics*>(BaseClass_ptr1))
+	const StaticVarCompensatorDynamics* element = dynamic_cast<const StaticVarCompensatorDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->StaticVarCompensator != 0)
 		{
@@ -73,7 +71,6 @@ bool get_StaticVarCompensatorDynamics_StaticVarCompensator(const BaseClass* Base
 	return false;
 }
 
-
 const char StaticVarCompensatorDynamics::debugName[] = "StaticVarCompensatorDynamics";
 const char* StaticVarCompensatorDynamics::debugString() const
 {
@@ -82,7 +79,7 @@ const char* StaticVarCompensatorDynamics::debugString() const
 
 void StaticVarCompensatorDynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:StaticVarCompensatorDynamics"), &StaticVarCompensatorDynamics_factory));
+	factory_map.emplace("cim:StaticVarCompensatorDynamics", &StaticVarCompensatorDynamics_factory);
 }
 
 void StaticVarCompensatorDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -91,7 +88,7 @@ void StaticVarCompensatorDynamics::addPrimitiveAssignFnsToMap(std::unordered_map
 
 void StaticVarCompensatorDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:StaticVarCompensatorDynamics.StaticVarCompensator"), &assign_StaticVarCompensatorDynamics_StaticVarCompensator));
+	assign_map.emplace("cim:StaticVarCompensatorDynamics.StaticVarCompensator", &assign_StaticVarCompensatorDynamics_StaticVarCompensator);
 }
 
 void StaticVarCompensatorDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "SVCControlMode")
+		if (EnumSymbol.substr(0, pos) != "SVCControlMode")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,12 +50,12 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "reactivePower")
+		if (EnumSymbol == "reactivePower")
 		{
 			rop = SVCControlMode::reactivePower;
 			return lop;
 		}
-		if(EnumSymbol == "voltage")
+		if (EnumSymbol == "voltage")
 		{
 			rop = SVCControlMode::voltage;
 			return lop;

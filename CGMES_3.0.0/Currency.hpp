@@ -9,657 +9,333 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Monetary currencies.  ISO 4217 standard including 3-character currency code.
-	*/
+	/** \brief Monetary currencies.  ISO 4217 standard including 3-character currency code. */
 	class Currency
 	{
 	public:
 		enum Currency_ENUM
 		{
-			/**
-			 * United Arab Emirates dirham.
-			 */
+			/** United Arab Emirates dirham. */
 			AED,
-			/**
-			 * Afghan afghani.
-			 */
+			/** Afghan afghani. */
 			AFN,
-			/**
-			 * Albanian lek.
-			 */
+			/** Albanian lek. */
 			ALL,
-			/**
-			 * Armenian dram.
-			 */
+			/** Armenian dram. */
 			AMD,
-			/**
-			 * Netherlands Antillean guilder.
-			 */
+			/** Netherlands Antillean guilder. */
 			ANG,
-			/**
-			 * Angolan kwanza.
-			 */
+			/** Angolan kwanza. */
 			AOA,
-			/**
-			 * Argentine peso.
-			 */
+			/** Argentine peso. */
 			ARS,
-			/**
-			 * Australian dollar.
-			 */
+			/** Australian dollar. */
 			AUD,
-			/**
-			 * Aruban florin.
-			 */
+			/** Aruban florin. */
 			AWG,
-			/**
-			 * Azerbaijani manat.
-			 */
+			/** Azerbaijani manat. */
 			AZN,
-			/**
-			 * Bosnia and Herzegovina convertible mark.
-			 */
+			/** Bosnia and Herzegovina convertible mark. */
 			BAM,
-			/**
-			 * Barbados dollar.
-			 */
+			/** Barbados dollar. */
 			BBD,
-			/**
-			 * Bangladeshi taka.
-			 */
+			/** Bangladeshi taka. */
 			BDT,
-			/**
-			 * Bulgarian lev.
-			 */
+			/** Bulgarian lev. */
 			BGN,
-			/**
-			 * Bahraini dinar.
-			 */
+			/** Bahraini dinar. */
 			BHD,
-			/**
-			 * Burundian franc.
-			 */
+			/** Burundian franc. */
 			BIF,
-			/**
-			 * Bermudian dollar (customarily known as Bermuda dollar).
-			 */
+			/** Bermudian dollar (customarily known as Bermuda dollar). */
 			BMD,
-			/**
-			 * Brunei dollar.
-			 */
+			/** Brunei dollar. */
 			BND,
-			/**
-			 * Boliviano.
-			 */
+			/** Boliviano. */
 			BOB,
-			/**
-			 * Bolivian Mvdol (funds code).
-			 */
+			/** Bolivian Mvdol (funds code). */
 			BOV,
-			/**
-			 * Brazilian real.
-			 */
+			/** Brazilian real. */
 			BRL,
-			/**
-			 * Bahamian dollar.
-			 */
+			/** Bahamian dollar. */
 			BSD,
-			/**
-			 * Bhutanese ngultrum.
-			 */
+			/** Bhutanese ngultrum. */
 			BTN,
-			/**
-			 * Botswana pula.
-			 */
+			/** Botswana pula. */
 			BWP,
-			/**
-			 * Belarusian ruble.
-			 */
+			/** Belarusian ruble. */
 			BYR,
-			/**
-			 * Belize dollar.
-			 */
+			/** Belize dollar. */
 			BZD,
-			/**
-			 * Canadian dollar.
-			 */
+			/** Canadian dollar. */
 			CAD,
-			/**
-			 * Congolese franc.
-			 */
+			/** Congolese franc. */
 			CDF,
-			/**
-			 * Swiss franc.
-			 */
+			/** Swiss franc. */
 			CHF,
-			/**
-			 * Unidad de Fomento (funds code), Chile.
-			 */
+			/** Unidad de Fomento (funds code), Chile. */
 			CLF,
-			/**
-			 * Chilean peso.
-			 */
+			/** Chilean peso. */
 			CLP,
-			/**
-			 * Chinese yuan.
-			 */
+			/** Chinese yuan. */
 			CNY,
-			/**
-			 * Colombian peso.
-			 */
+			/** Colombian peso. */
 			COP,
-			/**
-			 * Unidad de Valor Real.
-			 */
+			/** Unidad de Valor Real. */
 			COU,
-			/**
-			 * Costa Rican colon.
-			 */
+			/** Costa Rican colon. */
 			CRC,
-			/**
-			 * Cuban convertible peso.
-			 */
+			/** Cuban convertible peso. */
 			CUC,
-			/**
-			 * Cuban peso.
-			 */
+			/** Cuban peso. */
 			CUP,
-			/**
-			 * Cape Verde escudo.
-			 */
+			/** Cape Verde escudo. */
 			CVE,
-			/**
-			 * Czech koruna.
-			 */
+			/** Czech koruna. */
 			CZK,
-			/**
-			 * Djiboutian franc.
-			 */
+			/** Djiboutian franc. */
 			DJF,
-			/**
-			 * Danish krone.
-			 */
+			/** Danish krone. */
 			DKK,
-			/**
-			 * Dominican peso.
-			 */
+			/** Dominican peso. */
 			DOP,
-			/**
-			 * Algerian dinar.
-			 */
+			/** Algerian dinar. */
 			DZD,
-			/**
-			 * Estonian kroon.
-			 */
+			/** Estonian kroon. */
 			EEK,
-			/**
-			 * Egyptian pound.
-			 */
+			/** Egyptian pound. */
 			EGP,
-			/**
-			 * Eritrean nakfa.
-			 */
+			/** Eritrean nakfa. */
 			ERN,
-			/**
-			 * Ethiopian birr.
-			 */
+			/** Ethiopian birr. */
 			ETB,
-			/**
-			 * Euro.
-			 */
+			/** Euro. */
 			EUR,
-			/**
-			 * Fiji dollar.
-			 */
+			/** Fiji dollar. */
 			FJD,
-			/**
-			 * Falkland Islands pound.
-			 */
+			/** Falkland Islands pound. */
 			FKP,
-			/**
-			 * Pound sterling.
-			 */
+			/** Pound sterling. */
 			GBP,
-			/**
-			 * Georgian lari.
-			 */
+			/** Georgian lari. */
 			GEL,
-			/**
-			 * Ghanaian cedi.
-			 */
+			/** Ghanaian cedi. */
 			GHS,
-			/**
-			 * Gibraltar pound.
-			 */
+			/** Gibraltar pound. */
 			GIP,
-			/**
-			 * Gambian dalasi.
-			 */
+			/** Gambian dalasi. */
 			GMD,
-			/**
-			 * Guinean franc.
-			 */
+			/** Guinean franc. */
 			GNF,
-			/**
-			 * Guatemalan quetzal.
-			 */
+			/** Guatemalan quetzal. */
 			GTQ,
-			/**
-			 * Guyanese dollar.
-			 */
+			/** Guyanese dollar. */
 			GYD,
-			/**
-			 * Hong Kong dollar.
-			 */
+			/** Hong Kong dollar. */
 			HKD,
-			/**
-			 * Honduran lempira.
-			 */
+			/** Honduran lempira. */
 			HNL,
-			/**
-			 * Croatian kuna.
-			 */
+			/** Croatian kuna. */
 			HRK,
-			/**
-			 * Haitian gourde.
-			 */
+			/** Haitian gourde. */
 			HTG,
-			/**
-			 * Hungarian forint.
-			 */
+			/** Hungarian forint. */
 			HUF,
-			/**
-			 * Indonesian rupiah.
-			 */
+			/** Indonesian rupiah. */
 			IDR,
-			/**
-			 * Israeli new sheqel.
-			 */
+			/** Israeli new sheqel. */
 			ILS,
-			/**
-			 * Indian rupee.
-			 */
+			/** Indian rupee. */
 			INR,
-			/**
-			 * Iraqi dinar.
-			 */
+			/** Iraqi dinar. */
 			IQD,
-			/**
-			 * Iranian rial.
-			 */
+			/** Iranian rial. */
 			IRR,
-			/**
-			 * Icelandic króna.
-			 */
+			/** Icelandic króna. */
 			ISK,
-			/**
-			 * Jamaican dollar.
-			 */
+			/** Jamaican dollar. */
 			JMD,
-			/**
-			 * Jordanian dinar.
-			 */
+			/** Jordanian dinar. */
 			JOD,
-			/**
-			 * Japanese yen.
-			 */
+			/** Japanese yen. */
 			JPY,
-			/**
-			 * Kenyan shilling.
-			 */
+			/** Kenyan shilling. */
 			KES,
-			/**
-			 * Kyrgyzstani som.
-			 */
+			/** Kyrgyzstani som. */
 			KGS,
-			/**
-			 * Cambodian riel.
-			 */
+			/** Cambodian riel. */
 			KHR,
-			/**
-			 * Comoro franc.
-			 */
+			/** Comoro franc. */
 			KMF,
-			/**
-			 * North Korean won.
-			 */
+			/** North Korean won. */
 			KPW,
-			/**
-			 * South Korean won.
-			 */
+			/** South Korean won. */
 			KRW,
-			/**
-			 * Kuwaiti dinar.
-			 */
+			/** Kuwaiti dinar. */
 			KWD,
-			/**
-			 * Cayman Islands dollar.
-			 */
+			/** Cayman Islands dollar. */
 			KYD,
-			/**
-			 * Kazakhstani tenge.
-			 */
+			/** Kazakhstani tenge. */
 			KZT,
-			/**
-			 * Lao kip.
-			 */
+			/** Lao kip. */
 			LAK,
-			/**
-			 * Lebanese pound.
-			 */
+			/** Lebanese pound. */
 			LBP,
-			/**
-			 * Sri Lanka rupee.
-			 */
+			/** Sri Lanka rupee. */
 			LKR,
-			/**
-			 * Liberian dollar.
-			 */
+			/** Liberian dollar. */
 			LRD,
-			/**
-			 * Lesotho loti.
-			 */
+			/** Lesotho loti. */
 			LSL,
-			/**
-			 * Lithuanian litas.
-			 */
+			/** Lithuanian litas. */
 			LTL,
-			/**
-			 * Latvian lats.
-			 */
+			/** Latvian lats. */
 			LVL,
-			/**
-			 * Libyan dinar.
-			 */
+			/** Libyan dinar. */
 			LYD,
-			/**
-			 * Moroccan dirham.
-			 */
+			/** Moroccan dirham. */
 			MAD,
-			/**
-			 * Moldovan leu.
-			 */
+			/** Moldovan leu. */
 			MDL,
-			/**
-			 * Malagasy ariary.
-			 */
+			/** Malagasy ariary. */
 			MGA,
-			/**
-			 * Macedonian denar.
-			 */
+			/** Macedonian denar. */
 			MKD,
-			/**
-			 * Myanma kyat.
-			 */
+			/** Myanma kyat. */
 			MMK,
-			/**
-			 * Mongolian tugrik.
-			 */
+			/** Mongolian tugrik. */
 			MNT,
-			/**
-			 * Macanese pataca.
-			 */
+			/** Macanese pataca. */
 			MOP,
-			/**
-			 * Mauritanian ouguiya.
-			 */
+			/** Mauritanian ouguiya. */
 			MRO,
-			/**
-			 * Mauritian rupee.
-			 */
+			/** Mauritian rupee. */
 			MUR,
-			/**
-			 * Maldivian rufiyaa.
-			 */
+			/** Maldivian rufiyaa. */
 			MVR,
-			/**
-			 * Malawian kwacha.
-			 */
+			/** Malawian kwacha. */
 			MWK,
-			/**
-			 * Mexican peso.
-			 */
+			/** Mexican peso. */
 			MXN,
-			/**
-			 * Malaysian ringgit.
-			 */
+			/** Malaysian ringgit. */
 			MYR,
-			/**
-			 * Mozambican metical.
-			 */
+			/** Mozambican metical. */
 			MZN,
-			/**
-			 * Namibian dollar.
-			 */
+			/** Namibian dollar. */
 			NAD,
-			/**
-			 * Nigerian naira.
-			 */
+			/** Nigerian naira. */
 			NGN,
-			/**
-			 * Cordoba oro.
-			 */
+			/** Cordoba oro. */
 			NIO,
-			/**
-			 * Norwegian krone.
-			 */
+			/** Norwegian krone. */
 			NOK,
-			/**
-			 * Nepalese rupee.
-			 */
+			/** Nepalese rupee. */
 			NPR,
-			/**
-			 * New Zealand dollar.
-			 */
+			/** New Zealand dollar. */
 			NZD,
-			/**
-			 * Omani rial.
-			 */
+			/** Omani rial. */
 			OMR,
-			/**
-			 * Panamanian balboa.
-			 */
+			/** Panamanian balboa. */
 			PAB,
-			/**
-			 * Peruvian nuevo sol.
-			 */
+			/** Peruvian nuevo sol. */
 			PEN,
-			/**
-			 * Papua New Guinean kina.
-			 */
+			/** Papua New Guinean kina. */
 			PGK,
-			/**
-			 * Philippine peso.
-			 */
+			/** Philippine peso. */
 			PHP,
-			/**
-			 * Pakistani rupee.
-			 */
+			/** Pakistani rupee. */
 			PKR,
-			/**
-			 * Polish zloty.
-			 */
+			/** Polish zloty. */
 			PLN,
-			/**
-			 * Paraguayan guaraní.
-			 */
+			/** Paraguayan guaraní. */
 			PYG,
-			/**
-			 * Qatari rial.
-			 */
+			/** Qatari rial. */
 			QAR,
-			/**
-			 * Romanian new leu.
-			 */
+			/** Romanian new leu. */
 			RON,
-			/**
-			 * Serbian dinar.
-			 */
+			/** Serbian dinar. */
 			RSD,
-			/**
-			 * Russian rouble.
-			 */
+			/** Russian rouble. */
 			RUB,
-			/**
-			 * Rwandan franc.
-			 */
+			/** Rwandan franc. */
 			RWF,
-			/**
-			 * Saudi riyal.
-			 */
+			/** Saudi riyal. */
 			SAR,
-			/**
-			 * Solomon Islands dollar.
-			 */
+			/** Solomon Islands dollar. */
 			SBD,
-			/**
-			 * Seychelles rupee.
-			 */
+			/** Seychelles rupee. */
 			SCR,
-			/**
-			 * Sudanese pound.
-			 */
+			/** Sudanese pound. */
 			SDG,
-			/**
-			 * Swedish krona/kronor.
-			 */
+			/** Swedish krona/kronor. */
 			SEK,
-			/**
-			 * Singapore dollar.
-			 */
+			/** Singapore dollar. */
 			SGD,
-			/**
-			 * Saint Helena pound.
-			 */
+			/** Saint Helena pound. */
 			SHP,
-			/**
-			 * Sierra Leonean leone.
-			 */
+			/** Sierra Leonean leone. */
 			SLL,
-			/**
-			 * Somali shilling.
-			 */
+			/** Somali shilling. */
 			SOS,
-			/**
-			 * Surinamese dollar.
-			 */
+			/** Surinamese dollar. */
 			SRD,
-			/**
-			 * São Tomé and Príncipe dobra.
-			 */
+			/** São Tomé and Príncipe dobra. */
 			STD,
-			/**
-			 * Syrian pound.
-			 */
+			/** Syrian pound. */
 			SYP,
-			/**
-			 * Lilangeni.
-			 */
+			/** Lilangeni. */
 			SZL,
-			/**
-			 * Thai baht.
-			 */
+			/** Thai baht. */
 			THB,
-			/**
-			 * Tajikistani somoni.
-			 */
+			/** Tajikistani somoni. */
 			TJS,
-			/**
-			 * Turkmenistani manat.
-			 */
+			/** Turkmenistani manat. */
 			TMT,
-			/**
-			 * Tunisian dinar.
-			 */
+			/** Tunisian dinar. */
 			TND,
-			/**
-			 * Tongan pa'anga.
-			 */
+			/** Tongan pa'anga. */
 			TOP,
-			/**
-			 * Turkish lira.
-			 */
+			/** Turkish lira. */
 			TRY,
-			/**
-			 * Trinidad and Tobago dollar.
-			 */
+			/** Trinidad and Tobago dollar. */
 			TTD,
-			/**
-			 * New Taiwan dollar.
-			 */
+			/** New Taiwan dollar. */
 			TWD,
-			/**
-			 * Tanzanian shilling.
-			 */
+			/** Tanzanian shilling. */
 			TZS,
-			/**
-			 * Ukrainian hryvnia.
-			 */
+			/** Ukrainian hryvnia. */
 			UAH,
-			/**
-			 * Ugandan shilling.
-			 */
+			/** Ugandan shilling. */
 			UGX,
-			/**
-			 * United States dollar.
-			 */
+			/** United States dollar. */
 			USD,
-			/**
-			 * Uruguayan peso.
-			 */
+			/** Uruguayan peso. */
 			UYU,
-			/**
-			 * Uzbekistan som.
-			 */
+			/** Uzbekistan som. */
 			UZS,
-			/**
-			 * Venezuelan bolívar fuerte.
-			 */
+			/** Venezuelan bolívar fuerte. */
 			VEF,
-			/**
-			 * Vietnamese Dong.
-			 */
+			/** Vietnamese Dong. */
 			VND,
-			/**
-			 * Vanuatu vatu.
-			 */
+			/** Vanuatu vatu. */
 			VUV,
-			/**
-			 * Samoan tala.
-			 */
+			/** Samoan tala. */
 			WST,
-			/**
-			 * CFA franc BEAC.
-			 */
+			/** CFA franc BEAC. */
 			XAF,
-			/**
-			 * East Caribbean dollar.
-			 */
+			/** East Caribbean dollar. */
 			XCD,
-			/**
-			 * CFA Franc BCEAO.
-			 */
+			/** CFA Franc BCEAO. */
 			XOF,
-			/**
-			 * CFP franc.
-			 */
+			/** CFP franc. */
 			XPF,
-			/**
-			 * Yemeni rial.
-			 */
+			/** Yemeni rial. */
 			YER,
-			/**
-			 * South African rand.
-			 */
+			/** South African rand. */
 			ZAR,
-			/**
-			 * Zambian kwacha.
-			 */
+			/** Zambian kwacha. */
 			ZMK,
-			/**
-			 * Zimbabwe dollar.
-			 */
+			/** Zimbabwe dollar. */
 			ZWL,
 		};
 

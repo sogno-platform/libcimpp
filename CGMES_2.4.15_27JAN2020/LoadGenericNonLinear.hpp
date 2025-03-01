@@ -19,9 +19,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	These load models (known also as generic non-linear dynamic (GNLD) load models) can be used in mid-term and long-term voltage stability simulations (i.e., to study voltage collapse), as they can replace a more detailed representation of aggregate load, including induction motors, thermostatically controlled and static loads.
-	*/
+	/** \brief These load models (known also as generic non-linear dynamic (GNLD) load models) can be used in mid-term and long-term voltage stability simulations (i.e., to study voltage collapse), as they can replace a more detailed representation of aggregate load, including induction motors, thermostatically controlled and static loads. */
 	class LoadGenericNonLinear : public LoadDynamics
 	{
 	public:
@@ -29,15 +27,32 @@ namespace CIMPP
 		LoadGenericNonLinear();
 		~LoadGenericNonLinear() override;
 
-		CIMPP::Simple_Float bs;  /* Steady state voltage index for reactive power (BS). Default: nullptr */
-		CIMPP::Simple_Float bt;  /* Transient voltage index for reactive power (BT). Default: nullptr */
-		CIMPP::GenericNonLinearLoadModelKind genericNonLinearLoadModelType;  /* Type of generic non-linear load model. Default: 0 */
-		CIMPP::Simple_Float ls;  /* Steady state voltage index for active power (LS). Default: nullptr */
-		CIMPP::Simple_Float lt;  /* Transient voltage index for active power (LT). Default: nullptr */
-		CIMPP::Simple_Float pt;  /* Dynamic portion of active load (P). Default: nullptr */
-		CIMPP::Simple_Float qt;  /* Dynamic portion of reactive load (Q). Default: nullptr */
-		CIMPP::Seconds tp;  /* Time constant of lag function of active power (T). Default: nullptr */
-		CIMPP::Seconds tq;  /* Time constant of lag function of reactive power (T). Default: nullptr */
+		/** \brief Steady state voltage index for reactive power (BS). Default: nullptr */
+		CIMPP::Simple_Float bs;
+
+		/** \brief Transient voltage index for reactive power (BT). Default: nullptr */
+		CIMPP::Simple_Float bt;
+
+		/** \brief Type of generic non-linear load model. Default: 0 */
+		CIMPP::GenericNonLinearLoadModelKind genericNonLinearLoadModelType;
+
+		/** \brief Steady state voltage index for active power (LS). Default: nullptr */
+		CIMPP::Simple_Float ls;
+
+		/** \brief Transient voltage index for active power (LT). Default: nullptr */
+		CIMPP::Simple_Float lt;
+
+		/** \brief Dynamic portion of active load (P). Default: nullptr */
+		CIMPP::Simple_Float pt;
+
+		/** \brief Dynamic portion of reactive load (Q). Default: nullptr */
+		CIMPP::Simple_Float qt;
+
+		/** \brief Time constant of lag function of active power (T). Default: nullptr */
+		CIMPP::Seconds tp;
+
+		/** \brief Time constant of lag function of reactive power (T). Default: nullptr */
+		CIMPP::Seconds tq;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -9,29 +9,19 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	The source of controls for a generating unit.
-	*/
+	/** \brief The source of controls for a generating unit. */
 	class GeneratorControlSource
 	{
 	public:
 		enum GeneratorControlSource_ENUM
 		{
-			/**
-			 * Not available.
-			 */
+			/** Not available. */
 			unavailable,
-			/**
-			 * Off of automatic generation control (AGC).
-			 */
+			/** Off of automatic generation control (AGC). */
 			offAGC,
-			/**
-			 * On automatic generation control (AGC).
-			 */
+			/** On automatic generation control (AGC). */
 			onAGC,
-			/**
-			 * Plant is controlling.
-			 */
+			/** Plant is controlling. */
 			plantControl,
 		};
 

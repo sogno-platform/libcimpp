@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	IEEE type DEC3A model. In some systems, the stabilizer output is disconnected from the regulator immediately following a severe fault to prevent the stabilizer from competing with action of voltage regulator during the first swing. Reference: IEEE 421.5-2005 12.4.
-	*/
+	/** \brief IEEE type DEC3A model. In some systems, the stabilizer output is disconnected from the regulator immediately following a severe fault to prevent the stabilizer from competing with action of voltage regulator during the first swing. Reference: IEEE 421.5-2005 12.4. */
 	class DiscExcContIEEEDEC3A : public DiscontinuousExcitationControlDynamics
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		DiscExcContIEEEDEC3A();
 		~DiscExcContIEEEDEC3A() override;
 
-		CIMPP::Seconds tdr;  /* Reset time delay (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;DR&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). Default: nullptr */
-		CIMPP::PU vtmin;  /* Terminal undervoltage comparison level (&lt;i&gt;V&lt;/i&gt;&lt;i&gt;&lt;sub&gt;TMIN&lt;/sub&gt;&lt;/i&gt;). Default: nullptr */
+		/** \brief Reset time delay (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;DR&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). Default: nullptr */
+		CIMPP::Seconds tdr;
+
+		/** \brief Terminal undervoltage comparison level (&lt;i&gt;V&lt;/i&gt;&lt;i&gt;&lt;sub&gt;TMIN&lt;/sub&gt;&lt;/i&gt;). Default: nullptr */
+		CIMPP::PU vtmin;
 
 		static const char debugName[];
 		const char* debugString() const override;

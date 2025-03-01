@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A real estate location, commonly referred to as premises.
-	*/
+	/** \brief A real estate location, commonly referred to as premises. */
 	class ServiceLocation : public WorkLocation
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		ServiceLocation();
 		~ServiceLocation() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

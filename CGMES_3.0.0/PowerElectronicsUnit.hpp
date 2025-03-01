@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class PowerElectronicsConnection;
 
-	/*
-	A generating unit or battery or aggregation that connects to the AC network using power electronics rather than rotating machines.
-	*/
+	/** \brief A generating unit or battery or aggregation that connects to the AC network using power electronics rather than rotating machines. */
 	class PowerElectronicsUnit : public Equipment
 	{
 	public:
@@ -28,9 +26,14 @@ namespace CIMPP
 		PowerElectronicsUnit();
 		~PowerElectronicsUnit() override;
 
-		CIMPP::PowerElectronicsConnection* PowerElectronicsConnection;  /* A power electronics unit has a connection to the AC network. Default: 0 */
-		CIMPP::ActivePower maxP;  /* Maximum active power limit. This is the maximum (nameplate) limit for the unit. Default: nullptr */
-		CIMPP::ActivePower minP;  /* Minimum active power limit. This is the minimum (nameplate) limit for the unit. Default: nullptr */
+		/** \brief A power electronics unit has a connection to the AC network. Default: 0 */
+		CIMPP::PowerElectronicsConnection* PowerElectronicsConnection;
+
+		/** \brief Maximum active power limit. This is the maximum (nameplate) limit for the unit. Default: nullptr */
+		CIMPP::ActivePower maxP;
+
+		/** \brief Minimum active power limit. This is the minimum (nameplate) limit for the unit. Default: nullptr */
+		CIMPP::ActivePower minP;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "ProprietaryParameterDynamics.hpp"
-#include "Boolean.hpp"
 
 using namespace CIMPP;
 
-TurbineLoadControllerUserDefined::TurbineLoadControllerUserDefined() {};
-TurbineLoadControllerUserDefined::~TurbineLoadControllerUserDefined() {};
+TurbineLoadControllerUserDefined::TurbineLoadControllerUserDefined() {}
+TurbineLoadControllerUserDefined::~TurbineLoadControllerUserDefined() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,21 +41,6 @@ TurbineLoadControllerUserDefined::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_TurbineLoadControllerUserDefined_proprietary(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (TurbineLoadControllerUserDefined* element = dynamic_cast<TurbineLoadControllerUserDefined*>(BaseClass_ptr1))
-	{
-		buffer >> element->proprietary;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_ProprietaryParameterDynamics_TurbineLoadControllerUserDefined(BaseClass*, BaseClass*);
 bool assign_TurbineLoadControllerUserDefined_ProprietaryParameterDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,9 +58,25 @@ bool assign_TurbineLoadControllerUserDefined_ProprietaryParameterDynamics(BaseCl
 	return false;
 }
 
+bool assign_TurbineLoadControllerUserDefined_proprietary(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	TurbineLoadControllerUserDefined* element = dynamic_cast<TurbineLoadControllerUserDefined*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->proprietary;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_TurbineLoadControllerUserDefined_proprietary(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TurbineLoadControllerUserDefined* element = dynamic_cast<const TurbineLoadControllerUserDefined*>(BaseClass_ptr1))
+	const TurbineLoadControllerUserDefined* element = dynamic_cast<const TurbineLoadControllerUserDefined*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->proprietary;
 		if (!buffer.str().empty())
@@ -88,8 +88,6 @@ bool get_TurbineLoadControllerUserDefined_proprietary(const BaseClass* BaseClass
 	return false;
 }
 
-
-
 const char TurbineLoadControllerUserDefined::debugName[] = "TurbineLoadControllerUserDefined";
 const char* TurbineLoadControllerUserDefined::debugString() const
 {
@@ -98,17 +96,17 @@ const char* TurbineLoadControllerUserDefined::debugString() const
 
 void TurbineLoadControllerUserDefined::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:TurbineLoadControllerUserDefined"), &TurbineLoadControllerUserDefined_factory));
+	factory_map.emplace("cim:TurbineLoadControllerUserDefined", &TurbineLoadControllerUserDefined_factory);
 }
 
 void TurbineLoadControllerUserDefined::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:TurbineLoadControllerUserDefined.proprietary"), &assign_TurbineLoadControllerUserDefined_proprietary));
+	assign_map.emplace("cim:TurbineLoadControllerUserDefined.proprietary", &assign_TurbineLoadControllerUserDefined_proprietary);
 }
 
 void TurbineLoadControllerUserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:TurbineLoadControllerUserDefined.ProprietaryParameterDynamics"), &assign_TurbineLoadControllerUserDefined_ProprietaryParameterDynamics));
+	assign_map.emplace("cim:TurbineLoadControllerUserDefined.ProprietaryParameterDynamics", &assign_TurbineLoadControllerUserDefined_ProprietaryParameterDynamics);
 }
 
 void TurbineLoadControllerUserDefined::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

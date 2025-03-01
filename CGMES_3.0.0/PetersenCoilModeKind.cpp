@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "PetersenCoilModeKind")
+		if (EnumSymbol.substr(0, pos) != "PetersenCoilModeKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,17 +50,17 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "fixed")
+		if (EnumSymbol == "fixed")
 		{
 			rop = PetersenCoilModeKind::fixed;
 			return lop;
 		}
-		if(EnumSymbol == "manual")
+		if (EnumSymbol == "manual")
 		{
 			rop = PetersenCoilModeKind::manual;
 			return lop;
 		}
-		if(EnumSymbol == "automaticPositioning")
+		if (EnumSymbol == "automaticPositioning")
 		{
 			rop = PetersenCoilModeKind::automaticPositioning;
 			return lop;

@@ -10,12 +10,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 #include "Accumulator.hpp"
 #include "AccumulatorReset.hpp"
-#include "Integer.hpp"
 
 using namespace CIMPP;
 
-AccumulatorValue::AccumulatorValue() : Accumulator(nullptr), AccumulatorReset(nullptr) {};
-AccumulatorValue::~AccumulatorValue() {};
+AccumulatorValue::AccumulatorValue() : Accumulator(nullptr), AccumulatorReset(nullptr) {}
+AccumulatorValue::~AccumulatorValue() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -44,21 +43,6 @@ AccumulatorValue::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_AccumulatorValue_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (AccumulatorValue* element = dynamic_cast<AccumulatorValue*>(BaseClass_ptr1))
-	{
-		buffer >> element->value;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_Accumulator_AccumulatorValues(BaseClass*, BaseClass*);
 bool assign_AccumulatorValue_Accumulator(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -75,6 +59,7 @@ bool assign_AccumulatorValue_Accumulator(BaseClass* BaseClass_ptr1, BaseClass* B
 	}
 	return false;
 }
+
 bool assign_AccumulatorReset_AccumulatorValue(BaseClass*, BaseClass*);
 bool assign_AccumulatorValue_AccumulatorReset(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -92,24 +77,24 @@ bool assign_AccumulatorValue_AccumulatorReset(BaseClass* BaseClass_ptr1, BaseCla
 	return false;
 }
 
-bool get_AccumulatorValue_value(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+bool assign_AccumulatorValue_value(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (const AccumulatorValue* element = dynamic_cast<const AccumulatorValue*>(BaseClass_ptr1))
+	AccumulatorValue* element = dynamic_cast<AccumulatorValue*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
-		buffer << element->value;
-		if (!buffer.str().empty())
+		buffer >> element->value;
+		if (!buffer.fail())
 		{
 			return true;
 		}
 	}
-	buffer.setstate(std::ios::failbit);
 	return false;
 }
 
-
 bool get_AccumulatorValue_Accumulator(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const AccumulatorValue* element = dynamic_cast<const AccumulatorValue*>(BaseClass_ptr1))
+	const AccumulatorValue* element = dynamic_cast<const AccumulatorValue*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->Accumulator != 0)
 		{
@@ -121,6 +106,21 @@ bool get_AccumulatorValue_Accumulator(const BaseClass* BaseClass_ptr1, std::list
 }
 
 
+bool get_AccumulatorValue_value(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	const AccumulatorValue* element = dynamic_cast<const AccumulatorValue*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer << element->value;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
 const char AccumulatorValue::debugName[] = "AccumulatorValue";
 const char* AccumulatorValue::debugString() const
 {
@@ -129,18 +129,18 @@ const char* AccumulatorValue::debugString() const
 
 void AccumulatorValue::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:AccumulatorValue"), &AccumulatorValue_factory));
+	factory_map.emplace("cim:AccumulatorValue", &AccumulatorValue_factory);
 }
 
 void AccumulatorValue::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:AccumulatorValue.value"), &assign_AccumulatorValue_value));
+	assign_map.emplace("cim:AccumulatorValue.value", &assign_AccumulatorValue_value);
 }
 
 void AccumulatorValue::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:AccumulatorValue.Accumulator"), &assign_AccumulatorValue_Accumulator));
-	assign_map.insert(std::make_pair(std::string("cim:AccumulatorValue.AccumulatorReset"), &assign_AccumulatorValue_AccumulatorReset));
+	assign_map.emplace("cim:AccumulatorValue.Accumulator", &assign_AccumulatorValue_Accumulator);
+	assign_map.emplace("cim:AccumulatorValue.AccumulatorReset", &assign_AccumulatorValue_AccumulatorReset);
 }
 
 void AccumulatorValue::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

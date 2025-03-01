@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-DCConductingEquipment::DCConductingEquipment() {};
-DCConductingEquipment::~DCConductingEquipment() {};
+DCConductingEquipment::DCConductingEquipment() {}
+DCConductingEquipment::~DCConductingEquipment() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -41,8 +41,6 @@ DCConductingEquipment::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_DCTerminal_DCConductingEquipment(BaseClass*, BaseClass*);
 bool assign_DCConductingEquipment_DCTerminals(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -61,7 +59,6 @@ bool assign_DCConductingEquipment_DCTerminals(BaseClass* BaseClass_ptr1, BaseCla
 }
 
 
-
 const char DCConductingEquipment::debugName[] = "DCConductingEquipment";
 const char* DCConductingEquipment::debugString() const
 {
@@ -70,7 +67,7 @@ const char* DCConductingEquipment::debugString() const
 
 void DCConductingEquipment::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:DCConductingEquipment"), &DCConductingEquipment_factory));
+	factory_map.emplace("cim:DCConductingEquipment", &DCConductingEquipment_factory);
 }
 
 void DCConductingEquipment::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -79,7 +76,7 @@ void DCConductingEquipment::addPrimitiveAssignFnsToMap(std::unordered_map<std::s
 
 void DCConductingEquipment::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:DCConductingEquipment.DCTerminals"), &assign_DCConductingEquipment_DCTerminals));
+	assign_map.emplace("cim:DCConductingEquipment.DCTerminals", &assign_DCConductingEquipment_DCTerminals);
 }
 
 void DCConductingEquipment::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

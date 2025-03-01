@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class EquivalentNetwork;
 
-	/*
-	The class represents equivalent objects that are the result of a network reduction. The class is the base for equivalent objects of different types.
-	*/
+	/** \brief The class represents equivalent objects that are the result of a network reduction. The class is the base for equivalent objects of different types. */
 	class EquivalentEquipment : public ConductingEquipment
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		EquivalentEquipment();
 		~EquivalentEquipment() override;
 
-		CIMPP::EquivalentNetwork* EquivalentNetwork;  /* The associated reduced equivalents. Default: 0 */
+		/** \brief The associated reduced equivalents. Default: 0 */
+		CIMPP::EquivalentNetwork* EquivalentNetwork;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -17,9 +17,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Specifies a set of Limits that are associated with a Measurement. A Measurement may have several LimitSets corresponding to seasonal or other changing conditions. The condition is captured in the name and description attributes. The same LimitSet may be used for several Measurements. In particular percentage limits are used this way.
-	*/
+	/** \brief Specifies a set of Limits that are associated with a Measurement. A Measurement may have several LimitSets corresponding to seasonal or other changing conditions. The condition is captured in the name and description attributes. The same LimitSet may be used for several Measurements. In particular percentage limits are used this way. */
 	class LimitSet : public IdentifiedObject
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		LimitSet();
 		~LimitSet() override;
 
-		CIMPP::Boolean isPercentageLimits;  /* Tells if the limit values are in percentage of normalValue or the specified Unit for Measurements and Controls. Default: false */
+		/** \brief Tells if the limit values are in percentage of normalValue or the specified Unit for Measurements and Controls. Default: false */
+		CIMPP::Boolean isPercentageLimits;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -18,9 +18,7 @@ namespace CIMPP
 	class DayType;
 	class Season;
 
-	/*
-	A time schedule covering a 24 hour period, with curve data for a specific type of season and day.
-	*/
+	/** \brief A time schedule covering a 24 hour period, with curve data for a specific type of season and day. */
 	class SeasonDayTypeSchedule : public RegularIntervalSchedule
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		SeasonDayTypeSchedule();
 		~SeasonDayTypeSchedule() override;
 
-		CIMPP::DayType* DayType;  /* DayType for the Schedule. Default: 0 */
-		CIMPP::Season* Season;  /* Season for the Schedule. Default: 0 */
+		/** \brief DayType for the Schedule. Default: 0 */
+		CIMPP::DayType* DayType;
+
+		/** \brief Season for the Schedule. Default: 0 */
+		CIMPP::Season* Season;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -9,14 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "WindTurbineType4aIEC.hpp"
-#include "PU.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
 
 using namespace CIMPP;
 
-WindContPType4aIEC::WindContPType4aIEC() : WindTurbineType4aIEC(nullptr) {};
-WindContPType4aIEC::~WindContPType4aIEC() {};
+WindContPType4aIEC::WindContPType4aIEC() : WindTurbineType4aIEC(nullptr) {}
+WindContPType4aIEC::~WindContPType4aIEC() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -46,47 +43,6 @@ WindContPType4aIEC::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_WindContPType4aIEC_dpmaxp4a(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindContPType4aIEC* element = dynamic_cast<WindContPType4aIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->dpmaxp4a;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindContPType4aIEC_tpordp4a(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindContPType4aIEC* element = dynamic_cast<WindContPType4aIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->tpordp4a;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindContPType4aIEC_tufiltp4a(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindContPType4aIEC* element = dynamic_cast<WindContPType4aIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->tufiltp4a;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_WindTurbineType4aIEC_WindContPType4aIEC(BaseClass*, BaseClass*);
 bool assign_WindContPType4aIEC_WindTurbineType4aIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -104,9 +60,53 @@ bool assign_WindContPType4aIEC_WindTurbineType4aIEC(BaseClass* BaseClass_ptr1, B
 	return false;
 }
 
+bool assign_WindContPType4aIEC_dpmaxp4a(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindContPType4aIEC* element = dynamic_cast<WindContPType4aIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->dpmaxp4a;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindContPType4aIEC_tpordp4a(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindContPType4aIEC* element = dynamic_cast<WindContPType4aIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->tpordp4a;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindContPType4aIEC_tufiltp4a(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindContPType4aIEC* element = dynamic_cast<WindContPType4aIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->tufiltp4a;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_WindContPType4aIEC_dpmaxp4a(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindContPType4aIEC* element = dynamic_cast<const WindContPType4aIEC*>(BaseClass_ptr1))
+	const WindContPType4aIEC* element = dynamic_cast<const WindContPType4aIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->dpmaxp4a;
 		if (!buffer.str().empty())
@@ -120,7 +120,8 @@ bool get_WindContPType4aIEC_dpmaxp4a(const BaseClass* BaseClass_ptr1, std::strin
 
 bool get_WindContPType4aIEC_tpordp4a(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindContPType4aIEC* element = dynamic_cast<const WindContPType4aIEC*>(BaseClass_ptr1))
+	const WindContPType4aIEC* element = dynamic_cast<const WindContPType4aIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tpordp4a;
 		if (!buffer.str().empty())
@@ -134,7 +135,8 @@ bool get_WindContPType4aIEC_tpordp4a(const BaseClass* BaseClass_ptr1, std::strin
 
 bool get_WindContPType4aIEC_tufiltp4a(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindContPType4aIEC* element = dynamic_cast<const WindContPType4aIEC*>(BaseClass_ptr1))
+	const WindContPType4aIEC* element = dynamic_cast<const WindContPType4aIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tufiltp4a;
 		if (!buffer.str().empty())
@@ -146,8 +148,6 @@ bool get_WindContPType4aIEC_tufiltp4a(const BaseClass* BaseClass_ptr1, std::stri
 	return false;
 }
 
-
-
 const char WindContPType4aIEC::debugName[] = "WindContPType4aIEC";
 const char* WindContPType4aIEC::debugString() const
 {
@@ -156,19 +156,19 @@ const char* WindContPType4aIEC::debugString() const
 
 void WindContPType4aIEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:WindContPType4aIEC"), &WindContPType4aIEC_factory));
+	factory_map.emplace("cim:WindContPType4aIEC", &WindContPType4aIEC_factory);
 }
 
 void WindContPType4aIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindContPType4aIEC.dpmaxp4a"), &assign_WindContPType4aIEC_dpmaxp4a));
-	assign_map.insert(std::make_pair(std::string("cim:WindContPType4aIEC.tpordp4a"), &assign_WindContPType4aIEC_tpordp4a));
-	assign_map.insert(std::make_pair(std::string("cim:WindContPType4aIEC.tufiltp4a"), &assign_WindContPType4aIEC_tufiltp4a));
+	assign_map.emplace("cim:WindContPType4aIEC.dpmaxp4a", &assign_WindContPType4aIEC_dpmaxp4a);
+	assign_map.emplace("cim:WindContPType4aIEC.tpordp4a", &assign_WindContPType4aIEC_tpordp4a);
+	assign_map.emplace("cim:WindContPType4aIEC.tufiltp4a", &assign_WindContPType4aIEC_tufiltp4a);
 }
 
 void WindContPType4aIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindContPType4aIEC.WindTurbineType4aIEC"), &assign_WindContPType4aIEC_WindTurbineType4aIEC));
+	assign_map.emplace("cim:WindContPType4aIEC.WindTurbineType4aIEC", &assign_WindContPType4aIEC_WindTurbineType4aIEC);
 }
 
 void WindContPType4aIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class Terminal;
 
-	/*
-	AuxiliaryEquipment describe equipment that is not performing any primary functions but support for the equipment performing the primary function. AuxiliaryEquipment is attached to primary equipment via an association with Terminal.
-	*/
+	/** \brief AuxiliaryEquipment describe equipment that is not performing any primary functions but support for the equipment performing the primary function. AuxiliaryEquipment is attached to primary equipment via an association with Terminal. */
 	class AuxiliaryEquipment : public Equipment
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		AuxiliaryEquipment();
 		~AuxiliaryEquipment() override;
 
-		CIMPP::Terminal* Terminal;  /* The Terminal at the equipment where the AuxiliaryEquipment is attached. Default: 0 */
+		/** \brief The Terminal at the equipment where the AuxiliaryEquipment is attached. Default: 0 */
+		CIMPP::Terminal* Terminal;
 
 		static const char debugName[];
 		const char* debugString() const override;

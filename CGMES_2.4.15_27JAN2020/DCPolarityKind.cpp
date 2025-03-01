@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "DCPolarityKind")
+		if (EnumSymbol.substr(0, pos) != "DCPolarityKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,17 +50,17 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "positive")
+		if (EnumSymbol == "positive")
 		{
 			rop = DCPolarityKind::positive;
 			return lop;
 		}
-		if(EnumSymbol == "middle")
+		if (EnumSymbol == "middle")
 		{
 			rop = DCPolarityKind::middle;
 			return lop;
 		}
-		if(EnumSymbol == "negative")
+		if (EnumSymbol == "negative")
 		{
 			rop = DCPolarityKind::negative;
 			return lop;

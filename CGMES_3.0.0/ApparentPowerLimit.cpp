@@ -8,13 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "ApparentPower.hpp"
-#include "ApparentPower.hpp"
 
 using namespace CIMPP;
 
-ApparentPowerLimit::ApparentPowerLimit() {};
-ApparentPowerLimit::~ApparentPowerLimit() {};
+ApparentPowerLimit::ApparentPowerLimit() {}
+ApparentPowerLimit::~ApparentPowerLimit() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -43,38 +41,38 @@ ApparentPowerLimit::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_ApparentPowerLimit_normalValue(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ApparentPowerLimit_normalValue(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ApparentPowerLimit* element = dynamic_cast<ApparentPowerLimit*>(BaseClass_ptr1))
+	ApparentPowerLimit* element = dynamic_cast<ApparentPowerLimit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->normalValue;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ApparentPowerLimit_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ApparentPowerLimit_value(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ApparentPowerLimit* element = dynamic_cast<ApparentPowerLimit*>(BaseClass_ptr1))
+	ApparentPowerLimit* element = dynamic_cast<ApparentPowerLimit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->value;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_ApparentPowerLimit_normalValue(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ApparentPowerLimit* element = dynamic_cast<const ApparentPowerLimit*>(BaseClass_ptr1))
+	const ApparentPowerLimit* element = dynamic_cast<const ApparentPowerLimit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->normalValue;
 		if (!buffer.str().empty())
@@ -88,7 +86,8 @@ bool get_ApparentPowerLimit_normalValue(const BaseClass* BaseClass_ptr1, std::st
 
 bool get_ApparentPowerLimit_value(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ApparentPowerLimit* element = dynamic_cast<const ApparentPowerLimit*>(BaseClass_ptr1))
+	const ApparentPowerLimit* element = dynamic_cast<const ApparentPowerLimit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->value;
 		if (!buffer.str().empty())
@@ -100,8 +99,6 @@ bool get_ApparentPowerLimit_value(const BaseClass* BaseClass_ptr1, std::stringst
 	return false;
 }
 
-
-
 const char ApparentPowerLimit::debugName[] = "ApparentPowerLimit";
 const char* ApparentPowerLimit::debugString() const
 {
@@ -110,13 +107,13 @@ const char* ApparentPowerLimit::debugString() const
 
 void ApparentPowerLimit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ApparentPowerLimit"), &ApparentPowerLimit_factory));
+	factory_map.emplace("cim:ApparentPowerLimit", &ApparentPowerLimit_factory);
 }
 
 void ApparentPowerLimit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ApparentPowerLimit.normalValue"), &assign_ApparentPowerLimit_normalValue));
-	assign_map.insert(std::make_pair(std::string("cim:ApparentPowerLimit.value"), &assign_ApparentPowerLimit_value));
+	assign_map.emplace("cim:ApparentPowerLimit.normalValue", &assign_ApparentPowerLimit_normalValue);
+	assign_map.emplace("cim:ApparentPowerLimit.value", &assign_ApparentPowerLimit_value);
 }
 
 void ApparentPowerLimit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

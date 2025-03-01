@@ -11,8 +11,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-DCBusbar::DCBusbar() {};
-DCBusbar::~DCBusbar() {};
+DCBusbar::DCBusbar() {}
+DCBusbar::~DCBusbar() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -38,11 +38,6 @@ DCBusbar::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
-
-
-
 const char DCBusbar::debugName[] = "DCBusbar";
 const char* DCBusbar::debugString() const
 {
@@ -51,7 +46,7 @@ const char* DCBusbar::debugString() const
 
 void DCBusbar::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:DCBusbar"), &DCBusbar_factory));
+	factory_map.emplace("cim:DCBusbar", &DCBusbar_factory);
 }
 
 void DCBusbar::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)

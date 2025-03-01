@@ -9,29 +9,19 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Reactive power/voltage controller mode.
-	*/
+	/** \brief Reactive power/voltage controller mode. */
 	class WindPlantQcontrolModeKind
 	{
 	public:
 		enum WindPlantQcontrolModeKind_ENUM
 		{
-			/**
-			 * Reactive power reference.
-			 */
+			/** Reactive power reference. */
 			reactivePower,
-			/**
-			 * Power factor reference.
-			 */
+			/** Power factor reference. */
 			powerFactor,
-			/**
-			 * UQ static.
-			 */
+			/** UQ static. */
 			uqStatic,
-			/**
-			 * Voltage control.
-			 */
+			/** Voltage control. */
 			voltageControl,
 		};
 

@@ -9,21 +9,15 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Type of generic non-linear load model.
-	*/
+	/** \brief Type of generic non-linear load model. */
 	class GenericNonLinearLoadModelKind
 	{
 	public:
 		enum GenericNonLinearLoadModelKind_ENUM
 		{
-			/**
-			 * Exponential recovery model.
-			 */
+			/** Exponential recovery model. */
 			exponentialRecovery,
-			/**
-			 * Load adaptive model.
-			 */
+			/** Load adaptive model. */
 			loadAdaptive,
 		};
 

@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "WindUVRTQcontrolModeKind")
+		if (EnumSymbol.substr(0, pos) != "WindUVRTQcontrolModeKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,17 +50,17 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "mode0")
+		if (EnumSymbol == "mode0")
 		{
 			rop = WindUVRTQcontrolModeKind::mode0;
 			return lop;
 		}
-		if(EnumSymbol == "mode1")
+		if (EnumSymbol == "mode1")
 		{
 			rop = WindUVRTQcontrolModeKind::mode1;
 			return lop;
 		}
-		if(EnumSymbol == "mode2")
+		if (EnumSymbol == "mode2")
 		{
 			rop = WindUVRTQcontrolModeKind::mode2;
 			return lop;

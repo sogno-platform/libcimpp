@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-EnergySchedulingType::EnergySchedulingType() {};
-EnergySchedulingType::~EnergySchedulingType() {};
+EnergySchedulingType::EnergySchedulingType() {}
+EnergySchedulingType::~EnergySchedulingType() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -41,8 +41,6 @@ EnergySchedulingType::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_EnergySource_EnergySchedulingType(BaseClass*, BaseClass*);
 bool assign_EnergySchedulingType_EnergySource(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -61,7 +59,6 @@ bool assign_EnergySchedulingType_EnergySource(BaseClass* BaseClass_ptr1, BaseCla
 }
 
 
-
 const char EnergySchedulingType::debugName[] = "EnergySchedulingType";
 const char* EnergySchedulingType::debugString() const
 {
@@ -70,7 +67,7 @@ const char* EnergySchedulingType::debugString() const
 
 void EnergySchedulingType::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:EnergySchedulingType"), &EnergySchedulingType_factory));
+	factory_map.emplace("cim:EnergySchedulingType", &EnergySchedulingType_factory);
 }
 
 void EnergySchedulingType::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -79,7 +76,7 @@ void EnergySchedulingType::addPrimitiveAssignFnsToMap(std::unordered_map<std::st
 
 void EnergySchedulingType::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:EnergySchedulingType.EnergySource"), &assign_EnergySchedulingType_EnergySource));
+	assign_map.emplace("cim:EnergySchedulingType.EnergySource", &assign_EnergySchedulingType_EnergySource);
 }
 
 void EnergySchedulingType::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

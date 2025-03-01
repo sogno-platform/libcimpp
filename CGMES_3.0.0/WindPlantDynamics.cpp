@@ -13,8 +13,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-WindPlantDynamics::WindPlantDynamics() : RemoteInputSignal(nullptr) {};
-WindPlantDynamics::~WindPlantDynamics() {};
+WindPlantDynamics::WindPlantDynamics() : RemoteInputSignal(nullptr) {}
+WindPlantDynamics::~WindPlantDynamics() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,8 +42,6 @@ WindPlantDynamics::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_RemoteInputSignal_WindPlantDynamics(BaseClass*, BaseClass*);
 bool assign_WindPlantDynamics_RemoteInputSignal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,6 +58,7 @@ bool assign_WindPlantDynamics_RemoteInputSignal(BaseClass* BaseClass_ptr1, BaseC
 	}
 	return false;
 }
+
 bool assign_WindTurbineType3or4Dynamics_WindPlantDynamics(BaseClass*, BaseClass*);
 bool assign_WindPlantDynamics_WindTurbineType3or4Dynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -77,10 +76,10 @@ bool assign_WindPlantDynamics_WindTurbineType3or4Dynamics(BaseClass* BaseClass_p
 	return false;
 }
 
-
 bool get_WindPlantDynamics_RemoteInputSignal(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const WindPlantDynamics* element = dynamic_cast<const WindPlantDynamics*>(BaseClass_ptr1))
+	const WindPlantDynamics* element = dynamic_cast<const WindPlantDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->RemoteInputSignal != 0)
 		{
@@ -100,7 +99,7 @@ const char* WindPlantDynamics::debugString() const
 
 void WindPlantDynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:WindPlantDynamics"), &WindPlantDynamics_factory));
+	factory_map.emplace("cim:WindPlantDynamics", &WindPlantDynamics_factory);
 }
 
 void WindPlantDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -109,8 +108,8 @@ void WindPlantDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::strin
 
 void WindPlantDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantDynamics.RemoteInputSignal"), &assign_WindPlantDynamics_RemoteInputSignal));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantDynamics.WindTurbineType3or4Dynamics"), &assign_WindPlantDynamics_WindTurbineType3or4Dynamics));
+	assign_map.emplace("cim:WindPlantDynamics.RemoteInputSignal", &assign_WindPlantDynamics_RemoteInputSignal);
+	assign_map.emplace("cim:WindPlantDynamics.WindTurbineType3or4Dynamics", &assign_WindPlantDynamics_WindTurbineType3or4Dynamics);
 }
 
 void WindPlantDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

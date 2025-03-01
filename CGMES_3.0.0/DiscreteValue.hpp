@@ -18,9 +18,7 @@ namespace CIMPP
 	class Command;
 	class Discrete;
 
-	/*
-	DiscreteValue represents a discrete MeasurementValue.
-	*/
+	/** \brief DiscreteValue represents a discrete MeasurementValue. */
 	class DiscreteValue : public MeasurementValue
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		DiscreteValue();
 		~DiscreteValue() override;
 
-		CIMPP::Command* Command;  /* The Control variable associated with the MeasurementValue. Default: 0 */
-		CIMPP::Discrete* Discrete;  /* Measurement to which this value is connected. Default: 0 */
+		/** \brief The Control variable associated with the MeasurementValue. Default: 0 */
+		CIMPP::Command* Command;
+
+		/** \brief Measurement to which this value is connected. Default: 0 */
+		CIMPP::Discrete* Discrete;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -24,9 +24,7 @@ namespace CIMPP
 	class RatioTapChanger;
 	class Terminal;
 
-	/*
-	A conducting connection point of a power transformer. It corresponds to a physical transformer winding terminal.  In earlier CIM versions, the TransformerWinding class served a similar purpose, but this class is more flexible because it associates to terminal but is not a specialization of ConductingEquipment.
-	*/
+	/** \brief A conducting connection point of a power transformer. It corresponds to a physical transformer winding terminal.  In earlier CIM versions, the TransformerWinding class served a similar purpose, but this class is more flexible because it associates to terminal but is not a specialization of ConductingEquipment. */
 	class TransformerEnd : public IdentifiedObject
 	{
 	public:
@@ -34,14 +32,29 @@ namespace CIMPP
 		TransformerEnd();
 		~TransformerEnd() override;
 
-		CIMPP::BaseVoltage* BaseVoltage;  /* Base voltage of the transformer end.  This is essential for PU calculation. Default: 0 */
-		CIMPP::PhaseTapChanger* PhaseTapChanger;  /* Phase tap changer associated with this transformer end. Default: 0 */
-		CIMPP::RatioTapChanger* RatioTapChanger;  /* Ratio tap changer associated with this transformer end. Default: 0 */
-		CIMPP::Terminal* Terminal;  /* Terminal of the power transformer to which this transformer end belongs. Default: 0 */
-		CIMPP::Integer endNumber;  /* Number for this transformer end, corresponding to the end`s order in the power transformer vector group or phase angle clock number.  Highest voltage winding should be 1.  Each end within a power transformer should have a unique subsequent end number.   Note the transformer end number need not match the terminal sequence number. Default: 0 */
-		CIMPP::Boolean grounded;  /* (for Yn and Zn connections) True if the neutral is solidly grounded. Default: false */
-		CIMPP::Resistance rground;  /* (for Yn and Zn connections) Resistance part of neutral impedance where `grounded` is true. Default: nullptr */
-		CIMPP::Reactance xground;  /* (for Yn and Zn connections) Reactive part of neutral impedance where `grounded` is true. Default: nullptr */
+		/** \brief Base voltage of the transformer end.  This is essential for PU calculation. Default: 0 */
+		CIMPP::BaseVoltage* BaseVoltage;
+
+		/** \brief Phase tap changer associated with this transformer end. Default: 0 */
+		CIMPP::PhaseTapChanger* PhaseTapChanger;
+
+		/** \brief Ratio tap changer associated with this transformer end. Default: 0 */
+		CIMPP::RatioTapChanger* RatioTapChanger;
+
+		/** \brief Terminal of the power transformer to which this transformer end belongs. Default: 0 */
+		CIMPP::Terminal* Terminal;
+
+		/** \brief Number for this transformer end, corresponding to the end`s order in the power transformer vector group or phase angle clock number.  Highest voltage winding should be 1.  Each end within a power transformer should have a unique subsequent end number.   Note the transformer end number need not match the terminal sequence number. Default: 0 */
+		CIMPP::Integer endNumber;
+
+		/** \brief (for Yn and Zn connections) True if the neutral is solidly grounded. Default: false */
+		CIMPP::Boolean grounded;
+
+		/** \brief (for Yn and Zn connections) Resistance part of neutral impedance where `grounded` is true. Default: nullptr */
+		CIMPP::Resistance rground;
+
+		/** \brief (for Yn and Zn connections) Reactive part of neutral impedance where `grounded` is true. Default: nullptr */
+		CIMPP::Reactance xground;
 
 		static const char debugName[];
 		const char* debugString() const override;

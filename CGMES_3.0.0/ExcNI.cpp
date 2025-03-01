@@ -8,21 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Boolean.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
 
 using namespace CIMPP;
 
-ExcNI::ExcNI() {};
-ExcNI::~ExcNI() {};
+ExcNI::ExcNI() {}
+ExcNI::~ExcNI() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -58,142 +48,150 @@ ExcNI::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_ExcNI_busFedSelector(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcNI_busFedSelector(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcNI* element = dynamic_cast<ExcNI*>(BaseClass_ptr1))
+	ExcNI* element = dynamic_cast<ExcNI*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->busFedSelector;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcNI_ka(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcNI_ka(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcNI* element = dynamic_cast<ExcNI*>(BaseClass_ptr1))
+	ExcNI* element = dynamic_cast<ExcNI*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ka;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcNI_kf(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcNI_kf(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcNI* element = dynamic_cast<ExcNI*>(BaseClass_ptr1))
+	ExcNI* element = dynamic_cast<ExcNI*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kf;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcNI_r(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcNI_r(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcNI* element = dynamic_cast<ExcNI*>(BaseClass_ptr1))
+	ExcNI* element = dynamic_cast<ExcNI*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->r;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcNI_ta(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcNI_ta(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcNI* element = dynamic_cast<ExcNI*>(BaseClass_ptr1))
+	ExcNI* element = dynamic_cast<ExcNI*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ta;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcNI_tf1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcNI_tf1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcNI* element = dynamic_cast<ExcNI*>(BaseClass_ptr1))
+	ExcNI* element = dynamic_cast<ExcNI*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tf1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcNI_tf2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcNI_tf2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcNI* element = dynamic_cast<ExcNI*>(BaseClass_ptr1))
+	ExcNI* element = dynamic_cast<ExcNI*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tf2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcNI_tr(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcNI_tr(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcNI* element = dynamic_cast<ExcNI*>(BaseClass_ptr1))
+	ExcNI* element = dynamic_cast<ExcNI*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tr;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcNI_vrmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcNI_vrmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcNI* element = dynamic_cast<ExcNI*>(BaseClass_ptr1))
+	ExcNI* element = dynamic_cast<ExcNI*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vrmax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcNI_vrmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcNI_vrmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcNI* element = dynamic_cast<ExcNI*>(BaseClass_ptr1))
+	ExcNI* element = dynamic_cast<ExcNI*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vrmin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_ExcNI_busFedSelector(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcNI* element = dynamic_cast<const ExcNI*>(BaseClass_ptr1))
+	const ExcNI* element = dynamic_cast<const ExcNI*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->busFedSelector;
 		if (!buffer.str().empty())
@@ -207,7 +205,8 @@ bool get_ExcNI_busFedSelector(const BaseClass* BaseClass_ptr1, std::stringstream
 
 bool get_ExcNI_ka(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcNI* element = dynamic_cast<const ExcNI*>(BaseClass_ptr1))
+	const ExcNI* element = dynamic_cast<const ExcNI*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ka;
 		if (!buffer.str().empty())
@@ -221,7 +220,8 @@ bool get_ExcNI_ka(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcNI_kf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcNI* element = dynamic_cast<const ExcNI*>(BaseClass_ptr1))
+	const ExcNI* element = dynamic_cast<const ExcNI*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kf;
 		if (!buffer.str().empty())
@@ -235,7 +235,8 @@ bool get_ExcNI_kf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcNI_r(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcNI* element = dynamic_cast<const ExcNI*>(BaseClass_ptr1))
+	const ExcNI* element = dynamic_cast<const ExcNI*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->r;
 		if (!buffer.str().empty())
@@ -249,7 +250,8 @@ bool get_ExcNI_r(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcNI_ta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcNI* element = dynamic_cast<const ExcNI*>(BaseClass_ptr1))
+	const ExcNI* element = dynamic_cast<const ExcNI*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ta;
 		if (!buffer.str().empty())
@@ -263,7 +265,8 @@ bool get_ExcNI_ta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcNI_tf1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcNI* element = dynamic_cast<const ExcNI*>(BaseClass_ptr1))
+	const ExcNI* element = dynamic_cast<const ExcNI*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tf1;
 		if (!buffer.str().empty())
@@ -277,7 +280,8 @@ bool get_ExcNI_tf1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcNI_tf2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcNI* element = dynamic_cast<const ExcNI*>(BaseClass_ptr1))
+	const ExcNI* element = dynamic_cast<const ExcNI*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tf2;
 		if (!buffer.str().empty())
@@ -291,7 +295,8 @@ bool get_ExcNI_tf2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcNI_tr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcNI* element = dynamic_cast<const ExcNI*>(BaseClass_ptr1))
+	const ExcNI* element = dynamic_cast<const ExcNI*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tr;
 		if (!buffer.str().empty())
@@ -305,7 +310,8 @@ bool get_ExcNI_tr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcNI_vrmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcNI* element = dynamic_cast<const ExcNI*>(BaseClass_ptr1))
+	const ExcNI* element = dynamic_cast<const ExcNI*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vrmax;
 		if (!buffer.str().empty())
@@ -319,7 +325,8 @@ bool get_ExcNI_vrmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcNI_vrmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcNI* element = dynamic_cast<const ExcNI*>(BaseClass_ptr1))
+	const ExcNI* element = dynamic_cast<const ExcNI*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vrmin;
 		if (!buffer.str().empty())
@@ -331,8 +338,6 @@ bool get_ExcNI_vrmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 	return false;
 }
 
-
-
 const char ExcNI::debugName[] = "ExcNI";
 const char* ExcNI::debugString() const
 {
@@ -341,21 +346,21 @@ const char* ExcNI::debugString() const
 
 void ExcNI::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ExcNI"), &ExcNI_factory));
+	factory_map.emplace("cim:ExcNI", &ExcNI_factory);
 }
 
 void ExcNI::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ExcNI.busFedSelector"), &assign_ExcNI_busFedSelector));
-	assign_map.insert(std::make_pair(std::string("cim:ExcNI.ka"), &assign_ExcNI_ka));
-	assign_map.insert(std::make_pair(std::string("cim:ExcNI.kf"), &assign_ExcNI_kf));
-	assign_map.insert(std::make_pair(std::string("cim:ExcNI.r"), &assign_ExcNI_r));
-	assign_map.insert(std::make_pair(std::string("cim:ExcNI.ta"), &assign_ExcNI_ta));
-	assign_map.insert(std::make_pair(std::string("cim:ExcNI.tf1"), &assign_ExcNI_tf1));
-	assign_map.insert(std::make_pair(std::string("cim:ExcNI.tf2"), &assign_ExcNI_tf2));
-	assign_map.insert(std::make_pair(std::string("cim:ExcNI.tr"), &assign_ExcNI_tr));
-	assign_map.insert(std::make_pair(std::string("cim:ExcNI.vrmax"), &assign_ExcNI_vrmax));
-	assign_map.insert(std::make_pair(std::string("cim:ExcNI.vrmin"), &assign_ExcNI_vrmin));
+	assign_map.emplace("cim:ExcNI.busFedSelector", &assign_ExcNI_busFedSelector);
+	assign_map.emplace("cim:ExcNI.ka", &assign_ExcNI_ka);
+	assign_map.emplace("cim:ExcNI.kf", &assign_ExcNI_kf);
+	assign_map.emplace("cim:ExcNI.r", &assign_ExcNI_r);
+	assign_map.emplace("cim:ExcNI.ta", &assign_ExcNI_ta);
+	assign_map.emplace("cim:ExcNI.tf1", &assign_ExcNI_tf1);
+	assign_map.emplace("cim:ExcNI.tf2", &assign_ExcNI_tf2);
+	assign_map.emplace("cim:ExcNI.tr", &assign_ExcNI_tr);
+	assign_map.emplace("cim:ExcNI.vrmax", &assign_ExcNI_vrmax);
+	assign_map.emplace("cim:ExcNI.vrmin", &assign_ExcNI_vrmin);
 }
 
 void ExcNI::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

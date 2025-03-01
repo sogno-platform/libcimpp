@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class ThermalGeneratingUnit;
 
-	/*
-	A set of combustion turbines and steam turbines where the exhaust heat from the combustion turbines is recovered to make steam for the steam turbines, resulting in greater overall plant efficiency.
-	*/
+	/** \brief A set of combustion turbines and steam turbines where the exhaust heat from the combustion turbines is recovered to make steam for the steam turbines, resulting in greater overall plant efficiency. */
 	class CombinedCyclePlant : public PowerSystemResource
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		CombinedCyclePlant();
 		~CombinedCyclePlant() override;
 
-		std::list<CIMPP::ThermalGeneratingUnit*> ThermalGeneratingUnits;  /* A thermal generating unit may be a member of a combined cycle plant. Default: 0 */
+		/** \brief A thermal generating unit may be a member of a combined cycle plant. Default: 0 */
+		std::list<CIMPP::ThermalGeneratingUnit*> ThermalGeneratingUnits;
 
 		static const char debugName[];
 		const char* debugString() const override;

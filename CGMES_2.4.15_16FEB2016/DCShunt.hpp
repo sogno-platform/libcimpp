@@ -19,9 +19,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A shunt device within the DC system, typically used for filtering.  Needed for transient and short circuit studies.
-	*/
+	/** \brief A shunt device within the DC system, typically used for filtering.  Needed for transient and short circuit studies. */
 	class DCShunt : public DCConductingEquipment
 	{
 	public:
@@ -29,9 +27,14 @@ namespace CIMPP
 		DCShunt();
 		~DCShunt() override;
 
-		CIMPP::Capacitance capacitance;  /* Capacitance of the DC shunt. Default: nullptr */
-		CIMPP::Voltage ratedUdc;  /* Rated DC device voltage. Converter configuration data used in power flow. Default: nullptr */
-		CIMPP::Resistance resistance;  /* Resistance of the DC device. Default: nullptr */
+		/** \brief Capacitance of the DC shunt. Default: nullptr */
+		CIMPP::Capacitance capacitance;
+
+		/** \brief Rated DC device voltage. Converter configuration data used in power flow. Default: nullptr */
+		CIMPP::Voltage ratedUdc;
+
+		/** \brief Resistance of the DC device. Default: nullptr */
+		CIMPP::Resistance resistance;
 
 		static const char debugName[];
 		const char* debugString() const override;

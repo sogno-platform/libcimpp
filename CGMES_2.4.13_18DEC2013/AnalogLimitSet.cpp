@@ -8,14 +8,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "AnalogLimit.hpp"
 #include "Analog.hpp"
-#include "Boolean.hpp"
+#include "AnalogLimit.hpp"
 
 using namespace CIMPP;
 
-AnalogLimitSet::AnalogLimitSet() {};
-AnalogLimitSet::~AnalogLimitSet() {};
+AnalogLimitSet::AnalogLimitSet() {}
+AnalogLimitSet::~AnalogLimitSet() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -44,21 +43,6 @@ AnalogLimitSet::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_AnalogLimitSet_isPercentageLimits(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (AnalogLimitSet* element = dynamic_cast<AnalogLimitSet*>(BaseClass_ptr1))
-	{
-		buffer >> element->isPercentageLimits;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_AnalogLimit_LimitSet(BaseClass*, BaseClass*);
 bool assign_AnalogLimitSet_Limits(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -75,6 +59,7 @@ bool assign_AnalogLimitSet_Limits(BaseClass* BaseClass_ptr1, BaseClass* BaseClas
 	}
 	return false;
 }
+
 bool assign_Analog_LimitSets(BaseClass*, BaseClass*);
 bool assign_AnalogLimitSet_Measurements(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -92,9 +77,36 @@ bool assign_AnalogLimitSet_Measurements(BaseClass* BaseClass_ptr1, BaseClass* Ba
 	return false;
 }
 
+bool assign_AnalogLimitSet_isPercentageLimits(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	AnalogLimitSet* element = dynamic_cast<AnalogLimitSet*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->isPercentageLimits;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
+bool get_AnalogLimitSet_Measurements(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const AnalogLimitSet* element = dynamic_cast<const AnalogLimitSet*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		std::copy(element->Measurements.begin(), element->Measurements.end(), std::back_inserter(BaseClass_list));
+		return !BaseClass_list.empty();
+	}
+	return false;
+}
+
 bool get_AnalogLimitSet_isPercentageLimits(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const AnalogLimitSet* element = dynamic_cast<const AnalogLimitSet*>(BaseClass_ptr1))
+	const AnalogLimitSet* element = dynamic_cast<const AnalogLimitSet*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->isPercentageLimits;
 		if (!buffer.str().empty())
@@ -106,18 +118,6 @@ bool get_AnalogLimitSet_isPercentageLimits(const BaseClass* BaseClass_ptr1, std:
 	return false;
 }
 
-
-bool get_AnalogLimitSet_Measurements(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const AnalogLimitSet* element = dynamic_cast<const AnalogLimitSet*>(BaseClass_ptr1))
-	{
-		std::copy(element->Measurements.begin(), element->Measurements.end(), std::back_inserter(BaseClass_list));
-		return !BaseClass_list.empty();
-	}
-	return false;
-}
-
-
 const char AnalogLimitSet::debugName[] = "AnalogLimitSet";
 const char* AnalogLimitSet::debugString() const
 {
@@ -126,18 +126,18 @@ const char* AnalogLimitSet::debugString() const
 
 void AnalogLimitSet::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:AnalogLimitSet"), &AnalogLimitSet_factory));
+	factory_map.emplace("cim:AnalogLimitSet", &AnalogLimitSet_factory);
 }
 
 void AnalogLimitSet::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:AnalogLimitSet.isPercentageLimits"), &assign_AnalogLimitSet_isPercentageLimits));
+	assign_map.emplace("cim:AnalogLimitSet.isPercentageLimits", &assign_AnalogLimitSet_isPercentageLimits);
 }
 
 void AnalogLimitSet::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:AnalogLimitSet.Limits"), &assign_AnalogLimitSet_Limits));
-	assign_map.insert(std::make_pair(std::string("cim:AnalogLimitSet.Measurements"), &assign_AnalogLimitSet_Measurements));
+	assign_map.emplace("cim:AnalogLimitSet.Limits", &assign_AnalogLimitSet_Limits);
+	assign_map.emplace("cim:AnalogLimitSet.Measurements", &assign_AnalogLimitSet_Measurements);
 }
 
 void AnalogLimitSet::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

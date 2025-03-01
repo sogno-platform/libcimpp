@@ -8,21 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "String.hpp"
-#include "String.hpp"
-#include "Date.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
 
 using namespace CIMPP;
 
-SteadyStateHypothesisVersion::SteadyStateHypothesisVersion() {};
-SteadyStateHypothesisVersion::~SteadyStateHypothesisVersion() {};
+SteadyStateHypothesisVersion::SteadyStateHypothesisVersion() {}
+SteadyStateHypothesisVersion::~SteadyStateHypothesisVersion() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -58,142 +48,150 @@ SteadyStateHypothesisVersion::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_SteadyStateHypothesisVersion_baseUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_SteadyStateHypothesisVersion_baseUML(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (SteadyStateHypothesisVersion* element = dynamic_cast<SteadyStateHypothesisVersion*>(BaseClass_ptr1))
+	SteadyStateHypothesisVersion* element = dynamic_cast<SteadyStateHypothesisVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->baseUML = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_SteadyStateHypothesisVersion_baseURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_SteadyStateHypothesisVersion_baseURI(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (SteadyStateHypothesisVersion* element = dynamic_cast<SteadyStateHypothesisVersion*>(BaseClass_ptr1))
+	SteadyStateHypothesisVersion* element = dynamic_cast<SteadyStateHypothesisVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->baseURI = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_SteadyStateHypothesisVersion_date(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_SteadyStateHypothesisVersion_date(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (SteadyStateHypothesisVersion* element = dynamic_cast<SteadyStateHypothesisVersion*>(BaseClass_ptr1))
+	SteadyStateHypothesisVersion* element = dynamic_cast<SteadyStateHypothesisVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->date = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_SteadyStateHypothesisVersion_differenceModelURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_SteadyStateHypothesisVersion_differenceModelURI(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (SteadyStateHypothesisVersion* element = dynamic_cast<SteadyStateHypothesisVersion*>(BaseClass_ptr1))
+	SteadyStateHypothesisVersion* element = dynamic_cast<SteadyStateHypothesisVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->differenceModelURI = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_SteadyStateHypothesisVersion_entsoeUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_SteadyStateHypothesisVersion_entsoeUML(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (SteadyStateHypothesisVersion* element = dynamic_cast<SteadyStateHypothesisVersion*>(BaseClass_ptr1))
+	SteadyStateHypothesisVersion* element = dynamic_cast<SteadyStateHypothesisVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->entsoeUML = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_SteadyStateHypothesisVersion_entsoeURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_SteadyStateHypothesisVersion_entsoeURI(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (SteadyStateHypothesisVersion* element = dynamic_cast<SteadyStateHypothesisVersion*>(BaseClass_ptr1))
+	SteadyStateHypothesisVersion* element = dynamic_cast<SteadyStateHypothesisVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->entsoeURI = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_SteadyStateHypothesisVersion_modelDescriptionURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_SteadyStateHypothesisVersion_modelDescriptionURI(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (SteadyStateHypothesisVersion* element = dynamic_cast<SteadyStateHypothesisVersion*>(BaseClass_ptr1))
+	SteadyStateHypothesisVersion* element = dynamic_cast<SteadyStateHypothesisVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->modelDescriptionURI = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_SteadyStateHypothesisVersion_namespaceRDF(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_SteadyStateHypothesisVersion_namespaceRDF(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (SteadyStateHypothesisVersion* element = dynamic_cast<SteadyStateHypothesisVersion*>(BaseClass_ptr1))
+	SteadyStateHypothesisVersion* element = dynamic_cast<SteadyStateHypothesisVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->namespaceRDF = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_SteadyStateHypothesisVersion_namespaceUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_SteadyStateHypothesisVersion_namespaceUML(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (SteadyStateHypothesisVersion* element = dynamic_cast<SteadyStateHypothesisVersion*>(BaseClass_ptr1))
+	SteadyStateHypothesisVersion* element = dynamic_cast<SteadyStateHypothesisVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->namespaceUML = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_SteadyStateHypothesisVersion_shortName(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_SteadyStateHypothesisVersion_shortName(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (SteadyStateHypothesisVersion* element = dynamic_cast<SteadyStateHypothesisVersion*>(BaseClass_ptr1))
+	SteadyStateHypothesisVersion* element = dynamic_cast<SteadyStateHypothesisVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->shortName = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_SteadyStateHypothesisVersion_baseUML(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SteadyStateHypothesisVersion* element = dynamic_cast<const SteadyStateHypothesisVersion*>(BaseClass_ptr1))
+	const SteadyStateHypothesisVersion* element = dynamic_cast<const SteadyStateHypothesisVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->baseUML;
 		if (!buffer.str().empty())
@@ -207,7 +205,8 @@ bool get_SteadyStateHypothesisVersion_baseUML(const BaseClass* BaseClass_ptr1, s
 
 bool get_SteadyStateHypothesisVersion_baseURI(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SteadyStateHypothesisVersion* element = dynamic_cast<const SteadyStateHypothesisVersion*>(BaseClass_ptr1))
+	const SteadyStateHypothesisVersion* element = dynamic_cast<const SteadyStateHypothesisVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->baseURI;
 		if (!buffer.str().empty())
@@ -221,7 +220,8 @@ bool get_SteadyStateHypothesisVersion_baseURI(const BaseClass* BaseClass_ptr1, s
 
 bool get_SteadyStateHypothesisVersion_date(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SteadyStateHypothesisVersion* element = dynamic_cast<const SteadyStateHypothesisVersion*>(BaseClass_ptr1))
+	const SteadyStateHypothesisVersion* element = dynamic_cast<const SteadyStateHypothesisVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->date;
 		if (!buffer.str().empty())
@@ -235,7 +235,8 @@ bool get_SteadyStateHypothesisVersion_date(const BaseClass* BaseClass_ptr1, std:
 
 bool get_SteadyStateHypothesisVersion_differenceModelURI(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SteadyStateHypothesisVersion* element = dynamic_cast<const SteadyStateHypothesisVersion*>(BaseClass_ptr1))
+	const SteadyStateHypothesisVersion* element = dynamic_cast<const SteadyStateHypothesisVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->differenceModelURI;
 		if (!buffer.str().empty())
@@ -249,7 +250,8 @@ bool get_SteadyStateHypothesisVersion_differenceModelURI(const BaseClass* BaseCl
 
 bool get_SteadyStateHypothesisVersion_entsoeUML(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SteadyStateHypothesisVersion* element = dynamic_cast<const SteadyStateHypothesisVersion*>(BaseClass_ptr1))
+	const SteadyStateHypothesisVersion* element = dynamic_cast<const SteadyStateHypothesisVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->entsoeUML;
 		if (!buffer.str().empty())
@@ -263,7 +265,8 @@ bool get_SteadyStateHypothesisVersion_entsoeUML(const BaseClass* BaseClass_ptr1,
 
 bool get_SteadyStateHypothesisVersion_entsoeURI(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SteadyStateHypothesisVersion* element = dynamic_cast<const SteadyStateHypothesisVersion*>(BaseClass_ptr1))
+	const SteadyStateHypothesisVersion* element = dynamic_cast<const SteadyStateHypothesisVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->entsoeURI;
 		if (!buffer.str().empty())
@@ -277,7 +280,8 @@ bool get_SteadyStateHypothesisVersion_entsoeURI(const BaseClass* BaseClass_ptr1,
 
 bool get_SteadyStateHypothesisVersion_modelDescriptionURI(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SteadyStateHypothesisVersion* element = dynamic_cast<const SteadyStateHypothesisVersion*>(BaseClass_ptr1))
+	const SteadyStateHypothesisVersion* element = dynamic_cast<const SteadyStateHypothesisVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->modelDescriptionURI;
 		if (!buffer.str().empty())
@@ -291,7 +295,8 @@ bool get_SteadyStateHypothesisVersion_modelDescriptionURI(const BaseClass* BaseC
 
 bool get_SteadyStateHypothesisVersion_namespaceRDF(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SteadyStateHypothesisVersion* element = dynamic_cast<const SteadyStateHypothesisVersion*>(BaseClass_ptr1))
+	const SteadyStateHypothesisVersion* element = dynamic_cast<const SteadyStateHypothesisVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->namespaceRDF;
 		if (!buffer.str().empty())
@@ -305,7 +310,8 @@ bool get_SteadyStateHypothesisVersion_namespaceRDF(const BaseClass* BaseClass_pt
 
 bool get_SteadyStateHypothesisVersion_namespaceUML(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SteadyStateHypothesisVersion* element = dynamic_cast<const SteadyStateHypothesisVersion*>(BaseClass_ptr1))
+	const SteadyStateHypothesisVersion* element = dynamic_cast<const SteadyStateHypothesisVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->namespaceUML;
 		if (!buffer.str().empty())
@@ -319,7 +325,8 @@ bool get_SteadyStateHypothesisVersion_namespaceUML(const BaseClass* BaseClass_pt
 
 bool get_SteadyStateHypothesisVersion_shortName(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SteadyStateHypothesisVersion* element = dynamic_cast<const SteadyStateHypothesisVersion*>(BaseClass_ptr1))
+	const SteadyStateHypothesisVersion* element = dynamic_cast<const SteadyStateHypothesisVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->shortName;
 		if (!buffer.str().empty())
@@ -331,8 +338,6 @@ bool get_SteadyStateHypothesisVersion_shortName(const BaseClass* BaseClass_ptr1,
 	return false;
 }
 
-
-
 const char SteadyStateHypothesisVersion::debugName[] = "SteadyStateHypothesisVersion";
 const char* SteadyStateHypothesisVersion::debugString() const
 {
@@ -341,21 +346,21 @@ const char* SteadyStateHypothesisVersion::debugString() const
 
 void SteadyStateHypothesisVersion::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:SteadyStateHypothesisVersion"), &SteadyStateHypothesisVersion_factory));
+	factory_map.emplace("cim:SteadyStateHypothesisVersion", &SteadyStateHypothesisVersion_factory);
 }
 
 void SteadyStateHypothesisVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:SteadyStateHypothesisVersion.baseUML"), &assign_SteadyStateHypothesisVersion_baseUML));
-	assign_map.insert(std::make_pair(std::string("cim:SteadyStateHypothesisVersion.baseURI"), &assign_SteadyStateHypothesisVersion_baseURI));
-	assign_map.insert(std::make_pair(std::string("cim:SteadyStateHypothesisVersion.date"), &assign_SteadyStateHypothesisVersion_date));
-	assign_map.insert(std::make_pair(std::string("cim:SteadyStateHypothesisVersion.differenceModelURI"), &assign_SteadyStateHypothesisVersion_differenceModelURI));
-	assign_map.insert(std::make_pair(std::string("cim:SteadyStateHypothesisVersion.entsoeUML"), &assign_SteadyStateHypothesisVersion_entsoeUML));
-	assign_map.insert(std::make_pair(std::string("cim:SteadyStateHypothesisVersion.entsoeURI"), &assign_SteadyStateHypothesisVersion_entsoeURI));
-	assign_map.insert(std::make_pair(std::string("cim:SteadyStateHypothesisVersion.modelDescriptionURI"), &assign_SteadyStateHypothesisVersion_modelDescriptionURI));
-	assign_map.insert(std::make_pair(std::string("cim:SteadyStateHypothesisVersion.namespaceRDF"), &assign_SteadyStateHypothesisVersion_namespaceRDF));
-	assign_map.insert(std::make_pair(std::string("cim:SteadyStateHypothesisVersion.namespaceUML"), &assign_SteadyStateHypothesisVersion_namespaceUML));
-	assign_map.insert(std::make_pair(std::string("cim:SteadyStateHypothesisVersion.shortName"), &assign_SteadyStateHypothesisVersion_shortName));
+	assign_map.emplace("cim:SteadyStateHypothesisVersion.baseUML", &assign_SteadyStateHypothesisVersion_baseUML);
+	assign_map.emplace("cim:SteadyStateHypothesisVersion.baseURI", &assign_SteadyStateHypothesisVersion_baseURI);
+	assign_map.emplace("cim:SteadyStateHypothesisVersion.date", &assign_SteadyStateHypothesisVersion_date);
+	assign_map.emplace("cim:SteadyStateHypothesisVersion.differenceModelURI", &assign_SteadyStateHypothesisVersion_differenceModelURI);
+	assign_map.emplace("cim:SteadyStateHypothesisVersion.entsoeUML", &assign_SteadyStateHypothesisVersion_entsoeUML);
+	assign_map.emplace("cim:SteadyStateHypothesisVersion.entsoeURI", &assign_SteadyStateHypothesisVersion_entsoeURI);
+	assign_map.emplace("cim:SteadyStateHypothesisVersion.modelDescriptionURI", &assign_SteadyStateHypothesisVersion_modelDescriptionURI);
+	assign_map.emplace("cim:SteadyStateHypothesisVersion.namespaceRDF", &assign_SteadyStateHypothesisVersion_namespaceRDF);
+	assign_map.emplace("cim:SteadyStateHypothesisVersion.namespaceUML", &assign_SteadyStateHypothesisVersion_namespaceUML);
+	assign_map.emplace("cim:SteadyStateHypothesisVersion.shortName", &assign_SteadyStateHypothesisVersion_shortName);
 }
 
 void SteadyStateHypothesisVersion::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

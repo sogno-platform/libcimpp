@@ -9,9 +9,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Reactance (imaginary part of impedance), at rated frequency.
-	*/
+	/** \brief Reactance (imaginary part of impedance), at rated frequency. */
 	class Reactance
 	{
 	public:

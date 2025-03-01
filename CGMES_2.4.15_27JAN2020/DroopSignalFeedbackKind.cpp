@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "DroopSignalFeedbackKind")
+		if (EnumSymbol.substr(0, pos) != "DroopSignalFeedbackKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,22 +50,22 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "electricalPower")
+		if (EnumSymbol == "electricalPower")
 		{
 			rop = DroopSignalFeedbackKind::electricalPower;
 			return lop;
 		}
-		if(EnumSymbol == "none")
+		if (EnumSymbol == "none")
 		{
 			rop = DroopSignalFeedbackKind::none;
 			return lop;
 		}
-		if(EnumSymbol == "fuelValveStroke")
+		if (EnumSymbol == "fuelValveStroke")
 		{
 			rop = DroopSignalFeedbackKind::fuelValveStroke;
 			return lop;
 		}
-		if(EnumSymbol == "governorOutput")
+		if (EnumSymbol == "governorOutput")
 		{
 			rop = DroopSignalFeedbackKind::governorOutput;
 			return lop;

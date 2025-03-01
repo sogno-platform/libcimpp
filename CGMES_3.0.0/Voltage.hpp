@@ -9,9 +9,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Electrical voltage, can be both AC and DC.
-	*/
+	/** \brief Electrical voltage, can be both AC and DC. */
 	class Voltage
 	{
 	public:

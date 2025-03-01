@@ -17,12 +17,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "WindPlantDynamics.hpp"
 #include "WindTurbineType1or2Dynamics.hpp"
 #include "WindTurbineType3or4Dynamics.hpp"
-#include "RemoteSignalKind.hpp"
 
 using namespace CIMPP;
 
-RemoteInputSignal::RemoteInputSignal() : DiscontinuousExcitationControlDynamics(nullptr), PFVArControllerType1Dynamics(nullptr), PowerSystemStabilizerDynamics(nullptr), Terminal(nullptr), UnderexcitationLimiterDynamics(nullptr), VoltageCompensatorDynamics(nullptr), WindPlantDynamics(nullptr), WindTurbineType1or2Dynamics(nullptr), WindTurbineType3or4Dynamics(nullptr) {};
-RemoteInputSignal::~RemoteInputSignal() {};
+RemoteInputSignal::RemoteInputSignal() : DiscontinuousExcitationControlDynamics(nullptr), PFVArControllerType1Dynamics(nullptr), PowerSystemStabilizerDynamics(nullptr), Terminal(nullptr), UnderexcitationLimiterDynamics(nullptr), VoltageCompensatorDynamics(nullptr), WindPlantDynamics(nullptr), WindTurbineType1or2Dynamics(nullptr), WindTurbineType3or4Dynamics(nullptr) {}
+RemoteInputSignal::~RemoteInputSignal() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -58,21 +57,6 @@ RemoteInputSignal::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_RemoteInputSignal_remoteSignalType(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (RemoteInputSignal* element = dynamic_cast<RemoteInputSignal*>(BaseClass_ptr1))
-	{
-		buffer >> element->remoteSignalType;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_DiscontinuousExcitationControlDynamics_RemoteInputSignal(BaseClass*, BaseClass*);
 bool assign_RemoteInputSignal_DiscontinuousExcitationControlDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -89,6 +73,7 @@ bool assign_RemoteInputSignal_DiscontinuousExcitationControlDynamics(BaseClass* 
 	}
 	return false;
 }
+
 bool assign_PFVArControllerType1Dynamics_RemoteInputSignal(BaseClass*, BaseClass*);
 bool assign_RemoteInputSignal_PFVArControllerType1Dynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -105,6 +90,7 @@ bool assign_RemoteInputSignal_PFVArControllerType1Dynamics(BaseClass* BaseClass_
 	}
 	return false;
 }
+
 bool assign_PowerSystemStabilizerDynamics_RemoteInputSignal(BaseClass*, BaseClass*);
 bool assign_RemoteInputSignal_PowerSystemStabilizerDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -121,6 +107,7 @@ bool assign_RemoteInputSignal_PowerSystemStabilizerDynamics(BaseClass* BaseClass
 	}
 	return false;
 }
+
 bool assign_Terminal_RemoteInputSignal(BaseClass*, BaseClass*);
 bool assign_RemoteInputSignal_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -137,6 +124,7 @@ bool assign_RemoteInputSignal_Terminal(BaseClass* BaseClass_ptr1, BaseClass* Bas
 	}
 	return false;
 }
+
 bool assign_UnderexcitationLimiterDynamics_RemoteInputSignal(BaseClass*, BaseClass*);
 bool assign_RemoteInputSignal_UnderexcitationLimiterDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -153,6 +141,7 @@ bool assign_RemoteInputSignal_UnderexcitationLimiterDynamics(BaseClass* BaseClas
 	}
 	return false;
 }
+
 bool assign_VoltageCompensatorDynamics_RemoteInputSignal(BaseClass*, BaseClass*);
 bool assign_RemoteInputSignal_VoltageCompensatorDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -169,6 +158,7 @@ bool assign_RemoteInputSignal_VoltageCompensatorDynamics(BaseClass* BaseClass_pt
 	}
 	return false;
 }
+
 bool assign_WindPlantDynamics_RemoteInputSignal(BaseClass*, BaseClass*);
 bool assign_RemoteInputSignal_WindPlantDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -185,6 +175,7 @@ bool assign_RemoteInputSignal_WindPlantDynamics(BaseClass* BaseClass_ptr1, BaseC
 	}
 	return false;
 }
+
 bool assign_WindTurbineType1or2Dynamics_RemoteInputSignal(BaseClass*, BaseClass*);
 bool assign_RemoteInputSignal_WindTurbineType1or2Dynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -201,6 +192,7 @@ bool assign_RemoteInputSignal_WindTurbineType1or2Dynamics(BaseClass* BaseClass_p
 	}
 	return false;
 }
+
 bool assign_WindTurbineType3or4Dynamics_RemoteInputSignal(BaseClass*, BaseClass*);
 bool assign_RemoteInputSignal_WindTurbineType3or4Dynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -218,10 +210,24 @@ bool assign_RemoteInputSignal_WindTurbineType3or4Dynamics(BaseClass* BaseClass_p
 	return false;
 }
 
+bool assign_RemoteInputSignal_remoteSignalType(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	RemoteInputSignal* element = dynamic_cast<RemoteInputSignal*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->remoteSignalType;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
 
 bool get_RemoteInputSignal_DiscontinuousExcitationControlDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const RemoteInputSignal* element = dynamic_cast<const RemoteInputSignal*>(BaseClass_ptr1))
+	const RemoteInputSignal* element = dynamic_cast<const RemoteInputSignal*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->DiscontinuousExcitationControlDynamics != 0)
 		{
@@ -234,7 +240,8 @@ bool get_RemoteInputSignal_DiscontinuousExcitationControlDynamics(const BaseClas
 
 bool get_RemoteInputSignal_PFVArControllerType1Dynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const RemoteInputSignal* element = dynamic_cast<const RemoteInputSignal*>(BaseClass_ptr1))
+	const RemoteInputSignal* element = dynamic_cast<const RemoteInputSignal*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->PFVArControllerType1Dynamics != 0)
 		{
@@ -247,7 +254,8 @@ bool get_RemoteInputSignal_PFVArControllerType1Dynamics(const BaseClass* BaseCla
 
 bool get_RemoteInputSignal_PowerSystemStabilizerDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const RemoteInputSignal* element = dynamic_cast<const RemoteInputSignal*>(BaseClass_ptr1))
+	const RemoteInputSignal* element = dynamic_cast<const RemoteInputSignal*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->PowerSystemStabilizerDynamics != 0)
 		{
@@ -260,7 +268,8 @@ bool get_RemoteInputSignal_PowerSystemStabilizerDynamics(const BaseClass* BaseCl
 
 bool get_RemoteInputSignal_Terminal(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const RemoteInputSignal* element = dynamic_cast<const RemoteInputSignal*>(BaseClass_ptr1))
+	const RemoteInputSignal* element = dynamic_cast<const RemoteInputSignal*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->Terminal != 0)
 		{
@@ -273,7 +282,8 @@ bool get_RemoteInputSignal_Terminal(const BaseClass* BaseClass_ptr1, std::list<c
 
 bool get_RemoteInputSignal_UnderexcitationLimiterDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const RemoteInputSignal* element = dynamic_cast<const RemoteInputSignal*>(BaseClass_ptr1))
+	const RemoteInputSignal* element = dynamic_cast<const RemoteInputSignal*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->UnderexcitationLimiterDynamics != 0)
 		{
@@ -286,7 +296,8 @@ bool get_RemoteInputSignal_UnderexcitationLimiterDynamics(const BaseClass* BaseC
 
 bool get_RemoteInputSignal_VoltageCompensatorDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const RemoteInputSignal* element = dynamic_cast<const RemoteInputSignal*>(BaseClass_ptr1))
+	const RemoteInputSignal* element = dynamic_cast<const RemoteInputSignal*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->VoltageCompensatorDynamics != 0)
 		{
@@ -298,9 +309,12 @@ bool get_RemoteInputSignal_VoltageCompensatorDynamics(const BaseClass* BaseClass
 }
 
 
+
+
 bool get_RemoteInputSignal_remoteSignalType(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const RemoteInputSignal* element = dynamic_cast<const RemoteInputSignal*>(BaseClass_ptr1))
+	const RemoteInputSignal* element = dynamic_cast<const RemoteInputSignal*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->remoteSignalType;
 		if (!buffer.str().empty())
@@ -320,25 +334,25 @@ const char* RemoteInputSignal::debugString() const
 
 void RemoteInputSignal::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:RemoteInputSignal"), &RemoteInputSignal_factory));
+	factory_map.emplace("cim:RemoteInputSignal", &RemoteInputSignal_factory);
 }
 
 void RemoteInputSignal::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:RemoteInputSignal.remoteSignalType"), &assign_RemoteInputSignal_remoteSignalType));
+	assign_map.emplace("cim:RemoteInputSignal.remoteSignalType", &assign_RemoteInputSignal_remoteSignalType);
 }
 
 void RemoteInputSignal::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:RemoteInputSignal.DiscontinuousExcitationControlDynamics"), &assign_RemoteInputSignal_DiscontinuousExcitationControlDynamics));
-	assign_map.insert(std::make_pair(std::string("cim:RemoteInputSignal.PFVArControllerType1Dynamics"), &assign_RemoteInputSignal_PFVArControllerType1Dynamics));
-	assign_map.insert(std::make_pair(std::string("cim:RemoteInputSignal.PowerSystemStabilizerDynamics"), &assign_RemoteInputSignal_PowerSystemStabilizerDynamics));
-	assign_map.insert(std::make_pair(std::string("cim:RemoteInputSignal.Terminal"), &assign_RemoteInputSignal_Terminal));
-	assign_map.insert(std::make_pair(std::string("cim:RemoteInputSignal.UnderexcitationLimiterDynamics"), &assign_RemoteInputSignal_UnderexcitationLimiterDynamics));
-	assign_map.insert(std::make_pair(std::string("cim:RemoteInputSignal.VoltageCompensatorDynamics"), &assign_RemoteInputSignal_VoltageCompensatorDynamics));
-	assign_map.insert(std::make_pair(std::string("cim:RemoteInputSignal.WindPlantDynamics"), &assign_RemoteInputSignal_WindPlantDynamics));
-	assign_map.insert(std::make_pair(std::string("cim:RemoteInputSignal.WindTurbineType1or2Dynamics"), &assign_RemoteInputSignal_WindTurbineType1or2Dynamics));
-	assign_map.insert(std::make_pair(std::string("cim:RemoteInputSignal.WindTurbineType3or4Dynamics"), &assign_RemoteInputSignal_WindTurbineType3or4Dynamics));
+	assign_map.emplace("cim:RemoteInputSignal.DiscontinuousExcitationControlDynamics", &assign_RemoteInputSignal_DiscontinuousExcitationControlDynamics);
+	assign_map.emplace("cim:RemoteInputSignal.PFVArControllerType1Dynamics", &assign_RemoteInputSignal_PFVArControllerType1Dynamics);
+	assign_map.emplace("cim:RemoteInputSignal.PowerSystemStabilizerDynamics", &assign_RemoteInputSignal_PowerSystemStabilizerDynamics);
+	assign_map.emplace("cim:RemoteInputSignal.Terminal", &assign_RemoteInputSignal_Terminal);
+	assign_map.emplace("cim:RemoteInputSignal.UnderexcitationLimiterDynamics", &assign_RemoteInputSignal_UnderexcitationLimiterDynamics);
+	assign_map.emplace("cim:RemoteInputSignal.VoltageCompensatorDynamics", &assign_RemoteInputSignal_VoltageCompensatorDynamics);
+	assign_map.emplace("cim:RemoteInputSignal.WindPlantDynamics", &assign_RemoteInputSignal_WindPlantDynamics);
+	assign_map.emplace("cim:RemoteInputSignal.WindTurbineType1or2Dynamics", &assign_RemoteInputSignal_WindTurbineType1or2Dynamics);
+	assign_map.emplace("cim:RemoteInputSignal.WindTurbineType3or4Dynamics", &assign_RemoteInputSignal_WindTurbineType3or4Dynamics);
 }
 
 void RemoteInputSignal::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

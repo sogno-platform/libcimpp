@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class RatioTapChangerTable;
 
-	/*
-	Describes each tap step in the ratio tap changer tabular curve.
-	*/
+	/** \brief Describes each tap step in the ratio tap changer tabular curve. */
 	class RatioTapChangerTablePoint : public TapChangerTablePoint
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		RatioTapChangerTablePoint();
 		~RatioTapChangerTablePoint() override;
 
-		CIMPP::RatioTapChangerTable* RatioTapChangerTable;  /* Points of this table. Default: 0 */
+		/** \brief Points of this table. Default: 0 */
+		CIMPP::RatioTapChangerTable* RatioTapChangerTable;
 
 		static const char debugName[];
 		const char* debugString() const override;

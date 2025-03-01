@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class WindTurbineType3or4IEC;
 
-	/*
-	Constant Q limitation model. Reference: IEC 61400-27-1:2015, 5.6.5.9.
-	*/
+	/** \brief Constant Q limitation model. Reference: IEC 61400-27-1:2015, 5.6.5.9. */
 	class WindContQLimIEC : public IdentifiedObject
 	{
 	public:
@@ -28,9 +26,14 @@ namespace CIMPP
 		WindContQLimIEC();
 		~WindContQLimIEC() override;
 
-		CIMPP::WindTurbineType3or4IEC* WindTurbineType3or4IEC;  /* Wind generator type 3 or type 4 model with which this constant Q limitation model is associated. Default: 0 */
-		CIMPP::PU qmax;  /* Maximum reactive power (&lt;i&gt;q&lt;/i&gt;&lt;i&gt;&lt;sub&gt;max&lt;/sub&gt;&lt;/i&gt;) (&amp;gt; WindContQLimIEC.qmin). It is a type-dependent parameter. Default: nullptr */
-		CIMPP::PU qmin;  /* Minimum reactive power (&lt;i&gt;q&lt;/i&gt;&lt;i&gt;&lt;sub&gt;min&lt;/sub&gt;&lt;/i&gt;) (&amp;lt; WindContQLimIEC.qmax). It is a type-dependent parameter. Default: nullptr */
+		/** \brief Wind generator type 3 or type 4 model with which this constant Q limitation model is associated. Default: 0 */
+		CIMPP::WindTurbineType3or4IEC* WindTurbineType3or4IEC;
+
+		/** \brief Maximum reactive power (&lt;i&gt;q&lt;/i&gt;&lt;i&gt;&lt;sub&gt;max&lt;/sub&gt;&lt;/i&gt;) (&amp;gt; WindContQLimIEC.qmin). It is a type-dependent parameter. Default: nullptr */
+		CIMPP::PU qmax;
+
+		/** \brief Minimum reactive power (&lt;i&gt;q&lt;/i&gt;&lt;i&gt;&lt;sub&gt;min&lt;/sub&gt;&lt;/i&gt;) (&amp;lt; WindContQLimIEC.qmax). It is a type-dependent parameter. Default: nullptr */
+		CIMPP::PU qmin;
 
 		static const char debugName[];
 		const char* debugString() const override;

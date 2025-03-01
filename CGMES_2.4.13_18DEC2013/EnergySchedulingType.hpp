@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class EnergySource;
 
-	/*
-	Used to define the type of generation for scheduling purposes.
-	*/
+	/** \brief Used to define the type of generation for scheduling purposes. */
 	class EnergySchedulingType : public IdentifiedObject
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		EnergySchedulingType();
 		~EnergySchedulingType() override;
 
-		std::list<CIMPP::EnergySource*> EnergySource;  /* Energy Scheduling Type of an Energy Source Default: 0 */
+		/** \brief Energy Scheduling Type of an Energy Source Default: 0 */
+		std::list<CIMPP::EnergySource*> EnergySource;
 
 		static const char debugName[];
 		const char* debugString() const override;

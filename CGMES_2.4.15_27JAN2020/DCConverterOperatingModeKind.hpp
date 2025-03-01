@@ -9,25 +9,17 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	The operating mode of an HVDC bipole.
-	*/
+	/** \brief The operating mode of an HVDC bipole. */
 	class DCConverterOperatingModeKind
 	{
 	public:
 		enum DCConverterOperatingModeKind_ENUM
 		{
-			/**
-			 * Bipolar operation.
-			 */
+			/** Bipolar operation. */
 			bipolar,
-			/**
-			 * Monopolar operation with metallic return
-			 */
+			/** Monopolar operation with metallic return */
 			monopolarMetallicReturn,
-			/**
-			 * Monopolar operation with ground return
-			 */
+			/** Monopolar operation with ground return */
 			monopolarGroundReturn,
 		};
 

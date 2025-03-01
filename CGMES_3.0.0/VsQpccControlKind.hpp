@@ -9,29 +9,19 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Kind of reactive power control at point of common coupling for a voltage source converter.
-	*/
+	/** \brief Kind of reactive power control at point of common coupling for a voltage source converter. */
 	class VsQpccControlKind
 	{
 	public:
 		enum VsQpccControlKind_ENUM
 		{
-			/**
-			 * Control is reactive power at point of common coupling. Target is provided by VsConverter.targetQpcc.
-			 */
+			/** Control is reactive power at point of common coupling. Target is provided by VsConverter.targetQpcc. */
 			reactivePcc,
-			/**
-			 * Control is voltage at point of common coupling. Target is provided by VsConverter.targetUpcc.
-			 */
+			/** Control is voltage at point of common coupling. Target is provided by VsConverter.targetUpcc. */
 			voltagePcc,
-			/**
-			 * Control is power factor at point of common coupling. Target is provided by VsConverter.targetPowerFactorPcc.
-			 */
+			/** Control is power factor at point of common coupling. Target is provided by VsConverter.targetPowerFactorPcc. */
 			powerFactorPcc,
-			/**
-			 * No explicit control. Pulse-modulation factor is directly set in magnitude (VsConverter.targetPWMfactor) and phase (VsConverter.targetPhasePcc).
-			 */
+			/** No explicit control. Pulse-modulation factor is directly set in magnitude (VsConverter.targetPWMfactor) and phase (VsConverter.targetPhasePcc). */
 			pulseWidthModulation,
 		};
 

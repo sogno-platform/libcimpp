@@ -17,9 +17,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A conducting equipment used to represent a connection to ground which is typically used to compensate earth faults..   An earth fault compensator device modeled with a single terminal implies a second terminal solidly connected to ground.  If two terminals are modeled, the ground is not assumed and normal connection rules apply.
-	*/
+	/** \brief A conducting equipment used to represent a connection to ground which is typically used to compensate earth faults..   An earth fault compensator device modeled with a single terminal implies a second terminal solidly connected to ground.  If two terminals are modeled, the ground is not assumed and normal connection rules apply. */
 	class EarthFaultCompensator : public ConductingEquipment
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		EarthFaultCompensator();
 		~EarthFaultCompensator() override;
 
-		CIMPP::Resistance r;  /* Nominal resistance of device. Default: nullptr */
+		/** \brief Nominal resistance of device. Default: nullptr */
+		CIMPP::Resistance r;
 
 		static const char debugName[];
 		const char* debugString() const override;

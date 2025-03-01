@@ -9,25 +9,17 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Active power control modes for HVDC line operating as Current Source Converter.
-	*/
+	/** \brief Active power control modes for HVDC line operating as Current Source Converter. */
 	class CsPpccControlKind
 	{
 	public:
 		enum CsPpccControlKind_ENUM
 		{
-			/**
-			 * Active power control at AC side.
-			 */
+			/** Active power control at AC side. */
 			activePower,
-			/**
-			 * DC voltage control.
-			 */
+			/** DC voltage control. */
 			dcVoltage,
-			/**
-			 * DC current control
-			 */
+			/** DC current control */
 			dcCurrent,
 		};
 

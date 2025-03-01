@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class WindAeroConstIEC;
 
-	/*
-	Wind turbine IEC type 1A. Reference: IEC 61400-27-1:2015, 5.5.2.2.
-	*/
+	/** \brief Wind turbine IEC type 1A. Reference: IEC 61400-27-1:2015, 5.5.2.2. */
 	class WindGenTurbineType1aIEC : public WindTurbineType1or2IEC
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		WindGenTurbineType1aIEC();
 		~WindGenTurbineType1aIEC() override;
 
-		CIMPP::WindAeroConstIEC* WindAeroConstIEC;  /* Wind aerodynamic model associated with this wind turbine type 1A model. Default: 0 */
+		/** \brief Wind aerodynamic model associated with this wind turbine type 1A model. Default: 0 */
+		CIMPP::WindAeroConstIEC* WindAeroConstIEC;
 
 		static const char debugName[];
 		const char* debugString() const override;

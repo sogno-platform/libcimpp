@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "CurveStyle")
+		if (EnumSymbol.substr(0, pos) != "CurveStyle")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,12 +50,12 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "constantYValue")
+		if (EnumSymbol == "constantYValue")
 		{
 			rop = CurveStyle::constantYValue;
 			return lop;
 		}
-		if(EnumSymbol == "straightLineYValues")
+		if (EnumSymbol == "straightLineYValues")
 		{
 			rop = CurveStyle::straightLineYValues;
 			return lop;

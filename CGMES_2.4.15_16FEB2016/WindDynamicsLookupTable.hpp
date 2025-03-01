@@ -23,9 +23,7 @@ namespace CIMPP
 	class WindContRotorRIEC;
 	class WindPlantFreqPcontrolIEC;
 
-	/*
-	The class models a look up table for the purpose of wind standard models.
-	*/
+	/** \brief The class models a look up table for the purpose of wind standard models. */
 	class WindDynamicsLookupTable : public IdentifiedObject
 	{
 	public:
@@ -33,14 +31,29 @@ namespace CIMPP
 		WindDynamicsLookupTable();
 		~WindDynamicsLookupTable() override;
 
-		CIMPP::WindContCurrLimIEC* WindContCurrLimIEC;  /* The wind dynamics lookup table associated with this current control limitation model. Default: 0 */
-		CIMPP::WindContPType3IEC* WindContPType3IEC;  /* The wind dynamics lookup table associated with this P control type 3 model. Default: 0 */
-		CIMPP::WindContRotorRIEC* WindContRotorRIEC;  /* The rotor resistance control model with which this wind dynamics lookup table is associated. Default: 0 */
-		CIMPP::WindPlantFreqPcontrolIEC* WindPlantFreqPcontrolIEC;  /* The wind dynamics lookup table associated with this frequency and active power wind plant model. Default: 0 */
-		CIMPP::Simple_Float input;  /* Input value (x) for the lookup table function. Default: nullptr */
-		CIMPP::WindLookupTableFunctionKind lookupTableFunctionType;  /* Type of the lookup table function. Default: 0 */
-		CIMPP::Simple_Float output;  /* Output value (y) for the lookup table function. Default: nullptr */
-		CIMPP::Integer sequence;  /* Sequence numbers of the pairs of the input (x) and the output (y) of the lookup table function. Default: 0 */
+		/** \brief The wind dynamics lookup table associated with this current control limitation model. Default: 0 */
+		CIMPP::WindContCurrLimIEC* WindContCurrLimIEC;
+
+		/** \brief The wind dynamics lookup table associated with this P control type 3 model. Default: 0 */
+		CIMPP::WindContPType3IEC* WindContPType3IEC;
+
+		/** \brief The rotor resistance control model with which this wind dynamics lookup table is associated. Default: 0 */
+		CIMPP::WindContRotorRIEC* WindContRotorRIEC;
+
+		/** \brief The wind dynamics lookup table associated with this frequency and active power wind plant model. Default: 0 */
+		CIMPP::WindPlantFreqPcontrolIEC* WindPlantFreqPcontrolIEC;
+
+		/** \brief Input value (x) for the lookup table function. Default: nullptr */
+		CIMPP::Simple_Float input;
+
+		/** \brief Type of the lookup table function. Default: 0 */
+		CIMPP::WindLookupTableFunctionKind lookupTableFunctionType;
+
+		/** \brief Output value (y) for the lookup table function. Default: nullptr */
+		CIMPP::Simple_Float output;
+
+		/** \brief Sequence numbers of the pairs of the input (x) and the output (y) of the lookup table function. Default: 0 */
+		CIMPP::Integer sequence;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -13,8 +13,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-DCNode::DCNode() : DCTopologicalNode(nullptr) {};
-DCNode::~DCNode() {};
+DCNode::DCNode() : DCTopologicalNode(nullptr) {}
+DCNode::~DCNode() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -43,8 +43,6 @@ DCNode::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_DCBaseTerminal_DCNode(BaseClass*, BaseClass*);
 bool assign_DCNode_DCTerminals(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -61,6 +59,7 @@ bool assign_DCNode_DCTerminals(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_p
 	}
 	return false;
 }
+
 bool assign_DCTopologicalNode_DCNodes(BaseClass*, BaseClass*);
 bool assign_DCNode_DCTopologicalNode(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -88,7 +87,7 @@ const char* DCNode::debugString() const
 
 void DCNode::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:DCNode"), &DCNode_factory));
+	factory_map.emplace("cim:DCNode", &DCNode_factory);
 }
 
 void DCNode::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -97,8 +96,8 @@ void DCNode::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_f
 
 void DCNode::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:DCNode.DCTerminals"), &assign_DCNode_DCTerminals));
-	assign_map.insert(std::make_pair(std::string("cim:DCNode.DCTopologicalNode"), &assign_DCNode_DCTopologicalNode));
+	assign_map.emplace("cim:DCNode.DCTerminals", &assign_DCNode_DCTerminals);
+	assign_map.emplace("cim:DCNode.DCTopologicalNode", &assign_DCNode_DCTopologicalNode);
 }
 
 void DCNode::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

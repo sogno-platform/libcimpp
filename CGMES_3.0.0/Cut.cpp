@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "ACLineSegment.hpp"
-#include "Length.hpp"
 
 using namespace CIMPP;
 
-Cut::Cut() : ACLineSegment(nullptr) {};
-Cut::~Cut() {};
+Cut::Cut() : ACLineSegment(nullptr) {}
+Cut::~Cut() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,21 +41,6 @@ Cut::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_Cut_lengthFromTerminal1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (Cut* element = dynamic_cast<Cut*>(BaseClass_ptr1))
-	{
-		buffer >> element->lengthFromTerminal1;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_ACLineSegment_Cut(BaseClass*, BaseClass*);
 bool assign_Cut_ACLineSegment(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,9 +58,38 @@ bool assign_Cut_ACLineSegment(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_pt
 	return false;
 }
 
+bool assign_Cut_lengthFromTerminal1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	Cut* element = dynamic_cast<Cut*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->lengthFromTerminal1;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_Cut_ACLineSegment(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const Cut* element = dynamic_cast<const Cut*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->ACLineSegment != 0)
+		{
+			BaseClass_list.push_back(element->ACLineSegment);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_Cut_lengthFromTerminal1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Cut* element = dynamic_cast<const Cut*>(BaseClass_ptr1))
+	const Cut* element = dynamic_cast<const Cut*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->lengthFromTerminal1;
 		if (!buffer.str().empty())
@@ -88,21 +101,6 @@ bool get_Cut_lengthFromTerminal1(const BaseClass* BaseClass_ptr1, std::stringstr
 	return false;
 }
 
-
-bool get_Cut_ACLineSegment(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const Cut* element = dynamic_cast<const Cut*>(BaseClass_ptr1))
-	{
-		if (element->ACLineSegment != 0)
-		{
-			BaseClass_list.push_back(element->ACLineSegment);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char Cut::debugName[] = "Cut";
 const char* Cut::debugString() const
 {
@@ -111,17 +109,17 @@ const char* Cut::debugString() const
 
 void Cut::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:Cut"), &Cut_factory));
+	factory_map.emplace("cim:Cut", &Cut_factory);
 }
 
 void Cut::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Cut.lengthFromTerminal1"), &assign_Cut_lengthFromTerminal1));
+	assign_map.emplace("cim:Cut.lengthFromTerminal1", &assign_Cut_lengthFromTerminal1);
 }
 
 void Cut::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Cut.ACLineSegment"), &assign_Cut_ACLineSegment));
+	assign_map.emplace("cim:Cut.ACLineSegment", &assign_Cut_ACLineSegment);
 }
 
 void Cut::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

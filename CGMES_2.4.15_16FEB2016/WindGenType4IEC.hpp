@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	IEC Type 4 generator set model.  Reference: IEC Standard 61400-27-1 Section 6.6.3.4.
-	*/
+	/** \brief IEC Type 4 generator set model.  Reference: IEC Standard 61400-27-1 Section 6.6.3.4. */
 	class WindGenType4IEC : public WindTurbineType3or4IEC
 	{
 	public:
@@ -28,10 +26,17 @@ namespace CIMPP
 		WindGenType4IEC();
 		~WindGenType4IEC() override;
 
-		CIMPP::PU dipmax;  /* Maximum active current ramp rate (di). It is project dependent parameter. Default: nullptr */
-		CIMPP::PU diqmax;  /* Maximum reactive current ramp rate (di). It is project dependent parameter. Default: nullptr */
-		CIMPP::PU diqmin;  /* Minimum reactive current ramp rate (d). It is case dependent parameter. Default: nullptr */
-		CIMPP::Seconds tg;  /* Time constant (T). It is type dependent parameter. Default: nullptr */
+		/** \brief Maximum active current ramp rate (di). It is project dependent parameter. Default: nullptr */
+		CIMPP::PU dipmax;
+
+		/** \brief Maximum reactive current ramp rate (di). It is project dependent parameter. Default: nullptr */
+		CIMPP::PU diqmax;
+
+		/** \brief Minimum reactive current ramp rate (d). It is case dependent parameter. Default: nullptr */
+		CIMPP::PU diqmin;
+
+		/** \brief Time constant (T). It is type dependent parameter. Default: nullptr */
+		CIMPP::Seconds tg;
 
 		static const char debugName[];
 		const char* debugString() const override;

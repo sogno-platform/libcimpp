@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-DiagramStyle::DiagramStyle() {};
-DiagramStyle::~DiagramStyle() {};
+DiagramStyle::DiagramStyle() {}
+DiagramStyle::~DiagramStyle() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ DiagramStyle::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_Diagram_DiagramStyle(BaseClass*, BaseClass*);
 bool assign_DiagramStyle_Diagram(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,7 +58,6 @@ bool assign_DiagramStyle_Diagram(BaseClass* BaseClass_ptr1, BaseClass* BaseClass
 }
 
 
-
 const char DiagramStyle::debugName[] = "DiagramStyle";
 const char* DiagramStyle::debugString() const
 {
@@ -69,7 +66,7 @@ const char* DiagramStyle::debugString() const
 
 void DiagramStyle::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:DiagramStyle"), &DiagramStyle_factory));
+	factory_map.emplace("cim:DiagramStyle", &DiagramStyle_factory);
 }
 
 void DiagramStyle::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -78,7 +75,7 @@ void DiagramStyle::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, as
 
 void DiagramStyle::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:DiagramStyle.Diagram"), &assign_DiagramStyle_Diagram));
+	assign_map.emplace("cim:DiagramStyle.Diagram", &assign_DiagramStyle_Diagram);
 }
 
 void DiagramStyle::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

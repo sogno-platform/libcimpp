@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A point where the system is grounded used for connecting conducting equipment to ground. The power system model can have any number of grounds.
-	*/
+	/** \brief A point where the system is grounded used for connecting conducting equipment to ground. The power system model can have any number of grounds. */
 	class Ground : public ConductingEquipment
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		Ground();
 		~Ground() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

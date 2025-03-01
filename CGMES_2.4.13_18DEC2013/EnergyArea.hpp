@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class ControlArea;
 
-	/*
-	The class describes an area having energy production or consumption.
-	*/
+	/** \brief The class describes an area having energy production or consumption. */
 	class EnergyArea : public IdentifiedObject
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		EnergyArea();
 		~EnergyArea() override;
 
-		CIMPP::ControlArea* ControlArea;  /* The control area specification that is used for the load forecast. Default: 0 */
+		/** \brief The control area specification that is used for the load forecast. Default: 0 */
+		CIMPP::ControlArea* ControlArea;
 
 		static const char debugName[];
 		const char* debugString() const override;

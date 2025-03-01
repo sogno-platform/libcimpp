@@ -11,8 +11,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-DCGround::DCGround() {};
-DCGround::~DCGround() {};
+DCGround::DCGround() {}
+DCGround::~DCGround() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -38,11 +38,6 @@ DCGround::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
-
-
-
 const char DCGround::debugName[] = "DCGround";
 const char* DCGround::debugString() const
 {
@@ -51,7 +46,7 @@ const char* DCGround::debugString() const
 
 void DCGround::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:DCGround"), &DCGround_factory));
+	factory_map.emplace("cim:DCGround", &DCGround_factory);
 }
 
 void DCGround::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)

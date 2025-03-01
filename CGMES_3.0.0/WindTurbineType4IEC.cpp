@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-WindTurbineType4IEC::WindTurbineType4IEC() : WindGenType3aIEC(nullptr) {};
-WindTurbineType4IEC::~WindTurbineType4IEC() {};
+WindTurbineType4IEC::WindTurbineType4IEC() : WindGenType3aIEC(nullptr) {}
+WindTurbineType4IEC::~WindTurbineType4IEC() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ WindTurbineType4IEC::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_WindGenType3aIEC_WindTurbineType4IEC(BaseClass*, BaseClass*);
 bool assign_WindTurbineType4IEC_WindGenType3aIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -59,10 +57,10 @@ bool assign_WindTurbineType4IEC_WindGenType3aIEC(BaseClass* BaseClass_ptr1, Base
 	return false;
 }
 
-
 bool get_WindTurbineType4IEC_WindGenType3aIEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const WindTurbineType4IEC* element = dynamic_cast<const WindTurbineType4IEC*>(BaseClass_ptr1))
+	const WindTurbineType4IEC* element = dynamic_cast<const WindTurbineType4IEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->WindGenType3aIEC != 0)
 		{
@@ -73,7 +71,6 @@ bool get_WindTurbineType4IEC_WindGenType3aIEC(const BaseClass* BaseClass_ptr1, s
 	return false;
 }
 
-
 const char WindTurbineType4IEC::debugName[] = "WindTurbineType4IEC";
 const char* WindTurbineType4IEC::debugString() const
 {
@@ -82,7 +79,7 @@ const char* WindTurbineType4IEC::debugString() const
 
 void WindTurbineType4IEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:WindTurbineType4IEC"), &WindTurbineType4IEC_factory));
+	factory_map.emplace("cim:WindTurbineType4IEC", &WindTurbineType4IEC_factory);
 }
 
 void WindTurbineType4IEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -91,7 +88,7 @@ void WindTurbineType4IEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::str
 
 void WindTurbineType4IEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindTurbineType4IEC.WindGenType3aIEC"), &assign_WindTurbineType4IEC_WindGenType3aIEC));
+	assign_map.emplace("cim:WindTurbineType4IEC.WindGenType3aIEC", &assign_WindTurbineType4IEC_WindGenType3aIEC);
 }
 
 void WindTurbineType4IEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

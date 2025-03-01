@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class ValueAliasSet;
 
-	/*
-	Describes the translation of one particular value into a name, e.g. 1 as "Open".
-	*/
+	/** \brief Describes the translation of one particular value into a name, e.g. 1 as "Open". */
 	class ValueToAlias : public IdentifiedObject
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		ValueToAlias();
 		~ValueToAlias() override;
 
-		CIMPP::ValueAliasSet* ValueAliasSet;  /* The ValueToAlias mappings included in the set. Default: 0 */
-		CIMPP::Integer value;  /* The value that is mapped. Default: 0 */
+		/** \brief The ValueToAlias mappings included in the set. Default: 0 */
+		CIMPP::ValueAliasSet* ValueAliasSet;
+
+		/** \brief The value that is mapped. Default: 0 */
+		CIMPP::Integer value;
 
 		static const char debugName[];
 		const char* debugString() const override;

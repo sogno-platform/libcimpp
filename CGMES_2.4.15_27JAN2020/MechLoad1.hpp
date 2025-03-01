@@ -17,9 +17,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Mechanical load model type 1.
-	*/
+	/** \brief Mechanical load model type 1. */
 	class MechLoad1 : public MechanicalLoadDynamics
 	{
 	public:
@@ -27,10 +25,17 @@ namespace CIMPP
 		MechLoad1();
 		~MechLoad1() override;
 
-		CIMPP::Simple_Float a;  /* Speed squared coefficient (a). Default: nullptr */
-		CIMPP::Simple_Float b;  /* Speed coefficient (b). Default: nullptr */
-		CIMPP::Simple_Float d;  /* Speed to the exponent coefficient (d). Default: nullptr */
-		CIMPP::Simple_Float e;  /* Exponent (e). Default: nullptr */
+		/** \brief Speed squared coefficient (a). Default: nullptr */
+		CIMPP::Simple_Float a;
+
+		/** \brief Speed coefficient (b). Default: nullptr */
+		CIMPP::Simple_Float b;
+
+		/** \brief Speed to the exponent coefficient (d). Default: nullptr */
+		CIMPP::Simple_Float d;
+
+		/** \brief Exponent (e). Default: nullptr */
+		CIMPP::Simple_Float e;
 
 		static const char debugName[];
 		const char* debugString() const override;

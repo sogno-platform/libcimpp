@@ -21,9 +21,7 @@ namespace CIMPP
 	class EnergyArea;
 	class TieFlow;
 
-	/*
-	A is a grouping of  and/or loads and a cutset of tie lines (as ) which may be used for a variety of purposes including automatic generation control, powerflow solution area interchange control specification, and input to load forecasting.   Note that any number of overlapping control area specifications can be superimposed on the physical model.
-	*/
+	/** \brief A is a grouping of  and/or loads and a cutset of tie lines (as ) which may be used for a variety of purposes including automatic generation control, powerflow solution area interchange control specification, and input to load forecasting.   Note that any number of overlapping control area specifications can be superimposed on the physical model. */
 	class ControlArea : public PowerSystemResource
 	{
 	public:
@@ -31,12 +29,23 @@ namespace CIMPP
 		ControlArea();
 		~ControlArea() override;
 
-		std::list<CIMPP::ControlAreaGeneratingUnit*> ControlAreaGeneratingUnit;  /* The generating unit specificaitons for the control area. Default: 0 */
-		CIMPP::EnergyArea* EnergyArea;  /* The energy area that is forecast from this control area specification. Default: 0 */
-		std::list<CIMPP::TieFlow*> TieFlow;  /* The tie flows associated with the control area. Default: 0 */
-		CIMPP::ActivePower netInterchange;  /* The specified positive net interchange into the control area, i.e. positive sign means flow in to the area. Default: nullptr */
-		CIMPP::ActivePower pTolerance;  /* Active power net interchange tolerance Default: nullptr */
-		CIMPP::ControlAreaTypeKind type;  /* The type of control area definition used to determine if this is used for automatic generation control, for planning interchange control, or other purposes. Default: 0 */
+		/** \brief The generating unit specificaitons for the control area. Default: 0 */
+		std::list<CIMPP::ControlAreaGeneratingUnit*> ControlAreaGeneratingUnit;
+
+		/** \brief The energy area that is forecast from this control area specification. Default: 0 */
+		CIMPP::EnergyArea* EnergyArea;
+
+		/** \brief The tie flows associated with the control area. Default: 0 */
+		std::list<CIMPP::TieFlow*> TieFlow;
+
+		/** \brief The specified positive net interchange into the control area, i.e. positive sign means flow in to the area. Default: nullptr */
+		CIMPP::ActivePower netInterchange;
+
+		/** \brief Active power net interchange tolerance Default: nullptr */
+		CIMPP::ActivePower pTolerance;
+
+		/** \brief The type of control area definition used to determine if this is used for automatic generation control, for planning interchange control, or other purposes. Default: 0 */
+		CIMPP::ControlAreaTypeKind type;
 
 		static const char debugName[];
 		const char* debugString() const override;

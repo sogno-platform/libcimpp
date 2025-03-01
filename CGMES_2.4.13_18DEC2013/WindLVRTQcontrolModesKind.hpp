@@ -9,25 +9,17 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	LVRT Q control modes .
-	*/
+	/** \brief LVRT Q control modes . */
 	class WindLVRTQcontrolModesKind
 	{
 	public:
 		enum WindLVRTQcontrolModesKind_ENUM
 		{
-			/**
-			 * Voltage dependent reactive current injection ().
-			 */
+			/** Voltage dependent reactive current injection (). */
 			mode1,
-			/**
-			 * Reactive current injection controlled as the pre-fault value plus an additional voltage dependent reactive current injection ().
-			 */
+			/** Reactive current injection controlled as the pre-fault value plus an additional voltage dependent reactive current injection (). */
 			mode2,
-			/**
-			 * Reactive current injection controlled as the pre-fault value plus an additional voltage dependent reactive current injection during fault, and as the pre-fault value plus an additional constant reactive current injection post fault ().
-			 */
+			/** Reactive current injection controlled as the pre-fault value plus an additional voltage dependent reactive current injection during fault, and as the pre-fault value plus an additional constant reactive current injection post fault (). */
 			mode3,
 		};
 

@@ -9,9 +9,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Static VAr Compensator control mode.
-	*/
+	/** \brief Static VAr Compensator control mode. */
 	class SVCControlMode
 	{
 	public:

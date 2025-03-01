@@ -18,9 +18,7 @@ namespace CIMPP
 	class Analog;
 	class AnalogLimit;
 
-	/*
-	An AnalogLimitSet specifies a set of Limits that are associated with an Analog measurement.
-	*/
+	/** \brief An AnalogLimitSet specifies a set of Limits that are associated with an Analog measurement. */
 	class AnalogLimitSet : public LimitSet
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		AnalogLimitSet();
 		~AnalogLimitSet() override;
 
-		std::list<CIMPP::AnalogLimit*> Limits;  /* The limit values used for supervision of Measurements. Default: 0 */
-		std::list<CIMPP::Analog*> Measurements;  /* The Measurements using the LimitSet. Default: 0 */
+		/** \brief The limit values used for supervision of Measurements. Default: 0 */
+		std::list<CIMPP::AnalogLimit*> Limits;
+
+		/** \brief The Measurements using the LimitSet. Default: 0 */
+		std::list<CIMPP::Analog*> Measurements;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -8,16 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
 
 using namespace CIMPP;
 
-TownDetail::TownDetail() {};
-TownDetail::~TownDetail() {};
+TownDetail::TownDetail() {}
+TownDetail::~TownDetail() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -48,77 +43,80 @@ TownDetail::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_TownDetail_code(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_TownDetail_code(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (TownDetail* element = dynamic_cast<TownDetail*>(BaseClass_ptr1))
+	TownDetail* element = dynamic_cast<TownDetail*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->code = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_TownDetail_country(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_TownDetail_country(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (TownDetail* element = dynamic_cast<TownDetail*>(BaseClass_ptr1))
+	TownDetail* element = dynamic_cast<TownDetail*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->country = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_TownDetail_name(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_TownDetail_name(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (TownDetail* element = dynamic_cast<TownDetail*>(BaseClass_ptr1))
+	TownDetail* element = dynamic_cast<TownDetail*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->name = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_TownDetail_section(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_TownDetail_section(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (TownDetail* element = dynamic_cast<TownDetail*>(BaseClass_ptr1))
+	TownDetail* element = dynamic_cast<TownDetail*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->section = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_TownDetail_stateOrProvince(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_TownDetail_stateOrProvince(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (TownDetail* element = dynamic_cast<TownDetail*>(BaseClass_ptr1))
+	TownDetail* element = dynamic_cast<TownDetail*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->stateOrProvince = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_TownDetail_code(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TownDetail* element = dynamic_cast<const TownDetail*>(BaseClass_ptr1))
+	const TownDetail* element = dynamic_cast<const TownDetail*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->code;
 		if (!buffer.str().empty())
@@ -132,7 +130,8 @@ bool get_TownDetail_code(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_TownDetail_country(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TownDetail* element = dynamic_cast<const TownDetail*>(BaseClass_ptr1))
+	const TownDetail* element = dynamic_cast<const TownDetail*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->country;
 		if (!buffer.str().empty())
@@ -146,7 +145,8 @@ bool get_TownDetail_country(const BaseClass* BaseClass_ptr1, std::stringstream& 
 
 bool get_TownDetail_name(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TownDetail* element = dynamic_cast<const TownDetail*>(BaseClass_ptr1))
+	const TownDetail* element = dynamic_cast<const TownDetail*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->name;
 		if (!buffer.str().empty())
@@ -160,7 +160,8 @@ bool get_TownDetail_name(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_TownDetail_section(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TownDetail* element = dynamic_cast<const TownDetail*>(BaseClass_ptr1))
+	const TownDetail* element = dynamic_cast<const TownDetail*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->section;
 		if (!buffer.str().empty())
@@ -174,7 +175,8 @@ bool get_TownDetail_section(const BaseClass* BaseClass_ptr1, std::stringstream& 
 
 bool get_TownDetail_stateOrProvince(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TownDetail* element = dynamic_cast<const TownDetail*>(BaseClass_ptr1))
+	const TownDetail* element = dynamic_cast<const TownDetail*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->stateOrProvince;
 		if (!buffer.str().empty())
@@ -186,8 +188,6 @@ bool get_TownDetail_stateOrProvince(const BaseClass* BaseClass_ptr1, std::string
 	return false;
 }
 
-
-
 const char TownDetail::debugName[] = "TownDetail";
 const char* TownDetail::debugString() const
 {
@@ -196,16 +196,16 @@ const char* TownDetail::debugString() const
 
 void TownDetail::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:TownDetail"), &TownDetail_factory));
+	factory_map.emplace("cim:TownDetail", &TownDetail_factory);
 }
 
 void TownDetail::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:TownDetail.code"), &assign_TownDetail_code));
-	assign_map.insert(std::make_pair(std::string("cim:TownDetail.country"), &assign_TownDetail_country));
-	assign_map.insert(std::make_pair(std::string("cim:TownDetail.name"), &assign_TownDetail_name));
-	assign_map.insert(std::make_pair(std::string("cim:TownDetail.section"), &assign_TownDetail_section));
-	assign_map.insert(std::make_pair(std::string("cim:TownDetail.stateOrProvince"), &assign_TownDetail_stateOrProvince));
+	assign_map.emplace("cim:TownDetail.code", &assign_TownDetail_code);
+	assign_map.emplace("cim:TownDetail.country", &assign_TownDetail_country);
+	assign_map.emplace("cim:TownDetail.name", &assign_TownDetail_name);
+	assign_map.emplace("cim:TownDetail.section", &assign_TownDetail_section);
+	assign_map.emplace("cim:TownDetail.stateOrProvince", &assign_TownDetail_stateOrProvince);
 }
 
 void TownDetail::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

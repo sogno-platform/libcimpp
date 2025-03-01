@@ -20,9 +20,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Italian PSS - three input PSS (speed, frequency, power).
-	*/
+	/** \brief Italian PSS - three input PSS (speed, frequency, power). */
 	class Pss1 : public PowerSystemStabilizerDynamics
 	{
 	public:
@@ -30,21 +28,50 @@ namespace CIMPP
 		Pss1();
 		~Pss1() override;
 
-		CIMPP::Simple_Float kf;  /* Frequency power input gain (K).  Typical Value = 5. Default: nullptr */
-		CIMPP::Simple_Float kpe;  /* Electric power input gain (K).  Typical Value = 0.3. Default: nullptr */
-		CIMPP::Simple_Float ks;  /* PSS gain (K).  Typical Value = 1. Default: nullptr */
-		CIMPP::Simple_Float kw;  /* Shaft speed power input gain (K).  Typical Value = 0. Default: nullptr */
-		CIMPP::PU pmin;  /* Minimum power PSS enabling (P).  Typical Value = 0.25. Default: nullptr */
-		CIMPP::Seconds t10;  /* Lead/lag time constant (T).  Typical Value = 0. Default: nullptr */
-		CIMPP::Seconds t5;  /* Washout (T).  Typical Value = 3.5. Default: nullptr */
-		CIMPP::Seconds t6;  /* Filter time constant (T).  Typical Value = 0. Default: nullptr */
-		CIMPP::Seconds t7;  /* Lead/lag time constant (T).  Typical Value = 0. Default: nullptr */
-		CIMPP::Seconds t8;  /* Lead/lag time constant (T).  Typical Value = 0. Default: nullptr */
-		CIMPP::Seconds t9;  /* Lead/lag time constant (T).  Typical Value = 0. Default: nullptr */
-		CIMPP::Seconds tpe;  /* Electric power filter time constant (T).  Typical Value = 0.05. Default: nullptr */
-		CIMPP::Boolean vadat;  /*  Default: false */
-		CIMPP::PU vsmn;  /* Stabilizer output max limit (V).  Typical Value = -0.06. Default: nullptr */
-		CIMPP::PU vsmx;  /* Stabilizer output min limit (V).  Typical Value = 0.06. Default: nullptr */
+		/** \brief Frequency power input gain (K).  Typical Value = 5. Default: nullptr */
+		CIMPP::Simple_Float kf;
+
+		/** \brief Electric power input gain (K).  Typical Value = 0.3. Default: nullptr */
+		CIMPP::Simple_Float kpe;
+
+		/** \brief PSS gain (K).  Typical Value = 1. Default: nullptr */
+		CIMPP::Simple_Float ks;
+
+		/** \brief Shaft speed power input gain (K).  Typical Value = 0. Default: nullptr */
+		CIMPP::Simple_Float kw;
+
+		/** \brief Minimum power PSS enabling (P).  Typical Value = 0.25. Default: nullptr */
+		CIMPP::PU pmin;
+
+		/** \brief Lead/lag time constant (T).  Typical Value = 0. Default: nullptr */
+		CIMPP::Seconds t10;
+
+		/** \brief Washout (T).  Typical Value = 3.5. Default: nullptr */
+		CIMPP::Seconds t5;
+
+		/** \brief Filter time constant (T).  Typical Value = 0. Default: nullptr */
+		CIMPP::Seconds t6;
+
+		/** \brief Lead/lag time constant (T).  Typical Value = 0. Default: nullptr */
+		CIMPP::Seconds t7;
+
+		/** \brief Lead/lag time constant (T).  Typical Value = 0. Default: nullptr */
+		CIMPP::Seconds t8;
+
+		/** \brief Lead/lag time constant (T).  Typical Value = 0. Default: nullptr */
+		CIMPP::Seconds t9;
+
+		/** \brief Electric power filter time constant (T).  Typical Value = 0.05. Default: nullptr */
+		CIMPP::Seconds tpe;
+
+		/** \brief  Default: false */
+		CIMPP::Boolean vadat;
+
+		/** \brief Stabilizer output max limit (V).  Typical Value = -0.06. Default: nullptr */
+		CIMPP::PU vsmn;
+
+		/** \brief Stabilizer output min limit (V).  Typical Value = 0.06. Default: nullptr */
+		CIMPP::PU vsmx;
 
 		static const char debugName[];
 		const char* debugString() const override;

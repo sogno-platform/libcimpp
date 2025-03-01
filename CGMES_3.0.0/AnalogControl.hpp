@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class AnalogValue;
 
-	/*
-	An analog control used for supervisory control.
-	*/
+	/** \brief An analog control used for supervisory control. */
 	class AnalogControl : public Control
 	{
 	public:
@@ -28,9 +26,14 @@ namespace CIMPP
 		AnalogControl();
 		~AnalogControl() override;
 
-		CIMPP::AnalogValue* AnalogValue;  /* The MeasurementValue that is controlled. Default: 0 */
-		CIMPP::Float maxValue;  /* Normal value range maximum for any of the Control.value. Used for scaling, e.g. in bar graphs. Default: 0.0 */
-		CIMPP::Float minValue;  /* Normal value range minimum for any of the Control.value. Used for scaling, e.g. in bar graphs. Default: 0.0 */
+		/** \brief The MeasurementValue that is controlled. Default: 0 */
+		CIMPP::AnalogValue* AnalogValue;
+
+		/** \brief Normal value range maximum for any of the Control.value. Used for scaling, e.g. in bar graphs. Default: 0.0 */
+		CIMPP::Float maxValue;
+
+		/** \brief Normal value range minimum for any of the Control.value. Used for scaling, e.g. in bar graphs. Default: 0.0 */
+		CIMPP::Float minValue;
 
 		static const char debugName[];
 		const char* debugString() const override;

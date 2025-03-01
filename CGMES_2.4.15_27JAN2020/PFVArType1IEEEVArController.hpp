@@ -19,9 +19,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	The class represents IEEE VAR Controller Type 1 which operates by moving the voltage reference directly.  Reference: IEEE Standard 421.5-2005 Section 11.3.
-	*/
+	/** \brief The class represents IEEE VAR Controller Type 1 which operates by moving the voltage reference directly.  Reference: IEEE Standard 421.5-2005 Section 11.3. */
 	class PFVArType1IEEEVArController : public PFVArControllerType1Dynamics
 	{
 	public:
@@ -29,12 +27,23 @@ namespace CIMPP
 		PFVArType1IEEEVArController();
 		~PFVArType1IEEEVArController() override;
 
-		CIMPP::Seconds tvarc;  /* Var controller time delay ().  Typical Value = 5. Default: nullptr */
-		CIMPP::PU vvar;  /* Synchronous machine power factor (). Default: nullptr */
-		CIMPP::Simple_Float vvarcbw;  /* Var controller dead band ().  Typical Value = 0.02. Default: nullptr */
-		CIMPP::PU vvarref;  /* Var controller reference (). Default: nullptr */
-		CIMPP::PU vvtmax;  /* Maximum machine terminal voltage needed for pf/var controller to be enabled (). Default: nullptr */
-		CIMPP::PU vvtmin;  /* Minimum machine terminal voltage needed to enable pf/var controller (). Default: nullptr */
+		/** \brief Var controller time delay ().  Typical Value = 5. Default: nullptr */
+		CIMPP::Seconds tvarc;
+
+		/** \brief Synchronous machine power factor (). Default: nullptr */
+		CIMPP::PU vvar;
+
+		/** \brief Var controller dead band ().  Typical Value = 0.02. Default: nullptr */
+		CIMPP::Simple_Float vvarcbw;
+
+		/** \brief Var controller reference (). Default: nullptr */
+		CIMPP::PU vvarref;
+
+		/** \brief Maximum machine terminal voltage needed for pf/var controller to be enabled (). Default: nullptr */
+		CIMPP::PU vvtmax;
+
+		/** \brief Minimum machine terminal voltage needed to enable pf/var controller (). Default: nullptr */
+		CIMPP::PU vvtmin;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "RemoteSignalKind")
+		if (EnumSymbol.substr(0, pos) != "RemoteSignalKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,47 +50,47 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "remoteBusVoltageFrequency")
+		if (EnumSymbol == "remoteBusVoltageFrequency")
 		{
 			rop = RemoteSignalKind::remoteBusVoltageFrequency;
 			return lop;
 		}
-		if(EnumSymbol == "remoteBusVoltageFrequencyDeviation")
+		if (EnumSymbol == "remoteBusVoltageFrequencyDeviation")
 		{
 			rop = RemoteSignalKind::remoteBusVoltageFrequencyDeviation;
 			return lop;
 		}
-		if(EnumSymbol == "remoteBusFrequency")
+		if (EnumSymbol == "remoteBusFrequency")
 		{
 			rop = RemoteSignalKind::remoteBusFrequency;
 			return lop;
 		}
-		if(EnumSymbol == "remoteBusFrequencyDeviation")
+		if (EnumSymbol == "remoteBusFrequencyDeviation")
 		{
 			rop = RemoteSignalKind::remoteBusFrequencyDeviation;
 			return lop;
 		}
-		if(EnumSymbol == "remoteBusVoltageAmplitude")
+		if (EnumSymbol == "remoteBusVoltageAmplitude")
 		{
 			rop = RemoteSignalKind::remoteBusVoltageAmplitude;
 			return lop;
 		}
-		if(EnumSymbol == "remoteBusVoltage")
+		if (EnumSymbol == "remoteBusVoltage")
 		{
 			rop = RemoteSignalKind::remoteBusVoltage;
 			return lop;
 		}
-		if(EnumSymbol == "remoteBranchCurrentAmplitude")
+		if (EnumSymbol == "remoteBranchCurrentAmplitude")
 		{
 			rop = RemoteSignalKind::remoteBranchCurrentAmplitude;
 			return lop;
 		}
-		if(EnumSymbol == "remoteBusVoltageAmplitudeDerivative")
+		if (EnumSymbol == "remoteBusVoltageAmplitudeDerivative")
 		{
 			rop = RemoteSignalKind::remoteBusVoltageAmplitudeDerivative;
 			return lop;
 		}
-		if(EnumSymbol == "remotePuBusVoltageDerivative")
+		if (EnumSymbol == "remotePuBusVoltageDerivative")
 		{
 			rop = RemoteSignalKind::remotePuBusVoltageDerivative;
 			return lop;

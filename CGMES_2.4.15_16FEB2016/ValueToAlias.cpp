@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "ValueAliasSet.hpp"
-#include "Integer.hpp"
 
 using namespace CIMPP;
 
-ValueToAlias::ValueToAlias() : ValueAliasSet(nullptr) {};
-ValueToAlias::~ValueToAlias() {};
+ValueToAlias::ValueToAlias() : ValueAliasSet(nullptr) {}
+ValueToAlias::~ValueToAlias() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,21 +41,6 @@ ValueToAlias::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_ValueToAlias_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ValueToAlias* element = dynamic_cast<ValueToAlias*>(BaseClass_ptr1))
-	{
-		buffer >> element->value;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_ValueAliasSet_Values(BaseClass*, BaseClass*);
 bool assign_ValueToAlias_ValueAliasSet(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,9 +58,38 @@ bool assign_ValueToAlias_ValueAliasSet(BaseClass* BaseClass_ptr1, BaseClass* Bas
 	return false;
 }
 
+bool assign_ValueToAlias_value(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ValueToAlias* element = dynamic_cast<ValueToAlias*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->value;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_ValueToAlias_ValueAliasSet(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const ValueToAlias* element = dynamic_cast<const ValueToAlias*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->ValueAliasSet != 0)
+		{
+			BaseClass_list.push_back(element->ValueAliasSet);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_ValueToAlias_value(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ValueToAlias* element = dynamic_cast<const ValueToAlias*>(BaseClass_ptr1))
+	const ValueToAlias* element = dynamic_cast<const ValueToAlias*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->value;
 		if (!buffer.str().empty())
@@ -88,21 +101,6 @@ bool get_ValueToAlias_value(const BaseClass* BaseClass_ptr1, std::stringstream& 
 	return false;
 }
 
-
-bool get_ValueToAlias_ValueAliasSet(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const ValueToAlias* element = dynamic_cast<const ValueToAlias*>(BaseClass_ptr1))
-	{
-		if (element->ValueAliasSet != 0)
-		{
-			BaseClass_list.push_back(element->ValueAliasSet);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char ValueToAlias::debugName[] = "ValueToAlias";
 const char* ValueToAlias::debugString() const
 {
@@ -111,17 +109,17 @@ const char* ValueToAlias::debugString() const
 
 void ValueToAlias::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ValueToAlias"), &ValueToAlias_factory));
+	factory_map.emplace("cim:ValueToAlias", &ValueToAlias_factory);
 }
 
 void ValueToAlias::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ValueToAlias.value"), &assign_ValueToAlias_value));
+	assign_map.emplace("cim:ValueToAlias.value", &assign_ValueToAlias_value);
 }
 
 void ValueToAlias::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ValueToAlias.ValueAliasSet"), &assign_ValueToAlias_ValueAliasSet));
+	assign_map.emplace("cim:ValueToAlias.ValueAliasSet", &assign_ValueToAlias_ValueAliasSet);
 }
 
 void ValueToAlias::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

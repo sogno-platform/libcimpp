@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Proportional/Integral Regulator Excitation System Model.  This model can be used to represent excitation systems with a proportional-integral (PI) voltage regulator controller.
-	*/
+	/** \brief Proportional/Integral Regulator Excitation System Model.  This model can be used to represent excitation systems with a proportional-integral (PI) voltage regulator controller. */
 	class ExcPIC : public ExcitationSystemDynamics
 	{
 	public:
@@ -28,29 +26,74 @@ namespace CIMPP
 		ExcPIC();
 		~ExcPIC() override;
 
-		CIMPP::PU e1;  /* Field voltage value 1 (E1).  Typical Value = 0. Default: nullptr */
-		CIMPP::PU e2;  /* Field voltage value 2 (E2).  Typical Value = 0. Default: nullptr */
-		CIMPP::PU efdmax;  /* Exciter maximum limit (Efdmax).  Typical Value = 8. Default: nullptr */
-		CIMPP::PU efdmin;  /* Exciter minimum limit (Efdmin).  Typical Value = -0.87. Default: nullptr */
-		CIMPP::PU ka;  /* PI controller gain (Ka).  Typical Value = 3.15. Default: nullptr */
-		CIMPP::PU kc;  /* Exciter regulation factor (Kc).  Typical Value = 0.08. Default: nullptr */
-		CIMPP::PU ke;  /* Exciter constant (Ke).  Typical Value = 0. Default: nullptr */
-		CIMPP::PU kf;  /* Rate feedback gain (Kf).  Typical Value = 0. Default: nullptr */
-		CIMPP::PU ki;  /* Current source gain (Ki).  Typical Value = 0. Default: nullptr */
-		CIMPP::PU kp;  /* Potential source gain (Kp).  Typical Value = 6.5. Default: nullptr */
-		CIMPP::PU se1;  /* Saturation factor at E1 (Se1).  Typical Value = 0. Default: nullptr */
-		CIMPP::PU se2;  /* Saturation factor at E2 (Se2).  Typical Value = 0. Default: nullptr */
-		CIMPP::Seconds ta1;  /* PI controller time constant (Ta1).  Typical Value = 1. Default: nullptr */
-		CIMPP::Seconds ta2;  /* Voltage regulator time constant (Ta2).  Typical Value = 0.01. Default: nullptr */
-		CIMPP::Seconds ta3;  /* Lead time constant (Ta3).  Typical Value = 0. Default: nullptr */
-		CIMPP::Seconds ta4;  /* Lag time constant (Ta4).  Typical Value = 0. Default: nullptr */
-		CIMPP::Seconds te;  /* Exciter time constant (Te).  Typical Value = 0. Default: nullptr */
-		CIMPP::Seconds tf1;  /* Rate feedback time constant (Tf1).  Typical Value = 0. Default: nullptr */
-		CIMPP::Seconds tf2;  /* Rate feedback lag time constant (Tf2).  Typical Value = 0. Default: nullptr */
-		CIMPP::PU vr1;  /* PI maximum limit (Vr1).  Typical Value = 1. Default: nullptr */
-		CIMPP::PU vr2;  /* PI minimum limit (Vr2).  Typical Value = -0.87. Default: nullptr */
-		CIMPP::PU vrmax;  /* Voltage regulator maximum limit (Vrmax).  Typical Value = 1. Default: nullptr */
-		CIMPP::PU vrmin;  /* Voltage regulator minimum limit (Vrmin).  Typical Value = -0.87. Default: nullptr */
+		/** \brief Field voltage value 1 (E1).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU e1;
+
+		/** \brief Field voltage value 2 (E2).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU e2;
+
+		/** \brief Exciter maximum limit (Efdmax).  Typical Value = 8. Default: nullptr */
+		CIMPP::PU efdmax;
+
+		/** \brief Exciter minimum limit (Efdmin).  Typical Value = -0.87. Default: nullptr */
+		CIMPP::PU efdmin;
+
+		/** \brief PI controller gain (Ka).  Typical Value = 3.15. Default: nullptr */
+		CIMPP::PU ka;
+
+		/** \brief Exciter regulation factor (Kc).  Typical Value = 0.08. Default: nullptr */
+		CIMPP::PU kc;
+
+		/** \brief Exciter constant (Ke).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU ke;
+
+		/** \brief Rate feedback gain (Kf).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU kf;
+
+		/** \brief Current source gain (Ki).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU ki;
+
+		/** \brief Potential source gain (Kp).  Typical Value = 6.5. Default: nullptr */
+		CIMPP::PU kp;
+
+		/** \brief Saturation factor at E1 (Se1).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU se1;
+
+		/** \brief Saturation factor at E2 (Se2).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU se2;
+
+		/** \brief PI controller time constant (Ta1).  Typical Value = 1. Default: nullptr */
+		CIMPP::Seconds ta1;
+
+		/** \brief Voltage regulator time constant (Ta2).  Typical Value = 0.01. Default: nullptr */
+		CIMPP::Seconds ta2;
+
+		/** \brief Lead time constant (Ta3).  Typical Value = 0. Default: nullptr */
+		CIMPP::Seconds ta3;
+
+		/** \brief Lag time constant (Ta4).  Typical Value = 0. Default: nullptr */
+		CIMPP::Seconds ta4;
+
+		/** \brief Exciter time constant (Te).  Typical Value = 0. Default: nullptr */
+		CIMPP::Seconds te;
+
+		/** \brief Rate feedback time constant (Tf1).  Typical Value = 0. Default: nullptr */
+		CIMPP::Seconds tf1;
+
+		/** \brief Rate feedback lag time constant (Tf2).  Typical Value = 0. Default: nullptr */
+		CIMPP::Seconds tf2;
+
+		/** \brief PI maximum limit (Vr1).  Typical Value = 1. Default: nullptr */
+		CIMPP::PU vr1;
+
+		/** \brief PI minimum limit (Vr2).  Typical Value = -0.87. Default: nullptr */
+		CIMPP::PU vr2;
+
+		/** \brief Voltage regulator maximum limit (Vrmax).  Typical Value = 1. Default: nullptr */
+		CIMPP::PU vrmax;
+
+		/** \brief Voltage regulator minimum limit (Vrmin).  Typical Value = -0.87. Default: nullptr */
+		CIMPP::PU vrmin;
 
 		static const char debugName[];
 		const char* debugString() const override;

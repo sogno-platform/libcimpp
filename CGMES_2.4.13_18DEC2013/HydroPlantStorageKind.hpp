@@ -9,25 +9,17 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	The type of hydro power plant.
-	*/
+	/** \brief The type of hydro power plant. */
 	class HydroPlantStorageKind
 	{
 	public:
 		enum HydroPlantStorageKind_ENUM
 		{
-			/**
-			 * Run of river.
-			 */
+			/** Run of river. */
 			runOfRiver,
-			/**
-			 * Pumped storage.
-			 */
+			/** Pumped storage. */
 			pumpedStorage,
-			/**
-			 * Storage.
-			 */
+			/** Storage. */
 			storage,
 		};
 

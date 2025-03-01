@@ -19,9 +19,7 @@ namespace CIMPP
 {
 	class TopologicalNode;
 
-	/*
-	State variable for voltage.
-	*/
+	/** \brief State variable for voltage. */
 	class SvVoltage : public BaseClass
 	{
 	public:
@@ -29,9 +27,14 @@ namespace CIMPP
 		SvVoltage();
 		~SvVoltage() override;
 
-		CIMPP::TopologicalNode* TopologicalNode;  /* The topological node associated with the voltage state. Default: 0 */
-		CIMPP::AngleDegrees angle;  /* The voltage angle of the topological node complex voltage with respect to system reference. Default: nullptr */
-		CIMPP::Voltage v;  /* The voltage magnitude at the topological node. The attribute shall be a positive value. Default: nullptr */
+		/** \brief The topological node associated with the voltage state. Default: 0 */
+		CIMPP::TopologicalNode* TopologicalNode;
+
+		/** \brief The voltage angle of the topological node complex voltage with respect to system reference. Default: nullptr */
+		CIMPP::AngleDegrees angle;
+
+		/** \brief The voltage magnitude at the topological node. The attribute shall be a positive value. Default: nullptr */
+		CIMPP::Voltage v;
 
 		static const char debugName[];
 		const char* debugString() const override;

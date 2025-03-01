@@ -11,8 +11,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-SynchronousMachineSimplified::SynchronousMachineSimplified() {};
-SynchronousMachineSimplified::~SynchronousMachineSimplified() {};
+SynchronousMachineSimplified::SynchronousMachineSimplified() {}
+SynchronousMachineSimplified::~SynchronousMachineSimplified() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -38,11 +38,6 @@ SynchronousMachineSimplified::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
-
-
-
 const char SynchronousMachineSimplified::debugName[] = "SynchronousMachineSimplified";
 const char* SynchronousMachineSimplified::debugString() const
 {
@@ -51,7 +46,7 @@ const char* SynchronousMachineSimplified::debugString() const
 
 void SynchronousMachineSimplified::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:SynchronousMachineSimplified"), &SynchronousMachineSimplified_factory));
+	factory_map.emplace("cim:SynchronousMachineSimplified", &SynchronousMachineSimplified_factory);
 }
 
 void SynchronousMachineSimplified::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)

@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "TransformerControlMode")
+		if (EnumSymbol.substr(0, pos) != "TransformerControlMode")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,12 +50,12 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "volt")
+		if (EnumSymbol == "volt")
 		{
 			rop = TransformerControlMode::volt;
 			return lop;
 		}
-		if(EnumSymbol == "reactive")
+		if (EnumSymbol == "reactive")
 		{
 			rop = TransformerControlMode::reactive;
 			return lop;

@@ -9,21 +9,15 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Type of rotor on physical machine.
-	*/
+	/** \brief Type of rotor on physical machine. */
 	class RotorKind
 	{
 	public:
 		enum RotorKind_ENUM
 		{
-			/**
-			 * Round rotor type of synchronous machine.
-			 */
+			/** Round rotor type of synchronous machine. */
 			roundRotor,
-			/**
-			 * Salient pole type of synchronous machine.
-			 */
+			/** Salient pole type of synchronous machine. */
 			salientPole,
 		};
 

@@ -9,49 +9,29 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Type of input signal coming from remote bus.
-	*/
+	/** \brief Type of input signal coming from remote bus. */
 	class RemoteSignalKind
 	{
 	public:
 		enum RemoteSignalKind_ENUM
 		{
-			/**
-			 * Input is voltage frequency from remote terminal bus.
-			 */
+			/** Input is voltage frequency from remote terminal bus. */
 			remoteBusVoltageFrequency,
-			/**
-			 * Input is voltage frequency deviation from remote terminal bus.
-			 */
+			/** Input is voltage frequency deviation from remote terminal bus. */
 			remoteBusVoltageFrequencyDeviation,
-			/**
-			 * Input is frequency from remote terminal bus.
-			 */
+			/** Input is frequency from remote terminal bus. */
 			remoteBusFrequency,
-			/**
-			 * Input is frequency deviation from remote terminal bus.
-			 */
+			/** Input is frequency deviation from remote terminal bus. */
 			remoteBusFrequencyDeviation,
-			/**
-			 * Input is voltage amplitude from remote terminal bus.
-			 */
+			/** Input is voltage amplitude from remote terminal bus. */
 			remoteBusVoltageAmplitude,
-			/**
-			 * Input is voltage from remote terminal bus.
-			 */
+			/** Input is voltage from remote terminal bus. */
 			remoteBusVoltage,
-			/**
-			 * Input is branch current amplitude from remote terminal bus.
-			 */
+			/** Input is branch current amplitude from remote terminal bus. */
 			remoteBranchCurrentAmplitude,
-			/**
-			 * Input is branch current amplitude derivative from remote terminal bus.
-			 */
+			/** Input is branch current amplitude derivative from remote terminal bus. */
 			remoteBusVoltageAmplitudeDerivative,
-			/**
-			 * Input is PU voltage derivative from remote terminal bus.
-			 */
+			/** Input is PU voltage derivative from remote terminal bus. */
 			remotePuBusVoltageDerivative,
 		};
 

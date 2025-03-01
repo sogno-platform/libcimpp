@@ -19,9 +19,7 @@ namespace CIMPP
 	class EquipmentContainer;
 	class OperationalLimitSet;
 
-	/*
-	The parts of a power system that are physical devices, electronic or mechanical.
-	*/
+	/** \brief The parts of a power system that are physical devices, electronic or mechanical. */
 	class Equipment : public PowerSystemResource
 	{
 	public:
@@ -29,11 +27,20 @@ namespace CIMPP
 		Equipment();
 		~Equipment() override;
 
-		CIMPP::EquipmentContainer* EquipmentContainer;  /* Container of this equipment. Default: 0 */
-		std::list<CIMPP::OperationalLimitSet*> OperationalLimitSet;  /* The operational limit sets associated with this equipment. Default: 0 */
-		CIMPP::Boolean aggregate;  /* The aggregate flag provides an alternative way of representing an aggregated (equivalent) element. It is applicable in cases when the dedicated classes for equivalent equipment do not have all of the attributes necessary to represent the required level of detail.  In case the flag is set to `true` the single instance of equipment represents multiple pieces of equipment that have been modelled together as an aggregate equivalent obtained by a network reduction procedure. Examples would be power transformers or synchronous machines operating in parallel modelled as a single aggregate power transformer or aggregate synchronous machine.   The attribute is not used for EquivalentBranch, EquivalentShunt and EquivalentInjection. Default: false */
-		CIMPP::Boolean inService;  /* Specifies the availability of the equipment. True means the equipment is available for topology processing, which determines if the equipment is energized or not. False means that the equipment is treated by network applications as if it is not in the model. Default: false */
-		CIMPP::Boolean normallyInService;  /* Specifies the availability of the equipment under normal operating conditions. True means the equipment is available for topology processing, which determines if the equipment is energized or not. False means that the equipment is treated by network applications as if it is not in the model. Default: false */
+		/** \brief Container of this equipment. Default: 0 */
+		CIMPP::EquipmentContainer* EquipmentContainer;
+
+		/** \brief The operational limit sets associated with this equipment. Default: 0 */
+		std::list<CIMPP::OperationalLimitSet*> OperationalLimitSet;
+
+		/** \brief The aggregate flag provides an alternative way of representing an aggregated (equivalent) element. It is applicable in cases when the dedicated classes for equivalent equipment do not have all of the attributes necessary to represent the required level of detail.  In case the flag is set to `true` the single instance of equipment represents multiple pieces of equipment that have been modelled together as an aggregate equivalent obtained by a network reduction procedure. Examples would be power transformers or synchronous machines operating in parallel modelled as a single aggregate power transformer or aggregate synchronous machine.   The attribute is not used for EquivalentBranch, EquivalentShunt and EquivalentInjection. Default: false */
+		CIMPP::Boolean aggregate;
+
+		/** \brief Specifies the availability of the equipment. True means the equipment is available for topology processing, which determines if the equipment is energized or not. False means that the equipment is treated by network applications as if it is not in the model. Default: false */
+		CIMPP::Boolean inService;
+
+		/** \brief Specifies the availability of the equipment under normal operating conditions. True means the equipment is available for topology processing, which determines if the equipment is energized or not. False means that the equipment is treated by network applications as if it is not in the model. Default: false */
+		CIMPP::Boolean normallyInService;
 
 		static const char debugName[];
 		const char* debugString() const override;

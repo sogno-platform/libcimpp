@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "FrancisGovernorControlKind")
+		if (EnumSymbol.substr(0, pos) != "FrancisGovernorControlKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,17 +50,17 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "mechanicHydrolicTachoAccelerator")
+		if (EnumSymbol == "mechanicHydrolicTachoAccelerator")
 		{
 			rop = FrancisGovernorControlKind::mechanicHydrolicTachoAccelerator;
 			return lop;
 		}
-		if(EnumSymbol == "mechanicHydraulicTransientFeedback")
+		if (EnumSymbol == "mechanicHydraulicTransientFeedback")
 		{
 			rop = FrancisGovernorControlKind::mechanicHydraulicTransientFeedback;
 			return lop;
 		}
-		if(EnumSymbol == "electromechanicalElectrohydraulic")
+		if (EnumSymbol == "electromechanicalElectrohydraulic")
 		{
 			rop = FrancisGovernorControlKind::electromechanicalElectrohydraulic;
 			return lop;

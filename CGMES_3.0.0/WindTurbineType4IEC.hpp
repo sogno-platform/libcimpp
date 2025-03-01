@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class WindGenType3aIEC;
 
-	/*
-	Parent class supporting relationships to IEC wind turbines type 4 including their control models.
-	*/
+	/** \brief Parent class supporting relationships to IEC wind turbines type 4 including their control models. */
 	class WindTurbineType4IEC : public WindTurbineType3or4IEC
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		WindTurbineType4IEC();
 		~WindTurbineType4IEC() override;
 
-		CIMPP::WindGenType3aIEC* WindGenType3aIEC;  /* Wind generator type 3A model associated with this wind turbine type 4 model. Default: 0 */
+		/** \brief Wind generator type 3A model associated with this wind turbine type 4 model. Default: 0 */
+		CIMPP::WindGenType3aIEC* WindGenType3aIEC;
 
 		static const char debugName[];
 		const char* debugString() const override;

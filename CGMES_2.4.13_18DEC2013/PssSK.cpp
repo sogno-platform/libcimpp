@@ -8,22 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
 
 using namespace CIMPP;
 
-PssSK::PssSK() {};
-PssSK::~PssSK() {};
+PssSK::PssSK() {}
+PssSK::~PssSK() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -60,155 +49,164 @@ PssSK::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_PssSK_k1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PssSK_k1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PssSK* element = dynamic_cast<PssSK*>(BaseClass_ptr1))
+	PssSK* element = dynamic_cast<PssSK*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->k1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PssSK_k2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PssSK_k2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PssSK* element = dynamic_cast<PssSK*>(BaseClass_ptr1))
+	PssSK* element = dynamic_cast<PssSK*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->k2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PssSK_k3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PssSK_k3(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PssSK* element = dynamic_cast<PssSK*>(BaseClass_ptr1))
+	PssSK* element = dynamic_cast<PssSK*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->k3;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PssSK_t1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PssSK_t1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PssSK* element = dynamic_cast<PssSK*>(BaseClass_ptr1))
+	PssSK* element = dynamic_cast<PssSK*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PssSK_t2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PssSK_t2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PssSK* element = dynamic_cast<PssSK*>(BaseClass_ptr1))
+	PssSK* element = dynamic_cast<PssSK*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PssSK_t3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PssSK_t3(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PssSK* element = dynamic_cast<PssSK*>(BaseClass_ptr1))
+	PssSK* element = dynamic_cast<PssSK*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t3;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PssSK_t4(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PssSK_t4(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PssSK* element = dynamic_cast<PssSK*>(BaseClass_ptr1))
+	PssSK* element = dynamic_cast<PssSK*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t4;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PssSK_t5(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PssSK_t5(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PssSK* element = dynamic_cast<PssSK*>(BaseClass_ptr1))
+	PssSK* element = dynamic_cast<PssSK*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t5;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PssSK_t6(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PssSK_t6(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PssSK* element = dynamic_cast<PssSK*>(BaseClass_ptr1))
+	PssSK* element = dynamic_cast<PssSK*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t6;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PssSK_vsmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PssSK_vsmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PssSK* element = dynamic_cast<PssSK*>(BaseClass_ptr1))
+	PssSK* element = dynamic_cast<PssSK*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vsmax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PssSK_vsmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PssSK_vsmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PssSK* element = dynamic_cast<PssSK*>(BaseClass_ptr1))
+	PssSK* element = dynamic_cast<PssSK*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vsmin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_PssSK_k1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1))
+	const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->k1;
 		if (!buffer.str().empty())
@@ -222,7 +220,8 @@ bool get_PssSK_k1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_PssSK_k2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1))
+	const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->k2;
 		if (!buffer.str().empty())
@@ -236,7 +235,8 @@ bool get_PssSK_k2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_PssSK_k3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1))
+	const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->k3;
 		if (!buffer.str().empty())
@@ -250,7 +250,8 @@ bool get_PssSK_k3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_PssSK_t1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1))
+	const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t1;
 		if (!buffer.str().empty())
@@ -264,7 +265,8 @@ bool get_PssSK_t1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_PssSK_t2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1))
+	const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t2;
 		if (!buffer.str().empty())
@@ -278,7 +280,8 @@ bool get_PssSK_t2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_PssSK_t3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1))
+	const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t3;
 		if (!buffer.str().empty())
@@ -292,7 +295,8 @@ bool get_PssSK_t3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_PssSK_t4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1))
+	const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t4;
 		if (!buffer.str().empty())
@@ -306,7 +310,8 @@ bool get_PssSK_t4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_PssSK_t5(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1))
+	const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t5;
 		if (!buffer.str().empty())
@@ -320,7 +325,8 @@ bool get_PssSK_t5(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_PssSK_t6(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1))
+	const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t6;
 		if (!buffer.str().empty())
@@ -334,7 +340,8 @@ bool get_PssSK_t6(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_PssSK_vsmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1))
+	const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vsmax;
 		if (!buffer.str().empty())
@@ -348,7 +355,8 @@ bool get_PssSK_vsmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_PssSK_vsmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1))
+	const PssSK* element = dynamic_cast<const PssSK*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vsmin;
 		if (!buffer.str().empty())
@@ -360,8 +368,6 @@ bool get_PssSK_vsmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 	return false;
 }
 
-
-
 const char PssSK::debugName[] = "PssSK";
 const char* PssSK::debugString() const
 {
@@ -370,22 +376,22 @@ const char* PssSK::debugString() const
 
 void PssSK::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:PssSK"), &PssSK_factory));
+	factory_map.emplace("cim:PssSK", &PssSK_factory);
 }
 
 void PssSK::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:PssSK.k1"), &assign_PssSK_k1));
-	assign_map.insert(std::make_pair(std::string("cim:PssSK.k2"), &assign_PssSK_k2));
-	assign_map.insert(std::make_pair(std::string("cim:PssSK.k3"), &assign_PssSK_k3));
-	assign_map.insert(std::make_pair(std::string("cim:PssSK.t1"), &assign_PssSK_t1));
-	assign_map.insert(std::make_pair(std::string("cim:PssSK.t2"), &assign_PssSK_t2));
-	assign_map.insert(std::make_pair(std::string("cim:PssSK.t3"), &assign_PssSK_t3));
-	assign_map.insert(std::make_pair(std::string("cim:PssSK.t4"), &assign_PssSK_t4));
-	assign_map.insert(std::make_pair(std::string("cim:PssSK.t5"), &assign_PssSK_t5));
-	assign_map.insert(std::make_pair(std::string("cim:PssSK.t6"), &assign_PssSK_t6));
-	assign_map.insert(std::make_pair(std::string("cim:PssSK.vsmax"), &assign_PssSK_vsmax));
-	assign_map.insert(std::make_pair(std::string("cim:PssSK.vsmin"), &assign_PssSK_vsmin));
+	assign_map.emplace("cim:PssSK.k1", &assign_PssSK_k1);
+	assign_map.emplace("cim:PssSK.k2", &assign_PssSK_k2);
+	assign_map.emplace("cim:PssSK.k3", &assign_PssSK_k3);
+	assign_map.emplace("cim:PssSK.t1", &assign_PssSK_t1);
+	assign_map.emplace("cim:PssSK.t2", &assign_PssSK_t2);
+	assign_map.emplace("cim:PssSK.t3", &assign_PssSK_t3);
+	assign_map.emplace("cim:PssSK.t4", &assign_PssSK_t4);
+	assign_map.emplace("cim:PssSK.t5", &assign_PssSK_t5);
+	assign_map.emplace("cim:PssSK.t6", &assign_PssSK_t6);
+	assign_map.emplace("cim:PssSK.vsmax", &assign_PssSK_vsmax);
+	assign_map.emplace("cim:PssSK.vsmin", &assign_PssSK_vsmin);
 }
 
 void PssSK::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

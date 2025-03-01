@@ -11,8 +11,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-Breaker::Breaker() {};
-Breaker::~Breaker() {};
+Breaker::Breaker() {}
+Breaker::~Breaker() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -39,11 +39,6 @@ Breaker::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
-
-
-
 const char Breaker::debugName[] = "Breaker";
 const char* Breaker::debugString() const
 {
@@ -52,7 +47,7 @@ const char* Breaker::debugString() const
 
 void Breaker::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:Breaker"), &Breaker_factory));
+	factory_map.emplace("cim:Breaker", &Breaker_factory);
 }
 
 void Breaker::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)

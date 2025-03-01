@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	The class describe a measurement or control value. The purpose is to enable having attributes and associations common for measurement and control.
-	*/
+	/** \brief The class describe a measurement or control value. The purpose is to enable having attributes and associations common for measurement and control. */
 	class IOPoint : public IdentifiedObject
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		IOPoint();
 		~IOPoint() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

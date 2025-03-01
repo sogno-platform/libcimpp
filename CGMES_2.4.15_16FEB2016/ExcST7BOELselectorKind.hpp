@@ -9,29 +9,19 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Type of connection for the OEL input used for static excitation systems type 7B.
-	*/
+	/** \brief Type of connection for the OEL input used for static excitation systems type 7B. */
 	class ExcST7BOELselectorKind
 	{
 	public:
 		enum ExcST7BOELselectorKind_ENUM
 		{
-			/**
-			 * No OEL input is used.
-			 */
+			/** No OEL input is used. */
 			noOELinput,
-			/**
-			 * The signal is added to Vref.
-			 */
+			/** The signal is added to Vref. */
 			addVref,
-			/**
-			 * The signal is connected in the input of the LV gate.
-			 */
+			/** The signal is connected in the input of the LV gate. */
 			inputLVgate,
-			/**
-			 * The signal is connected in the output of the LV gate.
-			 */
+			/** The signal is connected in the output of the LV gate. */
 			outputLVgate,
 		};
 

@@ -12,12 +12,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "TopologicalNode.hpp"
 #include "TransformerEnd.hpp"
 #include "VoltageLevel.hpp"
-#include "Voltage.hpp"
 
 using namespace CIMPP;
 
-BaseVoltage::BaseVoltage() {};
-BaseVoltage::~BaseVoltage() {};
+BaseVoltage::BaseVoltage() {}
+BaseVoltage::~BaseVoltage() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -50,21 +49,6 @@ BaseVoltage::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_BaseVoltage_nominalVoltage(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (BaseVoltage* element = dynamic_cast<BaseVoltage*>(BaseClass_ptr1))
-	{
-		buffer >> element->nominalVoltage;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_ConductingEquipment_BaseVoltage(BaseClass*, BaseClass*);
 bool assign_BaseVoltage_ConductingEquipment(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -81,6 +65,7 @@ bool assign_BaseVoltage_ConductingEquipment(BaseClass* BaseClass_ptr1, BaseClass
 	}
 	return false;
 }
+
 bool assign_TopologicalNode_BaseVoltage(BaseClass*, BaseClass*);
 bool assign_BaseVoltage_TopologicalNode(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -97,6 +82,7 @@ bool assign_BaseVoltage_TopologicalNode(BaseClass* BaseClass_ptr1, BaseClass* Ba
 	}
 	return false;
 }
+
 bool assign_TransformerEnd_BaseVoltage(BaseClass*, BaseClass*);
 bool assign_BaseVoltage_TransformerEnds(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -113,6 +99,7 @@ bool assign_BaseVoltage_TransformerEnds(BaseClass* BaseClass_ptr1, BaseClass* Ba
 	}
 	return false;
 }
+
 bool assign_VoltageLevel_BaseVoltage(BaseClass*, BaseClass*);
 bool assign_BaseVoltage_VoltageLevel(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -130,9 +117,28 @@ bool assign_BaseVoltage_VoltageLevel(BaseClass* BaseClass_ptr1, BaseClass* BaseC
 	return false;
 }
 
+bool assign_BaseVoltage_nominalVoltage(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	BaseVoltage* element = dynamic_cast<BaseVoltage*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->nominalVoltage;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
+
+
+
 bool get_BaseVoltage_nominalVoltage(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const BaseVoltage* element = dynamic_cast<const BaseVoltage*>(BaseClass_ptr1))
+	const BaseVoltage* element = dynamic_cast<const BaseVoltage*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->nominalVoltage;
 		if (!buffer.str().empty())
@@ -144,8 +150,6 @@ bool get_BaseVoltage_nominalVoltage(const BaseClass* BaseClass_ptr1, std::string
 	return false;
 }
 
-
-
 const char BaseVoltage::debugName[] = "BaseVoltage";
 const char* BaseVoltage::debugString() const
 {
@@ -154,20 +158,20 @@ const char* BaseVoltage::debugString() const
 
 void BaseVoltage::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:BaseVoltage"), &BaseVoltage_factory));
+	factory_map.emplace("cim:BaseVoltage", &BaseVoltage_factory);
 }
 
 void BaseVoltage::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:BaseVoltage.nominalVoltage"), &assign_BaseVoltage_nominalVoltage));
+	assign_map.emplace("cim:BaseVoltage.nominalVoltage", &assign_BaseVoltage_nominalVoltage);
 }
 
 void BaseVoltage::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:BaseVoltage.ConductingEquipment"), &assign_BaseVoltage_ConductingEquipment));
-	assign_map.insert(std::make_pair(std::string("cim:BaseVoltage.TopologicalNode"), &assign_BaseVoltage_TopologicalNode));
-	assign_map.insert(std::make_pair(std::string("cim:BaseVoltage.TransformerEnds"), &assign_BaseVoltage_TransformerEnds));
-	assign_map.insert(std::make_pair(std::string("cim:BaseVoltage.VoltageLevel"), &assign_BaseVoltage_VoltageLevel));
+	assign_map.emplace("cim:BaseVoltage.ConductingEquipment", &assign_BaseVoltage_ConductingEquipment);
+	assign_map.emplace("cim:BaseVoltage.TopologicalNode", &assign_BaseVoltage_TopologicalNode);
+	assign_map.emplace("cim:BaseVoltage.TransformerEnds", &assign_BaseVoltage_TransformerEnds);
+	assign_map.emplace("cim:BaseVoltage.VoltageLevel", &assign_BaseVoltage_VoltageLevel);
 }
 
 void BaseVoltage::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

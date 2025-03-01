@@ -20,9 +20,7 @@ namespace CIMPP
 	class PowerSystemResource;
 	class StreetAddress;
 
-	/*
-	The place, scene, or point of something where someone or something has been, is, and/or will be at a given moment in time. It can be defined with one or more position points (coordinates) in a given coordinate system.
-	*/
+	/** \brief The place, scene, or point of something where someone or something has been, is, and/or will be at a given moment in time. It can be defined with one or more position points (coordinates) in a given coordinate system. */
 	class Location : public IdentifiedObject
 	{
 	public:
@@ -30,10 +28,17 @@ namespace CIMPP
 		Location();
 		~Location() override;
 
-		CIMPP::CoordinateSystem* CoordinateSystem;  /* Coordinate system used to describe position points of this location. Default: 0 */
-		std::list<CIMPP::PositionPoint*> PositionPoints;  /* Sequence of position points describing this location, expressed in coordinate system `Location.CoordinateSystem`. Default: 0 */
-		CIMPP::PowerSystemResource* PowerSystemResources;  /* All power system resources at this location. Default: 0 */
-		CIMPP::StreetAddress* mainAddress;  /* Main address of the location. Default: nullptr */
+		/** \brief Coordinate system used to describe position points of this location. Default: 0 */
+		CIMPP::CoordinateSystem* CoordinateSystem;
+
+		/** \brief Sequence of position points describing this location, expressed in coordinate system `Location.CoordinateSystem`. Default: 0 */
+		std::list<CIMPP::PositionPoint*> PositionPoints;
+
+		/** \brief All power system resources at this location. Default: 0 */
+		CIMPP::PowerSystemResource* PowerSystemResources;
+
+		/** \brief Main address of the location. Default: nullptr */
+		CIMPP::StreetAddress* mainAddress;
 
 		static const char debugName[];
 		const char* debugString() const override;

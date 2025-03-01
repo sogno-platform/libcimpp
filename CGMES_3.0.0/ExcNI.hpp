@@ -19,9 +19,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Bus or solid fed SCR (silicon-controlled rectifier) bridge excitation system model type NI (NVE).
-	*/
+	/** \brief Bus or solid fed SCR (silicon-controlled rectifier) bridge excitation system model type NI (NVE). */
 	class ExcNI : public ExcitationSystemDynamics
 	{
 	public:
@@ -29,16 +27,35 @@ namespace CIMPP
 		ExcNI();
 		~ExcNI() override;
 
-		CIMPP::Boolean busFedSelector;  /* Fed by selector (&lt;i&gt;BusFedSelector&lt;/i&gt;).  true = bus fed (switch is closed) false = solid fed (switch is open). Typical value = true. Default: false */
-		CIMPP::PU ka;  /* Voltage regulator gain (&lt;i&gt;Ka&lt;/i&gt;) (&amp;gt; 0).  Typical value = 210. Default: nullptr */
-		CIMPP::PU kf;  /* Excitation control system stabilizer gain (&lt;i&gt;Kf&lt;/i&gt;) (&amp;gt; 0).  Typical value 0,01. Default: nullptr */
-		CIMPP::PU r;  /* &lt;i&gt;rc&lt;/i&gt; / &lt;i&gt;rfd&lt;/i&gt; (&lt;i&gt;R&lt;/i&gt;) (&amp;gt;= 0).  0 means exciter has negative current capability &amp;gt; 0 means exciter does not have negative current capability.   Typical value = 5. Default: nullptr */
-		CIMPP::Seconds ta;  /* Voltage regulator time constant (&lt;i&gt;Ta&lt;/i&gt;) (&amp;gt; 0).  Typical value = 0,02. Default: nullptr */
-		CIMPP::Seconds tf1;  /* Excitation control system stabilizer time constant (&lt;i&gt;Tf1&lt;/i&gt;) (&amp;gt; 0). Typical value = 1,0. Default: nullptr */
-		CIMPP::Seconds tf2;  /* Excitation control system stabilizer time constant (&lt;i&gt;Tf2&lt;/i&gt;) (&amp;gt; 0). Typical value = 0,1. Default: nullptr */
-		CIMPP::Seconds tr;  /* Time constant (&lt;i&gt;Tr&lt;/i&gt;) (&amp;gt;= 0). Typical value = 0,02. Default: nullptr */
-		CIMPP::PU vrmax;  /* Maximum voltage regulator ouput (&lt;i&gt;Vrmax&lt;/i&gt;) (&amp;gt; ExcNI.vrmin). Typical value = 5,0. Default: nullptr */
-		CIMPP::PU vrmin;  /* Minimum voltage regulator ouput (&lt;i&gt;Vrmin&lt;/i&gt;) (&amp;lt; ExcNI.vrmax). Typical value = -2,0. Default: nullptr */
+		/** \brief Fed by selector (&lt;i&gt;BusFedSelector&lt;/i&gt;).  true = bus fed (switch is closed) false = solid fed (switch is open). Typical value = true. Default: false */
+		CIMPP::Boolean busFedSelector;
+
+		/** \brief Voltage regulator gain (&lt;i&gt;Ka&lt;/i&gt;) (&amp;gt; 0).  Typical value = 210. Default: nullptr */
+		CIMPP::PU ka;
+
+		/** \brief Excitation control system stabilizer gain (&lt;i&gt;Kf&lt;/i&gt;) (&amp;gt; 0).  Typical value 0,01. Default: nullptr */
+		CIMPP::PU kf;
+
+		/** \brief &lt;i&gt;rc&lt;/i&gt; / &lt;i&gt;rfd&lt;/i&gt; (&lt;i&gt;R&lt;/i&gt;) (&amp;gt;= 0).  0 means exciter has negative current capability &amp;gt; 0 means exciter does not have negative current capability.   Typical value = 5. Default: nullptr */
+		CIMPP::PU r;
+
+		/** \brief Voltage regulator time constant (&lt;i&gt;Ta&lt;/i&gt;) (&amp;gt; 0).  Typical value = 0,02. Default: nullptr */
+		CIMPP::Seconds ta;
+
+		/** \brief Excitation control system stabilizer time constant (&lt;i&gt;Tf1&lt;/i&gt;) (&amp;gt; 0). Typical value = 1,0. Default: nullptr */
+		CIMPP::Seconds tf1;
+
+		/** \brief Excitation control system stabilizer time constant (&lt;i&gt;Tf2&lt;/i&gt;) (&amp;gt; 0). Typical value = 0,1. Default: nullptr */
+		CIMPP::Seconds tf2;
+
+		/** \brief Time constant (&lt;i&gt;Tr&lt;/i&gt;) (&amp;gt;= 0). Typical value = 0,02. Default: nullptr */
+		CIMPP::Seconds tr;
+
+		/** \brief Maximum voltage regulator ouput (&lt;i&gt;Vrmax&lt;/i&gt;) (&amp;gt; ExcNI.vrmin). Typical value = 5,0. Default: nullptr */
+		CIMPP::PU vrmax;
+
+		/** \brief Minimum voltage regulator ouput (&lt;i&gt;Vrmin&lt;/i&gt;) (&amp;lt; ExcNI.vrmax). Typical value = -2,0. Default: nullptr */
+		CIMPP::PU vrmin;
 
 		static const char debugName[];
 		const char* debugString() const override;

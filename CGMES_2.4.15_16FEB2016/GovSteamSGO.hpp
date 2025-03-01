@@ -19,9 +19,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Simplified Steam turbine governor model.
-	*/
+	/** \brief Simplified Steam turbine governor model. */
 	class GovSteamSGO : public TurbineGovernorDynamics
 	{
 	public:
@@ -29,18 +27,41 @@ namespace CIMPP
 		GovSteamSGO();
 		~GovSteamSGO() override;
 
-		CIMPP::PU k1;  /* One/per unit regulation (K1). Default: nullptr */
-		CIMPP::PU k2;  /* Fraction (K2). Default: nullptr */
-		CIMPP::PU k3;  /* Fraction (K3). Default: nullptr */
-		CIMPP::ActivePower mwbase;  /* Base for power values (MWbase) (&gt;0).  Unit = MW. Default: nullptr */
-		CIMPP::PU pmax;  /* Upper power limit (Pmax). Default: nullptr */
-		CIMPP::Seconds pmin;  /* Lower power limit (Pmin). Default: nullptr */
-		CIMPP::Seconds t1;  /* Controller lag (T1). Default: nullptr */
-		CIMPP::Seconds t2;  /* Controller lead compensation (T2). Default: nullptr */
-		CIMPP::Seconds t3;  /* Governor lag (T3) (&gt;0). Default: nullptr */
-		CIMPP::Seconds t4;  /* Delay due to steam inlet volumes associated with steam chest and inlet piping (T4). Default: nullptr */
-		CIMPP::Seconds t5;  /* Reheater delay including hot and cold leads (T5). Default: nullptr */
-		CIMPP::Seconds t6;  /* Delay due to IP-LP turbine, crossover pipes and LP end hoods (T6). Default: nullptr */
+		/** \brief One/per unit regulation (K1). Default: nullptr */
+		CIMPP::PU k1;
+
+		/** \brief Fraction (K2). Default: nullptr */
+		CIMPP::PU k2;
+
+		/** \brief Fraction (K3). Default: nullptr */
+		CIMPP::PU k3;
+
+		/** \brief Base for power values (MWbase) (&gt;0).  Unit = MW. Default: nullptr */
+		CIMPP::ActivePower mwbase;
+
+		/** \brief Upper power limit (Pmax). Default: nullptr */
+		CIMPP::PU pmax;
+
+		/** \brief Lower power limit (Pmin). Default: nullptr */
+		CIMPP::Seconds pmin;
+
+		/** \brief Controller lag (T1). Default: nullptr */
+		CIMPP::Seconds t1;
+
+		/** \brief Controller lead compensation (T2). Default: nullptr */
+		CIMPP::Seconds t2;
+
+		/** \brief Governor lag (T3) (&gt;0). Default: nullptr */
+		CIMPP::Seconds t3;
+
+		/** \brief Delay due to steam inlet volumes associated with steam chest and inlet piping (T4). Default: nullptr */
+		CIMPP::Seconds t4;
+
+		/** \brief Reheater delay including hot and cold leads (T5). Default: nullptr */
+		CIMPP::Seconds t5;
+
+		/** \brief Delay due to IP-LP turbine, crossover pipes and LP end hoods (T6). Default: nullptr */
+		CIMPP::Seconds t6;
 
 		static const char debugName[];
 		const char* debugString() const override;

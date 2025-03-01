@@ -27,10 +27,17 @@ namespace CIMPP
 		PerLengthDCLineParameter();
 		~PerLengthDCLineParameter() override;
 
-		std::list<CIMPP::DCLineSegment*> DCLineSegments;  /* All line segments described by this set of per-length parameters. Default: 0 */
-		CIMPP::CapacitancePerLength capacitance;  /* Capacitance per unit of length of the DC line segment; significant for cables only. Default: nullptr */
-		CIMPP::InductancePerLength inductance;  /* Inductance per unit of length of the DC line segment. Default: nullptr */
-		CIMPP::ResistancePerLength resistance;  /* Resistance per length of the DC line segment. Default: nullptr */
+		/** \brief All line segments described by this set of per-length parameters. Default: 0 */
+		std::list<CIMPP::DCLineSegment*> DCLineSegments;
+
+		/** \brief Capacitance per unit of length of the DC line segment; significant for cables only. Default: nullptr */
+		CIMPP::CapacitancePerLength capacitance;
+
+		/** \brief Inductance per unit of length of the DC line segment. Default: nullptr */
+		CIMPP::InductancePerLength inductance;
+
+		/** \brief Resistance per length of the DC line segment. Default: nullptr */
+		CIMPP::ResistancePerLength resistance;
 
 		static const char debugName[];
 		const char* debugString() const override;

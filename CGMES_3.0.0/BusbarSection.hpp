@@ -17,9 +17,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A conductor, or group of conductors, with negligible impedance, that serve to connect other conducting equipment within a single substation.  Voltage measurements are typically obtained from voltage transformers that are connected to busbar sections. A bus bar section may have many physical terminals but for analysis is modelled with exactly one logical terminal.
-	*/
+	/** \brief A conductor, or group of conductors, with negligible impedance, that serve to connect other conducting equipment within a single substation.  Voltage measurements are typically obtained from voltage transformers that are connected to busbar sections. A bus bar section may have many physical terminals but for analysis is modelled with exactly one logical terminal. */
 	class BusbarSection : public Connector
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		BusbarSection();
 		~BusbarSection() override;
 
-		CIMPP::CurrentFlow ipMax;  /* Maximum allowable peak short-circuit current of busbar (Ipmax in IEC 60909-0).  Mechanical limit of the busbar in the substation itself. Used for short circuit data exchange according to IEC 60909. Default: nullptr */
+		/** \brief Maximum allowable peak short-circuit current of busbar (Ipmax in IEC 60909-0).  Mechanical limit of the busbar in the substation itself. Used for short circuit data exchange according to IEC 60909. Default: nullptr */
+		CIMPP::CurrentFlow ipMax;
 
 		static const char debugName[];
 		const char* debugString() const override;

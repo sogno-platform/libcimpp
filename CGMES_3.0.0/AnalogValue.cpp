@@ -13,8 +13,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-AnalogValue::AnalogValue() : Analog(nullptr), AnalogControl(nullptr) {};
-AnalogValue::~AnalogValue() {};
+AnalogValue::AnalogValue() : Analog(nullptr), AnalogControl(nullptr) {}
+AnalogValue::~AnalogValue() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,8 +42,6 @@ AnalogValue::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_Analog_AnalogValues(BaseClass*, BaseClass*);
 bool assign_AnalogValue_Analog(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,6 +58,7 @@ bool assign_AnalogValue_Analog(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_p
 	}
 	return false;
 }
+
 bool assign_AnalogControl_AnalogValue(BaseClass*, BaseClass*);
 bool assign_AnalogValue_AnalogControl(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -77,10 +76,10 @@ bool assign_AnalogValue_AnalogControl(BaseClass* BaseClass_ptr1, BaseClass* Base
 	return false;
 }
 
-
 bool get_AnalogValue_Analog(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const AnalogValue* element = dynamic_cast<const AnalogValue*>(BaseClass_ptr1))
+	const AnalogValue* element = dynamic_cast<const AnalogValue*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->Analog != 0)
 		{
@@ -100,7 +99,7 @@ const char* AnalogValue::debugString() const
 
 void AnalogValue::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:AnalogValue"), &AnalogValue_factory));
+	factory_map.emplace("cim:AnalogValue", &AnalogValue_factory);
 }
 
 void AnalogValue::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -109,8 +108,8 @@ void AnalogValue::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, ass
 
 void AnalogValue::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:AnalogValue.Analog"), &assign_AnalogValue_Analog));
-	assign_map.insert(std::make_pair(std::string("cim:AnalogValue.AnalogControl"), &assign_AnalogValue_AnalogControl));
+	assign_map.emplace("cim:AnalogValue.Analog", &assign_AnalogValue_Analog);
+	assign_map.emplace("cim:AnalogValue.AnalogControl", &assign_AnalogValue_AnalogControl);
 }
 
 void AnalogValue::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

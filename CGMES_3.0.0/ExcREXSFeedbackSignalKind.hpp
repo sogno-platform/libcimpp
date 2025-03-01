@@ -9,25 +9,17 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Types of rate feedback signals.
-	*/
+	/** \brief Types of rate feedback signals. */
 	class ExcREXSFeedbackSignalKind
 	{
 	public:
 		enum ExcREXSFeedbackSignalKind_ENUM
 		{
-			/**
-			 * The voltage regulator output voltage is used. It is the same as exciter field voltage.
-			 */
+			/** The voltage regulator output voltage is used. It is the same as exciter field voltage. */
 			fieldVoltage,
-			/**
-			 * The exciter field current is used.
-			 */
+			/** The exciter field current is used. */
 			fieldCurrent,
-			/**
-			 * The output voltage of the exciter is used.
-			 */
+			/** The output voltage of the exciter is used. */
 			outputVoltage,
 		};
 

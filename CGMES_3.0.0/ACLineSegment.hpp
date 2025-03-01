@@ -23,9 +23,7 @@ namespace CIMPP
 	class Clamp;
 	class Cut;
 
-	/*
-	A wire or combination of wires, with consistent electrical characteristics, building a single electrical system, used to carry alternating current between points in the power system. For symmetrical, transposed three phase lines, it is sufficient to use attributes of the line segment, which describe impedances and admittances for the entire length of the segment.  Additionally impedances can be computed by using length and associated per length impedances. The BaseVoltage at the two ends of ACLineSegments in a Line shall have the same BaseVoltage.nominalVoltage. However, boundary lines may have slightly different BaseVoltage.nominalVoltages and variation is allowed. Larger voltage difference in general requires use of an equivalent branch.
-	*/
+	/** \brief A wire or combination of wires, with consistent electrical characteristics, building a single electrical system, used to carry alternating current between points in the power system. For symmetrical, transposed three phase lines, it is sufficient to use attributes of the line segment, which describe impedances and admittances for the entire length of the segment.  Additionally impedances can be computed by using length and associated per length impedances. The BaseVoltage at the two ends of ACLineSegments in a Line shall have the same BaseVoltage.nominalVoltage. However, boundary lines may have slightly different BaseVoltage.nominalVoltages and variation is allowed. Larger voltage difference in general requires use of an equivalent branch. */
 	class ACLineSegment : public Conductor
 	{
 	public:
@@ -33,17 +31,38 @@ namespace CIMPP
 		ACLineSegment();
 		~ACLineSegment() override;
 
-		std::list<CIMPP::Clamp*> Clamp;  /* The clamps connected to the line segment. Default: 0 */
-		std::list<CIMPP::Cut*> Cut;  /* Cuts applied to the line segment. Default: 0 */
-		CIMPP::Susceptance b0ch;  /* Zero sequence shunt (charging) susceptance, uniformly distributed, of the entire line section. Default: nullptr */
-		CIMPP::Susceptance bch;  /* Positive sequence shunt (charging) susceptance, uniformly distributed, of the entire line section.  This value represents the full charging over the full length of the line. Default: nullptr */
-		CIMPP::Conductance g0ch;  /* Zero sequence shunt (charging) conductance, uniformly distributed, of the entire line section. Default: nullptr */
-		CIMPP::Conductance gch;  /* Positive sequence shunt (charging) conductance, uniformly distributed, of the entire line section. Default: nullptr */
-		CIMPP::Resistance r;  /* Positive sequence series resistance of the entire line section. Default: nullptr */
-		CIMPP::Resistance r0;  /* Zero sequence series resistance of the entire line section. Default: nullptr */
-		CIMPP::Temperature shortCircuitEndTemperature;  /* Maximum permitted temperature at the end of SC for the calculation of minimum short-circuit currents. Used for short circuit data exchange according to IEC 60909. Default: nullptr */
-		CIMPP::Reactance x;  /* Positive sequence series reactance of the entire line section. Default: nullptr */
-		CIMPP::Reactance x0;  /* Zero sequence series reactance of the entire line section. Default: nullptr */
+		/** \brief The clamps connected to the line segment. Default: 0 */
+		std::list<CIMPP::Clamp*> Clamp;
+
+		/** \brief Cuts applied to the line segment. Default: 0 */
+		std::list<CIMPP::Cut*> Cut;
+
+		/** \brief Zero sequence shunt (charging) susceptance, uniformly distributed, of the entire line section. Default: nullptr */
+		CIMPP::Susceptance b0ch;
+
+		/** \brief Positive sequence shunt (charging) susceptance, uniformly distributed, of the entire line section.  This value represents the full charging over the full length of the line. Default: nullptr */
+		CIMPP::Susceptance bch;
+
+		/** \brief Zero sequence shunt (charging) conductance, uniformly distributed, of the entire line section. Default: nullptr */
+		CIMPP::Conductance g0ch;
+
+		/** \brief Positive sequence shunt (charging) conductance, uniformly distributed, of the entire line section. Default: nullptr */
+		CIMPP::Conductance gch;
+
+		/** \brief Positive sequence series resistance of the entire line section. Default: nullptr */
+		CIMPP::Resistance r;
+
+		/** \brief Zero sequence series resistance of the entire line section. Default: nullptr */
+		CIMPP::Resistance r0;
+
+		/** \brief Maximum permitted temperature at the end of SC for the calculation of minimum short-circuit currents. Used for short circuit data exchange according to IEC 60909. Default: nullptr */
+		CIMPP::Temperature shortCircuitEndTemperature;
+
+		/** \brief Positive sequence series reactance of the entire line section. Default: nullptr */
+		CIMPP::Reactance x;
+
+		/** \brief Zero sequence series reactance of the entire line section. Default: nullptr */
+		CIMPP::Reactance x0;
 
 		static const char debugName[];
 		const char* debugString() const override;

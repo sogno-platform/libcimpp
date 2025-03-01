@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class DiagramObject;
 
-	/*
-	This is a root class to provide common identification for all classes needing identification and naming attributes.
-	*/
+	/** \brief This is a root class to provide common identification for all classes needing identification and naming attributes. */
 	class IdentifiedObject : public BaseClass
 	{
 	public:
@@ -28,12 +26,23 @@ namespace CIMPP
 		IdentifiedObject();
 		~IdentifiedObject() override;
 
-		std::list<CIMPP::DiagramObject*> DiagramObjects;  /* The diagram objects that are associated with the domain object. Default: 0 */
-		CIMPP::String description;  /* The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy. Default: '' */
-		CIMPP::String energyIdentCodeEic;  /* The attribute is used for an exchange of the EIC code (Energy identification Code). The length of the string is 16 characters as defined by the EIC code. For details on EIC scheme please refer to ENTSO-E web site. Default: '' */
-		CIMPP::String mRID;  /* Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements. Default: '' */
-		CIMPP::String name;  /* The name is any free human readable and possibly non unique text naming the object. Default: '' */
-		CIMPP::String shortName;  /* The attribute is used for an exchange of a human readable short name with length of the string 12 characters maximum. Default: '' */
+		/** \brief The diagram objects that are associated with the domain object. Default: 0 */
+		std::list<CIMPP::DiagramObject*> DiagramObjects;
+
+		/** \brief The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy. Default: '' */
+		CIMPP::String description;
+
+		/** \brief The attribute is used for an exchange of the EIC code (Energy identification Code). The length of the string is 16 characters as defined by the EIC code. For details on EIC scheme please refer to ENTSO-E web site. Default: '' */
+		CIMPP::String energyIdentCodeEic;
+
+		/** \brief Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements. Default: '' */
+		CIMPP::String mRID;
+
+		/** \brief The name is any free human readable and possibly non unique text naming the object. Default: '' */
+		CIMPP::String name;
+
+		/** \brief The attribute is used for an exchange of a human readable short name with length of the string 12 characters maximum. Default: '' */
+		CIMPP::String shortName;
 
 		static const char debugName[];
 		const char* debugString() const override;

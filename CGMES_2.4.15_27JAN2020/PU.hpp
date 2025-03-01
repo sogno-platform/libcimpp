@@ -9,9 +9,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Per Unit - a positive or negative value referred to a defined base. Values typically range from -10 to +10.
-	*/
+	/** \brief Per Unit - a positive or negative value referred to a defined base. Values typically range from -10 to +10. */
 	class PU
 	{
 	public:

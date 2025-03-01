@@ -8,18 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "PetersenCoilModeKind.hpp"
-#include "Voltage.hpp"
-#include "CurrentFlow.hpp"
-#include "CurrentFlow.hpp"
-#include "Reactance.hpp"
-#include "Reactance.hpp"
-#include "Reactance.hpp"
 
 using namespace CIMPP;
 
-PetersenCoil::PetersenCoil() {};
-PetersenCoil::~PetersenCoil() {};
+PetersenCoil::PetersenCoil() {}
+PetersenCoil::~PetersenCoil() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -52,103 +45,123 @@ PetersenCoil::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_PetersenCoil_mode(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PetersenCoil_mode(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PetersenCoil* element = dynamic_cast<PetersenCoil*>(BaseClass_ptr1))
+	PetersenCoil* element = dynamic_cast<PetersenCoil*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->mode;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PetersenCoil_nominalU(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PetersenCoil_nominalU(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PetersenCoil* element = dynamic_cast<PetersenCoil*>(BaseClass_ptr1))
+	PetersenCoil* element = dynamic_cast<PetersenCoil*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->nominalU;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PetersenCoil_offsetCurrent(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PetersenCoil_offsetCurrent(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PetersenCoil* element = dynamic_cast<PetersenCoil*>(BaseClass_ptr1))
+	PetersenCoil* element = dynamic_cast<PetersenCoil*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->offsetCurrent;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PetersenCoil_positionCurrent(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PetersenCoil_positionCurrent(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PetersenCoil* element = dynamic_cast<PetersenCoil*>(BaseClass_ptr1))
+	PetersenCoil* element = dynamic_cast<PetersenCoil*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->positionCurrent;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PetersenCoil_xGroundMax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PetersenCoil_xGroundMax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PetersenCoil* element = dynamic_cast<PetersenCoil*>(BaseClass_ptr1))
+	PetersenCoil* element = dynamic_cast<PetersenCoil*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->xGroundMax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PetersenCoil_xGroundMin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PetersenCoil_xGroundMin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PetersenCoil* element = dynamic_cast<PetersenCoil*>(BaseClass_ptr1))
+	PetersenCoil* element = dynamic_cast<PetersenCoil*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->xGroundMin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PetersenCoil_xGroundNominal(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PetersenCoil_xGroundNominal(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PetersenCoil* element = dynamic_cast<PetersenCoil*>(BaseClass_ptr1))
+	PetersenCoil* element = dynamic_cast<PetersenCoil*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->xGroundNominal;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-
+bool get_PetersenCoil_mode(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	const PetersenCoil* element = dynamic_cast<const PetersenCoil*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer << element->mode;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 bool get_PetersenCoil_nominalU(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PetersenCoil* element = dynamic_cast<const PetersenCoil*>(BaseClass_ptr1))
+	const PetersenCoil* element = dynamic_cast<const PetersenCoil*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->nominalU;
 		if (!buffer.str().empty())
@@ -162,7 +175,8 @@ bool get_PetersenCoil_nominalU(const BaseClass* BaseClass_ptr1, std::stringstrea
 
 bool get_PetersenCoil_offsetCurrent(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PetersenCoil* element = dynamic_cast<const PetersenCoil*>(BaseClass_ptr1))
+	const PetersenCoil* element = dynamic_cast<const PetersenCoil*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->offsetCurrent;
 		if (!buffer.str().empty())
@@ -176,7 +190,8 @@ bool get_PetersenCoil_offsetCurrent(const BaseClass* BaseClass_ptr1, std::string
 
 bool get_PetersenCoil_positionCurrent(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PetersenCoil* element = dynamic_cast<const PetersenCoil*>(BaseClass_ptr1))
+	const PetersenCoil* element = dynamic_cast<const PetersenCoil*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->positionCurrent;
 		if (!buffer.str().empty())
@@ -190,7 +205,8 @@ bool get_PetersenCoil_positionCurrent(const BaseClass* BaseClass_ptr1, std::stri
 
 bool get_PetersenCoil_xGroundMax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PetersenCoil* element = dynamic_cast<const PetersenCoil*>(BaseClass_ptr1))
+	const PetersenCoil* element = dynamic_cast<const PetersenCoil*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->xGroundMax;
 		if (!buffer.str().empty())
@@ -204,7 +220,8 @@ bool get_PetersenCoil_xGroundMax(const BaseClass* BaseClass_ptr1, std::stringstr
 
 bool get_PetersenCoil_xGroundMin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PetersenCoil* element = dynamic_cast<const PetersenCoil*>(BaseClass_ptr1))
+	const PetersenCoil* element = dynamic_cast<const PetersenCoil*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->xGroundMin;
 		if (!buffer.str().empty())
@@ -218,25 +235,10 @@ bool get_PetersenCoil_xGroundMin(const BaseClass* BaseClass_ptr1, std::stringstr
 
 bool get_PetersenCoil_xGroundNominal(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PetersenCoil* element = dynamic_cast<const PetersenCoil*>(BaseClass_ptr1))
+	const PetersenCoil* element = dynamic_cast<const PetersenCoil*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->xGroundNominal;
-		if (!buffer.str().empty())
-		{
-			return true;
-		}
-	}
-	buffer.setstate(std::ios::failbit);
-	return false;
-}
-
-
-
-bool get_PetersenCoil_mode(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
-{
-	if (const PetersenCoil* element = dynamic_cast<const PetersenCoil*>(BaseClass_ptr1))
-	{
-		buffer << element->mode;
 		if (!buffer.str().empty())
 		{
 			return true;
@@ -254,18 +256,18 @@ const char* PetersenCoil::debugString() const
 
 void PetersenCoil::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:PetersenCoil"), &PetersenCoil_factory));
+	factory_map.emplace("cim:PetersenCoil", &PetersenCoil_factory);
 }
 
 void PetersenCoil::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:PetersenCoil.mode"), &assign_PetersenCoil_mode));
-	assign_map.insert(std::make_pair(std::string("cim:PetersenCoil.nominalU"), &assign_PetersenCoil_nominalU));
-	assign_map.insert(std::make_pair(std::string("cim:PetersenCoil.offsetCurrent"), &assign_PetersenCoil_offsetCurrent));
-	assign_map.insert(std::make_pair(std::string("cim:PetersenCoil.positionCurrent"), &assign_PetersenCoil_positionCurrent));
-	assign_map.insert(std::make_pair(std::string("cim:PetersenCoil.xGroundMax"), &assign_PetersenCoil_xGroundMax));
-	assign_map.insert(std::make_pair(std::string("cim:PetersenCoil.xGroundMin"), &assign_PetersenCoil_xGroundMin));
-	assign_map.insert(std::make_pair(std::string("cim:PetersenCoil.xGroundNominal"), &assign_PetersenCoil_xGroundNominal));
+	assign_map.emplace("cim:PetersenCoil.mode", &assign_PetersenCoil_mode);
+	assign_map.emplace("cim:PetersenCoil.nominalU", &assign_PetersenCoil_nominalU);
+	assign_map.emplace("cim:PetersenCoil.offsetCurrent", &assign_PetersenCoil_offsetCurrent);
+	assign_map.emplace("cim:PetersenCoil.positionCurrent", &assign_PetersenCoil_positionCurrent);
+	assign_map.emplace("cim:PetersenCoil.xGroundMax", &assign_PetersenCoil_xGroundMax);
+	assign_map.emplace("cim:PetersenCoil.xGroundMin", &assign_PetersenCoil_xGroundMin);
+	assign_map.emplace("cim:PetersenCoil.xGroundNominal", &assign_PetersenCoil_xGroundNominal);
 }
 
 void PetersenCoil::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

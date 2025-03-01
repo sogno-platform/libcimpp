@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class SubGeographicalRegion;
 
-	/*
-	A geographical region of a power system network model.
-	*/
+	/** \brief A geographical region of a power system network model. */
 	class GeographicalRegion : public IdentifiedObject
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		GeographicalRegion();
 		~GeographicalRegion() override;
 
-		std::list<CIMPP::SubGeographicalRegion*> Regions;  /* All sub-geograhpical regions within this geographical region. Default: 0 */
+		/** \brief All sub-geograhpical regions within this geographical region. Default: 0 */
+		std::list<CIMPP::SubGeographicalRegion*> Regions;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -19,9 +19,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	IEEE Simplified Hydro Governor-Turbine Model.  Used for Mechanical-Hydraulic and Electro-Hydraulic turbine governors, with our without steam feedback. Typical values given are for Mechanical-Hydraulic.  Ref
-	*/
+	/** \brief IEEE Simplified Hydro Governor-Turbine Model.  Used for Mechanical-Hydraulic and Electro-Hydraulic turbine governors, with our without steam feedback. Typical values given are for Mechanical-Hydraulic.  Ref */
 	class GovHydroIEEE0 : public TurbineGovernorDynamics
 	{
 	public:
@@ -29,14 +27,29 @@ namespace CIMPP
 		GovHydroIEEE0();
 		~GovHydroIEEE0() override;
 
-		CIMPP::PU k;  /* Governor gain (K. Default: nullptr */
-		CIMPP::ActivePower mwbase;  /* Base for power values (MWbase) (&gt; 0).  Unit = MW. Default: nullptr */
-		CIMPP::PU pmax;  /* Gate maximum (Pmax). Default: nullptr */
-		CIMPP::PU pmin;  /* Gate minimum (Pmin). Default: nullptr */
-		CIMPP::Seconds t1;  /* Governor lag time constant (T1).  Typical Value = 0.25. Default: nullptr */
-		CIMPP::Seconds t2;  /* Governor lead time constant (T2.  Typical Value = 0. Default: nullptr */
-		CIMPP::Seconds t3;  /* Gate actuator time constant (T3).  Typical Value = 0.1. Default: nullptr */
-		CIMPP::Seconds t4;  /* Water starting time (T4). Default: nullptr */
+		/** \brief Governor gain (K. Default: nullptr */
+		CIMPP::PU k;
+
+		/** \brief Base for power values (MWbase) (&gt; 0).  Unit = MW. Default: nullptr */
+		CIMPP::ActivePower mwbase;
+
+		/** \brief Gate maximum (Pmax). Default: nullptr */
+		CIMPP::PU pmax;
+
+		/** \brief Gate minimum (Pmin). Default: nullptr */
+		CIMPP::PU pmin;
+
+		/** \brief Governor lag time constant (T1).  Typical Value = 0.25. Default: nullptr */
+		CIMPP::Seconds t1;
+
+		/** \brief Governor lead time constant (T2.  Typical Value = 0. Default: nullptr */
+		CIMPP::Seconds t2;
+
+		/** \brief Gate actuator time constant (T3).  Typical Value = 0.1. Default: nullptr */
+		CIMPP::Seconds t3;
+
+		/** \brief Water starting time (T4). Default: nullptr */
+		CIMPP::Seconds t4;
 
 		static const char debugName[];
 		const char* debugString() const override;

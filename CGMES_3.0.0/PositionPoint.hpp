@@ -19,9 +19,7 @@ namespace CIMPP
 {
 	class Location;
 
-	/*
-	Set of spatial coordinates that determine a point, defined in the coordinate system specified in 'Location.CoordinateSystem'. Use a single position point instance to describe a point-oriented location. Use a sequence of position points to describe a line-oriented object (physical location of non-point oriented objects like cables or lines), or area of an object (like a substation or a geographical zone - in this case, have first and last position point with the same values).
-	*/
+	/** \brief Set of spatial coordinates that determine a point, defined in the coordinate system specified in 'Location.CoordinateSystem'. Use a single position point instance to describe a point-oriented location. Use a sequence of position points to describe a line-oriented object (physical location of non-point oriented objects like cables or lines), or area of an object (like a substation or a geographical zone - in this case, have first and last position point with the same values). */
 	class PositionPoint : public BaseClass
 	{
 	public:
@@ -29,11 +27,20 @@ namespace CIMPP
 		PositionPoint();
 		~PositionPoint() override;
 
-		CIMPP::Location* Location;  /* Location described by this position point. Default: 0 */
-		CIMPP::Integer sequenceNumber;  /* Zero-relative sequence number of this point within a series of points. Default: 0 */
-		CIMPP::String xPosition;  /* X axis position. Default: '' */
-		CIMPP::String yPosition;  /* Y axis position. Default: '' */
-		CIMPP::String zPosition;  /* (if applicable) Z axis position. Default: '' */
+		/** \brief Location described by this position point. Default: 0 */
+		CIMPP::Location* Location;
+
+		/** \brief Zero-relative sequence number of this point within a series of points. Default: 0 */
+		CIMPP::Integer sequenceNumber;
+
+		/** \brief X axis position. Default: '' */
+		CIMPP::String xPosition;
+
+		/** \brief Y axis position. Default: '' */
+		CIMPP::String yPosition;
+
+		/** \brief (if applicable) Z axis position. Default: '' */
+		CIMPP::String zPosition;
 
 		static const char debugName[];
 		const char* debugString() const override;

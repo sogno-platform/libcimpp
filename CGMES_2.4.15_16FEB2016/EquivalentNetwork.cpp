@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-EquivalentNetwork::EquivalentNetwork() {};
-EquivalentNetwork::~EquivalentNetwork() {};
+EquivalentNetwork::EquivalentNetwork() {}
+EquivalentNetwork::~EquivalentNetwork() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ EquivalentNetwork::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_EquivalentEquipment_EquivalentNetwork(BaseClass*, BaseClass*);
 bool assign_EquivalentNetwork_EquivalentEquipments(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,7 +58,6 @@ bool assign_EquivalentNetwork_EquivalentEquipments(BaseClass* BaseClass_ptr1, Ba
 }
 
 
-
 const char EquivalentNetwork::debugName[] = "EquivalentNetwork";
 const char* EquivalentNetwork::debugString() const
 {
@@ -69,7 +66,7 @@ const char* EquivalentNetwork::debugString() const
 
 void EquivalentNetwork::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:EquivalentNetwork"), &EquivalentNetwork_factory));
+	factory_map.emplace("cim:EquivalentNetwork", &EquivalentNetwork_factory);
 }
 
 void EquivalentNetwork::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -78,7 +75,7 @@ void EquivalentNetwork::addPrimitiveAssignFnsToMap(std::unordered_map<std::strin
 
 void EquivalentNetwork::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:EquivalentNetwork.EquivalentEquipments"), &assign_EquivalentNetwork_EquivalentEquipments));
+	assign_map.emplace("cim:EquivalentNetwork.EquivalentEquipments", &assign_EquivalentNetwork_EquivalentEquipments);
 }
 
 void EquivalentNetwork::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

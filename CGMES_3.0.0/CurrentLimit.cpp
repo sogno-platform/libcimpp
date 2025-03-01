@@ -8,13 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "CurrentFlow.hpp"
-#include "CurrentFlow.hpp"
 
 using namespace CIMPP;
 
-CurrentLimit::CurrentLimit() {};
-CurrentLimit::~CurrentLimit() {};
+CurrentLimit::CurrentLimit() {}
+CurrentLimit::~CurrentLimit() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -43,38 +41,38 @@ CurrentLimit::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_CurrentLimit_normalValue(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_CurrentLimit_normalValue(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (CurrentLimit* element = dynamic_cast<CurrentLimit*>(BaseClass_ptr1))
+	CurrentLimit* element = dynamic_cast<CurrentLimit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->normalValue;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_CurrentLimit_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_CurrentLimit_value(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (CurrentLimit* element = dynamic_cast<CurrentLimit*>(BaseClass_ptr1))
+	CurrentLimit* element = dynamic_cast<CurrentLimit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->value;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_CurrentLimit_normalValue(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const CurrentLimit* element = dynamic_cast<const CurrentLimit*>(BaseClass_ptr1))
+	const CurrentLimit* element = dynamic_cast<const CurrentLimit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->normalValue;
 		if (!buffer.str().empty())
@@ -88,7 +86,8 @@ bool get_CurrentLimit_normalValue(const BaseClass* BaseClass_ptr1, std::stringst
 
 bool get_CurrentLimit_value(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const CurrentLimit* element = dynamic_cast<const CurrentLimit*>(BaseClass_ptr1))
+	const CurrentLimit* element = dynamic_cast<const CurrentLimit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->value;
 		if (!buffer.str().empty())
@@ -100,8 +99,6 @@ bool get_CurrentLimit_value(const BaseClass* BaseClass_ptr1, std::stringstream& 
 	return false;
 }
 
-
-
 const char CurrentLimit::debugName[] = "CurrentLimit";
 const char* CurrentLimit::debugString() const
 {
@@ -110,13 +107,13 @@ const char* CurrentLimit::debugString() const
 
 void CurrentLimit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:CurrentLimit"), &CurrentLimit_factory));
+	factory_map.emplace("cim:CurrentLimit", &CurrentLimit_factory);
 }
 
 void CurrentLimit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:CurrentLimit.normalValue"), &assign_CurrentLimit_normalValue));
-	assign_map.insert(std::make_pair(std::string("cim:CurrentLimit.value"), &assign_CurrentLimit_value));
+	assign_map.emplace("cim:CurrentLimit.normalValue", &assign_CurrentLimit_normalValue);
+	assign_map.emplace("cim:CurrentLimit.value", &assign_CurrentLimit_value);
 }
 
 void CurrentLimit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

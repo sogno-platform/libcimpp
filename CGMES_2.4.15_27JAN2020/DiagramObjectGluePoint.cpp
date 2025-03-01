@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-DiagramObjectGluePoint::DiagramObjectGluePoint() {};
-DiagramObjectGluePoint::~DiagramObjectGluePoint() {};
+DiagramObjectGluePoint::DiagramObjectGluePoint() {}
+DiagramObjectGluePoint::~DiagramObjectGluePoint() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ DiagramObjectGluePoint::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_DiagramObjectPoint_DiagramObjectGluePoint(BaseClass*, BaseClass*);
 bool assign_DiagramObjectGluePoint_DiagramObjectPoints(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,7 +58,6 @@ bool assign_DiagramObjectGluePoint_DiagramObjectPoints(BaseClass* BaseClass_ptr1
 }
 
 
-
 const char DiagramObjectGluePoint::debugName[] = "DiagramObjectGluePoint";
 const char* DiagramObjectGluePoint::debugString() const
 {
@@ -69,7 +66,7 @@ const char* DiagramObjectGluePoint::debugString() const
 
 void DiagramObjectGluePoint::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:DiagramObjectGluePoint"), &DiagramObjectGluePoint_factory));
+	factory_map.emplace("cim:DiagramObjectGluePoint", &DiagramObjectGluePoint_factory);
 }
 
 void DiagramObjectGluePoint::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -78,7 +75,7 @@ void DiagramObjectGluePoint::addPrimitiveAssignFnsToMap(std::unordered_map<std::
 
 void DiagramObjectGluePoint::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:DiagramObjectGluePoint.DiagramObjectPoints"), &assign_DiagramObjectGluePoint_DiagramObjectPoints));
+	assign_map.emplace("cim:DiagramObjectGluePoint.DiagramObjectPoints", &assign_DiagramObjectGluePoint_DiagramObjectPoints);
 }
 
 void DiagramObjectGluePoint::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

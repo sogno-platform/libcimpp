@@ -18,9 +18,7 @@ namespace CIMPP
 	class Accumulator;
 	class AccumulatorLimit;
 
-	/*
-	An AccumulatorLimitSet specifies a set of Limits that are associated with an Accumulator measurement.
-	*/
+	/** \brief An AccumulatorLimitSet specifies a set of Limits that are associated with an Accumulator measurement. */
 	class AccumulatorLimitSet : public LimitSet
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		AccumulatorLimitSet();
 		~AccumulatorLimitSet() override;
 
-		std::list<CIMPP::AccumulatorLimit*> Limits;  /* The set of limits. Default: 0 */
-		std::list<CIMPP::Accumulator*> Measurements;  /* A measurement may have zero or more limit ranges defined for it. Default: 0 */
+		/** \brief The set of limits. Default: 0 */
+		std::list<CIMPP::AccumulatorLimit*> Limits;
+
+		/** \brief A measurement may have zero or more limit ranges defined for it. Default: 0 */
+		std::list<CIMPP::Accumulator*> Measurements;
 
 		static const char debugName[];
 		const char* debugString() const override;

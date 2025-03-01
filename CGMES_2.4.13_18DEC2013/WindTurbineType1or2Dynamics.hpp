@@ -18,9 +18,7 @@ namespace CIMPP
 	class AsynchronousMachineDynamics;
 	class RemoteInputSignal;
 
-	/*
-	Parent class supporting relationships to wind turbines Type 1 and 2 and their control models.
-	*/
+	/** \brief Parent class supporting relationships to wind turbines Type 1 and 2 and their control models. */
 	class WindTurbineType1or2Dynamics : public DynamicsFunctionBlock
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		WindTurbineType1or2Dynamics();
 		~WindTurbineType1or2Dynamics() override;
 
-		CIMPP::AsynchronousMachineDynamics* AsynchronousMachineDynamics;  /* Asynchronous machine model with which this wind generator type 1 or 2 model is associated. Default: 0 */
-		CIMPP::RemoteInputSignal* RemoteInputSignal;  /* Remote input signal used by this wind generator Type 1 or Type 2 model. Default: 0 */
+		/** \brief Asynchronous machine model with which this wind generator type 1 or 2 model is associated. Default: 0 */
+		CIMPP::AsynchronousMachineDynamics* AsynchronousMachineDynamics;
+
+		/** \brief Remote input signal used by this wind generator Type 1 or Type 2 model. Default: 0 */
+		CIMPP::RemoteInputSignal* RemoteInputSignal;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -24,9 +24,7 @@ namespace CIMPP
 	class UnderexcitationLimiterDynamics;
 	class VoltageCompensatorDynamics;
 
-	/*
-	Excitation system function block whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font>
-	*/
+	/** \brief Excitation system function block whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font> */
 	class ExcitationSystemDynamics : public DynamicsFunctionBlock
 	{
 	public:
@@ -34,14 +32,29 @@ namespace CIMPP
 		ExcitationSystemDynamics();
 		~ExcitationSystemDynamics() override;
 
-		CIMPP::DiscontinuousExcitationControlDynamics* DiscontinuousExcitationControlDynamics;  /* Discontinuous excitation control model associated with this excitation system model. Default: 0 */
-		CIMPP::OverexcitationLimiterDynamics* OverexcitationLimiterDynamics;  /* Overexcitation limiter model associated with this excitation system model. Default: 0 */
-		CIMPP::PFVArControllerType1Dynamics* PFVArControllerType1Dynamics;  /* Power factor or VAr controller type 1 model associated with this excitation system model. Default: 0 */
-		CIMPP::PFVArControllerType2Dynamics* PFVArControllerType2Dynamics;  /* Power factor or VAr controller type 2 model associated with this excitation system model. Default: 0 */
-		CIMPP::PowerSystemStabilizerDynamics* PowerSystemStabilizerDynamics;  /* Power system stabilizer model associated with this excitation system model. Default: 0 */
-		CIMPP::SynchronousMachineDynamics* SynchronousMachineDynamics;  /* Synchronous machine model with which this excitation system model is associated. Default: 0 */
-		CIMPP::UnderexcitationLimiterDynamics* UnderexcitationLimiterDynamics;  /* Undrexcitation limiter model associated with this excitation system model. Default: 0 */
-		CIMPP::VoltageCompensatorDynamics* VoltageCompensatorDynamics;  /* Voltage compensator model associated with this excitation system model. Default: 0 */
+		/** \brief Discontinuous excitation control model associated with this excitation system model. Default: 0 */
+		CIMPP::DiscontinuousExcitationControlDynamics* DiscontinuousExcitationControlDynamics;
+
+		/** \brief Overexcitation limiter model associated with this excitation system model. Default: 0 */
+		CIMPP::OverexcitationLimiterDynamics* OverexcitationLimiterDynamics;
+
+		/** \brief Power factor or VAr controller type 1 model associated with this excitation system model. Default: 0 */
+		CIMPP::PFVArControllerType1Dynamics* PFVArControllerType1Dynamics;
+
+		/** \brief Power factor or VAr controller type 2 model associated with this excitation system model. Default: 0 */
+		CIMPP::PFVArControllerType2Dynamics* PFVArControllerType2Dynamics;
+
+		/** \brief Power system stabilizer model associated with this excitation system model. Default: 0 */
+		CIMPP::PowerSystemStabilizerDynamics* PowerSystemStabilizerDynamics;
+
+		/** \brief Synchronous machine model with which this excitation system model is associated. Default: 0 */
+		CIMPP::SynchronousMachineDynamics* SynchronousMachineDynamics;
+
+		/** \brief Undrexcitation limiter model associated with this excitation system model. Default: 0 */
+		CIMPP::UnderexcitationLimiterDynamics* UnderexcitationLimiterDynamics;
+
+		/** \brief Voltage compensator model associated with this excitation system model. Default: 0 */
+		CIMPP::VoltageCompensatorDynamics* VoltageCompensatorDynamics;
 
 		static const char debugName[];
 		const char* debugString() const override;

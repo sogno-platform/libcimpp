@@ -8,13 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Inductance.hpp"
-#include "Resistance.hpp"
 
 using namespace CIMPP;
 
-DCGround::DCGround() {};
-DCGround::~DCGround() {};
+DCGround::DCGround() {}
+DCGround::~DCGround() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,38 +40,38 @@ DCGround::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_DCGround_inductance(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DCGround_inductance(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DCGround* element = dynamic_cast<DCGround*>(BaseClass_ptr1))
+	DCGround* element = dynamic_cast<DCGround*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->inductance;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_DCGround_r(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DCGround_r(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DCGround* element = dynamic_cast<DCGround*>(BaseClass_ptr1))
+	DCGround* element = dynamic_cast<DCGround*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->r;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_DCGround_inductance(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DCGround* element = dynamic_cast<const DCGround*>(BaseClass_ptr1))
+	const DCGround* element = dynamic_cast<const DCGround*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->inductance;
 		if (!buffer.str().empty())
@@ -87,7 +85,8 @@ bool get_DCGround_inductance(const BaseClass* BaseClass_ptr1, std::stringstream&
 
 bool get_DCGround_r(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DCGround* element = dynamic_cast<const DCGround*>(BaseClass_ptr1))
+	const DCGround* element = dynamic_cast<const DCGround*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->r;
 		if (!buffer.str().empty())
@@ -99,8 +98,6 @@ bool get_DCGround_r(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 	return false;
 }
 
-
-
 const char DCGround::debugName[] = "DCGround";
 const char* DCGround::debugString() const
 {
@@ -109,13 +106,13 @@ const char* DCGround::debugString() const
 
 void DCGround::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:DCGround"), &DCGround_factory));
+	factory_map.emplace("cim:DCGround", &DCGround_factory);
 }
 
 void DCGround::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:DCGround.inductance"), &assign_DCGround_inductance));
-	assign_map.insert(std::make_pair(std::string("cim:DCGround.r"), &assign_DCGround_r));
+	assign_map.emplace("cim:DCGround.inductance", &assign_DCGround_inductance);
+	assign_map.emplace("cim:DCGround.r", &assign_DCGround_r);
 }
 
 void DCGround::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

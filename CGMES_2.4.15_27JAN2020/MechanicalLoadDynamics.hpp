@@ -18,9 +18,7 @@ namespace CIMPP
 	class AsynchronousMachineDynamics;
 	class SynchronousMachineDynamics;
 
-	/*
-	Mechanical load function block whose behavior is described by reference to a standard model
-	*/
+	/** \brief Mechanical load function block whose behavior is described by reference to a standard model */
 	class MechanicalLoadDynamics : public DynamicsFunctionBlock
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		MechanicalLoadDynamics();
 		~MechanicalLoadDynamics() override;
 
-		CIMPP::AsynchronousMachineDynamics* AsynchronousMachineDynamics;  /* Asynchronous machine model with which this mechanical load model is associated. Default: 0 */
-		CIMPP::SynchronousMachineDynamics* SynchronousMachineDynamics;  /* Synchronous machine model with which this mechanical load model is associated. Default: 0 */
+		/** \brief Asynchronous machine model with which this mechanical load model is associated. Default: 0 */
+		CIMPP::AsynchronousMachineDynamics* AsynchronousMachineDynamics;
+
+		/** \brief Synchronous machine model with which this mechanical load model is associated. Default: 0 */
+		CIMPP::SynchronousMachineDynamics* SynchronousMachineDynamics;
 
 		static const char debugName[];
 		const char* debugString() const override;

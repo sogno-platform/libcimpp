@@ -10,12 +10,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 #include "RatioTapChangerTable.hpp"
 #include "TransformerEnd.hpp"
-#include "PerCent.hpp"
 
 using namespace CIMPP;
 
-RatioTapChanger::RatioTapChanger() : RatioTapChangerTable(nullptr), TransformerEnd(nullptr) {};
-RatioTapChanger::~RatioTapChanger() {};
+RatioTapChanger::RatioTapChanger() : RatioTapChangerTable(nullptr), TransformerEnd(nullptr) {}
+RatioTapChanger::~RatioTapChanger() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -45,21 +44,6 @@ RatioTapChanger::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_RatioTapChanger_stepVoltageIncrement(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (RatioTapChanger* element = dynamic_cast<RatioTapChanger*>(BaseClass_ptr1))
-	{
-		buffer >> element->stepVoltageIncrement;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_RatioTapChangerTable_RatioTapChanger(BaseClass*, BaseClass*);
 bool assign_RatioTapChanger_RatioTapChangerTable(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -76,6 +60,7 @@ bool assign_RatioTapChanger_RatioTapChangerTable(BaseClass* BaseClass_ptr1, Base
 	}
 	return false;
 }
+
 bool assign_TransformerEnd_RatioTapChanger(BaseClass*, BaseClass*);
 bool assign_RatioTapChanger_TransformerEnd(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -93,24 +78,24 @@ bool assign_RatioTapChanger_TransformerEnd(BaseClass* BaseClass_ptr1, BaseClass*
 	return false;
 }
 
-bool get_RatioTapChanger_stepVoltageIncrement(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+bool assign_RatioTapChanger_stepVoltageIncrement(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (const RatioTapChanger* element = dynamic_cast<const RatioTapChanger*>(BaseClass_ptr1))
+	RatioTapChanger* element = dynamic_cast<RatioTapChanger*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
-		buffer << element->stepVoltageIncrement;
-		if (!buffer.str().empty())
+		buffer >> element->stepVoltageIncrement;
+		if (!buffer.fail())
 		{
 			return true;
 		}
 	}
-	buffer.setstate(std::ios::failbit);
 	return false;
 }
 
-
 bool get_RatioTapChanger_RatioTapChangerTable(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const RatioTapChanger* element = dynamic_cast<const RatioTapChanger*>(BaseClass_ptr1))
+	const RatioTapChanger* element = dynamic_cast<const RatioTapChanger*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->RatioTapChangerTable != 0)
 		{
@@ -123,7 +108,8 @@ bool get_RatioTapChanger_RatioTapChangerTable(const BaseClass* BaseClass_ptr1, s
 
 bool get_RatioTapChanger_TransformerEnd(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const RatioTapChanger* element = dynamic_cast<const RatioTapChanger*>(BaseClass_ptr1))
+	const RatioTapChanger* element = dynamic_cast<const RatioTapChanger*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->TransformerEnd != 0)
 		{
@@ -134,6 +120,20 @@ bool get_RatioTapChanger_TransformerEnd(const BaseClass* BaseClass_ptr1, std::li
 	return false;
 }
 
+bool get_RatioTapChanger_stepVoltageIncrement(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	const RatioTapChanger* element = dynamic_cast<const RatioTapChanger*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer << element->stepVoltageIncrement;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 const char RatioTapChanger::debugName[] = "RatioTapChanger";
 const char* RatioTapChanger::debugString() const
@@ -143,18 +143,18 @@ const char* RatioTapChanger::debugString() const
 
 void RatioTapChanger::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:RatioTapChanger"), &RatioTapChanger_factory));
+	factory_map.emplace("cim:RatioTapChanger", &RatioTapChanger_factory);
 }
 
 void RatioTapChanger::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:RatioTapChanger.stepVoltageIncrement"), &assign_RatioTapChanger_stepVoltageIncrement));
+	assign_map.emplace("cim:RatioTapChanger.stepVoltageIncrement", &assign_RatioTapChanger_stepVoltageIncrement);
 }
 
 void RatioTapChanger::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:RatioTapChanger.RatioTapChangerTable"), &assign_RatioTapChanger_RatioTapChangerTable));
-	assign_map.insert(std::make_pair(std::string("cim:RatioTapChanger.TransformerEnd"), &assign_RatioTapChanger_TransformerEnd));
+	assign_map.emplace("cim:RatioTapChanger.RatioTapChangerTable", &assign_RatioTapChanger_RatioTapChangerTable);
+	assign_map.emplace("cim:RatioTapChanger.TransformerEnd", &assign_RatioTapChanger_TransformerEnd);
 }
 
 void RatioTapChanger::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

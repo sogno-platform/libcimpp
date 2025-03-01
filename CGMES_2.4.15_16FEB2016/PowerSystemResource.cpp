@@ -14,8 +14,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-PowerSystemResource::PowerSystemResource() : Location(nullptr) {};
-PowerSystemResource::~PowerSystemResource() {};
+PowerSystemResource::PowerSystemResource() : Location(nullptr) {}
+PowerSystemResource::~PowerSystemResource() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -48,8 +48,6 @@ PowerSystemResource::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_Control_PowerSystemResource(BaseClass*, BaseClass*);
 bool assign_PowerSystemResource_Controls(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -66,6 +64,7 @@ bool assign_PowerSystemResource_Controls(BaseClass* BaseClass_ptr1, BaseClass* B
 	}
 	return false;
 }
+
 bool assign_Location_PowerSystemResources(BaseClass*, BaseClass*);
 bool assign_PowerSystemResource_Location(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -82,6 +81,7 @@ bool assign_PowerSystemResource_Location(BaseClass* BaseClass_ptr1, BaseClass* B
 	}
 	return false;
 }
+
 bool assign_Measurement_PowerSystemResource(BaseClass*, BaseClass*);
 bool assign_PowerSystemResource_Measurements(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -101,6 +101,7 @@ bool assign_PowerSystemResource_Measurements(BaseClass* BaseClass_ptr1, BaseClas
 
 
 
+
 const char PowerSystemResource::debugName[] = "PowerSystemResource";
 const char* PowerSystemResource::debugString() const
 {
@@ -109,7 +110,7 @@ const char* PowerSystemResource::debugString() const
 
 void PowerSystemResource::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:PowerSystemResource"), &PowerSystemResource_factory));
+	factory_map.emplace("cim:PowerSystemResource", &PowerSystemResource_factory);
 }
 
 void PowerSystemResource::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -118,9 +119,9 @@ void PowerSystemResource::addPrimitiveAssignFnsToMap(std::unordered_map<std::str
 
 void PowerSystemResource::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:PowerSystemResource.Controls"), &assign_PowerSystemResource_Controls));
-	assign_map.insert(std::make_pair(std::string("cim:PowerSystemResource.Location"), &assign_PowerSystemResource_Location));
-	assign_map.insert(std::make_pair(std::string("cim:PowerSystemResource.Measurements"), &assign_PowerSystemResource_Measurements));
+	assign_map.emplace("cim:PowerSystemResource.Controls", &assign_PowerSystemResource_Controls);
+	assign_map.emplace("cim:PowerSystemResource.Location", &assign_PowerSystemResource_Location);
+	assign_map.emplace("cim:PowerSystemResource.Measurements", &assign_PowerSystemResource_Measurements);
 }
 
 void PowerSystemResource::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

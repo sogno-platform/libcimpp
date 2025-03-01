@@ -11,8 +11,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-EnergyConnection::EnergyConnection() {};
-EnergyConnection::~EnergyConnection() {};
+EnergyConnection::EnergyConnection() {}
+EnergyConnection::~EnergyConnection() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -41,11 +41,6 @@ EnergyConnection::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
-
-
-
 const char EnergyConnection::debugName[] = "EnergyConnection";
 const char* EnergyConnection::debugString() const
 {
@@ -54,7 +49,7 @@ const char* EnergyConnection::debugString() const
 
 void EnergyConnection::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:EnergyConnection"), &EnergyConnection_factory));
+	factory_map.emplace("cim:EnergyConnection", &EnergyConnection_factory);
 }
 
 void EnergyConnection::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)

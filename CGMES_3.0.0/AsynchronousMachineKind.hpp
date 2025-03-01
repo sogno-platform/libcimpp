@@ -9,21 +9,15 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Kind of Asynchronous Machine.
-	*/
+	/** \brief Kind of Asynchronous Machine. */
 	class AsynchronousMachineKind
 	{
 	public:
 		enum AsynchronousMachineKind_ENUM
 		{
-			/**
-			 * The Asynchronous Machine is a generator.
-			 */
+			/** The Asynchronous Machine is a generator. */
 			generator,
-			/**
-			 * The Asynchronous Machine is a motor.
-			 */
+			/** The Asynchronous Machine is a motor. */
 			motor,
 		};
 

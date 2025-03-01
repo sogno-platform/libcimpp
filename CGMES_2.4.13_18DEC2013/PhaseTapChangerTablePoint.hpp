@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class PhaseTapChangerTable;
 
-	/*
-	Describes each tap step in the phase tap changer tabular curve.
-	*/
+	/** \brief Describes each tap step in the phase tap changer tabular curve. */
 	class PhaseTapChangerTablePoint : public TapChangerTablePoint
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		PhaseTapChangerTablePoint();
 		~PhaseTapChangerTablePoint() override;
 
-		CIMPP::PhaseTapChangerTable* PhaseTapChangerTable;  /* The table of this point. Default: 0 */
-		CIMPP::AngleDegrees angle;  /* The angle difference in degrees. Default: nullptr */
+		/** \brief The table of this point. Default: 0 */
+		CIMPP::PhaseTapChangerTable* PhaseTapChangerTable;
+
+		/** \brief The angle difference in degrees. Default: nullptr */
+		CIMPP::AngleDegrees angle;
 
 		static const char debugName[];
 		const char* debugString() const override;
