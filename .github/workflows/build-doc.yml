@@ -11,6 +11,8 @@ jobs:
     strategy:
       matrix:
         schema:
+        - CGMES_2.4.13_18DEC2013
+        - CGMES_2.4.15_16FEB2016
         - CGMES_2.4.15_27JAN2020
         - CGMES_3.0.0
     steps:
@@ -43,8 +45,7 @@ jobs:
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     env:
-      CIM_1: CGMES_2.4.15_27JAN2020
-      CIM_2: CGMES_3.0.0
+      CIM: CGMES_3.0.0
     steps:
     - name: Download
       uses: actions/download-artifact@v4
@@ -52,9 +53,8 @@ jobs:
       shell: bash
       run: |
           mkdir -p ./copy_files/docs
-          cp -r ./doc_${{env.CIM_1}} ./copy_files/docs/${{env.CIM_1}}
-          cp -r ./doc_${{env.CIM_2}} ./copy_files/docs/${{env.CIM_2}}
-          echo "<html><head><meta http-equiv='refresh' content='0; url=${{env.CIM_1}}/index.html' /></head></html>" >./copy_files/docs/index.html
+          cp -r ./doc_${{env.CIM}} ./copy_files/docs/${{env.CIM}}
+          echo "<html><head><meta http-equiv='refresh' content='0; url=${{env.CIM}}/index.html' /></head></html>" >./copy_files/docs/index.html
     - name: Upload Artifact github-pages
       uses: actions/upload-pages-artifact@v3
       with:
