@@ -97,7 +97,7 @@ bool CIMWriter::writeCim(std::ostream& rdf, const std::vector<BaseClass*>& objLi
           std::stringstream stream;
           if (func(obj, stream))
           {
-            rdfObj << "    <" << attr << ">" << stream.str() << "</" << attr << ">" << std::endl;
+            rdfObj << "    <" << attr << ">" << xmlEscape(stream.str()) << "</" << attr << ">" << std::endl;
             ++attributesCount;
           }
         }
@@ -231,4 +231,27 @@ CGMESProfile CIMWriter::getAttributeProfile(const BaseClass* obj, const std::str
     }
   }
   return UnknownProfile;
+}
+
+std::string CIMWriter::xmlEscape(const std::string& txt)
+{
+  if (txt.find_first_of("&<>'\"") == std::string::npos)
+  {
+    return txt;
+  }
+  std::string result;
+  result.reserve(txt.size() + 10);
+  for (size_t pos = 0; pos != txt.size(); ++pos)
+  {
+    switch (txt[pos])
+    {
+      case '&':   result.append("&amp;");       break;
+      case '<':   result.append("&lt;");        break;
+      case '>':   result.append("&gt;");        break;
+      case '\'':  result.append("&apos;");      break;
+      case '"':   result.append("&quot;");      break;
+      default:    result.append(&txt[pos], 1);  break;
+    }
+  }
+  return result;
 }
