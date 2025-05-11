@@ -230,7 +230,7 @@ std::string CIMContentHandler::get_rdf_enum(const AttributesT &attributes)
 	{
 		if(attributes.getQName(i) == "rdf:resource")
 		{
-			std::regex expr("^http[s]*://[a-zA-Z0-9./_]*CIM-schema-cim[0-9]+#([a-zA-z0-9]*).([a-zA-z0-9]*)");
+			std::regex expr("^http[s]*://.*#([a-zA-z0-9]*).([a-zA-z0-9]*)");
 			std::smatch m;
 			std::string str = attributes.getValue(i);
 			if(std::regex_match(str, m, expr))
