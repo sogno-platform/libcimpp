@@ -15,9 +15,25 @@
 #include "gettercache.hpp"
 #include "profilecache.hpp"
 
-std::map<CGMESProfile, std::string> CIMWriter::writeFiles(const std::string& outputfile,
+void CIMWriter::writeFile(const std::string& path, const std::vector<BaseClass*>& objList)
+{
+  writeFile(path, objList, UnknownProfile, {}, {});
+}
+
+void CIMWriter::writeFile(const std::string& path, const std::vector<BaseClass*>& objList,
+                          const CGMESProfile& profile, const std::string& modelId,
+                          const std::map<std::string, CGMESProfile>& classProfileMap)
+{
+  std::stringstream rdf;
+  writeCim(rdf, objList, profile, modelId, classProfileMap);
+
+  std::ofstream rdfFile(path);
+  rdfFile << rdf.str();
+}
+
+std::map<CGMESProfile, std::string> CIMWriter::writeFiles(const std::string& pathStem,
                                                           const std::vector<BaseClass*>& objList,
-                                                          const std::string& modelID,
+                                                          const std::string& modelIdStem,
                                                           const std::map<std::string, CGMESProfile>& classProfileMap)
 {
   std::map<CGMESProfile, std::string> profileToFileMap;
@@ -26,9 +42,9 @@ std::map<CGMESProfile, std::string> CIMWriter::writeFiles(const std::string& out
   {
     std::string profileName = getProfileLongName(profile);
     std::stringstream rdf;
-    if (writeCim(rdf, objList, profile, modelID + "_" + profileName, classProfileMap))
+    if (writeCim(rdf, objList, profile, modelIdStem + "_" + profileName, classProfileMap))
     {
-      std::string file = outputfile + "_" + profileName + ".xml";
+      std::string file = pathStem + "_" + profileName + ".xml";
       std::ofstream rdfFile(file);
       rdfFile << rdf.str();
       profileToFileMap.emplace(profile, file);
@@ -38,8 +54,13 @@ std::map<CGMESProfile, std::string> CIMWriter::writeFiles(const std::string& out
   return profileToFileMap;
 }
 
+void CIMWriter::writeCim(std::ostream& rdf, const std::vector<BaseClass*>& objList)
+{
+  writeCim(rdf, objList, UnknownProfile, {}, {});
+}
+
 bool CIMWriter::writeCim(std::ostream& rdf, const std::vector<BaseClass*>& objList,
-                         const CGMESProfile& profile, const std::string& modelID,
+                         const CGMESProfile& profile, const std::string& modelId,
                          const std::map<std::string, CGMESProfile>& classProfileMap)
 {
   int objectsCount = 0;
@@ -49,31 +70,41 @@ bool CIMWriter::writeCim(std::ostream& rdf, const std::vector<BaseClass*>& objLi
 
   rdf << "<?xml version='1.0' encoding='utf-8' ?>" << std::endl;
   rdf << "<rdf:RDF xmlns:rdf='" << rdfURL << "'" << std::endl;
-  rdf << "         xmlns:cim='" << cimURL << "'" << std::endl;
-  rdf << "         xmlns:md='" << mdURL << "'>" << std::endl;
-
-  rdf << "  <md:FullModel rdf:about='#" << modelID << "'>" << std::endl;
-  for (const auto& uri : getProfileURIs(profile))
+  rdf << "         xmlns:cim='" << cimURL << "'";
+  if (profile != UnknownProfile)
   {
-    rdf << "    <md:Model.profile>" << uri << "</md:Model.profile>" << std::endl;
+    rdf  << std::endl << "         xmlns:md='" << mdURL << "'";
   }
-  rdf << "  </md:FullModel>" << std::endl;
+  rdf << ">" << std::endl;
+
+  if (profile != UnknownProfile)
+  {
+    rdf << "  <md:FullModel rdf:about='#" << modelId << "'>" << std::endl;
+    for (const auto& uri : getProfileURIs(profile))
+    {
+      rdf << "    <md:Model.profile>" << uri << "</md:Model.profile>" << std::endl;
+    }
+    rdf << "  </md:FullModel>" << std::endl;
+  }
 
   for (const BaseClass* obj : objList)
   {
     std::string type = obj->debugString();
     std::string id   = obj->getRdfid();
 
-    if (!id.empty() && type != "UnknownType" && isClassMatchingProfile(obj, profile))
+    if (!id.empty() && type != "UnknownType" && (profile == UnknownProfile || isClassMatchingProfile(obj, profile)))
     {
       std::stringstream rdfObj;
       int attributesCount = 0;
 
       CGMESProfile classProfile = UnknownProfile;
-      auto it = classProfileMap.find(type);
-      if (it != classProfileMap.end())
+      if (profile != UnknownProfile)
       {
-        classProfile = it->second;
+        auto it = classProfileMap.find(type);
+        if (it != classProfileMap.end())
+        {
+          classProfile = it->second;
+        }
       }
 
       bool mainEntryOfObject = (classProfile == profile);
@@ -92,7 +123,7 @@ bool CIMWriter::writeCim(std::ostream& rdf, const std::vector<BaseClass*>& objLi
         get_function func = attrAndFunc.second;
 
         if (attr != "cim:IdentifiedObject.mRID" &&
-            getAttributeProfile(obj, attr, classProfile) == profile)
+            (profile == UnknownProfile || getAttributeProfile(obj, attr, classProfile) == profile))
         {
           std::stringstream stream;
           if (func(obj, stream))
@@ -108,7 +139,7 @@ bool CIMWriter::writeCim(std::ostream& rdf, const std::vector<BaseClass*>& objLi
         std::string attr        = attrAndFunc.first;
         class_get_function func = attrAndFunc.second;
 
-        if (getAttributeProfile(obj, attr, classProfile) == profile)
+        if (profile == UnknownProfile || getAttributeProfile(obj, attr, classProfile) == profile)
         {
           std::list<const BaseClass*> targetList;
           if (func(obj, targetList))
@@ -127,7 +158,7 @@ bool CIMWriter::writeCim(std::ostream& rdf, const std::vector<BaseClass*>& objLi
         std::string attr  = attrAndFunc.first;
         get_function func = attrAndFunc.second;
 
-        if (getAttributeProfile(obj, attr, classProfile) == profile)
+        if (profile == UnknownProfile || getAttributeProfile(obj, attr, classProfile) == profile)
         {
           std::stringstream stream;
           if (func(obj, stream))
