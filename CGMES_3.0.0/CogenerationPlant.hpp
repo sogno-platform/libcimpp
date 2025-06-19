@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class ThermalGeneratingUnit;
 
-	/*
-	A set of thermal generating units for the production of electrical energy and process steam (usually from the output of the steam turbines). The steam sendout is typically used for industrial purposes or for municipal heating and cooling.
-	*/
+	/** \brief A set of thermal generating units for the production of electrical energy and process steam (usually from the output of the steam turbines). The steam sendout is typically used for industrial purposes or for municipal heating and cooling. */
 	class CogenerationPlant : public PowerSystemResource
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		CogenerationPlant();
 		~CogenerationPlant() override;
 
-		std::list<CIMPP::ThermalGeneratingUnit*> ThermalGeneratingUnits;  /* A thermal generating unit may be a member of a cogeneration plant. Default: 0 */
+		/** \brief A thermal generating unit may be a member of a cogeneration plant. Default: 0 */
+		std::list<CIMPP::ThermalGeneratingUnit*> ThermalGeneratingUnits;
 
 		static const char debugName[];
 		const char* debugString() const override;

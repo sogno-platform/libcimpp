@@ -9,9 +9,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Voltage variation with reactive power.
-	*/
+	/** \brief Voltage variation with reactive power. */
 	class VoltagePerReactivePower
 	{
 	public:

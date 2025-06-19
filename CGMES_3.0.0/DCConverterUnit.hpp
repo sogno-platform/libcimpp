@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class Substation;
 
-	/*
-	Indivisible operative unit comprising all equipment between the point of common coupling on the AC side and the point of common coupling - DC side, essentially one or more converters, together with one or more converter transformers, converter control equipment, essential protective and switching devices and auxiliaries, if any, used for conversion.
-	*/
+	/** \brief Indivisible operative unit comprising all equipment between the point of common coupling on the AC side and the point of common coupling - DC side, essentially one or more converters, together with one or more converter transformers, converter control equipment, essential protective and switching devices and auxiliaries, if any, used for conversion. */
 	class DCConverterUnit : public DCEquipmentContainer
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		DCConverterUnit();
 		~DCConverterUnit() override;
 
-		CIMPP::Substation* Substation;  /* The containing substation of the DC converter unit. Default: 0 */
-		CIMPP::DCConverterOperatingModeKind operationMode;  /* The operating mode of an HVDC bipole (bipolar, monopolar metallic return, etc). Default: 0 */
+		/** \brief The containing substation of the DC converter unit. Default: 0 */
+		CIMPP::Substation* Substation;
+
+		/** \brief The operating mode of an HVDC bipole (bipolar, monopolar metallic return, etc). Default: 0 */
+		CIMPP::DCConverterOperatingModeKind operationMode;
 
 		static const char debugName[];
 		const char* debugString() const override;

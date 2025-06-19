@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "GenICompensationForGenJ.hpp"
-#include "Seconds.hpp"
 
 using namespace CIMPP;
 
-VCompIEEEType2::VCompIEEEType2() {};
-VCompIEEEType2::~VCompIEEEType2() {};
+VCompIEEEType2::VCompIEEEType2() {}
+VCompIEEEType2::~VCompIEEEType2() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,21 +41,6 @@ VCompIEEEType2::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_VCompIEEEType2_tr(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (VCompIEEEType2* element = dynamic_cast<VCompIEEEType2*>(BaseClass_ptr1))
-	{
-		buffer >> element->tr;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_GenICompensationForGenJ_VcompIEEEType2(BaseClass*, BaseClass*);
 bool assign_VCompIEEEType2_GenICompensationForGenJ(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,9 +58,25 @@ bool assign_VCompIEEEType2_GenICompensationForGenJ(BaseClass* BaseClass_ptr1, Ba
 	return false;
 }
 
+bool assign_VCompIEEEType2_tr(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	VCompIEEEType2* element = dynamic_cast<VCompIEEEType2*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->tr;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_VCompIEEEType2_tr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const VCompIEEEType2* element = dynamic_cast<const VCompIEEEType2*>(BaseClass_ptr1))
+	const VCompIEEEType2* element = dynamic_cast<const VCompIEEEType2*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tr;
 		if (!buffer.str().empty())
@@ -88,8 +88,6 @@ bool get_VCompIEEEType2_tr(const BaseClass* BaseClass_ptr1, std::stringstream& b
 	return false;
 }
 
-
-
 const char VCompIEEEType2::debugName[] = "VCompIEEEType2";
 const char* VCompIEEEType2::debugString() const
 {
@@ -98,17 +96,17 @@ const char* VCompIEEEType2::debugString() const
 
 void VCompIEEEType2::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:VCompIEEEType2"), &VCompIEEEType2_factory));
+	factory_map.emplace("cim:VCompIEEEType2", &VCompIEEEType2_factory);
 }
 
 void VCompIEEEType2::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:VCompIEEEType2.tr"), &assign_VCompIEEEType2_tr));
+	assign_map.emplace("cim:VCompIEEEType2.tr", &assign_VCompIEEEType2_tr);
 }
 
 void VCompIEEEType2::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:VCompIEEEType2.GenICompensationForGenJ"), &assign_VCompIEEEType2_GenICompensationForGenJ));
+	assign_map.emplace("cim:VCompIEEEType2.GenICompensationForGenJ", &assign_VCompIEEEType2_GenICompensationForGenJ);
 }
 
 void VCompIEEEType2::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

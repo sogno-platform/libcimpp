@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class RegulatingControl;
 
-	/*
-	A pre-established pattern over time for a controlled variable, e.g., busbar voltage.
-	*/
+	/** \brief A pre-established pattern over time for a controlled variable, e.g., busbar voltage. */
 	class RegulationSchedule : public SeasonDayTypeSchedule
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		RegulationSchedule();
 		~RegulationSchedule() override;
 
-		CIMPP::RegulatingControl* RegulatingControl;  /* Regulating controls that have this Schedule. Default: 0 */
+		/** \brief Regulating controls that have this Schedule. Default: 0 */
+		CIMPP::RegulatingControl* RegulatingControl;
 
 		static const char debugName[];
 		const char* debugString() const override;

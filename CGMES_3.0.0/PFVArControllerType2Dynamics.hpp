@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class ExcitationSystemDynamics;
 
-	/*
-	Power factor or VAr controller type 2 function block whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font>
-	*/
+	/** \brief Power factor or VAr controller type 2 function block whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font> */
 	class PFVArControllerType2Dynamics : public DynamicsFunctionBlock
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		PFVArControllerType2Dynamics();
 		~PFVArControllerType2Dynamics() override;
 
-		CIMPP::ExcitationSystemDynamics* ExcitationSystemDynamics;  /* Excitation system model with which this power factor or VAr controller type 2 is associated. Default: 0 */
+		/** \brief Excitation system model with which this power factor or VAr controller type 2 is associated. Default: 0 */
+		CIMPP::ExcitationSystemDynamics* ExcitationSystemDynamics;
 
 		static const char debugName[];
 		const char* debugString() const override;

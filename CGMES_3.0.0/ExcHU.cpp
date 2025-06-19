@@ -8,23 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Float.hpp"
-#include "Float.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
 
 using namespace CIMPP;
 
-ExcHU::ExcHU() {};
-ExcHU::~ExcHU() {};
+ExcHU::ExcHU() {}
+ExcHU::~ExcHU() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -62,168 +50,178 @@ ExcHU::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_ExcHU_ae(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcHU_ae(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcHU* element = dynamic_cast<ExcHU*>(BaseClass_ptr1))
+	ExcHU* element = dynamic_cast<ExcHU*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ae;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcHU_ai(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcHU_ai(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcHU* element = dynamic_cast<ExcHU*>(BaseClass_ptr1))
+	ExcHU* element = dynamic_cast<ExcHU*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ai;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcHU_atr(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcHU_atr(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcHU* element = dynamic_cast<ExcHU*>(BaseClass_ptr1))
+	ExcHU* element = dynamic_cast<ExcHU*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->atr;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcHU_emax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcHU_emax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcHU* element = dynamic_cast<ExcHU*>(BaseClass_ptr1))
+	ExcHU* element = dynamic_cast<ExcHU*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->emax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcHU_emin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcHU_emin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcHU* element = dynamic_cast<ExcHU*>(BaseClass_ptr1))
+	ExcHU* element = dynamic_cast<ExcHU*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->emin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcHU_imax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcHU_imax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcHU* element = dynamic_cast<ExcHU*>(BaseClass_ptr1))
+	ExcHU* element = dynamic_cast<ExcHU*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->imax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcHU_imin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcHU_imin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcHU* element = dynamic_cast<ExcHU*>(BaseClass_ptr1))
+	ExcHU* element = dynamic_cast<ExcHU*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->imin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcHU_ke(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcHU_ke(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcHU* element = dynamic_cast<ExcHU*>(BaseClass_ptr1))
+	ExcHU* element = dynamic_cast<ExcHU*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ke;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcHU_ki(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcHU_ki(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcHU* element = dynamic_cast<ExcHU*>(BaseClass_ptr1))
+	ExcHU* element = dynamic_cast<ExcHU*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ki;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcHU_te(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcHU_te(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcHU* element = dynamic_cast<ExcHU*>(BaseClass_ptr1))
+	ExcHU* element = dynamic_cast<ExcHU*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->te;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcHU_ti(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcHU_ti(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcHU* element = dynamic_cast<ExcHU*>(BaseClass_ptr1))
+	ExcHU* element = dynamic_cast<ExcHU*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ti;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcHU_tr(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcHU_tr(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcHU* element = dynamic_cast<ExcHU*>(BaseClass_ptr1))
+	ExcHU* element = dynamic_cast<ExcHU*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tr;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_ExcHU_ae(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcHU* element = dynamic_cast<const ExcHU*>(BaseClass_ptr1))
+	const ExcHU* element = dynamic_cast<const ExcHU*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ae;
 		if (!buffer.str().empty())
@@ -237,7 +235,8 @@ bool get_ExcHU_ae(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcHU_ai(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcHU* element = dynamic_cast<const ExcHU*>(BaseClass_ptr1))
+	const ExcHU* element = dynamic_cast<const ExcHU*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ai;
 		if (!buffer.str().empty())
@@ -251,7 +250,8 @@ bool get_ExcHU_ai(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcHU_atr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcHU* element = dynamic_cast<const ExcHU*>(BaseClass_ptr1))
+	const ExcHU* element = dynamic_cast<const ExcHU*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->atr;
 		if (!buffer.str().empty())
@@ -265,7 +265,8 @@ bool get_ExcHU_atr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcHU_emax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcHU* element = dynamic_cast<const ExcHU*>(BaseClass_ptr1))
+	const ExcHU* element = dynamic_cast<const ExcHU*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->emax;
 		if (!buffer.str().empty())
@@ -279,7 +280,8 @@ bool get_ExcHU_emax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcHU_emin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcHU* element = dynamic_cast<const ExcHU*>(BaseClass_ptr1))
+	const ExcHU* element = dynamic_cast<const ExcHU*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->emin;
 		if (!buffer.str().empty())
@@ -293,7 +295,8 @@ bool get_ExcHU_emin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcHU_imax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcHU* element = dynamic_cast<const ExcHU*>(BaseClass_ptr1))
+	const ExcHU* element = dynamic_cast<const ExcHU*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->imax;
 		if (!buffer.str().empty())
@@ -307,7 +310,8 @@ bool get_ExcHU_imax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcHU_imin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcHU* element = dynamic_cast<const ExcHU*>(BaseClass_ptr1))
+	const ExcHU* element = dynamic_cast<const ExcHU*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->imin;
 		if (!buffer.str().empty())
@@ -321,7 +325,8 @@ bool get_ExcHU_imin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcHU_ke(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcHU* element = dynamic_cast<const ExcHU*>(BaseClass_ptr1))
+	const ExcHU* element = dynamic_cast<const ExcHU*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ke;
 		if (!buffer.str().empty())
@@ -335,7 +340,8 @@ bool get_ExcHU_ke(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcHU_ki(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcHU* element = dynamic_cast<const ExcHU*>(BaseClass_ptr1))
+	const ExcHU* element = dynamic_cast<const ExcHU*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ki;
 		if (!buffer.str().empty())
@@ -349,7 +355,8 @@ bool get_ExcHU_ki(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcHU_te(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcHU* element = dynamic_cast<const ExcHU*>(BaseClass_ptr1))
+	const ExcHU* element = dynamic_cast<const ExcHU*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->te;
 		if (!buffer.str().empty())
@@ -363,7 +370,8 @@ bool get_ExcHU_te(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcHU_ti(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcHU* element = dynamic_cast<const ExcHU*>(BaseClass_ptr1))
+	const ExcHU* element = dynamic_cast<const ExcHU*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ti;
 		if (!buffer.str().empty())
@@ -377,7 +385,8 @@ bool get_ExcHU_ti(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcHU_tr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcHU* element = dynamic_cast<const ExcHU*>(BaseClass_ptr1))
+	const ExcHU* element = dynamic_cast<const ExcHU*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tr;
 		if (!buffer.str().empty())
@@ -389,8 +398,6 @@ bool get_ExcHU_tr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 	return false;
 }
 
-
-
 const char ExcHU::debugName[] = "ExcHU";
 const char* ExcHU::debugString() const
 {
@@ -399,23 +406,23 @@ const char* ExcHU::debugString() const
 
 void ExcHU::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ExcHU"), &ExcHU_factory));
+	factory_map.emplace("cim:ExcHU", &ExcHU_factory);
 }
 
 void ExcHU::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ExcHU.ae"), &assign_ExcHU_ae));
-	assign_map.insert(std::make_pair(std::string("cim:ExcHU.ai"), &assign_ExcHU_ai));
-	assign_map.insert(std::make_pair(std::string("cim:ExcHU.atr"), &assign_ExcHU_atr));
-	assign_map.insert(std::make_pair(std::string("cim:ExcHU.emax"), &assign_ExcHU_emax));
-	assign_map.insert(std::make_pair(std::string("cim:ExcHU.emin"), &assign_ExcHU_emin));
-	assign_map.insert(std::make_pair(std::string("cim:ExcHU.imax"), &assign_ExcHU_imax));
-	assign_map.insert(std::make_pair(std::string("cim:ExcHU.imin"), &assign_ExcHU_imin));
-	assign_map.insert(std::make_pair(std::string("cim:ExcHU.ke"), &assign_ExcHU_ke));
-	assign_map.insert(std::make_pair(std::string("cim:ExcHU.ki"), &assign_ExcHU_ki));
-	assign_map.insert(std::make_pair(std::string("cim:ExcHU.te"), &assign_ExcHU_te));
-	assign_map.insert(std::make_pair(std::string("cim:ExcHU.ti"), &assign_ExcHU_ti));
-	assign_map.insert(std::make_pair(std::string("cim:ExcHU.tr"), &assign_ExcHU_tr));
+	assign_map.emplace("cim:ExcHU.ae", &assign_ExcHU_ae);
+	assign_map.emplace("cim:ExcHU.ai", &assign_ExcHU_ai);
+	assign_map.emplace("cim:ExcHU.atr", &assign_ExcHU_atr);
+	assign_map.emplace("cim:ExcHU.emax", &assign_ExcHU_emax);
+	assign_map.emplace("cim:ExcHU.emin", &assign_ExcHU_emin);
+	assign_map.emplace("cim:ExcHU.imax", &assign_ExcHU_imax);
+	assign_map.emplace("cim:ExcHU.imin", &assign_ExcHU_imin);
+	assign_map.emplace("cim:ExcHU.ke", &assign_ExcHU_ke);
+	assign_map.emplace("cim:ExcHU.ki", &assign_ExcHU_ki);
+	assign_map.emplace("cim:ExcHU.te", &assign_ExcHU_te);
+	assign_map.emplace("cim:ExcHU.ti", &assign_ExcHU_ti);
+	assign_map.emplace("cim:ExcHU.tr", &assign_ExcHU_tr);
 }
 
 void ExcHU::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

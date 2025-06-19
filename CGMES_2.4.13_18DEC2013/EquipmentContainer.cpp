@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-EquipmentContainer::EquipmentContainer() {};
-EquipmentContainer::~EquipmentContainer() {};
+EquipmentContainer::EquipmentContainer() {}
+EquipmentContainer::~EquipmentContainer() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -41,8 +41,6 @@ EquipmentContainer::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_Equipment_EquipmentContainer(BaseClass*, BaseClass*);
 bool assign_EquipmentContainer_Equipments(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -61,7 +59,6 @@ bool assign_EquipmentContainer_Equipments(BaseClass* BaseClass_ptr1, BaseClass* 
 }
 
 
-
 const char EquipmentContainer::debugName[] = "EquipmentContainer";
 const char* EquipmentContainer::debugString() const
 {
@@ -70,7 +67,7 @@ const char* EquipmentContainer::debugString() const
 
 void EquipmentContainer::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:EquipmentContainer"), &EquipmentContainer_factory));
+	factory_map.emplace("cim:EquipmentContainer", &EquipmentContainer_factory);
 }
 
 void EquipmentContainer::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -79,7 +76,7 @@ void EquipmentContainer::addPrimitiveAssignFnsToMap(std::unordered_map<std::stri
 
 void EquipmentContainer::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentContainer.Equipments"), &assign_EquipmentContainer_Equipments));
+	assign_map.emplace("cim:EquipmentContainer.Equipments", &assign_EquipmentContainer_Equipments);
 }
 
 void EquipmentContainer::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

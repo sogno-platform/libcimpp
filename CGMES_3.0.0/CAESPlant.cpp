@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-CAESPlant::CAESPlant() : ThermalGeneratingUnit(nullptr) {};
-CAESPlant::~CAESPlant() {};
+CAESPlant::CAESPlant() : ThermalGeneratingUnit(nullptr) {}
+CAESPlant::~CAESPlant() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ CAESPlant::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_ThermalGeneratingUnit_CAESPlant(BaseClass*, BaseClass*);
 bool assign_CAESPlant_ThermalGeneratingUnit(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,7 +58,6 @@ bool assign_CAESPlant_ThermalGeneratingUnit(BaseClass* BaseClass_ptr1, BaseClass
 }
 
 
-
 const char CAESPlant::debugName[] = "CAESPlant";
 const char* CAESPlant::debugString() const
 {
@@ -69,7 +66,7 @@ const char* CAESPlant::debugString() const
 
 void CAESPlant::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:CAESPlant"), &CAESPlant_factory));
+	factory_map.emplace("cim:CAESPlant", &CAESPlant_factory);
 }
 
 void CAESPlant::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -78,7 +75,7 @@ void CAESPlant::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assig
 
 void CAESPlant::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:CAESPlant.ThermalGeneratingUnit"), &assign_CAESPlant_ThermalGeneratingUnit));
+	assign_map.emplace("cim:CAESPlant.ThermalGeneratingUnit", &assign_CAESPlant_ThermalGeneratingUnit);
 }
 
 void CAESPlant::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

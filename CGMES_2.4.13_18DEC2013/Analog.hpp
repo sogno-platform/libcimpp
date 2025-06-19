@@ -19,9 +19,7 @@ namespace CIMPP
 	class AnalogLimitSet;
 	class AnalogValue;
 
-	/*
-	Analog represents an analog Measurement.
-	*/
+	/** \brief Analog represents an analog Measurement. */
 	class Analog : public Measurement
 	{
 	public:
@@ -29,9 +27,14 @@ namespace CIMPP
 		Analog();
 		~Analog() override;
 
-		std::list<CIMPP::AnalogValue*> AnalogValues;  /* Measurement to which this value is connected. Default: 0 */
-		std::list<CIMPP::AnalogLimitSet*> LimitSets;  /* The Measurements using the LimitSet. Default: 0 */
-		CIMPP::Boolean positiveFlowIn;  /* If true then this measurement is an active power, reactive power or current with the convention that a positive value measured at the Terminal means power is flowing into the related PowerSystemResource. Default: false */
+		/** \brief Measurement to which this value is connected. Default: 0 */
+		std::list<CIMPP::AnalogValue*> AnalogValues;
+
+		/** \brief The Measurements using the LimitSet. Default: 0 */
+		std::list<CIMPP::AnalogLimitSet*> LimitSets;
+
+		/** \brief If true then this measurement is an active power, reactive power or current with the convention that a positive value measured at the Terminal means power is flowing into the related PowerSystemResource. Default: false */
+		CIMPP::Boolean positiveFlowIn;
 
 		static const char debugName[];
 		const char* debugString() const override;

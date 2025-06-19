@@ -9,9 +9,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Decimal is the base-10 notational system for representing real numbers.
-	*/
+	/** \brief Decimal is the base-10 notational system for representing real numbers. */
 	class Decimal
 	{
 	public:

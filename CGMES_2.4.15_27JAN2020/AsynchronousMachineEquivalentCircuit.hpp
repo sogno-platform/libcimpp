@@ -17,9 +17,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	The electrical equations of all variations of the asynchronous model are based on the AsynchronousEquivalentCircuit diagram for the direct and quadrature axes, with two equivalent rotor windings in each axis.      =  +   =  +  *  / ( + )  =  +  * *  / ( *  +  *  +  * )  = ( + ) / ( * )  = ( *  +  *  +  * ) / ( *  * (+ ) Same equations using CIM attributes from AsynchronousMachineTimeConstantReactance class on left of = sign and AsynchronousMachineEquivalentCircuit class on right (except as noted): xs = xm + RotatingMachineDynamics.statorLeakageReactance xp = RotatingMachineDynamics.statorLeakageReactance + xm * xlr1 / (xm + xlr1) xpp = RotatingMachineDynamics.statorLeakageReactance + xm * xlr1* xlr2 / (xm * xlr1 + xm * xlr2 + xlr1 * xlr2) tpo = (xm + xlr1) / (2*pi*nominal frequency * rr1) tppo = (xm * xlr1 + xm * xlr2 + xlr1 * xlr2) / (2*pi*nominal frequency * rr2 * (xm + xlr1).
-	*/
+	/** \brief The electrical equations of all variations of the asynchronous model are based on the AsynchronousEquivalentCircuit diagram for the direct and quadrature axes, with two equivalent rotor windings in each axis.      =  +   =  +  *  / ( + )  =  +  * *  / ( *  +  *  +  * )  = ( + ) / ( * )  = ( *  +  *  +  * ) / ( *  * (+ ) Same equations using CIM attributes from AsynchronousMachineTimeConstantReactance class on left of = sign and AsynchronousMachineEquivalentCircuit class on right (except as noted): xs = xm + RotatingMachineDynamics.statorLeakageReactance xp = RotatingMachineDynamics.statorLeakageReactance + xm * xlr1 / (xm + xlr1) xpp = RotatingMachineDynamics.statorLeakageReactance + xm * xlr1* xlr2 / (xm * xlr1 + xm * xlr2 + xlr1 * xlr2) tpo = (xm + xlr1) / (2*pi*nominal frequency * rr1) tppo = (xm * xlr1 + xm * xlr2 + xlr1 * xlr2) / (2*pi*nominal frequency * rr2 * (xm + xlr1). */
 	class AsynchronousMachineEquivalentCircuit : public AsynchronousMachineDynamics
 	{
 	public:
@@ -27,11 +25,20 @@ namespace CIMPP
 		AsynchronousMachineEquivalentCircuit();
 		~AsynchronousMachineEquivalentCircuit() override;
 
-		CIMPP::PU rr1;  /* Damper 1 winding resistance. Default: nullptr */
-		CIMPP::PU rr2;  /* Damper 2 winding resistance. Default: nullptr */
-		CIMPP::PU xlr1;  /* Damper 1 winding leakage reactance. Default: nullptr */
-		CIMPP::PU xlr2;  /* Damper 2 winding leakage reactance. Default: nullptr */
-		CIMPP::PU xm;  /* Magnetizing reactance. Default: nullptr */
+		/** \brief Damper 1 winding resistance. Default: nullptr */
+		CIMPP::PU rr1;
+
+		/** \brief Damper 2 winding resistance. Default: nullptr */
+		CIMPP::PU rr2;
+
+		/** \brief Damper 1 winding leakage reactance. Default: nullptr */
+		CIMPP::PU xlr1;
+
+		/** \brief Damper 2 winding leakage reactance. Default: nullptr */
+		CIMPP::PU xlr2;
+
+		/** \brief Magnetizing reactance. Default: nullptr */
+		CIMPP::PU xm;
 
 		static const char debugName[];
 		const char* debugString() const override;

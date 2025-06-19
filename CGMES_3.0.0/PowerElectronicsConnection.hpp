@@ -22,9 +22,7 @@ namespace CIMPP
 	class PowerElectronicsUnit;
 	class WindTurbineType3or4Dynamics;
 
-	/*
-	A connection to the AC network for energy production or consumption that uses power electronics rather than rotating machines.
-	*/
+	/** \brief A connection to the AC network for energy production or consumption that uses power electronics rather than rotating machines. */
 	class PowerElectronicsConnection : public RegulatingCondEq
 	{
 	public:
@@ -32,14 +30,29 @@ namespace CIMPP
 		PowerElectronicsConnection();
 		~PowerElectronicsConnection() override;
 
-		CIMPP::PowerElectronicsUnit* PowerElectronicsUnit;  /* An AC network connection may have several power electronics units connecting through it. Default: 0 */
-		CIMPP::WindTurbineType3or4Dynamics* WindTurbineType3or4Dynamics;  /* The wind turbine type 3 or type 4 dynamics model associated with this power electronics connection. Default: 0 */
-		CIMPP::ReactivePower maxQ;  /* Maximum reactive power limit. This is the maximum (nameplate) limit for the unit. Default: nullptr */
-		CIMPP::ReactivePower minQ;  /* Minimum reactive power limit for the unit. This is the minimum (nameplate) limit for the unit. Default: nullptr */
-		CIMPP::ActivePower p;  /* Active power injection. Load sign convention is used, i.e. positive sign means flow out from a node. Starting value for a steady state solution. Default: nullptr */
-		CIMPP::ReactivePower q;  /* Reactive power injection. Load sign convention is used, i.e. positive sign means flow out from a node. Starting value for a steady state solution. Default: nullptr */
-		CIMPP::ApparentPower ratedS;  /* Nameplate apparent power rating for the unit. The attribute shall have a positive value. Default: nullptr */
-		CIMPP::Voltage ratedU;  /* Rated voltage (nameplate data, Ur in IEC 60909-0). It is primarily used for short circuit data exchange according to IEC 60909. The attribute shall be a positive value. Default: nullptr */
+		/** \brief An AC network connection may have several power electronics units connecting through it. Default: 0 */
+		CIMPP::PowerElectronicsUnit* PowerElectronicsUnit;
+
+		/** \brief The wind turbine type 3 or type 4 dynamics model associated with this power electronics connection. Default: 0 */
+		CIMPP::WindTurbineType3or4Dynamics* WindTurbineType3or4Dynamics;
+
+		/** \brief Maximum reactive power limit. This is the maximum (nameplate) limit for the unit. Default: nullptr */
+		CIMPP::ReactivePower maxQ;
+
+		/** \brief Minimum reactive power limit for the unit. This is the minimum (nameplate) limit for the unit. Default: nullptr */
+		CIMPP::ReactivePower minQ;
+
+		/** \brief Active power injection. Load sign convention is used, i.e. positive sign means flow out from a node. Starting value for a steady state solution. Default: nullptr */
+		CIMPP::ActivePower p;
+
+		/** \brief Reactive power injection. Load sign convention is used, i.e. positive sign means flow out from a node. Starting value for a steady state solution. Default: nullptr */
+		CIMPP::ReactivePower q;
+
+		/** \brief Nameplate apparent power rating for the unit. The attribute shall have a positive value. Default: nullptr */
+		CIMPP::ApparentPower ratedS;
+
+		/** \brief Rated voltage (nameplate data, Ur in IEC 60909-0). It is primarily used for short circuit data exchange according to IEC 60909. The attribute shall be a positive value. Default: nullptr */
+		CIMPP::Voltage ratedU;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -19,9 +19,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	IEC Type 3A generator set model.  Reference: IEC Standard 61400-27-1 Section 6.6.3.2.
-	*/
+	/** \brief IEC Type 3A generator set model.  Reference: IEC Standard 61400-27-1 Section 6.6.3.2. */
 	class WindGenTurbineType3aIEC : public WindGenTurbineType3IEC
 	{
 	public:
@@ -29,9 +27,14 @@ namespace CIMPP
 		WindGenTurbineType3aIEC();
 		~WindGenTurbineType3aIEC() override;
 
-		CIMPP::Simple_Float kpc;  /* Current PI controller proportional gain (K). It is type dependent parameter. Default: nullptr */
-		CIMPP::Seconds tic;  /* Current PI controller integration time constant (T). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU xs;  /* Electromagnetic transient reactance (x). It is type dependent parameter. Default: nullptr */
+		/** \brief Current PI controller proportional gain (K). It is type dependent parameter. Default: nullptr */
+		CIMPP::Simple_Float kpc;
+
+		/** \brief Current PI controller integration time constant (T). It is type dependent parameter. Default: nullptr */
+		CIMPP::Seconds tic;
+
+		/** \brief Electromagnetic transient reactance (x). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU xs;
 
 		static const char debugName[];
 		const char* debugString() const override;

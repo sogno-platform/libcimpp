@@ -8,15 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "DateTime.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
 
 using namespace CIMPP;
 
-Status::Status() {};
-Status::~Status() {};
+Status::Status() {}
+Status::~Status() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -46,64 +42,66 @@ Status::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_Status_dateTime(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Status_dateTime(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Status* element = dynamic_cast<Status*>(BaseClass_ptr1))
+	Status* element = dynamic_cast<Status*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->dateTime = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Status_reason(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Status_reason(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Status* element = dynamic_cast<Status*>(BaseClass_ptr1))
+	Status* element = dynamic_cast<Status*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->reason = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Status_remark(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Status_remark(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Status* element = dynamic_cast<Status*>(BaseClass_ptr1))
+	Status* element = dynamic_cast<Status*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->remark = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_Status_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Status_value(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Status* element = dynamic_cast<Status*>(BaseClass_ptr1))
+	Status* element = dynamic_cast<Status*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->value = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_Status_dateTime(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Status* element = dynamic_cast<const Status*>(BaseClass_ptr1))
+	const Status* element = dynamic_cast<const Status*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->dateTime;
 		if (!buffer.str().empty())
@@ -117,7 +115,8 @@ bool get_Status_dateTime(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_Status_reason(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Status* element = dynamic_cast<const Status*>(BaseClass_ptr1))
+	const Status* element = dynamic_cast<const Status*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->reason;
 		if (!buffer.str().empty())
@@ -131,7 +130,8 @@ bool get_Status_reason(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_Status_remark(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Status* element = dynamic_cast<const Status*>(BaseClass_ptr1))
+	const Status* element = dynamic_cast<const Status*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->remark;
 		if (!buffer.str().empty())
@@ -145,7 +145,8 @@ bool get_Status_remark(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_Status_value(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Status* element = dynamic_cast<const Status*>(BaseClass_ptr1))
+	const Status* element = dynamic_cast<const Status*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->value;
 		if (!buffer.str().empty())
@@ -157,8 +158,6 @@ bool get_Status_value(const BaseClass* BaseClass_ptr1, std::stringstream& buffer
 	return false;
 }
 
-
-
 const char Status::debugName[] = "Status";
 const char* Status::debugString() const
 {
@@ -167,15 +166,15 @@ const char* Status::debugString() const
 
 void Status::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:Status"), &Status_factory));
+	factory_map.emplace("cim:Status", &Status_factory);
 }
 
 void Status::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Status.dateTime"), &assign_Status_dateTime));
-	assign_map.insert(std::make_pair(std::string("cim:Status.reason"), &assign_Status_reason));
-	assign_map.insert(std::make_pair(std::string("cim:Status.remark"), &assign_Status_remark));
-	assign_map.insert(std::make_pair(std::string("cim:Status.value"), &assign_Status_value));
+	assign_map.emplace("cim:Status.dateTime", &assign_Status_dateTime);
+	assign_map.emplace("cim:Status.reason", &assign_Status_reason);
+	assign_map.emplace("cim:Status.remark", &assign_Status_remark);
+	assign_map.emplace("cim:Status.value", &assign_Status_value);
 }
 
 void Status::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

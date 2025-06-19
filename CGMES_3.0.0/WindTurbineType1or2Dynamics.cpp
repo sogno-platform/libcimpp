@@ -13,8 +13,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-WindTurbineType1or2Dynamics::WindTurbineType1or2Dynamics() : AsynchronousMachineDynamics(nullptr), RemoteInputSignal(nullptr) {};
-WindTurbineType1or2Dynamics::~WindTurbineType1or2Dynamics() {};
+WindTurbineType1or2Dynamics::WindTurbineType1or2Dynamics() : AsynchronousMachineDynamics(nullptr), RemoteInputSignal(nullptr) {}
+WindTurbineType1or2Dynamics::~WindTurbineType1or2Dynamics() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,8 +42,6 @@ WindTurbineType1or2Dynamics::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_AsynchronousMachineDynamics_WindTurbineType1or2Dynamics(BaseClass*, BaseClass*);
 bool assign_WindTurbineType1or2Dynamics_AsynchronousMachineDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,6 +58,7 @@ bool assign_WindTurbineType1or2Dynamics_AsynchronousMachineDynamics(BaseClass* B
 	}
 	return false;
 }
+
 bool assign_RemoteInputSignal_WindTurbineType1or2Dynamics(BaseClass*, BaseClass*);
 bool assign_WindTurbineType1or2Dynamics_RemoteInputSignal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -77,10 +76,10 @@ bool assign_WindTurbineType1or2Dynamics_RemoteInputSignal(BaseClass* BaseClass_p
 	return false;
 }
 
-
 bool get_WindTurbineType1or2Dynamics_AsynchronousMachineDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const WindTurbineType1or2Dynamics* element = dynamic_cast<const WindTurbineType1or2Dynamics*>(BaseClass_ptr1))
+	const WindTurbineType1or2Dynamics* element = dynamic_cast<const WindTurbineType1or2Dynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->AsynchronousMachineDynamics != 0)
 		{
@@ -93,7 +92,8 @@ bool get_WindTurbineType1or2Dynamics_AsynchronousMachineDynamics(const BaseClass
 
 bool get_WindTurbineType1or2Dynamics_RemoteInputSignal(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const WindTurbineType1or2Dynamics* element = dynamic_cast<const WindTurbineType1or2Dynamics*>(BaseClass_ptr1))
+	const WindTurbineType1or2Dynamics* element = dynamic_cast<const WindTurbineType1or2Dynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->RemoteInputSignal != 0)
 		{
@@ -104,7 +104,6 @@ bool get_WindTurbineType1or2Dynamics_RemoteInputSignal(const BaseClass* BaseClas
 	return false;
 }
 
-
 const char WindTurbineType1or2Dynamics::debugName[] = "WindTurbineType1or2Dynamics";
 const char* WindTurbineType1or2Dynamics::debugString() const
 {
@@ -113,7 +112,7 @@ const char* WindTurbineType1or2Dynamics::debugString() const
 
 void WindTurbineType1or2Dynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:WindTurbineType1or2Dynamics"), &WindTurbineType1or2Dynamics_factory));
+	factory_map.emplace("cim:WindTurbineType1or2Dynamics", &WindTurbineType1or2Dynamics_factory);
 }
 
 void WindTurbineType1or2Dynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -122,8 +121,8 @@ void WindTurbineType1or2Dynamics::addPrimitiveAssignFnsToMap(std::unordered_map<
 
 void WindTurbineType1or2Dynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindTurbineType1or2Dynamics.AsynchronousMachineDynamics"), &assign_WindTurbineType1or2Dynamics_AsynchronousMachineDynamics));
-	assign_map.insert(std::make_pair(std::string("cim:WindTurbineType1or2Dynamics.RemoteInputSignal"), &assign_WindTurbineType1or2Dynamics_RemoteInputSignal));
+	assign_map.emplace("cim:WindTurbineType1or2Dynamics.AsynchronousMachineDynamics", &assign_WindTurbineType1or2Dynamics_AsynchronousMachineDynamics);
+	assign_map.emplace("cim:WindTurbineType1or2Dynamics.RemoteInputSignal", &assign_WindTurbineType1or2Dynamics_RemoteInputSignal);
 }
 
 void WindTurbineType1or2Dynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

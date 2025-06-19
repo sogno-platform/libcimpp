@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class SynchronousMachineDynamics;
 
-	/*
-	Turbine-governor cross-compound function block whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font>
-	*/
+	/** \brief Turbine-governor cross-compound function block whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font> */
 	class CrossCompoundTurbineGovernorDynamics : public DynamicsFunctionBlock
 	{
 	public:
@@ -27,8 +25,11 @@ namespace CIMPP
 		CrossCompoundTurbineGovernorDynamics();
 		~CrossCompoundTurbineGovernorDynamics() override;
 
-		CIMPP::SynchronousMachineDynamics* HighPressureSynchronousMachineDynamics;  /* High-pressure synchronous machine with which this cross-compound turbine governor is associated. Default: 0 */
-		CIMPP::SynchronousMachineDynamics* LowPressureSynchronousMachineDynamics;  /* Low-pressure synchronous machine with which this cross-compound turbine governor is associated. Default: 0 */
+		/** \brief High-pressure synchronous machine with which this cross-compound turbine governor is associated. Default: 0 */
+		CIMPP::SynchronousMachineDynamics* HighPressureSynchronousMachineDynamics;
+
+		/** \brief Low-pressure synchronous machine with which this cross-compound turbine governor is associated. Default: 0 */
+		CIMPP::SynchronousMachineDynamics* LowPressureSynchronousMachineDynamics;
 
 		static const char debugName[];
 		const char* debugString() const override;

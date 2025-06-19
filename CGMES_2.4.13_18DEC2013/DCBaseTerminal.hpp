@@ -25,8 +25,11 @@ namespace CIMPP
 		DCBaseTerminal();
 		~DCBaseTerminal() override;
 
-		CIMPP::DCNode* DCNode;  /*  Default: 0 */
-		CIMPP::DCTopologicalNode* DCTopologicalNode;  /* See association end TopologicalNode.Terminal. Default: 0 */
+		/** \brief  Default: 0 */
+		CIMPP::DCNode* DCNode;
+
+		/** \brief See association end TopologicalNode.Terminal. Default: 0 */
+		CIMPP::DCTopologicalNode* DCTopologicalNode;
 
 		static const char debugName[];
 		const char* debugString() const override;

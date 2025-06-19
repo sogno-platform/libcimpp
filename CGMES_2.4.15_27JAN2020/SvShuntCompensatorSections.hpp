@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class ShuntCompensator;
 
-	/*
-	State variable for the number of sections in service for a shunt compensator.
-	*/
+	/** \brief State variable for the number of sections in service for a shunt compensator. */
 	class SvShuntCompensatorSections : public BaseClass
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		SvShuntCompensatorSections();
 		~SvShuntCompensatorSections() override;
 
-		CIMPP::ShuntCompensator* ShuntCompensator;  /* The shunt compensator for which the state applies. Default: 0 */
-		CIMPP::Simple_Float sections;  /* The number of sections in service as a continous variable. To get integer value scale with ShuntCompensator.bPerSection. Default: nullptr */
+		/** \brief The shunt compensator for which the state applies. Default: 0 */
+		CIMPP::ShuntCompensator* ShuntCompensator;
+
+		/** \brief The number of sections in service as a continous variable. To get integer value scale with ShuntCompensator.bPerSection. Default: nullptr */
+		CIMPP::Simple_Float sections;
 
 		static const char debugName[];
 		const char* debugString() const override;

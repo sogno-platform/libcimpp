@@ -8,18 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Resistance.hpp"
-#include "Resistance.hpp"
-#include "Boolean.hpp"
-#include "CurrentFlow.hpp"
-#include "Voltage.hpp"
-#include "Reactance.hpp"
-#include "Reactance.hpp"
 
 using namespace CIMPP;
 
-SeriesCompensator::SeriesCompensator() {};
-SeriesCompensator::~SeriesCompensator() {};
+SeriesCompensator::SeriesCompensator() {}
+SeriesCompensator::~SeriesCompensator() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -53,103 +46,108 @@ SeriesCompensator::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_SeriesCompensator_r(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_SeriesCompensator_r(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (SeriesCompensator* element = dynamic_cast<SeriesCompensator*>(BaseClass_ptr1))
+	SeriesCompensator* element = dynamic_cast<SeriesCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->r;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_SeriesCompensator_r0(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_SeriesCompensator_r0(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (SeriesCompensator* element = dynamic_cast<SeriesCompensator*>(BaseClass_ptr1))
+	SeriesCompensator* element = dynamic_cast<SeriesCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->r0;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_SeriesCompensator_varistorPresent(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_SeriesCompensator_varistorPresent(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (SeriesCompensator* element = dynamic_cast<SeriesCompensator*>(BaseClass_ptr1))
+	SeriesCompensator* element = dynamic_cast<SeriesCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->varistorPresent;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_SeriesCompensator_varistorRatedCurrent(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_SeriesCompensator_varistorRatedCurrent(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (SeriesCompensator* element = dynamic_cast<SeriesCompensator*>(BaseClass_ptr1))
+	SeriesCompensator* element = dynamic_cast<SeriesCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->varistorRatedCurrent;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_SeriesCompensator_varistorVoltageThreshold(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_SeriesCompensator_varistorVoltageThreshold(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (SeriesCompensator* element = dynamic_cast<SeriesCompensator*>(BaseClass_ptr1))
+	SeriesCompensator* element = dynamic_cast<SeriesCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->varistorVoltageThreshold;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_SeriesCompensator_x(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_SeriesCompensator_x(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (SeriesCompensator* element = dynamic_cast<SeriesCompensator*>(BaseClass_ptr1))
+	SeriesCompensator* element = dynamic_cast<SeriesCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->x;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_SeriesCompensator_x0(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_SeriesCompensator_x0(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (SeriesCompensator* element = dynamic_cast<SeriesCompensator*>(BaseClass_ptr1))
+	SeriesCompensator* element = dynamic_cast<SeriesCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->x0;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_SeriesCompensator_r(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SeriesCompensator* element = dynamic_cast<const SeriesCompensator*>(BaseClass_ptr1))
+	const SeriesCompensator* element = dynamic_cast<const SeriesCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->r;
 		if (!buffer.str().empty())
@@ -163,7 +161,8 @@ bool get_SeriesCompensator_r(const BaseClass* BaseClass_ptr1, std::stringstream&
 
 bool get_SeriesCompensator_r0(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SeriesCompensator* element = dynamic_cast<const SeriesCompensator*>(BaseClass_ptr1))
+	const SeriesCompensator* element = dynamic_cast<const SeriesCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->r0;
 		if (!buffer.str().empty())
@@ -177,7 +176,8 @@ bool get_SeriesCompensator_r0(const BaseClass* BaseClass_ptr1, std::stringstream
 
 bool get_SeriesCompensator_varistorPresent(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SeriesCompensator* element = dynamic_cast<const SeriesCompensator*>(BaseClass_ptr1))
+	const SeriesCompensator* element = dynamic_cast<const SeriesCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->varistorPresent;
 		if (!buffer.str().empty())
@@ -191,7 +191,8 @@ bool get_SeriesCompensator_varistorPresent(const BaseClass* BaseClass_ptr1, std:
 
 bool get_SeriesCompensator_varistorRatedCurrent(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SeriesCompensator* element = dynamic_cast<const SeriesCompensator*>(BaseClass_ptr1))
+	const SeriesCompensator* element = dynamic_cast<const SeriesCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->varistorRatedCurrent;
 		if (!buffer.str().empty())
@@ -205,7 +206,8 @@ bool get_SeriesCompensator_varistorRatedCurrent(const BaseClass* BaseClass_ptr1,
 
 bool get_SeriesCompensator_varistorVoltageThreshold(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SeriesCompensator* element = dynamic_cast<const SeriesCompensator*>(BaseClass_ptr1))
+	const SeriesCompensator* element = dynamic_cast<const SeriesCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->varistorVoltageThreshold;
 		if (!buffer.str().empty())
@@ -219,7 +221,8 @@ bool get_SeriesCompensator_varistorVoltageThreshold(const BaseClass* BaseClass_p
 
 bool get_SeriesCompensator_x(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SeriesCompensator* element = dynamic_cast<const SeriesCompensator*>(BaseClass_ptr1))
+	const SeriesCompensator* element = dynamic_cast<const SeriesCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->x;
 		if (!buffer.str().empty())
@@ -233,7 +236,8 @@ bool get_SeriesCompensator_x(const BaseClass* BaseClass_ptr1, std::stringstream&
 
 bool get_SeriesCompensator_x0(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SeriesCompensator* element = dynamic_cast<const SeriesCompensator*>(BaseClass_ptr1))
+	const SeriesCompensator* element = dynamic_cast<const SeriesCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->x0;
 		if (!buffer.str().empty())
@@ -245,8 +249,6 @@ bool get_SeriesCompensator_x0(const BaseClass* BaseClass_ptr1, std::stringstream
 	return false;
 }
 
-
-
 const char SeriesCompensator::debugName[] = "SeriesCompensator";
 const char* SeriesCompensator::debugString() const
 {
@@ -255,18 +257,18 @@ const char* SeriesCompensator::debugString() const
 
 void SeriesCompensator::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:SeriesCompensator"), &SeriesCompensator_factory));
+	factory_map.emplace("cim:SeriesCompensator", &SeriesCompensator_factory);
 }
 
 void SeriesCompensator::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:SeriesCompensator.r"), &assign_SeriesCompensator_r));
-	assign_map.insert(std::make_pair(std::string("cim:SeriesCompensator.r0"), &assign_SeriesCompensator_r0));
-	assign_map.insert(std::make_pair(std::string("cim:SeriesCompensator.varistorPresent"), &assign_SeriesCompensator_varistorPresent));
-	assign_map.insert(std::make_pair(std::string("cim:SeriesCompensator.varistorRatedCurrent"), &assign_SeriesCompensator_varistorRatedCurrent));
-	assign_map.insert(std::make_pair(std::string("cim:SeriesCompensator.varistorVoltageThreshold"), &assign_SeriesCompensator_varistorVoltageThreshold));
-	assign_map.insert(std::make_pair(std::string("cim:SeriesCompensator.x"), &assign_SeriesCompensator_x));
-	assign_map.insert(std::make_pair(std::string("cim:SeriesCompensator.x0"), &assign_SeriesCompensator_x0));
+	assign_map.emplace("cim:SeriesCompensator.r", &assign_SeriesCompensator_r);
+	assign_map.emplace("cim:SeriesCompensator.r0", &assign_SeriesCompensator_r0);
+	assign_map.emplace("cim:SeriesCompensator.varistorPresent", &assign_SeriesCompensator_varistorPresent);
+	assign_map.emplace("cim:SeriesCompensator.varistorRatedCurrent", &assign_SeriesCompensator_varistorRatedCurrent);
+	assign_map.emplace("cim:SeriesCompensator.varistorVoltageThreshold", &assign_SeriesCompensator_varistorVoltageThreshold);
+	assign_map.emplace("cim:SeriesCompensator.x", &assign_SeriesCompensator_x);
+	assign_map.emplace("cim:SeriesCompensator.x0", &assign_SeriesCompensator_x0);
 }
 
 void SeriesCompensator::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

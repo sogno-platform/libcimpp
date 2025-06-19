@@ -8,12 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Length.hpp"
 
 using namespace CIMPP;
 
-Conductor::Conductor() {};
-Conductor::~Conductor() {};
+Conductor::Conductor() {}
+Conductor::~Conductor() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,25 +39,24 @@ Conductor::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_Conductor_length(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_Conductor_length(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (Conductor* element = dynamic_cast<Conductor*>(BaseClass_ptr1))
+	Conductor* element = dynamic_cast<Conductor*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->length;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-
-
 bool get_Conductor_length(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Conductor* element = dynamic_cast<const Conductor*>(BaseClass_ptr1))
+	const Conductor* element = dynamic_cast<const Conductor*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->length;
 		if (!buffer.str().empty())
@@ -70,8 +68,6 @@ bool get_Conductor_length(const BaseClass* BaseClass_ptr1, std::stringstream& bu
 	return false;
 }
 
-
-
 const char Conductor::debugName[] = "Conductor";
 const char* Conductor::debugString() const
 {
@@ -80,12 +76,12 @@ const char* Conductor::debugString() const
 
 void Conductor::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:Conductor"), &Conductor_factory));
+	factory_map.emplace("cim:Conductor", &Conductor_factory);
 }
 
 void Conductor::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Conductor.length"), &assign_Conductor_length));
+	assign_map.emplace("cim:Conductor.length", &assign_Conductor_length);
 }
 
 void Conductor::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

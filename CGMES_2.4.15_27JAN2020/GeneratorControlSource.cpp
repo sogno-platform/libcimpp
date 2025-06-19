@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "GeneratorControlSource")
+		if (EnumSymbol.substr(0, pos) != "GeneratorControlSource")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,22 +50,22 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "unavailable")
+		if (EnumSymbol == "unavailable")
 		{
 			rop = GeneratorControlSource::unavailable;
 			return lop;
 		}
-		if(EnumSymbol == "offAGC")
+		if (EnumSymbol == "offAGC")
 		{
 			rop = GeneratorControlSource::offAGC;
 			return lop;
 		}
-		if(EnumSymbol == "onAGC")
+		if (EnumSymbol == "onAGC")
 		{
 			rop = GeneratorControlSource::onAGC;
 			return lop;
 		}
-		if(EnumSymbol == "plantControl")
+		if (EnumSymbol == "plantControl")
 		{
 			rop = GeneratorControlSource::plantControl;
 			return lop;

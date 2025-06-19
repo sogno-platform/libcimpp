@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Czech proportion/integral exciter.
-	*/
+	/** \brief Czech proportion/integral exciter. */
 	class ExcCZ : public ExcitationSystemDynamics
 	{
 	public:
@@ -28,16 +26,35 @@ namespace CIMPP
 		ExcCZ();
 		~ExcCZ() override;
 
-		CIMPP::PU efdmax;  /* Exciter output maximum limit (&lt;i&gt;Efdmax&lt;/i&gt;) (&amp;gt; ExcCZ.efdmin). Default: nullptr */
-		CIMPP::PU efdmin;  /* Exciter output minimum limit (&lt;i&gt;Efdmin&lt;/i&gt;) (&amp;lt; ExcCZ.efdmax). Default: nullptr */
-		CIMPP::PU ka;  /* Regulator gain (&lt;i&gt;Ka&lt;/i&gt;). Default: nullptr */
-		CIMPP::PU ke;  /* Exciter constant related to self-excited field (&lt;i&gt;Ke&lt;/i&gt;). Default: nullptr */
-		CIMPP::PU kp;  /* Regulator proportional gain (&lt;i&gt;Kp&lt;/i&gt;). Default: nullptr */
-		CIMPP::Seconds ta;  /* Regulator time constant (&lt;i&gt;Ta&lt;/i&gt;) (&amp;gt;= 0). Default: nullptr */
-		CIMPP::Seconds tc;  /* Regulator integral time constant (&lt;i&gt;Tc&lt;/i&gt;) (&amp;gt;= 0). Default: nullptr */
-		CIMPP::Seconds te;  /* Exciter time constant, integration rate associated with exciter control (&lt;i&gt;Te&lt;/i&gt;) (&amp;gt;= 0). Default: nullptr */
-		CIMPP::PU vrmax;  /* Voltage regulator maximum limit (&lt;i&gt;Vrmax&lt;/i&gt;) (&amp;gt; ExcCZ.vrmin). Default: nullptr */
-		CIMPP::PU vrmin;  /* Voltage regulator minimum limit (&lt;i&gt;Vrmin&lt;/i&gt;) (&amp;lt; ExcCZ.vrmax). Default: nullptr */
+		/** \brief Exciter output maximum limit (&lt;i&gt;Efdmax&lt;/i&gt;) (&amp;gt; ExcCZ.efdmin). Default: nullptr */
+		CIMPP::PU efdmax;
+
+		/** \brief Exciter output minimum limit (&lt;i&gt;Efdmin&lt;/i&gt;) (&amp;lt; ExcCZ.efdmax). Default: nullptr */
+		CIMPP::PU efdmin;
+
+		/** \brief Regulator gain (&lt;i&gt;Ka&lt;/i&gt;). Default: nullptr */
+		CIMPP::PU ka;
+
+		/** \brief Exciter constant related to self-excited field (&lt;i&gt;Ke&lt;/i&gt;). Default: nullptr */
+		CIMPP::PU ke;
+
+		/** \brief Regulator proportional gain (&lt;i&gt;Kp&lt;/i&gt;). Default: nullptr */
+		CIMPP::PU kp;
+
+		/** \brief Regulator time constant (&lt;i&gt;Ta&lt;/i&gt;) (&amp;gt;= 0). Default: nullptr */
+		CIMPP::Seconds ta;
+
+		/** \brief Regulator integral time constant (&lt;i&gt;Tc&lt;/i&gt;) (&amp;gt;= 0). Default: nullptr */
+		CIMPP::Seconds tc;
+
+		/** \brief Exciter time constant, integration rate associated with exciter control (&lt;i&gt;Te&lt;/i&gt;) (&amp;gt;= 0). Default: nullptr */
+		CIMPP::Seconds te;
+
+		/** \brief Voltage regulator maximum limit (&lt;i&gt;Vrmax&lt;/i&gt;) (&amp;gt; ExcCZ.vrmin). Default: nullptr */
+		CIMPP::PU vrmax;
+
+		/** \brief Voltage regulator minimum limit (&lt;i&gt;Vrmin&lt;/i&gt;) (&amp;lt; ExcCZ.vrmax). Default: nullptr */
+		CIMPP::PU vrmin;
 
 		static const char debugName[];
 		const char* debugString() const override;

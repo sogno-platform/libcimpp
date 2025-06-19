@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-WindPowerPlant::WindPowerPlant() {};
-WindPowerPlant::~WindPowerPlant() {};
+WindPowerPlant::WindPowerPlant() {}
+WindPowerPlant::~WindPowerPlant() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ WindPowerPlant::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_WindGeneratingUnit_WindPowerPlant(BaseClass*, BaseClass*);
 bool assign_WindPowerPlant_WindGeneratingUnits(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,7 +58,6 @@ bool assign_WindPowerPlant_WindGeneratingUnits(BaseClass* BaseClass_ptr1, BaseCl
 }
 
 
-
 const char WindPowerPlant::debugName[] = "WindPowerPlant";
 const char* WindPowerPlant::debugString() const
 {
@@ -69,7 +66,7 @@ const char* WindPowerPlant::debugString() const
 
 void WindPowerPlant::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:WindPowerPlant"), &WindPowerPlant_factory));
+	factory_map.emplace("cim:WindPowerPlant", &WindPowerPlant_factory);
 }
 
 void WindPowerPlant::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -78,7 +75,7 @@ void WindPowerPlant::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, 
 
 void WindPowerPlant::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindPowerPlant.WindGeneratingUnits"), &assign_WindPowerPlant_WindGeneratingUnits));
+	assign_map.emplace("cim:WindPowerPlant.WindGeneratingUnits", &assign_WindPowerPlant_WindGeneratingUnits);
 }
 
 void WindPowerPlant::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

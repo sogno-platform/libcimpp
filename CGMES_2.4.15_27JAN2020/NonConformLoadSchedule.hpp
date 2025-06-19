@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class NonConformLoadGroup;
 
-	/*
-	An active power (Y1-axis) and reactive power (Y2-axis) schedule (curves) versus time (X-axis) for non-conforming loads, e.g., large industrial load or power station service (where modeled).
-	*/
+	/** \brief An active power (Y1-axis) and reactive power (Y2-axis) schedule (curves) versus time (X-axis) for non-conforming loads, e.g., large industrial load or power station service (where modeled). */
 	class NonConformLoadSchedule : public SeasonDayTypeSchedule
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		NonConformLoadSchedule();
 		~NonConformLoadSchedule() override;
 
-		CIMPP::NonConformLoadGroup* NonConformLoadGroup;  /* The NonConformLoadGroup where the NonConformLoadSchedule belongs. Default: 0 */
+		/** \brief The NonConformLoadGroup where the NonConformLoadSchedule belongs. Default: 0 */
+		CIMPP::NonConformLoadGroup* NonConformLoadGroup;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "SynchronousMachineOperatingMode")
+		if (EnumSymbol.substr(0, pos) != "SynchronousMachineOperatingMode")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,17 +50,17 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "generator")
+		if (EnumSymbol == "generator")
 		{
 			rop = SynchronousMachineOperatingMode::generator;
 			return lop;
 		}
-		if(EnumSymbol == "condenser")
+		if (EnumSymbol == "condenser")
 		{
 			rop = SynchronousMachineOperatingMode::condenser;
 			return lop;
 		}
-		if(EnumSymbol == "motor")
+		if (EnumSymbol == "motor")
 		{
 			rop = SynchronousMachineOperatingMode::motor;
 			return lop;

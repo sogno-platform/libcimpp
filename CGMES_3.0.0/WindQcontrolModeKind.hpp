@@ -9,33 +9,21 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	General wind turbine Q control modes <i>M</i><i><sub>qG</sub></i><i>.</i>
-	*/
+	/** \brief General wind turbine Q control modes <i>M</i><i><sub>qG</sub></i><i>.</i> */
 	class WindQcontrolModeKind
 	{
 	public:
 		enum WindQcontrolModeKind_ENUM
 		{
-			/**
-			 * Voltage control (&lt;i&gt;M&lt;/i&gt;&lt;i&gt;&lt;sub&gt;qG&lt;/sub&gt;&lt;/i&gt; equals 0).
-			 */
+			/** Voltage control (&lt;i&gt;M&lt;/i&gt;&lt;i&gt;&lt;sub&gt;qG&lt;/sub&gt;&lt;/i&gt; equals 0). */
 			voltage,
-			/**
-			 * Reactive power control (&lt;i&gt;M&lt;/i&gt;&lt;i&gt;&lt;sub&gt;qG&lt;/sub&gt;&lt;/i&gt; equals 1).
-			 */
+			/** Reactive power control (&lt;i&gt;M&lt;/i&gt;&lt;i&gt;&lt;sub&gt;qG&lt;/sub&gt;&lt;/i&gt; equals 1). */
 			reactivePower,
-			/**
-			 * Open loop reactive power control (only used with closed loop at plant level) (&lt;i&gt;M&lt;/i&gt;&lt;i&gt;&lt;sub&gt;qG&lt;/sub&gt;&lt;/i&gt;&lt;sub&gt; &lt;/sub&gt;equals 2).
-			 */
+			/** Open loop reactive power control (only used with closed loop at plant level) (&lt;i&gt;M&lt;/i&gt;&lt;i&gt;&lt;sub&gt;qG&lt;/sub&gt;&lt;/i&gt;&lt;sub&gt; &lt;/sub&gt;equals 2). */
 			openLoopReactivePower,
-			/**
-			 * Power factor control (&lt;i&gt;M&lt;/i&gt;&lt;i&gt;&lt;sub&gt;qG&lt;/sub&gt;&lt;/i&gt;&lt;sub&gt; &lt;/sub&gt;equals 3).
-			 */
+			/** Power factor control (&lt;i&gt;M&lt;/i&gt;&lt;i&gt;&lt;sub&gt;qG&lt;/sub&gt;&lt;/i&gt;&lt;sub&gt; &lt;/sub&gt;equals 3). */
 			powerFactor,
-			/**
-			 * Open loop power factor control (&lt;i&gt;M&lt;/i&gt;&lt;i&gt;&lt;sub&gt;qG&lt;/sub&gt;&lt;/i&gt;&lt;sub&gt; &lt;/sub&gt;equals 4).
-			 */
+			/** Open loop power factor control (&lt;i&gt;M&lt;/i&gt;&lt;i&gt;&lt;sub&gt;qG&lt;/sub&gt;&lt;/i&gt;&lt;sub&gt; &lt;/sub&gt;equals 4). */
 			openLooppowerFactor,
 		};
 

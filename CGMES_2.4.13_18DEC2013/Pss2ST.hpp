@@ -19,9 +19,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	PTI Microprocessor-Based Stabilizer type 1.
-	*/
+	/** \brief PTI Microprocessor-Based Stabilizer type 1. */
 	class Pss2ST : public PowerSystemStabilizerDynamics
 	{
 	public:
@@ -29,24 +27,59 @@ namespace CIMPP
 		Pss2ST();
 		~Pss2ST() override;
 
-		CIMPP::InputSignalKind inputSignal1Type;  /* Type of input signal #1.  Typical Value = rotorAngularFrequencyDeviation. Default: 0 */
-		CIMPP::InputSignalKind inputSignal2Type;  /* Type of input signal #2.  Typical Value = generatorElectricalPower. Default: 0 */
-		CIMPP::PU k1;  /* Gain (K1). Default: nullptr */
-		CIMPP::PU k2;  /* Gain (K2). Default: nullptr */
-		CIMPP::PU lsmax;  /* Limiter (Lsmax). Default: nullptr */
-		CIMPP::PU lsmin;  /* Limiter (Lsmin). Default: nullptr */
-		CIMPP::Seconds t1;  /* Time constant (T1). Default: nullptr */
-		CIMPP::Seconds t10;  /* Time constant (T10). Default: nullptr */
-		CIMPP::Seconds t2;  /* Time constant (T2). Default: nullptr */
-		CIMPP::Seconds t3;  /* Time constant (T3). Default: nullptr */
-		CIMPP::Seconds t4;  /* Time constant (T4). Default: nullptr */
-		CIMPP::Seconds t5;  /* Time constant (T5). Default: nullptr */
-		CIMPP::Seconds t6;  /* Time constant (T6). Default: nullptr */
-		CIMPP::Seconds t7;  /* Time constant (T7). Default: nullptr */
-		CIMPP::Seconds t8;  /* Time constant (T8). Default: nullptr */
-		CIMPP::Seconds t9;  /* Time constant (T9). Default: nullptr */
-		CIMPP::PU vcl;  /* Cutoff limiter (Vcl). Default: nullptr */
-		CIMPP::PU vcu;  /* Cutoff limiter (Vcu). Default: nullptr */
+		/** \brief Type of input signal #1.  Typical Value = rotorAngularFrequencyDeviation. Default: 0 */
+		CIMPP::InputSignalKind inputSignal1Type;
+
+		/** \brief Type of input signal #2.  Typical Value = generatorElectricalPower. Default: 0 */
+		CIMPP::InputSignalKind inputSignal2Type;
+
+		/** \brief Gain (K1). Default: nullptr */
+		CIMPP::PU k1;
+
+		/** \brief Gain (K2). Default: nullptr */
+		CIMPP::PU k2;
+
+		/** \brief Limiter (Lsmax). Default: nullptr */
+		CIMPP::PU lsmax;
+
+		/** \brief Limiter (Lsmin). Default: nullptr */
+		CIMPP::PU lsmin;
+
+		/** \brief Time constant (T1). Default: nullptr */
+		CIMPP::Seconds t1;
+
+		/** \brief Time constant (T10). Default: nullptr */
+		CIMPP::Seconds t10;
+
+		/** \brief Time constant (T2). Default: nullptr */
+		CIMPP::Seconds t2;
+
+		/** \brief Time constant (T3). Default: nullptr */
+		CIMPP::Seconds t3;
+
+		/** \brief Time constant (T4). Default: nullptr */
+		CIMPP::Seconds t4;
+
+		/** \brief Time constant (T5). Default: nullptr */
+		CIMPP::Seconds t5;
+
+		/** \brief Time constant (T6). Default: nullptr */
+		CIMPP::Seconds t6;
+
+		/** \brief Time constant (T7). Default: nullptr */
+		CIMPP::Seconds t7;
+
+		/** \brief Time constant (T8). Default: nullptr */
+		CIMPP::Seconds t8;
+
+		/** \brief Time constant (T9). Default: nullptr */
+		CIMPP::Seconds t9;
+
+		/** \brief Cutoff limiter (Vcl). Default: nullptr */
+		CIMPP::PU vcl;
+
+		/** \brief Cutoff limiter (Vcu). Default: nullptr */
+		CIMPP::PU vcu;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -19,9 +19,7 @@ namespace CIMPP
 {
 	class WindTurbineType4aIEC;
 
-	/*
-	P control model Type 4A.  Reference: IEC Standard 61400-27-1 Section 6.6.5.4.
-	*/
+	/** \brief P control model Type 4A.  Reference: IEC Standard 61400-27-1 Section 6.6.5.4. */
 	class WindContPType4aIEC : public IdentifiedObject
 	{
 	public:
@@ -29,10 +27,17 @@ namespace CIMPP
 		WindContPType4aIEC();
 		~WindContPType4aIEC() override;
 
-		CIMPP::WindTurbineType4aIEC* WindTurbineType4aIEC;  /* Wind turbine type 4A model with which this wind control P type 4A model is associated. Default: 0 */
-		CIMPP::PU dpmax;  /* Maximum wind turbine power ramp rate (). It is project dependent parameter. Default: nullptr */
-		CIMPP::Seconds tpord;  /* Time constant in power order lag (). It is type dependent parameter. Default: nullptr */
-		CIMPP::Seconds tufilt;  /* Voltage measurement filter time constant (). It is type dependent parameter. Default: nullptr */
+		/** \brief Wind turbine type 4A model with which this wind control P type 4A model is associated. Default: 0 */
+		CIMPP::WindTurbineType4aIEC* WindTurbineType4aIEC;
+
+		/** \brief Maximum wind turbine power ramp rate (). It is project dependent parameter. Default: nullptr */
+		CIMPP::PU dpmax;
+
+		/** \brief Time constant in power order lag (). It is type dependent parameter. Default: nullptr */
+		CIMPP::Seconds tpord;
+
+		/** \brief Voltage measurement filter time constant (). It is type dependent parameter. Default: nullptr */
+		CIMPP::Seconds tufilt;
 
 		static const char debugName[];
 		const char* debugString() const override;

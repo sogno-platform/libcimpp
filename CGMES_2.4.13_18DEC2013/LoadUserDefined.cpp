@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "ProprietaryParameterDynamics.hpp"
-#include "Boolean.hpp"
 
 using namespace CIMPP;
 
-LoadUserDefined::LoadUserDefined() {};
-LoadUserDefined::~LoadUserDefined() {};
+LoadUserDefined::LoadUserDefined() {}
+LoadUserDefined::~LoadUserDefined() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,21 +41,6 @@ LoadUserDefined::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_LoadUserDefined_proprietary(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (LoadUserDefined* element = dynamic_cast<LoadUserDefined*>(BaseClass_ptr1))
-	{
-		buffer >> element->proprietary;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_ProprietaryParameterDynamics_LoadUserDefined(BaseClass*, BaseClass*);
 bool assign_LoadUserDefined_ProprietaryParameterDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,9 +58,25 @@ bool assign_LoadUserDefined_ProprietaryParameterDynamics(BaseClass* BaseClass_pt
 	return false;
 }
 
+bool assign_LoadUserDefined_proprietary(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	LoadUserDefined* element = dynamic_cast<LoadUserDefined*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->proprietary;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_LoadUserDefined_proprietary(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const LoadUserDefined* element = dynamic_cast<const LoadUserDefined*>(BaseClass_ptr1))
+	const LoadUserDefined* element = dynamic_cast<const LoadUserDefined*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->proprietary;
 		if (!buffer.str().empty())
@@ -88,8 +88,6 @@ bool get_LoadUserDefined_proprietary(const BaseClass* BaseClass_ptr1, std::strin
 	return false;
 }
 
-
-
 const char LoadUserDefined::debugName[] = "LoadUserDefined";
 const char* LoadUserDefined::debugString() const
 {
@@ -98,17 +96,17 @@ const char* LoadUserDefined::debugString() const
 
 void LoadUserDefined::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:LoadUserDefined"), &LoadUserDefined_factory));
+	factory_map.emplace("cim:LoadUserDefined", &LoadUserDefined_factory);
 }
 
 void LoadUserDefined::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:LoadUserDefined.proprietary"), &assign_LoadUserDefined_proprietary));
+	assign_map.emplace("cim:LoadUserDefined.proprietary", &assign_LoadUserDefined_proprietary);
 }
 
 void LoadUserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:LoadUserDefined.ProprietaryParameterDynamics"), &assign_LoadUserDefined_ProprietaryParameterDynamics));
+	assign_map.emplace("cim:LoadUserDefined.ProprietaryParameterDynamics", &assign_LoadUserDefined_ProprietaryParameterDynamics);
 }
 
 void LoadUserDefined::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

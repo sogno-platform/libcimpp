@@ -8,21 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "String.hpp"
-#include "String.hpp"
-#include "Date.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
 
 using namespace CIMPP;
 
-DiagramLayoutVersion::DiagramLayoutVersion() {};
-DiagramLayoutVersion::~DiagramLayoutVersion() {};
+DiagramLayoutVersion::DiagramLayoutVersion() {}
+DiagramLayoutVersion::~DiagramLayoutVersion() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -58,142 +48,150 @@ DiagramLayoutVersion::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_DiagramLayoutVersion_baseUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DiagramLayoutVersion_baseUML(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DiagramLayoutVersion* element = dynamic_cast<DiagramLayoutVersion*>(BaseClass_ptr1))
+	DiagramLayoutVersion* element = dynamic_cast<DiagramLayoutVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->baseUML = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_DiagramLayoutVersion_baseURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DiagramLayoutVersion_baseURI(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DiagramLayoutVersion* element = dynamic_cast<DiagramLayoutVersion*>(BaseClass_ptr1))
+	DiagramLayoutVersion* element = dynamic_cast<DiagramLayoutVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->baseURI = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_DiagramLayoutVersion_date(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DiagramLayoutVersion_date(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DiagramLayoutVersion* element = dynamic_cast<DiagramLayoutVersion*>(BaseClass_ptr1))
+	DiagramLayoutVersion* element = dynamic_cast<DiagramLayoutVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->date = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_DiagramLayoutVersion_differenceModelURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DiagramLayoutVersion_differenceModelURI(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DiagramLayoutVersion* element = dynamic_cast<DiagramLayoutVersion*>(BaseClass_ptr1))
+	DiagramLayoutVersion* element = dynamic_cast<DiagramLayoutVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->differenceModelURI = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_DiagramLayoutVersion_entsoeUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DiagramLayoutVersion_entsoeUML(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DiagramLayoutVersion* element = dynamic_cast<DiagramLayoutVersion*>(BaseClass_ptr1))
+	DiagramLayoutVersion* element = dynamic_cast<DiagramLayoutVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->entsoeUML = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_DiagramLayoutVersion_entsoeURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DiagramLayoutVersion_entsoeURI(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DiagramLayoutVersion* element = dynamic_cast<DiagramLayoutVersion*>(BaseClass_ptr1))
+	DiagramLayoutVersion* element = dynamic_cast<DiagramLayoutVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->entsoeURI = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_DiagramLayoutVersion_modelDescriptionURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DiagramLayoutVersion_modelDescriptionURI(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DiagramLayoutVersion* element = dynamic_cast<DiagramLayoutVersion*>(BaseClass_ptr1))
+	DiagramLayoutVersion* element = dynamic_cast<DiagramLayoutVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->modelDescriptionURI = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_DiagramLayoutVersion_namespaceRDF(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DiagramLayoutVersion_namespaceRDF(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DiagramLayoutVersion* element = dynamic_cast<DiagramLayoutVersion*>(BaseClass_ptr1))
+	DiagramLayoutVersion* element = dynamic_cast<DiagramLayoutVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->namespaceRDF = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_DiagramLayoutVersion_namespaceUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DiagramLayoutVersion_namespaceUML(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DiagramLayoutVersion* element = dynamic_cast<DiagramLayoutVersion*>(BaseClass_ptr1))
+	DiagramLayoutVersion* element = dynamic_cast<DiagramLayoutVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->namespaceUML = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_DiagramLayoutVersion_shortName(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DiagramLayoutVersion_shortName(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DiagramLayoutVersion* element = dynamic_cast<DiagramLayoutVersion*>(BaseClass_ptr1))
+	DiagramLayoutVersion* element = dynamic_cast<DiagramLayoutVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->shortName = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_DiagramLayoutVersion_baseUML(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DiagramLayoutVersion* element = dynamic_cast<const DiagramLayoutVersion*>(BaseClass_ptr1))
+	const DiagramLayoutVersion* element = dynamic_cast<const DiagramLayoutVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->baseUML;
 		if (!buffer.str().empty())
@@ -207,7 +205,8 @@ bool get_DiagramLayoutVersion_baseUML(const BaseClass* BaseClass_ptr1, std::stri
 
 bool get_DiagramLayoutVersion_baseURI(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DiagramLayoutVersion* element = dynamic_cast<const DiagramLayoutVersion*>(BaseClass_ptr1))
+	const DiagramLayoutVersion* element = dynamic_cast<const DiagramLayoutVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->baseURI;
 		if (!buffer.str().empty())
@@ -221,7 +220,8 @@ bool get_DiagramLayoutVersion_baseURI(const BaseClass* BaseClass_ptr1, std::stri
 
 bool get_DiagramLayoutVersion_date(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DiagramLayoutVersion* element = dynamic_cast<const DiagramLayoutVersion*>(BaseClass_ptr1))
+	const DiagramLayoutVersion* element = dynamic_cast<const DiagramLayoutVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->date;
 		if (!buffer.str().empty())
@@ -235,7 +235,8 @@ bool get_DiagramLayoutVersion_date(const BaseClass* BaseClass_ptr1, std::strings
 
 bool get_DiagramLayoutVersion_differenceModelURI(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DiagramLayoutVersion* element = dynamic_cast<const DiagramLayoutVersion*>(BaseClass_ptr1))
+	const DiagramLayoutVersion* element = dynamic_cast<const DiagramLayoutVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->differenceModelURI;
 		if (!buffer.str().empty())
@@ -249,7 +250,8 @@ bool get_DiagramLayoutVersion_differenceModelURI(const BaseClass* BaseClass_ptr1
 
 bool get_DiagramLayoutVersion_entsoeUML(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DiagramLayoutVersion* element = dynamic_cast<const DiagramLayoutVersion*>(BaseClass_ptr1))
+	const DiagramLayoutVersion* element = dynamic_cast<const DiagramLayoutVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->entsoeUML;
 		if (!buffer.str().empty())
@@ -263,7 +265,8 @@ bool get_DiagramLayoutVersion_entsoeUML(const BaseClass* BaseClass_ptr1, std::st
 
 bool get_DiagramLayoutVersion_entsoeURI(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DiagramLayoutVersion* element = dynamic_cast<const DiagramLayoutVersion*>(BaseClass_ptr1))
+	const DiagramLayoutVersion* element = dynamic_cast<const DiagramLayoutVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->entsoeURI;
 		if (!buffer.str().empty())
@@ -277,7 +280,8 @@ bool get_DiagramLayoutVersion_entsoeURI(const BaseClass* BaseClass_ptr1, std::st
 
 bool get_DiagramLayoutVersion_modelDescriptionURI(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DiagramLayoutVersion* element = dynamic_cast<const DiagramLayoutVersion*>(BaseClass_ptr1))
+	const DiagramLayoutVersion* element = dynamic_cast<const DiagramLayoutVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->modelDescriptionURI;
 		if (!buffer.str().empty())
@@ -291,7 +295,8 @@ bool get_DiagramLayoutVersion_modelDescriptionURI(const BaseClass* BaseClass_ptr
 
 bool get_DiagramLayoutVersion_namespaceRDF(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DiagramLayoutVersion* element = dynamic_cast<const DiagramLayoutVersion*>(BaseClass_ptr1))
+	const DiagramLayoutVersion* element = dynamic_cast<const DiagramLayoutVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->namespaceRDF;
 		if (!buffer.str().empty())
@@ -305,7 +310,8 @@ bool get_DiagramLayoutVersion_namespaceRDF(const BaseClass* BaseClass_ptr1, std:
 
 bool get_DiagramLayoutVersion_namespaceUML(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DiagramLayoutVersion* element = dynamic_cast<const DiagramLayoutVersion*>(BaseClass_ptr1))
+	const DiagramLayoutVersion* element = dynamic_cast<const DiagramLayoutVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->namespaceUML;
 		if (!buffer.str().empty())
@@ -319,7 +325,8 @@ bool get_DiagramLayoutVersion_namespaceUML(const BaseClass* BaseClass_ptr1, std:
 
 bool get_DiagramLayoutVersion_shortName(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DiagramLayoutVersion* element = dynamic_cast<const DiagramLayoutVersion*>(BaseClass_ptr1))
+	const DiagramLayoutVersion* element = dynamic_cast<const DiagramLayoutVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->shortName;
 		if (!buffer.str().empty())
@@ -331,8 +338,6 @@ bool get_DiagramLayoutVersion_shortName(const BaseClass* BaseClass_ptr1, std::st
 	return false;
 }
 
-
-
 const char DiagramLayoutVersion::debugName[] = "DiagramLayoutVersion";
 const char* DiagramLayoutVersion::debugString() const
 {
@@ -341,21 +346,21 @@ const char* DiagramLayoutVersion::debugString() const
 
 void DiagramLayoutVersion::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:DiagramLayoutVersion"), &DiagramLayoutVersion_factory));
+	factory_map.emplace("cim:DiagramLayoutVersion", &DiagramLayoutVersion_factory);
 }
 
 void DiagramLayoutVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:DiagramLayoutVersion.baseUML"), &assign_DiagramLayoutVersion_baseUML));
-	assign_map.insert(std::make_pair(std::string("cim:DiagramLayoutVersion.baseURI"), &assign_DiagramLayoutVersion_baseURI));
-	assign_map.insert(std::make_pair(std::string("cim:DiagramLayoutVersion.date"), &assign_DiagramLayoutVersion_date));
-	assign_map.insert(std::make_pair(std::string("cim:DiagramLayoutVersion.differenceModelURI"), &assign_DiagramLayoutVersion_differenceModelURI));
-	assign_map.insert(std::make_pair(std::string("cim:DiagramLayoutVersion.entsoeUML"), &assign_DiagramLayoutVersion_entsoeUML));
-	assign_map.insert(std::make_pair(std::string("cim:DiagramLayoutVersion.entsoeURI"), &assign_DiagramLayoutVersion_entsoeURI));
-	assign_map.insert(std::make_pair(std::string("cim:DiagramLayoutVersion.modelDescriptionURI"), &assign_DiagramLayoutVersion_modelDescriptionURI));
-	assign_map.insert(std::make_pair(std::string("cim:DiagramLayoutVersion.namespaceRDF"), &assign_DiagramLayoutVersion_namespaceRDF));
-	assign_map.insert(std::make_pair(std::string("cim:DiagramLayoutVersion.namespaceUML"), &assign_DiagramLayoutVersion_namespaceUML));
-	assign_map.insert(std::make_pair(std::string("cim:DiagramLayoutVersion.shortName"), &assign_DiagramLayoutVersion_shortName));
+	assign_map.emplace("cim:DiagramLayoutVersion.baseUML", &assign_DiagramLayoutVersion_baseUML);
+	assign_map.emplace("cim:DiagramLayoutVersion.baseURI", &assign_DiagramLayoutVersion_baseURI);
+	assign_map.emplace("cim:DiagramLayoutVersion.date", &assign_DiagramLayoutVersion_date);
+	assign_map.emplace("cim:DiagramLayoutVersion.differenceModelURI", &assign_DiagramLayoutVersion_differenceModelURI);
+	assign_map.emplace("cim:DiagramLayoutVersion.entsoeUML", &assign_DiagramLayoutVersion_entsoeUML);
+	assign_map.emplace("cim:DiagramLayoutVersion.entsoeURI", &assign_DiagramLayoutVersion_entsoeURI);
+	assign_map.emplace("cim:DiagramLayoutVersion.modelDescriptionURI", &assign_DiagramLayoutVersion_modelDescriptionURI);
+	assign_map.emplace("cim:DiagramLayoutVersion.namespaceRDF", &assign_DiagramLayoutVersion_namespaceRDF);
+	assign_map.emplace("cim:DiagramLayoutVersion.namespaceUML", &assign_DiagramLayoutVersion_namespaceUML);
+	assign_map.emplace("cim:DiagramLayoutVersion.shortName", &assign_DiagramLayoutVersion_shortName);
 }
 
 void DiagramLayoutVersion::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

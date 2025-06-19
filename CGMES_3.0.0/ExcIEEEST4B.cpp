@@ -8,27 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Seconds.hpp"
-#include "AngleDegrees.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
 
 using namespace CIMPP;
 
-ExcIEEEST4B::ExcIEEEST4B() {};
-ExcIEEEST4B::~ExcIEEEST4B() {};
+ExcIEEEST4B::ExcIEEEST4B() {}
+ExcIEEEST4B::~ExcIEEEST4B() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -70,220 +54,234 @@ ExcIEEEST4B::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_ExcIEEEST4B_kc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEST4B_kc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kc;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEST4B_kg(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEST4B_kg(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kg;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEST4B_ki(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEST4B_ki(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ki;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEST4B_kim(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEST4B_kim(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kim;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEST4B_kir(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEST4B_kir(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kir;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEST4B_kp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEST4B_kp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kp;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEST4B_kpm(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEST4B_kpm(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kpm;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEST4B_kpr(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEST4B_kpr(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kpr;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEST4B_ta(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEST4B_ta(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ta;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEST4B_thetap(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEST4B_thetap(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->thetap;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEST4B_vbmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEST4B_vbmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vbmax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEST4B_vmmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEST4B_vmmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vmmax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEST4B_vmmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEST4B_vmmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vmmin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEST4B_vrmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEST4B_vrmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vrmax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEST4B_vrmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEST4B_vrmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vrmin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEST4B_xl(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEST4B_xl(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1))
+	ExcIEEEST4B* element = dynamic_cast<ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->xl;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_ExcIEEEST4B_kc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kc;
 		if (!buffer.str().empty())
@@ -297,7 +295,8 @@ bool get_ExcIEEEST4B_kc(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_ExcIEEEST4B_kg(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kg;
 		if (!buffer.str().empty())
@@ -311,7 +310,8 @@ bool get_ExcIEEEST4B_kg(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_ExcIEEEST4B_ki(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ki;
 		if (!buffer.str().empty())
@@ -325,7 +325,8 @@ bool get_ExcIEEEST4B_ki(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_ExcIEEEST4B_kim(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kim;
 		if (!buffer.str().empty())
@@ -339,7 +340,8 @@ bool get_ExcIEEEST4B_kim(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_ExcIEEEST4B_kir(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kir;
 		if (!buffer.str().empty())
@@ -353,7 +355,8 @@ bool get_ExcIEEEST4B_kir(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_ExcIEEEST4B_kp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kp;
 		if (!buffer.str().empty())
@@ -367,7 +370,8 @@ bool get_ExcIEEEST4B_kp(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_ExcIEEEST4B_kpm(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kpm;
 		if (!buffer.str().empty())
@@ -381,7 +385,8 @@ bool get_ExcIEEEST4B_kpm(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_ExcIEEEST4B_kpr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kpr;
 		if (!buffer.str().empty())
@@ -395,7 +400,8 @@ bool get_ExcIEEEST4B_kpr(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_ExcIEEEST4B_ta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ta;
 		if (!buffer.str().empty())
@@ -409,7 +415,8 @@ bool get_ExcIEEEST4B_ta(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_ExcIEEEST4B_thetap(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->thetap;
 		if (!buffer.str().empty())
@@ -423,7 +430,8 @@ bool get_ExcIEEEST4B_thetap(const BaseClass* BaseClass_ptr1, std::stringstream& 
 
 bool get_ExcIEEEST4B_vbmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vbmax;
 		if (!buffer.str().empty())
@@ -437,7 +445,8 @@ bool get_ExcIEEEST4B_vbmax(const BaseClass* BaseClass_ptr1, std::stringstream& b
 
 bool get_ExcIEEEST4B_vmmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vmmax;
 		if (!buffer.str().empty())
@@ -451,7 +460,8 @@ bool get_ExcIEEEST4B_vmmax(const BaseClass* BaseClass_ptr1, std::stringstream& b
 
 bool get_ExcIEEEST4B_vmmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vmmin;
 		if (!buffer.str().empty())
@@ -465,7 +475,8 @@ bool get_ExcIEEEST4B_vmmin(const BaseClass* BaseClass_ptr1, std::stringstream& b
 
 bool get_ExcIEEEST4B_vrmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vrmax;
 		if (!buffer.str().empty())
@@ -479,7 +490,8 @@ bool get_ExcIEEEST4B_vrmax(const BaseClass* BaseClass_ptr1, std::stringstream& b
 
 bool get_ExcIEEEST4B_vrmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vrmin;
 		if (!buffer.str().empty())
@@ -493,7 +505,8 @@ bool get_ExcIEEEST4B_vrmin(const BaseClass* BaseClass_ptr1, std::stringstream& b
 
 bool get_ExcIEEEST4B_xl(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1))
+	const ExcIEEEST4B* element = dynamic_cast<const ExcIEEEST4B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->xl;
 		if (!buffer.str().empty())
@@ -505,8 +518,6 @@ bool get_ExcIEEEST4B_xl(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 	return false;
 }
 
-
-
 const char ExcIEEEST4B::debugName[] = "ExcIEEEST4B";
 const char* ExcIEEEST4B::debugString() const
 {
@@ -515,27 +526,27 @@ const char* ExcIEEEST4B::debugString() const
 
 void ExcIEEEST4B::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ExcIEEEST4B"), &ExcIEEEST4B_factory));
+	factory_map.emplace("cim:ExcIEEEST4B", &ExcIEEEST4B_factory);
 }
 
 void ExcIEEEST4B::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEST4B.kc"), &assign_ExcIEEEST4B_kc));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEST4B.kg"), &assign_ExcIEEEST4B_kg));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEST4B.ki"), &assign_ExcIEEEST4B_ki));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEST4B.kim"), &assign_ExcIEEEST4B_kim));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEST4B.kir"), &assign_ExcIEEEST4B_kir));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEST4B.kp"), &assign_ExcIEEEST4B_kp));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEST4B.kpm"), &assign_ExcIEEEST4B_kpm));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEST4B.kpr"), &assign_ExcIEEEST4B_kpr));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEST4B.ta"), &assign_ExcIEEEST4B_ta));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEST4B.thetap"), &assign_ExcIEEEST4B_thetap));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEST4B.vbmax"), &assign_ExcIEEEST4B_vbmax));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEST4B.vmmax"), &assign_ExcIEEEST4B_vmmax));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEST4B.vmmin"), &assign_ExcIEEEST4B_vmmin));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEST4B.vrmax"), &assign_ExcIEEEST4B_vrmax));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEST4B.vrmin"), &assign_ExcIEEEST4B_vrmin));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEST4B.xl"), &assign_ExcIEEEST4B_xl));
+	assign_map.emplace("cim:ExcIEEEST4B.kc", &assign_ExcIEEEST4B_kc);
+	assign_map.emplace("cim:ExcIEEEST4B.kg", &assign_ExcIEEEST4B_kg);
+	assign_map.emplace("cim:ExcIEEEST4B.ki", &assign_ExcIEEEST4B_ki);
+	assign_map.emplace("cim:ExcIEEEST4B.kim", &assign_ExcIEEEST4B_kim);
+	assign_map.emplace("cim:ExcIEEEST4B.kir", &assign_ExcIEEEST4B_kir);
+	assign_map.emplace("cim:ExcIEEEST4B.kp", &assign_ExcIEEEST4B_kp);
+	assign_map.emplace("cim:ExcIEEEST4B.kpm", &assign_ExcIEEEST4B_kpm);
+	assign_map.emplace("cim:ExcIEEEST4B.kpr", &assign_ExcIEEEST4B_kpr);
+	assign_map.emplace("cim:ExcIEEEST4B.ta", &assign_ExcIEEEST4B_ta);
+	assign_map.emplace("cim:ExcIEEEST4B.thetap", &assign_ExcIEEEST4B_thetap);
+	assign_map.emplace("cim:ExcIEEEST4B.vbmax", &assign_ExcIEEEST4B_vbmax);
+	assign_map.emplace("cim:ExcIEEEST4B.vmmax", &assign_ExcIEEEST4B_vmmax);
+	assign_map.emplace("cim:ExcIEEEST4B.vmmin", &assign_ExcIEEEST4B_vmmin);
+	assign_map.emplace("cim:ExcIEEEST4B.vrmax", &assign_ExcIEEEST4B_vrmax);
+	assign_map.emplace("cim:ExcIEEEST4B.vrmin", &assign_ExcIEEEST4B_vrmin);
+	assign_map.emplace("cim:ExcIEEEST4B.xl", &assign_ExcIEEEST4B_xl);
 }
 
 void ExcIEEEST4B::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

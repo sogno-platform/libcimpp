@@ -9,9 +9,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Resistance (real part of impedance) per unit of length.
-	*/
+	/** \brief Resistance (real part of impedance) per unit of length. */
 	class ResistancePerLength
 	{
 	public:

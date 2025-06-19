@@ -8,13 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Voltage.hpp"
-#include "Voltage.hpp"
 
 using namespace CIMPP;
 
-VoltageLimit::VoltageLimit() {};
-VoltageLimit::~VoltageLimit() {};
+VoltageLimit::VoltageLimit() {}
+VoltageLimit::~VoltageLimit() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -43,38 +41,38 @@ VoltageLimit::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_VoltageLimit_normalValue(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_VoltageLimit_normalValue(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (VoltageLimit* element = dynamic_cast<VoltageLimit*>(BaseClass_ptr1))
+	VoltageLimit* element = dynamic_cast<VoltageLimit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->normalValue;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_VoltageLimit_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_VoltageLimit_value(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (VoltageLimit* element = dynamic_cast<VoltageLimit*>(BaseClass_ptr1))
+	VoltageLimit* element = dynamic_cast<VoltageLimit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->value;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_VoltageLimit_normalValue(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const VoltageLimit* element = dynamic_cast<const VoltageLimit*>(BaseClass_ptr1))
+	const VoltageLimit* element = dynamic_cast<const VoltageLimit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->normalValue;
 		if (!buffer.str().empty())
@@ -88,7 +86,8 @@ bool get_VoltageLimit_normalValue(const BaseClass* BaseClass_ptr1, std::stringst
 
 bool get_VoltageLimit_value(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const VoltageLimit* element = dynamic_cast<const VoltageLimit*>(BaseClass_ptr1))
+	const VoltageLimit* element = dynamic_cast<const VoltageLimit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->value;
 		if (!buffer.str().empty())
@@ -100,8 +99,6 @@ bool get_VoltageLimit_value(const BaseClass* BaseClass_ptr1, std::stringstream& 
 	return false;
 }
 
-
-
 const char VoltageLimit::debugName[] = "VoltageLimit";
 const char* VoltageLimit::debugString() const
 {
@@ -110,13 +107,13 @@ const char* VoltageLimit::debugString() const
 
 void VoltageLimit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:VoltageLimit"), &VoltageLimit_factory));
+	factory_map.emplace("cim:VoltageLimit", &VoltageLimit_factory);
 }
 
 void VoltageLimit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:VoltageLimit.normalValue"), &assign_VoltageLimit_normalValue));
-	assign_map.insert(std::make_pair(std::string("cim:VoltageLimit.value"), &assign_VoltageLimit_value));
+	assign_map.emplace("cim:VoltageLimit.normalValue", &assign_VoltageLimit_normalValue);
+	assign_map.emplace("cim:VoltageLimit.value", &assign_VoltageLimit_value);
 }
 
 void VoltageLimit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

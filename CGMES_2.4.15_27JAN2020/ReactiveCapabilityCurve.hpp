@@ -18,9 +18,7 @@ namespace CIMPP
 	class EquivalentInjection;
 	class SynchronousMachine;
 
-	/*
-	Reactive power rating envelope versus the synchronous machine's active power, in both the generating and motoring modes. For each active power value there is a corresponding high and low reactive power limit  value. Typically there will be a separate curve for each coolant condition, such as hydrogen pressure.  The Y1 axis values represent reactive minimum and the Y2 axis values represent reactive maximum.
-	*/
+	/** \brief Reactive power rating envelope versus the synchronous machine's active power, in both the generating and motoring modes. For each active power value there is a corresponding high and low reactive power limit  value. Typically there will be a separate curve for each coolant condition, such as hydrogen pressure.  The Y1 axis values represent reactive minimum and the Y2 axis values represent reactive maximum. */
 	class ReactiveCapabilityCurve : public Curve
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		ReactiveCapabilityCurve();
 		~ReactiveCapabilityCurve() override;
 
-		std::list<CIMPP::EquivalentInjection*> EquivalentInjection;  /* The reactive capability curve used by this equivalent injection. Default: 0 */
-		std::list<CIMPP::SynchronousMachine*> InitiallyUsedBySynchronousMachines;  /* The default reactive capability curve for use by a synchronous machine. Default: 0 */
+		/** \brief The reactive capability curve used by this equivalent injection. Default: 0 */
+		std::list<CIMPP::EquivalentInjection*> EquivalentInjection;
+
+		/** \brief The default reactive capability curve for use by a synchronous machine. Default: 0 */
+		std::list<CIMPP::SynchronousMachine*> InitiallyUsedBySynchronousMachines;
 
 		static const char debugName[];
 		const char* debugString() const override;

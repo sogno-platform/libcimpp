@@ -19,9 +19,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	This is modified old IEEE type 3 excitation system.
-	*/
+	/** \brief This is modified old IEEE type 3 excitation system. */
 	class ExcDC3A1 : public ExcitationSystemDynamics
 	{
 	public:
@@ -29,20 +27,47 @@ namespace CIMPP
 		ExcDC3A1();
 		~ExcDC3A1() override;
 
-		CIMPP::Boolean exclim;  /* (exclim). true = lower limit of zero is applied to integrator output false = lower limit of zero not applied to integrator output. Typical Value = true. Default: false */
-		CIMPP::PU ka;  /* Voltage regulator gain (Ka).  Typical Value = 300. Default: nullptr */
-		CIMPP::PU ke;  /* Exciter constant related to self-excited field (Ke).  Typical Value = 1. Default: nullptr */
-		CIMPP::PU kf;  /* Excitation control system stabilizer gain (Kf).  Typical Value = 0.1. Default: nullptr */
-		CIMPP::PU ki;  /* Potential circuit gain coefficient (Ki).  Typical Value = 4.83. Default: nullptr */
-		CIMPP::PU kp;  /* Potential circuit gain coefficient (Kp).  Typical Value = 4.37. Default: nullptr */
-		CIMPP::Seconds ta;  /* Voltage regulator time constant (Ta).  Typical Value = 0.01. Default: nullptr */
-		CIMPP::Seconds te;  /* Exciter time constant, integration rate associated with exciter control (Te).  Typical Value = 1.83. Default: nullptr */
-		CIMPP::Seconds tf;  /* Excitation control system stabilizer time constant (Tf).  Typical Value = 0.675. Default: nullptr */
-		CIMPP::PU vb1max;  /* Available exciter voltage limiter (Vb1max).  Typical Value = 11.63. Default: nullptr */
-		CIMPP::Boolean vblim;  /* Vb limiter indicator. true = exciter Vbmax limiter is active false = Vb1max is active.  Typical Value = true. Default: false */
-		CIMPP::PU vbmax;  /* Available exciter voltage limiter (Vbmax).  Typical Value = 11.63. Default: nullptr */
-		CIMPP::PU vrmax;  /* Maximum voltage regulator output (Vrmax).  Typical Value = 5. Default: nullptr */
-		CIMPP::PU vrmin;  /* Minimum voltage regulator output (Vrmin).  Typical Value = 0. Default: nullptr */
+		/** \brief (exclim). true = lower limit of zero is applied to integrator output false = lower limit of zero not applied to integrator output. Typical Value = true. Default: false */
+		CIMPP::Boolean exclim;
+
+		/** \brief Voltage regulator gain (Ka).  Typical Value = 300. Default: nullptr */
+		CIMPP::PU ka;
+
+		/** \brief Exciter constant related to self-excited field (Ke).  Typical Value = 1. Default: nullptr */
+		CIMPP::PU ke;
+
+		/** \brief Excitation control system stabilizer gain (Kf).  Typical Value = 0.1. Default: nullptr */
+		CIMPP::PU kf;
+
+		/** \brief Potential circuit gain coefficient (Ki).  Typical Value = 4.83. Default: nullptr */
+		CIMPP::PU ki;
+
+		/** \brief Potential circuit gain coefficient (Kp).  Typical Value = 4.37. Default: nullptr */
+		CIMPP::PU kp;
+
+		/** \brief Voltage regulator time constant (Ta).  Typical Value = 0.01. Default: nullptr */
+		CIMPP::Seconds ta;
+
+		/** \brief Exciter time constant, integration rate associated with exciter control (Te).  Typical Value = 1.83. Default: nullptr */
+		CIMPP::Seconds te;
+
+		/** \brief Excitation control system stabilizer time constant (Tf).  Typical Value = 0.675. Default: nullptr */
+		CIMPP::Seconds tf;
+
+		/** \brief Available exciter voltage limiter (Vb1max).  Typical Value = 11.63. Default: nullptr */
+		CIMPP::PU vb1max;
+
+		/** \brief Vb limiter indicator. true = exciter Vbmax limiter is active false = Vb1max is active.  Typical Value = true. Default: false */
+		CIMPP::Boolean vblim;
+
+		/** \brief Available exciter voltage limiter (Vbmax).  Typical Value = 11.63. Default: nullptr */
+		CIMPP::PU vbmax;
+
+		/** \brief Maximum voltage regulator output (Vrmax).  Typical Value = 5. Default: nullptr */
+		CIMPP::PU vrmax;
+
+		/** \brief Minimum voltage regulator output (Vrmin).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU vrmin;
 
 		static const char debugName[];
 		const char* debugString() const override;

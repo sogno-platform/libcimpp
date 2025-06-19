@@ -8,16 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
 
 using namespace CIMPP;
 
-AsynchronousMachineEquivalentCircuit::AsynchronousMachineEquivalentCircuit() {};
-AsynchronousMachineEquivalentCircuit::~AsynchronousMachineEquivalentCircuit() {};
+AsynchronousMachineEquivalentCircuit::AsynchronousMachineEquivalentCircuit() {}
+AsynchronousMachineEquivalentCircuit::~AsynchronousMachineEquivalentCircuit() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -48,77 +43,80 @@ AsynchronousMachineEquivalentCircuit::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_AsynchronousMachineEquivalentCircuit_rr1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_AsynchronousMachineEquivalentCircuit_rr1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (AsynchronousMachineEquivalentCircuit* element = dynamic_cast<AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1))
+	AsynchronousMachineEquivalentCircuit* element = dynamic_cast<AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->rr1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_AsynchronousMachineEquivalentCircuit_rr2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_AsynchronousMachineEquivalentCircuit_rr2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (AsynchronousMachineEquivalentCircuit* element = dynamic_cast<AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1))
+	AsynchronousMachineEquivalentCircuit* element = dynamic_cast<AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->rr2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_AsynchronousMachineEquivalentCircuit_xlr1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_AsynchronousMachineEquivalentCircuit_xlr1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (AsynchronousMachineEquivalentCircuit* element = dynamic_cast<AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1))
+	AsynchronousMachineEquivalentCircuit* element = dynamic_cast<AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->xlr1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_AsynchronousMachineEquivalentCircuit_xlr2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_AsynchronousMachineEquivalentCircuit_xlr2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (AsynchronousMachineEquivalentCircuit* element = dynamic_cast<AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1))
+	AsynchronousMachineEquivalentCircuit* element = dynamic_cast<AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->xlr2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_AsynchronousMachineEquivalentCircuit_xm(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_AsynchronousMachineEquivalentCircuit_xm(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (AsynchronousMachineEquivalentCircuit* element = dynamic_cast<AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1))
+	AsynchronousMachineEquivalentCircuit* element = dynamic_cast<AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->xm;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_AsynchronousMachineEquivalentCircuit_rr1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const AsynchronousMachineEquivalentCircuit* element = dynamic_cast<const AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1))
+	const AsynchronousMachineEquivalentCircuit* element = dynamic_cast<const AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->rr1;
 		if (!buffer.str().empty())
@@ -132,7 +130,8 @@ bool get_AsynchronousMachineEquivalentCircuit_rr1(const BaseClass* BaseClass_ptr
 
 bool get_AsynchronousMachineEquivalentCircuit_rr2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const AsynchronousMachineEquivalentCircuit* element = dynamic_cast<const AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1))
+	const AsynchronousMachineEquivalentCircuit* element = dynamic_cast<const AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->rr2;
 		if (!buffer.str().empty())
@@ -146,7 +145,8 @@ bool get_AsynchronousMachineEquivalentCircuit_rr2(const BaseClass* BaseClass_ptr
 
 bool get_AsynchronousMachineEquivalentCircuit_xlr1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const AsynchronousMachineEquivalentCircuit* element = dynamic_cast<const AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1))
+	const AsynchronousMachineEquivalentCircuit* element = dynamic_cast<const AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->xlr1;
 		if (!buffer.str().empty())
@@ -160,7 +160,8 @@ bool get_AsynchronousMachineEquivalentCircuit_xlr1(const BaseClass* BaseClass_pt
 
 bool get_AsynchronousMachineEquivalentCircuit_xlr2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const AsynchronousMachineEquivalentCircuit* element = dynamic_cast<const AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1))
+	const AsynchronousMachineEquivalentCircuit* element = dynamic_cast<const AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->xlr2;
 		if (!buffer.str().empty())
@@ -174,7 +175,8 @@ bool get_AsynchronousMachineEquivalentCircuit_xlr2(const BaseClass* BaseClass_pt
 
 bool get_AsynchronousMachineEquivalentCircuit_xm(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const AsynchronousMachineEquivalentCircuit* element = dynamic_cast<const AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1))
+	const AsynchronousMachineEquivalentCircuit* element = dynamic_cast<const AsynchronousMachineEquivalentCircuit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->xm;
 		if (!buffer.str().empty())
@@ -186,8 +188,6 @@ bool get_AsynchronousMachineEquivalentCircuit_xm(const BaseClass* BaseClass_ptr1
 	return false;
 }
 
-
-
 const char AsynchronousMachineEquivalentCircuit::debugName[] = "AsynchronousMachineEquivalentCircuit";
 const char* AsynchronousMachineEquivalentCircuit::debugString() const
 {
@@ -196,16 +196,16 @@ const char* AsynchronousMachineEquivalentCircuit::debugString() const
 
 void AsynchronousMachineEquivalentCircuit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:AsynchronousMachineEquivalentCircuit"), &AsynchronousMachineEquivalentCircuit_factory));
+	factory_map.emplace("cim:AsynchronousMachineEquivalentCircuit", &AsynchronousMachineEquivalentCircuit_factory);
 }
 
 void AsynchronousMachineEquivalentCircuit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:AsynchronousMachineEquivalentCircuit.rr1"), &assign_AsynchronousMachineEquivalentCircuit_rr1));
-	assign_map.insert(std::make_pair(std::string("cim:AsynchronousMachineEquivalentCircuit.rr2"), &assign_AsynchronousMachineEquivalentCircuit_rr2));
-	assign_map.insert(std::make_pair(std::string("cim:AsynchronousMachineEquivalentCircuit.xlr1"), &assign_AsynchronousMachineEquivalentCircuit_xlr1));
-	assign_map.insert(std::make_pair(std::string("cim:AsynchronousMachineEquivalentCircuit.xlr2"), &assign_AsynchronousMachineEquivalentCircuit_xlr2));
-	assign_map.insert(std::make_pair(std::string("cim:AsynchronousMachineEquivalentCircuit.xm"), &assign_AsynchronousMachineEquivalentCircuit_xm));
+	assign_map.emplace("cim:AsynchronousMachineEquivalentCircuit.rr1", &assign_AsynchronousMachineEquivalentCircuit_rr1);
+	assign_map.emplace("cim:AsynchronousMachineEquivalentCircuit.rr2", &assign_AsynchronousMachineEquivalentCircuit_rr2);
+	assign_map.emplace("cim:AsynchronousMachineEquivalentCircuit.xlr1", &assign_AsynchronousMachineEquivalentCircuit_xlr1);
+	assign_map.emplace("cim:AsynchronousMachineEquivalentCircuit.xlr2", &assign_AsynchronousMachineEquivalentCircuit_xlr2);
+	assign_map.emplace("cim:AsynchronousMachineEquivalentCircuit.xm", &assign_AsynchronousMachineEquivalentCircuit_xm);
 }
 
 void AsynchronousMachineEquivalentCircuit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

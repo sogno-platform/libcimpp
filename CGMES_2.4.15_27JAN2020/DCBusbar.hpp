@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A busbar within a DC system.
-	*/
+	/** \brief A busbar within a DC system. */
 	class DCBusbar : public DCConductingEquipment
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		DCBusbar();
 		~DCBusbar() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -3,9 +3,14 @@
 /*
 Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
 */
+
 #include <list>
+
+#include "BaseClassDefiner.hpp"
 #include "IEC61970.hpp"
+
 using namespace CIMPP;
+
 static std::list<BaseClassDefiner> CIMClassList =
 {
 	ACDCConverter::declare(),
@@ -406,4 +411,4 @@ static std::list<BaseClassDefiner> CIMClassList =
 	WindType3or4UserDefined::declare(),
 	UnknownType::declare(),
 };
-#endif // CIMCLASSLIST_H
+#endif

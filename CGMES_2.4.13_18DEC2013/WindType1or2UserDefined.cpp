@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "ProprietaryParameterDynamics.hpp"
-#include "Boolean.hpp"
 
 using namespace CIMPP;
 
-WindType1or2UserDefined::WindType1or2UserDefined() {};
-WindType1or2UserDefined::~WindType1or2UserDefined() {};
+WindType1or2UserDefined::WindType1or2UserDefined() {}
+WindType1or2UserDefined::~WindType1or2UserDefined() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,21 +41,6 @@ WindType1or2UserDefined::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_WindType1or2UserDefined_proprietary(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindType1or2UserDefined* element = dynamic_cast<WindType1or2UserDefined*>(BaseClass_ptr1))
-	{
-		buffer >> element->proprietary;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_ProprietaryParameterDynamics_WindType1or2UserDefined(BaseClass*, BaseClass*);
 bool assign_WindType1or2UserDefined_ProprietaryParameterDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,9 +58,25 @@ bool assign_WindType1or2UserDefined_ProprietaryParameterDynamics(BaseClass* Base
 	return false;
 }
 
+bool assign_WindType1or2UserDefined_proprietary(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindType1or2UserDefined* element = dynamic_cast<WindType1or2UserDefined*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->proprietary;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_WindType1or2UserDefined_proprietary(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindType1or2UserDefined* element = dynamic_cast<const WindType1or2UserDefined*>(BaseClass_ptr1))
+	const WindType1or2UserDefined* element = dynamic_cast<const WindType1or2UserDefined*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->proprietary;
 		if (!buffer.str().empty())
@@ -88,8 +88,6 @@ bool get_WindType1or2UserDefined_proprietary(const BaseClass* BaseClass_ptr1, st
 	return false;
 }
 
-
-
 const char WindType1or2UserDefined::debugName[] = "WindType1or2UserDefined";
 const char* WindType1or2UserDefined::debugString() const
 {
@@ -98,17 +96,17 @@ const char* WindType1or2UserDefined::debugString() const
 
 void WindType1or2UserDefined::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:WindType1or2UserDefined"), &WindType1or2UserDefined_factory));
+	factory_map.emplace("cim:WindType1or2UserDefined", &WindType1or2UserDefined_factory);
 }
 
 void WindType1or2UserDefined::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindType1or2UserDefined.proprietary"), &assign_WindType1or2UserDefined_proprietary));
+	assign_map.emplace("cim:WindType1or2UserDefined.proprietary", &assign_WindType1or2UserDefined_proprietary);
 }
 
 void WindType1or2UserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindType1or2UserDefined.ProprietaryParameterDynamics"), &assign_WindType1or2UserDefined_ProprietaryParameterDynamics));
+	assign_map.emplace("cim:WindType1or2UserDefined.ProprietaryParameterDynamics", &assign_WindType1or2UserDefined_ProprietaryParameterDynamics);
 }
 
 void WindType1or2UserDefined::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

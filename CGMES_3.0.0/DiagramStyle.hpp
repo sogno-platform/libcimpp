@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class Diagram;
 
-	/*
-	The diagram style refers to a style used by the originating system for a diagram.  A diagram style describes information such as schematic, geographic, etc.
-	*/
+	/** \brief The diagram style refers to a style used by the originating system for a diagram.  A diagram style describes information such as schematic, geographic, etc. */
 	class DiagramStyle : public IdentifiedObject
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		DiagramStyle();
 		~DiagramStyle() override;
 
-		std::list<CIMPP::Diagram*> Diagram;  /* A DiagramStyle can be used by many Diagrams. Default: 0 */
+		/** \brief A DiagramStyle can be used by many Diagrams. Default: 0 */
+		std::list<CIMPP::Diagram*> Diagram;
 
 		static const char debugName[];
 		const char* debugString() const override;

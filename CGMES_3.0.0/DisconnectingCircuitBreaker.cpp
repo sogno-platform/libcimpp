@@ -11,8 +11,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-DisconnectingCircuitBreaker::DisconnectingCircuitBreaker() {};
-DisconnectingCircuitBreaker::~DisconnectingCircuitBreaker() {};
+DisconnectingCircuitBreaker::DisconnectingCircuitBreaker() {}
+DisconnectingCircuitBreaker::~DisconnectingCircuitBreaker() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -39,11 +39,6 @@ DisconnectingCircuitBreaker::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
-
-
-
 const char DisconnectingCircuitBreaker::debugName[] = "DisconnectingCircuitBreaker";
 const char* DisconnectingCircuitBreaker::debugString() const
 {
@@ -52,7 +47,7 @@ const char* DisconnectingCircuitBreaker::debugString() const
 
 void DisconnectingCircuitBreaker::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:DisconnectingCircuitBreaker"), &DisconnectingCircuitBreaker_factory));
+	factory_map.emplace("cim:DisconnectingCircuitBreaker", &DisconnectingCircuitBreaker_factory);
 }
 
 void DisconnectingCircuitBreaker::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)

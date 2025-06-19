@@ -11,8 +11,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-LoadBreakSwitch::LoadBreakSwitch() {};
-LoadBreakSwitch::~LoadBreakSwitch() {};
+LoadBreakSwitch::LoadBreakSwitch() {}
+LoadBreakSwitch::~LoadBreakSwitch() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -39,11 +39,6 @@ LoadBreakSwitch::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
-
-
-
 const char LoadBreakSwitch::debugName[] = "LoadBreakSwitch";
 const char* LoadBreakSwitch::debugString() const
 {
@@ -52,7 +47,7 @@ const char* LoadBreakSwitch::debugString() const
 
 void LoadBreakSwitch::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:LoadBreakSwitch"), &LoadBreakSwitch_factory));
+	factory_map.emplace("cim:LoadBreakSwitch", &LoadBreakSwitch_factory);
 }
 
 void LoadBreakSwitch::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)

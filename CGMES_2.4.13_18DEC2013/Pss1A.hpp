@@ -20,9 +20,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Single input power system stabilizer. It is a modified version in order to allow representation of various vendors' implementations on PSS type 1A.
-	*/
+	/** \brief Single input power system stabilizer. It is a modified version in order to allow representation of various vendors' implementations on PSS type 1A. */
 	class Pss1A : public PowerSystemStabilizerDynamics
 	{
 	public:
@@ -30,28 +28,71 @@ namespace CIMPP
 		Pss1A();
 		~Pss1A() override;
 
-		CIMPP::PU a1;  /* Notch filter parameter (A1). Default: nullptr */
-		CIMPP::PU a2;  /* Notch filter parameter (A2). Default: nullptr */
-		CIMPP::PU a3;  /* Notch filter parameter (A3). Default: nullptr */
-		CIMPP::PU a4;  /* Notch filter parameter (A4). Default: nullptr */
-		CIMPP::PU a5;  /* Notch filter parameter (A5). Default: nullptr */
-		CIMPP::PU a6;  /* Notch filter parameter (A6). Default: nullptr */
-		CIMPP::PU a7;  /* Notch filter parameter (A7). Default: nullptr */
-		CIMPP::PU a8;  /* Notch filter parameter (A8). Default: nullptr */
-		CIMPP::InputSignalKind inputSignalType;  /* Type of input signal. Default: 0 */
-		CIMPP::Boolean kd;  /* Selector (Kd).  true = e used false = e not used. Default: false */
-		CIMPP::PU ks;  /* Stabilizer gain (Ks). Default: nullptr */
-		CIMPP::Seconds t1;  /* Lead/lag time constant (T1). Default: nullptr */
-		CIMPP::Seconds t2;  /* Lead/lag time constant (T2). Default: nullptr */
-		CIMPP::Seconds t3;  /* Lead/lag time constant (T3). Default: nullptr */
-		CIMPP::Seconds t4;  /* Lead/lag time constant (T4). Default: nullptr */
-		CIMPP::Seconds t5;  /* Washout time constant (T5). Default: nullptr */
-		CIMPP::Seconds t6;  /* Transducer time constant (T6). Default: nullptr */
-		CIMPP::Seconds tdelay;  /* Time constant (Tdelay). Default: nullptr */
-		CIMPP::PU vcl;  /* Stabilizer input cutoff threshold (Vcl). Default: nullptr */
-		CIMPP::PU vcu;  /* Stabilizer input cutoff threshold (Vcu). Default: nullptr */
-		CIMPP::PU vrmax;  /* Maximum stabilizer output (Vrmax). Default: nullptr */
-		CIMPP::PU vrmin;  /* Minimum stabilizer output (Vrmin). Default: nullptr */
+		/** \brief Notch filter parameter (A1). Default: nullptr */
+		CIMPP::PU a1;
+
+		/** \brief Notch filter parameter (A2). Default: nullptr */
+		CIMPP::PU a2;
+
+		/** \brief Notch filter parameter (A3). Default: nullptr */
+		CIMPP::PU a3;
+
+		/** \brief Notch filter parameter (A4). Default: nullptr */
+		CIMPP::PU a4;
+
+		/** \brief Notch filter parameter (A5). Default: nullptr */
+		CIMPP::PU a5;
+
+		/** \brief Notch filter parameter (A6). Default: nullptr */
+		CIMPP::PU a6;
+
+		/** \brief Notch filter parameter (A7). Default: nullptr */
+		CIMPP::PU a7;
+
+		/** \brief Notch filter parameter (A8). Default: nullptr */
+		CIMPP::PU a8;
+
+		/** \brief Type of input signal. Default: 0 */
+		CIMPP::InputSignalKind inputSignalType;
+
+		/** \brief Selector (Kd).  true = e used false = e not used. Default: false */
+		CIMPP::Boolean kd;
+
+		/** \brief Stabilizer gain (Ks). Default: nullptr */
+		CIMPP::PU ks;
+
+		/** \brief Lead/lag time constant (T1). Default: nullptr */
+		CIMPP::Seconds t1;
+
+		/** \brief Lead/lag time constant (T2). Default: nullptr */
+		CIMPP::Seconds t2;
+
+		/** \brief Lead/lag time constant (T3). Default: nullptr */
+		CIMPP::Seconds t3;
+
+		/** \brief Lead/lag time constant (T4). Default: nullptr */
+		CIMPP::Seconds t4;
+
+		/** \brief Washout time constant (T5). Default: nullptr */
+		CIMPP::Seconds t5;
+
+		/** \brief Transducer time constant (T6). Default: nullptr */
+		CIMPP::Seconds t6;
+
+		/** \brief Time constant (Tdelay). Default: nullptr */
+		CIMPP::Seconds tdelay;
+
+		/** \brief Stabilizer input cutoff threshold (Vcl). Default: nullptr */
+		CIMPP::PU vcl;
+
+		/** \brief Stabilizer input cutoff threshold (Vcu). Default: nullptr */
+		CIMPP::PU vcu;
+
+		/** \brief Maximum stabilizer output (Vrmax). Default: nullptr */
+		CIMPP::PU vrmax;
+
+		/** \brief Minimum stabilizer output (Vrmin). Default: nullptr */
+		CIMPP::PU vrmin;
 
 		static const char debugName[];
 		const char* debugString() const override;

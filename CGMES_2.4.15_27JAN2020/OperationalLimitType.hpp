@@ -20,9 +20,7 @@ namespace CIMPP
 {
 	class OperationalLimit;
 
-	/*
-	The operational meaning of a category of limits.
-	*/
+	/** \brief The operational meaning of a category of limits. */
 	class OperationalLimitType : public IdentifiedObject
 	{
 	public:
@@ -30,10 +28,17 @@ namespace CIMPP
 		OperationalLimitType();
 		~OperationalLimitType() override;
 
-		std::list<CIMPP::OperationalLimit*> OperationalLimit;  /* The operational limits associated with this type of limit. Default: 0 */
-		CIMPP::Seconds acceptableDuration;  /* The nominal acceptable duration of the limit.  Limits are commonly expressed in terms of the a time limit for which the limit is normally acceptable.   The actual acceptable duration of a specific limit may depend on other local factors such as temperature or wind speed. Default: nullptr */
-		CIMPP::OperationalLimitDirectionKind direction;  /* The direction of the limit. Default: 0 */
-		CIMPP::LimitTypeKind limitType;  /* Types of limits defined in the ENTSO-E Operational Handbook Policy 3. Default: 0 */
+		/** \brief The operational limits associated with this type of limit. Default: 0 */
+		std::list<CIMPP::OperationalLimit*> OperationalLimit;
+
+		/** \brief The nominal acceptable duration of the limit.  Limits are commonly expressed in terms of the a time limit for which the limit is normally acceptable.   The actual acceptable duration of a specific limit may depend on other local factors such as temperature or wind speed. Default: nullptr */
+		CIMPP::Seconds acceptableDuration;
+
+		/** \brief The direction of the limit. Default: 0 */
+		CIMPP::OperationalLimitDirectionKind direction;
+
+		/** \brief Types of limits defined in the ENTSO-E Operational Handbook Policy 3. Default: 0 */
+		CIMPP::LimitTypeKind limitType;
 
 		static const char debugName[];
 		const char* debugString() const override;

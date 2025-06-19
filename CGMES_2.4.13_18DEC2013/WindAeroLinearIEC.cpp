@@ -9,16 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "WindGenTurbineType3IEC.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "AngleDegrees.hpp"
 
 using namespace CIMPP;
 
-WindAeroLinearIEC::WindAeroLinearIEC() : WindGenTurbineType3IEC(nullptr) {};
-WindAeroLinearIEC::~WindAeroLinearIEC() {};
+WindAeroLinearIEC::WindAeroLinearIEC() : WindGenTurbineType3IEC(nullptr) {}
+WindAeroLinearIEC::~WindAeroLinearIEC() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -50,73 +45,6 @@ WindAeroLinearIEC::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_WindAeroLinearIEC_dpomega(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindAeroLinearIEC* element = dynamic_cast<WindAeroLinearIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->dpomega;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindAeroLinearIEC_dptheta(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindAeroLinearIEC* element = dynamic_cast<WindAeroLinearIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->dptheta;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindAeroLinearIEC_omegazero(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindAeroLinearIEC* element = dynamic_cast<WindAeroLinearIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->omegazero;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindAeroLinearIEC_pavail(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindAeroLinearIEC* element = dynamic_cast<WindAeroLinearIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->pavail;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindAeroLinearIEC_thetazero(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindAeroLinearIEC* element = dynamic_cast<WindAeroLinearIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->thetazero;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_WindGenTurbineType3IEC_WindAeroLinearIEC(BaseClass*, BaseClass*);
 bool assign_WindAeroLinearIEC_WindGenTurbineType3IEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -134,9 +62,81 @@ bool assign_WindAeroLinearIEC_WindGenTurbineType3IEC(BaseClass* BaseClass_ptr1, 
 	return false;
 }
 
+bool assign_WindAeroLinearIEC_dpomega(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindAeroLinearIEC* element = dynamic_cast<WindAeroLinearIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->dpomega;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindAeroLinearIEC_dptheta(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindAeroLinearIEC* element = dynamic_cast<WindAeroLinearIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->dptheta;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindAeroLinearIEC_omegazero(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindAeroLinearIEC* element = dynamic_cast<WindAeroLinearIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->omegazero;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindAeroLinearIEC_pavail(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindAeroLinearIEC* element = dynamic_cast<WindAeroLinearIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->pavail;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindAeroLinearIEC_thetazero(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindAeroLinearIEC* element = dynamic_cast<WindAeroLinearIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->thetazero;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_WindAeroLinearIEC_dpomega(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindAeroLinearIEC* element = dynamic_cast<const WindAeroLinearIEC*>(BaseClass_ptr1))
+	const WindAeroLinearIEC* element = dynamic_cast<const WindAeroLinearIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->dpomega;
 		if (!buffer.str().empty())
@@ -150,7 +150,8 @@ bool get_WindAeroLinearIEC_dpomega(const BaseClass* BaseClass_ptr1, std::strings
 
 bool get_WindAeroLinearIEC_dptheta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindAeroLinearIEC* element = dynamic_cast<const WindAeroLinearIEC*>(BaseClass_ptr1))
+	const WindAeroLinearIEC* element = dynamic_cast<const WindAeroLinearIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->dptheta;
 		if (!buffer.str().empty())
@@ -164,7 +165,8 @@ bool get_WindAeroLinearIEC_dptheta(const BaseClass* BaseClass_ptr1, std::strings
 
 bool get_WindAeroLinearIEC_omegazero(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindAeroLinearIEC* element = dynamic_cast<const WindAeroLinearIEC*>(BaseClass_ptr1))
+	const WindAeroLinearIEC* element = dynamic_cast<const WindAeroLinearIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->omegazero;
 		if (!buffer.str().empty())
@@ -178,7 +180,8 @@ bool get_WindAeroLinearIEC_omegazero(const BaseClass* BaseClass_ptr1, std::strin
 
 bool get_WindAeroLinearIEC_pavail(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindAeroLinearIEC* element = dynamic_cast<const WindAeroLinearIEC*>(BaseClass_ptr1))
+	const WindAeroLinearIEC* element = dynamic_cast<const WindAeroLinearIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pavail;
 		if (!buffer.str().empty())
@@ -192,7 +195,8 @@ bool get_WindAeroLinearIEC_pavail(const BaseClass* BaseClass_ptr1, std::stringst
 
 bool get_WindAeroLinearIEC_thetazero(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindAeroLinearIEC* element = dynamic_cast<const WindAeroLinearIEC*>(BaseClass_ptr1))
+	const WindAeroLinearIEC* element = dynamic_cast<const WindAeroLinearIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->thetazero;
 		if (!buffer.str().empty())
@@ -204,8 +208,6 @@ bool get_WindAeroLinearIEC_thetazero(const BaseClass* BaseClass_ptr1, std::strin
 	return false;
 }
 
-
-
 const char WindAeroLinearIEC::debugName[] = "WindAeroLinearIEC";
 const char* WindAeroLinearIEC::debugString() const
 {
@@ -214,21 +216,21 @@ const char* WindAeroLinearIEC::debugString() const
 
 void WindAeroLinearIEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:WindAeroLinearIEC"), &WindAeroLinearIEC_factory));
+	factory_map.emplace("cim:WindAeroLinearIEC", &WindAeroLinearIEC_factory);
 }
 
 void WindAeroLinearIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindAeroLinearIEC.dpomega"), &assign_WindAeroLinearIEC_dpomega));
-	assign_map.insert(std::make_pair(std::string("cim:WindAeroLinearIEC.dptheta"), &assign_WindAeroLinearIEC_dptheta));
-	assign_map.insert(std::make_pair(std::string("cim:WindAeroLinearIEC.omegazero"), &assign_WindAeroLinearIEC_omegazero));
-	assign_map.insert(std::make_pair(std::string("cim:WindAeroLinearIEC.pavail"), &assign_WindAeroLinearIEC_pavail));
-	assign_map.insert(std::make_pair(std::string("cim:WindAeroLinearIEC.thetazero"), &assign_WindAeroLinearIEC_thetazero));
+	assign_map.emplace("cim:WindAeroLinearIEC.dpomega", &assign_WindAeroLinearIEC_dpomega);
+	assign_map.emplace("cim:WindAeroLinearIEC.dptheta", &assign_WindAeroLinearIEC_dptheta);
+	assign_map.emplace("cim:WindAeroLinearIEC.omegazero", &assign_WindAeroLinearIEC_omegazero);
+	assign_map.emplace("cim:WindAeroLinearIEC.pavail", &assign_WindAeroLinearIEC_pavail);
+	assign_map.emplace("cim:WindAeroLinearIEC.thetazero", &assign_WindAeroLinearIEC_thetazero);
 }
 
 void WindAeroLinearIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindAeroLinearIEC.WindGenTurbineType3IEC"), &assign_WindAeroLinearIEC_WindGenTurbineType3IEC));
+	assign_map.emplace("cim:WindAeroLinearIEC.WindGenTurbineType3IEC", &assign_WindAeroLinearIEC_WindGenTurbineType3IEC);
 }
 
 void WindAeroLinearIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

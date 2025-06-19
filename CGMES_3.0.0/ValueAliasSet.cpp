@@ -15,8 +15,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-ValueAliasSet::ValueAliasSet() {};
-ValueAliasSet::~ValueAliasSet() {};
+ValueAliasSet::ValueAliasSet() {}
+ValueAliasSet::~ValueAliasSet() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -46,8 +46,6 @@ ValueAliasSet::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_Command_ValueAliasSet(BaseClass*, BaseClass*);
 bool assign_ValueAliasSet_Commands(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -64,6 +62,7 @@ bool assign_ValueAliasSet_Commands(BaseClass* BaseClass_ptr1, BaseClass* BaseCla
 	}
 	return false;
 }
+
 bool assign_Discrete_ValueAliasSet(BaseClass*, BaseClass*);
 bool assign_ValueAliasSet_Discretes(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -80,6 +79,7 @@ bool assign_ValueAliasSet_Discretes(BaseClass* BaseClass_ptr1, BaseClass* BaseCl
 	}
 	return false;
 }
+
 bool assign_RaiseLowerCommand_ValueAliasSet(BaseClass*, BaseClass*);
 bool assign_ValueAliasSet_RaiseLowerCommands(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -96,6 +96,7 @@ bool assign_ValueAliasSet_RaiseLowerCommands(BaseClass* BaseClass_ptr1, BaseClas
 	}
 	return false;
 }
+
 bool assign_ValueToAlias_ValueAliasSet(BaseClass*, BaseClass*);
 bool assign_ValueAliasSet_Values(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -115,6 +116,8 @@ bool assign_ValueAliasSet_Values(BaseClass* BaseClass_ptr1, BaseClass* BaseClass
 
 
 
+
+
 const char ValueAliasSet::debugName[] = "ValueAliasSet";
 const char* ValueAliasSet::debugString() const
 {
@@ -123,7 +126,7 @@ const char* ValueAliasSet::debugString() const
 
 void ValueAliasSet::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ValueAliasSet"), &ValueAliasSet_factory));
+	factory_map.emplace("cim:ValueAliasSet", &ValueAliasSet_factory);
 }
 
 void ValueAliasSet::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -132,10 +135,10 @@ void ValueAliasSet::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, a
 
 void ValueAliasSet::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ValueAliasSet.Commands"), &assign_ValueAliasSet_Commands));
-	assign_map.insert(std::make_pair(std::string("cim:ValueAliasSet.Discretes"), &assign_ValueAliasSet_Discretes));
-	assign_map.insert(std::make_pair(std::string("cim:ValueAliasSet.RaiseLowerCommands"), &assign_ValueAliasSet_RaiseLowerCommands));
-	assign_map.insert(std::make_pair(std::string("cim:ValueAliasSet.Values"), &assign_ValueAliasSet_Values));
+	assign_map.emplace("cim:ValueAliasSet.Commands", &assign_ValueAliasSet_Commands);
+	assign_map.emplace("cim:ValueAliasSet.Discretes", &assign_ValueAliasSet_Discretes);
+	assign_map.emplace("cim:ValueAliasSet.RaiseLowerCommands", &assign_ValueAliasSet_RaiseLowerCommands);
+	assign_map.emplace("cim:ValueAliasSet.Values", &assign_ValueAliasSet_Values);
 }
 
 void ValueAliasSet::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

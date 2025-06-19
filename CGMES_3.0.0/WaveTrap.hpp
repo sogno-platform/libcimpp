@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Line traps are devices that impede high frequency power line carrier signals yet present a negligible impedance at the main power frequency.
-	*/
+	/** \brief Line traps are devices that impede high frequency power line carrier signals yet present a negligible impedance at the main power frequency. */
 	class WaveTrap : public AuxiliaryEquipment
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		WaveTrap();
 		~WaveTrap() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

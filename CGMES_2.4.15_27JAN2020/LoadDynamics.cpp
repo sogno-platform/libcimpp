@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-LoadDynamics::LoadDynamics() {};
-LoadDynamics::~LoadDynamics() {};
+LoadDynamics::LoadDynamics() {}
+LoadDynamics::~LoadDynamics() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ LoadDynamics::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_EnergyConsumer_LoadDynamics(BaseClass*, BaseClass*);
 bool assign_LoadDynamics_EnergyConsumer(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,7 +58,6 @@ bool assign_LoadDynamics_EnergyConsumer(BaseClass* BaseClass_ptr1, BaseClass* Ba
 }
 
 
-
 const char LoadDynamics::debugName[] = "LoadDynamics";
 const char* LoadDynamics::debugString() const
 {
@@ -69,7 +66,7 @@ const char* LoadDynamics::debugString() const
 
 void LoadDynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:LoadDynamics"), &LoadDynamics_factory));
+	factory_map.emplace("cim:LoadDynamics", &LoadDynamics_factory);
 }
 
 void LoadDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -78,7 +75,7 @@ void LoadDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, as
 
 void LoadDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:LoadDynamics.EnergyConsumer"), &assign_LoadDynamics_EnergyConsumer));
+	assign_map.emplace("cim:LoadDynamics.EnergyConsumer", &assign_LoadDynamics_EnergyConsumer);
 }
 
 void LoadDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

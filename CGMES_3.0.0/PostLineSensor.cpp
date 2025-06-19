@@ -11,8 +11,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-PostLineSensor::PostLineSensor() {};
-PostLineSensor::~PostLineSensor() {};
+PostLineSensor::PostLineSensor() {}
+PostLineSensor::~PostLineSensor() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -38,11 +38,6 @@ PostLineSensor::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
-
-
-
 const char PostLineSensor::debugName[] = "PostLineSensor";
 const char* PostLineSensor::debugString() const
 {
@@ -51,7 +46,7 @@ const char* PostLineSensor::debugString() const
 
 void PostLineSensor::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:PostLineSensor"), &PostLineSensor_factory));
+	factory_map.emplace("cim:PostLineSensor", &PostLineSensor_factory);
 }
 
 void PostLineSensor::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)

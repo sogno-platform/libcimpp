@@ -9,25 +9,17 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Active power control modes for HVDC line operating as Current Source Converter.
-	*/
+	/** \brief Active power control modes for HVDC line operating as Current Source Converter. */
 	class CsPpccControlKind
 	{
 	public:
 		enum CsPpccControlKind_ENUM
 		{
-			/**
-			 * Control is active power control at AC side, at point of common coupling. Target is provided by ACDCConverter.targetPpcc.
-			 */
+			/** Control is active power control at AC side, at point of common coupling. Target is provided by ACDCConverter.targetPpcc. */
 			activePower,
-			/**
-			 * Control is DC voltage  with target value provided by ACDCConverter.targetUdc.
-			 */
+			/** Control is DC voltage  with target value provided by ACDCConverter.targetUdc. */
 			dcVoltage,
-			/**
-			 * Control is DC current  with target value provided by CsConverter.targetIdc.
-			 */
+			/** Control is DC current  with target value provided by CsConverter.targetIdc. */
 			dcCurrent,
 		};
 

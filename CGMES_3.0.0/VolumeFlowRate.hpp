@@ -9,9 +9,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Volume per time.
-	*/
+	/** \brief Volume per time. */
 	class VolumeFlowRate
 	{
 	public:

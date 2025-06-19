@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "UnitMultiplier")
+		if (EnumSymbol.substr(0, pos) != "UnitMultiplier")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,107 +50,107 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "y")
+		if (EnumSymbol == "y")
 		{
 			rop = UnitMultiplier::y;
 			return lop;
 		}
-		if(EnumSymbol == "z")
+		if (EnumSymbol == "z")
 		{
 			rop = UnitMultiplier::z;
 			return lop;
 		}
-		if(EnumSymbol == "a")
+		if (EnumSymbol == "a")
 		{
 			rop = UnitMultiplier::a;
 			return lop;
 		}
-		if(EnumSymbol == "f")
+		if (EnumSymbol == "f")
 		{
 			rop = UnitMultiplier::f;
 			return lop;
 		}
-		if(EnumSymbol == "p")
+		if (EnumSymbol == "p")
 		{
 			rop = UnitMultiplier::p;
 			return lop;
 		}
-		if(EnumSymbol == "n")
+		if (EnumSymbol == "n")
 		{
 			rop = UnitMultiplier::n;
 			return lop;
 		}
-		if(EnumSymbol == "micro")
+		if (EnumSymbol == "micro")
 		{
 			rop = UnitMultiplier::micro;
 			return lop;
 		}
-		if(EnumSymbol == "m")
+		if (EnumSymbol == "m")
 		{
 			rop = UnitMultiplier::m;
 			return lop;
 		}
-		if(EnumSymbol == "c")
+		if (EnumSymbol == "c")
 		{
 			rop = UnitMultiplier::c;
 			return lop;
 		}
-		if(EnumSymbol == "d")
+		if (EnumSymbol == "d")
 		{
 			rop = UnitMultiplier::d;
 			return lop;
 		}
-		if(EnumSymbol == "none")
+		if (EnumSymbol == "none")
 		{
 			rop = UnitMultiplier::none;
 			return lop;
 		}
-		if(EnumSymbol == "da")
+		if (EnumSymbol == "da")
 		{
 			rop = UnitMultiplier::da;
 			return lop;
 		}
-		if(EnumSymbol == "h")
+		if (EnumSymbol == "h")
 		{
 			rop = UnitMultiplier::h;
 			return lop;
 		}
-		if(EnumSymbol == "k")
+		if (EnumSymbol == "k")
 		{
 			rop = UnitMultiplier::k;
 			return lop;
 		}
-		if(EnumSymbol == "M")
+		if (EnumSymbol == "M")
 		{
 			rop = UnitMultiplier::M;
 			return lop;
 		}
-		if(EnumSymbol == "G")
+		if (EnumSymbol == "G")
 		{
 			rop = UnitMultiplier::G;
 			return lop;
 		}
-		if(EnumSymbol == "T")
+		if (EnumSymbol == "T")
 		{
 			rop = UnitMultiplier::T;
 			return lop;
 		}
-		if(EnumSymbol == "P")
+		if (EnumSymbol == "P")
 		{
 			rop = UnitMultiplier::P;
 			return lop;
 		}
-		if(EnumSymbol == "E")
+		if (EnumSymbol == "E")
 		{
 			rop = UnitMultiplier::E;
 			return lop;
 		}
-		if(EnumSymbol == "Z")
+		if (EnumSymbol == "Z")
 		{
 			rop = UnitMultiplier::Z;
 			return lop;
 		}
-		if(EnumSymbol == "Y")
+		if (EnumSymbol == "Y")
 		{
 			rop = UnitMultiplier::Y;
 			return lop;

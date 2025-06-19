@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "BatteryStateKind")
+		if (EnumSymbol.substr(0, pos) != "BatteryStateKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,27 +50,27 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "discharging")
+		if (EnumSymbol == "discharging")
 		{
 			rop = BatteryStateKind::discharging;
 			return lop;
 		}
-		if(EnumSymbol == "full")
+		if (EnumSymbol == "full")
 		{
 			rop = BatteryStateKind::full;
 			return lop;
 		}
-		if(EnumSymbol == "waiting")
+		if (EnumSymbol == "waiting")
 		{
 			rop = BatteryStateKind::waiting;
 			return lop;
 		}
-		if(EnumSymbol == "charging")
+		if (EnumSymbol == "charging")
 		{
 			rop = BatteryStateKind::charging;
 			return lop;
 		}
-		if(EnumSymbol == "empty")
+		if (EnumSymbol == "empty")
 		{
 			rop = BatteryStateKind::empty;
 			return lop;

@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	<font color="#0f0f0f">Allis-Chalmers minimum excitation limiter.</font>
-	*/
+	/** \brief <font color="#0f0f0f">Allis-Chalmers minimum excitation limiter.</font> */
 	class UnderexcLimX1 : public UnderexcitationLimiterDynamics
 	{
 	public:
@@ -28,12 +26,23 @@ namespace CIMPP
 		UnderexcLimX1();
 		~UnderexcLimX1() override;
 
-		CIMPP::PU k;  /* Minimum excitation limit slope (&lt;i&gt;K&lt;/i&gt;) (&amp;gt; 0). Default: nullptr */
-		CIMPP::PU kf2;  /* Differential gain (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;F2&lt;/sub&gt;&lt;/i&gt;). Default: nullptr */
-		CIMPP::PU km;  /* Minimum excitation limit gain (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;M&lt;/sub&gt;&lt;/i&gt;). Default: nullptr */
-		CIMPP::PU melmax;  /* Minimum excitation limit value (&lt;i&gt;MELMAX&lt;/i&gt;). Default: nullptr */
-		CIMPP::Seconds tf2;  /* Differential time constant (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;F2&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). Default: nullptr */
-		CIMPP::Seconds tm;  /* Minimum excitation limit time constant (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;M&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). Default: nullptr */
+		/** \brief Minimum excitation limit slope (&lt;i&gt;K&lt;/i&gt;) (&amp;gt; 0). Default: nullptr */
+		CIMPP::PU k;
+
+		/** \brief Differential gain (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;F2&lt;/sub&gt;&lt;/i&gt;). Default: nullptr */
+		CIMPP::PU kf2;
+
+		/** \brief Minimum excitation limit gain (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;M&lt;/sub&gt;&lt;/i&gt;). Default: nullptr */
+		CIMPP::PU km;
+
+		/** \brief Minimum excitation limit value (&lt;i&gt;MELMAX&lt;/i&gt;). Default: nullptr */
+		CIMPP::PU melmax;
+
+		/** \brief Differential time constant (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;F2&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). Default: nullptr */
+		CIMPP::Seconds tf2;
+
+		/** \brief Minimum excitation limit time constant (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;M&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). Default: nullptr */
+		CIMPP::Seconds tm;
 
 		static const char debugName[];
 		const char* debugString() const override;

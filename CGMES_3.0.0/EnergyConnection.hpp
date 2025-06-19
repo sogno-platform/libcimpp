@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A connection of energy generation or consumption on the power system model.
-	*/
+	/** \brief A connection of energy generation or consumption on the power system model. */
 	class EnergyConnection : public ConductingEquipment
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		EnergyConnection();
 		~EnergyConnection() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

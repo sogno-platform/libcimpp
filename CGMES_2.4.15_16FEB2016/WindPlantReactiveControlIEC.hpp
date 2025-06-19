@@ -21,9 +21,7 @@ namespace CIMPP
 {
 	class WindPlantIEC;
 
-	/*
-	Simplified plant voltage and reactive power control model for use with type 3 and type 4 wind turbine models.  Reference: IEC Standard 61400-27-1 Annex E.
-	*/
+	/** \brief Simplified plant voltage and reactive power control model for use with type 3 and type 4 wind turbine models.  Reference: IEC Standard 61400-27-1 Annex E. */
 	class WindPlantReactiveControlIEC : public IdentifiedObject
 	{
 	public:
@@ -31,20 +29,47 @@ namespace CIMPP
 		WindPlantReactiveControlIEC();
 		~WindPlantReactiveControlIEC() override;
 
-		CIMPP::WindPlantIEC* WindPlantIEC;  /* Wind plant model with which this wind reactive control is associated. Default: 0 */
-		CIMPP::Simple_Float kiwpx;  /* Plant Q controller integral gain (). It is type dependent parameter. Default: nullptr */
-		CIMPP::Simple_Float kpwpx;  /* Plant Q controller proportional gain (). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU kwpqu;  /* Plant voltage control droop (). It is project dependent parameter. Default: nullptr */
-		CIMPP::Boolean mwppf;  /* Power factor control modes selector (). Used only if mwpu is set to false. true = 1: power factor control false = 0: reactive power control. It is project dependent parameter. Default: false */
-		CIMPP::Boolean mwpu;  /* Reactive power control modes selector (). true = 1: voltage control false = 0: reactive power control. It is project dependent parameter. Default: false */
-		CIMPP::Seconds twppfilt;  /* Filter time constant for active power measurement (). It is type dependent parameter. Default: nullptr */
-		CIMPP::Seconds twpqfilt;  /* Filter time constant for reactive power measurement (). It is type dependent parameter. Default: nullptr */
-		CIMPP::Seconds twpufilt;  /* Filter time constant for voltage measurement (). It is type dependent parameter. Default: nullptr */
-		CIMPP::Seconds txft;  /* Lead time constant in reference value transfer function (). It is type dependent parameter. Default: nullptr */
-		CIMPP::Seconds txfv;  /* Lag time constant in reference value transfer function (). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU uwpqdip;  /* Voltage threshold for LVRT detection in q control (). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU xrefmax;  /* Maximum  ( or delta ) request from the plant controller (). It is project dependent parameter. Default: nullptr */
-		CIMPP::PU xrefmin;  /* Minimum  ( or delta) request from the plant controller (). It is project dependent parameter. Default: nullptr */
+		/** \brief Wind plant model with which this wind reactive control is associated. Default: 0 */
+		CIMPP::WindPlantIEC* WindPlantIEC;
+
+		/** \brief Plant Q controller integral gain (). It is type dependent parameter. Default: nullptr */
+		CIMPP::Simple_Float kiwpx;
+
+		/** \brief Plant Q controller proportional gain (). It is type dependent parameter. Default: nullptr */
+		CIMPP::Simple_Float kpwpx;
+
+		/** \brief Plant voltage control droop (). It is project dependent parameter. Default: nullptr */
+		CIMPP::PU kwpqu;
+
+		/** \brief Power factor control modes selector (). Used only if mwpu is set to false. true = 1: power factor control false = 0: reactive power control. It is project dependent parameter. Default: false */
+		CIMPP::Boolean mwppf;
+
+		/** \brief Reactive power control modes selector (). true = 1: voltage control false = 0: reactive power control. It is project dependent parameter. Default: false */
+		CIMPP::Boolean mwpu;
+
+		/** \brief Filter time constant for active power measurement (). It is type dependent parameter. Default: nullptr */
+		CIMPP::Seconds twppfilt;
+
+		/** \brief Filter time constant for reactive power measurement (). It is type dependent parameter. Default: nullptr */
+		CIMPP::Seconds twpqfilt;
+
+		/** \brief Filter time constant for voltage measurement (). It is type dependent parameter. Default: nullptr */
+		CIMPP::Seconds twpufilt;
+
+		/** \brief Lead time constant in reference value transfer function (). It is type dependent parameter. Default: nullptr */
+		CIMPP::Seconds txft;
+
+		/** \brief Lag time constant in reference value transfer function (). It is type dependent parameter. Default: nullptr */
+		CIMPP::Seconds txfv;
+
+		/** \brief Voltage threshold for LVRT detection in q control (). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU uwpqdip;
+
+		/** \brief Maximum  ( or delta ) request from the plant controller (). It is project dependent parameter. Default: nullptr */
+		CIMPP::PU xrefmax;
+
+		/** \brief Minimum  ( or delta) request from the plant controller (). It is project dependent parameter. Default: nullptr */
+		CIMPP::PU xrefmin;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -15,8 +15,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-AsynchronousMachineDynamics::AsynchronousMachineDynamics() : AsynchronousMachine(nullptr), MechanicalLoadDynamics(nullptr), TurbineGovernorDynamics(nullptr), WindTurbineType1or2Dynamics(nullptr) {};
-AsynchronousMachineDynamics::~AsynchronousMachineDynamics() {};
+AsynchronousMachineDynamics::AsynchronousMachineDynamics() : AsynchronousMachine(nullptr), MechanicalLoadDynamics(nullptr), TurbineGovernorDynamics(nullptr), WindTurbineType1or2Dynamics(nullptr) {}
+AsynchronousMachineDynamics::~AsynchronousMachineDynamics() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -46,8 +46,6 @@ AsynchronousMachineDynamics::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_AsynchronousMachine_AsynchronousMachineDynamics(BaseClass*, BaseClass*);
 bool assign_AsynchronousMachineDynamics_AsynchronousMachine(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -64,6 +62,7 @@ bool assign_AsynchronousMachineDynamics_AsynchronousMachine(BaseClass* BaseClass
 	}
 	return false;
 }
+
 bool assign_MechanicalLoadDynamics_AsynchronousMachineDynamics(BaseClass*, BaseClass*);
 bool assign_AsynchronousMachineDynamics_MechanicalLoadDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -80,6 +79,7 @@ bool assign_AsynchronousMachineDynamics_MechanicalLoadDynamics(BaseClass* BaseCl
 	}
 	return false;
 }
+
 bool assign_TurbineGovernorDynamics_AsynchronousMachineDynamics(BaseClass*, BaseClass*);
 bool assign_AsynchronousMachineDynamics_TurbineGovernorDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -96,6 +96,7 @@ bool assign_AsynchronousMachineDynamics_TurbineGovernorDynamics(BaseClass* BaseC
 	}
 	return false;
 }
+
 bool assign_WindTurbineType1or2Dynamics_AsynchronousMachineDynamics(BaseClass*, BaseClass*);
 bool assign_AsynchronousMachineDynamics_WindTurbineType1or2Dynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -113,10 +114,10 @@ bool assign_AsynchronousMachineDynamics_WindTurbineType1or2Dynamics(BaseClass* B
 	return false;
 }
 
-
 bool get_AsynchronousMachineDynamics_AsynchronousMachine(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const AsynchronousMachineDynamics* element = dynamic_cast<const AsynchronousMachineDynamics*>(BaseClass_ptr1))
+	const AsynchronousMachineDynamics* element = dynamic_cast<const AsynchronousMachineDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->AsynchronousMachine != 0)
 		{
@@ -128,6 +129,8 @@ bool get_AsynchronousMachineDynamics_AsynchronousMachine(const BaseClass* BaseCl
 }
 
 
+
+
 const char AsynchronousMachineDynamics::debugName[] = "AsynchronousMachineDynamics";
 const char* AsynchronousMachineDynamics::debugString() const
 {
@@ -136,7 +139,7 @@ const char* AsynchronousMachineDynamics::debugString() const
 
 void AsynchronousMachineDynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:AsynchronousMachineDynamics"), &AsynchronousMachineDynamics_factory));
+	factory_map.emplace("cim:AsynchronousMachineDynamics", &AsynchronousMachineDynamics_factory);
 }
 
 void AsynchronousMachineDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -145,10 +148,10 @@ void AsynchronousMachineDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<
 
 void AsynchronousMachineDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:AsynchronousMachineDynamics.AsynchronousMachine"), &assign_AsynchronousMachineDynamics_AsynchronousMachine));
-	assign_map.insert(std::make_pair(std::string("cim:AsynchronousMachineDynamics.MechanicalLoadDynamics"), &assign_AsynchronousMachineDynamics_MechanicalLoadDynamics));
-	assign_map.insert(std::make_pair(std::string("cim:AsynchronousMachineDynamics.TurbineGovernorDynamics"), &assign_AsynchronousMachineDynamics_TurbineGovernorDynamics));
-	assign_map.insert(std::make_pair(std::string("cim:AsynchronousMachineDynamics.WindTurbineType1or2Dynamics"), &assign_AsynchronousMachineDynamics_WindTurbineType1or2Dynamics));
+	assign_map.emplace("cim:AsynchronousMachineDynamics.AsynchronousMachine", &assign_AsynchronousMachineDynamics_AsynchronousMachine);
+	assign_map.emplace("cim:AsynchronousMachineDynamics.MechanicalLoadDynamics", &assign_AsynchronousMachineDynamics_MechanicalLoadDynamics);
+	assign_map.emplace("cim:AsynchronousMachineDynamics.TurbineGovernorDynamics", &assign_AsynchronousMachineDynamics_TurbineGovernorDynamics);
+	assign_map.emplace("cim:AsynchronousMachineDynamics.WindTurbineType1or2Dynamics", &assign_AsynchronousMachineDynamics_WindTurbineType1or2Dynamics);
 }
 
 void AsynchronousMachineDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

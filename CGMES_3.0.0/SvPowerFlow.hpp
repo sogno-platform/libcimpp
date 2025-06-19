@@ -19,9 +19,7 @@ namespace CIMPP
 {
 	class Terminal;
 
-	/*
-	State variable for power flow. Load convention is used for flow direction. This means flow out from the TopologicalNode into the equipment is positive.
-	*/
+	/** \brief State variable for power flow. Load convention is used for flow direction. This means flow out from the TopologicalNode into the equipment is positive. */
 	class SvPowerFlow : public BaseClass
 	{
 	public:
@@ -29,9 +27,14 @@ namespace CIMPP
 		SvPowerFlow();
 		~SvPowerFlow() override;
 
-		CIMPP::Terminal* Terminal;  /* The terminal associated with the power flow state variable. Default: 0 */
-		CIMPP::ActivePower p;  /* The active power flow. Load sign convention is used, i.e. positive sign means flow out from a TopologicalNode (bus) into the conducting equipment. Default: nullptr */
-		CIMPP::ReactivePower q;  /* The reactive power flow. Load sign convention is used, i.e. positive sign means flow out from a TopologicalNode (bus) into the conducting equipment. Default: nullptr */
+		/** \brief The terminal associated with the power flow state variable. Default: 0 */
+		CIMPP::Terminal* Terminal;
+
+		/** \brief The active power flow. Load sign convention is used, i.e. positive sign means flow out from a TopologicalNode (bus) into the conducting equipment. Default: nullptr */
+		CIMPP::ActivePower p;
+
+		/** \brief The reactive power flow. Load sign convention is used, i.e. positive sign means flow out from a TopologicalNode (bus) into the conducting equipment. Default: nullptr */
+		CIMPP::ReactivePower q;
 
 		static const char debugName[];
 		const char* debugString() const override;

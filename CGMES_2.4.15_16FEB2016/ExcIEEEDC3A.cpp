@@ -8,22 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Boolean.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Simple_Float.hpp"
-#include "Simple_Float.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
 
 using namespace CIMPP;
 
-ExcIEEEDC3A::ExcIEEEDC3A() {};
-ExcIEEEDC3A::~ExcIEEEDC3A() {};
+ExcIEEEDC3A::ExcIEEEDC3A() {}
+ExcIEEEDC3A::~ExcIEEEDC3A() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -60,155 +49,164 @@ ExcIEEEDC3A::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_ExcIEEEDC3A_efd1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEDC3A_efd1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEDC3A* element = dynamic_cast<ExcIEEEDC3A*>(BaseClass_ptr1))
+	ExcIEEEDC3A* element = dynamic_cast<ExcIEEEDC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->efd1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEDC3A_efd2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEDC3A_efd2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEDC3A* element = dynamic_cast<ExcIEEEDC3A*>(BaseClass_ptr1))
+	ExcIEEEDC3A* element = dynamic_cast<ExcIEEEDC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->efd2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEDC3A_exclim(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEDC3A_exclim(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEDC3A* element = dynamic_cast<ExcIEEEDC3A*>(BaseClass_ptr1))
+	ExcIEEEDC3A* element = dynamic_cast<ExcIEEEDC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->exclim;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEDC3A_ke(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEDC3A_ke(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEDC3A* element = dynamic_cast<ExcIEEEDC3A*>(BaseClass_ptr1))
+	ExcIEEEDC3A* element = dynamic_cast<ExcIEEEDC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ke;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEDC3A_kv(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEDC3A_kv(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEDC3A* element = dynamic_cast<ExcIEEEDC3A*>(BaseClass_ptr1))
+	ExcIEEEDC3A* element = dynamic_cast<ExcIEEEDC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kv;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEDC3A_seefd1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEDC3A_seefd1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEDC3A* element = dynamic_cast<ExcIEEEDC3A*>(BaseClass_ptr1))
+	ExcIEEEDC3A* element = dynamic_cast<ExcIEEEDC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->seefd1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEDC3A_seefd2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEDC3A_seefd2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEDC3A* element = dynamic_cast<ExcIEEEDC3A*>(BaseClass_ptr1))
+	ExcIEEEDC3A* element = dynamic_cast<ExcIEEEDC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->seefd2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEDC3A_te(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEDC3A_te(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEDC3A* element = dynamic_cast<ExcIEEEDC3A*>(BaseClass_ptr1))
+	ExcIEEEDC3A* element = dynamic_cast<ExcIEEEDC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->te;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEDC3A_trh(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEDC3A_trh(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEDC3A* element = dynamic_cast<ExcIEEEDC3A*>(BaseClass_ptr1))
+	ExcIEEEDC3A* element = dynamic_cast<ExcIEEEDC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->trh;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEDC3A_vrmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEDC3A_vrmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEDC3A* element = dynamic_cast<ExcIEEEDC3A*>(BaseClass_ptr1))
+	ExcIEEEDC3A* element = dynamic_cast<ExcIEEEDC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vrmax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcIEEEDC3A_vrmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcIEEEDC3A_vrmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcIEEEDC3A* element = dynamic_cast<ExcIEEEDC3A*>(BaseClass_ptr1))
+	ExcIEEEDC3A* element = dynamic_cast<ExcIEEEDC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vrmin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_ExcIEEEDC3A_efd1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEDC3A* element = dynamic_cast<const ExcIEEEDC3A*>(BaseClass_ptr1))
+	const ExcIEEEDC3A* element = dynamic_cast<const ExcIEEEDC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->efd1;
 		if (!buffer.str().empty())
@@ -222,7 +220,8 @@ bool get_ExcIEEEDC3A_efd1(const BaseClass* BaseClass_ptr1, std::stringstream& bu
 
 bool get_ExcIEEEDC3A_efd2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEDC3A* element = dynamic_cast<const ExcIEEEDC3A*>(BaseClass_ptr1))
+	const ExcIEEEDC3A* element = dynamic_cast<const ExcIEEEDC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->efd2;
 		if (!buffer.str().empty())
@@ -236,7 +235,8 @@ bool get_ExcIEEEDC3A_efd2(const BaseClass* BaseClass_ptr1, std::stringstream& bu
 
 bool get_ExcIEEEDC3A_exclim(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEDC3A* element = dynamic_cast<const ExcIEEEDC3A*>(BaseClass_ptr1))
+	const ExcIEEEDC3A* element = dynamic_cast<const ExcIEEEDC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->exclim;
 		if (!buffer.str().empty())
@@ -250,7 +250,8 @@ bool get_ExcIEEEDC3A_exclim(const BaseClass* BaseClass_ptr1, std::stringstream& 
 
 bool get_ExcIEEEDC3A_ke(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEDC3A* element = dynamic_cast<const ExcIEEEDC3A*>(BaseClass_ptr1))
+	const ExcIEEEDC3A* element = dynamic_cast<const ExcIEEEDC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ke;
 		if (!buffer.str().empty())
@@ -264,7 +265,8 @@ bool get_ExcIEEEDC3A_ke(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_ExcIEEEDC3A_kv(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEDC3A* element = dynamic_cast<const ExcIEEEDC3A*>(BaseClass_ptr1))
+	const ExcIEEEDC3A* element = dynamic_cast<const ExcIEEEDC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kv;
 		if (!buffer.str().empty())
@@ -278,7 +280,8 @@ bool get_ExcIEEEDC3A_kv(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_ExcIEEEDC3A_seefd1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEDC3A* element = dynamic_cast<const ExcIEEEDC3A*>(BaseClass_ptr1))
+	const ExcIEEEDC3A* element = dynamic_cast<const ExcIEEEDC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->seefd1;
 		if (!buffer.str().empty())
@@ -292,7 +295,8 @@ bool get_ExcIEEEDC3A_seefd1(const BaseClass* BaseClass_ptr1, std::stringstream& 
 
 bool get_ExcIEEEDC3A_seefd2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEDC3A* element = dynamic_cast<const ExcIEEEDC3A*>(BaseClass_ptr1))
+	const ExcIEEEDC3A* element = dynamic_cast<const ExcIEEEDC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->seefd2;
 		if (!buffer.str().empty())
@@ -306,7 +310,8 @@ bool get_ExcIEEEDC3A_seefd2(const BaseClass* BaseClass_ptr1, std::stringstream& 
 
 bool get_ExcIEEEDC3A_te(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEDC3A* element = dynamic_cast<const ExcIEEEDC3A*>(BaseClass_ptr1))
+	const ExcIEEEDC3A* element = dynamic_cast<const ExcIEEEDC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->te;
 		if (!buffer.str().empty())
@@ -320,7 +325,8 @@ bool get_ExcIEEEDC3A_te(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_ExcIEEEDC3A_trh(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEDC3A* element = dynamic_cast<const ExcIEEEDC3A*>(BaseClass_ptr1))
+	const ExcIEEEDC3A* element = dynamic_cast<const ExcIEEEDC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->trh;
 		if (!buffer.str().empty())
@@ -334,7 +340,8 @@ bool get_ExcIEEEDC3A_trh(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_ExcIEEEDC3A_vrmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEDC3A* element = dynamic_cast<const ExcIEEEDC3A*>(BaseClass_ptr1))
+	const ExcIEEEDC3A* element = dynamic_cast<const ExcIEEEDC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vrmax;
 		if (!buffer.str().empty())
@@ -348,7 +355,8 @@ bool get_ExcIEEEDC3A_vrmax(const BaseClass* BaseClass_ptr1, std::stringstream& b
 
 bool get_ExcIEEEDC3A_vrmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcIEEEDC3A* element = dynamic_cast<const ExcIEEEDC3A*>(BaseClass_ptr1))
+	const ExcIEEEDC3A* element = dynamic_cast<const ExcIEEEDC3A*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vrmin;
 		if (!buffer.str().empty())
@@ -360,8 +368,6 @@ bool get_ExcIEEEDC3A_vrmin(const BaseClass* BaseClass_ptr1, std::stringstream& b
 	return false;
 }
 
-
-
 const char ExcIEEEDC3A::debugName[] = "ExcIEEEDC3A";
 const char* ExcIEEEDC3A::debugString() const
 {
@@ -370,22 +376,22 @@ const char* ExcIEEEDC3A::debugString() const
 
 void ExcIEEEDC3A::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ExcIEEEDC3A"), &ExcIEEEDC3A_factory));
+	factory_map.emplace("cim:ExcIEEEDC3A", &ExcIEEEDC3A_factory);
 }
 
 void ExcIEEEDC3A::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEDC3A.efd1"), &assign_ExcIEEEDC3A_efd1));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEDC3A.efd2"), &assign_ExcIEEEDC3A_efd2));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEDC3A.exclim"), &assign_ExcIEEEDC3A_exclim));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEDC3A.ke"), &assign_ExcIEEEDC3A_ke));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEDC3A.kv"), &assign_ExcIEEEDC3A_kv));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEDC3A.seefd1"), &assign_ExcIEEEDC3A_seefd1));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEDC3A.seefd2"), &assign_ExcIEEEDC3A_seefd2));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEDC3A.te"), &assign_ExcIEEEDC3A_te));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEDC3A.trh"), &assign_ExcIEEEDC3A_trh));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEDC3A.vrmax"), &assign_ExcIEEEDC3A_vrmax));
-	assign_map.insert(std::make_pair(std::string("cim:ExcIEEEDC3A.vrmin"), &assign_ExcIEEEDC3A_vrmin));
+	assign_map.emplace("cim:ExcIEEEDC3A.efd1", &assign_ExcIEEEDC3A_efd1);
+	assign_map.emplace("cim:ExcIEEEDC3A.efd2", &assign_ExcIEEEDC3A_efd2);
+	assign_map.emplace("cim:ExcIEEEDC3A.exclim", &assign_ExcIEEEDC3A_exclim);
+	assign_map.emplace("cim:ExcIEEEDC3A.ke", &assign_ExcIEEEDC3A_ke);
+	assign_map.emplace("cim:ExcIEEEDC3A.kv", &assign_ExcIEEEDC3A_kv);
+	assign_map.emplace("cim:ExcIEEEDC3A.seefd1", &assign_ExcIEEEDC3A_seefd1);
+	assign_map.emplace("cim:ExcIEEEDC3A.seefd2", &assign_ExcIEEEDC3A_seefd2);
+	assign_map.emplace("cim:ExcIEEEDC3A.te", &assign_ExcIEEEDC3A_te);
+	assign_map.emplace("cim:ExcIEEEDC3A.trh", &assign_ExcIEEEDC3A_trh);
+	assign_map.emplace("cim:ExcIEEEDC3A.vrmax", &assign_ExcIEEEDC3A_vrmax);
+	assign_map.emplace("cim:ExcIEEEDC3A.vrmin", &assign_ExcIEEEDC3A_vrmin);
 }
 
 void ExcIEEEDC3A::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

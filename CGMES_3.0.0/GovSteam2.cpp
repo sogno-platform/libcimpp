@@ -8,19 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "PU.hpp"
-#include "Float.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
 
 using namespace CIMPP;
 
-GovSteam2::GovSteam2() {};
-GovSteam2::~GovSteam2() {};
+GovSteam2::GovSteam2() {}
+GovSteam2::~GovSteam2() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -54,116 +46,122 @@ GovSteam2::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_GovSteam2_dbf(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteam2_dbf(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteam2* element = dynamic_cast<GovSteam2*>(BaseClass_ptr1))
+	GovSteam2* element = dynamic_cast<GovSteam2*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->dbf;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovSteam2_k(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteam2_k(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteam2* element = dynamic_cast<GovSteam2*>(BaseClass_ptr1))
+	GovSteam2* element = dynamic_cast<GovSteam2*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->k;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovSteam2_mnef(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteam2_mnef(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteam2* element = dynamic_cast<GovSteam2*>(BaseClass_ptr1))
+	GovSteam2* element = dynamic_cast<GovSteam2*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->mnef;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovSteam2_mxef(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteam2_mxef(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteam2* element = dynamic_cast<GovSteam2*>(BaseClass_ptr1))
+	GovSteam2* element = dynamic_cast<GovSteam2*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->mxef;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovSteam2_pmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteam2_pmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteam2* element = dynamic_cast<GovSteam2*>(BaseClass_ptr1))
+	GovSteam2* element = dynamic_cast<GovSteam2*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->pmax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovSteam2_pmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteam2_pmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteam2* element = dynamic_cast<GovSteam2*>(BaseClass_ptr1))
+	GovSteam2* element = dynamic_cast<GovSteam2*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->pmin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovSteam2_t1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteam2_t1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteam2* element = dynamic_cast<GovSteam2*>(BaseClass_ptr1))
+	GovSteam2* element = dynamic_cast<GovSteam2*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovSteam2_t2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteam2_t2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteam2* element = dynamic_cast<GovSteam2*>(BaseClass_ptr1))
+	GovSteam2* element = dynamic_cast<GovSteam2*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_GovSteam2_dbf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteam2* element = dynamic_cast<const GovSteam2*>(BaseClass_ptr1))
+	const GovSteam2* element = dynamic_cast<const GovSteam2*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->dbf;
 		if (!buffer.str().empty())
@@ -177,7 +175,8 @@ bool get_GovSteam2_dbf(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_GovSteam2_k(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteam2* element = dynamic_cast<const GovSteam2*>(BaseClass_ptr1))
+	const GovSteam2* element = dynamic_cast<const GovSteam2*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->k;
 		if (!buffer.str().empty())
@@ -191,7 +190,8 @@ bool get_GovSteam2_k(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_GovSteam2_mnef(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteam2* element = dynamic_cast<const GovSteam2*>(BaseClass_ptr1))
+	const GovSteam2* element = dynamic_cast<const GovSteam2*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->mnef;
 		if (!buffer.str().empty())
@@ -205,7 +205,8 @@ bool get_GovSteam2_mnef(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_GovSteam2_mxef(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteam2* element = dynamic_cast<const GovSteam2*>(BaseClass_ptr1))
+	const GovSteam2* element = dynamic_cast<const GovSteam2*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->mxef;
 		if (!buffer.str().empty())
@@ -219,7 +220,8 @@ bool get_GovSteam2_mxef(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_GovSteam2_pmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteam2* element = dynamic_cast<const GovSteam2*>(BaseClass_ptr1))
+	const GovSteam2* element = dynamic_cast<const GovSteam2*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pmax;
 		if (!buffer.str().empty())
@@ -233,7 +235,8 @@ bool get_GovSteam2_pmax(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_GovSteam2_pmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteam2* element = dynamic_cast<const GovSteam2*>(BaseClass_ptr1))
+	const GovSteam2* element = dynamic_cast<const GovSteam2*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pmin;
 		if (!buffer.str().empty())
@@ -247,7 +250,8 @@ bool get_GovSteam2_pmin(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_GovSteam2_t1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteam2* element = dynamic_cast<const GovSteam2*>(BaseClass_ptr1))
+	const GovSteam2* element = dynamic_cast<const GovSteam2*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t1;
 		if (!buffer.str().empty())
@@ -261,7 +265,8 @@ bool get_GovSteam2_t1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer
 
 bool get_GovSteam2_t2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteam2* element = dynamic_cast<const GovSteam2*>(BaseClass_ptr1))
+	const GovSteam2* element = dynamic_cast<const GovSteam2*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t2;
 		if (!buffer.str().empty())
@@ -273,8 +278,6 @@ bool get_GovSteam2_t2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer
 	return false;
 }
 
-
-
 const char GovSteam2::debugName[] = "GovSteam2";
 const char* GovSteam2::debugString() const
 {
@@ -283,19 +286,19 @@ const char* GovSteam2::debugString() const
 
 void GovSteam2::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:GovSteam2"), &GovSteam2_factory));
+	factory_map.emplace("cim:GovSteam2", &GovSteam2_factory);
 }
 
 void GovSteam2::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:GovSteam2.dbf"), &assign_GovSteam2_dbf));
-	assign_map.insert(std::make_pair(std::string("cim:GovSteam2.k"), &assign_GovSteam2_k));
-	assign_map.insert(std::make_pair(std::string("cim:GovSteam2.mnef"), &assign_GovSteam2_mnef));
-	assign_map.insert(std::make_pair(std::string("cim:GovSteam2.mxef"), &assign_GovSteam2_mxef));
-	assign_map.insert(std::make_pair(std::string("cim:GovSteam2.pmax"), &assign_GovSteam2_pmax));
-	assign_map.insert(std::make_pair(std::string("cim:GovSteam2.pmin"), &assign_GovSteam2_pmin));
-	assign_map.insert(std::make_pair(std::string("cim:GovSteam2.t1"), &assign_GovSteam2_t1));
-	assign_map.insert(std::make_pair(std::string("cim:GovSteam2.t2"), &assign_GovSteam2_t2));
+	assign_map.emplace("cim:GovSteam2.dbf", &assign_GovSteam2_dbf);
+	assign_map.emplace("cim:GovSteam2.k", &assign_GovSteam2_k);
+	assign_map.emplace("cim:GovSteam2.mnef", &assign_GovSteam2_mnef);
+	assign_map.emplace("cim:GovSteam2.mxef", &assign_GovSteam2_mxef);
+	assign_map.emplace("cim:GovSteam2.pmax", &assign_GovSteam2_pmax);
+	assign_map.emplace("cim:GovSteam2.pmin", &assign_GovSteam2_pmin);
+	assign_map.emplace("cim:GovSteam2.t1", &assign_GovSteam2_t1);
+	assign_map.emplace("cim:GovSteam2.t2", &assign_GovSteam2_t2);
 }
 
 void GovSteam2::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "ACDCConverter.hpp"
-#include "DCPolarityKind.hpp"
 
 using namespace CIMPP;
 
-ACDCConverterDCTerminal::ACDCConverterDCTerminal() : DCConductingEquipment(nullptr) {};
-ACDCConverterDCTerminal::~ACDCConverterDCTerminal() {};
+ACDCConverterDCTerminal::ACDCConverterDCTerminal() : DCConductingEquipment(nullptr) {}
+ACDCConverterDCTerminal::~ACDCConverterDCTerminal() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,21 +41,6 @@ ACDCConverterDCTerminal::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_ACDCConverterDCTerminal_polarity(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ACDCConverterDCTerminal* element = dynamic_cast<ACDCConverterDCTerminal*>(BaseClass_ptr1))
-	{
-		buffer >> element->polarity;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_ACDCConverter_DCTerminals(BaseClass*, BaseClass*);
 bool assign_ACDCConverterDCTerminal_DCConductingEquipment(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,10 +58,24 @@ bool assign_ACDCConverterDCTerminal_DCConductingEquipment(BaseClass* BaseClass_p
 	return false;
 }
 
+bool assign_ACDCConverterDCTerminal_polarity(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ACDCConverterDCTerminal* element = dynamic_cast<ACDCConverterDCTerminal*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->polarity;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
 
 bool get_ACDCConverterDCTerminal_DCConductingEquipment(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const ACDCConverterDCTerminal* element = dynamic_cast<const ACDCConverterDCTerminal*>(BaseClass_ptr1))
+	const ACDCConverterDCTerminal* element = dynamic_cast<const ACDCConverterDCTerminal*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->DCConductingEquipment != 0)
 		{
@@ -88,10 +86,10 @@ bool get_ACDCConverterDCTerminal_DCConductingEquipment(const BaseClass* BaseClas
 	return false;
 }
 
-
 bool get_ACDCConverterDCTerminal_polarity(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ACDCConverterDCTerminal* element = dynamic_cast<const ACDCConverterDCTerminal*>(BaseClass_ptr1))
+	const ACDCConverterDCTerminal* element = dynamic_cast<const ACDCConverterDCTerminal*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->polarity;
 		if (!buffer.str().empty())
@@ -111,17 +109,17 @@ const char* ACDCConverterDCTerminal::debugString() const
 
 void ACDCConverterDCTerminal::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ACDCConverterDCTerminal"), &ACDCConverterDCTerminal_factory));
+	factory_map.emplace("cim:ACDCConverterDCTerminal", &ACDCConverterDCTerminal_factory);
 }
 
 void ACDCConverterDCTerminal::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ACDCConverterDCTerminal.polarity"), &assign_ACDCConverterDCTerminal_polarity));
+	assign_map.emplace("cim:ACDCConverterDCTerminal.polarity", &assign_ACDCConverterDCTerminal_polarity);
 }
 
 void ACDCConverterDCTerminal::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ACDCConverterDCTerminal.DCConductingEquipment"), &assign_ACDCConverterDCTerminal_DCConductingEquipment));
+	assign_map.emplace("cim:ACDCConverterDCTerminal.DCConductingEquipment", &assign_ACDCConverterDCTerminal_DCConductingEquipment);
 }
 
 void ACDCConverterDCTerminal::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

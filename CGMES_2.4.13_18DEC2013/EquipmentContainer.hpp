@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class Equipment;
 
-	/*
-	A modeling construct to provide a root class for containing equipment.
-	*/
+	/** \brief A modeling construct to provide a root class for containing equipment. */
 	class EquipmentContainer : public ConnectivityNodeContainer
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		EquipmentContainer();
 		~EquipmentContainer() override;
 
-		std::list<CIMPP::Equipment*> Equipments;  /* Contained equipment. Default: 0 */
+		/** \brief Contained equipment. Default: 0 */
+		std::list<CIMPP::Equipment*> Equipments;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-NonConformLoadSchedule::NonConformLoadSchedule() : NonConformLoadGroup(nullptr) {};
-NonConformLoadSchedule::~NonConformLoadSchedule() {};
+NonConformLoadSchedule::NonConformLoadSchedule() : NonConformLoadGroup(nullptr) {}
+NonConformLoadSchedule::~NonConformLoadSchedule() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ NonConformLoadSchedule::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_NonConformLoadGroup_NonConformLoadSchedules(BaseClass*, BaseClass*);
 bool assign_NonConformLoadSchedule_NonConformLoadGroup(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -59,10 +57,10 @@ bool assign_NonConformLoadSchedule_NonConformLoadGroup(BaseClass* BaseClass_ptr1
 	return false;
 }
 
-
 bool get_NonConformLoadSchedule_NonConformLoadGroup(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const NonConformLoadSchedule* element = dynamic_cast<const NonConformLoadSchedule*>(BaseClass_ptr1))
+	const NonConformLoadSchedule* element = dynamic_cast<const NonConformLoadSchedule*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->NonConformLoadGroup != 0)
 		{
@@ -73,7 +71,6 @@ bool get_NonConformLoadSchedule_NonConformLoadGroup(const BaseClass* BaseClass_p
 	return false;
 }
 
-
 const char NonConformLoadSchedule::debugName[] = "NonConformLoadSchedule";
 const char* NonConformLoadSchedule::debugString() const
 {
@@ -82,7 +79,7 @@ const char* NonConformLoadSchedule::debugString() const
 
 void NonConformLoadSchedule::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:NonConformLoadSchedule"), &NonConformLoadSchedule_factory));
+	factory_map.emplace("cim:NonConformLoadSchedule", &NonConformLoadSchedule_factory);
 }
 
 void NonConformLoadSchedule::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -91,7 +88,7 @@ void NonConformLoadSchedule::addPrimitiveAssignFnsToMap(std::unordered_map<std::
 
 void NonConformLoadSchedule::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:NonConformLoadSchedule.NonConformLoadGroup"), &assign_NonConformLoadSchedule_NonConformLoadGroup));
+	assign_map.emplace("cim:NonConformLoadSchedule.NonConformLoadGroup", &assign_NonConformLoadSchedule_NonConformLoadGroup);
 }
 
 void NonConformLoadSchedule::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

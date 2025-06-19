@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class PFVArControllerType1Dynamics;
 
-	/*
-	Voltage adjuster function block whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font>
-	*/
+	/** \brief Voltage adjuster function block whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font> */
 	class VoltageAdjusterDynamics : public DynamicsFunctionBlock
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		VoltageAdjusterDynamics();
 		~VoltageAdjusterDynamics() override;
 
-		CIMPP::PFVArControllerType1Dynamics* PFVArControllerType1Dynamics;  /* Power factor or VAr controller type 1 model with which this voltage adjuster is associated. Default: 0 */
+		/** \brief Power factor or VAr controller type 1 model with which this voltage adjuster is associated. Default: 0 */
+		CIMPP::PFVArControllerType1Dynamics* PFVArControllerType1Dynamics;
 
 		static const char debugName[];
 		const char* debugString() const override;

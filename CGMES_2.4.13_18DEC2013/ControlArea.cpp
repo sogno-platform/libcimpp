@@ -11,14 +11,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "ControlAreaGeneratingUnit.hpp"
 #include "EnergyArea.hpp"
 #include "TieFlow.hpp"
-#include "ActivePower.hpp"
-#include "ActivePower.hpp"
-#include "ControlAreaTypeKind.hpp"
 
 using namespace CIMPP;
 
-ControlArea::ControlArea() : EnergyArea(nullptr) {};
-ControlArea::~ControlArea() {};
+ControlArea::ControlArea() : EnergyArea(nullptr) {}
+ControlArea::~ControlArea() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -51,47 +48,6 @@ ControlArea::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_ControlArea_netInterchange(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ControlArea* element = dynamic_cast<ControlArea*>(BaseClass_ptr1))
-	{
-		buffer >> element->netInterchange;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ControlArea_pTolerance(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ControlArea* element = dynamic_cast<ControlArea*>(BaseClass_ptr1))
-	{
-		buffer >> element->pTolerance;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ControlArea_type(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ControlArea* element = dynamic_cast<ControlArea*>(BaseClass_ptr1))
-	{
-		buffer >> element->type;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_ControlAreaGeneratingUnit_ControlArea(BaseClass*, BaseClass*);
 bool assign_ControlArea_ControlAreaGeneratingUnit(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -108,6 +64,7 @@ bool assign_ControlArea_ControlAreaGeneratingUnit(BaseClass* BaseClass_ptr1, Bas
 	}
 	return false;
 }
+
 bool assign_EnergyArea_ControlArea(BaseClass*, BaseClass*);
 bool assign_ControlArea_EnergyArea(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -124,6 +81,7 @@ bool assign_ControlArea_EnergyArea(BaseClass* BaseClass_ptr1, BaseClass* BaseCla
 	}
 	return false;
 }
+
 bool assign_TieFlow_ControlArea(BaseClass*, BaseClass*);
 bool assign_ControlArea_TieFlow(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -141,9 +99,68 @@ bool assign_ControlArea_TieFlow(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_
 	return false;
 }
 
+bool assign_ControlArea_netInterchange(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ControlArea* element = dynamic_cast<ControlArea*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->netInterchange;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ControlArea_pTolerance(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ControlArea* element = dynamic_cast<ControlArea*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->pTolerance;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ControlArea_type(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ControlArea* element = dynamic_cast<ControlArea*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->type;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
+bool get_ControlArea_EnergyArea(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const ControlArea* element = dynamic_cast<const ControlArea*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->EnergyArea != 0)
+		{
+			BaseClass_list.push_back(element->EnergyArea);
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_ControlArea_netInterchange(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ControlArea* element = dynamic_cast<const ControlArea*>(BaseClass_ptr1))
+	const ControlArea* element = dynamic_cast<const ControlArea*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->netInterchange;
 		if (!buffer.str().empty())
@@ -157,7 +174,8 @@ bool get_ControlArea_netInterchange(const BaseClass* BaseClass_ptr1, std::string
 
 bool get_ControlArea_pTolerance(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ControlArea* element = dynamic_cast<const ControlArea*>(BaseClass_ptr1))
+	const ControlArea* element = dynamic_cast<const ControlArea*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pTolerance;
 		if (!buffer.str().empty())
@@ -169,24 +187,10 @@ bool get_ControlArea_pTolerance(const BaseClass* BaseClass_ptr1, std::stringstre
 	return false;
 }
 
-
-bool get_ControlArea_EnergyArea(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const ControlArea* element = dynamic_cast<const ControlArea*>(BaseClass_ptr1))
-	{
-		if (element->EnergyArea != 0)
-		{
-			BaseClass_list.push_back(element->EnergyArea);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 bool get_ControlArea_type(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ControlArea* element = dynamic_cast<const ControlArea*>(BaseClass_ptr1))
+	const ControlArea* element = dynamic_cast<const ControlArea*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->type;
 		if (!buffer.str().empty())
@@ -206,21 +210,21 @@ const char* ControlArea::debugString() const
 
 void ControlArea::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ControlArea"), &ControlArea_factory));
+	factory_map.emplace("cim:ControlArea", &ControlArea_factory);
 }
 
 void ControlArea::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ControlArea.netInterchange"), &assign_ControlArea_netInterchange));
-	assign_map.insert(std::make_pair(std::string("cim:ControlArea.pTolerance"), &assign_ControlArea_pTolerance));
-	assign_map.insert(std::make_pair(std::string("cim:ControlArea.type"), &assign_ControlArea_type));
+	assign_map.emplace("cim:ControlArea.netInterchange", &assign_ControlArea_netInterchange);
+	assign_map.emplace("cim:ControlArea.pTolerance", &assign_ControlArea_pTolerance);
+	assign_map.emplace("cim:ControlArea.type", &assign_ControlArea_type);
 }
 
 void ControlArea::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ControlArea.ControlAreaGeneratingUnit"), &assign_ControlArea_ControlAreaGeneratingUnit));
-	assign_map.insert(std::make_pair(std::string("cim:ControlArea.EnergyArea"), &assign_ControlArea_EnergyArea));
-	assign_map.insert(std::make_pair(std::string("cim:ControlArea.TieFlow"), &assign_ControlArea_TieFlow));
+	assign_map.emplace("cim:ControlArea.ControlAreaGeneratingUnit", &assign_ControlArea_ControlAreaGeneratingUnit);
+	assign_map.emplace("cim:ControlArea.EnergyArea", &assign_ControlArea_EnergyArea);
+	assign_map.emplace("cim:ControlArea.TieFlow", &assign_ControlArea_TieFlow);
 }
 
 void ControlArea::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

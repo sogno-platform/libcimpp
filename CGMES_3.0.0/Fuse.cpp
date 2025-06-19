@@ -11,8 +11,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-Fuse::Fuse() {};
-Fuse::~Fuse() {};
+Fuse::Fuse() {}
+Fuse::~Fuse() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -39,11 +39,6 @@ Fuse::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
-
-
-
 const char Fuse::debugName[] = "Fuse";
 const char* Fuse::debugString() const
 {
@@ -52,7 +47,7 @@ const char* Fuse::debugString() const
 
 void Fuse::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:Fuse"), &Fuse_factory));
+	factory_map.emplace("cim:Fuse", &Fuse_factory);
 }
 
 void Fuse::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)

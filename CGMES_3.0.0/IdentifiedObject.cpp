@@ -9,16 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "DiagramObject.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
 
 using namespace CIMPP;
 
-IdentifiedObject::IdentifiedObject() {};
-IdentifiedObject::~IdentifiedObject() {};
+IdentifiedObject::IdentifiedObject() {}
+IdentifiedObject::~IdentifiedObject() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -59,73 +54,6 @@ IdentifiedObject::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_IdentifiedObject_description(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (IdentifiedObject* element = dynamic_cast<IdentifiedObject*>(BaseClass_ptr1))
-	{
-		element->description = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_IdentifiedObject_energyIdentCodeEic(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (IdentifiedObject* element = dynamic_cast<IdentifiedObject*>(BaseClass_ptr1))
-	{
-		element->energyIdentCodeEic = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_IdentifiedObject_mRID(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (IdentifiedObject* element = dynamic_cast<IdentifiedObject*>(BaseClass_ptr1))
-	{
-		element->mRID = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_IdentifiedObject_name(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (IdentifiedObject* element = dynamic_cast<IdentifiedObject*>(BaseClass_ptr1))
-	{
-		element->name = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_IdentifiedObject_shortName(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (IdentifiedObject* element = dynamic_cast<IdentifiedObject*>(BaseClass_ptr1))
-	{
-		element->shortName = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_DiagramObject_IdentifiedObject(BaseClass*, BaseClass*);
 bool assign_IdentifiedObject_DiagramObjects(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -143,9 +71,81 @@ bool assign_IdentifiedObject_DiagramObjects(BaseClass* BaseClass_ptr1, BaseClass
 	return false;
 }
 
+bool assign_IdentifiedObject_description(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	IdentifiedObject* element = dynamic_cast<IdentifiedObject*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->description = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_IdentifiedObject_energyIdentCodeEic(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	IdentifiedObject* element = dynamic_cast<IdentifiedObject*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->energyIdentCodeEic = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_IdentifiedObject_mRID(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	IdentifiedObject* element = dynamic_cast<IdentifiedObject*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->mRID = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_IdentifiedObject_name(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	IdentifiedObject* element = dynamic_cast<IdentifiedObject*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->name = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_IdentifiedObject_shortName(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	IdentifiedObject* element = dynamic_cast<IdentifiedObject*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->shortName = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_IdentifiedObject_description(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const IdentifiedObject* element = dynamic_cast<const IdentifiedObject*>(BaseClass_ptr1))
+	const IdentifiedObject* element = dynamic_cast<const IdentifiedObject*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->description;
 		if (!buffer.str().empty())
@@ -159,7 +159,8 @@ bool get_IdentifiedObject_description(const BaseClass* BaseClass_ptr1, std::stri
 
 bool get_IdentifiedObject_energyIdentCodeEic(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const IdentifiedObject* element = dynamic_cast<const IdentifiedObject*>(BaseClass_ptr1))
+	const IdentifiedObject* element = dynamic_cast<const IdentifiedObject*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->energyIdentCodeEic;
 		if (!buffer.str().empty())
@@ -173,7 +174,8 @@ bool get_IdentifiedObject_energyIdentCodeEic(const BaseClass* BaseClass_ptr1, st
 
 bool get_IdentifiedObject_mRID(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const IdentifiedObject* element = dynamic_cast<const IdentifiedObject*>(BaseClass_ptr1))
+	const IdentifiedObject* element = dynamic_cast<const IdentifiedObject*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->mRID;
 		if (!buffer.str().empty())
@@ -187,7 +189,8 @@ bool get_IdentifiedObject_mRID(const BaseClass* BaseClass_ptr1, std::stringstrea
 
 bool get_IdentifiedObject_name(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const IdentifiedObject* element = dynamic_cast<const IdentifiedObject*>(BaseClass_ptr1))
+	const IdentifiedObject* element = dynamic_cast<const IdentifiedObject*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->name;
 		if (!buffer.str().empty())
@@ -201,7 +204,8 @@ bool get_IdentifiedObject_name(const BaseClass* BaseClass_ptr1, std::stringstrea
 
 bool get_IdentifiedObject_shortName(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const IdentifiedObject* element = dynamic_cast<const IdentifiedObject*>(BaseClass_ptr1))
+	const IdentifiedObject* element = dynamic_cast<const IdentifiedObject*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->shortName;
 		if (!buffer.str().empty())
@@ -213,8 +217,6 @@ bool get_IdentifiedObject_shortName(const BaseClass* BaseClass_ptr1, std::string
 	return false;
 }
 
-
-
 const char IdentifiedObject::debugName[] = "IdentifiedObject";
 const char* IdentifiedObject::debugString() const
 {
@@ -223,21 +225,21 @@ const char* IdentifiedObject::debugString() const
 
 void IdentifiedObject::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:IdentifiedObject"), &IdentifiedObject_factory));
+	factory_map.emplace("cim:IdentifiedObject", &IdentifiedObject_factory);
 }
 
 void IdentifiedObject::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:IdentifiedObject.description"), &assign_IdentifiedObject_description));
-	assign_map.insert(std::make_pair(std::string("cim:IdentifiedObject.energyIdentCodeEic"), &assign_IdentifiedObject_energyIdentCodeEic));
-	assign_map.insert(std::make_pair(std::string("cim:IdentifiedObject.mRID"), &assign_IdentifiedObject_mRID));
-	assign_map.insert(std::make_pair(std::string("cim:IdentifiedObject.name"), &assign_IdentifiedObject_name));
-	assign_map.insert(std::make_pair(std::string("cim:IdentifiedObject.shortName"), &assign_IdentifiedObject_shortName));
+	assign_map.emplace("cim:IdentifiedObject.description", &assign_IdentifiedObject_description);
+	assign_map.emplace("cim:IdentifiedObject.energyIdentCodeEic", &assign_IdentifiedObject_energyIdentCodeEic);
+	assign_map.emplace("cim:IdentifiedObject.mRID", &assign_IdentifiedObject_mRID);
+	assign_map.emplace("cim:IdentifiedObject.name", &assign_IdentifiedObject_name);
+	assign_map.emplace("cim:IdentifiedObject.shortName", &assign_IdentifiedObject_shortName);
 }
 
 void IdentifiedObject::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:IdentifiedObject.DiagramObjects"), &assign_IdentifiedObject_DiagramObjects));
+	assign_map.emplace("cim:IdentifiedObject.DiagramObjects", &assign_IdentifiedObject_DiagramObjects);
 }
 
 void IdentifiedObject::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

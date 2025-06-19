@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "VsQpccControlKind")
+		if (EnumSymbol.substr(0, pos) != "VsQpccControlKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,22 +50,22 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "reactivePcc")
+		if (EnumSymbol == "reactivePcc")
 		{
 			rop = VsQpccControlKind::reactivePcc;
 			return lop;
 		}
-		if(EnumSymbol == "voltagePcc")
+		if (EnumSymbol == "voltagePcc")
 		{
 			rop = VsQpccControlKind::voltagePcc;
 			return lop;
 		}
-		if(EnumSymbol == "powerFactorPcc")
+		if (EnumSymbol == "powerFactorPcc")
 		{
 			rop = VsQpccControlKind::powerFactorPcc;
 			return lop;
 		}
-		if(EnumSymbol == "pulseWidthModulation")
+		if (EnumSymbol == "pulseWidthModulation")
 		{
 			rop = VsQpccControlKind::pulseWidthModulation;
 			return lop;

@@ -9,21 +9,15 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Operating mode for HVDC line operating as Current Source Converter.
-	*/
+	/** \brief Operating mode for HVDC line operating as Current Source Converter. */
 	class CsOperatingModeKind
 	{
 	public:
 		enum CsOperatingModeKind_ENUM
 		{
-			/**
-			 * Operating as inverter
-			 */
+			/** Operating as inverter */
 			inverter,
-			/**
-			 * Operating as rectifier.
-			 */
+			/** Operating as rectifier. */
 			rectifier,
 		};
 

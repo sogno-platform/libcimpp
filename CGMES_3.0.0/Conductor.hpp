@@ -17,9 +17,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Combination of conducting material with consistent electrical characteristics, building a single electrical system, used to carry current between points in the power system.
-	*/
+	/** \brief Combination of conducting material with consistent electrical characteristics, building a single electrical system, used to carry current between points in the power system. */
 	class Conductor : public ConductingEquipment
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		Conductor();
 		~Conductor() override;
 
-		CIMPP::Length length;  /* Segment length for calculating line section capabilities. Default: nullptr */
+		/** \brief Segment length for calculating line section capabilities. Default: nullptr */
+		CIMPP::Length length;
 
 		static const char debugName[];
 		const char* debugString() const override;

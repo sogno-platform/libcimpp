@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	The parameters used for models expressed in time constant reactance form include:
-	*/
+	/** \brief The parameters used for models expressed in time constant reactance form include: */
 	class AsynchronousMachineTimeConstantReactance : public AsynchronousMachineDynamics
 	{
 	public:
@@ -28,11 +26,20 @@ namespace CIMPP
 		AsynchronousMachineTimeConstantReactance();
 		~AsynchronousMachineTimeConstantReactance() override;
 
-		CIMPP::Seconds tpo;  /* Transient rotor time constant (T`o) (&gt; T``o).  Typical Value = 5. Default: nullptr */
-		CIMPP::Seconds tppo;  /* Subtransient rotor time constant (T``o) (&gt; 0).  Typical Value = 0.03. Default: nullptr */
-		CIMPP::PU xp;  /* Transient reactance (unsaturated) (X`) (&gt;=X``).  Typical Value = 0.5. Default: nullptr */
-		CIMPP::PU xpp;  /* Subtransient reactance (unsaturated) (X``) (&gt; Xl).  Typical Value = 0.2. Default: nullptr */
-		CIMPP::PU xs;  /* Synchronous reactance (Xs) (&gt;= X`).  Typical Value = 1.8. Default: nullptr */
+		/** \brief Transient rotor time constant (T`o) (&gt; T``o).  Typical Value = 5. Default: nullptr */
+		CIMPP::Seconds tpo;
+
+		/** \brief Subtransient rotor time constant (T``o) (&gt; 0).  Typical Value = 0.03. Default: nullptr */
+		CIMPP::Seconds tppo;
+
+		/** \brief Transient reactance (unsaturated) (X`) (&gt;=X``).  Typical Value = 0.5. Default: nullptr */
+		CIMPP::PU xp;
+
+		/** \brief Subtransient reactance (unsaturated) (X``) (&gt; Xl).  Typical Value = 0.2. Default: nullptr */
+		CIMPP::PU xpp;
+
+		/** \brief Synchronous reactance (Xs) (&gt;= X`).  Typical Value = 1.8. Default: nullptr */
+		CIMPP::PU xs;
 
 		static const char debugName[];
 		const char* debugString() const override;

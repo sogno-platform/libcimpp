@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class Curve;
 
-	/*
-	Multi-purpose data points for defining a curve.  The use of this generic class is discouraged if a more specific class can be used to specify the X and Y axis values along with their specific data types.
-	*/
+	/** \brief Multi-purpose data points for defining a curve.  The use of this generic class is discouraged if a more specific class can be used to specify the X and Y axis values along with their specific data types. */
 	class CurveData : public BaseClass
 	{
 	public:
@@ -28,10 +26,17 @@ namespace CIMPP
 		CurveData();
 		~CurveData() override;
 
-		CIMPP::Curve* Curve;  /* The curve of  this curve data point. Default: 0 */
-		CIMPP::Float xvalue;  /* The data value of the X-axis variable,  depending on the X-axis units. Default: 0.0 */
-		CIMPP::Float y1value;  /* The data value of the  first Y-axis variable, depending on the Y-axis units. Default: 0.0 */
-		CIMPP::Float y2value;  /* The data value of the second Y-axis variable (if present), depending on the Y-axis units. Default: 0.0 */
+		/** \brief The curve of  this curve data point. Default: 0 */
+		CIMPP::Curve* Curve;
+
+		/** \brief The data value of the X-axis variable,  depending on the X-axis units. Default: 0.0 */
+		CIMPP::Float xvalue;
+
+		/** \brief The data value of the  first Y-axis variable, depending on the Y-axis units. Default: 0.0 */
+		CIMPP::Float y1value;
+
+		/** \brief The data value of the second Y-axis variable (if present), depending on the Y-axis units. Default: 0.0 */
+		CIMPP::Float y2value;
 
 		static const char debugName[];
 		const char* debugString() const override;

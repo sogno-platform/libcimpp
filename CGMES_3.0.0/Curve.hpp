@@ -19,9 +19,7 @@ namespace CIMPP
 {
 	class CurveData;
 
-	/*
-	A multi-purpose curve or functional relationship between an independent variable (X-axis) and dependent (Y-axis) variables.
-	*/
+	/** \brief A multi-purpose curve or functional relationship between an independent variable (X-axis) and dependent (Y-axis) variables. */
 	class Curve : public IdentifiedObject
 	{
 	public:
@@ -29,11 +27,20 @@ namespace CIMPP
 		Curve();
 		~Curve() override;
 
-		std::list<CIMPP::CurveData*> CurveDatas;  /* The point data values that define this curve. Default: 0 */
-		CIMPP::CurveStyle curveStyle;  /* The style or shape of the curve. Default: 0 */
-		CIMPP::UnitSymbol xUnit;  /* The X-axis units of measure. Default: 0 */
-		CIMPP::UnitSymbol y1Unit;  /* The Y1-axis units of measure. Default: 0 */
-		CIMPP::UnitSymbol y2Unit;  /* The Y2-axis units of measure. Default: 0 */
+		/** \brief The point data values that define this curve. Default: 0 */
+		std::list<CIMPP::CurveData*> CurveDatas;
+
+		/** \brief The style or shape of the curve. Default: 0 */
+		CIMPP::CurveStyle curveStyle;
+
+		/** \brief The X-axis units of measure. Default: 0 */
+		CIMPP::UnitSymbol xUnit;
+
+		/** \brief The Y1-axis units of measure. Default: 0 */
+		CIMPP::UnitSymbol y1Unit;
+
+		/** \brief The Y2-axis units of measure. Default: 0 */
+		CIMPP::UnitSymbol y2Unit;
 
 		static const char debugName[];
 		const char* debugString() const override;

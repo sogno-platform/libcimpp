@@ -9,17 +9,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	The orientation of the coordinate system with respect to top, left, and the coordinate number system.
-	*/
+	/** \brief The orientation of the coordinate system with respect to top, left, and the coordinate number system. */
 	class OrientationKind
 	{
 	public:
 		enum OrientationKind_ENUM
 		{
-			/**
-			 * For 2D diagrams, a negative orientation gives the left-hand orientation (favoured by computer graphics displays) with X values increasing from left to right and Y values increasing from top to bottom.   This is also known as a left hand orientation.
-			 */
+			/** For 2D diagrams, a negative orientation gives the left-hand orientation (favoured by computer graphics displays) with X values increasing from left to right and Y values increasing from top to bottom.   This is also known as a left hand orientation. */
 			negative,
 		};
 

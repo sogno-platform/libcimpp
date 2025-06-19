@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Manual excitation control with field circuit resistance. This model can be used as a very simple representation of manual voltage control.
-	*/
+	/** \brief Manual excitation control with field circuit resistance. This model can be used as a very simple representation of manual voltage control. */
 	class ExcAVR5 : public ExcitationSystemDynamics
 	{
 	public:
@@ -28,9 +26,14 @@ namespace CIMPP
 		ExcAVR5();
 		~ExcAVR5() override;
 
-		CIMPP::PU ka;  /* Gain (&lt;i&gt;Ka&lt;/i&gt;). Default: nullptr */
-		CIMPP::PU rex;  /* Effective output resistance (&lt;i&gt;Rex&lt;/i&gt;). &lt;i&gt;Rex&lt;/i&gt; represents the effective output resistance seen by the excitation system. Default: nullptr */
-		CIMPP::Seconds ta;  /* Time constant (&lt;i&gt;Ta&lt;/i&gt;) (&amp;gt;= 0). Default: nullptr */
+		/** \brief Gain (&lt;i&gt;Ka&lt;/i&gt;). Default: nullptr */
+		CIMPP::PU ka;
+
+		/** \brief Effective output resistance (&lt;i&gt;Rex&lt;/i&gt;). &lt;i&gt;Rex&lt;/i&gt; represents the effective output resistance seen by the excitation system. Default: nullptr */
+		CIMPP::PU rex;
+
+		/** \brief Time constant (&lt;i&gt;Ta&lt;/i&gt;) (&amp;gt;= 0). Default: nullptr */
+		CIMPP::Seconds ta;
 
 		static const char debugName[];
 		const char* debugString() const override;

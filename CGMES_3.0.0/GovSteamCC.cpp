@@ -8,28 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "ActivePower.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
 
 using namespace CIMPP;
 
-GovSteamCC::GovSteamCC() {};
-GovSteamCC::~GovSteamCC() {};
+GovSteamCC::GovSteamCC() {}
+GovSteamCC::~GovSteamCC() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -72,233 +55,248 @@ GovSteamCC::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_GovSteamCC_dhp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteamCC_dhp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1))
+	GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->dhp;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovSteamCC_dlp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteamCC_dlp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1))
+	GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->dlp;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovSteamCC_fhp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteamCC_fhp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1))
+	GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->fhp;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovSteamCC_flp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteamCC_flp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1))
+	GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->flp;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovSteamCC_mwbase(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteamCC_mwbase(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1))
+	GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->mwbase;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovSteamCC_pmaxhp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteamCC_pmaxhp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1))
+	GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->pmaxhp;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovSteamCC_pmaxlp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteamCC_pmaxlp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1))
+	GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->pmaxlp;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovSteamCC_rhp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteamCC_rhp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1))
+	GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->rhp;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovSteamCC_rlp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteamCC_rlp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1))
+	GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->rlp;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovSteamCC_t1hp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteamCC_t1hp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1))
+	GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t1hp;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovSteamCC_t1lp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteamCC_t1lp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1))
+	GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t1lp;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovSteamCC_t3hp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteamCC_t3hp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1))
+	GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t3hp;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovSteamCC_t3lp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteamCC_t3lp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1))
+	GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t3lp;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovSteamCC_t4hp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteamCC_t4hp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1))
+	GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t4hp;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovSteamCC_t4lp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteamCC_t4lp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1))
+	GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t4lp;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovSteamCC_t5hp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteamCC_t5hp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1))
+	GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t5hp;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovSteamCC_t5lp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovSteamCC_t5lp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1))
+	GovSteamCC* element = dynamic_cast<GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t5lp;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_GovSteamCC_dhp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1))
+	const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->dhp;
 		if (!buffer.str().empty())
@@ -312,7 +310,8 @@ bool get_GovSteamCC_dhp(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_GovSteamCC_dlp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1))
+	const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->dlp;
 		if (!buffer.str().empty())
@@ -326,7 +325,8 @@ bool get_GovSteamCC_dlp(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_GovSteamCC_fhp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1))
+	const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->fhp;
 		if (!buffer.str().empty())
@@ -340,7 +340,8 @@ bool get_GovSteamCC_fhp(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_GovSteamCC_flp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1))
+	const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->flp;
 		if (!buffer.str().empty())
@@ -354,7 +355,8 @@ bool get_GovSteamCC_flp(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_GovSteamCC_mwbase(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1))
+	const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->mwbase;
 		if (!buffer.str().empty())
@@ -368,7 +370,8 @@ bool get_GovSteamCC_mwbase(const BaseClass* BaseClass_ptr1, std::stringstream& b
 
 bool get_GovSteamCC_pmaxhp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1))
+	const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pmaxhp;
 		if (!buffer.str().empty())
@@ -382,7 +385,8 @@ bool get_GovSteamCC_pmaxhp(const BaseClass* BaseClass_ptr1, std::stringstream& b
 
 bool get_GovSteamCC_pmaxlp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1))
+	const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pmaxlp;
 		if (!buffer.str().empty())
@@ -396,7 +400,8 @@ bool get_GovSteamCC_pmaxlp(const BaseClass* BaseClass_ptr1, std::stringstream& b
 
 bool get_GovSteamCC_rhp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1))
+	const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->rhp;
 		if (!buffer.str().empty())
@@ -410,7 +415,8 @@ bool get_GovSteamCC_rhp(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_GovSteamCC_rlp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1))
+	const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->rlp;
 		if (!buffer.str().empty())
@@ -424,7 +430,8 @@ bool get_GovSteamCC_rlp(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_GovSteamCC_t1hp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1))
+	const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t1hp;
 		if (!buffer.str().empty())
@@ -438,7 +445,8 @@ bool get_GovSteamCC_t1hp(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_GovSteamCC_t1lp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1))
+	const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t1lp;
 		if (!buffer.str().empty())
@@ -452,7 +460,8 @@ bool get_GovSteamCC_t1lp(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_GovSteamCC_t3hp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1))
+	const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t3hp;
 		if (!buffer.str().empty())
@@ -466,7 +475,8 @@ bool get_GovSteamCC_t3hp(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_GovSteamCC_t3lp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1))
+	const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t3lp;
 		if (!buffer.str().empty())
@@ -480,7 +490,8 @@ bool get_GovSteamCC_t3lp(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_GovSteamCC_t4hp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1))
+	const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t4hp;
 		if (!buffer.str().empty())
@@ -494,7 +505,8 @@ bool get_GovSteamCC_t4hp(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_GovSteamCC_t4lp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1))
+	const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t4lp;
 		if (!buffer.str().empty())
@@ -508,7 +520,8 @@ bool get_GovSteamCC_t4lp(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_GovSteamCC_t5hp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1))
+	const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t5hp;
 		if (!buffer.str().empty())
@@ -522,7 +535,8 @@ bool get_GovSteamCC_t5hp(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_GovSteamCC_t5lp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1))
+	const GovSteamCC* element = dynamic_cast<const GovSteamCC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t5lp;
 		if (!buffer.str().empty())
@@ -534,8 +548,6 @@ bool get_GovSteamCC_t5lp(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 	return false;
 }
 
-
-
 const char GovSteamCC::debugName[] = "GovSteamCC";
 const char* GovSteamCC::debugString() const
 {
@@ -544,28 +556,28 @@ const char* GovSteamCC::debugString() const
 
 void GovSteamCC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:GovSteamCC"), &GovSteamCC_factory));
+	factory_map.emplace("cim:GovSteamCC", &GovSteamCC_factory);
 }
 
 void GovSteamCC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:GovSteamCC.dhp"), &assign_GovSteamCC_dhp));
-	assign_map.insert(std::make_pair(std::string("cim:GovSteamCC.dlp"), &assign_GovSteamCC_dlp));
-	assign_map.insert(std::make_pair(std::string("cim:GovSteamCC.fhp"), &assign_GovSteamCC_fhp));
-	assign_map.insert(std::make_pair(std::string("cim:GovSteamCC.flp"), &assign_GovSteamCC_flp));
-	assign_map.insert(std::make_pair(std::string("cim:GovSteamCC.mwbase"), &assign_GovSteamCC_mwbase));
-	assign_map.insert(std::make_pair(std::string("cim:GovSteamCC.pmaxhp"), &assign_GovSteamCC_pmaxhp));
-	assign_map.insert(std::make_pair(std::string("cim:GovSteamCC.pmaxlp"), &assign_GovSteamCC_pmaxlp));
-	assign_map.insert(std::make_pair(std::string("cim:GovSteamCC.rhp"), &assign_GovSteamCC_rhp));
-	assign_map.insert(std::make_pair(std::string("cim:GovSteamCC.rlp"), &assign_GovSteamCC_rlp));
-	assign_map.insert(std::make_pair(std::string("cim:GovSteamCC.t1hp"), &assign_GovSteamCC_t1hp));
-	assign_map.insert(std::make_pair(std::string("cim:GovSteamCC.t1lp"), &assign_GovSteamCC_t1lp));
-	assign_map.insert(std::make_pair(std::string("cim:GovSteamCC.t3hp"), &assign_GovSteamCC_t3hp));
-	assign_map.insert(std::make_pair(std::string("cim:GovSteamCC.t3lp"), &assign_GovSteamCC_t3lp));
-	assign_map.insert(std::make_pair(std::string("cim:GovSteamCC.t4hp"), &assign_GovSteamCC_t4hp));
-	assign_map.insert(std::make_pair(std::string("cim:GovSteamCC.t4lp"), &assign_GovSteamCC_t4lp));
-	assign_map.insert(std::make_pair(std::string("cim:GovSteamCC.t5hp"), &assign_GovSteamCC_t5hp));
-	assign_map.insert(std::make_pair(std::string("cim:GovSteamCC.t5lp"), &assign_GovSteamCC_t5lp));
+	assign_map.emplace("cim:GovSteamCC.dhp", &assign_GovSteamCC_dhp);
+	assign_map.emplace("cim:GovSteamCC.dlp", &assign_GovSteamCC_dlp);
+	assign_map.emplace("cim:GovSteamCC.fhp", &assign_GovSteamCC_fhp);
+	assign_map.emplace("cim:GovSteamCC.flp", &assign_GovSteamCC_flp);
+	assign_map.emplace("cim:GovSteamCC.mwbase", &assign_GovSteamCC_mwbase);
+	assign_map.emplace("cim:GovSteamCC.pmaxhp", &assign_GovSteamCC_pmaxhp);
+	assign_map.emplace("cim:GovSteamCC.pmaxlp", &assign_GovSteamCC_pmaxlp);
+	assign_map.emplace("cim:GovSteamCC.rhp", &assign_GovSteamCC_rhp);
+	assign_map.emplace("cim:GovSteamCC.rlp", &assign_GovSteamCC_rlp);
+	assign_map.emplace("cim:GovSteamCC.t1hp", &assign_GovSteamCC_t1hp);
+	assign_map.emplace("cim:GovSteamCC.t1lp", &assign_GovSteamCC_t1lp);
+	assign_map.emplace("cim:GovSteamCC.t3hp", &assign_GovSteamCC_t3hp);
+	assign_map.emplace("cim:GovSteamCC.t3lp", &assign_GovSteamCC_t3lp);
+	assign_map.emplace("cim:GovSteamCC.t4hp", &assign_GovSteamCC_t4hp);
+	assign_map.emplace("cim:GovSteamCC.t4lp", &assign_GovSteamCC_t4lp);
+	assign_map.emplace("cim:GovSteamCC.t5hp", &assign_GovSteamCC_t5hp);
+	assign_map.emplace("cim:GovSteamCC.t5lp", &assign_GovSteamCC_t5lp);
 }
 
 void GovSteamCC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

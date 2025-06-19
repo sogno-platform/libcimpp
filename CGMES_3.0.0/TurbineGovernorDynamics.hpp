@@ -19,9 +19,7 @@ namespace CIMPP
 	class SynchronousMachineDynamics;
 	class TurbineLoadControllerDynamics;
 
-	/*
-	Turbine-governor function block whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font>
-	*/
+	/** \brief Turbine-governor function block whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font> */
 	class TurbineGovernorDynamics : public DynamicsFunctionBlock
 	{
 	public:
@@ -29,9 +27,14 @@ namespace CIMPP
 		TurbineGovernorDynamics();
 		~TurbineGovernorDynamics() override;
 
-		CIMPP::AsynchronousMachineDynamics* AsynchronousMachineDynamics;  /* Asynchronous machine model with which this turbine-governor model is associated. TurbineGovernorDynamics shall have either an association to SynchronousMachineDynamics or to AsynchronousMachineDynamics. Default: 0 */
-		CIMPP::SynchronousMachineDynamics* SynchronousMachineDynamics;  /* Synchronous machine model with which this turbine-governor model is associated. TurbineGovernorDynamics shall have either an association to SynchronousMachineDynamics or to AsynchronousMachineDynamics. Default: 0 */
-		CIMPP::TurbineLoadControllerDynamics* TurbineLoadControllerDynamics;  /* Turbine load controller providing input to this turbine-governor. Default: 0 */
+		/** \brief Asynchronous machine model with which this turbine-governor model is associated. TurbineGovernorDynamics shall have either an association to SynchronousMachineDynamics or to AsynchronousMachineDynamics. Default: 0 */
+		CIMPP::AsynchronousMachineDynamics* AsynchronousMachineDynamics;
+
+		/** \brief Synchronous machine model with which this turbine-governor model is associated. TurbineGovernorDynamics shall have either an association to SynchronousMachineDynamics or to AsynchronousMachineDynamics. Default: 0 */
+		CIMPP::SynchronousMachineDynamics* SynchronousMachineDynamics;
+
+		/** \brief Turbine load controller providing input to this turbine-governor. Default: 0 */
+		CIMPP::TurbineLoadControllerDynamics* TurbineLoadControllerDynamics;
 
 		static const char debugName[];
 		const char* debugString() const override;

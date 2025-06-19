@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "Location.hpp"
-#include "String.hpp"
 
 using namespace CIMPP;
 
-CoordinateSystem::CoordinateSystem() {};
-CoordinateSystem::~CoordinateSystem() {};
+CoordinateSystem::CoordinateSystem() {}
+CoordinateSystem::~CoordinateSystem() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,21 +41,6 @@ CoordinateSystem::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_CoordinateSystem_crsUrn(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (CoordinateSystem* element = dynamic_cast<CoordinateSystem*>(BaseClass_ptr1))
-	{
-		element->crsUrn = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_Location_CoordinateSystem(BaseClass*, BaseClass*);
 bool assign_CoordinateSystem_Locations(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,9 +58,25 @@ bool assign_CoordinateSystem_Locations(BaseClass* BaseClass_ptr1, BaseClass* Bas
 	return false;
 }
 
+bool assign_CoordinateSystem_crsUrn(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	CoordinateSystem* element = dynamic_cast<CoordinateSystem*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->crsUrn = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_CoordinateSystem_crsUrn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const CoordinateSystem* element = dynamic_cast<const CoordinateSystem*>(BaseClass_ptr1))
+	const CoordinateSystem* element = dynamic_cast<const CoordinateSystem*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->crsUrn;
 		if (!buffer.str().empty())
@@ -88,8 +88,6 @@ bool get_CoordinateSystem_crsUrn(const BaseClass* BaseClass_ptr1, std::stringstr
 	return false;
 }
 
-
-
 const char CoordinateSystem::debugName[] = "CoordinateSystem";
 const char* CoordinateSystem::debugString() const
 {
@@ -98,17 +96,17 @@ const char* CoordinateSystem::debugString() const
 
 void CoordinateSystem::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:CoordinateSystem"), &CoordinateSystem_factory));
+	factory_map.emplace("cim:CoordinateSystem", &CoordinateSystem_factory);
 }
 
 void CoordinateSystem::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:CoordinateSystem.crsUrn"), &assign_CoordinateSystem_crsUrn));
+	assign_map.emplace("cim:CoordinateSystem.crsUrn", &assign_CoordinateSystem_crsUrn);
 }
 
 void CoordinateSystem::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:CoordinateSystem.Locations"), &assign_CoordinateSystem_Locations));
+	assign_map.emplace("cim:CoordinateSystem.Locations", &assign_CoordinateSystem_Locations);
 }
 
 void CoordinateSystem::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

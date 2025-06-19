@@ -19,9 +19,7 @@ namespace CIMPP
 	class Analog;
 	class AnalogControl;
 
-	/*
-	AnalogValue represents an analog MeasurementValue.
-	*/
+	/** \brief AnalogValue represents an analog MeasurementValue. */
 	class AnalogValue : public MeasurementValue
 	{
 	public:
@@ -29,9 +27,14 @@ namespace CIMPP
 		AnalogValue();
 		~AnalogValue() override;
 
-		CIMPP::Analog* Analog;  /* The values connected to this measurement. Default: 0 */
-		CIMPP::AnalogControl* AnalogControl;  /* The MeasurementValue that is controlled. Default: 0 */
-		CIMPP::Simple_Float value;  /* The value to supervise. Default: nullptr */
+		/** \brief The values connected to this measurement. Default: 0 */
+		CIMPP::Analog* Analog;
+
+		/** \brief The MeasurementValue that is controlled. Default: 0 */
+		CIMPP::AnalogControl* AnalogControl;
+
+		/** \brief The value to supervise. Default: nullptr */
+		CIMPP::Simple_Float value;
 
 		static const char debugName[];
 		const char* debugString() const override;

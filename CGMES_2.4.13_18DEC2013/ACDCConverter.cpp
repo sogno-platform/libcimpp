@@ -10,29 +10,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 #include "ACDCConverterDCTerminal.hpp"
 #include "Terminal.hpp"
-#include "ApparentPower.hpp"
-#include "CurrentFlow.hpp"
-#include "ActivePower.hpp"
-#include "Voltage.hpp"
-#include "Voltage.hpp"
-#include "Voltage.hpp"
-#include "Integer.hpp"
-#include "ActivePower.hpp"
-#include "ActivePower.hpp"
-#include "ReactivePower.hpp"
-#include "Voltage.hpp"
-#include "Simple_Float.hpp"
-#include "PU.hpp"
-#include "ActivePower.hpp"
-#include "Voltage.hpp"
-#include "Voltage.hpp"
-#include "Voltage.hpp"
-#include "Voltage.hpp"
 
 using namespace CIMPP;
 
-ACDCConverter::ACDCConverter() : PccTerminal(nullptr) {};
-ACDCConverter::~ACDCConverter() {};
+ACDCConverter::ACDCConverter() : PccTerminal(nullptr) {}
+ACDCConverter::~ACDCConverter() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -80,242 +62,6 @@ ACDCConverter::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_ACDCConverter_baseS(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->baseS;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ACDCConverter_idc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->idc;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ACDCConverter_idleLoss(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->idleLoss;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ACDCConverter_maxUdc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->maxUdc;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ACDCConverter_minUdc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->minUdc;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ACDCConverter_nomUdc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->nomUdc;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ACDCConverter_numberOfValves(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->numberOfValves;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ACDCConverter_p(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->p;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ACDCConverter_poleLossP(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->poleLossP;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ACDCConverter_q(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->q;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ACDCConverter_ratedUdc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->ratedUdc;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ACDCConverter_resistiveLoss(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->resistiveLoss;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ACDCConverter_switchingLoss(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->switchingLoss;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ACDCConverter_targetPpcc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->targetPpcc;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ACDCConverter_targetUdc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->targetUdc;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ACDCConverter_uc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->uc;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ACDCConverter_udc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->udc;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ACDCConverter_valveU0(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->valveU0;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_ACDCConverterDCTerminal_DCConductingEquipment(BaseClass*, BaseClass*);
 bool assign_ACDCConverter_DCTerminals(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -332,6 +78,7 @@ bool assign_ACDCConverter_DCTerminals(BaseClass* BaseClass_ptr1, BaseClass* Base
 	}
 	return false;
 }
+
 bool assign_Terminal_ConverterDCSides(BaseClass*, BaseClass*);
 bool assign_ACDCConverter_PccTerminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -349,9 +96,277 @@ bool assign_ACDCConverter_PccTerminal(BaseClass* BaseClass_ptr1, BaseClass* Base
 	return false;
 }
 
+bool assign_ACDCConverter_baseS(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->baseS;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ACDCConverter_idc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->idc;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ACDCConverter_idleLoss(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->idleLoss;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ACDCConverter_maxUdc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->maxUdc;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ACDCConverter_minUdc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->minUdc;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ACDCConverter_nomUdc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->nomUdc;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ACDCConverter_numberOfValves(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->numberOfValves;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ACDCConverter_p(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->p;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ACDCConverter_poleLossP(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->poleLossP;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ACDCConverter_q(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->q;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ACDCConverter_ratedUdc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->ratedUdc;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ACDCConverter_resistiveLoss(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->resistiveLoss;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ACDCConverter_switchingLoss(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->switchingLoss;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ACDCConverter_targetPpcc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->targetPpcc;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ACDCConverter_targetUdc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->targetUdc;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ACDCConverter_uc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->uc;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ACDCConverter_udc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->udc;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ACDCConverter_valveU0(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ACDCConverter* element = dynamic_cast<ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->valveU0;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
+bool get_ACDCConverter_PccTerminal(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->PccTerminal != 0)
+		{
+			BaseClass_list.push_back(element->PccTerminal);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_ACDCConverter_baseS(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->baseS;
 		if (!buffer.str().empty())
@@ -365,7 +380,8 @@ bool get_ACDCConverter_baseS(const BaseClass* BaseClass_ptr1, std::stringstream&
 
 bool get_ACDCConverter_idc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->idc;
 		if (!buffer.str().empty())
@@ -379,7 +395,8 @@ bool get_ACDCConverter_idc(const BaseClass* BaseClass_ptr1, std::stringstream& b
 
 bool get_ACDCConverter_idleLoss(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->idleLoss;
 		if (!buffer.str().empty())
@@ -393,7 +410,8 @@ bool get_ACDCConverter_idleLoss(const BaseClass* BaseClass_ptr1, std::stringstre
 
 bool get_ACDCConverter_maxUdc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->maxUdc;
 		if (!buffer.str().empty())
@@ -407,7 +425,8 @@ bool get_ACDCConverter_maxUdc(const BaseClass* BaseClass_ptr1, std::stringstream
 
 bool get_ACDCConverter_minUdc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->minUdc;
 		if (!buffer.str().empty())
@@ -421,7 +440,8 @@ bool get_ACDCConverter_minUdc(const BaseClass* BaseClass_ptr1, std::stringstream
 
 bool get_ACDCConverter_nomUdc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->nomUdc;
 		if (!buffer.str().empty())
@@ -435,7 +455,8 @@ bool get_ACDCConverter_nomUdc(const BaseClass* BaseClass_ptr1, std::stringstream
 
 bool get_ACDCConverter_numberOfValves(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->numberOfValves;
 		if (!buffer.str().empty())
@@ -449,7 +470,8 @@ bool get_ACDCConverter_numberOfValves(const BaseClass* BaseClass_ptr1, std::stri
 
 bool get_ACDCConverter_p(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->p;
 		if (!buffer.str().empty())
@@ -463,7 +485,8 @@ bool get_ACDCConverter_p(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_ACDCConverter_poleLossP(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->poleLossP;
 		if (!buffer.str().empty())
@@ -477,7 +500,8 @@ bool get_ACDCConverter_poleLossP(const BaseClass* BaseClass_ptr1, std::stringstr
 
 bool get_ACDCConverter_q(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->q;
 		if (!buffer.str().empty())
@@ -491,7 +515,8 @@ bool get_ACDCConverter_q(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_ACDCConverter_ratedUdc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ratedUdc;
 		if (!buffer.str().empty())
@@ -505,7 +530,8 @@ bool get_ACDCConverter_ratedUdc(const BaseClass* BaseClass_ptr1, std::stringstre
 
 bool get_ACDCConverter_resistiveLoss(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->resistiveLoss;
 		if (!buffer.str().empty())
@@ -519,7 +545,8 @@ bool get_ACDCConverter_resistiveLoss(const BaseClass* BaseClass_ptr1, std::strin
 
 bool get_ACDCConverter_switchingLoss(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->switchingLoss;
 		if (!buffer.str().empty())
@@ -533,7 +560,8 @@ bool get_ACDCConverter_switchingLoss(const BaseClass* BaseClass_ptr1, std::strin
 
 bool get_ACDCConverter_targetPpcc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->targetPpcc;
 		if (!buffer.str().empty())
@@ -547,7 +575,8 @@ bool get_ACDCConverter_targetPpcc(const BaseClass* BaseClass_ptr1, std::stringst
 
 bool get_ACDCConverter_targetUdc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->targetUdc;
 		if (!buffer.str().empty())
@@ -561,7 +590,8 @@ bool get_ACDCConverter_targetUdc(const BaseClass* BaseClass_ptr1, std::stringstr
 
 bool get_ACDCConverter_uc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->uc;
 		if (!buffer.str().empty())
@@ -575,7 +605,8 @@ bool get_ACDCConverter_uc(const BaseClass* BaseClass_ptr1, std::stringstream& bu
 
 bool get_ACDCConverter_udc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->udc;
 		if (!buffer.str().empty())
@@ -589,7 +620,8 @@ bool get_ACDCConverter_udc(const BaseClass* BaseClass_ptr1, std::stringstream& b
 
 bool get_ACDCConverter_valveU0(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
+	const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->valveU0;
 		if (!buffer.str().empty())
@@ -601,21 +633,6 @@ bool get_ACDCConverter_valveU0(const BaseClass* BaseClass_ptr1, std::stringstrea
 	return false;
 }
 
-
-bool get_ACDCConverter_PccTerminal(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const ACDCConverter* element = dynamic_cast<const ACDCConverter*>(BaseClass_ptr1))
-	{
-		if (element->PccTerminal != 0)
-		{
-			BaseClass_list.push_back(element->PccTerminal);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char ACDCConverter::debugName[] = "ACDCConverter";
 const char* ACDCConverter::debugString() const
 {
@@ -624,35 +641,35 @@ const char* ACDCConverter::debugString() const
 
 void ACDCConverter::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ACDCConverter"), &ACDCConverter_factory));
+	factory_map.emplace("cim:ACDCConverter", &ACDCConverter_factory);
 }
 
 void ACDCConverter::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ACDCConverter.baseS"), &assign_ACDCConverter_baseS));
-	assign_map.insert(std::make_pair(std::string("cim:ACDCConverter.idc"), &assign_ACDCConverter_idc));
-	assign_map.insert(std::make_pair(std::string("cim:ACDCConverter.idleLoss"), &assign_ACDCConverter_idleLoss));
-	assign_map.insert(std::make_pair(std::string("cim:ACDCConverter.maxUdc"), &assign_ACDCConverter_maxUdc));
-	assign_map.insert(std::make_pair(std::string("cim:ACDCConverter.minUdc"), &assign_ACDCConverter_minUdc));
-	assign_map.insert(std::make_pair(std::string("cim:ACDCConverter.nomUdc"), &assign_ACDCConverter_nomUdc));
-	assign_map.insert(std::make_pair(std::string("cim:ACDCConverter.numberOfValves"), &assign_ACDCConverter_numberOfValves));
-	assign_map.insert(std::make_pair(std::string("cim:ACDCConverter.p"), &assign_ACDCConverter_p));
-	assign_map.insert(std::make_pair(std::string("cim:ACDCConverter.poleLossP"), &assign_ACDCConverter_poleLossP));
-	assign_map.insert(std::make_pair(std::string("cim:ACDCConverter.q"), &assign_ACDCConverter_q));
-	assign_map.insert(std::make_pair(std::string("cim:ACDCConverter.ratedUdc"), &assign_ACDCConverter_ratedUdc));
-	assign_map.insert(std::make_pair(std::string("cim:ACDCConverter.resistiveLoss"), &assign_ACDCConverter_resistiveLoss));
-	assign_map.insert(std::make_pair(std::string("cim:ACDCConverter.switchingLoss"), &assign_ACDCConverter_switchingLoss));
-	assign_map.insert(std::make_pair(std::string("cim:ACDCConverter.targetPpcc"), &assign_ACDCConverter_targetPpcc));
-	assign_map.insert(std::make_pair(std::string("cim:ACDCConverter.targetUdc"), &assign_ACDCConverter_targetUdc));
-	assign_map.insert(std::make_pair(std::string("cim:ACDCConverter.uc"), &assign_ACDCConverter_uc));
-	assign_map.insert(std::make_pair(std::string("cim:ACDCConverter.udc"), &assign_ACDCConverter_udc));
-	assign_map.insert(std::make_pair(std::string("cim:ACDCConverter.valveU0"), &assign_ACDCConverter_valveU0));
+	assign_map.emplace("cim:ACDCConverter.baseS", &assign_ACDCConverter_baseS);
+	assign_map.emplace("cim:ACDCConverter.idc", &assign_ACDCConverter_idc);
+	assign_map.emplace("cim:ACDCConverter.idleLoss", &assign_ACDCConverter_idleLoss);
+	assign_map.emplace("cim:ACDCConverter.maxUdc", &assign_ACDCConverter_maxUdc);
+	assign_map.emplace("cim:ACDCConverter.minUdc", &assign_ACDCConverter_minUdc);
+	assign_map.emplace("cim:ACDCConverter.nomUdc", &assign_ACDCConverter_nomUdc);
+	assign_map.emplace("cim:ACDCConverter.numberOfValves", &assign_ACDCConverter_numberOfValves);
+	assign_map.emplace("cim:ACDCConverter.p", &assign_ACDCConverter_p);
+	assign_map.emplace("cim:ACDCConverter.poleLossP", &assign_ACDCConverter_poleLossP);
+	assign_map.emplace("cim:ACDCConverter.q", &assign_ACDCConverter_q);
+	assign_map.emplace("cim:ACDCConverter.ratedUdc", &assign_ACDCConverter_ratedUdc);
+	assign_map.emplace("cim:ACDCConverter.resistiveLoss", &assign_ACDCConverter_resistiveLoss);
+	assign_map.emplace("cim:ACDCConverter.switchingLoss", &assign_ACDCConverter_switchingLoss);
+	assign_map.emplace("cim:ACDCConverter.targetPpcc", &assign_ACDCConverter_targetPpcc);
+	assign_map.emplace("cim:ACDCConverter.targetUdc", &assign_ACDCConverter_targetUdc);
+	assign_map.emplace("cim:ACDCConverter.uc", &assign_ACDCConverter_uc);
+	assign_map.emplace("cim:ACDCConverter.udc", &assign_ACDCConverter_udc);
+	assign_map.emplace("cim:ACDCConverter.valveU0", &assign_ACDCConverter_valveU0);
 }
 
 void ACDCConverter::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ACDCConverter.DCTerminals"), &assign_ACDCConverter_DCTerminals));
-	assign_map.insert(std::make_pair(std::string("cim:ACDCConverter.PccTerminal"), &assign_ACDCConverter_PccTerminal));
+	assign_map.emplace("cim:ACDCConverter.DCTerminals", &assign_ACDCConverter_DCTerminals);
+	assign_map.emplace("cim:ACDCConverter.PccTerminal", &assign_ACDCConverter_PccTerminal);
 }
 
 void ACDCConverter::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

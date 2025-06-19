@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class WindGeneratingUnit;
 
-	/*
-	Wind power plant.
-	*/
+	/** \brief Wind power plant. */
 	class WindPowerPlant : public PowerSystemResource
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		WindPowerPlant();
 		~WindPowerPlant() override;
 
-		std::list<CIMPP::WindGeneratingUnit*> WindGeneratingUnits;  /* A wind generating unit or units may be a member of a wind power plant. Default: 0 */
+		/** \brief A wind generating unit or units may be a member of a wind power plant. Default: 0 */
+		std::list<CIMPP::WindGeneratingUnit*> WindGeneratingUnits;
 
 		static const char debugName[];
 		const char* debugString() const override;

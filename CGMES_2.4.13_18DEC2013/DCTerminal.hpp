@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class DCConductingEquipment;
 
-	/*
-	A DC electrical connection point to a piece of DC conducting equipment. Terminals are connected at physical connection points called DC nodes.
-	*/
+	/** \brief A DC electrical connection point to a piece of DC conducting equipment. Terminals are connected at physical connection points called DC nodes. */
 	class DCTerminal : public DCBaseTerminal
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		DCTerminal();
 		~DCTerminal() override;
 
-		CIMPP::DCConductingEquipment* DCConductingEquipment;  /*  Default: 0 */
+		/** \brief  Default: 0 */
+		CIMPP::DCConductingEquipment* DCConductingEquipment;
 
 		static const char debugName[];
 		const char* debugString() const override;

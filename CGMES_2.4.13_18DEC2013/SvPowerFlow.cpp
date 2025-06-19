@@ -9,13 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "Terminal.hpp"
-#include "ActivePower.hpp"
-#include "ReactivePower.hpp"
 
 using namespace CIMPP;
 
-SvPowerFlow::SvPowerFlow() : Terminal(nullptr) {};
-SvPowerFlow::~SvPowerFlow() {};
+SvPowerFlow::SvPowerFlow() : Terminal(nullptr) {}
+SvPowerFlow::~SvPowerFlow() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -44,34 +42,6 @@ SvPowerFlow::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_SvPowerFlow_p(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (SvPowerFlow* element = dynamic_cast<SvPowerFlow*>(BaseClass_ptr1))
-	{
-		buffer >> element->p;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_SvPowerFlow_q(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (SvPowerFlow* element = dynamic_cast<SvPowerFlow*>(BaseClass_ptr1))
-	{
-		buffer >> element->q;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_Terminal_SvPowerFlow(BaseClass*, BaseClass*);
 bool assign_SvPowerFlow_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -89,9 +59,52 @@ bool assign_SvPowerFlow_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass
 	return false;
 }
 
+bool assign_SvPowerFlow_p(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	SvPowerFlow* element = dynamic_cast<SvPowerFlow*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->p;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_SvPowerFlow_q(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	SvPowerFlow* element = dynamic_cast<SvPowerFlow*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->q;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_SvPowerFlow_Terminal(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const SvPowerFlow* element = dynamic_cast<const SvPowerFlow*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->Terminal != 0)
+		{
+			BaseClass_list.push_back(element->Terminal);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_SvPowerFlow_p(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SvPowerFlow* element = dynamic_cast<const SvPowerFlow*>(BaseClass_ptr1))
+	const SvPowerFlow* element = dynamic_cast<const SvPowerFlow*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->p;
 		if (!buffer.str().empty())
@@ -105,7 +118,8 @@ bool get_SvPowerFlow_p(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_SvPowerFlow_q(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SvPowerFlow* element = dynamic_cast<const SvPowerFlow*>(BaseClass_ptr1))
+	const SvPowerFlow* element = dynamic_cast<const SvPowerFlow*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->q;
 		if (!buffer.str().empty())
@@ -117,21 +131,6 @@ bool get_SvPowerFlow_q(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 	return false;
 }
 
-
-bool get_SvPowerFlow_Terminal(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const SvPowerFlow* element = dynamic_cast<const SvPowerFlow*>(BaseClass_ptr1))
-	{
-		if (element->Terminal != 0)
-		{
-			BaseClass_list.push_back(element->Terminal);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char SvPowerFlow::debugName[] = "SvPowerFlow";
 const char* SvPowerFlow::debugString() const
 {
@@ -140,18 +139,18 @@ const char* SvPowerFlow::debugString() const
 
 void SvPowerFlow::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:SvPowerFlow"), &SvPowerFlow_factory));
+	factory_map.emplace("cim:SvPowerFlow", &SvPowerFlow_factory);
 }
 
 void SvPowerFlow::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:SvPowerFlow.p"), &assign_SvPowerFlow_p));
-	assign_map.insert(std::make_pair(std::string("cim:SvPowerFlow.q"), &assign_SvPowerFlow_q));
+	assign_map.emplace("cim:SvPowerFlow.p", &assign_SvPowerFlow_p);
+	assign_map.emplace("cim:SvPowerFlow.q", &assign_SvPowerFlow_q);
 }
 
 void SvPowerFlow::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:SvPowerFlow.Terminal"), &assign_SvPowerFlow_Terminal));
+	assign_map.emplace("cim:SvPowerFlow.Terminal", &assign_SvPowerFlow_Terminal);
 }
 
 void SvPowerFlow::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

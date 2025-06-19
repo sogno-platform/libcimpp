@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class SubGeographicalRegion;
 
-	/*
-	Overhead lines and/or cables connecting two or more HVDC substations.
-	*/
+	/** \brief Overhead lines and/or cables connecting two or more HVDC substations. */
 	class DCLine : public DCEquipmentContainer
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		DCLine();
 		~DCLine() override;
 
-		CIMPP::SubGeographicalRegion* Region;  /*  Default: 0 */
+		/** \brief  Default: 0 */
+		CIMPP::SubGeographicalRegion* Region;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class TopologicalNode;
 
-	/*
-	An electrically connected subset of the network. Topological islands can change as the current network state changes: e.g. due to  - disconnect switches or breakers change state in a SCADA/EMS - manual creation, change or deletion of topological nodes in a planning tool.
-	*/
+	/** \brief An electrically connected subset of the network. Topological islands can change as the current network state changes: e.g. due to  - disconnect switches or breakers change state in a SCADA/EMS - manual creation, change or deletion of topological nodes in a planning tool. */
 	class TopologicalIsland : public IdentifiedObject
 	{
 	public:
@@ -27,8 +25,11 @@ namespace CIMPP
 		TopologicalIsland();
 		~TopologicalIsland() override;
 
-		CIMPP::TopologicalNode* AngleRefTopologicalNode;  /* The angle reference for the island.   Normally there is one TopologicalNode that is selected as the angle reference for each island.   Other reference schemes exist, so the association is typically optional. Default: 0 */
-		std::list<CIMPP::TopologicalNode*> TopologicalNodes;  /* A topological node belongs to a topological island. Default: 0 */
+		/** \brief The angle reference for the island.   Normally there is one TopologicalNode that is selected as the angle reference for each island.   Other reference schemes exist, so the association is typically optional. Default: 0 */
+		CIMPP::TopologicalNode* AngleRefTopologicalNode;
+
+		/** \brief A topological node belongs to a topological island. Default: 0 */
+		std::list<CIMPP::TopologicalNode*> TopologicalNodes;
 
 		static const char debugName[];
 		const char* debugString() const override;

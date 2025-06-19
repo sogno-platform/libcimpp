@@ -20,9 +20,7 @@ namespace CIMPP
 {
 	class NonlinearShuntCompensator;
 
-	/*
-	A non linear shunt compensator bank or section admittance value.
-	*/
+	/** \brief A non linear shunt compensator bank or section admittance value. */
 	class NonlinearShuntCompensatorPoint : public BaseClass
 	{
 	public:
@@ -30,12 +28,23 @@ namespace CIMPP
 		NonlinearShuntCompensatorPoint();
 		~NonlinearShuntCompensatorPoint() override;
 
-		CIMPP::NonlinearShuntCompensator* NonlinearShuntCompensator;  /* Non-linear shunt compensator owning this point. Default: 0 */
-		CIMPP::Susceptance b;  /* Positive sequence shunt (charging) susceptance per section Default: nullptr */
-		CIMPP::Susceptance b0;  /* Zero sequence shunt (charging) susceptance per section Default: nullptr */
-		CIMPP::Conductance g;  /* Positive sequence shunt (charging) conductance per section Default: nullptr */
-		CIMPP::Conductance g0;  /* Zero sequence shunt (charging) conductance per section Default: nullptr */
-		CIMPP::Integer sectionNumber;  /* The number of the section. Default: 0 */
+		/** \brief Non-linear shunt compensator owning this point. Default: 0 */
+		CIMPP::NonlinearShuntCompensator* NonlinearShuntCompensator;
+
+		/** \brief Positive sequence shunt (charging) susceptance per section Default: nullptr */
+		CIMPP::Susceptance b;
+
+		/** \brief Zero sequence shunt (charging) susceptance per section Default: nullptr */
+		CIMPP::Susceptance b0;
+
+		/** \brief Positive sequence shunt (charging) conductance per section Default: nullptr */
+		CIMPP::Conductance g;
+
+		/** \brief Zero sequence shunt (charging) conductance per section Default: nullptr */
+		CIMPP::Conductance g0;
+
+		/** \brief The number of the section. Default: 0 */
+		CIMPP::Integer sectionNumber;
 
 		static const char debugName[];
 		const char* debugString() const override;

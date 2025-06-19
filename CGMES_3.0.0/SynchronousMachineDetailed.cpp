@@ -8,15 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Float.hpp"
-#include "IfdBaseKind.hpp"
-#include "Float.hpp"
-#include "Float.hpp"
 
 using namespace CIMPP;
 
-SynchronousMachineDetailed::SynchronousMachineDetailed() {};
-SynchronousMachineDetailed::~SynchronousMachineDetailed() {};
+SynchronousMachineDetailed::SynchronousMachineDetailed() {}
+SynchronousMachineDetailed::~SynchronousMachineDetailed() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -46,64 +42,66 @@ SynchronousMachineDetailed::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_SynchronousMachineDetailed_efdBaseRatio(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_SynchronousMachineDetailed_efdBaseRatio(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (SynchronousMachineDetailed* element = dynamic_cast<SynchronousMachineDetailed*>(BaseClass_ptr1))
+	SynchronousMachineDetailed* element = dynamic_cast<SynchronousMachineDetailed*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->efdBaseRatio;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_SynchronousMachineDetailed_ifdBaseType(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_SynchronousMachineDetailed_ifdBaseType(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (SynchronousMachineDetailed* element = dynamic_cast<SynchronousMachineDetailed*>(BaseClass_ptr1))
+	SynchronousMachineDetailed* element = dynamic_cast<SynchronousMachineDetailed*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ifdBaseType;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_SynchronousMachineDetailed_saturationFactor120QAxis(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_SynchronousMachineDetailed_saturationFactor120QAxis(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (SynchronousMachineDetailed* element = dynamic_cast<SynchronousMachineDetailed*>(BaseClass_ptr1))
+	SynchronousMachineDetailed* element = dynamic_cast<SynchronousMachineDetailed*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->saturationFactor120QAxis;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_SynchronousMachineDetailed_saturationFactorQAxis(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_SynchronousMachineDetailed_saturationFactorQAxis(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (SynchronousMachineDetailed* element = dynamic_cast<SynchronousMachineDetailed*>(BaseClass_ptr1))
+	SynchronousMachineDetailed* element = dynamic_cast<SynchronousMachineDetailed*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->saturationFactorQAxis;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_SynchronousMachineDetailed_efdBaseRatio(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SynchronousMachineDetailed* element = dynamic_cast<const SynchronousMachineDetailed*>(BaseClass_ptr1))
+	const SynchronousMachineDetailed* element = dynamic_cast<const SynchronousMachineDetailed*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->efdBaseRatio;
 		if (!buffer.str().empty())
@@ -115,9 +113,25 @@ bool get_SynchronousMachineDetailed_efdBaseRatio(const BaseClass* BaseClass_ptr1
 	return false;
 }
 
+bool get_SynchronousMachineDetailed_ifdBaseType(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	const SynchronousMachineDetailed* element = dynamic_cast<const SynchronousMachineDetailed*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer << element->ifdBaseType;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
 bool get_SynchronousMachineDetailed_saturationFactor120QAxis(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SynchronousMachineDetailed* element = dynamic_cast<const SynchronousMachineDetailed*>(BaseClass_ptr1))
+	const SynchronousMachineDetailed* element = dynamic_cast<const SynchronousMachineDetailed*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->saturationFactor120QAxis;
 		if (!buffer.str().empty())
@@ -131,25 +145,10 @@ bool get_SynchronousMachineDetailed_saturationFactor120QAxis(const BaseClass* Ba
 
 bool get_SynchronousMachineDetailed_saturationFactorQAxis(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SynchronousMachineDetailed* element = dynamic_cast<const SynchronousMachineDetailed*>(BaseClass_ptr1))
+	const SynchronousMachineDetailed* element = dynamic_cast<const SynchronousMachineDetailed*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->saturationFactorQAxis;
-		if (!buffer.str().empty())
-		{
-			return true;
-		}
-	}
-	buffer.setstate(std::ios::failbit);
-	return false;
-}
-
-
-
-bool get_SynchronousMachineDetailed_ifdBaseType(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
-{
-	if (const SynchronousMachineDetailed* element = dynamic_cast<const SynchronousMachineDetailed*>(BaseClass_ptr1))
-	{
-		buffer << element->ifdBaseType;
 		if (!buffer.str().empty())
 		{
 			return true;
@@ -167,15 +166,15 @@ const char* SynchronousMachineDetailed::debugString() const
 
 void SynchronousMachineDetailed::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:SynchronousMachineDetailed"), &SynchronousMachineDetailed_factory));
+	factory_map.emplace("cim:SynchronousMachineDetailed", &SynchronousMachineDetailed_factory);
 }
 
 void SynchronousMachineDetailed::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:SynchronousMachineDetailed.efdBaseRatio"), &assign_SynchronousMachineDetailed_efdBaseRatio));
-	assign_map.insert(std::make_pair(std::string("cim:SynchronousMachineDetailed.ifdBaseType"), &assign_SynchronousMachineDetailed_ifdBaseType));
-	assign_map.insert(std::make_pair(std::string("cim:SynchronousMachineDetailed.saturationFactor120QAxis"), &assign_SynchronousMachineDetailed_saturationFactor120QAxis));
-	assign_map.insert(std::make_pair(std::string("cim:SynchronousMachineDetailed.saturationFactorQAxis"), &assign_SynchronousMachineDetailed_saturationFactorQAxis));
+	assign_map.emplace("cim:SynchronousMachineDetailed.efdBaseRatio", &assign_SynchronousMachineDetailed_efdBaseRatio);
+	assign_map.emplace("cim:SynchronousMachineDetailed.ifdBaseType", &assign_SynchronousMachineDetailed_ifdBaseType);
+	assign_map.emplace("cim:SynchronousMachineDetailed.saturationFactor120QAxis", &assign_SynchronousMachineDetailed_saturationFactor120QAxis);
+	assign_map.emplace("cim:SynchronousMachineDetailed.saturationFactorQAxis", &assign_SynchronousMachineDetailed_saturationFactorQAxis);
 }
 
 void SynchronousMachineDetailed::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

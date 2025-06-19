@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class ValueAliasSet;
 
-	/*
-	An analog control that increase or decrease a set point value with pulses.
-	*/
+	/** \brief An analog control that increase or decrease a set point value with pulses. */
 	class RaiseLowerCommand : public AnalogControl
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		RaiseLowerCommand();
 		~RaiseLowerCommand() override;
 
-		CIMPP::ValueAliasSet* ValueAliasSet;  /* The ValueAliasSet used for translation of a Control value to a name. Default: 0 */
+		/** \brief The ValueAliasSet used for translation of a Control value to a name. Default: 0 */
+		CIMPP::ValueAliasSet* ValueAliasSet;
 
 		static const char debugName[];
 		const char* debugString() const override;

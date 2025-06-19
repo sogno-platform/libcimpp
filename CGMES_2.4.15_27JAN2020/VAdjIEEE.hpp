@@ -19,9 +19,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	The class represents IEEE Voltage Adjuster which is used to represent the voltage adjuster in either a power factor or var control system.  Reference: IEEE Standard 421.5-2005 Section 11.1.
-	*/
+	/** \brief The class represents IEEE Voltage Adjuster which is used to represent the voltage adjuster in either a power factor or var control system.  Reference: IEEE Standard 421.5-2005 Section 11.1. */
 	class VAdjIEEE : public VoltageAdjusterDynamics
 	{
 	public:
@@ -29,12 +27,23 @@ namespace CIMPP
 		VAdjIEEE();
 		~VAdjIEEE() override;
 
-		CIMPP::Simple_Float adjslew;  /* Rate at which output of adjuster changes ().  Unit = sec./PU.  Typical Value = 300. Default: nullptr */
-		CIMPP::Seconds taoff;  /* Time that adjuster pulses are off ().  Typical Value = 0.5. Default: nullptr */
-		CIMPP::Seconds taon;  /* Time that adjuster pulses are on ().  Typical Value = 0.1. Default: nullptr */
-		CIMPP::Simple_Float vadjf;  /* Set high to provide a continuous raise or lower (). Default: nullptr */
-		CIMPP::PU vadjmax;  /* Maximum output of the adjuster ().  Typical Value = 1.1. Default: nullptr */
-		CIMPP::PU vadjmin;  /* Minimum output of the adjuster ().  Typical Value = 0.9. Default: nullptr */
+		/** \brief Rate at which output of adjuster changes ().  Unit = sec./PU.  Typical Value = 300. Default: nullptr */
+		CIMPP::Simple_Float adjslew;
+
+		/** \brief Time that adjuster pulses are off ().  Typical Value = 0.5. Default: nullptr */
+		CIMPP::Seconds taoff;
+
+		/** \brief Time that adjuster pulses are on ().  Typical Value = 0.1. Default: nullptr */
+		CIMPP::Seconds taon;
+
+		/** \brief Set high to provide a continuous raise or lower (). Default: nullptr */
+		CIMPP::Simple_Float vadjf;
+
+		/** \brief Maximum output of the adjuster ().  Typical Value = 1.1. Default: nullptr */
+		CIMPP::PU vadjmax;
+
+		/** \brief Minimum output of the adjuster ().  Typical Value = 0.9. Default: nullptr */
+		CIMPP::PU vadjmin;
 
 		static const char debugName[];
 		const char* debugString() const override;

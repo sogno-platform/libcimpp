@@ -19,9 +19,7 @@ namespace CIMPP
 	class SvStatus;
 	class Terminal;
 
-	/*
-	The parts of the AC power system that are designed to carry current or that are conductively connected through terminals.
-	*/
+	/** \brief The parts of the AC power system that are designed to carry current or that are conductively connected through terminals. */
 	class ConductingEquipment : public Equipment
 	{
 	public:
@@ -29,9 +27,14 @@ namespace CIMPP
 		ConductingEquipment();
 		~ConductingEquipment() override;
 
-		CIMPP::BaseVoltage* BaseVoltage;  /* All conducting equipment with this base voltage.  Use only when there is no voltage level container used and only one base voltage applies.  For example, not used for transformers. Default: 0 */
-		CIMPP::SvStatus* SvStatus;  /* The status state variable associated with this conducting equipment. Default: 0 */
-		std::list<CIMPP::Terminal*> Terminals;  /* Conducting equipment have terminals that may be connected to other conducting equipment terminals via connectivity nodes or topological nodes. Default: 0 */
+		/** \brief All conducting equipment with this base voltage.  Use only when there is no voltage level container used and only one base voltage applies.  For example, not used for transformers. Default: 0 */
+		CIMPP::BaseVoltage* BaseVoltage;
+
+		/** \brief The status state variable associated with this conducting equipment. Default: 0 */
+		CIMPP::SvStatus* SvStatus;
+
+		/** \brief Conducting equipment have terminals that may be connected to other conducting equipment terminals via connectivity nodes or topological nodes. Default: 0 */
+		std::list<CIMPP::Terminal*> Terminals;
 
 		static const char debugName[];
 		const char* debugString() const override;

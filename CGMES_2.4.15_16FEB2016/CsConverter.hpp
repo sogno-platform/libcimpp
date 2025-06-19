@@ -20,9 +20,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	DC side of the current source converter (CSC).
-	*/
+	/** \brief DC side of the current source converter (CSC). */
 	class CsConverter : public ACDCConverter
 	{
 	public:
@@ -30,20 +28,47 @@ namespace CIMPP
 		CsConverter();
 		~CsConverter() override;
 
-		CIMPP::AngleDegrees alpha;  /* Firing angle, typical value between 10 and 18 degrees for a rectifier. CSC state variable, result from power flow. Default: nullptr */
-		CIMPP::AngleDegrees gamma;  /* Extinction angle. CSC state variable, result from power flow. Default: nullptr */
-		CIMPP::AngleDegrees maxAlpha;  /* Maximum firing angle. CSC configuration data used in power flow. Default: nullptr */
-		CIMPP::AngleDegrees maxGamma;  /* Maximum extinction angle. CSC configuration data used in power flow. Default: nullptr */
-		CIMPP::CurrentFlow maxIdc;  /* The maximum direct current (Id) on the DC side at which the converter should operate. Converter configuration data use in power flow. Default: nullptr */
-		CIMPP::AngleDegrees minAlpha;  /* Minimum firing angle. CSC configuration data used in power flow. Default: nullptr */
-		CIMPP::AngleDegrees minGamma;  /* Minimum extinction angle. CSC configuration data used in power flow. Default: nullptr */
-		CIMPP::CurrentFlow minIdc;  /* The minimum direct current (Id) on the DC side at which the converter should operate. CSC configuration data used in power flow. Default: nullptr */
-		CIMPP::CsOperatingModeKind operatingMode;  /* Indicates whether the DC pole is operating as an inverter or as a rectifier. CSC control variable used in power flow. Default: 0 */
-		CIMPP::CsPpccControlKind pPccControl;  /*  Default: 0 */
-		CIMPP::CurrentFlow ratedIdc;  /* Rated converter DC current, also called IdN. Converter configuration data used in power flow. Default: nullptr */
-		CIMPP::AngleDegrees targetAlpha;  /* Target firing angle. CSC control variable used in power flow. Default: nullptr */
-		CIMPP::AngleDegrees targetGamma;  /* Target extinction angle. CSC  control variable used in power flow. Default: nullptr */
-		CIMPP::CurrentFlow targetIdc;  /* DC current target value. CSC control variable used in power flow. Default: nullptr */
+		/** \brief Firing angle, typical value between 10 and 18 degrees for a rectifier. CSC state variable, result from power flow. Default: nullptr */
+		CIMPP::AngleDegrees alpha;
+
+		/** \brief Extinction angle. CSC state variable, result from power flow. Default: nullptr */
+		CIMPP::AngleDegrees gamma;
+
+		/** \brief Maximum firing angle. CSC configuration data used in power flow. Default: nullptr */
+		CIMPP::AngleDegrees maxAlpha;
+
+		/** \brief Maximum extinction angle. CSC configuration data used in power flow. Default: nullptr */
+		CIMPP::AngleDegrees maxGamma;
+
+		/** \brief The maximum direct current (Id) on the DC side at which the converter should operate. Converter configuration data use in power flow. Default: nullptr */
+		CIMPP::CurrentFlow maxIdc;
+
+		/** \brief Minimum firing angle. CSC configuration data used in power flow. Default: nullptr */
+		CIMPP::AngleDegrees minAlpha;
+
+		/** \brief Minimum extinction angle. CSC configuration data used in power flow. Default: nullptr */
+		CIMPP::AngleDegrees minGamma;
+
+		/** \brief The minimum direct current (Id) on the DC side at which the converter should operate. CSC configuration data used in power flow. Default: nullptr */
+		CIMPP::CurrentFlow minIdc;
+
+		/** \brief Indicates whether the DC pole is operating as an inverter or as a rectifier. CSC control variable used in power flow. Default: 0 */
+		CIMPP::CsOperatingModeKind operatingMode;
+
+		/** \brief  Default: 0 */
+		CIMPP::CsPpccControlKind pPccControl;
+
+		/** \brief Rated converter DC current, also called IdN. Converter configuration data used in power flow. Default: nullptr */
+		CIMPP::CurrentFlow ratedIdc;
+
+		/** \brief Target firing angle. CSC control variable used in power flow. Default: nullptr */
+		CIMPP::AngleDegrees targetAlpha;
+
+		/** \brief Target extinction angle. CSC  control variable used in power flow. Default: nullptr */
+		CIMPP::AngleDegrees targetGamma;
+
+		/** \brief DC current target value. CSC control variable used in power flow. Default: nullptr */
+		CIMPP::CurrentFlow targetIdc;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -10,13 +10,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 #include "SynchronousMachineDynamics.hpp"
 #include "VCompIEEEType2.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
 
 using namespace CIMPP;
 
-GenICompensationForGenJ::GenICompensationForGenJ() : SynchronousMachineDynamics(nullptr), VcompIEEEType2(nullptr) {};
-GenICompensationForGenJ::~GenICompensationForGenJ() {};
+GenICompensationForGenJ::GenICompensationForGenJ() : SynchronousMachineDynamics(nullptr), VcompIEEEType2(nullptr) {}
+GenICompensationForGenJ::~GenICompensationForGenJ() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -46,34 +44,6 @@ GenICompensationForGenJ::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_GenICompensationForGenJ_rcij(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (GenICompensationForGenJ* element = dynamic_cast<GenICompensationForGenJ*>(BaseClass_ptr1))
-	{
-		buffer >> element->rcij;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_GenICompensationForGenJ_xcij(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (GenICompensationForGenJ* element = dynamic_cast<GenICompensationForGenJ*>(BaseClass_ptr1))
-	{
-		buffer >> element->xcij;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_SynchronousMachineDynamics_GenICompensationForGenJ(BaseClass*, BaseClass*);
 bool assign_GenICompensationForGenJ_SynchronousMachineDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -90,6 +60,7 @@ bool assign_GenICompensationForGenJ_SynchronousMachineDynamics(BaseClass* BaseCl
 	}
 	return false;
 }
+
 bool assign_VCompIEEEType2_GenICompensationForGenJ(BaseClass*, BaseClass*);
 bool assign_GenICompensationForGenJ_VcompIEEEType2(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -107,9 +78,66 @@ bool assign_GenICompensationForGenJ_VcompIEEEType2(BaseClass* BaseClass_ptr1, Ba
 	return false;
 }
 
+bool assign_GenICompensationForGenJ_rcij(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	GenICompensationForGenJ* element = dynamic_cast<GenICompensationForGenJ*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->rcij;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_GenICompensationForGenJ_xcij(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	GenICompensationForGenJ* element = dynamic_cast<GenICompensationForGenJ*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->xcij;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_GenICompensationForGenJ_SynchronousMachineDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const GenICompensationForGenJ* element = dynamic_cast<const GenICompensationForGenJ*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->SynchronousMachineDynamics != 0)
+		{
+			BaseClass_list.push_back(element->SynchronousMachineDynamics);
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_GenICompensationForGenJ_VcompIEEEType2(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const GenICompensationForGenJ* element = dynamic_cast<const GenICompensationForGenJ*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->VcompIEEEType2 != 0)
+		{
+			BaseClass_list.push_back(element->VcompIEEEType2);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_GenICompensationForGenJ_rcij(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GenICompensationForGenJ* element = dynamic_cast<const GenICompensationForGenJ*>(BaseClass_ptr1))
+	const GenICompensationForGenJ* element = dynamic_cast<const GenICompensationForGenJ*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->rcij;
 		if (!buffer.str().empty())
@@ -123,7 +151,8 @@ bool get_GenICompensationForGenJ_rcij(const BaseClass* BaseClass_ptr1, std::stri
 
 bool get_GenICompensationForGenJ_xcij(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GenICompensationForGenJ* element = dynamic_cast<const GenICompensationForGenJ*>(BaseClass_ptr1))
+	const GenICompensationForGenJ* element = dynamic_cast<const GenICompensationForGenJ*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->xcij;
 		if (!buffer.str().empty())
@@ -135,34 +164,6 @@ bool get_GenICompensationForGenJ_xcij(const BaseClass* BaseClass_ptr1, std::stri
 	return false;
 }
 
-
-bool get_GenICompensationForGenJ_SynchronousMachineDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const GenICompensationForGenJ* element = dynamic_cast<const GenICompensationForGenJ*>(BaseClass_ptr1))
-	{
-		if (element->SynchronousMachineDynamics != 0)
-		{
-			BaseClass_list.push_back(element->SynchronousMachineDynamics);
-			return true;
-		}
-	}
-	return false;
-}
-
-bool get_GenICompensationForGenJ_VcompIEEEType2(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const GenICompensationForGenJ* element = dynamic_cast<const GenICompensationForGenJ*>(BaseClass_ptr1))
-	{
-		if (element->VcompIEEEType2 != 0)
-		{
-			BaseClass_list.push_back(element->VcompIEEEType2);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char GenICompensationForGenJ::debugName[] = "GenICompensationForGenJ";
 const char* GenICompensationForGenJ::debugString() const
 {
@@ -171,19 +172,19 @@ const char* GenICompensationForGenJ::debugString() const
 
 void GenICompensationForGenJ::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:GenICompensationForGenJ"), &GenICompensationForGenJ_factory));
+	factory_map.emplace("cim:GenICompensationForGenJ", &GenICompensationForGenJ_factory);
 }
 
 void GenICompensationForGenJ::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:GenICompensationForGenJ.rcij"), &assign_GenICompensationForGenJ_rcij));
-	assign_map.insert(std::make_pair(std::string("cim:GenICompensationForGenJ.xcij"), &assign_GenICompensationForGenJ_xcij));
+	assign_map.emplace("cim:GenICompensationForGenJ.rcij", &assign_GenICompensationForGenJ_rcij);
+	assign_map.emplace("cim:GenICompensationForGenJ.xcij", &assign_GenICompensationForGenJ_xcij);
 }
 
 void GenICompensationForGenJ::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:GenICompensationForGenJ.SynchronousMachineDynamics"), &assign_GenICompensationForGenJ_SynchronousMachineDynamics));
-	assign_map.insert(std::make_pair(std::string("cim:GenICompensationForGenJ.VcompIEEEType2"), &assign_GenICompensationForGenJ_VcompIEEEType2));
+	assign_map.emplace("cim:GenICompensationForGenJ.SynchronousMachineDynamics", &assign_GenICompensationForGenJ_SynchronousMachineDynamics);
+	assign_map.emplace("cim:GenICompensationForGenJ.VcompIEEEType2", &assign_GenICompensationForGenJ_VcompIEEEType2);
 }
 
 void GenICompensationForGenJ::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

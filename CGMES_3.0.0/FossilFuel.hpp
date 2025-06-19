@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class ThermalGeneratingUnit;
 
-	/*
-	The fossil fuel consumed by the non-nuclear thermal generating unit.   For example, coal, oil, gas, etc.   These are the specific fuels that the generating unit can consume.
-	*/
+	/** \brief The fossil fuel consumed by the non-nuclear thermal generating unit.   For example, coal, oil, gas, etc.   These are the specific fuels that the generating unit can consume. */
 	class FossilFuel : public IdentifiedObject
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		FossilFuel();
 		~FossilFuel() override;
 
-		CIMPP::ThermalGeneratingUnit* ThermalGeneratingUnit;  /* A thermal generating unit may have one or more fossil fuels. Default: 0 */
-		CIMPP::FuelType fossilFuelType;  /* The type of fossil fuel, such as coal, oil, or gas. Default: 0 */
+		/** \brief A thermal generating unit may have one or more fossil fuels. Default: 0 */
+		CIMPP::ThermalGeneratingUnit* ThermalGeneratingUnit;
+
+		/** \brief The type of fossil fuel, such as coal, oil, or gas. Default: 0 */
+		CIMPP::FuelType fossilFuelType;
 
 		static const char debugName[];
 		const char* debugString() const override;

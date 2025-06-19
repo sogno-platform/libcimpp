@@ -8,10 +8,9 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
+#include "ACDCConverter.hpp"
 #include "ConductingEquipment.hpp"
 #include "ConnectivityNode.hpp"
-#include "ACDCConverter.hpp"
-#include "MutualCoupling.hpp"
 #include "MutualCoupling.hpp"
 #include "RegulatingControl.hpp"
 #include "RemoteInputSignal.hpp"
@@ -19,12 +18,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "TieFlow.hpp"
 #include "TopologicalNode.hpp"
 #include "TransformerEnd.hpp"
-#include "PhaseCode.hpp"
 
 using namespace CIMPP;
 
-Terminal::Terminal() : ConductingEquipment(nullptr), ConnectivityNode(nullptr), RegulatingControl(nullptr), SvPowerFlow(nullptr), TopologicalNode(nullptr) {};
-Terminal::~Terminal() {};
+Terminal::Terminal() : ConductingEquipment(nullptr), ConnectivityNode(nullptr), RegulatingControl(nullptr), SvPowerFlow(nullptr), TopologicalNode(nullptr) {}
+Terminal::~Terminal() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -67,21 +65,6 @@ Terminal::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_Terminal_phases(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (Terminal* element = dynamic_cast<Terminal*>(BaseClass_ptr1))
-	{
-		buffer >> element->phases;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_ConductingEquipment_Terminals(BaseClass*, BaseClass*);
 bool assign_Terminal_ConductingEquipment(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -98,6 +81,7 @@ bool assign_Terminal_ConductingEquipment(BaseClass* BaseClass_ptr1, BaseClass* B
 	}
 	return false;
 }
+
 bool assign_ConnectivityNode_Terminals(BaseClass*, BaseClass*);
 bool assign_Terminal_ConnectivityNode(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -114,6 +98,7 @@ bool assign_Terminal_ConnectivityNode(BaseClass* BaseClass_ptr1, BaseClass* Base
 	}
 	return false;
 }
+
 bool assign_ACDCConverter_PccTerminal(BaseClass*, BaseClass*);
 bool assign_Terminal_ConverterDCSides(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -130,6 +115,7 @@ bool assign_Terminal_ConverterDCSides(BaseClass* BaseClass_ptr1, BaseClass* Base
 	}
 	return false;
 }
+
 bool assign_MutualCoupling_First_Terminal(BaseClass*, BaseClass*);
 bool assign_Terminal_HasFirstMutualCoupling(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -146,6 +132,7 @@ bool assign_Terminal_HasFirstMutualCoupling(BaseClass* BaseClass_ptr1, BaseClass
 	}
 	return false;
 }
+
 bool assign_MutualCoupling_Second_Terminal(BaseClass*, BaseClass*);
 bool assign_Terminal_HasSecondMutualCoupling(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -162,6 +149,7 @@ bool assign_Terminal_HasSecondMutualCoupling(BaseClass* BaseClass_ptr1, BaseClas
 	}
 	return false;
 }
+
 bool assign_RegulatingControl_Terminal(BaseClass*, BaseClass*);
 bool assign_Terminal_RegulatingControl(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -178,6 +166,7 @@ bool assign_Terminal_RegulatingControl(BaseClass* BaseClass_ptr1, BaseClass* Bas
 	}
 	return false;
 }
+
 bool assign_RemoteInputSignal_Terminal(BaseClass*, BaseClass*);
 bool assign_Terminal_RemoteInputSignal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -194,6 +183,7 @@ bool assign_Terminal_RemoteInputSignal(BaseClass* BaseClass_ptr1, BaseClass* Bas
 	}
 	return false;
 }
+
 bool assign_SvPowerFlow_Terminal(BaseClass*, BaseClass*);
 bool assign_Terminal_SvPowerFlow(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -210,6 +200,7 @@ bool assign_Terminal_SvPowerFlow(BaseClass* BaseClass_ptr1, BaseClass* BaseClass
 	}
 	return false;
 }
+
 bool assign_TieFlow_Terminal(BaseClass*, BaseClass*);
 bool assign_Terminal_TieFlow(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -226,6 +217,7 @@ bool assign_Terminal_TieFlow(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr
 	}
 	return false;
 }
+
 bool assign_TopologicalNode_Terminal(BaseClass*, BaseClass*);
 bool assign_Terminal_TopologicalNode(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -242,6 +234,7 @@ bool assign_Terminal_TopologicalNode(BaseClass* BaseClass_ptr1, BaseClass* BaseC
 	}
 	return false;
 }
+
 bool assign_TransformerEnd_Terminal(BaseClass*, BaseClass*);
 bool assign_Terminal_TransformerEnd(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -259,10 +252,24 @@ bool assign_Terminal_TransformerEnd(BaseClass* BaseClass_ptr1, BaseClass* BaseCl
 	return false;
 }
 
+bool assign_Terminal_phases(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	Terminal* element = dynamic_cast<Terminal*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->phases;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
 
 bool get_Terminal_ConductingEquipment(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const Terminal* element = dynamic_cast<const Terminal*>(BaseClass_ptr1))
+	const Terminal* element = dynamic_cast<const Terminal*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->ConductingEquipment != 0)
 		{
@@ -275,7 +282,8 @@ bool get_Terminal_ConductingEquipment(const BaseClass* BaseClass_ptr1, std::list
 
 bool get_Terminal_ConnectivityNode(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const Terminal* element = dynamic_cast<const Terminal*>(BaseClass_ptr1))
+	const Terminal* element = dynamic_cast<const Terminal*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->ConnectivityNode != 0)
 		{
@@ -286,9 +294,17 @@ bool get_Terminal_ConnectivityNode(const BaseClass* BaseClass_ptr1, std::list<co
 	return false;
 }
 
+
+
+
+
+
+
+
 bool get_Terminal_TopologicalNode(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const Terminal* element = dynamic_cast<const Terminal*>(BaseClass_ptr1))
+	const Terminal* element = dynamic_cast<const Terminal*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->TopologicalNode != 0)
 		{
@@ -302,7 +318,8 @@ bool get_Terminal_TopologicalNode(const BaseClass* BaseClass_ptr1, std::list<con
 
 bool get_Terminal_phases(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Terminal* element = dynamic_cast<const Terminal*>(BaseClass_ptr1))
+	const Terminal* element = dynamic_cast<const Terminal*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->phases;
 		if (!buffer.str().empty())
@@ -322,27 +339,27 @@ const char* Terminal::debugString() const
 
 void Terminal::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:Terminal"), &Terminal_factory));
+	factory_map.emplace("cim:Terminal", &Terminal_factory);
 }
 
 void Terminal::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Terminal.phases"), &assign_Terminal_phases));
+	assign_map.emplace("cim:Terminal.phases", &assign_Terminal_phases);
 }
 
 void Terminal::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Terminal.ConductingEquipment"), &assign_Terminal_ConductingEquipment));
-	assign_map.insert(std::make_pair(std::string("cim:Terminal.ConnectivityNode"), &assign_Terminal_ConnectivityNode));
-	assign_map.insert(std::make_pair(std::string("cim:Terminal.ConverterDCSides"), &assign_Terminal_ConverterDCSides));
-	assign_map.insert(std::make_pair(std::string("cim:Terminal.HasFirstMutualCoupling"), &assign_Terminal_HasFirstMutualCoupling));
-	assign_map.insert(std::make_pair(std::string("cim:Terminal.HasSecondMutualCoupling"), &assign_Terminal_HasSecondMutualCoupling));
-	assign_map.insert(std::make_pair(std::string("cim:Terminal.RegulatingControl"), &assign_Terminal_RegulatingControl));
-	assign_map.insert(std::make_pair(std::string("cim:Terminal.RemoteInputSignal"), &assign_Terminal_RemoteInputSignal));
-	assign_map.insert(std::make_pair(std::string("cim:Terminal.SvPowerFlow"), &assign_Terminal_SvPowerFlow));
-	assign_map.insert(std::make_pair(std::string("cim:Terminal.TieFlow"), &assign_Terminal_TieFlow));
-	assign_map.insert(std::make_pair(std::string("cim:Terminal.TopologicalNode"), &assign_Terminal_TopologicalNode));
-	assign_map.insert(std::make_pair(std::string("cim:Terminal.TransformerEnd"), &assign_Terminal_TransformerEnd));
+	assign_map.emplace("cim:Terminal.ConductingEquipment", &assign_Terminal_ConductingEquipment);
+	assign_map.emplace("cim:Terminal.ConnectivityNode", &assign_Terminal_ConnectivityNode);
+	assign_map.emplace("cim:Terminal.ConverterDCSides", &assign_Terminal_ConverterDCSides);
+	assign_map.emplace("cim:Terminal.HasFirstMutualCoupling", &assign_Terminal_HasFirstMutualCoupling);
+	assign_map.emplace("cim:Terminal.HasSecondMutualCoupling", &assign_Terminal_HasSecondMutualCoupling);
+	assign_map.emplace("cim:Terminal.RegulatingControl", &assign_Terminal_RegulatingControl);
+	assign_map.emplace("cim:Terminal.RemoteInputSignal", &assign_Terminal_RemoteInputSignal);
+	assign_map.emplace("cim:Terminal.SvPowerFlow", &assign_Terminal_SvPowerFlow);
+	assign_map.emplace("cim:Terminal.TieFlow", &assign_Terminal_TieFlow);
+	assign_map.emplace("cim:Terminal.TopologicalNode", &assign_Terminal_TopologicalNode);
+	assign_map.emplace("cim:Terminal.TransformerEnd", &assign_Terminal_TransformerEnd);
 }
 
 void Terminal::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

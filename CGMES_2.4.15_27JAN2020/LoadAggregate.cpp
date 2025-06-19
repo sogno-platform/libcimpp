@@ -13,8 +13,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-LoadAggregate::LoadAggregate() : LoadMotor(nullptr), LoadStatic(nullptr) {};
-LoadAggregate::~LoadAggregate() {};
+LoadAggregate::LoadAggregate() : LoadMotor(nullptr), LoadStatic(nullptr) {}
+LoadAggregate::~LoadAggregate() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,8 +42,6 @@ LoadAggregate::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_LoadMotor_LoadAggregate(BaseClass*, BaseClass*);
 bool assign_LoadAggregate_LoadMotor(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,6 +58,7 @@ bool assign_LoadAggregate_LoadMotor(BaseClass* BaseClass_ptr1, BaseClass* BaseCl
 	}
 	return false;
 }
+
 bool assign_LoadStatic_LoadAggregate(BaseClass*, BaseClass*);
 bool assign_LoadAggregate_LoadStatic(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -87,7 +86,7 @@ const char* LoadAggregate::debugString() const
 
 void LoadAggregate::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:LoadAggregate"), &LoadAggregate_factory));
+	factory_map.emplace("cim:LoadAggregate", &LoadAggregate_factory);
 }
 
 void LoadAggregate::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -96,8 +95,8 @@ void LoadAggregate::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, a
 
 void LoadAggregate::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:LoadAggregate.LoadMotor"), &assign_LoadAggregate_LoadMotor));
-	assign_map.insert(std::make_pair(std::string("cim:LoadAggregate.LoadStatic"), &assign_LoadAggregate_LoadStatic));
+	assign_map.emplace("cim:LoadAggregate.LoadMotor", &assign_LoadAggregate_LoadMotor);
+	assign_map.emplace("cim:LoadAggregate.LoadStatic", &assign_LoadAggregate_LoadStatic);
 }
 
 void LoadAggregate::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

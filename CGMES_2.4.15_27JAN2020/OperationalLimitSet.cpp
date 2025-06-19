@@ -8,14 +8,14 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
+#include "ACDCTerminal.hpp"
 #include "Equipment.hpp"
 #include "OperationalLimit.hpp"
-#include "ACDCTerminal.hpp"
 
 using namespace CIMPP;
 
-OperationalLimitSet::OperationalLimitSet() : Equipment(nullptr), Terminal(nullptr) {};
-OperationalLimitSet::~OperationalLimitSet() {};
+OperationalLimitSet::OperationalLimitSet() : Equipment(nullptr), Terminal(nullptr) {}
+OperationalLimitSet::~OperationalLimitSet() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -44,8 +44,6 @@ OperationalLimitSet::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_Equipment_OperationalLimitSet(BaseClass*, BaseClass*);
 bool assign_OperationalLimitSet_Equipment(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -62,6 +60,7 @@ bool assign_OperationalLimitSet_Equipment(BaseClass* BaseClass_ptr1, BaseClass* 
 	}
 	return false;
 }
+
 bool assign_OperationalLimit_OperationalLimitSet(BaseClass*, BaseClass*);
 bool assign_OperationalLimitSet_OperationalLimitValue(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -78,6 +77,7 @@ bool assign_OperationalLimitSet_OperationalLimitValue(BaseClass* BaseClass_ptr1,
 	}
 	return false;
 }
+
 bool assign_ACDCTerminal_OperationalLimitSet(BaseClass*, BaseClass*);
 bool assign_OperationalLimitSet_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -95,10 +95,10 @@ bool assign_OperationalLimitSet_Terminal(BaseClass* BaseClass_ptr1, BaseClass* B
 	return false;
 }
 
-
 bool get_OperationalLimitSet_Equipment(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const OperationalLimitSet* element = dynamic_cast<const OperationalLimitSet*>(BaseClass_ptr1))
+	const OperationalLimitSet* element = dynamic_cast<const OperationalLimitSet*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->Equipment != 0)
 		{
@@ -109,9 +109,11 @@ bool get_OperationalLimitSet_Equipment(const BaseClass* BaseClass_ptr1, std::lis
 	return false;
 }
 
+
 bool get_OperationalLimitSet_Terminal(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const OperationalLimitSet* element = dynamic_cast<const OperationalLimitSet*>(BaseClass_ptr1))
+	const OperationalLimitSet* element = dynamic_cast<const OperationalLimitSet*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->Terminal != 0)
 		{
@@ -122,7 +124,6 @@ bool get_OperationalLimitSet_Terminal(const BaseClass* BaseClass_ptr1, std::list
 	return false;
 }
 
-
 const char OperationalLimitSet::debugName[] = "OperationalLimitSet";
 const char* OperationalLimitSet::debugString() const
 {
@@ -131,7 +132,7 @@ const char* OperationalLimitSet::debugString() const
 
 void OperationalLimitSet::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:OperationalLimitSet"), &OperationalLimitSet_factory));
+	factory_map.emplace("cim:OperationalLimitSet", &OperationalLimitSet_factory);
 }
 
 void OperationalLimitSet::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -140,9 +141,9 @@ void OperationalLimitSet::addPrimitiveAssignFnsToMap(std::unordered_map<std::str
 
 void OperationalLimitSet::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:OperationalLimitSet.Equipment"), &assign_OperationalLimitSet_Equipment));
-	assign_map.insert(std::make_pair(std::string("cim:OperationalLimitSet.OperationalLimitValue"), &assign_OperationalLimitSet_OperationalLimitValue));
-	assign_map.insert(std::make_pair(std::string("cim:OperationalLimitSet.Terminal"), &assign_OperationalLimitSet_Terminal));
+	assign_map.emplace("cim:OperationalLimitSet.Equipment", &assign_OperationalLimitSet_Equipment);
+	assign_map.emplace("cim:OperationalLimitSet.OperationalLimitValue", &assign_OperationalLimitSet_OperationalLimitValue);
+	assign_map.emplace("cim:OperationalLimitSet.Terminal", &assign_OperationalLimitSet_Terminal);
 }
 
 void OperationalLimitSet::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

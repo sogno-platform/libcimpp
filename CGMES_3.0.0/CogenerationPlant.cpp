@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-CogenerationPlant::CogenerationPlant() {};
-CogenerationPlant::~CogenerationPlant() {};
+CogenerationPlant::CogenerationPlant() {}
+CogenerationPlant::~CogenerationPlant() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ CogenerationPlant::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_ThermalGeneratingUnit_CogenerationPlant(BaseClass*, BaseClass*);
 bool assign_CogenerationPlant_ThermalGeneratingUnits(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,7 +58,6 @@ bool assign_CogenerationPlant_ThermalGeneratingUnits(BaseClass* BaseClass_ptr1, 
 }
 
 
-
 const char CogenerationPlant::debugName[] = "CogenerationPlant";
 const char* CogenerationPlant::debugString() const
 {
@@ -69,7 +66,7 @@ const char* CogenerationPlant::debugString() const
 
 void CogenerationPlant::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:CogenerationPlant"), &CogenerationPlant_factory));
+	factory_map.emplace("cim:CogenerationPlant", &CogenerationPlant_factory);
 }
 
 void CogenerationPlant::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -78,7 +75,7 @@ void CogenerationPlant::addPrimitiveAssignFnsToMap(std::unordered_map<std::strin
 
 void CogenerationPlant::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:CogenerationPlant.ThermalGeneratingUnits"), &assign_CogenerationPlant_ThermalGeneratingUnits));
+	assign_map.emplace("cim:CogenerationPlant.ThermalGeneratingUnits", &assign_CogenerationPlant_ThermalGeneratingUnits);
 }
 
 void CogenerationPlant::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

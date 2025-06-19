@@ -8,15 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Simple_Float.hpp"
-#include "Simple_Float.hpp"
-#include "Simple_Float.hpp"
-#include "Simple_Float.hpp"
 
 using namespace CIMPP;
 
-MechLoad1::MechLoad1() {};
-MechLoad1::~MechLoad1() {};
+MechLoad1::MechLoad1() {}
+MechLoad1::~MechLoad1() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -46,64 +42,66 @@ MechLoad1::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_MechLoad1_a(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_MechLoad1_a(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (MechLoad1* element = dynamic_cast<MechLoad1*>(BaseClass_ptr1))
+	MechLoad1* element = dynamic_cast<MechLoad1*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->a;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_MechLoad1_b(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_MechLoad1_b(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (MechLoad1* element = dynamic_cast<MechLoad1*>(BaseClass_ptr1))
+	MechLoad1* element = dynamic_cast<MechLoad1*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->b;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_MechLoad1_d(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_MechLoad1_d(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (MechLoad1* element = dynamic_cast<MechLoad1*>(BaseClass_ptr1))
+	MechLoad1* element = dynamic_cast<MechLoad1*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->d;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_MechLoad1_e(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_MechLoad1_e(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (MechLoad1* element = dynamic_cast<MechLoad1*>(BaseClass_ptr1))
+	MechLoad1* element = dynamic_cast<MechLoad1*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->e;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_MechLoad1_a(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const MechLoad1* element = dynamic_cast<const MechLoad1*>(BaseClass_ptr1))
+	const MechLoad1* element = dynamic_cast<const MechLoad1*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->a;
 		if (!buffer.str().empty())
@@ -117,7 +115,8 @@ bool get_MechLoad1_a(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_MechLoad1_b(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const MechLoad1* element = dynamic_cast<const MechLoad1*>(BaseClass_ptr1))
+	const MechLoad1* element = dynamic_cast<const MechLoad1*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->b;
 		if (!buffer.str().empty())
@@ -131,7 +130,8 @@ bool get_MechLoad1_b(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_MechLoad1_d(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const MechLoad1* element = dynamic_cast<const MechLoad1*>(BaseClass_ptr1))
+	const MechLoad1* element = dynamic_cast<const MechLoad1*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->d;
 		if (!buffer.str().empty())
@@ -145,7 +145,8 @@ bool get_MechLoad1_d(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_MechLoad1_e(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const MechLoad1* element = dynamic_cast<const MechLoad1*>(BaseClass_ptr1))
+	const MechLoad1* element = dynamic_cast<const MechLoad1*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->e;
 		if (!buffer.str().empty())
@@ -157,8 +158,6 @@ bool get_MechLoad1_e(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 	return false;
 }
 
-
-
 const char MechLoad1::debugName[] = "MechLoad1";
 const char* MechLoad1::debugString() const
 {
@@ -167,15 +166,15 @@ const char* MechLoad1::debugString() const
 
 void MechLoad1::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:MechLoad1"), &MechLoad1_factory));
+	factory_map.emplace("cim:MechLoad1", &MechLoad1_factory);
 }
 
 void MechLoad1::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:MechLoad1.a"), &assign_MechLoad1_a));
-	assign_map.insert(std::make_pair(std::string("cim:MechLoad1.b"), &assign_MechLoad1_b));
-	assign_map.insert(std::make_pair(std::string("cim:MechLoad1.d"), &assign_MechLoad1_d));
-	assign_map.insert(std::make_pair(std::string("cim:MechLoad1.e"), &assign_MechLoad1_e));
+	assign_map.emplace("cim:MechLoad1.a", &assign_MechLoad1_a);
+	assign_map.emplace("cim:MechLoad1.b", &assign_MechLoad1_b);
+	assign_map.emplace("cim:MechLoad1.d", &assign_MechLoad1_d);
+	assign_map.emplace("cim:MechLoad1.e", &assign_MechLoad1_e);
 }
 
 void MechLoad1::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

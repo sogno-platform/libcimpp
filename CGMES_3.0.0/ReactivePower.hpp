@@ -9,9 +9,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Product of RMS value of the voltage and the RMS value of the quadrature component of the current.
-	*/
+	/** \brief Product of RMS value of the voltage and the RMS value of the quadrature component of the current. */
 	class ReactivePower
 	{
 	public:

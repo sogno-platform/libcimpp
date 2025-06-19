@@ -9,25 +9,17 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Source gives information related to the origin of a value.
-	*/
+	/** \brief Source gives information related to the origin of a value. */
 	class Source
 	{
 	public:
 		enum Source_ENUM
 		{
-			/**
-			 * The value is provided by input from the process I/O or being calculated from some function.
-			 */
+			/** The value is provided by input from the process I/O or being calculated from some function. */
 			PROCESS,
-			/**
-			 * The value contains a default value.
-			 */
+			/** The value contains a default value. */
 			DEFAULTED,
-			/**
-			 * The value is provided by input of an operator or by an automatic source.
-			 */
+			/** The value is provided by input of an operator or by an automatic source. */
 			SUBSTITUTED,
 		};
 

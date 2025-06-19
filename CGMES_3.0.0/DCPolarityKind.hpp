@@ -9,25 +9,17 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Polarity for DC circuits.
-	*/
+	/** \brief Polarity for DC circuits. */
 	class DCPolarityKind
 	{
 	public:
 		enum DCPolarityKind_ENUM
 		{
-			/**
-			 * Positive pole. The converter terminal is intended to operate at a positive voltage relative the midpoint or negative terminal.
-			 */
+			/** Positive pole. The converter terminal is intended to operate at a positive voltage relative the midpoint or negative terminal. */
 			positive,
-			/**
-			 * Middle pole. The converter terminal is the midpoint in a bipolar or symmetric monopole configuration. The midpoint can be grounded and/or have a metallic return.
-			 */
+			/** Middle pole. The converter terminal is the midpoint in a bipolar or symmetric monopole configuration. The midpoint can be grounded and/or have a metallic return. */
 			middle,
-			/**
-			 * Negative pole. The converter terminal is intended to operate at a negative voltage relative the midpoint or positive terminal.
-			 */
+			/** Negative pole. The converter terminal is intended to operate at a negative voltage relative the midpoint or positive terminal. */
 			negative,
 		};
 

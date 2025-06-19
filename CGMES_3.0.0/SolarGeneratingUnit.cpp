@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-SolarGeneratingUnit::SolarGeneratingUnit() : SolarPowerPlant(nullptr) {};
-SolarGeneratingUnit::~SolarGeneratingUnit() {};
+SolarGeneratingUnit::SolarGeneratingUnit() : SolarPowerPlant(nullptr) {}
+SolarGeneratingUnit::~SolarGeneratingUnit() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -41,8 +41,6 @@ SolarGeneratingUnit::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_SolarPowerPlant_SolarGeneratingUnits(BaseClass*, BaseClass*);
 bool assign_SolarGeneratingUnit_SolarPowerPlant(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,10 +58,10 @@ bool assign_SolarGeneratingUnit_SolarPowerPlant(BaseClass* BaseClass_ptr1, BaseC
 	return false;
 }
 
-
 bool get_SolarGeneratingUnit_SolarPowerPlant(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const SolarGeneratingUnit* element = dynamic_cast<const SolarGeneratingUnit*>(BaseClass_ptr1))
+	const SolarGeneratingUnit* element = dynamic_cast<const SolarGeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->SolarPowerPlant != 0)
 		{
@@ -74,7 +72,6 @@ bool get_SolarGeneratingUnit_SolarPowerPlant(const BaseClass* BaseClass_ptr1, st
 	return false;
 }
 
-
 const char SolarGeneratingUnit::debugName[] = "SolarGeneratingUnit";
 const char* SolarGeneratingUnit::debugString() const
 {
@@ -83,7 +80,7 @@ const char* SolarGeneratingUnit::debugString() const
 
 void SolarGeneratingUnit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:SolarGeneratingUnit"), &SolarGeneratingUnit_factory));
+	factory_map.emplace("cim:SolarGeneratingUnit", &SolarGeneratingUnit_factory);
 }
 
 void SolarGeneratingUnit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -92,7 +89,7 @@ void SolarGeneratingUnit::addPrimitiveAssignFnsToMap(std::unordered_map<std::str
 
 void SolarGeneratingUnit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:SolarGeneratingUnit.SolarPowerPlant"), &assign_SolarGeneratingUnit_SolarPowerPlant));
+	assign_map.emplace("cim:SolarGeneratingUnit.SolarPowerPlant", &assign_SolarGeneratingUnit_SolarPowerPlant);
 }
 
 void SolarGeneratingUnit::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

@@ -11,27 +11,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "ControlAreaGeneratingUnit.hpp"
 #include "GrossToNetActivePowerCurve.hpp"
 #include "RotatingMachine.hpp"
-#include "GeneratorControlSource.hpp"
-#include "PerCent.hpp"
-#include "Float.hpp"
-#include "ActivePower.hpp"
-#include "ActivePower.hpp"
-#include "ActivePower.hpp"
-#include "ActivePower.hpp"
-#include "Float.hpp"
-#include "ActivePower.hpp"
-#include "ActivePower.hpp"
-#include "ActivePower.hpp"
-#include "Float.hpp"
-#include "Money.hpp"
-#include "Seconds.hpp"
-#include "PerCent.hpp"
-#include "Money.hpp"
 
 using namespace CIMPP;
 
-GeneratingUnit::GeneratingUnit() {};
-GeneratingUnit::~GeneratingUnit() {};
+GeneratingUnit::GeneratingUnit() {}
+GeneratingUnit::~GeneratingUnit() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -77,216 +61,6 @@ GeneratingUnit::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_GeneratingUnit_genControlSource(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1))
-	{
-		buffer >> element->genControlSource;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_GeneratingUnit_governorSCD(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1))
-	{
-		buffer >> element->governorSCD;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_GeneratingUnit_longPF(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1))
-	{
-		buffer >> element->longPF;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_GeneratingUnit_maxOperatingP(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1))
-	{
-		buffer >> element->maxOperatingP;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_GeneratingUnit_maximumAllowableSpinningReserve(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1))
-	{
-		buffer >> element->maximumAllowableSpinningReserve;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_GeneratingUnit_minOperatingP(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1))
-	{
-		buffer >> element->minOperatingP;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_GeneratingUnit_nominalP(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1))
-	{
-		buffer >> element->nominalP;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_GeneratingUnit_normalPF(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1))
-	{
-		buffer >> element->normalPF;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_GeneratingUnit_ratedGrossMaxP(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1))
-	{
-		buffer >> element->ratedGrossMaxP;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_GeneratingUnit_ratedGrossMinP(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1))
-	{
-		buffer >> element->ratedGrossMinP;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_GeneratingUnit_ratedNetMaxP(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1))
-	{
-		buffer >> element->ratedNetMaxP;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_GeneratingUnit_shortPF(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1))
-	{
-		buffer >> element->shortPF;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_GeneratingUnit_startupCost(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1))
-	{
-		buffer >> element->startupCost;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_GeneratingUnit_startupTime(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1))
-	{
-		buffer >> element->startupTime;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_GeneratingUnit_totalEfficiency(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1))
-	{
-		buffer >> element->totalEfficiency;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_GeneratingUnit_variableCost(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1))
-	{
-		buffer >> element->variableCost;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_ControlAreaGeneratingUnit_GeneratingUnit(BaseClass*, BaseClass*);
 bool assign_GeneratingUnit_ControlAreaGeneratingUnit(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -303,6 +77,7 @@ bool assign_GeneratingUnit_ControlAreaGeneratingUnit(BaseClass* BaseClass_ptr1, 
 	}
 	return false;
 }
+
 bool assign_GrossToNetActivePowerCurve_GeneratingUnit(BaseClass*, BaseClass*);
 bool assign_GeneratingUnit_GrossToNetActivePowerCurves(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -319,6 +94,7 @@ bool assign_GeneratingUnit_GrossToNetActivePowerCurves(BaseClass* BaseClass_ptr1
 	}
 	return false;
 }
+
 bool assign_RotatingMachine_GeneratingUnit(BaseClass*, BaseClass*);
 bool assign_GeneratingUnit_RotatingMachine(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -336,9 +112,252 @@ bool assign_GeneratingUnit_RotatingMachine(BaseClass* BaseClass_ptr1, BaseClass*
 	return false;
 }
 
+bool assign_GeneratingUnit_genControlSource(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->genControlSource;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_GeneratingUnit_governorSCD(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->governorSCD;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_GeneratingUnit_longPF(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->longPF;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_GeneratingUnit_maxOperatingP(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->maxOperatingP;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_GeneratingUnit_maximumAllowableSpinningReserve(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->maximumAllowableSpinningReserve;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_GeneratingUnit_minOperatingP(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->minOperatingP;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_GeneratingUnit_nominalP(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->nominalP;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_GeneratingUnit_normalPF(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->normalPF;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_GeneratingUnit_ratedGrossMaxP(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->ratedGrossMaxP;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_GeneratingUnit_ratedGrossMinP(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->ratedGrossMinP;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_GeneratingUnit_ratedNetMaxP(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->ratedNetMaxP;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_GeneratingUnit_shortPF(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->shortPF;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_GeneratingUnit_startupCost(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->startupCost;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_GeneratingUnit_startupTime(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->startupTime;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_GeneratingUnit_totalEfficiency(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->totalEfficiency;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_GeneratingUnit_variableCost(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	GeneratingUnit* element = dynamic_cast<GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->variableCost;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
+
+
+bool get_GeneratingUnit_genControlSource(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer << element->genControlSource;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
 bool get_GeneratingUnit_governorSCD(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1))
+	const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->governorSCD;
 		if (!buffer.str().empty())
@@ -352,7 +371,8 @@ bool get_GeneratingUnit_governorSCD(const BaseClass* BaseClass_ptr1, std::string
 
 bool get_GeneratingUnit_longPF(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1))
+	const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->longPF;
 		if (!buffer.str().empty())
@@ -366,7 +386,8 @@ bool get_GeneratingUnit_longPF(const BaseClass* BaseClass_ptr1, std::stringstrea
 
 bool get_GeneratingUnit_maxOperatingP(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1))
+	const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->maxOperatingP;
 		if (!buffer.str().empty())
@@ -380,7 +401,8 @@ bool get_GeneratingUnit_maxOperatingP(const BaseClass* BaseClass_ptr1, std::stri
 
 bool get_GeneratingUnit_maximumAllowableSpinningReserve(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1))
+	const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->maximumAllowableSpinningReserve;
 		if (!buffer.str().empty())
@@ -394,7 +416,8 @@ bool get_GeneratingUnit_maximumAllowableSpinningReserve(const BaseClass* BaseCla
 
 bool get_GeneratingUnit_minOperatingP(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1))
+	const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->minOperatingP;
 		if (!buffer.str().empty())
@@ -408,7 +431,8 @@ bool get_GeneratingUnit_minOperatingP(const BaseClass* BaseClass_ptr1, std::stri
 
 bool get_GeneratingUnit_nominalP(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1))
+	const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->nominalP;
 		if (!buffer.str().empty())
@@ -422,7 +446,8 @@ bool get_GeneratingUnit_nominalP(const BaseClass* BaseClass_ptr1, std::stringstr
 
 bool get_GeneratingUnit_normalPF(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1))
+	const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->normalPF;
 		if (!buffer.str().empty())
@@ -436,7 +461,8 @@ bool get_GeneratingUnit_normalPF(const BaseClass* BaseClass_ptr1, std::stringstr
 
 bool get_GeneratingUnit_ratedGrossMaxP(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1))
+	const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ratedGrossMaxP;
 		if (!buffer.str().empty())
@@ -450,7 +476,8 @@ bool get_GeneratingUnit_ratedGrossMaxP(const BaseClass* BaseClass_ptr1, std::str
 
 bool get_GeneratingUnit_ratedGrossMinP(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1))
+	const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ratedGrossMinP;
 		if (!buffer.str().empty())
@@ -464,7 +491,8 @@ bool get_GeneratingUnit_ratedGrossMinP(const BaseClass* BaseClass_ptr1, std::str
 
 bool get_GeneratingUnit_ratedNetMaxP(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1))
+	const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ratedNetMaxP;
 		if (!buffer.str().empty())
@@ -478,7 +506,8 @@ bool get_GeneratingUnit_ratedNetMaxP(const BaseClass* BaseClass_ptr1, std::strin
 
 bool get_GeneratingUnit_shortPF(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1))
+	const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->shortPF;
 		if (!buffer.str().empty())
@@ -492,7 +521,8 @@ bool get_GeneratingUnit_shortPF(const BaseClass* BaseClass_ptr1, std::stringstre
 
 bool get_GeneratingUnit_startupCost(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1))
+	const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->startupCost;
 		if (!buffer.str().empty())
@@ -506,7 +536,8 @@ bool get_GeneratingUnit_startupCost(const BaseClass* BaseClass_ptr1, std::string
 
 bool get_GeneratingUnit_startupTime(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1))
+	const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->startupTime;
 		if (!buffer.str().empty())
@@ -520,7 +551,8 @@ bool get_GeneratingUnit_startupTime(const BaseClass* BaseClass_ptr1, std::string
 
 bool get_GeneratingUnit_totalEfficiency(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1))
+	const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->totalEfficiency;
 		if (!buffer.str().empty())
@@ -534,25 +566,10 @@ bool get_GeneratingUnit_totalEfficiency(const BaseClass* BaseClass_ptr1, std::st
 
 bool get_GeneratingUnit_variableCost(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1))
+	const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->variableCost;
-		if (!buffer.str().empty())
-		{
-			return true;
-		}
-	}
-	buffer.setstate(std::ios::failbit);
-	return false;
-}
-
-
-
-bool get_GeneratingUnit_genControlSource(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
-{
-	if (const GeneratingUnit* element = dynamic_cast<const GeneratingUnit*>(BaseClass_ptr1))
-	{
-		buffer << element->genControlSource;
 		if (!buffer.str().empty())
 		{
 			return true;
@@ -570,34 +587,34 @@ const char* GeneratingUnit::debugString() const
 
 void GeneratingUnit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:GeneratingUnit"), &GeneratingUnit_factory));
+	factory_map.emplace("cim:GeneratingUnit", &GeneratingUnit_factory);
 }
 
 void GeneratingUnit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:GeneratingUnit.genControlSource"), &assign_GeneratingUnit_genControlSource));
-	assign_map.insert(std::make_pair(std::string("cim:GeneratingUnit.governorSCD"), &assign_GeneratingUnit_governorSCD));
-	assign_map.insert(std::make_pair(std::string("cim:GeneratingUnit.longPF"), &assign_GeneratingUnit_longPF));
-	assign_map.insert(std::make_pair(std::string("cim:GeneratingUnit.maxOperatingP"), &assign_GeneratingUnit_maxOperatingP));
-	assign_map.insert(std::make_pair(std::string("cim:GeneratingUnit.maximumAllowableSpinningReserve"), &assign_GeneratingUnit_maximumAllowableSpinningReserve));
-	assign_map.insert(std::make_pair(std::string("cim:GeneratingUnit.minOperatingP"), &assign_GeneratingUnit_minOperatingP));
-	assign_map.insert(std::make_pair(std::string("cim:GeneratingUnit.nominalP"), &assign_GeneratingUnit_nominalP));
-	assign_map.insert(std::make_pair(std::string("cim:GeneratingUnit.normalPF"), &assign_GeneratingUnit_normalPF));
-	assign_map.insert(std::make_pair(std::string("cim:GeneratingUnit.ratedGrossMaxP"), &assign_GeneratingUnit_ratedGrossMaxP));
-	assign_map.insert(std::make_pair(std::string("cim:GeneratingUnit.ratedGrossMinP"), &assign_GeneratingUnit_ratedGrossMinP));
-	assign_map.insert(std::make_pair(std::string("cim:GeneratingUnit.ratedNetMaxP"), &assign_GeneratingUnit_ratedNetMaxP));
-	assign_map.insert(std::make_pair(std::string("cim:GeneratingUnit.shortPF"), &assign_GeneratingUnit_shortPF));
-	assign_map.insert(std::make_pair(std::string("cim:GeneratingUnit.startupCost"), &assign_GeneratingUnit_startupCost));
-	assign_map.insert(std::make_pair(std::string("cim:GeneratingUnit.startupTime"), &assign_GeneratingUnit_startupTime));
-	assign_map.insert(std::make_pair(std::string("cim:GeneratingUnit.totalEfficiency"), &assign_GeneratingUnit_totalEfficiency));
-	assign_map.insert(std::make_pair(std::string("cim:GeneratingUnit.variableCost"), &assign_GeneratingUnit_variableCost));
+	assign_map.emplace("cim:GeneratingUnit.genControlSource", &assign_GeneratingUnit_genControlSource);
+	assign_map.emplace("cim:GeneratingUnit.governorSCD", &assign_GeneratingUnit_governorSCD);
+	assign_map.emplace("cim:GeneratingUnit.longPF", &assign_GeneratingUnit_longPF);
+	assign_map.emplace("cim:GeneratingUnit.maxOperatingP", &assign_GeneratingUnit_maxOperatingP);
+	assign_map.emplace("cim:GeneratingUnit.maximumAllowableSpinningReserve", &assign_GeneratingUnit_maximumAllowableSpinningReserve);
+	assign_map.emplace("cim:GeneratingUnit.minOperatingP", &assign_GeneratingUnit_minOperatingP);
+	assign_map.emplace("cim:GeneratingUnit.nominalP", &assign_GeneratingUnit_nominalP);
+	assign_map.emplace("cim:GeneratingUnit.normalPF", &assign_GeneratingUnit_normalPF);
+	assign_map.emplace("cim:GeneratingUnit.ratedGrossMaxP", &assign_GeneratingUnit_ratedGrossMaxP);
+	assign_map.emplace("cim:GeneratingUnit.ratedGrossMinP", &assign_GeneratingUnit_ratedGrossMinP);
+	assign_map.emplace("cim:GeneratingUnit.ratedNetMaxP", &assign_GeneratingUnit_ratedNetMaxP);
+	assign_map.emplace("cim:GeneratingUnit.shortPF", &assign_GeneratingUnit_shortPF);
+	assign_map.emplace("cim:GeneratingUnit.startupCost", &assign_GeneratingUnit_startupCost);
+	assign_map.emplace("cim:GeneratingUnit.startupTime", &assign_GeneratingUnit_startupTime);
+	assign_map.emplace("cim:GeneratingUnit.totalEfficiency", &assign_GeneratingUnit_totalEfficiency);
+	assign_map.emplace("cim:GeneratingUnit.variableCost", &assign_GeneratingUnit_variableCost);
 }
 
 void GeneratingUnit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:GeneratingUnit.ControlAreaGeneratingUnit"), &assign_GeneratingUnit_ControlAreaGeneratingUnit));
-	assign_map.insert(std::make_pair(std::string("cim:GeneratingUnit.GrossToNetActivePowerCurves"), &assign_GeneratingUnit_GrossToNetActivePowerCurves));
-	assign_map.insert(std::make_pair(std::string("cim:GeneratingUnit.RotatingMachine"), &assign_GeneratingUnit_RotatingMachine));
+	assign_map.emplace("cim:GeneratingUnit.ControlAreaGeneratingUnit", &assign_GeneratingUnit_ControlAreaGeneratingUnit);
+	assign_map.emplace("cim:GeneratingUnit.GrossToNetActivePowerCurves", &assign_GeneratingUnit_GrossToNetActivePowerCurves);
+	assign_map.emplace("cim:GeneratingUnit.RotatingMachine", &assign_GeneratingUnit_RotatingMachine);
 }
 
 void GeneratingUnit::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

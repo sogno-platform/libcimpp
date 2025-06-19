@@ -19,9 +19,7 @@ namespace CIMPP
 	class WindDynamicsLookupTable;
 	class WindTurbineType3or4IEC;
 
-	/*
-	QP and QU limitation model. Reference: IEC 61400-27-1:2015, 5.6.5.10.
-	*/
+	/** \brief QP and QU limitation model. Reference: IEC 61400-27-1:2015, 5.6.5.10. */
 	class WindContQPQULimIEC : public IdentifiedObject
 	{
 	public:
@@ -29,10 +27,17 @@ namespace CIMPP
 		WindContQPQULimIEC();
 		~WindContQPQULimIEC() override;
 
-		std::list<CIMPP::WindDynamicsLookupTable*> WindDynamicsLookupTable;  /* The wind dynamics lookup table associated with this QP and QU limitation model. Default: 0 */
-		CIMPP::WindTurbineType3or4IEC* WindTurbineType3or4IEC;  /* Wind generator type 3 or type 4 model with which this QP and QU limitation model is associated. Default: 0 */
-		CIMPP::Seconds tpfiltql;  /* Power measurement filter time constant for Q capacity (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;pfiltql&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). It is a type-dependent parameter. Default: nullptr */
-		CIMPP::Seconds tufiltql;  /* Voltage measurement filter time constant for Q capacity (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;ufiltql&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). It is a type-dependent parameter. Default: nullptr */
+		/** \brief The wind dynamics lookup table associated with this QP and QU limitation model. Default: 0 */
+		std::list<CIMPP::WindDynamicsLookupTable*> WindDynamicsLookupTable;
+
+		/** \brief Wind generator type 3 or type 4 model with which this QP and QU limitation model is associated. Default: 0 */
+		CIMPP::WindTurbineType3or4IEC* WindTurbineType3or4IEC;
+
+		/** \brief Power measurement filter time constant for Q capacity (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;pfiltql&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). It is a type-dependent parameter. Default: nullptr */
+		CIMPP::Seconds tpfiltql;
+
+		/** \brief Voltage measurement filter time constant for Q capacity (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;ufiltql&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). It is a type-dependent parameter. Default: nullptr */
+		CIMPP::Seconds tufiltql;
 
 		static const char debugName[];
 		const char* debugString() const override;

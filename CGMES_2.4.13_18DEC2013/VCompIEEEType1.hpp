@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Reference: IEEE Standard 421.5-2005 Section 4.
-	*/
+	/** \brief Reference: IEEE Standard 421.5-2005 Section 4. */
 	class VCompIEEEType1 : public VoltageCompensatorDynamics
 	{
 	public:
@@ -28,9 +26,14 @@ namespace CIMPP
 		VCompIEEEType1();
 		~VCompIEEEType1() override;
 
-		CIMPP::PU rc;  /*  Default: nullptr */
-		CIMPP::Seconds tr;  /*  Default: nullptr */
-		CIMPP::PU xc;  /*  Default: nullptr */
+		/** \brief  Default: nullptr */
+		CIMPP::PU rc;
+
+		/** \brief  Default: nullptr */
+		CIMPP::Seconds tr;
+
+		/** \brief  Default: nullptr */
+		CIMPP::PU xc;
 
 		static const char debugName[];
 		const char* debugString() const override;

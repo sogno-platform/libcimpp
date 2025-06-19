@@ -13,8 +13,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-NonConformLoadGroup::NonConformLoadGroup() {};
-NonConformLoadGroup::~NonConformLoadGroup() {};
+NonConformLoadGroup::NonConformLoadGroup() {}
+NonConformLoadGroup::~NonConformLoadGroup() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,8 +42,6 @@ NonConformLoadGroup::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_NonConformLoad_LoadGroup(BaseClass*, BaseClass*);
 bool assign_NonConformLoadGroup_EnergyConsumers(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,6 +58,7 @@ bool assign_NonConformLoadGroup_EnergyConsumers(BaseClass* BaseClass_ptr1, BaseC
 	}
 	return false;
 }
+
 bool assign_NonConformLoadSchedule_NonConformLoadGroup(BaseClass*, BaseClass*);
 bool assign_NonConformLoadGroup_NonConformLoadSchedules(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -87,7 +86,7 @@ const char* NonConformLoadGroup::debugString() const
 
 void NonConformLoadGroup::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:NonConformLoadGroup"), &NonConformLoadGroup_factory));
+	factory_map.emplace("cim:NonConformLoadGroup", &NonConformLoadGroup_factory);
 }
 
 void NonConformLoadGroup::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -96,8 +95,8 @@ void NonConformLoadGroup::addPrimitiveAssignFnsToMap(std::unordered_map<std::str
 
 void NonConformLoadGroup::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:NonConformLoadGroup.EnergyConsumers"), &assign_NonConformLoadGroup_EnergyConsumers));
-	assign_map.insert(std::make_pair(std::string("cim:NonConformLoadGroup.NonConformLoadSchedules"), &assign_NonConformLoadGroup_NonConformLoadSchedules));
+	assign_map.emplace("cim:NonConformLoadGroup.EnergyConsumers", &assign_NonConformLoadGroup_EnergyConsumers);
+	assign_map.emplace("cim:NonConformLoadGroup.NonConformLoadSchedules", &assign_NonConformLoadGroup_NonConformLoadSchedules);
 }
 
 void NonConformLoadGroup::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

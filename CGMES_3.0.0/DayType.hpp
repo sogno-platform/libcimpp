@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class SeasonDayTypeSchedule;
 
-	/*
-	Group of similar days.   For example it could be used to represent weekdays, weekend, or holidays.
-	*/
+	/** \brief Group of similar days.   For example it could be used to represent weekdays, weekend, or holidays. */
 	class DayType : public IdentifiedObject
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		DayType();
 		~DayType() override;
 
-		std::list<CIMPP::SeasonDayTypeSchedule*> SeasonDayTypeSchedules;  /* Schedules that use this DayType. Default: 0 */
+		/** \brief Schedules that use this DayType. Default: 0 */
+		std::list<CIMPP::SeasonDayTypeSchedule*> SeasonDayTypeSchedules;
 
 		static const char debugName[];
 		const char* debugString() const override;

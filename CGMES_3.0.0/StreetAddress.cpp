@@ -8,17 +8,14 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
 #include "Status.hpp"
 #include "StreetDetail.hpp"
 #include "TownDetail.hpp"
 
 using namespace CIMPP;
 
-StreetAddress::StreetAddress() : status(nullptr), streetDetail(nullptr), townDetail(nullptr) {};
-StreetAddress::~StreetAddress() {};
+StreetAddress::StreetAddress() : status(nullptr), streetDetail(nullptr), townDetail(nullptr) {}
+StreetAddress::~StreetAddress() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -50,50 +47,52 @@ StreetAddress::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_StreetAddress_language(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_StreetAddress_language(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (StreetAddress* element = dynamic_cast<StreetAddress*>(BaseClass_ptr1))
+	StreetAddress* element = dynamic_cast<StreetAddress*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->language = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_StreetAddress_poBox(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_StreetAddress_poBox(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (StreetAddress* element = dynamic_cast<StreetAddress*>(BaseClass_ptr1))
+	StreetAddress* element = dynamic_cast<StreetAddress*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->poBox = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_StreetAddress_postalCode(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_StreetAddress_postalCode(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (StreetAddress* element = dynamic_cast<StreetAddress*>(BaseClass_ptr1))
+	StreetAddress* element = dynamic_cast<StreetAddress*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->postalCode = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
 
 bool assign_StreetAddress_status(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
-	if(StreetAddress* element = dynamic_cast<StreetAddress*>(BaseClass_ptr1))
+	StreetAddress* element = dynamic_cast<StreetAddress*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->status = dynamic_cast<Status*>(BaseClass_ptr2);
 		if (element->status != nullptr)
@@ -103,9 +102,11 @@ bool assign_StreetAddress_status(BaseClass* BaseClass_ptr1, BaseClass* BaseClass
 	}
 	return false;
 }
+
 bool assign_StreetAddress_streetDetail(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
-	if(StreetAddress* element = dynamic_cast<StreetAddress*>(BaseClass_ptr1))
+	StreetAddress* element = dynamic_cast<StreetAddress*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->streetDetail = dynamic_cast<StreetDetail*>(BaseClass_ptr2);
 		if (element->streetDetail != nullptr)
@@ -115,9 +116,11 @@ bool assign_StreetAddress_streetDetail(BaseClass* BaseClass_ptr1, BaseClass* Bas
 	}
 	return false;
 }
+
 bool assign_StreetAddress_townDetail(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
-	if(StreetAddress* element = dynamic_cast<StreetAddress*>(BaseClass_ptr1))
+	StreetAddress* element = dynamic_cast<StreetAddress*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->townDetail = dynamic_cast<TownDetail*>(BaseClass_ptr2);
 		if (element->townDetail != nullptr)
@@ -130,7 +133,8 @@ bool assign_StreetAddress_townDetail(BaseClass* BaseClass_ptr1, BaseClass* BaseC
 
 bool get_StreetAddress_language(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const StreetAddress* element = dynamic_cast<const StreetAddress*>(BaseClass_ptr1))
+	const StreetAddress* element = dynamic_cast<const StreetAddress*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->language;
 		if (!buffer.str().empty())
@@ -144,7 +148,8 @@ bool get_StreetAddress_language(const BaseClass* BaseClass_ptr1, std::stringstre
 
 bool get_StreetAddress_poBox(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const StreetAddress* element = dynamic_cast<const StreetAddress*>(BaseClass_ptr1))
+	const StreetAddress* element = dynamic_cast<const StreetAddress*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->poBox;
 		if (!buffer.str().empty())
@@ -158,7 +163,8 @@ bool get_StreetAddress_poBox(const BaseClass* BaseClass_ptr1, std::stringstream&
 
 bool get_StreetAddress_postalCode(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const StreetAddress* element = dynamic_cast<const StreetAddress*>(BaseClass_ptr1))
+	const StreetAddress* element = dynamic_cast<const StreetAddress*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->postalCode;
 		if (!buffer.str().empty())
@@ -170,10 +176,10 @@ bool get_StreetAddress_postalCode(const BaseClass* BaseClass_ptr1, std::stringst
 	return false;
 }
 
-
 bool get_StreetAddress_status(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const StreetAddress* element = dynamic_cast<const StreetAddress*>(BaseClass_ptr1))
+	const StreetAddress* element = dynamic_cast<const StreetAddress*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->status != 0)
 		{
@@ -186,7 +192,8 @@ bool get_StreetAddress_status(const BaseClass* BaseClass_ptr1, std::list<const B
 
 bool get_StreetAddress_streetDetail(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const StreetAddress* element = dynamic_cast<const StreetAddress*>(BaseClass_ptr1))
+	const StreetAddress* element = dynamic_cast<const StreetAddress*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->streetDetail != 0)
 		{
@@ -199,7 +206,8 @@ bool get_StreetAddress_streetDetail(const BaseClass* BaseClass_ptr1, std::list<c
 
 bool get_StreetAddress_townDetail(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const StreetAddress* element = dynamic_cast<const StreetAddress*>(BaseClass_ptr1))
+	const StreetAddress* element = dynamic_cast<const StreetAddress*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->townDetail != 0)
 		{
@@ -210,7 +218,6 @@ bool get_StreetAddress_townDetail(const BaseClass* BaseClass_ptr1, std::list<con
 	return false;
 }
 
-
 const char StreetAddress::debugName[] = "StreetAddress";
 const char* StreetAddress::debugString() const
 {
@@ -219,21 +226,21 @@ const char* StreetAddress::debugString() const
 
 void StreetAddress::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:StreetAddress"), &StreetAddress_factory));
+	factory_map.emplace("cim:StreetAddress", &StreetAddress_factory);
 }
 
 void StreetAddress::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:StreetAddress.language"), &assign_StreetAddress_language));
-	assign_map.insert(std::make_pair(std::string("cim:StreetAddress.poBox"), &assign_StreetAddress_poBox));
-	assign_map.insert(std::make_pair(std::string("cim:StreetAddress.postalCode"), &assign_StreetAddress_postalCode));
+	assign_map.emplace("cim:StreetAddress.language", &assign_StreetAddress_language);
+	assign_map.emplace("cim:StreetAddress.poBox", &assign_StreetAddress_poBox);
+	assign_map.emplace("cim:StreetAddress.postalCode", &assign_StreetAddress_postalCode);
 }
 
 void StreetAddress::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:StreetAddress.status"), &assign_StreetAddress_status));
-	assign_map.insert(std::make_pair(std::string("cim:StreetAddress.streetDetail"), &assign_StreetAddress_streetDetail));
-	assign_map.insert(std::make_pair(std::string("cim:StreetAddress.townDetail"), &assign_StreetAddress_townDetail));
+	assign_map.emplace("cim:StreetAddress.status", &assign_StreetAddress_status);
+	assign_map.emplace("cim:StreetAddress.streetDetail", &assign_StreetAddress_streetDetail);
+	assign_map.emplace("cim:StreetAddress.townDetail", &assign_StreetAddress_townDetail);
 }
 
 void StreetAddress::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

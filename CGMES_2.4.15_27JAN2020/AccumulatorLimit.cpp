@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "AccumulatorLimitSet.hpp"
-#include "Integer.hpp"
 
 using namespace CIMPP;
 
-AccumulatorLimit::AccumulatorLimit() : LimitSet(nullptr) {};
-AccumulatorLimit::~AccumulatorLimit() {};
+AccumulatorLimit::AccumulatorLimit() : LimitSet(nullptr) {}
+AccumulatorLimit::~AccumulatorLimit() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,21 +41,6 @@ AccumulatorLimit::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_AccumulatorLimit_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (AccumulatorLimit* element = dynamic_cast<AccumulatorLimit*>(BaseClass_ptr1))
-	{
-		buffer >> element->value;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_AccumulatorLimitSet_Limits(BaseClass*, BaseClass*);
 bool assign_AccumulatorLimit_LimitSet(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,9 +58,38 @@ bool assign_AccumulatorLimit_LimitSet(BaseClass* BaseClass_ptr1, BaseClass* Base
 	return false;
 }
 
+bool assign_AccumulatorLimit_value(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	AccumulatorLimit* element = dynamic_cast<AccumulatorLimit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->value;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_AccumulatorLimit_LimitSet(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const AccumulatorLimit* element = dynamic_cast<const AccumulatorLimit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->LimitSet != 0)
+		{
+			BaseClass_list.push_back(element->LimitSet);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_AccumulatorLimit_value(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const AccumulatorLimit* element = dynamic_cast<const AccumulatorLimit*>(BaseClass_ptr1))
+	const AccumulatorLimit* element = dynamic_cast<const AccumulatorLimit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->value;
 		if (!buffer.str().empty())
@@ -88,21 +101,6 @@ bool get_AccumulatorLimit_value(const BaseClass* BaseClass_ptr1, std::stringstre
 	return false;
 }
 
-
-bool get_AccumulatorLimit_LimitSet(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const AccumulatorLimit* element = dynamic_cast<const AccumulatorLimit*>(BaseClass_ptr1))
-	{
-		if (element->LimitSet != 0)
-		{
-			BaseClass_list.push_back(element->LimitSet);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char AccumulatorLimit::debugName[] = "AccumulatorLimit";
 const char* AccumulatorLimit::debugString() const
 {
@@ -111,17 +109,17 @@ const char* AccumulatorLimit::debugString() const
 
 void AccumulatorLimit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:AccumulatorLimit"), &AccumulatorLimit_factory));
+	factory_map.emplace("cim:AccumulatorLimit", &AccumulatorLimit_factory);
 }
 
 void AccumulatorLimit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:AccumulatorLimit.value"), &assign_AccumulatorLimit_value));
+	assign_map.emplace("cim:AccumulatorLimit.value", &assign_AccumulatorLimit_value);
 }
 
 void AccumulatorLimit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:AccumulatorLimit.LimitSet"), &assign_AccumulatorLimit_LimitSet));
+	assign_map.emplace("cim:AccumulatorLimit.LimitSet", &assign_AccumulatorLimit_LimitSet);
 }
 
 void AccumulatorLimit::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

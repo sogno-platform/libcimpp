@@ -18,9 +18,7 @@ namespace CIMPP
 	class RatioTapChanger;
 	class RatioTapChangerTablePoint;
 
-	/*
-	Describes a curve for how the voltage magnitude and impedance varies with the tap step.
-	*/
+	/** \brief Describes a curve for how the voltage magnitude and impedance varies with the tap step. */
 	class RatioTapChangerTable : public IdentifiedObject
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		RatioTapChangerTable();
 		~RatioTapChangerTable() override;
 
-		std::list<CIMPP::RatioTapChanger*> RatioTapChanger;  /* The tap ratio table for this ratio  tap changer. Default: 0 */
-		std::list<CIMPP::RatioTapChangerTablePoint*> RatioTapChangerTablePoint;  /* Table of this point. Default: 0 */
+		/** \brief The tap ratio table for this ratio  tap changer. Default: 0 */
+		std::list<CIMPP::RatioTapChanger*> RatioTapChanger;
+
+		/** \brief Table of this point. Default: 0 */
+		std::list<CIMPP::RatioTapChangerTablePoint*> RatioTapChangerTablePoint;
 
 		static const char debugName[];
 		const char* debugString() const override;

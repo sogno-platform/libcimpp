@@ -10,13 +10,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 #include "WindDynamicsLookupTable.hpp"
 #include "WindTurbineType3or4IEC.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
 
 using namespace CIMPP;
 
-WindContQPQULimIEC::WindContQPQULimIEC() : WindTurbineType3or4IEC(nullptr) {};
-WindContQPQULimIEC::~WindContQPQULimIEC() {};
+WindContQPQULimIEC::WindContQPQULimIEC() : WindTurbineType3or4IEC(nullptr) {}
+WindContQPQULimIEC::~WindContQPQULimIEC() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -46,34 +44,6 @@ WindContQPQULimIEC::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_WindContQPQULimIEC_tpfiltql(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindContQPQULimIEC* element = dynamic_cast<WindContQPQULimIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->tpfiltql;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindContQPQULimIEC_tufiltql(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindContQPQULimIEC* element = dynamic_cast<WindContQPQULimIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->tufiltql;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_WindDynamicsLookupTable_WindContQPQULimIEC(BaseClass*, BaseClass*);
 bool assign_WindContQPQULimIEC_WindDynamicsLookupTable(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -90,6 +60,7 @@ bool assign_WindContQPQULimIEC_WindDynamicsLookupTable(BaseClass* BaseClass_ptr1
 	}
 	return false;
 }
+
 bool assign_WindTurbineType3or4IEC_WindContQPQULimIEC(BaseClass*, BaseClass*);
 bool assign_WindContQPQULimIEC_WindTurbineType3or4IEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -107,9 +78,40 @@ bool assign_WindContQPQULimIEC_WindTurbineType3or4IEC(BaseClass* BaseClass_ptr1,
 	return false;
 }
 
+bool assign_WindContQPQULimIEC_tpfiltql(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindContQPQULimIEC* element = dynamic_cast<WindContQPQULimIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->tpfiltql;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindContQPQULimIEC_tufiltql(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindContQPQULimIEC* element = dynamic_cast<WindContQPQULimIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->tufiltql;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
+
 bool get_WindContQPQULimIEC_tpfiltql(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindContQPQULimIEC* element = dynamic_cast<const WindContQPQULimIEC*>(BaseClass_ptr1))
+	const WindContQPQULimIEC* element = dynamic_cast<const WindContQPQULimIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tpfiltql;
 		if (!buffer.str().empty())
@@ -123,7 +125,8 @@ bool get_WindContQPQULimIEC_tpfiltql(const BaseClass* BaseClass_ptr1, std::strin
 
 bool get_WindContQPQULimIEC_tufiltql(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindContQPQULimIEC* element = dynamic_cast<const WindContQPQULimIEC*>(BaseClass_ptr1))
+	const WindContQPQULimIEC* element = dynamic_cast<const WindContQPQULimIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tufiltql;
 		if (!buffer.str().empty())
@@ -135,8 +138,6 @@ bool get_WindContQPQULimIEC_tufiltql(const BaseClass* BaseClass_ptr1, std::strin
 	return false;
 }
 
-
-
 const char WindContQPQULimIEC::debugName[] = "WindContQPQULimIEC";
 const char* WindContQPQULimIEC::debugString() const
 {
@@ -145,19 +146,19 @@ const char* WindContQPQULimIEC::debugString() const
 
 void WindContQPQULimIEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:WindContQPQULimIEC"), &WindContQPQULimIEC_factory));
+	factory_map.emplace("cim:WindContQPQULimIEC", &WindContQPQULimIEC_factory);
 }
 
 void WindContQPQULimIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindContQPQULimIEC.tpfiltql"), &assign_WindContQPQULimIEC_tpfiltql));
-	assign_map.insert(std::make_pair(std::string("cim:WindContQPQULimIEC.tufiltql"), &assign_WindContQPQULimIEC_tufiltql));
+	assign_map.emplace("cim:WindContQPQULimIEC.tpfiltql", &assign_WindContQPQULimIEC_tpfiltql);
+	assign_map.emplace("cim:WindContQPQULimIEC.tufiltql", &assign_WindContQPQULimIEC_tufiltql);
 }
 
 void WindContQPQULimIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindContQPQULimIEC.WindDynamicsLookupTable"), &assign_WindContQPQULimIEC_WindDynamicsLookupTable));
-	assign_map.insert(std::make_pair(std::string("cim:WindContQPQULimIEC.WindTurbineType3or4IEC"), &assign_WindContQPQULimIEC_WindTurbineType3or4IEC));
+	assign_map.emplace("cim:WindContQPQULimIEC.WindDynamicsLookupTable", &assign_WindContQPQULimIEC_WindDynamicsLookupTable);
+	assign_map.emplace("cim:WindContQPQULimIEC.WindTurbineType3or4IEC", &assign_WindContQPQULimIEC_WindTurbineType3or4IEC);
 }
 
 void WindContQPQULimIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

@@ -8,13 +8,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "ConformLoadSchedule.hpp"
 #include "ConformLoad.hpp"
+#include "ConformLoadSchedule.hpp"
 
 using namespace CIMPP;
 
-ConformLoadGroup::ConformLoadGroup() {};
-ConformLoadGroup::~ConformLoadGroup() {};
+ConformLoadGroup::ConformLoadGroup() {}
+ConformLoadGroup::~ConformLoadGroup() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,8 +42,6 @@ ConformLoadGroup::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_ConformLoadSchedule_ConformLoadGroup(BaseClass*, BaseClass*);
 bool assign_ConformLoadGroup_ConformLoadSchedules(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,6 +58,7 @@ bool assign_ConformLoadGroup_ConformLoadSchedules(BaseClass* BaseClass_ptr1, Bas
 	}
 	return false;
 }
+
 bool assign_ConformLoad_LoadGroup(BaseClass*, BaseClass*);
 bool assign_ConformLoadGroup_EnergyConsumers(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -87,7 +86,7 @@ const char* ConformLoadGroup::debugString() const
 
 void ConformLoadGroup::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ConformLoadGroup"), &ConformLoadGroup_factory));
+	factory_map.emplace("cim:ConformLoadGroup", &ConformLoadGroup_factory);
 }
 
 void ConformLoadGroup::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -96,8 +95,8 @@ void ConformLoadGroup::addPrimitiveAssignFnsToMap(std::unordered_map<std::string
 
 void ConformLoadGroup::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ConformLoadGroup.ConformLoadSchedules"), &assign_ConformLoadGroup_ConformLoadSchedules));
-	assign_map.insert(std::make_pair(std::string("cim:ConformLoadGroup.EnergyConsumers"), &assign_ConformLoadGroup_EnergyConsumers));
+	assign_map.emplace("cim:ConformLoadGroup.ConformLoadSchedules", &assign_ConformLoadGroup_ConformLoadSchedules);
+	assign_map.emplace("cim:ConformLoadGroup.EnergyConsumers", &assign_ConformLoadGroup_EnergyConsumers);
 }
 
 void ConformLoadGroup::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

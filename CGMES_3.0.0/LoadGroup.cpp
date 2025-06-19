@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-LoadGroup::LoadGroup() : SubLoadArea(nullptr) {};
-LoadGroup::~LoadGroup() {};
+LoadGroup::LoadGroup() : SubLoadArea(nullptr) {}
+LoadGroup::~LoadGroup() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ LoadGroup::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_SubLoadArea_LoadGroups(BaseClass*, BaseClass*);
 bool assign_LoadGroup_SubLoadArea(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -59,10 +57,10 @@ bool assign_LoadGroup_SubLoadArea(BaseClass* BaseClass_ptr1, BaseClass* BaseClas
 	return false;
 }
 
-
 bool get_LoadGroup_SubLoadArea(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const LoadGroup* element = dynamic_cast<const LoadGroup*>(BaseClass_ptr1))
+	const LoadGroup* element = dynamic_cast<const LoadGroup*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->SubLoadArea != 0)
 		{
@@ -73,7 +71,6 @@ bool get_LoadGroup_SubLoadArea(const BaseClass* BaseClass_ptr1, std::list<const 
 	return false;
 }
 
-
 const char LoadGroup::debugName[] = "LoadGroup";
 const char* LoadGroup::debugString() const
 {
@@ -82,7 +79,7 @@ const char* LoadGroup::debugString() const
 
 void LoadGroup::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:LoadGroup"), &LoadGroup_factory));
+	factory_map.emplace("cim:LoadGroup", &LoadGroup_factory);
 }
 
 void LoadGroup::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -91,7 +88,7 @@ void LoadGroup::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assig
 
 void LoadGroup::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:LoadGroup.SubLoadArea"), &assign_LoadGroup_SubLoadArea));
+	assign_map.emplace("cim:LoadGroup.SubLoadArea", &assign_LoadGroup_SubLoadArea);
 }
 
 void LoadGroup::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

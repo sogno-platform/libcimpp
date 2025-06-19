@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class SubGeographicalRegion;
 
-	/*
-	Contains equipment beyond a substation belonging to a power transmission line.
-	*/
+	/** \brief Contains equipment beyond a substation belonging to a power transmission line. */
 	class Line : public EquipmentContainer
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		Line();
 		~Line() override;
 
-		CIMPP::SubGeographicalRegion* Region;  /* The sub-geographical region of the line. Default: 0 */
+		/** \brief The sub-geographical region of the line. Default: 0 */
+		CIMPP::SubGeographicalRegion* Region;
 
 		static const char debugName[];
 		const char* debugString() const override;

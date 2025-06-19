@@ -19,9 +19,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Steam turbine governor with reheat time constants and modeling of the effects of fast valve closing to reduce mechanical power.
-	*/
+	/** \brief Steam turbine governor with reheat time constants and modeling of the effects of fast valve closing to reduce mechanical power. */
 	class GovSteamFV2 : public TurbineGovernorDynamics
 	{
 	public:
@@ -29,19 +27,44 @@ namespace CIMPP
 		GovSteamFV2();
 		~GovSteamFV2() override;
 
-		CIMPP::PU dt;  /* (Dt). Default: nullptr */
-		CIMPP::PU k;  /* Fraction of the turbine power developed by turbine sections not involved in fast valving (K). Default: nullptr */
-		CIMPP::ActivePower mwbase;  /* Alternate Base used instead of Machine base in equipment model if necessary (MWbase) (&gt;0).  Unit = MW. Default: nullptr */
-		CIMPP::PU r;  /* (R). Default: nullptr */
-		CIMPP::Seconds t1;  /* Governor time constant (T1). Default: nullptr */
-		CIMPP::Seconds t3;  /* Reheater time constant (T3). Default: nullptr */
-		CIMPP::Seconds ta;  /* Time after initial time for valve to close (Ta). Default: nullptr */
-		CIMPP::Seconds tb;  /* Time after initial time for valve to begin opening (Tb). Default: nullptr */
-		CIMPP::Seconds tc;  /* Time after initial time for valve to become fully open (Tc). Default: nullptr */
-		CIMPP::Seconds ti;  /* Initial time to begin fast valving (Ti). Default: nullptr */
-		CIMPP::Seconds tt;  /* Time constant with which power falls off after intercept valve closure (Tt). Default: nullptr */
-		CIMPP::PU vmax;  /* (Vmax). Default: nullptr */
-		CIMPP::PU vmin;  /* (Vmin). Default: nullptr */
+		/** \brief (Dt). Default: nullptr */
+		CIMPP::PU dt;
+
+		/** \brief Fraction of the turbine power developed by turbine sections not involved in fast valving (K). Default: nullptr */
+		CIMPP::PU k;
+
+		/** \brief Alternate Base used instead of Machine base in equipment model if necessary (MWbase) (&gt;0).  Unit = MW. Default: nullptr */
+		CIMPP::ActivePower mwbase;
+
+		/** \brief (R). Default: nullptr */
+		CIMPP::PU r;
+
+		/** \brief Governor time constant (T1). Default: nullptr */
+		CIMPP::Seconds t1;
+
+		/** \brief Reheater time constant (T3). Default: nullptr */
+		CIMPP::Seconds t3;
+
+		/** \brief Time after initial time for valve to close (Ta). Default: nullptr */
+		CIMPP::Seconds ta;
+
+		/** \brief Time after initial time for valve to begin opening (Tb). Default: nullptr */
+		CIMPP::Seconds tb;
+
+		/** \brief Time after initial time for valve to become fully open (Tc). Default: nullptr */
+		CIMPP::Seconds tc;
+
+		/** \brief Initial time to begin fast valving (Ti). Default: nullptr */
+		CIMPP::Seconds ti;
+
+		/** \brief Time constant with which power falls off after intercept valve closure (Tt). Default: nullptr */
+		CIMPP::Seconds tt;
+
+		/** \brief (Vmax). Default: nullptr */
+		CIMPP::PU vmax;
+
+		/** \brief (Vmin). Default: nullptr */
+		CIMPP::PU vmin;
 
 		static const char debugName[];
 		const char* debugString() const override;

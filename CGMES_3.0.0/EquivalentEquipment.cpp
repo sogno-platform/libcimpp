@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-EquivalentEquipment::EquivalentEquipment() : EquivalentNetwork(nullptr) {};
-EquivalentEquipment::~EquivalentEquipment() {};
+EquivalentEquipment::EquivalentEquipment() : EquivalentNetwork(nullptr) {}
+EquivalentEquipment::~EquivalentEquipment() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,8 +42,6 @@ EquivalentEquipment::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_EquivalentNetwork_EquivalentEquipments(BaseClass*, BaseClass*);
 bool assign_EquivalentEquipment_EquivalentNetwork(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -61,10 +59,10 @@ bool assign_EquivalentEquipment_EquivalentNetwork(BaseClass* BaseClass_ptr1, Bas
 	return false;
 }
 
-
 bool get_EquivalentEquipment_EquivalentNetwork(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const EquivalentEquipment* element = dynamic_cast<const EquivalentEquipment*>(BaseClass_ptr1))
+	const EquivalentEquipment* element = dynamic_cast<const EquivalentEquipment*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->EquivalentNetwork != 0)
 		{
@@ -75,7 +73,6 @@ bool get_EquivalentEquipment_EquivalentNetwork(const BaseClass* BaseClass_ptr1, 
 	return false;
 }
 
-
 const char EquivalentEquipment::debugName[] = "EquivalentEquipment";
 const char* EquivalentEquipment::debugString() const
 {
@@ -84,7 +81,7 @@ const char* EquivalentEquipment::debugString() const
 
 void EquivalentEquipment::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:EquivalentEquipment"), &EquivalentEquipment_factory));
+	factory_map.emplace("cim:EquivalentEquipment", &EquivalentEquipment_factory);
 }
 
 void EquivalentEquipment::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -93,7 +90,7 @@ void EquivalentEquipment::addPrimitiveAssignFnsToMap(std::unordered_map<std::str
 
 void EquivalentEquipment::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:EquivalentEquipment.EquivalentNetwork"), &assign_EquivalentEquipment_EquivalentNetwork));
+	assign_map.emplace("cim:EquivalentEquipment.EquivalentNetwork", &assign_EquivalentEquipment_EquivalentNetwork);
 }
 
 void EquivalentEquipment::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

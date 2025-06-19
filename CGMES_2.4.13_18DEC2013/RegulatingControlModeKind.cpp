@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "RegulatingControlModeKind")
+		if (EnumSymbol.substr(0, pos) != "RegulatingControlModeKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,42 +50,42 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "voltage")
+		if (EnumSymbol == "voltage")
 		{
 			rop = RegulatingControlModeKind::voltage;
 			return lop;
 		}
-		if(EnumSymbol == "activePower")
+		if (EnumSymbol == "activePower")
 		{
 			rop = RegulatingControlModeKind::activePower;
 			return lop;
 		}
-		if(EnumSymbol == "reactivePower")
+		if (EnumSymbol == "reactivePower")
 		{
 			rop = RegulatingControlModeKind::reactivePower;
 			return lop;
 		}
-		if(EnumSymbol == "currentFlow")
+		if (EnumSymbol == "currentFlow")
 		{
 			rop = RegulatingControlModeKind::currentFlow;
 			return lop;
 		}
-		if(EnumSymbol == "admittance")
+		if (EnumSymbol == "admittance")
 		{
 			rop = RegulatingControlModeKind::admittance;
 			return lop;
 		}
-		if(EnumSymbol == "timeScheduled")
+		if (EnumSymbol == "timeScheduled")
 		{
 			rop = RegulatingControlModeKind::timeScheduled;
 			return lop;
 		}
-		if(EnumSymbol == "temperature")
+		if (EnumSymbol == "temperature")
 		{
 			rop = RegulatingControlModeKind::temperature;
 			return lop;
 		}
-		if(EnumSymbol == "powerFactor")
+		if (EnumSymbol == "powerFactor")
 		{
 			rop = RegulatingControlModeKind::powerFactor;
 			return lop;

@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class AccumulatorLimitSet;
 
-	/*
-	Limit values for Accumulator measurements.
-	*/
+	/** \brief Limit values for Accumulator measurements. */
 	class AccumulatorLimit : public Limit
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		AccumulatorLimit();
 		~AccumulatorLimit() override;
 
-		CIMPP::AccumulatorLimitSet* LimitSet;  /* The set of limits. Default: 0 */
-		CIMPP::Integer value;  /* The value to supervise against. The value is positive. Default: 0 */
+		/** \brief The set of limits. Default: 0 */
+		CIMPP::AccumulatorLimitSet* LimitSet;
+
+		/** \brief The value to supervise against. The value is positive. Default: 0 */
+		CIMPP::Integer value;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "DCTerminal.hpp"
-#include "Voltage.hpp"
 
 using namespace CIMPP;
 
-DCConductingEquipment::DCConductingEquipment() {};
-DCConductingEquipment::~DCConductingEquipment() {};
+DCConductingEquipment::DCConductingEquipment() {}
+DCConductingEquipment::~DCConductingEquipment() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,21 +41,6 @@ DCConductingEquipment::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_DCConductingEquipment_ratedUdc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (DCConductingEquipment* element = dynamic_cast<DCConductingEquipment*>(BaseClass_ptr1))
-	{
-		buffer >> element->ratedUdc;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_DCTerminal_DCConductingEquipment(BaseClass*, BaseClass*);
 bool assign_DCConductingEquipment_DCTerminals(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,9 +58,25 @@ bool assign_DCConductingEquipment_DCTerminals(BaseClass* BaseClass_ptr1, BaseCla
 	return false;
 }
 
+bool assign_DCConductingEquipment_ratedUdc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	DCConductingEquipment* element = dynamic_cast<DCConductingEquipment*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->ratedUdc;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_DCConductingEquipment_ratedUdc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DCConductingEquipment* element = dynamic_cast<const DCConductingEquipment*>(BaseClass_ptr1))
+	const DCConductingEquipment* element = dynamic_cast<const DCConductingEquipment*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ratedUdc;
 		if (!buffer.str().empty())
@@ -88,8 +88,6 @@ bool get_DCConductingEquipment_ratedUdc(const BaseClass* BaseClass_ptr1, std::st
 	return false;
 }
 
-
-
 const char DCConductingEquipment::debugName[] = "DCConductingEquipment";
 const char* DCConductingEquipment::debugString() const
 {
@@ -98,17 +96,17 @@ const char* DCConductingEquipment::debugString() const
 
 void DCConductingEquipment::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:DCConductingEquipment"), &DCConductingEquipment_factory));
+	factory_map.emplace("cim:DCConductingEquipment", &DCConductingEquipment_factory);
 }
 
 void DCConductingEquipment::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:DCConductingEquipment.ratedUdc"), &assign_DCConductingEquipment_ratedUdc));
+	assign_map.emplace("cim:DCConductingEquipment.ratedUdc", &assign_DCConductingEquipment_ratedUdc);
 }
 
 void DCConductingEquipment::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:DCConductingEquipment.DCTerminals"), &assign_DCConductingEquipment_DCTerminals));
+	assign_map.emplace("cim:DCConductingEquipment.DCTerminals", &assign_DCConductingEquipment_DCTerminals);
 }
 
 void DCConductingEquipment::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

@@ -9,25 +9,17 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Governor control flag for Francis hydro model.
-	*/
+	/** \brief Governor control flag for Francis hydro model. */
 	class FrancisGovernorControlKind
 	{
 	public:
 		enum FrancisGovernorControlKind_ENUM
 		{
-			/**
-			 * Mechanic-hydraulic regulator with tacho-accelerometer (Cflag = 1).
-			 */
+			/** Mechanic-hydraulic regulator with tacho-accelerometer (Cflag = 1). */
 			mechanicHydrolicTachoAccelerator,
-			/**
-			 * Mechanic-hydraulic regulator with transient feedback (Cflag=2).
-			 */
+			/** Mechanic-hydraulic regulator with transient feedback (Cflag=2). */
 			mechanicHydraulicTransientFeedback,
-			/**
-			 * Electromechanical and electrohydraulic regulator (Cflag=3).
-			 */
+			/** Electromechanical and electrohydraulic regulator (Cflag=3). */
 			electromechanicalElectrohydraulic,
 		};
 

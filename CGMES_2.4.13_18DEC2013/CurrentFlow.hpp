@@ -9,9 +9,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Electrical current with sign convention: positive flow is out of the conducting equipment into the connectivity node. Can be both AC and DC.
-	*/
+	/** \brief Electrical current with sign convention: positive flow is out of the conducting equipment into the connectivity node. Can be both AC and DC. */
 	class CurrentFlow
 	{
 	public:

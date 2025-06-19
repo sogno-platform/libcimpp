@@ -9,53 +9,31 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Input signal type.  In Dynamics modelling, commonly represented by j parameter.
-	*/
+	/** \brief Input signal type.  In Dynamics modelling, commonly represented by j parameter. */
 	class InputSignalKind
 	{
 	public:
 		enum InputSignalKind_ENUM
 		{
-			/**
-			 * Input signal is rotor or shaft speed (angular frequency).
-			 */
+			/** Input signal is rotor or shaft speed (angular frequency). */
 			rotorSpeed,
-			/**
-			 * Input signal is rotor or shaft angular frequency deviation.
-			 */
+			/** Input signal is rotor or shaft angular frequency deviation. */
 			rotorAngularFrequencyDeviation,
-			/**
-			 * Input signal is bus voltage fr
-			 */
+			/** Input signal is bus voltage fr */
 			busFrequency,
-			/**
-			 * Input signal is deviation of bus voltage frequ
-			 */
+			/** Input signal is deviation of bus voltage frequ */
 			busFrequencyDeviation,
-			/**
-			 * Input signal is generator electrical power on rated S.
-			 */
+			/** Input signal is generator electrical power on rated S. */
 			generatorElectricalPower,
-			/**
-			 * Input signal is generating accelerating power.
-			 */
+			/** Input signal is generating accelerating power. */
 			generatorAcceleratingPower,
-			/**
-			 * Input signal
-			 */
+			/** Input signal */
 			busVoltage,
-			/**
-			 * Input signal is derivative of bus voltag
-			 */
+			/** Input signal is derivative of bus voltag */
 			busVoltageDerivative,
-			/**
-			 * Input signal is amplitude of remote branch current.
-			 */
+			/** Input signal is amplitude of remote branch current. */
 			branchCurrent,
-			/**
-			 * Input signal is generator field current.
-			 */
+			/** Input signal is generator field current. */
 			fieldCurrent,
 		};
 

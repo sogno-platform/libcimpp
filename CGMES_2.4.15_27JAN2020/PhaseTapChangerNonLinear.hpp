@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	The non-linear phase tap changer describes the non-linear behavior of a phase tap changer. This is a base class for the symmetrical and asymmetrical phase tap changer models. The details of these models can be found in the IEC 61970-301 document.
-	*/
+	/** \brief The non-linear phase tap changer describes the non-linear behavior of a phase tap changer. This is a base class for the symmetrical and asymmetrical phase tap changer models. The details of these models can be found in the IEC 61970-301 document. */
 	class PhaseTapChangerNonLinear : public PhaseTapChanger
 	{
 	public:
@@ -28,9 +26,14 @@ namespace CIMPP
 		PhaseTapChangerNonLinear();
 		~PhaseTapChangerNonLinear() override;
 
-		CIMPP::PerCent voltageStepIncrement;  /* The voltage step increment on the out of phase winding specified in percent of nominal voltage of the transformer end. Default: nullptr */
-		CIMPP::Reactance xMax;  /* The reactance depend on the tap position according to a `u` shaped curve. The maximum reactance (xMax) appear at the low and high tap positions. Default: nullptr */
-		CIMPP::Reactance xMin;  /* The reactance depend on the tap position according to a `u` shaped curve. The minimum reactance (xMin) appear at the mid tap position. Default: nullptr */
+		/** \brief The voltage step increment on the out of phase winding specified in percent of nominal voltage of the transformer end. Default: nullptr */
+		CIMPP::PerCent voltageStepIncrement;
+
+		/** \brief The reactance depend on the tap position according to a `u` shaped curve. The maximum reactance (xMax) appear at the low and high tap positions. Default: nullptr */
+		CIMPP::Reactance xMax;
+
+		/** \brief The reactance depend on the tap position according to a `u` shaped curve. The minimum reactance (xMin) appear at the mid tap position. Default: nullptr */
+		CIMPP::Reactance xMin;
 
 		static const char debugName[];
 		const char* debugString() const override;

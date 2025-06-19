@@ -8,16 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Boolean.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
 
 using namespace CIMPP;
 
-PFVArType2Common1::PFVArType2Common1() {};
-PFVArType2Common1::~PFVArType2Common1() {};
+PFVArType2Common1::PFVArType2Common1() {}
+PFVArType2Common1::~PFVArType2Common1() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -48,77 +43,80 @@ PFVArType2Common1::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_PFVArType2Common1_j(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PFVArType2Common1_j(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PFVArType2Common1* element = dynamic_cast<PFVArType2Common1*>(BaseClass_ptr1))
+	PFVArType2Common1* element = dynamic_cast<PFVArType2Common1*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->j;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PFVArType2Common1_ki(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PFVArType2Common1_ki(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PFVArType2Common1* element = dynamic_cast<PFVArType2Common1*>(BaseClass_ptr1))
+	PFVArType2Common1* element = dynamic_cast<PFVArType2Common1*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ki;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PFVArType2Common1_kp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PFVArType2Common1_kp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PFVArType2Common1* element = dynamic_cast<PFVArType2Common1*>(BaseClass_ptr1))
+	PFVArType2Common1* element = dynamic_cast<PFVArType2Common1*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kp;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PFVArType2Common1_max(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PFVArType2Common1_max(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PFVArType2Common1* element = dynamic_cast<PFVArType2Common1*>(BaseClass_ptr1))
+	PFVArType2Common1* element = dynamic_cast<PFVArType2Common1*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->max;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PFVArType2Common1_ref(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PFVArType2Common1_ref(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PFVArType2Common1* element = dynamic_cast<PFVArType2Common1*>(BaseClass_ptr1))
+	PFVArType2Common1* element = dynamic_cast<PFVArType2Common1*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ref;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_PFVArType2Common1_j(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PFVArType2Common1* element = dynamic_cast<const PFVArType2Common1*>(BaseClass_ptr1))
+	const PFVArType2Common1* element = dynamic_cast<const PFVArType2Common1*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->j;
 		if (!buffer.str().empty())
@@ -132,7 +130,8 @@ bool get_PFVArType2Common1_j(const BaseClass* BaseClass_ptr1, std::stringstream&
 
 bool get_PFVArType2Common1_ki(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PFVArType2Common1* element = dynamic_cast<const PFVArType2Common1*>(BaseClass_ptr1))
+	const PFVArType2Common1* element = dynamic_cast<const PFVArType2Common1*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ki;
 		if (!buffer.str().empty())
@@ -146,7 +145,8 @@ bool get_PFVArType2Common1_ki(const BaseClass* BaseClass_ptr1, std::stringstream
 
 bool get_PFVArType2Common1_kp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PFVArType2Common1* element = dynamic_cast<const PFVArType2Common1*>(BaseClass_ptr1))
+	const PFVArType2Common1* element = dynamic_cast<const PFVArType2Common1*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kp;
 		if (!buffer.str().empty())
@@ -160,7 +160,8 @@ bool get_PFVArType2Common1_kp(const BaseClass* BaseClass_ptr1, std::stringstream
 
 bool get_PFVArType2Common1_max(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PFVArType2Common1* element = dynamic_cast<const PFVArType2Common1*>(BaseClass_ptr1))
+	const PFVArType2Common1* element = dynamic_cast<const PFVArType2Common1*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->max;
 		if (!buffer.str().empty())
@@ -174,7 +175,8 @@ bool get_PFVArType2Common1_max(const BaseClass* BaseClass_ptr1, std::stringstrea
 
 bool get_PFVArType2Common1_ref(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PFVArType2Common1* element = dynamic_cast<const PFVArType2Common1*>(BaseClass_ptr1))
+	const PFVArType2Common1* element = dynamic_cast<const PFVArType2Common1*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ref;
 		if (!buffer.str().empty())
@@ -186,8 +188,6 @@ bool get_PFVArType2Common1_ref(const BaseClass* BaseClass_ptr1, std::stringstrea
 	return false;
 }
 
-
-
 const char PFVArType2Common1::debugName[] = "PFVArType2Common1";
 const char* PFVArType2Common1::debugString() const
 {
@@ -196,16 +196,16 @@ const char* PFVArType2Common1::debugString() const
 
 void PFVArType2Common1::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:PFVArType2Common1"), &PFVArType2Common1_factory));
+	factory_map.emplace("cim:PFVArType2Common1", &PFVArType2Common1_factory);
 }
 
 void PFVArType2Common1::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:PFVArType2Common1.j"), &assign_PFVArType2Common1_j));
-	assign_map.insert(std::make_pair(std::string("cim:PFVArType2Common1.ki"), &assign_PFVArType2Common1_ki));
-	assign_map.insert(std::make_pair(std::string("cim:PFVArType2Common1.kp"), &assign_PFVArType2Common1_kp));
-	assign_map.insert(std::make_pair(std::string("cim:PFVArType2Common1.max"), &assign_PFVArType2Common1_max));
-	assign_map.insert(std::make_pair(std::string("cim:PFVArType2Common1.ref"), &assign_PFVArType2Common1_ref));
+	assign_map.emplace("cim:PFVArType2Common1.j", &assign_PFVArType2Common1_j);
+	assign_map.emplace("cim:PFVArType2Common1.ki", &assign_PFVArType2Common1_ki);
+	assign_map.emplace("cim:PFVArType2Common1.kp", &assign_PFVArType2Common1_kp);
+	assign_map.emplace("cim:PFVArType2Common1.max", &assign_PFVArType2Common1_max);
+	assign_map.emplace("cim:PFVArType2Common1.ref", &assign_PFVArType2Common1_ref);
 }
 
 void PFVArType2Common1::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

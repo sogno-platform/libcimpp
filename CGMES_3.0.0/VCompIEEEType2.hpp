@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class GenICompensationForGenJ;
 
-	/*
-	<font color="#0f0f0f">Terminal voltage transducer and load compensator as defined in IEEE 421.5-2005, 4. This model is designed to cover the following types of compensation: </font> <ul> 	<li><font color="#0f0f0f">reactive droop;</font></li> 	<li><font color="#0f0f0f">transformer-drop or line-drop compensation;</font></li> 	<li><font color="#0f0f0f">reactive differential compensation known also as cross-current compensation.</font></li> </ul> <font color="#0f0f0f">Reference: IEEE 421.5-2005, 4.</font>
-	*/
+	/** \brief <font color="#0f0f0f">Terminal voltage transducer and load compensator as defined in IEEE 421.5-2005, 4. This model is designed to cover the following types of compensation: </font> <ul> 	<li><font color="#0f0f0f">reactive droop;</font></li> 	<li><font color="#0f0f0f">transformer-drop or line-drop compensation;</font></li> 	<li><font color="#0f0f0f">reactive differential compensation known also as cross-current compensation.</font></li> </ul> <font color="#0f0f0f">Reference: IEEE 421.5-2005, 4.</font> */
 	class VCompIEEEType2 : public VoltageCompensatorDynamics
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		VCompIEEEType2();
 		~VCompIEEEType2() override;
 
-		std::list<CIMPP::GenICompensationForGenJ*> GenICompensationForGenJ;  /* Compensation of this voltage compensator`s generator for current flow out of another generator. Default: 0 */
-		CIMPP::Seconds tr;  /* &lt;font color=`#0f0f0f`&gt;Time constant which is used for the combined voltage sensing and compensation signal (&lt;i&gt;Tr&lt;/i&gt;) (&amp;gt;= 0).&lt;/font&gt; Default: nullptr */
+		/** \brief Compensation of this voltage compensator`s generator for current flow out of another generator. Default: 0 */
+		std::list<CIMPP::GenICompensationForGenJ*> GenICompensationForGenJ;
+
+		/** \brief &lt;font color=`#0f0f0f`&gt;Time constant which is used for the combined voltage sensing and compensation signal (&lt;i&gt;Tr&lt;/i&gt;) (&amp;gt;= 0).&lt;/font&gt; Default: nullptr */
+		CIMPP::Seconds tr;
 
 		static const char debugName[];
 		const char* debugString() const override;

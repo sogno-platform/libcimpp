@@ -19,9 +19,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A simplified steam turbine governor model.
-	*/
+	/** \brief A simplified steam turbine governor model. */
 	class GovSteam0 : public TurbineGovernorDynamics
 	{
 	public:
@@ -29,14 +27,29 @@ namespace CIMPP
 		GovSteam0();
 		~GovSteam0() override;
 
-		CIMPP::PU dt;  /* Turbine damping coefficient (Dt).  Unit = delta P / delta speed. Typical Value = 0. Default: nullptr */
-		CIMPP::ActivePower mwbase;  /* Base for power values (MWbase)  (&gt;0).  Unit = MW. Default: nullptr */
-		CIMPP::PU r;  /* Permanent droop (R).  Typical Value = 0.05. Default: nullptr */
-		CIMPP::Seconds t1;  /* Steam bowl time constant (T1).  Typical Value = 0.5. Default: nullptr */
-		CIMPP::Seconds t2;  /* Numerator time constant of T2/T3 block (T2).  Typical Value = 3. Default: nullptr */
-		CIMPP::Seconds t3;  /* Reheater time constant (T3).  Typical Value = 10. Default: nullptr */
-		CIMPP::PU vmax;  /* Maximum valve position, PU of mwcap (Vmax).  Typical Value = 1. Default: nullptr */
-		CIMPP::PU vmin;  /* Minimum valve position, PU of mwcap (Vmin).  Typical Value = 0. Default: nullptr */
+		/** \brief Turbine damping coefficient (Dt).  Unit = delta P / delta speed. Typical Value = 0. Default: nullptr */
+		CIMPP::PU dt;
+
+		/** \brief Base for power values (MWbase)  (&gt;0).  Unit = MW. Default: nullptr */
+		CIMPP::ActivePower mwbase;
+
+		/** \brief Permanent droop (R).  Typical Value = 0.05. Default: nullptr */
+		CIMPP::PU r;
+
+		/** \brief Steam bowl time constant (T1).  Typical Value = 0.5. Default: nullptr */
+		CIMPP::Seconds t1;
+
+		/** \brief Numerator time constant of T2/T3 block (T2).  Typical Value = 3. Default: nullptr */
+		CIMPP::Seconds t2;
+
+		/** \brief Reheater time constant (T3).  Typical Value = 10. Default: nullptr */
+		CIMPP::Seconds t3;
+
+		/** \brief Maximum valve position, PU of mwcap (Vmax).  Typical Value = 1. Default: nullptr */
+		CIMPP::PU vmax;
+
+		/** \brief Minimum valve position, PU of mwcap (Vmin).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU vmin;
 
 		static const char debugName[];
 		const char* debugString() const override;

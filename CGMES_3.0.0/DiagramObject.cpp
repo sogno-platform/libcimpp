@@ -13,16 +13,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "DiagramObjectStyle.hpp"
 #include "IdentifiedObject.hpp"
 #include "VisibilityLayer.hpp"
-#include "Integer.hpp"
-#include "Boolean.hpp"
-#include "Float.hpp"
-#include "Float.hpp"
-#include "AngleDegrees.hpp"
 
 using namespace CIMPP;
 
-DiagramObject::DiagramObject() : Diagram(nullptr), DiagramObjectStyle(nullptr), IdentifiedObject(nullptr) {};
-DiagramObject::~DiagramObject() {};
+DiagramObject::DiagramObject() : Diagram(nullptr), DiagramObjectStyle(nullptr), IdentifiedObject(nullptr) {}
+DiagramObject::~DiagramObject() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -58,73 +53,6 @@ DiagramObject::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_DiagramObject_drawingOrder(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (DiagramObject* element = dynamic_cast<DiagramObject*>(BaseClass_ptr1))
-	{
-		buffer >> element->drawingOrder;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_DiagramObject_isPolygon(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (DiagramObject* element = dynamic_cast<DiagramObject*>(BaseClass_ptr1))
-	{
-		buffer >> element->isPolygon;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_DiagramObject_offsetX(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (DiagramObject* element = dynamic_cast<DiagramObject*>(BaseClass_ptr1))
-	{
-		buffer >> element->offsetX;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_DiagramObject_offsetY(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (DiagramObject* element = dynamic_cast<DiagramObject*>(BaseClass_ptr1))
-	{
-		buffer >> element->offsetY;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_DiagramObject_rotation(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (DiagramObject* element = dynamic_cast<DiagramObject*>(BaseClass_ptr1))
-	{
-		buffer >> element->rotation;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_Diagram_DiagramElements(BaseClass*, BaseClass*);
 bool assign_DiagramObject_Diagram(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -141,6 +69,7 @@ bool assign_DiagramObject_Diagram(BaseClass* BaseClass_ptr1, BaseClass* BaseClas
 	}
 	return false;
 }
+
 bool assign_DiagramObjectPoint_DiagramObject(BaseClass*, BaseClass*);
 bool assign_DiagramObject_DiagramObjectPoints(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -157,6 +86,7 @@ bool assign_DiagramObject_DiagramObjectPoints(BaseClass* BaseClass_ptr1, BaseCla
 	}
 	return false;
 }
+
 bool assign_DiagramObjectStyle_StyledObjects(BaseClass*, BaseClass*);
 bool assign_DiagramObject_DiagramObjectStyle(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -173,6 +103,7 @@ bool assign_DiagramObject_DiagramObjectStyle(BaseClass* BaseClass_ptr1, BaseClas
 	}
 	return false;
 }
+
 bool assign_IdentifiedObject_DiagramObjects(BaseClass*, BaseClass*);
 bool assign_DiagramObject_IdentifiedObject(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -189,6 +120,7 @@ bool assign_DiagramObject_IdentifiedObject(BaseClass* BaseClass_ptr1, BaseClass*
 	}
 	return false;
 }
+
 bool assign_VisibilityLayer_VisibleObjects(BaseClass*, BaseClass*);
 bool assign_DiagramObject_VisibilityLayers(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -206,9 +138,124 @@ bool assign_DiagramObject_VisibilityLayers(BaseClass* BaseClass_ptr1, BaseClass*
 	return false;
 }
 
+bool assign_DiagramObject_drawingOrder(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	DiagramObject* element = dynamic_cast<DiagramObject*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->drawingOrder;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_DiagramObject_isPolygon(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	DiagramObject* element = dynamic_cast<DiagramObject*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->isPolygon;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_DiagramObject_offsetX(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	DiagramObject* element = dynamic_cast<DiagramObject*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->offsetX;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_DiagramObject_offsetY(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	DiagramObject* element = dynamic_cast<DiagramObject*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->offsetY;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_DiagramObject_rotation(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	DiagramObject* element = dynamic_cast<DiagramObject*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->rotation;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_DiagramObject_Diagram(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const DiagramObject* element = dynamic_cast<const DiagramObject*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->Diagram != 0)
+		{
+			BaseClass_list.push_back(element->Diagram);
+			return true;
+		}
+	}
+	return false;
+}
+
+
+bool get_DiagramObject_DiagramObjectStyle(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const DiagramObject* element = dynamic_cast<const DiagramObject*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->DiagramObjectStyle != 0)
+		{
+			BaseClass_list.push_back(element->DiagramObjectStyle);
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_DiagramObject_IdentifiedObject(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const DiagramObject* element = dynamic_cast<const DiagramObject*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->IdentifiedObject != 0)
+		{
+			BaseClass_list.push_back(element->IdentifiedObject);
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_DiagramObject_drawingOrder(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DiagramObject* element = dynamic_cast<const DiagramObject*>(BaseClass_ptr1))
+	const DiagramObject* element = dynamic_cast<const DiagramObject*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->drawingOrder;
 		if (!buffer.str().empty())
@@ -222,7 +269,8 @@ bool get_DiagramObject_drawingOrder(const BaseClass* BaseClass_ptr1, std::string
 
 bool get_DiagramObject_isPolygon(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DiagramObject* element = dynamic_cast<const DiagramObject*>(BaseClass_ptr1))
+	const DiagramObject* element = dynamic_cast<const DiagramObject*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->isPolygon;
 		if (!buffer.str().empty())
@@ -236,7 +284,8 @@ bool get_DiagramObject_isPolygon(const BaseClass* BaseClass_ptr1, std::stringstr
 
 bool get_DiagramObject_offsetX(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DiagramObject* element = dynamic_cast<const DiagramObject*>(BaseClass_ptr1))
+	const DiagramObject* element = dynamic_cast<const DiagramObject*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->offsetX;
 		if (!buffer.str().empty())
@@ -250,7 +299,8 @@ bool get_DiagramObject_offsetX(const BaseClass* BaseClass_ptr1, std::stringstrea
 
 bool get_DiagramObject_offsetY(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DiagramObject* element = dynamic_cast<const DiagramObject*>(BaseClass_ptr1))
+	const DiagramObject* element = dynamic_cast<const DiagramObject*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->offsetY;
 		if (!buffer.str().empty())
@@ -264,7 +314,8 @@ bool get_DiagramObject_offsetY(const BaseClass* BaseClass_ptr1, std::stringstrea
 
 bool get_DiagramObject_rotation(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DiagramObject* element = dynamic_cast<const DiagramObject*>(BaseClass_ptr1))
+	const DiagramObject* element = dynamic_cast<const DiagramObject*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->rotation;
 		if (!buffer.str().empty())
@@ -276,47 +327,6 @@ bool get_DiagramObject_rotation(const BaseClass* BaseClass_ptr1, std::stringstre
 	return false;
 }
 
-
-bool get_DiagramObject_Diagram(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const DiagramObject* element = dynamic_cast<const DiagramObject*>(BaseClass_ptr1))
-	{
-		if (element->Diagram != 0)
-		{
-			BaseClass_list.push_back(element->Diagram);
-			return true;
-		}
-	}
-	return false;
-}
-
-bool get_DiagramObject_DiagramObjectStyle(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const DiagramObject* element = dynamic_cast<const DiagramObject*>(BaseClass_ptr1))
-	{
-		if (element->DiagramObjectStyle != 0)
-		{
-			BaseClass_list.push_back(element->DiagramObjectStyle);
-			return true;
-		}
-	}
-	return false;
-}
-
-bool get_DiagramObject_IdentifiedObject(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const DiagramObject* element = dynamic_cast<const DiagramObject*>(BaseClass_ptr1))
-	{
-		if (element->IdentifiedObject != 0)
-		{
-			BaseClass_list.push_back(element->IdentifiedObject);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char DiagramObject::debugName[] = "DiagramObject";
 const char* DiagramObject::debugString() const
 {
@@ -325,25 +335,25 @@ const char* DiagramObject::debugString() const
 
 void DiagramObject::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:DiagramObject"), &DiagramObject_factory));
+	factory_map.emplace("cim:DiagramObject", &DiagramObject_factory);
 }
 
 void DiagramObject::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:DiagramObject.drawingOrder"), &assign_DiagramObject_drawingOrder));
-	assign_map.insert(std::make_pair(std::string("cim:DiagramObject.isPolygon"), &assign_DiagramObject_isPolygon));
-	assign_map.insert(std::make_pair(std::string("cim:DiagramObject.offsetX"), &assign_DiagramObject_offsetX));
-	assign_map.insert(std::make_pair(std::string("cim:DiagramObject.offsetY"), &assign_DiagramObject_offsetY));
-	assign_map.insert(std::make_pair(std::string("cim:DiagramObject.rotation"), &assign_DiagramObject_rotation));
+	assign_map.emplace("cim:DiagramObject.drawingOrder", &assign_DiagramObject_drawingOrder);
+	assign_map.emplace("cim:DiagramObject.isPolygon", &assign_DiagramObject_isPolygon);
+	assign_map.emplace("cim:DiagramObject.offsetX", &assign_DiagramObject_offsetX);
+	assign_map.emplace("cim:DiagramObject.offsetY", &assign_DiagramObject_offsetY);
+	assign_map.emplace("cim:DiagramObject.rotation", &assign_DiagramObject_rotation);
 }
 
 void DiagramObject::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:DiagramObject.Diagram"), &assign_DiagramObject_Diagram));
-	assign_map.insert(std::make_pair(std::string("cim:DiagramObject.DiagramObjectPoints"), &assign_DiagramObject_DiagramObjectPoints));
-	assign_map.insert(std::make_pair(std::string("cim:DiagramObject.DiagramObjectStyle"), &assign_DiagramObject_DiagramObjectStyle));
-	assign_map.insert(std::make_pair(std::string("cim:DiagramObject.IdentifiedObject"), &assign_DiagramObject_IdentifiedObject));
-	assign_map.insert(std::make_pair(std::string("cim:DiagramObject.VisibilityLayers"), &assign_DiagramObject_VisibilityLayers));
+	assign_map.emplace("cim:DiagramObject.Diagram", &assign_DiagramObject_Diagram);
+	assign_map.emplace("cim:DiagramObject.DiagramObjectPoints", &assign_DiagramObject_DiagramObjectPoints);
+	assign_map.emplace("cim:DiagramObject.DiagramObjectStyle", &assign_DiagramObject_DiagramObjectStyle);
+	assign_map.emplace("cim:DiagramObject.IdentifiedObject", &assign_DiagramObject_IdentifiedObject);
+	assign_map.emplace("cim:DiagramObject.VisibilityLayers", &assign_DiagramObject_VisibilityLayers);
 }
 
 void DiagramObject::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

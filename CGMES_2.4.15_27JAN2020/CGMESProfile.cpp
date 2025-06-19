@@ -59,8 +59,6 @@ static const std::map<CGMESProfile, std::list<std::string>> ProfileURIs =
 	{ CGMESProfile::TP_BD, { "http://entsoe.eu/CIM/TopologyBoundary/3/1", } },
 };
 
-static const std::string CimNamespace = "http://iec.ch/TC57/2013/CIM-schema-cim16#";
-
 const std::list<CGMESProfile>&
 getProfileList()
 {
@@ -125,10 +123,4 @@ getProfileFromLongName(const std::string& name)
 		}
 	}
 	return UnknownProfile;
-}
-
-std::string
-getCimNamespace()
-{
-	return CimNamespace;
 }

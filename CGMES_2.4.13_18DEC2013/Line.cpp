@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-Line::Line() : Region(nullptr) {};
-Line::~Line() {};
+Line::Line() : Region(nullptr) {}
+Line::~Line() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -41,8 +41,6 @@ Line::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_SubGeographicalRegion_Lines(BaseClass*, BaseClass*);
 bool assign_Line_Region(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,10 +58,10 @@ bool assign_Line_Region(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 	return false;
 }
 
-
 bool get_Line_Region(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const Line* element = dynamic_cast<const Line*>(BaseClass_ptr1))
+	const Line* element = dynamic_cast<const Line*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->Region != 0)
 		{
@@ -74,7 +72,6 @@ bool get_Line_Region(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*
 	return false;
 }
 
-
 const char Line::debugName[] = "Line";
 const char* Line::debugString() const
 {
@@ -83,7 +80,7 @@ const char* Line::debugString() const
 
 void Line::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:Line"), &Line_factory));
+	factory_map.emplace("cim:Line", &Line_factory);
 }
 
 void Line::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -92,7 +89,7 @@ void Line::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_fun
 
 void Line::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Line.Region"), &assign_Line_Region));
+	assign_map.emplace("cim:Line.Region", &assign_Line_Region);
 }
 
 void Line::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

@@ -10,16 +10,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 #include "GeneratingUnit.hpp"
 #include "HydroPump.hpp"
-#include "ActivePower.hpp"
-#include "ReactivePower.hpp"
-#include "Float.hpp"
-#include "ApparentPower.hpp"
-#include "Voltage.hpp"
 
 using namespace CIMPP;
 
-RotatingMachine::RotatingMachine() : GeneratingUnit(nullptr), HydroPump(nullptr) {};
-RotatingMachine::~RotatingMachine() {};
+RotatingMachine::RotatingMachine() : GeneratingUnit(nullptr), HydroPump(nullptr) {}
+RotatingMachine::~RotatingMachine() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -55,73 +50,6 @@ RotatingMachine::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_RotatingMachine_p(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (RotatingMachine* element = dynamic_cast<RotatingMachine*>(BaseClass_ptr1))
-	{
-		buffer >> element->p;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_RotatingMachine_q(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (RotatingMachine* element = dynamic_cast<RotatingMachine*>(BaseClass_ptr1))
-	{
-		buffer >> element->q;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_RotatingMachine_ratedPowerFactor(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (RotatingMachine* element = dynamic_cast<RotatingMachine*>(BaseClass_ptr1))
-	{
-		buffer >> element->ratedPowerFactor;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_RotatingMachine_ratedS(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (RotatingMachine* element = dynamic_cast<RotatingMachine*>(BaseClass_ptr1))
-	{
-		buffer >> element->ratedS;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_RotatingMachine_ratedU(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (RotatingMachine* element = dynamic_cast<RotatingMachine*>(BaseClass_ptr1))
-	{
-		buffer >> element->ratedU;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_GeneratingUnit_RotatingMachine(BaseClass*, BaseClass*);
 bool assign_RotatingMachine_GeneratingUnit(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -138,6 +66,7 @@ bool assign_RotatingMachine_GeneratingUnit(BaseClass* BaseClass_ptr1, BaseClass*
 	}
 	return false;
 }
+
 bool assign_HydroPump_RotatingMachine(BaseClass*, BaseClass*);
 bool assign_RotatingMachine_HydroPump(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -155,9 +84,95 @@ bool assign_RotatingMachine_HydroPump(BaseClass* BaseClass_ptr1, BaseClass* Base
 	return false;
 }
 
+bool assign_RotatingMachine_p(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	RotatingMachine* element = dynamic_cast<RotatingMachine*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->p;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_RotatingMachine_q(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	RotatingMachine* element = dynamic_cast<RotatingMachine*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->q;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_RotatingMachine_ratedPowerFactor(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	RotatingMachine* element = dynamic_cast<RotatingMachine*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->ratedPowerFactor;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_RotatingMachine_ratedS(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	RotatingMachine* element = dynamic_cast<RotatingMachine*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->ratedS;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_RotatingMachine_ratedU(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	RotatingMachine* element = dynamic_cast<RotatingMachine*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->ratedU;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_RotatingMachine_GeneratingUnit(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const RotatingMachine* element = dynamic_cast<const RotatingMachine*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->GeneratingUnit != 0)
+		{
+			BaseClass_list.push_back(element->GeneratingUnit);
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_RotatingMachine_p(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const RotatingMachine* element = dynamic_cast<const RotatingMachine*>(BaseClass_ptr1))
+	const RotatingMachine* element = dynamic_cast<const RotatingMachine*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->p;
 		if (!buffer.str().empty())
@@ -171,7 +186,8 @@ bool get_RotatingMachine_p(const BaseClass* BaseClass_ptr1, std::stringstream& b
 
 bool get_RotatingMachine_q(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const RotatingMachine* element = dynamic_cast<const RotatingMachine*>(BaseClass_ptr1))
+	const RotatingMachine* element = dynamic_cast<const RotatingMachine*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->q;
 		if (!buffer.str().empty())
@@ -185,7 +201,8 @@ bool get_RotatingMachine_q(const BaseClass* BaseClass_ptr1, std::stringstream& b
 
 bool get_RotatingMachine_ratedPowerFactor(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const RotatingMachine* element = dynamic_cast<const RotatingMachine*>(BaseClass_ptr1))
+	const RotatingMachine* element = dynamic_cast<const RotatingMachine*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ratedPowerFactor;
 		if (!buffer.str().empty())
@@ -199,7 +216,8 @@ bool get_RotatingMachine_ratedPowerFactor(const BaseClass* BaseClass_ptr1, std::
 
 bool get_RotatingMachine_ratedS(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const RotatingMachine* element = dynamic_cast<const RotatingMachine*>(BaseClass_ptr1))
+	const RotatingMachine* element = dynamic_cast<const RotatingMachine*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ratedS;
 		if (!buffer.str().empty())
@@ -213,7 +231,8 @@ bool get_RotatingMachine_ratedS(const BaseClass* BaseClass_ptr1, std::stringstre
 
 bool get_RotatingMachine_ratedU(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const RotatingMachine* element = dynamic_cast<const RotatingMachine*>(BaseClass_ptr1))
+	const RotatingMachine* element = dynamic_cast<const RotatingMachine*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ratedU;
 		if (!buffer.str().empty())
@@ -225,21 +244,6 @@ bool get_RotatingMachine_ratedU(const BaseClass* BaseClass_ptr1, std::stringstre
 	return false;
 }
 
-
-bool get_RotatingMachine_GeneratingUnit(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const RotatingMachine* element = dynamic_cast<const RotatingMachine*>(BaseClass_ptr1))
-	{
-		if (element->GeneratingUnit != 0)
-		{
-			BaseClass_list.push_back(element->GeneratingUnit);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char RotatingMachine::debugName[] = "RotatingMachine";
 const char* RotatingMachine::debugString() const
 {
@@ -248,22 +252,22 @@ const char* RotatingMachine::debugString() const
 
 void RotatingMachine::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:RotatingMachine"), &RotatingMachine_factory));
+	factory_map.emplace("cim:RotatingMachine", &RotatingMachine_factory);
 }
 
 void RotatingMachine::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:RotatingMachine.p"), &assign_RotatingMachine_p));
-	assign_map.insert(std::make_pair(std::string("cim:RotatingMachine.q"), &assign_RotatingMachine_q));
-	assign_map.insert(std::make_pair(std::string("cim:RotatingMachine.ratedPowerFactor"), &assign_RotatingMachine_ratedPowerFactor));
-	assign_map.insert(std::make_pair(std::string("cim:RotatingMachine.ratedS"), &assign_RotatingMachine_ratedS));
-	assign_map.insert(std::make_pair(std::string("cim:RotatingMachine.ratedU"), &assign_RotatingMachine_ratedU));
+	assign_map.emplace("cim:RotatingMachine.p", &assign_RotatingMachine_p);
+	assign_map.emplace("cim:RotatingMachine.q", &assign_RotatingMachine_q);
+	assign_map.emplace("cim:RotatingMachine.ratedPowerFactor", &assign_RotatingMachine_ratedPowerFactor);
+	assign_map.emplace("cim:RotatingMachine.ratedS", &assign_RotatingMachine_ratedS);
+	assign_map.emplace("cim:RotatingMachine.ratedU", &assign_RotatingMachine_ratedU);
 }
 
 void RotatingMachine::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:RotatingMachine.GeneratingUnit"), &assign_RotatingMachine_GeneratingUnit));
-	assign_map.insert(std::make_pair(std::string("cim:RotatingMachine.HydroPump"), &assign_RotatingMachine_HydroPump));
+	assign_map.emplace("cim:RotatingMachine.GeneratingUnit", &assign_RotatingMachine_GeneratingUnit);
+	assign_map.emplace("cim:RotatingMachine.HydroPump", &assign_RotatingMachine_HydroPump);
 }
 
 void RotatingMachine::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

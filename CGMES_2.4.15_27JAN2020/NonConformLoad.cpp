@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-NonConformLoad::NonConformLoad() : LoadGroup(nullptr) {};
-NonConformLoad::~NonConformLoad() {};
+NonConformLoad::NonConformLoad() : LoadGroup(nullptr) {}
+NonConformLoad::~NonConformLoad() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -41,8 +41,6 @@ NonConformLoad::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_NonConformLoadGroup_EnergyConsumers(BaseClass*, BaseClass*);
 bool assign_NonConformLoad_LoadGroup(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,10 +58,10 @@ bool assign_NonConformLoad_LoadGroup(BaseClass* BaseClass_ptr1, BaseClass* BaseC
 	return false;
 }
 
-
 bool get_NonConformLoad_LoadGroup(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const NonConformLoad* element = dynamic_cast<const NonConformLoad*>(BaseClass_ptr1))
+	const NonConformLoad* element = dynamic_cast<const NonConformLoad*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->LoadGroup != 0)
 		{
@@ -74,7 +72,6 @@ bool get_NonConformLoad_LoadGroup(const BaseClass* BaseClass_ptr1, std::list<con
 	return false;
 }
 
-
 const char NonConformLoad::debugName[] = "NonConformLoad";
 const char* NonConformLoad::debugString() const
 {
@@ -83,7 +80,7 @@ const char* NonConformLoad::debugString() const
 
 void NonConformLoad::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:NonConformLoad"), &NonConformLoad_factory));
+	factory_map.emplace("cim:NonConformLoad", &NonConformLoad_factory);
 }
 
 void NonConformLoad::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -92,7 +89,7 @@ void NonConformLoad::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, 
 
 void NonConformLoad::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:NonConformLoad.LoadGroup"), &assign_NonConformLoad_LoadGroup));
+	assign_map.emplace("cim:NonConformLoad.LoadGroup", &assign_NonConformLoad_LoadGroup);
 }
 
 void NonConformLoad::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

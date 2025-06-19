@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class MeasurementValue;
 
-	/*
-	Measurement quality flags. Bits 0-10 are defined for substation automation in draft IEC 61850 part 7-3. Bits 11-15 are reserved for future expansion by that document. Bits 16-31 are reserved for EMS applications.
-	*/
+	/** \brief Measurement quality flags. Bits 0-10 are defined for substation automation in draft IEC 61850 part 7-3. Bits 11-15 are reserved for future expansion by that document. Bits 16-31 are reserved for EMS applications. */
 	class MeasurementValueQuality : public Quality61850
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		MeasurementValueQuality();
 		~MeasurementValueQuality() override;
 
-		CIMPP::MeasurementValue* MeasurementValue;  /* A MeasurementValue has a MeasurementValueQuality associated with it. Default: 0 */
+		/** \brief A MeasurementValue has a MeasurementValueQuality associated with it. Default: 0 */
+		CIMPP::MeasurementValue* MeasurementValue;
 
 		static const char debugName[];
 		const char* debugString() const override;

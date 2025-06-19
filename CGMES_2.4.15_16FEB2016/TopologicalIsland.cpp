@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "TopologicalNode.hpp"
-#include "TopologicalNode.hpp"
 
 using namespace CIMPP;
 
-TopologicalIsland::TopologicalIsland() : AngleRefTopologicalNode(nullptr) {};
-TopologicalIsland::~TopologicalIsland() {};
+TopologicalIsland::TopologicalIsland() : AngleRefTopologicalNode(nullptr) {}
+TopologicalIsland::~TopologicalIsland() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,8 +41,6 @@ TopologicalIsland::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_TopologicalNode_AngleRefTopologicalIsland(BaseClass*, BaseClass*);
 bool assign_TopologicalIsland_AngleRefTopologicalNode(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,6 +57,7 @@ bool assign_TopologicalIsland_AngleRefTopologicalNode(BaseClass* BaseClass_ptr1,
 	}
 	return false;
 }
+
 bool assign_TopologicalNode_TopologicalIsland(BaseClass*, BaseClass*);
 bool assign_TopologicalIsland_TopologicalNodes(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -77,10 +75,10 @@ bool assign_TopologicalIsland_TopologicalNodes(BaseClass* BaseClass_ptr1, BaseCl
 	return false;
 }
 
-
 bool get_TopologicalIsland_AngleRefTopologicalNode(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const TopologicalIsland* element = dynamic_cast<const TopologicalIsland*>(BaseClass_ptr1))
+	const TopologicalIsland* element = dynamic_cast<const TopologicalIsland*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->AngleRefTopologicalNode != 0)
 		{
@@ -93,14 +91,14 @@ bool get_TopologicalIsland_AngleRefTopologicalNode(const BaseClass* BaseClass_pt
 
 bool get_TopologicalIsland_TopologicalNodes(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const TopologicalIsland* element = dynamic_cast<const TopologicalIsland*>(BaseClass_ptr1))
+	const TopologicalIsland* element = dynamic_cast<const TopologicalIsland*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		std::copy(element->TopologicalNodes.begin(), element->TopologicalNodes.end(), std::back_inserter(BaseClass_list));
 		return !BaseClass_list.empty();
 	}
 	return false;
 }
-
 
 const char TopologicalIsland::debugName[] = "TopologicalIsland";
 const char* TopologicalIsland::debugString() const
@@ -110,7 +108,7 @@ const char* TopologicalIsland::debugString() const
 
 void TopologicalIsland::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:TopologicalIsland"), &TopologicalIsland_factory));
+	factory_map.emplace("cim:TopologicalIsland", &TopologicalIsland_factory);
 }
 
 void TopologicalIsland::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -119,8 +117,8 @@ void TopologicalIsland::addPrimitiveAssignFnsToMap(std::unordered_map<std::strin
 
 void TopologicalIsland::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:TopologicalIsland.AngleRefTopologicalNode"), &assign_TopologicalIsland_AngleRefTopologicalNode));
-	assign_map.insert(std::make_pair(std::string("cim:TopologicalIsland.TopologicalNodes"), &assign_TopologicalIsland_TopologicalNodes));
+	assign_map.emplace("cim:TopologicalIsland.AngleRefTopologicalNode", &assign_TopologicalIsland_AngleRefTopologicalNode);
+	assign_map.emplace("cim:TopologicalIsland.TopologicalNodes", &assign_TopologicalIsland_TopologicalNodes);
 }
 
 void TopologicalIsland::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

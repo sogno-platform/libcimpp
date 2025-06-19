@@ -13,8 +13,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-ReactiveCapabilityCurve::ReactiveCapabilityCurve() {};
-ReactiveCapabilityCurve::~ReactiveCapabilityCurve() {};
+ReactiveCapabilityCurve::ReactiveCapabilityCurve() {}
+ReactiveCapabilityCurve::~ReactiveCapabilityCurve() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,8 +42,6 @@ ReactiveCapabilityCurve::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_EquivalentInjection_ReactiveCapabilityCurve(BaseClass*, BaseClass*);
 bool assign_ReactiveCapabilityCurve_EquivalentInjection(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,6 +58,7 @@ bool assign_ReactiveCapabilityCurve_EquivalentInjection(BaseClass* BaseClass_ptr
 	}
 	return false;
 }
+
 bool assign_SynchronousMachine_InitialReactiveCapabilityCurve(BaseClass*, BaseClass*);
 bool assign_ReactiveCapabilityCurve_InitiallyUsedBySynchronousMachines(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -87,7 +86,7 @@ const char* ReactiveCapabilityCurve::debugString() const
 
 void ReactiveCapabilityCurve::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ReactiveCapabilityCurve"), &ReactiveCapabilityCurve_factory));
+	factory_map.emplace("cim:ReactiveCapabilityCurve", &ReactiveCapabilityCurve_factory);
 }
 
 void ReactiveCapabilityCurve::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -96,8 +95,8 @@ void ReactiveCapabilityCurve::addPrimitiveAssignFnsToMap(std::unordered_map<std:
 
 void ReactiveCapabilityCurve::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ReactiveCapabilityCurve.EquivalentInjection"), &assign_ReactiveCapabilityCurve_EquivalentInjection));
-	assign_map.insert(std::make_pair(std::string("cim:ReactiveCapabilityCurve.InitiallyUsedBySynchronousMachines"), &assign_ReactiveCapabilityCurve_InitiallyUsedBySynchronousMachines));
+	assign_map.emplace("cim:ReactiveCapabilityCurve.EquivalentInjection", &assign_ReactiveCapabilityCurve_EquivalentInjection);
+	assign_map.emplace("cim:ReactiveCapabilityCurve.InitiallyUsedBySynchronousMachines", &assign_ReactiveCapabilityCurve_InitiallyUsedBySynchronousMachines);
 }
 
 void ReactiveCapabilityCurve::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

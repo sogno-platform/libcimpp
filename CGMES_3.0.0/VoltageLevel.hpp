@@ -20,9 +20,7 @@ namespace CIMPP
 	class Bay;
 	class Substation;
 
-	/*
-	A collection of equipment at one common system voltage forming a switchgear. The equipment typically consists of breakers, busbars, instrumentation, control, regulation and protection devices as well as assemblies of all these.
-	*/
+	/** \brief A collection of equipment at one common system voltage forming a switchgear. The equipment typically consists of breakers, busbars, instrumentation, control, regulation and protection devices as well as assemblies of all these. */
 	class VoltageLevel : public EquipmentContainer
 	{
 	public:
@@ -30,11 +28,20 @@ namespace CIMPP
 		VoltageLevel();
 		~VoltageLevel() override;
 
-		CIMPP::BaseVoltage* BaseVoltage;  /* The base voltage used for all equipment within the voltage level. Default: 0 */
-		std::list<CIMPP::Bay*> Bays;  /* The bays within this voltage level. Default: 0 */
-		CIMPP::Substation* Substation;  /* The substation of the voltage level. Default: 0 */
-		CIMPP::Voltage highVoltageLimit;  /* The bus bar`s high voltage limit. The limit applies to all equipment and nodes contained in a given VoltageLevel. It is not required that it is exchanged in pair with lowVoltageLimit. It is preferable to use operational VoltageLimit, which prevails, if present. Default: nullptr */
-		CIMPP::Voltage lowVoltageLimit;  /* The bus bar`s low voltage limit. The limit applies to all equipment and nodes contained in a given VoltageLevel. It is not required that it is exchanged in pair with highVoltageLimit. It is preferable to use operational VoltageLimit, which prevails, if present. Default: nullptr */
+		/** \brief The base voltage used for all equipment within the voltage level. Default: 0 */
+		CIMPP::BaseVoltage* BaseVoltage;
+
+		/** \brief The bays within this voltage level. Default: 0 */
+		std::list<CIMPP::Bay*> Bays;
+
+		/** \brief The substation of the voltage level. Default: 0 */
+		CIMPP::Substation* Substation;
+
+		/** \brief The bus bar`s high voltage limit. The limit applies to all equipment and nodes contained in a given VoltageLevel. It is not required that it is exchanged in pair with lowVoltageLimit. It is preferable to use operational VoltageLimit, which prevails, if present. Default: nullptr */
+		CIMPP::Voltage highVoltageLimit;
+
+		/** \brief The bus bar`s low voltage limit. The limit applies to all equipment and nodes contained in a given VoltageLevel. It is not required that it is exchanged in pair with highVoltageLimit. It is preferable to use operational VoltageLimit, which prevails, if present. Default: nullptr */
+		CIMPP::Voltage lowVoltageLimit;
 
 		static const char debugName[];
 		const char* debugString() const override;

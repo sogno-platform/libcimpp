@@ -21,9 +21,7 @@ namespace CIMPP
 	class TransformerEnd;
 	class VoltageLevel;
 
-	/*
-	Defines a system base voltage which is referenced.
-	*/
+	/** \brief Defines a system base voltage which is referenced. */
 	class BaseVoltage : public IdentifiedObject
 	{
 	public:
@@ -31,11 +29,20 @@ namespace CIMPP
 		BaseVoltage();
 		~BaseVoltage() override;
 
-		std::list<CIMPP::ConductingEquipment*> ConductingEquipment;  /* Base voltage of this conducting equipment.  Use only when there is no voltage level container used and only one base voltage applies.  For example, not used for transformers. Default: 0 */
-		std::list<CIMPP::TopologicalNode*> TopologicalNode;  /* The topological nodes at the base voltage. Default: 0 */
-		std::list<CIMPP::TransformerEnd*> TransformerEnds;  /* Transformer ends at the base voltage.  This is essential for PU calculation. Default: 0 */
-		std::list<CIMPP::VoltageLevel*> VoltageLevel;  /* The voltage levels having this base voltage. Default: 0 */
-		CIMPP::Voltage nominalVoltage;  /* The power system resource`s base voltage. Default: nullptr */
+		/** \brief Base voltage of this conducting equipment.  Use only when there is no voltage level container used and only one base voltage applies.  For example, not used for transformers. Default: 0 */
+		std::list<CIMPP::ConductingEquipment*> ConductingEquipment;
+
+		/** \brief The topological nodes at the base voltage. Default: 0 */
+		std::list<CIMPP::TopologicalNode*> TopologicalNode;
+
+		/** \brief Transformer ends at the base voltage.  This is essential for PU calculation. Default: 0 */
+		std::list<CIMPP::TransformerEnd*> TransformerEnds;
+
+		/** \brief The voltage levels having this base voltage. Default: 0 */
+		std::list<CIMPP::VoltageLevel*> VoltageLevel;
+
+		/** \brief The power system resource`s base voltage. Default: nullptr */
+		CIMPP::Voltage nominalVoltage;
 
 		static const char debugName[];
 		const char* debugString() const override;

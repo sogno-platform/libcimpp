@@ -19,8 +19,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-ExcitationSystemDynamics::ExcitationSystemDynamics() : DiscontinuousExcitationControlDynamics(nullptr), OverexcitationLimiterDynamics(nullptr), PFVArControllerType1Dynamics(nullptr), PFVArControllerType2Dynamics(nullptr), PowerSystemStabilizerDynamics(nullptr), SynchronousMachineDynamics(nullptr), UnderexcitationLimiterDynamics(nullptr), VoltageCompensatorDynamics(nullptr) {};
-ExcitationSystemDynamics::~ExcitationSystemDynamics() {};
+ExcitationSystemDynamics::ExcitationSystemDynamics() : DiscontinuousExcitationControlDynamics(nullptr), OverexcitationLimiterDynamics(nullptr), PFVArControllerType1Dynamics(nullptr), PFVArControllerType2Dynamics(nullptr), PowerSystemStabilizerDynamics(nullptr), SynchronousMachineDynamics(nullptr), UnderexcitationLimiterDynamics(nullptr), VoltageCompensatorDynamics(nullptr) {}
+ExcitationSystemDynamics::~ExcitationSystemDynamics() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -54,8 +54,6 @@ ExcitationSystemDynamics::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_DiscontinuousExcitationControlDynamics_ExcitationSystemDynamics(BaseClass*, BaseClass*);
 bool assign_ExcitationSystemDynamics_DiscontinuousExcitationControlDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -72,6 +70,7 @@ bool assign_ExcitationSystemDynamics_DiscontinuousExcitationControlDynamics(Base
 	}
 	return false;
 }
+
 bool assign_OverexcitationLimiterDynamics_ExcitationSystemDynamics(BaseClass*, BaseClass*);
 bool assign_ExcitationSystemDynamics_OverexcitationLimiterDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -88,6 +87,7 @@ bool assign_ExcitationSystemDynamics_OverexcitationLimiterDynamics(BaseClass* Ba
 	}
 	return false;
 }
+
 bool assign_PFVArControllerType1Dynamics_ExcitationSystemDynamics(BaseClass*, BaseClass*);
 bool assign_ExcitationSystemDynamics_PFVArControllerType1Dynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -104,6 +104,7 @@ bool assign_ExcitationSystemDynamics_PFVArControllerType1Dynamics(BaseClass* Bas
 	}
 	return false;
 }
+
 bool assign_PFVArControllerType2Dynamics_ExcitationSystemDynamics(BaseClass*, BaseClass*);
 bool assign_ExcitationSystemDynamics_PFVArControllerType2Dynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -120,6 +121,7 @@ bool assign_ExcitationSystemDynamics_PFVArControllerType2Dynamics(BaseClass* Bas
 	}
 	return false;
 }
+
 bool assign_PowerSystemStabilizerDynamics_ExcitationSystemDynamics(BaseClass*, BaseClass*);
 bool assign_ExcitationSystemDynamics_PowerSystemStabilizerDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -136,6 +138,7 @@ bool assign_ExcitationSystemDynamics_PowerSystemStabilizerDynamics(BaseClass* Ba
 	}
 	return false;
 }
+
 bool assign_SynchronousMachineDynamics_ExcitationSystemDynamics(BaseClass*, BaseClass*);
 bool assign_ExcitationSystemDynamics_SynchronousMachineDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -152,6 +155,7 @@ bool assign_ExcitationSystemDynamics_SynchronousMachineDynamics(BaseClass* BaseC
 	}
 	return false;
 }
+
 bool assign_UnderexcitationLimiterDynamics_ExcitationSystemDynamics(BaseClass*, BaseClass*);
 bool assign_ExcitationSystemDynamics_UnderexcitationLimiterDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -168,6 +172,7 @@ bool assign_ExcitationSystemDynamics_UnderexcitationLimiterDynamics(BaseClass* B
 	}
 	return false;
 }
+
 bool assign_VoltageCompensatorDynamics_ExcitationSystemDynamics(BaseClass*, BaseClass*);
 bool assign_ExcitationSystemDynamics_VoltageCompensatorDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -186,9 +191,14 @@ bool assign_ExcitationSystemDynamics_VoltageCompensatorDynamics(BaseClass* BaseC
 }
 
 
+
+
+
+
 bool get_ExcitationSystemDynamics_SynchronousMachineDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const ExcitationSystemDynamics* element = dynamic_cast<const ExcitationSystemDynamics*>(BaseClass_ptr1))
+	const ExcitationSystemDynamics* element = dynamic_cast<const ExcitationSystemDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->SynchronousMachineDynamics != 0)
 		{
@@ -200,6 +210,7 @@ bool get_ExcitationSystemDynamics_SynchronousMachineDynamics(const BaseClass* Ba
 }
 
 
+
 const char ExcitationSystemDynamics::debugName[] = "ExcitationSystemDynamics";
 const char* ExcitationSystemDynamics::debugString() const
 {
@@ -208,7 +219,7 @@ const char* ExcitationSystemDynamics::debugString() const
 
 void ExcitationSystemDynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ExcitationSystemDynamics"), &ExcitationSystemDynamics_factory));
+	factory_map.emplace("cim:ExcitationSystemDynamics", &ExcitationSystemDynamics_factory);
 }
 
 void ExcitationSystemDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -217,14 +228,14 @@ void ExcitationSystemDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std
 
 void ExcitationSystemDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ExcitationSystemDynamics.DiscontinuousExcitationControlDynamics"), &assign_ExcitationSystemDynamics_DiscontinuousExcitationControlDynamics));
-	assign_map.insert(std::make_pair(std::string("cim:ExcitationSystemDynamics.OverexcitationLimiterDynamics"), &assign_ExcitationSystemDynamics_OverexcitationLimiterDynamics));
-	assign_map.insert(std::make_pair(std::string("cim:ExcitationSystemDynamics.PFVArControllerType1Dynamics"), &assign_ExcitationSystemDynamics_PFVArControllerType1Dynamics));
-	assign_map.insert(std::make_pair(std::string("cim:ExcitationSystemDynamics.PFVArControllerType2Dynamics"), &assign_ExcitationSystemDynamics_PFVArControllerType2Dynamics));
-	assign_map.insert(std::make_pair(std::string("cim:ExcitationSystemDynamics.PowerSystemStabilizerDynamics"), &assign_ExcitationSystemDynamics_PowerSystemStabilizerDynamics));
-	assign_map.insert(std::make_pair(std::string("cim:ExcitationSystemDynamics.SynchronousMachineDynamics"), &assign_ExcitationSystemDynamics_SynchronousMachineDynamics));
-	assign_map.insert(std::make_pair(std::string("cim:ExcitationSystemDynamics.UnderexcitationLimiterDynamics"), &assign_ExcitationSystemDynamics_UnderexcitationLimiterDynamics));
-	assign_map.insert(std::make_pair(std::string("cim:ExcitationSystemDynamics.VoltageCompensatorDynamics"), &assign_ExcitationSystemDynamics_VoltageCompensatorDynamics));
+	assign_map.emplace("cim:ExcitationSystemDynamics.DiscontinuousExcitationControlDynamics", &assign_ExcitationSystemDynamics_DiscontinuousExcitationControlDynamics);
+	assign_map.emplace("cim:ExcitationSystemDynamics.OverexcitationLimiterDynamics", &assign_ExcitationSystemDynamics_OverexcitationLimiterDynamics);
+	assign_map.emplace("cim:ExcitationSystemDynamics.PFVArControllerType1Dynamics", &assign_ExcitationSystemDynamics_PFVArControllerType1Dynamics);
+	assign_map.emplace("cim:ExcitationSystemDynamics.PFVArControllerType2Dynamics", &assign_ExcitationSystemDynamics_PFVArControllerType2Dynamics);
+	assign_map.emplace("cim:ExcitationSystemDynamics.PowerSystemStabilizerDynamics", &assign_ExcitationSystemDynamics_PowerSystemStabilizerDynamics);
+	assign_map.emplace("cim:ExcitationSystemDynamics.SynchronousMachineDynamics", &assign_ExcitationSystemDynamics_SynchronousMachineDynamics);
+	assign_map.emplace("cim:ExcitationSystemDynamics.UnderexcitationLimiterDynamics", &assign_ExcitationSystemDynamics_UnderexcitationLimiterDynamics);
+	assign_map.emplace("cim:ExcitationSystemDynamics.VoltageCompensatorDynamics", &assign_ExcitationSystemDynamics_VoltageCompensatorDynamics);
 }
 
 void ExcitationSystemDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

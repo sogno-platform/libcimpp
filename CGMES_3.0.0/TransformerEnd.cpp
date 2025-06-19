@@ -12,15 +12,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "PhaseTapChanger.hpp"
 #include "RatioTapChanger.hpp"
 #include "Terminal.hpp"
-#include "Integer.hpp"
-#include "Boolean.hpp"
-#include "Resistance.hpp"
-#include "Reactance.hpp"
 
 using namespace CIMPP;
 
-TransformerEnd::TransformerEnd() : BaseVoltage(nullptr), PhaseTapChanger(nullptr), RatioTapChanger(nullptr), Terminal(nullptr) {};
-TransformerEnd::~TransformerEnd() {};
+TransformerEnd::TransformerEnd() : BaseVoltage(nullptr), PhaseTapChanger(nullptr), RatioTapChanger(nullptr), Terminal(nullptr) {}
+TransformerEnd::~TransformerEnd() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -55,60 +51,6 @@ TransformerEnd::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_TransformerEnd_endNumber(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (TransformerEnd* element = dynamic_cast<TransformerEnd*>(BaseClass_ptr1))
-	{
-		buffer >> element->endNumber;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_TransformerEnd_grounded(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (TransformerEnd* element = dynamic_cast<TransformerEnd*>(BaseClass_ptr1))
-	{
-		buffer >> element->grounded;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_TransformerEnd_rground(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (TransformerEnd* element = dynamic_cast<TransformerEnd*>(BaseClass_ptr1))
-	{
-		buffer >> element->rground;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_TransformerEnd_xground(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (TransformerEnd* element = dynamic_cast<TransformerEnd*>(BaseClass_ptr1))
-	{
-		buffer >> element->xground;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_BaseVoltage_TransformerEnds(BaseClass*, BaseClass*);
 bool assign_TransformerEnd_BaseVoltage(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -125,6 +67,7 @@ bool assign_TransformerEnd_BaseVoltage(BaseClass* BaseClass_ptr1, BaseClass* Bas
 	}
 	return false;
 }
+
 bool assign_PhaseTapChanger_TransformerEnd(BaseClass*, BaseClass*);
 bool assign_TransformerEnd_PhaseTapChanger(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -141,6 +84,7 @@ bool assign_TransformerEnd_PhaseTapChanger(BaseClass* BaseClass_ptr1, BaseClass*
 	}
 	return false;
 }
+
 bool assign_RatioTapChanger_TransformerEnd(BaseClass*, BaseClass*);
 bool assign_TransformerEnd_RatioTapChanger(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -157,6 +101,7 @@ bool assign_TransformerEnd_RatioTapChanger(BaseClass* BaseClass_ptr1, BaseClass*
 	}
 	return false;
 }
+
 bool assign_Terminal_TransformerEnd(BaseClass*, BaseClass*);
 bool assign_TransformerEnd_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -174,9 +119,96 @@ bool assign_TransformerEnd_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseCl
 	return false;
 }
 
+bool assign_TransformerEnd_endNumber(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	TransformerEnd* element = dynamic_cast<TransformerEnd*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->endNumber;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_TransformerEnd_grounded(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	TransformerEnd* element = dynamic_cast<TransformerEnd*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->grounded;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_TransformerEnd_rground(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	TransformerEnd* element = dynamic_cast<TransformerEnd*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->rground;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_TransformerEnd_xground(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	TransformerEnd* element = dynamic_cast<TransformerEnd*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->xground;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_TransformerEnd_BaseVoltage(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const TransformerEnd* element = dynamic_cast<const TransformerEnd*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->BaseVoltage != 0)
+		{
+			BaseClass_list.push_back(element->BaseVoltage);
+			return true;
+		}
+	}
+	return false;
+}
+
+
+
+bool get_TransformerEnd_Terminal(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const TransformerEnd* element = dynamic_cast<const TransformerEnd*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->Terminal != 0)
+		{
+			BaseClass_list.push_back(element->Terminal);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_TransformerEnd_endNumber(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TransformerEnd* element = dynamic_cast<const TransformerEnd*>(BaseClass_ptr1))
+	const TransformerEnd* element = dynamic_cast<const TransformerEnd*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->endNumber;
 		if (!buffer.str().empty())
@@ -190,7 +222,8 @@ bool get_TransformerEnd_endNumber(const BaseClass* BaseClass_ptr1, std::stringst
 
 bool get_TransformerEnd_grounded(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TransformerEnd* element = dynamic_cast<const TransformerEnd*>(BaseClass_ptr1))
+	const TransformerEnd* element = dynamic_cast<const TransformerEnd*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->grounded;
 		if (!buffer.str().empty())
@@ -204,7 +237,8 @@ bool get_TransformerEnd_grounded(const BaseClass* BaseClass_ptr1, std::stringstr
 
 bool get_TransformerEnd_rground(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TransformerEnd* element = dynamic_cast<const TransformerEnd*>(BaseClass_ptr1))
+	const TransformerEnd* element = dynamic_cast<const TransformerEnd*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->rground;
 		if (!buffer.str().empty())
@@ -218,7 +252,8 @@ bool get_TransformerEnd_rground(const BaseClass* BaseClass_ptr1, std::stringstre
 
 bool get_TransformerEnd_xground(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TransformerEnd* element = dynamic_cast<const TransformerEnd*>(BaseClass_ptr1))
+	const TransformerEnd* element = dynamic_cast<const TransformerEnd*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->xground;
 		if (!buffer.str().empty())
@@ -230,34 +265,6 @@ bool get_TransformerEnd_xground(const BaseClass* BaseClass_ptr1, std::stringstre
 	return false;
 }
 
-
-bool get_TransformerEnd_BaseVoltage(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const TransformerEnd* element = dynamic_cast<const TransformerEnd*>(BaseClass_ptr1))
-	{
-		if (element->BaseVoltage != 0)
-		{
-			BaseClass_list.push_back(element->BaseVoltage);
-			return true;
-		}
-	}
-	return false;
-}
-
-bool get_TransformerEnd_Terminal(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const TransformerEnd* element = dynamic_cast<const TransformerEnd*>(BaseClass_ptr1))
-	{
-		if (element->Terminal != 0)
-		{
-			BaseClass_list.push_back(element->Terminal);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char TransformerEnd::debugName[] = "TransformerEnd";
 const char* TransformerEnd::debugString() const
 {
@@ -266,23 +273,23 @@ const char* TransformerEnd::debugString() const
 
 void TransformerEnd::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:TransformerEnd"), &TransformerEnd_factory));
+	factory_map.emplace("cim:TransformerEnd", &TransformerEnd_factory);
 }
 
 void TransformerEnd::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:TransformerEnd.endNumber"), &assign_TransformerEnd_endNumber));
-	assign_map.insert(std::make_pair(std::string("cim:TransformerEnd.grounded"), &assign_TransformerEnd_grounded));
-	assign_map.insert(std::make_pair(std::string("cim:TransformerEnd.rground"), &assign_TransformerEnd_rground));
-	assign_map.insert(std::make_pair(std::string("cim:TransformerEnd.xground"), &assign_TransformerEnd_xground));
+	assign_map.emplace("cim:TransformerEnd.endNumber", &assign_TransformerEnd_endNumber);
+	assign_map.emplace("cim:TransformerEnd.grounded", &assign_TransformerEnd_grounded);
+	assign_map.emplace("cim:TransformerEnd.rground", &assign_TransformerEnd_rground);
+	assign_map.emplace("cim:TransformerEnd.xground", &assign_TransformerEnd_xground);
 }
 
 void TransformerEnd::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:TransformerEnd.BaseVoltage"), &assign_TransformerEnd_BaseVoltage));
-	assign_map.insert(std::make_pair(std::string("cim:TransformerEnd.PhaseTapChanger"), &assign_TransformerEnd_PhaseTapChanger));
-	assign_map.insert(std::make_pair(std::string("cim:TransformerEnd.RatioTapChanger"), &assign_TransformerEnd_RatioTapChanger));
-	assign_map.insert(std::make_pair(std::string("cim:TransformerEnd.Terminal"), &assign_TransformerEnd_Terminal));
+	assign_map.emplace("cim:TransformerEnd.BaseVoltage", &assign_TransformerEnd_BaseVoltage);
+	assign_map.emplace("cim:TransformerEnd.PhaseTapChanger", &assign_TransformerEnd_PhaseTapChanger);
+	assign_map.emplace("cim:TransformerEnd.RatioTapChanger", &assign_TransformerEnd_RatioTapChanger);
+	assign_map.emplace("cim:TransformerEnd.Terminal", &assign_TransformerEnd_Terminal);
 }
 
 void TransformerEnd::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

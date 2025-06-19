@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-ConformLoadSchedule::ConformLoadSchedule() : ConformLoadGroup(nullptr) {};
-ConformLoadSchedule::~ConformLoadSchedule() {};
+ConformLoadSchedule::ConformLoadSchedule() : ConformLoadGroup(nullptr) {}
+ConformLoadSchedule::~ConformLoadSchedule() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ ConformLoadSchedule::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_ConformLoadGroup_ConformLoadSchedules(BaseClass*, BaseClass*);
 bool assign_ConformLoadSchedule_ConformLoadGroup(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -59,10 +57,10 @@ bool assign_ConformLoadSchedule_ConformLoadGroup(BaseClass* BaseClass_ptr1, Base
 	return false;
 }
 
-
 bool get_ConformLoadSchedule_ConformLoadGroup(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const ConformLoadSchedule* element = dynamic_cast<const ConformLoadSchedule*>(BaseClass_ptr1))
+	const ConformLoadSchedule* element = dynamic_cast<const ConformLoadSchedule*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->ConformLoadGroup != 0)
 		{
@@ -73,7 +71,6 @@ bool get_ConformLoadSchedule_ConformLoadGroup(const BaseClass* BaseClass_ptr1, s
 	return false;
 }
 
-
 const char ConformLoadSchedule::debugName[] = "ConformLoadSchedule";
 const char* ConformLoadSchedule::debugString() const
 {
@@ -82,7 +79,7 @@ const char* ConformLoadSchedule::debugString() const
 
 void ConformLoadSchedule::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ConformLoadSchedule"), &ConformLoadSchedule_factory));
+	factory_map.emplace("cim:ConformLoadSchedule", &ConformLoadSchedule_factory);
 }
 
 void ConformLoadSchedule::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -91,7 +88,7 @@ void ConformLoadSchedule::addPrimitiveAssignFnsToMap(std::unordered_map<std::str
 
 void ConformLoadSchedule::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ConformLoadSchedule.ConformLoadGroup"), &assign_ConformLoadSchedule_ConformLoadGroup));
+	assign_map.emplace("cim:ConformLoadSchedule.ConformLoadGroup", &assign_ConformLoadSchedule_ConformLoadGroup);
 }
 
 void ConformLoadSchedule::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

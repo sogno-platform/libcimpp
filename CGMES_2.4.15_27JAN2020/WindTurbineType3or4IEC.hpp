@@ -19,9 +19,7 @@ namespace CIMPP
 	class WindContQIEC;
 	class WindProtectionIEC;
 
-	/*
-	Parent class supporting relationships to IEC wind turbines Type 3 and 4 and wind plant including their control models.
-	*/
+	/** \brief Parent class supporting relationships to IEC wind turbines Type 3 and 4 and wind plant including their control models. */
 	class WindTurbineType3or4IEC : public WindTurbineType3or4Dynamics
 	{
 	public:
@@ -29,9 +27,14 @@ namespace CIMPP
 		WindTurbineType3or4IEC();
 		~WindTurbineType3or4IEC() override;
 
-		CIMPP::WindContQIEC* WIndContQIEC;  /* Wind control Q model associated with this wind turbine type 3 or 4 model. Default: 0 */
-		CIMPP::WindContCurrLimIEC* WindContCurrLimIEC;  /* Wind control current limitation model associated with this wind turbine type 3 or 4 model. Default: 0 */
-		CIMPP::WindProtectionIEC* WindProtectionIEC;  /* Wind turbune protection model associated with this wind generator type 3 or 4 model. Default: 0 */
+		/** \brief Wind control Q model associated with this wind turbine type 3 or 4 model. Default: 0 */
+		CIMPP::WindContQIEC* WIndContQIEC;
+
+		/** \brief Wind control current limitation model associated with this wind turbine type 3 or 4 model. Default: 0 */
+		CIMPP::WindContCurrLimIEC* WindContCurrLimIEC;
+
+		/** \brief Wind turbune protection model associated with this wind generator type 3 or 4 model. Default: 0 */
+		CIMPP::WindProtectionIEC* WindProtectionIEC;
 
 		static const char debugName[];
 		const char* debugString() const override;

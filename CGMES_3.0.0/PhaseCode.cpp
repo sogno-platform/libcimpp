@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "PhaseCode")
+		if (EnumSymbol.substr(0, pos) != "PhaseCode")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,132 +50,132 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "ABCN")
+		if (EnumSymbol == "ABCN")
 		{
 			rop = PhaseCode::ABCN;
 			return lop;
 		}
-		if(EnumSymbol == "ABC")
+		if (EnumSymbol == "ABC")
 		{
 			rop = PhaseCode::ABC;
 			return lop;
 		}
-		if(EnumSymbol == "ABN")
+		if (EnumSymbol == "ABN")
 		{
 			rop = PhaseCode::ABN;
 			return lop;
 		}
-		if(EnumSymbol == "ACN")
+		if (EnumSymbol == "ACN")
 		{
 			rop = PhaseCode::ACN;
 			return lop;
 		}
-		if(EnumSymbol == "BCN")
+		if (EnumSymbol == "BCN")
 		{
 			rop = PhaseCode::BCN;
 			return lop;
 		}
-		if(EnumSymbol == "AB")
+		if (EnumSymbol == "AB")
 		{
 			rop = PhaseCode::AB;
 			return lop;
 		}
-		if(EnumSymbol == "AC")
+		if (EnumSymbol == "AC")
 		{
 			rop = PhaseCode::AC;
 			return lop;
 		}
-		if(EnumSymbol == "BC")
+		if (EnumSymbol == "BC")
 		{
 			rop = PhaseCode::BC;
 			return lop;
 		}
-		if(EnumSymbol == "AN")
+		if (EnumSymbol == "AN")
 		{
 			rop = PhaseCode::AN;
 			return lop;
 		}
-		if(EnumSymbol == "BN")
+		if (EnumSymbol == "BN")
 		{
 			rop = PhaseCode::BN;
 			return lop;
 		}
-		if(EnumSymbol == "CN")
+		if (EnumSymbol == "CN")
 		{
 			rop = PhaseCode::CN;
 			return lop;
 		}
-		if(EnumSymbol == "A")
+		if (EnumSymbol == "A")
 		{
 			rop = PhaseCode::A;
 			return lop;
 		}
-		if(EnumSymbol == "B")
+		if (EnumSymbol == "B")
 		{
 			rop = PhaseCode::B;
 			return lop;
 		}
-		if(EnumSymbol == "C")
+		if (EnumSymbol == "C")
 		{
 			rop = PhaseCode::C;
 			return lop;
 		}
-		if(EnumSymbol == "N")
+		if (EnumSymbol == "N")
 		{
 			rop = PhaseCode::N;
 			return lop;
 		}
-		if(EnumSymbol == "s1N")
+		if (EnumSymbol == "s1N")
 		{
 			rop = PhaseCode::s1N;
 			return lop;
 		}
-		if(EnumSymbol == "s2N")
+		if (EnumSymbol == "s2N")
 		{
 			rop = PhaseCode::s2N;
 			return lop;
 		}
-		if(EnumSymbol == "s12N")
+		if (EnumSymbol == "s12N")
 		{
 			rop = PhaseCode::s12N;
 			return lop;
 		}
-		if(EnumSymbol == "s1")
+		if (EnumSymbol == "s1")
 		{
 			rop = PhaseCode::s1;
 			return lop;
 		}
-		if(EnumSymbol == "s2")
+		if (EnumSymbol == "s2")
 		{
 			rop = PhaseCode::s2;
 			return lop;
 		}
-		if(EnumSymbol == "s12")
+		if (EnumSymbol == "s12")
 		{
 			rop = PhaseCode::s12;
 			return lop;
 		}
-		if(EnumSymbol == "none")
+		if (EnumSymbol == "none")
 		{
 			rop = PhaseCode::none;
 			return lop;
 		}
-		if(EnumSymbol == "X")
+		if (EnumSymbol == "X")
 		{
 			rop = PhaseCode::X;
 			return lop;
 		}
-		if(EnumSymbol == "XY")
+		if (EnumSymbol == "XY")
 		{
 			rop = PhaseCode::XY;
 			return lop;
 		}
-		if(EnumSymbol == "XN")
+		if (EnumSymbol == "XN")
 		{
 			rop = PhaseCode::XN;
 			return lop;
 		}
-		if(EnumSymbol == "XYN")
+		if (EnumSymbol == "XYN")
 		{
 			rop = PhaseCode::XYN;
 			return lop;

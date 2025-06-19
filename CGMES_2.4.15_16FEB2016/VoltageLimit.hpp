@@ -17,9 +17,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Operational limit applied to voltage.
-	*/
+	/** \brief Operational limit applied to voltage. */
 	class VoltageLimit : public OperationalLimit
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		VoltageLimit();
 		~VoltageLimit() override;
 
-		CIMPP::Voltage value;  /* Limit on voltage. High or low limit nature of the limit depends upon the properties of the operational limit type. Default: nullptr */
+		/** \brief Limit on voltage. High or low limit nature of the limit depends upon the properties of the operational limit type. Default: nullptr */
+		CIMPP::Voltage value;
 
 		static const char debugName[];
 		const char* debugString() const override;

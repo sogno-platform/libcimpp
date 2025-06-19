@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "Source")
+		if (EnumSymbol.substr(0, pos) != "Source")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,17 +50,17 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "PROCESS")
+		if (EnumSymbol == "PROCESS")
 		{
 			rop = Source::PROCESS;
 			return lop;
 		}
-		if(EnumSymbol == "DEFAULTED")
+		if (EnumSymbol == "DEFAULTED")
 		{
 			rop = Source::DEFAULTED;
 			return lop;
 		}
-		if(EnumSymbol == "SUBSTITUTED")
+		if (EnumSymbol == "SUBSTITUTED")
 		{
 			rop = Source::SUBSTITUTED;
 			return lop;

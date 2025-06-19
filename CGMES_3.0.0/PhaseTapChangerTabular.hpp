@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class PhaseTapChangerTable;
 
-	/*
-	Describes a tap changer with a table defining the relation between the tap step and the phase angle difference across the transformer.
-	*/
+	/** \brief Describes a tap changer with a table defining the relation between the tap step and the phase angle difference across the transformer. */
 	class PhaseTapChangerTabular : public PhaseTapChanger
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		PhaseTapChangerTabular();
 		~PhaseTapChangerTabular() override;
 
-		CIMPP::PhaseTapChangerTable* PhaseTapChangerTable;  /* The phase tap changer table for this phase tap changer. Default: 0 */
+		/** \brief The phase tap changer table for this phase tap changer. Default: 0 */
+		CIMPP::PhaseTapChangerTable* PhaseTapChangerTable;
 
 		static const char debugName[];
 		const char* debugString() const override;

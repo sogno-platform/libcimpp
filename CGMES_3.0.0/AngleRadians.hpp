@@ -9,9 +9,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Phase angle in radians.
-	*/
+	/** \brief Phase angle in radians. */
 	class AngleRadians
 	{
 	public:

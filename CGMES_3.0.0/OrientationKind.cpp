@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "OrientationKind")
+		if (EnumSymbol.substr(0, pos) != "OrientationKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,12 +50,12 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "positive")
+		if (EnumSymbol == "positive")
 		{
 			rop = OrientationKind::positive;
 			return lop;
 		}
-		if(EnumSymbol == "negative")
+		if (EnumSymbol == "negative")
 		{
 			rop = OrientationKind::negative;
 			return lop;

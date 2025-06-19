@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class TransformerEnd;
 
-	/*
-	A transformer phase shifting tap model that controls the phase angle difference across the power transformer and potentially the active power flow through the power transformer.  This phase tap model may also impact the voltage magnitude.
-	*/
+	/** \brief A transformer phase shifting tap model that controls the phase angle difference across the power transformer and potentially the active power flow through the power transformer.  This phase tap model may also impact the voltage magnitude. */
 	class PhaseTapChanger : public TapChanger
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		PhaseTapChanger();
 		~PhaseTapChanger() override;
 
-		CIMPP::TransformerEnd* TransformerEnd;  /* Transformer end to which this phase tap changer belongs. Default: 0 */
+		/** \brief Transformer end to which this phase tap changer belongs. Default: 0 */
+		CIMPP::TransformerEnd* TransformerEnd;
 
 		static const char debugName[];
 		const char* debugString() const override;

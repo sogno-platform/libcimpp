@@ -9,13 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "PowerElectronicsConnection.hpp"
-#include "ActivePower.hpp"
-#include "ActivePower.hpp"
 
 using namespace CIMPP;
 
-PowerElectronicsUnit::PowerElectronicsUnit() : PowerElectronicsConnection(nullptr) {};
-PowerElectronicsUnit::~PowerElectronicsUnit() {};
+PowerElectronicsUnit::PowerElectronicsUnit() : PowerElectronicsConnection(nullptr) {}
+PowerElectronicsUnit::~PowerElectronicsUnit() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -45,34 +43,6 @@ PowerElectronicsUnit::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_PowerElectronicsUnit_maxP(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (PowerElectronicsUnit* element = dynamic_cast<PowerElectronicsUnit*>(BaseClass_ptr1))
-	{
-		buffer >> element->maxP;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_PowerElectronicsUnit_minP(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (PowerElectronicsUnit* element = dynamic_cast<PowerElectronicsUnit*>(BaseClass_ptr1))
-	{
-		buffer >> element->minP;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_PowerElectronicsConnection_PowerElectronicsUnit(BaseClass*, BaseClass*);
 bool assign_PowerElectronicsUnit_PowerElectronicsConnection(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -90,9 +60,39 @@ bool assign_PowerElectronicsUnit_PowerElectronicsConnection(BaseClass* BaseClass
 	return false;
 }
 
+bool assign_PowerElectronicsUnit_maxP(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	PowerElectronicsUnit* element = dynamic_cast<PowerElectronicsUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->maxP;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_PowerElectronicsUnit_minP(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	PowerElectronicsUnit* element = dynamic_cast<PowerElectronicsUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->minP;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_PowerElectronicsUnit_maxP(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PowerElectronicsUnit* element = dynamic_cast<const PowerElectronicsUnit*>(BaseClass_ptr1))
+	const PowerElectronicsUnit* element = dynamic_cast<const PowerElectronicsUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->maxP;
 		if (!buffer.str().empty())
@@ -106,7 +106,8 @@ bool get_PowerElectronicsUnit_maxP(const BaseClass* BaseClass_ptr1, std::strings
 
 bool get_PowerElectronicsUnit_minP(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PowerElectronicsUnit* element = dynamic_cast<const PowerElectronicsUnit*>(BaseClass_ptr1))
+	const PowerElectronicsUnit* element = dynamic_cast<const PowerElectronicsUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->minP;
 		if (!buffer.str().empty())
@@ -118,8 +119,6 @@ bool get_PowerElectronicsUnit_minP(const BaseClass* BaseClass_ptr1, std::strings
 	return false;
 }
 
-
-
 const char PowerElectronicsUnit::debugName[] = "PowerElectronicsUnit";
 const char* PowerElectronicsUnit::debugString() const
 {
@@ -128,18 +127,18 @@ const char* PowerElectronicsUnit::debugString() const
 
 void PowerElectronicsUnit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:PowerElectronicsUnit"), &PowerElectronicsUnit_factory));
+	factory_map.emplace("cim:PowerElectronicsUnit", &PowerElectronicsUnit_factory);
 }
 
 void PowerElectronicsUnit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:PowerElectronicsUnit.maxP"), &assign_PowerElectronicsUnit_maxP));
-	assign_map.insert(std::make_pair(std::string("cim:PowerElectronicsUnit.minP"), &assign_PowerElectronicsUnit_minP));
+	assign_map.emplace("cim:PowerElectronicsUnit.maxP", &assign_PowerElectronicsUnit_maxP);
+	assign_map.emplace("cim:PowerElectronicsUnit.minP", &assign_PowerElectronicsUnit_minP);
 }
 
 void PowerElectronicsUnit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:PowerElectronicsUnit.PowerElectronicsConnection"), &assign_PowerElectronicsUnit_PowerElectronicsConnection));
+	assign_map.emplace("cim:PowerElectronicsUnit.PowerElectronicsConnection", &assign_PowerElectronicsUnit_PowerElectronicsConnection);
 }
 
 void PowerElectronicsUnit::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

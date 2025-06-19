@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Power sensitive stabilizer model.
-	*/
+	/** \brief Power sensitive stabilizer model. */
 	class PssSB4 : public PowerSystemStabilizerDynamics
 	{
 	public:
@@ -28,17 +26,38 @@ namespace CIMPP
 		PssSB4();
 		~PssSB4() override;
 
-		CIMPP::PU kx;  /* Gain (Kx). Default: nullptr */
-		CIMPP::Seconds ta;  /* Time constant (Ta). Default: nullptr */
-		CIMPP::Seconds tb;  /* Time constant (Tb). Default: nullptr */
-		CIMPP::Seconds tc;  /* Time constant (Tc). Default: nullptr */
-		CIMPP::Seconds td;  /* Time constant (Td). Default: nullptr */
-		CIMPP::Seconds te;  /* Time constant (Te). Default: nullptr */
-		CIMPP::Seconds tt;  /* Time constant (Tt). Default: nullptr */
-		CIMPP::Seconds tx1;  /* Reset time constant (Tx1). Default: nullptr */
-		CIMPP::Seconds tx2;  /* Time constant (Tx2). Default: nullptr */
-		CIMPP::PU vsmax;  /* Limiter (Vsmax). Default: nullptr */
-		CIMPP::PU vsmin;  /* Limiter (Vsmin). Default: nullptr */
+		/** \brief Gain (Kx). Default: nullptr */
+		CIMPP::PU kx;
+
+		/** \brief Time constant (Ta). Default: nullptr */
+		CIMPP::Seconds ta;
+
+		/** \brief Time constant (Tb). Default: nullptr */
+		CIMPP::Seconds tb;
+
+		/** \brief Time constant (Tc). Default: nullptr */
+		CIMPP::Seconds tc;
+
+		/** \brief Time constant (Td). Default: nullptr */
+		CIMPP::Seconds td;
+
+		/** \brief Time constant (Te). Default: nullptr */
+		CIMPP::Seconds te;
+
+		/** \brief Time constant (Tt). Default: nullptr */
+		CIMPP::Seconds tt;
+
+		/** \brief Reset time constant (Tx1). Default: nullptr */
+		CIMPP::Seconds tx1;
+
+		/** \brief Time constant (Tx2). Default: nullptr */
+		CIMPP::Seconds tx2;
+
+		/** \brief Limiter (Vsmax). Default: nullptr */
+		CIMPP::PU vsmax;
+
+		/** \brief Limiter (Vsmin). Default: nullptr */
+		CIMPP::PU vsmin;
 
 		static const char debugName[];
 		const char* debugString() const override;

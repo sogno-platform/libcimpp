@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class SolarPowerPlant;
 
-	/*
-	A solar thermal generating unit, connected to the grid by means of a rotating machine.  This class does not represent photovoltaic (PV) generation.
-	*/
+	/** \brief A solar thermal generating unit, connected to the grid by means of a rotating machine.  This class does not represent photovoltaic (PV) generation. */
 	class SolarGeneratingUnit : public GeneratingUnit
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		SolarGeneratingUnit();
 		~SolarGeneratingUnit() override;
 
-		CIMPP::SolarPowerPlant* SolarPowerPlant;  /* A solar power plant may have solar generating units. Default: 0 */
+		/** \brief A solar power plant may have solar generating units. Default: 0 */
+		CIMPP::SolarPowerPlant* SolarPowerPlant;
 
 		static const char debugName[];
 		const char* debugString() const override;

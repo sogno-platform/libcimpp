@@ -9,29 +9,19 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Type of connection for the UEL input used for static excitation systems type 7B.
-	*/
+	/** \brief Type of connection for the UEL input used for static excitation systems type 7B. */
 	class ExcST7BUELselectorKind
 	{
 	public:
 		enum ExcST7BUELselectorKind_ENUM
 		{
-			/**
-			 * No UEL input is used.
-			 */
+			/** No UEL input is used. */
 			noUELinput,
-			/**
-			 * The signal is added to Vref.
-			 */
+			/** The signal is added to Vref. */
 			addVref,
-			/**
-			 * The signal is connected in the input of the HV gate.
-			 */
+			/** The signal is connected in the input of the HV gate. */
 			inputHVgate,
-			/**
-			 * The signal is connected in the output of the HV gate.
-			 */
+			/** The signal is connected in the output of the HV gate. */
 			outputHVgate,
 		};
 

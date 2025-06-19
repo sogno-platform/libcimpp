@@ -20,9 +20,7 @@ namespace CIMPP
 	class DiagramObject;
 	class DiagramStyle;
 
-	/*
-	The diagram being exchanged.  The coordinate system is a standard Cartesian coordinate system and the orientation attribute defines the orientation.
-	*/
+	/** \brief The diagram being exchanged.  The coordinate system is a standard Cartesian coordinate system and the orientation attribute defines the orientation. */
 	class Diagram : public IdentifiedObject
 	{
 	public:
@@ -30,13 +28,26 @@ namespace CIMPP
 		Diagram();
 		~Diagram() override;
 
-		std::list<CIMPP::DiagramObject*> DiagramElements;  /* A diagram is made up of multiple diagram objects. Default: 0 */
-		CIMPP::DiagramStyle* DiagramStyle;  /* A Diagram may have a DiagramStyle. Default: 0 */
-		CIMPP::OrientationKind orientation;  /* Coordinate system orientation of the diagram. Default: 0 */
-		CIMPP::Simple_Float x1InitialView;  /* X coordinate of the first corner of the initial view. Default: nullptr */
-		CIMPP::Simple_Float x2InitialView;  /* X coordinate of the second corner of the initial view. Default: nullptr */
-		CIMPP::Simple_Float y1InitialView;  /* Y coordinate of the first corner of the initial view. Default: nullptr */
-		CIMPP::Simple_Float y2InitialView;  /* Y coordinate of the second corner of the initial view. Default: nullptr */
+		/** \brief A diagram is made up of multiple diagram objects. Default: 0 */
+		std::list<CIMPP::DiagramObject*> DiagramElements;
+
+		/** \brief A Diagram may have a DiagramStyle. Default: 0 */
+		CIMPP::DiagramStyle* DiagramStyle;
+
+		/** \brief Coordinate system orientation of the diagram. Default: 0 */
+		CIMPP::OrientationKind orientation;
+
+		/** \brief X coordinate of the first corner of the initial view. Default: nullptr */
+		CIMPP::Simple_Float x1InitialView;
+
+		/** \brief X coordinate of the second corner of the initial view. Default: nullptr */
+		CIMPP::Simple_Float x2InitialView;
+
+		/** \brief Y coordinate of the first corner of the initial view. Default: nullptr */
+		CIMPP::Simple_Float y1InitialView;
+
+		/** \brief Y coordinate of the second corner of the initial view. Default: nullptr */
+		CIMPP::Simple_Float y2InitialView;
 
 		static const char debugName[];
 		const char* debugString() const override;

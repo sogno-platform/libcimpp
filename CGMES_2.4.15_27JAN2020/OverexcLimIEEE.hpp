@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	The over excitation limiter model is intended to represent the significant features of OELs necessary for some large-scale system studies. It is the result of a pragmatic approach to obtain a model that can be widely applied with attainable data from generator owners. An attempt to include all variations in the functionality of OELs and duplicate how they interact with the rest of the excitation systems would likely result in a level of application insufficient for the studies for which they are intended.  Reference: IEEE OEL 421.5-2005 Section 9.
-	*/
+	/** \brief The over excitation limiter model is intended to represent the significant features of OELs necessary for some large-scale system studies. It is the result of a pragmatic approach to obtain a model that can be widely applied with attainable data from generator owners. An attempt to include all variations in the functionality of OELs and duplicate how they interact with the rest of the excitation systems would likely result in a level of application insufficient for the studies for which they are intended.  Reference: IEEE OEL 421.5-2005 Section 9. */
 	class OverexcLimIEEE : public OverexcitationLimiterDynamics
 	{
 	public:
@@ -28,12 +26,23 @@ namespace CIMPP
 		OverexcLimIEEE();
 		~OverexcLimIEEE() override;
 
-		CIMPP::PU hyst;  /* OEL pickup/drop-out hysteresis (HYST).  Typical Value = 0.03. Default: nullptr */
-		CIMPP::PU ifdlim;  /* OEL timed field current limit (I).  Typical Value = 1.05. Default: nullptr */
-		CIMPP::PU ifdmax;  /* OEL instantaneous field current limit (I).  Typical Value = 1.5. Default: nullptr */
-		CIMPP::PU itfpu;  /* OEL timed field current limiter pickup level (I).  Typical Value = 1.05. Default: nullptr */
-		CIMPP::PU kcd;  /* OEL cooldown gain (K).  Typical Value = 1. Default: nullptr */
-		CIMPP::Simple_Float kramp;  /* OEL ramped limit rate (K).  Unit = PU/sec.  Typical Value = 10. Default: nullptr */
+		/** \brief OEL pickup/drop-out hysteresis (HYST).  Typical Value = 0.03. Default: nullptr */
+		CIMPP::PU hyst;
+
+		/** \brief OEL timed field current limit (I).  Typical Value = 1.05. Default: nullptr */
+		CIMPP::PU ifdlim;
+
+		/** \brief OEL instantaneous field current limit (I).  Typical Value = 1.5. Default: nullptr */
+		CIMPP::PU ifdmax;
+
+		/** \brief OEL timed field current limiter pickup level (I).  Typical Value = 1.05. Default: nullptr */
+		CIMPP::PU itfpu;
+
+		/** \brief OEL cooldown gain (K).  Typical Value = 1. Default: nullptr */
+		CIMPP::PU kcd;
+
+		/** \brief OEL ramped limit rate (K).  Unit = PU/sec.  Typical Value = 10. Default: nullptr */
+		CIMPP::Simple_Float kramp;
 
 		static const char debugName[];
 		const char* debugString() const override;

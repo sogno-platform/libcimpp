@@ -19,9 +19,7 @@ namespace CIMPP
 	class PositionPoint;
 	class PowerSystemResource;
 
-	/*
-	The place, scene, or point of something where someone or something has been, is, and/or will be at a given moment in time. It can be defined with one or more postition points (coordinates) in a given coordinate system.
-	*/
+	/** \brief The place, scene, or point of something where someone or something has been, is, and/or will be at a given moment in time. It can be defined with one or more postition points (coordinates) in a given coordinate system. */
 	class Location : public IdentifiedObject
 	{
 	public:
@@ -29,9 +27,14 @@ namespace CIMPP
 		Location();
 		~Location() override;
 
-		CIMPP::CoordinateSystem* CoordinateSystem;  /* Coordinate system used to describe position points of this location. Default: 0 */
-		std::list<CIMPP::PositionPoint*> PositionPoints;  /* Sequence of position points describing this location, expressed in coordinate system `Location.CoordinateSystem`. Default: 0 */
-		CIMPP::PowerSystemResource* PowerSystemResources;  /* All power system resources at this location. Default: 0 */
+		/** \brief Coordinate system used to describe position points of this location. Default: 0 */
+		CIMPP::CoordinateSystem* CoordinateSystem;
+
+		/** \brief Sequence of position points describing this location, expressed in coordinate system `Location.CoordinateSystem`. Default: 0 */
+		std::list<CIMPP::PositionPoint*> PositionPoints;
+
+		/** \brief All power system resources at this location. Default: 0 */
+		CIMPP::PowerSystemResource* PowerSystemResources;
 
 		static const char debugName[];
 		const char* debugString() const override;

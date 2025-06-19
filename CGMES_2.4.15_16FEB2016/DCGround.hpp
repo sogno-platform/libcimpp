@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A ground within a DC system.
-	*/
+	/** \brief A ground within a DC system. */
 	class DCGround : public DCConductingEquipment
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		DCGround();
 		~DCGround() override;
 
-		CIMPP::Inductance inductance;  /* Inductance to ground. Default: nullptr */
-		CIMPP::Resistance r;  /* Resistance to ground. Default: nullptr */
+		/** \brief Inductance to ground. Default: nullptr */
+		CIMPP::Inductance inductance;
+
+		/** \brief Resistance to ground. Default: nullptr */
+		CIMPP::Resistance r;
 
 		static const char debugName[];
 		const char* debugString() const override;

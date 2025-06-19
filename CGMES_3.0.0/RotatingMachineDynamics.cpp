@@ -8,17 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Float.hpp"
-#include "Seconds.hpp"
-#include "Float.hpp"
-#include "Float.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
 
 using namespace CIMPP;
 
-RotatingMachineDynamics::RotatingMachineDynamics() {};
-RotatingMachineDynamics::~RotatingMachineDynamics() {};
+RotatingMachineDynamics::RotatingMachineDynamics() {}
+RotatingMachineDynamics::~RotatingMachineDynamics() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -50,90 +44,94 @@ RotatingMachineDynamics::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_RotatingMachineDynamics_damping(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_RotatingMachineDynamics_damping(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (RotatingMachineDynamics* element = dynamic_cast<RotatingMachineDynamics*>(BaseClass_ptr1))
+	RotatingMachineDynamics* element = dynamic_cast<RotatingMachineDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->damping;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_RotatingMachineDynamics_inertia(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_RotatingMachineDynamics_inertia(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (RotatingMachineDynamics* element = dynamic_cast<RotatingMachineDynamics*>(BaseClass_ptr1))
+	RotatingMachineDynamics* element = dynamic_cast<RotatingMachineDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->inertia;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_RotatingMachineDynamics_saturationFactor(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_RotatingMachineDynamics_saturationFactor(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (RotatingMachineDynamics* element = dynamic_cast<RotatingMachineDynamics*>(BaseClass_ptr1))
+	RotatingMachineDynamics* element = dynamic_cast<RotatingMachineDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->saturationFactor;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_RotatingMachineDynamics_saturationFactor120(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_RotatingMachineDynamics_saturationFactor120(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (RotatingMachineDynamics* element = dynamic_cast<RotatingMachineDynamics*>(BaseClass_ptr1))
+	RotatingMachineDynamics* element = dynamic_cast<RotatingMachineDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->saturationFactor120;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_RotatingMachineDynamics_statorLeakageReactance(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_RotatingMachineDynamics_statorLeakageReactance(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (RotatingMachineDynamics* element = dynamic_cast<RotatingMachineDynamics*>(BaseClass_ptr1))
+	RotatingMachineDynamics* element = dynamic_cast<RotatingMachineDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->statorLeakageReactance;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_RotatingMachineDynamics_statorResistance(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_RotatingMachineDynamics_statorResistance(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (RotatingMachineDynamics* element = dynamic_cast<RotatingMachineDynamics*>(BaseClass_ptr1))
+	RotatingMachineDynamics* element = dynamic_cast<RotatingMachineDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->statorResistance;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_RotatingMachineDynamics_damping(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const RotatingMachineDynamics* element = dynamic_cast<const RotatingMachineDynamics*>(BaseClass_ptr1))
+	const RotatingMachineDynamics* element = dynamic_cast<const RotatingMachineDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->damping;
 		if (!buffer.str().empty())
@@ -147,7 +145,8 @@ bool get_RotatingMachineDynamics_damping(const BaseClass* BaseClass_ptr1, std::s
 
 bool get_RotatingMachineDynamics_inertia(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const RotatingMachineDynamics* element = dynamic_cast<const RotatingMachineDynamics*>(BaseClass_ptr1))
+	const RotatingMachineDynamics* element = dynamic_cast<const RotatingMachineDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->inertia;
 		if (!buffer.str().empty())
@@ -161,7 +160,8 @@ bool get_RotatingMachineDynamics_inertia(const BaseClass* BaseClass_ptr1, std::s
 
 bool get_RotatingMachineDynamics_saturationFactor(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const RotatingMachineDynamics* element = dynamic_cast<const RotatingMachineDynamics*>(BaseClass_ptr1))
+	const RotatingMachineDynamics* element = dynamic_cast<const RotatingMachineDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->saturationFactor;
 		if (!buffer.str().empty())
@@ -175,7 +175,8 @@ bool get_RotatingMachineDynamics_saturationFactor(const BaseClass* BaseClass_ptr
 
 bool get_RotatingMachineDynamics_saturationFactor120(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const RotatingMachineDynamics* element = dynamic_cast<const RotatingMachineDynamics*>(BaseClass_ptr1))
+	const RotatingMachineDynamics* element = dynamic_cast<const RotatingMachineDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->saturationFactor120;
 		if (!buffer.str().empty())
@@ -189,7 +190,8 @@ bool get_RotatingMachineDynamics_saturationFactor120(const BaseClass* BaseClass_
 
 bool get_RotatingMachineDynamics_statorLeakageReactance(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const RotatingMachineDynamics* element = dynamic_cast<const RotatingMachineDynamics*>(BaseClass_ptr1))
+	const RotatingMachineDynamics* element = dynamic_cast<const RotatingMachineDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->statorLeakageReactance;
 		if (!buffer.str().empty())
@@ -203,7 +205,8 @@ bool get_RotatingMachineDynamics_statorLeakageReactance(const BaseClass* BaseCla
 
 bool get_RotatingMachineDynamics_statorResistance(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const RotatingMachineDynamics* element = dynamic_cast<const RotatingMachineDynamics*>(BaseClass_ptr1))
+	const RotatingMachineDynamics* element = dynamic_cast<const RotatingMachineDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->statorResistance;
 		if (!buffer.str().empty())
@@ -215,8 +218,6 @@ bool get_RotatingMachineDynamics_statorResistance(const BaseClass* BaseClass_ptr
 	return false;
 }
 
-
-
 const char RotatingMachineDynamics::debugName[] = "RotatingMachineDynamics";
 const char* RotatingMachineDynamics::debugString() const
 {
@@ -225,17 +226,17 @@ const char* RotatingMachineDynamics::debugString() const
 
 void RotatingMachineDynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:RotatingMachineDynamics"), &RotatingMachineDynamics_factory));
+	factory_map.emplace("cim:RotatingMachineDynamics", &RotatingMachineDynamics_factory);
 }
 
 void RotatingMachineDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:RotatingMachineDynamics.damping"), &assign_RotatingMachineDynamics_damping));
-	assign_map.insert(std::make_pair(std::string("cim:RotatingMachineDynamics.inertia"), &assign_RotatingMachineDynamics_inertia));
-	assign_map.insert(std::make_pair(std::string("cim:RotatingMachineDynamics.saturationFactor"), &assign_RotatingMachineDynamics_saturationFactor));
-	assign_map.insert(std::make_pair(std::string("cim:RotatingMachineDynamics.saturationFactor120"), &assign_RotatingMachineDynamics_saturationFactor120));
-	assign_map.insert(std::make_pair(std::string("cim:RotatingMachineDynamics.statorLeakageReactance"), &assign_RotatingMachineDynamics_statorLeakageReactance));
-	assign_map.insert(std::make_pair(std::string("cim:RotatingMachineDynamics.statorResistance"), &assign_RotatingMachineDynamics_statorResistance));
+	assign_map.emplace("cim:RotatingMachineDynamics.damping", &assign_RotatingMachineDynamics_damping);
+	assign_map.emplace("cim:RotatingMachineDynamics.inertia", &assign_RotatingMachineDynamics_inertia);
+	assign_map.emplace("cim:RotatingMachineDynamics.saturationFactor", &assign_RotatingMachineDynamics_saturationFactor);
+	assign_map.emplace("cim:RotatingMachineDynamics.saturationFactor120", &assign_RotatingMachineDynamics_saturationFactor120);
+	assign_map.emplace("cim:RotatingMachineDynamics.statorLeakageReactance", &assign_RotatingMachineDynamics_statorLeakageReactance);
+	assign_map.emplace("cim:RotatingMachineDynamics.statorResistance", &assign_RotatingMachineDynamics_statorResistance);
 }
 
 void RotatingMachineDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

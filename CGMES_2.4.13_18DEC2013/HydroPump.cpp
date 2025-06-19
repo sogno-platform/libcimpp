@@ -13,8 +13,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-HydroPump::HydroPump() : HydroPowerPlant(nullptr), RotatingMachine(nullptr) {};
-HydroPump::~HydroPump() {};
+HydroPump::HydroPump() : HydroPowerPlant(nullptr), RotatingMachine(nullptr) {}
+HydroPump::~HydroPump() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,8 +42,6 @@ HydroPump::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_HydroPowerPlant_HydroPumps(BaseClass*, BaseClass*);
 bool assign_HydroPump_HydroPowerPlant(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,6 +58,7 @@ bool assign_HydroPump_HydroPowerPlant(BaseClass* BaseClass_ptr1, BaseClass* Base
 	}
 	return false;
 }
+
 bool assign_RotatingMachine_HydroPump(BaseClass*, BaseClass*);
 bool assign_HydroPump_RotatingMachine(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -77,10 +76,10 @@ bool assign_HydroPump_RotatingMachine(BaseClass* BaseClass_ptr1, BaseClass* Base
 	return false;
 }
 
-
 bool get_HydroPump_HydroPowerPlant(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const HydroPump* element = dynamic_cast<const HydroPump*>(BaseClass_ptr1))
+	const HydroPump* element = dynamic_cast<const HydroPump*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->HydroPowerPlant != 0)
 		{
@@ -93,7 +92,8 @@ bool get_HydroPump_HydroPowerPlant(const BaseClass* BaseClass_ptr1, std::list<co
 
 bool get_HydroPump_RotatingMachine(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const HydroPump* element = dynamic_cast<const HydroPump*>(BaseClass_ptr1))
+	const HydroPump* element = dynamic_cast<const HydroPump*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->RotatingMachine != 0)
 		{
@@ -104,7 +104,6 @@ bool get_HydroPump_RotatingMachine(const BaseClass* BaseClass_ptr1, std::list<co
 	return false;
 }
 
-
 const char HydroPump::debugName[] = "HydroPump";
 const char* HydroPump::debugString() const
 {
@@ -113,7 +112,7 @@ const char* HydroPump::debugString() const
 
 void HydroPump::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:HydroPump"), &HydroPump_factory));
+	factory_map.emplace("cim:HydroPump", &HydroPump_factory);
 }
 
 void HydroPump::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -122,8 +121,8 @@ void HydroPump::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assig
 
 void HydroPump::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:HydroPump.HydroPowerPlant"), &assign_HydroPump_HydroPowerPlant));
-	assign_map.insert(std::make_pair(std::string("cim:HydroPump.RotatingMachine"), &assign_HydroPump_RotatingMachine));
+	assign_map.emplace("cim:HydroPump.HydroPowerPlant", &assign_HydroPump_HydroPowerPlant);
+	assign_map.emplace("cim:HydroPump.RotatingMachine", &assign_HydroPump_RotatingMachine);
 }
 
 void HydroPump::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

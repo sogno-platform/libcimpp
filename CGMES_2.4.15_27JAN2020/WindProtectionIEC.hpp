@@ -20,9 +20,7 @@ namespace CIMPP
 	class WindTurbineType1or2IEC;
 	class WindTurbineType3or4IEC;
 
-	/*
-	The grid protection model includes protection against over and under voltage, and against over and under frequency.  Reference: IEC Standard 614000-27-1 Section 6.6.6.
-	*/
+	/** \brief The grid protection model includes protection against over and under voltage, and against over and under frequency.  Reference: IEC Standard 614000-27-1 Section 6.6.6. */
 	class WindProtectionIEC : public IdentifiedObject
 	{
 	public:
@@ -30,16 +28,35 @@ namespace CIMPP
 		WindProtectionIEC();
 		~WindProtectionIEC() override;
 
-		CIMPP::WindTurbineType1or2IEC* WindTurbineType1or2IEC;  /* Wind generator type 1 or 2 model with which this wind turbine protection model is associated. Default: 0 */
-		CIMPP::WindTurbineType3or4IEC* WindTurbineType3or4IEC;  /* Wind generator type 3 or 4 model with which this wind turbine protection model is associated. Default: 0 */
-		CIMPP::PU fover;  /* Set of wind turbine over frequency protection levels (). It is project dependent parameter. Default: nullptr */
-		CIMPP::PU funder;  /* Set of wind turbine under frequency protection levels (). It is project dependent parameter. Default: nullptr */
-		CIMPP::Seconds tfover;  /* Set of corresponding wind turbine over frequency protection disconnection times (). It is project dependent parameter. Default: nullptr */
-		CIMPP::Seconds tfunder;  /* Set of corresponding wind turbine under frequency protection disconnection times (). It is project dependent parameter. Default: nullptr */
-		CIMPP::Seconds tuover;  /* Set of corresponding wind turbine over voltage protection disconnection times (). It is project dependent parameter. Default: nullptr */
-		CIMPP::Seconds tuunder;  /* Set of corresponding wind turbine under voltage protection disconnection times (). It is project dependent parameter. Default: nullptr */
-		CIMPP::PU uover;  /* Set of wind turbine over voltage protection levels (). It is project dependent parameter. Default: nullptr */
-		CIMPP::PU uunder;  /* Set of wind turbine under voltage protection levels (). It is project dependent parameter. Default: nullptr */
+		/** \brief Wind generator type 1 or 2 model with which this wind turbine protection model is associated. Default: 0 */
+		CIMPP::WindTurbineType1or2IEC* WindTurbineType1or2IEC;
+
+		/** \brief Wind generator type 3 or 4 model with which this wind turbine protection model is associated. Default: 0 */
+		CIMPP::WindTurbineType3or4IEC* WindTurbineType3or4IEC;
+
+		/** \brief Set of wind turbine over frequency protection levels (). It is project dependent parameter. Default: nullptr */
+		CIMPP::PU fover;
+
+		/** \brief Set of wind turbine under frequency protection levels (). It is project dependent parameter. Default: nullptr */
+		CIMPP::PU funder;
+
+		/** \brief Set of corresponding wind turbine over frequency protection disconnection times (). It is project dependent parameter. Default: nullptr */
+		CIMPP::Seconds tfover;
+
+		/** \brief Set of corresponding wind turbine under frequency protection disconnection times (). It is project dependent parameter. Default: nullptr */
+		CIMPP::Seconds tfunder;
+
+		/** \brief Set of corresponding wind turbine over voltage protection disconnection times (). It is project dependent parameter. Default: nullptr */
+		CIMPP::Seconds tuover;
+
+		/** \brief Set of corresponding wind turbine under voltage protection disconnection times (). It is project dependent parameter. Default: nullptr */
+		CIMPP::Seconds tuunder;
+
+		/** \brief Set of wind turbine over voltage protection levels (). It is project dependent parameter. Default: nullptr */
+		CIMPP::PU uover;
+
+		/** \brief Set of wind turbine under voltage protection levels (). It is project dependent parameter. Default: nullptr */
+		CIMPP::PU uunder;
 
 		static const char debugName[];
 		const char* debugString() const override;

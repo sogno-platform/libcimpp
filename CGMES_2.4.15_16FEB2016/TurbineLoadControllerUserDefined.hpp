@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class ProprietaryParameterDynamics;
 
-	/*
-	Turbine load controller function block whose dynamic behaviour is described by
-	*/
+	/** \brief Turbine load controller function block whose dynamic behaviour is described by */
 	class TurbineLoadControllerUserDefined : public TurbineLoadControllerDynamics
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		TurbineLoadControllerUserDefined();
 		~TurbineLoadControllerUserDefined() override;
 
-		std::list<CIMPP::ProprietaryParameterDynamics*> ProprietaryParameterDynamics;  /* Parameter of this proprietary user-defined model. Default: 0 */
-		CIMPP::Boolean proprietary;  /* Behaviour is based on proprietary model as opposed to detailed model. true = user-defined model is proprietary with behaviour mutually understood by sending and receiving applications and parameters passed as general attributes false = user-defined model is explicitly defined in terms of control blocks and their input and output signals. Default: false */
+		/** \brief Parameter of this proprietary user-defined model. Default: 0 */
+		std::list<CIMPP::ProprietaryParameterDynamics*> ProprietaryParameterDynamics;
+
+		/** \brief Behaviour is based on proprietary model as opposed to detailed model. true = user-defined model is proprietary with behaviour mutually understood by sending and receiving applications and parameters passed as general attributes false = user-defined model is explicitly defined in terms of control blocks and their input and output signals. Default: false */
+		CIMPP::Boolean proprietary;
 
 		static const char debugName[];
 		const char* debugString() const override;

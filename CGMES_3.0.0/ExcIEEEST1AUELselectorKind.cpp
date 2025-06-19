@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "ExcIEEEST1AUELselectorKind")
+		if (EnumSymbol.substr(0, pos) != "ExcIEEEST1AUELselectorKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,22 +50,22 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "ignoreUELsignal")
+		if (EnumSymbol == "ignoreUELsignal")
 		{
 			rop = ExcIEEEST1AUELselectorKind::ignoreUELsignal;
 			return lop;
 		}
-		if(EnumSymbol == "inputHVgateVoltageOutput")
+		if (EnumSymbol == "inputHVgateVoltageOutput")
 		{
 			rop = ExcIEEEST1AUELselectorKind::inputHVgateVoltageOutput;
 			return lop;
 		}
-		if(EnumSymbol == "inputHVgateErrorSignal")
+		if (EnumSymbol == "inputHVgateErrorSignal")
 		{
 			rop = ExcIEEEST1AUELselectorKind::inputHVgateErrorSignal;
 			return lop;
 		}
-		if(EnumSymbol == "inputAddedToErrorSignal")
+		if (EnumSymbol == "inputAddedToErrorSignal")
 		{
 			rop = ExcIEEEST1AUELselectorKind::inputAddedToErrorSignal;
 			return lop;

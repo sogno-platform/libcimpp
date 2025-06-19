@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Specifies a set of Limits that are associated with a Measurement. A Measurement may have several LimitSets corresponding to seasonal or other changing conditions. The condition is captured in the name and description attributes. The same LimitSet may be used for several Measurements. In particular percentage limits are used this way.
-	*/
+	/** \brief Specifies a set of Limits that are associated with a Measurement. A Measurement may have several LimitSets corresponding to seasonal or other changing conditions. The condition is captured in the name and description attributes. The same LimitSet may be used for several Measurements. In particular percentage limits are used this way. */
 	class LimitSet : public IdentifiedObject
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		LimitSet();
 		~LimitSet() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

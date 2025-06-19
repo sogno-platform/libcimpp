@@ -9,9 +9,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Value of temperature in degrees Celsius.
-	*/
+	/** \brief Value of temperature in degrees Celsius. */
 	class Temperature
 	{
 	public:

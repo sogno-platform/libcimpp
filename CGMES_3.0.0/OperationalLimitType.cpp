@@ -9,15 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "OperationalLimit.hpp"
-#include "Seconds.hpp"
-#include "OperationalLimitDirectionKind.hpp"
-#include "Boolean.hpp"
-#include "LimitKind.hpp"
 
 using namespace CIMPP;
 
-OperationalLimitType::OperationalLimitType() {};
-OperationalLimitType::~OperationalLimitType() {};
+OperationalLimitType::OperationalLimitType() {}
+OperationalLimitType::~OperationalLimitType() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -48,60 +44,6 @@ OperationalLimitType::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_OperationalLimitType_acceptableDuration(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (OperationalLimitType* element = dynamic_cast<OperationalLimitType*>(BaseClass_ptr1))
-	{
-		buffer >> element->acceptableDuration;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_OperationalLimitType_direction(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (OperationalLimitType* element = dynamic_cast<OperationalLimitType*>(BaseClass_ptr1))
-	{
-		buffer >> element->direction;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_OperationalLimitType_isInfiniteDuration(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (OperationalLimitType* element = dynamic_cast<OperationalLimitType*>(BaseClass_ptr1))
-	{
-		buffer >> element->isInfiniteDuration;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_OperationalLimitType_kind(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (OperationalLimitType* element = dynamic_cast<OperationalLimitType*>(BaseClass_ptr1))
-	{
-		buffer >> element->kind;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_OperationalLimit_OperationalLimitType(BaseClass*, BaseClass*);
 bool assign_OperationalLimitType_OperationalLimit(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -119,9 +61,67 @@ bool assign_OperationalLimitType_OperationalLimit(BaseClass* BaseClass_ptr1, Bas
 	return false;
 }
 
+bool assign_OperationalLimitType_acceptableDuration(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	OperationalLimitType* element = dynamic_cast<OperationalLimitType*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->acceptableDuration;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_OperationalLimitType_direction(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	OperationalLimitType* element = dynamic_cast<OperationalLimitType*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->direction;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_OperationalLimitType_isInfiniteDuration(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	OperationalLimitType* element = dynamic_cast<OperationalLimitType*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->isInfiniteDuration;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_OperationalLimitType_kind(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	OperationalLimitType* element = dynamic_cast<OperationalLimitType*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->kind;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_OperationalLimitType_acceptableDuration(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const OperationalLimitType* element = dynamic_cast<const OperationalLimitType*>(BaseClass_ptr1))
+	const OperationalLimitType* element = dynamic_cast<const OperationalLimitType*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->acceptableDuration;
 		if (!buffer.str().empty())
@@ -133,25 +133,10 @@ bool get_OperationalLimitType_acceptableDuration(const BaseClass* BaseClass_ptr1
 	return false;
 }
 
-bool get_OperationalLimitType_isInfiniteDuration(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
-{
-	if (const OperationalLimitType* element = dynamic_cast<const OperationalLimitType*>(BaseClass_ptr1))
-	{
-		buffer << element->isInfiniteDuration;
-		if (!buffer.str().empty())
-		{
-			return true;
-		}
-	}
-	buffer.setstate(std::ios::failbit);
-	return false;
-}
-
-
-
 bool get_OperationalLimitType_direction(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const OperationalLimitType* element = dynamic_cast<const OperationalLimitType*>(BaseClass_ptr1))
+	const OperationalLimitType* element = dynamic_cast<const OperationalLimitType*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->direction;
 		if (!buffer.str().empty())
@@ -163,9 +148,25 @@ bool get_OperationalLimitType_direction(const BaseClass* BaseClass_ptr1, std::st
 	return false;
 }
 
+bool get_OperationalLimitType_isInfiniteDuration(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	const OperationalLimitType* element = dynamic_cast<const OperationalLimitType*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer << element->isInfiniteDuration;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
 bool get_OperationalLimitType_kind(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const OperationalLimitType* element = dynamic_cast<const OperationalLimitType*>(BaseClass_ptr1))
+	const OperationalLimitType* element = dynamic_cast<const OperationalLimitType*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kind;
 		if (!buffer.str().empty())
@@ -185,20 +186,20 @@ const char* OperationalLimitType::debugString() const
 
 void OperationalLimitType::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:OperationalLimitType"), &OperationalLimitType_factory));
+	factory_map.emplace("cim:OperationalLimitType", &OperationalLimitType_factory);
 }
 
 void OperationalLimitType::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:OperationalLimitType.acceptableDuration"), &assign_OperationalLimitType_acceptableDuration));
-	assign_map.insert(std::make_pair(std::string("cim:OperationalLimitType.direction"), &assign_OperationalLimitType_direction));
-	assign_map.insert(std::make_pair(std::string("cim:OperationalLimitType.isInfiniteDuration"), &assign_OperationalLimitType_isInfiniteDuration));
-	assign_map.insert(std::make_pair(std::string("cim:OperationalLimitType.kind"), &assign_OperationalLimitType_kind));
+	assign_map.emplace("cim:OperationalLimitType.acceptableDuration", &assign_OperationalLimitType_acceptableDuration);
+	assign_map.emplace("cim:OperationalLimitType.direction", &assign_OperationalLimitType_direction);
+	assign_map.emplace("cim:OperationalLimitType.isInfiniteDuration", &assign_OperationalLimitType_isInfiniteDuration);
+	assign_map.emplace("cim:OperationalLimitType.kind", &assign_OperationalLimitType_kind);
 }
 
 void OperationalLimitType::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:OperationalLimitType.OperationalLimit"), &assign_OperationalLimitType_OperationalLimit));
+	assign_map.emplace("cim:OperationalLimitType.OperationalLimit", &assign_OperationalLimitType_OperationalLimit);
 }
 
 void OperationalLimitType::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

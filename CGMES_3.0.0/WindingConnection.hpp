@@ -9,41 +9,25 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Winding connection type.
-	*/
+	/** \brief Winding connection type. */
 	class WindingConnection
 	{
 	public:
 		enum WindingConnection_ENUM
 		{
-			/**
-			 * Delta.
-			 */
+			/** Delta. */
 			D,
-			/**
-			 * Wye.
-			 */
+			/** Wye. */
 			Y,
-			/**
-			 * ZigZag.
-			 */
+			/** ZigZag. */
 			Z,
-			/**
-			 * Wye, with neutral brought out for grounding.
-			 */
+			/** Wye, with neutral brought out for grounding. */
 			Yn,
-			/**
-			 * ZigZag, with neutral brought out for grounding.
-			 */
+			/** ZigZag, with neutral brought out for grounding. */
 			Zn,
-			/**
-			 * Autotransformer common winding.
-			 */
+			/** Autotransformer common winding. */
 			A,
-			/**
-			 * Independent winding, for single-phase connections.
-			 */
+			/** Independent winding, for single-phase connections. */
 			I,
 		};
 

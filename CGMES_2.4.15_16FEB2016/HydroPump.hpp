@@ -18,9 +18,7 @@ namespace CIMPP
 	class HydroPowerPlant;
 	class RotatingMachine;
 
-	/*
-	A synchronous motor-driven pump, typically associated with a pumped storage plant.
-	*/
+	/** \brief A synchronous motor-driven pump, typically associated with a pumped storage plant. */
 	class HydroPump : public Equipment
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		HydroPump();
 		~HydroPump() override;
 
-		CIMPP::HydroPowerPlant* HydroPowerPlant;  /* The hydro pump may be a member of a pumped storage plant or a pump for distributing water. Default: 0 */
-		CIMPP::RotatingMachine* RotatingMachine;  /* The synchronous machine drives the turbine which moves the water from a low elevation to a higher elevation. The direction of machine rotation for pumping may or may not be the same as for generating. Default: 0 */
+		/** \brief The hydro pump may be a member of a pumped storage plant or a pump for distributing water. Default: 0 */
+		CIMPP::HydroPowerPlant* HydroPowerPlant;
+
+		/** \brief The synchronous machine drives the turbine which moves the water from a low elevation to a higher elevation. The direction of machine rotation for pumping may or may not be the same as for generating. Default: 0 */
+		CIMPP::RotatingMachine* RotatingMachine;
 
 		static const char debugName[];
 		const char* debugString() const override;

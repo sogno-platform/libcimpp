@@ -21,9 +21,7 @@ namespace CIMPP
 	class WindDynamicsLookupTable;
 	class WindPlantIEC;
 
-	/*
-	Frequency and active power controller model. Reference: IEC 61400-27-1:2015, Annex D.
-	*/
+	/** \brief Frequency and active power controller model. Reference: IEC 61400-27-1:2015, Annex D. */
 	class WindPlantFreqPcontrolIEC : public IdentifiedObject
 	{
 	public:
@@ -31,23 +29,56 @@ namespace CIMPP
 		WindPlantFreqPcontrolIEC();
 		~WindPlantFreqPcontrolIEC() override;
 
-		std::list<CIMPP::WindDynamicsLookupTable*> WindDynamicsLookupTable;  /* The wind dynamics lookup table associated with this frequency and active power wind plant model. Default: 0 */
-		CIMPP::WindPlantIEC* WindPlantIEC;  /* Wind plant model with which this wind plant frequency and active power control is associated. Default: 0 */
-		CIMPP::PU dprefmax;  /* Maximum ramp rate of &lt;i&gt;p&lt;/i&gt;&lt;i&gt;&lt;sub&gt;WTref&lt;/sub&gt;&lt;/i&gt; request from the plant controller to the wind turbines (&lt;i&gt;dp&lt;/i&gt;&lt;i&gt;&lt;sub&gt;refmax&lt;/sub&gt;&lt;/i&gt;) (&amp;gt; WindPlantFreqPcontrolIEC.dprefmin). It is a case-dependent parameter. Default: nullptr */
-		CIMPP::PU dprefmin;  /* Minimum (negative) ramp rate of &lt;i&gt;p&lt;/i&gt;&lt;i&gt;&lt;sub&gt;WTref&lt;/sub&gt;&lt;/i&gt; request from the plant controller to the wind turbines (&lt;i&gt;dp&lt;/i&gt;&lt;i&gt;&lt;sub&gt;refmin&lt;/sub&gt;&lt;/i&gt;) (&amp;lt; WindPlantFreqPcontrolIEC.dprefmax). It is a project-dependent parameter. Default: nullptr */
-		CIMPP::PU dpwprefmax;  /* Maximum positive ramp rate for wind plant power reference (&lt;i&gt;dp&lt;/i&gt;&lt;i&gt;&lt;sub&gt;WPrefmax&lt;/sub&gt;&lt;/i&gt;) (&amp;gt; WindPlantFreqPcontrolIEC.dpwprefmin). It is a project-dependent parameter. Default: nullptr */
-		CIMPP::PU dpwprefmin;  /* Maximum negative ramp rate for wind plant power reference (&lt;i&gt;dp&lt;/i&gt;&lt;i&gt;&lt;sub&gt;WPrefmin&lt;/sub&gt;&lt;/i&gt;) (&amp;lt; WindPlantFreqPcontrolIEC.dpwprefmax). It is a project-dependent parameter. Default: nullptr */
-		CIMPP::Float kiwpp;  /* Plant P controller integral gain (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;IWPp&lt;/sub&gt;&lt;/i&gt;). It is a project-dependent parameter. Default: 0.0 */
-		CIMPP::PU kiwppmax;  /* Maximum PI integrator term (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;IWPpmax&lt;/sub&gt;&lt;/i&gt;) (&amp;gt; WindPlantFreqPcontrolIEC.kiwppmin). It is a project-dependent parameter. Default: nullptr */
-		CIMPP::PU kiwppmin;  /* Minimum PI integrator term (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;IWPpmin&lt;/sub&gt;&lt;/i&gt;) (&amp;lt; WindPlantFreqPcontrolIEC.kiwppmax). It is a project-dependent parameter. Default: nullptr */
-		CIMPP::Float kpwpp;  /* Plant P controller proportional gain (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;PWPp&lt;/sub&gt;&lt;/i&gt;). It is a project-dependent parameter. Default: 0.0 */
-		CIMPP::PU kwppref;  /* Power reference gain (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;WPpref&lt;/sub&gt;&lt;/i&gt;). It is a project-dependent parameter. Default: nullptr */
-		CIMPP::PU prefmax;  /* Maximum &lt;i&gt;p&lt;/i&gt;&lt;i&gt;&lt;sub&gt;WTref&lt;/sub&gt;&lt;/i&gt; request from the plant controller to the wind turbines (&lt;i&gt;p&lt;/i&gt;&lt;i&gt;&lt;sub&gt;refmax&lt;/sub&gt;&lt;/i&gt;) (&amp;gt; WindPlantFreqPcontrolIEC.prefmin). It is a project-dependent parameter. Default: nullptr */
-		CIMPP::PU prefmin;  /* Minimum &lt;i&gt;p&lt;/i&gt;&lt;i&gt;&lt;sub&gt;WTref&lt;/sub&gt;&lt;/i&gt; request from the plant controller to the wind turbines (&lt;i&gt;p&lt;/i&gt;&lt;i&gt;&lt;sub&gt;refmin&lt;/sub&gt;&lt;/i&gt;) (&amp;lt; WindPlantFreqPcontrolIEC.prefmax). It is a project-dependent parameter. Default: nullptr */
-		CIMPP::Seconds tpft;  /* Lead time constant in reference value transfer function (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;pft&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). It is a project-dependent parameter. Default: nullptr */
-		CIMPP::Seconds tpfv;  /* Lag time constant in reference value transfer function (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;pfv&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). It is a project-dependent parameter. Default: nullptr */
-		CIMPP::Seconds twpffiltp;  /* Filter time constant for frequency measurement (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;WPffiltp&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). It is a project-dependent parameter. Default: nullptr */
-		CIMPP::Seconds twppfiltp;  /* Filter time constant for active power measurement (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;WPpfiltp&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). It is a project-dependent parameter. Default: nullptr */
+		/** \brief The wind dynamics lookup table associated with this frequency and active power wind plant model. Default: 0 */
+		std::list<CIMPP::WindDynamicsLookupTable*> WindDynamicsLookupTable;
+
+		/** \brief Wind plant model with which this wind plant frequency and active power control is associated. Default: 0 */
+		CIMPP::WindPlantIEC* WindPlantIEC;
+
+		/** \brief Maximum ramp rate of &lt;i&gt;p&lt;/i&gt;&lt;i&gt;&lt;sub&gt;WTref&lt;/sub&gt;&lt;/i&gt; request from the plant controller to the wind turbines (&lt;i&gt;dp&lt;/i&gt;&lt;i&gt;&lt;sub&gt;refmax&lt;/sub&gt;&lt;/i&gt;) (&amp;gt; WindPlantFreqPcontrolIEC.dprefmin). It is a case-dependent parameter. Default: nullptr */
+		CIMPP::PU dprefmax;
+
+		/** \brief Minimum (negative) ramp rate of &lt;i&gt;p&lt;/i&gt;&lt;i&gt;&lt;sub&gt;WTref&lt;/sub&gt;&lt;/i&gt; request from the plant controller to the wind turbines (&lt;i&gt;dp&lt;/i&gt;&lt;i&gt;&lt;sub&gt;refmin&lt;/sub&gt;&lt;/i&gt;) (&amp;lt; WindPlantFreqPcontrolIEC.dprefmax). It is a project-dependent parameter. Default: nullptr */
+		CIMPP::PU dprefmin;
+
+		/** \brief Maximum positive ramp rate for wind plant power reference (&lt;i&gt;dp&lt;/i&gt;&lt;i&gt;&lt;sub&gt;WPrefmax&lt;/sub&gt;&lt;/i&gt;) (&amp;gt; WindPlantFreqPcontrolIEC.dpwprefmin). It is a project-dependent parameter. Default: nullptr */
+		CIMPP::PU dpwprefmax;
+
+		/** \brief Maximum negative ramp rate for wind plant power reference (&lt;i&gt;dp&lt;/i&gt;&lt;i&gt;&lt;sub&gt;WPrefmin&lt;/sub&gt;&lt;/i&gt;) (&amp;lt; WindPlantFreqPcontrolIEC.dpwprefmax). It is a project-dependent parameter. Default: nullptr */
+		CIMPP::PU dpwprefmin;
+
+		/** \brief Plant P controller integral gain (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;IWPp&lt;/sub&gt;&lt;/i&gt;). It is a project-dependent parameter. Default: 0.0 */
+		CIMPP::Float kiwpp;
+
+		/** \brief Maximum PI integrator term (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;IWPpmax&lt;/sub&gt;&lt;/i&gt;) (&amp;gt; WindPlantFreqPcontrolIEC.kiwppmin). It is a project-dependent parameter. Default: nullptr */
+		CIMPP::PU kiwppmax;
+
+		/** \brief Minimum PI integrator term (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;IWPpmin&lt;/sub&gt;&lt;/i&gt;) (&amp;lt; WindPlantFreqPcontrolIEC.kiwppmax). It is a project-dependent parameter. Default: nullptr */
+		CIMPP::PU kiwppmin;
+
+		/** \brief Plant P controller proportional gain (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;PWPp&lt;/sub&gt;&lt;/i&gt;). It is a project-dependent parameter. Default: 0.0 */
+		CIMPP::Float kpwpp;
+
+		/** \brief Power reference gain (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;WPpref&lt;/sub&gt;&lt;/i&gt;). It is a project-dependent parameter. Default: nullptr */
+		CIMPP::PU kwppref;
+
+		/** \brief Maximum &lt;i&gt;p&lt;/i&gt;&lt;i&gt;&lt;sub&gt;WTref&lt;/sub&gt;&lt;/i&gt; request from the plant controller to the wind turbines (&lt;i&gt;p&lt;/i&gt;&lt;i&gt;&lt;sub&gt;refmax&lt;/sub&gt;&lt;/i&gt;) (&amp;gt; WindPlantFreqPcontrolIEC.prefmin). It is a project-dependent parameter. Default: nullptr */
+		CIMPP::PU prefmax;
+
+		/** \brief Minimum &lt;i&gt;p&lt;/i&gt;&lt;i&gt;&lt;sub&gt;WTref&lt;/sub&gt;&lt;/i&gt; request from the plant controller to the wind turbines (&lt;i&gt;p&lt;/i&gt;&lt;i&gt;&lt;sub&gt;refmin&lt;/sub&gt;&lt;/i&gt;) (&amp;lt; WindPlantFreqPcontrolIEC.prefmax). It is a project-dependent parameter. Default: nullptr */
+		CIMPP::PU prefmin;
+
+		/** \brief Lead time constant in reference value transfer function (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;pft&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). It is a project-dependent parameter. Default: nullptr */
+		CIMPP::Seconds tpft;
+
+		/** \brief Lag time constant in reference value transfer function (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;pfv&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). It is a project-dependent parameter. Default: nullptr */
+		CIMPP::Seconds tpfv;
+
+		/** \brief Filter time constant for frequency measurement (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;WPffiltp&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). It is a project-dependent parameter. Default: nullptr */
+		CIMPP::Seconds twpffiltp;
+
+		/** \brief Filter time constant for active power measurement (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;WPpfiltp&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). It is a project-dependent parameter. Default: nullptr */
+		CIMPP::Seconds twppfiltp;
 
 		static const char debugName[];
 		const char* debugString() const override;

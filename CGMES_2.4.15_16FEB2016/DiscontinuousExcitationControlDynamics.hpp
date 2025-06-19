@@ -18,9 +18,7 @@ namespace CIMPP
 	class ExcitationSystemDynamics;
 	class RemoteInputSignal;
 
-	/*
-	Discontinuous excitation control function block whose behaviour is described by reference to a standard model .
-	*/
+	/** \brief Discontinuous excitation control function block whose behaviour is described by reference to a standard model . */
 	class DiscontinuousExcitationControlDynamics : public DynamicsFunctionBlock
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		DiscontinuousExcitationControlDynamics();
 		~DiscontinuousExcitationControlDynamics() override;
 
-		CIMPP::ExcitationSystemDynamics* ExcitationSystemDynamics;  /* Excitation system model with which this discontinuous excitation control model is associated. Default: 0 */
-		CIMPP::RemoteInputSignal* RemoteInputSignal;  /* Remote input signal used by this discontinuous excitation control system model. Default: 0 */
+		/** \brief Excitation system model with which this discontinuous excitation control model is associated. Default: 0 */
+		CIMPP::ExcitationSystemDynamics* ExcitationSystemDynamics;
+
+		/** \brief Remote input signal used by this discontinuous excitation control system model. Default: 0 */
+		CIMPP::RemoteInputSignal* RemoteInputSignal;
 
 		static const char debugName[];
 		const char* debugString() const override;

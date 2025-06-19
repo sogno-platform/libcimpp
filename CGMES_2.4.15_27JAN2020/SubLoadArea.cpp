@@ -13,8 +13,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-SubLoadArea::SubLoadArea() : LoadArea(nullptr) {};
-SubLoadArea::~SubLoadArea() {};
+SubLoadArea::SubLoadArea() : LoadArea(nullptr) {}
+SubLoadArea::~SubLoadArea() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,8 +42,6 @@ SubLoadArea::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_LoadArea_SubLoadAreas(BaseClass*, BaseClass*);
 bool assign_SubLoadArea_LoadArea(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,6 +58,7 @@ bool assign_SubLoadArea_LoadArea(BaseClass* BaseClass_ptr1, BaseClass* BaseClass
 	}
 	return false;
 }
+
 bool assign_LoadGroup_SubLoadArea(BaseClass*, BaseClass*);
 bool assign_SubLoadArea_LoadGroups(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -77,10 +76,10 @@ bool assign_SubLoadArea_LoadGroups(BaseClass* BaseClass_ptr1, BaseClass* BaseCla
 	return false;
 }
 
-
 bool get_SubLoadArea_LoadArea(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const SubLoadArea* element = dynamic_cast<const SubLoadArea*>(BaseClass_ptr1))
+	const SubLoadArea* element = dynamic_cast<const SubLoadArea*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->LoadArea != 0)
 		{
@@ -100,7 +99,7 @@ const char* SubLoadArea::debugString() const
 
 void SubLoadArea::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:SubLoadArea"), &SubLoadArea_factory));
+	factory_map.emplace("cim:SubLoadArea", &SubLoadArea_factory);
 }
 
 void SubLoadArea::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -109,8 +108,8 @@ void SubLoadArea::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, ass
 
 void SubLoadArea::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:SubLoadArea.LoadArea"), &assign_SubLoadArea_LoadArea));
-	assign_map.insert(std::make_pair(std::string("cim:SubLoadArea.LoadGroups"), &assign_SubLoadArea_LoadGroups));
+	assign_map.emplace("cim:SubLoadArea.LoadArea", &assign_SubLoadArea_LoadArea);
+	assign_map.emplace("cim:SubLoadArea.LoadGroups", &assign_SubLoadArea_LoadGroups);
 }
 
 void SubLoadArea::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

@@ -13,8 +13,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-PowerSystemStabilizerDynamics::PowerSystemStabilizerDynamics() : ExcitationSystemDynamics(nullptr) {};
-PowerSystemStabilizerDynamics::~PowerSystemStabilizerDynamics() {};
+PowerSystemStabilizerDynamics::PowerSystemStabilizerDynamics() : ExcitationSystemDynamics(nullptr) {}
+PowerSystemStabilizerDynamics::~PowerSystemStabilizerDynamics() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,8 +42,6 @@ PowerSystemStabilizerDynamics::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_ExcitationSystemDynamics_PowerSystemStabilizerDynamics(BaseClass*, BaseClass*);
 bool assign_PowerSystemStabilizerDynamics_ExcitationSystemDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,6 +58,7 @@ bool assign_PowerSystemStabilizerDynamics_ExcitationSystemDynamics(BaseClass* Ba
 	}
 	return false;
 }
+
 bool assign_RemoteInputSignal_PowerSystemStabilizerDynamics(BaseClass*, BaseClass*);
 bool assign_PowerSystemStabilizerDynamics_RemoteInputSignal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -77,10 +76,10 @@ bool assign_PowerSystemStabilizerDynamics_RemoteInputSignal(BaseClass* BaseClass
 	return false;
 }
 
-
 bool get_PowerSystemStabilizerDynamics_ExcitationSystemDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const PowerSystemStabilizerDynamics* element = dynamic_cast<const PowerSystemStabilizerDynamics*>(BaseClass_ptr1))
+	const PowerSystemStabilizerDynamics* element = dynamic_cast<const PowerSystemStabilizerDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->ExcitationSystemDynamics != 0)
 		{
@@ -100,7 +99,7 @@ const char* PowerSystemStabilizerDynamics::debugString() const
 
 void PowerSystemStabilizerDynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:PowerSystemStabilizerDynamics"), &PowerSystemStabilizerDynamics_factory));
+	factory_map.emplace("cim:PowerSystemStabilizerDynamics", &PowerSystemStabilizerDynamics_factory);
 }
 
 void PowerSystemStabilizerDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -109,8 +108,8 @@ void PowerSystemStabilizerDynamics::addPrimitiveAssignFnsToMap(std::unordered_ma
 
 void PowerSystemStabilizerDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:PowerSystemStabilizerDynamics.ExcitationSystemDynamics"), &assign_PowerSystemStabilizerDynamics_ExcitationSystemDynamics));
-	assign_map.insert(std::make_pair(std::string("cim:PowerSystemStabilizerDynamics.RemoteInputSignal"), &assign_PowerSystemStabilizerDynamics_RemoteInputSignal));
+	assign_map.emplace("cim:PowerSystemStabilizerDynamics.ExcitationSystemDynamics", &assign_PowerSystemStabilizerDynamics_ExcitationSystemDynamics);
+	assign_map.emplace("cim:PowerSystemStabilizerDynamics.RemoteInputSignal", &assign_PowerSystemStabilizerDynamics_RemoteInputSignal);
 }
 
 void PowerSystemStabilizerDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

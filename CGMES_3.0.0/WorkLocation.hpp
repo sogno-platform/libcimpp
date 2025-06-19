@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Information about a particular location for various forms of work.
-	*/
+	/** \brief Information about a particular location for various forms of work. */
 	class WorkLocation : public Location
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		WorkLocation();
 		~WorkLocation() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

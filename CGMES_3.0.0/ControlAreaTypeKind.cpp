@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "ControlAreaTypeKind")
+		if (EnumSymbol.substr(0, pos) != "ControlAreaTypeKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,17 +50,17 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "AGC")
+		if (EnumSymbol == "AGC")
 		{
 			rop = ControlAreaTypeKind::AGC;
 			return lop;
 		}
-		if(EnumSymbol == "Forecast")
+		if (EnumSymbol == "Forecast")
 		{
 			rop = ControlAreaTypeKind::Forecast;
 			return lop;
 		}
-		if(EnumSymbol == "Interchange")
+		if (EnumSymbol == "Interchange")
 		{
 			rop = ControlAreaTypeKind::Interchange;
 			return lop;

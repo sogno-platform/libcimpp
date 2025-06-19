@@ -17,9 +17,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Operational limit on current.
-	*/
+	/** \brief Operational limit on current. */
 	class CurrentLimit : public OperationalLimit
 	{
 	public:
@@ -27,8 +25,11 @@ namespace CIMPP
 		CurrentLimit();
 		~CurrentLimit() override;
 
-		CIMPP::CurrentFlow normalValue;  /* The normal value for limit on current flow. The attribute shall be a positive value or zero. Default: nullptr */
-		CIMPP::CurrentFlow value;  /* Limit on current flow. The attribute shall be a positive value or zero. Default: nullptr */
+		/** \brief The normal value for limit on current flow. The attribute shall be a positive value or zero. Default: nullptr */
+		CIMPP::CurrentFlow normalValue;
+
+		/** \brief Limit on current flow. The attribute shall be a positive value or zero. Default: nullptr */
+		CIMPP::CurrentFlow value;
 
 		static const char debugName[];
 		const char* debugString() const override;

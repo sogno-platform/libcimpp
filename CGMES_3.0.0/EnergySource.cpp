@@ -9,24 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "EnergySchedulingType.hpp"
-#include "ActivePower.hpp"
-#include "Voltage.hpp"
-#include "ActivePower.hpp"
-#include "ActivePower.hpp"
-#include "Resistance.hpp"
-#include "Resistance.hpp"
-#include "ReactivePower.hpp"
-#include "Resistance.hpp"
-#include "AngleRadians.hpp"
-#include "Voltage.hpp"
-#include "Reactance.hpp"
-#include "Reactance.hpp"
-#include "Reactance.hpp"
 
 using namespace CIMPP;
 
-EnergySource::EnergySource() : EnergySchedulingType(nullptr) {};
-EnergySource::~EnergySource() {};
+EnergySource::EnergySource() : EnergySchedulingType(nullptr) {}
+EnergySource::~EnergySource() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -68,177 +55,6 @@ EnergySource::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_EnergySource_activePower(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1))
-	{
-		buffer >> element->activePower;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_EnergySource_nominalVoltage(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1))
-	{
-		buffer >> element->nominalVoltage;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_EnergySource_pMax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1))
-	{
-		buffer >> element->pMax;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_EnergySource_pMin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1))
-	{
-		buffer >> element->pMin;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_EnergySource_r(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1))
-	{
-		buffer >> element->r;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_EnergySource_r0(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1))
-	{
-		buffer >> element->r0;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_EnergySource_reactivePower(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1))
-	{
-		buffer >> element->reactivePower;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_EnergySource_rn(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1))
-	{
-		buffer >> element->rn;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_EnergySource_voltageAngle(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1))
-	{
-		buffer >> element->voltageAngle;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_EnergySource_voltageMagnitude(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1))
-	{
-		buffer >> element->voltageMagnitude;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_EnergySource_x(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1))
-	{
-		buffer >> element->x;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_EnergySource_x0(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1))
-	{
-		buffer >> element->x0;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_EnergySource_xn(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1))
-	{
-		buffer >> element->xn;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_EnergySchedulingType_EnergySource(BaseClass*, BaseClass*);
 bool assign_EnergySource_EnergySchedulingType(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -256,9 +72,206 @@ bool assign_EnergySource_EnergySchedulingType(BaseClass* BaseClass_ptr1, BaseCla
 	return false;
 }
 
+bool assign_EnergySource_activePower(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->activePower;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_EnergySource_nominalVoltage(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->nominalVoltage;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_EnergySource_pMax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->pMax;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_EnergySource_pMin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->pMin;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_EnergySource_r(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->r;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_EnergySource_r0(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->r0;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_EnergySource_reactivePower(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->reactivePower;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_EnergySource_rn(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->rn;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_EnergySource_voltageAngle(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->voltageAngle;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_EnergySource_voltageMagnitude(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->voltageMagnitude;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_EnergySource_x(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->x;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_EnergySource_x0(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->x0;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_EnergySource_xn(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	EnergySource* element = dynamic_cast<EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->xn;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_EnergySource_EnergySchedulingType(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->EnergySchedulingType != 0)
+		{
+			BaseClass_list.push_back(element->EnergySchedulingType);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_EnergySource_activePower(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1))
+	const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->activePower;
 		if (!buffer.str().empty())
@@ -272,7 +285,8 @@ bool get_EnergySource_activePower(const BaseClass* BaseClass_ptr1, std::stringst
 
 bool get_EnergySource_nominalVoltage(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1))
+	const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->nominalVoltage;
 		if (!buffer.str().empty())
@@ -286,7 +300,8 @@ bool get_EnergySource_nominalVoltage(const BaseClass* BaseClass_ptr1, std::strin
 
 bool get_EnergySource_pMax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1))
+	const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pMax;
 		if (!buffer.str().empty())
@@ -300,7 +315,8 @@ bool get_EnergySource_pMax(const BaseClass* BaseClass_ptr1, std::stringstream& b
 
 bool get_EnergySource_pMin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1))
+	const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pMin;
 		if (!buffer.str().empty())
@@ -314,7 +330,8 @@ bool get_EnergySource_pMin(const BaseClass* BaseClass_ptr1, std::stringstream& b
 
 bool get_EnergySource_r(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1))
+	const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->r;
 		if (!buffer.str().empty())
@@ -328,7 +345,8 @@ bool get_EnergySource_r(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_EnergySource_r0(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1))
+	const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->r0;
 		if (!buffer.str().empty())
@@ -342,7 +360,8 @@ bool get_EnergySource_r0(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_EnergySource_reactivePower(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1))
+	const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->reactivePower;
 		if (!buffer.str().empty())
@@ -356,7 +375,8 @@ bool get_EnergySource_reactivePower(const BaseClass* BaseClass_ptr1, std::string
 
 bool get_EnergySource_rn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1))
+	const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->rn;
 		if (!buffer.str().empty())
@@ -370,7 +390,8 @@ bool get_EnergySource_rn(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_EnergySource_voltageAngle(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1))
+	const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->voltageAngle;
 		if (!buffer.str().empty())
@@ -384,7 +405,8 @@ bool get_EnergySource_voltageAngle(const BaseClass* BaseClass_ptr1, std::strings
 
 bool get_EnergySource_voltageMagnitude(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1))
+	const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->voltageMagnitude;
 		if (!buffer.str().empty())
@@ -398,7 +420,8 @@ bool get_EnergySource_voltageMagnitude(const BaseClass* BaseClass_ptr1, std::str
 
 bool get_EnergySource_x(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1))
+	const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->x;
 		if (!buffer.str().empty())
@@ -412,7 +435,8 @@ bool get_EnergySource_x(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_EnergySource_x0(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1))
+	const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->x0;
 		if (!buffer.str().empty())
@@ -426,7 +450,8 @@ bool get_EnergySource_x0(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_EnergySource_xn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1))
+	const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->xn;
 		if (!buffer.str().empty())
@@ -438,21 +463,6 @@ bool get_EnergySource_xn(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 	return false;
 }
 
-
-bool get_EnergySource_EnergySchedulingType(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const EnergySource* element = dynamic_cast<const EnergySource*>(BaseClass_ptr1))
-	{
-		if (element->EnergySchedulingType != 0)
-		{
-			BaseClass_list.push_back(element->EnergySchedulingType);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char EnergySource::debugName[] = "EnergySource";
 const char* EnergySource::debugString() const
 {
@@ -461,29 +471,29 @@ const char* EnergySource::debugString() const
 
 void EnergySource::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:EnergySource"), &EnergySource_factory));
+	factory_map.emplace("cim:EnergySource", &EnergySource_factory);
 }
 
 void EnergySource::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:EnergySource.activePower"), &assign_EnergySource_activePower));
-	assign_map.insert(std::make_pair(std::string("cim:EnergySource.nominalVoltage"), &assign_EnergySource_nominalVoltage));
-	assign_map.insert(std::make_pair(std::string("cim:EnergySource.pMax"), &assign_EnergySource_pMax));
-	assign_map.insert(std::make_pair(std::string("cim:EnergySource.pMin"), &assign_EnergySource_pMin));
-	assign_map.insert(std::make_pair(std::string("cim:EnergySource.r"), &assign_EnergySource_r));
-	assign_map.insert(std::make_pair(std::string("cim:EnergySource.r0"), &assign_EnergySource_r0));
-	assign_map.insert(std::make_pair(std::string("cim:EnergySource.reactivePower"), &assign_EnergySource_reactivePower));
-	assign_map.insert(std::make_pair(std::string("cim:EnergySource.rn"), &assign_EnergySource_rn));
-	assign_map.insert(std::make_pair(std::string("cim:EnergySource.voltageAngle"), &assign_EnergySource_voltageAngle));
-	assign_map.insert(std::make_pair(std::string("cim:EnergySource.voltageMagnitude"), &assign_EnergySource_voltageMagnitude));
-	assign_map.insert(std::make_pair(std::string("cim:EnergySource.x"), &assign_EnergySource_x));
-	assign_map.insert(std::make_pair(std::string("cim:EnergySource.x0"), &assign_EnergySource_x0));
-	assign_map.insert(std::make_pair(std::string("cim:EnergySource.xn"), &assign_EnergySource_xn));
+	assign_map.emplace("cim:EnergySource.activePower", &assign_EnergySource_activePower);
+	assign_map.emplace("cim:EnergySource.nominalVoltage", &assign_EnergySource_nominalVoltage);
+	assign_map.emplace("cim:EnergySource.pMax", &assign_EnergySource_pMax);
+	assign_map.emplace("cim:EnergySource.pMin", &assign_EnergySource_pMin);
+	assign_map.emplace("cim:EnergySource.r", &assign_EnergySource_r);
+	assign_map.emplace("cim:EnergySource.r0", &assign_EnergySource_r0);
+	assign_map.emplace("cim:EnergySource.reactivePower", &assign_EnergySource_reactivePower);
+	assign_map.emplace("cim:EnergySource.rn", &assign_EnergySource_rn);
+	assign_map.emplace("cim:EnergySource.voltageAngle", &assign_EnergySource_voltageAngle);
+	assign_map.emplace("cim:EnergySource.voltageMagnitude", &assign_EnergySource_voltageMagnitude);
+	assign_map.emplace("cim:EnergySource.x", &assign_EnergySource_x);
+	assign_map.emplace("cim:EnergySource.x0", &assign_EnergySource_x0);
+	assign_map.emplace("cim:EnergySource.xn", &assign_EnergySource_xn);
 }
 
 void EnergySource::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:EnergySource.EnergySchedulingType"), &assign_EnergySource_EnergySchedulingType));
+	assign_map.emplace("cim:EnergySource.EnergySchedulingType", &assign_EnergySource_EnergySchedulingType);
 }
 
 void EnergySource::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

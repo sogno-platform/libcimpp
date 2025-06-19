@@ -25,8 +25,11 @@ namespace CIMPP
 		VCompIEEEType2();
 		~VCompIEEEType2() override;
 
-		std::list<CIMPP::GenICompensationForGenJ*> GenICompensationForGenJ;  /* Compensation of this voltage compensator`s generator for current flow out of another generator. Default: 0 */
-		CIMPP::Seconds tr;  /*  Default: nullptr */
+		/** \brief Compensation of this voltage compensator`s generator for current flow out of another generator. Default: 0 */
+		std::list<CIMPP::GenICompensationForGenJ*> GenICompensationForGenJ;
+
+		/** \brief  Default: nullptr */
+		CIMPP::Seconds tr;
 
 		static const char debugName[];
 		const char* debugString() const override;

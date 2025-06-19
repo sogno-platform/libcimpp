@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class TapChanger;
 
-	/*
-	State variable for transformer tap step.
-	*/
+	/** \brief State variable for transformer tap step. */
 	class SvTapStep : public BaseClass
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		SvTapStep();
 		~SvTapStep() override;
 
-		CIMPP::TapChanger* TapChanger;  /* The tap changer associated with the tap step state. Default: 0 */
-		CIMPP::Float position;  /* The floating point tap position.   This is not the tap ratio, but rather the tap step position as defined by the related tap changer model and normally is constrained to be within the range of minimum and maximum tap positions. Default: 0.0 */
+		/** \brief The tap changer associated with the tap step state. Default: 0 */
+		CIMPP::TapChanger* TapChanger;
+
+		/** \brief The floating point tap position.   This is not the tap ratio, but rather the tap step position as defined by the related tap changer model and normally is constrained to be within the range of minimum and maximum tap positions. Default: 0.0 */
+		CIMPP::Float position;
 
 		static const char debugName[];
 		const char* debugString() const override;

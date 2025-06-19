@@ -15,8 +15,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-ConnectivityNode::ConnectivityNode() : BoundaryPoint(nullptr), ConnectivityNodeContainer(nullptr), TopologicalNode(nullptr) {};
-ConnectivityNode::~ConnectivityNode() {};
+ConnectivityNode::ConnectivityNode() : BoundaryPoint(nullptr), ConnectivityNodeContainer(nullptr), TopologicalNode(nullptr) {}
+ConnectivityNode::~ConnectivityNode() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -48,8 +48,6 @@ ConnectivityNode::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_BoundaryPoint_ConnectivityNode(BaseClass*, BaseClass*);
 bool assign_ConnectivityNode_BoundaryPoint(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -66,6 +64,7 @@ bool assign_ConnectivityNode_BoundaryPoint(BaseClass* BaseClass_ptr1, BaseClass*
 	}
 	return false;
 }
+
 bool assign_ConnectivityNodeContainer_ConnectivityNodes(BaseClass*, BaseClass*);
 bool assign_ConnectivityNode_ConnectivityNodeContainer(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -82,6 +81,7 @@ bool assign_ConnectivityNode_ConnectivityNodeContainer(BaseClass* BaseClass_ptr1
 	}
 	return false;
 }
+
 bool assign_Terminal_ConnectivityNode(BaseClass*, BaseClass*);
 bool assign_ConnectivityNode_Terminals(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -98,6 +98,7 @@ bool assign_ConnectivityNode_Terminals(BaseClass* BaseClass_ptr1, BaseClass* Bas
 	}
 	return false;
 }
+
 bool assign_TopologicalNode_ConnectivityNodes(BaseClass*, BaseClass*);
 bool assign_ConnectivityNode_TopologicalNode(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -118,7 +119,8 @@ bool assign_ConnectivityNode_TopologicalNode(BaseClass* BaseClass_ptr1, BaseClas
 
 bool get_ConnectivityNode_ConnectivityNodeContainer(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const ConnectivityNode* element = dynamic_cast<const ConnectivityNode*>(BaseClass_ptr1))
+	const ConnectivityNode* element = dynamic_cast<const ConnectivityNode*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->ConnectivityNodeContainer != 0)
 		{
@@ -129,9 +131,11 @@ bool get_ConnectivityNode_ConnectivityNodeContainer(const BaseClass* BaseClass_p
 	return false;
 }
 
+
 bool get_ConnectivityNode_TopologicalNode(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const ConnectivityNode* element = dynamic_cast<const ConnectivityNode*>(BaseClass_ptr1))
+	const ConnectivityNode* element = dynamic_cast<const ConnectivityNode*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->TopologicalNode != 0)
 		{
@@ -142,7 +146,6 @@ bool get_ConnectivityNode_TopologicalNode(const BaseClass* BaseClass_ptr1, std::
 	return false;
 }
 
-
 const char ConnectivityNode::debugName[] = "ConnectivityNode";
 const char* ConnectivityNode::debugString() const
 {
@@ -151,7 +154,7 @@ const char* ConnectivityNode::debugString() const
 
 void ConnectivityNode::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ConnectivityNode"), &ConnectivityNode_factory));
+	factory_map.emplace("cim:ConnectivityNode", &ConnectivityNode_factory);
 }
 
 void ConnectivityNode::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -160,10 +163,10 @@ void ConnectivityNode::addPrimitiveAssignFnsToMap(std::unordered_map<std::string
 
 void ConnectivityNode::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ConnectivityNode.BoundaryPoint"), &assign_ConnectivityNode_BoundaryPoint));
-	assign_map.insert(std::make_pair(std::string("cim:ConnectivityNode.ConnectivityNodeContainer"), &assign_ConnectivityNode_ConnectivityNodeContainer));
-	assign_map.insert(std::make_pair(std::string("cim:ConnectivityNode.Terminals"), &assign_ConnectivityNode_Terminals));
-	assign_map.insert(std::make_pair(std::string("cim:ConnectivityNode.TopologicalNode"), &assign_ConnectivityNode_TopologicalNode));
+	assign_map.emplace("cim:ConnectivityNode.BoundaryPoint", &assign_ConnectivityNode_BoundaryPoint);
+	assign_map.emplace("cim:ConnectivityNode.ConnectivityNodeContainer", &assign_ConnectivityNode_ConnectivityNodeContainer);
+	assign_map.emplace("cim:ConnectivityNode.Terminals", &assign_ConnectivityNode_Terminals);
+	assign_map.emplace("cim:ConnectivityNode.TopologicalNode", &assign_ConnectivityNode_TopologicalNode);
 }
 
 void ConnectivityNode::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

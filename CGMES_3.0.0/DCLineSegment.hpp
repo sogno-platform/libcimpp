@@ -20,9 +20,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A wire or combination of wires not insulated from one another, with consistent electrical characteristics, used to carry direct current between points in the DC region of the power system.
-	*/
+	/** \brief A wire or combination of wires not insulated from one another, with consistent electrical characteristics, used to carry direct current between points in the DC region of the power system. */
 	class DCLineSegment : public DCConductingEquipment
 	{
 	public:
@@ -30,10 +28,17 @@ namespace CIMPP
 		DCLineSegment();
 		~DCLineSegment() override;
 
-		CIMPP::Capacitance capacitance;  /* Capacitance of the DC line segment. Significant for cables only. Default: nullptr */
-		CIMPP::Inductance inductance;  /* Inductance of the DC line segment. Negligible compared with DCSeriesDevice used for smoothing. Default: nullptr */
-		CIMPP::Length length;  /* Segment length for calculating line section capabilities. Default: nullptr */
-		CIMPP::Resistance resistance;  /* Resistance of the DC line segment. Default: nullptr */
+		/** \brief Capacitance of the DC line segment. Significant for cables only. Default: nullptr */
+		CIMPP::Capacitance capacitance;
+
+		/** \brief Inductance of the DC line segment. Negligible compared with DCSeriesDevice used for smoothing. Default: nullptr */
+		CIMPP::Inductance inductance;
+
+		/** \brief Segment length for calculating line section capabilities. Default: nullptr */
+		CIMPP::Length length;
+
+		/** \brief Resistance of the DC line segment. Default: nullptr */
+		CIMPP::Resistance resistance;
 
 		static const char debugName[];
 		const char* debugString() const override;

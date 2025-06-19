@@ -18,9 +18,7 @@ namespace CIMPP
 	class ControlArea;
 	class GeneratingUnit;
 
-	/*
-	A control area generating unit. This class is needed so that alternate control area definitions may include the same generating unit.   Note only one instance within a control area should reference a specific generating unit.
-	*/
+	/** \brief A control area generating unit. This class is needed so that alternate control area definitions may include the same generating unit.   Note only one instance within a control area should reference a specific generating unit. */
 	class ControlAreaGeneratingUnit : public IdentifiedObject
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		ControlAreaGeneratingUnit();
 		~ControlAreaGeneratingUnit() override;
 
-		CIMPP::ControlArea* ControlArea;  /* The parent control area for the generating unit specifications. Default: 0 */
-		CIMPP::GeneratingUnit* GeneratingUnit;  /* The generating unit specified for this control area.  Note that a control area should include a GeneratingUnit only once. Default: 0 */
+		/** \brief The parent control area for the generating unit specifications. Default: 0 */
+		CIMPP::ControlArea* ControlArea;
+
+		/** \brief The generating unit specified for this control area.  Note that a control area should include a GeneratingUnit only once. Default: 0 */
+		CIMPP::GeneratingUnit* GeneratingUnit;
 
 		static const char debugName[];
 		const char* debugString() const override;

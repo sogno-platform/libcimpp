@@ -9,9 +9,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Measurement of angle in degrees.
-	*/
+	/** \brief Measurement of angle in degrees. */
 	class AngleDegrees
 	{
 	public:

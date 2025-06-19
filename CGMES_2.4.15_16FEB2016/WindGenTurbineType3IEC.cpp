@@ -12,13 +12,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "WindContPType3IEC.hpp"
 #include "WindContPitchAngleIEC.hpp"
 #include "WindMechIEC.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
 
 using namespace CIMPP;
 
-WindGenTurbineType3IEC::WindGenTurbineType3IEC() : WindAeroLinearIEC(nullptr), WindContPType3IEC(nullptr), WindContPitchAngleIEC(nullptr), WindMechIEC(nullptr) {};
-WindGenTurbineType3IEC::~WindGenTurbineType3IEC() {};
+WindGenTurbineType3IEC::WindGenTurbineType3IEC() : WindAeroLinearIEC(nullptr), WindContPType3IEC(nullptr), WindContPitchAngleIEC(nullptr), WindMechIEC(nullptr) {}
+WindGenTurbineType3IEC::~WindGenTurbineType3IEC() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -50,34 +48,6 @@ WindGenTurbineType3IEC::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_WindGenTurbineType3IEC_dipmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindGenTurbineType3IEC* element = dynamic_cast<WindGenTurbineType3IEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->dipmax;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindGenTurbineType3IEC_diqmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindGenTurbineType3IEC* element = dynamic_cast<WindGenTurbineType3IEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->diqmax;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_WindAeroLinearIEC_WindGenTurbineType3IEC(BaseClass*, BaseClass*);
 bool assign_WindGenTurbineType3IEC_WindAeroLinearIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -94,6 +64,7 @@ bool assign_WindGenTurbineType3IEC_WindAeroLinearIEC(BaseClass* BaseClass_ptr1, 
 	}
 	return false;
 }
+
 bool assign_WindContPType3IEC_WindGenTurbineType3IEC(BaseClass*, BaseClass*);
 bool assign_WindGenTurbineType3IEC_WindContPType3IEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -110,6 +81,7 @@ bool assign_WindGenTurbineType3IEC_WindContPType3IEC(BaseClass* BaseClass_ptr1, 
 	}
 	return false;
 }
+
 bool assign_WindContPitchAngleIEC_WindGenTurbineType3IEC(BaseClass*, BaseClass*);
 bool assign_WindGenTurbineType3IEC_WindContPitchAngleIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -126,6 +98,7 @@ bool assign_WindGenTurbineType3IEC_WindContPitchAngleIEC(BaseClass* BaseClass_pt
 	}
 	return false;
 }
+
 bool assign_WindMechIEC_WindGenTurbineType3IEC(BaseClass*, BaseClass*);
 bool assign_WindGenTurbineType3IEC_WindMechIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -143,9 +116,94 @@ bool assign_WindGenTurbineType3IEC_WindMechIEC(BaseClass* BaseClass_ptr1, BaseCl
 	return false;
 }
 
+bool assign_WindGenTurbineType3IEC_dipmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindGenTurbineType3IEC* element = dynamic_cast<WindGenTurbineType3IEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->dipmax;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindGenTurbineType3IEC_diqmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindGenTurbineType3IEC* element = dynamic_cast<WindGenTurbineType3IEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->diqmax;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_WindGenTurbineType3IEC_WindAeroLinearIEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const WindGenTurbineType3IEC* element = dynamic_cast<const WindGenTurbineType3IEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->WindAeroLinearIEC != 0)
+		{
+			BaseClass_list.push_back(element->WindAeroLinearIEC);
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_WindGenTurbineType3IEC_WindContPType3IEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const WindGenTurbineType3IEC* element = dynamic_cast<const WindGenTurbineType3IEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->WindContPType3IEC != 0)
+		{
+			BaseClass_list.push_back(element->WindContPType3IEC);
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_WindGenTurbineType3IEC_WindContPitchAngleIEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const WindGenTurbineType3IEC* element = dynamic_cast<const WindGenTurbineType3IEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->WindContPitchAngleIEC != 0)
+		{
+			BaseClass_list.push_back(element->WindContPitchAngleIEC);
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_WindGenTurbineType3IEC_WindMechIEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const WindGenTurbineType3IEC* element = dynamic_cast<const WindGenTurbineType3IEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->WindMechIEC != 0)
+		{
+			BaseClass_list.push_back(element->WindMechIEC);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_WindGenTurbineType3IEC_dipmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindGenTurbineType3IEC* element = dynamic_cast<const WindGenTurbineType3IEC*>(BaseClass_ptr1))
+	const WindGenTurbineType3IEC* element = dynamic_cast<const WindGenTurbineType3IEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->dipmax;
 		if (!buffer.str().empty())
@@ -159,7 +217,8 @@ bool get_WindGenTurbineType3IEC_dipmax(const BaseClass* BaseClass_ptr1, std::str
 
 bool get_WindGenTurbineType3IEC_diqmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindGenTurbineType3IEC* element = dynamic_cast<const WindGenTurbineType3IEC*>(BaseClass_ptr1))
+	const WindGenTurbineType3IEC* element = dynamic_cast<const WindGenTurbineType3IEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->diqmax;
 		if (!buffer.str().empty())
@@ -171,60 +230,6 @@ bool get_WindGenTurbineType3IEC_diqmax(const BaseClass* BaseClass_ptr1, std::str
 	return false;
 }
 
-
-bool get_WindGenTurbineType3IEC_WindAeroLinearIEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const WindGenTurbineType3IEC* element = dynamic_cast<const WindGenTurbineType3IEC*>(BaseClass_ptr1))
-	{
-		if (element->WindAeroLinearIEC != 0)
-		{
-			BaseClass_list.push_back(element->WindAeroLinearIEC);
-			return true;
-		}
-	}
-	return false;
-}
-
-bool get_WindGenTurbineType3IEC_WindContPType3IEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const WindGenTurbineType3IEC* element = dynamic_cast<const WindGenTurbineType3IEC*>(BaseClass_ptr1))
-	{
-		if (element->WindContPType3IEC != 0)
-		{
-			BaseClass_list.push_back(element->WindContPType3IEC);
-			return true;
-		}
-	}
-	return false;
-}
-
-bool get_WindGenTurbineType3IEC_WindContPitchAngleIEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const WindGenTurbineType3IEC* element = dynamic_cast<const WindGenTurbineType3IEC*>(BaseClass_ptr1))
-	{
-		if (element->WindContPitchAngleIEC != 0)
-		{
-			BaseClass_list.push_back(element->WindContPitchAngleIEC);
-			return true;
-		}
-	}
-	return false;
-}
-
-bool get_WindGenTurbineType3IEC_WindMechIEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const WindGenTurbineType3IEC* element = dynamic_cast<const WindGenTurbineType3IEC*>(BaseClass_ptr1))
-	{
-		if (element->WindMechIEC != 0)
-		{
-			BaseClass_list.push_back(element->WindMechIEC);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char WindGenTurbineType3IEC::debugName[] = "WindGenTurbineType3IEC";
 const char* WindGenTurbineType3IEC::debugString() const
 {
@@ -233,21 +238,21 @@ const char* WindGenTurbineType3IEC::debugString() const
 
 void WindGenTurbineType3IEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:WindGenTurbineType3IEC"), &WindGenTurbineType3IEC_factory));
+	factory_map.emplace("cim:WindGenTurbineType3IEC", &WindGenTurbineType3IEC_factory);
 }
 
 void WindGenTurbineType3IEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindGenTurbineType3IEC.dipmax"), &assign_WindGenTurbineType3IEC_dipmax));
-	assign_map.insert(std::make_pair(std::string("cim:WindGenTurbineType3IEC.diqmax"), &assign_WindGenTurbineType3IEC_diqmax));
+	assign_map.emplace("cim:WindGenTurbineType3IEC.dipmax", &assign_WindGenTurbineType3IEC_dipmax);
+	assign_map.emplace("cim:WindGenTurbineType3IEC.diqmax", &assign_WindGenTurbineType3IEC_diqmax);
 }
 
 void WindGenTurbineType3IEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindGenTurbineType3IEC.WindAeroLinearIEC"), &assign_WindGenTurbineType3IEC_WindAeroLinearIEC));
-	assign_map.insert(std::make_pair(std::string("cim:WindGenTurbineType3IEC.WindContPType3IEC"), &assign_WindGenTurbineType3IEC_WindContPType3IEC));
-	assign_map.insert(std::make_pair(std::string("cim:WindGenTurbineType3IEC.WindContPitchAngleIEC"), &assign_WindGenTurbineType3IEC_WindContPitchAngleIEC));
-	assign_map.insert(std::make_pair(std::string("cim:WindGenTurbineType3IEC.WindMechIEC"), &assign_WindGenTurbineType3IEC_WindMechIEC));
+	assign_map.emplace("cim:WindGenTurbineType3IEC.WindAeroLinearIEC", &assign_WindGenTurbineType3IEC_WindAeroLinearIEC);
+	assign_map.emplace("cim:WindGenTurbineType3IEC.WindContPType3IEC", &assign_WindGenTurbineType3IEC_WindContPType3IEC);
+	assign_map.emplace("cim:WindGenTurbineType3IEC.WindContPitchAngleIEC", &assign_WindGenTurbineType3IEC_WindContPitchAngleIEC);
+	assign_map.emplace("cim:WindGenTurbineType3IEC.WindMechIEC", &assign_WindGenTurbineType3IEC_WindMechIEC);
 }
 
 void WindGenTurbineType3IEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

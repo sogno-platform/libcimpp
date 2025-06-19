@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "HydroPlantStorageKind")
+		if (EnumSymbol.substr(0, pos) != "HydroPlantStorageKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,17 +50,17 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "runOfRiver")
+		if (EnumSymbol == "runOfRiver")
 		{
 			rop = HydroPlantStorageKind::runOfRiver;
 			return lop;
 		}
-		if(EnumSymbol == "pumpedStorage")
+		if (EnumSymbol == "pumpedStorage")
 		{
 			rop = HydroPlantStorageKind::pumpedStorage;
 			return lop;
 		}
-		if(EnumSymbol == "storage")
+		if (EnumSymbol == "storage")
 		{
 			rop = HydroPlantStorageKind::storage;
 			return lop;

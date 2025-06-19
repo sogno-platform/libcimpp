@@ -9,9 +9,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Real electrical energy.
-	*/
+	/** \brief Real electrical energy. */
 	class RealEnergy
 	{
 	public:

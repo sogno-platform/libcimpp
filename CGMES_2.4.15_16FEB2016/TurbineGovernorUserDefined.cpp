@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "ProprietaryParameterDynamics.hpp"
-#include "Boolean.hpp"
 
 using namespace CIMPP;
 
-TurbineGovernorUserDefined::TurbineGovernorUserDefined() {};
-TurbineGovernorUserDefined::~TurbineGovernorUserDefined() {};
+TurbineGovernorUserDefined::TurbineGovernorUserDefined() {}
+TurbineGovernorUserDefined::~TurbineGovernorUserDefined() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,21 +41,6 @@ TurbineGovernorUserDefined::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_TurbineGovernorUserDefined_proprietary(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (TurbineGovernorUserDefined* element = dynamic_cast<TurbineGovernorUserDefined*>(BaseClass_ptr1))
-	{
-		buffer >> element->proprietary;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_ProprietaryParameterDynamics_TurbineGovernorUserDefined(BaseClass*, BaseClass*);
 bool assign_TurbineGovernorUserDefined_ProprietaryParameterDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,9 +58,25 @@ bool assign_TurbineGovernorUserDefined_ProprietaryParameterDynamics(BaseClass* B
 	return false;
 }
 
+bool assign_TurbineGovernorUserDefined_proprietary(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	TurbineGovernorUserDefined* element = dynamic_cast<TurbineGovernorUserDefined*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->proprietary;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_TurbineGovernorUserDefined_proprietary(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TurbineGovernorUserDefined* element = dynamic_cast<const TurbineGovernorUserDefined*>(BaseClass_ptr1))
+	const TurbineGovernorUserDefined* element = dynamic_cast<const TurbineGovernorUserDefined*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->proprietary;
 		if (!buffer.str().empty())
@@ -88,8 +88,6 @@ bool get_TurbineGovernorUserDefined_proprietary(const BaseClass* BaseClass_ptr1,
 	return false;
 }
 
-
-
 const char TurbineGovernorUserDefined::debugName[] = "TurbineGovernorUserDefined";
 const char* TurbineGovernorUserDefined::debugString() const
 {
@@ -98,17 +96,17 @@ const char* TurbineGovernorUserDefined::debugString() const
 
 void TurbineGovernorUserDefined::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:TurbineGovernorUserDefined"), &TurbineGovernorUserDefined_factory));
+	factory_map.emplace("cim:TurbineGovernorUserDefined", &TurbineGovernorUserDefined_factory);
 }
 
 void TurbineGovernorUserDefined::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:TurbineGovernorUserDefined.proprietary"), &assign_TurbineGovernorUserDefined_proprietary));
+	assign_map.emplace("cim:TurbineGovernorUserDefined.proprietary", &assign_TurbineGovernorUserDefined_proprietary);
 }
 
 void TurbineGovernorUserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:TurbineGovernorUserDefined.ProprietaryParameterDynamics"), &assign_TurbineGovernorUserDefined_ProprietaryParameterDynamics));
+	assign_map.emplace("cim:TurbineGovernorUserDefined.ProprietaryParameterDynamics", &assign_TurbineGovernorUserDefined_ProprietaryParameterDynamics);
 }
 
 void TurbineGovernorUserDefined::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

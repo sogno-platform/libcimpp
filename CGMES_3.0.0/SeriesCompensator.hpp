@@ -21,9 +21,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A Series Compensator is a series capacitor or reactor or an AC transmission line without charging susceptance.  It is a two terminal device.
-	*/
+	/** \brief A Series Compensator is a series capacitor or reactor or an AC transmission line without charging susceptance.  It is a two terminal device. */
 	class SeriesCompensator : public ConductingEquipment
 	{
 	public:
@@ -31,13 +29,26 @@ namespace CIMPP
 		SeriesCompensator();
 		~SeriesCompensator() override;
 
-		CIMPP::Resistance r;  /* Positive sequence resistance. Default: nullptr */
-		CIMPP::Resistance r0;  /* Zero sequence resistance. Default: nullptr */
-		CIMPP::Boolean varistorPresent;  /* Describe if a metal oxide varistor (mov) for over voltage protection is configured in parallel with the series compensator. It is used for short circuit calculations. Default: false */
-		CIMPP::CurrentFlow varistorRatedCurrent;  /* The maximum current the varistor is designed to handle at specified duration. It is used for short circuit calculations and exchanged only if SeriesCompensator.varistorPresent is true. The attribute shall be a positive value. Default: nullptr */
-		CIMPP::Voltage varistorVoltageThreshold;  /* The dc voltage at which the varistor starts conducting. It is used for short circuit calculations and exchanged only if SeriesCompensator.varistorPresent is true. Default: nullptr */
-		CIMPP::Reactance x;  /* Positive sequence reactance. Default: nullptr */
-		CIMPP::Reactance x0;  /* Zero sequence reactance. Default: nullptr */
+		/** \brief Positive sequence resistance. Default: nullptr */
+		CIMPP::Resistance r;
+
+		/** \brief Zero sequence resistance. Default: nullptr */
+		CIMPP::Resistance r0;
+
+		/** \brief Describe if a metal oxide varistor (mov) for over voltage protection is configured in parallel with the series compensator. It is used for short circuit calculations. Default: false */
+		CIMPP::Boolean varistorPresent;
+
+		/** \brief The maximum current the varistor is designed to handle at specified duration. It is used for short circuit calculations and exchanged only if SeriesCompensator.varistorPresent is true. The attribute shall be a positive value. Default: nullptr */
+		CIMPP::CurrentFlow varistorRatedCurrent;
+
+		/** \brief The dc voltage at which the varistor starts conducting. It is used for short circuit calculations and exchanged only if SeriesCompensator.varistorPresent is true. Default: nullptr */
+		CIMPP::Voltage varistorVoltageThreshold;
+
+		/** \brief Positive sequence reactance. Default: nullptr */
+		CIMPP::Reactance x;
+
+		/** \brief Zero sequence reactance. Default: nullptr */
+		CIMPP::Reactance x0;
 
 		static const char debugName[];
 		const char* debugString() const override;

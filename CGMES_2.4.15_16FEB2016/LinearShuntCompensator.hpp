@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A linear shunt compensator has banks or sections with equal admittance values.
-	*/
+	/** \brief A linear shunt compensator has banks or sections with equal admittance values. */
 	class LinearShuntCompensator : public ShuntCompensator
 	{
 	public:
@@ -28,10 +26,17 @@ namespace CIMPP
 		LinearShuntCompensator();
 		~LinearShuntCompensator() override;
 
-		CIMPP::Susceptance b0PerSection;  /* Zero sequence shunt (charging) susceptance per section Default: nullptr */
-		CIMPP::Susceptance bPerSection;  /* Positive sequence shunt (charging) susceptance per section Default: nullptr */
-		CIMPP::Conductance g0PerSection;  /* Zero sequence shunt (charging) conductance per section Default: nullptr */
-		CIMPP::Conductance gPerSection;  /* Positive sequence shunt (charging) conductance per section Default: nullptr */
+		/** \brief Zero sequence shunt (charging) susceptance per section Default: nullptr */
+		CIMPP::Susceptance b0PerSection;
+
+		/** \brief Positive sequence shunt (charging) susceptance per section Default: nullptr */
+		CIMPP::Susceptance bPerSection;
+
+		/** \brief Zero sequence shunt (charging) conductance per section Default: nullptr */
+		CIMPP::Conductance g0PerSection;
+
+		/** \brief Positive sequence shunt (charging) conductance per section Default: nullptr */
+		CIMPP::Conductance gPerSection;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -8,13 +8,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "AccumulatorValue.hpp"
 #include "AccumulatorLimitSet.hpp"
+#include "AccumulatorValue.hpp"
 
 using namespace CIMPP;
 
-Accumulator::Accumulator() {};
-Accumulator::~Accumulator() {};
+Accumulator::Accumulator() {}
+Accumulator::~Accumulator() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,8 +42,6 @@ Accumulator::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_AccumulatorValue_Accumulator(BaseClass*, BaseClass*);
 bool assign_Accumulator_AccumulatorValues(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,6 +58,7 @@ bool assign_Accumulator_AccumulatorValues(BaseClass* BaseClass_ptr1, BaseClass* 
 	}
 	return false;
 }
+
 bool assign_AccumulatorLimitSet_Measurements(BaseClass*, BaseClass*);
 bool assign_Accumulator_LimitSets(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -87,7 +86,7 @@ const char* Accumulator::debugString() const
 
 void Accumulator::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:Accumulator"), &Accumulator_factory));
+	factory_map.emplace("cim:Accumulator", &Accumulator_factory);
 }
 
 void Accumulator::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -96,8 +95,8 @@ void Accumulator::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, ass
 
 void Accumulator::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Accumulator.AccumulatorValues"), &assign_Accumulator_AccumulatorValues));
-	assign_map.insert(std::make_pair(std::string("cim:Accumulator.LimitSets"), &assign_Accumulator_LimitSets));
+	assign_map.emplace("cim:Accumulator.AccumulatorValues", &assign_Accumulator_AccumulatorValues);
+	assign_map.emplace("cim:Accumulator.LimitSets", &assign_Accumulator_LimitSets);
 }
 
 void Accumulator::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

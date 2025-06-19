@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Czech Proportion/Integral Exciter.
-	*/
+	/** \brief Czech Proportion/Integral Exciter. */
 	class ExcCZ : public ExcitationSystemDynamics
 	{
 	public:
@@ -28,16 +26,35 @@ namespace CIMPP
 		ExcCZ();
 		~ExcCZ() override;
 
-		CIMPP::PU efdmax;  /* Exciter output maximum limit (Efdmax). Default: nullptr */
-		CIMPP::PU efdmin;  /* Exciter output minimum limit (Efdmin). Default: nullptr */
-		CIMPP::PU ka;  /* Regulator gain (Ka). Default: nullptr */
-		CIMPP::PU ke;  /* Exciter constant related to self-excited field (Ke). Default: nullptr */
-		CIMPP::PU kp;  /* Regulator proportional gain (Kp). Default: nullptr */
-		CIMPP::Seconds ta;  /* Regulator time constant (Ta). Default: nullptr */
-		CIMPP::Seconds tc;  /* Regulator integral time constant (Tc). Default: nullptr */
-		CIMPP::Seconds te;  /* Exciter time constant, integration rate associated with exciter control (Te). Default: nullptr */
-		CIMPP::PU vrmax;  /* Voltage regulator maximum limit (Vrmax). Default: nullptr */
-		CIMPP::PU vrmin;  /* Voltage regulator minimum limit (Vrmin). Default: nullptr */
+		/** \brief Exciter output maximum limit (Efdmax). Default: nullptr */
+		CIMPP::PU efdmax;
+
+		/** \brief Exciter output minimum limit (Efdmin). Default: nullptr */
+		CIMPP::PU efdmin;
+
+		/** \brief Regulator gain (Ka). Default: nullptr */
+		CIMPP::PU ka;
+
+		/** \brief Exciter constant related to self-excited field (Ke). Default: nullptr */
+		CIMPP::PU ke;
+
+		/** \brief Regulator proportional gain (Kp). Default: nullptr */
+		CIMPP::PU kp;
+
+		/** \brief Regulator time constant (Ta). Default: nullptr */
+		CIMPP::Seconds ta;
+
+		/** \brief Regulator integral time constant (Tc). Default: nullptr */
+		CIMPP::Seconds tc;
+
+		/** \brief Exciter time constant, integration rate associated with exciter control (Te). Default: nullptr */
+		CIMPP::Seconds te;
+
+		/** \brief Voltage regulator maximum limit (Vrmax). Default: nullptr */
+		CIMPP::PU vrmax;
+
+		/** \brief Voltage regulator minimum limit (Vrmin). Default: nullptr */
+		CIMPP::PU vrmin;
 
 		static const char debugName[];
 		const char* debugString() const override;

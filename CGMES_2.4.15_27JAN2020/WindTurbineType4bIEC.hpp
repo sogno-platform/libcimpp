@@ -18,9 +18,7 @@ namespace CIMPP
 	class WindContPType4bIEC;
 	class WindMechIEC;
 
-	/*
-	Wind turbine IEC Type 4A.  Reference: IEC Standard 61400-27-1, section 6.5.5.3.
-	*/
+	/** \brief Wind turbine IEC Type 4A.  Reference: IEC Standard 61400-27-1, section 6.5.5.3. */
 	class WindTurbineType4bIEC : public WindGenType4IEC
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		WindTurbineType4bIEC();
 		~WindTurbineType4bIEC() override;
 
-		CIMPP::WindContPType4bIEC* WindContPType4bIEC;  /* Wind control P type 4B model associated with this wind turbine type 4B model. Default: 0 */
-		CIMPP::WindMechIEC* WindMechIEC;  /* Wind mechanical model associated with this wind turbine Type 4B model. Default: 0 */
+		/** \brief Wind control P type 4B model associated with this wind turbine type 4B model. Default: 0 */
+		CIMPP::WindContPType4bIEC* WindContPType4bIEC;
+
+		/** \brief Wind mechanical model associated with this wind turbine Type 4B model. Default: 0 */
+		CIMPP::WindMechIEC* WindMechIEC;
 
 		static const char debugName[];
 		const char* debugString() const override;

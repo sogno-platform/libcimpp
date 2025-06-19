@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	PSS Slovakian type - three inputs.
-	*/
+	/** \brief PSS Slovakian type - three inputs. */
 	class PssSK : public PowerSystemStabilizerDynamics
 	{
 	public:
@@ -28,17 +26,38 @@ namespace CIMPP
 		PssSK();
 		~PssSK() override;
 
-		CIMPP::PU k1;  /* Gain P (K1).  Typical Value = -0.3. Default: nullptr */
-		CIMPP::PU k2;  /* Gain fe (K2).  Typical Value = -0.15. Default: nullptr */
-		CIMPP::PU k3;  /* Gain If (K3).  Typical Value = 10. Default: nullptr */
-		CIMPP::Seconds t1;  /* Denominator time constant (T1).  Typical Value = 0.3. Default: nullptr */
-		CIMPP::Seconds t2;  /* Filter time constant (T2).  Typical Value = 0.35. Default: nullptr */
-		CIMPP::Seconds t3;  /* Denominator time constant (T3).  Typical Value = 0.22. Default: nullptr */
-		CIMPP::Seconds t4;  /* Filter time constant (T4).  Typical Value = 0.02. Default: nullptr */
-		CIMPP::Seconds t5;  /* Denominator time constant (T5).  Typical Value = 0.02. Default: nullptr */
-		CIMPP::Seconds t6;  /* Filter time constant (T6).  Typical Value = 0.02. Default: nullptr */
-		CIMPP::PU vsmax;  /* Stabilizer output max limit (Vsmax).  Typical Value = 0.4. Default: nullptr */
-		CIMPP::PU vsmin;  /* Stabilizer output min limit (Vsmin).  Typical Value = -0.4. Default: nullptr */
+		/** \brief Gain P (K1).  Typical Value = -0.3. Default: nullptr */
+		CIMPP::PU k1;
+
+		/** \brief Gain fe (K2).  Typical Value = -0.15. Default: nullptr */
+		CIMPP::PU k2;
+
+		/** \brief Gain If (K3).  Typical Value = 10. Default: nullptr */
+		CIMPP::PU k3;
+
+		/** \brief Denominator time constant (T1).  Typical Value = 0.3. Default: nullptr */
+		CIMPP::Seconds t1;
+
+		/** \brief Filter time constant (T2).  Typical Value = 0.35. Default: nullptr */
+		CIMPP::Seconds t2;
+
+		/** \brief Denominator time constant (T3).  Typical Value = 0.22. Default: nullptr */
+		CIMPP::Seconds t3;
+
+		/** \brief Filter time constant (T4).  Typical Value = 0.02. Default: nullptr */
+		CIMPP::Seconds t4;
+
+		/** \brief Denominator time constant (T5).  Typical Value = 0.02. Default: nullptr */
+		CIMPP::Seconds t5;
+
+		/** \brief Filter time constant (T6).  Typical Value = 0.02. Default: nullptr */
+		CIMPP::Seconds t6;
+
+		/** \brief Stabilizer output max limit (Vsmax).  Typical Value = 0.4. Default: nullptr */
+		CIMPP::PU vsmax;
+
+		/** \brief Stabilizer output min limit (Vsmin).  Typical Value = -0.4. Default: nullptr */
+		CIMPP::PU vsmin;
 
 		static const char debugName[];
 		const char* debugString() const override;

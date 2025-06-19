@@ -20,9 +20,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Italian excitation system. It represents static field voltage or excitation current feedback excitation system.
-	*/
+	/** \brief Italian excitation system. It represents static field voltage or excitation current feedback excitation system. */
 	class ExcANS : public ExcitationSystemDynamics
 	{
 	public:
@@ -30,20 +28,47 @@ namespace CIMPP
 		ExcANS();
 		~ExcANS() override;
 
-		CIMPP::Integer blint;  /* Governor control flag (&lt;i&gt;BLINT&lt;/i&gt;).  0 = lead-lag regulator 1 = proportional integral regulator. Typical value = 0. Default: 0 */
-		CIMPP::PU ifmn;  /* Minimum exciter current (&lt;i&gt;I&lt;/i&gt;&lt;i&gt;&lt;sub&gt;FMN&lt;/sub&gt;&lt;/i&gt;).  Typical value = -5,2. Default: nullptr */
-		CIMPP::PU ifmx;  /* Maximum exciter current (&lt;i&gt;I&lt;/i&gt;&lt;i&gt;&lt;sub&gt;FMX&lt;/sub&gt;&lt;/i&gt;).  Typical value = 6,5. Default: nullptr */
-		CIMPP::Float k2;  /* Exciter gain (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;2&lt;/sub&gt;&lt;/i&gt;).  Typical value = 20. Default: 0.0 */
-		CIMPP::Float k3;  /* AVR gain (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;3&lt;/sub&gt;&lt;/i&gt;).  Typical value = 1000. Default: 0.0 */
-		CIMPP::Float kce;  /* Ceiling factor (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;CE&lt;/sub&gt;&lt;/i&gt;).  Typical value = 1. Default: 0.0 */
-		CIMPP::Integer krvecc;  /* Feedback enabling (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;RVECC&lt;/sub&gt;&lt;/i&gt;).  0 = open loop control 1 = closed loop control. Typical value = 1. Default: 0 */
-		CIMPP::Integer kvfif;  /* Rate feedback signal flag (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;VFIF&lt;/sub&gt;&lt;/i&gt;).  0 = output voltage of the exciter 1 = exciter field current. Typical value = 0. Default: 0 */
-		CIMPP::Seconds t1;  /* Time constant (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;1&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 20. Default: nullptr */
-		CIMPP::Seconds t2;  /* Time constant (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;2&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 0,05. Default: nullptr */
-		CIMPP::Seconds t3;  /* Time constant (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;3&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 1,6. Default: nullptr */
-		CIMPP::Seconds tb;  /* Exciter time constant (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;B&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 0,04. Default: nullptr */
-		CIMPP::PU vrmn;  /* Minimum AVR output (&lt;i&gt;V&lt;/i&gt;&lt;i&gt;&lt;sub&gt;RMN&lt;/sub&gt;&lt;/i&gt;).  Typical value = -5,2. Default: nullptr */
-		CIMPP::PU vrmx;  /* Maximum AVR output (&lt;i&gt;V&lt;/i&gt;&lt;i&gt;&lt;sub&gt;RMX&lt;/sub&gt;&lt;/i&gt;).  Typical value = 6,5. Default: nullptr */
+		/** \brief Governor control flag (&lt;i&gt;BLINT&lt;/i&gt;).  0 = lead-lag regulator 1 = proportional integral regulator. Typical value = 0. Default: 0 */
+		CIMPP::Integer blint;
+
+		/** \brief Minimum exciter current (&lt;i&gt;I&lt;/i&gt;&lt;i&gt;&lt;sub&gt;FMN&lt;/sub&gt;&lt;/i&gt;).  Typical value = -5,2. Default: nullptr */
+		CIMPP::PU ifmn;
+
+		/** \brief Maximum exciter current (&lt;i&gt;I&lt;/i&gt;&lt;i&gt;&lt;sub&gt;FMX&lt;/sub&gt;&lt;/i&gt;).  Typical value = 6,5. Default: nullptr */
+		CIMPP::PU ifmx;
+
+		/** \brief Exciter gain (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;2&lt;/sub&gt;&lt;/i&gt;).  Typical value = 20. Default: 0.0 */
+		CIMPP::Float k2;
+
+		/** \brief AVR gain (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;3&lt;/sub&gt;&lt;/i&gt;).  Typical value = 1000. Default: 0.0 */
+		CIMPP::Float k3;
+
+		/** \brief Ceiling factor (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;CE&lt;/sub&gt;&lt;/i&gt;).  Typical value = 1. Default: 0.0 */
+		CIMPP::Float kce;
+
+		/** \brief Feedback enabling (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;RVECC&lt;/sub&gt;&lt;/i&gt;).  0 = open loop control 1 = closed loop control. Typical value = 1. Default: 0 */
+		CIMPP::Integer krvecc;
+
+		/** \brief Rate feedback signal flag (&lt;i&gt;K&lt;/i&gt;&lt;i&gt;&lt;sub&gt;VFIF&lt;/sub&gt;&lt;/i&gt;).  0 = output voltage of the exciter 1 = exciter field current. Typical value = 0. Default: 0 */
+		CIMPP::Integer kvfif;
+
+		/** \brief Time constant (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;1&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 20. Default: nullptr */
+		CIMPP::Seconds t1;
+
+		/** \brief Time constant (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;2&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 0,05. Default: nullptr */
+		CIMPP::Seconds t2;
+
+		/** \brief Time constant (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;3&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 1,6. Default: nullptr */
+		CIMPP::Seconds t3;
+
+		/** \brief Exciter time constant (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;B&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 0,04. Default: nullptr */
+		CIMPP::Seconds tb;
+
+		/** \brief Minimum AVR output (&lt;i&gt;V&lt;/i&gt;&lt;i&gt;&lt;sub&gt;RMN&lt;/sub&gt;&lt;/i&gt;).  Typical value = -5,2. Default: nullptr */
+		CIMPP::PU vrmn;
+
+		/** \brief Maximum AVR output (&lt;i&gt;V&lt;/i&gt;&lt;i&gt;&lt;sub&gt;RMX&lt;/sub&gt;&lt;/i&gt;).  Typical value = 6,5. Default: nullptr */
+		CIMPP::PU vrmx;
 
 		static const char debugName[];
 		const char* debugString() const override;

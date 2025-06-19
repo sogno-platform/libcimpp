@@ -8,21 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "String.hpp"
-#include "String.hpp"
-#include "Date.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
 
 using namespace CIMPP;
 
-GeographicalLocationVersion::GeographicalLocationVersion() {};
-GeographicalLocationVersion::~GeographicalLocationVersion() {};
+GeographicalLocationVersion::GeographicalLocationVersion() {}
+GeographicalLocationVersion::~GeographicalLocationVersion() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -58,142 +48,150 @@ GeographicalLocationVersion::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_GeographicalLocationVersion_baseUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GeographicalLocationVersion_baseUML(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1))
+	GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->baseUML = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GeographicalLocationVersion_baseURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GeographicalLocationVersion_baseURI(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1))
+	GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->baseURI = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GeographicalLocationVersion_date(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GeographicalLocationVersion_date(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1))
+	GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->date = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GeographicalLocationVersion_differenceModelURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GeographicalLocationVersion_differenceModelURI(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1))
+	GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->differenceModelURI = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GeographicalLocationVersion_entsoeUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GeographicalLocationVersion_entsoeUML(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1))
+	GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->entsoeUML = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GeographicalLocationVersion_entsoeURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GeographicalLocationVersion_entsoeURI(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1))
+	GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->entsoeURI = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GeographicalLocationVersion_modelDescriptionURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GeographicalLocationVersion_modelDescriptionURI(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1))
+	GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->modelDescriptionURI = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GeographicalLocationVersion_namespaceRDF(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GeographicalLocationVersion_namespaceRDF(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1))
+	GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->namespaceRDF = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GeographicalLocationVersion_namespaceUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GeographicalLocationVersion_namespaceUML(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1))
+	GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->namespaceUML = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GeographicalLocationVersion_shortName(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GeographicalLocationVersion_shortName(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1))
+	GeographicalLocationVersion* element = dynamic_cast<GeographicalLocationVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->shortName = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_GeographicalLocationVersion_baseUML(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeographicalLocationVersion* element = dynamic_cast<const GeographicalLocationVersion*>(BaseClass_ptr1))
+	const GeographicalLocationVersion* element = dynamic_cast<const GeographicalLocationVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->baseUML;
 		if (!buffer.str().empty())
@@ -207,7 +205,8 @@ bool get_GeographicalLocationVersion_baseUML(const BaseClass* BaseClass_ptr1, st
 
 bool get_GeographicalLocationVersion_baseURI(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeographicalLocationVersion* element = dynamic_cast<const GeographicalLocationVersion*>(BaseClass_ptr1))
+	const GeographicalLocationVersion* element = dynamic_cast<const GeographicalLocationVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->baseURI;
 		if (!buffer.str().empty())
@@ -221,7 +220,8 @@ bool get_GeographicalLocationVersion_baseURI(const BaseClass* BaseClass_ptr1, st
 
 bool get_GeographicalLocationVersion_date(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeographicalLocationVersion* element = dynamic_cast<const GeographicalLocationVersion*>(BaseClass_ptr1))
+	const GeographicalLocationVersion* element = dynamic_cast<const GeographicalLocationVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->date;
 		if (!buffer.str().empty())
@@ -235,7 +235,8 @@ bool get_GeographicalLocationVersion_date(const BaseClass* BaseClass_ptr1, std::
 
 bool get_GeographicalLocationVersion_differenceModelURI(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeographicalLocationVersion* element = dynamic_cast<const GeographicalLocationVersion*>(BaseClass_ptr1))
+	const GeographicalLocationVersion* element = dynamic_cast<const GeographicalLocationVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->differenceModelURI;
 		if (!buffer.str().empty())
@@ -249,7 +250,8 @@ bool get_GeographicalLocationVersion_differenceModelURI(const BaseClass* BaseCla
 
 bool get_GeographicalLocationVersion_entsoeUML(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeographicalLocationVersion* element = dynamic_cast<const GeographicalLocationVersion*>(BaseClass_ptr1))
+	const GeographicalLocationVersion* element = dynamic_cast<const GeographicalLocationVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->entsoeUML;
 		if (!buffer.str().empty())
@@ -263,7 +265,8 @@ bool get_GeographicalLocationVersion_entsoeUML(const BaseClass* BaseClass_ptr1, 
 
 bool get_GeographicalLocationVersion_entsoeURI(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeographicalLocationVersion* element = dynamic_cast<const GeographicalLocationVersion*>(BaseClass_ptr1))
+	const GeographicalLocationVersion* element = dynamic_cast<const GeographicalLocationVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->entsoeURI;
 		if (!buffer.str().empty())
@@ -277,7 +280,8 @@ bool get_GeographicalLocationVersion_entsoeURI(const BaseClass* BaseClass_ptr1, 
 
 bool get_GeographicalLocationVersion_modelDescriptionURI(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeographicalLocationVersion* element = dynamic_cast<const GeographicalLocationVersion*>(BaseClass_ptr1))
+	const GeographicalLocationVersion* element = dynamic_cast<const GeographicalLocationVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->modelDescriptionURI;
 		if (!buffer.str().empty())
@@ -291,7 +295,8 @@ bool get_GeographicalLocationVersion_modelDescriptionURI(const BaseClass* BaseCl
 
 bool get_GeographicalLocationVersion_namespaceRDF(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeographicalLocationVersion* element = dynamic_cast<const GeographicalLocationVersion*>(BaseClass_ptr1))
+	const GeographicalLocationVersion* element = dynamic_cast<const GeographicalLocationVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->namespaceRDF;
 		if (!buffer.str().empty())
@@ -305,7 +310,8 @@ bool get_GeographicalLocationVersion_namespaceRDF(const BaseClass* BaseClass_ptr
 
 bool get_GeographicalLocationVersion_namespaceUML(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeographicalLocationVersion* element = dynamic_cast<const GeographicalLocationVersion*>(BaseClass_ptr1))
+	const GeographicalLocationVersion* element = dynamic_cast<const GeographicalLocationVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->namespaceUML;
 		if (!buffer.str().empty())
@@ -319,7 +325,8 @@ bool get_GeographicalLocationVersion_namespaceUML(const BaseClass* BaseClass_ptr
 
 bool get_GeographicalLocationVersion_shortName(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GeographicalLocationVersion* element = dynamic_cast<const GeographicalLocationVersion*>(BaseClass_ptr1))
+	const GeographicalLocationVersion* element = dynamic_cast<const GeographicalLocationVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->shortName;
 		if (!buffer.str().empty())
@@ -331,8 +338,6 @@ bool get_GeographicalLocationVersion_shortName(const BaseClass* BaseClass_ptr1, 
 	return false;
 }
 
-
-
 const char GeographicalLocationVersion::debugName[] = "GeographicalLocationVersion";
 const char* GeographicalLocationVersion::debugString() const
 {
@@ -341,21 +346,21 @@ const char* GeographicalLocationVersion::debugString() const
 
 void GeographicalLocationVersion::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:GeographicalLocationVersion"), &GeographicalLocationVersion_factory));
+	factory_map.emplace("cim:GeographicalLocationVersion", &GeographicalLocationVersion_factory);
 }
 
 void GeographicalLocationVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:GeographicalLocationVersion.baseUML"), &assign_GeographicalLocationVersion_baseUML));
-	assign_map.insert(std::make_pair(std::string("cim:GeographicalLocationVersion.baseURI"), &assign_GeographicalLocationVersion_baseURI));
-	assign_map.insert(std::make_pair(std::string("cim:GeographicalLocationVersion.date"), &assign_GeographicalLocationVersion_date));
-	assign_map.insert(std::make_pair(std::string("cim:GeographicalLocationVersion.differenceModelURI"), &assign_GeographicalLocationVersion_differenceModelURI));
-	assign_map.insert(std::make_pair(std::string("cim:GeographicalLocationVersion.entsoeUML"), &assign_GeographicalLocationVersion_entsoeUML));
-	assign_map.insert(std::make_pair(std::string("cim:GeographicalLocationVersion.entsoeURI"), &assign_GeographicalLocationVersion_entsoeURI));
-	assign_map.insert(std::make_pair(std::string("cim:GeographicalLocationVersion.modelDescriptionURI"), &assign_GeographicalLocationVersion_modelDescriptionURI));
-	assign_map.insert(std::make_pair(std::string("cim:GeographicalLocationVersion.namespaceRDF"), &assign_GeographicalLocationVersion_namespaceRDF));
-	assign_map.insert(std::make_pair(std::string("cim:GeographicalLocationVersion.namespaceUML"), &assign_GeographicalLocationVersion_namespaceUML));
-	assign_map.insert(std::make_pair(std::string("cim:GeographicalLocationVersion.shortName"), &assign_GeographicalLocationVersion_shortName));
+	assign_map.emplace("cim:GeographicalLocationVersion.baseUML", &assign_GeographicalLocationVersion_baseUML);
+	assign_map.emplace("cim:GeographicalLocationVersion.baseURI", &assign_GeographicalLocationVersion_baseURI);
+	assign_map.emplace("cim:GeographicalLocationVersion.date", &assign_GeographicalLocationVersion_date);
+	assign_map.emplace("cim:GeographicalLocationVersion.differenceModelURI", &assign_GeographicalLocationVersion_differenceModelURI);
+	assign_map.emplace("cim:GeographicalLocationVersion.entsoeUML", &assign_GeographicalLocationVersion_entsoeUML);
+	assign_map.emplace("cim:GeographicalLocationVersion.entsoeURI", &assign_GeographicalLocationVersion_entsoeURI);
+	assign_map.emplace("cim:GeographicalLocationVersion.modelDescriptionURI", &assign_GeographicalLocationVersion_modelDescriptionURI);
+	assign_map.emplace("cim:GeographicalLocationVersion.namespaceRDF", &assign_GeographicalLocationVersion_namespaceRDF);
+	assign_map.emplace("cim:GeographicalLocationVersion.namespaceUML", &assign_GeographicalLocationVersion_namespaceUML);
+	assign_map.emplace("cim:GeographicalLocationVersion.shortName", &assign_GeographicalLocationVersion_shortName);
 }
 
 void GeographicalLocationVersion::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

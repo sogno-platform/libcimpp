@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A photovoltaic device or an aggregation of such devices.
-	*/
+	/** \brief A photovoltaic device or an aggregation of such devices. */
 	class PhotoVoltaicUnit : public PowerElectronicsUnit
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		PhotoVoltaicUnit();
 		~PhotoVoltaicUnit() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

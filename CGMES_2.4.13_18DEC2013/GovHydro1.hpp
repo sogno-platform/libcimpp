@@ -20,9 +20,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Basic Hydro turbine governor model.
-	*/
+	/** \brief Basic Hydro turbine governor model. */
 	class GovHydro1 : public TurbineGovernorDynamics
 	{
 	public:
@@ -30,20 +28,47 @@ namespace CIMPP
 		GovHydro1();
 		~GovHydro1() override;
 
-		CIMPP::PU at;  /* Turbine gain (At) (&gt;0).  Typical Value = 1.2. Default: nullptr */
-		CIMPP::PU dturb;  /* Turbine damping factor (Dturb) (&gt;=0).  Typical Value = 0.5. Default: nullptr */
-		CIMPP::PU gmax;  /* Maximum gate opening (Gmax) (&gt;0).  Typical Value = 1. Default: nullptr */
-		CIMPP::PU gmin;  /* Minimum gate opening (Gmin) (&gt;=0).  Typical Value = 0. Default: nullptr */
-		CIMPP::PU hdam;  /* Turbine nominal head (hdam).  Typical Value = 1. Default: nullptr */
-		CIMPP::ActivePower mwbase;  /* Base for power values (MWbase) (&gt; 0).  Unit = MW. Default: nullptr */
-		CIMPP::PU qnl;  /* No-load flow at nominal head (qnl) (&gt;=0).  Typical Value = 0.08. Default: nullptr */
-		CIMPP::PU rperm;  /* Permanent droop (R) (&gt;0).  Typical Value = 0.04. Default: nullptr */
-		CIMPP::PU rtemp;  /* Temporary droop (r) (&gt;R).  Typical Value = 0.3. Default: nullptr */
-		CIMPP::Seconds tf;  /* Filter time constant () (&gt;0).  Typical Value = 0.05. Default: nullptr */
-		CIMPP::Seconds tg;  /* Gate servo time constant (Tg) (&gt;0).  Typical Value = 0.5. Default: nullptr */
-		CIMPP::Seconds tr;  /* Washout time constant (Tr) (&gt;0).  Typical Value = 5. Default: nullptr */
-		CIMPP::Seconds tw;  /* Water inertia time constant (Tw) (&gt;0).  Typical Value = 1. Default: nullptr */
-		CIMPP::Simple_Float velm;  /* Maximum gate velocity (Vlem) (&gt;0).  Typical Value = 0.2. Default: nullptr */
+		/** \brief Turbine gain (At) (&gt;0).  Typical Value = 1.2. Default: nullptr */
+		CIMPP::PU at;
+
+		/** \brief Turbine damping factor (Dturb) (&gt;=0).  Typical Value = 0.5. Default: nullptr */
+		CIMPP::PU dturb;
+
+		/** \brief Maximum gate opening (Gmax) (&gt;0).  Typical Value = 1. Default: nullptr */
+		CIMPP::PU gmax;
+
+		/** \brief Minimum gate opening (Gmin) (&gt;=0).  Typical Value = 0. Default: nullptr */
+		CIMPP::PU gmin;
+
+		/** \brief Turbine nominal head (hdam).  Typical Value = 1. Default: nullptr */
+		CIMPP::PU hdam;
+
+		/** \brief Base for power values (MWbase) (&gt; 0).  Unit = MW. Default: nullptr */
+		CIMPP::ActivePower mwbase;
+
+		/** \brief No-load flow at nominal head (qnl) (&gt;=0).  Typical Value = 0.08. Default: nullptr */
+		CIMPP::PU qnl;
+
+		/** \brief Permanent droop (R) (&gt;0).  Typical Value = 0.04. Default: nullptr */
+		CIMPP::PU rperm;
+
+		/** \brief Temporary droop (r) (&gt;R).  Typical Value = 0.3. Default: nullptr */
+		CIMPP::PU rtemp;
+
+		/** \brief Filter time constant () (&gt;0).  Typical Value = 0.05. Default: nullptr */
+		CIMPP::Seconds tf;
+
+		/** \brief Gate servo time constant (Tg) (&gt;0).  Typical Value = 0.5. Default: nullptr */
+		CIMPP::Seconds tg;
+
+		/** \brief Washout time constant (Tr) (&gt;0).  Typical Value = 5. Default: nullptr */
+		CIMPP::Seconds tr;
+
+		/** \brief Water inertia time constant (Tw) (&gt;0).  Typical Value = 1. Default: nullptr */
+		CIMPP::Seconds tw;
+
+		/** \brief Maximum gate velocity (Vlem) (&gt;0).  Typical Value = 0.2. Default: nullptr */
+		CIMPP::Simple_Float velm;
 
 		static const char debugName[];
 		const char* debugString() const override;

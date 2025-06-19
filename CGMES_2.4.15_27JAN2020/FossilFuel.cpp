@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "ThermalGeneratingUnit.hpp"
-#include "FuelType.hpp"
 
 using namespace CIMPP;
 
-FossilFuel::FossilFuel() : ThermalGeneratingUnit(nullptr) {};
-FossilFuel::~FossilFuel() {};
+FossilFuel::FossilFuel() : ThermalGeneratingUnit(nullptr) {}
+FossilFuel::~FossilFuel() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,21 +41,6 @@ FossilFuel::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_FossilFuel_fossilFuelType(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (FossilFuel* element = dynamic_cast<FossilFuel*>(BaseClass_ptr1))
-	{
-		buffer >> element->fossilFuelType;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_ThermalGeneratingUnit_FossilFuels(BaseClass*, BaseClass*);
 bool assign_FossilFuel_ThermalGeneratingUnit(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,10 +58,24 @@ bool assign_FossilFuel_ThermalGeneratingUnit(BaseClass* BaseClass_ptr1, BaseClas
 	return false;
 }
 
+bool assign_FossilFuel_fossilFuelType(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	FossilFuel* element = dynamic_cast<FossilFuel*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->fossilFuelType;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
 
 bool get_FossilFuel_ThermalGeneratingUnit(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const FossilFuel* element = dynamic_cast<const FossilFuel*>(BaseClass_ptr1))
+	const FossilFuel* element = dynamic_cast<const FossilFuel*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->ThermalGeneratingUnit != 0)
 		{
@@ -88,10 +86,10 @@ bool get_FossilFuel_ThermalGeneratingUnit(const BaseClass* BaseClass_ptr1, std::
 	return false;
 }
 
-
 bool get_FossilFuel_fossilFuelType(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const FossilFuel* element = dynamic_cast<const FossilFuel*>(BaseClass_ptr1))
+	const FossilFuel* element = dynamic_cast<const FossilFuel*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->fossilFuelType;
 		if (!buffer.str().empty())
@@ -111,17 +109,17 @@ const char* FossilFuel::debugString() const
 
 void FossilFuel::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:FossilFuel"), &FossilFuel_factory));
+	factory_map.emplace("cim:FossilFuel", &FossilFuel_factory);
 }
 
 void FossilFuel::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:FossilFuel.fossilFuelType"), &assign_FossilFuel_fossilFuelType));
+	assign_map.emplace("cim:FossilFuel.fossilFuelType", &assign_FossilFuel_fossilFuelType);
 }
 
 void FossilFuel::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:FossilFuel.ThermalGeneratingUnit"), &assign_FossilFuel_ThermalGeneratingUnit));
+	assign_map.emplace("cim:FossilFuel.ThermalGeneratingUnit", &assign_FossilFuel_ThermalGeneratingUnit);
 }
 
 void FossilFuel::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

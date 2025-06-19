@@ -8,14 +8,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "ReportingGroup.hpp"
 #include "ACDCTerminal.hpp"
-#include "Integer.hpp"
+#include "ReportingGroup.hpp"
 
 using namespace CIMPP;
 
-BusNameMarker::BusNameMarker() : ReportingGroup(nullptr) {};
-BusNameMarker::~BusNameMarker() {};
+BusNameMarker::BusNameMarker() : ReportingGroup(nullptr) {}
+BusNameMarker::~BusNameMarker() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -44,21 +43,6 @@ BusNameMarker::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_BusNameMarker_priority(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (BusNameMarker* element = dynamic_cast<BusNameMarker*>(BaseClass_ptr1))
-	{
-		buffer >> element->priority;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_ReportingGroup_BusNameMarker(BaseClass*, BaseClass*);
 bool assign_BusNameMarker_ReportingGroup(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -75,6 +59,7 @@ bool assign_BusNameMarker_ReportingGroup(BaseClass* BaseClass_ptr1, BaseClass* B
 	}
 	return false;
 }
+
 bool assign_ACDCTerminal_BusNameMarker(BaseClass*, BaseClass*);
 bool assign_BusNameMarker_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -92,24 +77,24 @@ bool assign_BusNameMarker_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseCla
 	return false;
 }
 
-bool get_BusNameMarker_priority(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+bool assign_BusNameMarker_priority(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (const BusNameMarker* element = dynamic_cast<const BusNameMarker*>(BaseClass_ptr1))
+	BusNameMarker* element = dynamic_cast<BusNameMarker*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
-		buffer << element->priority;
-		if (!buffer.str().empty())
+		buffer >> element->priority;
+		if (!buffer.fail())
 		{
 			return true;
 		}
 	}
-	buffer.setstate(std::ios::failbit);
 	return false;
 }
 
-
 bool get_BusNameMarker_ReportingGroup(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const BusNameMarker* element = dynamic_cast<const BusNameMarker*>(BaseClass_ptr1))
+	const BusNameMarker* element = dynamic_cast<const BusNameMarker*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->ReportingGroup != 0)
 		{
@@ -121,6 +106,21 @@ bool get_BusNameMarker_ReportingGroup(const BaseClass* BaseClass_ptr1, std::list
 }
 
 
+bool get_BusNameMarker_priority(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	const BusNameMarker* element = dynamic_cast<const BusNameMarker*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer << element->priority;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
 const char BusNameMarker::debugName[] = "BusNameMarker";
 const char* BusNameMarker::debugString() const
 {
@@ -129,18 +129,18 @@ const char* BusNameMarker::debugString() const
 
 void BusNameMarker::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:BusNameMarker"), &BusNameMarker_factory));
+	factory_map.emplace("cim:BusNameMarker", &BusNameMarker_factory);
 }
 
 void BusNameMarker::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:BusNameMarker.priority"), &assign_BusNameMarker_priority));
+	assign_map.emplace("cim:BusNameMarker.priority", &assign_BusNameMarker_priority);
 }
 
 void BusNameMarker::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:BusNameMarker.ReportingGroup"), &assign_BusNameMarker_ReportingGroup));
-	assign_map.insert(std::make_pair(std::string("cim:BusNameMarker.Terminal"), &assign_BusNameMarker_Terminal));
+	assign_map.emplace("cim:BusNameMarker.ReportingGroup", &assign_BusNameMarker_ReportingGroup);
+	assign_map.emplace("cim:BusNameMarker.Terminal", &assign_BusNameMarker_Terminal);
 }
 
 void BusNameMarker::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

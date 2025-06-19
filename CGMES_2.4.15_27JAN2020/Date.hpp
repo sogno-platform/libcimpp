@@ -4,22 +4,20 @@
 Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
 */
 
-#include <string>
 #include <istream>
 #include <ostream>
+#include <string>
 
 namespace CIMPP
 {
-	/*
-	Date as "yyyy-mm-dd", which conforms with ISO 8601. UTC time zone is specified as "yyyy-mm-ddZ". A local timezone relative UTC is specified as "yyyy-mm-dd(+/-)hh:mm".
-	*/
+	/** \brief Date as "yyyy-mm-dd", which conforms with ISO 8601. UTC time zone is specified as "yyyy-mm-ddZ". A local timezone relative UTC is specified as "yyyy-mm-dd(+/-)hh:mm". */
 	class Date
 	{
 	public:
 		Date() : initialized(false) {}
 		Date(const std::string& value) : value(value), initialized(true) {}
 
-		Date& operator=(const std::string &rop);
+		Date& operator=(const std::string& rop);
 		operator std::string() const;
 
 		std::string value;

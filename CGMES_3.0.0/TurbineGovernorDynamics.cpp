@@ -14,8 +14,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-TurbineGovernorDynamics::TurbineGovernorDynamics() : AsynchronousMachineDynamics(nullptr), SynchronousMachineDynamics(nullptr), TurbineLoadControllerDynamics(nullptr) {};
-TurbineGovernorDynamics::~TurbineGovernorDynamics() {};
+TurbineGovernorDynamics::TurbineGovernorDynamics() : AsynchronousMachineDynamics(nullptr), SynchronousMachineDynamics(nullptr), TurbineLoadControllerDynamics(nullptr) {}
+TurbineGovernorDynamics::~TurbineGovernorDynamics() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -44,8 +44,6 @@ TurbineGovernorDynamics::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_AsynchronousMachineDynamics_TurbineGovernorDynamics(BaseClass*, BaseClass*);
 bool assign_TurbineGovernorDynamics_AsynchronousMachineDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -62,6 +60,7 @@ bool assign_TurbineGovernorDynamics_AsynchronousMachineDynamics(BaseClass* BaseC
 	}
 	return false;
 }
+
 bool assign_SynchronousMachineDynamics_TurbineGovernorDynamics(BaseClass*, BaseClass*);
 bool assign_TurbineGovernorDynamics_SynchronousMachineDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -78,6 +77,7 @@ bool assign_TurbineGovernorDynamics_SynchronousMachineDynamics(BaseClass* BaseCl
 	}
 	return false;
 }
+
 bool assign_TurbineLoadControllerDynamics_TurbineGovernorDynamics(BaseClass*, BaseClass*);
 bool assign_TurbineGovernorDynamics_TurbineLoadControllerDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -95,10 +95,10 @@ bool assign_TurbineGovernorDynamics_TurbineLoadControllerDynamics(BaseClass* Bas
 	return false;
 }
 
-
 bool get_TurbineGovernorDynamics_AsynchronousMachineDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const TurbineGovernorDynamics* element = dynamic_cast<const TurbineGovernorDynamics*>(BaseClass_ptr1))
+	const TurbineGovernorDynamics* element = dynamic_cast<const TurbineGovernorDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->AsynchronousMachineDynamics != 0)
 		{
@@ -111,7 +111,8 @@ bool get_TurbineGovernorDynamics_AsynchronousMachineDynamics(const BaseClass* Ba
 
 bool get_TurbineGovernorDynamics_SynchronousMachineDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const TurbineGovernorDynamics* element = dynamic_cast<const TurbineGovernorDynamics*>(BaseClass_ptr1))
+	const TurbineGovernorDynamics* element = dynamic_cast<const TurbineGovernorDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->SynchronousMachineDynamics != 0)
 		{
@@ -131,7 +132,7 @@ const char* TurbineGovernorDynamics::debugString() const
 
 void TurbineGovernorDynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:TurbineGovernorDynamics"), &TurbineGovernorDynamics_factory));
+	factory_map.emplace("cim:TurbineGovernorDynamics", &TurbineGovernorDynamics_factory);
 }
 
 void TurbineGovernorDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -140,9 +141,9 @@ void TurbineGovernorDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std:
 
 void TurbineGovernorDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:TurbineGovernorDynamics.AsynchronousMachineDynamics"), &assign_TurbineGovernorDynamics_AsynchronousMachineDynamics));
-	assign_map.insert(std::make_pair(std::string("cim:TurbineGovernorDynamics.SynchronousMachineDynamics"), &assign_TurbineGovernorDynamics_SynchronousMachineDynamics));
-	assign_map.insert(std::make_pair(std::string("cim:TurbineGovernorDynamics.TurbineLoadControllerDynamics"), &assign_TurbineGovernorDynamics_TurbineLoadControllerDynamics));
+	assign_map.emplace("cim:TurbineGovernorDynamics.AsynchronousMachineDynamics", &assign_TurbineGovernorDynamics_AsynchronousMachineDynamics);
+	assign_map.emplace("cim:TurbineGovernorDynamics.SynchronousMachineDynamics", &assign_TurbineGovernorDynamics_SynchronousMachineDynamics);
+	assign_map.emplace("cim:TurbineGovernorDynamics.TurbineLoadControllerDynamics", &assign_TurbineGovernorDynamics_TurbineLoadControllerDynamics);
 }
 
 void TurbineGovernorDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

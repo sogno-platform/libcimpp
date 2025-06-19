@@ -10,12 +10,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 #include "Analog.hpp"
 #include "AnalogControl.hpp"
-#include "Simple_Float.hpp"
 
 using namespace CIMPP;
 
-AnalogValue::AnalogValue() : Analog(nullptr), AnalogControl(nullptr) {};
-AnalogValue::~AnalogValue() {};
+AnalogValue::AnalogValue() : Analog(nullptr), AnalogControl(nullptr) {}
+AnalogValue::~AnalogValue() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -44,21 +43,6 @@ AnalogValue::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_AnalogValue_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (AnalogValue* element = dynamic_cast<AnalogValue*>(BaseClass_ptr1))
-	{
-		buffer >> element->value;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_Analog_AnalogValues(BaseClass*, BaseClass*);
 bool assign_AnalogValue_Analog(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -75,6 +59,7 @@ bool assign_AnalogValue_Analog(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_p
 	}
 	return false;
 }
+
 bool assign_AnalogControl_AnalogValue(BaseClass*, BaseClass*);
 bool assign_AnalogValue_AnalogControl(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -92,24 +77,24 @@ bool assign_AnalogValue_AnalogControl(BaseClass* BaseClass_ptr1, BaseClass* Base
 	return false;
 }
 
-bool get_AnalogValue_value(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+bool assign_AnalogValue_value(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (const AnalogValue* element = dynamic_cast<const AnalogValue*>(BaseClass_ptr1))
+	AnalogValue* element = dynamic_cast<AnalogValue*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
-		buffer << element->value;
-		if (!buffer.str().empty())
+		buffer >> element->value;
+		if (!buffer.fail())
 		{
 			return true;
 		}
 	}
-	buffer.setstate(std::ios::failbit);
 	return false;
 }
 
-
 bool get_AnalogValue_Analog(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const AnalogValue* element = dynamic_cast<const AnalogValue*>(BaseClass_ptr1))
+	const AnalogValue* element = dynamic_cast<const AnalogValue*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->Analog != 0)
 		{
@@ -121,6 +106,21 @@ bool get_AnalogValue_Analog(const BaseClass* BaseClass_ptr1, std::list<const Bas
 }
 
 
+bool get_AnalogValue_value(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	const AnalogValue* element = dynamic_cast<const AnalogValue*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer << element->value;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
 const char AnalogValue::debugName[] = "AnalogValue";
 const char* AnalogValue::debugString() const
 {
@@ -129,18 +129,18 @@ const char* AnalogValue::debugString() const
 
 void AnalogValue::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:AnalogValue"), &AnalogValue_factory));
+	factory_map.emplace("cim:AnalogValue", &AnalogValue_factory);
 }
 
 void AnalogValue::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:AnalogValue.value"), &assign_AnalogValue_value));
+	assign_map.emplace("cim:AnalogValue.value", &assign_AnalogValue_value);
 }
 
 void AnalogValue::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:AnalogValue.Analog"), &assign_AnalogValue_Analog));
-	assign_map.insert(std::make_pair(std::string("cim:AnalogValue.AnalogControl"), &assign_AnalogValue_AnalogControl));
+	assign_map.emplace("cim:AnalogValue.Analog", &assign_AnalogValue_Analog);
+	assign_map.emplace("cim:AnalogValue.AnalogControl", &assign_AnalogValue_AnalogControl);
 }
 
 void AnalogValue::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

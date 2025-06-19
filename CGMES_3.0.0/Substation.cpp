@@ -14,8 +14,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-Substation::Substation() : Region(nullptr) {};
-Substation::~Substation() {};
+Substation::Substation() : Region(nullptr) {}
+Substation::~Substation() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -45,8 +45,6 @@ Substation::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_DCConverterUnit_Substation(BaseClass*, BaseClass*);
 bool assign_Substation_DCConverterUnit(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -63,6 +61,7 @@ bool assign_Substation_DCConverterUnit(BaseClass* BaseClass_ptr1, BaseClass* Bas
 	}
 	return false;
 }
+
 bool assign_SubGeographicalRegion_Substations(BaseClass*, BaseClass*);
 bool assign_Substation_Region(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -79,6 +78,7 @@ bool assign_Substation_Region(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_pt
 	}
 	return false;
 }
+
 bool assign_VoltageLevel_Substation(BaseClass*, BaseClass*);
 bool assign_Substation_VoltageLevels(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -99,7 +99,8 @@ bool assign_Substation_VoltageLevels(BaseClass* BaseClass_ptr1, BaseClass* BaseC
 
 bool get_Substation_Region(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const Substation* element = dynamic_cast<const Substation*>(BaseClass_ptr1))
+	const Substation* element = dynamic_cast<const Substation*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->Region != 0)
 		{
@@ -119,7 +120,7 @@ const char* Substation::debugString() const
 
 void Substation::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:Substation"), &Substation_factory));
+	factory_map.emplace("cim:Substation", &Substation_factory);
 }
 
 void Substation::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -128,9 +129,9 @@ void Substation::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assi
 
 void Substation::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Substation.DCConverterUnit"), &assign_Substation_DCConverterUnit));
-	assign_map.insert(std::make_pair(std::string("cim:Substation.Region"), &assign_Substation_Region));
-	assign_map.insert(std::make_pair(std::string("cim:Substation.VoltageLevels"), &assign_Substation_VoltageLevels));
+	assign_map.emplace("cim:Substation.DCConverterUnit", &assign_Substation_DCConverterUnit);
+	assign_map.emplace("cim:Substation.Region", &assign_Substation_Region);
+	assign_map.emplace("cim:Substation.VoltageLevels", &assign_Substation_VoltageLevels);
 }
 
 void Substation::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

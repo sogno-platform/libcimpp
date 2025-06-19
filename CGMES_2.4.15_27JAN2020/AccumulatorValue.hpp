@@ -19,9 +19,7 @@ namespace CIMPP
 	class Accumulator;
 	class AccumulatorReset;
 
-	/*
-	AccumulatorValue represents an accumulated (counted) MeasurementValue.
-	*/
+	/** \brief AccumulatorValue represents an accumulated (counted) MeasurementValue. */
 	class AccumulatorValue : public MeasurementValue
 	{
 	public:
@@ -29,9 +27,14 @@ namespace CIMPP
 		AccumulatorValue();
 		~AccumulatorValue() override;
 
-		CIMPP::Accumulator* Accumulator;  /* The values connected to this measurement. Default: 0 */
-		CIMPP::AccumulatorReset* AccumulatorReset;  /* The command that reset the accumulator value. Default: 0 */
-		CIMPP::Integer value;  /* The value to supervise. The value is positive. Default: 0 */
+		/** \brief The values connected to this measurement. Default: 0 */
+		CIMPP::Accumulator* Accumulator;
+
+		/** \brief The command that reset the accumulator value. Default: 0 */
+		CIMPP::AccumulatorReset* AccumulatorReset;
+
+		/** \brief The value to supervise. The value is positive. Default: 0 */
+		CIMPP::Integer value;
 
 		static const char debugName[];
 		const char* debugString() const override;

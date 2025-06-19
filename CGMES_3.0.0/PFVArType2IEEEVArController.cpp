@@ -8,18 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Boolean.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Float.hpp"
 
 using namespace CIMPP;
 
-PFVArType2IEEEVArController::PFVArType2IEEEVArController() {};
-PFVArType2IEEEVArController::~PFVArType2IEEEVArController() {};
+PFVArType2IEEEVArController::PFVArType2IEEEVArController() {}
+PFVArType2IEEEVArController::~PFVArType2IEEEVArController() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -52,103 +45,108 @@ PFVArType2IEEEVArController::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_PFVArType2IEEEVArController_exlon(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PFVArType2IEEEVArController_exlon(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PFVArType2IEEEVArController* element = dynamic_cast<PFVArType2IEEEVArController*>(BaseClass_ptr1))
+	PFVArType2IEEEVArController* element = dynamic_cast<PFVArType2IEEEVArController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->exlon;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PFVArType2IEEEVArController_ki(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PFVArType2IEEEVArController_ki(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PFVArType2IEEEVArController* element = dynamic_cast<PFVArType2IEEEVArController*>(BaseClass_ptr1))
+	PFVArType2IEEEVArController* element = dynamic_cast<PFVArType2IEEEVArController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ki;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PFVArType2IEEEVArController_kp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PFVArType2IEEEVArController_kp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PFVArType2IEEEVArController* element = dynamic_cast<PFVArType2IEEEVArController*>(BaseClass_ptr1))
+	PFVArType2IEEEVArController* element = dynamic_cast<PFVArType2IEEEVArController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kp;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PFVArType2IEEEVArController_qref(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PFVArType2IEEEVArController_qref(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PFVArType2IEEEVArController* element = dynamic_cast<PFVArType2IEEEVArController*>(BaseClass_ptr1))
+	PFVArType2IEEEVArController* element = dynamic_cast<PFVArType2IEEEVArController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->qref;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PFVArType2IEEEVArController_vclmt(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PFVArType2IEEEVArController_vclmt(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PFVArType2IEEEVArController* element = dynamic_cast<PFVArType2IEEEVArController*>(BaseClass_ptr1))
+	PFVArType2IEEEVArController* element = dynamic_cast<PFVArType2IEEEVArController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vclmt;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PFVArType2IEEEVArController_vref(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PFVArType2IEEEVArController_vref(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PFVArType2IEEEVArController* element = dynamic_cast<PFVArType2IEEEVArController*>(BaseClass_ptr1))
+	PFVArType2IEEEVArController* element = dynamic_cast<PFVArType2IEEEVArController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vref;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_PFVArType2IEEEVArController_vs(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_PFVArType2IEEEVArController_vs(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (PFVArType2IEEEVArController* element = dynamic_cast<PFVArType2IEEEVArController*>(BaseClass_ptr1))
+	PFVArType2IEEEVArController* element = dynamic_cast<PFVArType2IEEEVArController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vs;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_PFVArType2IEEEVArController_exlon(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PFVArType2IEEEVArController* element = dynamic_cast<const PFVArType2IEEEVArController*>(BaseClass_ptr1))
+	const PFVArType2IEEEVArController* element = dynamic_cast<const PFVArType2IEEEVArController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->exlon;
 		if (!buffer.str().empty())
@@ -162,7 +160,8 @@ bool get_PFVArType2IEEEVArController_exlon(const BaseClass* BaseClass_ptr1, std:
 
 bool get_PFVArType2IEEEVArController_ki(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PFVArType2IEEEVArController* element = dynamic_cast<const PFVArType2IEEEVArController*>(BaseClass_ptr1))
+	const PFVArType2IEEEVArController* element = dynamic_cast<const PFVArType2IEEEVArController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ki;
 		if (!buffer.str().empty())
@@ -176,7 +175,8 @@ bool get_PFVArType2IEEEVArController_ki(const BaseClass* BaseClass_ptr1, std::st
 
 bool get_PFVArType2IEEEVArController_kp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PFVArType2IEEEVArController* element = dynamic_cast<const PFVArType2IEEEVArController*>(BaseClass_ptr1))
+	const PFVArType2IEEEVArController* element = dynamic_cast<const PFVArType2IEEEVArController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kp;
 		if (!buffer.str().empty())
@@ -190,7 +190,8 @@ bool get_PFVArType2IEEEVArController_kp(const BaseClass* BaseClass_ptr1, std::st
 
 bool get_PFVArType2IEEEVArController_qref(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PFVArType2IEEEVArController* element = dynamic_cast<const PFVArType2IEEEVArController*>(BaseClass_ptr1))
+	const PFVArType2IEEEVArController* element = dynamic_cast<const PFVArType2IEEEVArController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->qref;
 		if (!buffer.str().empty())
@@ -204,7 +205,8 @@ bool get_PFVArType2IEEEVArController_qref(const BaseClass* BaseClass_ptr1, std::
 
 bool get_PFVArType2IEEEVArController_vclmt(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PFVArType2IEEEVArController* element = dynamic_cast<const PFVArType2IEEEVArController*>(BaseClass_ptr1))
+	const PFVArType2IEEEVArController* element = dynamic_cast<const PFVArType2IEEEVArController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vclmt;
 		if (!buffer.str().empty())
@@ -218,7 +220,8 @@ bool get_PFVArType2IEEEVArController_vclmt(const BaseClass* BaseClass_ptr1, std:
 
 bool get_PFVArType2IEEEVArController_vref(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PFVArType2IEEEVArController* element = dynamic_cast<const PFVArType2IEEEVArController*>(BaseClass_ptr1))
+	const PFVArType2IEEEVArController* element = dynamic_cast<const PFVArType2IEEEVArController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vref;
 		if (!buffer.str().empty())
@@ -232,7 +235,8 @@ bool get_PFVArType2IEEEVArController_vref(const BaseClass* BaseClass_ptr1, std::
 
 bool get_PFVArType2IEEEVArController_vs(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PFVArType2IEEEVArController* element = dynamic_cast<const PFVArType2IEEEVArController*>(BaseClass_ptr1))
+	const PFVArType2IEEEVArController* element = dynamic_cast<const PFVArType2IEEEVArController*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vs;
 		if (!buffer.str().empty())
@@ -244,8 +248,6 @@ bool get_PFVArType2IEEEVArController_vs(const BaseClass* BaseClass_ptr1, std::st
 	return false;
 }
 
-
-
 const char PFVArType2IEEEVArController::debugName[] = "PFVArType2IEEEVArController";
 const char* PFVArType2IEEEVArController::debugString() const
 {
@@ -254,18 +256,18 @@ const char* PFVArType2IEEEVArController::debugString() const
 
 void PFVArType2IEEEVArController::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:PFVArType2IEEEVArController"), &PFVArType2IEEEVArController_factory));
+	factory_map.emplace("cim:PFVArType2IEEEVArController", &PFVArType2IEEEVArController_factory);
 }
 
 void PFVArType2IEEEVArController::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:PFVArType2IEEEVArController.exlon"), &assign_PFVArType2IEEEVArController_exlon));
-	assign_map.insert(std::make_pair(std::string("cim:PFVArType2IEEEVArController.ki"), &assign_PFVArType2IEEEVArController_ki));
-	assign_map.insert(std::make_pair(std::string("cim:PFVArType2IEEEVArController.kp"), &assign_PFVArType2IEEEVArController_kp));
-	assign_map.insert(std::make_pair(std::string("cim:PFVArType2IEEEVArController.qref"), &assign_PFVArType2IEEEVArController_qref));
-	assign_map.insert(std::make_pair(std::string("cim:PFVArType2IEEEVArController.vclmt"), &assign_PFVArType2IEEEVArController_vclmt));
-	assign_map.insert(std::make_pair(std::string("cim:PFVArType2IEEEVArController.vref"), &assign_PFVArType2IEEEVArController_vref));
-	assign_map.insert(std::make_pair(std::string("cim:PFVArType2IEEEVArController.vs"), &assign_PFVArType2IEEEVArController_vs));
+	assign_map.emplace("cim:PFVArType2IEEEVArController.exlon", &assign_PFVArType2IEEEVArController_exlon);
+	assign_map.emplace("cim:PFVArType2IEEEVArController.ki", &assign_PFVArType2IEEEVArController_ki);
+	assign_map.emplace("cim:PFVArType2IEEEVArController.kp", &assign_PFVArType2IEEEVArController_kp);
+	assign_map.emplace("cim:PFVArType2IEEEVArController.qref", &assign_PFVArType2IEEEVArController_qref);
+	assign_map.emplace("cim:PFVArType2IEEEVArController.vclmt", &assign_PFVArType2IEEEVArController_vclmt);
+	assign_map.emplace("cim:PFVArType2IEEEVArController.vref", &assign_PFVArType2IEEEVArController_vref);
+	assign_map.emplace("cim:PFVArType2IEEEVArController.vs", &assign_PFVArType2IEEEVArController_vs);
 }
 
 void PFVArType2IEEEVArController::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

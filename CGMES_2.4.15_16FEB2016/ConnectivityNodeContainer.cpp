@@ -13,8 +13,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-ConnectivityNodeContainer::ConnectivityNodeContainer() {};
-ConnectivityNodeContainer::~ConnectivityNodeContainer() {};
+ConnectivityNodeContainer::ConnectivityNodeContainer() {}
+ConnectivityNodeContainer::~ConnectivityNodeContainer() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -45,8 +45,6 @@ ConnectivityNodeContainer::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_ConnectivityNode_ConnectivityNodeContainer(BaseClass*, BaseClass*);
 bool assign_ConnectivityNodeContainer_ConnectivityNodes(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -63,6 +61,7 @@ bool assign_ConnectivityNodeContainer_ConnectivityNodes(BaseClass* BaseClass_ptr
 	}
 	return false;
 }
+
 bool assign_TopologicalNode_ConnectivityNodeContainer(BaseClass*, BaseClass*);
 bool assign_ConnectivityNodeContainer_TopologicalNode(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -90,7 +89,7 @@ const char* ConnectivityNodeContainer::debugString() const
 
 void ConnectivityNodeContainer::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ConnectivityNodeContainer"), &ConnectivityNodeContainer_factory));
+	factory_map.emplace("cim:ConnectivityNodeContainer", &ConnectivityNodeContainer_factory);
 }
 
 void ConnectivityNodeContainer::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -99,8 +98,8 @@ void ConnectivityNodeContainer::addPrimitiveAssignFnsToMap(std::unordered_map<st
 
 void ConnectivityNodeContainer::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ConnectivityNodeContainer.ConnectivityNodes"), &assign_ConnectivityNodeContainer_ConnectivityNodes));
-	assign_map.insert(std::make_pair(std::string("cim:ConnectivityNodeContainer.TopologicalNode"), &assign_ConnectivityNodeContainer_TopologicalNode));
+	assign_map.emplace("cim:ConnectivityNodeContainer.ConnectivityNodes", &assign_ConnectivityNodeContainer_ConnectivityNodes);
+	assign_map.emplace("cim:ConnectivityNodeContainer.TopologicalNode", &assign_ConnectivityNodeContainer_TopologicalNode);
 }
 
 void ConnectivityNodeContainer::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

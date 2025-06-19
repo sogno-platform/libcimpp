@@ -15,8 +15,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-Location::Location() : CoordinateSystem(nullptr), PowerSystemResources(nullptr), mainAddress(nullptr) {};
-Location::~Location() {};
+Location::Location() : CoordinateSystem(nullptr), PowerSystemResources(nullptr), mainAddress(nullptr) {}
+Location::~Location() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -46,8 +46,6 @@ Location::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_CoordinateSystem_Locations(BaseClass*, BaseClass*);
 bool assign_Location_CoordinateSystem(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -64,6 +62,7 @@ bool assign_Location_CoordinateSystem(BaseClass* BaseClass_ptr1, BaseClass* Base
 	}
 	return false;
 }
+
 bool assign_PositionPoint_Location(BaseClass*, BaseClass*);
 bool assign_Location_PositionPoints(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -80,6 +79,7 @@ bool assign_Location_PositionPoints(BaseClass* BaseClass_ptr1, BaseClass* BaseCl
 	}
 	return false;
 }
+
 bool assign_PowerSystemResource_Location(BaseClass*, BaseClass*);
 bool assign_Location_PowerSystemResources(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -96,9 +96,11 @@ bool assign_Location_PowerSystemResources(BaseClass* BaseClass_ptr1, BaseClass* 
 	}
 	return false;
 }
+
 bool assign_Location_mainAddress(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
-	if(Location* element = dynamic_cast<Location*>(BaseClass_ptr1))
+	Location* element = dynamic_cast<Location*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->mainAddress = dynamic_cast<StreetAddress*>(BaseClass_ptr2);
 		if (element->mainAddress != nullptr)
@@ -109,10 +111,10 @@ bool assign_Location_mainAddress(BaseClass* BaseClass_ptr1, BaseClass* BaseClass
 	return false;
 }
 
-
 bool get_Location_CoordinateSystem(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const Location* element = dynamic_cast<const Location*>(BaseClass_ptr1))
+	const Location* element = dynamic_cast<const Location*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->CoordinateSystem != 0)
 		{
@@ -123,9 +125,11 @@ bool get_Location_CoordinateSystem(const BaseClass* BaseClass_ptr1, std::list<co
 	return false;
 }
 
+
 bool get_Location_PowerSystemResources(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const Location* element = dynamic_cast<const Location*>(BaseClass_ptr1))
+	const Location* element = dynamic_cast<const Location*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->PowerSystemResources != 0)
 		{
@@ -138,7 +142,8 @@ bool get_Location_PowerSystemResources(const BaseClass* BaseClass_ptr1, std::lis
 
 bool get_Location_mainAddress(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const Location* element = dynamic_cast<const Location*>(BaseClass_ptr1))
+	const Location* element = dynamic_cast<const Location*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->mainAddress != 0)
 		{
@@ -149,7 +154,6 @@ bool get_Location_mainAddress(const BaseClass* BaseClass_ptr1, std::list<const B
 	return false;
 }
 
-
 const char Location::debugName[] = "Location";
 const char* Location::debugString() const
 {
@@ -158,7 +162,7 @@ const char* Location::debugString() const
 
 void Location::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:Location"), &Location_factory));
+	factory_map.emplace("cim:Location", &Location_factory);
 }
 
 void Location::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -167,10 +171,10 @@ void Location::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign
 
 void Location::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Location.CoordinateSystem"), &assign_Location_CoordinateSystem));
-	assign_map.insert(std::make_pair(std::string("cim:Location.PositionPoints"), &assign_Location_PositionPoints));
-	assign_map.insert(std::make_pair(std::string("cim:Location.PowerSystemResources"), &assign_Location_PowerSystemResources));
-	assign_map.insert(std::make_pair(std::string("cim:Location.mainAddress"), &assign_Location_mainAddress));
+	assign_map.emplace("cim:Location.CoordinateSystem", &assign_Location_CoordinateSystem);
+	assign_map.emplace("cim:Location.PositionPoints", &assign_Location_PositionPoints);
+	assign_map.emplace("cim:Location.PowerSystemResources", &assign_Location_PowerSystemResources);
+	assign_map.emplace("cim:Location.mainAddress", &assign_Location_mainAddress);
 }
 
 void Location::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

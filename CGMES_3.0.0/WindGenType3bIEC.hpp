@@ -19,9 +19,7 @@ namespace CIMPP
 {
 	class WindDynamicsLookupTable;
 
-	/*
-	IEC type 3B generator set model. Reference: IEC 61400-27-1:2015, 5.6.3.3.
-	*/
+	/** \brief IEC type 3B generator set model. Reference: IEC 61400-27-1:2015, 5.6.3.3. */
 	class WindGenType3bIEC : public WindGenType3IEC
 	{
 	public:
@@ -29,10 +27,17 @@ namespace CIMPP
 		WindGenType3bIEC();
 		~WindGenType3bIEC() override;
 
-		std::list<CIMPP::WindDynamicsLookupTable*> WindDynamicsLookupTable;  /* The wind dynamics lookup table associated with this generator type 3B model. Default: 0 */
-		CIMPP::Boolean mwtcwp;  /* Crowbar control mode (&lt;i&gt;M&lt;/i&gt;&lt;i&gt;&lt;sub&gt;WTcwp&lt;/sub&gt;&lt;/i&gt;). It is a case-dependent parameter. true = 1 in the IEC model false = 0 in the IEC model. Default: false */
-		CIMPP::Seconds tg;  /* Current generation time constant (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;g&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). It is a type-dependent parameter. Default: nullptr */
-		CIMPP::Seconds two;  /* Time constant for crowbar washout filter (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;wo&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). It is a case-dependent parameter. Default: nullptr */
+		/** \brief The wind dynamics lookup table associated with this generator type 3B model. Default: 0 */
+		std::list<CIMPP::WindDynamicsLookupTable*> WindDynamicsLookupTable;
+
+		/** \brief Crowbar control mode (&lt;i&gt;M&lt;/i&gt;&lt;i&gt;&lt;sub&gt;WTcwp&lt;/sub&gt;&lt;/i&gt;). It is a case-dependent parameter. true = 1 in the IEC model false = 0 in the IEC model. Default: false */
+		CIMPP::Boolean mwtcwp;
+
+		/** \brief Current generation time constant (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;g&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). It is a type-dependent parameter. Default: nullptr */
+		CIMPP::Seconds tg;
+
+		/** \brief Time constant for crowbar washout filter (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;wo&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). It is a case-dependent parameter. Default: nullptr */
+		CIMPP::Seconds two;
 
 		static const char debugName[];
 		const char* debugString() const override;

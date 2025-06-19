@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Schedule of values at points in time.
-	*/
+	/** \brief Schedule of values at points in time. */
 	class BasicIntervalSchedule : public IdentifiedObject
 	{
 	public:
@@ -28,9 +26,14 @@ namespace CIMPP
 		BasicIntervalSchedule();
 		~BasicIntervalSchedule() override;
 
-		CIMPP::DateTime startTime;  /* The time for the first time point. Default: '' */
-		CIMPP::UnitSymbol value1Unit;  /* Value1 units of measure. Default: 0 */
-		CIMPP::UnitSymbol value2Unit;  /* Value2 units of measure. Default: 0 */
+		/** \brief The time for the first time point. Default: '' */
+		CIMPP::DateTime startTime;
+
+		/** \brief Value1 units of measure. Default: 0 */
+		CIMPP::UnitSymbol value1Unit;
+
+		/** \brief Value2 units of measure. Default: 0 */
+		CIMPP::UnitSymbol value2Unit;
 
 		static const char debugName[];
 		const char* debugString() const override;

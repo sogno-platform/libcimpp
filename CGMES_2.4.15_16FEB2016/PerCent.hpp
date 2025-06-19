@@ -9,9 +9,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Percentage on a defined base.   For example, specify as 100 to indicate at the defined base.
-	*/
+	/** \brief Percentage on a defined base.   For example, specify as 100 to indicate at the defined base. */
 	class PerCent
 	{
 	public:

@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class EquivalentEquipment;
 
-	/*
-	A class that groups electrical equivalents, including internal nodes, of a network that has been reduced. The ConnectivityNodes contained in the equivalent are intended to reflect internal nodes of the equivalent. The boundary Connectivity nodes where the equivalent connects outside itself are not contained by the equivalent.
-	*/
+	/** \brief A class that groups electrical equivalents, including internal nodes, of a network that has been reduced. The ConnectivityNodes contained in the equivalent are intended to reflect internal nodes of the equivalent. The boundary Connectivity nodes where the equivalent connects outside itself are not contained by the equivalent. */
 	class EquivalentNetwork : public ConnectivityNodeContainer
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		EquivalentNetwork();
 		~EquivalentNetwork() override;
 
-		std::list<CIMPP::EquivalentEquipment*> EquivalentEquipments;  /* The associated reduced equivalents. Default: 0 */
+		/** \brief The associated reduced equivalents. Default: 0 */
+		std::list<CIMPP::EquivalentEquipment*> EquivalentEquipments;
 
 		static const char debugName[];
 		const char* debugString() const override;

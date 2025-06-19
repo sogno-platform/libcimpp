@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class VsConverter;
 
-	/*
-	VSC function block whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font>
-	*/
+	/** \brief VSC function block whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font> */
 	class VSCDynamics : public HVDCDynamics
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		VSCDynamics();
 		~VSCDynamics() override;
 
-		CIMPP::VsConverter* VsConverter;  /* Voltage source converter to which voltage source converter dynamics model applies. Default: 0 */
+		/** \brief Voltage source converter to which voltage source converter dynamics model applies. Default: 0 */
+		CIMPP::VsConverter* VsConverter;
 
 		static const char debugName[];
 		const char* debugString() const override;

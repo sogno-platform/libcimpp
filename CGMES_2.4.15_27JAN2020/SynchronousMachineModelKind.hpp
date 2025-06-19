@@ -9,33 +9,21 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Type of synchronous machine model used in Dynamic simulation applications.
-	*/
+	/** \brief Type of synchronous machine model used in Dynamic simulation applications. */
 	class SynchronousMachineModelKind
 	{
 	public:
 		enum SynchronousMachineModelKind_ENUM
 		{
-			/**
-			 * Subtransient synchronous machine model.
-			 */
+			/** Subtransient synchronous machine model. */
 			subtransient,
-			/**
-			 * WECC Type F variant of subtransient synchronous machine model.
-			 */
+			/** WECC Type F variant of subtransient synchronous machine model. */
 			subtransientTypeF,
-			/**
-			 * WECC Type J variant of subtransient synchronous machine model.
-			 */
+			/** WECC Type J variant of subtransient synchronous machine model. */
 			subtransientTypeJ,
-			/**
-			 * Simplified version of subtransient synchronous machine model where magnetic coupling between the direct and quadrature axes is ignored.
-			 */
+			/** Simplified version of subtransient synchronous machine model where magnetic coupling between the direct and quadrature axes is ignored. */
 			subtransientSimplified,
-			/**
-			 * Simplified version of a subtransient synchronous machine model with no damper circuit on d-axis.
-			 */
+			/** Simplified version of a subtransient synchronous machine model with no damper circuit on d-axis. */
 			subtransientSimplifiedDirectAxis,
 		};
 

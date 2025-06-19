@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class NonlinearShuntCompensatorPoint;
 
-	/*
-	A non linear shunt compensator has bank or section admittance values that differs.
-	*/
+	/** \brief A non linear shunt compensator has bank or section admittance values that differs. */
 	class NonlinearShuntCompensator : public ShuntCompensator
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		NonlinearShuntCompensator();
 		~NonlinearShuntCompensator() override;
 
-		std::list<CIMPP::NonlinearShuntCompensatorPoint*> NonlinearShuntCompensatorPoints;  /* All points of the non-linear shunt compensator. Default: 0 */
+		/** \brief All points of the non-linear shunt compensator. Default: 0 */
+		std::list<CIMPP::NonlinearShuntCompensatorPoint*> NonlinearShuntCompensatorPoints;
 
 		static const char debugName[];
 		const char* debugString() const override;

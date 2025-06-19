@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class ProprietaryParameterDynamics;
 
-	/*
-	Voltage source converter (VSC) function block whose dynamic behaviour is described by <font color="#0f0f0f">a user-defined model.</font>
-	*/
+	/** \brief Voltage source converter (VSC) function block whose dynamic behaviour is described by <font color="#0f0f0f">a user-defined model.</font> */
 	class VSCUserDefined : public VSCDynamics
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		VSCUserDefined();
 		~VSCUserDefined() override;
 
-		std::list<CIMPP::ProprietaryParameterDynamics*> ProprietaryParameterDynamics;  /* Parameter of this proprietary user-defined model. Default: 0 */
-		CIMPP::Boolean proprietary;  /* Behaviour is based on a proprietary model as opposed to a detailed model. true = user-defined model is proprietary with behaviour mutually understood by sending and receiving applications and parameters passed as general attributes false = user-defined model is explicitly defined in terms of control blocks and their input and output signals. Default: false */
+		/** \brief Parameter of this proprietary user-defined model. Default: 0 */
+		std::list<CIMPP::ProprietaryParameterDynamics*> ProprietaryParameterDynamics;
+
+		/** \brief Behaviour is based on a proprietary model as opposed to a detailed model. true = user-defined model is proprietary with behaviour mutually understood by sending and receiving applications and parameters passed as general attributes false = user-defined model is explicitly defined in terms of control blocks and their input and output signals. Default: false */
+		CIMPP::Boolean proprietary;
 
 		static const char debugName[];
 		const char* debugString() const override;

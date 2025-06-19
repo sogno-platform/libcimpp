@@ -17,9 +17,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	An analog control that issues a set point value.
-	*/
+	/** \brief An analog control that issues a set point value. */
 	class SetPoint : public AnalogControl
 	{
 	public:
@@ -27,8 +25,11 @@ namespace CIMPP
 		SetPoint();
 		~SetPoint() override;
 
-		CIMPP::Float normalValue;  /* Normal value for Control.value e.g. used for percentage scaling. Default: 0.0 */
-		CIMPP::Float value;  /* The value representing the actuator output. Default: 0.0 */
+		/** \brief Normal value for Control.value e.g. used for percentage scaling. Default: 0.0 */
+		CIMPP::Float normalValue;
+
+		/** \brief The value representing the actuator output. Default: 0.0 */
+		CIMPP::Float value;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A ProtectedSwitch is a switching device that can be operated by ProtectionEquipment.
-	*/
+	/** \brief A ProtectedSwitch is a switching device that can be operated by ProtectionEquipment. */
 	class ProtectedSwitch : public Switch
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		ProtectedSwitch();
 		~ProtectedSwitch() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

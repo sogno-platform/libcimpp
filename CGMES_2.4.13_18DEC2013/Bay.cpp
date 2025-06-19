@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-Bay::Bay() : VoltageLevel(nullptr) {};
-Bay::~Bay() {};
+Bay::Bay() : VoltageLevel(nullptr) {}
+Bay::~Bay() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ Bay::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_VoltageLevel_Bays(BaseClass*, BaseClass*);
 bool assign_Bay_VoltageLevel(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -59,10 +57,10 @@ bool assign_Bay_VoltageLevel(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr
 	return false;
 }
 
-
 bool get_Bay_VoltageLevel(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const Bay* element = dynamic_cast<const Bay*>(BaseClass_ptr1))
+	const Bay* element = dynamic_cast<const Bay*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->VoltageLevel != 0)
 		{
@@ -73,7 +71,6 @@ bool get_Bay_VoltageLevel(const BaseClass* BaseClass_ptr1, std::list<const BaseC
 	return false;
 }
 
-
 const char Bay::debugName[] = "Bay";
 const char* Bay::debugString() const
 {
@@ -82,7 +79,7 @@ const char* Bay::debugString() const
 
 void Bay::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:Bay"), &Bay_factory));
+	factory_map.emplace("cim:Bay", &Bay_factory);
 }
 
 void Bay::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -91,7 +88,7 @@ void Bay::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_func
 
 void Bay::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Bay.VoltageLevel"), &assign_Bay_VoltageLevel));
+	assign_map.emplace("cim:Bay.VoltageLevel", &assign_Bay_VoltageLevel);
 }
 
 void Bay::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

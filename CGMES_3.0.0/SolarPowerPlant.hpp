@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class SolarGeneratingUnit;
 
-	/*
-	Solar power plant.
-	*/
+	/** \brief Solar power plant. */
 	class SolarPowerPlant : public PowerSystemResource
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		SolarPowerPlant();
 		~SolarPowerPlant() override;
 
-		std::list<CIMPP::SolarGeneratingUnit*> SolarGeneratingUnits;  /* A solar generating unit or units may be a member of a solar power plant. Default: 0 */
+		/** \brief A solar generating unit or units may be a member of a solar power plant. Default: 0 */
+		std::list<CIMPP::SolarGeneratingUnit*> SolarGeneratingUnits;
 
 		static const char debugName[];
 		const char* debugString() const override;

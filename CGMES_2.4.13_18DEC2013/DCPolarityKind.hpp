@@ -9,25 +9,17 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Polarity for DC circuits.
-	*/
+	/** \brief Polarity for DC circuits. */
 	class DCPolarityKind
 	{
 	public:
 		enum DCPolarityKind_ENUM
 		{
-			/**
-			 * Positive pole.
-			 */
+			/** Positive pole. */
 			positive,
-			/**
-			 * Middle pole, potentially grounded.
-			 */
+			/** Middle pole, potentially grounded. */
 			middle,
-			/**
-			 * Negative pole.
-			 */
+			/** Negative pole. */
 			negative,
 		};
 

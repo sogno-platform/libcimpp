@@ -8,12 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "CurrentFlow.hpp"
 
 using namespace CIMPP;
 
-BusbarSection::BusbarSection() {};
-BusbarSection::~BusbarSection() {};
+BusbarSection::BusbarSection() {}
+BusbarSection::~BusbarSection() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,25 +39,24 @@ BusbarSection::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_BusbarSection_ipMax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_BusbarSection_ipMax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (BusbarSection* element = dynamic_cast<BusbarSection*>(BaseClass_ptr1))
+	BusbarSection* element = dynamic_cast<BusbarSection*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ipMax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-
-
 bool get_BusbarSection_ipMax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const BusbarSection* element = dynamic_cast<const BusbarSection*>(BaseClass_ptr1))
+	const BusbarSection* element = dynamic_cast<const BusbarSection*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ipMax;
 		if (!buffer.str().empty())
@@ -70,8 +68,6 @@ bool get_BusbarSection_ipMax(const BaseClass* BaseClass_ptr1, std::stringstream&
 	return false;
 }
 
-
-
 const char BusbarSection::debugName[] = "BusbarSection";
 const char* BusbarSection::debugString() const
 {
@@ -80,12 +76,12 @@ const char* BusbarSection::debugString() const
 
 void BusbarSection::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:BusbarSection"), &BusbarSection_factory));
+	factory_map.emplace("cim:BusbarSection", &BusbarSection_factory);
 }
 
 void BusbarSection::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:BusbarSection.ipMax"), &assign_BusbarSection_ipMax));
+	assign_map.emplace("cim:BusbarSection.ipMax", &assign_BusbarSection_ipMax);
 }
 
 void BusbarSection::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

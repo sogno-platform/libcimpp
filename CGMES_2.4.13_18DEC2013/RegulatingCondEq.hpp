@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class RegulatingControl;
 
-	/*
-	A type of conducting equipment that can regulate a quantity (i.e. voltage or flow) at a specific point in the network.
-	*/
+	/** \brief A type of conducting equipment that can regulate a quantity (i.e. voltage or flow) at a specific point in the network. */
 	class RegulatingCondEq : public ConductingEquipment
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		RegulatingCondEq();
 		~RegulatingCondEq() override;
 
-		CIMPP::RegulatingControl* RegulatingControl;  /* The regulating control scheme in which this equipment participates. Default: 0 */
-		CIMPP::Boolean controlEnabled;  /* Specifies the regulation status of the equipment.  True is regulating, false is not regulating. Default: false */
+		/** \brief The regulating control scheme in which this equipment participates. Default: 0 */
+		CIMPP::RegulatingControl* RegulatingControl;
+
+		/** \brief Specifies the regulation status of the equipment.  True is regulating, false is not regulating. Default: false */
+		CIMPP::Boolean controlEnabled;
 
 		static const char debugName[];
 		const char* debugString() const override;

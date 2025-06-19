@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class CsConverter;
 
-	/*
-	CSC function block whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font>
-	*/
+	/** \brief CSC function block whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font> */
 	class CSCDynamics : public HVDCDynamics
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		CSCDynamics();
 		~CSCDynamics() override;
 
-		CIMPP::CsConverter* CSConverter;  /* Current source converter to which current source converter dynamics model applies. Default: 0 */
+		/** \brief Current source converter to which current source converter dynamics model applies. Default: 0 */
+		CIMPP::CsConverter* CSConverter;
 
 		static const char debugName[];
 		const char* debugString() const override;

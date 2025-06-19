@@ -18,9 +18,7 @@ namespace CIMPP
 	class AccumulatorLimitSet;
 	class AccumulatorValue;
 
-	/*
-	Accumulator represents an accumulated (counted) Measurement, e.g. an energy value.
-	*/
+	/** \brief Accumulator represents an accumulated (counted) Measurement, e.g. an energy value. */
 	class Accumulator : public Measurement
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		Accumulator();
 		~Accumulator() override;
 
-		std::list<CIMPP::AccumulatorValue*> AccumulatorValues;  /* Measurement to which this value is connected. Default: 0 */
-		std::list<CIMPP::AccumulatorLimitSet*> LimitSets;  /* The Measurements using the LimitSet. Default: 0 */
+		/** \brief Measurement to which this value is connected. Default: 0 */
+		std::list<CIMPP::AccumulatorValue*> AccumulatorValues;
+
+		/** \brief The Measurements using the LimitSet. Default: 0 */
+		std::list<CIMPP::AccumulatorLimitSet*> LimitSets;
 
 		static const char debugName[];
 		const char* debugString() const override;

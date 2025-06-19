@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A point where one or more conducting equipments are connected with zero resistance.
-	*/
+	/** \brief A point where one or more conducting equipments are connected with zero resistance. */
 	class Junction : public Connector
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		Junction();
 		~Junction() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

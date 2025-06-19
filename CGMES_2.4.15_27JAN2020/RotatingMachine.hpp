@@ -23,9 +23,7 @@ namespace CIMPP
 	class GeneratingUnit;
 	class HydroPump;
 
-	/*
-	A rotating machine which may be used as a generator or motor.
-	*/
+	/** \brief A rotating machine which may be used as a generator or motor. */
 	class RotatingMachine : public RegulatingCondEq
 	{
 	public:
@@ -33,13 +31,26 @@ namespace CIMPP
 		RotatingMachine();
 		~RotatingMachine() override;
 
-		CIMPP::GeneratingUnit* GeneratingUnit;  /* A synchronous machine may operate as a generator and as such becomes a member of a generating unit. Default: 0 */
-		CIMPP::HydroPump* HydroPump;  /* The synchronous machine drives the turbine which moves the water from a low elevation to a higher elevation. The direction of machine rotation for pumping may or may not be the same as for generating. Default: 0 */
-		CIMPP::ActivePower p;  /* Active power injection. Load sign convention is used, i.e. positive sign means flow out from a node. Starting value for a steady state solution. Default: nullptr */
-		CIMPP::ReactivePower q;  /* Reactive power injection. Load sign convention is used, i.e. positive sign means flow out from a node. Starting value for a steady state solution. Default: nullptr */
-		CIMPP::Simple_Float ratedPowerFactor;  /* Power factor (nameplate data). It is primarily used for short circuit data exchange according to IEC 60909. Default: nullptr */
-		CIMPP::ApparentPower ratedS;  /* Nameplate apparent power rating for the unit. The attribute shall have a positive value. Default: nullptr */
-		CIMPP::Voltage ratedU;  /* Rated voltage (nameplate data, Ur in IEC 60909-0). It is primarily used for short circuit data exchange according to IEC 60909. Default: nullptr */
+		/** \brief A synchronous machine may operate as a generator and as such becomes a member of a generating unit. Default: 0 */
+		CIMPP::GeneratingUnit* GeneratingUnit;
+
+		/** \brief The synchronous machine drives the turbine which moves the water from a low elevation to a higher elevation. The direction of machine rotation for pumping may or may not be the same as for generating. Default: 0 */
+		CIMPP::HydroPump* HydroPump;
+
+		/** \brief Active power injection. Load sign convention is used, i.e. positive sign means flow out from a node. Starting value for a steady state solution. Default: nullptr */
+		CIMPP::ActivePower p;
+
+		/** \brief Reactive power injection. Load sign convention is used, i.e. positive sign means flow out from a node. Starting value for a steady state solution. Default: nullptr */
+		CIMPP::ReactivePower q;
+
+		/** \brief Power factor (nameplate data). It is primarily used for short circuit data exchange according to IEC 60909. Default: nullptr */
+		CIMPP::Simple_Float ratedPowerFactor;
+
+		/** \brief Nameplate apparent power rating for the unit. The attribute shall have a positive value. Default: nullptr */
+		CIMPP::ApparentPower ratedS;
+
+		/** \brief Rated voltage (nameplate data, Ur in IEC 60909-0). It is primarily used for short circuit data exchange according to IEC 60909. Default: nullptr */
+		CIMPP::Voltage ratedU;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class TurbineGovernorDynamics;
 
-	/*
-	Turbine load controller function block whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font>
-	*/
+	/** \brief Turbine load controller function block whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font> */
 	class TurbineLoadControllerDynamics : public DynamicsFunctionBlock
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		TurbineLoadControllerDynamics();
 		~TurbineLoadControllerDynamics() override;
 
-		CIMPP::TurbineGovernorDynamics* TurbineGovernorDynamics;  /* Turbine-governor controlled by this turbine load controller. Default: 0 */
+		/** \brief Turbine-governor controlled by this turbine load controller. Default: 0 */
+		CIMPP::TurbineGovernorDynamics* TurbineGovernorDynamics;
 
 		static const char debugName[];
 		const char* debugString() const override;

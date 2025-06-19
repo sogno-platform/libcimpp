@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-ConformLoad::ConformLoad() : LoadGroup(nullptr) {};
-ConformLoad::~ConformLoad() {};
+ConformLoad::ConformLoad() : LoadGroup(nullptr) {}
+ConformLoad::~ConformLoad() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -41,8 +41,6 @@ ConformLoad::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_ConformLoadGroup_EnergyConsumers(BaseClass*, BaseClass*);
 bool assign_ConformLoad_LoadGroup(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,10 +58,10 @@ bool assign_ConformLoad_LoadGroup(BaseClass* BaseClass_ptr1, BaseClass* BaseClas
 	return false;
 }
 
-
 bool get_ConformLoad_LoadGroup(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const ConformLoad* element = dynamic_cast<const ConformLoad*>(BaseClass_ptr1))
+	const ConformLoad* element = dynamic_cast<const ConformLoad*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->LoadGroup != 0)
 		{
@@ -74,7 +72,6 @@ bool get_ConformLoad_LoadGroup(const BaseClass* BaseClass_ptr1, std::list<const 
 	return false;
 }
 
-
 const char ConformLoad::debugName[] = "ConformLoad";
 const char* ConformLoad::debugString() const
 {
@@ -83,7 +80,7 @@ const char* ConformLoad::debugString() const
 
 void ConformLoad::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ConformLoad"), &ConformLoad_factory));
+	factory_map.emplace("cim:ConformLoad", &ConformLoad_factory);
 }
 
 void ConformLoad::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -92,7 +89,7 @@ void ConformLoad::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, ass
 
 void ConformLoad::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ConformLoad.LoadGroup"), &assign_ConformLoad_LoadGroup));
+	assign_map.emplace("cim:ConformLoad.LoadGroup", &assign_ConformLoad_LoadGroup);
 }
 
 void ConformLoad::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

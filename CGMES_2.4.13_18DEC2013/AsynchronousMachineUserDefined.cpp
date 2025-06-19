@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "ProprietaryParameterDynamics.hpp"
-#include "Boolean.hpp"
 
 using namespace CIMPP;
 
-AsynchronousMachineUserDefined::AsynchronousMachineUserDefined() {};
-AsynchronousMachineUserDefined::~AsynchronousMachineUserDefined() {};
+AsynchronousMachineUserDefined::AsynchronousMachineUserDefined() {}
+AsynchronousMachineUserDefined::~AsynchronousMachineUserDefined() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,21 +41,6 @@ AsynchronousMachineUserDefined::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_AsynchronousMachineUserDefined_proprietary(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (AsynchronousMachineUserDefined* element = dynamic_cast<AsynchronousMachineUserDefined*>(BaseClass_ptr1))
-	{
-		buffer >> element->proprietary;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_ProprietaryParameterDynamics_AsynchronousMachineUserDefined(BaseClass*, BaseClass*);
 bool assign_AsynchronousMachineUserDefined_ProprietaryParameterDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,9 +58,25 @@ bool assign_AsynchronousMachineUserDefined_ProprietaryParameterDynamics(BaseClas
 	return false;
 }
 
+bool assign_AsynchronousMachineUserDefined_proprietary(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	AsynchronousMachineUserDefined* element = dynamic_cast<AsynchronousMachineUserDefined*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->proprietary;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_AsynchronousMachineUserDefined_proprietary(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const AsynchronousMachineUserDefined* element = dynamic_cast<const AsynchronousMachineUserDefined*>(BaseClass_ptr1))
+	const AsynchronousMachineUserDefined* element = dynamic_cast<const AsynchronousMachineUserDefined*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->proprietary;
 		if (!buffer.str().empty())
@@ -88,8 +88,6 @@ bool get_AsynchronousMachineUserDefined_proprietary(const BaseClass* BaseClass_p
 	return false;
 }
 
-
-
 const char AsynchronousMachineUserDefined::debugName[] = "AsynchronousMachineUserDefined";
 const char* AsynchronousMachineUserDefined::debugString() const
 {
@@ -98,17 +96,17 @@ const char* AsynchronousMachineUserDefined::debugString() const
 
 void AsynchronousMachineUserDefined::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:AsynchronousMachineUserDefined"), &AsynchronousMachineUserDefined_factory));
+	factory_map.emplace("cim:AsynchronousMachineUserDefined", &AsynchronousMachineUserDefined_factory);
 }
 
 void AsynchronousMachineUserDefined::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:AsynchronousMachineUserDefined.proprietary"), &assign_AsynchronousMachineUserDefined_proprietary));
+	assign_map.emplace("cim:AsynchronousMachineUserDefined.proprietary", &assign_AsynchronousMachineUserDefined_proprietary);
 }
 
 void AsynchronousMachineUserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:AsynchronousMachineUserDefined.ProprietaryParameterDynamics"), &assign_AsynchronousMachineUserDefined_ProprietaryParameterDynamics));
+	assign_map.emplace("cim:AsynchronousMachineUserDefined.ProprietaryParameterDynamics", &assign_AsynchronousMachineUserDefined_ProprietaryParameterDynamics);
 }
 
 void AsynchronousMachineUserDefined::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

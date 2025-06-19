@@ -9,21 +9,15 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Kind of wind generating unit.
-	*/
+	/** \brief Kind of wind generating unit. */
 	class WindGenUnitKind
 	{
 	public:
 		enum WindGenUnitKind_ENUM
 		{
-			/**
-			 * The wind generating unit is located offshore.
-			 */
+			/** The wind generating unit is located offshore. */
 			offshore,
-			/**
-			 * The wind generating unit is located onshore.
-			 */
+			/** The wind generating unit is located onshore. */
 			onshore,
 		};
 

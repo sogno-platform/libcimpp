@@ -8,14 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Inductance.hpp"
-#include "Voltage.hpp"
-#include "Resistance.hpp"
 
 using namespace CIMPP;
 
-DCSeriesDevice::DCSeriesDevice() {};
-DCSeriesDevice::~DCSeriesDevice() {};
+DCSeriesDevice::DCSeriesDevice() {}
+DCSeriesDevice::~DCSeriesDevice() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -44,51 +41,52 @@ DCSeriesDevice::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_DCSeriesDevice_inductance(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DCSeriesDevice_inductance(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DCSeriesDevice* element = dynamic_cast<DCSeriesDevice*>(BaseClass_ptr1))
+	DCSeriesDevice* element = dynamic_cast<DCSeriesDevice*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->inductance;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_DCSeriesDevice_ratedUdc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DCSeriesDevice_ratedUdc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DCSeriesDevice* element = dynamic_cast<DCSeriesDevice*>(BaseClass_ptr1))
+	DCSeriesDevice* element = dynamic_cast<DCSeriesDevice*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ratedUdc;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_DCSeriesDevice_resistance(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DCSeriesDevice_resistance(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DCSeriesDevice* element = dynamic_cast<DCSeriesDevice*>(BaseClass_ptr1))
+	DCSeriesDevice* element = dynamic_cast<DCSeriesDevice*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->resistance;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_DCSeriesDevice_inductance(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DCSeriesDevice* element = dynamic_cast<const DCSeriesDevice*>(BaseClass_ptr1))
+	const DCSeriesDevice* element = dynamic_cast<const DCSeriesDevice*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->inductance;
 		if (!buffer.str().empty())
@@ -102,7 +100,8 @@ bool get_DCSeriesDevice_inductance(const BaseClass* BaseClass_ptr1, std::strings
 
 bool get_DCSeriesDevice_ratedUdc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DCSeriesDevice* element = dynamic_cast<const DCSeriesDevice*>(BaseClass_ptr1))
+	const DCSeriesDevice* element = dynamic_cast<const DCSeriesDevice*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ratedUdc;
 		if (!buffer.str().empty())
@@ -116,7 +115,8 @@ bool get_DCSeriesDevice_ratedUdc(const BaseClass* BaseClass_ptr1, std::stringstr
 
 bool get_DCSeriesDevice_resistance(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DCSeriesDevice* element = dynamic_cast<const DCSeriesDevice*>(BaseClass_ptr1))
+	const DCSeriesDevice* element = dynamic_cast<const DCSeriesDevice*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->resistance;
 		if (!buffer.str().empty())
@@ -128,8 +128,6 @@ bool get_DCSeriesDevice_resistance(const BaseClass* BaseClass_ptr1, std::strings
 	return false;
 }
 
-
-
 const char DCSeriesDevice::debugName[] = "DCSeriesDevice";
 const char* DCSeriesDevice::debugString() const
 {
@@ -138,14 +136,14 @@ const char* DCSeriesDevice::debugString() const
 
 void DCSeriesDevice::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:DCSeriesDevice"), &DCSeriesDevice_factory));
+	factory_map.emplace("cim:DCSeriesDevice", &DCSeriesDevice_factory);
 }
 
 void DCSeriesDevice::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:DCSeriesDevice.inductance"), &assign_DCSeriesDevice_inductance));
-	assign_map.insert(std::make_pair(std::string("cim:DCSeriesDevice.ratedUdc"), &assign_DCSeriesDevice_ratedUdc));
-	assign_map.insert(std::make_pair(std::string("cim:DCSeriesDevice.resistance"), &assign_DCSeriesDevice_resistance));
+	assign_map.emplace("cim:DCSeriesDevice.inductance", &assign_DCSeriesDevice_inductance);
+	assign_map.emplace("cim:DCSeriesDevice.ratedUdc", &assign_DCSeriesDevice_ratedUdc);
+	assign_map.emplace("cim:DCSeriesDevice.resistance", &assign_DCSeriesDevice_resistance);
 }
 
 void DCSeriesDevice::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

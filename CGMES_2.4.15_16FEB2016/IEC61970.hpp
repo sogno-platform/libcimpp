@@ -401,4 +401,5 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "WindType1or2UserDefined.hpp"
 #include "WindType3or4UserDefined.hpp"
 #include "UnknownType.hpp"
+
 #endif

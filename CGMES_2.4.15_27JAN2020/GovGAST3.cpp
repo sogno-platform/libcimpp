@@ -8,32 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Simple_Float.hpp"
-#include "PU.hpp"
-#include "Temperature.hpp"
-#include "PU.hpp"
-#include "Simple_Float.hpp"
-#include "Simple_Float.hpp"
-#include "Simple_Float.hpp"
-#include "Simple_Float.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Temperature.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Temperature.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
 
 using namespace CIMPP;
 
-GovGAST3::GovGAST3() {};
-GovGAST3::~GovGAST3() {};
+GovGAST3::GovGAST3() {}
+GovGAST3::~GovGAST3() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -80,285 +59,304 @@ GovGAST3::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_GovGAST3_bca(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovGAST3_bca(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1))
+	GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->bca;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovGAST3_bp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovGAST3_bp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1))
+	GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->bp;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovGAST3_dtc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovGAST3_dtc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1))
+	GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->dtc;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovGAST3_ka(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovGAST3_ka(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1))
+	GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ka;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovGAST3_kac(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovGAST3_kac(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1))
+	GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kac;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovGAST3_kca(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovGAST3_kca(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1))
+	GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kca;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovGAST3_ksi(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovGAST3_ksi(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1))
+	GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ksi;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovGAST3_ky(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovGAST3_ky(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1))
+	GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ky;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovGAST3_mnef(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovGAST3_mnef(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1))
+	GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->mnef;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovGAST3_mxef(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovGAST3_mxef(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1))
+	GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->mxef;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovGAST3_rcmn(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovGAST3_rcmn(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1))
+	GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->rcmn;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovGAST3_rcmx(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovGAST3_rcmx(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1))
+	GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->rcmx;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovGAST3_tac(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovGAST3_tac(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1))
+	GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tac;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovGAST3_tc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovGAST3_tc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1))
+	GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tc;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovGAST3_td(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovGAST3_td(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1))
+	GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->td;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovGAST3_tfen(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovGAST3_tfen(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1))
+	GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tfen;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovGAST3_tg(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovGAST3_tg(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1))
+	GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tg;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovGAST3_tsi(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovGAST3_tsi(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1))
+	GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tsi;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovGAST3_tt(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovGAST3_tt(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1))
+	GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tt;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovGAST3_ttc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovGAST3_ttc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1))
+	GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ttc;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovGAST3_ty(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovGAST3_ty(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1))
+	GovGAST3* element = dynamic_cast<GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ty;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_GovGAST3_bca(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1))
+	const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->bca;
 		if (!buffer.str().empty())
@@ -372,7 +370,8 @@ bool get_GovGAST3_bca(const BaseClass* BaseClass_ptr1, std::stringstream& buffer
 
 bool get_GovGAST3_bp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1))
+	const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->bp;
 		if (!buffer.str().empty())
@@ -386,7 +385,8 @@ bool get_GovGAST3_bp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_GovGAST3_dtc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1))
+	const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->dtc;
 		if (!buffer.str().empty())
@@ -400,7 +400,8 @@ bool get_GovGAST3_dtc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer
 
 bool get_GovGAST3_ka(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1))
+	const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ka;
 		if (!buffer.str().empty())
@@ -414,7 +415,8 @@ bool get_GovGAST3_ka(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_GovGAST3_kac(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1))
+	const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kac;
 		if (!buffer.str().empty())
@@ -428,7 +430,8 @@ bool get_GovGAST3_kac(const BaseClass* BaseClass_ptr1, std::stringstream& buffer
 
 bool get_GovGAST3_kca(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1))
+	const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kca;
 		if (!buffer.str().empty())
@@ -442,7 +445,8 @@ bool get_GovGAST3_kca(const BaseClass* BaseClass_ptr1, std::stringstream& buffer
 
 bool get_GovGAST3_ksi(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1))
+	const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ksi;
 		if (!buffer.str().empty())
@@ -456,7 +460,8 @@ bool get_GovGAST3_ksi(const BaseClass* BaseClass_ptr1, std::stringstream& buffer
 
 bool get_GovGAST3_ky(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1))
+	const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ky;
 		if (!buffer.str().empty())
@@ -470,7 +475,8 @@ bool get_GovGAST3_ky(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_GovGAST3_mnef(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1))
+	const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->mnef;
 		if (!buffer.str().empty())
@@ -484,7 +490,8 @@ bool get_GovGAST3_mnef(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_GovGAST3_mxef(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1))
+	const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->mxef;
 		if (!buffer.str().empty())
@@ -498,7 +505,8 @@ bool get_GovGAST3_mxef(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_GovGAST3_rcmn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1))
+	const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->rcmn;
 		if (!buffer.str().empty())
@@ -512,7 +520,8 @@ bool get_GovGAST3_rcmn(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_GovGAST3_rcmx(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1))
+	const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->rcmx;
 		if (!buffer.str().empty())
@@ -526,7 +535,8 @@ bool get_GovGAST3_rcmx(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_GovGAST3_tac(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1))
+	const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tac;
 		if (!buffer.str().empty())
@@ -540,7 +550,8 @@ bool get_GovGAST3_tac(const BaseClass* BaseClass_ptr1, std::stringstream& buffer
 
 bool get_GovGAST3_tc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1))
+	const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tc;
 		if (!buffer.str().empty())
@@ -554,7 +565,8 @@ bool get_GovGAST3_tc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_GovGAST3_td(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1))
+	const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->td;
 		if (!buffer.str().empty())
@@ -568,7 +580,8 @@ bool get_GovGAST3_td(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_GovGAST3_tfen(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1))
+	const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tfen;
 		if (!buffer.str().empty())
@@ -582,7 +595,8 @@ bool get_GovGAST3_tfen(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_GovGAST3_tg(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1))
+	const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tg;
 		if (!buffer.str().empty())
@@ -596,7 +610,8 @@ bool get_GovGAST3_tg(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_GovGAST3_tsi(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1))
+	const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tsi;
 		if (!buffer.str().empty())
@@ -610,7 +625,8 @@ bool get_GovGAST3_tsi(const BaseClass* BaseClass_ptr1, std::stringstream& buffer
 
 bool get_GovGAST3_tt(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1))
+	const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tt;
 		if (!buffer.str().empty())
@@ -624,7 +640,8 @@ bool get_GovGAST3_tt(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_GovGAST3_ttc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1))
+	const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ttc;
 		if (!buffer.str().empty())
@@ -638,7 +655,8 @@ bool get_GovGAST3_ttc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer
 
 bool get_GovGAST3_ty(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1))
+	const GovGAST3* element = dynamic_cast<const GovGAST3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ty;
 		if (!buffer.str().empty())
@@ -650,8 +668,6 @@ bool get_GovGAST3_ty(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 	return false;
 }
 
-
-
 const char GovGAST3::debugName[] = "GovGAST3";
 const char* GovGAST3::debugString() const
 {
@@ -660,32 +676,32 @@ const char* GovGAST3::debugString() const
 
 void GovGAST3::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:GovGAST3"), &GovGAST3_factory));
+	factory_map.emplace("cim:GovGAST3", &GovGAST3_factory);
 }
 
 void GovGAST3::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:GovGAST3.bca"), &assign_GovGAST3_bca));
-	assign_map.insert(std::make_pair(std::string("cim:GovGAST3.bp"), &assign_GovGAST3_bp));
-	assign_map.insert(std::make_pair(std::string("cim:GovGAST3.dtc"), &assign_GovGAST3_dtc));
-	assign_map.insert(std::make_pair(std::string("cim:GovGAST3.ka"), &assign_GovGAST3_ka));
-	assign_map.insert(std::make_pair(std::string("cim:GovGAST3.kac"), &assign_GovGAST3_kac));
-	assign_map.insert(std::make_pair(std::string("cim:GovGAST3.kca"), &assign_GovGAST3_kca));
-	assign_map.insert(std::make_pair(std::string("cim:GovGAST3.ksi"), &assign_GovGAST3_ksi));
-	assign_map.insert(std::make_pair(std::string("cim:GovGAST3.ky"), &assign_GovGAST3_ky));
-	assign_map.insert(std::make_pair(std::string("cim:GovGAST3.mnef"), &assign_GovGAST3_mnef));
-	assign_map.insert(std::make_pair(std::string("cim:GovGAST3.mxef"), &assign_GovGAST3_mxef));
-	assign_map.insert(std::make_pair(std::string("cim:GovGAST3.rcmn"), &assign_GovGAST3_rcmn));
-	assign_map.insert(std::make_pair(std::string("cim:GovGAST3.rcmx"), &assign_GovGAST3_rcmx));
-	assign_map.insert(std::make_pair(std::string("cim:GovGAST3.tac"), &assign_GovGAST3_tac));
-	assign_map.insert(std::make_pair(std::string("cim:GovGAST3.tc"), &assign_GovGAST3_tc));
-	assign_map.insert(std::make_pair(std::string("cim:GovGAST3.td"), &assign_GovGAST3_td));
-	assign_map.insert(std::make_pair(std::string("cim:GovGAST3.tfen"), &assign_GovGAST3_tfen));
-	assign_map.insert(std::make_pair(std::string("cim:GovGAST3.tg"), &assign_GovGAST3_tg));
-	assign_map.insert(std::make_pair(std::string("cim:GovGAST3.tsi"), &assign_GovGAST3_tsi));
-	assign_map.insert(std::make_pair(std::string("cim:GovGAST3.tt"), &assign_GovGAST3_tt));
-	assign_map.insert(std::make_pair(std::string("cim:GovGAST3.ttc"), &assign_GovGAST3_ttc));
-	assign_map.insert(std::make_pair(std::string("cim:GovGAST3.ty"), &assign_GovGAST3_ty));
+	assign_map.emplace("cim:GovGAST3.bca", &assign_GovGAST3_bca);
+	assign_map.emplace("cim:GovGAST3.bp", &assign_GovGAST3_bp);
+	assign_map.emplace("cim:GovGAST3.dtc", &assign_GovGAST3_dtc);
+	assign_map.emplace("cim:GovGAST3.ka", &assign_GovGAST3_ka);
+	assign_map.emplace("cim:GovGAST3.kac", &assign_GovGAST3_kac);
+	assign_map.emplace("cim:GovGAST3.kca", &assign_GovGAST3_kca);
+	assign_map.emplace("cim:GovGAST3.ksi", &assign_GovGAST3_ksi);
+	assign_map.emplace("cim:GovGAST3.ky", &assign_GovGAST3_ky);
+	assign_map.emplace("cim:GovGAST3.mnef", &assign_GovGAST3_mnef);
+	assign_map.emplace("cim:GovGAST3.mxef", &assign_GovGAST3_mxef);
+	assign_map.emplace("cim:GovGAST3.rcmn", &assign_GovGAST3_rcmn);
+	assign_map.emplace("cim:GovGAST3.rcmx", &assign_GovGAST3_rcmx);
+	assign_map.emplace("cim:GovGAST3.tac", &assign_GovGAST3_tac);
+	assign_map.emplace("cim:GovGAST3.tc", &assign_GovGAST3_tc);
+	assign_map.emplace("cim:GovGAST3.td", &assign_GovGAST3_td);
+	assign_map.emplace("cim:GovGAST3.tfen", &assign_GovGAST3_tfen);
+	assign_map.emplace("cim:GovGAST3.tg", &assign_GovGAST3_tg);
+	assign_map.emplace("cim:GovGAST3.tsi", &assign_GovGAST3_tsi);
+	assign_map.emplace("cim:GovGAST3.tt", &assign_GovGAST3_tt);
+	assign_map.emplace("cim:GovGAST3.ttc", &assign_GovGAST3_ttc);
+	assign_map.emplace("cim:GovGAST3.ty", &assign_GovGAST3_ty);
 }
 
 void GovGAST3::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

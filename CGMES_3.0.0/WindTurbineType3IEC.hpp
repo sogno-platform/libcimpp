@@ -22,9 +22,7 @@ namespace CIMPP
 	class WindGenType3IEC;
 	class WindMechIEC;
 
-	/*
-	Parent class supporting relationships to IEC wind turbines type 3 including their control models.
-	*/
+	/** \brief Parent class supporting relationships to IEC wind turbines type 3 including their control models. */
 	class WindTurbineType3IEC : public WindTurbineType3or4IEC
 	{
 	public:
@@ -32,12 +30,23 @@ namespace CIMPP
 		WindTurbineType3IEC();
 		~WindTurbineType3IEC() override;
 
-		CIMPP::WindAeroOneDimIEC* WindAeroOneDimIEC;  /* Wind aerodynamic model associated with this wind generator type 3 model. Default: 0 */
-		CIMPP::WindAeroTwoDimIEC* WindAeroTwoDimIEC;  /* Wind aerodynamic model associated with this wind turbine type 3 model. Default: 0 */
-		CIMPP::WindContPType3IEC* WindContPType3IEC;  /* Wind control P type 3 model associated with this wind turbine type 3 model. Default: 0 */
-		CIMPP::WindContPitchAngleIEC* WindContPitchAngleIEC;  /* Wind control pitch angle model associated with this wind turbine type 3. Default: 0 */
-		CIMPP::WindGenType3IEC* WindGenType3IEC;  /* Wind generator type 3 model associated with this wind turbine type 3 model. Default: 0 */
-		CIMPP::WindMechIEC* WindMechIEC;  /* Wind mechanical model associated with this wind turbine type 3 model. Default: 0 */
+		/** \brief Wind aerodynamic model associated with this wind generator type 3 model. Default: 0 */
+		CIMPP::WindAeroOneDimIEC* WindAeroOneDimIEC;
+
+		/** \brief Wind aerodynamic model associated with this wind turbine type 3 model. Default: 0 */
+		CIMPP::WindAeroTwoDimIEC* WindAeroTwoDimIEC;
+
+		/** \brief Wind control P type 3 model associated with this wind turbine type 3 model. Default: 0 */
+		CIMPP::WindContPType3IEC* WindContPType3IEC;
+
+		/** \brief Wind control pitch angle model associated with this wind turbine type 3. Default: 0 */
+		CIMPP::WindContPitchAngleIEC* WindContPitchAngleIEC;
+
+		/** \brief Wind generator type 3 model associated with this wind turbine type 3 model. Default: 0 */
+		CIMPP::WindGenType3IEC* WindGenType3IEC;
+
+		/** \brief Wind mechanical model associated with this wind turbine type 3 model. Default: 0 */
+		CIMPP::WindMechIEC* WindMechIEC;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A conductor, or group of conductors, with negligible impedance, that serve to connect other conducting equipment within a single substation and are modelled with a single logical terminal.
-	*/
+	/** \brief A conductor, or group of conductors, with negligible impedance, that serve to connect other conducting equipment within a single substation and are modelled with a single logical terminal. */
 	class Connector : public ConductingEquipment
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		Connector();
 		~Connector() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

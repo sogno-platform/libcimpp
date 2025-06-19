@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "GovHydro4ModelKind")
+		if (EnumSymbol.substr(0, pos) != "GovHydro4ModelKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,17 +50,17 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "simple")
+		if (EnumSymbol == "simple")
 		{
 			rop = GovHydro4ModelKind::simple;
 			return lop;
 		}
-		if(EnumSymbol == "francisPelton")
+		if (EnumSymbol == "francisPelton")
 		{
 			rop = GovHydro4ModelKind::francisPelton;
 			return lop;
 		}
-		if(EnumSymbol == "kaplan")
+		if (EnumSymbol == "kaplan")
 		{
 			rop = GovHydro4ModelKind::kaplan;
 			return lop;

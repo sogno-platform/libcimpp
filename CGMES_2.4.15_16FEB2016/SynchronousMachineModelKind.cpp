@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "SynchronousMachineModelKind")
+		if (EnumSymbol.substr(0, pos) != "SynchronousMachineModelKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,27 +50,27 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "subtransient")
+		if (EnumSymbol == "subtransient")
 		{
 			rop = SynchronousMachineModelKind::subtransient;
 			return lop;
 		}
-		if(EnumSymbol == "subtransientTypeF")
+		if (EnumSymbol == "subtransientTypeF")
 		{
 			rop = SynchronousMachineModelKind::subtransientTypeF;
 			return lop;
 		}
-		if(EnumSymbol == "subtransientTypeJ")
+		if (EnumSymbol == "subtransientTypeJ")
 		{
 			rop = SynchronousMachineModelKind::subtransientTypeJ;
 			return lop;
 		}
-		if(EnumSymbol == "subtransientSimplified")
+		if (EnumSymbol == "subtransientSimplified")
 		{
 			rop = SynchronousMachineModelKind::subtransientSimplified;
 			return lop;
 		}
-		if(EnumSymbol == "subtransientSimplifiedDirectAxis")
+		if (EnumSymbol == "subtransientSimplifiedDirectAxis")
 		{
 			rop = SynchronousMachineModelKind::subtransientSimplifiedDirectAxis;
 			return lop;

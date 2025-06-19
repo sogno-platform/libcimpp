@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Generic turbogas.
-	*/
+	/** \brief Generic turbogas. */
 	class GovGAST4 : public TurbineGovernorDynamics
 	{
 	public:
@@ -28,17 +26,38 @@ namespace CIMPP
 		GovGAST4();
 		~GovGAST4() override;
 
-		CIMPP::PU bp;  /* Droop (&lt;i&gt;b&lt;/i&gt;&lt;i&gt;&lt;sub&gt;p&lt;/sub&gt;&lt;/i&gt;).  Typical value = 0,05. Default: nullptr */
-		CIMPP::PU ktm;  /* Compressor gain (&lt;i&gt;Ktm&lt;/i&gt;).  Typical value = 0. Default: nullptr */
-		CIMPP::PU mnef;  /* Fuel flow maximum negative error value (&lt;i&gt;MNef&lt;/i&gt;).  Typical value = -0,05. Default: nullptr */
-		CIMPP::PU mxef;  /* Fuel flow maximum positive error value (&lt;i&gt;MXef&lt;/i&gt;).  Typical value = 0,05. Default: nullptr */
-		CIMPP::PU rymn;  /* Minimum valve opening (&lt;i&gt;RYMN&lt;/i&gt;).  Typical value = 0. Default: nullptr */
-		CIMPP::PU rymx;  /* Maximum valve opening (&lt;i&gt;RYMX&lt;/i&gt;).  Typical value = 1,1. Default: nullptr */
-		CIMPP::Seconds ta;  /* Maximum gate opening velocity (&lt;i&gt;TA&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 3. Default: nullptr */
-		CIMPP::Seconds tc;  /* Maximum gate closing velocity (&lt;i&gt;TC&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 0,5. Default: nullptr */
-		CIMPP::Seconds tcm;  /* Fuel control time constant (&lt;i&gt;Tcm&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 0,1. Default: nullptr */
-		CIMPP::Seconds tm;  /* Compressor discharge volume time constant (&lt;i&gt;Tm&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 0,2. Default: nullptr */
-		CIMPP::Seconds ty;  /* Time constant of fuel valve positioner (&lt;i&gt;Ty&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 0,1. Default: nullptr */
+		/** \brief Droop (&lt;i&gt;b&lt;/i&gt;&lt;i&gt;&lt;sub&gt;p&lt;/sub&gt;&lt;/i&gt;).  Typical value = 0,05. Default: nullptr */
+		CIMPP::PU bp;
+
+		/** \brief Compressor gain (&lt;i&gt;Ktm&lt;/i&gt;).  Typical value = 0. Default: nullptr */
+		CIMPP::PU ktm;
+
+		/** \brief Fuel flow maximum negative error value (&lt;i&gt;MNef&lt;/i&gt;).  Typical value = -0,05. Default: nullptr */
+		CIMPP::PU mnef;
+
+		/** \brief Fuel flow maximum positive error value (&lt;i&gt;MXef&lt;/i&gt;).  Typical value = 0,05. Default: nullptr */
+		CIMPP::PU mxef;
+
+		/** \brief Minimum valve opening (&lt;i&gt;RYMN&lt;/i&gt;).  Typical value = 0. Default: nullptr */
+		CIMPP::PU rymn;
+
+		/** \brief Maximum valve opening (&lt;i&gt;RYMX&lt;/i&gt;).  Typical value = 1,1. Default: nullptr */
+		CIMPP::PU rymx;
+
+		/** \brief Maximum gate opening velocity (&lt;i&gt;TA&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 3. Default: nullptr */
+		CIMPP::Seconds ta;
+
+		/** \brief Maximum gate closing velocity (&lt;i&gt;TC&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 0,5. Default: nullptr */
+		CIMPP::Seconds tc;
+
+		/** \brief Fuel control time constant (&lt;i&gt;Tcm&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 0,1. Default: nullptr */
+		CIMPP::Seconds tcm;
+
+		/** \brief Compressor discharge volume time constant (&lt;i&gt;Tm&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 0,2. Default: nullptr */
+		CIMPP::Seconds tm;
+
+		/** \brief Time constant of fuel valve positioner (&lt;i&gt;Ty&lt;/i&gt;) (&amp;gt;= 0).  Typical value = 0,1. Default: nullptr */
+		CIMPP::Seconds ty;
 
 		static const char debugName[];
 		const char* debugString() const override;

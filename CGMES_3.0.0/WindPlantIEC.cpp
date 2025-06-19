@@ -13,8 +13,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-WindPlantIEC::WindPlantIEC() : WindPlantFreqPcontrolIEC(nullptr), WindPlantReactiveControlIEC(nullptr) {};
-WindPlantIEC::~WindPlantIEC() {};
+WindPlantIEC::WindPlantIEC() : WindPlantFreqPcontrolIEC(nullptr), WindPlantReactiveControlIEC(nullptr) {}
+WindPlantIEC::~WindPlantIEC() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,8 +42,6 @@ WindPlantIEC::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_WindPlantFreqPcontrolIEC_WindPlantIEC(BaseClass*, BaseClass*);
 bool assign_WindPlantIEC_WindPlantFreqPcontrolIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,6 +58,7 @@ bool assign_WindPlantIEC_WindPlantFreqPcontrolIEC(BaseClass* BaseClass_ptr1, Bas
 	}
 	return false;
 }
+
 bool assign_WindPlantReactiveControlIEC_WindPlantIEC(BaseClass*, BaseClass*);
 bool assign_WindPlantIEC_WindPlantReactiveControlIEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -77,10 +76,10 @@ bool assign_WindPlantIEC_WindPlantReactiveControlIEC(BaseClass* BaseClass_ptr1, 
 	return false;
 }
 
-
 bool get_WindPlantIEC_WindPlantFreqPcontrolIEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const WindPlantIEC* element = dynamic_cast<const WindPlantIEC*>(BaseClass_ptr1))
+	const WindPlantIEC* element = dynamic_cast<const WindPlantIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->WindPlantFreqPcontrolIEC != 0)
 		{
@@ -93,7 +92,8 @@ bool get_WindPlantIEC_WindPlantFreqPcontrolIEC(const BaseClass* BaseClass_ptr1, 
 
 bool get_WindPlantIEC_WindPlantReactiveControlIEC(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const WindPlantIEC* element = dynamic_cast<const WindPlantIEC*>(BaseClass_ptr1))
+	const WindPlantIEC* element = dynamic_cast<const WindPlantIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->WindPlantReactiveControlIEC != 0)
 		{
@@ -104,7 +104,6 @@ bool get_WindPlantIEC_WindPlantReactiveControlIEC(const BaseClass* BaseClass_ptr
 	return false;
 }
 
-
 const char WindPlantIEC::debugName[] = "WindPlantIEC";
 const char* WindPlantIEC::debugString() const
 {
@@ -113,7 +112,7 @@ const char* WindPlantIEC::debugString() const
 
 void WindPlantIEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:WindPlantIEC"), &WindPlantIEC_factory));
+	factory_map.emplace("cim:WindPlantIEC", &WindPlantIEC_factory);
 }
 
 void WindPlantIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -122,8 +121,8 @@ void WindPlantIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, as
 
 void WindPlantIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantIEC.WindPlantFreqPcontrolIEC"), &assign_WindPlantIEC_WindPlantFreqPcontrolIEC));
-	assign_map.insert(std::make_pair(std::string("cim:WindPlantIEC.WindPlantReactiveControlIEC"), &assign_WindPlantIEC_WindPlantReactiveControlIEC));
+	assign_map.emplace("cim:WindPlantIEC.WindPlantFreqPcontrolIEC", &assign_WindPlantIEC_WindPlantFreqPcontrolIEC);
+	assign_map.emplace("cim:WindPlantIEC.WindPlantReactiveControlIEC", &assign_WindPlantIEC_WindPlantReactiveControlIEC);
 }
 
 void WindPlantIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

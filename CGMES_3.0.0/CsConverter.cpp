@@ -9,25 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "CSCDynamics.hpp"
-#include "AngleDegrees.hpp"
-#include "AngleDegrees.hpp"
-#include "AngleDegrees.hpp"
-#include "AngleDegrees.hpp"
-#include "CurrentFlow.hpp"
-#include "AngleDegrees.hpp"
-#include "AngleDegrees.hpp"
-#include "CurrentFlow.hpp"
-#include "CsOperatingModeKind.hpp"
-#include "CsPpccControlKind.hpp"
-#include "CurrentFlow.hpp"
-#include "AngleDegrees.hpp"
-#include "AngleDegrees.hpp"
-#include "CurrentFlow.hpp"
 
 using namespace CIMPP;
 
-CsConverter::CsConverter() : CSCDynamics(nullptr) {};
-CsConverter::~CsConverter() {};
+CsConverter::CsConverter() : CSCDynamics(nullptr) {}
+CsConverter::~CsConverter() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -71,190 +57,6 @@ CsConverter::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_CsConverter_alpha(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->alpha;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_CsConverter_gamma(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->gamma;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_CsConverter_maxAlpha(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->maxAlpha;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_CsConverter_maxGamma(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->maxGamma;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_CsConverter_maxIdc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->maxIdc;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_CsConverter_minAlpha(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->minAlpha;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_CsConverter_minGamma(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->minGamma;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_CsConverter_minIdc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->minIdc;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_CsConverter_operatingMode(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->operatingMode;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_CsConverter_pPccControl(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->pPccControl;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_CsConverter_ratedIdc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->ratedIdc;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_CsConverter_targetAlpha(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->targetAlpha;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_CsConverter_targetGamma(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->targetGamma;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_CsConverter_targetIdc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->targetIdc;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_CSCDynamics_CSConverter(BaseClass*, BaseClass*);
 bool assign_CsConverter_CSCDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -272,9 +74,207 @@ bool assign_CsConverter_CSCDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseCl
 	return false;
 }
 
+bool assign_CsConverter_alpha(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->alpha;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_CsConverter_gamma(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->gamma;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_CsConverter_maxAlpha(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->maxAlpha;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_CsConverter_maxGamma(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->maxGamma;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_CsConverter_maxIdc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->maxIdc;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_CsConverter_minAlpha(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->minAlpha;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_CsConverter_minGamma(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->minGamma;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_CsConverter_minIdc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->minIdc;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_CsConverter_operatingMode(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->operatingMode;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_CsConverter_pPccControl(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->pPccControl;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_CsConverter_ratedIdc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->ratedIdc;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_CsConverter_targetAlpha(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->targetAlpha;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_CsConverter_targetGamma(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->targetGamma;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_CsConverter_targetIdc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	CsConverter* element = dynamic_cast<CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->targetIdc;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_CsConverter_alpha(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
+	const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->alpha;
 		if (!buffer.str().empty())
@@ -288,7 +288,8 @@ bool get_CsConverter_alpha(const BaseClass* BaseClass_ptr1, std::stringstream& b
 
 bool get_CsConverter_gamma(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
+	const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->gamma;
 		if (!buffer.str().empty())
@@ -302,7 +303,8 @@ bool get_CsConverter_gamma(const BaseClass* BaseClass_ptr1, std::stringstream& b
 
 bool get_CsConverter_maxAlpha(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
+	const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->maxAlpha;
 		if (!buffer.str().empty())
@@ -316,7 +318,8 @@ bool get_CsConverter_maxAlpha(const BaseClass* BaseClass_ptr1, std::stringstream
 
 bool get_CsConverter_maxGamma(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
+	const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->maxGamma;
 		if (!buffer.str().empty())
@@ -330,7 +333,8 @@ bool get_CsConverter_maxGamma(const BaseClass* BaseClass_ptr1, std::stringstream
 
 bool get_CsConverter_maxIdc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
+	const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->maxIdc;
 		if (!buffer.str().empty())
@@ -344,7 +348,8 @@ bool get_CsConverter_maxIdc(const BaseClass* BaseClass_ptr1, std::stringstream& 
 
 bool get_CsConverter_minAlpha(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
+	const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->minAlpha;
 		if (!buffer.str().empty())
@@ -358,7 +363,8 @@ bool get_CsConverter_minAlpha(const BaseClass* BaseClass_ptr1, std::stringstream
 
 bool get_CsConverter_minGamma(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
+	const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->minGamma;
 		if (!buffer.str().empty())
@@ -372,7 +378,8 @@ bool get_CsConverter_minGamma(const BaseClass* BaseClass_ptr1, std::stringstream
 
 bool get_CsConverter_minIdc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
+	const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->minIdc;
 		if (!buffer.str().empty())
@@ -384,67 +391,10 @@ bool get_CsConverter_minIdc(const BaseClass* BaseClass_ptr1, std::stringstream& 
 	return false;
 }
 
-bool get_CsConverter_ratedIdc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
-{
-	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
-	{
-		buffer << element->ratedIdc;
-		if (!buffer.str().empty())
-		{
-			return true;
-		}
-	}
-	buffer.setstate(std::ios::failbit);
-	return false;
-}
-
-bool get_CsConverter_targetAlpha(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
-{
-	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
-	{
-		buffer << element->targetAlpha;
-		if (!buffer.str().empty())
-		{
-			return true;
-		}
-	}
-	buffer.setstate(std::ios::failbit);
-	return false;
-}
-
-bool get_CsConverter_targetGamma(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
-{
-	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
-	{
-		buffer << element->targetGamma;
-		if (!buffer.str().empty())
-		{
-			return true;
-		}
-	}
-	buffer.setstate(std::ios::failbit);
-	return false;
-}
-
-bool get_CsConverter_targetIdc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
-{
-	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
-	{
-		buffer << element->targetIdc;
-		if (!buffer.str().empty())
-		{
-			return true;
-		}
-	}
-	buffer.setstate(std::ios::failbit);
-	return false;
-}
-
-
-
 bool get_CsConverter_operatingMode(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
+	const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->operatingMode;
 		if (!buffer.str().empty())
@@ -458,9 +408,70 @@ bool get_CsConverter_operatingMode(const BaseClass* BaseClass_ptr1, std::strings
 
 bool get_CsConverter_pPccControl(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1))
+	const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pPccControl;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_CsConverter_ratedIdc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer << element->ratedIdc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_CsConverter_targetAlpha(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer << element->targetAlpha;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_CsConverter_targetGamma(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer << element->targetGamma;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_CsConverter_targetIdc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	const CsConverter* element = dynamic_cast<const CsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer << element->targetIdc;
 		if (!buffer.str().empty())
 		{
 			return true;
@@ -478,30 +489,30 @@ const char* CsConverter::debugString() const
 
 void CsConverter::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:CsConverter"), &CsConverter_factory));
+	factory_map.emplace("cim:CsConverter", &CsConverter_factory);
 }
 
 void CsConverter::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:CsConverter.alpha"), &assign_CsConverter_alpha));
-	assign_map.insert(std::make_pair(std::string("cim:CsConverter.gamma"), &assign_CsConverter_gamma));
-	assign_map.insert(std::make_pair(std::string("cim:CsConverter.maxAlpha"), &assign_CsConverter_maxAlpha));
-	assign_map.insert(std::make_pair(std::string("cim:CsConverter.maxGamma"), &assign_CsConverter_maxGamma));
-	assign_map.insert(std::make_pair(std::string("cim:CsConverter.maxIdc"), &assign_CsConverter_maxIdc));
-	assign_map.insert(std::make_pair(std::string("cim:CsConverter.minAlpha"), &assign_CsConverter_minAlpha));
-	assign_map.insert(std::make_pair(std::string("cim:CsConverter.minGamma"), &assign_CsConverter_minGamma));
-	assign_map.insert(std::make_pair(std::string("cim:CsConverter.minIdc"), &assign_CsConverter_minIdc));
-	assign_map.insert(std::make_pair(std::string("cim:CsConverter.operatingMode"), &assign_CsConverter_operatingMode));
-	assign_map.insert(std::make_pair(std::string("cim:CsConverter.pPccControl"), &assign_CsConverter_pPccControl));
-	assign_map.insert(std::make_pair(std::string("cim:CsConverter.ratedIdc"), &assign_CsConverter_ratedIdc));
-	assign_map.insert(std::make_pair(std::string("cim:CsConverter.targetAlpha"), &assign_CsConverter_targetAlpha));
-	assign_map.insert(std::make_pair(std::string("cim:CsConverter.targetGamma"), &assign_CsConverter_targetGamma));
-	assign_map.insert(std::make_pair(std::string("cim:CsConverter.targetIdc"), &assign_CsConverter_targetIdc));
+	assign_map.emplace("cim:CsConverter.alpha", &assign_CsConverter_alpha);
+	assign_map.emplace("cim:CsConverter.gamma", &assign_CsConverter_gamma);
+	assign_map.emplace("cim:CsConverter.maxAlpha", &assign_CsConverter_maxAlpha);
+	assign_map.emplace("cim:CsConverter.maxGamma", &assign_CsConverter_maxGamma);
+	assign_map.emplace("cim:CsConverter.maxIdc", &assign_CsConverter_maxIdc);
+	assign_map.emplace("cim:CsConverter.minAlpha", &assign_CsConverter_minAlpha);
+	assign_map.emplace("cim:CsConverter.minGamma", &assign_CsConverter_minGamma);
+	assign_map.emplace("cim:CsConverter.minIdc", &assign_CsConverter_minIdc);
+	assign_map.emplace("cim:CsConverter.operatingMode", &assign_CsConverter_operatingMode);
+	assign_map.emplace("cim:CsConverter.pPccControl", &assign_CsConverter_pPccControl);
+	assign_map.emplace("cim:CsConverter.ratedIdc", &assign_CsConverter_ratedIdc);
+	assign_map.emplace("cim:CsConverter.targetAlpha", &assign_CsConverter_targetAlpha);
+	assign_map.emplace("cim:CsConverter.targetGamma", &assign_CsConverter_targetGamma);
+	assign_map.emplace("cim:CsConverter.targetIdc", &assign_CsConverter_targetIdc);
 }
 
 void CsConverter::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:CsConverter.CSCDynamics"), &assign_CsConverter_CSCDynamics));
+	assign_map.emplace("cim:CsConverter.CSCDynamics", &assign_CsConverter_CSCDynamics);
 }
 
 void CsConverter::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

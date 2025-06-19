@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class StaticVarCompensator;
 
-	/*
-	Static var compensator whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font>
-	*/
+	/** \brief Static var compensator whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font> */
 	class StaticVarCompensatorDynamics : public DynamicsFunctionBlock
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		StaticVarCompensatorDynamics();
 		~StaticVarCompensatorDynamics() override;
 
-		CIMPP::StaticVarCompensator* StaticVarCompensator;  /* Static Var Compensator to which Static Var Compensator dynamics model applies. Default: 0 */
+		/** \brief Static Var Compensator to which Static Var Compensator dynamics model applies. Default: 0 */
+		CIMPP::StaticVarCompensator* StaticVarCompensator;
 
 		static const char debugName[];
 		const char* debugString() const override;

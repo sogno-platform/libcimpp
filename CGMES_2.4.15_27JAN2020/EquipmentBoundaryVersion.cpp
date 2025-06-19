@@ -8,22 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "String.hpp"
-#include "String.hpp"
-#include "Date.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
 
 using namespace CIMPP;
 
-EquipmentBoundaryVersion::EquipmentBoundaryVersion() {};
-EquipmentBoundaryVersion::~EquipmentBoundaryVersion() {};
+EquipmentBoundaryVersion::EquipmentBoundaryVersion() {}
+EquipmentBoundaryVersion::~EquipmentBoundaryVersion() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -60,155 +49,164 @@ EquipmentBoundaryVersion::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_EquipmentBoundaryVersion_baseUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentBoundaryVersion_baseUML(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1))
+	EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->baseUML = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_EquipmentBoundaryVersion_baseURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentBoundaryVersion_baseURI(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1))
+	EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->baseURI = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_EquipmentBoundaryVersion_date(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentBoundaryVersion_date(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1))
+	EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->date = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_EquipmentBoundaryVersion_differenceModelURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentBoundaryVersion_differenceModelURI(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1))
+	EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->differenceModelURI = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_EquipmentBoundaryVersion_entsoeUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentBoundaryVersion_entsoeUML(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1))
+	EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->entsoeUML = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_EquipmentBoundaryVersion_entsoeURIcore(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentBoundaryVersion_entsoeURIcore(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1))
+	EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->entsoeURIcore = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_EquipmentBoundaryVersion_entsoeURIoperation(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentBoundaryVersion_entsoeURIoperation(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1))
+	EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->entsoeURIoperation = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_EquipmentBoundaryVersion_modelDescriptionURI(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentBoundaryVersion_modelDescriptionURI(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1))
+	EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->modelDescriptionURI = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_EquipmentBoundaryVersion_namespaceRDF(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentBoundaryVersion_namespaceRDF(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1))
+	EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->namespaceRDF = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_EquipmentBoundaryVersion_namespaceUML(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentBoundaryVersion_namespaceUML(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1))
+	EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->namespaceUML = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_EquipmentBoundaryVersion_shortName(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquipmentBoundaryVersion_shortName(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1))
+	EquipmentBoundaryVersion* element = dynamic_cast<EquipmentBoundaryVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->shortName = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_EquipmentBoundaryVersion_baseUML(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentBoundaryVersion* element = dynamic_cast<const EquipmentBoundaryVersion*>(BaseClass_ptr1))
+	const EquipmentBoundaryVersion* element = dynamic_cast<const EquipmentBoundaryVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->baseUML;
 		if (!buffer.str().empty())
@@ -222,7 +220,8 @@ bool get_EquipmentBoundaryVersion_baseUML(const BaseClass* BaseClass_ptr1, std::
 
 bool get_EquipmentBoundaryVersion_baseURI(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentBoundaryVersion* element = dynamic_cast<const EquipmentBoundaryVersion*>(BaseClass_ptr1))
+	const EquipmentBoundaryVersion* element = dynamic_cast<const EquipmentBoundaryVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->baseURI;
 		if (!buffer.str().empty())
@@ -236,7 +235,8 @@ bool get_EquipmentBoundaryVersion_baseURI(const BaseClass* BaseClass_ptr1, std::
 
 bool get_EquipmentBoundaryVersion_date(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentBoundaryVersion* element = dynamic_cast<const EquipmentBoundaryVersion*>(BaseClass_ptr1))
+	const EquipmentBoundaryVersion* element = dynamic_cast<const EquipmentBoundaryVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->date;
 		if (!buffer.str().empty())
@@ -250,7 +250,8 @@ bool get_EquipmentBoundaryVersion_date(const BaseClass* BaseClass_ptr1, std::str
 
 bool get_EquipmentBoundaryVersion_differenceModelURI(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentBoundaryVersion* element = dynamic_cast<const EquipmentBoundaryVersion*>(BaseClass_ptr1))
+	const EquipmentBoundaryVersion* element = dynamic_cast<const EquipmentBoundaryVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->differenceModelURI;
 		if (!buffer.str().empty())
@@ -264,7 +265,8 @@ bool get_EquipmentBoundaryVersion_differenceModelURI(const BaseClass* BaseClass_
 
 bool get_EquipmentBoundaryVersion_entsoeUML(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentBoundaryVersion* element = dynamic_cast<const EquipmentBoundaryVersion*>(BaseClass_ptr1))
+	const EquipmentBoundaryVersion* element = dynamic_cast<const EquipmentBoundaryVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->entsoeUML;
 		if (!buffer.str().empty())
@@ -278,7 +280,8 @@ bool get_EquipmentBoundaryVersion_entsoeUML(const BaseClass* BaseClass_ptr1, std
 
 bool get_EquipmentBoundaryVersion_entsoeURIcore(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentBoundaryVersion* element = dynamic_cast<const EquipmentBoundaryVersion*>(BaseClass_ptr1))
+	const EquipmentBoundaryVersion* element = dynamic_cast<const EquipmentBoundaryVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->entsoeURIcore;
 		if (!buffer.str().empty())
@@ -292,7 +295,8 @@ bool get_EquipmentBoundaryVersion_entsoeURIcore(const BaseClass* BaseClass_ptr1,
 
 bool get_EquipmentBoundaryVersion_entsoeURIoperation(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentBoundaryVersion* element = dynamic_cast<const EquipmentBoundaryVersion*>(BaseClass_ptr1))
+	const EquipmentBoundaryVersion* element = dynamic_cast<const EquipmentBoundaryVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->entsoeURIoperation;
 		if (!buffer.str().empty())
@@ -306,7 +310,8 @@ bool get_EquipmentBoundaryVersion_entsoeURIoperation(const BaseClass* BaseClass_
 
 bool get_EquipmentBoundaryVersion_modelDescriptionURI(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentBoundaryVersion* element = dynamic_cast<const EquipmentBoundaryVersion*>(BaseClass_ptr1))
+	const EquipmentBoundaryVersion* element = dynamic_cast<const EquipmentBoundaryVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->modelDescriptionURI;
 		if (!buffer.str().empty())
@@ -320,7 +325,8 @@ bool get_EquipmentBoundaryVersion_modelDescriptionURI(const BaseClass* BaseClass
 
 bool get_EquipmentBoundaryVersion_namespaceRDF(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentBoundaryVersion* element = dynamic_cast<const EquipmentBoundaryVersion*>(BaseClass_ptr1))
+	const EquipmentBoundaryVersion* element = dynamic_cast<const EquipmentBoundaryVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->namespaceRDF;
 		if (!buffer.str().empty())
@@ -334,7 +340,8 @@ bool get_EquipmentBoundaryVersion_namespaceRDF(const BaseClass* BaseClass_ptr1, 
 
 bool get_EquipmentBoundaryVersion_namespaceUML(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentBoundaryVersion* element = dynamic_cast<const EquipmentBoundaryVersion*>(BaseClass_ptr1))
+	const EquipmentBoundaryVersion* element = dynamic_cast<const EquipmentBoundaryVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->namespaceUML;
 		if (!buffer.str().empty())
@@ -348,7 +355,8 @@ bool get_EquipmentBoundaryVersion_namespaceUML(const BaseClass* BaseClass_ptr1, 
 
 bool get_EquipmentBoundaryVersion_shortName(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquipmentBoundaryVersion* element = dynamic_cast<const EquipmentBoundaryVersion*>(BaseClass_ptr1))
+	const EquipmentBoundaryVersion* element = dynamic_cast<const EquipmentBoundaryVersion*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->shortName;
 		if (!buffer.str().empty())
@@ -360,8 +368,6 @@ bool get_EquipmentBoundaryVersion_shortName(const BaseClass* BaseClass_ptr1, std
 	return false;
 }
 
-
-
 const char EquipmentBoundaryVersion::debugName[] = "EquipmentBoundaryVersion";
 const char* EquipmentBoundaryVersion::debugString() const
 {
@@ -370,22 +376,22 @@ const char* EquipmentBoundaryVersion::debugString() const
 
 void EquipmentBoundaryVersion::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:EquipmentBoundaryVersion"), &EquipmentBoundaryVersion_factory));
+	factory_map.emplace("cim:EquipmentBoundaryVersion", &EquipmentBoundaryVersion_factory);
 }
 
 void EquipmentBoundaryVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentBoundaryVersion.baseUML"), &assign_EquipmentBoundaryVersion_baseUML));
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentBoundaryVersion.baseURI"), &assign_EquipmentBoundaryVersion_baseURI));
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentBoundaryVersion.date"), &assign_EquipmentBoundaryVersion_date));
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentBoundaryVersion.differenceModelURI"), &assign_EquipmentBoundaryVersion_differenceModelURI));
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentBoundaryVersion.entsoeUML"), &assign_EquipmentBoundaryVersion_entsoeUML));
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentBoundaryVersion.entsoeURIcore"), &assign_EquipmentBoundaryVersion_entsoeURIcore));
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentBoundaryVersion.entsoeURIoperation"), &assign_EquipmentBoundaryVersion_entsoeURIoperation));
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentBoundaryVersion.modelDescriptionURI"), &assign_EquipmentBoundaryVersion_modelDescriptionURI));
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentBoundaryVersion.namespaceRDF"), &assign_EquipmentBoundaryVersion_namespaceRDF));
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentBoundaryVersion.namespaceUML"), &assign_EquipmentBoundaryVersion_namespaceUML));
-	assign_map.insert(std::make_pair(std::string("cim:EquipmentBoundaryVersion.shortName"), &assign_EquipmentBoundaryVersion_shortName));
+	assign_map.emplace("cim:EquipmentBoundaryVersion.baseUML", &assign_EquipmentBoundaryVersion_baseUML);
+	assign_map.emplace("cim:EquipmentBoundaryVersion.baseURI", &assign_EquipmentBoundaryVersion_baseURI);
+	assign_map.emplace("cim:EquipmentBoundaryVersion.date", &assign_EquipmentBoundaryVersion_date);
+	assign_map.emplace("cim:EquipmentBoundaryVersion.differenceModelURI", &assign_EquipmentBoundaryVersion_differenceModelURI);
+	assign_map.emplace("cim:EquipmentBoundaryVersion.entsoeUML", &assign_EquipmentBoundaryVersion_entsoeUML);
+	assign_map.emplace("cim:EquipmentBoundaryVersion.entsoeURIcore", &assign_EquipmentBoundaryVersion_entsoeURIcore);
+	assign_map.emplace("cim:EquipmentBoundaryVersion.entsoeURIoperation", &assign_EquipmentBoundaryVersion_entsoeURIoperation);
+	assign_map.emplace("cim:EquipmentBoundaryVersion.modelDescriptionURI", &assign_EquipmentBoundaryVersion_modelDescriptionURI);
+	assign_map.emplace("cim:EquipmentBoundaryVersion.namespaceRDF", &assign_EquipmentBoundaryVersion_namespaceRDF);
+	assign_map.emplace("cim:EquipmentBoundaryVersion.namespaceUML", &assign_EquipmentBoundaryVersion_namespaceUML);
+	assign_map.emplace("cim:EquipmentBoundaryVersion.shortName", &assign_EquipmentBoundaryVersion_shortName);
 }
 
 void EquipmentBoundaryVersion::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

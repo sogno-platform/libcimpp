@@ -13,8 +13,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-MechanicalLoadDynamics::MechanicalLoadDynamics() : AsynchronousMachineDynamics(nullptr), SynchronousMachineDynamics(nullptr) {};
-MechanicalLoadDynamics::~MechanicalLoadDynamics() {};
+MechanicalLoadDynamics::MechanicalLoadDynamics() : AsynchronousMachineDynamics(nullptr), SynchronousMachineDynamics(nullptr) {}
+MechanicalLoadDynamics::~MechanicalLoadDynamics() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,8 +42,6 @@ MechanicalLoadDynamics::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_AsynchronousMachineDynamics_MechanicalLoadDynamics(BaseClass*, BaseClass*);
 bool assign_MechanicalLoadDynamics_AsynchronousMachineDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,6 +58,7 @@ bool assign_MechanicalLoadDynamics_AsynchronousMachineDynamics(BaseClass* BaseCl
 	}
 	return false;
 }
+
 bool assign_SynchronousMachineDynamics_MechanicalLoadDynamics(BaseClass*, BaseClass*);
 bool assign_MechanicalLoadDynamics_SynchronousMachineDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -77,10 +76,10 @@ bool assign_MechanicalLoadDynamics_SynchronousMachineDynamics(BaseClass* BaseCla
 	return false;
 }
 
-
 bool get_MechanicalLoadDynamics_AsynchronousMachineDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const MechanicalLoadDynamics* element = dynamic_cast<const MechanicalLoadDynamics*>(BaseClass_ptr1))
+	const MechanicalLoadDynamics* element = dynamic_cast<const MechanicalLoadDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->AsynchronousMachineDynamics != 0)
 		{
@@ -93,7 +92,8 @@ bool get_MechanicalLoadDynamics_AsynchronousMachineDynamics(const BaseClass* Bas
 
 bool get_MechanicalLoadDynamics_SynchronousMachineDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const MechanicalLoadDynamics* element = dynamic_cast<const MechanicalLoadDynamics*>(BaseClass_ptr1))
+	const MechanicalLoadDynamics* element = dynamic_cast<const MechanicalLoadDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->SynchronousMachineDynamics != 0)
 		{
@@ -104,7 +104,6 @@ bool get_MechanicalLoadDynamics_SynchronousMachineDynamics(const BaseClass* Base
 	return false;
 }
 
-
 const char MechanicalLoadDynamics::debugName[] = "MechanicalLoadDynamics";
 const char* MechanicalLoadDynamics::debugString() const
 {
@@ -113,7 +112,7 @@ const char* MechanicalLoadDynamics::debugString() const
 
 void MechanicalLoadDynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:MechanicalLoadDynamics"), &MechanicalLoadDynamics_factory));
+	factory_map.emplace("cim:MechanicalLoadDynamics", &MechanicalLoadDynamics_factory);
 }
 
 void MechanicalLoadDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -122,8 +121,8 @@ void MechanicalLoadDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::
 
 void MechanicalLoadDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:MechanicalLoadDynamics.AsynchronousMachineDynamics"), &assign_MechanicalLoadDynamics_AsynchronousMachineDynamics));
-	assign_map.insert(std::make_pair(std::string("cim:MechanicalLoadDynamics.SynchronousMachineDynamics"), &assign_MechanicalLoadDynamics_SynchronousMachineDynamics));
+	assign_map.emplace("cim:MechanicalLoadDynamics.AsynchronousMachineDynamics", &assign_MechanicalLoadDynamics_AsynchronousMachineDynamics);
+	assign_map.emplace("cim:MechanicalLoadDynamics.SynchronousMachineDynamics", &assign_MechanicalLoadDynamics_SynchronousMachineDynamics);
 }
 
 void MechanicalLoadDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

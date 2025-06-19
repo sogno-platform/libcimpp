@@ -19,9 +19,7 @@ namespace CIMPP
 	class RatioTapChangerTable;
 	class TransformerEnd;
 
-	/*
-	A tap changer that changes the voltage ratio impacting the voltage magnitude but not the phase angle across the transformer.  Angle sign convention (general): Positive value indicates a positive phase shift from the winding where the tap is located to the other winding (for a two-winding transformer).
-	*/
+	/** \brief A tap changer that changes the voltage ratio impacting the voltage magnitude but not the phase angle across the transformer.  Angle sign convention (general): Positive value indicates a positive phase shift from the winding where the tap is located to the other winding (for a two-winding transformer). */
 	class RatioTapChanger : public TapChanger
 	{
 	public:
@@ -29,9 +27,14 @@ namespace CIMPP
 		RatioTapChanger();
 		~RatioTapChanger() override;
 
-		CIMPP::RatioTapChangerTable* RatioTapChangerTable;  /* The tap ratio table for this ratio  tap changer. Default: 0 */
-		CIMPP::TransformerEnd* TransformerEnd;  /* Transformer end to which this ratio tap changer belongs. Default: 0 */
-		CIMPP::PerCent stepVoltageIncrement;  /* Tap step increment, in per cent of rated voltage of the power transformer end, per step position. When the increment is negative, the voltage decreases when the tap step increases. Default: nullptr */
+		/** \brief The tap ratio table for this ratio  tap changer. Default: 0 */
+		CIMPP::RatioTapChangerTable* RatioTapChangerTable;
+
+		/** \brief Transformer end to which this ratio tap changer belongs. Default: 0 */
+		CIMPP::TransformerEnd* TransformerEnd;
+
+		/** \brief Tap step increment, in per cent of rated voltage of the power transformer end, per step position. When the increment is negative, the voltage decreases when the tap step increases. Default: nullptr */
+		CIMPP::PerCent stepVoltageIncrement;
 
 		static const char debugName[];
 		const char* debugString() const override;

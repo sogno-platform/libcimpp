@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "UnitSymbol")
+		if (EnumSymbol.substr(0, pos) != "UnitSymbol")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,137 +50,137 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "VA")
+		if (EnumSymbol == "VA")
 		{
 			rop = UnitSymbol::VA;
 			return lop;
 		}
-		if(EnumSymbol == "W")
+		if (EnumSymbol == "W")
 		{
 			rop = UnitSymbol::W;
 			return lop;
 		}
-		if(EnumSymbol == "VAr")
+		if (EnumSymbol == "VAr")
 		{
 			rop = UnitSymbol::VAr;
 			return lop;
 		}
-		if(EnumSymbol == "VAh")
+		if (EnumSymbol == "VAh")
 		{
 			rop = UnitSymbol::VAh;
 			return lop;
 		}
-		if(EnumSymbol == "Wh")
+		if (EnumSymbol == "Wh")
 		{
 			rop = UnitSymbol::Wh;
 			return lop;
 		}
-		if(EnumSymbol == "VArh")
+		if (EnumSymbol == "VArh")
 		{
 			rop = UnitSymbol::VArh;
 			return lop;
 		}
-		if(EnumSymbol == "V")
+		if (EnumSymbol == "V")
 		{
 			rop = UnitSymbol::V;
 			return lop;
 		}
-		if(EnumSymbol == "ohm")
+		if (EnumSymbol == "ohm")
 		{
 			rop = UnitSymbol::ohm;
 			return lop;
 		}
-		if(EnumSymbol == "A")
+		if (EnumSymbol == "A")
 		{
 			rop = UnitSymbol::A;
 			return lop;
 		}
-		if(EnumSymbol == "F")
+		if (EnumSymbol == "F")
 		{
 			rop = UnitSymbol::F;
 			return lop;
 		}
-		if(EnumSymbol == "H")
+		if (EnumSymbol == "H")
 		{
 			rop = UnitSymbol::H;
 			return lop;
 		}
-		if(EnumSymbol == "degC")
+		if (EnumSymbol == "degC")
 		{
 			rop = UnitSymbol::degC;
 			return lop;
 		}
-		if(EnumSymbol == "s")
+		if (EnumSymbol == "s")
 		{
 			rop = UnitSymbol::s;
 			return lop;
 		}
-		if(EnumSymbol == "min")
+		if (EnumSymbol == "min")
 		{
 			rop = UnitSymbol::min;
 			return lop;
 		}
-		if(EnumSymbol == "h")
+		if (EnumSymbol == "h")
 		{
 			rop = UnitSymbol::h;
 			return lop;
 		}
-		if(EnumSymbol == "deg")
+		if (EnumSymbol == "deg")
 		{
 			rop = UnitSymbol::deg;
 			return lop;
 		}
-		if(EnumSymbol == "rad")
+		if (EnumSymbol == "rad")
 		{
 			rop = UnitSymbol::rad;
 			return lop;
 		}
-		if(EnumSymbol == "J")
+		if (EnumSymbol == "J")
 		{
 			rop = UnitSymbol::J;
 			return lop;
 		}
-		if(EnumSymbol == "N")
+		if (EnumSymbol == "N")
 		{
 			rop = UnitSymbol::N;
 			return lop;
 		}
-		if(EnumSymbol == "S")
+		if (EnumSymbol == "S")
 		{
 			rop = UnitSymbol::S;
 			return lop;
 		}
-		if(EnumSymbol == "none")
+		if (EnumSymbol == "none")
 		{
 			rop = UnitSymbol::none;
 			return lop;
 		}
-		if(EnumSymbol == "Hz")
+		if (EnumSymbol == "Hz")
 		{
 			rop = UnitSymbol::Hz;
 			return lop;
 		}
-		if(EnumSymbol == "g")
+		if (EnumSymbol == "g")
 		{
 			rop = UnitSymbol::g;
 			return lop;
 		}
-		if(EnumSymbol == "Pa")
+		if (EnumSymbol == "Pa")
 		{
 			rop = UnitSymbol::Pa;
 			return lop;
 		}
-		if(EnumSymbol == "m")
+		if (EnumSymbol == "m")
 		{
 			rop = UnitSymbol::m;
 			return lop;
 		}
-		if(EnumSymbol == "m2")
+		if (EnumSymbol == "m2")
 		{
 			rop = UnitSymbol::m2;
 			return lop;
 		}
-		if(EnumSymbol == "m3")
+		if (EnumSymbol == "m3")
 		{
 			rop = UnitSymbol::m3;
 			return lop;

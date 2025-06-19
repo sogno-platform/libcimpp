@@ -9,41 +9,25 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Synchronous machine type.
-	*/
+	/** \brief Synchronous machine type. */
 	class SynchronousMachineKind
 	{
 	public:
 		enum SynchronousMachineKind_ENUM
 		{
-			/**
-			 * Indicates the synchronous machine can operate as a generator.
-			 */
+			/** Indicates the synchronous machine can operate as a generator. */
 			generator,
-			/**
-			 * Indicates the synchronous machine can operate as a condenser.
-			 */
+			/** Indicates the synchronous machine can operate as a condenser. */
 			condenser,
-			/**
-			 * Indicates the synchronous machine can operate as a generator or as a condenser.
-			 */
+			/** Indicates the synchronous machine can operate as a generator or as a condenser. */
 			generatorOrCondenser,
-			/**
-			 * Indicates the synchronous machine can operate as a motor.
-			 */
+			/** Indicates the synchronous machine can operate as a motor. */
 			motor,
-			/**
-			 * Indicates the synchronous machine can operate as a generator or as a motor.
-			 */
+			/** Indicates the synchronous machine can operate as a generator or as a motor. */
 			generatorOrMotor,
-			/**
-			 * Indicates the synchronous machine can operate as a motor or as a condenser.
-			 */
+			/** Indicates the synchronous machine can operate as a motor or as a condenser. */
 			motorOrCondenser,
-			/**
-			 * Indicates the synchronous machine can operate as a generator or as a condenser or as a motor.
-			 */
+			/** Indicates the synchronous machine can operate as a generator or as a condenser or as a motor. */
 			generatorOrCondenserOrMotor,
 		};
 

@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A switch within the DC system.
-	*/
+	/** \brief A switch within the DC system. */
 	class DCSwitch : public DCConductingEquipment
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		DCSwitch();
 		~DCSwitch() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

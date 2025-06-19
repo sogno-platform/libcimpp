@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Instrument transformer used to measure electrical qualities of the circuit that is being protected and/or monitored. Typically used as current transducer for the purpose of metering or protection. A typical secondary current rating would be 5A.
-	*/
+	/** \brief Instrument transformer used to measure electrical qualities of the circuit that is being protected and/or monitored. Typically used as current transducer for the purpose of metering or protection. A typical secondary current rating would be 5A. */
 	class CurrentTransformer : public Sensor
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		CurrentTransformer();
 		~CurrentTransformer() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

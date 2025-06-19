@@ -18,9 +18,7 @@ namespace CIMPP
 	class DCNode;
 	class DCTopologicalNode;
 
-	/*
-	An electrical connection point at a piece of DC conducting equipment. DC terminals are connected at one physical DC node that may have multiple DC terminals connected. A DC node is similar to an AC connectivity node. The model requires that DC connections are distinct from AC connections.
-	*/
+	/** \brief An electrical connection point at a piece of DC conducting equipment. DC terminals are connected at one physical DC node that may have multiple DC terminals connected. A DC node is similar to an AC connectivity node. The model requires that DC connections are distinct from AC connections. */
 	class DCBaseTerminal : public ACDCTerminal
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		DCBaseTerminal();
 		~DCBaseTerminal() override;
 
-		CIMPP::DCNode* DCNode;  /* The DC connectivity node to which this DC base terminal connects with zero impedance. Default: 0 */
-		CIMPP::DCTopologicalNode* DCTopologicalNode;  /* See association end Terminal.TopologicalNode. Default: 0 */
+		/** \brief The DC connectivity node to which this DC base terminal connects with zero impedance. Default: 0 */
+		CIMPP::DCNode* DCNode;
+
+		/** \brief See association end Terminal.TopologicalNode. Default: 0 */
+		CIMPP::DCTopologicalNode* DCTopologicalNode;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Low resistance equipment used in the internal DC circuit to balance voltages. It has typically positive and negative pole terminals and a ground.
-	*/
+	/** \brief Low resistance equipment used in the internal DC circuit to balance voltages. It has typically positive and negative pole terminals and a ground. */
 	class DCChopper : public DCConductingEquipment
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		DCChopper();
 		~DCChopper() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

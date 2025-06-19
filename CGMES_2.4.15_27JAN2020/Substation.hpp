@@ -19,9 +19,7 @@ namespace CIMPP
 	class SubGeographicalRegion;
 	class VoltageLevel;
 
-	/*
-	A collection of equipment for purposes other than generation or utilization, through which electric energy in bulk is passed for the purposes of switching or modifying its characteristics.
-	*/
+	/** \brief A collection of equipment for purposes other than generation or utilization, through which electric energy in bulk is passed for the purposes of switching or modifying its characteristics. */
 	class Substation : public EquipmentContainer
 	{
 	public:
@@ -29,9 +27,14 @@ namespace CIMPP
 		Substation();
 		~Substation() override;
 
-		std::list<CIMPP::DCConverterUnit*> DCConverterUnit;  /*  Default: 0 */
-		CIMPP::SubGeographicalRegion* Region;  /* The SubGeographicalRegion containing the substation. Default: 0 */
-		std::list<CIMPP::VoltageLevel*> VoltageLevels;  /* The voltage levels within this substation. Default: 0 */
+		/** \brief  Default: 0 */
+		std::list<CIMPP::DCConverterUnit*> DCConverterUnit;
+
+		/** \brief The SubGeographicalRegion containing the substation. Default: 0 */
+		CIMPP::SubGeographicalRegion* Region;
+
+		/** \brief The voltage levels within this substation. Default: 0 */
+		std::list<CIMPP::VoltageLevel*> VoltageLevels;
 
 		static const char debugName[];
 		const char* debugString() const override;

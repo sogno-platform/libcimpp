@@ -8,26 +8,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "VsCapabilityCurve.hpp"
 #include "VSCDynamics.hpp"
-#include "AngleDegrees.hpp"
-#include "PU.hpp"
-#include "Resistance.hpp"
-#include "Float.hpp"
-#include "VsPpccControlKind.hpp"
-#include "VsQpccControlKind.hpp"
-#include "PerCent.hpp"
-#include "Float.hpp"
-#include "AngleDegrees.hpp"
-#include "Float.hpp"
-#include "ReactivePower.hpp"
-#include "Voltage.hpp"
-#include "Voltage.hpp"
+#include "VsCapabilityCurve.hpp"
 
 using namespace CIMPP;
 
-VsConverter::VsConverter() : CapabilityCurve(nullptr), VSCDynamics(nullptr) {};
-VsConverter::~VsConverter() {};
+VsConverter::VsConverter() : CapabilityCurve(nullptr), VSCDynamics(nullptr) {}
+VsConverter::~VsConverter() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -71,177 +58,6 @@ VsConverter::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_VsConverter_delta(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->delta;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_VsConverter_droop(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->droop;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_VsConverter_droopCompensation(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->droopCompensation;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_VsConverter_maxModulationIndex(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->maxModulationIndex;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_VsConverter_pPccControl(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->pPccControl;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_VsConverter_qPccControl(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->qPccControl;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_VsConverter_qShare(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->qShare;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_VsConverter_targetPWMfactor(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->targetPWMfactor;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_VsConverter_targetPhasePcc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->targetPhasePcc;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_VsConverter_targetPowerFactorPcc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->targetPowerFactorPcc;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_VsConverter_targetQpcc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->targetQpcc;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_VsConverter_targetUpcc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->targetUpcc;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_VsConverter_uv(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1))
-	{
-		buffer >> element->uv;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_VsCapabilityCurve_VsConverterDCSides(BaseClass*, BaseClass*);
 bool assign_VsConverter_CapabilityCurve(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -258,6 +74,7 @@ bool assign_VsConverter_CapabilityCurve(BaseClass* BaseClass_ptr1, BaseClass* Ba
 	}
 	return false;
 }
+
 bool assign_VSCDynamics_VsConverter(BaseClass*, BaseClass*);
 bool assign_VsConverter_VSCDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -275,9 +92,207 @@ bool assign_VsConverter_VSCDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseCl
 	return false;
 }
 
+bool assign_VsConverter_delta(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->delta;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_VsConverter_droop(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->droop;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_VsConverter_droopCompensation(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->droopCompensation;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_VsConverter_maxModulationIndex(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->maxModulationIndex;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_VsConverter_pPccControl(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->pPccControl;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_VsConverter_qPccControl(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->qPccControl;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_VsConverter_qShare(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->qShare;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_VsConverter_targetPWMfactor(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->targetPWMfactor;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_VsConverter_targetPhasePcc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->targetPhasePcc;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_VsConverter_targetPowerFactorPcc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->targetPowerFactorPcc;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_VsConverter_targetQpcc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->targetQpcc;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_VsConverter_targetUpcc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->targetUpcc;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_VsConverter_uv(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	VsConverter* element = dynamic_cast<VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->uv;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_VsConverter_CapabilityCurve(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->CapabilityCurve != 0)
+		{
+			BaseClass_list.push_back(element->CapabilityCurve);
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_VsConverter_delta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1))
+	const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->delta;
 		if (!buffer.str().empty())
@@ -291,7 +306,8 @@ bool get_VsConverter_delta(const BaseClass* BaseClass_ptr1, std::stringstream& b
 
 bool get_VsConverter_droop(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1))
+	const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->droop;
 		if (!buffer.str().empty())
@@ -305,7 +321,8 @@ bool get_VsConverter_droop(const BaseClass* BaseClass_ptr1, std::stringstream& b
 
 bool get_VsConverter_droopCompensation(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1))
+	const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->droopCompensation;
 		if (!buffer.str().empty())
@@ -319,7 +336,8 @@ bool get_VsConverter_droopCompensation(const BaseClass* BaseClass_ptr1, std::str
 
 bool get_VsConverter_maxModulationIndex(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1))
+	const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->maxModulationIndex;
 		if (!buffer.str().empty())
@@ -331,122 +349,10 @@ bool get_VsConverter_maxModulationIndex(const BaseClass* BaseClass_ptr1, std::st
 	return false;
 }
 
-bool get_VsConverter_qShare(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
-{
-	if (const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1))
-	{
-		buffer << element->qShare;
-		if (!buffer.str().empty())
-		{
-			return true;
-		}
-	}
-	buffer.setstate(std::ios::failbit);
-	return false;
-}
-
-bool get_VsConverter_targetPWMfactor(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
-{
-	if (const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1))
-	{
-		buffer << element->targetPWMfactor;
-		if (!buffer.str().empty())
-		{
-			return true;
-		}
-	}
-	buffer.setstate(std::ios::failbit);
-	return false;
-}
-
-bool get_VsConverter_targetPhasePcc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
-{
-	if (const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1))
-	{
-		buffer << element->targetPhasePcc;
-		if (!buffer.str().empty())
-		{
-			return true;
-		}
-	}
-	buffer.setstate(std::ios::failbit);
-	return false;
-}
-
-bool get_VsConverter_targetPowerFactorPcc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
-{
-	if (const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1))
-	{
-		buffer << element->targetPowerFactorPcc;
-		if (!buffer.str().empty())
-		{
-			return true;
-		}
-	}
-	buffer.setstate(std::ios::failbit);
-	return false;
-}
-
-bool get_VsConverter_targetQpcc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
-{
-	if (const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1))
-	{
-		buffer << element->targetQpcc;
-		if (!buffer.str().empty())
-		{
-			return true;
-		}
-	}
-	buffer.setstate(std::ios::failbit);
-	return false;
-}
-
-bool get_VsConverter_targetUpcc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
-{
-	if (const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1))
-	{
-		buffer << element->targetUpcc;
-		if (!buffer.str().empty())
-		{
-			return true;
-		}
-	}
-	buffer.setstate(std::ios::failbit);
-	return false;
-}
-
-bool get_VsConverter_uv(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
-{
-	if (const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1))
-	{
-		buffer << element->uv;
-		if (!buffer.str().empty())
-		{
-			return true;
-		}
-	}
-	buffer.setstate(std::ios::failbit);
-	return false;
-}
-
-
-bool get_VsConverter_CapabilityCurve(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1))
-	{
-		if (element->CapabilityCurve != 0)
-		{
-			BaseClass_list.push_back(element->CapabilityCurve);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 bool get_VsConverter_pPccControl(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1))
+	const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pPccControl;
 		if (!buffer.str().empty())
@@ -460,9 +366,115 @@ bool get_VsConverter_pPccControl(const BaseClass* BaseClass_ptr1, std::stringstr
 
 bool get_VsConverter_qPccControl(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1))
+	const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->qPccControl;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_VsConverter_qShare(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer << element->qShare;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_VsConverter_targetPWMfactor(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer << element->targetPWMfactor;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_VsConverter_targetPhasePcc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer << element->targetPhasePcc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_VsConverter_targetPowerFactorPcc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer << element->targetPowerFactorPcc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_VsConverter_targetQpcc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer << element->targetQpcc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_VsConverter_targetUpcc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer << element->targetUpcc;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
+
+bool get_VsConverter_uv(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	const VsConverter* element = dynamic_cast<const VsConverter*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer << element->uv;
 		if (!buffer.str().empty())
 		{
 			return true;
@@ -480,30 +492,30 @@ const char* VsConverter::debugString() const
 
 void VsConverter::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:VsConverter"), &VsConverter_factory));
+	factory_map.emplace("cim:VsConverter", &VsConverter_factory);
 }
 
 void VsConverter::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:VsConverter.delta"), &assign_VsConverter_delta));
-	assign_map.insert(std::make_pair(std::string("cim:VsConverter.droop"), &assign_VsConverter_droop));
-	assign_map.insert(std::make_pair(std::string("cim:VsConverter.droopCompensation"), &assign_VsConverter_droopCompensation));
-	assign_map.insert(std::make_pair(std::string("cim:VsConverter.maxModulationIndex"), &assign_VsConverter_maxModulationIndex));
-	assign_map.insert(std::make_pair(std::string("cim:VsConverter.pPccControl"), &assign_VsConverter_pPccControl));
-	assign_map.insert(std::make_pair(std::string("cim:VsConverter.qPccControl"), &assign_VsConverter_qPccControl));
-	assign_map.insert(std::make_pair(std::string("cim:VsConverter.qShare"), &assign_VsConverter_qShare));
-	assign_map.insert(std::make_pair(std::string("cim:VsConverter.targetPWMfactor"), &assign_VsConverter_targetPWMfactor));
-	assign_map.insert(std::make_pair(std::string("cim:VsConverter.targetPhasePcc"), &assign_VsConverter_targetPhasePcc));
-	assign_map.insert(std::make_pair(std::string("cim:VsConverter.targetPowerFactorPcc"), &assign_VsConverter_targetPowerFactorPcc));
-	assign_map.insert(std::make_pair(std::string("cim:VsConverter.targetQpcc"), &assign_VsConverter_targetQpcc));
-	assign_map.insert(std::make_pair(std::string("cim:VsConverter.targetUpcc"), &assign_VsConverter_targetUpcc));
-	assign_map.insert(std::make_pair(std::string("cim:VsConverter.uv"), &assign_VsConverter_uv));
+	assign_map.emplace("cim:VsConverter.delta", &assign_VsConverter_delta);
+	assign_map.emplace("cim:VsConverter.droop", &assign_VsConverter_droop);
+	assign_map.emplace("cim:VsConverter.droopCompensation", &assign_VsConverter_droopCompensation);
+	assign_map.emplace("cim:VsConverter.maxModulationIndex", &assign_VsConverter_maxModulationIndex);
+	assign_map.emplace("cim:VsConverter.pPccControl", &assign_VsConverter_pPccControl);
+	assign_map.emplace("cim:VsConverter.qPccControl", &assign_VsConverter_qPccControl);
+	assign_map.emplace("cim:VsConverter.qShare", &assign_VsConverter_qShare);
+	assign_map.emplace("cim:VsConverter.targetPWMfactor", &assign_VsConverter_targetPWMfactor);
+	assign_map.emplace("cim:VsConverter.targetPhasePcc", &assign_VsConverter_targetPhasePcc);
+	assign_map.emplace("cim:VsConverter.targetPowerFactorPcc", &assign_VsConverter_targetPowerFactorPcc);
+	assign_map.emplace("cim:VsConverter.targetQpcc", &assign_VsConverter_targetQpcc);
+	assign_map.emplace("cim:VsConverter.targetUpcc", &assign_VsConverter_targetUpcc);
+	assign_map.emplace("cim:VsConverter.uv", &assign_VsConverter_uv);
 }
 
 void VsConverter::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:VsConverter.CapabilityCurve"), &assign_VsConverter_CapabilityCurve));
-	assign_map.insert(std::make_pair(std::string("cim:VsConverter.VSCDynamics"), &assign_VsConverter_VSCDynamics));
+	assign_map.emplace("cim:VsConverter.CapabilityCurve", &assign_VsConverter_CapabilityCurve);
+	assign_map.emplace("cim:VsConverter.VSCDynamics", &assign_VsConverter_VSCDynamics);
 }
 
 void VsConverter::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

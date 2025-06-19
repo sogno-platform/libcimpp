@@ -13,8 +13,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-VoltageCompensatorDynamics::VoltageCompensatorDynamics() : ExcitationSystemDynamics(nullptr), RemoteInputSignal(nullptr) {};
-VoltageCompensatorDynamics::~VoltageCompensatorDynamics() {};
+VoltageCompensatorDynamics::VoltageCompensatorDynamics() : ExcitationSystemDynamics(nullptr), RemoteInputSignal(nullptr) {}
+VoltageCompensatorDynamics::~VoltageCompensatorDynamics() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,8 +42,6 @@ VoltageCompensatorDynamics::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_ExcitationSystemDynamics_VoltageCompensatorDynamics(BaseClass*, BaseClass*);
 bool assign_VoltageCompensatorDynamics_ExcitationSystemDynamics(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,6 +58,7 @@ bool assign_VoltageCompensatorDynamics_ExcitationSystemDynamics(BaseClass* BaseC
 	}
 	return false;
 }
+
 bool assign_RemoteInputSignal_VoltageCompensatorDynamics(BaseClass*, BaseClass*);
 bool assign_VoltageCompensatorDynamics_RemoteInputSignal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -77,10 +76,10 @@ bool assign_VoltageCompensatorDynamics_RemoteInputSignal(BaseClass* BaseClass_pt
 	return false;
 }
 
-
 bool get_VoltageCompensatorDynamics_ExcitationSystemDynamics(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const VoltageCompensatorDynamics* element = dynamic_cast<const VoltageCompensatorDynamics*>(BaseClass_ptr1))
+	const VoltageCompensatorDynamics* element = dynamic_cast<const VoltageCompensatorDynamics*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->ExcitationSystemDynamics != 0)
 		{
@@ -100,7 +99,7 @@ const char* VoltageCompensatorDynamics::debugString() const
 
 void VoltageCompensatorDynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:VoltageCompensatorDynamics"), &VoltageCompensatorDynamics_factory));
+	factory_map.emplace("cim:VoltageCompensatorDynamics", &VoltageCompensatorDynamics_factory);
 }
 
 void VoltageCompensatorDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -109,8 +108,8 @@ void VoltageCompensatorDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<s
 
 void VoltageCompensatorDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:VoltageCompensatorDynamics.ExcitationSystemDynamics"), &assign_VoltageCompensatorDynamics_ExcitationSystemDynamics));
-	assign_map.insert(std::make_pair(std::string("cim:VoltageCompensatorDynamics.RemoteInputSignal"), &assign_VoltageCompensatorDynamics_RemoteInputSignal));
+	assign_map.emplace("cim:VoltageCompensatorDynamics.ExcitationSystemDynamics", &assign_VoltageCompensatorDynamics_ExcitationSystemDynamics);
+	assign_map.emplace("cim:VoltageCompensatorDynamics.RemoteInputSignal", &assign_VoltageCompensatorDynamics_RemoteInputSignal);
 }
 
 void VoltageCompensatorDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

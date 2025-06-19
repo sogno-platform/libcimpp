@@ -9,29 +9,19 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	General wind turbine Q control modes .
-	*/
+	/** \brief General wind turbine Q control modes . */
 	class WindQcontrolModesKind
 	{
 	public:
 		enum WindQcontrolModesKind_ENUM
 		{
-			/**
-			 * Voltage control ().
-			 */
+			/** Voltage control (). */
 			voltage,
-			/**
-			 * Reactive power control ().
-			 */
+			/** Reactive power control (). */
 			reactivePower,
-			/**
-			 * Open loop reactive power control (only used with closed loop at plant level) ().
-			 */
+			/** Open loop reactive power control (only used with closed loop at plant level) (). */
 			openLoopReactivePower,
-			/**
-			 * Power factor control ().
-			 */
+			/** Power factor control (). */
 			powerFactor,
 		};
 

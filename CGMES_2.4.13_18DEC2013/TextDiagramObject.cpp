@@ -8,12 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "String.hpp"
 
 using namespace CIMPP;
 
-TextDiagramObject::TextDiagramObject() {};
-TextDiagramObject::~TextDiagramObject() {};
+TextDiagramObject::TextDiagramObject() {}
+TextDiagramObject::~TextDiagramObject() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,25 +39,24 @@ TextDiagramObject::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_TextDiagramObject_text(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_TextDiagramObject_text(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (TextDiagramObject* element = dynamic_cast<TextDiagramObject*>(BaseClass_ptr1))
+	TextDiagramObject* element = dynamic_cast<TextDiagramObject*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		element->text = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-
-
 bool get_TextDiagramObject_text(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TextDiagramObject* element = dynamic_cast<const TextDiagramObject*>(BaseClass_ptr1))
+	const TextDiagramObject* element = dynamic_cast<const TextDiagramObject*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->text;
 		if (!buffer.str().empty())
@@ -70,8 +68,6 @@ bool get_TextDiagramObject_text(const BaseClass* BaseClass_ptr1, std::stringstre
 	return false;
 }
 
-
-
 const char TextDiagramObject::debugName[] = "TextDiagramObject";
 const char* TextDiagramObject::debugString() const
 {
@@ -80,12 +76,12 @@ const char* TextDiagramObject::debugString() const
 
 void TextDiagramObject::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:TextDiagramObject"), &TextDiagramObject_factory));
+	factory_map.emplace("cim:TextDiagramObject", &TextDiagramObject_factory);
 }
 
 void TextDiagramObject::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:TextDiagramObject.text"), &assign_TextDiagramObject_text));
+	assign_map.emplace("cim:TextDiagramObject.text", &assign_TextDiagramObject_text);
 }
 
 void TextDiagramObject::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

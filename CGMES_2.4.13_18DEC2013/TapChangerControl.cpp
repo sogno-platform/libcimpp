@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-TapChangerControl::TapChangerControl() {};
-TapChangerControl::~TapChangerControl() {};
+TapChangerControl::TapChangerControl() {}
+TapChangerControl::~TapChangerControl() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ TapChangerControl::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_TapChanger_TapChangerControl(BaseClass*, BaseClass*);
 bool assign_TapChangerControl_TapChanger(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,7 +58,6 @@ bool assign_TapChangerControl_TapChanger(BaseClass* BaseClass_ptr1, BaseClass* B
 }
 
 
-
 const char TapChangerControl::debugName[] = "TapChangerControl";
 const char* TapChangerControl::debugString() const
 {
@@ -69,7 +66,7 @@ const char* TapChangerControl::debugString() const
 
 void TapChangerControl::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:TapChangerControl"), &TapChangerControl_factory));
+	factory_map.emplace("cim:TapChangerControl", &TapChangerControl_factory);
 }
 
 void TapChangerControl::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -78,7 +75,7 @@ void TapChangerControl::addPrimitiveAssignFnsToMap(std::unordered_map<std::strin
 
 void TapChangerControl::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:TapChangerControl.TapChanger"), &assign_TapChangerControl_TapChanger));
+	assign_map.emplace("cim:TapChangerControl.TapChanger", &assign_TapChangerControl_TapChanger);
 }
 
 void TapChangerControl::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

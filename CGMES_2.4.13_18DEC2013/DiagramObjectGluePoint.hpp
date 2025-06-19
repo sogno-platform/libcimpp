@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class DiagramObjectPoint;
 
-	/*
-	This is used for grouping diagram object points from different diagram objects that are considered to be glued together in a diagram even if they are not at the exact same coordinates.
-	*/
+	/** \brief This is used for grouping diagram object points from different diagram objects that are considered to be glued together in a diagram even if they are not at the exact same coordinates. */
 	class DiagramObjectGluePoint : public BaseClass
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		DiagramObjectGluePoint();
 		~DiagramObjectGluePoint() override;
 
-		std::list<CIMPP::DiagramObjectPoint*> DiagramObjectPoints;  /* The `glue` point to which this point is associated. Default: 0 */
+		/** \brief The `glue` point to which this point is associated. Default: 0 */
+		std::list<CIMPP::DiagramObjectPoint*> DiagramObjectPoints;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -20,9 +20,7 @@ namespace CIMPP
 	class MeasurementValueQuality;
 	class MeasurementValueSource;
 
-	/*
-	The current state for a measurement. A state value is an instance of a measurement from a specific source. Measurements can be associated with many state values, each representing a different source for the measurement.
-	*/
+	/** \brief The current state for a measurement. A state value is an instance of a measurement from a specific source. Measurements can be associated with many state values, each representing a different source for the measurement. */
 	class MeasurementValue : public IdentifiedObject
 	{
 	public:
@@ -30,10 +28,17 @@ namespace CIMPP
 		MeasurementValue();
 		~MeasurementValue() override;
 
-		CIMPP::MeasurementValueQuality* MeasurementValueQuality;  /* A MeasurementValue has a MeasurementValueQuality associated with it. Default: 0 */
-		CIMPP::MeasurementValueSource* MeasurementValueSource;  /* The MeasurementValues updated by the source. Default: 0 */
-		CIMPP::PerCent sensorAccuracy;  /* The limit, expressed as a percentage of the sensor maximum, that errors will not exceed when the sensor is used under  reference conditions. Default: nullptr */
-		CIMPP::DateTime timeStamp;  /* The time when the value was last updated Default: '' */
+		/** \brief A MeasurementValue has a MeasurementValueQuality associated with it. Default: 0 */
+		CIMPP::MeasurementValueQuality* MeasurementValueQuality;
+
+		/** \brief The MeasurementValues updated by the source. Default: 0 */
+		CIMPP::MeasurementValueSource* MeasurementValueSource;
+
+		/** \brief The limit, expressed as a percentage of the sensor maximum, that errors will not exceed when the sensor is used under  reference conditions. Default: nullptr */
+		CIMPP::PerCent sensorAccuracy;
+
+		/** \brief The time when the value was last updated Default: '' */
+		CIMPP::DateTime timeStamp;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -9,14 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "WindDynamicsLookupTable.hpp"
-#include "Boolean.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
 
 using namespace CIMPP;
 
-WindGenType3bIEC::WindGenType3bIEC() {};
-WindGenType3bIEC::~WindGenType3bIEC() {};
+WindGenType3bIEC::WindGenType3bIEC() {}
+WindGenType3bIEC::~WindGenType3bIEC() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -46,47 +43,6 @@ WindGenType3bIEC::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_WindGenType3bIEC_mwtcwp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindGenType3bIEC* element = dynamic_cast<WindGenType3bIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->mwtcwp;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindGenType3bIEC_tg(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindGenType3bIEC* element = dynamic_cast<WindGenType3bIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->tg;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindGenType3bIEC_two(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindGenType3bIEC* element = dynamic_cast<WindGenType3bIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->two;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_WindDynamicsLookupTable_WindGenType3bIEC(BaseClass*, BaseClass*);
 bool assign_WindGenType3bIEC_WindDynamicsLookupTable(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -104,9 +60,53 @@ bool assign_WindGenType3bIEC_WindDynamicsLookupTable(BaseClass* BaseClass_ptr1, 
 	return false;
 }
 
+bool assign_WindGenType3bIEC_mwtcwp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindGenType3bIEC* element = dynamic_cast<WindGenType3bIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->mwtcwp;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindGenType3bIEC_tg(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindGenType3bIEC* element = dynamic_cast<WindGenType3bIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->tg;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindGenType3bIEC_two(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindGenType3bIEC* element = dynamic_cast<WindGenType3bIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->two;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_WindGenType3bIEC_mwtcwp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindGenType3bIEC* element = dynamic_cast<const WindGenType3bIEC*>(BaseClass_ptr1))
+	const WindGenType3bIEC* element = dynamic_cast<const WindGenType3bIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->mwtcwp;
 		if (!buffer.str().empty())
@@ -120,7 +120,8 @@ bool get_WindGenType3bIEC_mwtcwp(const BaseClass* BaseClass_ptr1, std::stringstr
 
 bool get_WindGenType3bIEC_tg(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindGenType3bIEC* element = dynamic_cast<const WindGenType3bIEC*>(BaseClass_ptr1))
+	const WindGenType3bIEC* element = dynamic_cast<const WindGenType3bIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tg;
 		if (!buffer.str().empty())
@@ -134,7 +135,8 @@ bool get_WindGenType3bIEC_tg(const BaseClass* BaseClass_ptr1, std::stringstream&
 
 bool get_WindGenType3bIEC_two(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindGenType3bIEC* element = dynamic_cast<const WindGenType3bIEC*>(BaseClass_ptr1))
+	const WindGenType3bIEC* element = dynamic_cast<const WindGenType3bIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->two;
 		if (!buffer.str().empty())
@@ -146,8 +148,6 @@ bool get_WindGenType3bIEC_two(const BaseClass* BaseClass_ptr1, std::stringstream
 	return false;
 }
 
-
-
 const char WindGenType3bIEC::debugName[] = "WindGenType3bIEC";
 const char* WindGenType3bIEC::debugString() const
 {
@@ -156,19 +156,19 @@ const char* WindGenType3bIEC::debugString() const
 
 void WindGenType3bIEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:WindGenType3bIEC"), &WindGenType3bIEC_factory));
+	factory_map.emplace("cim:WindGenType3bIEC", &WindGenType3bIEC_factory);
 }
 
 void WindGenType3bIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindGenType3bIEC.mwtcwp"), &assign_WindGenType3bIEC_mwtcwp));
-	assign_map.insert(std::make_pair(std::string("cim:WindGenType3bIEC.tg"), &assign_WindGenType3bIEC_tg));
-	assign_map.insert(std::make_pair(std::string("cim:WindGenType3bIEC.two"), &assign_WindGenType3bIEC_two));
+	assign_map.emplace("cim:WindGenType3bIEC.mwtcwp", &assign_WindGenType3bIEC_mwtcwp);
+	assign_map.emplace("cim:WindGenType3bIEC.tg", &assign_WindGenType3bIEC_tg);
+	assign_map.emplace("cim:WindGenType3bIEC.two", &assign_WindGenType3bIEC_two);
 }
 
 void WindGenType3bIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindGenType3bIEC.WindDynamicsLookupTable"), &assign_WindGenType3bIEC_WindDynamicsLookupTable));
+	assign_map.emplace("cim:WindGenType3bIEC.WindDynamicsLookupTable", &assign_WindGenType3bIEC_WindDynamicsLookupTable);
 }
 
 void WindGenType3bIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

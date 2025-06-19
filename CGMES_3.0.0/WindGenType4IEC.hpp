@@ -20,9 +20,7 @@ namespace CIMPP
 	class WindTurbineType4aIEC;
 	class WindTurbineType4bIEC;
 
-	/*
-	IEC type 4 generator set model. Reference: IEC 61400-27-1:2015, 5.6.3.4.
-	*/
+	/** \brief IEC type 4 generator set model. Reference: IEC 61400-27-1:2015, 5.6.3.4. */
 	class WindGenType4IEC : public IdentifiedObject
 	{
 	public:
@@ -30,12 +28,23 @@ namespace CIMPP
 		WindGenType4IEC();
 		~WindGenType4IEC() override;
 
-		CIMPP::WindTurbineType4aIEC* WindTurbineType4aIEC;  /* Wind turbine type 4A model with which this wind generator type 4 model is associated. Default: 0 */
-		CIMPP::WindTurbineType4bIEC* WindTurbineType4bIEC;  /* Wind turbine type 4B model with which this wind generator type 4 model is associated. Default: 0 */
-		CIMPP::PU dipmax;  /* Maximum active current ramp rate (&lt;i&gt;di&lt;/i&gt;&lt;i&gt;&lt;sub&gt;pmax&lt;/sub&gt;&lt;/i&gt;). It is a project-dependent parameter. Default: nullptr */
-		CIMPP::PU diqmax;  /* Maximum reactive current ramp rate (&lt;i&gt;di&lt;/i&gt;&lt;i&gt;&lt;sub&gt;qmax&lt;/sub&gt;&lt;/i&gt;). It is a project-dependent parameter. Default: nullptr */
-		CIMPP::PU diqmin;  /* Minimum reactive current ramp rate (&lt;i&gt;di&lt;/i&gt;&lt;i&gt;&lt;sub&gt;qmin&lt;/sub&gt;&lt;/i&gt;). It is a project-dependent parameter. Default: nullptr */
-		CIMPP::Seconds tg;  /* Time constant (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;g&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). It is a type-dependent parameter. Default: nullptr */
+		/** \brief Wind turbine type 4A model with which this wind generator type 4 model is associated. Default: 0 */
+		CIMPP::WindTurbineType4aIEC* WindTurbineType4aIEC;
+
+		/** \brief Wind turbine type 4B model with which this wind generator type 4 model is associated. Default: 0 */
+		CIMPP::WindTurbineType4bIEC* WindTurbineType4bIEC;
+
+		/** \brief Maximum active current ramp rate (&lt;i&gt;di&lt;/i&gt;&lt;i&gt;&lt;sub&gt;pmax&lt;/sub&gt;&lt;/i&gt;). It is a project-dependent parameter. Default: nullptr */
+		CIMPP::PU dipmax;
+
+		/** \brief Maximum reactive current ramp rate (&lt;i&gt;di&lt;/i&gt;&lt;i&gt;&lt;sub&gt;qmax&lt;/sub&gt;&lt;/i&gt;). It is a project-dependent parameter. Default: nullptr */
+		CIMPP::PU diqmax;
+
+		/** \brief Minimum reactive current ramp rate (&lt;i&gt;di&lt;/i&gt;&lt;i&gt;&lt;sub&gt;qmin&lt;/sub&gt;&lt;/i&gt;). It is a project-dependent parameter. Default: nullptr */
+		CIMPP::PU diqmin;
+
+		/** \brief Time constant (&lt;i&gt;T&lt;/i&gt;&lt;i&gt;&lt;sub&gt;g&lt;/sub&gt;&lt;/i&gt;) (&amp;gt;= 0). It is a type-dependent parameter. Default: nullptr */
+		CIMPP::Seconds tg;
 
 		static const char debugName[];
 		const char* debugString() const override;

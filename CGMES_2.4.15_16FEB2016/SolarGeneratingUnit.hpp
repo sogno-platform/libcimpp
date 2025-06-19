@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A solar thermal generating unit.
-	*/
+	/** \brief A solar thermal generating unit. */
 	class SolarGeneratingUnit : public GeneratingUnit
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		SolarGeneratingUnit();
 		~SolarGeneratingUnit() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

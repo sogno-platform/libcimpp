@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A short section of conductor with negligible impedance which can be manually removed and replaced if the circuit is de-energized. Note that zero-impedance branches can potentially be modelled by other equipment types.
-	*/
+	/** \brief A short section of conductor with negligible impedance which can be manually removed and replaced if the circuit is de-energized. Note that zero-impedance branches can potentially be modelled by other equipment types. */
 	class Jumper : public Switch
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		Jumper();
 		~Jumper() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

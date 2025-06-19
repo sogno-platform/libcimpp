@@ -11,8 +11,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-FaultIndicator::FaultIndicator() {};
-FaultIndicator::~FaultIndicator() {};
+FaultIndicator::FaultIndicator() {}
+FaultIndicator::~FaultIndicator() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -38,11 +38,6 @@ FaultIndicator::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
-
-
-
 const char FaultIndicator::debugName[] = "FaultIndicator";
 const char* FaultIndicator::debugString() const
 {
@@ -51,7 +46,7 @@ const char* FaultIndicator::debugString() const
 
 void FaultIndicator::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:FaultIndicator"), &FaultIndicator_factory));
+	factory_map.emplace("cim:FaultIndicator", &FaultIndicator_factory);
 }
 
 void FaultIndicator::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)

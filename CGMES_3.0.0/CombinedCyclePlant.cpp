@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-CombinedCyclePlant::CombinedCyclePlant() {};
-CombinedCyclePlant::~CombinedCyclePlant() {};
+CombinedCyclePlant::CombinedCyclePlant() {}
+CombinedCyclePlant::~CombinedCyclePlant() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ CombinedCyclePlant::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_ThermalGeneratingUnit_CombinedCyclePlant(BaseClass*, BaseClass*);
 bool assign_CombinedCyclePlant_ThermalGeneratingUnits(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,7 +58,6 @@ bool assign_CombinedCyclePlant_ThermalGeneratingUnits(BaseClass* BaseClass_ptr1,
 }
 
 
-
 const char CombinedCyclePlant::debugName[] = "CombinedCyclePlant";
 const char* CombinedCyclePlant::debugString() const
 {
@@ -69,7 +66,7 @@ const char* CombinedCyclePlant::debugString() const
 
 void CombinedCyclePlant::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:CombinedCyclePlant"), &CombinedCyclePlant_factory));
+	factory_map.emplace("cim:CombinedCyclePlant", &CombinedCyclePlant_factory);
 }
 
 void CombinedCyclePlant::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -78,7 +75,7 @@ void CombinedCyclePlant::addPrimitiveAssignFnsToMap(std::unordered_map<std::stri
 
 void CombinedCyclePlant::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:CombinedCyclePlant.ThermalGeneratingUnits"), &assign_CombinedCyclePlant_ThermalGeneratingUnits));
+	assign_map.emplace("cim:CombinedCyclePlant.ThermalGeneratingUnits", &assign_CombinedCyclePlant_ThermalGeneratingUnits);
 }
 
 void CombinedCyclePlant::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

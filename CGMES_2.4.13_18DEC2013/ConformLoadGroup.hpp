@@ -18,9 +18,7 @@ namespace CIMPP
 	class ConformLoad;
 	class ConformLoadSchedule;
 
-	/*
-	A group of loads conforming to an allocation pattern.
-	*/
+	/** \brief A group of loads conforming to an allocation pattern. */
 	class ConformLoadGroup : public LoadGroup
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		ConformLoadGroup();
 		~ConformLoadGroup() override;
 
-		std::list<CIMPP::ConformLoadSchedule*> ConformLoadSchedules;  /* The ConformLoadSchedules in the ConformLoadGroup. Default: 0 */
-		std::list<CIMPP::ConformLoad*> EnergyConsumers;  /* Conform loads assigned to this ConformLoadGroup. Default: 0 */
+		/** \brief The ConformLoadSchedules in the ConformLoadGroup. Default: 0 */
+		std::list<CIMPP::ConformLoadSchedule*> ConformLoadSchedules;
+
+		/** \brief Conform loads assigned to this ConformLoadGroup. Default: 0 */
+		std::list<CIMPP::ConformLoad*> EnergyConsumers;
 
 		static const char debugName[];
 		const char* debugString() const override;

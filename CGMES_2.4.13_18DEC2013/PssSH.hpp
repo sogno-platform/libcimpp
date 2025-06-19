@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Model for Siemens "H infinity" power system stabilizer with generator electrical power input.
-	*/
+	/** \brief Model for Siemens "H infinity" power system stabilizer with generator electrical power input. */
 	class PssSH : public PowerSystemStabilizerDynamics
 	{
 	public:
@@ -28,19 +26,44 @@ namespace CIMPP
 		PssSH();
 		~PssSH() override;
 
-		CIMPP::PU k;  /* Main gain (K).  Typical Value = 1. Default: nullptr */
-		CIMPP::PU k0;  /* Gain 0 (K0).  Typical Value = 0.012. Default: nullptr */
-		CIMPP::PU k1;  /* Gain 1 (K1).  Typical Value = 0.488. Default: nullptr */
-		CIMPP::PU k2;  /* Gain 2 (K2).  Typical Value = 0.064. Default: nullptr */
-		CIMPP::PU k3;  /* Gain 3 (K3).  Typical Value = 0.224. Default: nullptr */
-		CIMPP::PU k4;  /* Gain 4 (K4).  Typical Value = 0.1. Default: nullptr */
-		CIMPP::Seconds t1;  /* Time constant 1 (T1).  Typical Value = 0.076. Default: nullptr */
-		CIMPP::Seconds t2;  /* Time constant 2 (T2).  Typical Value = 0.086. Default: nullptr */
-		CIMPP::Seconds t3;  /* Time constant 3 (T3).   Typical Value = 1.068. Default: nullptr */
-		CIMPP::Seconds t4;  /* Time constant 4 (T4).  Typical Value = 1.913. Default: nullptr */
-		CIMPP::Seconds td;  /* Input time constant (Td).  Typical Value = 10. Default: nullptr */
-		CIMPP::PU vsmax;  /* Output maximum limit (Vsmax).  Typical Value = 0.1. Default: nullptr */
-		CIMPP::PU vsmin;  /* Output minimum limit (Vsmin).  Typical Value = -0.1. Default: nullptr */
+		/** \brief Main gain (K).  Typical Value = 1. Default: nullptr */
+		CIMPP::PU k;
+
+		/** \brief Gain 0 (K0).  Typical Value = 0.012. Default: nullptr */
+		CIMPP::PU k0;
+
+		/** \brief Gain 1 (K1).  Typical Value = 0.488. Default: nullptr */
+		CIMPP::PU k1;
+
+		/** \brief Gain 2 (K2).  Typical Value = 0.064. Default: nullptr */
+		CIMPP::PU k2;
+
+		/** \brief Gain 3 (K3).  Typical Value = 0.224. Default: nullptr */
+		CIMPP::PU k3;
+
+		/** \brief Gain 4 (K4).  Typical Value = 0.1. Default: nullptr */
+		CIMPP::PU k4;
+
+		/** \brief Time constant 1 (T1).  Typical Value = 0.076. Default: nullptr */
+		CIMPP::Seconds t1;
+
+		/** \brief Time constant 2 (T2).  Typical Value = 0.086. Default: nullptr */
+		CIMPP::Seconds t2;
+
+		/** \brief Time constant 3 (T3).   Typical Value = 1.068. Default: nullptr */
+		CIMPP::Seconds t3;
+
+		/** \brief Time constant 4 (T4).  Typical Value = 1.913. Default: nullptr */
+		CIMPP::Seconds t4;
+
+		/** \brief Input time constant (Td).  Typical Value = 10. Default: nullptr */
+		CIMPP::Seconds td;
+
+		/** \brief Output maximum limit (Vsmax).  Typical Value = 0.1. Default: nullptr */
+		CIMPP::PU vsmax;
+
+		/** \brief Output minimum limit (Vsmin).  Typical Value = -0.1. Default: nullptr */
+		CIMPP::PU vsmin;
 
 		static const char debugName[];
 		const char* debugString() const override;

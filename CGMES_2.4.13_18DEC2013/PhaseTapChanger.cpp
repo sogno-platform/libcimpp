@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-PhaseTapChanger::PhaseTapChanger() : TransformerEnd(nullptr) {};
-PhaseTapChanger::~PhaseTapChanger() {};
+PhaseTapChanger::PhaseTapChanger() : TransformerEnd(nullptr) {}
+PhaseTapChanger::~PhaseTapChanger() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ PhaseTapChanger::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_TransformerEnd_PhaseTapChanger(BaseClass*, BaseClass*);
 bool assign_PhaseTapChanger_TransformerEnd(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -59,10 +57,10 @@ bool assign_PhaseTapChanger_TransformerEnd(BaseClass* BaseClass_ptr1, BaseClass*
 	return false;
 }
 
-
 bool get_PhaseTapChanger_TransformerEnd(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
 {
-	if (const PhaseTapChanger* element = dynamic_cast<const PhaseTapChanger*>(BaseClass_ptr1))
+	const PhaseTapChanger* element = dynamic_cast<const PhaseTapChanger*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		if (element->TransformerEnd != 0)
 		{
@@ -73,7 +71,6 @@ bool get_PhaseTapChanger_TransformerEnd(const BaseClass* BaseClass_ptr1, std::li
 	return false;
 }
 
-
 const char PhaseTapChanger::debugName[] = "PhaseTapChanger";
 const char* PhaseTapChanger::debugString() const
 {
@@ -82,7 +79,7 @@ const char* PhaseTapChanger::debugString() const
 
 void PhaseTapChanger::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:PhaseTapChanger"), &PhaseTapChanger_factory));
+	factory_map.emplace("cim:PhaseTapChanger", &PhaseTapChanger_factory);
 }
 
 void PhaseTapChanger::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -91,7 +88,7 @@ void PhaseTapChanger::addPrimitiveAssignFnsToMap(std::unordered_map<std::string,
 
 void PhaseTapChanger::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:PhaseTapChanger.TransformerEnd"), &assign_PhaseTapChanger_TransformerEnd));
+	assign_map.emplace("cim:PhaseTapChanger.TransformerEnd", &assign_PhaseTapChanger_TransformerEnd);
 }
 
 void PhaseTapChanger::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

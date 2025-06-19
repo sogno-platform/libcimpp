@@ -11,8 +11,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-Jumper::Jumper() {};
-Jumper::~Jumper() {};
+Jumper::Jumper() {}
+Jumper::~Jumper() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -39,11 +39,6 @@ Jumper::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
-
-
-
 const char Jumper::debugName[] = "Jumper";
 const char* Jumper::debugString() const
 {
@@ -52,7 +47,7 @@ const char* Jumper::debugString() const
 
 void Jumper::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:Jumper"), &Jumper_factory));
+	factory_map.emplace("cim:Jumper", &Jumper_factory);
 }
 
 void Jumper::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)

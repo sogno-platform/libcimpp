@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class SeasonDayTypeSchedule;
 
-	/*
-	A specified time period of the year.
-	*/
+	/** \brief A specified time period of the year. */
 	class Season : public IdentifiedObject
 	{
 	public:
@@ -28,9 +26,14 @@ namespace CIMPP
 		Season();
 		~Season() override;
 
-		std::list<CIMPP::SeasonDayTypeSchedule*> SeasonDayTypeSchedules;  /* Schedules that use this Season. Default: 0 */
-		CIMPP::MonthDay endDate;  /* Date season ends. Default: nullptr */
-		CIMPP::MonthDay startDate;  /* Date season starts. Default: nullptr */
+		/** \brief Schedules that use this Season. Default: 0 */
+		std::list<CIMPP::SeasonDayTypeSchedule*> SeasonDayTypeSchedules;
+
+		/** \brief Date season ends. Default: nullptr */
+		CIMPP::MonthDay endDate;
+
+		/** \brief Date season starts. Default: nullptr */
+		CIMPP::MonthDay startDate;
 
 		static const char debugName[];
 		const char* debugString() const override;

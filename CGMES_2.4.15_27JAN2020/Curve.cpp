@@ -9,15 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "CurveData.hpp"
-#include "CurveStyle.hpp"
-#include "UnitSymbol.hpp"
-#include "UnitSymbol.hpp"
-#include "UnitSymbol.hpp"
 
 using namespace CIMPP;
 
-Curve::Curve() {};
-Curve::~Curve() {};
+Curve::Curve() {}
+Curve::~Curve() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -48,60 +44,6 @@ Curve::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_Curve_curveStyle(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (Curve* element = dynamic_cast<Curve*>(BaseClass_ptr1))
-	{
-		buffer >> element->curveStyle;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_Curve_xUnit(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (Curve* element = dynamic_cast<Curve*>(BaseClass_ptr1))
-	{
-		buffer >> element->xUnit;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_Curve_y1Unit(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (Curve* element = dynamic_cast<Curve*>(BaseClass_ptr1))
-	{
-		buffer >> element->y1Unit;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_Curve_y2Unit(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (Curve* element = dynamic_cast<Curve*>(BaseClass_ptr1))
-	{
-		buffer >> element->y2Unit;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_CurveData_Curve(BaseClass*, BaseClass*);
 bool assign_Curve_CurveDatas(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -119,11 +61,67 @@ bool assign_Curve_CurveDatas(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr
 	return false;
 }
 
+bool assign_Curve_curveStyle(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	Curve* element = dynamic_cast<Curve*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->curveStyle;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_Curve_xUnit(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	Curve* element = dynamic_cast<Curve*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->xUnit;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_Curve_y1Unit(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	Curve* element = dynamic_cast<Curve*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->y1Unit;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_Curve_y2Unit(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	Curve* element = dynamic_cast<Curve*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->y2Unit;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
 
 
 bool get_Curve_curveStyle(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Curve* element = dynamic_cast<const Curve*>(BaseClass_ptr1))
+	const Curve* element = dynamic_cast<const Curve*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->curveStyle;
 		if (!buffer.str().empty())
@@ -137,7 +135,8 @@ bool get_Curve_curveStyle(const BaseClass* BaseClass_ptr1, std::stringstream& bu
 
 bool get_Curve_xUnit(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Curve* element = dynamic_cast<const Curve*>(BaseClass_ptr1))
+	const Curve* element = dynamic_cast<const Curve*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->xUnit;
 		if (!buffer.str().empty())
@@ -151,7 +150,8 @@ bool get_Curve_xUnit(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_Curve_y1Unit(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Curve* element = dynamic_cast<const Curve*>(BaseClass_ptr1))
+	const Curve* element = dynamic_cast<const Curve*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->y1Unit;
 		if (!buffer.str().empty())
@@ -165,7 +165,8 @@ bool get_Curve_y1Unit(const BaseClass* BaseClass_ptr1, std::stringstream& buffer
 
 bool get_Curve_y2Unit(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Curve* element = dynamic_cast<const Curve*>(BaseClass_ptr1))
+	const Curve* element = dynamic_cast<const Curve*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->y2Unit;
 		if (!buffer.str().empty())
@@ -185,20 +186,20 @@ const char* Curve::debugString() const
 
 void Curve::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:Curve"), &Curve_factory));
+	factory_map.emplace("cim:Curve", &Curve_factory);
 }
 
 void Curve::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Curve.curveStyle"), &assign_Curve_curveStyle));
-	assign_map.insert(std::make_pair(std::string("cim:Curve.xUnit"), &assign_Curve_xUnit));
-	assign_map.insert(std::make_pair(std::string("cim:Curve.y1Unit"), &assign_Curve_y1Unit));
-	assign_map.insert(std::make_pair(std::string("cim:Curve.y2Unit"), &assign_Curve_y2Unit));
+	assign_map.emplace("cim:Curve.curveStyle", &assign_Curve_curveStyle);
+	assign_map.emplace("cim:Curve.xUnit", &assign_Curve_xUnit);
+	assign_map.emplace("cim:Curve.y1Unit", &assign_Curve_y1Unit);
+	assign_map.emplace("cim:Curve.y2Unit", &assign_Curve_y2Unit);
 }
 
 void Curve::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Curve.CurveDatas"), &assign_Curve_CurveDatas));
+	assign_map.emplace("cim:Curve.CurveDatas", &assign_Curve_CurveDatas);
 }
 
 void Curve::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

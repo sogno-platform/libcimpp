@@ -11,8 +11,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-NuclearGeneratingUnit::NuclearGeneratingUnit() {};
-NuclearGeneratingUnit::~NuclearGeneratingUnit() {};
+NuclearGeneratingUnit::NuclearGeneratingUnit() {}
+NuclearGeneratingUnit::~NuclearGeneratingUnit() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -39,11 +39,6 @@ NuclearGeneratingUnit::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
-
-
-
 const char NuclearGeneratingUnit::debugName[] = "NuclearGeneratingUnit";
 const char* NuclearGeneratingUnit::debugString() const
 {
@@ -52,7 +47,7 @@ const char* NuclearGeneratingUnit::debugString() const
 
 void NuclearGeneratingUnit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:NuclearGeneratingUnit"), &NuclearGeneratingUnit_factory));
+	factory_map.emplace("cim:NuclearGeneratingUnit", &NuclearGeneratingUnit_factory);
 }
 
 void NuclearGeneratingUnit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)

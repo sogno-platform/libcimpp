@@ -20,9 +20,7 @@ namespace CIMPP
 	class TurbineGovernorDynamics;
 	class WindTurbineType1or2Dynamics;
 
-	/*
-	Asynchronous machine whose behaviour is described by reference to a standard model expressed in either time constant reactance form or equivalent circuit form
-	*/
+	/** \brief Asynchronous machine whose behaviour is described by reference to a standard model expressed in either time constant reactance form or equivalent circuit form */
 	class AsynchronousMachineDynamics : public RotatingMachineDynamics
 	{
 	public:
@@ -30,10 +28,17 @@ namespace CIMPP
 		AsynchronousMachineDynamics();
 		~AsynchronousMachineDynamics() override;
 
-		CIMPP::AsynchronousMachine* AsynchronousMachine;  /* Asynchronous machine to which this asynchronous machine dynamics model applies. Default: 0 */
-		CIMPP::MechanicalLoadDynamics* MechanicalLoadDynamics;  /* Mechanical load model associated with this asynchronous machine model. Default: 0 */
-		CIMPP::TurbineGovernorDynamics* TurbineGovernorDynamics;  /* Turbine-governor model associated with this asynchronous machine model. Default: 0 */
-		CIMPP::WindTurbineType1or2Dynamics* WindTurbineType1or2Dynamics;  /* Wind generator type 1 or 2 model associated with this asynchronous machine model. Default: 0 */
+		/** \brief Asynchronous machine to which this asynchronous machine dynamics model applies. Default: 0 */
+		CIMPP::AsynchronousMachine* AsynchronousMachine;
+
+		/** \brief Mechanical load model associated with this asynchronous machine model. Default: 0 */
+		CIMPP::MechanicalLoadDynamics* MechanicalLoadDynamics;
+
+		/** \brief Turbine-governor model associated with this asynchronous machine model. Default: 0 */
+		CIMPP::TurbineGovernorDynamics* TurbineGovernorDynamics;
+
+		/** \brief Wind generator type 1 or 2 model associated with this asynchronous machine model. Default: 0 */
+		CIMPP::WindTurbineType1or2Dynamics* WindTurbineType1or2Dynamics;
 
 		static const char debugName[];
 		const char* debugString() const override;

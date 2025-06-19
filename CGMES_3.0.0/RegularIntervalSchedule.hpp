@@ -19,9 +19,7 @@ namespace CIMPP
 {
 	class RegularTimePoint;
 
-	/*
-	The schedule has time points where the time between them is constant.
-	*/
+	/** \brief The schedule has time points where the time between them is constant. */
 	class RegularIntervalSchedule : public BasicIntervalSchedule
 	{
 	public:
@@ -29,9 +27,14 @@ namespace CIMPP
 		RegularIntervalSchedule();
 		~RegularIntervalSchedule() override;
 
-		std::list<CIMPP::RegularTimePoint*> TimePoints;  /* The regular interval time point data values that define this schedule. Default: 0 */
-		CIMPP::DateTime endTime;  /* The time for the last time point.  The value can be a time of day, not a specific date. Default: '' */
-		CIMPP::Seconds timeStep;  /* The time between each pair of subsequent regular time points in sequence order. Default: nullptr */
+		/** \brief The regular interval time point data values that define this schedule. Default: 0 */
+		std::list<CIMPP::RegularTimePoint*> TimePoints;
+
+		/** \brief The time for the last time point.  The value can be a time of day, not a specific date. Default: '' */
+		CIMPP::DateTime endTime;
+
+		/** \brief The time between each pair of subsequent regular time points in sequence order. Default: nullptr */
+		CIMPP::Seconds timeStep;
 
 		static const char debugName[];
 		const char* debugString() const override;

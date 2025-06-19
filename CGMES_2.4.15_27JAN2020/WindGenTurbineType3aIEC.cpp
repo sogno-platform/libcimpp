@@ -8,14 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Simple_Float.hpp"
-#include "Seconds.hpp"
-#include "PU.hpp"
 
 using namespace CIMPP;
 
-WindGenTurbineType3aIEC::WindGenTurbineType3aIEC() {};
-WindGenTurbineType3aIEC::~WindGenTurbineType3aIEC() {};
+WindGenTurbineType3aIEC::WindGenTurbineType3aIEC() {}
+WindGenTurbineType3aIEC::~WindGenTurbineType3aIEC() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -44,51 +41,52 @@ WindGenTurbineType3aIEC::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_WindGenTurbineType3aIEC_kpc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_WindGenTurbineType3aIEC_kpc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (WindGenTurbineType3aIEC* element = dynamic_cast<WindGenTurbineType3aIEC*>(BaseClass_ptr1))
+	WindGenTurbineType3aIEC* element = dynamic_cast<WindGenTurbineType3aIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kpc;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_WindGenTurbineType3aIEC_tic(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_WindGenTurbineType3aIEC_tic(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (WindGenTurbineType3aIEC* element = dynamic_cast<WindGenTurbineType3aIEC*>(BaseClass_ptr1))
+	WindGenTurbineType3aIEC* element = dynamic_cast<WindGenTurbineType3aIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tic;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_WindGenTurbineType3aIEC_xs(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_WindGenTurbineType3aIEC_xs(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (WindGenTurbineType3aIEC* element = dynamic_cast<WindGenTurbineType3aIEC*>(BaseClass_ptr1))
+	WindGenTurbineType3aIEC* element = dynamic_cast<WindGenTurbineType3aIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->xs;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_WindGenTurbineType3aIEC_kpc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindGenTurbineType3aIEC* element = dynamic_cast<const WindGenTurbineType3aIEC*>(BaseClass_ptr1))
+	const WindGenTurbineType3aIEC* element = dynamic_cast<const WindGenTurbineType3aIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kpc;
 		if (!buffer.str().empty())
@@ -102,7 +100,8 @@ bool get_WindGenTurbineType3aIEC_kpc(const BaseClass* BaseClass_ptr1, std::strin
 
 bool get_WindGenTurbineType3aIEC_tic(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindGenTurbineType3aIEC* element = dynamic_cast<const WindGenTurbineType3aIEC*>(BaseClass_ptr1))
+	const WindGenTurbineType3aIEC* element = dynamic_cast<const WindGenTurbineType3aIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tic;
 		if (!buffer.str().empty())
@@ -116,7 +115,8 @@ bool get_WindGenTurbineType3aIEC_tic(const BaseClass* BaseClass_ptr1, std::strin
 
 bool get_WindGenTurbineType3aIEC_xs(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindGenTurbineType3aIEC* element = dynamic_cast<const WindGenTurbineType3aIEC*>(BaseClass_ptr1))
+	const WindGenTurbineType3aIEC* element = dynamic_cast<const WindGenTurbineType3aIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->xs;
 		if (!buffer.str().empty())
@@ -128,8 +128,6 @@ bool get_WindGenTurbineType3aIEC_xs(const BaseClass* BaseClass_ptr1, std::string
 	return false;
 }
 
-
-
 const char WindGenTurbineType3aIEC::debugName[] = "WindGenTurbineType3aIEC";
 const char* WindGenTurbineType3aIEC::debugString() const
 {
@@ -138,14 +136,14 @@ const char* WindGenTurbineType3aIEC::debugString() const
 
 void WindGenTurbineType3aIEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:WindGenTurbineType3aIEC"), &WindGenTurbineType3aIEC_factory));
+	factory_map.emplace("cim:WindGenTurbineType3aIEC", &WindGenTurbineType3aIEC_factory);
 }
 
 void WindGenTurbineType3aIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindGenTurbineType3aIEC.kpc"), &assign_WindGenTurbineType3aIEC_kpc));
-	assign_map.insert(std::make_pair(std::string("cim:WindGenTurbineType3aIEC.tic"), &assign_WindGenTurbineType3aIEC_tic));
-	assign_map.insert(std::make_pair(std::string("cim:WindGenTurbineType3aIEC.xs"), &assign_WindGenTurbineType3aIEC_xs));
+	assign_map.emplace("cim:WindGenTurbineType3aIEC.kpc", &assign_WindGenTurbineType3aIEC_kpc);
+	assign_map.emplace("cim:WindGenTurbineType3aIEC.tic", &assign_WindGenTurbineType3aIEC_tic);
+	assign_map.emplace("cim:WindGenTurbineType3aIEC.xs", &assign_WindGenTurbineType3aIEC_xs);
 }
 
 void WindGenTurbineType3aIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

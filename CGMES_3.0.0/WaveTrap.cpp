@@ -11,8 +11,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-WaveTrap::WaveTrap() {};
-WaveTrap::~WaveTrap() {};
+WaveTrap::WaveTrap() {}
+WaveTrap::~WaveTrap() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -38,11 +38,6 @@ WaveTrap::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
-
-
-
 const char WaveTrap::debugName[] = "WaveTrap";
 const char* WaveTrap::debugString() const
 {
@@ -51,7 +46,7 @@ const char* WaveTrap::debugString() const
 
 void WaveTrap::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:WaveTrap"), &WaveTrap_factory));
+	factory_map.emplace("cim:WaveTrap", &WaveTrap_factory);
 }
 
 void WaveTrap::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)

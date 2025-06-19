@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Shunt device, installed on the network, usually in the proximity of electrical equipment in order to protect the said equipment against transient voltage transients caused by lightning or switching activity.
-	*/
+	/** \brief Shunt device, installed on the network, usually in the proximity of electrical equipment in order to protect the said equipment against transient voltage transients caused by lightning or switching activity. */
 	class SurgeArrester : public AuxiliaryEquipment
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		SurgeArrester();
 		~SurgeArrester() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

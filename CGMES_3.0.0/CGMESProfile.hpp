@@ -32,6 +32,4 @@ const std::list<std::string>& getProfileURIs(CGMESProfile profile);
 CGMESProfile getProfileFromShortName(const std::string& name);
 CGMESProfile getProfileFromLongName(const std::string& name);
 
-std::string getCimNamespace();
-
-#endif // CGMESPROFILE_HPP
+#endif

@@ -19,9 +19,7 @@ namespace CIMPP
 	class RemoteInputSignal;
 	class WindPlantDynamics;
 
-	/*
-	Parent class supporting relationships to wind turbines type 3 and type 4 and wind plant including their control models.
-	*/
+	/** \brief Parent class supporting relationships to wind turbines type 3 and type 4 and wind plant including their control models. */
 	class WindTurbineType3or4Dynamics : public DynamicsFunctionBlock
 	{
 	public:
@@ -29,9 +27,14 @@ namespace CIMPP
 		WindTurbineType3or4Dynamics();
 		~WindTurbineType3or4Dynamics() override;
 
-		CIMPP::PowerElectronicsConnection* PowerElectronicsConnection;  /* The power electronics connection associated with this wind turbine type 3 or type 4 dynamics model. Default: 0 */
-		CIMPP::RemoteInputSignal* RemoteInputSignal;  /* Remote input signal used by these wind turbine type 3 or type 4 models. Default: 0 */
-		CIMPP::WindPlantDynamics* WindPlantDynamics;  /* The wind plant with which the wind turbines type 3 or type 4 are associated. Default: 0 */
+		/** \brief The power electronics connection associated with this wind turbine type 3 or type 4 dynamics model. Default: 0 */
+		CIMPP::PowerElectronicsConnection* PowerElectronicsConnection;
+
+		/** \brief Remote input signal used by these wind turbine type 3 or type 4 models. Default: 0 */
+		CIMPP::RemoteInputSignal* RemoteInputSignal;
+
+		/** \brief The wind plant with which the wind turbines type 3 or type 4 are associated. Default: 0 */
+		CIMPP::WindPlantDynamics* WindPlantDynamics;
 
 		static const char debugName[];
 		const char* debugString() const override;

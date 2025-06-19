@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "CsOperatingModeKind")
+		if (EnumSymbol.substr(0, pos) != "CsOperatingModeKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,12 +50,12 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "inverter")
+		if (EnumSymbol == "inverter")
 		{
 			rop = CsOperatingModeKind::inverter;
 			return lop;
 		}
-		if(EnumSymbol == "rectifier")
+		if (EnumSymbol == "rectifier")
 		{
 			rop = CsOperatingModeKind::rectifier;
 			return lop;

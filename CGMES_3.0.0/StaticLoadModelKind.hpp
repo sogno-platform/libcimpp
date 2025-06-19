@@ -9,29 +9,19 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Type of static load model.
-	*/
+	/** \brief Type of static load model. */
 	class StaticLoadModelKind
 	{
 	public:
 		enum StaticLoadModelKind_ENUM
 		{
-			/**
-			 * This model is an exponential representation of the load. Exponential equations for active and reactive power are used and the following attributes are required: kp1, kp2, kp3, kpf, ep1, ep2, ep3 kq1, kq2, kq3, kqf, eq1, eq2, eq3.
-			 */
+			/** This model is an exponential representation of the load. Exponential equations for active and reactive power are used and the following attributes are required: kp1, kp2, kp3, kpf, ep1, ep2, ep3 kq1, kq2, kq3, kqf, eq1, eq2, eq3. */
 			exponential,
-			/**
-			 * This model integrates the frequency-dependent load (primarily motors).  ZIP1 equations for active and reactive power are used and the following attributes are required: kp1, kp2, kp3, kpf kq1, kq2, kq3, kqf.
-			 */
+			/** This model integrates the frequency-dependent load (primarily motors).  ZIP1 equations for active and reactive power are used and the following attributes are required: kp1, kp2, kp3, kpf kq1, kq2, kq3, kqf. */
 			zIP1,
-			/**
-			 * This model separates the frequency-dependent load (primarily motors) from other load.  ZIP2 equations for active and reactive power are used and the following attributes are required: kp1, kp2, kp3, kq4, kpf kq1, kq2, kq3, kq4, kqf.
-			 */
+			/** This model separates the frequency-dependent load (primarily motors) from other load.  ZIP2 equations for active and reactive power are used and the following attributes are required: kp1, kp2, kp3, kq4, kpf kq1, kq2, kq3, kq4, kqf. */
 			zIP2,
-			/**
-			 * The load is represented as a constant impedance.  ConstantZ equations are used  for active and reactive power and no attributes are required.
-			 */
+			/** The load is represented as a constant impedance.  ConstantZ equations are used  for active and reactive power and no attributes are required. */
 			constantZ,
 		};
 

@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Modified IEEE Type ST1 Excitation System with semi-continuous and acting terminal voltage limiter.
-	*/
+	/** \brief Modified IEEE Type ST1 Excitation System with semi-continuous and acting terminal voltage limiter. */
 	class ExcOEX3T : public ExcitationSystemDynamics
 	{
 	public:
@@ -28,25 +26,62 @@ namespace CIMPP
 		ExcOEX3T();
 		~ExcOEX3T() override;
 
-		CIMPP::PU e1;  /* Saturation parameter (E). Default: nullptr */
-		CIMPP::PU e2;  /* Saturation parameter (E). Default: nullptr */
-		CIMPP::PU ka;  /* Gain (K). Default: nullptr */
-		CIMPP::PU kc;  /* Gain (K). Default: nullptr */
-		CIMPP::PU kd;  /* Gain (K). Default: nullptr */
-		CIMPP::PU ke;  /* Gain (K). Default: nullptr */
-		CIMPP::PU kf;  /* Gain (K). Default: nullptr */
-		CIMPP::PU see1;  /* Saturation parameter (S(E)). Default: nullptr */
-		CIMPP::PU see2;  /* Saturation parameter (S(E)). Default: nullptr */
-		CIMPP::Seconds t1;  /* Time constant (T). Default: nullptr */
-		CIMPP::Seconds t2;  /* Time constant (T). Default: nullptr */
-		CIMPP::Seconds t3;  /* Time constant (T). Default: nullptr */
-		CIMPP::Seconds t4;  /* Time constant (T). Default: nullptr */
-		CIMPP::Seconds t5;  /* Time constant (T). Default: nullptr */
-		CIMPP::Seconds t6;  /* Time constant (T). Default: nullptr */
-		CIMPP::Seconds te;  /* Time constant (T). Default: nullptr */
-		CIMPP::Seconds tf;  /* Time constant (T). Default: nullptr */
-		CIMPP::PU vrmax;  /* Limiter (V). Default: nullptr */
-		CIMPP::PU vrmin;  /* Limiter (V). Default: nullptr */
+		/** \brief Saturation parameter (E). Default: nullptr */
+		CIMPP::PU e1;
+
+		/** \brief Saturation parameter (E). Default: nullptr */
+		CIMPP::PU e2;
+
+		/** \brief Gain (K). Default: nullptr */
+		CIMPP::PU ka;
+
+		/** \brief Gain (K). Default: nullptr */
+		CIMPP::PU kc;
+
+		/** \brief Gain (K). Default: nullptr */
+		CIMPP::PU kd;
+
+		/** \brief Gain (K). Default: nullptr */
+		CIMPP::PU ke;
+
+		/** \brief Gain (K). Default: nullptr */
+		CIMPP::PU kf;
+
+		/** \brief Saturation parameter (S(E)). Default: nullptr */
+		CIMPP::PU see1;
+
+		/** \brief Saturation parameter (S(E)). Default: nullptr */
+		CIMPP::PU see2;
+
+		/** \brief Time constant (T). Default: nullptr */
+		CIMPP::Seconds t1;
+
+		/** \brief Time constant (T). Default: nullptr */
+		CIMPP::Seconds t2;
+
+		/** \brief Time constant (T). Default: nullptr */
+		CIMPP::Seconds t3;
+
+		/** \brief Time constant (T). Default: nullptr */
+		CIMPP::Seconds t4;
+
+		/** \brief Time constant (T). Default: nullptr */
+		CIMPP::Seconds t5;
+
+		/** \brief Time constant (T). Default: nullptr */
+		CIMPP::Seconds t6;
+
+		/** \brief Time constant (T). Default: nullptr */
+		CIMPP::Seconds te;
+
+		/** \brief Time constant (T). Default: nullptr */
+		CIMPP::Seconds tf;
+
+		/** \brief Limiter (V). Default: nullptr */
+		CIMPP::PU vrmax;
+
+		/** \brief Limiter (V). Default: nullptr */
+		CIMPP::PU vrmin;
 
 		static const char debugName[];
 		const char* debugString() const override;

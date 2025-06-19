@@ -8,27 +8,19 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "TopologicalIsland.hpp"
 #include "BaseVoltage.hpp"
-#include "ConnectivityNodeContainer.hpp"
 #include "ConnectivityNode.hpp"
+#include "ConnectivityNodeContainer.hpp"
 #include "ReportingGroup.hpp"
 #include "SvInjection.hpp"
 #include "SvVoltage.hpp"
 #include "Terminal.hpp"
 #include "TopologicalIsland.hpp"
-#include "Boolean.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
 
 using namespace CIMPP;
 
-TopologicalNode::TopologicalNode() : AngleRefTopologicalIsland(nullptr), BaseVoltage(nullptr), ConnectivityNodeContainer(nullptr), ReportingGroup(nullptr), SvInjection(nullptr), SvVoltage(nullptr), TopologicalIsland(nullptr) {};
-TopologicalNode::~TopologicalNode() {};
+TopologicalNode::TopologicalNode() : AngleRefTopologicalIsland(nullptr), BaseVoltage(nullptr), ConnectivityNodeContainer(nullptr), ReportingGroup(nullptr), SvInjection(nullptr), SvVoltage(nullptr), TopologicalIsland(nullptr) {}
+TopologicalNode::~TopologicalNode() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -72,99 +64,6 @@ TopologicalNode::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_TopologicalNode_boundaryPoint(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (TopologicalNode* element = dynamic_cast<TopologicalNode*>(BaseClass_ptr1))
-	{
-		buffer >> element->boundaryPoint;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_TopologicalNode_fromEndIsoCode(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (TopologicalNode* element = dynamic_cast<TopologicalNode*>(BaseClass_ptr1))
-	{
-		element->fromEndIsoCode = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_TopologicalNode_fromEndName(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (TopologicalNode* element = dynamic_cast<TopologicalNode*>(BaseClass_ptr1))
-	{
-		element->fromEndName = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_TopologicalNode_fromEndNameTso(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (TopologicalNode* element = dynamic_cast<TopologicalNode*>(BaseClass_ptr1))
-	{
-		element->fromEndNameTso = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_TopologicalNode_toEndIsoCode(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (TopologicalNode* element = dynamic_cast<TopologicalNode*>(BaseClass_ptr1))
-	{
-		element->toEndIsoCode = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_TopologicalNode_toEndName(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (TopologicalNode* element = dynamic_cast<TopologicalNode*>(BaseClass_ptr1))
-	{
-		element->toEndName = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_TopologicalNode_toEndNameTso(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (TopologicalNode* element = dynamic_cast<TopologicalNode*>(BaseClass_ptr1))
-	{
-		element->toEndNameTso = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_TopologicalIsland_AngleRefTopologicalNode(BaseClass*, BaseClass*);
 bool assign_TopologicalNode_AngleRefTopologicalIsland(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -181,6 +80,7 @@ bool assign_TopologicalNode_AngleRefTopologicalIsland(BaseClass* BaseClass_ptr1,
 	}
 	return false;
 }
+
 bool assign_BaseVoltage_TopologicalNode(BaseClass*, BaseClass*);
 bool assign_TopologicalNode_BaseVoltage(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -197,6 +97,7 @@ bool assign_TopologicalNode_BaseVoltage(BaseClass* BaseClass_ptr1, BaseClass* Ba
 	}
 	return false;
 }
+
 bool assign_ConnectivityNodeContainer_TopologicalNode(BaseClass*, BaseClass*);
 bool assign_TopologicalNode_ConnectivityNodeContainer(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -213,6 +114,7 @@ bool assign_TopologicalNode_ConnectivityNodeContainer(BaseClass* BaseClass_ptr1,
 	}
 	return false;
 }
+
 bool assign_ConnectivityNode_TopologicalNode(BaseClass*, BaseClass*);
 bool assign_TopologicalNode_ConnectivityNodes(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -229,6 +131,7 @@ bool assign_TopologicalNode_ConnectivityNodes(BaseClass* BaseClass_ptr1, BaseCla
 	}
 	return false;
 }
+
 bool assign_ReportingGroup_TopologicalNode(BaseClass*, BaseClass*);
 bool assign_TopologicalNode_ReportingGroup(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -245,6 +148,7 @@ bool assign_TopologicalNode_ReportingGroup(BaseClass* BaseClass_ptr1, BaseClass*
 	}
 	return false;
 }
+
 bool assign_SvInjection_TopologicalNode(BaseClass*, BaseClass*);
 bool assign_TopologicalNode_SvInjection(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -261,6 +165,7 @@ bool assign_TopologicalNode_SvInjection(BaseClass* BaseClass_ptr1, BaseClass* Ba
 	}
 	return false;
 }
+
 bool assign_SvVoltage_TopologicalNode(BaseClass*, BaseClass*);
 bool assign_TopologicalNode_SvVoltage(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -277,6 +182,7 @@ bool assign_TopologicalNode_SvVoltage(BaseClass* BaseClass_ptr1, BaseClass* Base
 	}
 	return false;
 }
+
 bool assign_Terminal_TopologicalNode(BaseClass*, BaseClass*);
 bool assign_TopologicalNode_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -293,6 +199,7 @@ bool assign_TopologicalNode_Terminal(BaseClass* BaseClass_ptr1, BaseClass* BaseC
 	}
 	return false;
 }
+
 bool assign_TopologicalIsland_TopologicalNodes(BaseClass*, BaseClass*);
 bool assign_TopologicalNode_TopologicalIsland(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -310,9 +217,156 @@ bool assign_TopologicalNode_TopologicalIsland(BaseClass* BaseClass_ptr1, BaseCla
 	return false;
 }
 
+bool assign_TopologicalNode_boundaryPoint(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	TopologicalNode* element = dynamic_cast<TopologicalNode*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->boundaryPoint;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_TopologicalNode_fromEndIsoCode(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	TopologicalNode* element = dynamic_cast<TopologicalNode*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->fromEndIsoCode = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_TopologicalNode_fromEndName(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	TopologicalNode* element = dynamic_cast<TopologicalNode*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->fromEndName = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_TopologicalNode_fromEndNameTso(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	TopologicalNode* element = dynamic_cast<TopologicalNode*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->fromEndNameTso = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_TopologicalNode_toEndIsoCode(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	TopologicalNode* element = dynamic_cast<TopologicalNode*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->toEndIsoCode = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_TopologicalNode_toEndName(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	TopologicalNode* element = dynamic_cast<TopologicalNode*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->toEndName = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_TopologicalNode_toEndNameTso(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	TopologicalNode* element = dynamic_cast<TopologicalNode*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->toEndNameTso = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
+bool get_TopologicalNode_BaseVoltage(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const TopologicalNode* element = dynamic_cast<const TopologicalNode*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->BaseVoltage != 0)
+		{
+			BaseClass_list.push_back(element->BaseVoltage);
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_TopologicalNode_ConnectivityNodeContainer(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const TopologicalNode* element = dynamic_cast<const TopologicalNode*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->ConnectivityNodeContainer != 0)
+		{
+			BaseClass_list.push_back(element->ConnectivityNodeContainer);
+			return true;
+		}
+	}
+	return false;
+}
+
+
+bool get_TopologicalNode_ReportingGroup(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const TopologicalNode* element = dynamic_cast<const TopologicalNode*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->ReportingGroup != 0)
+		{
+			BaseClass_list.push_back(element->ReportingGroup);
+			return true;
+		}
+	}
+	return false;
+}
+
+
+
+
+
 bool get_TopologicalNode_boundaryPoint(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TopologicalNode* element = dynamic_cast<const TopologicalNode*>(BaseClass_ptr1))
+	const TopologicalNode* element = dynamic_cast<const TopologicalNode*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->boundaryPoint;
 		if (!buffer.str().empty())
@@ -326,7 +380,8 @@ bool get_TopologicalNode_boundaryPoint(const BaseClass* BaseClass_ptr1, std::str
 
 bool get_TopologicalNode_fromEndIsoCode(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TopologicalNode* element = dynamic_cast<const TopologicalNode*>(BaseClass_ptr1))
+	const TopologicalNode* element = dynamic_cast<const TopologicalNode*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->fromEndIsoCode;
 		if (!buffer.str().empty())
@@ -340,7 +395,8 @@ bool get_TopologicalNode_fromEndIsoCode(const BaseClass* BaseClass_ptr1, std::st
 
 bool get_TopologicalNode_fromEndName(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TopologicalNode* element = dynamic_cast<const TopologicalNode*>(BaseClass_ptr1))
+	const TopologicalNode* element = dynamic_cast<const TopologicalNode*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->fromEndName;
 		if (!buffer.str().empty())
@@ -354,7 +410,8 @@ bool get_TopologicalNode_fromEndName(const BaseClass* BaseClass_ptr1, std::strin
 
 bool get_TopologicalNode_fromEndNameTso(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TopologicalNode* element = dynamic_cast<const TopologicalNode*>(BaseClass_ptr1))
+	const TopologicalNode* element = dynamic_cast<const TopologicalNode*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->fromEndNameTso;
 		if (!buffer.str().empty())
@@ -368,7 +425,8 @@ bool get_TopologicalNode_fromEndNameTso(const BaseClass* BaseClass_ptr1, std::st
 
 bool get_TopologicalNode_toEndIsoCode(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TopologicalNode* element = dynamic_cast<const TopologicalNode*>(BaseClass_ptr1))
+	const TopologicalNode* element = dynamic_cast<const TopologicalNode*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->toEndIsoCode;
 		if (!buffer.str().empty())
@@ -382,7 +440,8 @@ bool get_TopologicalNode_toEndIsoCode(const BaseClass* BaseClass_ptr1, std::stri
 
 bool get_TopologicalNode_toEndName(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TopologicalNode* element = dynamic_cast<const TopologicalNode*>(BaseClass_ptr1))
+	const TopologicalNode* element = dynamic_cast<const TopologicalNode*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->toEndName;
 		if (!buffer.str().empty())
@@ -396,7 +455,8 @@ bool get_TopologicalNode_toEndName(const BaseClass* BaseClass_ptr1, std::strings
 
 bool get_TopologicalNode_toEndNameTso(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const TopologicalNode* element = dynamic_cast<const TopologicalNode*>(BaseClass_ptr1))
+	const TopologicalNode* element = dynamic_cast<const TopologicalNode*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->toEndNameTso;
 		if (!buffer.str().empty())
@@ -408,47 +468,6 @@ bool get_TopologicalNode_toEndNameTso(const BaseClass* BaseClass_ptr1, std::stri
 	return false;
 }
 
-
-bool get_TopologicalNode_BaseVoltage(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const TopologicalNode* element = dynamic_cast<const TopologicalNode*>(BaseClass_ptr1))
-	{
-		if (element->BaseVoltage != 0)
-		{
-			BaseClass_list.push_back(element->BaseVoltage);
-			return true;
-		}
-	}
-	return false;
-}
-
-bool get_TopologicalNode_ConnectivityNodeContainer(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const TopologicalNode* element = dynamic_cast<const TopologicalNode*>(BaseClass_ptr1))
-	{
-		if (element->ConnectivityNodeContainer != 0)
-		{
-			BaseClass_list.push_back(element->ConnectivityNodeContainer);
-			return true;
-		}
-	}
-	return false;
-}
-
-bool get_TopologicalNode_ReportingGroup(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const TopologicalNode* element = dynamic_cast<const TopologicalNode*>(BaseClass_ptr1))
-	{
-		if (element->ReportingGroup != 0)
-		{
-			BaseClass_list.push_back(element->ReportingGroup);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char TopologicalNode::debugName[] = "TopologicalNode";
 const char* TopologicalNode::debugString() const
 {
@@ -457,31 +476,31 @@ const char* TopologicalNode::debugString() const
 
 void TopologicalNode::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:TopologicalNode"), &TopologicalNode_factory));
+	factory_map.emplace("cim:TopologicalNode", &TopologicalNode_factory);
 }
 
 void TopologicalNode::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:TopologicalNode.boundaryPoint"), &assign_TopologicalNode_boundaryPoint));
-	assign_map.insert(std::make_pair(std::string("cim:TopologicalNode.fromEndIsoCode"), &assign_TopologicalNode_fromEndIsoCode));
-	assign_map.insert(std::make_pair(std::string("cim:TopologicalNode.fromEndName"), &assign_TopologicalNode_fromEndName));
-	assign_map.insert(std::make_pair(std::string("cim:TopologicalNode.fromEndNameTso"), &assign_TopologicalNode_fromEndNameTso));
-	assign_map.insert(std::make_pair(std::string("cim:TopologicalNode.toEndIsoCode"), &assign_TopologicalNode_toEndIsoCode));
-	assign_map.insert(std::make_pair(std::string("cim:TopologicalNode.toEndName"), &assign_TopologicalNode_toEndName));
-	assign_map.insert(std::make_pair(std::string("cim:TopologicalNode.toEndNameTso"), &assign_TopologicalNode_toEndNameTso));
+	assign_map.emplace("cim:TopologicalNode.boundaryPoint", &assign_TopologicalNode_boundaryPoint);
+	assign_map.emplace("cim:TopologicalNode.fromEndIsoCode", &assign_TopologicalNode_fromEndIsoCode);
+	assign_map.emplace("cim:TopologicalNode.fromEndName", &assign_TopologicalNode_fromEndName);
+	assign_map.emplace("cim:TopologicalNode.fromEndNameTso", &assign_TopologicalNode_fromEndNameTso);
+	assign_map.emplace("cim:TopologicalNode.toEndIsoCode", &assign_TopologicalNode_toEndIsoCode);
+	assign_map.emplace("cim:TopologicalNode.toEndName", &assign_TopologicalNode_toEndName);
+	assign_map.emplace("cim:TopologicalNode.toEndNameTso", &assign_TopologicalNode_toEndNameTso);
 }
 
 void TopologicalNode::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:TopologicalNode.AngleRefTopologicalIsland"), &assign_TopologicalNode_AngleRefTopologicalIsland));
-	assign_map.insert(std::make_pair(std::string("cim:TopologicalNode.BaseVoltage"), &assign_TopologicalNode_BaseVoltage));
-	assign_map.insert(std::make_pair(std::string("cim:TopologicalNode.ConnectivityNodeContainer"), &assign_TopologicalNode_ConnectivityNodeContainer));
-	assign_map.insert(std::make_pair(std::string("cim:TopologicalNode.ConnectivityNodes"), &assign_TopologicalNode_ConnectivityNodes));
-	assign_map.insert(std::make_pair(std::string("cim:TopologicalNode.ReportingGroup"), &assign_TopologicalNode_ReportingGroup));
-	assign_map.insert(std::make_pair(std::string("cim:TopologicalNode.SvInjection"), &assign_TopologicalNode_SvInjection));
-	assign_map.insert(std::make_pair(std::string("cim:TopologicalNode.SvVoltage"), &assign_TopologicalNode_SvVoltage));
-	assign_map.insert(std::make_pair(std::string("cim:TopologicalNode.Terminal"), &assign_TopologicalNode_Terminal));
-	assign_map.insert(std::make_pair(std::string("cim:TopologicalNode.TopologicalIsland"), &assign_TopologicalNode_TopologicalIsland));
+	assign_map.emplace("cim:TopologicalNode.AngleRefTopologicalIsland", &assign_TopologicalNode_AngleRefTopologicalIsland);
+	assign_map.emplace("cim:TopologicalNode.BaseVoltage", &assign_TopologicalNode_BaseVoltage);
+	assign_map.emplace("cim:TopologicalNode.ConnectivityNodeContainer", &assign_TopologicalNode_ConnectivityNodeContainer);
+	assign_map.emplace("cim:TopologicalNode.ConnectivityNodes", &assign_TopologicalNode_ConnectivityNodes);
+	assign_map.emplace("cim:TopologicalNode.ReportingGroup", &assign_TopologicalNode_ReportingGroup);
+	assign_map.emplace("cim:TopologicalNode.SvInjection", &assign_TopologicalNode_SvInjection);
+	assign_map.emplace("cim:TopologicalNode.SvVoltage", &assign_TopologicalNode_SvVoltage);
+	assign_map.emplace("cim:TopologicalNode.Terminal", &assign_TopologicalNode_Terminal);
+	assign_map.emplace("cim:TopologicalNode.TopologicalIsland", &assign_TopologicalNode_TopologicalIsland);
 }
 
 void TopologicalNode::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

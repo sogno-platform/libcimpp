@@ -9,14 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "RegularIntervalSchedule.hpp"
-#include "Integer.hpp"
-#include "Float.hpp"
-#include "Float.hpp"
 
 using namespace CIMPP;
 
-RegularTimePoint::RegularTimePoint() : IntervalSchedule(nullptr) {};
-RegularTimePoint::~RegularTimePoint() {};
+RegularTimePoint::RegularTimePoint() : IntervalSchedule(nullptr) {}
+RegularTimePoint::~RegularTimePoint() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -46,47 +43,6 @@ RegularTimePoint::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_RegularTimePoint_sequenceNumber(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (RegularTimePoint* element = dynamic_cast<RegularTimePoint*>(BaseClass_ptr1))
-	{
-		buffer >> element->sequenceNumber;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_RegularTimePoint_value1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (RegularTimePoint* element = dynamic_cast<RegularTimePoint*>(BaseClass_ptr1))
-	{
-		buffer >> element->value1;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_RegularTimePoint_value2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (RegularTimePoint* element = dynamic_cast<RegularTimePoint*>(BaseClass_ptr1))
-	{
-		buffer >> element->value2;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_RegularIntervalSchedule_TimePoints(BaseClass*, BaseClass*);
 bool assign_RegularTimePoint_IntervalSchedule(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -104,9 +60,66 @@ bool assign_RegularTimePoint_IntervalSchedule(BaseClass* BaseClass_ptr1, BaseCla
 	return false;
 }
 
+bool assign_RegularTimePoint_sequenceNumber(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	RegularTimePoint* element = dynamic_cast<RegularTimePoint*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->sequenceNumber;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_RegularTimePoint_value1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	RegularTimePoint* element = dynamic_cast<RegularTimePoint*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->value1;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_RegularTimePoint_value2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	RegularTimePoint* element = dynamic_cast<RegularTimePoint*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->value2;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_RegularTimePoint_IntervalSchedule(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const RegularTimePoint* element = dynamic_cast<const RegularTimePoint*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->IntervalSchedule != 0)
+		{
+			BaseClass_list.push_back(element->IntervalSchedule);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_RegularTimePoint_sequenceNumber(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const RegularTimePoint* element = dynamic_cast<const RegularTimePoint*>(BaseClass_ptr1))
+	const RegularTimePoint* element = dynamic_cast<const RegularTimePoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->sequenceNumber;
 		if (!buffer.str().empty())
@@ -120,7 +133,8 @@ bool get_RegularTimePoint_sequenceNumber(const BaseClass* BaseClass_ptr1, std::s
 
 bool get_RegularTimePoint_value1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const RegularTimePoint* element = dynamic_cast<const RegularTimePoint*>(BaseClass_ptr1))
+	const RegularTimePoint* element = dynamic_cast<const RegularTimePoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->value1;
 		if (!buffer.str().empty())
@@ -134,7 +148,8 @@ bool get_RegularTimePoint_value1(const BaseClass* BaseClass_ptr1, std::stringstr
 
 bool get_RegularTimePoint_value2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const RegularTimePoint* element = dynamic_cast<const RegularTimePoint*>(BaseClass_ptr1))
+	const RegularTimePoint* element = dynamic_cast<const RegularTimePoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->value2;
 		if (!buffer.str().empty())
@@ -146,21 +161,6 @@ bool get_RegularTimePoint_value2(const BaseClass* BaseClass_ptr1, std::stringstr
 	return false;
 }
 
-
-bool get_RegularTimePoint_IntervalSchedule(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const RegularTimePoint* element = dynamic_cast<const RegularTimePoint*>(BaseClass_ptr1))
-	{
-		if (element->IntervalSchedule != 0)
-		{
-			BaseClass_list.push_back(element->IntervalSchedule);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char RegularTimePoint::debugName[] = "RegularTimePoint";
 const char* RegularTimePoint::debugString() const
 {
@@ -169,19 +169,19 @@ const char* RegularTimePoint::debugString() const
 
 void RegularTimePoint::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:RegularTimePoint"), &RegularTimePoint_factory));
+	factory_map.emplace("cim:RegularTimePoint", &RegularTimePoint_factory);
 }
 
 void RegularTimePoint::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:RegularTimePoint.sequenceNumber"), &assign_RegularTimePoint_sequenceNumber));
-	assign_map.insert(std::make_pair(std::string("cim:RegularTimePoint.value1"), &assign_RegularTimePoint_value1));
-	assign_map.insert(std::make_pair(std::string("cim:RegularTimePoint.value2"), &assign_RegularTimePoint_value2));
+	assign_map.emplace("cim:RegularTimePoint.sequenceNumber", &assign_RegularTimePoint_sequenceNumber);
+	assign_map.emplace("cim:RegularTimePoint.value1", &assign_RegularTimePoint_value1);
+	assign_map.emplace("cim:RegularTimePoint.value2", &assign_RegularTimePoint_value2);
 }
 
 void RegularTimePoint::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:RegularTimePoint.IntervalSchedule"), &assign_RegularTimePoint_IntervalSchedule));
+	assign_map.emplace("cim:RegularTimePoint.IntervalSchedule", &assign_RegularTimePoint_IntervalSchedule);
 }
 
 void RegularTimePoint::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

@@ -10,16 +10,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 #include "WindDynamicsLookupTable.hpp"
 #include "WindTurbineType3or4IEC.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Boolean.hpp"
-#include "Boolean.hpp"
-#include "Seconds.hpp"
 
 using namespace CIMPP;
 
-WindContCurrLimIEC::WindContCurrLimIEC() : WindTurbineType3or4IEC(nullptr) {};
-WindContCurrLimIEC::~WindContCurrLimIEC() {};
+WindContCurrLimIEC::WindContCurrLimIEC() : WindTurbineType3or4IEC(nullptr) {}
+WindContCurrLimIEC::~WindContCurrLimIEC() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -52,73 +47,6 @@ WindContCurrLimIEC::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_WindContCurrLimIEC_imax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindContCurrLimIEC* element = dynamic_cast<WindContCurrLimIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->imax;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindContCurrLimIEC_imaxdip(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindContCurrLimIEC* element = dynamic_cast<WindContCurrLimIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->imaxdip;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindContCurrLimIEC_mdfslim(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindContCurrLimIEC* element = dynamic_cast<WindContCurrLimIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->mdfslim;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindContCurrLimIEC_mqpri(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindContCurrLimIEC* element = dynamic_cast<WindContCurrLimIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->mqpri;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_WindContCurrLimIEC_tufilt(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (WindContCurrLimIEC* element = dynamic_cast<WindContCurrLimIEC*>(BaseClass_ptr1))
-	{
-		buffer >> element->tufilt;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_WindDynamicsLookupTable_WindContCurrLimIEC(BaseClass*, BaseClass*);
 bool assign_WindContCurrLimIEC_WindDynamicsLookupTable(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -135,6 +63,7 @@ bool assign_WindContCurrLimIEC_WindDynamicsLookupTable(BaseClass* BaseClass_ptr1
 	}
 	return false;
 }
+
 bool assign_WindTurbineType3or4IEC_WindContCurrLimIEC(BaseClass*, BaseClass*);
 bool assign_WindContCurrLimIEC_WindTurbineType3or4IEC(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -152,9 +81,82 @@ bool assign_WindContCurrLimIEC_WindTurbineType3or4IEC(BaseClass* BaseClass_ptr1,
 	return false;
 }
 
+bool assign_WindContCurrLimIEC_imax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindContCurrLimIEC* element = dynamic_cast<WindContCurrLimIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->imax;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindContCurrLimIEC_imaxdip(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindContCurrLimIEC* element = dynamic_cast<WindContCurrLimIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->imaxdip;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindContCurrLimIEC_mdfslim(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindContCurrLimIEC* element = dynamic_cast<WindContCurrLimIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->mdfslim;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindContCurrLimIEC_mqpri(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindContCurrLimIEC* element = dynamic_cast<WindContCurrLimIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->mqpri;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_WindContCurrLimIEC_tufilt(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	WindContCurrLimIEC* element = dynamic_cast<WindContCurrLimIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->tufilt;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
+
 bool get_WindContCurrLimIEC_imax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindContCurrLimIEC* element = dynamic_cast<const WindContCurrLimIEC*>(BaseClass_ptr1))
+	const WindContCurrLimIEC* element = dynamic_cast<const WindContCurrLimIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->imax;
 		if (!buffer.str().empty())
@@ -168,7 +170,8 @@ bool get_WindContCurrLimIEC_imax(const BaseClass* BaseClass_ptr1, std::stringstr
 
 bool get_WindContCurrLimIEC_imaxdip(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindContCurrLimIEC* element = dynamic_cast<const WindContCurrLimIEC*>(BaseClass_ptr1))
+	const WindContCurrLimIEC* element = dynamic_cast<const WindContCurrLimIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->imaxdip;
 		if (!buffer.str().empty())
@@ -182,7 +185,8 @@ bool get_WindContCurrLimIEC_imaxdip(const BaseClass* BaseClass_ptr1, std::string
 
 bool get_WindContCurrLimIEC_mdfslim(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindContCurrLimIEC* element = dynamic_cast<const WindContCurrLimIEC*>(BaseClass_ptr1))
+	const WindContCurrLimIEC* element = dynamic_cast<const WindContCurrLimIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->mdfslim;
 		if (!buffer.str().empty())
@@ -196,7 +200,8 @@ bool get_WindContCurrLimIEC_mdfslim(const BaseClass* BaseClass_ptr1, std::string
 
 bool get_WindContCurrLimIEC_mqpri(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindContCurrLimIEC* element = dynamic_cast<const WindContCurrLimIEC*>(BaseClass_ptr1))
+	const WindContCurrLimIEC* element = dynamic_cast<const WindContCurrLimIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->mqpri;
 		if (!buffer.str().empty())
@@ -210,7 +215,8 @@ bool get_WindContCurrLimIEC_mqpri(const BaseClass* BaseClass_ptr1, std::stringst
 
 bool get_WindContCurrLimIEC_tufilt(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindContCurrLimIEC* element = dynamic_cast<const WindContCurrLimIEC*>(BaseClass_ptr1))
+	const WindContCurrLimIEC* element = dynamic_cast<const WindContCurrLimIEC*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tufilt;
 		if (!buffer.str().empty())
@@ -222,8 +228,6 @@ bool get_WindContCurrLimIEC_tufilt(const BaseClass* BaseClass_ptr1, std::strings
 	return false;
 }
 
-
-
 const char WindContCurrLimIEC::debugName[] = "WindContCurrLimIEC";
 const char* WindContCurrLimIEC::debugString() const
 {
@@ -232,22 +236,22 @@ const char* WindContCurrLimIEC::debugString() const
 
 void WindContCurrLimIEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:WindContCurrLimIEC"), &WindContCurrLimIEC_factory));
+	factory_map.emplace("cim:WindContCurrLimIEC", &WindContCurrLimIEC_factory);
 }
 
 void WindContCurrLimIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindContCurrLimIEC.imax"), &assign_WindContCurrLimIEC_imax));
-	assign_map.insert(std::make_pair(std::string("cim:WindContCurrLimIEC.imaxdip"), &assign_WindContCurrLimIEC_imaxdip));
-	assign_map.insert(std::make_pair(std::string("cim:WindContCurrLimIEC.mdfslim"), &assign_WindContCurrLimIEC_mdfslim));
-	assign_map.insert(std::make_pair(std::string("cim:WindContCurrLimIEC.mqpri"), &assign_WindContCurrLimIEC_mqpri));
-	assign_map.insert(std::make_pair(std::string("cim:WindContCurrLimIEC.tufilt"), &assign_WindContCurrLimIEC_tufilt));
+	assign_map.emplace("cim:WindContCurrLimIEC.imax", &assign_WindContCurrLimIEC_imax);
+	assign_map.emplace("cim:WindContCurrLimIEC.imaxdip", &assign_WindContCurrLimIEC_imaxdip);
+	assign_map.emplace("cim:WindContCurrLimIEC.mdfslim", &assign_WindContCurrLimIEC_mdfslim);
+	assign_map.emplace("cim:WindContCurrLimIEC.mqpri", &assign_WindContCurrLimIEC_mqpri);
+	assign_map.emplace("cim:WindContCurrLimIEC.tufilt", &assign_WindContCurrLimIEC_tufilt);
 }
 
 void WindContCurrLimIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindContCurrLimIEC.WindDynamicsLookupTable"), &assign_WindContCurrLimIEC_WindDynamicsLookupTable));
-	assign_map.insert(std::make_pair(std::string("cim:WindContCurrLimIEC.WindTurbineType3or4IEC"), &assign_WindContCurrLimIEC_WindTurbineType3or4IEC));
+	assign_map.emplace("cim:WindContCurrLimIEC.WindDynamicsLookupTable", &assign_WindContCurrLimIEC_WindDynamicsLookupTable);
+	assign_map.emplace("cim:WindContCurrLimIEC.WindTurbineType3or4IEC", &assign_WindContCurrLimIEC_WindTurbineType3or4IEC);
 }
 
 void WindContCurrLimIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

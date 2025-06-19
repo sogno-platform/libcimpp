@@ -25,13 +25,26 @@ namespace CIMPP
 		UnderexcLimX2();
 		~UnderexcLimX2() override;
 
-		CIMPP::PU kf2;  /* Differential gain (Kf2). Default: nullptr */
-		CIMPP::PU km;  /* Minimum excitation limit gain (Km). Default: nullptr */
-		CIMPP::PU melmax;  /* Minimum excitation limit value (MELMAX). Default: nullptr */
-		CIMPP::PU qo;  /* Excitation center setting (Qo). Default: nullptr */
-		CIMPP::PU r;  /* Excitation radius (R). Default: nullptr */
-		CIMPP::Seconds tf2;  /* Differential time constant (Tf2) (&gt;0). Default: nullptr */
-		CIMPP::Seconds tm;  /* Minimum excitation limit time constant (Tm). Default: nullptr */
+		/** \brief Differential gain (Kf2). Default: nullptr */
+		CIMPP::PU kf2;
+
+		/** \brief Minimum excitation limit gain (Km). Default: nullptr */
+		CIMPP::PU km;
+
+		/** \brief Minimum excitation limit value (MELMAX). Default: nullptr */
+		CIMPP::PU melmax;
+
+		/** \brief Excitation center setting (Qo). Default: nullptr */
+		CIMPP::PU qo;
+
+		/** \brief Excitation radius (R). Default: nullptr */
+		CIMPP::PU r;
+
+		/** \brief Differential time constant (Tf2) (&gt;0). Default: nullptr */
+		CIMPP::Seconds tf2;
+
+		/** \brief Minimum excitation limit time constant (Tm). Default: nullptr */
+		CIMPP::Seconds tm;
 
 		static const char debugName[];
 		const char* debugString() const override;

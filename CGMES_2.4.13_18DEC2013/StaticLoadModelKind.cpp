@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "StaticLoadModelKind")
+		if (EnumSymbol.substr(0, pos) != "StaticLoadModelKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,22 +50,22 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "exponential")
+		if (EnumSymbol == "exponential")
 		{
 			rop = StaticLoadModelKind::exponential;
 			return lop;
 		}
-		if(EnumSymbol == "zIP1")
+		if (EnumSymbol == "zIP1")
 		{
 			rop = StaticLoadModelKind::zIP1;
 			return lop;
 		}
-		if(EnumSymbol == "zIP2")
+		if (EnumSymbol == "zIP2")
 		{
 			rop = StaticLoadModelKind::zIP2;
 			return lop;
 		}
-		if(EnumSymbol == "constantZ")
+		if (EnumSymbol == "constantZ")
 		{
 			rop = StaticLoadModelKind::constantZ;
 			return lop;

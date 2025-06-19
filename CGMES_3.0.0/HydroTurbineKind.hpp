@@ -9,25 +9,17 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Type of turbine.
-	*/
+	/** \brief Type of turbine. */
 	class HydroTurbineKind
 	{
 	public:
 		enum HydroTurbineKind_ENUM
 		{
-			/**
-			 * Francis.
-			 */
+			/** Francis. */
 			francis,
-			/**
-			 * Pelton.
-			 */
+			/** Pelton. */
 			pelton,
-			/**
-			 * Kaplan.
-			 */
+			/** Kaplan. */
 			kaplan,
 		};
 

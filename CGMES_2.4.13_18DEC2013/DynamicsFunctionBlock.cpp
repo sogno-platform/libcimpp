@@ -8,12 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Boolean.hpp"
 
 using namespace CIMPP;
 
-DynamicsFunctionBlock::DynamicsFunctionBlock() {};
-DynamicsFunctionBlock::~DynamicsFunctionBlock() {};
+DynamicsFunctionBlock::DynamicsFunctionBlock() {}
+DynamicsFunctionBlock::~DynamicsFunctionBlock() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,25 +39,24 @@ DynamicsFunctionBlock::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_DynamicsFunctionBlock_enabled(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_DynamicsFunctionBlock_enabled(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (DynamicsFunctionBlock* element = dynamic_cast<DynamicsFunctionBlock*>(BaseClass_ptr1))
+	DynamicsFunctionBlock* element = dynamic_cast<DynamicsFunctionBlock*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->enabled;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-
-
 bool get_DynamicsFunctionBlock_enabled(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const DynamicsFunctionBlock* element = dynamic_cast<const DynamicsFunctionBlock*>(BaseClass_ptr1))
+	const DynamicsFunctionBlock* element = dynamic_cast<const DynamicsFunctionBlock*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->enabled;
 		if (!buffer.str().empty())
@@ -70,8 +68,6 @@ bool get_DynamicsFunctionBlock_enabled(const BaseClass* BaseClass_ptr1, std::str
 	return false;
 }
 
-
-
 const char DynamicsFunctionBlock::debugName[] = "DynamicsFunctionBlock";
 const char* DynamicsFunctionBlock::debugString() const
 {
@@ -80,12 +76,12 @@ const char* DynamicsFunctionBlock::debugString() const
 
 void DynamicsFunctionBlock::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:DynamicsFunctionBlock"), &DynamicsFunctionBlock_factory));
+	factory_map.emplace("cim:DynamicsFunctionBlock", &DynamicsFunctionBlock_factory);
 }
 
 void DynamicsFunctionBlock::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:DynamicsFunctionBlock.enabled"), &assign_DynamicsFunctionBlock_enabled));
+	assign_map.emplace("cim:DynamicsFunctionBlock.enabled", &assign_DynamicsFunctionBlock_enabled);
 }
 
 void DynamicsFunctionBlock::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

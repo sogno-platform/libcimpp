@@ -18,9 +18,7 @@ namespace CIMPP
 	class DCBaseTerminal;
 	class DCTopologicalNode;
 
-	/*
-	DC nodes are points where terminals of DC conducting equipment are connected together with zero impedance.
-	*/
+	/** \brief DC nodes are points where terminals of DC conducting equipment are connected together with zero impedance. */
 	class DCNode : public IdentifiedObject
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		DCNode();
 		~DCNode() override;
 
-		std::list<CIMPP::DCBaseTerminal*> DCTerminals;  /*  Default: 0 */
-		CIMPP::DCTopologicalNode* DCTopologicalNode;  /* See association end TopologicalNode.ConnectivityNodes. Default: 0 */
+		/** \brief  Default: 0 */
+		std::list<CIMPP::DCBaseTerminal*> DCTerminals;
+
+		/** \brief See association end TopologicalNode.ConnectivityNodes. Default: 0 */
+		CIMPP::DCTopologicalNode* DCTopologicalNode;
 
 		static const char debugName[];
 		const char* debugString() const override;

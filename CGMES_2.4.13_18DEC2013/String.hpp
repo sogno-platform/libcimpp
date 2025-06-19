@@ -4,22 +4,20 @@
 Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cimgen
 */
 
-#include <string>
 #include <istream>
 #include <ostream>
+#include <string>
 
 namespace CIMPP
 {
-	/*
-	A string consisting of a sequence of characters. The character encoding is UTF-8. The string length is unspecified and unlimited.
-	*/
+	/** \brief A string consisting of a sequence of characters. The character encoding is UTF-8. The string length is unspecified and unlimited. */
 	class String
 	{
 	public:
 		String() : initialized(false) {}
 		String(const std::string& value) : value(value), initialized(true) {}
 
-		String& operator=(const std::string &rop);
+		String& operator=(const std::string& rop);
 		operator std::string() const;
 
 		std::string value;

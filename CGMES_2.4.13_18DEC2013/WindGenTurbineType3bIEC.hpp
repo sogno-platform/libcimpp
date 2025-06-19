@@ -20,9 +20,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	IEC Type 3B generator set model.  Reference: IEC Standard 61400-27-1 Section 6.6.3.3.
-	*/
+	/** \brief IEC Type 3B generator set model.  Reference: IEC Standard 61400-27-1 Section 6.6.3.3. */
 	class WindGenTurbineType3bIEC : public WindGenTurbineType3IEC
 	{
 	public:
@@ -30,11 +28,20 @@ namespace CIMPP
 		WindGenTurbineType3bIEC();
 		~WindGenTurbineType3bIEC() override;
 
-		CIMPP::Simple_Float fducw;  /* Crowbar duration versus voltage variation look-up table (f()). It is case dependent parameter. Default: nullptr */
-		CIMPP::Boolean mwtcwp;  /* Crowbar control mode ().   The parameter is case dependent parameter. Default: false */
-		CIMPP::Seconds tg;  /* Current generation Time constant (). It is type dependent parameter. Default: nullptr */
-		CIMPP::Seconds two;  /* Time constant for crowbar washout filter (). It is case dependent parameter. Default: nullptr */
-		CIMPP::PU xs;  /* Electromagnetic transient reactance (x). It is type dependent parameter. Default: nullptr */
+		/** \brief Crowbar duration versus voltage variation look-up table (f()). It is case dependent parameter. Default: nullptr */
+		CIMPP::Simple_Float fducw;
+
+		/** \brief Crowbar control mode ().   The parameter is case dependent parameter. Default: false */
+		CIMPP::Boolean mwtcwp;
+
+		/** \brief Current generation Time constant (). It is type dependent parameter. Default: nullptr */
+		CIMPP::Seconds tg;
+
+		/** \brief Time constant for crowbar washout filter (). It is case dependent parameter. Default: nullptr */
+		CIMPP::Seconds two;
+
+		/** \brief Electromagnetic transient reactance (x). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU xs;
 
 		static const char debugName[];
 		const char* debugString() const override;

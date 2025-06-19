@@ -13,8 +13,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-ReportingGroup::ReportingGroup() {};
-ReportingGroup::~ReportingGroup() {};
+ReportingGroup::ReportingGroup() {}
+ReportingGroup::~ReportingGroup() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -43,8 +43,6 @@ ReportingGroup::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_BusNameMarker_ReportingGroup(BaseClass*, BaseClass*);
 bool assign_ReportingGroup_BusNameMarker(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -61,6 +59,7 @@ bool assign_ReportingGroup_BusNameMarker(BaseClass* BaseClass_ptr1, BaseClass* B
 	}
 	return false;
 }
+
 bool assign_TopologicalNode_ReportingGroup(BaseClass*, BaseClass*);
 bool assign_ReportingGroup_TopologicalNode(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -88,7 +87,7 @@ const char* ReportingGroup::debugString() const
 
 void ReportingGroup::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ReportingGroup"), &ReportingGroup_factory));
+	factory_map.emplace("cim:ReportingGroup", &ReportingGroup_factory);
 }
 
 void ReportingGroup::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -97,8 +96,8 @@ void ReportingGroup::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, 
 
 void ReportingGroup::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ReportingGroup.BusNameMarker"), &assign_ReportingGroup_BusNameMarker));
-	assign_map.insert(std::make_pair(std::string("cim:ReportingGroup.TopologicalNode"), &assign_ReportingGroup_TopologicalNode));
+	assign_map.emplace("cim:ReportingGroup.BusNameMarker", &assign_ReportingGroup_BusNameMarker);
+	assign_map.emplace("cim:ReportingGroup.TopologicalNode", &assign_ReportingGroup_TopologicalNode);
 }
 
 void ReportingGroup::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

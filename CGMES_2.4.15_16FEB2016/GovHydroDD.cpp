@@ -8,46 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Frequency.hpp"
-#include "ActivePower.hpp"
-#include "Frequency.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Boolean.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "ActivePower.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Simple_Float.hpp"
-#include "Simple_Float.hpp"
 
 using namespace CIMPP;
 
-GovHydroDD::GovHydroDD() {};
-GovHydroDD::~GovHydroDD() {};
+GovHydroDD::GovHydroDD() {}
+GovHydroDD::~GovHydroDD() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -108,467 +73,500 @@ GovHydroDD::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_GovHydroDD_aturb(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_aturb(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->aturb;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_bturb(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_bturb(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->bturb;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_db1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_db1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->db1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_db2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_db2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->db2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_eps(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_eps(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->eps;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_gmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_gmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->gmax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_gmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_gmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->gmin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_gv1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_gv1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->gv1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_gv2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_gv2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->gv2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_gv3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_gv3(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->gv3;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_gv4(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_gv4(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->gv4;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_gv5(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_gv5(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->gv5;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_gv6(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_gv6(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->gv6;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_inputSignal(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_inputSignal(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->inputSignal;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_k1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_k1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->k1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_k2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_k2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->k2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_kg(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_kg(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kg;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_ki(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_ki(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ki;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_mwbase(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_mwbase(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->mwbase;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_pgv1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_pgv1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->pgv1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_pgv2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_pgv2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->pgv2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_pgv3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_pgv3(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->pgv3;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_pgv4(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_pgv4(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->pgv4;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_pgv5(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_pgv5(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->pgv5;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_pgv6(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_pgv6(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->pgv6;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_pmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_pmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->pmax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_pmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_pmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->pmin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_r(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_r(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->r;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_td(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_td(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->td;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_tf(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_tf(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tf;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_tp(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_tp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tp;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_tt(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_tt(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tt;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_tturb(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_tturb(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tturb;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_velcl(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_velcl(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->velcl;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroDD_velop(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroDD_velop(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1))
+	GovHydroDD* element = dynamic_cast<GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->velop;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_GovHydroDD_aturb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->aturb;
 		if (!buffer.str().empty())
@@ -582,7 +580,8 @@ bool get_GovHydroDD_aturb(const BaseClass* BaseClass_ptr1, std::stringstream& bu
 
 bool get_GovHydroDD_bturb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->bturb;
 		if (!buffer.str().empty())
@@ -596,7 +595,8 @@ bool get_GovHydroDD_bturb(const BaseClass* BaseClass_ptr1, std::stringstream& bu
 
 bool get_GovHydroDD_db1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->db1;
 		if (!buffer.str().empty())
@@ -610,7 +610,8 @@ bool get_GovHydroDD_db1(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_GovHydroDD_db2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->db2;
 		if (!buffer.str().empty())
@@ -624,7 +625,8 @@ bool get_GovHydroDD_db2(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_GovHydroDD_eps(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->eps;
 		if (!buffer.str().empty())
@@ -638,7 +640,8 @@ bool get_GovHydroDD_eps(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_GovHydroDD_gmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->gmax;
 		if (!buffer.str().empty())
@@ -652,7 +655,8 @@ bool get_GovHydroDD_gmax(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_GovHydroDD_gmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->gmin;
 		if (!buffer.str().empty())
@@ -666,7 +670,8 @@ bool get_GovHydroDD_gmin(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_GovHydroDD_gv1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->gv1;
 		if (!buffer.str().empty())
@@ -680,7 +685,8 @@ bool get_GovHydroDD_gv1(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_GovHydroDD_gv2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->gv2;
 		if (!buffer.str().empty())
@@ -694,7 +700,8 @@ bool get_GovHydroDD_gv2(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_GovHydroDD_gv3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->gv3;
 		if (!buffer.str().empty())
@@ -708,7 +715,8 @@ bool get_GovHydroDD_gv3(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_GovHydroDD_gv4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->gv4;
 		if (!buffer.str().empty())
@@ -722,7 +730,8 @@ bool get_GovHydroDD_gv4(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_GovHydroDD_gv5(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->gv5;
 		if (!buffer.str().empty())
@@ -736,7 +745,8 @@ bool get_GovHydroDD_gv5(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_GovHydroDD_gv6(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->gv6;
 		if (!buffer.str().empty())
@@ -750,7 +760,8 @@ bool get_GovHydroDD_gv6(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_GovHydroDD_inputSignal(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->inputSignal;
 		if (!buffer.str().empty())
@@ -764,7 +775,8 @@ bool get_GovHydroDD_inputSignal(const BaseClass* BaseClass_ptr1, std::stringstre
 
 bool get_GovHydroDD_k1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->k1;
 		if (!buffer.str().empty())
@@ -778,7 +790,8 @@ bool get_GovHydroDD_k1(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_GovHydroDD_k2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->k2;
 		if (!buffer.str().empty())
@@ -792,7 +805,8 @@ bool get_GovHydroDD_k2(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_GovHydroDD_kg(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kg;
 		if (!buffer.str().empty())
@@ -806,7 +820,8 @@ bool get_GovHydroDD_kg(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_GovHydroDD_ki(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ki;
 		if (!buffer.str().empty())
@@ -820,7 +835,8 @@ bool get_GovHydroDD_ki(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_GovHydroDD_mwbase(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->mwbase;
 		if (!buffer.str().empty())
@@ -834,7 +850,8 @@ bool get_GovHydroDD_mwbase(const BaseClass* BaseClass_ptr1, std::stringstream& b
 
 bool get_GovHydroDD_pgv1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pgv1;
 		if (!buffer.str().empty())
@@ -848,7 +865,8 @@ bool get_GovHydroDD_pgv1(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_GovHydroDD_pgv2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pgv2;
 		if (!buffer.str().empty())
@@ -862,7 +880,8 @@ bool get_GovHydroDD_pgv2(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_GovHydroDD_pgv3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pgv3;
 		if (!buffer.str().empty())
@@ -876,7 +895,8 @@ bool get_GovHydroDD_pgv3(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_GovHydroDD_pgv4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pgv4;
 		if (!buffer.str().empty())
@@ -890,7 +910,8 @@ bool get_GovHydroDD_pgv4(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_GovHydroDD_pgv5(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pgv5;
 		if (!buffer.str().empty())
@@ -904,7 +925,8 @@ bool get_GovHydroDD_pgv5(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_GovHydroDD_pgv6(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pgv6;
 		if (!buffer.str().empty())
@@ -918,7 +940,8 @@ bool get_GovHydroDD_pgv6(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_GovHydroDD_pmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pmax;
 		if (!buffer.str().empty())
@@ -932,7 +955,8 @@ bool get_GovHydroDD_pmax(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_GovHydroDD_pmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pmin;
 		if (!buffer.str().empty())
@@ -946,7 +970,8 @@ bool get_GovHydroDD_pmin(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_GovHydroDD_r(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->r;
 		if (!buffer.str().empty())
@@ -960,7 +985,8 @@ bool get_GovHydroDD_r(const BaseClass* BaseClass_ptr1, std::stringstream& buffer
 
 bool get_GovHydroDD_td(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->td;
 		if (!buffer.str().empty())
@@ -974,7 +1000,8 @@ bool get_GovHydroDD_td(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_GovHydroDD_tf(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tf;
 		if (!buffer.str().empty())
@@ -988,7 +1015,8 @@ bool get_GovHydroDD_tf(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_GovHydroDD_tp(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tp;
 		if (!buffer.str().empty())
@@ -1002,7 +1030,8 @@ bool get_GovHydroDD_tp(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_GovHydroDD_tt(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tt;
 		if (!buffer.str().empty())
@@ -1016,7 +1045,8 @@ bool get_GovHydroDD_tt(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_GovHydroDD_tturb(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tturb;
 		if (!buffer.str().empty())
@@ -1030,7 +1060,8 @@ bool get_GovHydroDD_tturb(const BaseClass* BaseClass_ptr1, std::stringstream& bu
 
 bool get_GovHydroDD_velcl(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->velcl;
 		if (!buffer.str().empty())
@@ -1044,7 +1075,8 @@ bool get_GovHydroDD_velcl(const BaseClass* BaseClass_ptr1, std::stringstream& bu
 
 bool get_GovHydroDD_velop(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1))
+	const GovHydroDD* element = dynamic_cast<const GovHydroDD*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->velop;
 		if (!buffer.str().empty())
@@ -1056,8 +1088,6 @@ bool get_GovHydroDD_velop(const BaseClass* BaseClass_ptr1, std::stringstream& bu
 	return false;
 }
 
-
-
 const char GovHydroDD::debugName[] = "GovHydroDD";
 const char* GovHydroDD::debugString() const
 {
@@ -1066,46 +1096,46 @@ const char* GovHydroDD::debugString() const
 
 void GovHydroDD::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:GovHydroDD"), &GovHydroDD_factory));
+	factory_map.emplace("cim:GovHydroDD", &GovHydroDD_factory);
 }
 
 void GovHydroDD::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.aturb"), &assign_GovHydroDD_aturb));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.bturb"), &assign_GovHydroDD_bturb));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.db1"), &assign_GovHydroDD_db1));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.db2"), &assign_GovHydroDD_db2));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.eps"), &assign_GovHydroDD_eps));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.gmax"), &assign_GovHydroDD_gmax));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.gmin"), &assign_GovHydroDD_gmin));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.gv1"), &assign_GovHydroDD_gv1));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.gv2"), &assign_GovHydroDD_gv2));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.gv3"), &assign_GovHydroDD_gv3));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.gv4"), &assign_GovHydroDD_gv4));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.gv5"), &assign_GovHydroDD_gv5));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.gv6"), &assign_GovHydroDD_gv6));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.inputSignal"), &assign_GovHydroDD_inputSignal));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.k1"), &assign_GovHydroDD_k1));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.k2"), &assign_GovHydroDD_k2));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.kg"), &assign_GovHydroDD_kg));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.ki"), &assign_GovHydroDD_ki));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.mwbase"), &assign_GovHydroDD_mwbase));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.pgv1"), &assign_GovHydroDD_pgv1));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.pgv2"), &assign_GovHydroDD_pgv2));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.pgv3"), &assign_GovHydroDD_pgv3));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.pgv4"), &assign_GovHydroDD_pgv4));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.pgv5"), &assign_GovHydroDD_pgv5));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.pgv6"), &assign_GovHydroDD_pgv6));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.pmax"), &assign_GovHydroDD_pmax));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.pmin"), &assign_GovHydroDD_pmin));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.r"), &assign_GovHydroDD_r));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.td"), &assign_GovHydroDD_td));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.tf"), &assign_GovHydroDD_tf));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.tp"), &assign_GovHydroDD_tp));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.tt"), &assign_GovHydroDD_tt));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.tturb"), &assign_GovHydroDD_tturb));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.velcl"), &assign_GovHydroDD_velcl));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroDD.velop"), &assign_GovHydroDD_velop));
+	assign_map.emplace("cim:GovHydroDD.aturb", &assign_GovHydroDD_aturb);
+	assign_map.emplace("cim:GovHydroDD.bturb", &assign_GovHydroDD_bturb);
+	assign_map.emplace("cim:GovHydroDD.db1", &assign_GovHydroDD_db1);
+	assign_map.emplace("cim:GovHydroDD.db2", &assign_GovHydroDD_db2);
+	assign_map.emplace("cim:GovHydroDD.eps", &assign_GovHydroDD_eps);
+	assign_map.emplace("cim:GovHydroDD.gmax", &assign_GovHydroDD_gmax);
+	assign_map.emplace("cim:GovHydroDD.gmin", &assign_GovHydroDD_gmin);
+	assign_map.emplace("cim:GovHydroDD.gv1", &assign_GovHydroDD_gv1);
+	assign_map.emplace("cim:GovHydroDD.gv2", &assign_GovHydroDD_gv2);
+	assign_map.emplace("cim:GovHydroDD.gv3", &assign_GovHydroDD_gv3);
+	assign_map.emplace("cim:GovHydroDD.gv4", &assign_GovHydroDD_gv4);
+	assign_map.emplace("cim:GovHydroDD.gv5", &assign_GovHydroDD_gv5);
+	assign_map.emplace("cim:GovHydroDD.gv6", &assign_GovHydroDD_gv6);
+	assign_map.emplace("cim:GovHydroDD.inputSignal", &assign_GovHydroDD_inputSignal);
+	assign_map.emplace("cim:GovHydroDD.k1", &assign_GovHydroDD_k1);
+	assign_map.emplace("cim:GovHydroDD.k2", &assign_GovHydroDD_k2);
+	assign_map.emplace("cim:GovHydroDD.kg", &assign_GovHydroDD_kg);
+	assign_map.emplace("cim:GovHydroDD.ki", &assign_GovHydroDD_ki);
+	assign_map.emplace("cim:GovHydroDD.mwbase", &assign_GovHydroDD_mwbase);
+	assign_map.emplace("cim:GovHydroDD.pgv1", &assign_GovHydroDD_pgv1);
+	assign_map.emplace("cim:GovHydroDD.pgv2", &assign_GovHydroDD_pgv2);
+	assign_map.emplace("cim:GovHydroDD.pgv3", &assign_GovHydroDD_pgv3);
+	assign_map.emplace("cim:GovHydroDD.pgv4", &assign_GovHydroDD_pgv4);
+	assign_map.emplace("cim:GovHydroDD.pgv5", &assign_GovHydroDD_pgv5);
+	assign_map.emplace("cim:GovHydroDD.pgv6", &assign_GovHydroDD_pgv6);
+	assign_map.emplace("cim:GovHydroDD.pmax", &assign_GovHydroDD_pmax);
+	assign_map.emplace("cim:GovHydroDD.pmin", &assign_GovHydroDD_pmin);
+	assign_map.emplace("cim:GovHydroDD.r", &assign_GovHydroDD_r);
+	assign_map.emplace("cim:GovHydroDD.td", &assign_GovHydroDD_td);
+	assign_map.emplace("cim:GovHydroDD.tf", &assign_GovHydroDD_tf);
+	assign_map.emplace("cim:GovHydroDD.tp", &assign_GovHydroDD_tp);
+	assign_map.emplace("cim:GovHydroDD.tt", &assign_GovHydroDD_tt);
+	assign_map.emplace("cim:GovHydroDD.tturb", &assign_GovHydroDD_tturb);
+	assign_map.emplace("cim:GovHydroDD.velcl", &assign_GovHydroDD_velcl);
+	assign_map.emplace("cim:GovHydroDD.velop", &assign_GovHydroDD_velop);
 }
 
 void GovHydroDD::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

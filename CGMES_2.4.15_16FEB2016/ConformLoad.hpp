@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class ConformLoadGroup;
 
-	/*
-	ConformLoad represent loads that follow a daily load change pattern where the pattern can be used to scale the load with a system load.
-	*/
+	/** \brief ConformLoad represent loads that follow a daily load change pattern where the pattern can be used to scale the load with a system load. */
 	class ConformLoad : public EnergyConsumer
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		ConformLoad();
 		~ConformLoad() override;
 
-		CIMPP::ConformLoadGroup* LoadGroup;  /* Group of this ConformLoad. Default: 0 */
+		/** \brief Group of this ConformLoad. Default: 0 */
+		CIMPP::ConformLoadGroup* LoadGroup;
 
 		static const char debugName[];
 		const char* debugString() const override;

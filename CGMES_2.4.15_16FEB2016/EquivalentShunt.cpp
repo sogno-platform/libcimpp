@@ -8,13 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Susceptance.hpp"
-#include "Conductance.hpp"
 
 using namespace CIMPP;
 
-EquivalentShunt::EquivalentShunt() {};
-EquivalentShunt::~EquivalentShunt() {};
+EquivalentShunt::EquivalentShunt() {}
+EquivalentShunt::~EquivalentShunt() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,38 +40,38 @@ EquivalentShunt::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_EquivalentShunt_b(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquivalentShunt_b(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquivalentShunt* element = dynamic_cast<EquivalentShunt*>(BaseClass_ptr1))
+	EquivalentShunt* element = dynamic_cast<EquivalentShunt*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->b;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_EquivalentShunt_g(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_EquivalentShunt_g(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (EquivalentShunt* element = dynamic_cast<EquivalentShunt*>(BaseClass_ptr1))
+	EquivalentShunt* element = dynamic_cast<EquivalentShunt*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->g;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_EquivalentShunt_b(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquivalentShunt* element = dynamic_cast<const EquivalentShunt*>(BaseClass_ptr1))
+	const EquivalentShunt* element = dynamic_cast<const EquivalentShunt*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->b;
 		if (!buffer.str().empty())
@@ -87,7 +85,8 @@ bool get_EquivalentShunt_b(const BaseClass* BaseClass_ptr1, std::stringstream& b
 
 bool get_EquivalentShunt_g(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const EquivalentShunt* element = dynamic_cast<const EquivalentShunt*>(BaseClass_ptr1))
+	const EquivalentShunt* element = dynamic_cast<const EquivalentShunt*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->g;
 		if (!buffer.str().empty())
@@ -99,8 +98,6 @@ bool get_EquivalentShunt_g(const BaseClass* BaseClass_ptr1, std::stringstream& b
 	return false;
 }
 
-
-
 const char EquivalentShunt::debugName[] = "EquivalentShunt";
 const char* EquivalentShunt::debugString() const
 {
@@ -109,13 +106,13 @@ const char* EquivalentShunt::debugString() const
 
 void EquivalentShunt::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:EquivalentShunt"), &EquivalentShunt_factory));
+	factory_map.emplace("cim:EquivalentShunt", &EquivalentShunt_factory);
 }
 
 void EquivalentShunt::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:EquivalentShunt.b"), &assign_EquivalentShunt_b));
-	assign_map.insert(std::make_pair(std::string("cim:EquivalentShunt.g"), &assign_EquivalentShunt_g));
+	assign_map.emplace("cim:EquivalentShunt.b", &assign_EquivalentShunt_b);
+	assign_map.emplace("cim:EquivalentShunt.g", &assign_EquivalentShunt_g);
 }
 
 void EquivalentShunt::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

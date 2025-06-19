@@ -8,12 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "WindGenUnitKind.hpp"
 
 using namespace CIMPP;
 
-WindGeneratingUnit::WindGeneratingUnit() {};
-WindGeneratingUnit::~WindGeneratingUnit() {};
+WindGeneratingUnit::WindGeneratingUnit() {}
+WindGeneratingUnit::~WindGeneratingUnit() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -41,27 +40,24 @@ WindGeneratingUnit::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_WindGeneratingUnit_windGenUnitType(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_WindGeneratingUnit_windGenUnitType(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (WindGeneratingUnit* element = dynamic_cast<WindGeneratingUnit*>(BaseClass_ptr1))
+	WindGeneratingUnit* element = dynamic_cast<WindGeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->windGenUnitType;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-
-
-
-
 bool get_WindGeneratingUnit_windGenUnitType(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const WindGeneratingUnit* element = dynamic_cast<const WindGeneratingUnit*>(BaseClass_ptr1))
+	const WindGeneratingUnit* element = dynamic_cast<const WindGeneratingUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->windGenUnitType;
 		if (!buffer.str().empty())
@@ -81,12 +77,12 @@ const char* WindGeneratingUnit::debugString() const
 
 void WindGeneratingUnit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:WindGeneratingUnit"), &WindGeneratingUnit_factory));
+	factory_map.emplace("cim:WindGeneratingUnit", &WindGeneratingUnit_factory);
 }
 
 void WindGeneratingUnit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:WindGeneratingUnit.windGenUnitType"), &assign_WindGeneratingUnit_windGenUnitType));
+	assign_map.emplace("cim:WindGeneratingUnit.windGenUnitType", &assign_WindGeneratingUnit_windGenUnitType);
 }
 
 void WindGeneratingUnit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

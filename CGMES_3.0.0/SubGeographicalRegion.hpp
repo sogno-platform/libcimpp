@@ -20,9 +20,7 @@ namespace CIMPP
 	class Line;
 	class Substation;
 
-	/*
-	A subset of a geographical region of a power system network model.
-	*/
+	/** \brief A subset of a geographical region of a power system network model. */
 	class SubGeographicalRegion : public IdentifiedObject
 	{
 	public:
@@ -30,10 +28,17 @@ namespace CIMPP
 		SubGeographicalRegion();
 		~SubGeographicalRegion() override;
 
-		std::list<CIMPP::DCLine*> DCLines;  /* The DC lines in this sub-geographical region. Default: 0 */
-		std::list<CIMPP::Line*> Lines;  /* The lines within the sub-geographical region. Default: 0 */
-		CIMPP::GeographicalRegion* Region;  /* The geographical region which this sub-geographical region is within. Default: 0 */
-		std::list<CIMPP::Substation*> Substations;  /* The substations in this sub-geographical region. Default: 0 */
+		/** \brief The DC lines in this sub-geographical region. Default: 0 */
+		std::list<CIMPP::DCLine*> DCLines;
+
+		/** \brief The lines within the sub-geographical region. Default: 0 */
+		std::list<CIMPP::Line*> Lines;
+
+		/** \brief The geographical region which this sub-geographical region is within. Default: 0 */
+		CIMPP::GeographicalRegion* Region;
+
+		/** \brief The substations in this sub-geographical region. Default: 0 */
+		std::list<CIMPP::Substation*> Substations;
 
 		static const char debugName[];
 		const char* debugString() const override;

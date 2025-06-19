@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A wind generating unit that connects to the AC network with power electronics rather than rotating machines or an aggregation of such units.
-	*/
+	/** \brief A wind generating unit that connects to the AC network with power electronics rather than rotating machines or an aggregation of such units. */
 	class PowerElectronicsWindUnit : public PowerElectronicsUnit
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		PowerElectronicsWindUnit();
 		~PowerElectronicsWindUnit() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

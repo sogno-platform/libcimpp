@@ -19,9 +19,7 @@ namespace CIMPP
 	class Location;
 	class Measurement;
 
-	/*
-	A power system resource can be an item of equipment such as a switch, an equipment container containing many individual items of equipment such as a substation, or an organisational entity such as sub-control area. Power system resources can have measurements associated.
-	*/
+	/** \brief A power system resource can be an item of equipment such as a switch, an equipment container containing many individual items of equipment such as a substation, or an organisational entity such as sub-control area. Power system resources can have measurements associated. */
 	class PowerSystemResource : public IdentifiedObject
 	{
 	public:
@@ -29,9 +27,14 @@ namespace CIMPP
 		PowerSystemResource();
 		~PowerSystemResource() override;
 
-		std::list<CIMPP::Control*> Controls;  /* Regulating device governed by this control output. Default: 0 */
-		CIMPP::Location* Location;  /* Location of this power system resource. Default: 0 */
-		std::list<CIMPP::Measurement*> Measurements;  /* The power system resource that contains the measurement. Default: 0 */
+		/** \brief Regulating device governed by this control output. Default: 0 */
+		std::list<CIMPP::Control*> Controls;
+
+		/** \brief Location of this power system resource. Default: 0 */
+		CIMPP::Location* Location;
+
+		/** \brief The power system resource that contains the measurement. Default: 0 */
+		std::list<CIMPP::Measurement*> Measurements;
 
 		static const char debugName[];
 		const char* debugString() const override;

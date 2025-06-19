@@ -17,9 +17,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A diagram object for placing free-text or text derived from an associated domain object.
-	*/
+	/** \brief A diagram object for placing free-text or text derived from an associated domain object. */
 	class TextDiagramObject : public DiagramObject
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		TextDiagramObject();
 		~TextDiagramObject() override;
 
-		CIMPP::String text;  /* The text that is displayed by this text diagram object. Default: '' */
+		/** \brief The text that is displayed by this text diagram object. Default: '' */
+		CIMPP::String text;
 
 		static const char debugName[];
 		const char* debugString() const override;

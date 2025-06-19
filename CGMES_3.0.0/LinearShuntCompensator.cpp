@@ -8,15 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Susceptance.hpp"
-#include "Susceptance.hpp"
-#include "Conductance.hpp"
-#include "Conductance.hpp"
 
 using namespace CIMPP;
 
-LinearShuntCompensator::LinearShuntCompensator() {};
-LinearShuntCompensator::~LinearShuntCompensator() {};
+LinearShuntCompensator::LinearShuntCompensator() {}
+LinearShuntCompensator::~LinearShuntCompensator() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -48,64 +44,66 @@ LinearShuntCompensator::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_LinearShuntCompensator_b0PerSection(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_LinearShuntCompensator_b0PerSection(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (LinearShuntCompensator* element = dynamic_cast<LinearShuntCompensator*>(BaseClass_ptr1))
+	LinearShuntCompensator* element = dynamic_cast<LinearShuntCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->b0PerSection;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_LinearShuntCompensator_bPerSection(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_LinearShuntCompensator_bPerSection(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (LinearShuntCompensator* element = dynamic_cast<LinearShuntCompensator*>(BaseClass_ptr1))
+	LinearShuntCompensator* element = dynamic_cast<LinearShuntCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->bPerSection;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_LinearShuntCompensator_g0PerSection(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_LinearShuntCompensator_g0PerSection(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (LinearShuntCompensator* element = dynamic_cast<LinearShuntCompensator*>(BaseClass_ptr1))
+	LinearShuntCompensator* element = dynamic_cast<LinearShuntCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->g0PerSection;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_LinearShuntCompensator_gPerSection(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_LinearShuntCompensator_gPerSection(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (LinearShuntCompensator* element = dynamic_cast<LinearShuntCompensator*>(BaseClass_ptr1))
+	LinearShuntCompensator* element = dynamic_cast<LinearShuntCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->gPerSection;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_LinearShuntCompensator_b0PerSection(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const LinearShuntCompensator* element = dynamic_cast<const LinearShuntCompensator*>(BaseClass_ptr1))
+	const LinearShuntCompensator* element = dynamic_cast<const LinearShuntCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->b0PerSection;
 		if (!buffer.str().empty())
@@ -119,7 +117,8 @@ bool get_LinearShuntCompensator_b0PerSection(const BaseClass* BaseClass_ptr1, st
 
 bool get_LinearShuntCompensator_bPerSection(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const LinearShuntCompensator* element = dynamic_cast<const LinearShuntCompensator*>(BaseClass_ptr1))
+	const LinearShuntCompensator* element = dynamic_cast<const LinearShuntCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->bPerSection;
 		if (!buffer.str().empty())
@@ -133,7 +132,8 @@ bool get_LinearShuntCompensator_bPerSection(const BaseClass* BaseClass_ptr1, std
 
 bool get_LinearShuntCompensator_g0PerSection(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const LinearShuntCompensator* element = dynamic_cast<const LinearShuntCompensator*>(BaseClass_ptr1))
+	const LinearShuntCompensator* element = dynamic_cast<const LinearShuntCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->g0PerSection;
 		if (!buffer.str().empty())
@@ -147,7 +147,8 @@ bool get_LinearShuntCompensator_g0PerSection(const BaseClass* BaseClass_ptr1, st
 
 bool get_LinearShuntCompensator_gPerSection(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const LinearShuntCompensator* element = dynamic_cast<const LinearShuntCompensator*>(BaseClass_ptr1))
+	const LinearShuntCompensator* element = dynamic_cast<const LinearShuntCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->gPerSection;
 		if (!buffer.str().empty())
@@ -159,8 +160,6 @@ bool get_LinearShuntCompensator_gPerSection(const BaseClass* BaseClass_ptr1, std
 	return false;
 }
 
-
-
 const char LinearShuntCompensator::debugName[] = "LinearShuntCompensator";
 const char* LinearShuntCompensator::debugString() const
 {
@@ -169,15 +168,15 @@ const char* LinearShuntCompensator::debugString() const
 
 void LinearShuntCompensator::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:LinearShuntCompensator"), &LinearShuntCompensator_factory));
+	factory_map.emplace("cim:LinearShuntCompensator", &LinearShuntCompensator_factory);
 }
 
 void LinearShuntCompensator::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:LinearShuntCompensator.b0PerSection"), &assign_LinearShuntCompensator_b0PerSection));
-	assign_map.insert(std::make_pair(std::string("cim:LinearShuntCompensator.bPerSection"), &assign_LinearShuntCompensator_bPerSection));
-	assign_map.insert(std::make_pair(std::string("cim:LinearShuntCompensator.g0PerSection"), &assign_LinearShuntCompensator_g0PerSection));
-	assign_map.insert(std::make_pair(std::string("cim:LinearShuntCompensator.gPerSection"), &assign_LinearShuntCompensator_gPerSection));
+	assign_map.emplace("cim:LinearShuntCompensator.b0PerSection", &assign_LinearShuntCompensator_b0PerSection);
+	assign_map.emplace("cim:LinearShuntCompensator.bPerSection", &assign_LinearShuntCompensator_bPerSection);
+	assign_map.emplace("cim:LinearShuntCompensator.g0PerSection", &assign_LinearShuntCompensator_g0PerSection);
+	assign_map.emplace("cim:LinearShuntCompensator.gPerSection", &assign_LinearShuntCompensator_gPerSection);
 }
 
 void LinearShuntCompensator::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

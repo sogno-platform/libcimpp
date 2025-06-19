@@ -8,14 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "BatteryStateKind.hpp"
-#include "RealEnergy.hpp"
-#include "RealEnergy.hpp"
 
 using namespace CIMPP;
 
-BatteryUnit::BatteryUnit() {};
-BatteryUnit::~BatteryUnit() {};
+BatteryUnit::BatteryUnit() {}
+BatteryUnit::~BatteryUnit() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -45,51 +42,67 @@ BatteryUnit::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_BatteryUnit_batteryState(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_BatteryUnit_batteryState(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (BatteryUnit* element = dynamic_cast<BatteryUnit*>(BaseClass_ptr1))
+	BatteryUnit* element = dynamic_cast<BatteryUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->batteryState;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_BatteryUnit_ratedE(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_BatteryUnit_ratedE(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (BatteryUnit* element = dynamic_cast<BatteryUnit*>(BaseClass_ptr1))
+	BatteryUnit* element = dynamic_cast<BatteryUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ratedE;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_BatteryUnit_storedE(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_BatteryUnit_storedE(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (BatteryUnit* element = dynamic_cast<BatteryUnit*>(BaseClass_ptr1))
+	BatteryUnit* element = dynamic_cast<BatteryUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->storedE;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-
+bool get_BatteryUnit_batteryState(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
+{
+	const BatteryUnit* element = dynamic_cast<const BatteryUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer << element->batteryState;
+		if (!buffer.str().empty())
+		{
+			return true;
+		}
+	}
+	buffer.setstate(std::ios::failbit);
+	return false;
+}
 
 bool get_BatteryUnit_ratedE(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const BatteryUnit* element = dynamic_cast<const BatteryUnit*>(BaseClass_ptr1))
+	const BatteryUnit* element = dynamic_cast<const BatteryUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ratedE;
 		if (!buffer.str().empty())
@@ -103,25 +116,10 @@ bool get_BatteryUnit_ratedE(const BaseClass* BaseClass_ptr1, std::stringstream& 
 
 bool get_BatteryUnit_storedE(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const BatteryUnit* element = dynamic_cast<const BatteryUnit*>(BaseClass_ptr1))
+	const BatteryUnit* element = dynamic_cast<const BatteryUnit*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->storedE;
-		if (!buffer.str().empty())
-		{
-			return true;
-		}
-	}
-	buffer.setstate(std::ios::failbit);
-	return false;
-}
-
-
-
-bool get_BatteryUnit_batteryState(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
-{
-	if (const BatteryUnit* element = dynamic_cast<const BatteryUnit*>(BaseClass_ptr1))
-	{
-		buffer << element->batteryState;
 		if (!buffer.str().empty())
 		{
 			return true;
@@ -139,14 +137,14 @@ const char* BatteryUnit::debugString() const
 
 void BatteryUnit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:BatteryUnit"), &BatteryUnit_factory));
+	factory_map.emplace("cim:BatteryUnit", &BatteryUnit_factory);
 }
 
 void BatteryUnit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:BatteryUnit.batteryState"), &assign_BatteryUnit_batteryState));
-	assign_map.insert(std::make_pair(std::string("cim:BatteryUnit.ratedE"), &assign_BatteryUnit_ratedE));
-	assign_map.insert(std::make_pair(std::string("cim:BatteryUnit.storedE"), &assign_BatteryUnit_storedE));
+	assign_map.emplace("cim:BatteryUnit.batteryState", &assign_BatteryUnit_batteryState);
+	assign_map.emplace("cim:BatteryUnit.ratedE", &assign_BatteryUnit_ratedE);
+	assign_map.emplace("cim:BatteryUnit.storedE", &assign_BatteryUnit_storedE);
 }
 
 void BatteryUnit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class StringMeasurement;
 
-	/*
-	StringMeasurementValue represents a measurement value of type string.
-	*/
+	/** \brief StringMeasurementValue represents a measurement value of type string. */
 	class StringMeasurementValue : public MeasurementValue
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		StringMeasurementValue();
 		~StringMeasurementValue() override;
 
-		CIMPP::StringMeasurement* StringMeasurement;  /* Measurement to which this value is connected. Default: 0 */
-		CIMPP::String value;  /* The value to supervise. Default: '' */
+		/** \brief Measurement to which this value is connected. Default: 0 */
+		CIMPP::StringMeasurement* StringMeasurement;
+
+		/** \brief The value to supervise. Default: '' */
+		CIMPP::String value;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class MeasurementValue;
 
-	/*
-	MeasurementValueSource describes the alternative sources updating a MeasurementValue. User conventions for how to use the MeasurementValueSource attributes are described in the introduction to IEC 61970-301.
-	*/
+	/** \brief MeasurementValueSource describes the alternative sources updating a MeasurementValue. User conventions for how to use the MeasurementValueSource attributes are described in the introduction to IEC 61970-301. */
 	class MeasurementValueSource : public IdentifiedObject
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		MeasurementValueSource();
 		~MeasurementValueSource() override;
 
-		std::list<CIMPP::MeasurementValue*> MeasurementValues;  /* A reference to the type of source that updates the MeasurementValue, e.g. SCADA, CCLink, manual, etc. User conventions for the names of sources are contained in the introduction to IEC 61970-301. Default: 0 */
+		/** \brief A reference to the type of source that updates the MeasurementValue, e.g. SCADA, CCLink, manual, etc. User conventions for the names of sources are contained in the introduction to IEC 61970-301. Default: 0 */
+		std::list<CIMPP::MeasurementValue*> MeasurementValues;
 
 		static const char debugName[];
 		const char* debugString() const override;

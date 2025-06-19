@@ -22,9 +22,7 @@ namespace CIMPP
 	class WindDynamicsLookupTable;
 	class WindGenTurbineType3IEC;
 
-	/*
-	P control model Type 3.  Reference: IEC Standard 61400-27-1 Section 6.6.5.3.
-	*/
+	/** \brief P control model Type 3.  Reference: IEC Standard 61400-27-1 Section 6.6.5.3. */
 	class WindContPType3IEC : public IdentifiedObject
 	{
 	public:
@@ -32,29 +30,74 @@ namespace CIMPP
 		WindContPType3IEC();
 		~WindContPType3IEC() override;
 
-		std::list<CIMPP::WindDynamicsLookupTable*> WindDynamicsLookupTable;  /* The P control type 3 model with which this wind dynamics lookup table is associated. Default: 0 */
-		CIMPP::WindGenTurbineType3IEC* WindGenTurbineType3IEC;  /* Wind turbine type 3 model with which this Wind control P type 3 model is associated. Default: 0 */
-		CIMPP::PU dpmax;  /* Maximum wind turbine power ramp rate (). It is project dependent parameter. Default: nullptr */
-		CIMPP::PU dtrisemaxlvrt;  /* Limitation of torque rise rate during LVRT for S (d). It is project dependent parameter. Default: nullptr */
-		CIMPP::PU kdtd;  /* Gain for active drive train damping (). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU kip;  /* PI controller integration parameter (). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU kpp;  /* PI controller proportional gain (). It is type dependent parameter. Default: nullptr */
-		CIMPP::Boolean mplvrt;  /* Enable LVRT power control mode (M true = 1: voltage control false = 0: reactive power control.  It is project dependent parameter. Default: false */
-		CIMPP::PU omegaoffset;  /* Offset to reference value that limits controller action during rotor speed changes (omega). It is case dependent parameter. Default: nullptr */
-		CIMPP::PU pdtdmax;  /* Maximum active drive train damping power (). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU rramp;  /* Ramp limitation of torque, required in some grid codes (). It is project dependent parameter. Default: nullptr */
-		CIMPP::Seconds tdvs;  /* Timedelay after deep voltage sags (T). It is project dependent parameter. Default: nullptr */
-		CIMPP::PU temin;  /* Minimum electrical generator torque (). It is type dependent parameter. Default: nullptr */
-		CIMPP::Seconds tomegafilt;  /* Filter time constant for generator speed measurement (). It is type dependent parameter. Default: nullptr */
-		CIMPP::Seconds tpfilt;  /* Filter time constant for power measurement (). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU tpord;  /* Time constant in power order lag (). It is type dependent parameter. Default: nullptr */
-		CIMPP::Seconds tufilt;  /* Filter time constant for voltage measurement (). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU tuscale;  /* Voltage scaling factor of reset-torque (T). It is project dependent parameter. Default: nullptr */
-		CIMPP::Seconds twref;  /* Time constant in speed reference filter (). It is type dependent parameter. Default: nullptr */
-		CIMPP::PU udvs;  /* Voltage limit for hold LVRT status after deep voltage sags (). It is project dependent parameter. Default: nullptr */
-		CIMPP::PU updip;  /* Voltage dip threshold for P-control ().  Part of turbine control, often different (e.g 0.8) from converter thresholds. It is project dependent parameter. Default: nullptr */
-		CIMPP::PU wdtd;  /* Active drive train damping frequency (omega). It can be calculated from two mass model parameters. It is type dependent parameter. Default: nullptr */
-		CIMPP::Simple_Float zeta;  /* Coefficient for active drive train damping (zeta). It is type dependent parameter. Default: nullptr */
+		/** \brief The P control type 3 model with which this wind dynamics lookup table is associated. Default: 0 */
+		std::list<CIMPP::WindDynamicsLookupTable*> WindDynamicsLookupTable;
+
+		/** \brief Wind turbine type 3 model with which this Wind control P type 3 model is associated. Default: 0 */
+		CIMPP::WindGenTurbineType3IEC* WindGenTurbineType3IEC;
+
+		/** \brief Maximum wind turbine power ramp rate (). It is project dependent parameter. Default: nullptr */
+		CIMPP::PU dpmax;
+
+		/** \brief Limitation of torque rise rate during LVRT for S (d). It is project dependent parameter. Default: nullptr */
+		CIMPP::PU dtrisemaxlvrt;
+
+		/** \brief Gain for active drive train damping (). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU kdtd;
+
+		/** \brief PI controller integration parameter (). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU kip;
+
+		/** \brief PI controller proportional gain (). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU kpp;
+
+		/** \brief Enable LVRT power control mode (M true = 1: voltage control false = 0: reactive power control.  It is project dependent parameter. Default: false */
+		CIMPP::Boolean mplvrt;
+
+		/** \brief Offset to reference value that limits controller action during rotor speed changes (omega). It is case dependent parameter. Default: nullptr */
+		CIMPP::PU omegaoffset;
+
+		/** \brief Maximum active drive train damping power (). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU pdtdmax;
+
+		/** \brief Ramp limitation of torque, required in some grid codes (). It is project dependent parameter. Default: nullptr */
+		CIMPP::PU rramp;
+
+		/** \brief Timedelay after deep voltage sags (T). It is project dependent parameter. Default: nullptr */
+		CIMPP::Seconds tdvs;
+
+		/** \brief Minimum electrical generator torque (). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU temin;
+
+		/** \brief Filter time constant for generator speed measurement (). It is type dependent parameter. Default: nullptr */
+		CIMPP::Seconds tomegafilt;
+
+		/** \brief Filter time constant for power measurement (). It is type dependent parameter. Default: nullptr */
+		CIMPP::Seconds tpfilt;
+
+		/** \brief Time constant in power order lag (). It is type dependent parameter. Default: nullptr */
+		CIMPP::PU tpord;
+
+		/** \brief Filter time constant for voltage measurement (). It is type dependent parameter. Default: nullptr */
+		CIMPP::Seconds tufilt;
+
+		/** \brief Voltage scaling factor of reset-torque (T). It is project dependent parameter. Default: nullptr */
+		CIMPP::PU tuscale;
+
+		/** \brief Time constant in speed reference filter (). It is type dependent parameter. Default: nullptr */
+		CIMPP::Seconds twref;
+
+		/** \brief Voltage limit for hold LVRT status after deep voltage sags (). It is project dependent parameter. Default: nullptr */
+		CIMPP::PU udvs;
+
+		/** \brief Voltage dip threshold for P-control ().  Part of turbine control, often different (e.g 0.8) from converter thresholds. It is project dependent parameter. Default: nullptr */
+		CIMPP::PU updip;
+
+		/** \brief Active drive train damping frequency (omega). It can be calculated from two mass model parameters. It is type dependent parameter. Default: nullptr */
+		CIMPP::PU wdtd;
+
+		/** \brief Coefficient for active drive train damping (zeta). It is type dependent parameter. Default: nullptr */
+		CIMPP::Simple_Float zeta;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -8,19 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "PU.hpp"
-#include "ActivePower.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
 
 using namespace CIMPP;
 
-GovHydroIEEE0::GovHydroIEEE0() {};
-GovHydroIEEE0::~GovHydroIEEE0() {};
+GovHydroIEEE0::GovHydroIEEE0() {}
+GovHydroIEEE0::~GovHydroIEEE0() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -54,116 +46,122 @@ GovHydroIEEE0::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_GovHydroIEEE0_k(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroIEEE0_k(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroIEEE0* element = dynamic_cast<GovHydroIEEE0*>(BaseClass_ptr1))
+	GovHydroIEEE0* element = dynamic_cast<GovHydroIEEE0*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->k;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroIEEE0_mwbase(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroIEEE0_mwbase(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroIEEE0* element = dynamic_cast<GovHydroIEEE0*>(BaseClass_ptr1))
+	GovHydroIEEE0* element = dynamic_cast<GovHydroIEEE0*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->mwbase;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroIEEE0_pmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroIEEE0_pmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroIEEE0* element = dynamic_cast<GovHydroIEEE0*>(BaseClass_ptr1))
+	GovHydroIEEE0* element = dynamic_cast<GovHydroIEEE0*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->pmax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroIEEE0_pmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroIEEE0_pmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroIEEE0* element = dynamic_cast<GovHydroIEEE0*>(BaseClass_ptr1))
+	GovHydroIEEE0* element = dynamic_cast<GovHydroIEEE0*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->pmin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroIEEE0_t1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroIEEE0_t1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroIEEE0* element = dynamic_cast<GovHydroIEEE0*>(BaseClass_ptr1))
+	GovHydroIEEE0* element = dynamic_cast<GovHydroIEEE0*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroIEEE0_t2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroIEEE0_t2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroIEEE0* element = dynamic_cast<GovHydroIEEE0*>(BaseClass_ptr1))
+	GovHydroIEEE0* element = dynamic_cast<GovHydroIEEE0*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroIEEE0_t3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroIEEE0_t3(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroIEEE0* element = dynamic_cast<GovHydroIEEE0*>(BaseClass_ptr1))
+	GovHydroIEEE0* element = dynamic_cast<GovHydroIEEE0*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t3;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_GovHydroIEEE0_t4(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_GovHydroIEEE0_t4(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (GovHydroIEEE0* element = dynamic_cast<GovHydroIEEE0*>(BaseClass_ptr1))
+	GovHydroIEEE0* element = dynamic_cast<GovHydroIEEE0*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t4;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_GovHydroIEEE0_k(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroIEEE0* element = dynamic_cast<const GovHydroIEEE0*>(BaseClass_ptr1))
+	const GovHydroIEEE0* element = dynamic_cast<const GovHydroIEEE0*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->k;
 		if (!buffer.str().empty())
@@ -177,7 +175,8 @@ bool get_GovHydroIEEE0_k(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_GovHydroIEEE0_mwbase(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroIEEE0* element = dynamic_cast<const GovHydroIEEE0*>(BaseClass_ptr1))
+	const GovHydroIEEE0* element = dynamic_cast<const GovHydroIEEE0*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->mwbase;
 		if (!buffer.str().empty())
@@ -191,7 +190,8 @@ bool get_GovHydroIEEE0_mwbase(const BaseClass* BaseClass_ptr1, std::stringstream
 
 bool get_GovHydroIEEE0_pmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroIEEE0* element = dynamic_cast<const GovHydroIEEE0*>(BaseClass_ptr1))
+	const GovHydroIEEE0* element = dynamic_cast<const GovHydroIEEE0*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pmax;
 		if (!buffer.str().empty())
@@ -205,7 +205,8 @@ bool get_GovHydroIEEE0_pmax(const BaseClass* BaseClass_ptr1, std::stringstream& 
 
 bool get_GovHydroIEEE0_pmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroIEEE0* element = dynamic_cast<const GovHydroIEEE0*>(BaseClass_ptr1))
+	const GovHydroIEEE0* element = dynamic_cast<const GovHydroIEEE0*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pmin;
 		if (!buffer.str().empty())
@@ -219,7 +220,8 @@ bool get_GovHydroIEEE0_pmin(const BaseClass* BaseClass_ptr1, std::stringstream& 
 
 bool get_GovHydroIEEE0_t1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroIEEE0* element = dynamic_cast<const GovHydroIEEE0*>(BaseClass_ptr1))
+	const GovHydroIEEE0* element = dynamic_cast<const GovHydroIEEE0*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t1;
 		if (!buffer.str().empty())
@@ -233,7 +235,8 @@ bool get_GovHydroIEEE0_t1(const BaseClass* BaseClass_ptr1, std::stringstream& bu
 
 bool get_GovHydroIEEE0_t2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroIEEE0* element = dynamic_cast<const GovHydroIEEE0*>(BaseClass_ptr1))
+	const GovHydroIEEE0* element = dynamic_cast<const GovHydroIEEE0*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t2;
 		if (!buffer.str().empty())
@@ -247,7 +250,8 @@ bool get_GovHydroIEEE0_t2(const BaseClass* BaseClass_ptr1, std::stringstream& bu
 
 bool get_GovHydroIEEE0_t3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroIEEE0* element = dynamic_cast<const GovHydroIEEE0*>(BaseClass_ptr1))
+	const GovHydroIEEE0* element = dynamic_cast<const GovHydroIEEE0*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t3;
 		if (!buffer.str().empty())
@@ -261,7 +265,8 @@ bool get_GovHydroIEEE0_t3(const BaseClass* BaseClass_ptr1, std::stringstream& bu
 
 bool get_GovHydroIEEE0_t4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const GovHydroIEEE0* element = dynamic_cast<const GovHydroIEEE0*>(BaseClass_ptr1))
+	const GovHydroIEEE0* element = dynamic_cast<const GovHydroIEEE0*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t4;
 		if (!buffer.str().empty())
@@ -273,8 +278,6 @@ bool get_GovHydroIEEE0_t4(const BaseClass* BaseClass_ptr1, std::stringstream& bu
 	return false;
 }
 
-
-
 const char GovHydroIEEE0::debugName[] = "GovHydroIEEE0";
 const char* GovHydroIEEE0::debugString() const
 {
@@ -283,19 +286,19 @@ const char* GovHydroIEEE0::debugString() const
 
 void GovHydroIEEE0::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:GovHydroIEEE0"), &GovHydroIEEE0_factory));
+	factory_map.emplace("cim:GovHydroIEEE0", &GovHydroIEEE0_factory);
 }
 
 void GovHydroIEEE0::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroIEEE0.k"), &assign_GovHydroIEEE0_k));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroIEEE0.mwbase"), &assign_GovHydroIEEE0_mwbase));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroIEEE0.pmax"), &assign_GovHydroIEEE0_pmax));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroIEEE0.pmin"), &assign_GovHydroIEEE0_pmin));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroIEEE0.t1"), &assign_GovHydroIEEE0_t1));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroIEEE0.t2"), &assign_GovHydroIEEE0_t2));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroIEEE0.t3"), &assign_GovHydroIEEE0_t3));
-	assign_map.insert(std::make_pair(std::string("cim:GovHydroIEEE0.t4"), &assign_GovHydroIEEE0_t4));
+	assign_map.emplace("cim:GovHydroIEEE0.k", &assign_GovHydroIEEE0_k);
+	assign_map.emplace("cim:GovHydroIEEE0.mwbase", &assign_GovHydroIEEE0_mwbase);
+	assign_map.emplace("cim:GovHydroIEEE0.pmax", &assign_GovHydroIEEE0_pmax);
+	assign_map.emplace("cim:GovHydroIEEE0.pmin", &assign_GovHydroIEEE0_pmin);
+	assign_map.emplace("cim:GovHydroIEEE0.t1", &assign_GovHydroIEEE0_t1);
+	assign_map.emplace("cim:GovHydroIEEE0.t2", &assign_GovHydroIEEE0_t2);
+	assign_map.emplace("cim:GovHydroIEEE0.t3", &assign_GovHydroIEEE0_t3);
+	assign_map.emplace("cim:GovHydroIEEE0.t4", &assign_GovHydroIEEE0_t4);
 }
 
 void GovHydroIEEE0::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

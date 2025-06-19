@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class NonConformLoadGroup;
 
-	/*
-	NonConformLoad represents loads that do not follow a daily load change pattern and whose changes are not correlated with the daily load change pattern.
-	*/
+	/** \brief NonConformLoad represents loads that do not follow a daily load change pattern and whose changes are not correlated with the daily load change pattern. */
 	class NonConformLoad : public EnergyConsumer
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		NonConformLoad();
 		~NonConformLoad() override;
 
-		CIMPP::NonConformLoadGroup* LoadGroup;  /* Group of this ConformLoad. Default: 0 */
+		/** \brief Group of this ConformLoad. Default: 0 */
+		CIMPP::NonConformLoadGroup* LoadGroup;
 
 		static const char debugName[];
 		const char* debugString() const override;

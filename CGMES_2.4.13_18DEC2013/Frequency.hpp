@@ -9,9 +9,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Cycles per second.
-	*/
+	/** \brief Cycles per second. */
 	class Frequency
 	{
 	public:

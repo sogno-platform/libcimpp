@@ -11,8 +11,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-SolarGeneratingUnit::SolarGeneratingUnit() {};
-SolarGeneratingUnit::~SolarGeneratingUnit() {};
+SolarGeneratingUnit::SolarGeneratingUnit() {}
+SolarGeneratingUnit::~SolarGeneratingUnit() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -39,11 +39,6 @@ SolarGeneratingUnit::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
-
-
-
 const char SolarGeneratingUnit::debugName[] = "SolarGeneratingUnit";
 const char* SolarGeneratingUnit::debugString() const
 {
@@ -52,7 +47,7 @@ const char* SolarGeneratingUnit::debugString() const
 
 void SolarGeneratingUnit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:SolarGeneratingUnit"), &SolarGeneratingUnit_factory));
+	factory_map.emplace("cim:SolarGeneratingUnit", &SolarGeneratingUnit_factory);
 }
 
 void SolarGeneratingUnit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)

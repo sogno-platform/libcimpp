@@ -18,9 +18,7 @@ namespace CIMPP
 	class WindMechIEC;
 	class WindProtectionIEC;
 
-	/*
-	Parent class supporting relationships to IEC wind turbines type 1 and type 2 including their control models. Generator model for wind turbine of IEC type 1 or type 2 is a standard asynchronous generator model. Reference: IEC 61400-27-1:2015, 5.5.2 and 5.5.3.
-	*/
+	/** \brief Parent class supporting relationships to IEC wind turbines type 1 and type 2 including their control models. Generator model for wind turbine of IEC type 1 or type 2 is a standard asynchronous generator model. Reference: IEC 61400-27-1:2015, 5.5.2 and 5.5.3. */
 	class WindTurbineType1or2IEC : public WindTurbineType1or2Dynamics
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		WindTurbineType1or2IEC();
 		~WindTurbineType1or2IEC() override;
 
-		CIMPP::WindMechIEC* WindMechIEC;  /* Wind mechanical model associated with this wind generator type 1 or type 2 model. Default: 0 */
-		CIMPP::WindProtectionIEC* WindProtectionIEC;  /* Wind turbune protection model associated with this wind generator type 1 or type 2 model. Default: 0 */
+		/** \brief Wind mechanical model associated with this wind generator type 1 or type 2 model. Default: 0 */
+		CIMPP::WindMechIEC* WindMechIEC;
+
+		/** \brief Wind turbune protection model associated with this wind generator type 1 or type 2 model. Default: 0 */
+		CIMPP::WindProtectionIEC* WindProtectionIEC;
 
 		static const char debugName[];
 		const char* debugString() const override;

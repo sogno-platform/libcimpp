@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	The simplified model represents a synchronous generator as a constant internal voltage behind an impedance<i> </i>(<i>Rs + jXp</i>) as shown in the Simplified diagram. Since internal voltage is held constant, there is no <i>Efd</i> input and any excitation system model will be ignored.  There is also no <i>Ifd</i> output. This model should not be used for representing a real generator except, perhaps, small generators whose response is insignificant.   The parameters used for the simplified model include: - RotatingMachineDynamics.damping (<i>D</i>); - RotatingMachineDynamics.inertia (<i>H</i>); - RotatingMachineDynamics.statorLeakageReactance (used to exchange <i>jXp </i>for SynchronousMachineSimplified); - RotatingMachineDynamics.statorResistance (<i>Rs</i>).
-	*/
+	/** \brief The simplified model represents a synchronous generator as a constant internal voltage behind an impedance<i> </i>(<i>Rs + jXp</i>) as shown in the Simplified diagram. Since internal voltage is held constant, there is no <i>Efd</i> input and any excitation system model will be ignored.  There is also no <i>Ifd</i> output. This model should not be used for representing a real generator except, perhaps, small generators whose response is insignificant.   The parameters used for the simplified model include: - RotatingMachineDynamics.damping (<i>D</i>); - RotatingMachineDynamics.inertia (<i>H</i>); - RotatingMachineDynamics.statorLeakageReactance (used to exchange <i>jXp </i>for SynchronousMachineSimplified); - RotatingMachineDynamics.statorResistance (<i>Rs</i>). */
 	class SynchronousMachineSimplified : public SynchronousMachineDynamics
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		SynchronousMachineSimplified();
 		~SynchronousMachineSimplified() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

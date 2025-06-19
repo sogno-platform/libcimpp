@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	HVDC whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font>
-	*/
+	/** \brief HVDC whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font> */
 	class HVDCDynamics : public DynamicsFunctionBlock
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		HVDCDynamics();
 		~HVDCDynamics() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -8,38 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Boolean.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Boolean.hpp"
-#include "Simple_Float.hpp"
-#include "Simple_Float.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Boolean.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Boolean.hpp"
 
 using namespace CIMPP;
 
-ExcAC8B::ExcAC8B() {};
-ExcAC8B::~ExcAC8B() {};
+ExcAC8B::ExcAC8B() {}
+ExcAC8B::~ExcAC8B() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -92,363 +65,388 @@ ExcAC8B::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_ExcAC8B_inlim(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_inlim(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->inlim;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_ka(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_ka(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ka;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_kc(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_kc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kc;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_kd(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_kd(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kd;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_kdr(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_kdr(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kdr;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_ke(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_ke(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ke;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_kir(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_kir(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kir;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_kpr(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_kpr(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kpr;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_ks(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_ks(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ks;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_pidlim(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_pidlim(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->pidlim;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_seve1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_seve1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->seve1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_seve2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_seve2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->seve2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_ta(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_ta(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ta;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_tdr(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_tdr(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->tdr;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_te(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_te(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->te;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_telim(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_telim(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->telim;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_ve1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_ve1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ve1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_ve2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_ve2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ve2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_vemin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_vemin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vemin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_vfemax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_vfemax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vfemax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_vimax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_vimax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vimax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_vimin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_vimin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vimin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_vpidmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_vpidmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vpidmax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_vpidmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_vpidmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vpidmin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_vrmax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_vrmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vrmax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_vrmin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_vrmin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vrmin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAC8B_vtmult(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAC8B_vtmult(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1))
+	ExcAC8B* element = dynamic_cast<ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vtmult;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_ExcAC8B_inlim(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->inlim;
 		if (!buffer.str().empty())
@@ -462,7 +460,8 @@ bool get_ExcAC8B_inlim(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_ExcAC8B_ka(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ka;
 		if (!buffer.str().empty())
@@ -476,7 +475,8 @@ bool get_ExcAC8B_ka(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcAC8B_kc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kc;
 		if (!buffer.str().empty())
@@ -490,7 +490,8 @@ bool get_ExcAC8B_kc(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcAC8B_kd(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kd;
 		if (!buffer.str().empty())
@@ -504,7 +505,8 @@ bool get_ExcAC8B_kd(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcAC8B_kdr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kdr;
 		if (!buffer.str().empty())
@@ -518,7 +520,8 @@ bool get_ExcAC8B_kdr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcAC8B_ke(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ke;
 		if (!buffer.str().empty())
@@ -532,7 +535,8 @@ bool get_ExcAC8B_ke(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcAC8B_kir(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kir;
 		if (!buffer.str().empty())
@@ -546,7 +550,8 @@ bool get_ExcAC8B_kir(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcAC8B_kpr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kpr;
 		if (!buffer.str().empty())
@@ -560,7 +565,8 @@ bool get_ExcAC8B_kpr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcAC8B_ks(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ks;
 		if (!buffer.str().empty())
@@ -574,7 +580,8 @@ bool get_ExcAC8B_ks(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcAC8B_pidlim(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->pidlim;
 		if (!buffer.str().empty())
@@ -588,7 +595,8 @@ bool get_ExcAC8B_pidlim(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_ExcAC8B_seve1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->seve1;
 		if (!buffer.str().empty())
@@ -602,7 +610,8 @@ bool get_ExcAC8B_seve1(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_ExcAC8B_seve2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->seve2;
 		if (!buffer.str().empty())
@@ -616,7 +625,8 @@ bool get_ExcAC8B_seve2(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_ExcAC8B_ta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ta;
 		if (!buffer.str().empty())
@@ -630,7 +640,8 @@ bool get_ExcAC8B_ta(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcAC8B_tdr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->tdr;
 		if (!buffer.str().empty())
@@ -644,7 +655,8 @@ bool get_ExcAC8B_tdr(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcAC8B_te(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->te;
 		if (!buffer.str().empty())
@@ -658,7 +670,8 @@ bool get_ExcAC8B_te(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcAC8B_telim(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->telim;
 		if (!buffer.str().empty())
@@ -672,7 +685,8 @@ bool get_ExcAC8B_telim(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_ExcAC8B_ve1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ve1;
 		if (!buffer.str().empty())
@@ -686,7 +700,8 @@ bool get_ExcAC8B_ve1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcAC8B_ve2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ve2;
 		if (!buffer.str().empty())
@@ -700,7 +715,8 @@ bool get_ExcAC8B_ve2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcAC8B_vemin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vemin;
 		if (!buffer.str().empty())
@@ -714,7 +730,8 @@ bool get_ExcAC8B_vemin(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_ExcAC8B_vfemax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vfemax;
 		if (!buffer.str().empty())
@@ -728,7 +745,8 @@ bool get_ExcAC8B_vfemax(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 
 bool get_ExcAC8B_vimax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vimax;
 		if (!buffer.str().empty())
@@ -742,7 +760,8 @@ bool get_ExcAC8B_vimax(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_ExcAC8B_vimin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vimin;
 		if (!buffer.str().empty())
@@ -756,7 +775,8 @@ bool get_ExcAC8B_vimin(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_ExcAC8B_vpidmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vpidmax;
 		if (!buffer.str().empty())
@@ -770,7 +790,8 @@ bool get_ExcAC8B_vpidmax(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_ExcAC8B_vpidmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vpidmin;
 		if (!buffer.str().empty())
@@ -784,7 +805,8 @@ bool get_ExcAC8B_vpidmin(const BaseClass* BaseClass_ptr1, std::stringstream& buf
 
 bool get_ExcAC8B_vrmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vrmax;
 		if (!buffer.str().empty())
@@ -798,7 +820,8 @@ bool get_ExcAC8B_vrmax(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_ExcAC8B_vrmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vrmin;
 		if (!buffer.str().empty())
@@ -812,7 +835,8 @@ bool get_ExcAC8B_vrmin(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 
 bool get_ExcAC8B_vtmult(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1))
+	const ExcAC8B* element = dynamic_cast<const ExcAC8B*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vtmult;
 		if (!buffer.str().empty())
@@ -824,8 +848,6 @@ bool get_ExcAC8B_vtmult(const BaseClass* BaseClass_ptr1, std::stringstream& buff
 	return false;
 }
 
-
-
 const char ExcAC8B::debugName[] = "ExcAC8B";
 const char* ExcAC8B::debugString() const
 {
@@ -834,38 +856,38 @@ const char* ExcAC8B::debugString() const
 
 void ExcAC8B::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ExcAC8B"), &ExcAC8B_factory));
+	factory_map.emplace("cim:ExcAC8B", &ExcAC8B_factory);
 }
 
 void ExcAC8B::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.inlim"), &assign_ExcAC8B_inlim));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.ka"), &assign_ExcAC8B_ka));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.kc"), &assign_ExcAC8B_kc));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.kd"), &assign_ExcAC8B_kd));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.kdr"), &assign_ExcAC8B_kdr));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.ke"), &assign_ExcAC8B_ke));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.kir"), &assign_ExcAC8B_kir));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.kpr"), &assign_ExcAC8B_kpr));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.ks"), &assign_ExcAC8B_ks));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.pidlim"), &assign_ExcAC8B_pidlim));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.seve1"), &assign_ExcAC8B_seve1));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.seve2"), &assign_ExcAC8B_seve2));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.ta"), &assign_ExcAC8B_ta));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.tdr"), &assign_ExcAC8B_tdr));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.te"), &assign_ExcAC8B_te));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.telim"), &assign_ExcAC8B_telim));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.ve1"), &assign_ExcAC8B_ve1));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.ve2"), &assign_ExcAC8B_ve2));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.vemin"), &assign_ExcAC8B_vemin));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.vfemax"), &assign_ExcAC8B_vfemax));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.vimax"), &assign_ExcAC8B_vimax));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.vimin"), &assign_ExcAC8B_vimin));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.vpidmax"), &assign_ExcAC8B_vpidmax));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.vpidmin"), &assign_ExcAC8B_vpidmin));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.vrmax"), &assign_ExcAC8B_vrmax));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.vrmin"), &assign_ExcAC8B_vrmin));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAC8B.vtmult"), &assign_ExcAC8B_vtmult));
+	assign_map.emplace("cim:ExcAC8B.inlim", &assign_ExcAC8B_inlim);
+	assign_map.emplace("cim:ExcAC8B.ka", &assign_ExcAC8B_ka);
+	assign_map.emplace("cim:ExcAC8B.kc", &assign_ExcAC8B_kc);
+	assign_map.emplace("cim:ExcAC8B.kd", &assign_ExcAC8B_kd);
+	assign_map.emplace("cim:ExcAC8B.kdr", &assign_ExcAC8B_kdr);
+	assign_map.emplace("cim:ExcAC8B.ke", &assign_ExcAC8B_ke);
+	assign_map.emplace("cim:ExcAC8B.kir", &assign_ExcAC8B_kir);
+	assign_map.emplace("cim:ExcAC8B.kpr", &assign_ExcAC8B_kpr);
+	assign_map.emplace("cim:ExcAC8B.ks", &assign_ExcAC8B_ks);
+	assign_map.emplace("cim:ExcAC8B.pidlim", &assign_ExcAC8B_pidlim);
+	assign_map.emplace("cim:ExcAC8B.seve1", &assign_ExcAC8B_seve1);
+	assign_map.emplace("cim:ExcAC8B.seve2", &assign_ExcAC8B_seve2);
+	assign_map.emplace("cim:ExcAC8B.ta", &assign_ExcAC8B_ta);
+	assign_map.emplace("cim:ExcAC8B.tdr", &assign_ExcAC8B_tdr);
+	assign_map.emplace("cim:ExcAC8B.te", &assign_ExcAC8B_te);
+	assign_map.emplace("cim:ExcAC8B.telim", &assign_ExcAC8B_telim);
+	assign_map.emplace("cim:ExcAC8B.ve1", &assign_ExcAC8B_ve1);
+	assign_map.emplace("cim:ExcAC8B.ve2", &assign_ExcAC8B_ve2);
+	assign_map.emplace("cim:ExcAC8B.vemin", &assign_ExcAC8B_vemin);
+	assign_map.emplace("cim:ExcAC8B.vfemax", &assign_ExcAC8B_vfemax);
+	assign_map.emplace("cim:ExcAC8B.vimax", &assign_ExcAC8B_vimax);
+	assign_map.emplace("cim:ExcAC8B.vimin", &assign_ExcAC8B_vimin);
+	assign_map.emplace("cim:ExcAC8B.vpidmax", &assign_ExcAC8B_vpidmax);
+	assign_map.emplace("cim:ExcAC8B.vpidmin", &assign_ExcAC8B_vpidmin);
+	assign_map.emplace("cim:ExcAC8B.vrmax", &assign_ExcAC8B_vrmax);
+	assign_map.emplace("cim:ExcAC8B.vrmin", &assign_ExcAC8B_vrmin);
+	assign_map.emplace("cim:ExcAC8B.vtmult", &assign_ExcAC8B_vtmult);
 }
 
 void ExcAC8B::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

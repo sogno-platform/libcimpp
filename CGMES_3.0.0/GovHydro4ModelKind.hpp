@@ -9,25 +9,17 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 namespace CIMPP
 {
-	/*
-	Possible types of GovHydro4 models.
-	*/
+	/** \brief Possible types of GovHydro4 models. */
 	class GovHydro4ModelKind
 	{
 	public:
 		enum GovHydro4ModelKind_ENUM
 		{
-			/**
-			 * Simple model.
-			 */
+			/** Simple model. */
 			simple,
-			/**
-			 * Francis or Pelton model.
-			 */
+			/** Francis or Pelton model. */
 			francisPelton,
-			/**
-			 * Kaplan model.
-			 */
+			/** Kaplan model. */
 			kaplan,
 		};
 

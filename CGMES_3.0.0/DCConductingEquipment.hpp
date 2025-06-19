@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class DCTerminal;
 
-	/*
-	The parts of the DC power system that are designed to carry current or that are conductively connected through DC terminals.
-	*/
+	/** \brief The parts of the DC power system that are designed to carry current or that are conductively connected through DC terminals. */
 	class DCConductingEquipment : public Equipment
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		DCConductingEquipment();
 		~DCConductingEquipment() override;
 
-		std::list<CIMPP::DCTerminal*> DCTerminals;  /* A DC conducting equipment has DC terminals. Default: 0 */
-		CIMPP::Voltage ratedUdc;  /* Rated DC device voltage. The attribute shall be a positive value. It is configuration data used in power flow. Default: nullptr */
+		/** \brief A DC conducting equipment has DC terminals. Default: 0 */
+		std::list<CIMPP::DCTerminal*> DCTerminals;
+
+		/** \brief Rated DC device voltage. The attribute shall be a positive value. It is configuration data used in power flow. Default: nullptr */
+		CIMPP::Voltage ratedUdc;
 
 		static const char debugName[];
 		const char* debugString() const override;

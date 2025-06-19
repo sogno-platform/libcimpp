@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class ThermalGeneratingUnit;
 
-	/*
-	Compressed air energy storage plant.
-	*/
+	/** \brief Compressed air energy storage plant. */
 	class CAESPlant : public PowerSystemResource
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		CAESPlant();
 		~CAESPlant() override;
 
-		CIMPP::ThermalGeneratingUnit* ThermalGeneratingUnit;  /* A thermal generating unit may be a member of a compressed air energy storage plant. Default: 0 */
+		/** \brief A thermal generating unit may be a member of a compressed air energy storage plant. Default: 0 */
+		CIMPP::ThermalGeneratingUnit* ThermalGeneratingUnit;
 
 		static const char debugName[];
 		const char* debugString() const override;

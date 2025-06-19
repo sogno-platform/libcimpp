@@ -17,9 +17,7 @@ namespace CIMPP
 {
 	class VsConverter;
 
-	/*
-	The P-Q capability curve for a voltage source converter, with P on x-axis and Qmin and Qmax on y1-axis and y2-axis.
-	*/
+	/** \brief The P-Q capability curve for a voltage source converter, with P on x-axis and Qmin and Qmax on y1-axis and y2-axis. */
 	class VsCapabilityCurve : public Curve
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		VsCapabilityCurve();
 		~VsCapabilityCurve() override;
 
-		std::list<CIMPP::VsConverter*> VsConverterDCSides;  /* Capability curve of this converter. Default: 0 */
+		/** \brief Capability curve of this converter. Default: 0 */
+		std::list<CIMPP::VsConverter*> VsConverterDCSides;
 
 		static const char debugName[];
 		const char* debugString() const override;

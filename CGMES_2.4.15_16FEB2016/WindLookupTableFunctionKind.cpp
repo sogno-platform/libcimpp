@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "WindLookupTableFunctionKind")
+		if (EnumSymbol.substr(0, pos) != "WindLookupTableFunctionKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,27 +50,27 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "fpslip")
+		if (EnumSymbol == "fpslip")
 		{
 			rop = WindLookupTableFunctionKind::fpslip;
 			return lop;
 		}
-		if(EnumSymbol == "fpomega")
+		if (EnumSymbol == "fpomega")
 		{
 			rop = WindLookupTableFunctionKind::fpomega;
 			return lop;
 		}
-		if(EnumSymbol == "ipvdl")
+		if (EnumSymbol == "ipvdl")
 		{
 			rop = WindLookupTableFunctionKind::ipvdl;
 			return lop;
 		}
-		if(EnumSymbol == "iqvdl")
+		if (EnumSymbol == "iqvdl")
 		{
 			rop = WindLookupTableFunctionKind::iqvdl;
 			return lop;
 		}
-		if(EnumSymbol == "fdpf")
+		if (EnumSymbol == "fdpf")
 		{
 			rop = WindLookupTableFunctionKind::fdpf;
 			return lop;

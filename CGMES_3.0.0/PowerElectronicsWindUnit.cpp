@@ -11,8 +11,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-PowerElectronicsWindUnit::PowerElectronicsWindUnit() {};
-PowerElectronicsWindUnit::~PowerElectronicsWindUnit() {};
+PowerElectronicsWindUnit::PowerElectronicsWindUnit() {}
+PowerElectronicsWindUnit::~PowerElectronicsWindUnit() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -38,11 +38,6 @@ PowerElectronicsWindUnit::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
-
-
-
 const char PowerElectronicsWindUnit::debugName[] = "PowerElectronicsWindUnit";
 const char* PowerElectronicsWindUnit::debugString() const
 {
@@ -51,7 +46,7 @@ const char* PowerElectronicsWindUnit::debugString() const
 
 void PowerElectronicsWindUnit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:PowerElectronicsWindUnit"), &PowerElectronicsWindUnit_factory));
+	factory_map.emplace("cim:PowerElectronicsWindUnit", &PowerElectronicsWindUnit_factory);
 }
 
 void PowerElectronicsWindUnit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)

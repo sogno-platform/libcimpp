@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class AnalogLimitSet;
 
-	/*
-	Limit values for Analog measurements.
-	*/
+	/** \brief Limit values for Analog measurements. */
 	class AnalogLimit : public Limit
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		AnalogLimit();
 		~AnalogLimit() override;
 
-		CIMPP::AnalogLimitSet* LimitSet;  /* The limit values used for supervision of Measurements. Default: 0 */
-		CIMPP::Simple_Float value;  /* The value to supervise against. Default: nullptr */
+		/** \brief The limit values used for supervision of Measurements. Default: 0 */
+		CIMPP::AnalogLimitSet* LimitSet;
+
+		/** \brief The value to supervise against. Default: nullptr */
+		CIMPP::Simple_Float value;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "IfdBaseKind")
+		if (EnumSymbol.substr(0, pos) != "IfdBaseKind")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,22 +50,22 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "ifag")
+		if (EnumSymbol == "ifag")
 		{
 			rop = IfdBaseKind::ifag;
 			return lop;
 		}
-		if(EnumSymbol == "ifnl")
+		if (EnumSymbol == "ifnl")
 		{
 			rop = IfdBaseKind::ifnl;
 			return lop;
 		}
-		if(EnumSymbol == "iffl")
+		if (EnumSymbol == "iffl")
 		{
 			rop = IfdBaseKind::iffl;
 			return lop;
 		}
-		if(EnumSymbol == "other")
+		if (EnumSymbol == "other")
 		{
 			rop = IfdBaseKind::other;
 			return lop;

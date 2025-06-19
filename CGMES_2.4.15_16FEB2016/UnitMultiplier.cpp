@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "UnitMultiplier")
+		if (EnumSymbol.substr(0, pos) != "UnitMultiplier")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,57 +50,57 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "p")
+		if (EnumSymbol == "p")
 		{
 			rop = UnitMultiplier::p;
 			return lop;
 		}
-		if(EnumSymbol == "n")
+		if (EnumSymbol == "n")
 		{
 			rop = UnitMultiplier::n;
 			return lop;
 		}
-		if(EnumSymbol == "micro")
+		if (EnumSymbol == "micro")
 		{
 			rop = UnitMultiplier::micro;
 			return lop;
 		}
-		if(EnumSymbol == "m")
+		if (EnumSymbol == "m")
 		{
 			rop = UnitMultiplier::m;
 			return lop;
 		}
-		if(EnumSymbol == "c")
+		if (EnumSymbol == "c")
 		{
 			rop = UnitMultiplier::c;
 			return lop;
 		}
-		if(EnumSymbol == "d")
+		if (EnumSymbol == "d")
 		{
 			rop = UnitMultiplier::d;
 			return lop;
 		}
-		if(EnumSymbol == "k")
+		if (EnumSymbol == "k")
 		{
 			rop = UnitMultiplier::k;
 			return lop;
 		}
-		if(EnumSymbol == "M")
+		if (EnumSymbol == "M")
 		{
 			rop = UnitMultiplier::M;
 			return lop;
 		}
-		if(EnumSymbol == "G")
+		if (EnumSymbol == "G")
 		{
 			rop = UnitMultiplier::G;
 			return lop;
 		}
-		if(EnumSymbol == "T")
+		if (EnumSymbol == "T")
 		{
 			rop = UnitMultiplier::T;
 			return lop;
 		}
-		if(EnumSymbol == "none")
+		if (EnumSymbol == "none")
 		{
 			rop = UnitMultiplier::none;
 			return lop;

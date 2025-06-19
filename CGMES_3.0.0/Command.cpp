@@ -10,13 +10,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 #include "DiscreteValue.hpp"
 #include "ValueAliasSet.hpp"
-#include "Integer.hpp"
-#include "Integer.hpp"
 
 using namespace CIMPP;
 
-Command::Command() : DiscreteValue(nullptr), ValueAliasSet(nullptr) {};
-Command::~Command() {};
+Command::Command() : DiscreteValue(nullptr), ValueAliasSet(nullptr) {}
+Command::~Command() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -46,34 +44,6 @@ Command::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_Command_normalValue(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (Command* element = dynamic_cast<Command*>(BaseClass_ptr1))
-	{
-		buffer >> element->normalValue;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_Command_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (Command* element = dynamic_cast<Command*>(BaseClass_ptr1))
-	{
-		buffer >> element->value;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_DiscreteValue_Command(BaseClass*, BaseClass*);
 bool assign_Command_DiscreteValue(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -90,6 +60,7 @@ bool assign_Command_DiscreteValue(BaseClass* BaseClass_ptr1, BaseClass* BaseClas
 	}
 	return false;
 }
+
 bool assign_ValueAliasSet_Commands(BaseClass*, BaseClass*);
 bool assign_Command_ValueAliasSet(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -107,9 +78,66 @@ bool assign_Command_ValueAliasSet(BaseClass* BaseClass_ptr1, BaseClass* BaseClas
 	return false;
 }
 
+bool assign_Command_normalValue(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	Command* element = dynamic_cast<Command*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->normalValue;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_Command_value(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	Command* element = dynamic_cast<Command*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->value;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_Command_DiscreteValue(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const Command* element = dynamic_cast<const Command*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->DiscreteValue != 0)
+		{
+			BaseClass_list.push_back(element->DiscreteValue);
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_Command_ValueAliasSet(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const Command* element = dynamic_cast<const Command*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->ValueAliasSet != 0)
+		{
+			BaseClass_list.push_back(element->ValueAliasSet);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_Command_normalValue(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Command* element = dynamic_cast<const Command*>(BaseClass_ptr1))
+	const Command* element = dynamic_cast<const Command*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->normalValue;
 		if (!buffer.str().empty())
@@ -123,7 +151,8 @@ bool get_Command_normalValue(const BaseClass* BaseClass_ptr1, std::stringstream&
 
 bool get_Command_value(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const Command* element = dynamic_cast<const Command*>(BaseClass_ptr1))
+	const Command* element = dynamic_cast<const Command*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->value;
 		if (!buffer.str().empty())
@@ -135,34 +164,6 @@ bool get_Command_value(const BaseClass* BaseClass_ptr1, std::stringstream& buffe
 	return false;
 }
 
-
-bool get_Command_DiscreteValue(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const Command* element = dynamic_cast<const Command*>(BaseClass_ptr1))
-	{
-		if (element->DiscreteValue != 0)
-		{
-			BaseClass_list.push_back(element->DiscreteValue);
-			return true;
-		}
-	}
-	return false;
-}
-
-bool get_Command_ValueAliasSet(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const Command* element = dynamic_cast<const Command*>(BaseClass_ptr1))
-	{
-		if (element->ValueAliasSet != 0)
-		{
-			BaseClass_list.push_back(element->ValueAliasSet);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char Command::debugName[] = "Command";
 const char* Command::debugString() const
 {
@@ -171,19 +172,19 @@ const char* Command::debugString() const
 
 void Command::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:Command"), &Command_factory));
+	factory_map.emplace("cim:Command", &Command_factory);
 }
 
 void Command::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Command.normalValue"), &assign_Command_normalValue));
-	assign_map.insert(std::make_pair(std::string("cim:Command.value"), &assign_Command_value));
+	assign_map.emplace("cim:Command.normalValue", &assign_Command_normalValue);
+	assign_map.emplace("cim:Command.value", &assign_Command_value);
 }
 
 void Command::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:Command.DiscreteValue"), &assign_Command_DiscreteValue));
-	assign_map.insert(std::make_pair(std::string("cim:Command.ValueAliasSet"), &assign_Command_ValueAliasSet));
+	assign_map.emplace("cim:Command.DiscreteValue", &assign_Command_DiscreteValue);
+	assign_map.emplace("cim:Command.ValueAliasSet", &assign_Command_ValueAliasSet);
 }
 
 void Command::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

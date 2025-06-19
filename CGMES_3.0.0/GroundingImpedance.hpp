@@ -17,9 +17,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	A fixed impedance device used for grounding.
-	*/
+	/** \brief A fixed impedance device used for grounding. */
 	class GroundingImpedance : public EarthFaultCompensator
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		GroundingImpedance();
 		~GroundingImpedance() override;
 
-		CIMPP::Reactance x;  /* Reactance of device. Default: nullptr */
+		/** \brief Reactance of device. Default: nullptr */
+		CIMPP::Reactance x;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -9,15 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "Location.hpp"
-#include "Integer.hpp"
-#include "String.hpp"
-#include "String.hpp"
-#include "String.hpp"
 
 using namespace CIMPP;
 
-PositionPoint::PositionPoint() : Location(nullptr) {};
-PositionPoint::~PositionPoint() {};
+PositionPoint::PositionPoint() : Location(nullptr) {}
+PositionPoint::~PositionPoint() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -48,60 +44,6 @@ PositionPoint::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_PositionPoint_sequenceNumber(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (PositionPoint* element = dynamic_cast<PositionPoint*>(BaseClass_ptr1))
-	{
-		buffer >> element->sequenceNumber;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_PositionPoint_xPosition(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (PositionPoint* element = dynamic_cast<PositionPoint*>(BaseClass_ptr1))
-	{
-		element->xPosition = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_PositionPoint_yPosition(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (PositionPoint* element = dynamic_cast<PositionPoint*>(BaseClass_ptr1))
-	{
-		element->yPosition = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_PositionPoint_zPosition(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (PositionPoint* element = dynamic_cast<PositionPoint*>(BaseClass_ptr1))
-	{
-		element->zPosition = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_Location_PositionPoints(BaseClass*, BaseClass*);
 bool assign_PositionPoint_Location(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -119,9 +61,80 @@ bool assign_PositionPoint_Location(BaseClass* BaseClass_ptr1, BaseClass* BaseCla
 	return false;
 }
 
+bool assign_PositionPoint_sequenceNumber(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	PositionPoint* element = dynamic_cast<PositionPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->sequenceNumber;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_PositionPoint_xPosition(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	PositionPoint* element = dynamic_cast<PositionPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->xPosition = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_PositionPoint_yPosition(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	PositionPoint* element = dynamic_cast<PositionPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->yPosition = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_PositionPoint_zPosition(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	PositionPoint* element = dynamic_cast<PositionPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->zPosition = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_PositionPoint_Location(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const PositionPoint* element = dynamic_cast<const PositionPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->Location != 0)
+		{
+			BaseClass_list.push_back(element->Location);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_PositionPoint_sequenceNumber(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PositionPoint* element = dynamic_cast<const PositionPoint*>(BaseClass_ptr1))
+	const PositionPoint* element = dynamic_cast<const PositionPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->sequenceNumber;
 		if (!buffer.str().empty())
@@ -135,7 +148,8 @@ bool get_PositionPoint_sequenceNumber(const BaseClass* BaseClass_ptr1, std::stri
 
 bool get_PositionPoint_xPosition(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PositionPoint* element = dynamic_cast<const PositionPoint*>(BaseClass_ptr1))
+	const PositionPoint* element = dynamic_cast<const PositionPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->xPosition;
 		if (!buffer.str().empty())
@@ -149,7 +163,8 @@ bool get_PositionPoint_xPosition(const BaseClass* BaseClass_ptr1, std::stringstr
 
 bool get_PositionPoint_yPosition(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PositionPoint* element = dynamic_cast<const PositionPoint*>(BaseClass_ptr1))
+	const PositionPoint* element = dynamic_cast<const PositionPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->yPosition;
 		if (!buffer.str().empty())
@@ -163,7 +178,8 @@ bool get_PositionPoint_yPosition(const BaseClass* BaseClass_ptr1, std::stringstr
 
 bool get_PositionPoint_zPosition(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const PositionPoint* element = dynamic_cast<const PositionPoint*>(BaseClass_ptr1))
+	const PositionPoint* element = dynamic_cast<const PositionPoint*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->zPosition;
 		if (!buffer.str().empty())
@@ -175,21 +191,6 @@ bool get_PositionPoint_zPosition(const BaseClass* BaseClass_ptr1, std::stringstr
 	return false;
 }
 
-
-bool get_PositionPoint_Location(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const PositionPoint* element = dynamic_cast<const PositionPoint*>(BaseClass_ptr1))
-	{
-		if (element->Location != 0)
-		{
-			BaseClass_list.push_back(element->Location);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char PositionPoint::debugName[] = "PositionPoint";
 const char* PositionPoint::debugString() const
 {
@@ -198,20 +199,20 @@ const char* PositionPoint::debugString() const
 
 void PositionPoint::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:PositionPoint"), &PositionPoint_factory));
+	factory_map.emplace("cim:PositionPoint", &PositionPoint_factory);
 }
 
 void PositionPoint::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:PositionPoint.sequenceNumber"), &assign_PositionPoint_sequenceNumber));
-	assign_map.insert(std::make_pair(std::string("cim:PositionPoint.xPosition"), &assign_PositionPoint_xPosition));
-	assign_map.insert(std::make_pair(std::string("cim:PositionPoint.yPosition"), &assign_PositionPoint_yPosition));
-	assign_map.insert(std::make_pair(std::string("cim:PositionPoint.zPosition"), &assign_PositionPoint_zPosition));
+	assign_map.emplace("cim:PositionPoint.sequenceNumber", &assign_PositionPoint_sequenceNumber);
+	assign_map.emplace("cim:PositionPoint.xPosition", &assign_PositionPoint_xPosition);
+	assign_map.emplace("cim:PositionPoint.yPosition", &assign_PositionPoint_yPosition);
+	assign_map.emplace("cim:PositionPoint.zPosition", &assign_PositionPoint_zPosition);
 }
 
 void PositionPoint::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:PositionPoint.Location"), &assign_PositionPoint_Location));
+	assign_map.emplace("cim:PositionPoint.Location", &assign_PositionPoint_Location);
 }
 
 void PositionPoint::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

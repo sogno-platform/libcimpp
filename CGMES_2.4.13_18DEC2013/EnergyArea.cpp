@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-EnergyArea::EnergyArea() : ControlArea(nullptr) {};
-EnergyArea::~EnergyArea() {};
+EnergyArea::EnergyArea() : ControlArea(nullptr) {}
+EnergyArea::~EnergyArea() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ EnergyArea::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_ControlArea_EnergyArea(BaseClass*, BaseClass*);
 bool assign_EnergyArea_ControlArea(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,7 +58,6 @@ bool assign_EnergyArea_ControlArea(BaseClass* BaseClass_ptr1, BaseClass* BaseCla
 }
 
 
-
 const char EnergyArea::debugName[] = "EnergyArea";
 const char* EnergyArea::debugString() const
 {
@@ -69,7 +66,7 @@ const char* EnergyArea::debugString() const
 
 void EnergyArea::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:EnergyArea"), &EnergyArea_factory));
+	factory_map.emplace("cim:EnergyArea", &EnergyArea_factory);
 }
 
 void EnergyArea::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -78,7 +75,7 @@ void EnergyArea::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assi
 
 void EnergyArea::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:EnergyArea.ControlArea"), &assign_EnergyArea_ControlArea));
+	assign_map.emplace("cim:EnergyArea.ControlArea", &assign_EnergyArea_ControlArea);
 }
 
 void EnergyArea::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

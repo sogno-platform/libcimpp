@@ -18,9 +18,7 @@ namespace CIMPP
 	class ConnectivityNode;
 	class TopologicalNode;
 
-	/*
-	A base class for all objects that may contain connectivity nodes or topological nodes.
-	*/
+	/** \brief A base class for all objects that may contain connectivity nodes or topological nodes. */
 	class ConnectivityNodeContainer : public PowerSystemResource
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		ConnectivityNodeContainer();
 		~ConnectivityNodeContainer() override;
 
-		std::list<CIMPP::ConnectivityNode*> ConnectivityNodes;  /* Connectivity nodes which belong to this connectivity node container. Default: 0 */
-		std::list<CIMPP::TopologicalNode*> TopologicalNode;  /* The topological nodes which belong to this connectivity node container. Default: 0 */
+		/** \brief Connectivity nodes which belong to this connectivity node container. Default: 0 */
+		std::list<CIMPP::ConnectivityNode*> ConnectivityNodes;
+
+		/** \brief The topological nodes which belong to this connectivity node container. Default: 0 */
+		std::list<CIMPP::TopologicalNode*> TopologicalNode;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class Switch;
 
-	/*
-	State variable for switch.
-	*/
+	/** \brief State variable for switch. */
 	class SvSwitch : public BaseClass
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		SvSwitch();
 		~SvSwitch() override;
 
-		CIMPP::Switch* Switch;  /* The switch associated with the switch state. Default: 0 */
-		CIMPP::Boolean open;  /* The attribute tells if the computed state of the switch is considered open. Default: false */
+		/** \brief The switch associated with the switch state. Default: 0 */
+		CIMPP::Switch* Switch;
+
+		/** \brief The attribute tells if the computed state of the switch is considered open. Default: false */
+		CIMPP::Boolean open;
 
 		static const char debugName[];
 		const char* debugString() const override;

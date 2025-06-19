@@ -19,9 +19,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	The class represents IEEE VAR Controller Type 2 which is a summing point type controller. It makes up the outside loop of a two-loop system. This controller is implemented as a slow PI type controller, and the voltage regulator forms the inner loop and is implemented as a fast controller.  Reference: IEEE Standard 421.5-2005 Section 11.5.
-	*/
+	/** \brief The class represents IEEE VAR Controller Type 2 which is a summing point type controller. It makes up the outside loop of a two-loop system. This controller is implemented as a slow PI type controller, and the voltage regulator forms the inner loop and is implemented as a fast controller.  Reference: IEEE Standard 421.5-2005 Section 11.5. */
 	class PFVArType2IEEEVArController : public PFVArControllerType2Dynamics
 	{
 	public:
@@ -29,13 +27,26 @@ namespace CIMPP
 		PFVArType2IEEEVArController();
 		~PFVArType2IEEEVArController() override;
 
-		CIMPP::Boolean exlon;  /* Overexcitation or under excitation flag () true = 1 (not in the overexcitation or underexcitation state, integral action is active) false = 0 (in the overexcitation or underexcitation state, so integral action is disabled to allow the limiter to play its role). Default: false */
-		CIMPP::PU ki;  /* Integral gain of the pf controller (). Default: nullptr */
-		CIMPP::PU kp;  /* Proportional gain of the pf controller (). Default: nullptr */
-		CIMPP::PU qref;  /* Reactive power reference (). Default: nullptr */
-		CIMPP::PU vclmt;  /* Maximum output of the pf controller (). Default: nullptr */
-		CIMPP::PU vref;  /* Voltage regulator reference (). Default: nullptr */
-		CIMPP::Simple_Float vs;  /* Generator sensing voltage (). Default: nullptr */
+		/** \brief Overexcitation or under excitation flag () true = 1 (not in the overexcitation or underexcitation state, integral action is active) false = 0 (in the overexcitation or underexcitation state, so integral action is disabled to allow the limiter to play its role). Default: false */
+		CIMPP::Boolean exlon;
+
+		/** \brief Integral gain of the pf controller (). Default: nullptr */
+		CIMPP::PU ki;
+
+		/** \brief Proportional gain of the pf controller (). Default: nullptr */
+		CIMPP::PU kp;
+
+		/** \brief Reactive power reference (). Default: nullptr */
+		CIMPP::PU qref;
+
+		/** \brief Maximum output of the pf controller (). Default: nullptr */
+		CIMPP::PU vclmt;
+
+		/** \brief Voltage regulator reference (). Default: nullptr */
+		CIMPP::PU vref;
+
+		/** \brief Generator sensing voltage (). Default: nullptr */
+		CIMPP::Simple_Float vs;
 
 		static const char debugName[];
 		const char* debugString() const override;

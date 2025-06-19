@@ -11,8 +11,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-SurgeArrester::SurgeArrester() {};
-SurgeArrester::~SurgeArrester() {};
+SurgeArrester::SurgeArrester() {}
+SurgeArrester::~SurgeArrester() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -38,11 +38,6 @@ SurgeArrester::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
-
-
-
 const char SurgeArrester::debugName[] = "SurgeArrester";
 const char* SurgeArrester::debugString() const
 {
@@ -51,7 +46,7 @@ const char* SurgeArrester::debugString() const
 
 void SurgeArrester::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:SurgeArrester"), &SurgeArrester_factory));
+	factory_map.emplace("cim:SurgeArrester", &SurgeArrester_factory);
 }
 
 void SurgeArrester::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)

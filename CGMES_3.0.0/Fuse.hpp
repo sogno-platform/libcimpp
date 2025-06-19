@@ -16,16 +16,13 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	An overcurrent protective device with a circuit opening fusible part that is heated and severed by the passage of overcurrent through it. A fuse is considered a switching device because it breaks current.
-	*/
+	/** \brief An overcurrent protective device with a circuit opening fusible part that is heated and severed by the passage of overcurrent through it. A fuse is considered a switching device because it breaks current. */
 	class Fuse : public Switch
 	{
 	public:
 		/* constructor initialising all attributes to null */
 		Fuse();
 		~Fuse() override;
-
 
 		static const char debugName[];
 		const char* debugString() const override;

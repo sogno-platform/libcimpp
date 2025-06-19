@@ -18,9 +18,7 @@ namespace CIMPP
 	class ExcitationSystemDynamics;
 	class RemoteInputSignal;
 
-	/*
-	Underexcitation limiter function block whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font>
-	*/
+	/** \brief Underexcitation limiter function block whose behaviour is described by reference to a standard model <font color="#0f0f0f">or by definition of a user-defined model.</font> */
 	class UnderexcitationLimiterDynamics : public DynamicsFunctionBlock
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		UnderexcitationLimiterDynamics();
 		~UnderexcitationLimiterDynamics() override;
 
-		CIMPP::ExcitationSystemDynamics* ExcitationSystemDynamics;  /* Excitation system model with which this underexcitation limiter model is associated. Default: 0 */
-		CIMPP::RemoteInputSignal* RemoteInputSignal;  /* Remote input signal used by this underexcitation limiter model. Default: 0 */
+		/** \brief Excitation system model with which this underexcitation limiter model is associated. Default: 0 */
+		CIMPP::ExcitationSystemDynamics* ExcitationSystemDynamics;
+
+		/** \brief Remote input signal used by this underexcitation limiter model. Default: 0 */
+		CIMPP::RemoteInputSignal* RemoteInputSignal;
 
 		static const char debugName[];
 		const char* debugString() const override;

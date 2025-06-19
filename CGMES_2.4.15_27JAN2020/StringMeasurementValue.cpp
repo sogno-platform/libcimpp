@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "StringMeasurement.hpp"
-#include "String.hpp"
 
 using namespace CIMPP;
 
-StringMeasurementValue::StringMeasurementValue() : StringMeasurement(nullptr) {};
-StringMeasurementValue::~StringMeasurementValue() {};
+StringMeasurementValue::StringMeasurementValue() : StringMeasurement(nullptr) {}
+StringMeasurementValue::~StringMeasurementValue() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,21 +41,6 @@ StringMeasurementValue::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_StringMeasurementValue_value(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (StringMeasurementValue* element = dynamic_cast<StringMeasurementValue*>(BaseClass_ptr1))
-	{
-		element->value = buffer.str();
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_StringMeasurement_StringMeasurementValues(BaseClass*, BaseClass*);
 bool assign_StringMeasurementValue_StringMeasurement(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,9 +58,38 @@ bool assign_StringMeasurementValue_StringMeasurement(BaseClass* BaseClass_ptr1, 
 	return false;
 }
 
+bool assign_StringMeasurementValue_value(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	StringMeasurementValue* element = dynamic_cast<StringMeasurementValue*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		element->value = buffer.str();
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_StringMeasurementValue_StringMeasurement(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const StringMeasurementValue* element = dynamic_cast<const StringMeasurementValue*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->StringMeasurement != 0)
+		{
+			BaseClass_list.push_back(element->StringMeasurement);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_StringMeasurementValue_value(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const StringMeasurementValue* element = dynamic_cast<const StringMeasurementValue*>(BaseClass_ptr1))
+	const StringMeasurementValue* element = dynamic_cast<const StringMeasurementValue*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->value;
 		if (!buffer.str().empty())
@@ -88,21 +101,6 @@ bool get_StringMeasurementValue_value(const BaseClass* BaseClass_ptr1, std::stri
 	return false;
 }
 
-
-bool get_StringMeasurementValue_StringMeasurement(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const StringMeasurementValue* element = dynamic_cast<const StringMeasurementValue*>(BaseClass_ptr1))
-	{
-		if (element->StringMeasurement != 0)
-		{
-			BaseClass_list.push_back(element->StringMeasurement);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char StringMeasurementValue::debugName[] = "StringMeasurementValue";
 const char* StringMeasurementValue::debugString() const
 {
@@ -111,17 +109,17 @@ const char* StringMeasurementValue::debugString() const
 
 void StringMeasurementValue::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:StringMeasurementValue"), &StringMeasurementValue_factory));
+	factory_map.emplace("cim:StringMeasurementValue", &StringMeasurementValue_factory);
 }
 
 void StringMeasurementValue::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:StringMeasurementValue.value"), &assign_StringMeasurementValue_value));
+	assign_map.emplace("cim:StringMeasurementValue.value", &assign_StringMeasurementValue_value);
 }
 
 void StringMeasurementValue::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:StringMeasurementValue.StringMeasurement"), &assign_StringMeasurementValue_StringMeasurement));
+	assign_map.emplace("cim:StringMeasurementValue.StringMeasurement", &assign_StringMeasurementValue_StringMeasurement);
 }
 
 void StringMeasurementValue::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

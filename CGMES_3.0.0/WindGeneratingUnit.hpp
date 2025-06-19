@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class WindPowerPlant;
 
-	/*
-	A wind driven generating unit, connected to the grid by means of a rotating machine.  May be used to represent a single turbine or an aggregation.
-	*/
+	/** \brief A wind driven generating unit, connected to the grid by means of a rotating machine.  May be used to represent a single turbine or an aggregation. */
 	class WindGeneratingUnit : public GeneratingUnit
 	{
 	public:
@@ -28,8 +26,11 @@ namespace CIMPP
 		WindGeneratingUnit();
 		~WindGeneratingUnit() override;
 
-		CIMPP::WindPowerPlant* WindPowerPlant;  /* A wind power plant may have wind generating units. Default: 0 */
-		CIMPP::WindGenUnitKind windGenUnitType;  /* The kind of wind generating unit. Default: 0 */
+		/** \brief A wind power plant may have wind generating units. Default: 0 */
+		CIMPP::WindPowerPlant* WindPowerPlant;
+
+		/** \brief The kind of wind generating unit. Default: 0 */
+		CIMPP::WindGenUnitKind windGenUnitType;
 
 		static const char debugName[];
 		const char* debugString() const override;

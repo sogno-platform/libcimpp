@@ -9,18 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "SvShuntCompensatorSections.hpp"
-#include "Seconds.hpp"
-#include "Boolean.hpp"
-#include "Integer.hpp"
-#include "Voltage.hpp"
-#include "Integer.hpp"
-#include "Float.hpp"
-#include "VoltagePerReactivePower.hpp"
 
 using namespace CIMPP;
 
-ShuntCompensator::ShuntCompensator() : SvShuntCompensatorSections(nullptr) {};
-ShuntCompensator::~ShuntCompensator() {};
+ShuntCompensator::ShuntCompensator() : SvShuntCompensatorSections(nullptr) {}
+ShuntCompensator::~ShuntCompensator() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -57,99 +50,6 @@ ShuntCompensator::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_ShuntCompensator_aVRDelay(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ShuntCompensator* element = dynamic_cast<ShuntCompensator*>(BaseClass_ptr1))
-	{
-		buffer >> element->aVRDelay;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ShuntCompensator_grounded(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ShuntCompensator* element = dynamic_cast<ShuntCompensator*>(BaseClass_ptr1))
-	{
-		buffer >> element->grounded;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ShuntCompensator_maximumSections(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ShuntCompensator* element = dynamic_cast<ShuntCompensator*>(BaseClass_ptr1))
-	{
-		buffer >> element->maximumSections;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ShuntCompensator_nomU(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ShuntCompensator* element = dynamic_cast<ShuntCompensator*>(BaseClass_ptr1))
-	{
-		buffer >> element->nomU;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ShuntCompensator_normalSections(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ShuntCompensator* element = dynamic_cast<ShuntCompensator*>(BaseClass_ptr1))
-	{
-		buffer >> element->normalSections;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ShuntCompensator_sections(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ShuntCompensator* element = dynamic_cast<ShuntCompensator*>(BaseClass_ptr1))
-	{
-		buffer >> element->sections;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_ShuntCompensator_voltageSensitivity(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (ShuntCompensator* element = dynamic_cast<ShuntCompensator*>(BaseClass_ptr1))
-	{
-		buffer >> element->voltageSensitivity;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_SvShuntCompensatorSections_ShuntCompensator(BaseClass*, BaseClass*);
 bool assign_ShuntCompensator_SvShuntCompensatorSections(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -167,9 +67,109 @@ bool assign_ShuntCompensator_SvShuntCompensatorSections(BaseClass* BaseClass_ptr
 	return false;
 }
 
+bool assign_ShuntCompensator_aVRDelay(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ShuntCompensator* element = dynamic_cast<ShuntCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->aVRDelay;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ShuntCompensator_grounded(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ShuntCompensator* element = dynamic_cast<ShuntCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->grounded;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ShuntCompensator_maximumSections(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ShuntCompensator* element = dynamic_cast<ShuntCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->maximumSections;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ShuntCompensator_nomU(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ShuntCompensator* element = dynamic_cast<ShuntCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->nomU;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ShuntCompensator_normalSections(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ShuntCompensator* element = dynamic_cast<ShuntCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->normalSections;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ShuntCompensator_sections(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ShuntCompensator* element = dynamic_cast<ShuntCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->sections;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_ShuntCompensator_voltageSensitivity(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	ShuntCompensator* element = dynamic_cast<ShuntCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->voltageSensitivity;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+
 bool get_ShuntCompensator_aVRDelay(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ShuntCompensator* element = dynamic_cast<const ShuntCompensator*>(BaseClass_ptr1))
+	const ShuntCompensator* element = dynamic_cast<const ShuntCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->aVRDelay;
 		if (!buffer.str().empty())
@@ -183,7 +183,8 @@ bool get_ShuntCompensator_aVRDelay(const BaseClass* BaseClass_ptr1, std::strings
 
 bool get_ShuntCompensator_grounded(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ShuntCompensator* element = dynamic_cast<const ShuntCompensator*>(BaseClass_ptr1))
+	const ShuntCompensator* element = dynamic_cast<const ShuntCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->grounded;
 		if (!buffer.str().empty())
@@ -197,7 +198,8 @@ bool get_ShuntCompensator_grounded(const BaseClass* BaseClass_ptr1, std::strings
 
 bool get_ShuntCompensator_maximumSections(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ShuntCompensator* element = dynamic_cast<const ShuntCompensator*>(BaseClass_ptr1))
+	const ShuntCompensator* element = dynamic_cast<const ShuntCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->maximumSections;
 		if (!buffer.str().empty())
@@ -211,7 +213,8 @@ bool get_ShuntCompensator_maximumSections(const BaseClass* BaseClass_ptr1, std::
 
 bool get_ShuntCompensator_nomU(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ShuntCompensator* element = dynamic_cast<const ShuntCompensator*>(BaseClass_ptr1))
+	const ShuntCompensator* element = dynamic_cast<const ShuntCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->nomU;
 		if (!buffer.str().empty())
@@ -225,7 +228,8 @@ bool get_ShuntCompensator_nomU(const BaseClass* BaseClass_ptr1, std::stringstrea
 
 bool get_ShuntCompensator_normalSections(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ShuntCompensator* element = dynamic_cast<const ShuntCompensator*>(BaseClass_ptr1))
+	const ShuntCompensator* element = dynamic_cast<const ShuntCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->normalSections;
 		if (!buffer.str().empty())
@@ -239,7 +243,8 @@ bool get_ShuntCompensator_normalSections(const BaseClass* BaseClass_ptr1, std::s
 
 bool get_ShuntCompensator_sections(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ShuntCompensator* element = dynamic_cast<const ShuntCompensator*>(BaseClass_ptr1))
+	const ShuntCompensator* element = dynamic_cast<const ShuntCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->sections;
 		if (!buffer.str().empty())
@@ -253,7 +258,8 @@ bool get_ShuntCompensator_sections(const BaseClass* BaseClass_ptr1, std::strings
 
 bool get_ShuntCompensator_voltageSensitivity(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ShuntCompensator* element = dynamic_cast<const ShuntCompensator*>(BaseClass_ptr1))
+	const ShuntCompensator* element = dynamic_cast<const ShuntCompensator*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->voltageSensitivity;
 		if (!buffer.str().empty())
@@ -265,8 +271,6 @@ bool get_ShuntCompensator_voltageSensitivity(const BaseClass* BaseClass_ptr1, st
 	return false;
 }
 
-
-
 const char ShuntCompensator::debugName[] = "ShuntCompensator";
 const char* ShuntCompensator::debugString() const
 {
@@ -275,23 +279,23 @@ const char* ShuntCompensator::debugString() const
 
 void ShuntCompensator::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ShuntCompensator"), &ShuntCompensator_factory));
+	factory_map.emplace("cim:ShuntCompensator", &ShuntCompensator_factory);
 }
 
 void ShuntCompensator::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ShuntCompensator.aVRDelay"), &assign_ShuntCompensator_aVRDelay));
-	assign_map.insert(std::make_pair(std::string("cim:ShuntCompensator.grounded"), &assign_ShuntCompensator_grounded));
-	assign_map.insert(std::make_pair(std::string("cim:ShuntCompensator.maximumSections"), &assign_ShuntCompensator_maximumSections));
-	assign_map.insert(std::make_pair(std::string("cim:ShuntCompensator.nomU"), &assign_ShuntCompensator_nomU));
-	assign_map.insert(std::make_pair(std::string("cim:ShuntCompensator.normalSections"), &assign_ShuntCompensator_normalSections));
-	assign_map.insert(std::make_pair(std::string("cim:ShuntCompensator.sections"), &assign_ShuntCompensator_sections));
-	assign_map.insert(std::make_pair(std::string("cim:ShuntCompensator.voltageSensitivity"), &assign_ShuntCompensator_voltageSensitivity));
+	assign_map.emplace("cim:ShuntCompensator.aVRDelay", &assign_ShuntCompensator_aVRDelay);
+	assign_map.emplace("cim:ShuntCompensator.grounded", &assign_ShuntCompensator_grounded);
+	assign_map.emplace("cim:ShuntCompensator.maximumSections", &assign_ShuntCompensator_maximumSections);
+	assign_map.emplace("cim:ShuntCompensator.nomU", &assign_ShuntCompensator_nomU);
+	assign_map.emplace("cim:ShuntCompensator.normalSections", &assign_ShuntCompensator_normalSections);
+	assign_map.emplace("cim:ShuntCompensator.sections", &assign_ShuntCompensator_sections);
+	assign_map.emplace("cim:ShuntCompensator.voltageSensitivity", &assign_ShuntCompensator_voltageSensitivity);
 }
 
 void ShuntCompensator::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ShuntCompensator.SvShuntCompensatorSections"), &assign_ShuntCompensator_SvShuntCompensatorSections));
+	assign_map.emplace("cim:ShuntCompensator.SvShuntCompensatorSections", &assign_ShuntCompensator_SvShuntCompensatorSections);
 }
 
 void ShuntCompensator::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

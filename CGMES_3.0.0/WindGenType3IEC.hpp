@@ -18,9 +18,7 @@ namespace CIMPP
 {
 	class WindTurbineType3IEC;
 
-	/*
-	Parent class supporting relationships to IEC wind turbines type 3 generator models of IEC type 3A and 3B.
-	*/
+	/** \brief Parent class supporting relationships to IEC wind turbines type 3 generator models of IEC type 3A and 3B. */
 	class WindGenType3IEC : public IdentifiedObject
 	{
 	public:
@@ -28,10 +26,17 @@ namespace CIMPP
 		WindGenType3IEC();
 		~WindGenType3IEC() override;
 
-		CIMPP::WindTurbineType3IEC* WindTurbineType3IEC;  /* Wind turbine type 3 model with which this wind generator type 3 is associated. Default: 0 */
-		CIMPP::PU dipmax;  /* Maximum active current ramp rate (&lt;i&gt;di&lt;/i&gt;&lt;i&gt;&lt;sub&gt;pmax&lt;/sub&gt;&lt;/i&gt;). It is a project-dependent parameter. Default: nullptr */
-		CIMPP::PU diqmax;  /* Maximum reactive current ramp rate (&lt;i&gt;di&lt;/i&gt;&lt;i&gt;&lt;sub&gt;qmax&lt;/sub&gt;&lt;/i&gt;). It is a project-dependent parameter. Default: nullptr */
-		CIMPP::PU xs;  /* Electromagnetic transient reactance (&lt;i&gt;x&lt;/i&gt;&lt;i&gt;&lt;sub&gt;S&lt;/sub&gt;&lt;/i&gt;). It is a type-dependent parameter. Default: nullptr */
+		/** \brief Wind turbine type 3 model with which this wind generator type 3 is associated. Default: 0 */
+		CIMPP::WindTurbineType3IEC* WindTurbineType3IEC;
+
+		/** \brief Maximum active current ramp rate (&lt;i&gt;di&lt;/i&gt;&lt;i&gt;&lt;sub&gt;pmax&lt;/sub&gt;&lt;/i&gt;). It is a project-dependent parameter. Default: nullptr */
+		CIMPP::PU dipmax;
+
+		/** \brief Maximum reactive current ramp rate (&lt;i&gt;di&lt;/i&gt;&lt;i&gt;&lt;sub&gt;qmax&lt;/sub&gt;&lt;/i&gt;). It is a project-dependent parameter. Default: nullptr */
+		CIMPP::PU diqmax;
+
+		/** \brief Electromagnetic transient reactance (&lt;i&gt;x&lt;/i&gt;&lt;i&gt;&lt;sub&gt;S&lt;/sub&gt;&lt;/i&gt;). It is a type-dependent parameter. Default: nullptr */
+		CIMPP::PU xs;
 
 		static const char debugName[];
 		const char* debugString() const override;

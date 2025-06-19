@@ -17,9 +17,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	Abstract parent class for all Dynamics function blocks.
-	*/
+	/** \brief Abstract parent class for all Dynamics function blocks. */
 	class DynamicsFunctionBlock : public IdentifiedObject
 	{
 	public:
@@ -27,7 +25,8 @@ namespace CIMPP
 		DynamicsFunctionBlock();
 		~DynamicsFunctionBlock() override;
 
-		CIMPP::Boolean enabled;  /* Function block used indicator. true = use of function block is enabled false = use of function block is disabled. Default: false */
+		/** \brief Function block used indicator. true = use of function block is enabled false = use of function block is disabled. Default: false */
+		CIMPP::Boolean enabled;
 
 		static const char debugName[];
 		const char* debugString() const override;

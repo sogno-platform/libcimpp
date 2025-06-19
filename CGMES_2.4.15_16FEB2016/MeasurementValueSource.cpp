@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-MeasurementValueSource::MeasurementValueSource() {};
-MeasurementValueSource::~MeasurementValueSource() {};
+MeasurementValueSource::MeasurementValueSource() {}
+MeasurementValueSource::~MeasurementValueSource() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ MeasurementValueSource::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_MeasurementValue_MeasurementValueSource(BaseClass*, BaseClass*);
 bool assign_MeasurementValueSource_MeasurementValues(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,7 +58,6 @@ bool assign_MeasurementValueSource_MeasurementValues(BaseClass* BaseClass_ptr1, 
 }
 
 
-
 const char MeasurementValueSource::debugName[] = "MeasurementValueSource";
 const char* MeasurementValueSource::debugString() const
 {
@@ -69,7 +66,7 @@ const char* MeasurementValueSource::debugString() const
 
 void MeasurementValueSource::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:MeasurementValueSource"), &MeasurementValueSource_factory));
+	factory_map.emplace("cim:MeasurementValueSource", &MeasurementValueSource_factory);
 }
 
 void MeasurementValueSource::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -78,7 +75,7 @@ void MeasurementValueSource::addPrimitiveAssignFnsToMap(std::unordered_map<std::
 
 void MeasurementValueSource::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:MeasurementValueSource.MeasurementValues"), &assign_MeasurementValueSource_MeasurementValues));
+	assign_map.emplace("cim:MeasurementValueSource.MeasurementValues", &assign_MeasurementValueSource_MeasurementValues);
 }
 
 void MeasurementValueSource::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

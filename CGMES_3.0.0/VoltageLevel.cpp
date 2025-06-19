@@ -11,13 +11,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include "BaseVoltage.hpp"
 #include "Bay.hpp"
 #include "Substation.hpp"
-#include "Voltage.hpp"
-#include "Voltage.hpp"
 
 using namespace CIMPP;
 
-VoltageLevel::VoltageLevel() : BaseVoltage(nullptr), Substation(nullptr) {};
-VoltageLevel::~VoltageLevel() {};
+VoltageLevel::VoltageLevel() : BaseVoltage(nullptr), Substation(nullptr) {}
+VoltageLevel::~VoltageLevel() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -49,34 +47,6 @@ VoltageLevel::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_VoltageLevel_highVoltageLimit(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (VoltageLevel* element = dynamic_cast<VoltageLevel*>(BaseClass_ptr1))
-	{
-		buffer >> element->highVoltageLimit;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-bool assign_VoltageLevel_lowVoltageLimit(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (VoltageLevel* element = dynamic_cast<VoltageLevel*>(BaseClass_ptr1))
-	{
-		buffer >> element->lowVoltageLimit;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_BaseVoltage_VoltageLevel(BaseClass*, BaseClass*);
 bool assign_VoltageLevel_BaseVoltage(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -93,6 +63,7 @@ bool assign_VoltageLevel_BaseVoltage(BaseClass* BaseClass_ptr1, BaseClass* BaseC
 	}
 	return false;
 }
+
 bool assign_Bay_VoltageLevel(BaseClass*, BaseClass*);
 bool assign_VoltageLevel_Bays(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -109,6 +80,7 @@ bool assign_VoltageLevel_Bays(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_pt
 	}
 	return false;
 }
+
 bool assign_Substation_VoltageLevels(BaseClass*, BaseClass*);
 bool assign_VoltageLevel_Substation(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -126,9 +98,67 @@ bool assign_VoltageLevel_Substation(BaseClass* BaseClass_ptr1, BaseClass* BaseCl
 	return false;
 }
 
+bool assign_VoltageLevel_highVoltageLimit(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	VoltageLevel* element = dynamic_cast<VoltageLevel*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->highVoltageLimit;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool assign_VoltageLevel_lowVoltageLimit(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	VoltageLevel* element = dynamic_cast<VoltageLevel*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->lowVoltageLimit;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_VoltageLevel_BaseVoltage(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const VoltageLevel* element = dynamic_cast<const VoltageLevel*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->BaseVoltage != 0)
+		{
+			BaseClass_list.push_back(element->BaseVoltage);
+			return true;
+		}
+	}
+	return false;
+}
+
+
+bool get_VoltageLevel_Substation(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const VoltageLevel* element = dynamic_cast<const VoltageLevel*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->Substation != 0)
+		{
+			BaseClass_list.push_back(element->Substation);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_VoltageLevel_highVoltageLimit(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const VoltageLevel* element = dynamic_cast<const VoltageLevel*>(BaseClass_ptr1))
+	const VoltageLevel* element = dynamic_cast<const VoltageLevel*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->highVoltageLimit;
 		if (!buffer.str().empty())
@@ -142,7 +172,8 @@ bool get_VoltageLevel_highVoltageLimit(const BaseClass* BaseClass_ptr1, std::str
 
 bool get_VoltageLevel_lowVoltageLimit(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const VoltageLevel* element = dynamic_cast<const VoltageLevel*>(BaseClass_ptr1))
+	const VoltageLevel* element = dynamic_cast<const VoltageLevel*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->lowVoltageLimit;
 		if (!buffer.str().empty())
@@ -154,34 +185,6 @@ bool get_VoltageLevel_lowVoltageLimit(const BaseClass* BaseClass_ptr1, std::stri
 	return false;
 }
 
-
-bool get_VoltageLevel_BaseVoltage(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const VoltageLevel* element = dynamic_cast<const VoltageLevel*>(BaseClass_ptr1))
-	{
-		if (element->BaseVoltage != 0)
-		{
-			BaseClass_list.push_back(element->BaseVoltage);
-			return true;
-		}
-	}
-	return false;
-}
-
-bool get_VoltageLevel_Substation(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const VoltageLevel* element = dynamic_cast<const VoltageLevel*>(BaseClass_ptr1))
-	{
-		if (element->Substation != 0)
-		{
-			BaseClass_list.push_back(element->Substation);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char VoltageLevel::debugName[] = "VoltageLevel";
 const char* VoltageLevel::debugString() const
 {
@@ -190,20 +193,20 @@ const char* VoltageLevel::debugString() const
 
 void VoltageLevel::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:VoltageLevel"), &VoltageLevel_factory));
+	factory_map.emplace("cim:VoltageLevel", &VoltageLevel_factory);
 }
 
 void VoltageLevel::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:VoltageLevel.highVoltageLimit"), &assign_VoltageLevel_highVoltageLimit));
-	assign_map.insert(std::make_pair(std::string("cim:VoltageLevel.lowVoltageLimit"), &assign_VoltageLevel_lowVoltageLimit));
+	assign_map.emplace("cim:VoltageLevel.highVoltageLimit", &assign_VoltageLevel_highVoltageLimit);
+	assign_map.emplace("cim:VoltageLevel.lowVoltageLimit", &assign_VoltageLevel_lowVoltageLimit);
 }
 
 void VoltageLevel::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:VoltageLevel.BaseVoltage"), &assign_VoltageLevel_BaseVoltage));
-	assign_map.insert(std::make_pair(std::string("cim:VoltageLevel.Bays"), &assign_VoltageLevel_Bays));
-	assign_map.insert(std::make_pair(std::string("cim:VoltageLevel.Substation"), &assign_VoltageLevel_Substation));
+	assign_map.emplace("cim:VoltageLevel.BaseVoltage", &assign_VoltageLevel_BaseVoltage);
+	assign_map.emplace("cim:VoltageLevel.Bays", &assign_VoltageLevel_Bays);
+	assign_map.emplace("cim:VoltageLevel.Substation", &assign_VoltageLevel_Substation);
 }
 
 void VoltageLevel::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

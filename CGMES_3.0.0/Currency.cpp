@@ -42,7 +42,7 @@ namespace CIMPP
 		lop >> EnumSymbol;
 
 		size_t pos = EnumSymbol.find_first_of('.');
-		if(EnumSymbol.substr(0, pos) != "Currency")
+		if (EnumSymbol.substr(0, pos) != "Currency")
 		{
 			lop.setstate(std::ios::failbit);
 			return lop;
@@ -50,807 +50,807 @@ namespace CIMPP
 
 		EnumSymbol = EnumSymbol.substr(pos + 1);
 
-		if(EnumSymbol == "AED")
+		if (EnumSymbol == "AED")
 		{
 			rop = Currency::AED;
 			return lop;
 		}
-		if(EnumSymbol == "AFN")
+		if (EnumSymbol == "AFN")
 		{
 			rop = Currency::AFN;
 			return lop;
 		}
-		if(EnumSymbol == "ALL")
+		if (EnumSymbol == "ALL")
 		{
 			rop = Currency::ALL;
 			return lop;
 		}
-		if(EnumSymbol == "AMD")
+		if (EnumSymbol == "AMD")
 		{
 			rop = Currency::AMD;
 			return lop;
 		}
-		if(EnumSymbol == "ANG")
+		if (EnumSymbol == "ANG")
 		{
 			rop = Currency::ANG;
 			return lop;
 		}
-		if(EnumSymbol == "AOA")
+		if (EnumSymbol == "AOA")
 		{
 			rop = Currency::AOA;
 			return lop;
 		}
-		if(EnumSymbol == "ARS")
+		if (EnumSymbol == "ARS")
 		{
 			rop = Currency::ARS;
 			return lop;
 		}
-		if(EnumSymbol == "AUD")
+		if (EnumSymbol == "AUD")
 		{
 			rop = Currency::AUD;
 			return lop;
 		}
-		if(EnumSymbol == "AWG")
+		if (EnumSymbol == "AWG")
 		{
 			rop = Currency::AWG;
 			return lop;
 		}
-		if(EnumSymbol == "AZN")
+		if (EnumSymbol == "AZN")
 		{
 			rop = Currency::AZN;
 			return lop;
 		}
-		if(EnumSymbol == "BAM")
+		if (EnumSymbol == "BAM")
 		{
 			rop = Currency::BAM;
 			return lop;
 		}
-		if(EnumSymbol == "BBD")
+		if (EnumSymbol == "BBD")
 		{
 			rop = Currency::BBD;
 			return lop;
 		}
-		if(EnumSymbol == "BDT")
+		if (EnumSymbol == "BDT")
 		{
 			rop = Currency::BDT;
 			return lop;
 		}
-		if(EnumSymbol == "BGN")
+		if (EnumSymbol == "BGN")
 		{
 			rop = Currency::BGN;
 			return lop;
 		}
-		if(EnumSymbol == "BHD")
+		if (EnumSymbol == "BHD")
 		{
 			rop = Currency::BHD;
 			return lop;
 		}
-		if(EnumSymbol == "BIF")
+		if (EnumSymbol == "BIF")
 		{
 			rop = Currency::BIF;
 			return lop;
 		}
-		if(EnumSymbol == "BMD")
+		if (EnumSymbol == "BMD")
 		{
 			rop = Currency::BMD;
 			return lop;
 		}
-		if(EnumSymbol == "BND")
+		if (EnumSymbol == "BND")
 		{
 			rop = Currency::BND;
 			return lop;
 		}
-		if(EnumSymbol == "BOB")
+		if (EnumSymbol == "BOB")
 		{
 			rop = Currency::BOB;
 			return lop;
 		}
-		if(EnumSymbol == "BOV")
+		if (EnumSymbol == "BOV")
 		{
 			rop = Currency::BOV;
 			return lop;
 		}
-		if(EnumSymbol == "BRL")
+		if (EnumSymbol == "BRL")
 		{
 			rop = Currency::BRL;
 			return lop;
 		}
-		if(EnumSymbol == "BSD")
+		if (EnumSymbol == "BSD")
 		{
 			rop = Currency::BSD;
 			return lop;
 		}
-		if(EnumSymbol == "BTN")
+		if (EnumSymbol == "BTN")
 		{
 			rop = Currency::BTN;
 			return lop;
 		}
-		if(EnumSymbol == "BWP")
+		if (EnumSymbol == "BWP")
 		{
 			rop = Currency::BWP;
 			return lop;
 		}
-		if(EnumSymbol == "BYR")
+		if (EnumSymbol == "BYR")
 		{
 			rop = Currency::BYR;
 			return lop;
 		}
-		if(EnumSymbol == "BZD")
+		if (EnumSymbol == "BZD")
 		{
 			rop = Currency::BZD;
 			return lop;
 		}
-		if(EnumSymbol == "CAD")
+		if (EnumSymbol == "CAD")
 		{
 			rop = Currency::CAD;
 			return lop;
 		}
-		if(EnumSymbol == "CDF")
+		if (EnumSymbol == "CDF")
 		{
 			rop = Currency::CDF;
 			return lop;
 		}
-		if(EnumSymbol == "CHF")
+		if (EnumSymbol == "CHF")
 		{
 			rop = Currency::CHF;
 			return lop;
 		}
-		if(EnumSymbol == "CLF")
+		if (EnumSymbol == "CLF")
 		{
 			rop = Currency::CLF;
 			return lop;
 		}
-		if(EnumSymbol == "CLP")
+		if (EnumSymbol == "CLP")
 		{
 			rop = Currency::CLP;
 			return lop;
 		}
-		if(EnumSymbol == "CNY")
+		if (EnumSymbol == "CNY")
 		{
 			rop = Currency::CNY;
 			return lop;
 		}
-		if(EnumSymbol == "COP")
+		if (EnumSymbol == "COP")
 		{
 			rop = Currency::COP;
 			return lop;
 		}
-		if(EnumSymbol == "COU")
+		if (EnumSymbol == "COU")
 		{
 			rop = Currency::COU;
 			return lop;
 		}
-		if(EnumSymbol == "CRC")
+		if (EnumSymbol == "CRC")
 		{
 			rop = Currency::CRC;
 			return lop;
 		}
-		if(EnumSymbol == "CUC")
+		if (EnumSymbol == "CUC")
 		{
 			rop = Currency::CUC;
 			return lop;
 		}
-		if(EnumSymbol == "CUP")
+		if (EnumSymbol == "CUP")
 		{
 			rop = Currency::CUP;
 			return lop;
 		}
-		if(EnumSymbol == "CVE")
+		if (EnumSymbol == "CVE")
 		{
 			rop = Currency::CVE;
 			return lop;
 		}
-		if(EnumSymbol == "CZK")
+		if (EnumSymbol == "CZK")
 		{
 			rop = Currency::CZK;
 			return lop;
 		}
-		if(EnumSymbol == "DJF")
+		if (EnumSymbol == "DJF")
 		{
 			rop = Currency::DJF;
 			return lop;
 		}
-		if(EnumSymbol == "DKK")
+		if (EnumSymbol == "DKK")
 		{
 			rop = Currency::DKK;
 			return lop;
 		}
-		if(EnumSymbol == "DOP")
+		if (EnumSymbol == "DOP")
 		{
 			rop = Currency::DOP;
 			return lop;
 		}
-		if(EnumSymbol == "DZD")
+		if (EnumSymbol == "DZD")
 		{
 			rop = Currency::DZD;
 			return lop;
 		}
-		if(EnumSymbol == "EEK")
+		if (EnumSymbol == "EEK")
 		{
 			rop = Currency::EEK;
 			return lop;
 		}
-		if(EnumSymbol == "EGP")
+		if (EnumSymbol == "EGP")
 		{
 			rop = Currency::EGP;
 			return lop;
 		}
-		if(EnumSymbol == "ERN")
+		if (EnumSymbol == "ERN")
 		{
 			rop = Currency::ERN;
 			return lop;
 		}
-		if(EnumSymbol == "ETB")
+		if (EnumSymbol == "ETB")
 		{
 			rop = Currency::ETB;
 			return lop;
 		}
-		if(EnumSymbol == "EUR")
+		if (EnumSymbol == "EUR")
 		{
 			rop = Currency::EUR;
 			return lop;
 		}
-		if(EnumSymbol == "FJD")
+		if (EnumSymbol == "FJD")
 		{
 			rop = Currency::FJD;
 			return lop;
 		}
-		if(EnumSymbol == "FKP")
+		if (EnumSymbol == "FKP")
 		{
 			rop = Currency::FKP;
 			return lop;
 		}
-		if(EnumSymbol == "GBP")
+		if (EnumSymbol == "GBP")
 		{
 			rop = Currency::GBP;
 			return lop;
 		}
-		if(EnumSymbol == "GEL")
+		if (EnumSymbol == "GEL")
 		{
 			rop = Currency::GEL;
 			return lop;
 		}
-		if(EnumSymbol == "GHS")
+		if (EnumSymbol == "GHS")
 		{
 			rop = Currency::GHS;
 			return lop;
 		}
-		if(EnumSymbol == "GIP")
+		if (EnumSymbol == "GIP")
 		{
 			rop = Currency::GIP;
 			return lop;
 		}
-		if(EnumSymbol == "GMD")
+		if (EnumSymbol == "GMD")
 		{
 			rop = Currency::GMD;
 			return lop;
 		}
-		if(EnumSymbol == "GNF")
+		if (EnumSymbol == "GNF")
 		{
 			rop = Currency::GNF;
 			return lop;
 		}
-		if(EnumSymbol == "GTQ")
+		if (EnumSymbol == "GTQ")
 		{
 			rop = Currency::GTQ;
 			return lop;
 		}
-		if(EnumSymbol == "GYD")
+		if (EnumSymbol == "GYD")
 		{
 			rop = Currency::GYD;
 			return lop;
 		}
-		if(EnumSymbol == "HKD")
+		if (EnumSymbol == "HKD")
 		{
 			rop = Currency::HKD;
 			return lop;
 		}
-		if(EnumSymbol == "HNL")
+		if (EnumSymbol == "HNL")
 		{
 			rop = Currency::HNL;
 			return lop;
 		}
-		if(EnumSymbol == "HRK")
+		if (EnumSymbol == "HRK")
 		{
 			rop = Currency::HRK;
 			return lop;
 		}
-		if(EnumSymbol == "HTG")
+		if (EnumSymbol == "HTG")
 		{
 			rop = Currency::HTG;
 			return lop;
 		}
-		if(EnumSymbol == "HUF")
+		if (EnumSymbol == "HUF")
 		{
 			rop = Currency::HUF;
 			return lop;
 		}
-		if(EnumSymbol == "IDR")
+		if (EnumSymbol == "IDR")
 		{
 			rop = Currency::IDR;
 			return lop;
 		}
-		if(EnumSymbol == "ILS")
+		if (EnumSymbol == "ILS")
 		{
 			rop = Currency::ILS;
 			return lop;
 		}
-		if(EnumSymbol == "INR")
+		if (EnumSymbol == "INR")
 		{
 			rop = Currency::INR;
 			return lop;
 		}
-		if(EnumSymbol == "IQD")
+		if (EnumSymbol == "IQD")
 		{
 			rop = Currency::IQD;
 			return lop;
 		}
-		if(EnumSymbol == "IRR")
+		if (EnumSymbol == "IRR")
 		{
 			rop = Currency::IRR;
 			return lop;
 		}
-		if(EnumSymbol == "ISK")
+		if (EnumSymbol == "ISK")
 		{
 			rop = Currency::ISK;
 			return lop;
 		}
-		if(EnumSymbol == "JMD")
+		if (EnumSymbol == "JMD")
 		{
 			rop = Currency::JMD;
 			return lop;
 		}
-		if(EnumSymbol == "JOD")
+		if (EnumSymbol == "JOD")
 		{
 			rop = Currency::JOD;
 			return lop;
 		}
-		if(EnumSymbol == "JPY")
+		if (EnumSymbol == "JPY")
 		{
 			rop = Currency::JPY;
 			return lop;
 		}
-		if(EnumSymbol == "KES")
+		if (EnumSymbol == "KES")
 		{
 			rop = Currency::KES;
 			return lop;
 		}
-		if(EnumSymbol == "KGS")
+		if (EnumSymbol == "KGS")
 		{
 			rop = Currency::KGS;
 			return lop;
 		}
-		if(EnumSymbol == "KHR")
+		if (EnumSymbol == "KHR")
 		{
 			rop = Currency::KHR;
 			return lop;
 		}
-		if(EnumSymbol == "KMF")
+		if (EnumSymbol == "KMF")
 		{
 			rop = Currency::KMF;
 			return lop;
 		}
-		if(EnumSymbol == "KPW")
+		if (EnumSymbol == "KPW")
 		{
 			rop = Currency::KPW;
 			return lop;
 		}
-		if(EnumSymbol == "KRW")
+		if (EnumSymbol == "KRW")
 		{
 			rop = Currency::KRW;
 			return lop;
 		}
-		if(EnumSymbol == "KWD")
+		if (EnumSymbol == "KWD")
 		{
 			rop = Currency::KWD;
 			return lop;
 		}
-		if(EnumSymbol == "KYD")
+		if (EnumSymbol == "KYD")
 		{
 			rop = Currency::KYD;
 			return lop;
 		}
-		if(EnumSymbol == "KZT")
+		if (EnumSymbol == "KZT")
 		{
 			rop = Currency::KZT;
 			return lop;
 		}
-		if(EnumSymbol == "LAK")
+		if (EnumSymbol == "LAK")
 		{
 			rop = Currency::LAK;
 			return lop;
 		}
-		if(EnumSymbol == "LBP")
+		if (EnumSymbol == "LBP")
 		{
 			rop = Currency::LBP;
 			return lop;
 		}
-		if(EnumSymbol == "LKR")
+		if (EnumSymbol == "LKR")
 		{
 			rop = Currency::LKR;
 			return lop;
 		}
-		if(EnumSymbol == "LRD")
+		if (EnumSymbol == "LRD")
 		{
 			rop = Currency::LRD;
 			return lop;
 		}
-		if(EnumSymbol == "LSL")
+		if (EnumSymbol == "LSL")
 		{
 			rop = Currency::LSL;
 			return lop;
 		}
-		if(EnumSymbol == "LTL")
+		if (EnumSymbol == "LTL")
 		{
 			rop = Currency::LTL;
 			return lop;
 		}
-		if(EnumSymbol == "LVL")
+		if (EnumSymbol == "LVL")
 		{
 			rop = Currency::LVL;
 			return lop;
 		}
-		if(EnumSymbol == "LYD")
+		if (EnumSymbol == "LYD")
 		{
 			rop = Currency::LYD;
 			return lop;
 		}
-		if(EnumSymbol == "MAD")
+		if (EnumSymbol == "MAD")
 		{
 			rop = Currency::MAD;
 			return lop;
 		}
-		if(EnumSymbol == "MDL")
+		if (EnumSymbol == "MDL")
 		{
 			rop = Currency::MDL;
 			return lop;
 		}
-		if(EnumSymbol == "MGA")
+		if (EnumSymbol == "MGA")
 		{
 			rop = Currency::MGA;
 			return lop;
 		}
-		if(EnumSymbol == "MKD")
+		if (EnumSymbol == "MKD")
 		{
 			rop = Currency::MKD;
 			return lop;
 		}
-		if(EnumSymbol == "MMK")
+		if (EnumSymbol == "MMK")
 		{
 			rop = Currency::MMK;
 			return lop;
 		}
-		if(EnumSymbol == "MNT")
+		if (EnumSymbol == "MNT")
 		{
 			rop = Currency::MNT;
 			return lop;
 		}
-		if(EnumSymbol == "MOP")
+		if (EnumSymbol == "MOP")
 		{
 			rop = Currency::MOP;
 			return lop;
 		}
-		if(EnumSymbol == "MRO")
+		if (EnumSymbol == "MRO")
 		{
 			rop = Currency::MRO;
 			return lop;
 		}
-		if(EnumSymbol == "MUR")
+		if (EnumSymbol == "MUR")
 		{
 			rop = Currency::MUR;
 			return lop;
 		}
-		if(EnumSymbol == "MVR")
+		if (EnumSymbol == "MVR")
 		{
 			rop = Currency::MVR;
 			return lop;
 		}
-		if(EnumSymbol == "MWK")
+		if (EnumSymbol == "MWK")
 		{
 			rop = Currency::MWK;
 			return lop;
 		}
-		if(EnumSymbol == "MXN")
+		if (EnumSymbol == "MXN")
 		{
 			rop = Currency::MXN;
 			return lop;
 		}
-		if(EnumSymbol == "MYR")
+		if (EnumSymbol == "MYR")
 		{
 			rop = Currency::MYR;
 			return lop;
 		}
-		if(EnumSymbol == "MZN")
+		if (EnumSymbol == "MZN")
 		{
 			rop = Currency::MZN;
 			return lop;
 		}
-		if(EnumSymbol == "NAD")
+		if (EnumSymbol == "NAD")
 		{
 			rop = Currency::NAD;
 			return lop;
 		}
-		if(EnumSymbol == "NGN")
+		if (EnumSymbol == "NGN")
 		{
 			rop = Currency::NGN;
 			return lop;
 		}
-		if(EnumSymbol == "NIO")
+		if (EnumSymbol == "NIO")
 		{
 			rop = Currency::NIO;
 			return lop;
 		}
-		if(EnumSymbol == "NOK")
+		if (EnumSymbol == "NOK")
 		{
 			rop = Currency::NOK;
 			return lop;
 		}
-		if(EnumSymbol == "NPR")
+		if (EnumSymbol == "NPR")
 		{
 			rop = Currency::NPR;
 			return lop;
 		}
-		if(EnumSymbol == "NZD")
+		if (EnumSymbol == "NZD")
 		{
 			rop = Currency::NZD;
 			return lop;
 		}
-		if(EnumSymbol == "OMR")
+		if (EnumSymbol == "OMR")
 		{
 			rop = Currency::OMR;
 			return lop;
 		}
-		if(EnumSymbol == "PAB")
+		if (EnumSymbol == "PAB")
 		{
 			rop = Currency::PAB;
 			return lop;
 		}
-		if(EnumSymbol == "PEN")
+		if (EnumSymbol == "PEN")
 		{
 			rop = Currency::PEN;
 			return lop;
 		}
-		if(EnumSymbol == "PGK")
+		if (EnumSymbol == "PGK")
 		{
 			rop = Currency::PGK;
 			return lop;
 		}
-		if(EnumSymbol == "PHP")
+		if (EnumSymbol == "PHP")
 		{
 			rop = Currency::PHP;
 			return lop;
 		}
-		if(EnumSymbol == "PKR")
+		if (EnumSymbol == "PKR")
 		{
 			rop = Currency::PKR;
 			return lop;
 		}
-		if(EnumSymbol == "PLN")
+		if (EnumSymbol == "PLN")
 		{
 			rop = Currency::PLN;
 			return lop;
 		}
-		if(EnumSymbol == "PYG")
+		if (EnumSymbol == "PYG")
 		{
 			rop = Currency::PYG;
 			return lop;
 		}
-		if(EnumSymbol == "QAR")
+		if (EnumSymbol == "QAR")
 		{
 			rop = Currency::QAR;
 			return lop;
 		}
-		if(EnumSymbol == "RON")
+		if (EnumSymbol == "RON")
 		{
 			rop = Currency::RON;
 			return lop;
 		}
-		if(EnumSymbol == "RSD")
+		if (EnumSymbol == "RSD")
 		{
 			rop = Currency::RSD;
 			return lop;
 		}
-		if(EnumSymbol == "RUB")
+		if (EnumSymbol == "RUB")
 		{
 			rop = Currency::RUB;
 			return lop;
 		}
-		if(EnumSymbol == "RWF")
+		if (EnumSymbol == "RWF")
 		{
 			rop = Currency::RWF;
 			return lop;
 		}
-		if(EnumSymbol == "SAR")
+		if (EnumSymbol == "SAR")
 		{
 			rop = Currency::SAR;
 			return lop;
 		}
-		if(EnumSymbol == "SBD")
+		if (EnumSymbol == "SBD")
 		{
 			rop = Currency::SBD;
 			return lop;
 		}
-		if(EnumSymbol == "SCR")
+		if (EnumSymbol == "SCR")
 		{
 			rop = Currency::SCR;
 			return lop;
 		}
-		if(EnumSymbol == "SDG")
+		if (EnumSymbol == "SDG")
 		{
 			rop = Currency::SDG;
 			return lop;
 		}
-		if(EnumSymbol == "SEK")
+		if (EnumSymbol == "SEK")
 		{
 			rop = Currency::SEK;
 			return lop;
 		}
-		if(EnumSymbol == "SGD")
+		if (EnumSymbol == "SGD")
 		{
 			rop = Currency::SGD;
 			return lop;
 		}
-		if(EnumSymbol == "SHP")
+		if (EnumSymbol == "SHP")
 		{
 			rop = Currency::SHP;
 			return lop;
 		}
-		if(EnumSymbol == "SLL")
+		if (EnumSymbol == "SLL")
 		{
 			rop = Currency::SLL;
 			return lop;
 		}
-		if(EnumSymbol == "SOS")
+		if (EnumSymbol == "SOS")
 		{
 			rop = Currency::SOS;
 			return lop;
 		}
-		if(EnumSymbol == "SRD")
+		if (EnumSymbol == "SRD")
 		{
 			rop = Currency::SRD;
 			return lop;
 		}
-		if(EnumSymbol == "STD")
+		if (EnumSymbol == "STD")
 		{
 			rop = Currency::STD;
 			return lop;
 		}
-		if(EnumSymbol == "SYP")
+		if (EnumSymbol == "SYP")
 		{
 			rop = Currency::SYP;
 			return lop;
 		}
-		if(EnumSymbol == "SZL")
+		if (EnumSymbol == "SZL")
 		{
 			rop = Currency::SZL;
 			return lop;
 		}
-		if(EnumSymbol == "THB")
+		if (EnumSymbol == "THB")
 		{
 			rop = Currency::THB;
 			return lop;
 		}
-		if(EnumSymbol == "TJS")
+		if (EnumSymbol == "TJS")
 		{
 			rop = Currency::TJS;
 			return lop;
 		}
-		if(EnumSymbol == "TMT")
+		if (EnumSymbol == "TMT")
 		{
 			rop = Currency::TMT;
 			return lop;
 		}
-		if(EnumSymbol == "TND")
+		if (EnumSymbol == "TND")
 		{
 			rop = Currency::TND;
 			return lop;
 		}
-		if(EnumSymbol == "TOP")
+		if (EnumSymbol == "TOP")
 		{
 			rop = Currency::TOP;
 			return lop;
 		}
-		if(EnumSymbol == "TRY")
+		if (EnumSymbol == "TRY")
 		{
 			rop = Currency::TRY;
 			return lop;
 		}
-		if(EnumSymbol == "TTD")
+		if (EnumSymbol == "TTD")
 		{
 			rop = Currency::TTD;
 			return lop;
 		}
-		if(EnumSymbol == "TWD")
+		if (EnumSymbol == "TWD")
 		{
 			rop = Currency::TWD;
 			return lop;
 		}
-		if(EnumSymbol == "TZS")
+		if (EnumSymbol == "TZS")
 		{
 			rop = Currency::TZS;
 			return lop;
 		}
-		if(EnumSymbol == "UAH")
+		if (EnumSymbol == "UAH")
 		{
 			rop = Currency::UAH;
 			return lop;
 		}
-		if(EnumSymbol == "UGX")
+		if (EnumSymbol == "UGX")
 		{
 			rop = Currency::UGX;
 			return lop;
 		}
-		if(EnumSymbol == "USD")
+		if (EnumSymbol == "USD")
 		{
 			rop = Currency::USD;
 			return lop;
 		}
-		if(EnumSymbol == "UYU")
+		if (EnumSymbol == "UYU")
 		{
 			rop = Currency::UYU;
 			return lop;
 		}
-		if(EnumSymbol == "UZS")
+		if (EnumSymbol == "UZS")
 		{
 			rop = Currency::UZS;
 			return lop;
 		}
-		if(EnumSymbol == "VEF")
+		if (EnumSymbol == "VEF")
 		{
 			rop = Currency::VEF;
 			return lop;
 		}
-		if(EnumSymbol == "VND")
+		if (EnumSymbol == "VND")
 		{
 			rop = Currency::VND;
 			return lop;
 		}
-		if(EnumSymbol == "VUV")
+		if (EnumSymbol == "VUV")
 		{
 			rop = Currency::VUV;
 			return lop;
 		}
-		if(EnumSymbol == "WST")
+		if (EnumSymbol == "WST")
 		{
 			rop = Currency::WST;
 			return lop;
 		}
-		if(EnumSymbol == "XAF")
+		if (EnumSymbol == "XAF")
 		{
 			rop = Currency::XAF;
 			return lop;
 		}
-		if(EnumSymbol == "XCD")
+		if (EnumSymbol == "XCD")
 		{
 			rop = Currency::XCD;
 			return lop;
 		}
-		if(EnumSymbol == "XOF")
+		if (EnumSymbol == "XOF")
 		{
 			rop = Currency::XOF;
 			return lop;
 		}
-		if(EnumSymbol == "XPF")
+		if (EnumSymbol == "XPF")
 		{
 			rop = Currency::XPF;
 			return lop;
 		}
-		if(EnumSymbol == "YER")
+		if (EnumSymbol == "YER")
 		{
 			rop = Currency::YER;
 			return lop;
 		}
-		if(EnumSymbol == "ZAR")
+		if (EnumSymbol == "ZAR")
 		{
 			rop = Currency::ZAR;
 			return lop;
 		}
-		if(EnumSymbol == "ZMK")
+		if (EnumSymbol == "ZMK")
 		{
 			rop = Currency::ZMK;
 			return lop;
 		}
-		if(EnumSymbol == "ZWL")
+		if (EnumSymbol == "ZWL")
 		{
 			rop = Currency::ZWL;
 			return lop;

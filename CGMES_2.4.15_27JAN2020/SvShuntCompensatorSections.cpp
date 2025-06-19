@@ -9,12 +9,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <sstream>
 
 #include "ShuntCompensator.hpp"
-#include "Simple_Float.hpp"
 
 using namespace CIMPP;
 
-SvShuntCompensatorSections::SvShuntCompensatorSections() : ShuntCompensator(nullptr) {};
-SvShuntCompensatorSections::~SvShuntCompensatorSections() {};
+SvShuntCompensatorSections::SvShuntCompensatorSections() : ShuntCompensator(nullptr) {}
+SvShuntCompensatorSections::~SvShuntCompensatorSections() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -42,21 +41,6 @@ SvShuntCompensatorSections::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_SvShuntCompensatorSections_sections(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
-{
-	if (SvShuntCompensatorSections* element = dynamic_cast<SvShuntCompensatorSections*>(BaseClass_ptr1))
-	{
-		buffer >> element->sections;
-		if (buffer.fail())
-			return false;
-		else
-			return true;
-	}
-	return false;
-}
-
-
 bool assign_ShuntCompensator_SvShuntCompensatorSections(BaseClass*, BaseClass*);
 bool assign_SvShuntCompensatorSections_ShuntCompensator(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -74,9 +58,38 @@ bool assign_SvShuntCompensatorSections_ShuntCompensator(BaseClass* BaseClass_ptr
 	return false;
 }
 
+bool assign_SvShuntCompensatorSections_sections(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
+{
+	SvShuntCompensatorSections* element = dynamic_cast<SvShuntCompensatorSections*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		buffer >> element->sections;
+		if (!buffer.fail())
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool get_SvShuntCompensatorSections_ShuntCompensator(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
+{
+	const SvShuntCompensatorSections* element = dynamic_cast<const SvShuntCompensatorSections*>(BaseClass_ptr1);
+	if (element != nullptr)
+	{
+		if (element->ShuntCompensator != 0)
+		{
+			BaseClass_list.push_back(element->ShuntCompensator);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool get_SvShuntCompensatorSections_sections(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const SvShuntCompensatorSections* element = dynamic_cast<const SvShuntCompensatorSections*>(BaseClass_ptr1))
+	const SvShuntCompensatorSections* element = dynamic_cast<const SvShuntCompensatorSections*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->sections;
 		if (!buffer.str().empty())
@@ -88,21 +101,6 @@ bool get_SvShuntCompensatorSections_sections(const BaseClass* BaseClass_ptr1, st
 	return false;
 }
 
-
-bool get_SvShuntCompensatorSections_ShuntCompensator(const BaseClass* BaseClass_ptr1, std::list<const BaseClass*>& BaseClass_list)
-{
-	if (const SvShuntCompensatorSections* element = dynamic_cast<const SvShuntCompensatorSections*>(BaseClass_ptr1))
-	{
-		if (element->ShuntCompensator != 0)
-		{
-			BaseClass_list.push_back(element->ShuntCompensator);
-			return true;
-		}
-	}
-	return false;
-}
-
-
 const char SvShuntCompensatorSections::debugName[] = "SvShuntCompensatorSections";
 const char* SvShuntCompensatorSections::debugString() const
 {
@@ -111,17 +109,17 @@ const char* SvShuntCompensatorSections::debugString() const
 
 void SvShuntCompensatorSections::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:SvShuntCompensatorSections"), &SvShuntCompensatorSections_factory));
+	factory_map.emplace("cim:SvShuntCompensatorSections", &SvShuntCompensatorSections_factory);
 }
 
 void SvShuntCompensatorSections::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:SvShuntCompensatorSections.sections"), &assign_SvShuntCompensatorSections_sections));
+	assign_map.emplace("cim:SvShuntCompensatorSections.sections", &assign_SvShuntCompensatorSections_sections);
 }
 
 void SvShuntCompensatorSections::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:SvShuntCompensatorSections.ShuntCompensator"), &assign_SvShuntCompensatorSections_ShuntCompensator));
+	assign_map.emplace("cim:SvShuntCompensatorSections.ShuntCompensator", &assign_SvShuntCompensatorSections_ShuntCompensator);
 }
 
 void SvShuntCompensatorSections::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

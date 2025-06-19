@@ -18,9 +18,7 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 namespace CIMPP
 {
 
-	/*
-	<font color="#0f0f0f">Terminal voltage transducer and load compensator as defined in IEEE 421.5-2005, 4. This model is common to all excitation system models described in the IEEE Standard. </font> <font color="#0f0f0f">Parameter details:</font> <ol> 	<li><font color="#0f0f0f">If <i>Rc</i> and <i>Xc</i> are set to zero, the l</font>oad compensation is not employed and the behaviour is as a simple sensing circuit.</li> </ol> <ol> 	<li>If all parameters (<i>Rc</i>, <i>Xc</i> and <i>Tr</i>) are set to zero, the standard model VCompIEEEType1 is bypassed.</li> </ol> Reference: IEEE 421.5-2005 4.
-	*/
+	/** \brief <font color="#0f0f0f">Terminal voltage transducer and load compensator as defined in IEEE 421.5-2005, 4. This model is common to all excitation system models described in the IEEE Standard. </font> <font color="#0f0f0f">Parameter details:</font> <ol> 	<li><font color="#0f0f0f">If <i>Rc</i> and <i>Xc</i> are set to zero, the l</font>oad compensation is not employed and the behaviour is as a simple sensing circuit.</li> </ol> <ol> 	<li>If all parameters (<i>Rc</i>, <i>Xc</i> and <i>Tr</i>) are set to zero, the standard model VCompIEEEType1 is bypassed.</li> </ol> Reference: IEEE 421.5-2005 4. */
 	class VCompIEEEType1 : public VoltageCompensatorDynamics
 	{
 	public:
@@ -28,9 +26,14 @@ namespace CIMPP
 		VCompIEEEType1();
 		~VCompIEEEType1() override;
 
-		CIMPP::PU rc;  /* &lt;font color=`#0f0f0f`&gt;Resistive component of compensation of a generator (&lt;i&gt;Rc&lt;/i&gt;) (&amp;gt;= 0).&lt;/font&gt; Default: nullptr */
-		CIMPP::Seconds tr;  /* &lt;font color=`#0f0f0f`&gt;Time constant which is used for the combined voltage sensing and compensation signal (&lt;i&gt;Tr&lt;/i&gt;) (&amp;gt;= 0).&lt;/font&gt; Default: nullptr */
-		CIMPP::PU xc;  /* &lt;font color=`#0f0f0f`&gt;Reactive component of compensation of a generator (&lt;i&gt;Xc&lt;/i&gt;) (&amp;gt;= 0).&lt;/font&gt; Default: nullptr */
+		/** \brief &lt;font color=`#0f0f0f`&gt;Resistive component of compensation of a generator (&lt;i&gt;Rc&lt;/i&gt;) (&amp;gt;= 0).&lt;/font&gt; Default: nullptr */
+		CIMPP::PU rc;
+
+		/** \brief &lt;font color=`#0f0f0f`&gt;Time constant which is used for the combined voltage sensing and compensation signal (&lt;i&gt;Tr&lt;/i&gt;) (&amp;gt;= 0).&lt;/font&gt; Default: nullptr */
+		CIMPP::Seconds tr;
+
+		/** \brief &lt;font color=`#0f0f0f`&gt;Reactive component of compensation of a generator (&lt;i&gt;Xc&lt;/i&gt;) (&amp;gt;= 0).&lt;/font&gt; Default: nullptr */
+		CIMPP::PU xc;
 
 		static const char debugName[];
 		const char* debugString() const override;

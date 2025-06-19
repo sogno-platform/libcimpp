@@ -8,18 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
 
 using namespace CIMPP;
 
-UnderexcLim2Simplified::UnderexcLim2Simplified() {};
-UnderexcLim2Simplified::~UnderexcLim2Simplified() {};
+UnderexcLim2Simplified::UnderexcLim2Simplified() {}
+UnderexcLim2Simplified::~UnderexcLim2Simplified() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -52,103 +45,108 @@ UnderexcLim2Simplified::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_UnderexcLim2Simplified_kui(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_UnderexcLim2Simplified_kui(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (UnderexcLim2Simplified* element = dynamic_cast<UnderexcLim2Simplified*>(BaseClass_ptr1))
+	UnderexcLim2Simplified* element = dynamic_cast<UnderexcLim2Simplified*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->kui;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_UnderexcLim2Simplified_p0(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_UnderexcLim2Simplified_p0(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (UnderexcLim2Simplified* element = dynamic_cast<UnderexcLim2Simplified*>(BaseClass_ptr1))
+	UnderexcLim2Simplified* element = dynamic_cast<UnderexcLim2Simplified*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->p0;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_UnderexcLim2Simplified_p1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_UnderexcLim2Simplified_p1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (UnderexcLim2Simplified* element = dynamic_cast<UnderexcLim2Simplified*>(BaseClass_ptr1))
+	UnderexcLim2Simplified* element = dynamic_cast<UnderexcLim2Simplified*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->p1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_UnderexcLim2Simplified_q0(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_UnderexcLim2Simplified_q0(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (UnderexcLim2Simplified* element = dynamic_cast<UnderexcLim2Simplified*>(BaseClass_ptr1))
+	UnderexcLim2Simplified* element = dynamic_cast<UnderexcLim2Simplified*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->q0;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_UnderexcLim2Simplified_q1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_UnderexcLim2Simplified_q1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (UnderexcLim2Simplified* element = dynamic_cast<UnderexcLim2Simplified*>(BaseClass_ptr1))
+	UnderexcLim2Simplified* element = dynamic_cast<UnderexcLim2Simplified*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->q1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_UnderexcLim2Simplified_vuimax(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_UnderexcLim2Simplified_vuimax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (UnderexcLim2Simplified* element = dynamic_cast<UnderexcLim2Simplified*>(BaseClass_ptr1))
+	UnderexcLim2Simplified* element = dynamic_cast<UnderexcLim2Simplified*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vuimax;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_UnderexcLim2Simplified_vuimin(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_UnderexcLim2Simplified_vuimin(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (UnderexcLim2Simplified* element = dynamic_cast<UnderexcLim2Simplified*>(BaseClass_ptr1))
+	UnderexcLim2Simplified* element = dynamic_cast<UnderexcLim2Simplified*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vuimin;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_UnderexcLim2Simplified_kui(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const UnderexcLim2Simplified* element = dynamic_cast<const UnderexcLim2Simplified*>(BaseClass_ptr1))
+	const UnderexcLim2Simplified* element = dynamic_cast<const UnderexcLim2Simplified*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->kui;
 		if (!buffer.str().empty())
@@ -162,7 +160,8 @@ bool get_UnderexcLim2Simplified_kui(const BaseClass* BaseClass_ptr1, std::string
 
 bool get_UnderexcLim2Simplified_p0(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const UnderexcLim2Simplified* element = dynamic_cast<const UnderexcLim2Simplified*>(BaseClass_ptr1))
+	const UnderexcLim2Simplified* element = dynamic_cast<const UnderexcLim2Simplified*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->p0;
 		if (!buffer.str().empty())
@@ -176,7 +175,8 @@ bool get_UnderexcLim2Simplified_p0(const BaseClass* BaseClass_ptr1, std::strings
 
 bool get_UnderexcLim2Simplified_p1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const UnderexcLim2Simplified* element = dynamic_cast<const UnderexcLim2Simplified*>(BaseClass_ptr1))
+	const UnderexcLim2Simplified* element = dynamic_cast<const UnderexcLim2Simplified*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->p1;
 		if (!buffer.str().empty())
@@ -190,7 +190,8 @@ bool get_UnderexcLim2Simplified_p1(const BaseClass* BaseClass_ptr1, std::strings
 
 bool get_UnderexcLim2Simplified_q0(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const UnderexcLim2Simplified* element = dynamic_cast<const UnderexcLim2Simplified*>(BaseClass_ptr1))
+	const UnderexcLim2Simplified* element = dynamic_cast<const UnderexcLim2Simplified*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->q0;
 		if (!buffer.str().empty())
@@ -204,7 +205,8 @@ bool get_UnderexcLim2Simplified_q0(const BaseClass* BaseClass_ptr1, std::strings
 
 bool get_UnderexcLim2Simplified_q1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const UnderexcLim2Simplified* element = dynamic_cast<const UnderexcLim2Simplified*>(BaseClass_ptr1))
+	const UnderexcLim2Simplified* element = dynamic_cast<const UnderexcLim2Simplified*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->q1;
 		if (!buffer.str().empty())
@@ -218,7 +220,8 @@ bool get_UnderexcLim2Simplified_q1(const BaseClass* BaseClass_ptr1, std::strings
 
 bool get_UnderexcLim2Simplified_vuimax(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const UnderexcLim2Simplified* element = dynamic_cast<const UnderexcLim2Simplified*>(BaseClass_ptr1))
+	const UnderexcLim2Simplified* element = dynamic_cast<const UnderexcLim2Simplified*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vuimax;
 		if (!buffer.str().empty())
@@ -232,7 +235,8 @@ bool get_UnderexcLim2Simplified_vuimax(const BaseClass* BaseClass_ptr1, std::str
 
 bool get_UnderexcLim2Simplified_vuimin(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const UnderexcLim2Simplified* element = dynamic_cast<const UnderexcLim2Simplified*>(BaseClass_ptr1))
+	const UnderexcLim2Simplified* element = dynamic_cast<const UnderexcLim2Simplified*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vuimin;
 		if (!buffer.str().empty())
@@ -244,8 +248,6 @@ bool get_UnderexcLim2Simplified_vuimin(const BaseClass* BaseClass_ptr1, std::str
 	return false;
 }
 
-
-
 const char UnderexcLim2Simplified::debugName[] = "UnderexcLim2Simplified";
 const char* UnderexcLim2Simplified::debugString() const
 {
@@ -254,18 +256,18 @@ const char* UnderexcLim2Simplified::debugString() const
 
 void UnderexcLim2Simplified::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:UnderexcLim2Simplified"), &UnderexcLim2Simplified_factory));
+	factory_map.emplace("cim:UnderexcLim2Simplified", &UnderexcLim2Simplified_factory);
 }
 
 void UnderexcLim2Simplified::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:UnderexcLim2Simplified.kui"), &assign_UnderexcLim2Simplified_kui));
-	assign_map.insert(std::make_pair(std::string("cim:UnderexcLim2Simplified.p0"), &assign_UnderexcLim2Simplified_p0));
-	assign_map.insert(std::make_pair(std::string("cim:UnderexcLim2Simplified.p1"), &assign_UnderexcLim2Simplified_p1));
-	assign_map.insert(std::make_pair(std::string("cim:UnderexcLim2Simplified.q0"), &assign_UnderexcLim2Simplified_q0));
-	assign_map.insert(std::make_pair(std::string("cim:UnderexcLim2Simplified.q1"), &assign_UnderexcLim2Simplified_q1));
-	assign_map.insert(std::make_pair(std::string("cim:UnderexcLim2Simplified.vuimax"), &assign_UnderexcLim2Simplified_vuimax));
-	assign_map.insert(std::make_pair(std::string("cim:UnderexcLim2Simplified.vuimin"), &assign_UnderexcLim2Simplified_vuimin));
+	assign_map.emplace("cim:UnderexcLim2Simplified.kui", &assign_UnderexcLim2Simplified_kui);
+	assign_map.emplace("cim:UnderexcLim2Simplified.p0", &assign_UnderexcLim2Simplified_p0);
+	assign_map.emplace("cim:UnderexcLim2Simplified.p1", &assign_UnderexcLim2Simplified_p1);
+	assign_map.emplace("cim:UnderexcLim2Simplified.q0", &assign_UnderexcLim2Simplified_q0);
+	assign_map.emplace("cim:UnderexcLim2Simplified.q1", &assign_UnderexcLim2Simplified_q1);
+	assign_map.emplace("cim:UnderexcLim2Simplified.vuimax", &assign_UnderexcLim2Simplified_vuimax);
+	assign_map.emplace("cim:UnderexcLim2Simplified.vuimin", &assign_UnderexcLim2Simplified_vuimin);
 }
 
 void UnderexcLim2Simplified::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

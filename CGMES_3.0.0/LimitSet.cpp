@@ -8,12 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "Boolean.hpp"
 
 using namespace CIMPP;
 
-LimitSet::LimitSet() {};
-LimitSet::~LimitSet() {};
+LimitSet::LimitSet() {}
+LimitSet::~LimitSet() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,25 +39,24 @@ LimitSet::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_LimitSet_isPercentageLimits(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_LimitSet_isPercentageLimits(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (LimitSet* element = dynamic_cast<LimitSet*>(BaseClass_ptr1))
+	LimitSet* element = dynamic_cast<LimitSet*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->isPercentageLimits;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-
-
 bool get_LimitSet_isPercentageLimits(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const LimitSet* element = dynamic_cast<const LimitSet*>(BaseClass_ptr1))
+	const LimitSet* element = dynamic_cast<const LimitSet*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->isPercentageLimits;
 		if (!buffer.str().empty())
@@ -70,8 +68,6 @@ bool get_LimitSet_isPercentageLimits(const BaseClass* BaseClass_ptr1, std::strin
 	return false;
 }
 
-
-
 const char LimitSet::debugName[] = "LimitSet";
 const char* LimitSet::debugString() const
 {
@@ -80,12 +76,12 @@ const char* LimitSet::debugString() const
 
 void LimitSet::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:LimitSet"), &LimitSet_factory));
+	factory_map.emplace("cim:LimitSet", &LimitSet_factory);
 }
 
 void LimitSet::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:LimitSet.isPercentageLimits"), &assign_LimitSet_isPercentageLimits));
+	assign_map.emplace("cim:LimitSet.isPercentageLimits", &assign_LimitSet_isPercentageLimits);
 }
 
 void LimitSet::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

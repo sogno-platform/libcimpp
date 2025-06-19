@@ -12,8 +12,8 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
-StringMeasurement::StringMeasurement() {};
-StringMeasurement::~StringMeasurement() {};
+StringMeasurement::StringMeasurement() {}
+StringMeasurement::~StringMeasurement() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -40,8 +40,6 @@ StringMeasurement::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-
 bool assign_StringMeasurementValue_StringMeasurement(BaseClass*, BaseClass*);
 bool assign_StringMeasurement_StringMeasurementValues(BaseClass* BaseClass_ptr1, BaseClass* BaseClass_ptr2)
 {
@@ -60,7 +58,6 @@ bool assign_StringMeasurement_StringMeasurementValues(BaseClass* BaseClass_ptr1,
 }
 
 
-
 const char StringMeasurement::debugName[] = "StringMeasurement";
 const char* StringMeasurement::debugString() const
 {
@@ -69,7 +66,7 @@ const char* StringMeasurement::debugString() const
 
 void StringMeasurement::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:StringMeasurement"), &StringMeasurement_factory));
+	factory_map.emplace("cim:StringMeasurement", &StringMeasurement_factory);
 }
 
 void StringMeasurement::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -78,7 +75,7 @@ void StringMeasurement::addPrimitiveAssignFnsToMap(std::unordered_map<std::strin
 
 void StringMeasurement::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:StringMeasurement.StringMeasurementValues"), &assign_StringMeasurement_StringMeasurementValues));
+	assign_map.emplace("cim:StringMeasurement.StringMeasurementValues", &assign_StringMeasurement_StringMeasurementValues);
 }
 
 void StringMeasurement::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const

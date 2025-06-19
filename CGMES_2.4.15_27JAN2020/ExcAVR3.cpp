@@ -8,23 +8,11 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <iterator>
 #include <sstream>
 
-#include "PU.hpp"
-#include "PU.hpp"
-#include "Simple_Float.hpp"
-#include "Simple_Float.hpp"
-#include "Simple_Float.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "Seconds.hpp"
-#include "PU.hpp"
-#include "PU.hpp"
 
 using namespace CIMPP;
 
-ExcAVR3::ExcAVR3() {};
-ExcAVR3::~ExcAVR3() {};
+ExcAVR3::ExcAVR3() {}
+ExcAVR3::~ExcAVR3() {}
 
 static const std::list<CGMESProfile> PossibleProfilesForClass =
 {
@@ -62,168 +50,178 @@ ExcAVR3::getPossibleProfilesForAttributes() const
 	return map;
 }
 
-
-bool assign_ExcAVR3_e1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAVR3_e1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAVR3* element = dynamic_cast<ExcAVR3*>(BaseClass_ptr1))
+	ExcAVR3* element = dynamic_cast<ExcAVR3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->e1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAVR3_e2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAVR3_e2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAVR3* element = dynamic_cast<ExcAVR3*>(BaseClass_ptr1))
+	ExcAVR3* element = dynamic_cast<ExcAVR3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->e2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAVR3_ka(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAVR3_ka(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAVR3* element = dynamic_cast<ExcAVR3*>(BaseClass_ptr1))
+	ExcAVR3* element = dynamic_cast<ExcAVR3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->ka;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAVR3_se1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAVR3_se1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAVR3* element = dynamic_cast<ExcAVR3*>(BaseClass_ptr1))
+	ExcAVR3* element = dynamic_cast<ExcAVR3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->se1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAVR3_se2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAVR3_se2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAVR3* element = dynamic_cast<ExcAVR3*>(BaseClass_ptr1))
+	ExcAVR3* element = dynamic_cast<ExcAVR3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->se2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAVR3_t1(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAVR3_t1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAVR3* element = dynamic_cast<ExcAVR3*>(BaseClass_ptr1))
+	ExcAVR3* element = dynamic_cast<ExcAVR3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t1;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAVR3_t2(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAVR3_t2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAVR3* element = dynamic_cast<ExcAVR3*>(BaseClass_ptr1))
+	ExcAVR3* element = dynamic_cast<ExcAVR3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t2;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAVR3_t3(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAVR3_t3(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAVR3* element = dynamic_cast<ExcAVR3*>(BaseClass_ptr1))
+	ExcAVR3* element = dynamic_cast<ExcAVR3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t3;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAVR3_t4(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAVR3_t4(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAVR3* element = dynamic_cast<ExcAVR3*>(BaseClass_ptr1))
+	ExcAVR3* element = dynamic_cast<ExcAVR3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->t4;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAVR3_te(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAVR3_te(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAVR3* element = dynamic_cast<ExcAVR3*>(BaseClass_ptr1))
+	ExcAVR3* element = dynamic_cast<ExcAVR3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->te;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAVR3_vrmn(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAVR3_vrmn(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAVR3* element = dynamic_cast<ExcAVR3*>(BaseClass_ptr1))
+	ExcAVR3* element = dynamic_cast<ExcAVR3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vrmn;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
 
-bool assign_ExcAVR3_vrmx(std::stringstream &buffer, BaseClass* BaseClass_ptr1)
+bool assign_ExcAVR3_vrmx(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
 {
-	if (ExcAVR3* element = dynamic_cast<ExcAVR3*>(BaseClass_ptr1))
+	ExcAVR3* element = dynamic_cast<ExcAVR3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer >> element->vrmx;
-		if (buffer.fail())
-			return false;
-		else
+		if (!buffer.fail())
+		{
 			return true;
+		}
 	}
 	return false;
 }
-
-
 
 bool get_ExcAVR3_e1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAVR3* element = dynamic_cast<const ExcAVR3*>(BaseClass_ptr1))
+	const ExcAVR3* element = dynamic_cast<const ExcAVR3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->e1;
 		if (!buffer.str().empty())
@@ -237,7 +235,8 @@ bool get_ExcAVR3_e1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcAVR3_e2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAVR3* element = dynamic_cast<const ExcAVR3*>(BaseClass_ptr1))
+	const ExcAVR3* element = dynamic_cast<const ExcAVR3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->e2;
 		if (!buffer.str().empty())
@@ -251,7 +250,8 @@ bool get_ExcAVR3_e2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcAVR3_ka(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAVR3* element = dynamic_cast<const ExcAVR3*>(BaseClass_ptr1))
+	const ExcAVR3* element = dynamic_cast<const ExcAVR3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->ka;
 		if (!buffer.str().empty())
@@ -265,7 +265,8 @@ bool get_ExcAVR3_ka(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcAVR3_se1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAVR3* element = dynamic_cast<const ExcAVR3*>(BaseClass_ptr1))
+	const ExcAVR3* element = dynamic_cast<const ExcAVR3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->se1;
 		if (!buffer.str().empty())
@@ -279,7 +280,8 @@ bool get_ExcAVR3_se1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcAVR3_se2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAVR3* element = dynamic_cast<const ExcAVR3*>(BaseClass_ptr1))
+	const ExcAVR3* element = dynamic_cast<const ExcAVR3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->se2;
 		if (!buffer.str().empty())
@@ -293,7 +295,8 @@ bool get_ExcAVR3_se2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcAVR3_t1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAVR3* element = dynamic_cast<const ExcAVR3*>(BaseClass_ptr1))
+	const ExcAVR3* element = dynamic_cast<const ExcAVR3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t1;
 		if (!buffer.str().empty())
@@ -307,7 +310,8 @@ bool get_ExcAVR3_t1(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcAVR3_t2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAVR3* element = dynamic_cast<const ExcAVR3*>(BaseClass_ptr1))
+	const ExcAVR3* element = dynamic_cast<const ExcAVR3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t2;
 		if (!buffer.str().empty())
@@ -321,7 +325,8 @@ bool get_ExcAVR3_t2(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcAVR3_t3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAVR3* element = dynamic_cast<const ExcAVR3*>(BaseClass_ptr1))
+	const ExcAVR3* element = dynamic_cast<const ExcAVR3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t3;
 		if (!buffer.str().empty())
@@ -335,7 +340,8 @@ bool get_ExcAVR3_t3(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcAVR3_t4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAVR3* element = dynamic_cast<const ExcAVR3*>(BaseClass_ptr1))
+	const ExcAVR3* element = dynamic_cast<const ExcAVR3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->t4;
 		if (!buffer.str().empty())
@@ -349,7 +355,8 @@ bool get_ExcAVR3_t4(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcAVR3_te(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAVR3* element = dynamic_cast<const ExcAVR3*>(BaseClass_ptr1))
+	const ExcAVR3* element = dynamic_cast<const ExcAVR3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->te;
 		if (!buffer.str().empty())
@@ -363,7 +370,8 @@ bool get_ExcAVR3_te(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 
 bool get_ExcAVR3_vrmn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAVR3* element = dynamic_cast<const ExcAVR3*>(BaseClass_ptr1))
+	const ExcAVR3* element = dynamic_cast<const ExcAVR3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vrmn;
 		if (!buffer.str().empty())
@@ -377,7 +385,8 @@ bool get_ExcAVR3_vrmn(const BaseClass* BaseClass_ptr1, std::stringstream& buffer
 
 bool get_ExcAVR3_vrmx(const BaseClass* BaseClass_ptr1, std::stringstream& buffer)
 {
-	if (const ExcAVR3* element = dynamic_cast<const ExcAVR3*>(BaseClass_ptr1))
+	const ExcAVR3* element = dynamic_cast<const ExcAVR3*>(BaseClass_ptr1);
+	if (element != nullptr)
 	{
 		buffer << element->vrmx;
 		if (!buffer.str().empty())
@@ -389,8 +398,6 @@ bool get_ExcAVR3_vrmx(const BaseClass* BaseClass_ptr1, std::stringstream& buffer
 	return false;
 }
 
-
-
 const char ExcAVR3::debugName[] = "ExcAVR3";
 const char* ExcAVR3::debugString() const
 {
@@ -399,23 +406,23 @@ const char* ExcAVR3::debugString() const
 
 void ExcAVR3::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.insert(std::make_pair(std::string("cim:ExcAVR3"), &ExcAVR3_factory));
+	factory_map.emplace("cim:ExcAVR3", &ExcAVR3_factory);
 }
 
 void ExcAVR3::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.insert(std::make_pair(std::string("cim:ExcAVR3.e1"), &assign_ExcAVR3_e1));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAVR3.e2"), &assign_ExcAVR3_e2));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAVR3.ka"), &assign_ExcAVR3_ka));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAVR3.se1"), &assign_ExcAVR3_se1));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAVR3.se2"), &assign_ExcAVR3_se2));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAVR3.t1"), &assign_ExcAVR3_t1));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAVR3.t2"), &assign_ExcAVR3_t2));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAVR3.t3"), &assign_ExcAVR3_t3));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAVR3.t4"), &assign_ExcAVR3_t4));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAVR3.te"), &assign_ExcAVR3_te));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAVR3.vrmn"), &assign_ExcAVR3_vrmn));
-	assign_map.insert(std::make_pair(std::string("cim:ExcAVR3.vrmx"), &assign_ExcAVR3_vrmx));
+	assign_map.emplace("cim:ExcAVR3.e1", &assign_ExcAVR3_e1);
+	assign_map.emplace("cim:ExcAVR3.e2", &assign_ExcAVR3_e2);
+	assign_map.emplace("cim:ExcAVR3.ka", &assign_ExcAVR3_ka);
+	assign_map.emplace("cim:ExcAVR3.se1", &assign_ExcAVR3_se1);
+	assign_map.emplace("cim:ExcAVR3.se2", &assign_ExcAVR3_se2);
+	assign_map.emplace("cim:ExcAVR3.t1", &assign_ExcAVR3_t1);
+	assign_map.emplace("cim:ExcAVR3.t2", &assign_ExcAVR3_t2);
+	assign_map.emplace("cim:ExcAVR3.t3", &assign_ExcAVR3_t3);
+	assign_map.emplace("cim:ExcAVR3.t4", &assign_ExcAVR3_t4);
+	assign_map.emplace("cim:ExcAVR3.te", &assign_ExcAVR3_te);
+	assign_map.emplace("cim:ExcAVR3.vrmn", &assign_ExcAVR3_vrmn);
+	assign_map.emplace("cim:ExcAVR3.vrmx", &assign_ExcAVR3_vrmx);
 }
 
 void ExcAVR3::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)

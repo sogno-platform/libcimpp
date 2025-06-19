@@ -19,9 +19,7 @@ namespace CIMPP
 	class Equipment;
 	class OperationalLimit;
 
-	/*
-	A set of limits associated with equipment.  Sets of limits might apply to a specific temperature, or season for example. A set of limits may contain different severities of limit levels that would apply to the same equipment. The set may contain limits of different types such as apparent power and current limits or high and low voltage limits  that are logically applied together as a set.
-	*/
+	/** \brief A set of limits associated with equipment.  Sets of limits might apply to a specific temperature, or season for example. A set of limits may contain different severities of limit levels that would apply to the same equipment. The set may contain limits of different types such as apparent power and current limits or high and low voltage limits  that are logically applied together as a set. */
 	class OperationalLimitSet : public IdentifiedObject
 	{
 	public:
@@ -29,9 +27,14 @@ namespace CIMPP
 		OperationalLimitSet();
 		~OperationalLimitSet() override;
 
-		CIMPP::Equipment* Equipment;  /* The equipment to which the limit set applies. Default: 0 */
-		std::list<CIMPP::OperationalLimit*> OperationalLimitValue;  /* The limit set to which the limit values belong. Default: 0 */
-		CIMPP::ACDCTerminal* Terminal;  /*  Default: 0 */
+		/** \brief The equipment to which the limit set applies. Default: 0 */
+		CIMPP::Equipment* Equipment;
+
+		/** \brief The limit set to which the limit values belong. Default: 0 */
+		std::list<CIMPP::OperationalLimit*> OperationalLimitValue;
+
+		/** \brief  Default: 0 */
+		CIMPP::ACDCTerminal* Terminal;
 
 		static const char debugName[];
 		const char* debugString() const override;

@@ -25,8 +25,11 @@ namespace CIMPP
 		ACDCConverterDCTerminal();
 		~ACDCConverterDCTerminal() override;
 
-		CIMPP::ACDCConverter* DCConductingEquipment;  /*  Default: 0 */
-		CIMPP::DCPolarityKind polarity;  /* Represents the normal network polarity condition. Default: 0 */
+		/** \brief  Default: 0 */
+		CIMPP::ACDCConverter* DCConductingEquipment;
+
+		/** \brief Represents the normal network polarity condition. Default: 0 */
+		CIMPP::DCPolarityKind polarity;
 
 		static const char debugName[];
 		const char* debugString() const override;

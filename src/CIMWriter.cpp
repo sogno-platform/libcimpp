@@ -10,6 +10,7 @@
 #include <vector>
 
 #include "CGMESProfile.hpp"
+#include "CimConstants.hpp"
 #include "BaseClass.hpp"
 #include "gettercache.hpp"
 #include "profilecache.hpp"
@@ -42,9 +43,9 @@ bool CIMWriter::writeCim(std::ostream& rdf, const std::vector<BaseClass*>& objLi
                          const std::map<std::string, CGMESProfile>& classProfileMap)
 {
   int objectsCount = 0;
-  static char rdfURL[] = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
-  static auto cimURL   = getCimNamespace();
-  static char mdURL[]  = "http://iec.ch/TC57/61970-552/ModelDescription/1#";
+  static const auto& rdfURL = NamespaceMap.at("rdf");
+  static const auto& cimURL = NamespaceMap.at("cim");
+  static const auto& mdURL  = NamespaceMap.at("md");
 
   rdf << "<?xml version='1.0' encoding='utf-8' ?>" << std::endl;
   rdf << "<rdf:RDF xmlns:rdf='" << rdfURL << "'" << std::endl;
