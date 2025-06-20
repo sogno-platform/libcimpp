@@ -31,6 +31,8 @@ set(libcimpp_MINOR_VERSION 2)
 set(libcimpp_PATCH_VERSION 0)
 set(libcimpp_VERSION ${libcimpp_MAJOR_VERSION}.${libcimpp_MINOR_VERSION}.${libcimpp_PATCH_VERSION})
 
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/src/version.hpp.in ${CMAKE_CURRENT_SOURCE_DIR}/src/version.hpp)
+
 # Options
 option(BUILD_SHARED_LIBS "Build shared library" OFF)
 option(CIMPP_BUILD_EXAMPLES "Build examples" OFF)

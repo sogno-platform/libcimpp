@@ -1,8 +1,10 @@
 #include <iostream>
 #include <string>
 #include "CIMModel.hpp"
+#include "CimConstants.hpp"
 #include "BaseClass.hpp"
 #include "IdentifiedObject.hpp"
+#include "version.hpp"
 
 // forward declerations
 static std::string format_name(std::string name);
@@ -16,6 +18,7 @@ int main(int argc, char** argv)
 	{
 		std::cout << "Usage: example <cim file> [additional cim files]" << std::endl;
 		std::cout << "Provide at least one cim file" << std::endl;
+		std::cout << "Version: libcimpp " << RELEASE_VERSION << " (" << CimVersion << ")" << std::endl;
 		return 1;
 	}
 

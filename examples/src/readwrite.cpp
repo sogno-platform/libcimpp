@@ -3,6 +3,8 @@
 
 #include "CIMModel.hpp"
 #include "CIMWriter.hpp"
+#include "CimConstants.hpp"
+#include "version.hpp"
 
 int main(int argc, char** argv)
 {
@@ -10,6 +12,7 @@ int main(int argc, char** argv)
 	{
 		std::cout << "Usage: readwrite <cim file> [additional cim files] <outputfile>" << std::endl;
 		std::cout << "Provide at least one cim file and outputfile" << std::endl;
+		std::cout << "Version: libcimpp " << RELEASE_VERSION << " (" << CimVersion << ")" << std::endl;
 		return 1;
 	}
 	std::string outputfile = argv[argc-1];
