@@ -54,3 +54,5 @@ cmake-build*
 *.swp
 
 .cache
+
+src/version.hpp

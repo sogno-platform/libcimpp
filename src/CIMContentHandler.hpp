@@ -50,6 +50,7 @@ private:
 	std::stack<BaseClass*> objectStack;
 	std::stack<std::string> tagStack;
 	std::list<Task> taskQueue;
+	std::string value;
 };
 
 

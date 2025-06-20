@@ -88,6 +88,7 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 
 	// Remember last opened tag
 	tagStack.push(qName);
+	value.clear();
 
 	// If there is no RDF ID (an XML attribute!) then we don't have a new CIM
 	// object or RDF relation therefore the XML element will contain a value
@@ -148,9 +149,14 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 void CIMContentHandler::endElement(const std::string &namespaceURI, const std::string &localName, const std::string &qName)
 {
 	// Only process tags in cim namespace
-	if(qName.find("cim:") == std::string::npos)
+	if (qName.find("cim:") == std::string::npos)
 	{
 		return;
+	}
+
+	if (!tagStack.empty() && !objectStack.empty() && !value.empty())
+	{
+		assign(objectStack.top(), tagStack.top(), value);
 	}
 
 	// Pop Stacks
@@ -174,27 +180,7 @@ void CIMContentHandler::endElement(const std::string &namespaceURI, const std::s
 
 void CIMContentHandler::characters(const std::string &characters)
 {
-	// Only process tags in "cim" namespace
-	if(tagStack.empty())
-	{
-		return;
-	}
-	if(objectStack.empty())
-	{
-		throw CriticalError("CIMContentHandler: Critical Error: objectStack empty");
-	}
-
-#ifndef DEBUG
-	assign(objectStack.top(), tagStack.top(), characters);
-#else
-	// Check if the characters only contain whitespace
-	if(is_only_whitespace(characters))
-	{
-		return;
-	}
-	if(!assign(objectStack.top(), tagStack.top(), characters))
-		std::cout << "CIMContentHandler: Note: Cannot assign '" << characters << "' to " << tagStack.top() << std::endl;
-#endif
+	value.append(characters);
 }
 
 void CIMContentHandler::ignorableWhitespace(const std::string &ch)
@@ -244,7 +230,7 @@ std::string CIMContentHandler::get_rdf_enum(const AttributesT &attributes)
 	{
 		if(attributes.getQName(i) == "rdf:resource")
 		{
-			std::regex expr("^http[s]*://[a-zA-Z0-9./_]*CIM-schema-cim[0-9]+#([a-zA-z0-9]*).([a-zA-z0-9]*)");
+			std::regex expr("^http[s]*://.*#([a-zA-z0-9]*).([a-zA-z0-9]*)");
 			std::smatch m;
 			std::string str = attributes.getValue(i);
 			if(std::regex_match(str, m, expr))
