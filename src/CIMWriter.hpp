@@ -104,6 +104,9 @@ public:
    */
   static CGMESProfile getAttributeProfile(const BaseClass* obj, const std::string& attr,
                                           const CGMESProfile& classProfile);
+
+private:
+  static std::string xmlEscape(const std::string& txt);
 };
 
 #endif // CIMWRITER_HPP
