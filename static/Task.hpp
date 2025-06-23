@@ -11,8 +11,8 @@ public:
 	Task();
 	Task(BaseClass* CIMObj, const std::string CIMAttrName, const std::string Value);
 	~Task();
-	bool resolve(std::unordered_map<std::string, BaseClass*> *RDFMap);
-	void print();
+	bool resolve(std::unordered_map<std::string, BaseClass*> *RDFMap) const;
+	void print() const;
 	void replaceObject(BaseClass* oldObject_ptr, BaseClass* newObject_ptr);
 private:
 	BaseClass* _CIMObj;
