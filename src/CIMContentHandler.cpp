@@ -6,6 +6,10 @@
 #include "CIMFactory.hpp"
 #include "assignments.hpp"
 #include "CIMExceptions.hpp"
+#include "CimConstants.hpp"
+
+static std::string RDF = NamespaceMap.at("rdf");
+static std::string MD  = NamespaceMap.at("md");
 
 CIMContentHandler::CIMContentHandler() : Objects(nullptr), RDFMap(nullptr)
 {
@@ -73,21 +77,13 @@ void CIMContentHandler::endPrefixMapping(const std::string &prefix)
 
 void CIMContentHandler::startElement(const std::string &namespaceURI, const std::string &localName, const std::string &qName, const AttributesT &atts)
 {
-	// Only process tags in cim namespace
-	if(qName.find("cim:") == std::string::npos)
+	if (namespaceURI == RDF || namespaceURI == MD) // RDF root element or ModelDescription
 	{
-		bool isModelDescription = qName.find("md:") != std::string::npos || qName.find("DependentOn:") != std::string::npos || qName.find("createdBy") != std::string::npos;
-		bool isModel = qName.find("rdf:") != std::string::npos;
-
-		if(!isModelDescription && !isModel)
-		{
-			std::cerr << "WARNING: "<< qName << " not in namespace \"cim\"" << std::endl;
-		}
 		return;
 	}
 
 	// Remember last opened tag
-	tagStack.push(qName);
+	tagStack.push(localName);
 	value.clear();
 
 	// If there is no RDF ID (an XML attribute!) then we don't have a new CIM
@@ -96,7 +92,7 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 	if(atts.getLength() == 0)
 		return;
 	// If name is a CIM class check if to create a new object
-	if(CIMFactory::IsCIMClass(qName))
+	if (CIMFactory::IsCIMClass(localName))
 	{
 		// Get rdf_id
 		std::string rdf_id = get_rdf_id(atts);
@@ -112,7 +108,7 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 		}
 		else // object does not exist -> create object
 		{
-			BaseClass* BaseClass_ptr = CIMFactory::CreateNew(qName);
+			BaseClass* BaseClass_ptr = CIMFactory::CreateNew(localName);
 
 			//Check if created Object is IdentifiedObject and place rdf_id into mRID
 			if(CIMPP::IdentifiedObject* idOb = dynamic_cast<CIMPP::IdentifiedObject*>(BaseClass_ptr))
@@ -130,26 +126,25 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 	std::string rdf_id = get_rdf_resource(atts);
 	if (!rdf_id.empty())
 	{
-		taskQueue.push_back(Task(objectStack.top(), qName, rdf_id));
+		taskQueue.push_back(Task(objectStack.top(), localName, rdf_id));
 		return;
 	}
 	// Assign an enum symbol if the rdf id contains a enum symbol
 	std::string enumSymbol = get_rdf_enum(atts);
 	if(!enumSymbol.empty())
 	{
-		if(!assign(objectStack.top(), qName, enumSymbol))
+		if (!assign(objectStack.top(), localName, enumSymbol))
 			std::cerr << "CIMContentHandler: Error: " << enumSymbol << " can not be assigned" << std::endl;
 		return;
 	}
 
 	// Nobody knows what to do
-	std::cerr << "CIMContentHandler: Error: Nobody knows, the " << qName << " I've seen... *sing*" << std::endl;
+	std::cerr << "CIMContentHandler: Error: Nobody knows, the " << localName << " I've seen... *sing*" << std::endl;
 }
 
 void CIMContentHandler::endElement(const std::string &namespaceURI, const std::string &localName, const std::string &qName)
 {
-	// Only process tags in cim namespace
-	if (qName.find("cim:") == std::string::npos)
+	if (namespaceURI == RDF || namespaceURI == MD) // RDF root element or ModelDescription
 	{
 		return;
 	}
@@ -161,20 +156,19 @@ void CIMContentHandler::endElement(const std::string &namespaceURI, const std::s
 
 	// Pop Stacks
 	if (tagStack.size() == 0) {
-		std::cerr << "WARNING: Nearly tried to pop empty tag stack for tag: " << qName << std::endl;
+		std::cerr << "WARNING: Nearly tried to pop empty tag stack for tag: " << localName << std::endl;
 	}
 	else {
 		tagStack.pop();
 	}
-	if(CIMFactory::IsCIMClass(qName))
+	if (CIMFactory::IsCIMClass(localName))
 	{
 		if (objectStack.size() == 0) {
-			std::cerr << "WARNING: Nearly tried to pop empty object stack for tag: " << qName << std::endl;
+			std::cerr << "WARNING: Nearly tried to pop empty object stack for tag: " << localName << std::endl;
 		}
 		else {
 			objectStack.pop();
 		}
-		//std::cout << "Popped " << name << std::endl;
 	}
 }
 

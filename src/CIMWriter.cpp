@@ -122,13 +122,13 @@ bool CIMWriter::writeCim(std::ostream& rdf, const std::vector<BaseClass*>& objLi
         std::string attr  = attrAndFunc.first;
         get_function func = attrAndFunc.second;
 
-        if (attr != "cim:IdentifiedObject.mRID" &&
+        if (attr != "IdentifiedObject.mRID" &&
             (profile == UnknownProfile || getAttributeProfile(obj, attr, classProfile) == profile))
         {
           std::stringstream stream;
           if (func(obj, stream))
           {
-            rdfObj << "    <" << attr << ">" << xmlEscape(stream.str()) << "</" << attr << ">" << std::endl;
+            rdfObj << "    <cim:" << attr << ">" << xmlEscape(stream.str()) << "</cim:" << attr << ">" << std::endl;
             ++attributesCount;
           }
         }
@@ -146,7 +146,7 @@ bool CIMWriter::writeCim(std::ostream& rdf, const std::vector<BaseClass*>& objLi
           {
             for (const BaseClass* targetObj : targetList)
             {
-              rdfObj << "    <" << attr << " rdf:resource='#" << targetObj->getRdfid() << "' />" << std::endl;
+              rdfObj << "    <cim:" << attr << " rdf:resource='#" << targetObj->getRdfid() << "' />" << std::endl;
               ++attributesCount;
             }
           }
@@ -163,7 +163,7 @@ bool CIMWriter::writeCim(std::ostream& rdf, const std::vector<BaseClass*>& objLi
           std::stringstream stream;
           if (func(obj, stream))
           {
-            rdfObj << "    <" << attr << " rdf:resource='" << cimURL << stream.str() << "' />" << std::endl;
+            rdfObj << "    <cim:" << attr << " rdf:resource='" << cimURL << stream.str() << "' />" << std::endl;
             ++attributesCount;
           }
         }
