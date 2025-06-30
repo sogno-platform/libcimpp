@@ -139,6 +139,8 @@ public:
                                           const CGMESProfile& classProfile);
 
 private:
+  static std::map<std::string, std::string> getUsedNamespaces(const std::vector<BaseClass*>& objList);
+  static std::string getNamespaceKey(const std::string& url);
   static std::string xmlEscape(const std::string& txt);
 };
 

@@ -5,15 +5,15 @@
 #include <list>
 #include <map>
 #include <ostream>
+#include <set>
 #include <sstream>
 #include <string>
 #include <vector>
 
+#include "BaseClass.hpp"
 #include "CGMESProfile.hpp"
 #include "CimConstants.hpp"
-#include "BaseClass.hpp"
 #include "gettercache.hpp"
-#include "profilecache.hpp"
 
 void CIMWriter::writeFile(const std::string& path, const std::vector<BaseClass*>& objList)
 {
@@ -64,16 +64,20 @@ bool CIMWriter::writeCim(std::ostream& rdf, const std::vector<BaseClass*>& objLi
                          const std::map<std::string, CGMESProfile>& classProfileMap)
 {
   int objectsCount = 0;
-  static const auto& rdfURL = NamespaceMap.at("rdf");
   static const auto& cimURL = NamespaceMap.at("cim");
   static const auto& mdURL  = NamespaceMap.at("md");
 
-  rdf << "<?xml version='1.0' encoding='utf-8' ?>" << std::endl;
-  rdf << "<rdf:RDF xmlns:rdf='" << rdfURL << "'" << std::endl;
-  rdf << "         xmlns:cim='" << cimURL << "'";
+  auto usedNamespaces = getUsedNamespaces(objList);
   if (profile != UnknownProfile)
   {
-    rdf  << std::endl << "         xmlns:md='" << mdURL << "'";
+    usedNamespaces.emplace("md", mdURL);
+  }
+
+  rdf << "<?xml version='1.0' encoding='utf-8' ?>" << std::endl;
+  rdf << "<rdf:RDF";
+  for (const auto& nsAndUrl : usedNamespaces)
+  {
+    rdf << " xmlns:" << nsAndUrl.first << "='" << nsAndUrl.second << "'";
   }
   rdf << ">" << std::endl;
 
@@ -91,8 +95,10 @@ bool CIMWriter::writeCim(std::ostream& rdf, const std::vector<BaseClass*>& objLi
   {
     std::string type = obj->debugString();
     std::string id   = obj->getRdfid();
+    std::string nsObj = getNamespaceKey(obj->getClassNamespaceUrl());
 
-    if (!id.empty() && type != "UnknownType" && (profile == UnknownProfile || isClassMatchingProfile(obj, profile)))
+    if (!id.empty() && type != "UnknownType" && !nsObj.empty() &&
+        (profile == UnknownProfile || isClassMatchingProfile(obj, profile)))
     {
       std::stringstream rdfObj;
       int attributesCount = 0;
@@ -110,17 +116,18 @@ bool CIMWriter::writeCim(std::ostream& rdf, const std::vector<BaseClass*>& objLi
       bool mainEntryOfObject = (classProfile == profile);
       if (mainEntryOfObject)
       {
-        rdfObj << "  <cim:" << type << " rdf:ID='" << id << "'>" << std::endl;
+        rdfObj << "  <" << nsObj << ":" << type << " rdf:ID='" << id << "'>" << std::endl;
       }
       else
       {
-        rdfObj << "  <cim:" << type << " rdf:about='#" << id << "'>" << std::endl;
+        rdfObj << "  <" << nsObj << ":" << type << " rdf:about='#" << id << "'>" << std::endl;
       }
 
       for (const auto& attrAndFunc : get_primitive_getter_map(obj))
       {
         std::string attr  = attrAndFunc.first;
         get_function func = attrAndFunc.second;
+        std::string nsAttr = getNamespaceKey(obj->getAttributeNamespaceUrl(attr));
 
         if (attr != "IdentifiedObject.mRID" &&
             (profile == UnknownProfile || getAttributeProfile(obj, attr, classProfile) == profile))
@@ -128,7 +135,8 @@ bool CIMWriter::writeCim(std::ostream& rdf, const std::vector<BaseClass*>& objLi
           std::stringstream stream;
           if (func(obj, stream))
           {
-            rdfObj << "    <cim:" << attr << ">" << xmlEscape(stream.str()) << "</cim:" << attr << ">" << std::endl;
+            rdfObj << "    <" << nsAttr << ":" << attr << ">" << xmlEscape(stream.str()) << "</" << nsAttr << ":"
+                   << attr << ">" << std::endl;
             ++attributesCount;
           }
         }
@@ -138,6 +146,7 @@ bool CIMWriter::writeCim(std::ostream& rdf, const std::vector<BaseClass*>& objLi
       {
         std::string attr        = attrAndFunc.first;
         class_get_function func = attrAndFunc.second;
+        std::string nsAttr = getNamespaceKey(obj->getAttributeNamespaceUrl(attr));
 
         if (profile == UnknownProfile || getAttributeProfile(obj, attr, classProfile) == profile)
         {
@@ -146,7 +155,8 @@ bool CIMWriter::writeCim(std::ostream& rdf, const std::vector<BaseClass*>& objLi
           {
             for (const BaseClass* targetObj : targetList)
             {
-              rdfObj << "    <cim:" << attr << " rdf:resource='#" << targetObj->getRdfid() << "' />" << std::endl;
+              rdfObj << "    <" << nsAttr << ":" << attr << " rdf:resource='#" << targetObj->getRdfid() << "' />"
+                     << std::endl;
               ++attributesCount;
             }
           }
@@ -157,19 +167,22 @@ bool CIMWriter::writeCim(std::ostream& rdf, const std::vector<BaseClass*>& objLi
       {
         std::string attr  = attrAndFunc.first;
         get_function func = attrAndFunc.second;
+        std::string namespaceUrl = obj->getAttributeNamespaceUrl(attr);
+        std::string nsAttr = getNamespaceKey(namespaceUrl);
 
         if (profile == UnknownProfile || getAttributeProfile(obj, attr, classProfile) == profile)
         {
           std::stringstream stream;
           if (func(obj, stream))
           {
-            rdfObj << "    <cim:" << attr << " rdf:resource='" << cimURL << stream.str() << "' />" << std::endl;
+            rdfObj << "    <" << nsAttr << ":" << attr << " rdf:resource='" << namespaceUrl << stream.str() << "' />"
+                   << std::endl;
             ++attributesCount;
           }
         }
       }
 
-      rdfObj << "  </cim:" << type << ">" << std::endl;
+      rdfObj << "  </" << nsObj << ":" << type << ">" << std::endl;
 
       if (mainEntryOfObject || attributesCount != 0)
       {
@@ -185,22 +198,22 @@ bool CIMWriter::writeCim(std::ostream& rdf, const std::vector<BaseClass*>& objLi
 
 bool CIMWriter::isClassMatchingProfile(const BaseClass* obj, const CGMESProfile& profile)
 {
-  const auto& profiles = get_possible_profiles_for_class(obj);
+  const auto& profiles = obj->getPossibleProfiles();
   return std::find(profiles.begin(), profiles.end(), profile) != profiles.end();
 }
 
 CGMESProfile CIMWriter::getClassProfile(const BaseClass* obj)
 {
-  const auto& classProfiles = get_possible_profiles_for_class(obj);
+  const auto& classProfiles = obj->getPossibleProfiles();
   if (classProfiles.size() == 1)
   {
     return classProfiles.front();
   }
 
   std::map<CGMESProfile, int> profileCountMap;
-  for (const auto& attrAndProfiles : get_possible_profiles_for_attributes(obj))
+  for (const auto& attrName : obj->getAttributeNames())
   {
-    const auto& profiles = attrAndProfiles.second;
+    auto profiles = obj->getPossibleAttributeProfiles(attrName);
     bool ambiguousProfile = profiles.size() > 1;
     for (CGMESProfile profile : profiles)
     {
@@ -246,22 +259,86 @@ std::map<std::string, CGMESProfile> CIMWriter::getClassProfileMap(const std::vec
 CGMESProfile CIMWriter::getAttributeProfile(const BaseClass* obj, const std::string& attr,
                                             const CGMESProfile& classProfile)
 {
-  const auto& profilesMap = get_possible_profiles_for_attributes(obj);
-  auto it = profilesMap.find(attr);
-  if (it != profilesMap.end())
+  auto profiles = obj->getPossibleAttributeProfiles(attr);
+  if (std::find(profiles.begin(), profiles.end(), classProfile) != profiles.end())
   {
-    auto profiles = it->second;
-    if (std::find(profiles.begin(), profiles.end(), classProfile) != profiles.end())
-    {
-      return classProfile;
-    }
-    else if (!profiles.empty())
-    {
-      profiles.sort();
-      return profiles.front();
-    }
+    return classProfile;
+  }
+  else if (!profiles.empty())
+  {
+    profiles.sort();
+    return profiles.front();
   }
   return UnknownProfile;
+}
+
+std::map<std::string, std::string> CIMWriter::getUsedNamespaces(const std::vector<BaseClass*>& objList)
+{
+  std::set<std::string> urls;
+  urls.insert(NamespaceMap.at("rdf"));
+
+  for (const BaseClass* obj : objList)
+  {
+    urls.insert(obj->getClassNamespaceUrl());
+    for (const auto& attrAndFunc : get_primitive_getter_map(obj))
+    {
+      std::string attr  = attrAndFunc.first;
+      get_function func = attrAndFunc.second;
+
+      std::stringstream stream;
+      if (func(obj, stream))
+      {
+        urls.insert(obj->getAttributeNamespaceUrl(attr));
+      }
+    }
+
+    for (const auto& attrAndFunc : get_class_getter_map(obj))
+    {
+      std::string attr        = attrAndFunc.first;
+      class_get_function func = attrAndFunc.second;
+
+      std::list<const BaseClass*> targetList;
+      if (func(obj, targetList) && !targetList.empty())
+      {
+        urls.insert(obj->getAttributeNamespaceUrl(attr));
+      }
+    }
+
+    for (const auto& attrAndFunc : get_enum_getter_map(obj))
+    {
+      std::string attr  = attrAndFunc.first;
+      get_function func = attrAndFunc.second;
+
+      std::stringstream stream;
+      if (func(obj, stream))
+      {
+        urls.insert(obj->getAttributeNamespaceUrl(attr));
+      }
+    }
+  }
+
+  std::map<std::string, std::string> namespaces;
+  for (const auto& url : urls)
+  {
+    const auto& ns = getNamespaceKey(url);
+    if (!ns.empty())
+    {
+      namespaces.emplace(ns, url);
+    }
+  }
+  return namespaces;
+}
+
+std::string CIMWriter::getNamespaceKey(const std::string& url)
+{
+  for (const auto& nsAndUrl : NamespaceMap)
+  {
+    if (nsAndUrl.second == url)
+    {
+      return nsAndUrl.first;
+    }
+  }
+  return "";
 }
 
 std::string CIMWriter::xmlEscape(const std::string& txt)
