@@ -198,45 +198,13 @@ bool CIMWriter::writeCim(std::ostream& rdf, const std::vector<BaseClass*>& objLi
 
 bool CIMWriter::isClassMatchingProfile(const BaseClass* obj, const CGMESProfile& profile)
 {
-  const auto& profiles = obj->getPossibleProfiles();
+  const auto& profiles = obj->getPossibleProfilesIncludingAttributes();
   return std::find(profiles.begin(), profiles.end(), profile) != profiles.end();
 }
 
 CGMESProfile CIMWriter::getClassProfile(const BaseClass* obj)
 {
-  const auto& classProfiles = obj->getPossibleProfiles();
-  if (classProfiles.size() == 1)
-  {
-    return classProfiles.front();
-  }
-
-  std::map<CGMESProfile, int> profileCountMap;
-  for (const auto& attrName : obj->getAttributeNames())
-  {
-    auto profiles = obj->getPossibleAttributeProfiles(attrName);
-    bool ambiguousProfile = profiles.size() > 1;
-    for (CGMESProfile profile : profiles)
-    {
-      if (ambiguousProfile &&
-          std::find(classProfiles.begin(), classProfiles.end(), profile) != classProfiles.end())
-      {
-        ++profileCountMap[profile];
-      }
-    }
-  }
-
-  std::multimap<int, CGMESProfile> countProfileMap;
-  for (const auto& profileAndCount : profileCountMap)
-  {
-    countProfileMap.emplace(-profileAndCount.second, profileAndCount.first);
-  }
-
-  for (const auto& countAndProfile : countProfileMap)
-  {
-    return countAndProfile.second;
-  }
-
-  return UnknownProfile;
+  return obj->getRecommendedProfile();
 }
 
 std::map<std::string, CGMESProfile> CIMWriter::getClassProfileMap(const std::vector<BaseClass*>& objList)
