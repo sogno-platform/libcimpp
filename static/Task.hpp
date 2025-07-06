@@ -13,6 +13,7 @@ public:
 	~Task();
 	bool resolve(std::unordered_map<std::string, BaseClass*> *RDFMap);
 	void print();
+	void replaceObject(BaseClass* oldObject_ptr, BaseClass* newObject_ptr);
 private:
 	BaseClass* _CIMObj;
 	std::string _CIMAttrName;

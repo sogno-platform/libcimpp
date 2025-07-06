@@ -3,10 +3,11 @@
 #include <iostream>
 #include <regex>
 
-#include "CIMFactory.hpp"
-#include "assignments.hpp"
 #include "CIMExceptions.hpp"
+#include "CIMFactory.hpp"
 #include "CimConstants.hpp"
+#include "assignments.hpp"
+#include "gettercache.hpp"
 
 static std::string RDF = NamespaceMap.at("rdf");
 static std::string MD  = NamespaceMap.at("md");
@@ -104,7 +105,24 @@ void CIMContentHandler::startElement(const std::string &namespaceURI, const std:
 		std::unordered_map<std::string, BaseClass*>::iterator it = RDFMap->find(rdf_id);
 		if(it != RDFMap->end()) // object exists -> push it on the stack
 		{
-			objectStack.push(it->second);
+			BaseClass* BaseClass_ptr = it->second;
+			if (BaseClass_ptr->debugString() != localName)
+			{
+				BaseClass* newObject_ptr = retypeObject(BaseClass_ptr, localName, rdf_id);
+				if (newObject_ptr != nullptr)
+				{
+					it->second = newObject_ptr;
+					*std::find(Objects->begin(), Objects->end(), BaseClass_ptr) = newObject_ptr;
+					delete BaseClass_ptr;
+					BaseClass_ptr = newObject_ptr;
+				}
+				else
+				{
+					std::cout << "CIMContentHandler: Found " << BaseClass_ptr->debugString() << " (instead of "
+						<< localName << ") with rdf:ID: " << rdf_id << " in map" << std::endl;
+				}
+			}
+			objectStack.push(BaseClass_ptr);
 		}
 		else // object does not exist -> create object
 		{
@@ -263,4 +281,52 @@ bool CIMContentHandler::resolveRDFRelations()
 		return false;
 	else
 		return true;
+}
+
+BaseClass* CIMContentHandler::retypeObject(BaseClass* oldObject_ptr, const std::string& newClassName, const std::string& rdfid)
+{
+	BaseClass* newObject_ptr = CIMFactory::CreateNew(newClassName);
+	if (oldObject_ptr->isAssignableFrom(newObject_ptr))
+	{
+		std::cout << "CIMContentHandler: Retyping object with rdf:ID: " << rdfid << " from type: "
+			<< oldObject_ptr->debugString() << " to type: " << newClassName << std::endl;
+
+		newObject_ptr->setRdfid(rdfid);
+
+		// Copy primitive attributes from old object to the new object
+		for (const auto& attrAndFunc : get_primitive_getter_map(oldObject_ptr))
+		{
+			std::string attr  = attrAndFunc.first;
+			get_function func = attrAndFunc.second;
+
+			std::stringstream stream;
+			if (func(oldObject_ptr, stream))
+			{
+				assign(newObject_ptr, attr, stream.str());
+			}
+		}
+
+		// Copy enum attributes from old object to the new object
+		for (const auto& attrAndFunc : get_enum_getter_map(oldObject_ptr))
+		{
+			std::string attr  = attrAndFunc.first;
+			get_function func = attrAndFunc.second;
+
+			std::stringstream stream;
+			if (func(oldObject_ptr, stream))
+			{
+				assign(newObject_ptr, attr, stream.str());
+			}
+		}
+
+		// Copy class attributes from old object to the new object
+		for (auto& task : taskQueue)
+		{
+			task.replaceObject(oldObject_ptr, newObject_ptr);
+		}
+
+		return newObject_ptr;
+	}
+	delete newObject_ptr;
+	return nullptr;
 }

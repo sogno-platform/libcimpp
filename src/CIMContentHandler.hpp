@@ -51,6 +51,7 @@ private:
 	std::stack<std::string> tagStack;
 	std::list<Task> taskQueue;
 	std::string value;
+	BaseClass* retypeObject(BaseClass* oldObject_ptr, const std::string& className, const std::string& rdfid);
 };
 
 
