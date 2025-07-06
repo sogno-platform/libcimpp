@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:cim="http://iec.ch/TC57/CIM100#"
+         xmlns:eu="http://iec.ch/TC57/CIM100-European#">
+  <cim:OperationalLimitType rdf:ID="OLT">
+    <cim:IdentifiedObject.name>High Voltage</cim:IdentifiedObject.name>
+    <eu:OperationalLimitType.kind rdf:resource="http://iec.ch/TC57/CIM100-European#LimitKind.highVoltage" />
+  </cim:OperationalLimitType>
+</rdf:RDF>

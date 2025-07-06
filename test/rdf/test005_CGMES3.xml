@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:cim="http://iec.ch/TC57/CIM100#"
+         xmlns:eu="http://iec.ch/TC57/CIM100-European#">
+  <cim:ConnectivityNode rdf:ID="N0">
+    <cim:IdentifiedObject.name>N0</cim:IdentifiedObject.name>
+  </cim:ConnectivityNode>
+  <eu:BoundaryPoint rdf:ID="N0_BP">
+    <eu:BoundaryPoint.ConnectivityNode rdf:resource="#N0" />
+  </eu:BoundaryPoint>
+</rdf:RDF>

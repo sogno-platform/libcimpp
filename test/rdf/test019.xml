@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:cim="http://iec.ch/TC57/2013/CIM-schema-cim16#">
+  <cim:TopologicalNode rdf:ID="N0">
+    <cim:IdentifiedObject.name>N0</cim:IdentifiedObject.name>
+    <cim:TopologicalNode.SvVoltage rdf:resource="#SvVoltage.N0" />
+  </cim:TopologicalNode>
+  <cim:SvVoltage rdf:ID="SvVoltage.N0">
+    <cim:SvVoltage.v>110.5</cim:SvVoltage.v>
+    <cim:SvVoltage.TopologicalNode rdf:resource="#N0" />
+  </cim:SvVoltage>
+</rdf:RDF>

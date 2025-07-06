@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:cim="http://iec.ch/TC57/2013/CIM-schema-cim16#">
+  <cim:Terminal rdf:ID="Terminal.N0">
+    <cim:IdentifiedObject.name>Terminal.N0</cim:IdentifiedObject.name>
+  </cim:Terminal>
+</rdf:RDF>

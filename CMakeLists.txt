@@ -90,6 +90,10 @@ if(CIMPP_BUILD_EXAMPLES)
   target_compile_features(example PUBLIC cxx_range_for)
 endif()
 
+# Unit tests
+enable_testing()
+add_subdirectory(test)
+
 # Show feature summary
 include(FeatureSummary)
 feature_summary(WHAT ALL VAR enabledFeaturesText)
