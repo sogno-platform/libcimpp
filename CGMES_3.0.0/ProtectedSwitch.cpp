@@ -11,32 +11,64 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ProtectedSwitch(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+	};
+    return ClassAttrDetailsMap;
+}
+
 ProtectedSwitch::ProtectedSwitch() {}
 ProtectedSwitch::~ProtectedSwitch() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ProtectedSwitch::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-};
-
-std::list<CGMESProfile>
-ProtectedSwitch::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ProtectedSwitch::getPossibleProfilesForAttributes() const
+const std::string& ProtectedSwitch::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = Switch::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ProtectedSwitch::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ProtectedSwitch::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ProtectedSwitch::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ProtectedSwitch::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ProtectedSwitch::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 const char ProtectedSwitch::debugName[] = "ProtectedSwitch";
@@ -47,7 +79,7 @@ const char* ProtectedSwitch::debugString() const
 
 void ProtectedSwitch::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ProtectedSwitch", &ProtectedSwitch_factory);
+	factory_map.emplace("ProtectedSwitch", &ProtectedSwitch_factory);
 }
 
 void ProtectedSwitch::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -73,9 +105,23 @@ void ProtectedSwitch::addEnumGetFnsToMap(std::map<std::string, get_function>& ge
 	Switch::addEnumGetFnsToMap(get_map);
 }
 
+bool ProtectedSwitch::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ProtectedSwitch" &&
+		dynamic_cast<ProtectedSwitch*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ProtectedSwitch::declare()
 {
 	return BaseClassDefiner(ProtectedSwitch::addConstructToMap, ProtectedSwitch::addPrimitiveAssignFnsToMap, ProtectedSwitch::addClassAssignFnsToMap, ProtectedSwitch::debugName);
+}
+
+std::map<std::string, AttrDetails> ProtectedSwitch::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = Switch::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

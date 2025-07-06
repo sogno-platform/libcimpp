@@ -11,41 +11,73 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ExcNI(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ExcNI.busFedSelector", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcNI.ka", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcNI.kf", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcNI.r", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcNI.ta", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcNI.tf1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcNI.tf2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcNI.tr", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcNI.vrmax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcNI.vrmin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ExcNI::ExcNI() {}
 ExcNI::~ExcNI() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ExcNI::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ExcNI.busFedSelector", { CGMESProfile::DY, } },
-	{ "cim:ExcNI.ka", { CGMESProfile::DY, } },
-	{ "cim:ExcNI.kf", { CGMESProfile::DY, } },
-	{ "cim:ExcNI.r", { CGMESProfile::DY, } },
-	{ "cim:ExcNI.ta", { CGMESProfile::DY, } },
-	{ "cim:ExcNI.tf1", { CGMESProfile::DY, } },
-	{ "cim:ExcNI.tf2", { CGMESProfile::DY, } },
-	{ "cim:ExcNI.tr", { CGMESProfile::DY, } },
-	{ "cim:ExcNI.vrmax", { CGMESProfile::DY, } },
-	{ "cim:ExcNI.vrmin", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-ExcNI::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ExcNI::getPossibleProfilesForAttributes() const
+const std::string& ExcNI::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ExcNI::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ExcNI::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ExcNI::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ExcNI::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ExcNI::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ExcNI_busFedSelector(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -346,21 +378,21 @@ const char* ExcNI::debugString() const
 
 void ExcNI::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ExcNI", &ExcNI_factory);
+	factory_map.emplace("ExcNI", &ExcNI_factory);
 }
 
 void ExcNI::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ExcNI.busFedSelector", &assign_ExcNI_busFedSelector);
-	assign_map.emplace("cim:ExcNI.ka", &assign_ExcNI_ka);
-	assign_map.emplace("cim:ExcNI.kf", &assign_ExcNI_kf);
-	assign_map.emplace("cim:ExcNI.r", &assign_ExcNI_r);
-	assign_map.emplace("cim:ExcNI.ta", &assign_ExcNI_ta);
-	assign_map.emplace("cim:ExcNI.tf1", &assign_ExcNI_tf1);
-	assign_map.emplace("cim:ExcNI.tf2", &assign_ExcNI_tf2);
-	assign_map.emplace("cim:ExcNI.tr", &assign_ExcNI_tr);
-	assign_map.emplace("cim:ExcNI.vrmax", &assign_ExcNI_vrmax);
-	assign_map.emplace("cim:ExcNI.vrmin", &assign_ExcNI_vrmin);
+	assign_map.emplace("ExcNI.busFedSelector", &assign_ExcNI_busFedSelector);
+	assign_map.emplace("ExcNI.ka", &assign_ExcNI_ka);
+	assign_map.emplace("ExcNI.kf", &assign_ExcNI_kf);
+	assign_map.emplace("ExcNI.r", &assign_ExcNI_r);
+	assign_map.emplace("ExcNI.ta", &assign_ExcNI_ta);
+	assign_map.emplace("ExcNI.tf1", &assign_ExcNI_tf1);
+	assign_map.emplace("ExcNI.tf2", &assign_ExcNI_tf2);
+	assign_map.emplace("ExcNI.tr", &assign_ExcNI_tr);
+	assign_map.emplace("ExcNI.vrmax", &assign_ExcNI_vrmax);
+	assign_map.emplace("ExcNI.vrmin", &assign_ExcNI_vrmin);
 }
 
 void ExcNI::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -370,16 +402,16 @@ void ExcNI::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_
 void ExcNI::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ExcNI.busFedSelector", &get_ExcNI_busFedSelector);
-	get_map.emplace("cim:ExcNI.ka", &get_ExcNI_ka);
-	get_map.emplace("cim:ExcNI.kf", &get_ExcNI_kf);
-	get_map.emplace("cim:ExcNI.r", &get_ExcNI_r);
-	get_map.emplace("cim:ExcNI.ta", &get_ExcNI_ta);
-	get_map.emplace("cim:ExcNI.tf1", &get_ExcNI_tf1);
-	get_map.emplace("cim:ExcNI.tf2", &get_ExcNI_tf2);
-	get_map.emplace("cim:ExcNI.tr", &get_ExcNI_tr);
-	get_map.emplace("cim:ExcNI.vrmax", &get_ExcNI_vrmax);
-	get_map.emplace("cim:ExcNI.vrmin", &get_ExcNI_vrmin);
+	get_map.emplace("ExcNI.busFedSelector", &get_ExcNI_busFedSelector);
+	get_map.emplace("ExcNI.ka", &get_ExcNI_ka);
+	get_map.emplace("ExcNI.kf", &get_ExcNI_kf);
+	get_map.emplace("ExcNI.r", &get_ExcNI_r);
+	get_map.emplace("ExcNI.ta", &get_ExcNI_ta);
+	get_map.emplace("ExcNI.tf1", &get_ExcNI_tf1);
+	get_map.emplace("ExcNI.tf2", &get_ExcNI_tf2);
+	get_map.emplace("ExcNI.tr", &get_ExcNI_tr);
+	get_map.emplace("ExcNI.vrmax", &get_ExcNI_vrmax);
+	get_map.emplace("ExcNI.vrmin", &get_ExcNI_vrmin);
 }
 
 void ExcNI::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -392,9 +424,23 @@ void ExcNI::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) con
 	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool ExcNI::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ExcNI" &&
+		dynamic_cast<ExcNI*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ExcNI::declare()
 {
 	return BaseClassDefiner(ExcNI::addConstructToMap, ExcNI::addPrimitiveAssignFnsToMap, ExcNI::addClassAssignFnsToMap, ExcNI::debugName);
+}
+
+std::map<std::string, AttrDetails> ExcNI::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ExcitationSystemDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

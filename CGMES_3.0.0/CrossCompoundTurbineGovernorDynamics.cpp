@@ -12,33 +12,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		CrossCompoundTurbineGovernorDynamics(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "CrossCompoundTurbineGovernorDynamics.HighPressureSynchronousMachineDynamics", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "CrossCompoundTurbineGovernorDynamics.LowPressureSynchronousMachineDynamics", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 CrossCompoundTurbineGovernorDynamics::CrossCompoundTurbineGovernorDynamics() : HighPressureSynchronousMachineDynamics(nullptr), LowPressureSynchronousMachineDynamics(nullptr) {}
 CrossCompoundTurbineGovernorDynamics::~CrossCompoundTurbineGovernorDynamics() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& CrossCompoundTurbineGovernorDynamics::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:CrossCompoundTurbineGovernorDynamics.HighPressureSynchronousMachineDynamics", { CGMESProfile::DY, } },
-	{ "cim:CrossCompoundTurbineGovernorDynamics.LowPressureSynchronousMachineDynamics", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-CrossCompoundTurbineGovernorDynamics::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-CrossCompoundTurbineGovernorDynamics::getPossibleProfilesForAttributes() const
+const std::string& CrossCompoundTurbineGovernorDynamics::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = DynamicsFunctionBlock::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& CrossCompoundTurbineGovernorDynamics::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& CrossCompoundTurbineGovernorDynamics::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& CrossCompoundTurbineGovernorDynamics::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& CrossCompoundTurbineGovernorDynamics::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& CrossCompoundTurbineGovernorDynamics::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_SynchronousMachineDynamics_CrossCompoundTurbineGovernorDyanmics(BaseClass*, BaseClass*);
@@ -111,7 +143,7 @@ const char* CrossCompoundTurbineGovernorDynamics::debugString() const
 
 void CrossCompoundTurbineGovernorDynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:CrossCompoundTurbineGovernorDynamics", &CrossCompoundTurbineGovernorDynamics_factory);
+	factory_map.emplace("CrossCompoundTurbineGovernorDynamics", &CrossCompoundTurbineGovernorDynamics_factory);
 }
 
 void CrossCompoundTurbineGovernorDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -120,8 +152,8 @@ void CrossCompoundTurbineGovernorDynamics::addPrimitiveAssignFnsToMap(std::unord
 
 void CrossCompoundTurbineGovernorDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:CrossCompoundTurbineGovernorDynamics.HighPressureSynchronousMachineDynamics", &assign_CrossCompoundTurbineGovernorDynamics_HighPressureSynchronousMachineDynamics);
-	assign_map.emplace("cim:CrossCompoundTurbineGovernorDynamics.LowPressureSynchronousMachineDynamics", &assign_CrossCompoundTurbineGovernorDynamics_LowPressureSynchronousMachineDynamics);
+	assign_map.emplace("CrossCompoundTurbineGovernorDynamics.HighPressureSynchronousMachineDynamics", &assign_CrossCompoundTurbineGovernorDynamics_HighPressureSynchronousMachineDynamics);
+	assign_map.emplace("CrossCompoundTurbineGovernorDynamics.LowPressureSynchronousMachineDynamics", &assign_CrossCompoundTurbineGovernorDynamics_LowPressureSynchronousMachineDynamics);
 }
 
 void CrossCompoundTurbineGovernorDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -132,8 +164,8 @@ void CrossCompoundTurbineGovernorDynamics::addPrimitiveGetFnsToMap(std::map<std:
 void CrossCompoundTurbineGovernorDynamics::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	DynamicsFunctionBlock::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:CrossCompoundTurbineGovernorDynamics.HighPressureSynchronousMachineDynamics", &get_CrossCompoundTurbineGovernorDynamics_HighPressureSynchronousMachineDynamics);
-	get_map.emplace("cim:CrossCompoundTurbineGovernorDynamics.LowPressureSynchronousMachineDynamics", &get_CrossCompoundTurbineGovernorDynamics_LowPressureSynchronousMachineDynamics);
+	get_map.emplace("CrossCompoundTurbineGovernorDynamics.HighPressureSynchronousMachineDynamics", &get_CrossCompoundTurbineGovernorDynamics_HighPressureSynchronousMachineDynamics);
+	get_map.emplace("CrossCompoundTurbineGovernorDynamics.LowPressureSynchronousMachineDynamics", &get_CrossCompoundTurbineGovernorDynamics_LowPressureSynchronousMachineDynamics);
 }
 
 void CrossCompoundTurbineGovernorDynamics::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -141,9 +173,23 @@ void CrossCompoundTurbineGovernorDynamics::addEnumGetFnsToMap(std::map<std::stri
 	DynamicsFunctionBlock::addEnumGetFnsToMap(get_map);
 }
 
+bool CrossCompoundTurbineGovernorDynamics::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "CrossCompoundTurbineGovernorDynamics" &&
+		dynamic_cast<CrossCompoundTurbineGovernorDynamics*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner CrossCompoundTurbineGovernorDynamics::declare()
 {
 	return BaseClassDefiner(CrossCompoundTurbineGovernorDynamics::addConstructToMap, CrossCompoundTurbineGovernorDynamics::addPrimitiveAssignFnsToMap, CrossCompoundTurbineGovernorDynamics::addClassAssignFnsToMap, CrossCompoundTurbineGovernorDynamics::debugName);
+}
+
+std::map<std::string, AttrDetails> CrossCompoundTurbineGovernorDynamics::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = DynamicsFunctionBlock::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

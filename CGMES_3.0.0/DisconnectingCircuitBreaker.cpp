@@ -11,32 +11,64 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		DisconnectingCircuitBreaker(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+	};
+    return ClassAttrDetailsMap;
+}
+
 DisconnectingCircuitBreaker::DisconnectingCircuitBreaker() {}
 DisconnectingCircuitBreaker::~DisconnectingCircuitBreaker() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& DisconnectingCircuitBreaker::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-};
-
-std::list<CGMESProfile>
-DisconnectingCircuitBreaker::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-DisconnectingCircuitBreaker::getPossibleProfilesForAttributes() const
+const std::string& DisconnectingCircuitBreaker::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = Breaker::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& DisconnectingCircuitBreaker::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& DisconnectingCircuitBreaker::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& DisconnectingCircuitBreaker::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& DisconnectingCircuitBreaker::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& DisconnectingCircuitBreaker::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 const char DisconnectingCircuitBreaker::debugName[] = "DisconnectingCircuitBreaker";
@@ -47,7 +79,7 @@ const char* DisconnectingCircuitBreaker::debugString() const
 
 void DisconnectingCircuitBreaker::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:DisconnectingCircuitBreaker", &DisconnectingCircuitBreaker_factory);
+	factory_map.emplace("DisconnectingCircuitBreaker", &DisconnectingCircuitBreaker_factory);
 }
 
 void DisconnectingCircuitBreaker::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -73,9 +105,23 @@ void DisconnectingCircuitBreaker::addEnumGetFnsToMap(std::map<std::string, get_f
 	Breaker::addEnumGetFnsToMap(get_map);
 }
 
+bool DisconnectingCircuitBreaker::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "DisconnectingCircuitBreaker" &&
+		dynamic_cast<DisconnectingCircuitBreaker*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner DisconnectingCircuitBreaker::declare()
 {
 	return BaseClassDefiner(DisconnectingCircuitBreaker::addConstructToMap, DisconnectingCircuitBreaker::addPrimitiveAssignFnsToMap, DisconnectingCircuitBreaker::addClassAssignFnsToMap, DisconnectingCircuitBreaker::debugName);
+}
+
+std::map<std::string, AttrDetails> DisconnectingCircuitBreaker::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = Breaker::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

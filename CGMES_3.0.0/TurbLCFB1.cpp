@@ -11,43 +11,75 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		TurbLCFB1(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "TurbLCFB1.db", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "TurbLCFB1.emax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "TurbLCFB1.fb", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "TurbLCFB1.fbf", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "TurbLCFB1.irmax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "TurbLCFB1.ki", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "TurbLCFB1.kp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "TurbLCFB1.mwbase", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "TurbLCFB1.pbf", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "TurbLCFB1.pmwset", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "TurbLCFB1.speedReferenceGovernor", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "TurbLCFB1.tpelec", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 TurbLCFB1::TurbLCFB1() {}
 TurbLCFB1::~TurbLCFB1() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& TurbLCFB1::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:TurbLCFB1.db", { CGMESProfile::DY, } },
-	{ "cim:TurbLCFB1.emax", { CGMESProfile::DY, } },
-	{ "cim:TurbLCFB1.fb", { CGMESProfile::DY, } },
-	{ "cim:TurbLCFB1.fbf", { CGMESProfile::DY, } },
-	{ "cim:TurbLCFB1.irmax", { CGMESProfile::DY, } },
-	{ "cim:TurbLCFB1.ki", { CGMESProfile::DY, } },
-	{ "cim:TurbLCFB1.kp", { CGMESProfile::DY, } },
-	{ "cim:TurbLCFB1.mwbase", { CGMESProfile::DY, } },
-	{ "cim:TurbLCFB1.pbf", { CGMESProfile::DY, } },
-	{ "cim:TurbLCFB1.pmwset", { CGMESProfile::DY, } },
-	{ "cim:TurbLCFB1.speedReferenceGovernor", { CGMESProfile::DY, } },
-	{ "cim:TurbLCFB1.tpelec", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-TurbLCFB1::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-TurbLCFB1::getPossibleProfilesForAttributes() const
+const std::string& TurbLCFB1::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = TurbineLoadControllerDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& TurbLCFB1::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& TurbLCFB1::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& TurbLCFB1::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& TurbLCFB1::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& TurbLCFB1::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_TurbLCFB1_db(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -406,23 +438,23 @@ const char* TurbLCFB1::debugString() const
 
 void TurbLCFB1::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:TurbLCFB1", &TurbLCFB1_factory);
+	factory_map.emplace("TurbLCFB1", &TurbLCFB1_factory);
 }
 
 void TurbLCFB1::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:TurbLCFB1.db", &assign_TurbLCFB1_db);
-	assign_map.emplace("cim:TurbLCFB1.emax", &assign_TurbLCFB1_emax);
-	assign_map.emplace("cim:TurbLCFB1.fb", &assign_TurbLCFB1_fb);
-	assign_map.emplace("cim:TurbLCFB1.fbf", &assign_TurbLCFB1_fbf);
-	assign_map.emplace("cim:TurbLCFB1.irmax", &assign_TurbLCFB1_irmax);
-	assign_map.emplace("cim:TurbLCFB1.ki", &assign_TurbLCFB1_ki);
-	assign_map.emplace("cim:TurbLCFB1.kp", &assign_TurbLCFB1_kp);
-	assign_map.emplace("cim:TurbLCFB1.mwbase", &assign_TurbLCFB1_mwbase);
-	assign_map.emplace("cim:TurbLCFB1.pbf", &assign_TurbLCFB1_pbf);
-	assign_map.emplace("cim:TurbLCFB1.pmwset", &assign_TurbLCFB1_pmwset);
-	assign_map.emplace("cim:TurbLCFB1.speedReferenceGovernor", &assign_TurbLCFB1_speedReferenceGovernor);
-	assign_map.emplace("cim:TurbLCFB1.tpelec", &assign_TurbLCFB1_tpelec);
+	assign_map.emplace("TurbLCFB1.db", &assign_TurbLCFB1_db);
+	assign_map.emplace("TurbLCFB1.emax", &assign_TurbLCFB1_emax);
+	assign_map.emplace("TurbLCFB1.fb", &assign_TurbLCFB1_fb);
+	assign_map.emplace("TurbLCFB1.fbf", &assign_TurbLCFB1_fbf);
+	assign_map.emplace("TurbLCFB1.irmax", &assign_TurbLCFB1_irmax);
+	assign_map.emplace("TurbLCFB1.ki", &assign_TurbLCFB1_ki);
+	assign_map.emplace("TurbLCFB1.kp", &assign_TurbLCFB1_kp);
+	assign_map.emplace("TurbLCFB1.mwbase", &assign_TurbLCFB1_mwbase);
+	assign_map.emplace("TurbLCFB1.pbf", &assign_TurbLCFB1_pbf);
+	assign_map.emplace("TurbLCFB1.pmwset", &assign_TurbLCFB1_pmwset);
+	assign_map.emplace("TurbLCFB1.speedReferenceGovernor", &assign_TurbLCFB1_speedReferenceGovernor);
+	assign_map.emplace("TurbLCFB1.tpelec", &assign_TurbLCFB1_tpelec);
 }
 
 void TurbLCFB1::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -432,18 +464,18 @@ void TurbLCFB1::addClassAssignFnsToMap(std::unordered_map<std::string, class_ass
 void TurbLCFB1::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	TurbineLoadControllerDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:TurbLCFB1.db", &get_TurbLCFB1_db);
-	get_map.emplace("cim:TurbLCFB1.emax", &get_TurbLCFB1_emax);
-	get_map.emplace("cim:TurbLCFB1.fb", &get_TurbLCFB1_fb);
-	get_map.emplace("cim:TurbLCFB1.fbf", &get_TurbLCFB1_fbf);
-	get_map.emplace("cim:TurbLCFB1.irmax", &get_TurbLCFB1_irmax);
-	get_map.emplace("cim:TurbLCFB1.ki", &get_TurbLCFB1_ki);
-	get_map.emplace("cim:TurbLCFB1.kp", &get_TurbLCFB1_kp);
-	get_map.emplace("cim:TurbLCFB1.mwbase", &get_TurbLCFB1_mwbase);
-	get_map.emplace("cim:TurbLCFB1.pbf", &get_TurbLCFB1_pbf);
-	get_map.emplace("cim:TurbLCFB1.pmwset", &get_TurbLCFB1_pmwset);
-	get_map.emplace("cim:TurbLCFB1.speedReferenceGovernor", &get_TurbLCFB1_speedReferenceGovernor);
-	get_map.emplace("cim:TurbLCFB1.tpelec", &get_TurbLCFB1_tpelec);
+	get_map.emplace("TurbLCFB1.db", &get_TurbLCFB1_db);
+	get_map.emplace("TurbLCFB1.emax", &get_TurbLCFB1_emax);
+	get_map.emplace("TurbLCFB1.fb", &get_TurbLCFB1_fb);
+	get_map.emplace("TurbLCFB1.fbf", &get_TurbLCFB1_fbf);
+	get_map.emplace("TurbLCFB1.irmax", &get_TurbLCFB1_irmax);
+	get_map.emplace("TurbLCFB1.ki", &get_TurbLCFB1_ki);
+	get_map.emplace("TurbLCFB1.kp", &get_TurbLCFB1_kp);
+	get_map.emplace("TurbLCFB1.mwbase", &get_TurbLCFB1_mwbase);
+	get_map.emplace("TurbLCFB1.pbf", &get_TurbLCFB1_pbf);
+	get_map.emplace("TurbLCFB1.pmwset", &get_TurbLCFB1_pmwset);
+	get_map.emplace("TurbLCFB1.speedReferenceGovernor", &get_TurbLCFB1_speedReferenceGovernor);
+	get_map.emplace("TurbLCFB1.tpelec", &get_TurbLCFB1_tpelec);
 }
 
 void TurbLCFB1::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -456,9 +488,23 @@ void TurbLCFB1::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map)
 	TurbineLoadControllerDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool TurbLCFB1::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "TurbLCFB1" &&
+		dynamic_cast<TurbLCFB1*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner TurbLCFB1::declare()
 {
 	return BaseClassDefiner(TurbLCFB1::addConstructToMap, TurbLCFB1::addPrimitiveAssignFnsToMap, TurbLCFB1::addClassAssignFnsToMap, TurbLCFB1::debugName);
+}
+
+std::map<std::string, AttrDetails> TurbLCFB1::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = TurbineLoadControllerDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

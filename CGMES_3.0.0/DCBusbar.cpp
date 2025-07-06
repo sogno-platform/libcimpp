@@ -11,31 +11,63 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		DCBusbar(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+	};
+    return ClassAttrDetailsMap;
+}
+
 DCBusbar::DCBusbar() {}
 DCBusbar::~DCBusbar() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& DCBusbar::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-};
-
-std::list<CGMESProfile>
-DCBusbar::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-DCBusbar::getPossibleProfilesForAttributes() const
+const std::string& DCBusbar::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = DCConductingEquipment::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& DCBusbar::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& DCBusbar::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& DCBusbar::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& DCBusbar::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& DCBusbar::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 const char DCBusbar::debugName[] = "DCBusbar";
@@ -46,7 +78,7 @@ const char* DCBusbar::debugString() const
 
 void DCBusbar::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:DCBusbar", &DCBusbar_factory);
+	factory_map.emplace("DCBusbar", &DCBusbar_factory);
 }
 
 void DCBusbar::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -72,9 +104,23 @@ void DCBusbar::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) 
 	DCConductingEquipment::addEnumGetFnsToMap(get_map);
 }
 
+bool DCBusbar::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "DCBusbar" &&
+		dynamic_cast<DCBusbar*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner DCBusbar::declare()
 {
 	return BaseClassDefiner(DCBusbar::addConstructToMap, DCBusbar::addPrimitiveAssignFnsToMap, DCBusbar::addClassAssignFnsToMap, DCBusbar::debugName);
+}
+
+std::map<std::string, AttrDetails> DCBusbar::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = DCConductingEquipment::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

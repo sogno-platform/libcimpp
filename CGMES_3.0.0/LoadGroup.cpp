@@ -12,32 +12,64 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		LoadGroup(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "LoadGroup.SubLoadArea", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 LoadGroup::LoadGroup() : SubLoadArea(nullptr) {}
 LoadGroup::~LoadGroup() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& LoadGroup::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:LoadGroup.SubLoadArea", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-LoadGroup::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-LoadGroup::getPossibleProfilesForAttributes() const
+const std::string& LoadGroup::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& LoadGroup::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& LoadGroup::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& LoadGroup::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& LoadGroup::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& LoadGroup::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_SubLoadArea_LoadGroups(BaseClass*, BaseClass*);
@@ -79,7 +111,7 @@ const char* LoadGroup::debugString() const
 
 void LoadGroup::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:LoadGroup", &LoadGroup_factory);
+	factory_map.emplace("LoadGroup", &LoadGroup_factory);
 }
 
 void LoadGroup::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -88,7 +120,7 @@ void LoadGroup::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assig
 
 void LoadGroup::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:LoadGroup.SubLoadArea", &assign_LoadGroup_SubLoadArea);
+	assign_map.emplace("LoadGroup.SubLoadArea", &assign_LoadGroup_SubLoadArea);
 }
 
 void LoadGroup::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -99,7 +131,7 @@ void LoadGroup::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get
 void LoadGroup::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	IdentifiedObject::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:LoadGroup.SubLoadArea", &get_LoadGroup_SubLoadArea);
+	get_map.emplace("LoadGroup.SubLoadArea", &get_LoadGroup_SubLoadArea);
 }
 
 void LoadGroup::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -107,9 +139,23 @@ void LoadGroup::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map)
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool LoadGroup::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "LoadGroup" &&
+		dynamic_cast<LoadGroup*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner LoadGroup::declare()
 {
 	return BaseClassDefiner(LoadGroup::addConstructToMap, LoadGroup::addPrimitiveAssignFnsToMap, LoadGroup::addClassAssignFnsToMap, LoadGroup::debugName);
+}
+
+std::map<std::string, AttrDetails> LoadGroup::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

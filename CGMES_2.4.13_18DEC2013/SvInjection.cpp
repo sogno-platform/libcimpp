@@ -12,34 +12,66 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		SvInjection(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::SV,
+		},
+		CGMESProfile::SV
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "SvInjection.TopologicalNode", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SV, } } },
+		{ "SvInjection.pInjection", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SV, } } },
+		{ "SvInjection.qInjection", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SV, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 SvInjection::SvInjection() : TopologicalNode(nullptr) {}
 SvInjection::~SvInjection() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& SvInjection::getAttributeNames() const
 {
-	CGMESProfile::SV,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:SvInjection.TopologicalNode", { CGMESProfile::SV, } },
-	{ "cim:SvInjection.pInjection", { CGMESProfile::SV, } },
-	{ "cim:SvInjection.qInjection", { CGMESProfile::SV, } },
-};
-
-std::list<CGMESProfile>
-SvInjection::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-SvInjection::getPossibleProfilesForAttributes() const
+const std::string& SvInjection::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& SvInjection::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& SvInjection::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& SvInjection::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& SvInjection::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& SvInjection::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_TopologicalNode_SvInjection(BaseClass*, BaseClass*);
@@ -139,31 +171,31 @@ const char* SvInjection::debugString() const
 
 void SvInjection::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:SvInjection", &SvInjection_factory);
+	factory_map.emplace("SvInjection", &SvInjection_factory);
 }
 
 void SvInjection::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:SvInjection.pInjection", &assign_SvInjection_pInjection);
-	assign_map.emplace("cim:SvInjection.qInjection", &assign_SvInjection_qInjection);
+	assign_map.emplace("SvInjection.pInjection", &assign_SvInjection_pInjection);
+	assign_map.emplace("SvInjection.qInjection", &assign_SvInjection_qInjection);
 }
 
 void SvInjection::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:SvInjection.TopologicalNode", &assign_SvInjection_TopologicalNode);
+	assign_map.emplace("SvInjection.TopologicalNode", &assign_SvInjection_TopologicalNode);
 }
 
 void SvInjection::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	BaseClass::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:SvInjection.pInjection", &get_SvInjection_pInjection);
-	get_map.emplace("cim:SvInjection.qInjection", &get_SvInjection_qInjection);
+	get_map.emplace("SvInjection.pInjection", &get_SvInjection_pInjection);
+	get_map.emplace("SvInjection.qInjection", &get_SvInjection_qInjection);
 }
 
 void SvInjection::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	BaseClass::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:SvInjection.TopologicalNode", &get_SvInjection_TopologicalNode);
+	get_map.emplace("SvInjection.TopologicalNode", &get_SvInjection_TopologicalNode);
 }
 
 void SvInjection::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -171,9 +203,23 @@ void SvInjection::addEnumGetFnsToMap(std::map<std::string, get_function>& get_ma
 	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
+bool SvInjection::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "SvInjection" &&
+		dynamic_cast<SvInjection*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner SvInjection::declare()
 {
 	return BaseClassDefiner(SvInjection::addConstructToMap, SvInjection::addPrimitiveAssignFnsToMap, SvInjection::addClassAssignFnsToMap, SvInjection::debugName);
+}
+
+std::map<std::string, AttrDetails> SvInjection::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = BaseClass::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

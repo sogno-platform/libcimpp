@@ -12,42 +12,74 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		WindContPitchAngleIEC(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "WindContPitchAngleIEC.WindGenTurbineType3IEC", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContPitchAngleIEC.dthetamax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContPitchAngleIEC.dthetamin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContPitchAngleIEC.kic", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContPitchAngleIEC.kiomega", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContPitchAngleIEC.kpc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContPitchAngleIEC.kpomega", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContPitchAngleIEC.kpx", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContPitchAngleIEC.thetamax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContPitchAngleIEC.thetamin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContPitchAngleIEC.ttheta", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 WindContPitchAngleIEC::WindContPitchAngleIEC() : WindGenTurbineType3IEC(nullptr) {}
 WindContPitchAngleIEC::~WindContPitchAngleIEC() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& WindContPitchAngleIEC::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:WindContPitchAngleIEC.WindGenTurbineType3IEC", { CGMESProfile::DY, } },
-	{ "cim:WindContPitchAngleIEC.dthetamax", { CGMESProfile::DY, } },
-	{ "cim:WindContPitchAngleIEC.dthetamin", { CGMESProfile::DY, } },
-	{ "cim:WindContPitchAngleIEC.kic", { CGMESProfile::DY, } },
-	{ "cim:WindContPitchAngleIEC.kiomega", { CGMESProfile::DY, } },
-	{ "cim:WindContPitchAngleIEC.kpc", { CGMESProfile::DY, } },
-	{ "cim:WindContPitchAngleIEC.kpomega", { CGMESProfile::DY, } },
-	{ "cim:WindContPitchAngleIEC.kpx", { CGMESProfile::DY, } },
-	{ "cim:WindContPitchAngleIEC.thetamax", { CGMESProfile::DY, } },
-	{ "cim:WindContPitchAngleIEC.thetamin", { CGMESProfile::DY, } },
-	{ "cim:WindContPitchAngleIEC.ttheta", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-WindContPitchAngleIEC::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-WindContPitchAngleIEC::getPossibleProfilesForAttributes() const
+const std::string& WindContPitchAngleIEC::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& WindContPitchAngleIEC::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& WindContPitchAngleIEC::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& WindContPitchAngleIEC::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& WindContPitchAngleIEC::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& WindContPitchAngleIEC::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_WindGenTurbineType3IEC_WindContPitchAngleIEC(BaseClass*, BaseClass*);
@@ -366,41 +398,41 @@ const char* WindContPitchAngleIEC::debugString() const
 
 void WindContPitchAngleIEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:WindContPitchAngleIEC", &WindContPitchAngleIEC_factory);
+	factory_map.emplace("WindContPitchAngleIEC", &WindContPitchAngleIEC_factory);
 }
 
 void WindContPitchAngleIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindContPitchAngleIEC.dthetamax", &assign_WindContPitchAngleIEC_dthetamax);
-	assign_map.emplace("cim:WindContPitchAngleIEC.dthetamin", &assign_WindContPitchAngleIEC_dthetamin);
-	assign_map.emplace("cim:WindContPitchAngleIEC.kic", &assign_WindContPitchAngleIEC_kic);
-	assign_map.emplace("cim:WindContPitchAngleIEC.kiomega", &assign_WindContPitchAngleIEC_kiomega);
-	assign_map.emplace("cim:WindContPitchAngleIEC.kpc", &assign_WindContPitchAngleIEC_kpc);
-	assign_map.emplace("cim:WindContPitchAngleIEC.kpomega", &assign_WindContPitchAngleIEC_kpomega);
-	assign_map.emplace("cim:WindContPitchAngleIEC.kpx", &assign_WindContPitchAngleIEC_kpx);
-	assign_map.emplace("cim:WindContPitchAngleIEC.thetamax", &assign_WindContPitchAngleIEC_thetamax);
-	assign_map.emplace("cim:WindContPitchAngleIEC.thetamin", &assign_WindContPitchAngleIEC_thetamin);
-	assign_map.emplace("cim:WindContPitchAngleIEC.ttheta", &assign_WindContPitchAngleIEC_ttheta);
+	assign_map.emplace("WindContPitchAngleIEC.dthetamax", &assign_WindContPitchAngleIEC_dthetamax);
+	assign_map.emplace("WindContPitchAngleIEC.dthetamin", &assign_WindContPitchAngleIEC_dthetamin);
+	assign_map.emplace("WindContPitchAngleIEC.kic", &assign_WindContPitchAngleIEC_kic);
+	assign_map.emplace("WindContPitchAngleIEC.kiomega", &assign_WindContPitchAngleIEC_kiomega);
+	assign_map.emplace("WindContPitchAngleIEC.kpc", &assign_WindContPitchAngleIEC_kpc);
+	assign_map.emplace("WindContPitchAngleIEC.kpomega", &assign_WindContPitchAngleIEC_kpomega);
+	assign_map.emplace("WindContPitchAngleIEC.kpx", &assign_WindContPitchAngleIEC_kpx);
+	assign_map.emplace("WindContPitchAngleIEC.thetamax", &assign_WindContPitchAngleIEC_thetamax);
+	assign_map.emplace("WindContPitchAngleIEC.thetamin", &assign_WindContPitchAngleIEC_thetamin);
+	assign_map.emplace("WindContPitchAngleIEC.ttheta", &assign_WindContPitchAngleIEC_ttheta);
 }
 
 void WindContPitchAngleIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindContPitchAngleIEC.WindGenTurbineType3IEC", &assign_WindContPitchAngleIEC_WindGenTurbineType3IEC);
+	assign_map.emplace("WindContPitchAngleIEC.WindGenTurbineType3IEC", &assign_WindContPitchAngleIEC_WindGenTurbineType3IEC);
 }
 
 void WindContPitchAngleIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:WindContPitchAngleIEC.dthetamax", &get_WindContPitchAngleIEC_dthetamax);
-	get_map.emplace("cim:WindContPitchAngleIEC.dthetamin", &get_WindContPitchAngleIEC_dthetamin);
-	get_map.emplace("cim:WindContPitchAngleIEC.kic", &get_WindContPitchAngleIEC_kic);
-	get_map.emplace("cim:WindContPitchAngleIEC.kiomega", &get_WindContPitchAngleIEC_kiomega);
-	get_map.emplace("cim:WindContPitchAngleIEC.kpc", &get_WindContPitchAngleIEC_kpc);
-	get_map.emplace("cim:WindContPitchAngleIEC.kpomega", &get_WindContPitchAngleIEC_kpomega);
-	get_map.emplace("cim:WindContPitchAngleIEC.kpx", &get_WindContPitchAngleIEC_kpx);
-	get_map.emplace("cim:WindContPitchAngleIEC.thetamax", &get_WindContPitchAngleIEC_thetamax);
-	get_map.emplace("cim:WindContPitchAngleIEC.thetamin", &get_WindContPitchAngleIEC_thetamin);
-	get_map.emplace("cim:WindContPitchAngleIEC.ttheta", &get_WindContPitchAngleIEC_ttheta);
+	get_map.emplace("WindContPitchAngleIEC.dthetamax", &get_WindContPitchAngleIEC_dthetamax);
+	get_map.emplace("WindContPitchAngleIEC.dthetamin", &get_WindContPitchAngleIEC_dthetamin);
+	get_map.emplace("WindContPitchAngleIEC.kic", &get_WindContPitchAngleIEC_kic);
+	get_map.emplace("WindContPitchAngleIEC.kiomega", &get_WindContPitchAngleIEC_kiomega);
+	get_map.emplace("WindContPitchAngleIEC.kpc", &get_WindContPitchAngleIEC_kpc);
+	get_map.emplace("WindContPitchAngleIEC.kpomega", &get_WindContPitchAngleIEC_kpomega);
+	get_map.emplace("WindContPitchAngleIEC.kpx", &get_WindContPitchAngleIEC_kpx);
+	get_map.emplace("WindContPitchAngleIEC.thetamax", &get_WindContPitchAngleIEC_thetamax);
+	get_map.emplace("WindContPitchAngleIEC.thetamin", &get_WindContPitchAngleIEC_thetamin);
+	get_map.emplace("WindContPitchAngleIEC.ttheta", &get_WindContPitchAngleIEC_ttheta);
 }
 
 void WindContPitchAngleIEC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -413,9 +445,23 @@ void WindContPitchAngleIEC::addEnumGetFnsToMap(std::map<std::string, get_functio
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool WindContPitchAngleIEC::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "WindContPitchAngleIEC" &&
+		dynamic_cast<WindContPitchAngleIEC*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner WindContPitchAngleIEC::declare()
 {
 	return BaseClassDefiner(WindContPitchAngleIEC::addConstructToMap, WindContPitchAngleIEC::addPrimitiveAssignFnsToMap, WindContPitchAngleIEC::addClassAssignFnsToMap, WindContPitchAngleIEC::debugName);
+}
+
+std::map<std::string, AttrDetails> WindContPitchAngleIEC::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

@@ -12,39 +12,71 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		PowerTransformer(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SC,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "PowerTransformer.PowerTransformerEnd", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "PowerTransformer.beforeShCircuitHighestOperatingCurrent", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "PowerTransformer.beforeShCircuitHighestOperatingVoltage", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "PowerTransformer.beforeShortCircuitAnglePf", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "PowerTransformer.highSideMinOperatingU", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "PowerTransformer.isPartOfGeneratorUnit", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "PowerTransformer.operationalValuesConsidered", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 PowerTransformer::PowerTransformer() {}
 PowerTransformer::~PowerTransformer() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& PowerTransformer::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SC,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:PowerTransformer.PowerTransformerEnd", { CGMESProfile::EQ, } },
-	{ "cim:PowerTransformer.beforeShCircuitHighestOperatingCurrent", { CGMESProfile::SC, } },
-	{ "cim:PowerTransformer.beforeShCircuitHighestOperatingVoltage", { CGMESProfile::SC, } },
-	{ "cim:PowerTransformer.beforeShortCircuitAnglePf", { CGMESProfile::SC, } },
-	{ "cim:PowerTransformer.highSideMinOperatingU", { CGMESProfile::SC, } },
-	{ "cim:PowerTransformer.isPartOfGeneratorUnit", { CGMESProfile::SC, } },
-	{ "cim:PowerTransformer.operationalValuesConsidered", { CGMESProfile::SC, } },
-};
-
-std::list<CGMESProfile>
-PowerTransformer::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-PowerTransformer::getPossibleProfilesForAttributes() const
+const std::string& PowerTransformer::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ConductingEquipment::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& PowerTransformer::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& PowerTransformer::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& PowerTransformer::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& PowerTransformer::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& PowerTransformer::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_PowerTransformerEnd_PowerTransformer(BaseClass*, BaseClass*);
@@ -247,33 +279,33 @@ const char* PowerTransformer::debugString() const
 
 void PowerTransformer::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:PowerTransformer", &PowerTransformer_factory);
+	factory_map.emplace("PowerTransformer", &PowerTransformer_factory);
 }
 
 void PowerTransformer::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:PowerTransformer.beforeShCircuitHighestOperatingCurrent", &assign_PowerTransformer_beforeShCircuitHighestOperatingCurrent);
-	assign_map.emplace("cim:PowerTransformer.beforeShCircuitHighestOperatingVoltage", &assign_PowerTransformer_beforeShCircuitHighestOperatingVoltage);
-	assign_map.emplace("cim:PowerTransformer.beforeShortCircuitAnglePf", &assign_PowerTransformer_beforeShortCircuitAnglePf);
-	assign_map.emplace("cim:PowerTransformer.highSideMinOperatingU", &assign_PowerTransformer_highSideMinOperatingU);
-	assign_map.emplace("cim:PowerTransformer.isPartOfGeneratorUnit", &assign_PowerTransformer_isPartOfGeneratorUnit);
-	assign_map.emplace("cim:PowerTransformer.operationalValuesConsidered", &assign_PowerTransformer_operationalValuesConsidered);
+	assign_map.emplace("PowerTransformer.beforeShCircuitHighestOperatingCurrent", &assign_PowerTransformer_beforeShCircuitHighestOperatingCurrent);
+	assign_map.emplace("PowerTransformer.beforeShCircuitHighestOperatingVoltage", &assign_PowerTransformer_beforeShCircuitHighestOperatingVoltage);
+	assign_map.emplace("PowerTransformer.beforeShortCircuitAnglePf", &assign_PowerTransformer_beforeShortCircuitAnglePf);
+	assign_map.emplace("PowerTransformer.highSideMinOperatingU", &assign_PowerTransformer_highSideMinOperatingU);
+	assign_map.emplace("PowerTransformer.isPartOfGeneratorUnit", &assign_PowerTransformer_isPartOfGeneratorUnit);
+	assign_map.emplace("PowerTransformer.operationalValuesConsidered", &assign_PowerTransformer_operationalValuesConsidered);
 }
 
 void PowerTransformer::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:PowerTransformer.PowerTransformerEnd", &assign_PowerTransformer_PowerTransformerEnd);
+	assign_map.emplace("PowerTransformer.PowerTransformerEnd", &assign_PowerTransformer_PowerTransformerEnd);
 }
 
 void PowerTransformer::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ConductingEquipment::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:PowerTransformer.beforeShCircuitHighestOperatingCurrent", &get_PowerTransformer_beforeShCircuitHighestOperatingCurrent);
-	get_map.emplace("cim:PowerTransformer.beforeShCircuitHighestOperatingVoltage", &get_PowerTransformer_beforeShCircuitHighestOperatingVoltage);
-	get_map.emplace("cim:PowerTransformer.beforeShortCircuitAnglePf", &get_PowerTransformer_beforeShortCircuitAnglePf);
-	get_map.emplace("cim:PowerTransformer.highSideMinOperatingU", &get_PowerTransformer_highSideMinOperatingU);
-	get_map.emplace("cim:PowerTransformer.isPartOfGeneratorUnit", &get_PowerTransformer_isPartOfGeneratorUnit);
-	get_map.emplace("cim:PowerTransformer.operationalValuesConsidered", &get_PowerTransformer_operationalValuesConsidered);
+	get_map.emplace("PowerTransformer.beforeShCircuitHighestOperatingCurrent", &get_PowerTransformer_beforeShCircuitHighestOperatingCurrent);
+	get_map.emplace("PowerTransformer.beforeShCircuitHighestOperatingVoltage", &get_PowerTransformer_beforeShCircuitHighestOperatingVoltage);
+	get_map.emplace("PowerTransformer.beforeShortCircuitAnglePf", &get_PowerTransformer_beforeShortCircuitAnglePf);
+	get_map.emplace("PowerTransformer.highSideMinOperatingU", &get_PowerTransformer_highSideMinOperatingU);
+	get_map.emplace("PowerTransformer.isPartOfGeneratorUnit", &get_PowerTransformer_isPartOfGeneratorUnit);
+	get_map.emplace("PowerTransformer.operationalValuesConsidered", &get_PowerTransformer_operationalValuesConsidered);
 }
 
 void PowerTransformer::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -286,9 +318,23 @@ void PowerTransformer::addEnumGetFnsToMap(std::map<std::string, get_function>& g
 	ConductingEquipment::addEnumGetFnsToMap(get_map);
 }
 
+bool PowerTransformer::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "PowerTransformer" &&
+		dynamic_cast<PowerTransformer*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner PowerTransformer::declare()
 {
 	return BaseClassDefiner(PowerTransformer::addConstructToMap, PowerTransformer::addPrimitiveAssignFnsToMap, PowerTransformer::addClassAssignFnsToMap, PowerTransformer::debugName);
+}
+
+std::map<std::string, AttrDetails> PowerTransformer::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ConductingEquipment::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

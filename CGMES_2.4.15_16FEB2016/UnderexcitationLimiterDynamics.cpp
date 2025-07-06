@@ -13,33 +13,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		UnderexcitationLimiterDynamics(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "UnderexcitationLimiterDynamics.ExcitationSystemDynamics", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "UnderexcitationLimiterDynamics.RemoteInputSignal", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 UnderexcitationLimiterDynamics::UnderexcitationLimiterDynamics() : ExcitationSystemDynamics(nullptr), RemoteInputSignal(nullptr) {}
 UnderexcitationLimiterDynamics::~UnderexcitationLimiterDynamics() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& UnderexcitationLimiterDynamics::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:UnderexcitationLimiterDynamics.ExcitationSystemDynamics", { CGMESProfile::DY, } },
-	{ "cim:UnderexcitationLimiterDynamics.RemoteInputSignal", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-UnderexcitationLimiterDynamics::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-UnderexcitationLimiterDynamics::getPossibleProfilesForAttributes() const
+const std::string& UnderexcitationLimiterDynamics::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = DynamicsFunctionBlock::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& UnderexcitationLimiterDynamics::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& UnderexcitationLimiterDynamics::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& UnderexcitationLimiterDynamics::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& UnderexcitationLimiterDynamics::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& UnderexcitationLimiterDynamics::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ExcitationSystemDynamics_UnderexcitationLimiterDynamics(BaseClass*, BaseClass*);
@@ -99,7 +131,7 @@ const char* UnderexcitationLimiterDynamics::debugString() const
 
 void UnderexcitationLimiterDynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:UnderexcitationLimiterDynamics", &UnderexcitationLimiterDynamics_factory);
+	factory_map.emplace("UnderexcitationLimiterDynamics", &UnderexcitationLimiterDynamics_factory);
 }
 
 void UnderexcitationLimiterDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -108,8 +140,8 @@ void UnderexcitationLimiterDynamics::addPrimitiveAssignFnsToMap(std::unordered_m
 
 void UnderexcitationLimiterDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:UnderexcitationLimiterDynamics.ExcitationSystemDynamics", &assign_UnderexcitationLimiterDynamics_ExcitationSystemDynamics);
-	assign_map.emplace("cim:UnderexcitationLimiterDynamics.RemoteInputSignal", &assign_UnderexcitationLimiterDynamics_RemoteInputSignal);
+	assign_map.emplace("UnderexcitationLimiterDynamics.ExcitationSystemDynamics", &assign_UnderexcitationLimiterDynamics_ExcitationSystemDynamics);
+	assign_map.emplace("UnderexcitationLimiterDynamics.RemoteInputSignal", &assign_UnderexcitationLimiterDynamics_RemoteInputSignal);
 }
 
 void UnderexcitationLimiterDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -120,7 +152,7 @@ void UnderexcitationLimiterDynamics::addPrimitiveGetFnsToMap(std::map<std::strin
 void UnderexcitationLimiterDynamics::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	DynamicsFunctionBlock::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:UnderexcitationLimiterDynamics.ExcitationSystemDynamics", &get_UnderexcitationLimiterDynamics_ExcitationSystemDynamics);
+	get_map.emplace("UnderexcitationLimiterDynamics.ExcitationSystemDynamics", &get_UnderexcitationLimiterDynamics_ExcitationSystemDynamics);
 }
 
 void UnderexcitationLimiterDynamics::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -128,9 +160,23 @@ void UnderexcitationLimiterDynamics::addEnumGetFnsToMap(std::map<std::string, ge
 	DynamicsFunctionBlock::addEnumGetFnsToMap(get_map);
 }
 
+bool UnderexcitationLimiterDynamics::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "UnderexcitationLimiterDynamics" &&
+		dynamic_cast<UnderexcitationLimiterDynamics*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner UnderexcitationLimiterDynamics::declare()
 {
 	return BaseClassDefiner(UnderexcitationLimiterDynamics::addConstructToMap, UnderexcitationLimiterDynamics::addPrimitiveAssignFnsToMap, UnderexcitationLimiterDynamics::addClassAssignFnsToMap, UnderexcitationLimiterDynamics::debugName);
+}
+
+std::map<std::string, AttrDetails> UnderexcitationLimiterDynamics::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = DynamicsFunctionBlock::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

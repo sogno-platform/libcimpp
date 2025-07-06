@@ -12,33 +12,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		VoltageAdjusterUserDefined(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "VoltageAdjusterUserDefined.ProprietaryParameterDynamics", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "VoltageAdjusterUserDefined.proprietary", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 VoltageAdjusterUserDefined::VoltageAdjusterUserDefined() {}
 VoltageAdjusterUserDefined::~VoltageAdjusterUserDefined() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& VoltageAdjusterUserDefined::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:VoltageAdjusterUserDefined.ProprietaryParameterDynamics", { CGMESProfile::DY, } },
-	{ "cim:VoltageAdjusterUserDefined.proprietary", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-VoltageAdjusterUserDefined::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-VoltageAdjusterUserDefined::getPossibleProfilesForAttributes() const
+const std::string& VoltageAdjusterUserDefined::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = VoltageAdjusterDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& VoltageAdjusterUserDefined::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& VoltageAdjusterUserDefined::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& VoltageAdjusterUserDefined::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& VoltageAdjusterUserDefined::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& VoltageAdjusterUserDefined::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ProprietaryParameterDynamics_VoltageAdjusterUserDefined(BaseClass*, BaseClass*);
@@ -96,23 +128,23 @@ const char* VoltageAdjusterUserDefined::debugString() const
 
 void VoltageAdjusterUserDefined::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:VoltageAdjusterUserDefined", &VoltageAdjusterUserDefined_factory);
+	factory_map.emplace("VoltageAdjusterUserDefined", &VoltageAdjusterUserDefined_factory);
 }
 
 void VoltageAdjusterUserDefined::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:VoltageAdjusterUserDefined.proprietary", &assign_VoltageAdjusterUserDefined_proprietary);
+	assign_map.emplace("VoltageAdjusterUserDefined.proprietary", &assign_VoltageAdjusterUserDefined_proprietary);
 }
 
 void VoltageAdjusterUserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:VoltageAdjusterUserDefined.ProprietaryParameterDynamics", &assign_VoltageAdjusterUserDefined_ProprietaryParameterDynamics);
+	assign_map.emplace("VoltageAdjusterUserDefined.ProprietaryParameterDynamics", &assign_VoltageAdjusterUserDefined_ProprietaryParameterDynamics);
 }
 
 void VoltageAdjusterUserDefined::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	VoltageAdjusterDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:VoltageAdjusterUserDefined.proprietary", &get_VoltageAdjusterUserDefined_proprietary);
+	get_map.emplace("VoltageAdjusterUserDefined.proprietary", &get_VoltageAdjusterUserDefined_proprietary);
 }
 
 void VoltageAdjusterUserDefined::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -125,9 +157,23 @@ void VoltageAdjusterUserDefined::addEnumGetFnsToMap(std::map<std::string, get_fu
 	VoltageAdjusterDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool VoltageAdjusterUserDefined::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "VoltageAdjusterUserDefined" &&
+		dynamic_cast<VoltageAdjusterUserDefined*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner VoltageAdjusterUserDefined::declare()
 {
 	return BaseClassDefiner(VoltageAdjusterUserDefined::addConstructToMap, VoltageAdjusterUserDefined::addPrimitiveAssignFnsToMap, VoltageAdjusterUserDefined::addClassAssignFnsToMap, VoltageAdjusterUserDefined::debugName);
+}
+
+std::map<std::string, AttrDetails> VoltageAdjusterUserDefined::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = VoltageAdjusterDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

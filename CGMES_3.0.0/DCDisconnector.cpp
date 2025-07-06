@@ -11,31 +11,63 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		DCDisconnector(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+	};
+    return ClassAttrDetailsMap;
+}
+
 DCDisconnector::DCDisconnector() {}
 DCDisconnector::~DCDisconnector() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& DCDisconnector::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-};
-
-std::list<CGMESProfile>
-DCDisconnector::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-DCDisconnector::getPossibleProfilesForAttributes() const
+const std::string& DCDisconnector::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = DCSwitch::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& DCDisconnector::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& DCDisconnector::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& DCDisconnector::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& DCDisconnector::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& DCDisconnector::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 const char DCDisconnector::debugName[] = "DCDisconnector";
@@ -46,7 +78,7 @@ const char* DCDisconnector::debugString() const
 
 void DCDisconnector::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:DCDisconnector", &DCDisconnector_factory);
+	factory_map.emplace("DCDisconnector", &DCDisconnector_factory);
 }
 
 void DCDisconnector::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -72,9 +104,23 @@ void DCDisconnector::addEnumGetFnsToMap(std::map<std::string, get_function>& get
 	DCSwitch::addEnumGetFnsToMap(get_map);
 }
 
+bool DCDisconnector::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "DCDisconnector" &&
+		dynamic_cast<DCDisconnector*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner DCDisconnector::declare()
 {
 	return BaseClassDefiner(DCDisconnector::addConstructToMap, DCDisconnector::addPrimitiveAssignFnsToMap, DCDisconnector::addClassAssignFnsToMap, DCDisconnector::debugName);
+}
+
+std::map<std::string, AttrDetails> DCDisconnector::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = DCSwitch::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

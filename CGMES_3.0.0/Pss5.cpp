@@ -11,48 +11,80 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		Pss5(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "Pss5.ctw2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "Pss5.deadband", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "Pss5.isfreq", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "Pss5.kf", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "Pss5.kpe", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "Pss5.kpss", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "Pss5.pmin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "Pss5.tl1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "Pss5.tl2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "Pss5.tl3", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "Pss5.tl4", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "Pss5.tpe", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "Pss5.tw1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "Pss5.tw2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "Pss5.vadat", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "Pss5.vsmn", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "Pss5.vsmx", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 Pss5::Pss5() {}
 Pss5::~Pss5() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& Pss5::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:Pss5.ctw2", { CGMESProfile::DY, } },
-	{ "cim:Pss5.deadband", { CGMESProfile::DY, } },
-	{ "cim:Pss5.isfreq", { CGMESProfile::DY, } },
-	{ "cim:Pss5.kf", { CGMESProfile::DY, } },
-	{ "cim:Pss5.kpe", { CGMESProfile::DY, } },
-	{ "cim:Pss5.kpss", { CGMESProfile::DY, } },
-	{ "cim:Pss5.pmin", { CGMESProfile::DY, } },
-	{ "cim:Pss5.tl1", { CGMESProfile::DY, } },
-	{ "cim:Pss5.tl2", { CGMESProfile::DY, } },
-	{ "cim:Pss5.tl3", { CGMESProfile::DY, } },
-	{ "cim:Pss5.tl4", { CGMESProfile::DY, } },
-	{ "cim:Pss5.tpe", { CGMESProfile::DY, } },
-	{ "cim:Pss5.tw1", { CGMESProfile::DY, } },
-	{ "cim:Pss5.tw2", { CGMESProfile::DY, } },
-	{ "cim:Pss5.vadat", { CGMESProfile::DY, } },
-	{ "cim:Pss5.vsmn", { CGMESProfile::DY, } },
-	{ "cim:Pss5.vsmx", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-Pss5::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-Pss5::getPossibleProfilesForAttributes() const
+const std::string& Pss5::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = PowerSystemStabilizerDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& Pss5::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& Pss5::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& Pss5::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& Pss5::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& Pss5::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_Pss5_ctw2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -556,28 +588,28 @@ const char* Pss5::debugString() const
 
 void Pss5::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:Pss5", &Pss5_factory);
+	factory_map.emplace("Pss5", &Pss5_factory);
 }
 
 void Pss5::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:Pss5.ctw2", &assign_Pss5_ctw2);
-	assign_map.emplace("cim:Pss5.deadband", &assign_Pss5_deadband);
-	assign_map.emplace("cim:Pss5.isfreq", &assign_Pss5_isfreq);
-	assign_map.emplace("cim:Pss5.kf", &assign_Pss5_kf);
-	assign_map.emplace("cim:Pss5.kpe", &assign_Pss5_kpe);
-	assign_map.emplace("cim:Pss5.kpss", &assign_Pss5_kpss);
-	assign_map.emplace("cim:Pss5.pmin", &assign_Pss5_pmin);
-	assign_map.emplace("cim:Pss5.tl1", &assign_Pss5_tl1);
-	assign_map.emplace("cim:Pss5.tl2", &assign_Pss5_tl2);
-	assign_map.emplace("cim:Pss5.tl3", &assign_Pss5_tl3);
-	assign_map.emplace("cim:Pss5.tl4", &assign_Pss5_tl4);
-	assign_map.emplace("cim:Pss5.tpe", &assign_Pss5_tpe);
-	assign_map.emplace("cim:Pss5.tw1", &assign_Pss5_tw1);
-	assign_map.emplace("cim:Pss5.tw2", &assign_Pss5_tw2);
-	assign_map.emplace("cim:Pss5.vadat", &assign_Pss5_vadat);
-	assign_map.emplace("cim:Pss5.vsmn", &assign_Pss5_vsmn);
-	assign_map.emplace("cim:Pss5.vsmx", &assign_Pss5_vsmx);
+	assign_map.emplace("Pss5.ctw2", &assign_Pss5_ctw2);
+	assign_map.emplace("Pss5.deadband", &assign_Pss5_deadband);
+	assign_map.emplace("Pss5.isfreq", &assign_Pss5_isfreq);
+	assign_map.emplace("Pss5.kf", &assign_Pss5_kf);
+	assign_map.emplace("Pss5.kpe", &assign_Pss5_kpe);
+	assign_map.emplace("Pss5.kpss", &assign_Pss5_kpss);
+	assign_map.emplace("Pss5.pmin", &assign_Pss5_pmin);
+	assign_map.emplace("Pss5.tl1", &assign_Pss5_tl1);
+	assign_map.emplace("Pss5.tl2", &assign_Pss5_tl2);
+	assign_map.emplace("Pss5.tl3", &assign_Pss5_tl3);
+	assign_map.emplace("Pss5.tl4", &assign_Pss5_tl4);
+	assign_map.emplace("Pss5.tpe", &assign_Pss5_tpe);
+	assign_map.emplace("Pss5.tw1", &assign_Pss5_tw1);
+	assign_map.emplace("Pss5.tw2", &assign_Pss5_tw2);
+	assign_map.emplace("Pss5.vadat", &assign_Pss5_vadat);
+	assign_map.emplace("Pss5.vsmn", &assign_Pss5_vsmn);
+	assign_map.emplace("Pss5.vsmx", &assign_Pss5_vsmx);
 }
 
 void Pss5::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -587,23 +619,23 @@ void Pss5::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_f
 void Pss5::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	PowerSystemStabilizerDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:Pss5.ctw2", &get_Pss5_ctw2);
-	get_map.emplace("cim:Pss5.deadband", &get_Pss5_deadband);
-	get_map.emplace("cim:Pss5.isfreq", &get_Pss5_isfreq);
-	get_map.emplace("cim:Pss5.kf", &get_Pss5_kf);
-	get_map.emplace("cim:Pss5.kpe", &get_Pss5_kpe);
-	get_map.emplace("cim:Pss5.kpss", &get_Pss5_kpss);
-	get_map.emplace("cim:Pss5.pmin", &get_Pss5_pmin);
-	get_map.emplace("cim:Pss5.tl1", &get_Pss5_tl1);
-	get_map.emplace("cim:Pss5.tl2", &get_Pss5_tl2);
-	get_map.emplace("cim:Pss5.tl3", &get_Pss5_tl3);
-	get_map.emplace("cim:Pss5.tl4", &get_Pss5_tl4);
-	get_map.emplace("cim:Pss5.tpe", &get_Pss5_tpe);
-	get_map.emplace("cim:Pss5.tw1", &get_Pss5_tw1);
-	get_map.emplace("cim:Pss5.tw2", &get_Pss5_tw2);
-	get_map.emplace("cim:Pss5.vadat", &get_Pss5_vadat);
-	get_map.emplace("cim:Pss5.vsmn", &get_Pss5_vsmn);
-	get_map.emplace("cim:Pss5.vsmx", &get_Pss5_vsmx);
+	get_map.emplace("Pss5.ctw2", &get_Pss5_ctw2);
+	get_map.emplace("Pss5.deadband", &get_Pss5_deadband);
+	get_map.emplace("Pss5.isfreq", &get_Pss5_isfreq);
+	get_map.emplace("Pss5.kf", &get_Pss5_kf);
+	get_map.emplace("Pss5.kpe", &get_Pss5_kpe);
+	get_map.emplace("Pss5.kpss", &get_Pss5_kpss);
+	get_map.emplace("Pss5.pmin", &get_Pss5_pmin);
+	get_map.emplace("Pss5.tl1", &get_Pss5_tl1);
+	get_map.emplace("Pss5.tl2", &get_Pss5_tl2);
+	get_map.emplace("Pss5.tl3", &get_Pss5_tl3);
+	get_map.emplace("Pss5.tl4", &get_Pss5_tl4);
+	get_map.emplace("Pss5.tpe", &get_Pss5_tpe);
+	get_map.emplace("Pss5.tw1", &get_Pss5_tw1);
+	get_map.emplace("Pss5.tw2", &get_Pss5_tw2);
+	get_map.emplace("Pss5.vadat", &get_Pss5_vadat);
+	get_map.emplace("Pss5.vsmn", &get_Pss5_vsmn);
+	get_map.emplace("Pss5.vsmx", &get_Pss5_vsmx);
 }
 
 void Pss5::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -616,9 +648,23 @@ void Pss5::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) cons
 	PowerSystemStabilizerDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool Pss5::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "Pss5" &&
+		dynamic_cast<Pss5*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner Pss5::declare()
 {
 	return BaseClassDefiner(Pss5::addConstructToMap, Pss5::addPrimitiveAssignFnsToMap, Pss5::addClassAssignFnsToMap, Pss5::debugName);
+}
+
+std::map<std::string, AttrDetails> Pss5::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = PowerSystemStabilizerDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

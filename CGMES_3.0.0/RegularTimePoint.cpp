@@ -12,35 +12,67 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		RegularTimePoint(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "RegularTimePoint.IntervalSchedule", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "RegularTimePoint.sequenceNumber", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "RegularTimePoint.value1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "RegularTimePoint.value2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 RegularTimePoint::RegularTimePoint() : IntervalSchedule(nullptr) {}
 RegularTimePoint::~RegularTimePoint() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& RegularTimePoint::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:RegularTimePoint.IntervalSchedule", { CGMESProfile::EQ, } },
-	{ "cim:RegularTimePoint.sequenceNumber", { CGMESProfile::EQ, } },
-	{ "cim:RegularTimePoint.value1", { CGMESProfile::EQ, } },
-	{ "cim:RegularTimePoint.value2", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-RegularTimePoint::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-RegularTimePoint::getPossibleProfilesForAttributes() const
+const std::string& RegularTimePoint::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& RegularTimePoint::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& RegularTimePoint::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& RegularTimePoint::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& RegularTimePoint::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& RegularTimePoint::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_RegularIntervalSchedule_TimePoints(BaseClass*, BaseClass*);
@@ -169,33 +201,33 @@ const char* RegularTimePoint::debugString() const
 
 void RegularTimePoint::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:RegularTimePoint", &RegularTimePoint_factory);
+	factory_map.emplace("RegularTimePoint", &RegularTimePoint_factory);
 }
 
 void RegularTimePoint::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:RegularTimePoint.sequenceNumber", &assign_RegularTimePoint_sequenceNumber);
-	assign_map.emplace("cim:RegularTimePoint.value1", &assign_RegularTimePoint_value1);
-	assign_map.emplace("cim:RegularTimePoint.value2", &assign_RegularTimePoint_value2);
+	assign_map.emplace("RegularTimePoint.sequenceNumber", &assign_RegularTimePoint_sequenceNumber);
+	assign_map.emplace("RegularTimePoint.value1", &assign_RegularTimePoint_value1);
+	assign_map.emplace("RegularTimePoint.value2", &assign_RegularTimePoint_value2);
 }
 
 void RegularTimePoint::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:RegularTimePoint.IntervalSchedule", &assign_RegularTimePoint_IntervalSchedule);
+	assign_map.emplace("RegularTimePoint.IntervalSchedule", &assign_RegularTimePoint_IntervalSchedule);
 }
 
 void RegularTimePoint::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	BaseClass::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:RegularTimePoint.sequenceNumber", &get_RegularTimePoint_sequenceNumber);
-	get_map.emplace("cim:RegularTimePoint.value1", &get_RegularTimePoint_value1);
-	get_map.emplace("cim:RegularTimePoint.value2", &get_RegularTimePoint_value2);
+	get_map.emplace("RegularTimePoint.sequenceNumber", &get_RegularTimePoint_sequenceNumber);
+	get_map.emplace("RegularTimePoint.value1", &get_RegularTimePoint_value1);
+	get_map.emplace("RegularTimePoint.value2", &get_RegularTimePoint_value2);
 }
 
 void RegularTimePoint::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	BaseClass::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:RegularTimePoint.IntervalSchedule", &get_RegularTimePoint_IntervalSchedule);
+	get_map.emplace("RegularTimePoint.IntervalSchedule", &get_RegularTimePoint_IntervalSchedule);
 }
 
 void RegularTimePoint::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -203,9 +235,23 @@ void RegularTimePoint::addEnumGetFnsToMap(std::map<std::string, get_function>& g
 	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
+bool RegularTimePoint::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "RegularTimePoint" &&
+		dynamic_cast<RegularTimePoint*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner RegularTimePoint::declare()
 {
 	return BaseClassDefiner(RegularTimePoint::addConstructToMap, RegularTimePoint::addPrimitiveAssignFnsToMap, RegularTimePoint::addClassAssignFnsToMap, RegularTimePoint::debugName);
+}
+
+std::map<std::string, AttrDetails> RegularTimePoint::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = BaseClass::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

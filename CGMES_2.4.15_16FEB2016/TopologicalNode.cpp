@@ -19,49 +19,81 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		TopologicalNode(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::SV,
+			CGMESProfile::TP_BD,
+			CGMESProfile::TP,
+		},
+		CGMESProfile::TP
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "TopologicalNode.AngleRefTopologicalIsland", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SV, } } },
+		{ "TopologicalNode.BaseVoltage", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::TP_BD, CGMESProfile::TP, } } },
+		{ "TopologicalNode.ConnectivityNodeContainer", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::TP_BD, CGMESProfile::TP, } } },
+		{ "TopologicalNode.ConnectivityNodes", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::TP_BD, CGMESProfile::TP, } } },
+		{ "TopologicalNode.ReportingGroup", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::TP, } } },
+		{ "TopologicalNode.SvInjection", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SV, } } },
+		{ "TopologicalNode.SvVoltage", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SV, } } },
+		{ "TopologicalNode.Terminal", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::TP, } } },
+		{ "TopologicalNode.TopologicalIsland", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SV, } } },
+		{ "TopologicalNode.boundaryPoint", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP_BD, } } },
+		{ "TopologicalNode.fromEndIsoCode", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP_BD, } } },
+		{ "TopologicalNode.fromEndName", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP_BD, } } },
+		{ "TopologicalNode.fromEndNameTso", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP_BD, } } },
+		{ "TopologicalNode.toEndIsoCode", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP_BD, } } },
+		{ "TopologicalNode.toEndName", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP_BD, } } },
+		{ "TopologicalNode.toEndNameTso", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP_BD, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 TopologicalNode::TopologicalNode() : AngleRefTopologicalIsland(nullptr), BaseVoltage(nullptr), ConnectivityNodeContainer(nullptr), ReportingGroup(nullptr), SvInjection(nullptr), SvVoltage(nullptr), TopologicalIsland(nullptr) {}
 TopologicalNode::~TopologicalNode() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& TopologicalNode::getAttributeNames() const
 {
-	CGMESProfile::SV,
-	CGMESProfile::TP_BD,
-	CGMESProfile::TP,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:TopologicalNode.AngleRefTopologicalIsland", { CGMESProfile::SV, } },
-	{ "cim:TopologicalNode.BaseVoltage", { CGMESProfile::TP_BD, CGMESProfile::TP, } },
-	{ "cim:TopologicalNode.ConnectivityNodeContainer", { CGMESProfile::TP_BD, CGMESProfile::TP, } },
-	{ "cim:TopologicalNode.ConnectivityNodes", { CGMESProfile::TP_BD, CGMESProfile::TP, } },
-	{ "cim:TopologicalNode.ReportingGroup", { CGMESProfile::TP, } },
-	{ "cim:TopologicalNode.SvInjection", { CGMESProfile::SV, } },
-	{ "cim:TopologicalNode.SvVoltage", { CGMESProfile::SV, } },
-	{ "cim:TopologicalNode.Terminal", { CGMESProfile::TP, } },
-	{ "cim:TopologicalNode.TopologicalIsland", { CGMESProfile::SV, } },
-	{ "cim:TopologicalNode.boundaryPoint", { CGMESProfile::TP_BD, } },
-	{ "cim:TopologicalNode.fromEndIsoCode", { CGMESProfile::TP_BD, } },
-	{ "cim:TopologicalNode.fromEndName", { CGMESProfile::TP_BD, } },
-	{ "cim:TopologicalNode.fromEndNameTso", { CGMESProfile::TP_BD, } },
-	{ "cim:TopologicalNode.toEndIsoCode", { CGMESProfile::TP_BD, } },
-	{ "cim:TopologicalNode.toEndName", { CGMESProfile::TP_BD, } },
-	{ "cim:TopologicalNode.toEndNameTso", { CGMESProfile::TP_BD, } },
-};
-
-std::list<CGMESProfile>
-TopologicalNode::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-TopologicalNode::getPossibleProfilesForAttributes() const
+const std::string& TopologicalNode::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& TopologicalNode::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& TopologicalNode::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& TopologicalNode::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& TopologicalNode::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& TopologicalNode::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_TopologicalIsland_AngleRefTopologicalNode(BaseClass*, BaseClass*);
@@ -476,51 +508,51 @@ const char* TopologicalNode::debugString() const
 
 void TopologicalNode::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:TopologicalNode", &TopologicalNode_factory);
+	factory_map.emplace("TopologicalNode", &TopologicalNode_factory);
 }
 
 void TopologicalNode::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:TopologicalNode.boundaryPoint", &assign_TopologicalNode_boundaryPoint);
-	assign_map.emplace("cim:TopologicalNode.fromEndIsoCode", &assign_TopologicalNode_fromEndIsoCode);
-	assign_map.emplace("cim:TopologicalNode.fromEndName", &assign_TopologicalNode_fromEndName);
-	assign_map.emplace("cim:TopologicalNode.fromEndNameTso", &assign_TopologicalNode_fromEndNameTso);
-	assign_map.emplace("cim:TopologicalNode.toEndIsoCode", &assign_TopologicalNode_toEndIsoCode);
-	assign_map.emplace("cim:TopologicalNode.toEndName", &assign_TopologicalNode_toEndName);
-	assign_map.emplace("cim:TopologicalNode.toEndNameTso", &assign_TopologicalNode_toEndNameTso);
+	assign_map.emplace("TopologicalNode.boundaryPoint", &assign_TopologicalNode_boundaryPoint);
+	assign_map.emplace("TopologicalNode.fromEndIsoCode", &assign_TopologicalNode_fromEndIsoCode);
+	assign_map.emplace("TopologicalNode.fromEndName", &assign_TopologicalNode_fromEndName);
+	assign_map.emplace("TopologicalNode.fromEndNameTso", &assign_TopologicalNode_fromEndNameTso);
+	assign_map.emplace("TopologicalNode.toEndIsoCode", &assign_TopologicalNode_toEndIsoCode);
+	assign_map.emplace("TopologicalNode.toEndName", &assign_TopologicalNode_toEndName);
+	assign_map.emplace("TopologicalNode.toEndNameTso", &assign_TopologicalNode_toEndNameTso);
 }
 
 void TopologicalNode::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:TopologicalNode.AngleRefTopologicalIsland", &assign_TopologicalNode_AngleRefTopologicalIsland);
-	assign_map.emplace("cim:TopologicalNode.BaseVoltage", &assign_TopologicalNode_BaseVoltage);
-	assign_map.emplace("cim:TopologicalNode.ConnectivityNodeContainer", &assign_TopologicalNode_ConnectivityNodeContainer);
-	assign_map.emplace("cim:TopologicalNode.ConnectivityNodes", &assign_TopologicalNode_ConnectivityNodes);
-	assign_map.emplace("cim:TopologicalNode.ReportingGroup", &assign_TopologicalNode_ReportingGroup);
-	assign_map.emplace("cim:TopologicalNode.SvInjection", &assign_TopologicalNode_SvInjection);
-	assign_map.emplace("cim:TopologicalNode.SvVoltage", &assign_TopologicalNode_SvVoltage);
-	assign_map.emplace("cim:TopologicalNode.Terminal", &assign_TopologicalNode_Terminal);
-	assign_map.emplace("cim:TopologicalNode.TopologicalIsland", &assign_TopologicalNode_TopologicalIsland);
+	assign_map.emplace("TopologicalNode.AngleRefTopologicalIsland", &assign_TopologicalNode_AngleRefTopologicalIsland);
+	assign_map.emplace("TopologicalNode.BaseVoltage", &assign_TopologicalNode_BaseVoltage);
+	assign_map.emplace("TopologicalNode.ConnectivityNodeContainer", &assign_TopologicalNode_ConnectivityNodeContainer);
+	assign_map.emplace("TopologicalNode.ConnectivityNodes", &assign_TopologicalNode_ConnectivityNodes);
+	assign_map.emplace("TopologicalNode.ReportingGroup", &assign_TopologicalNode_ReportingGroup);
+	assign_map.emplace("TopologicalNode.SvInjection", &assign_TopologicalNode_SvInjection);
+	assign_map.emplace("TopologicalNode.SvVoltage", &assign_TopologicalNode_SvVoltage);
+	assign_map.emplace("TopologicalNode.Terminal", &assign_TopologicalNode_Terminal);
+	assign_map.emplace("TopologicalNode.TopologicalIsland", &assign_TopologicalNode_TopologicalIsland);
 }
 
 void TopologicalNode::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:TopologicalNode.boundaryPoint", &get_TopologicalNode_boundaryPoint);
-	get_map.emplace("cim:TopologicalNode.fromEndIsoCode", &get_TopologicalNode_fromEndIsoCode);
-	get_map.emplace("cim:TopologicalNode.fromEndName", &get_TopologicalNode_fromEndName);
-	get_map.emplace("cim:TopologicalNode.fromEndNameTso", &get_TopologicalNode_fromEndNameTso);
-	get_map.emplace("cim:TopologicalNode.toEndIsoCode", &get_TopologicalNode_toEndIsoCode);
-	get_map.emplace("cim:TopologicalNode.toEndName", &get_TopologicalNode_toEndName);
-	get_map.emplace("cim:TopologicalNode.toEndNameTso", &get_TopologicalNode_toEndNameTso);
+	get_map.emplace("TopologicalNode.boundaryPoint", &get_TopologicalNode_boundaryPoint);
+	get_map.emplace("TopologicalNode.fromEndIsoCode", &get_TopologicalNode_fromEndIsoCode);
+	get_map.emplace("TopologicalNode.fromEndName", &get_TopologicalNode_fromEndName);
+	get_map.emplace("TopologicalNode.fromEndNameTso", &get_TopologicalNode_fromEndNameTso);
+	get_map.emplace("TopologicalNode.toEndIsoCode", &get_TopologicalNode_toEndIsoCode);
+	get_map.emplace("TopologicalNode.toEndName", &get_TopologicalNode_toEndName);
+	get_map.emplace("TopologicalNode.toEndNameTso", &get_TopologicalNode_toEndNameTso);
 }
 
 void TopologicalNode::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	IdentifiedObject::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:TopologicalNode.BaseVoltage", &get_TopologicalNode_BaseVoltage);
-	get_map.emplace("cim:TopologicalNode.ConnectivityNodeContainer", &get_TopologicalNode_ConnectivityNodeContainer);
-	get_map.emplace("cim:TopologicalNode.ReportingGroup", &get_TopologicalNode_ReportingGroup);
+	get_map.emplace("TopologicalNode.BaseVoltage", &get_TopologicalNode_BaseVoltage);
+	get_map.emplace("TopologicalNode.ConnectivityNodeContainer", &get_TopologicalNode_ConnectivityNodeContainer);
+	get_map.emplace("TopologicalNode.ReportingGroup", &get_TopologicalNode_ReportingGroup);
 }
 
 void TopologicalNode::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -528,9 +560,23 @@ void TopologicalNode::addEnumGetFnsToMap(std::map<std::string, get_function>& ge
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool TopologicalNode::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "TopologicalNode" &&
+		dynamic_cast<TopologicalNode*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner TopologicalNode::declare()
 {
 	return BaseClassDefiner(TopologicalNode::addConstructToMap, TopologicalNode::addPrimitiveAssignFnsToMap, TopologicalNode::addClassAssignFnsToMap, TopologicalNode::debugName);
+}
+
+std::map<std::string, AttrDetails> TopologicalNode::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

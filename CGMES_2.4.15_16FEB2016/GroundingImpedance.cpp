@@ -11,32 +11,64 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		GroundingImpedance(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "GroundingImpedance.x", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 GroundingImpedance::GroundingImpedance() {}
 GroundingImpedance::~GroundingImpedance() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& GroundingImpedance::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:GroundingImpedance.x", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-GroundingImpedance::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-GroundingImpedance::getPossibleProfilesForAttributes() const
+const std::string& GroundingImpedance::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = EarthFaultCompensator::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& GroundingImpedance::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& GroundingImpedance::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& GroundingImpedance::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& GroundingImpedance::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& GroundingImpedance::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_GroundingImpedance_x(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -76,12 +108,12 @@ const char* GroundingImpedance::debugString() const
 
 void GroundingImpedance::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:GroundingImpedance", &GroundingImpedance_factory);
+	factory_map.emplace("GroundingImpedance", &GroundingImpedance_factory);
 }
 
 void GroundingImpedance::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:GroundingImpedance.x", &assign_GroundingImpedance_x);
+	assign_map.emplace("GroundingImpedance.x", &assign_GroundingImpedance_x);
 }
 
 void GroundingImpedance::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -91,7 +123,7 @@ void GroundingImpedance::addClassAssignFnsToMap(std::unordered_map<std::string, 
 void GroundingImpedance::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	EarthFaultCompensator::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:GroundingImpedance.x", &get_GroundingImpedance_x);
+	get_map.emplace("GroundingImpedance.x", &get_GroundingImpedance_x);
 }
 
 void GroundingImpedance::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -104,9 +136,23 @@ void GroundingImpedance::addEnumGetFnsToMap(std::map<std::string, get_function>&
 	EarthFaultCompensator::addEnumGetFnsToMap(get_map);
 }
 
+bool GroundingImpedance::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "GroundingImpedance" &&
+		dynamic_cast<GroundingImpedance*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner GroundingImpedance::declare()
 {
 	return BaseClassDefiner(GroundingImpedance::addConstructToMap, GroundingImpedance::addPrimitiveAssignFnsToMap, GroundingImpedance::addClassAssignFnsToMap, GroundingImpedance::debugName);
+}
+
+std::map<std::string, AttrDetails> GroundingImpedance::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = EarthFaultCompensator::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

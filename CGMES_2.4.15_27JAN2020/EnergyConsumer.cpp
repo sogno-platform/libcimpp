@@ -13,41 +13,73 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		EnergyConsumer(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+			CGMESProfile::EQ,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "EnergyConsumer.LoadDynamics", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "EnergyConsumer.LoadResponse", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "EnergyConsumer.p", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SSH, } } },
+		{ "EnergyConsumer.pfixed", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "EnergyConsumer.pfixedPct", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "EnergyConsumer.q", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SSH, } } },
+		{ "EnergyConsumer.qfixed", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "EnergyConsumer.qfixedPct", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 EnergyConsumer::EnergyConsumer() : LoadDynamics(nullptr), LoadResponse(nullptr) {}
 EnergyConsumer::~EnergyConsumer() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& EnergyConsumer::getAttributeNames() const
 {
-	CGMESProfile::DY,
-	CGMESProfile::EQ,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:EnergyConsumer.LoadDynamics", { CGMESProfile::DY, } },
-	{ "cim:EnergyConsumer.LoadResponse", { CGMESProfile::EQ, } },
-	{ "cim:EnergyConsumer.p", { CGMESProfile::SSH, } },
-	{ "cim:EnergyConsumer.pfixed", { CGMESProfile::EQ, } },
-	{ "cim:EnergyConsumer.pfixedPct", { CGMESProfile::EQ, } },
-	{ "cim:EnergyConsumer.q", { CGMESProfile::SSH, } },
-	{ "cim:EnergyConsumer.qfixed", { CGMESProfile::EQ, } },
-	{ "cim:EnergyConsumer.qfixedPct", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-EnergyConsumer::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-EnergyConsumer::getPossibleProfilesForAttributes() const
+const std::string& EnergyConsumer::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ConductingEquipment::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& EnergyConsumer::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& EnergyConsumer::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& EnergyConsumer::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& EnergyConsumer::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& EnergyConsumer::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_LoadDynamics_EnergyConsumer(BaseClass*, BaseClass*);
@@ -294,41 +326,41 @@ const char* EnergyConsumer::debugString() const
 
 void EnergyConsumer::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:EnergyConsumer", &EnergyConsumer_factory);
+	factory_map.emplace("EnergyConsumer", &EnergyConsumer_factory);
 }
 
 void EnergyConsumer::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:EnergyConsumer.p", &assign_EnergyConsumer_p);
-	assign_map.emplace("cim:EnergyConsumer.pfixed", &assign_EnergyConsumer_pfixed);
-	assign_map.emplace("cim:EnergyConsumer.pfixedPct", &assign_EnergyConsumer_pfixedPct);
-	assign_map.emplace("cim:EnergyConsumer.q", &assign_EnergyConsumer_q);
-	assign_map.emplace("cim:EnergyConsumer.qfixed", &assign_EnergyConsumer_qfixed);
-	assign_map.emplace("cim:EnergyConsumer.qfixedPct", &assign_EnergyConsumer_qfixedPct);
+	assign_map.emplace("EnergyConsumer.p", &assign_EnergyConsumer_p);
+	assign_map.emplace("EnergyConsumer.pfixed", &assign_EnergyConsumer_pfixed);
+	assign_map.emplace("EnergyConsumer.pfixedPct", &assign_EnergyConsumer_pfixedPct);
+	assign_map.emplace("EnergyConsumer.q", &assign_EnergyConsumer_q);
+	assign_map.emplace("EnergyConsumer.qfixed", &assign_EnergyConsumer_qfixed);
+	assign_map.emplace("EnergyConsumer.qfixedPct", &assign_EnergyConsumer_qfixedPct);
 }
 
 void EnergyConsumer::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:EnergyConsumer.LoadDynamics", &assign_EnergyConsumer_LoadDynamics);
-	assign_map.emplace("cim:EnergyConsumer.LoadResponse", &assign_EnergyConsumer_LoadResponse);
+	assign_map.emplace("EnergyConsumer.LoadDynamics", &assign_EnergyConsumer_LoadDynamics);
+	assign_map.emplace("EnergyConsumer.LoadResponse", &assign_EnergyConsumer_LoadResponse);
 }
 
 void EnergyConsumer::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ConductingEquipment::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:EnergyConsumer.p", &get_EnergyConsumer_p);
-	get_map.emplace("cim:EnergyConsumer.pfixed", &get_EnergyConsumer_pfixed);
-	get_map.emplace("cim:EnergyConsumer.pfixedPct", &get_EnergyConsumer_pfixedPct);
-	get_map.emplace("cim:EnergyConsumer.q", &get_EnergyConsumer_q);
-	get_map.emplace("cim:EnergyConsumer.qfixed", &get_EnergyConsumer_qfixed);
-	get_map.emplace("cim:EnergyConsumer.qfixedPct", &get_EnergyConsumer_qfixedPct);
+	get_map.emplace("EnergyConsumer.p", &get_EnergyConsumer_p);
+	get_map.emplace("EnergyConsumer.pfixed", &get_EnergyConsumer_pfixed);
+	get_map.emplace("EnergyConsumer.pfixedPct", &get_EnergyConsumer_pfixedPct);
+	get_map.emplace("EnergyConsumer.q", &get_EnergyConsumer_q);
+	get_map.emplace("EnergyConsumer.qfixed", &get_EnergyConsumer_qfixed);
+	get_map.emplace("EnergyConsumer.qfixedPct", &get_EnergyConsumer_qfixedPct);
 }
 
 void EnergyConsumer::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	ConductingEquipment::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:EnergyConsumer.LoadDynamics", &get_EnergyConsumer_LoadDynamics);
-	get_map.emplace("cim:EnergyConsumer.LoadResponse", &get_EnergyConsumer_LoadResponse);
+	get_map.emplace("EnergyConsumer.LoadDynamics", &get_EnergyConsumer_LoadDynamics);
+	get_map.emplace("EnergyConsumer.LoadResponse", &get_EnergyConsumer_LoadResponse);
 }
 
 void EnergyConsumer::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -336,9 +368,23 @@ void EnergyConsumer::addEnumGetFnsToMap(std::map<std::string, get_function>& get
 	ConductingEquipment::addEnumGetFnsToMap(get_map);
 }
 
+bool EnergyConsumer::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "EnergyConsumer" &&
+		dynamic_cast<EnergyConsumer*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner EnergyConsumer::declare()
 {
 	return BaseClassDefiner(EnergyConsumer::addConstructToMap, EnergyConsumer::addPrimitiveAssignFnsToMap, EnergyConsumer::addClassAssignFnsToMap, EnergyConsumer::debugName);
+}
+
+std::map<std::string, AttrDetails> EnergyConsumer::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ConductingEquipment::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

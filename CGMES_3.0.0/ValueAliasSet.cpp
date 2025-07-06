@@ -15,35 +15,67 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ValueAliasSet(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::OP,
+		},
+		CGMESProfile::OP
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ValueAliasSet.Commands", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::OP, } } },
+		{ "ValueAliasSet.Discretes", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::OP, } } },
+		{ "ValueAliasSet.RaiseLowerCommands", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::OP, } } },
+		{ "ValueAliasSet.Values", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::OP, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ValueAliasSet::ValueAliasSet() {}
 ValueAliasSet::~ValueAliasSet() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ValueAliasSet::getAttributeNames() const
 {
-	CGMESProfile::OP,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ValueAliasSet.Commands", { CGMESProfile::OP, } },
-	{ "cim:ValueAliasSet.Discretes", { CGMESProfile::OP, } },
-	{ "cim:ValueAliasSet.RaiseLowerCommands", { CGMESProfile::OP, } },
-	{ "cim:ValueAliasSet.Values", { CGMESProfile::OP, } },
-};
-
-std::list<CGMESProfile>
-ValueAliasSet::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ValueAliasSet::getPossibleProfilesForAttributes() const
+const std::string& ValueAliasSet::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ValueAliasSet::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ValueAliasSet::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ValueAliasSet::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ValueAliasSet::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ValueAliasSet::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_Command_ValueAliasSet(BaseClass*, BaseClass*);
@@ -126,7 +158,7 @@ const char* ValueAliasSet::debugString() const
 
 void ValueAliasSet::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ValueAliasSet", &ValueAliasSet_factory);
+	factory_map.emplace("ValueAliasSet", &ValueAliasSet_factory);
 }
 
 void ValueAliasSet::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -135,10 +167,10 @@ void ValueAliasSet::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, a
 
 void ValueAliasSet::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ValueAliasSet.Commands", &assign_ValueAliasSet_Commands);
-	assign_map.emplace("cim:ValueAliasSet.Discretes", &assign_ValueAliasSet_Discretes);
-	assign_map.emplace("cim:ValueAliasSet.RaiseLowerCommands", &assign_ValueAliasSet_RaiseLowerCommands);
-	assign_map.emplace("cim:ValueAliasSet.Values", &assign_ValueAliasSet_Values);
+	assign_map.emplace("ValueAliasSet.Commands", &assign_ValueAliasSet_Commands);
+	assign_map.emplace("ValueAliasSet.Discretes", &assign_ValueAliasSet_Discretes);
+	assign_map.emplace("ValueAliasSet.RaiseLowerCommands", &assign_ValueAliasSet_RaiseLowerCommands);
+	assign_map.emplace("ValueAliasSet.Values", &assign_ValueAliasSet_Values);
 }
 
 void ValueAliasSet::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -156,9 +188,23 @@ void ValueAliasSet::addEnumGetFnsToMap(std::map<std::string, get_function>& get_
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool ValueAliasSet::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ValueAliasSet" &&
+		dynamic_cast<ValueAliasSet*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ValueAliasSet::declare()
 {
 	return BaseClassDefiner(ValueAliasSet::addConstructToMap, ValueAliasSet::addPrimitiveAssignFnsToMap, ValueAliasSet::addClassAssignFnsToMap, ValueAliasSet::debugName);
+}
+
+std::map<std::string, AttrDetails> ValueAliasSet::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

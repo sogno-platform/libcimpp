@@ -12,49 +12,81 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		LoadStatic(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "LoadStatic.LoadAggregate", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadStatic.ep1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadStatic.ep2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadStatic.ep3", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadStatic.eq1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadStatic.eq2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadStatic.eq3", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadStatic.kp1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadStatic.kp2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadStatic.kp3", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadStatic.kp4", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadStatic.kpf", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadStatic.kq1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadStatic.kq2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadStatic.kq3", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadStatic.kq4", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadStatic.kqf", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadStatic.staticLoadModelType", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 LoadStatic::LoadStatic() : LoadAggregate(nullptr) {}
 LoadStatic::~LoadStatic() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& LoadStatic::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:LoadStatic.LoadAggregate", { CGMESProfile::DY, } },
-	{ "cim:LoadStatic.ep1", { CGMESProfile::DY, } },
-	{ "cim:LoadStatic.ep2", { CGMESProfile::DY, } },
-	{ "cim:LoadStatic.ep3", { CGMESProfile::DY, } },
-	{ "cim:LoadStatic.eq1", { CGMESProfile::DY, } },
-	{ "cim:LoadStatic.eq2", { CGMESProfile::DY, } },
-	{ "cim:LoadStatic.eq3", { CGMESProfile::DY, } },
-	{ "cim:LoadStatic.kp1", { CGMESProfile::DY, } },
-	{ "cim:LoadStatic.kp2", { CGMESProfile::DY, } },
-	{ "cim:LoadStatic.kp3", { CGMESProfile::DY, } },
-	{ "cim:LoadStatic.kp4", { CGMESProfile::DY, } },
-	{ "cim:LoadStatic.kpf", { CGMESProfile::DY, } },
-	{ "cim:LoadStatic.kq1", { CGMESProfile::DY, } },
-	{ "cim:LoadStatic.kq2", { CGMESProfile::DY, } },
-	{ "cim:LoadStatic.kq3", { CGMESProfile::DY, } },
-	{ "cim:LoadStatic.kq4", { CGMESProfile::DY, } },
-	{ "cim:LoadStatic.kqf", { CGMESProfile::DY, } },
-	{ "cim:LoadStatic.staticLoadModelType", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-LoadStatic::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-LoadStatic::getPossibleProfilesForAttributes() const
+const std::string& LoadStatic::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& LoadStatic::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& LoadStatic::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& LoadStatic::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& LoadStatic::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& LoadStatic::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_LoadAggregate_LoadStatic(BaseClass*, BaseClass*);
@@ -589,71 +621,85 @@ const char* LoadStatic::debugString() const
 
 void LoadStatic::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:LoadStatic", &LoadStatic_factory);
+	factory_map.emplace("LoadStatic", &LoadStatic_factory);
 }
 
 void LoadStatic::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:LoadStatic.ep1", &assign_LoadStatic_ep1);
-	assign_map.emplace("cim:LoadStatic.ep2", &assign_LoadStatic_ep2);
-	assign_map.emplace("cim:LoadStatic.ep3", &assign_LoadStatic_ep3);
-	assign_map.emplace("cim:LoadStatic.eq1", &assign_LoadStatic_eq1);
-	assign_map.emplace("cim:LoadStatic.eq2", &assign_LoadStatic_eq2);
-	assign_map.emplace("cim:LoadStatic.eq3", &assign_LoadStatic_eq3);
-	assign_map.emplace("cim:LoadStatic.kp1", &assign_LoadStatic_kp1);
-	assign_map.emplace("cim:LoadStatic.kp2", &assign_LoadStatic_kp2);
-	assign_map.emplace("cim:LoadStatic.kp3", &assign_LoadStatic_kp3);
-	assign_map.emplace("cim:LoadStatic.kp4", &assign_LoadStatic_kp4);
-	assign_map.emplace("cim:LoadStatic.kpf", &assign_LoadStatic_kpf);
-	assign_map.emplace("cim:LoadStatic.kq1", &assign_LoadStatic_kq1);
-	assign_map.emplace("cim:LoadStatic.kq2", &assign_LoadStatic_kq2);
-	assign_map.emplace("cim:LoadStatic.kq3", &assign_LoadStatic_kq3);
-	assign_map.emplace("cim:LoadStatic.kq4", &assign_LoadStatic_kq4);
-	assign_map.emplace("cim:LoadStatic.kqf", &assign_LoadStatic_kqf);
-	assign_map.emplace("cim:LoadStatic.staticLoadModelType", &assign_LoadStatic_staticLoadModelType);
+	assign_map.emplace("LoadStatic.ep1", &assign_LoadStatic_ep1);
+	assign_map.emplace("LoadStatic.ep2", &assign_LoadStatic_ep2);
+	assign_map.emplace("LoadStatic.ep3", &assign_LoadStatic_ep3);
+	assign_map.emplace("LoadStatic.eq1", &assign_LoadStatic_eq1);
+	assign_map.emplace("LoadStatic.eq2", &assign_LoadStatic_eq2);
+	assign_map.emplace("LoadStatic.eq3", &assign_LoadStatic_eq3);
+	assign_map.emplace("LoadStatic.kp1", &assign_LoadStatic_kp1);
+	assign_map.emplace("LoadStatic.kp2", &assign_LoadStatic_kp2);
+	assign_map.emplace("LoadStatic.kp3", &assign_LoadStatic_kp3);
+	assign_map.emplace("LoadStatic.kp4", &assign_LoadStatic_kp4);
+	assign_map.emplace("LoadStatic.kpf", &assign_LoadStatic_kpf);
+	assign_map.emplace("LoadStatic.kq1", &assign_LoadStatic_kq1);
+	assign_map.emplace("LoadStatic.kq2", &assign_LoadStatic_kq2);
+	assign_map.emplace("LoadStatic.kq3", &assign_LoadStatic_kq3);
+	assign_map.emplace("LoadStatic.kq4", &assign_LoadStatic_kq4);
+	assign_map.emplace("LoadStatic.kqf", &assign_LoadStatic_kqf);
+	assign_map.emplace("LoadStatic.staticLoadModelType", &assign_LoadStatic_staticLoadModelType);
 }
 
 void LoadStatic::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:LoadStatic.LoadAggregate", &assign_LoadStatic_LoadAggregate);
+	assign_map.emplace("LoadStatic.LoadAggregate", &assign_LoadStatic_LoadAggregate);
 }
 
 void LoadStatic::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:LoadStatic.ep1", &get_LoadStatic_ep1);
-	get_map.emplace("cim:LoadStatic.ep2", &get_LoadStatic_ep2);
-	get_map.emplace("cim:LoadStatic.ep3", &get_LoadStatic_ep3);
-	get_map.emplace("cim:LoadStatic.eq1", &get_LoadStatic_eq1);
-	get_map.emplace("cim:LoadStatic.eq2", &get_LoadStatic_eq2);
-	get_map.emplace("cim:LoadStatic.eq3", &get_LoadStatic_eq3);
-	get_map.emplace("cim:LoadStatic.kp1", &get_LoadStatic_kp1);
-	get_map.emplace("cim:LoadStatic.kp2", &get_LoadStatic_kp2);
-	get_map.emplace("cim:LoadStatic.kp3", &get_LoadStatic_kp3);
-	get_map.emplace("cim:LoadStatic.kp4", &get_LoadStatic_kp4);
-	get_map.emplace("cim:LoadStatic.kpf", &get_LoadStatic_kpf);
-	get_map.emplace("cim:LoadStatic.kq1", &get_LoadStatic_kq1);
-	get_map.emplace("cim:LoadStatic.kq2", &get_LoadStatic_kq2);
-	get_map.emplace("cim:LoadStatic.kq3", &get_LoadStatic_kq3);
-	get_map.emplace("cim:LoadStatic.kq4", &get_LoadStatic_kq4);
-	get_map.emplace("cim:LoadStatic.kqf", &get_LoadStatic_kqf);
+	get_map.emplace("LoadStatic.ep1", &get_LoadStatic_ep1);
+	get_map.emplace("LoadStatic.ep2", &get_LoadStatic_ep2);
+	get_map.emplace("LoadStatic.ep3", &get_LoadStatic_ep3);
+	get_map.emplace("LoadStatic.eq1", &get_LoadStatic_eq1);
+	get_map.emplace("LoadStatic.eq2", &get_LoadStatic_eq2);
+	get_map.emplace("LoadStatic.eq3", &get_LoadStatic_eq3);
+	get_map.emplace("LoadStatic.kp1", &get_LoadStatic_kp1);
+	get_map.emplace("LoadStatic.kp2", &get_LoadStatic_kp2);
+	get_map.emplace("LoadStatic.kp3", &get_LoadStatic_kp3);
+	get_map.emplace("LoadStatic.kp4", &get_LoadStatic_kp4);
+	get_map.emplace("LoadStatic.kpf", &get_LoadStatic_kpf);
+	get_map.emplace("LoadStatic.kq1", &get_LoadStatic_kq1);
+	get_map.emplace("LoadStatic.kq2", &get_LoadStatic_kq2);
+	get_map.emplace("LoadStatic.kq3", &get_LoadStatic_kq3);
+	get_map.emplace("LoadStatic.kq4", &get_LoadStatic_kq4);
+	get_map.emplace("LoadStatic.kqf", &get_LoadStatic_kqf);
 }
 
 void LoadStatic::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	IdentifiedObject::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:LoadStatic.LoadAggregate", &get_LoadStatic_LoadAggregate);
+	get_map.emplace("LoadStatic.LoadAggregate", &get_LoadStatic_LoadAggregate);
 }
 
 void LoadStatic::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:LoadStatic.staticLoadModelType", &get_LoadStatic_staticLoadModelType);
+	get_map.emplace("LoadStatic.staticLoadModelType", &get_LoadStatic_staticLoadModelType);
+}
+
+bool LoadStatic::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "LoadStatic" &&
+		dynamic_cast<LoadStatic*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner LoadStatic::declare()
 {
 	return BaseClassDefiner(LoadStatic::addConstructToMap, LoadStatic::addPrimitiveAssignFnsToMap, LoadStatic::addClassAssignFnsToMap, LoadStatic::debugName);
+}
+
+std::map<std::string, AttrDetails> LoadStatic::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

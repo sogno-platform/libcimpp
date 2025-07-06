@@ -15,40 +15,72 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		TransformerEnd(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SC,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "TransformerEnd.BaseVoltage", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "TransformerEnd.PhaseTapChanger", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "TransformerEnd.RatioTapChanger", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "TransformerEnd.Terminal", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "TransformerEnd.endNumber", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "TransformerEnd.grounded", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "TransformerEnd.rground", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "TransformerEnd.xground", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 TransformerEnd::TransformerEnd() : BaseVoltage(nullptr), PhaseTapChanger(nullptr), RatioTapChanger(nullptr), Terminal(nullptr) {}
 TransformerEnd::~TransformerEnd() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& TransformerEnd::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SC,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:TransformerEnd.BaseVoltage", { CGMESProfile::EQ, } },
-	{ "cim:TransformerEnd.PhaseTapChanger", { CGMESProfile::EQ, } },
-	{ "cim:TransformerEnd.RatioTapChanger", { CGMESProfile::EQ, } },
-	{ "cim:TransformerEnd.Terminal", { CGMESProfile::EQ, } },
-	{ "cim:TransformerEnd.endNumber", { CGMESProfile::EQ, } },
-	{ "cim:TransformerEnd.grounded", { CGMESProfile::SC, } },
-	{ "cim:TransformerEnd.rground", { CGMESProfile::SC, } },
-	{ "cim:TransformerEnd.xground", { CGMESProfile::SC, } },
-};
-
-std::list<CGMESProfile>
-TransformerEnd::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-TransformerEnd::getPossibleProfilesForAttributes() const
+const std::string& TransformerEnd::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& TransformerEnd::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& TransformerEnd::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& TransformerEnd::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& TransformerEnd::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& TransformerEnd::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_BaseVoltage_TransformerEnds(BaseClass*, BaseClass*);
@@ -273,39 +305,39 @@ const char* TransformerEnd::debugString() const
 
 void TransformerEnd::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:TransformerEnd", &TransformerEnd_factory);
+	factory_map.emplace("TransformerEnd", &TransformerEnd_factory);
 }
 
 void TransformerEnd::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:TransformerEnd.endNumber", &assign_TransformerEnd_endNumber);
-	assign_map.emplace("cim:TransformerEnd.grounded", &assign_TransformerEnd_grounded);
-	assign_map.emplace("cim:TransformerEnd.rground", &assign_TransformerEnd_rground);
-	assign_map.emplace("cim:TransformerEnd.xground", &assign_TransformerEnd_xground);
+	assign_map.emplace("TransformerEnd.endNumber", &assign_TransformerEnd_endNumber);
+	assign_map.emplace("TransformerEnd.grounded", &assign_TransformerEnd_grounded);
+	assign_map.emplace("TransformerEnd.rground", &assign_TransformerEnd_rground);
+	assign_map.emplace("TransformerEnd.xground", &assign_TransformerEnd_xground);
 }
 
 void TransformerEnd::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:TransformerEnd.BaseVoltage", &assign_TransformerEnd_BaseVoltage);
-	assign_map.emplace("cim:TransformerEnd.PhaseTapChanger", &assign_TransformerEnd_PhaseTapChanger);
-	assign_map.emplace("cim:TransformerEnd.RatioTapChanger", &assign_TransformerEnd_RatioTapChanger);
-	assign_map.emplace("cim:TransformerEnd.Terminal", &assign_TransformerEnd_Terminal);
+	assign_map.emplace("TransformerEnd.BaseVoltage", &assign_TransformerEnd_BaseVoltage);
+	assign_map.emplace("TransformerEnd.PhaseTapChanger", &assign_TransformerEnd_PhaseTapChanger);
+	assign_map.emplace("TransformerEnd.RatioTapChanger", &assign_TransformerEnd_RatioTapChanger);
+	assign_map.emplace("TransformerEnd.Terminal", &assign_TransformerEnd_Terminal);
 }
 
 void TransformerEnd::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:TransformerEnd.endNumber", &get_TransformerEnd_endNumber);
-	get_map.emplace("cim:TransformerEnd.grounded", &get_TransformerEnd_grounded);
-	get_map.emplace("cim:TransformerEnd.rground", &get_TransformerEnd_rground);
-	get_map.emplace("cim:TransformerEnd.xground", &get_TransformerEnd_xground);
+	get_map.emplace("TransformerEnd.endNumber", &get_TransformerEnd_endNumber);
+	get_map.emplace("TransformerEnd.grounded", &get_TransformerEnd_grounded);
+	get_map.emplace("TransformerEnd.rground", &get_TransformerEnd_rground);
+	get_map.emplace("TransformerEnd.xground", &get_TransformerEnd_xground);
 }
 
 void TransformerEnd::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	IdentifiedObject::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:TransformerEnd.BaseVoltage", &get_TransformerEnd_BaseVoltage);
-	get_map.emplace("cim:TransformerEnd.Terminal", &get_TransformerEnd_Terminal);
+	get_map.emplace("TransformerEnd.BaseVoltage", &get_TransformerEnd_BaseVoltage);
+	get_map.emplace("TransformerEnd.Terminal", &get_TransformerEnd_Terminal);
 }
 
 void TransformerEnd::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -313,9 +345,23 @@ void TransformerEnd::addEnumGetFnsToMap(std::map<std::string, get_function>& get
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool TransformerEnd::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "TransformerEnd" &&
+		dynamic_cast<TransformerEnd*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner TransformerEnd::declare()
 {
 	return BaseClassDefiner(TransformerEnd::addConstructToMap, TransformerEnd::addPrimitiveAssignFnsToMap, TransformerEnd::addClassAssignFnsToMap, TransformerEnd::debugName);
+}
+
+std::map<std::string, AttrDetails> TransformerEnd::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

@@ -12,32 +12,64 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		EquivalentNetwork(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "EquivalentNetwork.EquivalentEquipments", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 EquivalentNetwork::EquivalentNetwork() {}
 EquivalentNetwork::~EquivalentNetwork() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& EquivalentNetwork::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:EquivalentNetwork.EquivalentEquipments", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-EquivalentNetwork::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-EquivalentNetwork::getPossibleProfilesForAttributes() const
+const std::string& EquivalentNetwork::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ConnectivityNodeContainer::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& EquivalentNetwork::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& EquivalentNetwork::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& EquivalentNetwork::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& EquivalentNetwork::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& EquivalentNetwork::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_EquivalentEquipment_EquivalentNetwork(BaseClass*, BaseClass*);
@@ -66,7 +98,7 @@ const char* EquivalentNetwork::debugString() const
 
 void EquivalentNetwork::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:EquivalentNetwork", &EquivalentNetwork_factory);
+	factory_map.emplace("EquivalentNetwork", &EquivalentNetwork_factory);
 }
 
 void EquivalentNetwork::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -75,7 +107,7 @@ void EquivalentNetwork::addPrimitiveAssignFnsToMap(std::unordered_map<std::strin
 
 void EquivalentNetwork::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:EquivalentNetwork.EquivalentEquipments", &assign_EquivalentNetwork_EquivalentEquipments);
+	assign_map.emplace("EquivalentNetwork.EquivalentEquipments", &assign_EquivalentNetwork_EquivalentEquipments);
 }
 
 void EquivalentNetwork::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -93,9 +125,23 @@ void EquivalentNetwork::addEnumGetFnsToMap(std::map<std::string, get_function>& 
 	ConnectivityNodeContainer::addEnumGetFnsToMap(get_map);
 }
 
+bool EquivalentNetwork::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "EquivalentNetwork" &&
+		dynamic_cast<EquivalentNetwork*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner EquivalentNetwork::declare()
 {
 	return BaseClassDefiner(EquivalentNetwork::addConstructToMap, EquivalentNetwork::addPrimitiveAssignFnsToMap, EquivalentNetwork::addClassAssignFnsToMap, EquivalentNetwork::debugName);
+}
+
+std::map<std::string, AttrDetails> EquivalentNetwork::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ConnectivityNodeContainer::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

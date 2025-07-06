@@ -11,31 +11,63 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		Sensor(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+	};
+    return ClassAttrDetailsMap;
+}
+
 Sensor::Sensor() {}
 Sensor::~Sensor() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& Sensor::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-};
-
-std::list<CGMESProfile>
-Sensor::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-Sensor::getPossibleProfilesForAttributes() const
+const std::string& Sensor::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = AuxiliaryEquipment::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& Sensor::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& Sensor::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& Sensor::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& Sensor::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& Sensor::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 const char Sensor::debugName[] = "Sensor";
@@ -46,7 +78,7 @@ const char* Sensor::debugString() const
 
 void Sensor::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:Sensor", &Sensor_factory);
+	factory_map.emplace("Sensor", &Sensor_factory);
 }
 
 void Sensor::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -72,9 +104,23 @@ void Sensor::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) co
 	AuxiliaryEquipment::addEnumGetFnsToMap(get_map);
 }
 
+bool Sensor::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "Sensor" &&
+		dynamic_cast<Sensor*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner Sensor::declare()
 {
 	return BaseClassDefiner(Sensor::addConstructToMap, Sensor::addPrimitiveAssignFnsToMap, Sensor::addClassAssignFnsToMap, Sensor::debugName);
+}
+
+std::map<std::string, AttrDetails> Sensor::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = AuxiliaryEquipment::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

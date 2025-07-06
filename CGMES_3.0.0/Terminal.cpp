@@ -22,51 +22,83 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		Terminal(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+			CGMESProfile::EQ,
+			CGMESProfile::EQBD,
+			CGMESProfile::OP,
+			CGMESProfile::SC,
+			CGMESProfile::SSH,
+			CGMESProfile::SV,
+			CGMESProfile::TP,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "Terminal.AuxiliaryEquipment", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "Terminal.ConductingEquipment", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, CGMESProfile::EQ, CGMESProfile::EQBD, } } },
+		{ "Terminal.ConnectivityNode", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, CGMESProfile::EQBD, } } },
+		{ "Terminal.ConverterDCSides", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "Terminal.HasFirstMutualCoupling", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "Terminal.HasSecondMutualCoupling", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "Terminal.RegulatingControl", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "Terminal.RemoteInputSignal", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "Terminal.SvPowerFlow", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SV, } } },
+		{ "Terminal.TieFlow", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "Terminal.TopologicalNode", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::TP, } } },
+		{ "Terminal.TransformerEnd", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "Terminal.phases", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 Terminal::Terminal() : ConductingEquipment(nullptr), ConnectivityNode(nullptr), SvPowerFlow(nullptr), TopologicalNode(nullptr) {}
 Terminal::~Terminal() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& Terminal::getAttributeNames() const
 {
-	CGMESProfile::DY,
-	CGMESProfile::EQ,
-	CGMESProfile::EQBD,
-	CGMESProfile::OP,
-	CGMESProfile::SC,
-	CGMESProfile::SSH,
-	CGMESProfile::SV,
-	CGMESProfile::TP,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:Terminal.AuxiliaryEquipment", { CGMESProfile::EQ, } },
-	{ "cim:Terminal.ConductingEquipment", { CGMESProfile::DY, CGMESProfile::EQ, CGMESProfile::EQBD, } },
-	{ "cim:Terminal.ConnectivityNode", { CGMESProfile::EQ, CGMESProfile::EQBD, } },
-	{ "cim:Terminal.ConverterDCSides", { CGMESProfile::EQ, } },
-	{ "cim:Terminal.HasFirstMutualCoupling", { CGMESProfile::SC, } },
-	{ "cim:Terminal.HasSecondMutualCoupling", { CGMESProfile::SC, } },
-	{ "cim:Terminal.RegulatingControl", { CGMESProfile::EQ, } },
-	{ "cim:Terminal.RemoteInputSignal", { CGMESProfile::DY, } },
-	{ "cim:Terminal.SvPowerFlow", { CGMESProfile::SV, } },
-	{ "cim:Terminal.TieFlow", { CGMESProfile::EQ, } },
-	{ "cim:Terminal.TopologicalNode", { CGMESProfile::TP, } },
-	{ "cim:Terminal.TransformerEnd", { CGMESProfile::EQ, } },
-	{ "cim:Terminal.phases", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-Terminal::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-Terminal::getPossibleProfilesForAttributes() const
+const std::string& Terminal::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ACDCTerminal::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& Terminal::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& Terminal::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& Terminal::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& Terminal::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& Terminal::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_AuxiliaryEquipment_Terminal(BaseClass*, BaseClass*);
@@ -361,28 +393,28 @@ const char* Terminal::debugString() const
 
 void Terminal::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:Terminal", &Terminal_factory);
+	factory_map.emplace("Terminal", &Terminal_factory);
 }
 
 void Terminal::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:Terminal.phases", &assign_Terminal_phases);
+	assign_map.emplace("Terminal.phases", &assign_Terminal_phases);
 }
 
 void Terminal::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:Terminal.AuxiliaryEquipment", &assign_Terminal_AuxiliaryEquipment);
-	assign_map.emplace("cim:Terminal.ConductingEquipment", &assign_Terminal_ConductingEquipment);
-	assign_map.emplace("cim:Terminal.ConnectivityNode", &assign_Terminal_ConnectivityNode);
-	assign_map.emplace("cim:Terminal.ConverterDCSides", &assign_Terminal_ConverterDCSides);
-	assign_map.emplace("cim:Terminal.HasFirstMutualCoupling", &assign_Terminal_HasFirstMutualCoupling);
-	assign_map.emplace("cim:Terminal.HasSecondMutualCoupling", &assign_Terminal_HasSecondMutualCoupling);
-	assign_map.emplace("cim:Terminal.RegulatingControl", &assign_Terminal_RegulatingControl);
-	assign_map.emplace("cim:Terminal.RemoteInputSignal", &assign_Terminal_RemoteInputSignal);
-	assign_map.emplace("cim:Terminal.SvPowerFlow", &assign_Terminal_SvPowerFlow);
-	assign_map.emplace("cim:Terminal.TieFlow", &assign_Terminal_TieFlow);
-	assign_map.emplace("cim:Terminal.TopologicalNode", &assign_Terminal_TopologicalNode);
-	assign_map.emplace("cim:Terminal.TransformerEnd", &assign_Terminal_TransformerEnd);
+	assign_map.emplace("Terminal.AuxiliaryEquipment", &assign_Terminal_AuxiliaryEquipment);
+	assign_map.emplace("Terminal.ConductingEquipment", &assign_Terminal_ConductingEquipment);
+	assign_map.emplace("Terminal.ConnectivityNode", &assign_Terminal_ConnectivityNode);
+	assign_map.emplace("Terminal.ConverterDCSides", &assign_Terminal_ConverterDCSides);
+	assign_map.emplace("Terminal.HasFirstMutualCoupling", &assign_Terminal_HasFirstMutualCoupling);
+	assign_map.emplace("Terminal.HasSecondMutualCoupling", &assign_Terminal_HasSecondMutualCoupling);
+	assign_map.emplace("Terminal.RegulatingControl", &assign_Terminal_RegulatingControl);
+	assign_map.emplace("Terminal.RemoteInputSignal", &assign_Terminal_RemoteInputSignal);
+	assign_map.emplace("Terminal.SvPowerFlow", &assign_Terminal_SvPowerFlow);
+	assign_map.emplace("Terminal.TieFlow", &assign_Terminal_TieFlow);
+	assign_map.emplace("Terminal.TopologicalNode", &assign_Terminal_TopologicalNode);
+	assign_map.emplace("Terminal.TransformerEnd", &assign_Terminal_TransformerEnd);
 }
 
 void Terminal::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -393,20 +425,34 @@ void Terminal::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_
 void Terminal::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	ACDCTerminal::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:Terminal.ConductingEquipment", &get_Terminal_ConductingEquipment);
-	get_map.emplace("cim:Terminal.ConnectivityNode", &get_Terminal_ConnectivityNode);
-	get_map.emplace("cim:Terminal.TopologicalNode", &get_Terminal_TopologicalNode);
+	get_map.emplace("Terminal.ConductingEquipment", &get_Terminal_ConductingEquipment);
+	get_map.emplace("Terminal.ConnectivityNode", &get_Terminal_ConnectivityNode);
+	get_map.emplace("Terminal.TopologicalNode", &get_Terminal_TopologicalNode);
 }
 
 void Terminal::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ACDCTerminal::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:Terminal.phases", &get_Terminal_phases);
+	get_map.emplace("Terminal.phases", &get_Terminal_phases);
+}
+
+bool Terminal::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "Terminal" &&
+		dynamic_cast<Terminal*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner Terminal::declare()
 {
 	return BaseClassDefiner(Terminal::addConstructToMap, Terminal::addPrimitiveAssignFnsToMap, Terminal::addClassAssignFnsToMap, Terminal::debugName);
+}
+
+std::map<std::string, AttrDetails> Terminal::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ACDCTerminal::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

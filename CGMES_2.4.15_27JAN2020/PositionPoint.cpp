@@ -12,36 +12,68 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		PositionPoint(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::GL,
+		},
+		CGMESProfile::GL
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "PositionPoint.Location", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::GL, } } },
+		{ "PositionPoint.sequenceNumber", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::GL, } } },
+		{ "PositionPoint.xPosition", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::GL, } } },
+		{ "PositionPoint.yPosition", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::GL, } } },
+		{ "PositionPoint.zPosition", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::GL, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 PositionPoint::PositionPoint() : Location(nullptr) {}
 PositionPoint::~PositionPoint() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& PositionPoint::getAttributeNames() const
 {
-	CGMESProfile::GL,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:PositionPoint.Location", { CGMESProfile::GL, } },
-	{ "cim:PositionPoint.sequenceNumber", { CGMESProfile::GL, } },
-	{ "cim:PositionPoint.xPosition", { CGMESProfile::GL, } },
-	{ "cim:PositionPoint.yPosition", { CGMESProfile::GL, } },
-	{ "cim:PositionPoint.zPosition", { CGMESProfile::GL, } },
-};
-
-std::list<CGMESProfile>
-PositionPoint::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-PositionPoint::getPossibleProfilesForAttributes() const
+const std::string& PositionPoint::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& PositionPoint::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& PositionPoint::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& PositionPoint::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& PositionPoint::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& PositionPoint::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_Location_PositionPoints(BaseClass*, BaseClass*);
@@ -199,35 +231,35 @@ const char* PositionPoint::debugString() const
 
 void PositionPoint::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:PositionPoint", &PositionPoint_factory);
+	factory_map.emplace("PositionPoint", &PositionPoint_factory);
 }
 
 void PositionPoint::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:PositionPoint.sequenceNumber", &assign_PositionPoint_sequenceNumber);
-	assign_map.emplace("cim:PositionPoint.xPosition", &assign_PositionPoint_xPosition);
-	assign_map.emplace("cim:PositionPoint.yPosition", &assign_PositionPoint_yPosition);
-	assign_map.emplace("cim:PositionPoint.zPosition", &assign_PositionPoint_zPosition);
+	assign_map.emplace("PositionPoint.sequenceNumber", &assign_PositionPoint_sequenceNumber);
+	assign_map.emplace("PositionPoint.xPosition", &assign_PositionPoint_xPosition);
+	assign_map.emplace("PositionPoint.yPosition", &assign_PositionPoint_yPosition);
+	assign_map.emplace("PositionPoint.zPosition", &assign_PositionPoint_zPosition);
 }
 
 void PositionPoint::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:PositionPoint.Location", &assign_PositionPoint_Location);
+	assign_map.emplace("PositionPoint.Location", &assign_PositionPoint_Location);
 }
 
 void PositionPoint::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	BaseClass::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:PositionPoint.sequenceNumber", &get_PositionPoint_sequenceNumber);
-	get_map.emplace("cim:PositionPoint.xPosition", &get_PositionPoint_xPosition);
-	get_map.emplace("cim:PositionPoint.yPosition", &get_PositionPoint_yPosition);
-	get_map.emplace("cim:PositionPoint.zPosition", &get_PositionPoint_zPosition);
+	get_map.emplace("PositionPoint.sequenceNumber", &get_PositionPoint_sequenceNumber);
+	get_map.emplace("PositionPoint.xPosition", &get_PositionPoint_xPosition);
+	get_map.emplace("PositionPoint.yPosition", &get_PositionPoint_yPosition);
+	get_map.emplace("PositionPoint.zPosition", &get_PositionPoint_zPosition);
 }
 
 void PositionPoint::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	BaseClass::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:PositionPoint.Location", &get_PositionPoint_Location);
+	get_map.emplace("PositionPoint.Location", &get_PositionPoint_Location);
 }
 
 void PositionPoint::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -235,9 +267,23 @@ void PositionPoint::addEnumGetFnsToMap(std::map<std::string, get_function>& get_
 	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
+bool PositionPoint::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "PositionPoint" &&
+		dynamic_cast<PositionPoint*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner PositionPoint::declare()
 {
 	return BaseClassDefiner(PositionPoint::addConstructToMap, PositionPoint::addPrimitiveAssignFnsToMap, PositionPoint::addClassAssignFnsToMap, PositionPoint::debugName);
+}
+
+std::map<std::string, AttrDetails> PositionPoint::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = BaseClass::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

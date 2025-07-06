@@ -12,35 +12,67 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		CurveData(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "CurveData.Curve", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "CurveData.xvalue", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "CurveData.y1value", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "CurveData.y2value", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 CurveData::CurveData() : Curve(nullptr) {}
 CurveData::~CurveData() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& CurveData::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:CurveData.Curve", { CGMESProfile::EQ, } },
-	{ "cim:CurveData.xvalue", { CGMESProfile::EQ, } },
-	{ "cim:CurveData.y1value", { CGMESProfile::EQ, } },
-	{ "cim:CurveData.y2value", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-CurveData::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-CurveData::getPossibleProfilesForAttributes() const
+const std::string& CurveData::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& CurveData::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& CurveData::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& CurveData::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& CurveData::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& CurveData::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_Curve_CurveDatas(BaseClass*, BaseClass*);
@@ -169,33 +201,33 @@ const char* CurveData::debugString() const
 
 void CurveData::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:CurveData", &CurveData_factory);
+	factory_map.emplace("CurveData", &CurveData_factory);
 }
 
 void CurveData::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:CurveData.xvalue", &assign_CurveData_xvalue);
-	assign_map.emplace("cim:CurveData.y1value", &assign_CurveData_y1value);
-	assign_map.emplace("cim:CurveData.y2value", &assign_CurveData_y2value);
+	assign_map.emplace("CurveData.xvalue", &assign_CurveData_xvalue);
+	assign_map.emplace("CurveData.y1value", &assign_CurveData_y1value);
+	assign_map.emplace("CurveData.y2value", &assign_CurveData_y2value);
 }
 
 void CurveData::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:CurveData.Curve", &assign_CurveData_Curve);
+	assign_map.emplace("CurveData.Curve", &assign_CurveData_Curve);
 }
 
 void CurveData::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	BaseClass::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:CurveData.xvalue", &get_CurveData_xvalue);
-	get_map.emplace("cim:CurveData.y1value", &get_CurveData_y1value);
-	get_map.emplace("cim:CurveData.y2value", &get_CurveData_y2value);
+	get_map.emplace("CurveData.xvalue", &get_CurveData_xvalue);
+	get_map.emplace("CurveData.y1value", &get_CurveData_y1value);
+	get_map.emplace("CurveData.y2value", &get_CurveData_y2value);
 }
 
 void CurveData::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	BaseClass::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:CurveData.Curve", &get_CurveData_Curve);
+	get_map.emplace("CurveData.Curve", &get_CurveData_Curve);
 }
 
 void CurveData::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -203,9 +235,23 @@ void CurveData::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map)
 	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
+bool CurveData::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "CurveData" &&
+		dynamic_cast<CurveData*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner CurveData::declare()
 {
 	return BaseClassDefiner(CurveData::addConstructToMap, CurveData::addPrimitiveAssignFnsToMap, CurveData::addClassAssignFnsToMap, CurveData::debugName);
+}
+
+std::map<std::string, AttrDetails> CurveData::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = BaseClass::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

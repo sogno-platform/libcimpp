@@ -12,37 +12,69 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		Control(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "Control.PowerSystemResource", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Control.controlType", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Control.operationInProgress", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Control.timeStamp", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Control.unitMultiplier", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Control.unitSymbol", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 Control::Control() : PowerSystemResource(nullptr) {}
 Control::~Control() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& Control::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:Control.PowerSystemResource", { CGMESProfile::EQ, } },
-	{ "cim:Control.controlType", { CGMESProfile::EQ, } },
-	{ "cim:Control.operationInProgress", { CGMESProfile::EQ, } },
-	{ "cim:Control.timeStamp", { CGMESProfile::EQ, } },
-	{ "cim:Control.unitMultiplier", { CGMESProfile::EQ, } },
-	{ "cim:Control.unitSymbol", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-Control::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-Control::getPossibleProfilesForAttributes() const
+const std::string& Control::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& Control::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& Control::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& Control::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& Control::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& Control::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_PowerSystemResource_Controls(BaseClass*, BaseClass*);
@@ -229,47 +261,61 @@ const char* Control::debugString() const
 
 void Control::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:Control", &Control_factory);
+	factory_map.emplace("Control", &Control_factory);
 }
 
 void Control::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:Control.controlType", &assign_Control_controlType);
-	assign_map.emplace("cim:Control.operationInProgress", &assign_Control_operationInProgress);
-	assign_map.emplace("cim:Control.timeStamp", &assign_Control_timeStamp);
-	assign_map.emplace("cim:Control.unitMultiplier", &assign_Control_unitMultiplier);
-	assign_map.emplace("cim:Control.unitSymbol", &assign_Control_unitSymbol);
+	assign_map.emplace("Control.controlType", &assign_Control_controlType);
+	assign_map.emplace("Control.operationInProgress", &assign_Control_operationInProgress);
+	assign_map.emplace("Control.timeStamp", &assign_Control_timeStamp);
+	assign_map.emplace("Control.unitMultiplier", &assign_Control_unitMultiplier);
+	assign_map.emplace("Control.unitSymbol", &assign_Control_unitSymbol);
 }
 
 void Control::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:Control.PowerSystemResource", &assign_Control_PowerSystemResource);
+	assign_map.emplace("Control.PowerSystemResource", &assign_Control_PowerSystemResource);
 }
 
 void Control::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:Control.controlType", &get_Control_controlType);
-	get_map.emplace("cim:Control.operationInProgress", &get_Control_operationInProgress);
-	get_map.emplace("cim:Control.timeStamp", &get_Control_timeStamp);
+	get_map.emplace("Control.controlType", &get_Control_controlType);
+	get_map.emplace("Control.operationInProgress", &get_Control_operationInProgress);
+	get_map.emplace("Control.timeStamp", &get_Control_timeStamp);
 }
 
 void Control::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	IdentifiedObject::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:Control.PowerSystemResource", &get_Control_PowerSystemResource);
+	get_map.emplace("Control.PowerSystemResource", &get_Control_PowerSystemResource);
 }
 
 void Control::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:Control.unitMultiplier", &get_Control_unitMultiplier);
-	get_map.emplace("cim:Control.unitSymbol", &get_Control_unitSymbol);
+	get_map.emplace("Control.unitMultiplier", &get_Control_unitMultiplier);
+	get_map.emplace("Control.unitSymbol", &get_Control_unitSymbol);
+}
+
+bool Control::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "Control" &&
+		dynamic_cast<Control*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner Control::declare()
 {
 	return BaseClassDefiner(Control::addConstructToMap, Control::addPrimitiveAssignFnsToMap, Control::addClassAssignFnsToMap, Control::debugName);
+}
+
+std::map<std::string, AttrDetails> Control::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

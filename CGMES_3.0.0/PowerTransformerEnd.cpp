@@ -12,45 +12,77 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		PowerTransformerEnd(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SC,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "PowerTransformerEnd.PowerTransformer", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "PowerTransformerEnd.b", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "PowerTransformerEnd.b0", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "PowerTransformerEnd.connectionKind", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "PowerTransformerEnd.g", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "PowerTransformerEnd.g0", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "PowerTransformerEnd.phaseAngleClock", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "PowerTransformerEnd.r", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "PowerTransformerEnd.r0", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "PowerTransformerEnd.ratedS", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "PowerTransformerEnd.ratedU", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "PowerTransformerEnd.x", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "PowerTransformerEnd.x0", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 PowerTransformerEnd::PowerTransformerEnd() : PowerTransformer(nullptr) {}
 PowerTransformerEnd::~PowerTransformerEnd() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& PowerTransformerEnd::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SC,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:PowerTransformerEnd.PowerTransformer", { CGMESProfile::EQ, } },
-	{ "cim:PowerTransformerEnd.b", { CGMESProfile::EQ, } },
-	{ "cim:PowerTransformerEnd.b0", { CGMESProfile::SC, } },
-	{ "cim:PowerTransformerEnd.connectionKind", { CGMESProfile::EQ, } },
-	{ "cim:PowerTransformerEnd.g", { CGMESProfile::EQ, } },
-	{ "cim:PowerTransformerEnd.g0", { CGMESProfile::SC, } },
-	{ "cim:PowerTransformerEnd.phaseAngleClock", { CGMESProfile::SC, } },
-	{ "cim:PowerTransformerEnd.r", { CGMESProfile::EQ, } },
-	{ "cim:PowerTransformerEnd.r0", { CGMESProfile::SC, } },
-	{ "cim:PowerTransformerEnd.ratedS", { CGMESProfile::EQ, } },
-	{ "cim:PowerTransformerEnd.ratedU", { CGMESProfile::EQ, } },
-	{ "cim:PowerTransformerEnd.x", { CGMESProfile::EQ, } },
-	{ "cim:PowerTransformerEnd.x0", { CGMESProfile::SC, } },
-};
-
-std::list<CGMESProfile>
-PowerTransformerEnd::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-PowerTransformerEnd::getPossibleProfilesForAttributes() const
+const std::string& PowerTransformerEnd::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = TransformerEnd::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& PowerTransformerEnd::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& PowerTransformerEnd::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& PowerTransformerEnd::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& PowerTransformerEnd::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& PowerTransformerEnd::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_PowerTransformer_PowerTransformerEnd(BaseClass*, BaseClass*);
@@ -440,61 +472,75 @@ const char* PowerTransformerEnd::debugString() const
 
 void PowerTransformerEnd::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:PowerTransformerEnd", &PowerTransformerEnd_factory);
+	factory_map.emplace("PowerTransformerEnd", &PowerTransformerEnd_factory);
 }
 
 void PowerTransformerEnd::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:PowerTransformerEnd.b", &assign_PowerTransformerEnd_b);
-	assign_map.emplace("cim:PowerTransformerEnd.b0", &assign_PowerTransformerEnd_b0);
-	assign_map.emplace("cim:PowerTransformerEnd.connectionKind", &assign_PowerTransformerEnd_connectionKind);
-	assign_map.emplace("cim:PowerTransformerEnd.g", &assign_PowerTransformerEnd_g);
-	assign_map.emplace("cim:PowerTransformerEnd.g0", &assign_PowerTransformerEnd_g0);
-	assign_map.emplace("cim:PowerTransformerEnd.phaseAngleClock", &assign_PowerTransformerEnd_phaseAngleClock);
-	assign_map.emplace("cim:PowerTransformerEnd.r", &assign_PowerTransformerEnd_r);
-	assign_map.emplace("cim:PowerTransformerEnd.r0", &assign_PowerTransformerEnd_r0);
-	assign_map.emplace("cim:PowerTransformerEnd.ratedS", &assign_PowerTransformerEnd_ratedS);
-	assign_map.emplace("cim:PowerTransformerEnd.ratedU", &assign_PowerTransformerEnd_ratedU);
-	assign_map.emplace("cim:PowerTransformerEnd.x", &assign_PowerTransformerEnd_x);
-	assign_map.emplace("cim:PowerTransformerEnd.x0", &assign_PowerTransformerEnd_x0);
+	assign_map.emplace("PowerTransformerEnd.b", &assign_PowerTransformerEnd_b);
+	assign_map.emplace("PowerTransformerEnd.b0", &assign_PowerTransformerEnd_b0);
+	assign_map.emplace("PowerTransformerEnd.connectionKind", &assign_PowerTransformerEnd_connectionKind);
+	assign_map.emplace("PowerTransformerEnd.g", &assign_PowerTransformerEnd_g);
+	assign_map.emplace("PowerTransformerEnd.g0", &assign_PowerTransformerEnd_g0);
+	assign_map.emplace("PowerTransformerEnd.phaseAngleClock", &assign_PowerTransformerEnd_phaseAngleClock);
+	assign_map.emplace("PowerTransformerEnd.r", &assign_PowerTransformerEnd_r);
+	assign_map.emplace("PowerTransformerEnd.r0", &assign_PowerTransformerEnd_r0);
+	assign_map.emplace("PowerTransformerEnd.ratedS", &assign_PowerTransformerEnd_ratedS);
+	assign_map.emplace("PowerTransformerEnd.ratedU", &assign_PowerTransformerEnd_ratedU);
+	assign_map.emplace("PowerTransformerEnd.x", &assign_PowerTransformerEnd_x);
+	assign_map.emplace("PowerTransformerEnd.x0", &assign_PowerTransformerEnd_x0);
 }
 
 void PowerTransformerEnd::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:PowerTransformerEnd.PowerTransformer", &assign_PowerTransformerEnd_PowerTransformer);
+	assign_map.emplace("PowerTransformerEnd.PowerTransformer", &assign_PowerTransformerEnd_PowerTransformer);
 }
 
 void PowerTransformerEnd::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	TransformerEnd::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:PowerTransformerEnd.b", &get_PowerTransformerEnd_b);
-	get_map.emplace("cim:PowerTransformerEnd.b0", &get_PowerTransformerEnd_b0);
-	get_map.emplace("cim:PowerTransformerEnd.g", &get_PowerTransformerEnd_g);
-	get_map.emplace("cim:PowerTransformerEnd.g0", &get_PowerTransformerEnd_g0);
-	get_map.emplace("cim:PowerTransformerEnd.phaseAngleClock", &get_PowerTransformerEnd_phaseAngleClock);
-	get_map.emplace("cim:PowerTransformerEnd.r", &get_PowerTransformerEnd_r);
-	get_map.emplace("cim:PowerTransformerEnd.r0", &get_PowerTransformerEnd_r0);
-	get_map.emplace("cim:PowerTransformerEnd.ratedS", &get_PowerTransformerEnd_ratedS);
-	get_map.emplace("cim:PowerTransformerEnd.ratedU", &get_PowerTransformerEnd_ratedU);
-	get_map.emplace("cim:PowerTransformerEnd.x", &get_PowerTransformerEnd_x);
-	get_map.emplace("cim:PowerTransformerEnd.x0", &get_PowerTransformerEnd_x0);
+	get_map.emplace("PowerTransformerEnd.b", &get_PowerTransformerEnd_b);
+	get_map.emplace("PowerTransformerEnd.b0", &get_PowerTransformerEnd_b0);
+	get_map.emplace("PowerTransformerEnd.g", &get_PowerTransformerEnd_g);
+	get_map.emplace("PowerTransformerEnd.g0", &get_PowerTransformerEnd_g0);
+	get_map.emplace("PowerTransformerEnd.phaseAngleClock", &get_PowerTransformerEnd_phaseAngleClock);
+	get_map.emplace("PowerTransformerEnd.r", &get_PowerTransformerEnd_r);
+	get_map.emplace("PowerTransformerEnd.r0", &get_PowerTransformerEnd_r0);
+	get_map.emplace("PowerTransformerEnd.ratedS", &get_PowerTransformerEnd_ratedS);
+	get_map.emplace("PowerTransformerEnd.ratedU", &get_PowerTransformerEnd_ratedU);
+	get_map.emplace("PowerTransformerEnd.x", &get_PowerTransformerEnd_x);
+	get_map.emplace("PowerTransformerEnd.x0", &get_PowerTransformerEnd_x0);
 }
 
 void PowerTransformerEnd::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	TransformerEnd::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:PowerTransformerEnd.PowerTransformer", &get_PowerTransformerEnd_PowerTransformer);
+	get_map.emplace("PowerTransformerEnd.PowerTransformer", &get_PowerTransformerEnd_PowerTransformer);
 }
 
 void PowerTransformerEnd::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	TransformerEnd::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:PowerTransformerEnd.connectionKind", &get_PowerTransformerEnd_connectionKind);
+	get_map.emplace("PowerTransformerEnd.connectionKind", &get_PowerTransformerEnd_connectionKind);
+}
+
+bool PowerTransformerEnd::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "PowerTransformerEnd" &&
+		dynamic_cast<PowerTransformerEnd*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner PowerTransformerEnd::declare()
 {
 	return BaseClassDefiner(PowerTransformerEnd::addConstructToMap, PowerTransformerEnd::addPrimitiveAssignFnsToMap, PowerTransformerEnd::addClassAssignFnsToMap, PowerTransformerEnd::debugName);
+}
+
+std::map<std::string, AttrDetails> PowerTransformerEnd::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = TransformerEnd::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

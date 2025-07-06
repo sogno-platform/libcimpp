@@ -11,65 +11,97 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		PssPTIST3(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "PssPTIST3.a0", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.a1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.a2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.a3", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.a4", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.a5", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.al", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.athres", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.b0", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.b1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.b2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.b3", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.b4", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.b5", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.dl", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.dtc", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.dtf", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.dtp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.isw", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.k", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.lthres", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.m", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.nav", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.ncl", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.ncr", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.pmin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.t1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.t2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.t3", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.t4", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.t5", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.t6", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.tf", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssPTIST3.tp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 PssPTIST3::PssPTIST3() {}
 PssPTIST3::~PssPTIST3() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& PssPTIST3::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:PssPTIST3.a0", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.a1", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.a2", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.a3", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.a4", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.a5", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.al", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.athres", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.b0", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.b1", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.b2", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.b3", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.b4", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.b5", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.dl", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.dtc", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.dtf", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.dtp", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.isw", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.k", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.lthres", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.m", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.nav", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.ncl", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.ncr", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.pmin", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.t1", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.t2", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.t3", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.t4", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.t5", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.t6", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.tf", { CGMESProfile::DY, } },
-	{ "cim:PssPTIST3.tp", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-PssPTIST3::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-PssPTIST3::getPossibleProfilesForAttributes() const
+const std::string& PssPTIST3::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = PowerSystemStabilizerDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& PssPTIST3::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& PssPTIST3::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& PssPTIST3::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& PssPTIST3::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& PssPTIST3::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_PssPTIST3_a0(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -1066,45 +1098,45 @@ const char* PssPTIST3::debugString() const
 
 void PssPTIST3::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:PssPTIST3", &PssPTIST3_factory);
+	factory_map.emplace("PssPTIST3", &PssPTIST3_factory);
 }
 
 void PssPTIST3::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:PssPTIST3.a0", &assign_PssPTIST3_a0);
-	assign_map.emplace("cim:PssPTIST3.a1", &assign_PssPTIST3_a1);
-	assign_map.emplace("cim:PssPTIST3.a2", &assign_PssPTIST3_a2);
-	assign_map.emplace("cim:PssPTIST3.a3", &assign_PssPTIST3_a3);
-	assign_map.emplace("cim:PssPTIST3.a4", &assign_PssPTIST3_a4);
-	assign_map.emplace("cim:PssPTIST3.a5", &assign_PssPTIST3_a5);
-	assign_map.emplace("cim:PssPTIST3.al", &assign_PssPTIST3_al);
-	assign_map.emplace("cim:PssPTIST3.athres", &assign_PssPTIST3_athres);
-	assign_map.emplace("cim:PssPTIST3.b0", &assign_PssPTIST3_b0);
-	assign_map.emplace("cim:PssPTIST3.b1", &assign_PssPTIST3_b1);
-	assign_map.emplace("cim:PssPTIST3.b2", &assign_PssPTIST3_b2);
-	assign_map.emplace("cim:PssPTIST3.b3", &assign_PssPTIST3_b3);
-	assign_map.emplace("cim:PssPTIST3.b4", &assign_PssPTIST3_b4);
-	assign_map.emplace("cim:PssPTIST3.b5", &assign_PssPTIST3_b5);
-	assign_map.emplace("cim:PssPTIST3.dl", &assign_PssPTIST3_dl);
-	assign_map.emplace("cim:PssPTIST3.dtc", &assign_PssPTIST3_dtc);
-	assign_map.emplace("cim:PssPTIST3.dtf", &assign_PssPTIST3_dtf);
-	assign_map.emplace("cim:PssPTIST3.dtp", &assign_PssPTIST3_dtp);
-	assign_map.emplace("cim:PssPTIST3.isw", &assign_PssPTIST3_isw);
-	assign_map.emplace("cim:PssPTIST3.k", &assign_PssPTIST3_k);
-	assign_map.emplace("cim:PssPTIST3.lthres", &assign_PssPTIST3_lthres);
-	assign_map.emplace("cim:PssPTIST3.m", &assign_PssPTIST3_m);
-	assign_map.emplace("cim:PssPTIST3.nav", &assign_PssPTIST3_nav);
-	assign_map.emplace("cim:PssPTIST3.ncl", &assign_PssPTIST3_ncl);
-	assign_map.emplace("cim:PssPTIST3.ncr", &assign_PssPTIST3_ncr);
-	assign_map.emplace("cim:PssPTIST3.pmin", &assign_PssPTIST3_pmin);
-	assign_map.emplace("cim:PssPTIST3.t1", &assign_PssPTIST3_t1);
-	assign_map.emplace("cim:PssPTIST3.t2", &assign_PssPTIST3_t2);
-	assign_map.emplace("cim:PssPTIST3.t3", &assign_PssPTIST3_t3);
-	assign_map.emplace("cim:PssPTIST3.t4", &assign_PssPTIST3_t4);
-	assign_map.emplace("cim:PssPTIST3.t5", &assign_PssPTIST3_t5);
-	assign_map.emplace("cim:PssPTIST3.t6", &assign_PssPTIST3_t6);
-	assign_map.emplace("cim:PssPTIST3.tf", &assign_PssPTIST3_tf);
-	assign_map.emplace("cim:PssPTIST3.tp", &assign_PssPTIST3_tp);
+	assign_map.emplace("PssPTIST3.a0", &assign_PssPTIST3_a0);
+	assign_map.emplace("PssPTIST3.a1", &assign_PssPTIST3_a1);
+	assign_map.emplace("PssPTIST3.a2", &assign_PssPTIST3_a2);
+	assign_map.emplace("PssPTIST3.a3", &assign_PssPTIST3_a3);
+	assign_map.emplace("PssPTIST3.a4", &assign_PssPTIST3_a4);
+	assign_map.emplace("PssPTIST3.a5", &assign_PssPTIST3_a5);
+	assign_map.emplace("PssPTIST3.al", &assign_PssPTIST3_al);
+	assign_map.emplace("PssPTIST3.athres", &assign_PssPTIST3_athres);
+	assign_map.emplace("PssPTIST3.b0", &assign_PssPTIST3_b0);
+	assign_map.emplace("PssPTIST3.b1", &assign_PssPTIST3_b1);
+	assign_map.emplace("PssPTIST3.b2", &assign_PssPTIST3_b2);
+	assign_map.emplace("PssPTIST3.b3", &assign_PssPTIST3_b3);
+	assign_map.emplace("PssPTIST3.b4", &assign_PssPTIST3_b4);
+	assign_map.emplace("PssPTIST3.b5", &assign_PssPTIST3_b5);
+	assign_map.emplace("PssPTIST3.dl", &assign_PssPTIST3_dl);
+	assign_map.emplace("PssPTIST3.dtc", &assign_PssPTIST3_dtc);
+	assign_map.emplace("PssPTIST3.dtf", &assign_PssPTIST3_dtf);
+	assign_map.emplace("PssPTIST3.dtp", &assign_PssPTIST3_dtp);
+	assign_map.emplace("PssPTIST3.isw", &assign_PssPTIST3_isw);
+	assign_map.emplace("PssPTIST3.k", &assign_PssPTIST3_k);
+	assign_map.emplace("PssPTIST3.lthres", &assign_PssPTIST3_lthres);
+	assign_map.emplace("PssPTIST3.m", &assign_PssPTIST3_m);
+	assign_map.emplace("PssPTIST3.nav", &assign_PssPTIST3_nav);
+	assign_map.emplace("PssPTIST3.ncl", &assign_PssPTIST3_ncl);
+	assign_map.emplace("PssPTIST3.ncr", &assign_PssPTIST3_ncr);
+	assign_map.emplace("PssPTIST3.pmin", &assign_PssPTIST3_pmin);
+	assign_map.emplace("PssPTIST3.t1", &assign_PssPTIST3_t1);
+	assign_map.emplace("PssPTIST3.t2", &assign_PssPTIST3_t2);
+	assign_map.emplace("PssPTIST3.t3", &assign_PssPTIST3_t3);
+	assign_map.emplace("PssPTIST3.t4", &assign_PssPTIST3_t4);
+	assign_map.emplace("PssPTIST3.t5", &assign_PssPTIST3_t5);
+	assign_map.emplace("PssPTIST3.t6", &assign_PssPTIST3_t6);
+	assign_map.emplace("PssPTIST3.tf", &assign_PssPTIST3_tf);
+	assign_map.emplace("PssPTIST3.tp", &assign_PssPTIST3_tp);
 }
 
 void PssPTIST3::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -1114,40 +1146,40 @@ void PssPTIST3::addClassAssignFnsToMap(std::unordered_map<std::string, class_ass
 void PssPTIST3::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	PowerSystemStabilizerDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:PssPTIST3.a0", &get_PssPTIST3_a0);
-	get_map.emplace("cim:PssPTIST3.a1", &get_PssPTIST3_a1);
-	get_map.emplace("cim:PssPTIST3.a2", &get_PssPTIST3_a2);
-	get_map.emplace("cim:PssPTIST3.a3", &get_PssPTIST3_a3);
-	get_map.emplace("cim:PssPTIST3.a4", &get_PssPTIST3_a4);
-	get_map.emplace("cim:PssPTIST3.a5", &get_PssPTIST3_a5);
-	get_map.emplace("cim:PssPTIST3.al", &get_PssPTIST3_al);
-	get_map.emplace("cim:PssPTIST3.athres", &get_PssPTIST3_athres);
-	get_map.emplace("cim:PssPTIST3.b0", &get_PssPTIST3_b0);
-	get_map.emplace("cim:PssPTIST3.b1", &get_PssPTIST3_b1);
-	get_map.emplace("cim:PssPTIST3.b2", &get_PssPTIST3_b2);
-	get_map.emplace("cim:PssPTIST3.b3", &get_PssPTIST3_b3);
-	get_map.emplace("cim:PssPTIST3.b4", &get_PssPTIST3_b4);
-	get_map.emplace("cim:PssPTIST3.b5", &get_PssPTIST3_b5);
-	get_map.emplace("cim:PssPTIST3.dl", &get_PssPTIST3_dl);
-	get_map.emplace("cim:PssPTIST3.dtc", &get_PssPTIST3_dtc);
-	get_map.emplace("cim:PssPTIST3.dtf", &get_PssPTIST3_dtf);
-	get_map.emplace("cim:PssPTIST3.dtp", &get_PssPTIST3_dtp);
-	get_map.emplace("cim:PssPTIST3.isw", &get_PssPTIST3_isw);
-	get_map.emplace("cim:PssPTIST3.k", &get_PssPTIST3_k);
-	get_map.emplace("cim:PssPTIST3.lthres", &get_PssPTIST3_lthres);
-	get_map.emplace("cim:PssPTIST3.m", &get_PssPTIST3_m);
-	get_map.emplace("cim:PssPTIST3.nav", &get_PssPTIST3_nav);
-	get_map.emplace("cim:PssPTIST3.ncl", &get_PssPTIST3_ncl);
-	get_map.emplace("cim:PssPTIST3.ncr", &get_PssPTIST3_ncr);
-	get_map.emplace("cim:PssPTIST3.pmin", &get_PssPTIST3_pmin);
-	get_map.emplace("cim:PssPTIST3.t1", &get_PssPTIST3_t1);
-	get_map.emplace("cim:PssPTIST3.t2", &get_PssPTIST3_t2);
-	get_map.emplace("cim:PssPTIST3.t3", &get_PssPTIST3_t3);
-	get_map.emplace("cim:PssPTIST3.t4", &get_PssPTIST3_t4);
-	get_map.emplace("cim:PssPTIST3.t5", &get_PssPTIST3_t5);
-	get_map.emplace("cim:PssPTIST3.t6", &get_PssPTIST3_t6);
-	get_map.emplace("cim:PssPTIST3.tf", &get_PssPTIST3_tf);
-	get_map.emplace("cim:PssPTIST3.tp", &get_PssPTIST3_tp);
+	get_map.emplace("PssPTIST3.a0", &get_PssPTIST3_a0);
+	get_map.emplace("PssPTIST3.a1", &get_PssPTIST3_a1);
+	get_map.emplace("PssPTIST3.a2", &get_PssPTIST3_a2);
+	get_map.emplace("PssPTIST3.a3", &get_PssPTIST3_a3);
+	get_map.emplace("PssPTIST3.a4", &get_PssPTIST3_a4);
+	get_map.emplace("PssPTIST3.a5", &get_PssPTIST3_a5);
+	get_map.emplace("PssPTIST3.al", &get_PssPTIST3_al);
+	get_map.emplace("PssPTIST3.athres", &get_PssPTIST3_athres);
+	get_map.emplace("PssPTIST3.b0", &get_PssPTIST3_b0);
+	get_map.emplace("PssPTIST3.b1", &get_PssPTIST3_b1);
+	get_map.emplace("PssPTIST3.b2", &get_PssPTIST3_b2);
+	get_map.emplace("PssPTIST3.b3", &get_PssPTIST3_b3);
+	get_map.emplace("PssPTIST3.b4", &get_PssPTIST3_b4);
+	get_map.emplace("PssPTIST3.b5", &get_PssPTIST3_b5);
+	get_map.emplace("PssPTIST3.dl", &get_PssPTIST3_dl);
+	get_map.emplace("PssPTIST3.dtc", &get_PssPTIST3_dtc);
+	get_map.emplace("PssPTIST3.dtf", &get_PssPTIST3_dtf);
+	get_map.emplace("PssPTIST3.dtp", &get_PssPTIST3_dtp);
+	get_map.emplace("PssPTIST3.isw", &get_PssPTIST3_isw);
+	get_map.emplace("PssPTIST3.k", &get_PssPTIST3_k);
+	get_map.emplace("PssPTIST3.lthres", &get_PssPTIST3_lthres);
+	get_map.emplace("PssPTIST3.m", &get_PssPTIST3_m);
+	get_map.emplace("PssPTIST3.nav", &get_PssPTIST3_nav);
+	get_map.emplace("PssPTIST3.ncl", &get_PssPTIST3_ncl);
+	get_map.emplace("PssPTIST3.ncr", &get_PssPTIST3_ncr);
+	get_map.emplace("PssPTIST3.pmin", &get_PssPTIST3_pmin);
+	get_map.emplace("PssPTIST3.t1", &get_PssPTIST3_t1);
+	get_map.emplace("PssPTIST3.t2", &get_PssPTIST3_t2);
+	get_map.emplace("PssPTIST3.t3", &get_PssPTIST3_t3);
+	get_map.emplace("PssPTIST3.t4", &get_PssPTIST3_t4);
+	get_map.emplace("PssPTIST3.t5", &get_PssPTIST3_t5);
+	get_map.emplace("PssPTIST3.t6", &get_PssPTIST3_t6);
+	get_map.emplace("PssPTIST3.tf", &get_PssPTIST3_tf);
+	get_map.emplace("PssPTIST3.tp", &get_PssPTIST3_tp);
 }
 
 void PssPTIST3::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -1160,9 +1192,23 @@ void PssPTIST3::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map)
 	PowerSystemStabilizerDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool PssPTIST3::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "PssPTIST3" &&
+		dynamic_cast<PssPTIST3*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner PssPTIST3::declare()
 {
 	return BaseClassDefiner(PssPTIST3::addConstructToMap, PssPTIST3::addPrimitiveAssignFnsToMap, PssPTIST3::addClassAssignFnsToMap, PssPTIST3::debugName);
+}
+
+std::map<std::string, AttrDetails> PssPTIST3::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = PowerSystemStabilizerDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

@@ -11,41 +11,73 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		SteadyStateHypothesisVersion(),
+		"http://entsoe.eu/CIM/SchemaExtension/3/1#",
+		{
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::SSH
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "SteadyStateHypothesisVersion.baseUML", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::SSH, } } },
+		{ "SteadyStateHypothesisVersion.baseURI", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::SSH, } } },
+		{ "SteadyStateHypothesisVersion.date", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::SSH, } } },
+		{ "SteadyStateHypothesisVersion.differenceModelURI", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::SSH, } } },
+		{ "SteadyStateHypothesisVersion.entsoeUML", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::SSH, } } },
+		{ "SteadyStateHypothesisVersion.entsoeURI", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::SSH, } } },
+		{ "SteadyStateHypothesisVersion.modelDescriptionURI", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::SSH, } } },
+		{ "SteadyStateHypothesisVersion.namespaceRDF", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::SSH, } } },
+		{ "SteadyStateHypothesisVersion.namespaceUML", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::SSH, } } },
+		{ "SteadyStateHypothesisVersion.shortName", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::SSH, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 SteadyStateHypothesisVersion::SteadyStateHypothesisVersion() {}
 SteadyStateHypothesisVersion::~SteadyStateHypothesisVersion() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& SteadyStateHypothesisVersion::getAttributeNames() const
 {
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:SteadyStateHypothesisVersion.baseUML", { CGMESProfile::SSH, } },
-	{ "cim:SteadyStateHypothesisVersion.baseURI", { CGMESProfile::SSH, } },
-	{ "cim:SteadyStateHypothesisVersion.date", { CGMESProfile::SSH, } },
-	{ "cim:SteadyStateHypothesisVersion.differenceModelURI", { CGMESProfile::SSH, } },
-	{ "cim:SteadyStateHypothesisVersion.entsoeUML", { CGMESProfile::SSH, } },
-	{ "cim:SteadyStateHypothesisVersion.entsoeURI", { CGMESProfile::SSH, } },
-	{ "cim:SteadyStateHypothesisVersion.modelDescriptionURI", { CGMESProfile::SSH, } },
-	{ "cim:SteadyStateHypothesisVersion.namespaceRDF", { CGMESProfile::SSH, } },
-	{ "cim:SteadyStateHypothesisVersion.namespaceUML", { CGMESProfile::SSH, } },
-	{ "cim:SteadyStateHypothesisVersion.shortName", { CGMESProfile::SSH, } },
-};
-
-std::list<CGMESProfile>
-SteadyStateHypothesisVersion::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-SteadyStateHypothesisVersion::getPossibleProfilesForAttributes() const
+const std::string& SteadyStateHypothesisVersion::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& SteadyStateHypothesisVersion::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& SteadyStateHypothesisVersion::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& SteadyStateHypothesisVersion::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& SteadyStateHypothesisVersion::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& SteadyStateHypothesisVersion::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_SteadyStateHypothesisVersion_baseUML(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -346,21 +378,21 @@ const char* SteadyStateHypothesisVersion::debugString() const
 
 void SteadyStateHypothesisVersion::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:SteadyStateHypothesisVersion", &SteadyStateHypothesisVersion_factory);
+	factory_map.emplace("SteadyStateHypothesisVersion", &SteadyStateHypothesisVersion_factory);
 }
 
 void SteadyStateHypothesisVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:SteadyStateHypothesisVersion.baseUML", &assign_SteadyStateHypothesisVersion_baseUML);
-	assign_map.emplace("cim:SteadyStateHypothesisVersion.baseURI", &assign_SteadyStateHypothesisVersion_baseURI);
-	assign_map.emplace("cim:SteadyStateHypothesisVersion.date", &assign_SteadyStateHypothesisVersion_date);
-	assign_map.emplace("cim:SteadyStateHypothesisVersion.differenceModelURI", &assign_SteadyStateHypothesisVersion_differenceModelURI);
-	assign_map.emplace("cim:SteadyStateHypothesisVersion.entsoeUML", &assign_SteadyStateHypothesisVersion_entsoeUML);
-	assign_map.emplace("cim:SteadyStateHypothesisVersion.entsoeURI", &assign_SteadyStateHypothesisVersion_entsoeURI);
-	assign_map.emplace("cim:SteadyStateHypothesisVersion.modelDescriptionURI", &assign_SteadyStateHypothesisVersion_modelDescriptionURI);
-	assign_map.emplace("cim:SteadyStateHypothesisVersion.namespaceRDF", &assign_SteadyStateHypothesisVersion_namespaceRDF);
-	assign_map.emplace("cim:SteadyStateHypothesisVersion.namespaceUML", &assign_SteadyStateHypothesisVersion_namespaceUML);
-	assign_map.emplace("cim:SteadyStateHypothesisVersion.shortName", &assign_SteadyStateHypothesisVersion_shortName);
+	assign_map.emplace("SteadyStateHypothesisVersion.baseUML", &assign_SteadyStateHypothesisVersion_baseUML);
+	assign_map.emplace("SteadyStateHypothesisVersion.baseURI", &assign_SteadyStateHypothesisVersion_baseURI);
+	assign_map.emplace("SteadyStateHypothesisVersion.date", &assign_SteadyStateHypothesisVersion_date);
+	assign_map.emplace("SteadyStateHypothesisVersion.differenceModelURI", &assign_SteadyStateHypothesisVersion_differenceModelURI);
+	assign_map.emplace("SteadyStateHypothesisVersion.entsoeUML", &assign_SteadyStateHypothesisVersion_entsoeUML);
+	assign_map.emplace("SteadyStateHypothesisVersion.entsoeURI", &assign_SteadyStateHypothesisVersion_entsoeURI);
+	assign_map.emplace("SteadyStateHypothesisVersion.modelDescriptionURI", &assign_SteadyStateHypothesisVersion_modelDescriptionURI);
+	assign_map.emplace("SteadyStateHypothesisVersion.namespaceRDF", &assign_SteadyStateHypothesisVersion_namespaceRDF);
+	assign_map.emplace("SteadyStateHypothesisVersion.namespaceUML", &assign_SteadyStateHypothesisVersion_namespaceUML);
+	assign_map.emplace("SteadyStateHypothesisVersion.shortName", &assign_SteadyStateHypothesisVersion_shortName);
 }
 
 void SteadyStateHypothesisVersion::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -370,16 +402,16 @@ void SteadyStateHypothesisVersion::addClassAssignFnsToMap(std::unordered_map<std
 void SteadyStateHypothesisVersion::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	BaseClass::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:SteadyStateHypothesisVersion.baseUML", &get_SteadyStateHypothesisVersion_baseUML);
-	get_map.emplace("cim:SteadyStateHypothesisVersion.baseURI", &get_SteadyStateHypothesisVersion_baseURI);
-	get_map.emplace("cim:SteadyStateHypothesisVersion.date", &get_SteadyStateHypothesisVersion_date);
-	get_map.emplace("cim:SteadyStateHypothesisVersion.differenceModelURI", &get_SteadyStateHypothesisVersion_differenceModelURI);
-	get_map.emplace("cim:SteadyStateHypothesisVersion.entsoeUML", &get_SteadyStateHypothesisVersion_entsoeUML);
-	get_map.emplace("cim:SteadyStateHypothesisVersion.entsoeURI", &get_SteadyStateHypothesisVersion_entsoeURI);
-	get_map.emplace("cim:SteadyStateHypothesisVersion.modelDescriptionURI", &get_SteadyStateHypothesisVersion_modelDescriptionURI);
-	get_map.emplace("cim:SteadyStateHypothesisVersion.namespaceRDF", &get_SteadyStateHypothesisVersion_namespaceRDF);
-	get_map.emplace("cim:SteadyStateHypothesisVersion.namespaceUML", &get_SteadyStateHypothesisVersion_namespaceUML);
-	get_map.emplace("cim:SteadyStateHypothesisVersion.shortName", &get_SteadyStateHypothesisVersion_shortName);
+	get_map.emplace("SteadyStateHypothesisVersion.baseUML", &get_SteadyStateHypothesisVersion_baseUML);
+	get_map.emplace("SteadyStateHypothesisVersion.baseURI", &get_SteadyStateHypothesisVersion_baseURI);
+	get_map.emplace("SteadyStateHypothesisVersion.date", &get_SteadyStateHypothesisVersion_date);
+	get_map.emplace("SteadyStateHypothesisVersion.differenceModelURI", &get_SteadyStateHypothesisVersion_differenceModelURI);
+	get_map.emplace("SteadyStateHypothesisVersion.entsoeUML", &get_SteadyStateHypothesisVersion_entsoeUML);
+	get_map.emplace("SteadyStateHypothesisVersion.entsoeURI", &get_SteadyStateHypothesisVersion_entsoeURI);
+	get_map.emplace("SteadyStateHypothesisVersion.modelDescriptionURI", &get_SteadyStateHypothesisVersion_modelDescriptionURI);
+	get_map.emplace("SteadyStateHypothesisVersion.namespaceRDF", &get_SteadyStateHypothesisVersion_namespaceRDF);
+	get_map.emplace("SteadyStateHypothesisVersion.namespaceUML", &get_SteadyStateHypothesisVersion_namespaceUML);
+	get_map.emplace("SteadyStateHypothesisVersion.shortName", &get_SteadyStateHypothesisVersion_shortName);
 }
 
 void SteadyStateHypothesisVersion::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -392,9 +424,23 @@ void SteadyStateHypothesisVersion::addEnumGetFnsToMap(std::map<std::string, get_
 	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
+bool SteadyStateHypothesisVersion::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "SteadyStateHypothesisVersion" &&
+		dynamic_cast<SteadyStateHypothesisVersion*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner SteadyStateHypothesisVersion::declare()
 {
 	return BaseClassDefiner(SteadyStateHypothesisVersion::addConstructToMap, SteadyStateHypothesisVersion::addPrimitiveAssignFnsToMap, SteadyStateHypothesisVersion::addClassAssignFnsToMap, SteadyStateHypothesisVersion::debugName);
+}
+
+std::map<std::string, AttrDetails> SteadyStateHypothesisVersion::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = BaseClass::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

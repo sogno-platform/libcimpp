@@ -12,36 +12,68 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		HydroGeneratingUnit(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "HydroGeneratingUnit.HydroPowerPlant", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "HydroGeneratingUnit.dropHeight", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "HydroGeneratingUnit.energyConversionCapability", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "HydroGeneratingUnit.turbineType", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 HydroGeneratingUnit::HydroGeneratingUnit() : HydroPowerPlant(nullptr) {}
 HydroGeneratingUnit::~HydroGeneratingUnit() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& HydroGeneratingUnit::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:HydroGeneratingUnit.HydroPowerPlant", { CGMESProfile::EQ, } },
-	{ "cim:HydroGeneratingUnit.dropHeight", { CGMESProfile::EQ, } },
-	{ "cim:HydroGeneratingUnit.energyConversionCapability", { CGMESProfile::EQ, } },
-	{ "cim:HydroGeneratingUnit.turbineType", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-HydroGeneratingUnit::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-HydroGeneratingUnit::getPossibleProfilesForAttributes() const
+const std::string& HydroGeneratingUnit::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = GeneratingUnit::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& HydroGeneratingUnit::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& HydroGeneratingUnit::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& HydroGeneratingUnit::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& HydroGeneratingUnit::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& HydroGeneratingUnit::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_HydroPowerPlant_HydroGeneratingUnits(BaseClass*, BaseClass*);
@@ -170,43 +202,57 @@ const char* HydroGeneratingUnit::debugString() const
 
 void HydroGeneratingUnit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:HydroGeneratingUnit", &HydroGeneratingUnit_factory);
+	factory_map.emplace("HydroGeneratingUnit", &HydroGeneratingUnit_factory);
 }
 
 void HydroGeneratingUnit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:HydroGeneratingUnit.dropHeight", &assign_HydroGeneratingUnit_dropHeight);
-	assign_map.emplace("cim:HydroGeneratingUnit.energyConversionCapability", &assign_HydroGeneratingUnit_energyConversionCapability);
-	assign_map.emplace("cim:HydroGeneratingUnit.turbineType", &assign_HydroGeneratingUnit_turbineType);
+	assign_map.emplace("HydroGeneratingUnit.dropHeight", &assign_HydroGeneratingUnit_dropHeight);
+	assign_map.emplace("HydroGeneratingUnit.energyConversionCapability", &assign_HydroGeneratingUnit_energyConversionCapability);
+	assign_map.emplace("HydroGeneratingUnit.turbineType", &assign_HydroGeneratingUnit_turbineType);
 }
 
 void HydroGeneratingUnit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:HydroGeneratingUnit.HydroPowerPlant", &assign_HydroGeneratingUnit_HydroPowerPlant);
+	assign_map.emplace("HydroGeneratingUnit.HydroPowerPlant", &assign_HydroGeneratingUnit_HydroPowerPlant);
 }
 
 void HydroGeneratingUnit::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	GeneratingUnit::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:HydroGeneratingUnit.dropHeight", &get_HydroGeneratingUnit_dropHeight);
+	get_map.emplace("HydroGeneratingUnit.dropHeight", &get_HydroGeneratingUnit_dropHeight);
 }
 
 void HydroGeneratingUnit::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	GeneratingUnit::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:HydroGeneratingUnit.HydroPowerPlant", &get_HydroGeneratingUnit_HydroPowerPlant);
+	get_map.emplace("HydroGeneratingUnit.HydroPowerPlant", &get_HydroGeneratingUnit_HydroPowerPlant);
 }
 
 void HydroGeneratingUnit::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	GeneratingUnit::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:HydroGeneratingUnit.energyConversionCapability", &get_HydroGeneratingUnit_energyConversionCapability);
-	get_map.emplace("cim:HydroGeneratingUnit.turbineType", &get_HydroGeneratingUnit_turbineType);
+	get_map.emplace("HydroGeneratingUnit.energyConversionCapability", &get_HydroGeneratingUnit_energyConversionCapability);
+	get_map.emplace("HydroGeneratingUnit.turbineType", &get_HydroGeneratingUnit_turbineType);
+}
+
+bool HydroGeneratingUnit::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "HydroGeneratingUnit" &&
+		dynamic_cast<HydroGeneratingUnit*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner HydroGeneratingUnit::declare()
 {
 	return BaseClassDefiner(HydroGeneratingUnit::addConstructToMap, HydroGeneratingUnit::addPrimitiveAssignFnsToMap, HydroGeneratingUnit::addClassAssignFnsToMap, HydroGeneratingUnit::debugName);
+}
+
+std::map<std::string, AttrDetails> HydroGeneratingUnit::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = GeneratingUnit::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

@@ -11,41 +11,73 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		PssRQB(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "PssRQB.kdpm", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssRQB.ki2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssRQB.ki3", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssRQB.ki4", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssRQB.sibv", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssRQB.t4f", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssRQB.t4m", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssRQB.t4mom", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssRQB.tomd", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PssRQB.tomsl", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 PssRQB::PssRQB() {}
 PssRQB::~PssRQB() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& PssRQB::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:PssRQB.kdpm", { CGMESProfile::DY, } },
-	{ "cim:PssRQB.ki2", { CGMESProfile::DY, } },
-	{ "cim:PssRQB.ki3", { CGMESProfile::DY, } },
-	{ "cim:PssRQB.ki4", { CGMESProfile::DY, } },
-	{ "cim:PssRQB.sibv", { CGMESProfile::DY, } },
-	{ "cim:PssRQB.t4f", { CGMESProfile::DY, } },
-	{ "cim:PssRQB.t4m", { CGMESProfile::DY, } },
-	{ "cim:PssRQB.t4mom", { CGMESProfile::DY, } },
-	{ "cim:PssRQB.tomd", { CGMESProfile::DY, } },
-	{ "cim:PssRQB.tomsl", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-PssRQB::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-PssRQB::getPossibleProfilesForAttributes() const
+const std::string& PssRQB::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = PowerSystemStabilizerDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& PssRQB::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& PssRQB::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& PssRQB::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& PssRQB::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& PssRQB::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_PssRQB_kdpm(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -346,21 +378,21 @@ const char* PssRQB::debugString() const
 
 void PssRQB::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:PssRQB", &PssRQB_factory);
+	factory_map.emplace("PssRQB", &PssRQB_factory);
 }
 
 void PssRQB::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:PssRQB.kdpm", &assign_PssRQB_kdpm);
-	assign_map.emplace("cim:PssRQB.ki2", &assign_PssRQB_ki2);
-	assign_map.emplace("cim:PssRQB.ki3", &assign_PssRQB_ki3);
-	assign_map.emplace("cim:PssRQB.ki4", &assign_PssRQB_ki4);
-	assign_map.emplace("cim:PssRQB.sibv", &assign_PssRQB_sibv);
-	assign_map.emplace("cim:PssRQB.t4f", &assign_PssRQB_t4f);
-	assign_map.emplace("cim:PssRQB.t4m", &assign_PssRQB_t4m);
-	assign_map.emplace("cim:PssRQB.t4mom", &assign_PssRQB_t4mom);
-	assign_map.emplace("cim:PssRQB.tomd", &assign_PssRQB_tomd);
-	assign_map.emplace("cim:PssRQB.tomsl", &assign_PssRQB_tomsl);
+	assign_map.emplace("PssRQB.kdpm", &assign_PssRQB_kdpm);
+	assign_map.emplace("PssRQB.ki2", &assign_PssRQB_ki2);
+	assign_map.emplace("PssRQB.ki3", &assign_PssRQB_ki3);
+	assign_map.emplace("PssRQB.ki4", &assign_PssRQB_ki4);
+	assign_map.emplace("PssRQB.sibv", &assign_PssRQB_sibv);
+	assign_map.emplace("PssRQB.t4f", &assign_PssRQB_t4f);
+	assign_map.emplace("PssRQB.t4m", &assign_PssRQB_t4m);
+	assign_map.emplace("PssRQB.t4mom", &assign_PssRQB_t4mom);
+	assign_map.emplace("PssRQB.tomd", &assign_PssRQB_tomd);
+	assign_map.emplace("PssRQB.tomsl", &assign_PssRQB_tomsl);
 }
 
 void PssRQB::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -370,16 +402,16 @@ void PssRQB::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign
 void PssRQB::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	PowerSystemStabilizerDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:PssRQB.kdpm", &get_PssRQB_kdpm);
-	get_map.emplace("cim:PssRQB.ki2", &get_PssRQB_ki2);
-	get_map.emplace("cim:PssRQB.ki3", &get_PssRQB_ki3);
-	get_map.emplace("cim:PssRQB.ki4", &get_PssRQB_ki4);
-	get_map.emplace("cim:PssRQB.sibv", &get_PssRQB_sibv);
-	get_map.emplace("cim:PssRQB.t4f", &get_PssRQB_t4f);
-	get_map.emplace("cim:PssRQB.t4m", &get_PssRQB_t4m);
-	get_map.emplace("cim:PssRQB.t4mom", &get_PssRQB_t4mom);
-	get_map.emplace("cim:PssRQB.tomd", &get_PssRQB_tomd);
-	get_map.emplace("cim:PssRQB.tomsl", &get_PssRQB_tomsl);
+	get_map.emplace("PssRQB.kdpm", &get_PssRQB_kdpm);
+	get_map.emplace("PssRQB.ki2", &get_PssRQB_ki2);
+	get_map.emplace("PssRQB.ki3", &get_PssRQB_ki3);
+	get_map.emplace("PssRQB.ki4", &get_PssRQB_ki4);
+	get_map.emplace("PssRQB.sibv", &get_PssRQB_sibv);
+	get_map.emplace("PssRQB.t4f", &get_PssRQB_t4f);
+	get_map.emplace("PssRQB.t4m", &get_PssRQB_t4m);
+	get_map.emplace("PssRQB.t4mom", &get_PssRQB_t4mom);
+	get_map.emplace("PssRQB.tomd", &get_PssRQB_tomd);
+	get_map.emplace("PssRQB.tomsl", &get_PssRQB_tomsl);
 }
 
 void PssRQB::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -392,9 +424,23 @@ void PssRQB::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) co
 	PowerSystemStabilizerDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool PssRQB::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "PssRQB" &&
+		dynamic_cast<PssRQB*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner PssRQB::declare()
 {
 	return BaseClassDefiner(PssRQB::addConstructToMap, PssRQB::addPrimitiveAssignFnsToMap, PssRQB::addClassAssignFnsToMap, PssRQB::debugName);
+}
+
+std::map<std::string, AttrDetails> PssRQB::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = PowerSystemStabilizerDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

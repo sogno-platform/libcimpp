@@ -11,34 +11,66 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ExcAVR5(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ExcAVR5.ka", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcAVR5.rex", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcAVR5.ta", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ExcAVR5::ExcAVR5() {}
 ExcAVR5::~ExcAVR5() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ExcAVR5::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ExcAVR5.ka", { CGMESProfile::DY, } },
-	{ "cim:ExcAVR5.rex", { CGMESProfile::DY, } },
-	{ "cim:ExcAVR5.ta", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-ExcAVR5::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ExcAVR5::getPossibleProfilesForAttributes() const
+const std::string& ExcAVR5::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ExcAVR5::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ExcAVR5::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ExcAVR5::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ExcAVR5::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ExcAVR5::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ExcAVR5_ka(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -136,14 +168,14 @@ const char* ExcAVR5::debugString() const
 
 void ExcAVR5::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ExcAVR5", &ExcAVR5_factory);
+	factory_map.emplace("ExcAVR5", &ExcAVR5_factory);
 }
 
 void ExcAVR5::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ExcAVR5.ka", &assign_ExcAVR5_ka);
-	assign_map.emplace("cim:ExcAVR5.rex", &assign_ExcAVR5_rex);
-	assign_map.emplace("cim:ExcAVR5.ta", &assign_ExcAVR5_ta);
+	assign_map.emplace("ExcAVR5.ka", &assign_ExcAVR5_ka);
+	assign_map.emplace("ExcAVR5.rex", &assign_ExcAVR5_rex);
+	assign_map.emplace("ExcAVR5.ta", &assign_ExcAVR5_ta);
 }
 
 void ExcAVR5::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -153,9 +185,9 @@ void ExcAVR5::addClassAssignFnsToMap(std::unordered_map<std::string, class_assig
 void ExcAVR5::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ExcAVR5.ka", &get_ExcAVR5_ka);
-	get_map.emplace("cim:ExcAVR5.rex", &get_ExcAVR5_rex);
-	get_map.emplace("cim:ExcAVR5.ta", &get_ExcAVR5_ta);
+	get_map.emplace("ExcAVR5.ka", &get_ExcAVR5_ka);
+	get_map.emplace("ExcAVR5.rex", &get_ExcAVR5_rex);
+	get_map.emplace("ExcAVR5.ta", &get_ExcAVR5_ta);
 }
 
 void ExcAVR5::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -168,9 +200,23 @@ void ExcAVR5::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) c
 	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool ExcAVR5::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ExcAVR5" &&
+		dynamic_cast<ExcAVR5*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ExcAVR5::declare()
 {
 	return BaseClassDefiner(ExcAVR5::addConstructToMap, ExcAVR5::addPrimitiveAssignFnsToMap, ExcAVR5::addClassAssignFnsToMap, ExcAVR5::debugName);
+}
+
+std::map<std::string, AttrDetails> ExcAVR5::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ExcitationSystemDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

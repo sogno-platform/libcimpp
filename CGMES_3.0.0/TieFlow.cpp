@@ -13,34 +13,66 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		TieFlow(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "TieFlow.ControlArea", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "TieFlow.Terminal", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "TieFlow.positiveFlowIn", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 TieFlow::TieFlow() : ControlArea(nullptr), Terminal(nullptr) {}
 TieFlow::~TieFlow() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& TieFlow::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:TieFlow.ControlArea", { CGMESProfile::EQ, } },
-	{ "cim:TieFlow.Terminal", { CGMESProfile::EQ, } },
-	{ "cim:TieFlow.positiveFlowIn", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-TieFlow::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-TieFlow::getPossibleProfilesForAttributes() const
+const std::string& TieFlow::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& TieFlow::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& TieFlow::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& TieFlow::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& TieFlow::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& TieFlow::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ControlArea_TieFlow(BaseClass*, BaseClass*);
@@ -142,31 +174,31 @@ const char* TieFlow::debugString() const
 
 void TieFlow::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:TieFlow", &TieFlow_factory);
+	factory_map.emplace("TieFlow", &TieFlow_factory);
 }
 
 void TieFlow::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:TieFlow.positiveFlowIn", &assign_TieFlow_positiveFlowIn);
+	assign_map.emplace("TieFlow.positiveFlowIn", &assign_TieFlow_positiveFlowIn);
 }
 
 void TieFlow::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:TieFlow.ControlArea", &assign_TieFlow_ControlArea);
-	assign_map.emplace("cim:TieFlow.Terminal", &assign_TieFlow_Terminal);
+	assign_map.emplace("TieFlow.ControlArea", &assign_TieFlow_ControlArea);
+	assign_map.emplace("TieFlow.Terminal", &assign_TieFlow_Terminal);
 }
 
 void TieFlow::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:TieFlow.positiveFlowIn", &get_TieFlow_positiveFlowIn);
+	get_map.emplace("TieFlow.positiveFlowIn", &get_TieFlow_positiveFlowIn);
 }
 
 void TieFlow::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	IdentifiedObject::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:TieFlow.ControlArea", &get_TieFlow_ControlArea);
-	get_map.emplace("cim:TieFlow.Terminal", &get_TieFlow_Terminal);
+	get_map.emplace("TieFlow.ControlArea", &get_TieFlow_ControlArea);
+	get_map.emplace("TieFlow.Terminal", &get_TieFlow_Terminal);
 }
 
 void TieFlow::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -174,9 +206,23 @@ void TieFlow::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) c
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool TieFlow::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "TieFlow" &&
+		dynamic_cast<TieFlow*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner TieFlow::declare()
 {
 	return BaseClassDefiner(TieFlow::addConstructToMap, TieFlow::addPrimitiveAssignFnsToMap, TieFlow::addClassAssignFnsToMap, TieFlow::debugName);
+}
+
+std::map<std::string, AttrDetails> TieFlow::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

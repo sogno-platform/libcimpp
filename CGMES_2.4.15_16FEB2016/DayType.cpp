@@ -12,32 +12,64 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		DayType(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "DayType.SeasonDayTypeSchedules", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 DayType::DayType() {}
 DayType::~DayType() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& DayType::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:DayType.SeasonDayTypeSchedules", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-DayType::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-DayType::getPossibleProfilesForAttributes() const
+const std::string& DayType::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& DayType::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& DayType::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& DayType::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& DayType::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& DayType::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_SeasonDayTypeSchedule_DayType(BaseClass*, BaseClass*);
@@ -66,7 +98,7 @@ const char* DayType::debugString() const
 
 void DayType::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:DayType", &DayType_factory);
+	factory_map.emplace("DayType", &DayType_factory);
 }
 
 void DayType::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -75,7 +107,7 @@ void DayType::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_
 
 void DayType::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:DayType.SeasonDayTypeSchedules", &assign_DayType_SeasonDayTypeSchedules);
+	assign_map.emplace("DayType.SeasonDayTypeSchedules", &assign_DayType_SeasonDayTypeSchedules);
 }
 
 void DayType::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -93,9 +125,23 @@ void DayType::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) c
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool DayType::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "DayType" &&
+		dynamic_cast<DayType*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner DayType::declare()
 {
 	return BaseClassDefiner(DayType::addConstructToMap, DayType::addPrimitiveAssignFnsToMap, DayType::addClassAssignFnsToMap, DayType::debugName);
+}
+
+std::map<std::string, AttrDetails> DayType::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

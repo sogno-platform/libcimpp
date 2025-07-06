@@ -12,32 +12,64 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		CAESPlant(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "CAESPlant.ThermalGeneratingUnit", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 CAESPlant::CAESPlant() : ThermalGeneratingUnit(nullptr) {}
 CAESPlant::~CAESPlant() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& CAESPlant::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:CAESPlant.ThermalGeneratingUnit", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-CAESPlant::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-CAESPlant::getPossibleProfilesForAttributes() const
+const std::string& CAESPlant::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = PowerSystemResource::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& CAESPlant::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& CAESPlant::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& CAESPlant::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& CAESPlant::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& CAESPlant::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ThermalGeneratingUnit_CAESPlant(BaseClass*, BaseClass*);
@@ -66,7 +98,7 @@ const char* CAESPlant::debugString() const
 
 void CAESPlant::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:CAESPlant", &CAESPlant_factory);
+	factory_map.emplace("CAESPlant", &CAESPlant_factory);
 }
 
 void CAESPlant::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -75,7 +107,7 @@ void CAESPlant::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assig
 
 void CAESPlant::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:CAESPlant.ThermalGeneratingUnit", &assign_CAESPlant_ThermalGeneratingUnit);
+	assign_map.emplace("CAESPlant.ThermalGeneratingUnit", &assign_CAESPlant_ThermalGeneratingUnit);
 }
 
 void CAESPlant::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -93,9 +125,23 @@ void CAESPlant::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map)
 	PowerSystemResource::addEnumGetFnsToMap(get_map);
 }
 
+bool CAESPlant::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "CAESPlant" &&
+		dynamic_cast<CAESPlant*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner CAESPlant::declare()
 {
 	return BaseClassDefiner(CAESPlant::addConstructToMap, CAESPlant::addPrimitiveAssignFnsToMap, CAESPlant::addClassAssignFnsToMap, CAESPlant::debugName);
+}
+
+std::map<std::string, AttrDetails> CAESPlant::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = PowerSystemResource::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

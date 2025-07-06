@@ -11,40 +11,72 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		LoadGenericNonLinear(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "LoadGenericNonLinear.bs", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadGenericNonLinear.bt", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadGenericNonLinear.genericNonLinearLoadModelType", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadGenericNonLinear.ls", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadGenericNonLinear.lt", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadGenericNonLinear.pt", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadGenericNonLinear.qt", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadGenericNonLinear.tp", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadGenericNonLinear.tq", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 LoadGenericNonLinear::LoadGenericNonLinear() {}
 LoadGenericNonLinear::~LoadGenericNonLinear() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& LoadGenericNonLinear::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:LoadGenericNonLinear.bs", { CGMESProfile::DY, } },
-	{ "cim:LoadGenericNonLinear.bt", { CGMESProfile::DY, } },
-	{ "cim:LoadGenericNonLinear.genericNonLinearLoadModelType", { CGMESProfile::DY, } },
-	{ "cim:LoadGenericNonLinear.ls", { CGMESProfile::DY, } },
-	{ "cim:LoadGenericNonLinear.lt", { CGMESProfile::DY, } },
-	{ "cim:LoadGenericNonLinear.pt", { CGMESProfile::DY, } },
-	{ "cim:LoadGenericNonLinear.qt", { CGMESProfile::DY, } },
-	{ "cim:LoadGenericNonLinear.tp", { CGMESProfile::DY, } },
-	{ "cim:LoadGenericNonLinear.tq", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-LoadGenericNonLinear::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-LoadGenericNonLinear::getPossibleProfilesForAttributes() const
+const std::string& LoadGenericNonLinear::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = LoadDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& LoadGenericNonLinear::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& LoadGenericNonLinear::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& LoadGenericNonLinear::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& LoadGenericNonLinear::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& LoadGenericNonLinear::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_LoadGenericNonLinear_bs(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -316,20 +348,20 @@ const char* LoadGenericNonLinear::debugString() const
 
 void LoadGenericNonLinear::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:LoadGenericNonLinear", &LoadGenericNonLinear_factory);
+	factory_map.emplace("LoadGenericNonLinear", &LoadGenericNonLinear_factory);
 }
 
 void LoadGenericNonLinear::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:LoadGenericNonLinear.bs", &assign_LoadGenericNonLinear_bs);
-	assign_map.emplace("cim:LoadGenericNonLinear.bt", &assign_LoadGenericNonLinear_bt);
-	assign_map.emplace("cim:LoadGenericNonLinear.genericNonLinearLoadModelType", &assign_LoadGenericNonLinear_genericNonLinearLoadModelType);
-	assign_map.emplace("cim:LoadGenericNonLinear.ls", &assign_LoadGenericNonLinear_ls);
-	assign_map.emplace("cim:LoadGenericNonLinear.lt", &assign_LoadGenericNonLinear_lt);
-	assign_map.emplace("cim:LoadGenericNonLinear.pt", &assign_LoadGenericNonLinear_pt);
-	assign_map.emplace("cim:LoadGenericNonLinear.qt", &assign_LoadGenericNonLinear_qt);
-	assign_map.emplace("cim:LoadGenericNonLinear.tp", &assign_LoadGenericNonLinear_tp);
-	assign_map.emplace("cim:LoadGenericNonLinear.tq", &assign_LoadGenericNonLinear_tq);
+	assign_map.emplace("LoadGenericNonLinear.bs", &assign_LoadGenericNonLinear_bs);
+	assign_map.emplace("LoadGenericNonLinear.bt", &assign_LoadGenericNonLinear_bt);
+	assign_map.emplace("LoadGenericNonLinear.genericNonLinearLoadModelType", &assign_LoadGenericNonLinear_genericNonLinearLoadModelType);
+	assign_map.emplace("LoadGenericNonLinear.ls", &assign_LoadGenericNonLinear_ls);
+	assign_map.emplace("LoadGenericNonLinear.lt", &assign_LoadGenericNonLinear_lt);
+	assign_map.emplace("LoadGenericNonLinear.pt", &assign_LoadGenericNonLinear_pt);
+	assign_map.emplace("LoadGenericNonLinear.qt", &assign_LoadGenericNonLinear_qt);
+	assign_map.emplace("LoadGenericNonLinear.tp", &assign_LoadGenericNonLinear_tp);
+	assign_map.emplace("LoadGenericNonLinear.tq", &assign_LoadGenericNonLinear_tq);
 }
 
 void LoadGenericNonLinear::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -339,14 +371,14 @@ void LoadGenericNonLinear::addClassAssignFnsToMap(std::unordered_map<std::string
 void LoadGenericNonLinear::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	LoadDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:LoadGenericNonLinear.bs", &get_LoadGenericNonLinear_bs);
-	get_map.emplace("cim:LoadGenericNonLinear.bt", &get_LoadGenericNonLinear_bt);
-	get_map.emplace("cim:LoadGenericNonLinear.ls", &get_LoadGenericNonLinear_ls);
-	get_map.emplace("cim:LoadGenericNonLinear.lt", &get_LoadGenericNonLinear_lt);
-	get_map.emplace("cim:LoadGenericNonLinear.pt", &get_LoadGenericNonLinear_pt);
-	get_map.emplace("cim:LoadGenericNonLinear.qt", &get_LoadGenericNonLinear_qt);
-	get_map.emplace("cim:LoadGenericNonLinear.tp", &get_LoadGenericNonLinear_tp);
-	get_map.emplace("cim:LoadGenericNonLinear.tq", &get_LoadGenericNonLinear_tq);
+	get_map.emplace("LoadGenericNonLinear.bs", &get_LoadGenericNonLinear_bs);
+	get_map.emplace("LoadGenericNonLinear.bt", &get_LoadGenericNonLinear_bt);
+	get_map.emplace("LoadGenericNonLinear.ls", &get_LoadGenericNonLinear_ls);
+	get_map.emplace("LoadGenericNonLinear.lt", &get_LoadGenericNonLinear_lt);
+	get_map.emplace("LoadGenericNonLinear.pt", &get_LoadGenericNonLinear_pt);
+	get_map.emplace("LoadGenericNonLinear.qt", &get_LoadGenericNonLinear_qt);
+	get_map.emplace("LoadGenericNonLinear.tp", &get_LoadGenericNonLinear_tp);
+	get_map.emplace("LoadGenericNonLinear.tq", &get_LoadGenericNonLinear_tq);
 }
 
 void LoadGenericNonLinear::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -357,12 +389,26 @@ void LoadGenericNonLinear::addClassGetFnsToMap(std::map<std::string, class_get_f
 void LoadGenericNonLinear::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	LoadDynamics::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:LoadGenericNonLinear.genericNonLinearLoadModelType", &get_LoadGenericNonLinear_genericNonLinearLoadModelType);
+	get_map.emplace("LoadGenericNonLinear.genericNonLinearLoadModelType", &get_LoadGenericNonLinear_genericNonLinearLoadModelType);
+}
+
+bool LoadGenericNonLinear::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "LoadGenericNonLinear" &&
+		dynamic_cast<LoadGenericNonLinear*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner LoadGenericNonLinear::declare()
 {
 	return BaseClassDefiner(LoadGenericNonLinear::addConstructToMap, LoadGenericNonLinear::addPrimitiveAssignFnsToMap, LoadGenericNonLinear::addClassAssignFnsToMap, LoadGenericNonLinear::debugName);
+}
+
+std::map<std::string, AttrDetails> LoadGenericNonLinear::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = LoadDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

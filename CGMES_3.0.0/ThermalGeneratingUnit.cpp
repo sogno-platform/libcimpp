@@ -15,36 +15,68 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ThermalGeneratingUnit(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ThermalGeneratingUnit.CAESPlant", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "ThermalGeneratingUnit.CogenerationPlant", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "ThermalGeneratingUnit.CombinedCyclePlant", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "ThermalGeneratingUnit.FossilFuels", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ThermalGeneratingUnit::ThermalGeneratingUnit() : CAESPlant(nullptr), CogenerationPlant(nullptr), CombinedCyclePlant(nullptr) {}
 ThermalGeneratingUnit::~ThermalGeneratingUnit() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ThermalGeneratingUnit::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ThermalGeneratingUnit.CAESPlant", { CGMESProfile::EQ, } },
-	{ "cim:ThermalGeneratingUnit.CogenerationPlant", { CGMESProfile::EQ, } },
-	{ "cim:ThermalGeneratingUnit.CombinedCyclePlant", { CGMESProfile::EQ, } },
-	{ "cim:ThermalGeneratingUnit.FossilFuels", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-ThermalGeneratingUnit::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ThermalGeneratingUnit::getPossibleProfilesForAttributes() const
+const std::string& ThermalGeneratingUnit::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = GeneratingUnit::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ThermalGeneratingUnit::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ThermalGeneratingUnit::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ThermalGeneratingUnit::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ThermalGeneratingUnit::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ThermalGeneratingUnit::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_CAESPlant_ThermalGeneratingUnit(BaseClass*, BaseClass*);
@@ -166,7 +198,7 @@ const char* ThermalGeneratingUnit::debugString() const
 
 void ThermalGeneratingUnit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ThermalGeneratingUnit", &ThermalGeneratingUnit_factory);
+	factory_map.emplace("ThermalGeneratingUnit", &ThermalGeneratingUnit_factory);
 }
 
 void ThermalGeneratingUnit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -175,10 +207,10 @@ void ThermalGeneratingUnit::addPrimitiveAssignFnsToMap(std::unordered_map<std::s
 
 void ThermalGeneratingUnit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ThermalGeneratingUnit.CAESPlant", &assign_ThermalGeneratingUnit_CAESPlant);
-	assign_map.emplace("cim:ThermalGeneratingUnit.CogenerationPlant", &assign_ThermalGeneratingUnit_CogenerationPlant);
-	assign_map.emplace("cim:ThermalGeneratingUnit.CombinedCyclePlant", &assign_ThermalGeneratingUnit_CombinedCyclePlant);
-	assign_map.emplace("cim:ThermalGeneratingUnit.FossilFuels", &assign_ThermalGeneratingUnit_FossilFuels);
+	assign_map.emplace("ThermalGeneratingUnit.CAESPlant", &assign_ThermalGeneratingUnit_CAESPlant);
+	assign_map.emplace("ThermalGeneratingUnit.CogenerationPlant", &assign_ThermalGeneratingUnit_CogenerationPlant);
+	assign_map.emplace("ThermalGeneratingUnit.CombinedCyclePlant", &assign_ThermalGeneratingUnit_CombinedCyclePlant);
+	assign_map.emplace("ThermalGeneratingUnit.FossilFuels", &assign_ThermalGeneratingUnit_FossilFuels);
 }
 
 void ThermalGeneratingUnit::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -189,9 +221,9 @@ void ThermalGeneratingUnit::addPrimitiveGetFnsToMap(std::map<std::string, get_fu
 void ThermalGeneratingUnit::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	GeneratingUnit::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:ThermalGeneratingUnit.CAESPlant", &get_ThermalGeneratingUnit_CAESPlant);
-	get_map.emplace("cim:ThermalGeneratingUnit.CogenerationPlant", &get_ThermalGeneratingUnit_CogenerationPlant);
-	get_map.emplace("cim:ThermalGeneratingUnit.CombinedCyclePlant", &get_ThermalGeneratingUnit_CombinedCyclePlant);
+	get_map.emplace("ThermalGeneratingUnit.CAESPlant", &get_ThermalGeneratingUnit_CAESPlant);
+	get_map.emplace("ThermalGeneratingUnit.CogenerationPlant", &get_ThermalGeneratingUnit_CogenerationPlant);
+	get_map.emplace("ThermalGeneratingUnit.CombinedCyclePlant", &get_ThermalGeneratingUnit_CombinedCyclePlant);
 }
 
 void ThermalGeneratingUnit::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -199,9 +231,23 @@ void ThermalGeneratingUnit::addEnumGetFnsToMap(std::map<std::string, get_functio
 	GeneratingUnit::addEnumGetFnsToMap(get_map);
 }
 
+bool ThermalGeneratingUnit::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ThermalGeneratingUnit" &&
+		dynamic_cast<ThermalGeneratingUnit*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ThermalGeneratingUnit::declare()
 {
 	return BaseClassDefiner(ThermalGeneratingUnit::addConstructToMap, ThermalGeneratingUnit::addPrimitiveAssignFnsToMap, ThermalGeneratingUnit::addClassAssignFnsToMap, ThermalGeneratingUnit::debugName);
+}
+
+std::map<std::string, AttrDetails> ThermalGeneratingUnit::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = GeneratingUnit::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

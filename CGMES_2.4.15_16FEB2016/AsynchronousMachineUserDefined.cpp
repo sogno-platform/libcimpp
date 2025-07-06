@@ -12,33 +12,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		AsynchronousMachineUserDefined(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "AsynchronousMachineUserDefined.ProprietaryParameterDynamics", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "AsynchronousMachineUserDefined.proprietary", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 AsynchronousMachineUserDefined::AsynchronousMachineUserDefined() {}
 AsynchronousMachineUserDefined::~AsynchronousMachineUserDefined() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& AsynchronousMachineUserDefined::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:AsynchronousMachineUserDefined.ProprietaryParameterDynamics", { CGMESProfile::DY, } },
-	{ "cim:AsynchronousMachineUserDefined.proprietary", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-AsynchronousMachineUserDefined::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-AsynchronousMachineUserDefined::getPossibleProfilesForAttributes() const
+const std::string& AsynchronousMachineUserDefined::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = AsynchronousMachineDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& AsynchronousMachineUserDefined::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& AsynchronousMachineUserDefined::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& AsynchronousMachineUserDefined::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& AsynchronousMachineUserDefined::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& AsynchronousMachineUserDefined::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ProprietaryParameterDynamics_AsynchronousMachineUserDefined(BaseClass*, BaseClass*);
@@ -96,23 +128,23 @@ const char* AsynchronousMachineUserDefined::debugString() const
 
 void AsynchronousMachineUserDefined::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:AsynchronousMachineUserDefined", &AsynchronousMachineUserDefined_factory);
+	factory_map.emplace("AsynchronousMachineUserDefined", &AsynchronousMachineUserDefined_factory);
 }
 
 void AsynchronousMachineUserDefined::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:AsynchronousMachineUserDefined.proprietary", &assign_AsynchronousMachineUserDefined_proprietary);
+	assign_map.emplace("AsynchronousMachineUserDefined.proprietary", &assign_AsynchronousMachineUserDefined_proprietary);
 }
 
 void AsynchronousMachineUserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:AsynchronousMachineUserDefined.ProprietaryParameterDynamics", &assign_AsynchronousMachineUserDefined_ProprietaryParameterDynamics);
+	assign_map.emplace("AsynchronousMachineUserDefined.ProprietaryParameterDynamics", &assign_AsynchronousMachineUserDefined_ProprietaryParameterDynamics);
 }
 
 void AsynchronousMachineUserDefined::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	AsynchronousMachineDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:AsynchronousMachineUserDefined.proprietary", &get_AsynchronousMachineUserDefined_proprietary);
+	get_map.emplace("AsynchronousMachineUserDefined.proprietary", &get_AsynchronousMachineUserDefined_proprietary);
 }
 
 void AsynchronousMachineUserDefined::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -125,9 +157,23 @@ void AsynchronousMachineUserDefined::addEnumGetFnsToMap(std::map<std::string, ge
 	AsynchronousMachineDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool AsynchronousMachineUserDefined::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "AsynchronousMachineUserDefined" &&
+		dynamic_cast<AsynchronousMachineUserDefined*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner AsynchronousMachineUserDefined::declare()
 {
 	return BaseClassDefiner(AsynchronousMachineUserDefined::addConstructToMap, AsynchronousMachineUserDefined::addPrimitiveAssignFnsToMap, AsynchronousMachineUserDefined::addClassAssignFnsToMap, AsynchronousMachineUserDefined::debugName);
+}
+
+std::map<std::string, AttrDetails> AsynchronousMachineUserDefined::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = AsynchronousMachineDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

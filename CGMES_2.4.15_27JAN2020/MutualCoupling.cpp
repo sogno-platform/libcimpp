@@ -12,41 +12,73 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		MutualCoupling(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "MutualCoupling.First_Terminal", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "MutualCoupling.Second_Terminal", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "MutualCoupling.b0ch", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "MutualCoupling.distance11", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "MutualCoupling.distance12", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "MutualCoupling.distance21", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "MutualCoupling.distance22", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "MutualCoupling.g0ch", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "MutualCoupling.r0", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "MutualCoupling.x0", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 MutualCoupling::MutualCoupling() : First_Terminal(nullptr), Second_Terminal(nullptr) {}
 MutualCoupling::~MutualCoupling() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& MutualCoupling::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:MutualCoupling.First_Terminal", { CGMESProfile::EQ, } },
-	{ "cim:MutualCoupling.Second_Terminal", { CGMESProfile::EQ, } },
-	{ "cim:MutualCoupling.b0ch", { CGMESProfile::EQ, } },
-	{ "cim:MutualCoupling.distance11", { CGMESProfile::EQ, } },
-	{ "cim:MutualCoupling.distance12", { CGMESProfile::EQ, } },
-	{ "cim:MutualCoupling.distance21", { CGMESProfile::EQ, } },
-	{ "cim:MutualCoupling.distance22", { CGMESProfile::EQ, } },
-	{ "cim:MutualCoupling.g0ch", { CGMESProfile::EQ, } },
-	{ "cim:MutualCoupling.r0", { CGMESProfile::EQ, } },
-	{ "cim:MutualCoupling.x0", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-MutualCoupling::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-MutualCoupling::getPossibleProfilesForAttributes() const
+const std::string& MutualCoupling::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& MutualCoupling::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& MutualCoupling::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& MutualCoupling::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& MutualCoupling::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& MutualCoupling::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_Terminal_HasFirstMutualCoupling(BaseClass*, BaseClass*);
@@ -351,45 +383,45 @@ const char* MutualCoupling::debugString() const
 
 void MutualCoupling::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:MutualCoupling", &MutualCoupling_factory);
+	factory_map.emplace("MutualCoupling", &MutualCoupling_factory);
 }
 
 void MutualCoupling::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:MutualCoupling.b0ch", &assign_MutualCoupling_b0ch);
-	assign_map.emplace("cim:MutualCoupling.distance11", &assign_MutualCoupling_distance11);
-	assign_map.emplace("cim:MutualCoupling.distance12", &assign_MutualCoupling_distance12);
-	assign_map.emplace("cim:MutualCoupling.distance21", &assign_MutualCoupling_distance21);
-	assign_map.emplace("cim:MutualCoupling.distance22", &assign_MutualCoupling_distance22);
-	assign_map.emplace("cim:MutualCoupling.g0ch", &assign_MutualCoupling_g0ch);
-	assign_map.emplace("cim:MutualCoupling.r0", &assign_MutualCoupling_r0);
-	assign_map.emplace("cim:MutualCoupling.x0", &assign_MutualCoupling_x0);
+	assign_map.emplace("MutualCoupling.b0ch", &assign_MutualCoupling_b0ch);
+	assign_map.emplace("MutualCoupling.distance11", &assign_MutualCoupling_distance11);
+	assign_map.emplace("MutualCoupling.distance12", &assign_MutualCoupling_distance12);
+	assign_map.emplace("MutualCoupling.distance21", &assign_MutualCoupling_distance21);
+	assign_map.emplace("MutualCoupling.distance22", &assign_MutualCoupling_distance22);
+	assign_map.emplace("MutualCoupling.g0ch", &assign_MutualCoupling_g0ch);
+	assign_map.emplace("MutualCoupling.r0", &assign_MutualCoupling_r0);
+	assign_map.emplace("MutualCoupling.x0", &assign_MutualCoupling_x0);
 }
 
 void MutualCoupling::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:MutualCoupling.First_Terminal", &assign_MutualCoupling_First_Terminal);
-	assign_map.emplace("cim:MutualCoupling.Second_Terminal", &assign_MutualCoupling_Second_Terminal);
+	assign_map.emplace("MutualCoupling.First_Terminal", &assign_MutualCoupling_First_Terminal);
+	assign_map.emplace("MutualCoupling.Second_Terminal", &assign_MutualCoupling_Second_Terminal);
 }
 
 void MutualCoupling::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:MutualCoupling.b0ch", &get_MutualCoupling_b0ch);
-	get_map.emplace("cim:MutualCoupling.distance11", &get_MutualCoupling_distance11);
-	get_map.emplace("cim:MutualCoupling.distance12", &get_MutualCoupling_distance12);
-	get_map.emplace("cim:MutualCoupling.distance21", &get_MutualCoupling_distance21);
-	get_map.emplace("cim:MutualCoupling.distance22", &get_MutualCoupling_distance22);
-	get_map.emplace("cim:MutualCoupling.g0ch", &get_MutualCoupling_g0ch);
-	get_map.emplace("cim:MutualCoupling.r0", &get_MutualCoupling_r0);
-	get_map.emplace("cim:MutualCoupling.x0", &get_MutualCoupling_x0);
+	get_map.emplace("MutualCoupling.b0ch", &get_MutualCoupling_b0ch);
+	get_map.emplace("MutualCoupling.distance11", &get_MutualCoupling_distance11);
+	get_map.emplace("MutualCoupling.distance12", &get_MutualCoupling_distance12);
+	get_map.emplace("MutualCoupling.distance21", &get_MutualCoupling_distance21);
+	get_map.emplace("MutualCoupling.distance22", &get_MutualCoupling_distance22);
+	get_map.emplace("MutualCoupling.g0ch", &get_MutualCoupling_g0ch);
+	get_map.emplace("MutualCoupling.r0", &get_MutualCoupling_r0);
+	get_map.emplace("MutualCoupling.x0", &get_MutualCoupling_x0);
 }
 
 void MutualCoupling::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	IdentifiedObject::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:MutualCoupling.First_Terminal", &get_MutualCoupling_First_Terminal);
-	get_map.emplace("cim:MutualCoupling.Second_Terminal", &get_MutualCoupling_Second_Terminal);
+	get_map.emplace("MutualCoupling.First_Terminal", &get_MutualCoupling_First_Terminal);
+	get_map.emplace("MutualCoupling.Second_Terminal", &get_MutualCoupling_Second_Terminal);
 }
 
 void MutualCoupling::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -397,9 +429,23 @@ void MutualCoupling::addEnumGetFnsToMap(std::map<std::string, get_function>& get
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool MutualCoupling::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "MutualCoupling" &&
+		dynamic_cast<MutualCoupling*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner MutualCoupling::declare()
 {
 	return BaseClassDefiner(MutualCoupling::addConstructToMap, MutualCoupling::addPrimitiveAssignFnsToMap, MutualCoupling::addClassAssignFnsToMap, MutualCoupling::debugName);
+}
+
+std::map<std::string, AttrDetails> MutualCoupling::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

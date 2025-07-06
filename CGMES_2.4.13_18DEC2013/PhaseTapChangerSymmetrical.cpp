@@ -11,31 +11,63 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		PhaseTapChangerSymmetrical(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+	};
+    return ClassAttrDetailsMap;
+}
+
 PhaseTapChangerSymmetrical::PhaseTapChangerSymmetrical() {}
 PhaseTapChangerSymmetrical::~PhaseTapChangerSymmetrical() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& PhaseTapChangerSymmetrical::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-};
-
-std::list<CGMESProfile>
-PhaseTapChangerSymmetrical::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-PhaseTapChangerSymmetrical::getPossibleProfilesForAttributes() const
+const std::string& PhaseTapChangerSymmetrical::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = PhaseTapChangerNonLinear::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& PhaseTapChangerSymmetrical::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& PhaseTapChangerSymmetrical::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& PhaseTapChangerSymmetrical::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& PhaseTapChangerSymmetrical::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& PhaseTapChangerSymmetrical::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 const char PhaseTapChangerSymmetrical::debugName[] = "PhaseTapChangerSymmetrical";
@@ -46,7 +78,7 @@ const char* PhaseTapChangerSymmetrical::debugString() const
 
 void PhaseTapChangerSymmetrical::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:PhaseTapChangerSymmetrical", &PhaseTapChangerSymmetrical_factory);
+	factory_map.emplace("PhaseTapChangerSymmetrical", &PhaseTapChangerSymmetrical_factory);
 }
 
 void PhaseTapChangerSymmetrical::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -72,9 +104,23 @@ void PhaseTapChangerSymmetrical::addEnumGetFnsToMap(std::map<std::string, get_fu
 	PhaseTapChangerNonLinear::addEnumGetFnsToMap(get_map);
 }
 
+bool PhaseTapChangerSymmetrical::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "PhaseTapChangerSymmetrical" &&
+		dynamic_cast<PhaseTapChangerSymmetrical*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner PhaseTapChangerSymmetrical::declare()
 {
 	return BaseClassDefiner(PhaseTapChangerSymmetrical::addConstructToMap, PhaseTapChangerSymmetrical::addPrimitiveAssignFnsToMap, PhaseTapChangerSymmetrical::addClassAssignFnsToMap, PhaseTapChangerSymmetrical::debugName);
+}
+
+std::map<std::string, AttrDetails> PhaseTapChangerSymmetrical::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = PhaseTapChangerNonLinear::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

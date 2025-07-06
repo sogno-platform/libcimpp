@@ -12,33 +12,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ValueToAlias(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ValueToAlias.ValueAliasSet", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ValueToAlias.value", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ValueToAlias::ValueToAlias() : ValueAliasSet(nullptr) {}
 ValueToAlias::~ValueToAlias() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ValueToAlias::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ValueToAlias.ValueAliasSet", { CGMESProfile::EQ, } },
-	{ "cim:ValueToAlias.value", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-ValueToAlias::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ValueToAlias::getPossibleProfilesForAttributes() const
+const std::string& ValueToAlias::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ValueToAlias::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ValueToAlias::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ValueToAlias::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ValueToAlias::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ValueToAlias::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ValueAliasSet_Values(BaseClass*, BaseClass*);
@@ -109,29 +141,29 @@ const char* ValueToAlias::debugString() const
 
 void ValueToAlias::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ValueToAlias", &ValueToAlias_factory);
+	factory_map.emplace("ValueToAlias", &ValueToAlias_factory);
 }
 
 void ValueToAlias::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ValueToAlias.value", &assign_ValueToAlias_value);
+	assign_map.emplace("ValueToAlias.value", &assign_ValueToAlias_value);
 }
 
 void ValueToAlias::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ValueToAlias.ValueAliasSet", &assign_ValueToAlias_ValueAliasSet);
+	assign_map.emplace("ValueToAlias.ValueAliasSet", &assign_ValueToAlias_ValueAliasSet);
 }
 
 void ValueToAlias::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ValueToAlias.value", &get_ValueToAlias_value);
+	get_map.emplace("ValueToAlias.value", &get_ValueToAlias_value);
 }
 
 void ValueToAlias::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	IdentifiedObject::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:ValueToAlias.ValueAliasSet", &get_ValueToAlias_ValueAliasSet);
+	get_map.emplace("ValueToAlias.ValueAliasSet", &get_ValueToAlias_ValueAliasSet);
 }
 
 void ValueToAlias::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -139,9 +171,23 @@ void ValueToAlias::addEnumGetFnsToMap(std::map<std::string, get_function>& get_m
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool ValueToAlias::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ValueToAlias" &&
+		dynamic_cast<ValueToAlias*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ValueToAlias::declare()
 {
 	return BaseClassDefiner(ValueToAlias::addConstructToMap, ValueToAlias::addPrimitiveAssignFnsToMap, ValueToAlias::addClassAssignFnsToMap, ValueToAlias::debugName);
+}
+
+std::map<std::string, AttrDetails> ValueToAlias::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

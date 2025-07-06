@@ -14,51 +14,83 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		GeneratingUnit(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "GeneratingUnit.ControlAreaGeneratingUnit", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "GeneratingUnit.GrossToNetActivePowerCurves", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "GeneratingUnit.RotatingMachine", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "GeneratingUnit.genControlSource", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "GeneratingUnit.governorSCD", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "GeneratingUnit.initialP", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "GeneratingUnit.longPF", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "GeneratingUnit.maxOperatingP", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "GeneratingUnit.maximumAllowableSpinningReserve", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "GeneratingUnit.minOperatingP", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "GeneratingUnit.nominalP", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "GeneratingUnit.normalPF", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SSH, } } },
+		{ "GeneratingUnit.ratedGrossMaxP", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "GeneratingUnit.ratedGrossMinP", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "GeneratingUnit.ratedNetMaxP", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "GeneratingUnit.shortPF", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "GeneratingUnit.startupCost", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "GeneratingUnit.totalEfficiency", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "GeneratingUnit.variableCost", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 GeneratingUnit::GeneratingUnit() {}
 GeneratingUnit::~GeneratingUnit() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& GeneratingUnit::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:GeneratingUnit.ControlAreaGeneratingUnit", { CGMESProfile::EQ, } },
-	{ "cim:GeneratingUnit.GrossToNetActivePowerCurves", { CGMESProfile::EQ, } },
-	{ "cim:GeneratingUnit.RotatingMachine", { CGMESProfile::EQ, } },
-	{ "cim:GeneratingUnit.genControlSource", { CGMESProfile::EQ, } },
-	{ "cim:GeneratingUnit.governorSCD", { CGMESProfile::EQ, } },
-	{ "cim:GeneratingUnit.initialP", { CGMESProfile::EQ, } },
-	{ "cim:GeneratingUnit.longPF", { CGMESProfile::EQ, } },
-	{ "cim:GeneratingUnit.maxOperatingP", { CGMESProfile::EQ, } },
-	{ "cim:GeneratingUnit.maximumAllowableSpinningReserve", { CGMESProfile::EQ, } },
-	{ "cim:GeneratingUnit.minOperatingP", { CGMESProfile::EQ, } },
-	{ "cim:GeneratingUnit.nominalP", { CGMESProfile::EQ, } },
-	{ "cim:GeneratingUnit.normalPF", { CGMESProfile::SSH, } },
-	{ "cim:GeneratingUnit.ratedGrossMaxP", { CGMESProfile::EQ, } },
-	{ "cim:GeneratingUnit.ratedGrossMinP", { CGMESProfile::EQ, } },
-	{ "cim:GeneratingUnit.ratedNetMaxP", { CGMESProfile::EQ, } },
-	{ "cim:GeneratingUnit.shortPF", { CGMESProfile::EQ, } },
-	{ "cim:GeneratingUnit.startupCost", { CGMESProfile::EQ, } },
-	{ "cim:GeneratingUnit.totalEfficiency", { CGMESProfile::EQ, } },
-	{ "cim:GeneratingUnit.variableCost", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-GeneratingUnit::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-GeneratingUnit::getPossibleProfilesForAttributes() const
+const std::string& GeneratingUnit::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = Equipment::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& GeneratingUnit::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& GeneratingUnit::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& GeneratingUnit::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& GeneratingUnit::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& GeneratingUnit::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ControlAreaGeneratingUnit_GeneratingUnit(BaseClass*, BaseClass*);
@@ -587,54 +619,54 @@ const char* GeneratingUnit::debugString() const
 
 void GeneratingUnit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:GeneratingUnit", &GeneratingUnit_factory);
+	factory_map.emplace("GeneratingUnit", &GeneratingUnit_factory);
 }
 
 void GeneratingUnit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:GeneratingUnit.genControlSource", &assign_GeneratingUnit_genControlSource);
-	assign_map.emplace("cim:GeneratingUnit.governorSCD", &assign_GeneratingUnit_governorSCD);
-	assign_map.emplace("cim:GeneratingUnit.initialP", &assign_GeneratingUnit_initialP);
-	assign_map.emplace("cim:GeneratingUnit.longPF", &assign_GeneratingUnit_longPF);
-	assign_map.emplace("cim:GeneratingUnit.maxOperatingP", &assign_GeneratingUnit_maxOperatingP);
-	assign_map.emplace("cim:GeneratingUnit.maximumAllowableSpinningReserve", &assign_GeneratingUnit_maximumAllowableSpinningReserve);
-	assign_map.emplace("cim:GeneratingUnit.minOperatingP", &assign_GeneratingUnit_minOperatingP);
-	assign_map.emplace("cim:GeneratingUnit.nominalP", &assign_GeneratingUnit_nominalP);
-	assign_map.emplace("cim:GeneratingUnit.normalPF", &assign_GeneratingUnit_normalPF);
-	assign_map.emplace("cim:GeneratingUnit.ratedGrossMaxP", &assign_GeneratingUnit_ratedGrossMaxP);
-	assign_map.emplace("cim:GeneratingUnit.ratedGrossMinP", &assign_GeneratingUnit_ratedGrossMinP);
-	assign_map.emplace("cim:GeneratingUnit.ratedNetMaxP", &assign_GeneratingUnit_ratedNetMaxP);
-	assign_map.emplace("cim:GeneratingUnit.shortPF", &assign_GeneratingUnit_shortPF);
-	assign_map.emplace("cim:GeneratingUnit.startupCost", &assign_GeneratingUnit_startupCost);
-	assign_map.emplace("cim:GeneratingUnit.totalEfficiency", &assign_GeneratingUnit_totalEfficiency);
-	assign_map.emplace("cim:GeneratingUnit.variableCost", &assign_GeneratingUnit_variableCost);
+	assign_map.emplace("GeneratingUnit.genControlSource", &assign_GeneratingUnit_genControlSource);
+	assign_map.emplace("GeneratingUnit.governorSCD", &assign_GeneratingUnit_governorSCD);
+	assign_map.emplace("GeneratingUnit.initialP", &assign_GeneratingUnit_initialP);
+	assign_map.emplace("GeneratingUnit.longPF", &assign_GeneratingUnit_longPF);
+	assign_map.emplace("GeneratingUnit.maxOperatingP", &assign_GeneratingUnit_maxOperatingP);
+	assign_map.emplace("GeneratingUnit.maximumAllowableSpinningReserve", &assign_GeneratingUnit_maximumAllowableSpinningReserve);
+	assign_map.emplace("GeneratingUnit.minOperatingP", &assign_GeneratingUnit_minOperatingP);
+	assign_map.emplace("GeneratingUnit.nominalP", &assign_GeneratingUnit_nominalP);
+	assign_map.emplace("GeneratingUnit.normalPF", &assign_GeneratingUnit_normalPF);
+	assign_map.emplace("GeneratingUnit.ratedGrossMaxP", &assign_GeneratingUnit_ratedGrossMaxP);
+	assign_map.emplace("GeneratingUnit.ratedGrossMinP", &assign_GeneratingUnit_ratedGrossMinP);
+	assign_map.emplace("GeneratingUnit.ratedNetMaxP", &assign_GeneratingUnit_ratedNetMaxP);
+	assign_map.emplace("GeneratingUnit.shortPF", &assign_GeneratingUnit_shortPF);
+	assign_map.emplace("GeneratingUnit.startupCost", &assign_GeneratingUnit_startupCost);
+	assign_map.emplace("GeneratingUnit.totalEfficiency", &assign_GeneratingUnit_totalEfficiency);
+	assign_map.emplace("GeneratingUnit.variableCost", &assign_GeneratingUnit_variableCost);
 }
 
 void GeneratingUnit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:GeneratingUnit.ControlAreaGeneratingUnit", &assign_GeneratingUnit_ControlAreaGeneratingUnit);
-	assign_map.emplace("cim:GeneratingUnit.GrossToNetActivePowerCurves", &assign_GeneratingUnit_GrossToNetActivePowerCurves);
-	assign_map.emplace("cim:GeneratingUnit.RotatingMachine", &assign_GeneratingUnit_RotatingMachine);
+	assign_map.emplace("GeneratingUnit.ControlAreaGeneratingUnit", &assign_GeneratingUnit_ControlAreaGeneratingUnit);
+	assign_map.emplace("GeneratingUnit.GrossToNetActivePowerCurves", &assign_GeneratingUnit_GrossToNetActivePowerCurves);
+	assign_map.emplace("GeneratingUnit.RotatingMachine", &assign_GeneratingUnit_RotatingMachine);
 }
 
 void GeneratingUnit::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	Equipment::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:GeneratingUnit.governorSCD", &get_GeneratingUnit_governorSCD);
-	get_map.emplace("cim:GeneratingUnit.initialP", &get_GeneratingUnit_initialP);
-	get_map.emplace("cim:GeneratingUnit.longPF", &get_GeneratingUnit_longPF);
-	get_map.emplace("cim:GeneratingUnit.maxOperatingP", &get_GeneratingUnit_maxOperatingP);
-	get_map.emplace("cim:GeneratingUnit.maximumAllowableSpinningReserve", &get_GeneratingUnit_maximumAllowableSpinningReserve);
-	get_map.emplace("cim:GeneratingUnit.minOperatingP", &get_GeneratingUnit_minOperatingP);
-	get_map.emplace("cim:GeneratingUnit.nominalP", &get_GeneratingUnit_nominalP);
-	get_map.emplace("cim:GeneratingUnit.normalPF", &get_GeneratingUnit_normalPF);
-	get_map.emplace("cim:GeneratingUnit.ratedGrossMaxP", &get_GeneratingUnit_ratedGrossMaxP);
-	get_map.emplace("cim:GeneratingUnit.ratedGrossMinP", &get_GeneratingUnit_ratedGrossMinP);
-	get_map.emplace("cim:GeneratingUnit.ratedNetMaxP", &get_GeneratingUnit_ratedNetMaxP);
-	get_map.emplace("cim:GeneratingUnit.shortPF", &get_GeneratingUnit_shortPF);
-	get_map.emplace("cim:GeneratingUnit.startupCost", &get_GeneratingUnit_startupCost);
-	get_map.emplace("cim:GeneratingUnit.totalEfficiency", &get_GeneratingUnit_totalEfficiency);
-	get_map.emplace("cim:GeneratingUnit.variableCost", &get_GeneratingUnit_variableCost);
+	get_map.emplace("GeneratingUnit.governorSCD", &get_GeneratingUnit_governorSCD);
+	get_map.emplace("GeneratingUnit.initialP", &get_GeneratingUnit_initialP);
+	get_map.emplace("GeneratingUnit.longPF", &get_GeneratingUnit_longPF);
+	get_map.emplace("GeneratingUnit.maxOperatingP", &get_GeneratingUnit_maxOperatingP);
+	get_map.emplace("GeneratingUnit.maximumAllowableSpinningReserve", &get_GeneratingUnit_maximumAllowableSpinningReserve);
+	get_map.emplace("GeneratingUnit.minOperatingP", &get_GeneratingUnit_minOperatingP);
+	get_map.emplace("GeneratingUnit.nominalP", &get_GeneratingUnit_nominalP);
+	get_map.emplace("GeneratingUnit.normalPF", &get_GeneratingUnit_normalPF);
+	get_map.emplace("GeneratingUnit.ratedGrossMaxP", &get_GeneratingUnit_ratedGrossMaxP);
+	get_map.emplace("GeneratingUnit.ratedGrossMinP", &get_GeneratingUnit_ratedGrossMinP);
+	get_map.emplace("GeneratingUnit.ratedNetMaxP", &get_GeneratingUnit_ratedNetMaxP);
+	get_map.emplace("GeneratingUnit.shortPF", &get_GeneratingUnit_shortPF);
+	get_map.emplace("GeneratingUnit.startupCost", &get_GeneratingUnit_startupCost);
+	get_map.emplace("GeneratingUnit.totalEfficiency", &get_GeneratingUnit_totalEfficiency);
+	get_map.emplace("GeneratingUnit.variableCost", &get_GeneratingUnit_variableCost);
 }
 
 void GeneratingUnit::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -645,12 +677,26 @@ void GeneratingUnit::addClassGetFnsToMap(std::map<std::string, class_get_functio
 void GeneratingUnit::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	Equipment::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:GeneratingUnit.genControlSource", &get_GeneratingUnit_genControlSource);
+	get_map.emplace("GeneratingUnit.genControlSource", &get_GeneratingUnit_genControlSource);
+}
+
+bool GeneratingUnit::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "GeneratingUnit" &&
+		dynamic_cast<GeneratingUnit*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner GeneratingUnit::declare()
 {
 	return BaseClassDefiner(GeneratingUnit::addConstructToMap, GeneratingUnit::addPrimitiveAssignFnsToMap, GeneratingUnit::addClassAssignFnsToMap, GeneratingUnit::debugName);
+}
+
+std::map<std::string, AttrDetails> GeneratingUnit::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = Equipment::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

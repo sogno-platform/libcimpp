@@ -13,37 +13,69 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		DiagramObjectPoint(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DL,
+		},
+		CGMESProfile::DL
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "DiagramObjectPoint.DiagramObject", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+		{ "DiagramObjectPoint.DiagramObjectGluePoint", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+		{ "DiagramObjectPoint.sequenceNumber", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+		{ "DiagramObjectPoint.xPosition", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+		{ "DiagramObjectPoint.yPosition", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+		{ "DiagramObjectPoint.zPosition", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 DiagramObjectPoint::DiagramObjectPoint() : DiagramObject(nullptr), DiagramObjectGluePoint(nullptr) {}
 DiagramObjectPoint::~DiagramObjectPoint() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& DiagramObjectPoint::getAttributeNames() const
 {
-	CGMESProfile::DL,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:DiagramObjectPoint.DiagramObject", { CGMESProfile::DL, } },
-	{ "cim:DiagramObjectPoint.DiagramObjectGluePoint", { CGMESProfile::DL, } },
-	{ "cim:DiagramObjectPoint.sequenceNumber", { CGMESProfile::DL, } },
-	{ "cim:DiagramObjectPoint.xPosition", { CGMESProfile::DL, } },
-	{ "cim:DiagramObjectPoint.yPosition", { CGMESProfile::DL, } },
-	{ "cim:DiagramObjectPoint.zPosition", { CGMESProfile::DL, } },
-};
-
-std::list<CGMESProfile>
-DiagramObjectPoint::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-DiagramObjectPoint::getPossibleProfilesForAttributes() const
+const std::string& DiagramObjectPoint::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& DiagramObjectPoint::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& DiagramObjectPoint::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& DiagramObjectPoint::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& DiagramObjectPoint::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& DiagramObjectPoint::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_DiagramObject_DiagramObjectPoints(BaseClass*, BaseClass*);
@@ -232,37 +264,37 @@ const char* DiagramObjectPoint::debugString() const
 
 void DiagramObjectPoint::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:DiagramObjectPoint", &DiagramObjectPoint_factory);
+	factory_map.emplace("DiagramObjectPoint", &DiagramObjectPoint_factory);
 }
 
 void DiagramObjectPoint::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:DiagramObjectPoint.sequenceNumber", &assign_DiagramObjectPoint_sequenceNumber);
-	assign_map.emplace("cim:DiagramObjectPoint.xPosition", &assign_DiagramObjectPoint_xPosition);
-	assign_map.emplace("cim:DiagramObjectPoint.yPosition", &assign_DiagramObjectPoint_yPosition);
-	assign_map.emplace("cim:DiagramObjectPoint.zPosition", &assign_DiagramObjectPoint_zPosition);
+	assign_map.emplace("DiagramObjectPoint.sequenceNumber", &assign_DiagramObjectPoint_sequenceNumber);
+	assign_map.emplace("DiagramObjectPoint.xPosition", &assign_DiagramObjectPoint_xPosition);
+	assign_map.emplace("DiagramObjectPoint.yPosition", &assign_DiagramObjectPoint_yPosition);
+	assign_map.emplace("DiagramObjectPoint.zPosition", &assign_DiagramObjectPoint_zPosition);
 }
 
 void DiagramObjectPoint::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:DiagramObjectPoint.DiagramObject", &assign_DiagramObjectPoint_DiagramObject);
-	assign_map.emplace("cim:DiagramObjectPoint.DiagramObjectGluePoint", &assign_DiagramObjectPoint_DiagramObjectGluePoint);
+	assign_map.emplace("DiagramObjectPoint.DiagramObject", &assign_DiagramObjectPoint_DiagramObject);
+	assign_map.emplace("DiagramObjectPoint.DiagramObjectGluePoint", &assign_DiagramObjectPoint_DiagramObjectGluePoint);
 }
 
 void DiagramObjectPoint::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	BaseClass::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:DiagramObjectPoint.sequenceNumber", &get_DiagramObjectPoint_sequenceNumber);
-	get_map.emplace("cim:DiagramObjectPoint.xPosition", &get_DiagramObjectPoint_xPosition);
-	get_map.emplace("cim:DiagramObjectPoint.yPosition", &get_DiagramObjectPoint_yPosition);
-	get_map.emplace("cim:DiagramObjectPoint.zPosition", &get_DiagramObjectPoint_zPosition);
+	get_map.emplace("DiagramObjectPoint.sequenceNumber", &get_DiagramObjectPoint_sequenceNumber);
+	get_map.emplace("DiagramObjectPoint.xPosition", &get_DiagramObjectPoint_xPosition);
+	get_map.emplace("DiagramObjectPoint.yPosition", &get_DiagramObjectPoint_yPosition);
+	get_map.emplace("DiagramObjectPoint.zPosition", &get_DiagramObjectPoint_zPosition);
 }
 
 void DiagramObjectPoint::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	BaseClass::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:DiagramObjectPoint.DiagramObject", &get_DiagramObjectPoint_DiagramObject);
-	get_map.emplace("cim:DiagramObjectPoint.DiagramObjectGluePoint", &get_DiagramObjectPoint_DiagramObjectGluePoint);
+	get_map.emplace("DiagramObjectPoint.DiagramObject", &get_DiagramObjectPoint_DiagramObject);
+	get_map.emplace("DiagramObjectPoint.DiagramObjectGluePoint", &get_DiagramObjectPoint_DiagramObjectGluePoint);
 }
 
 void DiagramObjectPoint::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -270,9 +302,23 @@ void DiagramObjectPoint::addEnumGetFnsToMap(std::map<std::string, get_function>&
 	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
+bool DiagramObjectPoint::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "DiagramObjectPoint" &&
+		dynamic_cast<DiagramObjectPoint*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner DiagramObjectPoint::declare()
 {
 	return BaseClassDefiner(DiagramObjectPoint::addConstructToMap, DiagramObjectPoint::addPrimitiveAssignFnsToMap, DiagramObjectPoint::addClassAssignFnsToMap, DiagramObjectPoint::debugName);
+}
+
+std::map<std::string, AttrDetails> DiagramObjectPoint::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = BaseClass::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

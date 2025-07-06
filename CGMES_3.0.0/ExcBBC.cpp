@@ -11,42 +11,74 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ExcBBC(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ExcBBC.efdmax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcBBC.efdmin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcBBC.k", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcBBC.switch", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcBBC.t1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcBBC.t2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcBBC.t3", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcBBC.t4", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcBBC.vrmax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcBBC.vrmin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcBBC.xe", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ExcBBC::ExcBBC() {}
 ExcBBC::~ExcBBC() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ExcBBC::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ExcBBC.efdmax", { CGMESProfile::DY, } },
-	{ "cim:ExcBBC.efdmin", { CGMESProfile::DY, } },
-	{ "cim:ExcBBC.k", { CGMESProfile::DY, } },
-	{ "cim:ExcBBC.switch", { CGMESProfile::DY, } },
-	{ "cim:ExcBBC.t1", { CGMESProfile::DY, } },
-	{ "cim:ExcBBC.t2", { CGMESProfile::DY, } },
-	{ "cim:ExcBBC.t3", { CGMESProfile::DY, } },
-	{ "cim:ExcBBC.t4", { CGMESProfile::DY, } },
-	{ "cim:ExcBBC.vrmax", { CGMESProfile::DY, } },
-	{ "cim:ExcBBC.vrmin", { CGMESProfile::DY, } },
-	{ "cim:ExcBBC.xe", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-ExcBBC::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ExcBBC::getPossibleProfilesForAttributes() const
+const std::string& ExcBBC::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ExcBBC::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ExcBBC::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ExcBBC::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ExcBBC::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ExcBBC::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ExcBBC_efdmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -376,22 +408,22 @@ const char* ExcBBC::debugString() const
 
 void ExcBBC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ExcBBC", &ExcBBC_factory);
+	factory_map.emplace("ExcBBC", &ExcBBC_factory);
 }
 
 void ExcBBC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ExcBBC.efdmax", &assign_ExcBBC_efdmax);
-	assign_map.emplace("cim:ExcBBC.efdmin", &assign_ExcBBC_efdmin);
-	assign_map.emplace("cim:ExcBBC.k", &assign_ExcBBC_k);
-	assign_map.emplace("cim:ExcBBC.switch", &assign_ExcBBC_switch);
-	assign_map.emplace("cim:ExcBBC.t1", &assign_ExcBBC_t1);
-	assign_map.emplace("cim:ExcBBC.t2", &assign_ExcBBC_t2);
-	assign_map.emplace("cim:ExcBBC.t3", &assign_ExcBBC_t3);
-	assign_map.emplace("cim:ExcBBC.t4", &assign_ExcBBC_t4);
-	assign_map.emplace("cim:ExcBBC.vrmax", &assign_ExcBBC_vrmax);
-	assign_map.emplace("cim:ExcBBC.vrmin", &assign_ExcBBC_vrmin);
-	assign_map.emplace("cim:ExcBBC.xe", &assign_ExcBBC_xe);
+	assign_map.emplace("ExcBBC.efdmax", &assign_ExcBBC_efdmax);
+	assign_map.emplace("ExcBBC.efdmin", &assign_ExcBBC_efdmin);
+	assign_map.emplace("ExcBBC.k", &assign_ExcBBC_k);
+	assign_map.emplace("ExcBBC.switch", &assign_ExcBBC_switch);
+	assign_map.emplace("ExcBBC.t1", &assign_ExcBBC_t1);
+	assign_map.emplace("ExcBBC.t2", &assign_ExcBBC_t2);
+	assign_map.emplace("ExcBBC.t3", &assign_ExcBBC_t3);
+	assign_map.emplace("ExcBBC.t4", &assign_ExcBBC_t4);
+	assign_map.emplace("ExcBBC.vrmax", &assign_ExcBBC_vrmax);
+	assign_map.emplace("ExcBBC.vrmin", &assign_ExcBBC_vrmin);
+	assign_map.emplace("ExcBBC.xe", &assign_ExcBBC_xe);
 }
 
 void ExcBBC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -401,17 +433,17 @@ void ExcBBC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign
 void ExcBBC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ExcBBC.efdmax", &get_ExcBBC_efdmax);
-	get_map.emplace("cim:ExcBBC.efdmin", &get_ExcBBC_efdmin);
-	get_map.emplace("cim:ExcBBC.k", &get_ExcBBC_k);
-	get_map.emplace("cim:ExcBBC.switch", &get_ExcBBC_switch);
-	get_map.emplace("cim:ExcBBC.t1", &get_ExcBBC_t1);
-	get_map.emplace("cim:ExcBBC.t2", &get_ExcBBC_t2);
-	get_map.emplace("cim:ExcBBC.t3", &get_ExcBBC_t3);
-	get_map.emplace("cim:ExcBBC.t4", &get_ExcBBC_t4);
-	get_map.emplace("cim:ExcBBC.vrmax", &get_ExcBBC_vrmax);
-	get_map.emplace("cim:ExcBBC.vrmin", &get_ExcBBC_vrmin);
-	get_map.emplace("cim:ExcBBC.xe", &get_ExcBBC_xe);
+	get_map.emplace("ExcBBC.efdmax", &get_ExcBBC_efdmax);
+	get_map.emplace("ExcBBC.efdmin", &get_ExcBBC_efdmin);
+	get_map.emplace("ExcBBC.k", &get_ExcBBC_k);
+	get_map.emplace("ExcBBC.switch", &get_ExcBBC_switch);
+	get_map.emplace("ExcBBC.t1", &get_ExcBBC_t1);
+	get_map.emplace("ExcBBC.t2", &get_ExcBBC_t2);
+	get_map.emplace("ExcBBC.t3", &get_ExcBBC_t3);
+	get_map.emplace("ExcBBC.t4", &get_ExcBBC_t4);
+	get_map.emplace("ExcBBC.vrmax", &get_ExcBBC_vrmax);
+	get_map.emplace("ExcBBC.vrmin", &get_ExcBBC_vrmin);
+	get_map.emplace("ExcBBC.xe", &get_ExcBBC_xe);
 }
 
 void ExcBBC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -424,9 +456,23 @@ void ExcBBC::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) co
 	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool ExcBBC::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ExcBBC" &&
+		dynamic_cast<ExcBBC*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ExcBBC::declare()
 {
 	return BaseClassDefiner(ExcBBC::addConstructToMap, ExcBBC::addPrimitiveAssignFnsToMap, ExcBBC::addClassAssignFnsToMap, ExcBBC::debugName);
+}
+
+std::map<std::string, AttrDetails> ExcBBC::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ExcitationSystemDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

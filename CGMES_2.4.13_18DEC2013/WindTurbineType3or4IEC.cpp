@@ -14,34 +14,66 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		WindTurbineType3or4IEC(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "WindTurbineType3or4IEC.WIndContQIEC", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindTurbineType3or4IEC.WindContCurrLimIEC", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindTurbineType3or4IEC.WindProtectionIEC", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 WindTurbineType3or4IEC::WindTurbineType3or4IEC() : WIndContQIEC(nullptr), WindContCurrLimIEC(nullptr), WindProtectionIEC(nullptr) {}
 WindTurbineType3or4IEC::~WindTurbineType3or4IEC() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& WindTurbineType3or4IEC::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:WindTurbineType3or4IEC.WIndContQIEC", { CGMESProfile::DY, } },
-	{ "cim:WindTurbineType3or4IEC.WindContCurrLimIEC", { CGMESProfile::DY, } },
-	{ "cim:WindTurbineType3or4IEC.WindProtectionIEC", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-WindTurbineType3or4IEC::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-WindTurbineType3or4IEC::getPossibleProfilesForAttributes() const
+const std::string& WindTurbineType3or4IEC::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = WindTurbineType3or4Dynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& WindTurbineType3or4IEC::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& WindTurbineType3or4IEC::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& WindTurbineType3or4IEC::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& WindTurbineType3or4IEC::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& WindTurbineType3or4IEC::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_WindContQIEC_WindTurbineType3or4IEC(BaseClass*, BaseClass*);
@@ -145,7 +177,7 @@ const char* WindTurbineType3or4IEC::debugString() const
 
 void WindTurbineType3or4IEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:WindTurbineType3or4IEC", &WindTurbineType3or4IEC_factory);
+	factory_map.emplace("WindTurbineType3or4IEC", &WindTurbineType3or4IEC_factory);
 }
 
 void WindTurbineType3or4IEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -154,9 +186,9 @@ void WindTurbineType3or4IEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::
 
 void WindTurbineType3or4IEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindTurbineType3or4IEC.WIndContQIEC", &assign_WindTurbineType3or4IEC_WIndContQIEC);
-	assign_map.emplace("cim:WindTurbineType3or4IEC.WindContCurrLimIEC", &assign_WindTurbineType3or4IEC_WindContCurrLimIEC);
-	assign_map.emplace("cim:WindTurbineType3or4IEC.WindProtectionIEC", &assign_WindTurbineType3or4IEC_WindProtectionIEC);
+	assign_map.emplace("WindTurbineType3or4IEC.WIndContQIEC", &assign_WindTurbineType3or4IEC_WIndContQIEC);
+	assign_map.emplace("WindTurbineType3or4IEC.WindContCurrLimIEC", &assign_WindTurbineType3or4IEC_WindContCurrLimIEC);
+	assign_map.emplace("WindTurbineType3or4IEC.WindProtectionIEC", &assign_WindTurbineType3or4IEC_WindProtectionIEC);
 }
 
 void WindTurbineType3or4IEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -167,9 +199,9 @@ void WindTurbineType3or4IEC::addPrimitiveGetFnsToMap(std::map<std::string, get_f
 void WindTurbineType3or4IEC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	WindTurbineType3or4Dynamics::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:WindTurbineType3or4IEC.WIndContQIEC", &get_WindTurbineType3or4IEC_WIndContQIEC);
-	get_map.emplace("cim:WindTurbineType3or4IEC.WindContCurrLimIEC", &get_WindTurbineType3or4IEC_WindContCurrLimIEC);
-	get_map.emplace("cim:WindTurbineType3or4IEC.WindProtectionIEC", &get_WindTurbineType3or4IEC_WindProtectionIEC);
+	get_map.emplace("WindTurbineType3or4IEC.WIndContQIEC", &get_WindTurbineType3or4IEC_WIndContQIEC);
+	get_map.emplace("WindTurbineType3or4IEC.WindContCurrLimIEC", &get_WindTurbineType3or4IEC_WindContCurrLimIEC);
+	get_map.emplace("WindTurbineType3or4IEC.WindProtectionIEC", &get_WindTurbineType3or4IEC_WindProtectionIEC);
 }
 
 void WindTurbineType3or4IEC::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -177,9 +209,23 @@ void WindTurbineType3or4IEC::addEnumGetFnsToMap(std::map<std::string, get_functi
 	WindTurbineType3or4Dynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool WindTurbineType3or4IEC::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "WindTurbineType3or4IEC" &&
+		dynamic_cast<WindTurbineType3or4IEC*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner WindTurbineType3or4IEC::declare()
 {
 	return BaseClassDefiner(WindTurbineType3or4IEC::addConstructToMap, WindTurbineType3or4IEC::addPrimitiveAssignFnsToMap, WindTurbineType3or4IEC::addClassAssignFnsToMap, WindTurbineType3or4IEC::debugName);
+}
+
+std::map<std::string, AttrDetails> WindTurbineType3or4IEC::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = WindTurbineType3or4Dynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

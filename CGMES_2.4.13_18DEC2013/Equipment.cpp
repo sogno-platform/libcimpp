@@ -13,36 +13,68 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		Equipment(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+			CGMESProfile::EQ,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "Equipment.EquipmentContainer", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Equipment.OperationalLimitSet", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Equipment.aggregate", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 Equipment::Equipment() : EquipmentContainer(nullptr) {}
 Equipment::~Equipment() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& Equipment::getAttributeNames() const
 {
-	CGMESProfile::DY,
-	CGMESProfile::EQ,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:Equipment.EquipmentContainer", { CGMESProfile::EQ, } },
-	{ "cim:Equipment.OperationalLimitSet", { CGMESProfile::EQ, } },
-	{ "cim:Equipment.aggregate", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-Equipment::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-Equipment::getPossibleProfilesForAttributes() const
+const std::string& Equipment::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = PowerSystemResource::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& Equipment::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& Equipment::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& Equipment::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& Equipment::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& Equipment::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_EquipmentContainer_Equipments(BaseClass*, BaseClass*);
@@ -131,30 +163,30 @@ const char* Equipment::debugString() const
 
 void Equipment::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:Equipment", &Equipment_factory);
+	factory_map.emplace("Equipment", &Equipment_factory);
 }
 
 void Equipment::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:Equipment.aggregate", &assign_Equipment_aggregate);
+	assign_map.emplace("Equipment.aggregate", &assign_Equipment_aggregate);
 }
 
 void Equipment::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:Equipment.EquipmentContainer", &assign_Equipment_EquipmentContainer);
-	assign_map.emplace("cim:Equipment.OperationalLimitSet", &assign_Equipment_OperationalLimitSet);
+	assign_map.emplace("Equipment.EquipmentContainer", &assign_Equipment_EquipmentContainer);
+	assign_map.emplace("Equipment.OperationalLimitSet", &assign_Equipment_OperationalLimitSet);
 }
 
 void Equipment::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	PowerSystemResource::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:Equipment.aggregate", &get_Equipment_aggregate);
+	get_map.emplace("Equipment.aggregate", &get_Equipment_aggregate);
 }
 
 void Equipment::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	PowerSystemResource::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:Equipment.EquipmentContainer", &get_Equipment_EquipmentContainer);
+	get_map.emplace("Equipment.EquipmentContainer", &get_Equipment_EquipmentContainer);
 }
 
 void Equipment::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -162,9 +194,23 @@ void Equipment::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map)
 	PowerSystemResource::addEnumGetFnsToMap(get_map);
 }
 
+bool Equipment::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "Equipment" &&
+		dynamic_cast<Equipment*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner Equipment::declare()
 {
 	return BaseClassDefiner(Equipment::addConstructToMap, Equipment::addPrimitiveAssignFnsToMap, Equipment::addClassAssignFnsToMap, Equipment::debugName);
+}
+
+std::map<std::string, AttrDetails> Equipment::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = PowerSystemResource::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

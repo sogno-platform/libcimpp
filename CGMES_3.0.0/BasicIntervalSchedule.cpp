@@ -11,34 +11,66 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		BasicIntervalSchedule(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "BasicIntervalSchedule.startTime", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "BasicIntervalSchedule.value1Unit", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "BasicIntervalSchedule.value2Unit", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 BasicIntervalSchedule::BasicIntervalSchedule() {}
 BasicIntervalSchedule::~BasicIntervalSchedule() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& BasicIntervalSchedule::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:BasicIntervalSchedule.startTime", { CGMESProfile::EQ, } },
-	{ "cim:BasicIntervalSchedule.value1Unit", { CGMESProfile::EQ, } },
-	{ "cim:BasicIntervalSchedule.value2Unit", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-BasicIntervalSchedule::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-BasicIntervalSchedule::getPossibleProfilesForAttributes() const
+const std::string& BasicIntervalSchedule::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& BasicIntervalSchedule::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& BasicIntervalSchedule::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& BasicIntervalSchedule::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& BasicIntervalSchedule::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& BasicIntervalSchedule::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_BasicIntervalSchedule_startTime(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -136,14 +168,14 @@ const char* BasicIntervalSchedule::debugString() const
 
 void BasicIntervalSchedule::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:BasicIntervalSchedule", &BasicIntervalSchedule_factory);
+	factory_map.emplace("BasicIntervalSchedule", &BasicIntervalSchedule_factory);
 }
 
 void BasicIntervalSchedule::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:BasicIntervalSchedule.startTime", &assign_BasicIntervalSchedule_startTime);
-	assign_map.emplace("cim:BasicIntervalSchedule.value1Unit", &assign_BasicIntervalSchedule_value1Unit);
-	assign_map.emplace("cim:BasicIntervalSchedule.value2Unit", &assign_BasicIntervalSchedule_value2Unit);
+	assign_map.emplace("BasicIntervalSchedule.startTime", &assign_BasicIntervalSchedule_startTime);
+	assign_map.emplace("BasicIntervalSchedule.value1Unit", &assign_BasicIntervalSchedule_value1Unit);
+	assign_map.emplace("BasicIntervalSchedule.value2Unit", &assign_BasicIntervalSchedule_value2Unit);
 }
 
 void BasicIntervalSchedule::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -153,7 +185,7 @@ void BasicIntervalSchedule::addClassAssignFnsToMap(std::unordered_map<std::strin
 void BasicIntervalSchedule::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:BasicIntervalSchedule.startTime", &get_BasicIntervalSchedule_startTime);
+	get_map.emplace("BasicIntervalSchedule.startTime", &get_BasicIntervalSchedule_startTime);
 }
 
 void BasicIntervalSchedule::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -164,13 +196,27 @@ void BasicIntervalSchedule::addClassGetFnsToMap(std::map<std::string, class_get_
 void BasicIntervalSchedule::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:BasicIntervalSchedule.value1Unit", &get_BasicIntervalSchedule_value1Unit);
-	get_map.emplace("cim:BasicIntervalSchedule.value2Unit", &get_BasicIntervalSchedule_value2Unit);
+	get_map.emplace("BasicIntervalSchedule.value1Unit", &get_BasicIntervalSchedule_value1Unit);
+	get_map.emplace("BasicIntervalSchedule.value2Unit", &get_BasicIntervalSchedule_value2Unit);
+}
+
+bool BasicIntervalSchedule::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "BasicIntervalSchedule" &&
+		dynamic_cast<BasicIntervalSchedule*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner BasicIntervalSchedule::declare()
 {
 	return BaseClassDefiner(BasicIntervalSchedule::addConstructToMap, BasicIntervalSchedule::addPrimitiveAssignFnsToMap, BasicIntervalSchedule::addClassAssignFnsToMap, BasicIntervalSchedule::debugName);
+}
+
+std::map<std::string, AttrDetails> BasicIntervalSchedule::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

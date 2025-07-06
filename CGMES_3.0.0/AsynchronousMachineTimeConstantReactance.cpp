@@ -11,36 +11,68 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		AsynchronousMachineTimeConstantReactance(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "AsynchronousMachineTimeConstantReactance.tpo", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "AsynchronousMachineTimeConstantReactance.tppo", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "AsynchronousMachineTimeConstantReactance.xp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "AsynchronousMachineTimeConstantReactance.xpp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "AsynchronousMachineTimeConstantReactance.xs", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 AsynchronousMachineTimeConstantReactance::AsynchronousMachineTimeConstantReactance() {}
 AsynchronousMachineTimeConstantReactance::~AsynchronousMachineTimeConstantReactance() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& AsynchronousMachineTimeConstantReactance::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:AsynchronousMachineTimeConstantReactance.tpo", { CGMESProfile::DY, } },
-	{ "cim:AsynchronousMachineTimeConstantReactance.tppo", { CGMESProfile::DY, } },
-	{ "cim:AsynchronousMachineTimeConstantReactance.xp", { CGMESProfile::DY, } },
-	{ "cim:AsynchronousMachineTimeConstantReactance.xpp", { CGMESProfile::DY, } },
-	{ "cim:AsynchronousMachineTimeConstantReactance.xs", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-AsynchronousMachineTimeConstantReactance::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-AsynchronousMachineTimeConstantReactance::getPossibleProfilesForAttributes() const
+const std::string& AsynchronousMachineTimeConstantReactance::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = AsynchronousMachineDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& AsynchronousMachineTimeConstantReactance::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& AsynchronousMachineTimeConstantReactance::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& AsynchronousMachineTimeConstantReactance::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& AsynchronousMachineTimeConstantReactance::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& AsynchronousMachineTimeConstantReactance::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_AsynchronousMachineTimeConstantReactance_tpo(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -196,16 +228,16 @@ const char* AsynchronousMachineTimeConstantReactance::debugString() const
 
 void AsynchronousMachineTimeConstantReactance::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:AsynchronousMachineTimeConstantReactance", &AsynchronousMachineTimeConstantReactance_factory);
+	factory_map.emplace("AsynchronousMachineTimeConstantReactance", &AsynchronousMachineTimeConstantReactance_factory);
 }
 
 void AsynchronousMachineTimeConstantReactance::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:AsynchronousMachineTimeConstantReactance.tpo", &assign_AsynchronousMachineTimeConstantReactance_tpo);
-	assign_map.emplace("cim:AsynchronousMachineTimeConstantReactance.tppo", &assign_AsynchronousMachineTimeConstantReactance_tppo);
-	assign_map.emplace("cim:AsynchronousMachineTimeConstantReactance.xp", &assign_AsynchronousMachineTimeConstantReactance_xp);
-	assign_map.emplace("cim:AsynchronousMachineTimeConstantReactance.xpp", &assign_AsynchronousMachineTimeConstantReactance_xpp);
-	assign_map.emplace("cim:AsynchronousMachineTimeConstantReactance.xs", &assign_AsynchronousMachineTimeConstantReactance_xs);
+	assign_map.emplace("AsynchronousMachineTimeConstantReactance.tpo", &assign_AsynchronousMachineTimeConstantReactance_tpo);
+	assign_map.emplace("AsynchronousMachineTimeConstantReactance.tppo", &assign_AsynchronousMachineTimeConstantReactance_tppo);
+	assign_map.emplace("AsynchronousMachineTimeConstantReactance.xp", &assign_AsynchronousMachineTimeConstantReactance_xp);
+	assign_map.emplace("AsynchronousMachineTimeConstantReactance.xpp", &assign_AsynchronousMachineTimeConstantReactance_xpp);
+	assign_map.emplace("AsynchronousMachineTimeConstantReactance.xs", &assign_AsynchronousMachineTimeConstantReactance_xs);
 }
 
 void AsynchronousMachineTimeConstantReactance::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -215,11 +247,11 @@ void AsynchronousMachineTimeConstantReactance::addClassAssignFnsToMap(std::unord
 void AsynchronousMachineTimeConstantReactance::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	AsynchronousMachineDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:AsynchronousMachineTimeConstantReactance.tpo", &get_AsynchronousMachineTimeConstantReactance_tpo);
-	get_map.emplace("cim:AsynchronousMachineTimeConstantReactance.tppo", &get_AsynchronousMachineTimeConstantReactance_tppo);
-	get_map.emplace("cim:AsynchronousMachineTimeConstantReactance.xp", &get_AsynchronousMachineTimeConstantReactance_xp);
-	get_map.emplace("cim:AsynchronousMachineTimeConstantReactance.xpp", &get_AsynchronousMachineTimeConstantReactance_xpp);
-	get_map.emplace("cim:AsynchronousMachineTimeConstantReactance.xs", &get_AsynchronousMachineTimeConstantReactance_xs);
+	get_map.emplace("AsynchronousMachineTimeConstantReactance.tpo", &get_AsynchronousMachineTimeConstantReactance_tpo);
+	get_map.emplace("AsynchronousMachineTimeConstantReactance.tppo", &get_AsynchronousMachineTimeConstantReactance_tppo);
+	get_map.emplace("AsynchronousMachineTimeConstantReactance.xp", &get_AsynchronousMachineTimeConstantReactance_xp);
+	get_map.emplace("AsynchronousMachineTimeConstantReactance.xpp", &get_AsynchronousMachineTimeConstantReactance_xpp);
+	get_map.emplace("AsynchronousMachineTimeConstantReactance.xs", &get_AsynchronousMachineTimeConstantReactance_xs);
 }
 
 void AsynchronousMachineTimeConstantReactance::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -232,9 +264,23 @@ void AsynchronousMachineTimeConstantReactance::addEnumGetFnsToMap(std::map<std::
 	AsynchronousMachineDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool AsynchronousMachineTimeConstantReactance::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "AsynchronousMachineTimeConstantReactance" &&
+		dynamic_cast<AsynchronousMachineTimeConstantReactance*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner AsynchronousMachineTimeConstantReactance::declare()
 {
 	return BaseClassDefiner(AsynchronousMachineTimeConstantReactance::addConstructToMap, AsynchronousMachineTimeConstantReactance::addPrimitiveAssignFnsToMap, AsynchronousMachineTimeConstantReactance::addClassAssignFnsToMap, AsynchronousMachineTimeConstantReactance::debugName);
+}
+
+std::map<std::string, AttrDetails> AsynchronousMachineTimeConstantReactance::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = AsynchronousMachineDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

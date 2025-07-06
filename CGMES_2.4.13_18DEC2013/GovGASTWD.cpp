@@ -11,64 +11,96 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		GovGASTWD(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "GovGASTWD.a", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.af1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.af2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.b", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.bf1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.bf2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.c", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.cf2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.ecr", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.etd", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.k3", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.k4", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.k5", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.k6", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.kd", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.kdroop", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.kf", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.ki", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.kp", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.mwbase", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.t", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.t3", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.t4", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.t5", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.tc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.tcd", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.td", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.tf", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.tmax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.tmin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.tr", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.trate", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGASTWD.tt", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 GovGASTWD::GovGASTWD() {}
 GovGASTWD::~GovGASTWD() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& GovGASTWD::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:GovGASTWD.a", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.af1", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.af2", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.b", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.bf1", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.bf2", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.c", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.cf2", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.ecr", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.etd", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.k3", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.k4", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.k5", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.k6", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.kd", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.kdroop", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.kf", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.ki", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.kp", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.mwbase", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.t", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.t3", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.t4", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.t5", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.tc", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.tcd", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.td", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.tf", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.tmax", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.tmin", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.tr", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.trate", { CGMESProfile::DY, } },
-	{ "cim:GovGASTWD.tt", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-GovGASTWD::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-GovGASTWD::getPossibleProfilesForAttributes() const
+const std::string& GovGASTWD::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = TurbineGovernorDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& GovGASTWD::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& GovGASTWD::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& GovGASTWD::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& GovGASTWD::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& GovGASTWD::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_GovGASTWD_a(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -1036,44 +1068,44 @@ const char* GovGASTWD::debugString() const
 
 void GovGASTWD::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:GovGASTWD", &GovGASTWD_factory);
+	factory_map.emplace("GovGASTWD", &GovGASTWD_factory);
 }
 
 void GovGASTWD::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:GovGASTWD.a", &assign_GovGASTWD_a);
-	assign_map.emplace("cim:GovGASTWD.af1", &assign_GovGASTWD_af1);
-	assign_map.emplace("cim:GovGASTWD.af2", &assign_GovGASTWD_af2);
-	assign_map.emplace("cim:GovGASTWD.b", &assign_GovGASTWD_b);
-	assign_map.emplace("cim:GovGASTWD.bf1", &assign_GovGASTWD_bf1);
-	assign_map.emplace("cim:GovGASTWD.bf2", &assign_GovGASTWD_bf2);
-	assign_map.emplace("cim:GovGASTWD.c", &assign_GovGASTWD_c);
-	assign_map.emplace("cim:GovGASTWD.cf2", &assign_GovGASTWD_cf2);
-	assign_map.emplace("cim:GovGASTWD.ecr", &assign_GovGASTWD_ecr);
-	assign_map.emplace("cim:GovGASTWD.etd", &assign_GovGASTWD_etd);
-	assign_map.emplace("cim:GovGASTWD.k3", &assign_GovGASTWD_k3);
-	assign_map.emplace("cim:GovGASTWD.k4", &assign_GovGASTWD_k4);
-	assign_map.emplace("cim:GovGASTWD.k5", &assign_GovGASTWD_k5);
-	assign_map.emplace("cim:GovGASTWD.k6", &assign_GovGASTWD_k6);
-	assign_map.emplace("cim:GovGASTWD.kd", &assign_GovGASTWD_kd);
-	assign_map.emplace("cim:GovGASTWD.kdroop", &assign_GovGASTWD_kdroop);
-	assign_map.emplace("cim:GovGASTWD.kf", &assign_GovGASTWD_kf);
-	assign_map.emplace("cim:GovGASTWD.ki", &assign_GovGASTWD_ki);
-	assign_map.emplace("cim:GovGASTWD.kp", &assign_GovGASTWD_kp);
-	assign_map.emplace("cim:GovGASTWD.mwbase", &assign_GovGASTWD_mwbase);
-	assign_map.emplace("cim:GovGASTWD.t", &assign_GovGASTWD_t);
-	assign_map.emplace("cim:GovGASTWD.t3", &assign_GovGASTWD_t3);
-	assign_map.emplace("cim:GovGASTWD.t4", &assign_GovGASTWD_t4);
-	assign_map.emplace("cim:GovGASTWD.t5", &assign_GovGASTWD_t5);
-	assign_map.emplace("cim:GovGASTWD.tc", &assign_GovGASTWD_tc);
-	assign_map.emplace("cim:GovGASTWD.tcd", &assign_GovGASTWD_tcd);
-	assign_map.emplace("cim:GovGASTWD.td", &assign_GovGASTWD_td);
-	assign_map.emplace("cim:GovGASTWD.tf", &assign_GovGASTWD_tf);
-	assign_map.emplace("cim:GovGASTWD.tmax", &assign_GovGASTWD_tmax);
-	assign_map.emplace("cim:GovGASTWD.tmin", &assign_GovGASTWD_tmin);
-	assign_map.emplace("cim:GovGASTWD.tr", &assign_GovGASTWD_tr);
-	assign_map.emplace("cim:GovGASTWD.trate", &assign_GovGASTWD_trate);
-	assign_map.emplace("cim:GovGASTWD.tt", &assign_GovGASTWD_tt);
+	assign_map.emplace("GovGASTWD.a", &assign_GovGASTWD_a);
+	assign_map.emplace("GovGASTWD.af1", &assign_GovGASTWD_af1);
+	assign_map.emplace("GovGASTWD.af2", &assign_GovGASTWD_af2);
+	assign_map.emplace("GovGASTWD.b", &assign_GovGASTWD_b);
+	assign_map.emplace("GovGASTWD.bf1", &assign_GovGASTWD_bf1);
+	assign_map.emplace("GovGASTWD.bf2", &assign_GovGASTWD_bf2);
+	assign_map.emplace("GovGASTWD.c", &assign_GovGASTWD_c);
+	assign_map.emplace("GovGASTWD.cf2", &assign_GovGASTWD_cf2);
+	assign_map.emplace("GovGASTWD.ecr", &assign_GovGASTWD_ecr);
+	assign_map.emplace("GovGASTWD.etd", &assign_GovGASTWD_etd);
+	assign_map.emplace("GovGASTWD.k3", &assign_GovGASTWD_k3);
+	assign_map.emplace("GovGASTWD.k4", &assign_GovGASTWD_k4);
+	assign_map.emplace("GovGASTWD.k5", &assign_GovGASTWD_k5);
+	assign_map.emplace("GovGASTWD.k6", &assign_GovGASTWD_k6);
+	assign_map.emplace("GovGASTWD.kd", &assign_GovGASTWD_kd);
+	assign_map.emplace("GovGASTWD.kdroop", &assign_GovGASTWD_kdroop);
+	assign_map.emplace("GovGASTWD.kf", &assign_GovGASTWD_kf);
+	assign_map.emplace("GovGASTWD.ki", &assign_GovGASTWD_ki);
+	assign_map.emplace("GovGASTWD.kp", &assign_GovGASTWD_kp);
+	assign_map.emplace("GovGASTWD.mwbase", &assign_GovGASTWD_mwbase);
+	assign_map.emplace("GovGASTWD.t", &assign_GovGASTWD_t);
+	assign_map.emplace("GovGASTWD.t3", &assign_GovGASTWD_t3);
+	assign_map.emplace("GovGASTWD.t4", &assign_GovGASTWD_t4);
+	assign_map.emplace("GovGASTWD.t5", &assign_GovGASTWD_t5);
+	assign_map.emplace("GovGASTWD.tc", &assign_GovGASTWD_tc);
+	assign_map.emplace("GovGASTWD.tcd", &assign_GovGASTWD_tcd);
+	assign_map.emplace("GovGASTWD.td", &assign_GovGASTWD_td);
+	assign_map.emplace("GovGASTWD.tf", &assign_GovGASTWD_tf);
+	assign_map.emplace("GovGASTWD.tmax", &assign_GovGASTWD_tmax);
+	assign_map.emplace("GovGASTWD.tmin", &assign_GovGASTWD_tmin);
+	assign_map.emplace("GovGASTWD.tr", &assign_GovGASTWD_tr);
+	assign_map.emplace("GovGASTWD.trate", &assign_GovGASTWD_trate);
+	assign_map.emplace("GovGASTWD.tt", &assign_GovGASTWD_tt);
 }
 
 void GovGASTWD::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -1083,39 +1115,39 @@ void GovGASTWD::addClassAssignFnsToMap(std::unordered_map<std::string, class_ass
 void GovGASTWD::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	TurbineGovernorDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:GovGASTWD.a", &get_GovGASTWD_a);
-	get_map.emplace("cim:GovGASTWD.af1", &get_GovGASTWD_af1);
-	get_map.emplace("cim:GovGASTWD.af2", &get_GovGASTWD_af2);
-	get_map.emplace("cim:GovGASTWD.b", &get_GovGASTWD_b);
-	get_map.emplace("cim:GovGASTWD.bf1", &get_GovGASTWD_bf1);
-	get_map.emplace("cim:GovGASTWD.bf2", &get_GovGASTWD_bf2);
-	get_map.emplace("cim:GovGASTWD.c", &get_GovGASTWD_c);
-	get_map.emplace("cim:GovGASTWD.cf2", &get_GovGASTWD_cf2);
-	get_map.emplace("cim:GovGASTWD.ecr", &get_GovGASTWD_ecr);
-	get_map.emplace("cim:GovGASTWD.etd", &get_GovGASTWD_etd);
-	get_map.emplace("cim:GovGASTWD.k3", &get_GovGASTWD_k3);
-	get_map.emplace("cim:GovGASTWD.k4", &get_GovGASTWD_k4);
-	get_map.emplace("cim:GovGASTWD.k5", &get_GovGASTWD_k5);
-	get_map.emplace("cim:GovGASTWD.k6", &get_GovGASTWD_k6);
-	get_map.emplace("cim:GovGASTWD.kd", &get_GovGASTWD_kd);
-	get_map.emplace("cim:GovGASTWD.kdroop", &get_GovGASTWD_kdroop);
-	get_map.emplace("cim:GovGASTWD.kf", &get_GovGASTWD_kf);
-	get_map.emplace("cim:GovGASTWD.ki", &get_GovGASTWD_ki);
-	get_map.emplace("cim:GovGASTWD.kp", &get_GovGASTWD_kp);
-	get_map.emplace("cim:GovGASTWD.mwbase", &get_GovGASTWD_mwbase);
-	get_map.emplace("cim:GovGASTWD.t", &get_GovGASTWD_t);
-	get_map.emplace("cim:GovGASTWD.t3", &get_GovGASTWD_t3);
-	get_map.emplace("cim:GovGASTWD.t4", &get_GovGASTWD_t4);
-	get_map.emplace("cim:GovGASTWD.t5", &get_GovGASTWD_t5);
-	get_map.emplace("cim:GovGASTWD.tc", &get_GovGASTWD_tc);
-	get_map.emplace("cim:GovGASTWD.tcd", &get_GovGASTWD_tcd);
-	get_map.emplace("cim:GovGASTWD.td", &get_GovGASTWD_td);
-	get_map.emplace("cim:GovGASTWD.tf", &get_GovGASTWD_tf);
-	get_map.emplace("cim:GovGASTWD.tmax", &get_GovGASTWD_tmax);
-	get_map.emplace("cim:GovGASTWD.tmin", &get_GovGASTWD_tmin);
-	get_map.emplace("cim:GovGASTWD.tr", &get_GovGASTWD_tr);
-	get_map.emplace("cim:GovGASTWD.trate", &get_GovGASTWD_trate);
-	get_map.emplace("cim:GovGASTWD.tt", &get_GovGASTWD_tt);
+	get_map.emplace("GovGASTWD.a", &get_GovGASTWD_a);
+	get_map.emplace("GovGASTWD.af1", &get_GovGASTWD_af1);
+	get_map.emplace("GovGASTWD.af2", &get_GovGASTWD_af2);
+	get_map.emplace("GovGASTWD.b", &get_GovGASTWD_b);
+	get_map.emplace("GovGASTWD.bf1", &get_GovGASTWD_bf1);
+	get_map.emplace("GovGASTWD.bf2", &get_GovGASTWD_bf2);
+	get_map.emplace("GovGASTWD.c", &get_GovGASTWD_c);
+	get_map.emplace("GovGASTWD.cf2", &get_GovGASTWD_cf2);
+	get_map.emplace("GovGASTWD.ecr", &get_GovGASTWD_ecr);
+	get_map.emplace("GovGASTWD.etd", &get_GovGASTWD_etd);
+	get_map.emplace("GovGASTWD.k3", &get_GovGASTWD_k3);
+	get_map.emplace("GovGASTWD.k4", &get_GovGASTWD_k4);
+	get_map.emplace("GovGASTWD.k5", &get_GovGASTWD_k5);
+	get_map.emplace("GovGASTWD.k6", &get_GovGASTWD_k6);
+	get_map.emplace("GovGASTWD.kd", &get_GovGASTWD_kd);
+	get_map.emplace("GovGASTWD.kdroop", &get_GovGASTWD_kdroop);
+	get_map.emplace("GovGASTWD.kf", &get_GovGASTWD_kf);
+	get_map.emplace("GovGASTWD.ki", &get_GovGASTWD_ki);
+	get_map.emplace("GovGASTWD.kp", &get_GovGASTWD_kp);
+	get_map.emplace("GovGASTWD.mwbase", &get_GovGASTWD_mwbase);
+	get_map.emplace("GovGASTWD.t", &get_GovGASTWD_t);
+	get_map.emplace("GovGASTWD.t3", &get_GovGASTWD_t3);
+	get_map.emplace("GovGASTWD.t4", &get_GovGASTWD_t4);
+	get_map.emplace("GovGASTWD.t5", &get_GovGASTWD_t5);
+	get_map.emplace("GovGASTWD.tc", &get_GovGASTWD_tc);
+	get_map.emplace("GovGASTWD.tcd", &get_GovGASTWD_tcd);
+	get_map.emplace("GovGASTWD.td", &get_GovGASTWD_td);
+	get_map.emplace("GovGASTWD.tf", &get_GovGASTWD_tf);
+	get_map.emplace("GovGASTWD.tmax", &get_GovGASTWD_tmax);
+	get_map.emplace("GovGASTWD.tmin", &get_GovGASTWD_tmin);
+	get_map.emplace("GovGASTWD.tr", &get_GovGASTWD_tr);
+	get_map.emplace("GovGASTWD.trate", &get_GovGASTWD_trate);
+	get_map.emplace("GovGASTWD.tt", &get_GovGASTWD_tt);
 }
 
 void GovGASTWD::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -1128,9 +1160,23 @@ void GovGASTWD::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map)
 	TurbineGovernorDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool GovGASTWD::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "GovGASTWD" &&
+		dynamic_cast<GovGASTWD*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner GovGASTWD::declare()
 {
 	return BaseClassDefiner(GovGASTWD::addConstructToMap, GovGASTWD::addPrimitiveAssignFnsToMap, GovGASTWD::addClassAssignFnsToMap, GovGASTWD::debugName);
+}
+
+std::map<std::string, AttrDetails> GovGASTWD::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = TurbineGovernorDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

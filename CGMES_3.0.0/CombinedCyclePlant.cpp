@@ -12,32 +12,64 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		CombinedCyclePlant(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "CombinedCyclePlant.ThermalGeneratingUnits", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 CombinedCyclePlant::CombinedCyclePlant() {}
 CombinedCyclePlant::~CombinedCyclePlant() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& CombinedCyclePlant::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:CombinedCyclePlant.ThermalGeneratingUnits", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-CombinedCyclePlant::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-CombinedCyclePlant::getPossibleProfilesForAttributes() const
+const std::string& CombinedCyclePlant::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = PowerSystemResource::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& CombinedCyclePlant::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& CombinedCyclePlant::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& CombinedCyclePlant::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& CombinedCyclePlant::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& CombinedCyclePlant::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ThermalGeneratingUnit_CombinedCyclePlant(BaseClass*, BaseClass*);
@@ -66,7 +98,7 @@ const char* CombinedCyclePlant::debugString() const
 
 void CombinedCyclePlant::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:CombinedCyclePlant", &CombinedCyclePlant_factory);
+	factory_map.emplace("CombinedCyclePlant", &CombinedCyclePlant_factory);
 }
 
 void CombinedCyclePlant::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -75,7 +107,7 @@ void CombinedCyclePlant::addPrimitiveAssignFnsToMap(std::unordered_map<std::stri
 
 void CombinedCyclePlant::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:CombinedCyclePlant.ThermalGeneratingUnits", &assign_CombinedCyclePlant_ThermalGeneratingUnits);
+	assign_map.emplace("CombinedCyclePlant.ThermalGeneratingUnits", &assign_CombinedCyclePlant_ThermalGeneratingUnits);
 }
 
 void CombinedCyclePlant::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -93,9 +125,23 @@ void CombinedCyclePlant::addEnumGetFnsToMap(std::map<std::string, get_function>&
 	PowerSystemResource::addEnumGetFnsToMap(get_map);
 }
 
+bool CombinedCyclePlant::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "CombinedCyclePlant" &&
+		dynamic_cast<CombinedCyclePlant*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner CombinedCyclePlant::declare()
 {
 	return BaseClassDefiner(CombinedCyclePlant::addConstructToMap, CombinedCyclePlant::addPrimitiveAssignFnsToMap, CombinedCyclePlant::addClassAssignFnsToMap, CombinedCyclePlant::debugName);
+}
+
+std::map<std::string, AttrDetails> CombinedCyclePlant::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = PowerSystemResource::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

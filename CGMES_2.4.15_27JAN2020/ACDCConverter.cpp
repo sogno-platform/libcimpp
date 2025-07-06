@@ -13,52 +13,84 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ACDCConverter(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SV,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ACDCConverter.DCTerminals", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ACDCConverter.PccTerminal", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ACDCConverter.baseS", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ACDCConverter.idc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SV, } } },
+		{ "ACDCConverter.idleLoss", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ACDCConverter.maxUdc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ACDCConverter.minUdc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ACDCConverter.numberOfValves", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ACDCConverter.p", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SSH, } } },
+		{ "ACDCConverter.poleLossP", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SV, } } },
+		{ "ACDCConverter.q", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SSH, } } },
+		{ "ACDCConverter.ratedUdc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ACDCConverter.resistiveLoss", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ACDCConverter.switchingLoss", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ACDCConverter.targetPpcc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SSH, } } },
+		{ "ACDCConverter.targetUdc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SSH, } } },
+		{ "ACDCConverter.uc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SV, } } },
+		{ "ACDCConverter.udc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SV, } } },
+		{ "ACDCConverter.valveU0", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ACDCConverter::ACDCConverter() : PccTerminal(nullptr) {}
 ACDCConverter::~ACDCConverter() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ACDCConverter::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SV,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ACDCConverter.DCTerminals", { CGMESProfile::EQ, } },
-	{ "cim:ACDCConverter.PccTerminal", { CGMESProfile::EQ, } },
-	{ "cim:ACDCConverter.baseS", { CGMESProfile::EQ, } },
-	{ "cim:ACDCConverter.idc", { CGMESProfile::SV, } },
-	{ "cim:ACDCConverter.idleLoss", { CGMESProfile::EQ, } },
-	{ "cim:ACDCConverter.maxUdc", { CGMESProfile::EQ, } },
-	{ "cim:ACDCConverter.minUdc", { CGMESProfile::EQ, } },
-	{ "cim:ACDCConverter.numberOfValves", { CGMESProfile::EQ, } },
-	{ "cim:ACDCConverter.p", { CGMESProfile::SSH, } },
-	{ "cim:ACDCConverter.poleLossP", { CGMESProfile::SV, } },
-	{ "cim:ACDCConverter.q", { CGMESProfile::SSH, } },
-	{ "cim:ACDCConverter.ratedUdc", { CGMESProfile::EQ, } },
-	{ "cim:ACDCConverter.resistiveLoss", { CGMESProfile::EQ, } },
-	{ "cim:ACDCConverter.switchingLoss", { CGMESProfile::EQ, } },
-	{ "cim:ACDCConverter.targetPpcc", { CGMESProfile::SSH, } },
-	{ "cim:ACDCConverter.targetUdc", { CGMESProfile::SSH, } },
-	{ "cim:ACDCConverter.uc", { CGMESProfile::SV, } },
-	{ "cim:ACDCConverter.udc", { CGMESProfile::SV, } },
-	{ "cim:ACDCConverter.valveU0", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-ACDCConverter::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ACDCConverter::getPossibleProfilesForAttributes() const
+const std::string& ACDCConverter::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ConductingEquipment::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ACDCConverter::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ACDCConverter::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ACDCConverter::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ACDCConverter::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ACDCConverter::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ACDCConverterDCTerminal_DCConductingEquipment(BaseClass*, BaseClass*);
@@ -611,62 +643,62 @@ const char* ACDCConverter::debugString() const
 
 void ACDCConverter::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ACDCConverter", &ACDCConverter_factory);
+	factory_map.emplace("ACDCConverter", &ACDCConverter_factory);
 }
 
 void ACDCConverter::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ACDCConverter.baseS", &assign_ACDCConverter_baseS);
-	assign_map.emplace("cim:ACDCConverter.idc", &assign_ACDCConverter_idc);
-	assign_map.emplace("cim:ACDCConverter.idleLoss", &assign_ACDCConverter_idleLoss);
-	assign_map.emplace("cim:ACDCConverter.maxUdc", &assign_ACDCConverter_maxUdc);
-	assign_map.emplace("cim:ACDCConverter.minUdc", &assign_ACDCConverter_minUdc);
-	assign_map.emplace("cim:ACDCConverter.numberOfValves", &assign_ACDCConverter_numberOfValves);
-	assign_map.emplace("cim:ACDCConverter.p", &assign_ACDCConverter_p);
-	assign_map.emplace("cim:ACDCConverter.poleLossP", &assign_ACDCConverter_poleLossP);
-	assign_map.emplace("cim:ACDCConverter.q", &assign_ACDCConverter_q);
-	assign_map.emplace("cim:ACDCConverter.ratedUdc", &assign_ACDCConverter_ratedUdc);
-	assign_map.emplace("cim:ACDCConverter.resistiveLoss", &assign_ACDCConverter_resistiveLoss);
-	assign_map.emplace("cim:ACDCConverter.switchingLoss", &assign_ACDCConverter_switchingLoss);
-	assign_map.emplace("cim:ACDCConverter.targetPpcc", &assign_ACDCConverter_targetPpcc);
-	assign_map.emplace("cim:ACDCConverter.targetUdc", &assign_ACDCConverter_targetUdc);
-	assign_map.emplace("cim:ACDCConverter.uc", &assign_ACDCConverter_uc);
-	assign_map.emplace("cim:ACDCConverter.udc", &assign_ACDCConverter_udc);
-	assign_map.emplace("cim:ACDCConverter.valveU0", &assign_ACDCConverter_valveU0);
+	assign_map.emplace("ACDCConverter.baseS", &assign_ACDCConverter_baseS);
+	assign_map.emplace("ACDCConverter.idc", &assign_ACDCConverter_idc);
+	assign_map.emplace("ACDCConverter.idleLoss", &assign_ACDCConverter_idleLoss);
+	assign_map.emplace("ACDCConverter.maxUdc", &assign_ACDCConverter_maxUdc);
+	assign_map.emplace("ACDCConverter.minUdc", &assign_ACDCConverter_minUdc);
+	assign_map.emplace("ACDCConverter.numberOfValves", &assign_ACDCConverter_numberOfValves);
+	assign_map.emplace("ACDCConverter.p", &assign_ACDCConverter_p);
+	assign_map.emplace("ACDCConverter.poleLossP", &assign_ACDCConverter_poleLossP);
+	assign_map.emplace("ACDCConverter.q", &assign_ACDCConverter_q);
+	assign_map.emplace("ACDCConverter.ratedUdc", &assign_ACDCConverter_ratedUdc);
+	assign_map.emplace("ACDCConverter.resistiveLoss", &assign_ACDCConverter_resistiveLoss);
+	assign_map.emplace("ACDCConverter.switchingLoss", &assign_ACDCConverter_switchingLoss);
+	assign_map.emplace("ACDCConverter.targetPpcc", &assign_ACDCConverter_targetPpcc);
+	assign_map.emplace("ACDCConverter.targetUdc", &assign_ACDCConverter_targetUdc);
+	assign_map.emplace("ACDCConverter.uc", &assign_ACDCConverter_uc);
+	assign_map.emplace("ACDCConverter.udc", &assign_ACDCConverter_udc);
+	assign_map.emplace("ACDCConverter.valveU0", &assign_ACDCConverter_valveU0);
 }
 
 void ACDCConverter::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ACDCConverter.DCTerminals", &assign_ACDCConverter_DCTerminals);
-	assign_map.emplace("cim:ACDCConverter.PccTerminal", &assign_ACDCConverter_PccTerminal);
+	assign_map.emplace("ACDCConverter.DCTerminals", &assign_ACDCConverter_DCTerminals);
+	assign_map.emplace("ACDCConverter.PccTerminal", &assign_ACDCConverter_PccTerminal);
 }
 
 void ACDCConverter::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ConductingEquipment::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ACDCConverter.baseS", &get_ACDCConverter_baseS);
-	get_map.emplace("cim:ACDCConverter.idc", &get_ACDCConverter_idc);
-	get_map.emplace("cim:ACDCConverter.idleLoss", &get_ACDCConverter_idleLoss);
-	get_map.emplace("cim:ACDCConverter.maxUdc", &get_ACDCConverter_maxUdc);
-	get_map.emplace("cim:ACDCConverter.minUdc", &get_ACDCConverter_minUdc);
-	get_map.emplace("cim:ACDCConverter.numberOfValves", &get_ACDCConverter_numberOfValves);
-	get_map.emplace("cim:ACDCConverter.p", &get_ACDCConverter_p);
-	get_map.emplace("cim:ACDCConverter.poleLossP", &get_ACDCConverter_poleLossP);
-	get_map.emplace("cim:ACDCConverter.q", &get_ACDCConverter_q);
-	get_map.emplace("cim:ACDCConverter.ratedUdc", &get_ACDCConverter_ratedUdc);
-	get_map.emplace("cim:ACDCConverter.resistiveLoss", &get_ACDCConverter_resistiveLoss);
-	get_map.emplace("cim:ACDCConverter.switchingLoss", &get_ACDCConverter_switchingLoss);
-	get_map.emplace("cim:ACDCConverter.targetPpcc", &get_ACDCConverter_targetPpcc);
-	get_map.emplace("cim:ACDCConverter.targetUdc", &get_ACDCConverter_targetUdc);
-	get_map.emplace("cim:ACDCConverter.uc", &get_ACDCConverter_uc);
-	get_map.emplace("cim:ACDCConverter.udc", &get_ACDCConverter_udc);
-	get_map.emplace("cim:ACDCConverter.valveU0", &get_ACDCConverter_valveU0);
+	get_map.emplace("ACDCConverter.baseS", &get_ACDCConverter_baseS);
+	get_map.emplace("ACDCConverter.idc", &get_ACDCConverter_idc);
+	get_map.emplace("ACDCConverter.idleLoss", &get_ACDCConverter_idleLoss);
+	get_map.emplace("ACDCConverter.maxUdc", &get_ACDCConverter_maxUdc);
+	get_map.emplace("ACDCConverter.minUdc", &get_ACDCConverter_minUdc);
+	get_map.emplace("ACDCConverter.numberOfValves", &get_ACDCConverter_numberOfValves);
+	get_map.emplace("ACDCConverter.p", &get_ACDCConverter_p);
+	get_map.emplace("ACDCConverter.poleLossP", &get_ACDCConverter_poleLossP);
+	get_map.emplace("ACDCConverter.q", &get_ACDCConverter_q);
+	get_map.emplace("ACDCConverter.ratedUdc", &get_ACDCConverter_ratedUdc);
+	get_map.emplace("ACDCConverter.resistiveLoss", &get_ACDCConverter_resistiveLoss);
+	get_map.emplace("ACDCConverter.switchingLoss", &get_ACDCConverter_switchingLoss);
+	get_map.emplace("ACDCConverter.targetPpcc", &get_ACDCConverter_targetPpcc);
+	get_map.emplace("ACDCConverter.targetUdc", &get_ACDCConverter_targetUdc);
+	get_map.emplace("ACDCConverter.uc", &get_ACDCConverter_uc);
+	get_map.emplace("ACDCConverter.udc", &get_ACDCConverter_udc);
+	get_map.emplace("ACDCConverter.valveU0", &get_ACDCConverter_valveU0);
 }
 
 void ACDCConverter::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	ConductingEquipment::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:ACDCConverter.PccTerminal", &get_ACDCConverter_PccTerminal);
+	get_map.emplace("ACDCConverter.PccTerminal", &get_ACDCConverter_PccTerminal);
 }
 
 void ACDCConverter::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -674,9 +706,23 @@ void ACDCConverter::addEnumGetFnsToMap(std::map<std::string, get_function>& get_
 	ConductingEquipment::addEnumGetFnsToMap(get_map);
 }
 
+bool ACDCConverter::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ACDCConverter" &&
+		dynamic_cast<ACDCConverter*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ACDCConverter::declare()
 {
 	return BaseClassDefiner(ACDCConverter::addConstructToMap, ACDCConverter::addPrimitiveAssignFnsToMap, ACDCConverter::addClassAssignFnsToMap, ACDCConverter::debugName);
+}
+
+std::map<std::string, AttrDetails> ACDCConverter::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ConductingEquipment::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

@@ -14,40 +14,72 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ACDCTerminal(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+			CGMESProfile::EQ,
+			CGMESProfile::SV,
+			CGMESProfile::SSH,
+			CGMESProfile::TP,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ACDCTerminal.BusNameMarker", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ACDCTerminal.Measurements", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ACDCTerminal.OperationalLimitSet", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ACDCTerminal.connected", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SSH, } } },
+		{ "ACDCTerminal.sequenceNumber", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ACDCTerminal::ACDCTerminal() : BusNameMarker(nullptr) {}
 ACDCTerminal::~ACDCTerminal() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ACDCTerminal::getAttributeNames() const
 {
-	CGMESProfile::DY,
-	CGMESProfile::EQ,
-	CGMESProfile::SV,
-	CGMESProfile::SSH,
-	CGMESProfile::TP,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ACDCTerminal.BusNameMarker", { CGMESProfile::EQ, } },
-	{ "cim:ACDCTerminal.Measurements", { CGMESProfile::EQ, } },
-	{ "cim:ACDCTerminal.OperationalLimitSet", { CGMESProfile::EQ, } },
-	{ "cim:ACDCTerminal.connected", { CGMESProfile::SSH, } },
-	{ "cim:ACDCTerminal.sequenceNumber", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-ACDCTerminal::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ACDCTerminal::getPossibleProfilesForAttributes() const
+const std::string& ACDCTerminal::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ACDCTerminal::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ACDCTerminal::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ACDCTerminal::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ACDCTerminal::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ACDCTerminal::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_BusNameMarker_Terminal(BaseClass*, BaseClass*);
@@ -183,33 +215,33 @@ const char* ACDCTerminal::debugString() const
 
 void ACDCTerminal::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ACDCTerminal", &ACDCTerminal_factory);
+	factory_map.emplace("ACDCTerminal", &ACDCTerminal_factory);
 }
 
 void ACDCTerminal::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ACDCTerminal.connected", &assign_ACDCTerminal_connected);
-	assign_map.emplace("cim:ACDCTerminal.sequenceNumber", &assign_ACDCTerminal_sequenceNumber);
+	assign_map.emplace("ACDCTerminal.connected", &assign_ACDCTerminal_connected);
+	assign_map.emplace("ACDCTerminal.sequenceNumber", &assign_ACDCTerminal_sequenceNumber);
 }
 
 void ACDCTerminal::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ACDCTerminal.BusNameMarker", &assign_ACDCTerminal_BusNameMarker);
-	assign_map.emplace("cim:ACDCTerminal.Measurements", &assign_ACDCTerminal_Measurements);
-	assign_map.emplace("cim:ACDCTerminal.OperationalLimitSet", &assign_ACDCTerminal_OperationalLimitSet);
+	assign_map.emplace("ACDCTerminal.BusNameMarker", &assign_ACDCTerminal_BusNameMarker);
+	assign_map.emplace("ACDCTerminal.Measurements", &assign_ACDCTerminal_Measurements);
+	assign_map.emplace("ACDCTerminal.OperationalLimitSet", &assign_ACDCTerminal_OperationalLimitSet);
 }
 
 void ACDCTerminal::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ACDCTerminal.connected", &get_ACDCTerminal_connected);
-	get_map.emplace("cim:ACDCTerminal.sequenceNumber", &get_ACDCTerminal_sequenceNumber);
+	get_map.emplace("ACDCTerminal.connected", &get_ACDCTerminal_connected);
+	get_map.emplace("ACDCTerminal.sequenceNumber", &get_ACDCTerminal_sequenceNumber);
 }
 
 void ACDCTerminal::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	IdentifiedObject::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:ACDCTerminal.BusNameMarker", &get_ACDCTerminal_BusNameMarker);
+	get_map.emplace("ACDCTerminal.BusNameMarker", &get_ACDCTerminal_BusNameMarker);
 }
 
 void ACDCTerminal::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -217,9 +249,23 @@ void ACDCTerminal::addEnumGetFnsToMap(std::map<std::string, get_function>& get_m
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool ACDCTerminal::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ACDCTerminal" &&
+		dynamic_cast<ACDCTerminal*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ACDCTerminal::declare()
 {
 	return BaseClassDefiner(ACDCTerminal::addConstructToMap, ACDCTerminal::addPrimitiveAssignFnsToMap, ACDCTerminal::addClassAssignFnsToMap, ACDCTerminal::debugName);
+}
+
+std::map<std::string, AttrDetails> ACDCTerminal::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

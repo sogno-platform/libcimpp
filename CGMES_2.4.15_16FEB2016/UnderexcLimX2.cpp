@@ -11,38 +11,70 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		UnderexcLimX2(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "UnderexcLimX2.kf2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "UnderexcLimX2.km", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "UnderexcLimX2.melmax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "UnderexcLimX2.qo", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "UnderexcLimX2.r", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "UnderexcLimX2.tf2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "UnderexcLimX2.tm", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 UnderexcLimX2::UnderexcLimX2() {}
 UnderexcLimX2::~UnderexcLimX2() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& UnderexcLimX2::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:UnderexcLimX2.kf2", { CGMESProfile::DY, } },
-	{ "cim:UnderexcLimX2.km", { CGMESProfile::DY, } },
-	{ "cim:UnderexcLimX2.melmax", { CGMESProfile::DY, } },
-	{ "cim:UnderexcLimX2.qo", { CGMESProfile::DY, } },
-	{ "cim:UnderexcLimX2.r", { CGMESProfile::DY, } },
-	{ "cim:UnderexcLimX2.tf2", { CGMESProfile::DY, } },
-	{ "cim:UnderexcLimX2.tm", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-UnderexcLimX2::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-UnderexcLimX2::getPossibleProfilesForAttributes() const
+const std::string& UnderexcLimX2::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = UnderexcitationLimiterDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& UnderexcLimX2::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& UnderexcLimX2::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& UnderexcLimX2::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& UnderexcLimX2::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& UnderexcLimX2::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_UnderexcLimX2_kf2(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -256,18 +288,18 @@ const char* UnderexcLimX2::debugString() const
 
 void UnderexcLimX2::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:UnderexcLimX2", &UnderexcLimX2_factory);
+	factory_map.emplace("UnderexcLimX2", &UnderexcLimX2_factory);
 }
 
 void UnderexcLimX2::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:UnderexcLimX2.kf2", &assign_UnderexcLimX2_kf2);
-	assign_map.emplace("cim:UnderexcLimX2.km", &assign_UnderexcLimX2_km);
-	assign_map.emplace("cim:UnderexcLimX2.melmax", &assign_UnderexcLimX2_melmax);
-	assign_map.emplace("cim:UnderexcLimX2.qo", &assign_UnderexcLimX2_qo);
-	assign_map.emplace("cim:UnderexcLimX2.r", &assign_UnderexcLimX2_r);
-	assign_map.emplace("cim:UnderexcLimX2.tf2", &assign_UnderexcLimX2_tf2);
-	assign_map.emplace("cim:UnderexcLimX2.tm", &assign_UnderexcLimX2_tm);
+	assign_map.emplace("UnderexcLimX2.kf2", &assign_UnderexcLimX2_kf2);
+	assign_map.emplace("UnderexcLimX2.km", &assign_UnderexcLimX2_km);
+	assign_map.emplace("UnderexcLimX2.melmax", &assign_UnderexcLimX2_melmax);
+	assign_map.emplace("UnderexcLimX2.qo", &assign_UnderexcLimX2_qo);
+	assign_map.emplace("UnderexcLimX2.r", &assign_UnderexcLimX2_r);
+	assign_map.emplace("UnderexcLimX2.tf2", &assign_UnderexcLimX2_tf2);
+	assign_map.emplace("UnderexcLimX2.tm", &assign_UnderexcLimX2_tm);
 }
 
 void UnderexcLimX2::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -277,13 +309,13 @@ void UnderexcLimX2::addClassAssignFnsToMap(std::unordered_map<std::string, class
 void UnderexcLimX2::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	UnderexcitationLimiterDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:UnderexcLimX2.kf2", &get_UnderexcLimX2_kf2);
-	get_map.emplace("cim:UnderexcLimX2.km", &get_UnderexcLimX2_km);
-	get_map.emplace("cim:UnderexcLimX2.melmax", &get_UnderexcLimX2_melmax);
-	get_map.emplace("cim:UnderexcLimX2.qo", &get_UnderexcLimX2_qo);
-	get_map.emplace("cim:UnderexcLimX2.r", &get_UnderexcLimX2_r);
-	get_map.emplace("cim:UnderexcLimX2.tf2", &get_UnderexcLimX2_tf2);
-	get_map.emplace("cim:UnderexcLimX2.tm", &get_UnderexcLimX2_tm);
+	get_map.emplace("UnderexcLimX2.kf2", &get_UnderexcLimX2_kf2);
+	get_map.emplace("UnderexcLimX2.km", &get_UnderexcLimX2_km);
+	get_map.emplace("UnderexcLimX2.melmax", &get_UnderexcLimX2_melmax);
+	get_map.emplace("UnderexcLimX2.qo", &get_UnderexcLimX2_qo);
+	get_map.emplace("UnderexcLimX2.r", &get_UnderexcLimX2_r);
+	get_map.emplace("UnderexcLimX2.tf2", &get_UnderexcLimX2_tf2);
+	get_map.emplace("UnderexcLimX2.tm", &get_UnderexcLimX2_tm);
 }
 
 void UnderexcLimX2::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -296,9 +328,23 @@ void UnderexcLimX2::addEnumGetFnsToMap(std::map<std::string, get_function>& get_
 	UnderexcitationLimiterDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool UnderexcLimX2::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "UnderexcLimX2" &&
+		dynamic_cast<UnderexcLimX2*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner UnderexcLimX2::declare()
 {
 	return BaseClassDefiner(UnderexcLimX2::addConstructToMap, UnderexcLimX2::addPrimitiveAssignFnsToMap, UnderexcLimX2::addClassAssignFnsToMap, UnderexcLimX2::debugName);
+}
+
+std::map<std::string, AttrDetails> UnderexcLimX2::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = UnderexcitationLimiterDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

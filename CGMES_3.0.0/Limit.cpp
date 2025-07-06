@@ -11,31 +11,63 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		Limit(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::OP,
+		},
+		CGMESProfile::OP
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+	};
+    return ClassAttrDetailsMap;
+}
+
 Limit::Limit() {}
 Limit::~Limit() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& Limit::getAttributeNames() const
 {
-	CGMESProfile::OP,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-};
-
-std::list<CGMESProfile>
-Limit::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-Limit::getPossibleProfilesForAttributes() const
+const std::string& Limit::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& Limit::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& Limit::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& Limit::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& Limit::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& Limit::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 const char Limit::debugName[] = "Limit";
@@ -46,7 +78,7 @@ const char* Limit::debugString() const
 
 void Limit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:Limit", &Limit_factory);
+	factory_map.emplace("Limit", &Limit_factory);
 }
 
 void Limit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -72,9 +104,23 @@ void Limit::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) con
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool Limit::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "Limit" &&
+		dynamic_cast<Limit*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner Limit::declare()
 {
 	return BaseClassDefiner(Limit::addConstructToMap, Limit::addPrimitiveAssignFnsToMap, Limit::addClassAssignFnsToMap, Limit::debugName);
+}
+
+std::map<std::string, AttrDetails> Limit::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

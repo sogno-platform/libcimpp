@@ -11,52 +11,84 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		GovSteamIEEE1(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "GovSteamIEEE1.k", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamIEEE1.k1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamIEEE1.k2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamIEEE1.k3", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamIEEE1.k4", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamIEEE1.k5", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamIEEE1.k6", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamIEEE1.k7", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamIEEE1.k8", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamIEEE1.mwbase", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamIEEE1.pmax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamIEEE1.pmin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamIEEE1.t1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamIEEE1.t2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamIEEE1.t3", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamIEEE1.t4", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamIEEE1.t5", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamIEEE1.t6", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamIEEE1.t7", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamIEEE1.uc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamIEEE1.uo", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 GovSteamIEEE1::GovSteamIEEE1() {}
 GovSteamIEEE1::~GovSteamIEEE1() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& GovSteamIEEE1::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:GovSteamIEEE1.k", { CGMESProfile::DY, } },
-	{ "cim:GovSteamIEEE1.k1", { CGMESProfile::DY, } },
-	{ "cim:GovSteamIEEE1.k2", { CGMESProfile::DY, } },
-	{ "cim:GovSteamIEEE1.k3", { CGMESProfile::DY, } },
-	{ "cim:GovSteamIEEE1.k4", { CGMESProfile::DY, } },
-	{ "cim:GovSteamIEEE1.k5", { CGMESProfile::DY, } },
-	{ "cim:GovSteamIEEE1.k6", { CGMESProfile::DY, } },
-	{ "cim:GovSteamIEEE1.k7", { CGMESProfile::DY, } },
-	{ "cim:GovSteamIEEE1.k8", { CGMESProfile::DY, } },
-	{ "cim:GovSteamIEEE1.mwbase", { CGMESProfile::DY, } },
-	{ "cim:GovSteamIEEE1.pmax", { CGMESProfile::DY, } },
-	{ "cim:GovSteamIEEE1.pmin", { CGMESProfile::DY, } },
-	{ "cim:GovSteamIEEE1.t1", { CGMESProfile::DY, } },
-	{ "cim:GovSteamIEEE1.t2", { CGMESProfile::DY, } },
-	{ "cim:GovSteamIEEE1.t3", { CGMESProfile::DY, } },
-	{ "cim:GovSteamIEEE1.t4", { CGMESProfile::DY, } },
-	{ "cim:GovSteamIEEE1.t5", { CGMESProfile::DY, } },
-	{ "cim:GovSteamIEEE1.t6", { CGMESProfile::DY, } },
-	{ "cim:GovSteamIEEE1.t7", { CGMESProfile::DY, } },
-	{ "cim:GovSteamIEEE1.uc", { CGMESProfile::DY, } },
-	{ "cim:GovSteamIEEE1.uo", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-GovSteamIEEE1::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-GovSteamIEEE1::getPossibleProfilesForAttributes() const
+const std::string& GovSteamIEEE1::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = TurbineGovernorDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& GovSteamIEEE1::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& GovSteamIEEE1::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& GovSteamIEEE1::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& GovSteamIEEE1::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& GovSteamIEEE1::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_GovSteamIEEE1_k(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -676,32 +708,32 @@ const char* GovSteamIEEE1::debugString() const
 
 void GovSteamIEEE1::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:GovSteamIEEE1", &GovSteamIEEE1_factory);
+	factory_map.emplace("GovSteamIEEE1", &GovSteamIEEE1_factory);
 }
 
 void GovSteamIEEE1::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:GovSteamIEEE1.k", &assign_GovSteamIEEE1_k);
-	assign_map.emplace("cim:GovSteamIEEE1.k1", &assign_GovSteamIEEE1_k1);
-	assign_map.emplace("cim:GovSteamIEEE1.k2", &assign_GovSteamIEEE1_k2);
-	assign_map.emplace("cim:GovSteamIEEE1.k3", &assign_GovSteamIEEE1_k3);
-	assign_map.emplace("cim:GovSteamIEEE1.k4", &assign_GovSteamIEEE1_k4);
-	assign_map.emplace("cim:GovSteamIEEE1.k5", &assign_GovSteamIEEE1_k5);
-	assign_map.emplace("cim:GovSteamIEEE1.k6", &assign_GovSteamIEEE1_k6);
-	assign_map.emplace("cim:GovSteamIEEE1.k7", &assign_GovSteamIEEE1_k7);
-	assign_map.emplace("cim:GovSteamIEEE1.k8", &assign_GovSteamIEEE1_k8);
-	assign_map.emplace("cim:GovSteamIEEE1.mwbase", &assign_GovSteamIEEE1_mwbase);
-	assign_map.emplace("cim:GovSteamIEEE1.pmax", &assign_GovSteamIEEE1_pmax);
-	assign_map.emplace("cim:GovSteamIEEE1.pmin", &assign_GovSteamIEEE1_pmin);
-	assign_map.emplace("cim:GovSteamIEEE1.t1", &assign_GovSteamIEEE1_t1);
-	assign_map.emplace("cim:GovSteamIEEE1.t2", &assign_GovSteamIEEE1_t2);
-	assign_map.emplace("cim:GovSteamIEEE1.t3", &assign_GovSteamIEEE1_t3);
-	assign_map.emplace("cim:GovSteamIEEE1.t4", &assign_GovSteamIEEE1_t4);
-	assign_map.emplace("cim:GovSteamIEEE1.t5", &assign_GovSteamIEEE1_t5);
-	assign_map.emplace("cim:GovSteamIEEE1.t6", &assign_GovSteamIEEE1_t6);
-	assign_map.emplace("cim:GovSteamIEEE1.t7", &assign_GovSteamIEEE1_t7);
-	assign_map.emplace("cim:GovSteamIEEE1.uc", &assign_GovSteamIEEE1_uc);
-	assign_map.emplace("cim:GovSteamIEEE1.uo", &assign_GovSteamIEEE1_uo);
+	assign_map.emplace("GovSteamIEEE1.k", &assign_GovSteamIEEE1_k);
+	assign_map.emplace("GovSteamIEEE1.k1", &assign_GovSteamIEEE1_k1);
+	assign_map.emplace("GovSteamIEEE1.k2", &assign_GovSteamIEEE1_k2);
+	assign_map.emplace("GovSteamIEEE1.k3", &assign_GovSteamIEEE1_k3);
+	assign_map.emplace("GovSteamIEEE1.k4", &assign_GovSteamIEEE1_k4);
+	assign_map.emplace("GovSteamIEEE1.k5", &assign_GovSteamIEEE1_k5);
+	assign_map.emplace("GovSteamIEEE1.k6", &assign_GovSteamIEEE1_k6);
+	assign_map.emplace("GovSteamIEEE1.k7", &assign_GovSteamIEEE1_k7);
+	assign_map.emplace("GovSteamIEEE1.k8", &assign_GovSteamIEEE1_k8);
+	assign_map.emplace("GovSteamIEEE1.mwbase", &assign_GovSteamIEEE1_mwbase);
+	assign_map.emplace("GovSteamIEEE1.pmax", &assign_GovSteamIEEE1_pmax);
+	assign_map.emplace("GovSteamIEEE1.pmin", &assign_GovSteamIEEE1_pmin);
+	assign_map.emplace("GovSteamIEEE1.t1", &assign_GovSteamIEEE1_t1);
+	assign_map.emplace("GovSteamIEEE1.t2", &assign_GovSteamIEEE1_t2);
+	assign_map.emplace("GovSteamIEEE1.t3", &assign_GovSteamIEEE1_t3);
+	assign_map.emplace("GovSteamIEEE1.t4", &assign_GovSteamIEEE1_t4);
+	assign_map.emplace("GovSteamIEEE1.t5", &assign_GovSteamIEEE1_t5);
+	assign_map.emplace("GovSteamIEEE1.t6", &assign_GovSteamIEEE1_t6);
+	assign_map.emplace("GovSteamIEEE1.t7", &assign_GovSteamIEEE1_t7);
+	assign_map.emplace("GovSteamIEEE1.uc", &assign_GovSteamIEEE1_uc);
+	assign_map.emplace("GovSteamIEEE1.uo", &assign_GovSteamIEEE1_uo);
 }
 
 void GovSteamIEEE1::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -711,27 +743,27 @@ void GovSteamIEEE1::addClassAssignFnsToMap(std::unordered_map<std::string, class
 void GovSteamIEEE1::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	TurbineGovernorDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:GovSteamIEEE1.k", &get_GovSteamIEEE1_k);
-	get_map.emplace("cim:GovSteamIEEE1.k1", &get_GovSteamIEEE1_k1);
-	get_map.emplace("cim:GovSteamIEEE1.k2", &get_GovSteamIEEE1_k2);
-	get_map.emplace("cim:GovSteamIEEE1.k3", &get_GovSteamIEEE1_k3);
-	get_map.emplace("cim:GovSteamIEEE1.k4", &get_GovSteamIEEE1_k4);
-	get_map.emplace("cim:GovSteamIEEE1.k5", &get_GovSteamIEEE1_k5);
-	get_map.emplace("cim:GovSteamIEEE1.k6", &get_GovSteamIEEE1_k6);
-	get_map.emplace("cim:GovSteamIEEE1.k7", &get_GovSteamIEEE1_k7);
-	get_map.emplace("cim:GovSteamIEEE1.k8", &get_GovSteamIEEE1_k8);
-	get_map.emplace("cim:GovSteamIEEE1.mwbase", &get_GovSteamIEEE1_mwbase);
-	get_map.emplace("cim:GovSteamIEEE1.pmax", &get_GovSteamIEEE1_pmax);
-	get_map.emplace("cim:GovSteamIEEE1.pmin", &get_GovSteamIEEE1_pmin);
-	get_map.emplace("cim:GovSteamIEEE1.t1", &get_GovSteamIEEE1_t1);
-	get_map.emplace("cim:GovSteamIEEE1.t2", &get_GovSteamIEEE1_t2);
-	get_map.emplace("cim:GovSteamIEEE1.t3", &get_GovSteamIEEE1_t3);
-	get_map.emplace("cim:GovSteamIEEE1.t4", &get_GovSteamIEEE1_t4);
-	get_map.emplace("cim:GovSteamIEEE1.t5", &get_GovSteamIEEE1_t5);
-	get_map.emplace("cim:GovSteamIEEE1.t6", &get_GovSteamIEEE1_t6);
-	get_map.emplace("cim:GovSteamIEEE1.t7", &get_GovSteamIEEE1_t7);
-	get_map.emplace("cim:GovSteamIEEE1.uc", &get_GovSteamIEEE1_uc);
-	get_map.emplace("cim:GovSteamIEEE1.uo", &get_GovSteamIEEE1_uo);
+	get_map.emplace("GovSteamIEEE1.k", &get_GovSteamIEEE1_k);
+	get_map.emplace("GovSteamIEEE1.k1", &get_GovSteamIEEE1_k1);
+	get_map.emplace("GovSteamIEEE1.k2", &get_GovSteamIEEE1_k2);
+	get_map.emplace("GovSteamIEEE1.k3", &get_GovSteamIEEE1_k3);
+	get_map.emplace("GovSteamIEEE1.k4", &get_GovSteamIEEE1_k4);
+	get_map.emplace("GovSteamIEEE1.k5", &get_GovSteamIEEE1_k5);
+	get_map.emplace("GovSteamIEEE1.k6", &get_GovSteamIEEE1_k6);
+	get_map.emplace("GovSteamIEEE1.k7", &get_GovSteamIEEE1_k7);
+	get_map.emplace("GovSteamIEEE1.k8", &get_GovSteamIEEE1_k8);
+	get_map.emplace("GovSteamIEEE1.mwbase", &get_GovSteamIEEE1_mwbase);
+	get_map.emplace("GovSteamIEEE1.pmax", &get_GovSteamIEEE1_pmax);
+	get_map.emplace("GovSteamIEEE1.pmin", &get_GovSteamIEEE1_pmin);
+	get_map.emplace("GovSteamIEEE1.t1", &get_GovSteamIEEE1_t1);
+	get_map.emplace("GovSteamIEEE1.t2", &get_GovSteamIEEE1_t2);
+	get_map.emplace("GovSteamIEEE1.t3", &get_GovSteamIEEE1_t3);
+	get_map.emplace("GovSteamIEEE1.t4", &get_GovSteamIEEE1_t4);
+	get_map.emplace("GovSteamIEEE1.t5", &get_GovSteamIEEE1_t5);
+	get_map.emplace("GovSteamIEEE1.t6", &get_GovSteamIEEE1_t6);
+	get_map.emplace("GovSteamIEEE1.t7", &get_GovSteamIEEE1_t7);
+	get_map.emplace("GovSteamIEEE1.uc", &get_GovSteamIEEE1_uc);
+	get_map.emplace("GovSteamIEEE1.uo", &get_GovSteamIEEE1_uo);
 }
 
 void GovSteamIEEE1::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -744,9 +776,23 @@ void GovSteamIEEE1::addEnumGetFnsToMap(std::map<std::string, get_function>& get_
 	TurbineGovernorDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool GovSteamIEEE1::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "GovSteamIEEE1" &&
+		dynamic_cast<GovSteamIEEE1*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner GovSteamIEEE1::declare()
 {
 	return BaseClassDefiner(GovSteamIEEE1::addConstructToMap, GovSteamIEEE1::addPrimitiveAssignFnsToMap, GovSteamIEEE1::addClassAssignFnsToMap, GovSteamIEEE1::debugName);
+}
+
+std::map<std::string, AttrDetails> GovSteamIEEE1::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = TurbineGovernorDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

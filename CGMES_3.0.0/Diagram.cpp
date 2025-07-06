@@ -13,38 +13,70 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		Diagram(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DL,
+		},
+		CGMESProfile::DL
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "Diagram.DiagramElements", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+		{ "Diagram.DiagramStyle", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+		{ "Diagram.orientation", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+		{ "Diagram.x1InitialView", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+		{ "Diagram.x2InitialView", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+		{ "Diagram.y1InitialView", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+		{ "Diagram.y2InitialView", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 Diagram::Diagram() : DiagramStyle(nullptr) {}
 Diagram::~Diagram() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& Diagram::getAttributeNames() const
 {
-	CGMESProfile::DL,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:Diagram.DiagramElements", { CGMESProfile::DL, } },
-	{ "cim:Diagram.DiagramStyle", { CGMESProfile::DL, } },
-	{ "cim:Diagram.orientation", { CGMESProfile::DL, } },
-	{ "cim:Diagram.x1InitialView", { CGMESProfile::DL, } },
-	{ "cim:Diagram.x2InitialView", { CGMESProfile::DL, } },
-	{ "cim:Diagram.y1InitialView", { CGMESProfile::DL, } },
-	{ "cim:Diagram.y2InitialView", { CGMESProfile::DL, } },
-};
-
-std::list<CGMESProfile>
-Diagram::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-Diagram::getPossibleProfilesForAttributes() const
+const std::string& Diagram::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& Diagram::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& Diagram::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& Diagram::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& Diagram::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& Diagram::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_DiagramObject_Diagram(BaseClass*, BaseClass*);
@@ -249,48 +281,62 @@ const char* Diagram::debugString() const
 
 void Diagram::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:Diagram", &Diagram_factory);
+	factory_map.emplace("Diagram", &Diagram_factory);
 }
 
 void Diagram::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:Diagram.orientation", &assign_Diagram_orientation);
-	assign_map.emplace("cim:Diagram.x1InitialView", &assign_Diagram_x1InitialView);
-	assign_map.emplace("cim:Diagram.x2InitialView", &assign_Diagram_x2InitialView);
-	assign_map.emplace("cim:Diagram.y1InitialView", &assign_Diagram_y1InitialView);
-	assign_map.emplace("cim:Diagram.y2InitialView", &assign_Diagram_y2InitialView);
+	assign_map.emplace("Diagram.orientation", &assign_Diagram_orientation);
+	assign_map.emplace("Diagram.x1InitialView", &assign_Diagram_x1InitialView);
+	assign_map.emplace("Diagram.x2InitialView", &assign_Diagram_x2InitialView);
+	assign_map.emplace("Diagram.y1InitialView", &assign_Diagram_y1InitialView);
+	assign_map.emplace("Diagram.y2InitialView", &assign_Diagram_y2InitialView);
 }
 
 void Diagram::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:Diagram.DiagramElements", &assign_Diagram_DiagramElements);
-	assign_map.emplace("cim:Diagram.DiagramStyle", &assign_Diagram_DiagramStyle);
+	assign_map.emplace("Diagram.DiagramElements", &assign_Diagram_DiagramElements);
+	assign_map.emplace("Diagram.DiagramStyle", &assign_Diagram_DiagramStyle);
 }
 
 void Diagram::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:Diagram.x1InitialView", &get_Diagram_x1InitialView);
-	get_map.emplace("cim:Diagram.x2InitialView", &get_Diagram_x2InitialView);
-	get_map.emplace("cim:Diagram.y1InitialView", &get_Diagram_y1InitialView);
-	get_map.emplace("cim:Diagram.y2InitialView", &get_Diagram_y2InitialView);
+	get_map.emplace("Diagram.x1InitialView", &get_Diagram_x1InitialView);
+	get_map.emplace("Diagram.x2InitialView", &get_Diagram_x2InitialView);
+	get_map.emplace("Diagram.y1InitialView", &get_Diagram_y1InitialView);
+	get_map.emplace("Diagram.y2InitialView", &get_Diagram_y2InitialView);
 }
 
 void Diagram::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	IdentifiedObject::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:Diagram.DiagramStyle", &get_Diagram_DiagramStyle);
+	get_map.emplace("Diagram.DiagramStyle", &get_Diagram_DiagramStyle);
 }
 
 void Diagram::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:Diagram.orientation", &get_Diagram_orientation);
+	get_map.emplace("Diagram.orientation", &get_Diagram_orientation);
+}
+
+bool Diagram::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "Diagram" &&
+		dynamic_cast<Diagram*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner Diagram::declare()
 {
 	return BaseClassDefiner(Diagram::addConstructToMap, Diagram::addPrimitiveAssignFnsToMap, Diagram::addClassAssignFnsToMap, Diagram::debugName);
+}
+
+std::map<std::string, AttrDetails> Diagram::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

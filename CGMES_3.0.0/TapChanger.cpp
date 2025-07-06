@@ -14,44 +14,76 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		TapChanger(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SSH,
+			CGMESProfile::SV,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "TapChanger.SvTapStep", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SV, } } },
+		{ "TapChanger.TapChangerControl", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "TapChanger.TapSchedules", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "TapChanger.controlEnabled", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+		{ "TapChanger.highStep", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "TapChanger.lowStep", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "TapChanger.ltcFlag", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "TapChanger.neutralStep", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "TapChanger.neutralU", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "TapChanger.normalStep", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "TapChanger.step", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 TapChanger::TapChanger() : SvTapStep(nullptr), TapChangerControl(nullptr) {}
 TapChanger::~TapChanger() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& TapChanger::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SSH,
-	CGMESProfile::SV,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:TapChanger.SvTapStep", { CGMESProfile::SV, } },
-	{ "cim:TapChanger.TapChangerControl", { CGMESProfile::EQ, } },
-	{ "cim:TapChanger.TapSchedules", { CGMESProfile::EQ, } },
-	{ "cim:TapChanger.controlEnabled", { CGMESProfile::SSH, } },
-	{ "cim:TapChanger.highStep", { CGMESProfile::EQ, } },
-	{ "cim:TapChanger.lowStep", { CGMESProfile::EQ, } },
-	{ "cim:TapChanger.ltcFlag", { CGMESProfile::EQ, } },
-	{ "cim:TapChanger.neutralStep", { CGMESProfile::EQ, } },
-	{ "cim:TapChanger.neutralU", { CGMESProfile::EQ, } },
-	{ "cim:TapChanger.normalStep", { CGMESProfile::EQ, } },
-	{ "cim:TapChanger.step", { CGMESProfile::SSH, } },
-};
-
-std::list<CGMESProfile>
-TapChanger::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-TapChanger::getPossibleProfilesForAttributes() const
+const std::string& TapChanger::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = PowerSystemResource::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& TapChanger::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& TapChanger::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& TapChanger::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& TapChanger::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& TapChanger::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_SvTapStep_TapChanger(BaseClass*, BaseClass*);
@@ -361,45 +393,45 @@ const char* TapChanger::debugString() const
 
 void TapChanger::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:TapChanger", &TapChanger_factory);
+	factory_map.emplace("TapChanger", &TapChanger_factory);
 }
 
 void TapChanger::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:TapChanger.controlEnabled", &assign_TapChanger_controlEnabled);
-	assign_map.emplace("cim:TapChanger.highStep", &assign_TapChanger_highStep);
-	assign_map.emplace("cim:TapChanger.lowStep", &assign_TapChanger_lowStep);
-	assign_map.emplace("cim:TapChanger.ltcFlag", &assign_TapChanger_ltcFlag);
-	assign_map.emplace("cim:TapChanger.neutralStep", &assign_TapChanger_neutralStep);
-	assign_map.emplace("cim:TapChanger.neutralU", &assign_TapChanger_neutralU);
-	assign_map.emplace("cim:TapChanger.normalStep", &assign_TapChanger_normalStep);
-	assign_map.emplace("cim:TapChanger.step", &assign_TapChanger_step);
+	assign_map.emplace("TapChanger.controlEnabled", &assign_TapChanger_controlEnabled);
+	assign_map.emplace("TapChanger.highStep", &assign_TapChanger_highStep);
+	assign_map.emplace("TapChanger.lowStep", &assign_TapChanger_lowStep);
+	assign_map.emplace("TapChanger.ltcFlag", &assign_TapChanger_ltcFlag);
+	assign_map.emplace("TapChanger.neutralStep", &assign_TapChanger_neutralStep);
+	assign_map.emplace("TapChanger.neutralU", &assign_TapChanger_neutralU);
+	assign_map.emplace("TapChanger.normalStep", &assign_TapChanger_normalStep);
+	assign_map.emplace("TapChanger.step", &assign_TapChanger_step);
 }
 
 void TapChanger::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:TapChanger.SvTapStep", &assign_TapChanger_SvTapStep);
-	assign_map.emplace("cim:TapChanger.TapChangerControl", &assign_TapChanger_TapChangerControl);
-	assign_map.emplace("cim:TapChanger.TapSchedules", &assign_TapChanger_TapSchedules);
+	assign_map.emplace("TapChanger.SvTapStep", &assign_TapChanger_SvTapStep);
+	assign_map.emplace("TapChanger.TapChangerControl", &assign_TapChanger_TapChangerControl);
+	assign_map.emplace("TapChanger.TapSchedules", &assign_TapChanger_TapSchedules);
 }
 
 void TapChanger::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	PowerSystemResource::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:TapChanger.controlEnabled", &get_TapChanger_controlEnabled);
-	get_map.emplace("cim:TapChanger.highStep", &get_TapChanger_highStep);
-	get_map.emplace("cim:TapChanger.lowStep", &get_TapChanger_lowStep);
-	get_map.emplace("cim:TapChanger.ltcFlag", &get_TapChanger_ltcFlag);
-	get_map.emplace("cim:TapChanger.neutralStep", &get_TapChanger_neutralStep);
-	get_map.emplace("cim:TapChanger.neutralU", &get_TapChanger_neutralU);
-	get_map.emplace("cim:TapChanger.normalStep", &get_TapChanger_normalStep);
-	get_map.emplace("cim:TapChanger.step", &get_TapChanger_step);
+	get_map.emplace("TapChanger.controlEnabled", &get_TapChanger_controlEnabled);
+	get_map.emplace("TapChanger.highStep", &get_TapChanger_highStep);
+	get_map.emplace("TapChanger.lowStep", &get_TapChanger_lowStep);
+	get_map.emplace("TapChanger.ltcFlag", &get_TapChanger_ltcFlag);
+	get_map.emplace("TapChanger.neutralStep", &get_TapChanger_neutralStep);
+	get_map.emplace("TapChanger.neutralU", &get_TapChanger_neutralU);
+	get_map.emplace("TapChanger.normalStep", &get_TapChanger_normalStep);
+	get_map.emplace("TapChanger.step", &get_TapChanger_step);
 }
 
 void TapChanger::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	PowerSystemResource::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:TapChanger.TapChangerControl", &get_TapChanger_TapChangerControl);
+	get_map.emplace("TapChanger.TapChangerControl", &get_TapChanger_TapChangerControl);
 }
 
 void TapChanger::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -407,9 +439,23 @@ void TapChanger::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map
 	PowerSystemResource::addEnumGetFnsToMap(get_map);
 }
 
+bool TapChanger::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "TapChanger" &&
+		dynamic_cast<TapChanger*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner TapChanger::declare()
 {
 	return BaseClassDefiner(TapChanger::addConstructToMap, TapChanger::addPrimitiveAssignFnsToMap, TapChanger::addClassAssignFnsToMap, TapChanger::debugName);
+}
+
+std::map<std::string, AttrDetails> TapChanger::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = PowerSystemResource::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

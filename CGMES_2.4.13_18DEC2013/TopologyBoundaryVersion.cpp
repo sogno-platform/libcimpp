@@ -11,41 +11,73 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		TopologyBoundaryVersion(),
+		"http://entsoe.eu/CIM/SchemaExtension/3/1#",
+		{
+			CGMESProfile::TP_BD,
+		},
+		CGMESProfile::TP_BD
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "TopologyBoundaryVersion.baseUML", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP_BD, } } },
+		{ "TopologyBoundaryVersion.baseURI", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP_BD, } } },
+		{ "TopologyBoundaryVersion.date", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP_BD, } } },
+		{ "TopologyBoundaryVersion.differenceModelURI", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP_BD, } } },
+		{ "TopologyBoundaryVersion.entsoeUML", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP_BD, } } },
+		{ "TopologyBoundaryVersion.entsoeURI", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP_BD, } } },
+		{ "TopologyBoundaryVersion.modelDescriptionURI", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP_BD, } } },
+		{ "TopologyBoundaryVersion.namespaceRDF", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP_BD, } } },
+		{ "TopologyBoundaryVersion.namespaceUML", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP_BD, } } },
+		{ "TopologyBoundaryVersion.shortName", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP_BD, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 TopologyBoundaryVersion::TopologyBoundaryVersion() {}
 TopologyBoundaryVersion::~TopologyBoundaryVersion() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& TopologyBoundaryVersion::getAttributeNames() const
 {
-	CGMESProfile::TP_BD,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:TopologyBoundaryVersion.baseUML", { CGMESProfile::TP_BD, } },
-	{ "cim:TopologyBoundaryVersion.baseURI", { CGMESProfile::TP_BD, } },
-	{ "cim:TopologyBoundaryVersion.date", { CGMESProfile::TP_BD, } },
-	{ "cim:TopologyBoundaryVersion.differenceModelURI", { CGMESProfile::TP_BD, } },
-	{ "cim:TopologyBoundaryVersion.entsoeUML", { CGMESProfile::TP_BD, } },
-	{ "cim:TopologyBoundaryVersion.entsoeURI", { CGMESProfile::TP_BD, } },
-	{ "cim:TopologyBoundaryVersion.modelDescriptionURI", { CGMESProfile::TP_BD, } },
-	{ "cim:TopologyBoundaryVersion.namespaceRDF", { CGMESProfile::TP_BD, } },
-	{ "cim:TopologyBoundaryVersion.namespaceUML", { CGMESProfile::TP_BD, } },
-	{ "cim:TopologyBoundaryVersion.shortName", { CGMESProfile::TP_BD, } },
-};
-
-std::list<CGMESProfile>
-TopologyBoundaryVersion::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-TopologyBoundaryVersion::getPossibleProfilesForAttributes() const
+const std::string& TopologyBoundaryVersion::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& TopologyBoundaryVersion::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& TopologyBoundaryVersion::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& TopologyBoundaryVersion::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& TopologyBoundaryVersion::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& TopologyBoundaryVersion::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_TopologyBoundaryVersion_baseUML(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -346,21 +378,21 @@ const char* TopologyBoundaryVersion::debugString() const
 
 void TopologyBoundaryVersion::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:TopologyBoundaryVersion", &TopologyBoundaryVersion_factory);
+	factory_map.emplace("TopologyBoundaryVersion", &TopologyBoundaryVersion_factory);
 }
 
 void TopologyBoundaryVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:TopologyBoundaryVersion.baseUML", &assign_TopologyBoundaryVersion_baseUML);
-	assign_map.emplace("cim:TopologyBoundaryVersion.baseURI", &assign_TopologyBoundaryVersion_baseURI);
-	assign_map.emplace("cim:TopologyBoundaryVersion.date", &assign_TopologyBoundaryVersion_date);
-	assign_map.emplace("cim:TopologyBoundaryVersion.differenceModelURI", &assign_TopologyBoundaryVersion_differenceModelURI);
-	assign_map.emplace("cim:TopologyBoundaryVersion.entsoeUML", &assign_TopologyBoundaryVersion_entsoeUML);
-	assign_map.emplace("cim:TopologyBoundaryVersion.entsoeURI", &assign_TopologyBoundaryVersion_entsoeURI);
-	assign_map.emplace("cim:TopologyBoundaryVersion.modelDescriptionURI", &assign_TopologyBoundaryVersion_modelDescriptionURI);
-	assign_map.emplace("cim:TopologyBoundaryVersion.namespaceRDF", &assign_TopologyBoundaryVersion_namespaceRDF);
-	assign_map.emplace("cim:TopologyBoundaryVersion.namespaceUML", &assign_TopologyBoundaryVersion_namespaceUML);
-	assign_map.emplace("cim:TopologyBoundaryVersion.shortName", &assign_TopologyBoundaryVersion_shortName);
+	assign_map.emplace("TopologyBoundaryVersion.baseUML", &assign_TopologyBoundaryVersion_baseUML);
+	assign_map.emplace("TopologyBoundaryVersion.baseURI", &assign_TopologyBoundaryVersion_baseURI);
+	assign_map.emplace("TopologyBoundaryVersion.date", &assign_TopologyBoundaryVersion_date);
+	assign_map.emplace("TopologyBoundaryVersion.differenceModelURI", &assign_TopologyBoundaryVersion_differenceModelURI);
+	assign_map.emplace("TopologyBoundaryVersion.entsoeUML", &assign_TopologyBoundaryVersion_entsoeUML);
+	assign_map.emplace("TopologyBoundaryVersion.entsoeURI", &assign_TopologyBoundaryVersion_entsoeURI);
+	assign_map.emplace("TopologyBoundaryVersion.modelDescriptionURI", &assign_TopologyBoundaryVersion_modelDescriptionURI);
+	assign_map.emplace("TopologyBoundaryVersion.namespaceRDF", &assign_TopologyBoundaryVersion_namespaceRDF);
+	assign_map.emplace("TopologyBoundaryVersion.namespaceUML", &assign_TopologyBoundaryVersion_namespaceUML);
+	assign_map.emplace("TopologyBoundaryVersion.shortName", &assign_TopologyBoundaryVersion_shortName);
 }
 
 void TopologyBoundaryVersion::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -370,16 +402,16 @@ void TopologyBoundaryVersion::addClassAssignFnsToMap(std::unordered_map<std::str
 void TopologyBoundaryVersion::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	BaseClass::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:TopologyBoundaryVersion.baseUML", &get_TopologyBoundaryVersion_baseUML);
-	get_map.emplace("cim:TopologyBoundaryVersion.baseURI", &get_TopologyBoundaryVersion_baseURI);
-	get_map.emplace("cim:TopologyBoundaryVersion.date", &get_TopologyBoundaryVersion_date);
-	get_map.emplace("cim:TopologyBoundaryVersion.differenceModelURI", &get_TopologyBoundaryVersion_differenceModelURI);
-	get_map.emplace("cim:TopologyBoundaryVersion.entsoeUML", &get_TopologyBoundaryVersion_entsoeUML);
-	get_map.emplace("cim:TopologyBoundaryVersion.entsoeURI", &get_TopologyBoundaryVersion_entsoeURI);
-	get_map.emplace("cim:TopologyBoundaryVersion.modelDescriptionURI", &get_TopologyBoundaryVersion_modelDescriptionURI);
-	get_map.emplace("cim:TopologyBoundaryVersion.namespaceRDF", &get_TopologyBoundaryVersion_namespaceRDF);
-	get_map.emplace("cim:TopologyBoundaryVersion.namespaceUML", &get_TopologyBoundaryVersion_namespaceUML);
-	get_map.emplace("cim:TopologyBoundaryVersion.shortName", &get_TopologyBoundaryVersion_shortName);
+	get_map.emplace("TopologyBoundaryVersion.baseUML", &get_TopologyBoundaryVersion_baseUML);
+	get_map.emplace("TopologyBoundaryVersion.baseURI", &get_TopologyBoundaryVersion_baseURI);
+	get_map.emplace("TopologyBoundaryVersion.date", &get_TopologyBoundaryVersion_date);
+	get_map.emplace("TopologyBoundaryVersion.differenceModelURI", &get_TopologyBoundaryVersion_differenceModelURI);
+	get_map.emplace("TopologyBoundaryVersion.entsoeUML", &get_TopologyBoundaryVersion_entsoeUML);
+	get_map.emplace("TopologyBoundaryVersion.entsoeURI", &get_TopologyBoundaryVersion_entsoeURI);
+	get_map.emplace("TopologyBoundaryVersion.modelDescriptionURI", &get_TopologyBoundaryVersion_modelDescriptionURI);
+	get_map.emplace("TopologyBoundaryVersion.namespaceRDF", &get_TopologyBoundaryVersion_namespaceRDF);
+	get_map.emplace("TopologyBoundaryVersion.namespaceUML", &get_TopologyBoundaryVersion_namespaceUML);
+	get_map.emplace("TopologyBoundaryVersion.shortName", &get_TopologyBoundaryVersion_shortName);
 }
 
 void TopologyBoundaryVersion::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -392,9 +424,23 @@ void TopologyBoundaryVersion::addEnumGetFnsToMap(std::map<std::string, get_funct
 	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
+bool TopologyBoundaryVersion::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "TopologyBoundaryVersion" &&
+		dynamic_cast<TopologyBoundaryVersion*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner TopologyBoundaryVersion::declare()
 {
 	return BaseClassDefiner(TopologyBoundaryVersion::addConstructToMap, TopologyBoundaryVersion::addPrimitiveAssignFnsToMap, TopologyBoundaryVersion::addClassAssignFnsToMap, TopologyBoundaryVersion::debugName);
+}
+
+std::map<std::string, AttrDetails> TopologyBoundaryVersion::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = BaseClass::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

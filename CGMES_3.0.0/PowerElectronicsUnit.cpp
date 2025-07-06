@@ -12,35 +12,67 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		PowerElectronicsUnit(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "PowerElectronicsUnit.PowerElectronicsConnection", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "PowerElectronicsUnit.maxP", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "PowerElectronicsUnit.minP", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 PowerElectronicsUnit::PowerElectronicsUnit() : PowerElectronicsConnection(nullptr) {}
 PowerElectronicsUnit::~PowerElectronicsUnit() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& PowerElectronicsUnit::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:PowerElectronicsUnit.PowerElectronicsConnection", { CGMESProfile::EQ, } },
-	{ "cim:PowerElectronicsUnit.maxP", { CGMESProfile::EQ, } },
-	{ "cim:PowerElectronicsUnit.minP", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-PowerElectronicsUnit::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-PowerElectronicsUnit::getPossibleProfilesForAttributes() const
+const std::string& PowerElectronicsUnit::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = Equipment::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& PowerElectronicsUnit::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& PowerElectronicsUnit::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& PowerElectronicsUnit::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& PowerElectronicsUnit::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& PowerElectronicsUnit::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_PowerElectronicsConnection_PowerElectronicsUnit(BaseClass*, BaseClass*);
@@ -127,25 +159,25 @@ const char* PowerElectronicsUnit::debugString() const
 
 void PowerElectronicsUnit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:PowerElectronicsUnit", &PowerElectronicsUnit_factory);
+	factory_map.emplace("PowerElectronicsUnit", &PowerElectronicsUnit_factory);
 }
 
 void PowerElectronicsUnit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:PowerElectronicsUnit.maxP", &assign_PowerElectronicsUnit_maxP);
-	assign_map.emplace("cim:PowerElectronicsUnit.minP", &assign_PowerElectronicsUnit_minP);
+	assign_map.emplace("PowerElectronicsUnit.maxP", &assign_PowerElectronicsUnit_maxP);
+	assign_map.emplace("PowerElectronicsUnit.minP", &assign_PowerElectronicsUnit_minP);
 }
 
 void PowerElectronicsUnit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:PowerElectronicsUnit.PowerElectronicsConnection", &assign_PowerElectronicsUnit_PowerElectronicsConnection);
+	assign_map.emplace("PowerElectronicsUnit.PowerElectronicsConnection", &assign_PowerElectronicsUnit_PowerElectronicsConnection);
 }
 
 void PowerElectronicsUnit::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	Equipment::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:PowerElectronicsUnit.maxP", &get_PowerElectronicsUnit_maxP);
-	get_map.emplace("cim:PowerElectronicsUnit.minP", &get_PowerElectronicsUnit_minP);
+	get_map.emplace("PowerElectronicsUnit.maxP", &get_PowerElectronicsUnit_maxP);
+	get_map.emplace("PowerElectronicsUnit.minP", &get_PowerElectronicsUnit_minP);
 }
 
 void PowerElectronicsUnit::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -158,9 +190,23 @@ void PowerElectronicsUnit::addEnumGetFnsToMap(std::map<std::string, get_function
 	Equipment::addEnumGetFnsToMap(get_map);
 }
 
+bool PowerElectronicsUnit::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "PowerElectronicsUnit" &&
+		dynamic_cast<PowerElectronicsUnit*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner PowerElectronicsUnit::declare()
 {
 	return BaseClassDefiner(PowerElectronicsUnit::addConstructToMap, PowerElectronicsUnit::addPrimitiveAssignFnsToMap, PowerElectronicsUnit::addClassAssignFnsToMap, PowerElectronicsUnit::debugName);
+}
+
+std::map<std::string, AttrDetails> PowerElectronicsUnit::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = Equipment::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

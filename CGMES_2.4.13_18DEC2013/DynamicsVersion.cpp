@@ -11,41 +11,73 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		DynamicsVersion(),
+		"http://entsoe.eu/CIM/SchemaExtension/3/1#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "DynamicsVersion.baseUML", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::DY, } } },
+		{ "DynamicsVersion.baseURI", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::DY, } } },
+		{ "DynamicsVersion.date", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::DY, } } },
+		{ "DynamicsVersion.differenceModelURI", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::DY, } } },
+		{ "DynamicsVersion.entsoeUML", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::DY, } } },
+		{ "DynamicsVersion.entsoeURI", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::DY, } } },
+		{ "DynamicsVersion.modelDescriptionURI", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::DY, } } },
+		{ "DynamicsVersion.namespaceRDF", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::DY, } } },
+		{ "DynamicsVersion.namespaceUML", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::DY, } } },
+		{ "DynamicsVersion.shortName", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 DynamicsVersion::DynamicsVersion() {}
 DynamicsVersion::~DynamicsVersion() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& DynamicsVersion::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:DynamicsVersion.baseUML", { CGMESProfile::DY, } },
-	{ "cim:DynamicsVersion.baseURI", { CGMESProfile::DY, } },
-	{ "cim:DynamicsVersion.date", { CGMESProfile::DY, } },
-	{ "cim:DynamicsVersion.differenceModelURI", { CGMESProfile::DY, } },
-	{ "cim:DynamicsVersion.entsoeUML", { CGMESProfile::DY, } },
-	{ "cim:DynamicsVersion.entsoeURI", { CGMESProfile::DY, } },
-	{ "cim:DynamicsVersion.modelDescriptionURI", { CGMESProfile::DY, } },
-	{ "cim:DynamicsVersion.namespaceRDF", { CGMESProfile::DY, } },
-	{ "cim:DynamicsVersion.namespaceUML", { CGMESProfile::DY, } },
-	{ "cim:DynamicsVersion.shortName", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-DynamicsVersion::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-DynamicsVersion::getPossibleProfilesForAttributes() const
+const std::string& DynamicsVersion::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& DynamicsVersion::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& DynamicsVersion::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& DynamicsVersion::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& DynamicsVersion::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& DynamicsVersion::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_DynamicsVersion_baseUML(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -346,21 +378,21 @@ const char* DynamicsVersion::debugString() const
 
 void DynamicsVersion::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:DynamicsVersion", &DynamicsVersion_factory);
+	factory_map.emplace("DynamicsVersion", &DynamicsVersion_factory);
 }
 
 void DynamicsVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:DynamicsVersion.baseUML", &assign_DynamicsVersion_baseUML);
-	assign_map.emplace("cim:DynamicsVersion.baseURI", &assign_DynamicsVersion_baseURI);
-	assign_map.emplace("cim:DynamicsVersion.date", &assign_DynamicsVersion_date);
-	assign_map.emplace("cim:DynamicsVersion.differenceModelURI", &assign_DynamicsVersion_differenceModelURI);
-	assign_map.emplace("cim:DynamicsVersion.entsoeUML", &assign_DynamicsVersion_entsoeUML);
-	assign_map.emplace("cim:DynamicsVersion.entsoeURI", &assign_DynamicsVersion_entsoeURI);
-	assign_map.emplace("cim:DynamicsVersion.modelDescriptionURI", &assign_DynamicsVersion_modelDescriptionURI);
-	assign_map.emplace("cim:DynamicsVersion.namespaceRDF", &assign_DynamicsVersion_namespaceRDF);
-	assign_map.emplace("cim:DynamicsVersion.namespaceUML", &assign_DynamicsVersion_namespaceUML);
-	assign_map.emplace("cim:DynamicsVersion.shortName", &assign_DynamicsVersion_shortName);
+	assign_map.emplace("DynamicsVersion.baseUML", &assign_DynamicsVersion_baseUML);
+	assign_map.emplace("DynamicsVersion.baseURI", &assign_DynamicsVersion_baseURI);
+	assign_map.emplace("DynamicsVersion.date", &assign_DynamicsVersion_date);
+	assign_map.emplace("DynamicsVersion.differenceModelURI", &assign_DynamicsVersion_differenceModelURI);
+	assign_map.emplace("DynamicsVersion.entsoeUML", &assign_DynamicsVersion_entsoeUML);
+	assign_map.emplace("DynamicsVersion.entsoeURI", &assign_DynamicsVersion_entsoeURI);
+	assign_map.emplace("DynamicsVersion.modelDescriptionURI", &assign_DynamicsVersion_modelDescriptionURI);
+	assign_map.emplace("DynamicsVersion.namespaceRDF", &assign_DynamicsVersion_namespaceRDF);
+	assign_map.emplace("DynamicsVersion.namespaceUML", &assign_DynamicsVersion_namespaceUML);
+	assign_map.emplace("DynamicsVersion.shortName", &assign_DynamicsVersion_shortName);
 }
 
 void DynamicsVersion::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -370,16 +402,16 @@ void DynamicsVersion::addClassAssignFnsToMap(std::unordered_map<std::string, cla
 void DynamicsVersion::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	BaseClass::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:DynamicsVersion.baseUML", &get_DynamicsVersion_baseUML);
-	get_map.emplace("cim:DynamicsVersion.baseURI", &get_DynamicsVersion_baseURI);
-	get_map.emplace("cim:DynamicsVersion.date", &get_DynamicsVersion_date);
-	get_map.emplace("cim:DynamicsVersion.differenceModelURI", &get_DynamicsVersion_differenceModelURI);
-	get_map.emplace("cim:DynamicsVersion.entsoeUML", &get_DynamicsVersion_entsoeUML);
-	get_map.emplace("cim:DynamicsVersion.entsoeURI", &get_DynamicsVersion_entsoeURI);
-	get_map.emplace("cim:DynamicsVersion.modelDescriptionURI", &get_DynamicsVersion_modelDescriptionURI);
-	get_map.emplace("cim:DynamicsVersion.namespaceRDF", &get_DynamicsVersion_namespaceRDF);
-	get_map.emplace("cim:DynamicsVersion.namespaceUML", &get_DynamicsVersion_namespaceUML);
-	get_map.emplace("cim:DynamicsVersion.shortName", &get_DynamicsVersion_shortName);
+	get_map.emplace("DynamicsVersion.baseUML", &get_DynamicsVersion_baseUML);
+	get_map.emplace("DynamicsVersion.baseURI", &get_DynamicsVersion_baseURI);
+	get_map.emplace("DynamicsVersion.date", &get_DynamicsVersion_date);
+	get_map.emplace("DynamicsVersion.differenceModelURI", &get_DynamicsVersion_differenceModelURI);
+	get_map.emplace("DynamicsVersion.entsoeUML", &get_DynamicsVersion_entsoeUML);
+	get_map.emplace("DynamicsVersion.entsoeURI", &get_DynamicsVersion_entsoeURI);
+	get_map.emplace("DynamicsVersion.modelDescriptionURI", &get_DynamicsVersion_modelDescriptionURI);
+	get_map.emplace("DynamicsVersion.namespaceRDF", &get_DynamicsVersion_namespaceRDF);
+	get_map.emplace("DynamicsVersion.namespaceUML", &get_DynamicsVersion_namespaceUML);
+	get_map.emplace("DynamicsVersion.shortName", &get_DynamicsVersion_shortName);
 }
 
 void DynamicsVersion::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -392,9 +424,23 @@ void DynamicsVersion::addEnumGetFnsToMap(std::map<std::string, get_function>& ge
 	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
+bool DynamicsVersion::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "DynamicsVersion" &&
+		dynamic_cast<DynamicsVersion*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner DynamicsVersion::declare()
 {
 	return BaseClassDefiner(DynamicsVersion::addConstructToMap, DynamicsVersion::addPrimitiveAssignFnsToMap, DynamicsVersion::addClassAssignFnsToMap, DynamicsVersion::debugName);
+}
+
+std::map<std::string, AttrDetails> DynamicsVersion::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = BaseClass::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

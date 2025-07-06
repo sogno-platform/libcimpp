@@ -12,33 +12,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ExcitationSystemUserDefined(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ExcitationSystemUserDefined.ProprietaryParameterDynamics", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcitationSystemUserDefined.proprietary", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ExcitationSystemUserDefined::ExcitationSystemUserDefined() {}
 ExcitationSystemUserDefined::~ExcitationSystemUserDefined() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ExcitationSystemUserDefined::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ExcitationSystemUserDefined.ProprietaryParameterDynamics", { CGMESProfile::DY, } },
-	{ "cim:ExcitationSystemUserDefined.proprietary", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-ExcitationSystemUserDefined::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ExcitationSystemUserDefined::getPossibleProfilesForAttributes() const
+const std::string& ExcitationSystemUserDefined::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ExcitationSystemUserDefined::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ExcitationSystemUserDefined::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ExcitationSystemUserDefined::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ExcitationSystemUserDefined::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ExcitationSystemUserDefined::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ProprietaryParameterDynamics_ExcitationSystemUserDefined(BaseClass*, BaseClass*);
@@ -96,23 +128,23 @@ const char* ExcitationSystemUserDefined::debugString() const
 
 void ExcitationSystemUserDefined::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ExcitationSystemUserDefined", &ExcitationSystemUserDefined_factory);
+	factory_map.emplace("ExcitationSystemUserDefined", &ExcitationSystemUserDefined_factory);
 }
 
 void ExcitationSystemUserDefined::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ExcitationSystemUserDefined.proprietary", &assign_ExcitationSystemUserDefined_proprietary);
+	assign_map.emplace("ExcitationSystemUserDefined.proprietary", &assign_ExcitationSystemUserDefined_proprietary);
 }
 
 void ExcitationSystemUserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ExcitationSystemUserDefined.ProprietaryParameterDynamics", &assign_ExcitationSystemUserDefined_ProprietaryParameterDynamics);
+	assign_map.emplace("ExcitationSystemUserDefined.ProprietaryParameterDynamics", &assign_ExcitationSystemUserDefined_ProprietaryParameterDynamics);
 }
 
 void ExcitationSystemUserDefined::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ExcitationSystemUserDefined.proprietary", &get_ExcitationSystemUserDefined_proprietary);
+	get_map.emplace("ExcitationSystemUserDefined.proprietary", &get_ExcitationSystemUserDefined_proprietary);
 }
 
 void ExcitationSystemUserDefined::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -125,9 +157,23 @@ void ExcitationSystemUserDefined::addEnumGetFnsToMap(std::map<std::string, get_f
 	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool ExcitationSystemUserDefined::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ExcitationSystemUserDefined" &&
+		dynamic_cast<ExcitationSystemUserDefined*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ExcitationSystemUserDefined::declare()
 {
 	return BaseClassDefiner(ExcitationSystemUserDefined::addConstructToMap, ExcitationSystemUserDefined::addPrimitiveAssignFnsToMap, ExcitationSystemUserDefined::addClassAssignFnsToMap, ExcitationSystemUserDefined::debugName);
+}
+
+std::map<std::string, AttrDetails> ExcitationSystemUserDefined::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ExcitationSystemDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

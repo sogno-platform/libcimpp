@@ -13,33 +13,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ControlAreaGeneratingUnit(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ControlAreaGeneratingUnit.ControlArea", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ControlAreaGeneratingUnit.GeneratingUnit", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ControlAreaGeneratingUnit::ControlAreaGeneratingUnit() : ControlArea(nullptr), GeneratingUnit(nullptr) {}
 ControlAreaGeneratingUnit::~ControlAreaGeneratingUnit() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ControlAreaGeneratingUnit::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ControlAreaGeneratingUnit.ControlArea", { CGMESProfile::EQ, } },
-	{ "cim:ControlAreaGeneratingUnit.GeneratingUnit", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-ControlAreaGeneratingUnit::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ControlAreaGeneratingUnit::getPossibleProfilesForAttributes() const
+const std::string& ControlAreaGeneratingUnit::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ControlAreaGeneratingUnit::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ControlAreaGeneratingUnit::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ControlAreaGeneratingUnit::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ControlAreaGeneratingUnit::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ControlAreaGeneratingUnit::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ControlArea_ControlAreaGeneratingUnit(BaseClass*, BaseClass*);
@@ -112,7 +144,7 @@ const char* ControlAreaGeneratingUnit::debugString() const
 
 void ControlAreaGeneratingUnit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ControlAreaGeneratingUnit", &ControlAreaGeneratingUnit_factory);
+	factory_map.emplace("ControlAreaGeneratingUnit", &ControlAreaGeneratingUnit_factory);
 }
 
 void ControlAreaGeneratingUnit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -121,8 +153,8 @@ void ControlAreaGeneratingUnit::addPrimitiveAssignFnsToMap(std::unordered_map<st
 
 void ControlAreaGeneratingUnit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ControlAreaGeneratingUnit.ControlArea", &assign_ControlAreaGeneratingUnit_ControlArea);
-	assign_map.emplace("cim:ControlAreaGeneratingUnit.GeneratingUnit", &assign_ControlAreaGeneratingUnit_GeneratingUnit);
+	assign_map.emplace("ControlAreaGeneratingUnit.ControlArea", &assign_ControlAreaGeneratingUnit_ControlArea);
+	assign_map.emplace("ControlAreaGeneratingUnit.GeneratingUnit", &assign_ControlAreaGeneratingUnit_GeneratingUnit);
 }
 
 void ControlAreaGeneratingUnit::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -133,8 +165,8 @@ void ControlAreaGeneratingUnit::addPrimitiveGetFnsToMap(std::map<std::string, ge
 void ControlAreaGeneratingUnit::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	IdentifiedObject::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:ControlAreaGeneratingUnit.ControlArea", &get_ControlAreaGeneratingUnit_ControlArea);
-	get_map.emplace("cim:ControlAreaGeneratingUnit.GeneratingUnit", &get_ControlAreaGeneratingUnit_GeneratingUnit);
+	get_map.emplace("ControlAreaGeneratingUnit.ControlArea", &get_ControlAreaGeneratingUnit_ControlArea);
+	get_map.emplace("ControlAreaGeneratingUnit.GeneratingUnit", &get_ControlAreaGeneratingUnit_GeneratingUnit);
 }
 
 void ControlAreaGeneratingUnit::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -142,9 +174,23 @@ void ControlAreaGeneratingUnit::addEnumGetFnsToMap(std::map<std::string, get_fun
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool ControlAreaGeneratingUnit::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ControlAreaGeneratingUnit" &&
+		dynamic_cast<ControlAreaGeneratingUnit*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ControlAreaGeneratingUnit::declare()
 {
 	return BaseClassDefiner(ControlAreaGeneratingUnit::addConstructToMap, ControlAreaGeneratingUnit::addPrimitiveAssignFnsToMap, ControlAreaGeneratingUnit::addClassAssignFnsToMap, ControlAreaGeneratingUnit::debugName);
+}
+
+std::map<std::string, AttrDetails> ControlAreaGeneratingUnit::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

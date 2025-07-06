@@ -11,41 +11,73 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		TopologyVersion(),
+		"http://entsoe.eu/CIM/SchemaExtension/3/1#",
+		{
+			CGMESProfile::TP,
+		},
+		CGMESProfile::TP
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "TopologyVersion.baseUML", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP, } } },
+		{ "TopologyVersion.baseURI", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP, } } },
+		{ "TopologyVersion.date", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP, } } },
+		{ "TopologyVersion.differenceModelURI", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP, } } },
+		{ "TopologyVersion.entsoeUML", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP, } } },
+		{ "TopologyVersion.entsoeURI", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP, } } },
+		{ "TopologyVersion.modelDescriptionURI", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP, } } },
+		{ "TopologyVersion.namespaceRDF", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP, } } },
+		{ "TopologyVersion.namespaceUML", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP, } } },
+		{ "TopologyVersion.shortName", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::TP, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 TopologyVersion::TopologyVersion() {}
 TopologyVersion::~TopologyVersion() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& TopologyVersion::getAttributeNames() const
 {
-	CGMESProfile::TP,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:TopologyVersion.baseUML", { CGMESProfile::TP, } },
-	{ "cim:TopologyVersion.baseURI", { CGMESProfile::TP, } },
-	{ "cim:TopologyVersion.date", { CGMESProfile::TP, } },
-	{ "cim:TopologyVersion.differenceModelURI", { CGMESProfile::TP, } },
-	{ "cim:TopologyVersion.entsoeUML", { CGMESProfile::TP, } },
-	{ "cim:TopologyVersion.entsoeURI", { CGMESProfile::TP, } },
-	{ "cim:TopologyVersion.modelDescriptionURI", { CGMESProfile::TP, } },
-	{ "cim:TopologyVersion.namespaceRDF", { CGMESProfile::TP, } },
-	{ "cim:TopologyVersion.namespaceUML", { CGMESProfile::TP, } },
-	{ "cim:TopologyVersion.shortName", { CGMESProfile::TP, } },
-};
-
-std::list<CGMESProfile>
-TopologyVersion::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-TopologyVersion::getPossibleProfilesForAttributes() const
+const std::string& TopologyVersion::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& TopologyVersion::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& TopologyVersion::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& TopologyVersion::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& TopologyVersion::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& TopologyVersion::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_TopologyVersion_baseUML(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -346,21 +378,21 @@ const char* TopologyVersion::debugString() const
 
 void TopologyVersion::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:TopologyVersion", &TopologyVersion_factory);
+	factory_map.emplace("TopologyVersion", &TopologyVersion_factory);
 }
 
 void TopologyVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:TopologyVersion.baseUML", &assign_TopologyVersion_baseUML);
-	assign_map.emplace("cim:TopologyVersion.baseURI", &assign_TopologyVersion_baseURI);
-	assign_map.emplace("cim:TopologyVersion.date", &assign_TopologyVersion_date);
-	assign_map.emplace("cim:TopologyVersion.differenceModelURI", &assign_TopologyVersion_differenceModelURI);
-	assign_map.emplace("cim:TopologyVersion.entsoeUML", &assign_TopologyVersion_entsoeUML);
-	assign_map.emplace("cim:TopologyVersion.entsoeURI", &assign_TopologyVersion_entsoeURI);
-	assign_map.emplace("cim:TopologyVersion.modelDescriptionURI", &assign_TopologyVersion_modelDescriptionURI);
-	assign_map.emplace("cim:TopologyVersion.namespaceRDF", &assign_TopologyVersion_namespaceRDF);
-	assign_map.emplace("cim:TopologyVersion.namespaceUML", &assign_TopologyVersion_namespaceUML);
-	assign_map.emplace("cim:TopologyVersion.shortName", &assign_TopologyVersion_shortName);
+	assign_map.emplace("TopologyVersion.baseUML", &assign_TopologyVersion_baseUML);
+	assign_map.emplace("TopologyVersion.baseURI", &assign_TopologyVersion_baseURI);
+	assign_map.emplace("TopologyVersion.date", &assign_TopologyVersion_date);
+	assign_map.emplace("TopologyVersion.differenceModelURI", &assign_TopologyVersion_differenceModelURI);
+	assign_map.emplace("TopologyVersion.entsoeUML", &assign_TopologyVersion_entsoeUML);
+	assign_map.emplace("TopologyVersion.entsoeURI", &assign_TopologyVersion_entsoeURI);
+	assign_map.emplace("TopologyVersion.modelDescriptionURI", &assign_TopologyVersion_modelDescriptionURI);
+	assign_map.emplace("TopologyVersion.namespaceRDF", &assign_TopologyVersion_namespaceRDF);
+	assign_map.emplace("TopologyVersion.namespaceUML", &assign_TopologyVersion_namespaceUML);
+	assign_map.emplace("TopologyVersion.shortName", &assign_TopologyVersion_shortName);
 }
 
 void TopologyVersion::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -370,16 +402,16 @@ void TopologyVersion::addClassAssignFnsToMap(std::unordered_map<std::string, cla
 void TopologyVersion::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	BaseClass::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:TopologyVersion.baseUML", &get_TopologyVersion_baseUML);
-	get_map.emplace("cim:TopologyVersion.baseURI", &get_TopologyVersion_baseURI);
-	get_map.emplace("cim:TopologyVersion.date", &get_TopologyVersion_date);
-	get_map.emplace("cim:TopologyVersion.differenceModelURI", &get_TopologyVersion_differenceModelURI);
-	get_map.emplace("cim:TopologyVersion.entsoeUML", &get_TopologyVersion_entsoeUML);
-	get_map.emplace("cim:TopologyVersion.entsoeURI", &get_TopologyVersion_entsoeURI);
-	get_map.emplace("cim:TopologyVersion.modelDescriptionURI", &get_TopologyVersion_modelDescriptionURI);
-	get_map.emplace("cim:TopologyVersion.namespaceRDF", &get_TopologyVersion_namespaceRDF);
-	get_map.emplace("cim:TopologyVersion.namespaceUML", &get_TopologyVersion_namespaceUML);
-	get_map.emplace("cim:TopologyVersion.shortName", &get_TopologyVersion_shortName);
+	get_map.emplace("TopologyVersion.baseUML", &get_TopologyVersion_baseUML);
+	get_map.emplace("TopologyVersion.baseURI", &get_TopologyVersion_baseURI);
+	get_map.emplace("TopologyVersion.date", &get_TopologyVersion_date);
+	get_map.emplace("TopologyVersion.differenceModelURI", &get_TopologyVersion_differenceModelURI);
+	get_map.emplace("TopologyVersion.entsoeUML", &get_TopologyVersion_entsoeUML);
+	get_map.emplace("TopologyVersion.entsoeURI", &get_TopologyVersion_entsoeURI);
+	get_map.emplace("TopologyVersion.modelDescriptionURI", &get_TopologyVersion_modelDescriptionURI);
+	get_map.emplace("TopologyVersion.namespaceRDF", &get_TopologyVersion_namespaceRDF);
+	get_map.emplace("TopologyVersion.namespaceUML", &get_TopologyVersion_namespaceUML);
+	get_map.emplace("TopologyVersion.shortName", &get_TopologyVersion_shortName);
 }
 
 void TopologyVersion::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -392,9 +424,23 @@ void TopologyVersion::addEnumGetFnsToMap(std::map<std::string, get_function>& ge
 	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
+bool TopologyVersion::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "TopologyVersion" &&
+		dynamic_cast<TopologyVersion*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner TopologyVersion::declare()
 {
 	return BaseClassDefiner(TopologyVersion::addConstructToMap, TopologyVersion::addPrimitiveAssignFnsToMap, TopologyVersion::addClassAssignFnsToMap, TopologyVersion::debugName);
+}
+
+std::map<std::string, AttrDetails> TopologyVersion::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = BaseClass::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

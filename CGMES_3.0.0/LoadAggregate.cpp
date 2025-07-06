@@ -13,33 +13,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		LoadAggregate(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "LoadAggregate.LoadMotor", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "LoadAggregate.LoadStatic", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 LoadAggregate::LoadAggregate() : LoadMotor(nullptr), LoadStatic(nullptr) {}
 LoadAggregate::~LoadAggregate() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& LoadAggregate::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:LoadAggregate.LoadMotor", { CGMESProfile::DY, } },
-	{ "cim:LoadAggregate.LoadStatic", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-LoadAggregate::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-LoadAggregate::getPossibleProfilesForAttributes() const
+const std::string& LoadAggregate::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = LoadDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& LoadAggregate::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& LoadAggregate::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& LoadAggregate::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& LoadAggregate::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& LoadAggregate::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_LoadMotor_LoadAggregate(BaseClass*, BaseClass*);
@@ -86,7 +118,7 @@ const char* LoadAggregate::debugString() const
 
 void LoadAggregate::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:LoadAggregate", &LoadAggregate_factory);
+	factory_map.emplace("LoadAggregate", &LoadAggregate_factory);
 }
 
 void LoadAggregate::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -95,8 +127,8 @@ void LoadAggregate::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, a
 
 void LoadAggregate::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:LoadAggregate.LoadMotor", &assign_LoadAggregate_LoadMotor);
-	assign_map.emplace("cim:LoadAggregate.LoadStatic", &assign_LoadAggregate_LoadStatic);
+	assign_map.emplace("LoadAggregate.LoadMotor", &assign_LoadAggregate_LoadMotor);
+	assign_map.emplace("LoadAggregate.LoadStatic", &assign_LoadAggregate_LoadStatic);
 }
 
 void LoadAggregate::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -114,9 +146,23 @@ void LoadAggregate::addEnumGetFnsToMap(std::map<std::string, get_function>& get_
 	LoadDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool LoadAggregate::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "LoadAggregate" &&
+		dynamic_cast<LoadAggregate*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner LoadAggregate::declare()
 {
 	return BaseClassDefiner(LoadAggregate::addConstructToMap, LoadAggregate::addPrimitiveAssignFnsToMap, LoadAggregate::addClassAssignFnsToMap, LoadAggregate::debugName);
+}
+
+std::map<std::string, AttrDetails> LoadAggregate::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = LoadDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

@@ -13,43 +13,75 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		WindPlantFreqPcontrolIEC(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "WindPlantFreqPcontrolIEC.WindDynamicsLookupTable", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindPlantFreqPcontrolIEC.WindPlantIEC", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindPlantFreqPcontrolIEC.dprefmax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindPlantFreqPcontrolIEC.dprefmin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindPlantFreqPcontrolIEC.kiwpp", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindPlantFreqPcontrolIEC.kpwpp", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindPlantFreqPcontrolIEC.prefmax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindPlantFreqPcontrolIEC.prefmin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindPlantFreqPcontrolIEC.tpft", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindPlantFreqPcontrolIEC.tpfv", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindPlantFreqPcontrolIEC.twpffilt", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindPlantFreqPcontrolIEC.twppfilt", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 WindPlantFreqPcontrolIEC::WindPlantFreqPcontrolIEC() : WindPlantIEC(nullptr) {}
 WindPlantFreqPcontrolIEC::~WindPlantFreqPcontrolIEC() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& WindPlantFreqPcontrolIEC::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:WindPlantFreqPcontrolIEC.WindDynamicsLookupTable", { CGMESProfile::DY, } },
-	{ "cim:WindPlantFreqPcontrolIEC.WindPlantIEC", { CGMESProfile::DY, } },
-	{ "cim:WindPlantFreqPcontrolIEC.dprefmax", { CGMESProfile::DY, } },
-	{ "cim:WindPlantFreqPcontrolIEC.dprefmin", { CGMESProfile::DY, } },
-	{ "cim:WindPlantFreqPcontrolIEC.kiwpp", { CGMESProfile::DY, } },
-	{ "cim:WindPlantFreqPcontrolIEC.kpwpp", { CGMESProfile::DY, } },
-	{ "cim:WindPlantFreqPcontrolIEC.prefmax", { CGMESProfile::DY, } },
-	{ "cim:WindPlantFreqPcontrolIEC.prefmin", { CGMESProfile::DY, } },
-	{ "cim:WindPlantFreqPcontrolIEC.tpft", { CGMESProfile::DY, } },
-	{ "cim:WindPlantFreqPcontrolIEC.tpfv", { CGMESProfile::DY, } },
-	{ "cim:WindPlantFreqPcontrolIEC.twpffilt", { CGMESProfile::DY, } },
-	{ "cim:WindPlantFreqPcontrolIEC.twppfilt", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-WindPlantFreqPcontrolIEC::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-WindPlantFreqPcontrolIEC::getPossibleProfilesForAttributes() const
+const std::string& WindPlantFreqPcontrolIEC::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& WindPlantFreqPcontrolIEC::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& WindPlantFreqPcontrolIEC::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& WindPlantFreqPcontrolIEC::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& WindPlantFreqPcontrolIEC::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& WindPlantFreqPcontrolIEC::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_WindDynamicsLookupTable_WindPlantFreqPcontrolIEC(BaseClass*, BaseClass*);
@@ -386,42 +418,42 @@ const char* WindPlantFreqPcontrolIEC::debugString() const
 
 void WindPlantFreqPcontrolIEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:WindPlantFreqPcontrolIEC", &WindPlantFreqPcontrolIEC_factory);
+	factory_map.emplace("WindPlantFreqPcontrolIEC", &WindPlantFreqPcontrolIEC_factory);
 }
 
 void WindPlantFreqPcontrolIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.dprefmax", &assign_WindPlantFreqPcontrolIEC_dprefmax);
-	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.dprefmin", &assign_WindPlantFreqPcontrolIEC_dprefmin);
-	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.kiwpp", &assign_WindPlantFreqPcontrolIEC_kiwpp);
-	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.kpwpp", &assign_WindPlantFreqPcontrolIEC_kpwpp);
-	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.prefmax", &assign_WindPlantFreqPcontrolIEC_prefmax);
-	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.prefmin", &assign_WindPlantFreqPcontrolIEC_prefmin);
-	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.tpft", &assign_WindPlantFreqPcontrolIEC_tpft);
-	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.tpfv", &assign_WindPlantFreqPcontrolIEC_tpfv);
-	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.twpffilt", &assign_WindPlantFreqPcontrolIEC_twpffilt);
-	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.twppfilt", &assign_WindPlantFreqPcontrolIEC_twppfilt);
+	assign_map.emplace("WindPlantFreqPcontrolIEC.dprefmax", &assign_WindPlantFreqPcontrolIEC_dprefmax);
+	assign_map.emplace("WindPlantFreqPcontrolIEC.dprefmin", &assign_WindPlantFreqPcontrolIEC_dprefmin);
+	assign_map.emplace("WindPlantFreqPcontrolIEC.kiwpp", &assign_WindPlantFreqPcontrolIEC_kiwpp);
+	assign_map.emplace("WindPlantFreqPcontrolIEC.kpwpp", &assign_WindPlantFreqPcontrolIEC_kpwpp);
+	assign_map.emplace("WindPlantFreqPcontrolIEC.prefmax", &assign_WindPlantFreqPcontrolIEC_prefmax);
+	assign_map.emplace("WindPlantFreqPcontrolIEC.prefmin", &assign_WindPlantFreqPcontrolIEC_prefmin);
+	assign_map.emplace("WindPlantFreqPcontrolIEC.tpft", &assign_WindPlantFreqPcontrolIEC_tpft);
+	assign_map.emplace("WindPlantFreqPcontrolIEC.tpfv", &assign_WindPlantFreqPcontrolIEC_tpfv);
+	assign_map.emplace("WindPlantFreqPcontrolIEC.twpffilt", &assign_WindPlantFreqPcontrolIEC_twpffilt);
+	assign_map.emplace("WindPlantFreqPcontrolIEC.twppfilt", &assign_WindPlantFreqPcontrolIEC_twppfilt);
 }
 
 void WindPlantFreqPcontrolIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.WindDynamicsLookupTable", &assign_WindPlantFreqPcontrolIEC_WindDynamicsLookupTable);
-	assign_map.emplace("cim:WindPlantFreqPcontrolIEC.WindPlantIEC", &assign_WindPlantFreqPcontrolIEC_WindPlantIEC);
+	assign_map.emplace("WindPlantFreqPcontrolIEC.WindDynamicsLookupTable", &assign_WindPlantFreqPcontrolIEC_WindDynamicsLookupTable);
+	assign_map.emplace("WindPlantFreqPcontrolIEC.WindPlantIEC", &assign_WindPlantFreqPcontrolIEC_WindPlantIEC);
 }
 
 void WindPlantFreqPcontrolIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:WindPlantFreqPcontrolIEC.dprefmax", &get_WindPlantFreqPcontrolIEC_dprefmax);
-	get_map.emplace("cim:WindPlantFreqPcontrolIEC.dprefmin", &get_WindPlantFreqPcontrolIEC_dprefmin);
-	get_map.emplace("cim:WindPlantFreqPcontrolIEC.kiwpp", &get_WindPlantFreqPcontrolIEC_kiwpp);
-	get_map.emplace("cim:WindPlantFreqPcontrolIEC.kpwpp", &get_WindPlantFreqPcontrolIEC_kpwpp);
-	get_map.emplace("cim:WindPlantFreqPcontrolIEC.prefmax", &get_WindPlantFreqPcontrolIEC_prefmax);
-	get_map.emplace("cim:WindPlantFreqPcontrolIEC.prefmin", &get_WindPlantFreqPcontrolIEC_prefmin);
-	get_map.emplace("cim:WindPlantFreqPcontrolIEC.tpft", &get_WindPlantFreqPcontrolIEC_tpft);
-	get_map.emplace("cim:WindPlantFreqPcontrolIEC.tpfv", &get_WindPlantFreqPcontrolIEC_tpfv);
-	get_map.emplace("cim:WindPlantFreqPcontrolIEC.twpffilt", &get_WindPlantFreqPcontrolIEC_twpffilt);
-	get_map.emplace("cim:WindPlantFreqPcontrolIEC.twppfilt", &get_WindPlantFreqPcontrolIEC_twppfilt);
+	get_map.emplace("WindPlantFreqPcontrolIEC.dprefmax", &get_WindPlantFreqPcontrolIEC_dprefmax);
+	get_map.emplace("WindPlantFreqPcontrolIEC.dprefmin", &get_WindPlantFreqPcontrolIEC_dprefmin);
+	get_map.emplace("WindPlantFreqPcontrolIEC.kiwpp", &get_WindPlantFreqPcontrolIEC_kiwpp);
+	get_map.emplace("WindPlantFreqPcontrolIEC.kpwpp", &get_WindPlantFreqPcontrolIEC_kpwpp);
+	get_map.emplace("WindPlantFreqPcontrolIEC.prefmax", &get_WindPlantFreqPcontrolIEC_prefmax);
+	get_map.emplace("WindPlantFreqPcontrolIEC.prefmin", &get_WindPlantFreqPcontrolIEC_prefmin);
+	get_map.emplace("WindPlantFreqPcontrolIEC.tpft", &get_WindPlantFreqPcontrolIEC_tpft);
+	get_map.emplace("WindPlantFreqPcontrolIEC.tpfv", &get_WindPlantFreqPcontrolIEC_tpfv);
+	get_map.emplace("WindPlantFreqPcontrolIEC.twpffilt", &get_WindPlantFreqPcontrolIEC_twpffilt);
+	get_map.emplace("WindPlantFreqPcontrolIEC.twppfilt", &get_WindPlantFreqPcontrolIEC_twppfilt);
 }
 
 void WindPlantFreqPcontrolIEC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -434,9 +466,23 @@ void WindPlantFreqPcontrolIEC::addEnumGetFnsToMap(std::map<std::string, get_func
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool WindPlantFreqPcontrolIEC::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "WindPlantFreqPcontrolIEC" &&
+		dynamic_cast<WindPlantFreqPcontrolIEC*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner WindPlantFreqPcontrolIEC::declare()
 {
 	return BaseClassDefiner(WindPlantFreqPcontrolIEC::addConstructToMap, WindPlantFreqPcontrolIEC::addPrimitiveAssignFnsToMap, WindPlantFreqPcontrolIEC::addClassAssignFnsToMap, WindPlantFreqPcontrolIEC::debugName);
+}
+
+std::map<std::string, AttrDetails> WindPlantFreqPcontrolIEC::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

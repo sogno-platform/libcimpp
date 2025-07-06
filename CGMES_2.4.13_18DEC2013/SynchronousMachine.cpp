@@ -13,56 +13,88 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		SynchronousMachine(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+			CGMESProfile::EQ,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "SynchronousMachine.InitialReactiveCapabilityCurve", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "SynchronousMachine.SynchronousMachineDynamics", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "SynchronousMachine.earthing", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "SynchronousMachine.earthingStarPointR", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "SynchronousMachine.earthingStarPointX", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "SynchronousMachine.ikk", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "SynchronousMachine.maxQ", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "SynchronousMachine.minQ", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "SynchronousMachine.mu", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "SynchronousMachine.operatingMode", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SSH, } } },
+		{ "SynchronousMachine.qPercent", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "SynchronousMachine.r", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "SynchronousMachine.r0", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "SynchronousMachine.r2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "SynchronousMachine.referencePriority", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "SynchronousMachine.satDirectSubtransX", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "SynchronousMachine.satDirectSyncX", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "SynchronousMachine.satDirectTransX", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "SynchronousMachine.shortCircuitRotorType", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "SynchronousMachine.type", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "SynchronousMachine.voltageRegulationRange", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "SynchronousMachine.x0", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "SynchronousMachine.x2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 SynchronousMachine::SynchronousMachine() : InitialReactiveCapabilityCurve(nullptr), SynchronousMachineDynamics(nullptr) {}
 SynchronousMachine::~SynchronousMachine() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& SynchronousMachine::getAttributeNames() const
 {
-	CGMESProfile::DY,
-	CGMESProfile::EQ,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:SynchronousMachine.InitialReactiveCapabilityCurve", { CGMESProfile::EQ, } },
-	{ "cim:SynchronousMachine.SynchronousMachineDynamics", { CGMESProfile::DY, } },
-	{ "cim:SynchronousMachine.earthing", { CGMESProfile::EQ, } },
-	{ "cim:SynchronousMachine.earthingStarPointR", { CGMESProfile::EQ, } },
-	{ "cim:SynchronousMachine.earthingStarPointX", { CGMESProfile::EQ, } },
-	{ "cim:SynchronousMachine.ikk", { CGMESProfile::EQ, } },
-	{ "cim:SynchronousMachine.maxQ", { CGMESProfile::EQ, } },
-	{ "cim:SynchronousMachine.minQ", { CGMESProfile::EQ, } },
-	{ "cim:SynchronousMachine.mu", { CGMESProfile::EQ, } },
-	{ "cim:SynchronousMachine.operatingMode", { CGMESProfile::SSH, } },
-	{ "cim:SynchronousMachine.qPercent", { CGMESProfile::EQ, } },
-	{ "cim:SynchronousMachine.r", { CGMESProfile::EQ, } },
-	{ "cim:SynchronousMachine.r0", { CGMESProfile::EQ, } },
-	{ "cim:SynchronousMachine.r2", { CGMESProfile::EQ, } },
-	{ "cim:SynchronousMachine.referencePriority", { CGMESProfile::EQ, } },
-	{ "cim:SynchronousMachine.satDirectSubtransX", { CGMESProfile::EQ, } },
-	{ "cim:SynchronousMachine.satDirectSyncX", { CGMESProfile::EQ, } },
-	{ "cim:SynchronousMachine.satDirectTransX", { CGMESProfile::EQ, } },
-	{ "cim:SynchronousMachine.shortCircuitRotorType", { CGMESProfile::EQ, } },
-	{ "cim:SynchronousMachine.type", { CGMESProfile::EQ, } },
-	{ "cim:SynchronousMachine.voltageRegulationRange", { CGMESProfile::EQ, } },
-	{ "cim:SynchronousMachine.x0", { CGMESProfile::EQ, } },
-	{ "cim:SynchronousMachine.x2", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-SynchronousMachine::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-SynchronousMachine::getPossibleProfilesForAttributes() const
+const std::string& SynchronousMachine::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = RotatingMachine::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& SynchronousMachine::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& SynchronousMachine::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& SynchronousMachine::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& SynchronousMachine::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& SynchronousMachine::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ReactiveCapabilityCurve_InitiallyUsedBySynchronousMachines(BaseClass*, BaseClass*);
@@ -731,80 +763,94 @@ const char* SynchronousMachine::debugString() const
 
 void SynchronousMachine::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:SynchronousMachine", &SynchronousMachine_factory);
+	factory_map.emplace("SynchronousMachine", &SynchronousMachine_factory);
 }
 
 void SynchronousMachine::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:SynchronousMachine.earthing", &assign_SynchronousMachine_earthing);
-	assign_map.emplace("cim:SynchronousMachine.earthingStarPointR", &assign_SynchronousMachine_earthingStarPointR);
-	assign_map.emplace("cim:SynchronousMachine.earthingStarPointX", &assign_SynchronousMachine_earthingStarPointX);
-	assign_map.emplace("cim:SynchronousMachine.ikk", &assign_SynchronousMachine_ikk);
-	assign_map.emplace("cim:SynchronousMachine.maxQ", &assign_SynchronousMachine_maxQ);
-	assign_map.emplace("cim:SynchronousMachine.minQ", &assign_SynchronousMachine_minQ);
-	assign_map.emplace("cim:SynchronousMachine.mu", &assign_SynchronousMachine_mu);
-	assign_map.emplace("cim:SynchronousMachine.operatingMode", &assign_SynchronousMachine_operatingMode);
-	assign_map.emplace("cim:SynchronousMachine.qPercent", &assign_SynchronousMachine_qPercent);
-	assign_map.emplace("cim:SynchronousMachine.r", &assign_SynchronousMachine_r);
-	assign_map.emplace("cim:SynchronousMachine.r0", &assign_SynchronousMachine_r0);
-	assign_map.emplace("cim:SynchronousMachine.r2", &assign_SynchronousMachine_r2);
-	assign_map.emplace("cim:SynchronousMachine.referencePriority", &assign_SynchronousMachine_referencePriority);
-	assign_map.emplace("cim:SynchronousMachine.satDirectSubtransX", &assign_SynchronousMachine_satDirectSubtransX);
-	assign_map.emplace("cim:SynchronousMachine.satDirectSyncX", &assign_SynchronousMachine_satDirectSyncX);
-	assign_map.emplace("cim:SynchronousMachine.satDirectTransX", &assign_SynchronousMachine_satDirectTransX);
-	assign_map.emplace("cim:SynchronousMachine.shortCircuitRotorType", &assign_SynchronousMachine_shortCircuitRotorType);
-	assign_map.emplace("cim:SynchronousMachine.type", &assign_SynchronousMachine_type);
-	assign_map.emplace("cim:SynchronousMachine.voltageRegulationRange", &assign_SynchronousMachine_voltageRegulationRange);
-	assign_map.emplace("cim:SynchronousMachine.x0", &assign_SynchronousMachine_x0);
-	assign_map.emplace("cim:SynchronousMachine.x2", &assign_SynchronousMachine_x2);
+	assign_map.emplace("SynchronousMachine.earthing", &assign_SynchronousMachine_earthing);
+	assign_map.emplace("SynchronousMachine.earthingStarPointR", &assign_SynchronousMachine_earthingStarPointR);
+	assign_map.emplace("SynchronousMachine.earthingStarPointX", &assign_SynchronousMachine_earthingStarPointX);
+	assign_map.emplace("SynchronousMachine.ikk", &assign_SynchronousMachine_ikk);
+	assign_map.emplace("SynchronousMachine.maxQ", &assign_SynchronousMachine_maxQ);
+	assign_map.emplace("SynchronousMachine.minQ", &assign_SynchronousMachine_minQ);
+	assign_map.emplace("SynchronousMachine.mu", &assign_SynchronousMachine_mu);
+	assign_map.emplace("SynchronousMachine.operatingMode", &assign_SynchronousMachine_operatingMode);
+	assign_map.emplace("SynchronousMachine.qPercent", &assign_SynchronousMachine_qPercent);
+	assign_map.emplace("SynchronousMachine.r", &assign_SynchronousMachine_r);
+	assign_map.emplace("SynchronousMachine.r0", &assign_SynchronousMachine_r0);
+	assign_map.emplace("SynchronousMachine.r2", &assign_SynchronousMachine_r2);
+	assign_map.emplace("SynchronousMachine.referencePriority", &assign_SynchronousMachine_referencePriority);
+	assign_map.emplace("SynchronousMachine.satDirectSubtransX", &assign_SynchronousMachine_satDirectSubtransX);
+	assign_map.emplace("SynchronousMachine.satDirectSyncX", &assign_SynchronousMachine_satDirectSyncX);
+	assign_map.emplace("SynchronousMachine.satDirectTransX", &assign_SynchronousMachine_satDirectTransX);
+	assign_map.emplace("SynchronousMachine.shortCircuitRotorType", &assign_SynchronousMachine_shortCircuitRotorType);
+	assign_map.emplace("SynchronousMachine.type", &assign_SynchronousMachine_type);
+	assign_map.emplace("SynchronousMachine.voltageRegulationRange", &assign_SynchronousMachine_voltageRegulationRange);
+	assign_map.emplace("SynchronousMachine.x0", &assign_SynchronousMachine_x0);
+	assign_map.emplace("SynchronousMachine.x2", &assign_SynchronousMachine_x2);
 }
 
 void SynchronousMachine::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:SynchronousMachine.InitialReactiveCapabilityCurve", &assign_SynchronousMachine_InitialReactiveCapabilityCurve);
-	assign_map.emplace("cim:SynchronousMachine.SynchronousMachineDynamics", &assign_SynchronousMachine_SynchronousMachineDynamics);
+	assign_map.emplace("SynchronousMachine.InitialReactiveCapabilityCurve", &assign_SynchronousMachine_InitialReactiveCapabilityCurve);
+	assign_map.emplace("SynchronousMachine.SynchronousMachineDynamics", &assign_SynchronousMachine_SynchronousMachineDynamics);
 }
 
 void SynchronousMachine::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	RotatingMachine::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:SynchronousMachine.earthing", &get_SynchronousMachine_earthing);
-	get_map.emplace("cim:SynchronousMachine.earthingStarPointR", &get_SynchronousMachine_earthingStarPointR);
-	get_map.emplace("cim:SynchronousMachine.earthingStarPointX", &get_SynchronousMachine_earthingStarPointX);
-	get_map.emplace("cim:SynchronousMachine.ikk", &get_SynchronousMachine_ikk);
-	get_map.emplace("cim:SynchronousMachine.maxQ", &get_SynchronousMachine_maxQ);
-	get_map.emplace("cim:SynchronousMachine.minQ", &get_SynchronousMachine_minQ);
-	get_map.emplace("cim:SynchronousMachine.mu", &get_SynchronousMachine_mu);
-	get_map.emplace("cim:SynchronousMachine.qPercent", &get_SynchronousMachine_qPercent);
-	get_map.emplace("cim:SynchronousMachine.r", &get_SynchronousMachine_r);
-	get_map.emplace("cim:SynchronousMachine.r0", &get_SynchronousMachine_r0);
-	get_map.emplace("cim:SynchronousMachine.r2", &get_SynchronousMachine_r2);
-	get_map.emplace("cim:SynchronousMachine.referencePriority", &get_SynchronousMachine_referencePriority);
-	get_map.emplace("cim:SynchronousMachine.satDirectSubtransX", &get_SynchronousMachine_satDirectSubtransX);
-	get_map.emplace("cim:SynchronousMachine.satDirectSyncX", &get_SynchronousMachine_satDirectSyncX);
-	get_map.emplace("cim:SynchronousMachine.satDirectTransX", &get_SynchronousMachine_satDirectTransX);
-	get_map.emplace("cim:SynchronousMachine.voltageRegulationRange", &get_SynchronousMachine_voltageRegulationRange);
-	get_map.emplace("cim:SynchronousMachine.x0", &get_SynchronousMachine_x0);
-	get_map.emplace("cim:SynchronousMachine.x2", &get_SynchronousMachine_x2);
+	get_map.emplace("SynchronousMachine.earthing", &get_SynchronousMachine_earthing);
+	get_map.emplace("SynchronousMachine.earthingStarPointR", &get_SynchronousMachine_earthingStarPointR);
+	get_map.emplace("SynchronousMachine.earthingStarPointX", &get_SynchronousMachine_earthingStarPointX);
+	get_map.emplace("SynchronousMachine.ikk", &get_SynchronousMachine_ikk);
+	get_map.emplace("SynchronousMachine.maxQ", &get_SynchronousMachine_maxQ);
+	get_map.emplace("SynchronousMachine.minQ", &get_SynchronousMachine_minQ);
+	get_map.emplace("SynchronousMachine.mu", &get_SynchronousMachine_mu);
+	get_map.emplace("SynchronousMachine.qPercent", &get_SynchronousMachine_qPercent);
+	get_map.emplace("SynchronousMachine.r", &get_SynchronousMachine_r);
+	get_map.emplace("SynchronousMachine.r0", &get_SynchronousMachine_r0);
+	get_map.emplace("SynchronousMachine.r2", &get_SynchronousMachine_r2);
+	get_map.emplace("SynchronousMachine.referencePriority", &get_SynchronousMachine_referencePriority);
+	get_map.emplace("SynchronousMachine.satDirectSubtransX", &get_SynchronousMachine_satDirectSubtransX);
+	get_map.emplace("SynchronousMachine.satDirectSyncX", &get_SynchronousMachine_satDirectSyncX);
+	get_map.emplace("SynchronousMachine.satDirectTransX", &get_SynchronousMachine_satDirectTransX);
+	get_map.emplace("SynchronousMachine.voltageRegulationRange", &get_SynchronousMachine_voltageRegulationRange);
+	get_map.emplace("SynchronousMachine.x0", &get_SynchronousMachine_x0);
+	get_map.emplace("SynchronousMachine.x2", &get_SynchronousMachine_x2);
 }
 
 void SynchronousMachine::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	RotatingMachine::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:SynchronousMachine.InitialReactiveCapabilityCurve", &get_SynchronousMachine_InitialReactiveCapabilityCurve);
+	get_map.emplace("SynchronousMachine.InitialReactiveCapabilityCurve", &get_SynchronousMachine_InitialReactiveCapabilityCurve);
 }
 
 void SynchronousMachine::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	RotatingMachine::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:SynchronousMachine.operatingMode", &get_SynchronousMachine_operatingMode);
-	get_map.emplace("cim:SynchronousMachine.shortCircuitRotorType", &get_SynchronousMachine_shortCircuitRotorType);
-	get_map.emplace("cim:SynchronousMachine.type", &get_SynchronousMachine_type);
+	get_map.emplace("SynchronousMachine.operatingMode", &get_SynchronousMachine_operatingMode);
+	get_map.emplace("SynchronousMachine.shortCircuitRotorType", &get_SynchronousMachine_shortCircuitRotorType);
+	get_map.emplace("SynchronousMachine.type", &get_SynchronousMachine_type);
+}
+
+bool SynchronousMachine::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "SynchronousMachine" &&
+		dynamic_cast<SynchronousMachine*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner SynchronousMachine::declare()
 {
 	return BaseClassDefiner(SynchronousMachine::addConstructToMap, SynchronousMachine::addPrimitiveAssignFnsToMap, SynchronousMachine::addClassAssignFnsToMap, SynchronousMachine::debugName);
+}
+
+std::map<std::string, AttrDetails> SynchronousMachine::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = RotatingMachine::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

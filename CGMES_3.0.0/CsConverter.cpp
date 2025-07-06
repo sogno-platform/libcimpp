@@ -12,49 +12,81 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		CsConverter(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+			CGMESProfile::EQ,
+			CGMESProfile::SSH,
+			CGMESProfile::SV,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "CsConverter.CSCDynamics", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "CsConverter.alpha", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SV, } } },
+		{ "CsConverter.gamma", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SV, } } },
+		{ "CsConverter.maxAlpha", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "CsConverter.maxGamma", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "CsConverter.maxIdc", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "CsConverter.minAlpha", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "CsConverter.minGamma", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "CsConverter.minIdc", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "CsConverter.operatingMode", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+		{ "CsConverter.pPccControl", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+		{ "CsConverter.ratedIdc", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "CsConverter.targetAlpha", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+		{ "CsConverter.targetGamma", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+		{ "CsConverter.targetIdc", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 CsConverter::CsConverter() : CSCDynamics(nullptr) {}
 CsConverter::~CsConverter() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& CsConverter::getAttributeNames() const
 {
-	CGMESProfile::DY,
-	CGMESProfile::EQ,
-	CGMESProfile::SSH,
-	CGMESProfile::SV,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:CsConverter.CSCDynamics", { CGMESProfile::DY, } },
-	{ "cim:CsConverter.alpha", { CGMESProfile::SV, } },
-	{ "cim:CsConverter.gamma", { CGMESProfile::SV, } },
-	{ "cim:CsConverter.maxAlpha", { CGMESProfile::EQ, } },
-	{ "cim:CsConverter.maxGamma", { CGMESProfile::EQ, } },
-	{ "cim:CsConverter.maxIdc", { CGMESProfile::EQ, } },
-	{ "cim:CsConverter.minAlpha", { CGMESProfile::EQ, } },
-	{ "cim:CsConverter.minGamma", { CGMESProfile::EQ, } },
-	{ "cim:CsConverter.minIdc", { CGMESProfile::EQ, } },
-	{ "cim:CsConverter.operatingMode", { CGMESProfile::SSH, } },
-	{ "cim:CsConverter.pPccControl", { CGMESProfile::SSH, } },
-	{ "cim:CsConverter.ratedIdc", { CGMESProfile::EQ, } },
-	{ "cim:CsConverter.targetAlpha", { CGMESProfile::SSH, } },
-	{ "cim:CsConverter.targetGamma", { CGMESProfile::SSH, } },
-	{ "cim:CsConverter.targetIdc", { CGMESProfile::SSH, } },
-};
-
-std::list<CGMESProfile>
-CsConverter::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-CsConverter::getPossibleProfilesForAttributes() const
+const std::string& CsConverter::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ACDCConverter::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& CsConverter::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& CsConverter::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& CsConverter::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& CsConverter::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& CsConverter::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_CSCDynamics_CSConverter(BaseClass*, BaseClass*);
@@ -489,47 +521,47 @@ const char* CsConverter::debugString() const
 
 void CsConverter::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:CsConverter", &CsConverter_factory);
+	factory_map.emplace("CsConverter", &CsConverter_factory);
 }
 
 void CsConverter::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:CsConverter.alpha", &assign_CsConverter_alpha);
-	assign_map.emplace("cim:CsConverter.gamma", &assign_CsConverter_gamma);
-	assign_map.emplace("cim:CsConverter.maxAlpha", &assign_CsConverter_maxAlpha);
-	assign_map.emplace("cim:CsConverter.maxGamma", &assign_CsConverter_maxGamma);
-	assign_map.emplace("cim:CsConverter.maxIdc", &assign_CsConverter_maxIdc);
-	assign_map.emplace("cim:CsConverter.minAlpha", &assign_CsConverter_minAlpha);
-	assign_map.emplace("cim:CsConverter.minGamma", &assign_CsConverter_minGamma);
-	assign_map.emplace("cim:CsConverter.minIdc", &assign_CsConverter_minIdc);
-	assign_map.emplace("cim:CsConverter.operatingMode", &assign_CsConverter_operatingMode);
-	assign_map.emplace("cim:CsConverter.pPccControl", &assign_CsConverter_pPccControl);
-	assign_map.emplace("cim:CsConverter.ratedIdc", &assign_CsConverter_ratedIdc);
-	assign_map.emplace("cim:CsConverter.targetAlpha", &assign_CsConverter_targetAlpha);
-	assign_map.emplace("cim:CsConverter.targetGamma", &assign_CsConverter_targetGamma);
-	assign_map.emplace("cim:CsConverter.targetIdc", &assign_CsConverter_targetIdc);
+	assign_map.emplace("CsConverter.alpha", &assign_CsConverter_alpha);
+	assign_map.emplace("CsConverter.gamma", &assign_CsConverter_gamma);
+	assign_map.emplace("CsConverter.maxAlpha", &assign_CsConverter_maxAlpha);
+	assign_map.emplace("CsConverter.maxGamma", &assign_CsConverter_maxGamma);
+	assign_map.emplace("CsConverter.maxIdc", &assign_CsConverter_maxIdc);
+	assign_map.emplace("CsConverter.minAlpha", &assign_CsConverter_minAlpha);
+	assign_map.emplace("CsConverter.minGamma", &assign_CsConverter_minGamma);
+	assign_map.emplace("CsConverter.minIdc", &assign_CsConverter_minIdc);
+	assign_map.emplace("CsConverter.operatingMode", &assign_CsConverter_operatingMode);
+	assign_map.emplace("CsConverter.pPccControl", &assign_CsConverter_pPccControl);
+	assign_map.emplace("CsConverter.ratedIdc", &assign_CsConverter_ratedIdc);
+	assign_map.emplace("CsConverter.targetAlpha", &assign_CsConverter_targetAlpha);
+	assign_map.emplace("CsConverter.targetGamma", &assign_CsConverter_targetGamma);
+	assign_map.emplace("CsConverter.targetIdc", &assign_CsConverter_targetIdc);
 }
 
 void CsConverter::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:CsConverter.CSCDynamics", &assign_CsConverter_CSCDynamics);
+	assign_map.emplace("CsConverter.CSCDynamics", &assign_CsConverter_CSCDynamics);
 }
 
 void CsConverter::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ACDCConverter::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:CsConverter.alpha", &get_CsConverter_alpha);
-	get_map.emplace("cim:CsConverter.gamma", &get_CsConverter_gamma);
-	get_map.emplace("cim:CsConverter.maxAlpha", &get_CsConverter_maxAlpha);
-	get_map.emplace("cim:CsConverter.maxGamma", &get_CsConverter_maxGamma);
-	get_map.emplace("cim:CsConverter.maxIdc", &get_CsConverter_maxIdc);
-	get_map.emplace("cim:CsConverter.minAlpha", &get_CsConverter_minAlpha);
-	get_map.emplace("cim:CsConverter.minGamma", &get_CsConverter_minGamma);
-	get_map.emplace("cim:CsConverter.minIdc", &get_CsConverter_minIdc);
-	get_map.emplace("cim:CsConverter.ratedIdc", &get_CsConverter_ratedIdc);
-	get_map.emplace("cim:CsConverter.targetAlpha", &get_CsConverter_targetAlpha);
-	get_map.emplace("cim:CsConverter.targetGamma", &get_CsConverter_targetGamma);
-	get_map.emplace("cim:CsConverter.targetIdc", &get_CsConverter_targetIdc);
+	get_map.emplace("CsConverter.alpha", &get_CsConverter_alpha);
+	get_map.emplace("CsConverter.gamma", &get_CsConverter_gamma);
+	get_map.emplace("CsConverter.maxAlpha", &get_CsConverter_maxAlpha);
+	get_map.emplace("CsConverter.maxGamma", &get_CsConverter_maxGamma);
+	get_map.emplace("CsConverter.maxIdc", &get_CsConverter_maxIdc);
+	get_map.emplace("CsConverter.minAlpha", &get_CsConverter_minAlpha);
+	get_map.emplace("CsConverter.minGamma", &get_CsConverter_minGamma);
+	get_map.emplace("CsConverter.minIdc", &get_CsConverter_minIdc);
+	get_map.emplace("CsConverter.ratedIdc", &get_CsConverter_ratedIdc);
+	get_map.emplace("CsConverter.targetAlpha", &get_CsConverter_targetAlpha);
+	get_map.emplace("CsConverter.targetGamma", &get_CsConverter_targetGamma);
+	get_map.emplace("CsConverter.targetIdc", &get_CsConverter_targetIdc);
 }
 
 void CsConverter::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -540,13 +572,27 @@ void CsConverter::addClassGetFnsToMap(std::map<std::string, class_get_function>&
 void CsConverter::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ACDCConverter::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:CsConverter.operatingMode", &get_CsConverter_operatingMode);
-	get_map.emplace("cim:CsConverter.pPccControl", &get_CsConverter_pPccControl);
+	get_map.emplace("CsConverter.operatingMode", &get_CsConverter_operatingMode);
+	get_map.emplace("CsConverter.pPccControl", &get_CsConverter_pPccControl);
+}
+
+bool CsConverter::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "CsConverter" &&
+		dynamic_cast<CsConverter*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner CsConverter::declare()
 {
 	return BaseClassDefiner(CsConverter::addConstructToMap, CsConverter::addPrimitiveAssignFnsToMap, CsConverter::addClassAssignFnsToMap, CsConverter::debugName);
+}
+
+std::map<std::string, AttrDetails> CsConverter::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ACDCConverter::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

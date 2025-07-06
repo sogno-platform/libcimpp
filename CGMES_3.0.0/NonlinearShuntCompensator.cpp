@@ -12,33 +12,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		NonlinearShuntCompensator(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "NonlinearShuntCompensator.NonlinearShuntCompensatorPoints", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 NonlinearShuntCompensator::NonlinearShuntCompensator() {}
 NonlinearShuntCompensator::~NonlinearShuntCompensator() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& NonlinearShuntCompensator::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:NonlinearShuntCompensator.NonlinearShuntCompensatorPoints", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-NonlinearShuntCompensator::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-NonlinearShuntCompensator::getPossibleProfilesForAttributes() const
+const std::string& NonlinearShuntCompensator::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ShuntCompensator::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& NonlinearShuntCompensator::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& NonlinearShuntCompensator::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& NonlinearShuntCompensator::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& NonlinearShuntCompensator::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& NonlinearShuntCompensator::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_NonlinearShuntCompensatorPoint_NonlinearShuntCompensator(BaseClass*, BaseClass*);
@@ -67,7 +99,7 @@ const char* NonlinearShuntCompensator::debugString() const
 
 void NonlinearShuntCompensator::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:NonlinearShuntCompensator", &NonlinearShuntCompensator_factory);
+	factory_map.emplace("NonlinearShuntCompensator", &NonlinearShuntCompensator_factory);
 }
 
 void NonlinearShuntCompensator::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -76,7 +108,7 @@ void NonlinearShuntCompensator::addPrimitiveAssignFnsToMap(std::unordered_map<st
 
 void NonlinearShuntCompensator::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:NonlinearShuntCompensator.NonlinearShuntCompensatorPoints", &assign_NonlinearShuntCompensator_NonlinearShuntCompensatorPoints);
+	assign_map.emplace("NonlinearShuntCompensator.NonlinearShuntCompensatorPoints", &assign_NonlinearShuntCompensator_NonlinearShuntCompensatorPoints);
 }
 
 void NonlinearShuntCompensator::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -94,9 +126,23 @@ void NonlinearShuntCompensator::addEnumGetFnsToMap(std::map<std::string, get_fun
 	ShuntCompensator::addEnumGetFnsToMap(get_map);
 }
 
+bool NonlinearShuntCompensator::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "NonlinearShuntCompensator" &&
+		dynamic_cast<NonlinearShuntCompensator*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner NonlinearShuntCompensator::declare()
 {
 	return BaseClassDefiner(NonlinearShuntCompensator::addConstructToMap, NonlinearShuntCompensator::addPrimitiveAssignFnsToMap, NonlinearShuntCompensator::addClassAssignFnsToMap, NonlinearShuntCompensator::debugName);
+}
+
+std::map<std::string, AttrDetails> NonlinearShuntCompensator::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ShuntCompensator::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

@@ -13,41 +13,73 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		PowerElectronicsConnection(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+			CGMESProfile::EQ,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "PowerElectronicsConnection.PowerElectronicsUnit", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "PowerElectronicsConnection.WindTurbineType3or4Dynamics", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PowerElectronicsConnection.maxQ", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "PowerElectronicsConnection.minQ", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "PowerElectronicsConnection.p", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+		{ "PowerElectronicsConnection.q", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+		{ "PowerElectronicsConnection.ratedS", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "PowerElectronicsConnection.ratedU", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 PowerElectronicsConnection::PowerElectronicsConnection() : PowerElectronicsUnit(nullptr), WindTurbineType3or4Dynamics(nullptr) {}
 PowerElectronicsConnection::~PowerElectronicsConnection() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& PowerElectronicsConnection::getAttributeNames() const
 {
-	CGMESProfile::DY,
-	CGMESProfile::EQ,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:PowerElectronicsConnection.PowerElectronicsUnit", { CGMESProfile::EQ, } },
-	{ "cim:PowerElectronicsConnection.WindTurbineType3or4Dynamics", { CGMESProfile::DY, } },
-	{ "cim:PowerElectronicsConnection.maxQ", { CGMESProfile::EQ, } },
-	{ "cim:PowerElectronicsConnection.minQ", { CGMESProfile::EQ, } },
-	{ "cim:PowerElectronicsConnection.p", { CGMESProfile::SSH, } },
-	{ "cim:PowerElectronicsConnection.q", { CGMESProfile::SSH, } },
-	{ "cim:PowerElectronicsConnection.ratedS", { CGMESProfile::EQ, } },
-	{ "cim:PowerElectronicsConnection.ratedU", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-PowerElectronicsConnection::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-PowerElectronicsConnection::getPossibleProfilesForAttributes() const
+const std::string& PowerElectronicsConnection::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = RegulatingCondEq::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& PowerElectronicsConnection::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& PowerElectronicsConnection::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& PowerElectronicsConnection::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& PowerElectronicsConnection::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& PowerElectronicsConnection::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_PowerElectronicsUnit_PowerElectronicsConnection(BaseClass*, BaseClass*);
@@ -281,40 +313,40 @@ const char* PowerElectronicsConnection::debugString() const
 
 void PowerElectronicsConnection::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:PowerElectronicsConnection", &PowerElectronicsConnection_factory);
+	factory_map.emplace("PowerElectronicsConnection", &PowerElectronicsConnection_factory);
 }
 
 void PowerElectronicsConnection::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:PowerElectronicsConnection.maxQ", &assign_PowerElectronicsConnection_maxQ);
-	assign_map.emplace("cim:PowerElectronicsConnection.minQ", &assign_PowerElectronicsConnection_minQ);
-	assign_map.emplace("cim:PowerElectronicsConnection.p", &assign_PowerElectronicsConnection_p);
-	assign_map.emplace("cim:PowerElectronicsConnection.q", &assign_PowerElectronicsConnection_q);
-	assign_map.emplace("cim:PowerElectronicsConnection.ratedS", &assign_PowerElectronicsConnection_ratedS);
-	assign_map.emplace("cim:PowerElectronicsConnection.ratedU", &assign_PowerElectronicsConnection_ratedU);
+	assign_map.emplace("PowerElectronicsConnection.maxQ", &assign_PowerElectronicsConnection_maxQ);
+	assign_map.emplace("PowerElectronicsConnection.minQ", &assign_PowerElectronicsConnection_minQ);
+	assign_map.emplace("PowerElectronicsConnection.p", &assign_PowerElectronicsConnection_p);
+	assign_map.emplace("PowerElectronicsConnection.q", &assign_PowerElectronicsConnection_q);
+	assign_map.emplace("PowerElectronicsConnection.ratedS", &assign_PowerElectronicsConnection_ratedS);
+	assign_map.emplace("PowerElectronicsConnection.ratedU", &assign_PowerElectronicsConnection_ratedU);
 }
 
 void PowerElectronicsConnection::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:PowerElectronicsConnection.PowerElectronicsUnit", &assign_PowerElectronicsConnection_PowerElectronicsUnit);
-	assign_map.emplace("cim:PowerElectronicsConnection.WindTurbineType3or4Dynamics", &assign_PowerElectronicsConnection_WindTurbineType3or4Dynamics);
+	assign_map.emplace("PowerElectronicsConnection.PowerElectronicsUnit", &assign_PowerElectronicsConnection_PowerElectronicsUnit);
+	assign_map.emplace("PowerElectronicsConnection.WindTurbineType3or4Dynamics", &assign_PowerElectronicsConnection_WindTurbineType3or4Dynamics);
 }
 
 void PowerElectronicsConnection::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	RegulatingCondEq::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:PowerElectronicsConnection.maxQ", &get_PowerElectronicsConnection_maxQ);
-	get_map.emplace("cim:PowerElectronicsConnection.minQ", &get_PowerElectronicsConnection_minQ);
-	get_map.emplace("cim:PowerElectronicsConnection.p", &get_PowerElectronicsConnection_p);
-	get_map.emplace("cim:PowerElectronicsConnection.q", &get_PowerElectronicsConnection_q);
-	get_map.emplace("cim:PowerElectronicsConnection.ratedS", &get_PowerElectronicsConnection_ratedS);
-	get_map.emplace("cim:PowerElectronicsConnection.ratedU", &get_PowerElectronicsConnection_ratedU);
+	get_map.emplace("PowerElectronicsConnection.maxQ", &get_PowerElectronicsConnection_maxQ);
+	get_map.emplace("PowerElectronicsConnection.minQ", &get_PowerElectronicsConnection_minQ);
+	get_map.emplace("PowerElectronicsConnection.p", &get_PowerElectronicsConnection_p);
+	get_map.emplace("PowerElectronicsConnection.q", &get_PowerElectronicsConnection_q);
+	get_map.emplace("PowerElectronicsConnection.ratedS", &get_PowerElectronicsConnection_ratedS);
+	get_map.emplace("PowerElectronicsConnection.ratedU", &get_PowerElectronicsConnection_ratedU);
 }
 
 void PowerElectronicsConnection::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	RegulatingCondEq::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:PowerElectronicsConnection.PowerElectronicsUnit", &get_PowerElectronicsConnection_PowerElectronicsUnit);
+	get_map.emplace("PowerElectronicsConnection.PowerElectronicsUnit", &get_PowerElectronicsConnection_PowerElectronicsUnit);
 }
 
 void PowerElectronicsConnection::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -322,9 +354,23 @@ void PowerElectronicsConnection::addEnumGetFnsToMap(std::map<std::string, get_fu
 	RegulatingCondEq::addEnumGetFnsToMap(get_map);
 }
 
+bool PowerElectronicsConnection::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "PowerElectronicsConnection" &&
+		dynamic_cast<PowerElectronicsConnection*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner PowerElectronicsConnection::declare()
 {
 	return BaseClassDefiner(PowerElectronicsConnection::addConstructToMap, PowerElectronicsConnection::addPrimitiveAssignFnsToMap, PowerElectronicsConnection::addClassAssignFnsToMap, PowerElectronicsConnection::debugName);
+}
+
+std::map<std::string, AttrDetails> PowerElectronicsConnection::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = RegulatingCondEq::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

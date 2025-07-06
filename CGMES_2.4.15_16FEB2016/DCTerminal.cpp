@@ -12,34 +12,66 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		DCTerminal(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SSH,
+			CGMESProfile::TP,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "DCTerminal.DCConductingEquipment", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 DCTerminal::DCTerminal() : DCConductingEquipment(nullptr) {}
 DCTerminal::~DCTerminal() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& DCTerminal::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SSH,
-	CGMESProfile::TP,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:DCTerminal.DCConductingEquipment", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-DCTerminal::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-DCTerminal::getPossibleProfilesForAttributes() const
+const std::string& DCTerminal::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = DCBaseTerminal::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& DCTerminal::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& DCTerminal::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& DCTerminal::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& DCTerminal::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& DCTerminal::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_DCConductingEquipment_DCTerminals(BaseClass*, BaseClass*);
@@ -81,7 +113,7 @@ const char* DCTerminal::debugString() const
 
 void DCTerminal::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:DCTerminal", &DCTerminal_factory);
+	factory_map.emplace("DCTerminal", &DCTerminal_factory);
 }
 
 void DCTerminal::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -90,7 +122,7 @@ void DCTerminal::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assi
 
 void DCTerminal::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:DCTerminal.DCConductingEquipment", &assign_DCTerminal_DCConductingEquipment);
+	assign_map.emplace("DCTerminal.DCConductingEquipment", &assign_DCTerminal_DCConductingEquipment);
 }
 
 void DCTerminal::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -101,7 +133,7 @@ void DCTerminal::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& ge
 void DCTerminal::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	DCBaseTerminal::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:DCTerminal.DCConductingEquipment", &get_DCTerminal_DCConductingEquipment);
+	get_map.emplace("DCTerminal.DCConductingEquipment", &get_DCTerminal_DCConductingEquipment);
 }
 
 void DCTerminal::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -109,9 +141,23 @@ void DCTerminal::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map
 	DCBaseTerminal::addEnumGetFnsToMap(get_map);
 }
 
+bool DCTerminal::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "DCTerminal" &&
+		dynamic_cast<DCTerminal*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner DCTerminal::declare()
 {
 	return BaseClassDefiner(DCTerminal::addConstructToMap, DCTerminal::addPrimitiveAssignFnsToMap, DCTerminal::addClassAssignFnsToMap, DCTerminal::debugName);
+}
+
+std::map<std::string, AttrDetails> DCTerminal::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = DCBaseTerminal::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

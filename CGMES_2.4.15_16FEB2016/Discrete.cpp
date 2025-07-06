@@ -13,33 +13,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		Discrete(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "Discrete.DiscreteValues", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Discrete.ValueAliasSet", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 Discrete::Discrete() : ValueAliasSet(nullptr) {}
 Discrete::~Discrete() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& Discrete::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:Discrete.DiscreteValues", { CGMESProfile::EQ, } },
-	{ "cim:Discrete.ValueAliasSet", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-Discrete::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-Discrete::getPossibleProfilesForAttributes() const
+const std::string& Discrete::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = Measurement::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& Discrete::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& Discrete::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& Discrete::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& Discrete::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& Discrete::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_DiscreteValue_Discrete(BaseClass*, BaseClass*);
@@ -99,7 +131,7 @@ const char* Discrete::debugString() const
 
 void Discrete::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:Discrete", &Discrete_factory);
+	factory_map.emplace("Discrete", &Discrete_factory);
 }
 
 void Discrete::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -108,8 +140,8 @@ void Discrete::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign
 
 void Discrete::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:Discrete.DiscreteValues", &assign_Discrete_DiscreteValues);
-	assign_map.emplace("cim:Discrete.ValueAliasSet", &assign_Discrete_ValueAliasSet);
+	assign_map.emplace("Discrete.DiscreteValues", &assign_Discrete_DiscreteValues);
+	assign_map.emplace("Discrete.ValueAliasSet", &assign_Discrete_ValueAliasSet);
 }
 
 void Discrete::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -120,7 +152,7 @@ void Discrete::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_
 void Discrete::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	Measurement::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:Discrete.ValueAliasSet", &get_Discrete_ValueAliasSet);
+	get_map.emplace("Discrete.ValueAliasSet", &get_Discrete_ValueAliasSet);
 }
 
 void Discrete::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -128,9 +160,23 @@ void Discrete::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) 
 	Measurement::addEnumGetFnsToMap(get_map);
 }
 
+bool Discrete::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "Discrete" &&
+		dynamic_cast<Discrete*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner Discrete::declare()
 {
 	return BaseClassDefiner(Discrete::addConstructToMap, Discrete::addPrimitiveAssignFnsToMap, Discrete::addClassAssignFnsToMap, Discrete::debugName);
+}
+
+std::map<std::string, AttrDetails> Discrete::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = Measurement::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

@@ -12,33 +12,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		Cut(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "Cut.ACLineSegment", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "Cut.lengthFromTerminal1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 Cut::Cut() : ACLineSegment(nullptr) {}
 Cut::~Cut() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& Cut::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:Cut.ACLineSegment", { CGMESProfile::EQ, } },
-	{ "cim:Cut.lengthFromTerminal1", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-Cut::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-Cut::getPossibleProfilesForAttributes() const
+const std::string& Cut::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = Switch::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& Cut::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& Cut::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& Cut::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& Cut::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& Cut::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ACLineSegment_Cut(BaseClass*, BaseClass*);
@@ -109,29 +141,29 @@ const char* Cut::debugString() const
 
 void Cut::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:Cut", &Cut_factory);
+	factory_map.emplace("Cut", &Cut_factory);
 }
 
 void Cut::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:Cut.lengthFromTerminal1", &assign_Cut_lengthFromTerminal1);
+	assign_map.emplace("Cut.lengthFromTerminal1", &assign_Cut_lengthFromTerminal1);
 }
 
 void Cut::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:Cut.ACLineSegment", &assign_Cut_ACLineSegment);
+	assign_map.emplace("Cut.ACLineSegment", &assign_Cut_ACLineSegment);
 }
 
 void Cut::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	Switch::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:Cut.lengthFromTerminal1", &get_Cut_lengthFromTerminal1);
+	get_map.emplace("Cut.lengthFromTerminal1", &get_Cut_lengthFromTerminal1);
 }
 
 void Cut::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	Switch::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:Cut.ACLineSegment", &get_Cut_ACLineSegment);
+	get_map.emplace("Cut.ACLineSegment", &get_Cut_ACLineSegment);
 }
 
 void Cut::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -139,9 +171,23 @@ void Cut::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 	Switch::addEnumGetFnsToMap(get_map);
 }
 
+bool Cut::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "Cut" &&
+		dynamic_cast<Cut*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner Cut::declare()
 {
 	return BaseClassDefiner(Cut::addConstructToMap, Cut::addPrimitiveAssignFnsToMap, Cut::addClassAssignFnsToMap, Cut::debugName);
+}
+
+std::map<std::string, AttrDetails> Cut::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = Switch::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

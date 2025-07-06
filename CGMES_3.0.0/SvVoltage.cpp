@@ -12,34 +12,66 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		SvVoltage(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::SV,
+		},
+		CGMESProfile::SV
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "SvVoltage.TopologicalNode", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SV, } } },
+		{ "SvVoltage.angle", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SV, } } },
+		{ "SvVoltage.v", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SV, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 SvVoltage::SvVoltage() : TopologicalNode(nullptr) {}
 SvVoltage::~SvVoltage() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& SvVoltage::getAttributeNames() const
 {
-	CGMESProfile::SV,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:SvVoltage.TopologicalNode", { CGMESProfile::SV, } },
-	{ "cim:SvVoltage.angle", { CGMESProfile::SV, } },
-	{ "cim:SvVoltage.v", { CGMESProfile::SV, } },
-};
-
-std::list<CGMESProfile>
-SvVoltage::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-SvVoltage::getPossibleProfilesForAttributes() const
+const std::string& SvVoltage::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& SvVoltage::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& SvVoltage::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& SvVoltage::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& SvVoltage::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& SvVoltage::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_TopologicalNode_SvVoltage(BaseClass*, BaseClass*);
@@ -139,31 +171,31 @@ const char* SvVoltage::debugString() const
 
 void SvVoltage::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:SvVoltage", &SvVoltage_factory);
+	factory_map.emplace("SvVoltage", &SvVoltage_factory);
 }
 
 void SvVoltage::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:SvVoltage.angle", &assign_SvVoltage_angle);
-	assign_map.emplace("cim:SvVoltage.v", &assign_SvVoltage_v);
+	assign_map.emplace("SvVoltage.angle", &assign_SvVoltage_angle);
+	assign_map.emplace("SvVoltage.v", &assign_SvVoltage_v);
 }
 
 void SvVoltage::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:SvVoltage.TopologicalNode", &assign_SvVoltage_TopologicalNode);
+	assign_map.emplace("SvVoltage.TopologicalNode", &assign_SvVoltage_TopologicalNode);
 }
 
 void SvVoltage::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	BaseClass::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:SvVoltage.angle", &get_SvVoltage_angle);
-	get_map.emplace("cim:SvVoltage.v", &get_SvVoltage_v);
+	get_map.emplace("SvVoltage.angle", &get_SvVoltage_angle);
+	get_map.emplace("SvVoltage.v", &get_SvVoltage_v);
 }
 
 void SvVoltage::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	BaseClass::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:SvVoltage.TopologicalNode", &get_SvVoltage_TopologicalNode);
+	get_map.emplace("SvVoltage.TopologicalNode", &get_SvVoltage_TopologicalNode);
 }
 
 void SvVoltage::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -171,9 +203,23 @@ void SvVoltage::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map)
 	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
+bool SvVoltage::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "SvVoltage" &&
+		dynamic_cast<SvVoltage*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner SvVoltage::declare()
 {
 	return BaseClassDefiner(SvVoltage::addConstructToMap, SvVoltage::addPrimitiveAssignFnsToMap, SvVoltage::addClassAssignFnsToMap, SvVoltage::debugName);
+}
+
+std::map<std::string, AttrDetails> SvVoltage::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = BaseClass::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

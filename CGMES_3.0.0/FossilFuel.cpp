@@ -12,33 +12,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		FossilFuel(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "FossilFuel.ThermalGeneratingUnit", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "FossilFuel.fossilFuelType", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 FossilFuel::FossilFuel() : ThermalGeneratingUnit(nullptr) {}
 FossilFuel::~FossilFuel() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& FossilFuel::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:FossilFuel.ThermalGeneratingUnit", { CGMESProfile::EQ, } },
-	{ "cim:FossilFuel.fossilFuelType", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-FossilFuel::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-FossilFuel::getPossibleProfilesForAttributes() const
+const std::string& FossilFuel::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& FossilFuel::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& FossilFuel::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& FossilFuel::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& FossilFuel::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& FossilFuel::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ThermalGeneratingUnit_FossilFuels(BaseClass*, BaseClass*);
@@ -109,17 +141,17 @@ const char* FossilFuel::debugString() const
 
 void FossilFuel::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:FossilFuel", &FossilFuel_factory);
+	factory_map.emplace("FossilFuel", &FossilFuel_factory);
 }
 
 void FossilFuel::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:FossilFuel.fossilFuelType", &assign_FossilFuel_fossilFuelType);
+	assign_map.emplace("FossilFuel.fossilFuelType", &assign_FossilFuel_fossilFuelType);
 }
 
 void FossilFuel::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:FossilFuel.ThermalGeneratingUnit", &assign_FossilFuel_ThermalGeneratingUnit);
+	assign_map.emplace("FossilFuel.ThermalGeneratingUnit", &assign_FossilFuel_ThermalGeneratingUnit);
 }
 
 void FossilFuel::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -130,18 +162,32 @@ void FossilFuel::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& ge
 void FossilFuel::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	IdentifiedObject::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:FossilFuel.ThermalGeneratingUnit", &get_FossilFuel_ThermalGeneratingUnit);
+	get_map.emplace("FossilFuel.ThermalGeneratingUnit", &get_FossilFuel_ThermalGeneratingUnit);
 }
 
 void FossilFuel::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:FossilFuel.fossilFuelType", &get_FossilFuel_fossilFuelType);
+	get_map.emplace("FossilFuel.fossilFuelType", &get_FossilFuel_fossilFuelType);
+}
+
+bool FossilFuel::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "FossilFuel" &&
+		dynamic_cast<FossilFuel*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner FossilFuel::declare()
 {
 	return BaseClassDefiner(FossilFuel::addConstructToMap, FossilFuel::addPrimitiveAssignFnsToMap, FossilFuel::addClassAssignFnsToMap, FossilFuel::debugName);
+}
+
+std::map<std::string, AttrDetails> FossilFuel::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

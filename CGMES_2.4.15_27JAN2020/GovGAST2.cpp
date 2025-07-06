@@ -11,63 +11,95 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		GovGAST2(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "GovGAST2.a", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.af1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.af2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.b", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.bf1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.bf2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.c", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.cf2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.ecr", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.etd", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.k3", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.k4", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.k5", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.k6", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.kf", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.mwbase", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.t", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.t3", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.t4", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.t5", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.tc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.tcd", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.tf", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.tmax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.tmin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.tr", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.trate", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.tt", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.w", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.x", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.y", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovGAST2.z", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 GovGAST2::GovGAST2() {}
 GovGAST2::~GovGAST2() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& GovGAST2::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:GovGAST2.a", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.af1", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.af2", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.b", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.bf1", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.bf2", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.c", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.cf2", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.ecr", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.etd", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.k3", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.k4", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.k5", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.k6", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.kf", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.mwbase", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.t", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.t3", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.t4", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.t5", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.tc", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.tcd", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.tf", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.tmax", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.tmin", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.tr", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.trate", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.tt", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.w", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.x", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.y", { CGMESProfile::DY, } },
-	{ "cim:GovGAST2.z", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-GovGAST2::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-GovGAST2::getPossibleProfilesForAttributes() const
+const std::string& GovGAST2::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = TurbineGovernorDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& GovGAST2::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& GovGAST2::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& GovGAST2::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& GovGAST2::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& GovGAST2::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_GovGAST2_a(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -1006,43 +1038,43 @@ const char* GovGAST2::debugString() const
 
 void GovGAST2::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:GovGAST2", &GovGAST2_factory);
+	factory_map.emplace("GovGAST2", &GovGAST2_factory);
 }
 
 void GovGAST2::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:GovGAST2.a", &assign_GovGAST2_a);
-	assign_map.emplace("cim:GovGAST2.af1", &assign_GovGAST2_af1);
-	assign_map.emplace("cim:GovGAST2.af2", &assign_GovGAST2_af2);
-	assign_map.emplace("cim:GovGAST2.b", &assign_GovGAST2_b);
-	assign_map.emplace("cim:GovGAST2.bf1", &assign_GovGAST2_bf1);
-	assign_map.emplace("cim:GovGAST2.bf2", &assign_GovGAST2_bf2);
-	assign_map.emplace("cim:GovGAST2.c", &assign_GovGAST2_c);
-	assign_map.emplace("cim:GovGAST2.cf2", &assign_GovGAST2_cf2);
-	assign_map.emplace("cim:GovGAST2.ecr", &assign_GovGAST2_ecr);
-	assign_map.emplace("cim:GovGAST2.etd", &assign_GovGAST2_etd);
-	assign_map.emplace("cim:GovGAST2.k3", &assign_GovGAST2_k3);
-	assign_map.emplace("cim:GovGAST2.k4", &assign_GovGAST2_k4);
-	assign_map.emplace("cim:GovGAST2.k5", &assign_GovGAST2_k5);
-	assign_map.emplace("cim:GovGAST2.k6", &assign_GovGAST2_k6);
-	assign_map.emplace("cim:GovGAST2.kf", &assign_GovGAST2_kf);
-	assign_map.emplace("cim:GovGAST2.mwbase", &assign_GovGAST2_mwbase);
-	assign_map.emplace("cim:GovGAST2.t", &assign_GovGAST2_t);
-	assign_map.emplace("cim:GovGAST2.t3", &assign_GovGAST2_t3);
-	assign_map.emplace("cim:GovGAST2.t4", &assign_GovGAST2_t4);
-	assign_map.emplace("cim:GovGAST2.t5", &assign_GovGAST2_t5);
-	assign_map.emplace("cim:GovGAST2.tc", &assign_GovGAST2_tc);
-	assign_map.emplace("cim:GovGAST2.tcd", &assign_GovGAST2_tcd);
-	assign_map.emplace("cim:GovGAST2.tf", &assign_GovGAST2_tf);
-	assign_map.emplace("cim:GovGAST2.tmax", &assign_GovGAST2_tmax);
-	assign_map.emplace("cim:GovGAST2.tmin", &assign_GovGAST2_tmin);
-	assign_map.emplace("cim:GovGAST2.tr", &assign_GovGAST2_tr);
-	assign_map.emplace("cim:GovGAST2.trate", &assign_GovGAST2_trate);
-	assign_map.emplace("cim:GovGAST2.tt", &assign_GovGAST2_tt);
-	assign_map.emplace("cim:GovGAST2.w", &assign_GovGAST2_w);
-	assign_map.emplace("cim:GovGAST2.x", &assign_GovGAST2_x);
-	assign_map.emplace("cim:GovGAST2.y", &assign_GovGAST2_y);
-	assign_map.emplace("cim:GovGAST2.z", &assign_GovGAST2_z);
+	assign_map.emplace("GovGAST2.a", &assign_GovGAST2_a);
+	assign_map.emplace("GovGAST2.af1", &assign_GovGAST2_af1);
+	assign_map.emplace("GovGAST2.af2", &assign_GovGAST2_af2);
+	assign_map.emplace("GovGAST2.b", &assign_GovGAST2_b);
+	assign_map.emplace("GovGAST2.bf1", &assign_GovGAST2_bf1);
+	assign_map.emplace("GovGAST2.bf2", &assign_GovGAST2_bf2);
+	assign_map.emplace("GovGAST2.c", &assign_GovGAST2_c);
+	assign_map.emplace("GovGAST2.cf2", &assign_GovGAST2_cf2);
+	assign_map.emplace("GovGAST2.ecr", &assign_GovGAST2_ecr);
+	assign_map.emplace("GovGAST2.etd", &assign_GovGAST2_etd);
+	assign_map.emplace("GovGAST2.k3", &assign_GovGAST2_k3);
+	assign_map.emplace("GovGAST2.k4", &assign_GovGAST2_k4);
+	assign_map.emplace("GovGAST2.k5", &assign_GovGAST2_k5);
+	assign_map.emplace("GovGAST2.k6", &assign_GovGAST2_k6);
+	assign_map.emplace("GovGAST2.kf", &assign_GovGAST2_kf);
+	assign_map.emplace("GovGAST2.mwbase", &assign_GovGAST2_mwbase);
+	assign_map.emplace("GovGAST2.t", &assign_GovGAST2_t);
+	assign_map.emplace("GovGAST2.t3", &assign_GovGAST2_t3);
+	assign_map.emplace("GovGAST2.t4", &assign_GovGAST2_t4);
+	assign_map.emplace("GovGAST2.t5", &assign_GovGAST2_t5);
+	assign_map.emplace("GovGAST2.tc", &assign_GovGAST2_tc);
+	assign_map.emplace("GovGAST2.tcd", &assign_GovGAST2_tcd);
+	assign_map.emplace("GovGAST2.tf", &assign_GovGAST2_tf);
+	assign_map.emplace("GovGAST2.tmax", &assign_GovGAST2_tmax);
+	assign_map.emplace("GovGAST2.tmin", &assign_GovGAST2_tmin);
+	assign_map.emplace("GovGAST2.tr", &assign_GovGAST2_tr);
+	assign_map.emplace("GovGAST2.trate", &assign_GovGAST2_trate);
+	assign_map.emplace("GovGAST2.tt", &assign_GovGAST2_tt);
+	assign_map.emplace("GovGAST2.w", &assign_GovGAST2_w);
+	assign_map.emplace("GovGAST2.x", &assign_GovGAST2_x);
+	assign_map.emplace("GovGAST2.y", &assign_GovGAST2_y);
+	assign_map.emplace("GovGAST2.z", &assign_GovGAST2_z);
 }
 
 void GovGAST2::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -1052,38 +1084,38 @@ void GovGAST2::addClassAssignFnsToMap(std::unordered_map<std::string, class_assi
 void GovGAST2::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	TurbineGovernorDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:GovGAST2.a", &get_GovGAST2_a);
-	get_map.emplace("cim:GovGAST2.af1", &get_GovGAST2_af1);
-	get_map.emplace("cim:GovGAST2.af2", &get_GovGAST2_af2);
-	get_map.emplace("cim:GovGAST2.b", &get_GovGAST2_b);
-	get_map.emplace("cim:GovGAST2.bf1", &get_GovGAST2_bf1);
-	get_map.emplace("cim:GovGAST2.bf2", &get_GovGAST2_bf2);
-	get_map.emplace("cim:GovGAST2.c", &get_GovGAST2_c);
-	get_map.emplace("cim:GovGAST2.cf2", &get_GovGAST2_cf2);
-	get_map.emplace("cim:GovGAST2.ecr", &get_GovGAST2_ecr);
-	get_map.emplace("cim:GovGAST2.etd", &get_GovGAST2_etd);
-	get_map.emplace("cim:GovGAST2.k3", &get_GovGAST2_k3);
-	get_map.emplace("cim:GovGAST2.k4", &get_GovGAST2_k4);
-	get_map.emplace("cim:GovGAST2.k5", &get_GovGAST2_k5);
-	get_map.emplace("cim:GovGAST2.k6", &get_GovGAST2_k6);
-	get_map.emplace("cim:GovGAST2.kf", &get_GovGAST2_kf);
-	get_map.emplace("cim:GovGAST2.mwbase", &get_GovGAST2_mwbase);
-	get_map.emplace("cim:GovGAST2.t", &get_GovGAST2_t);
-	get_map.emplace("cim:GovGAST2.t3", &get_GovGAST2_t3);
-	get_map.emplace("cim:GovGAST2.t4", &get_GovGAST2_t4);
-	get_map.emplace("cim:GovGAST2.t5", &get_GovGAST2_t5);
-	get_map.emplace("cim:GovGAST2.tc", &get_GovGAST2_tc);
-	get_map.emplace("cim:GovGAST2.tcd", &get_GovGAST2_tcd);
-	get_map.emplace("cim:GovGAST2.tf", &get_GovGAST2_tf);
-	get_map.emplace("cim:GovGAST2.tmax", &get_GovGAST2_tmax);
-	get_map.emplace("cim:GovGAST2.tmin", &get_GovGAST2_tmin);
-	get_map.emplace("cim:GovGAST2.tr", &get_GovGAST2_tr);
-	get_map.emplace("cim:GovGAST2.trate", &get_GovGAST2_trate);
-	get_map.emplace("cim:GovGAST2.tt", &get_GovGAST2_tt);
-	get_map.emplace("cim:GovGAST2.w", &get_GovGAST2_w);
-	get_map.emplace("cim:GovGAST2.x", &get_GovGAST2_x);
-	get_map.emplace("cim:GovGAST2.y", &get_GovGAST2_y);
-	get_map.emplace("cim:GovGAST2.z", &get_GovGAST2_z);
+	get_map.emplace("GovGAST2.a", &get_GovGAST2_a);
+	get_map.emplace("GovGAST2.af1", &get_GovGAST2_af1);
+	get_map.emplace("GovGAST2.af2", &get_GovGAST2_af2);
+	get_map.emplace("GovGAST2.b", &get_GovGAST2_b);
+	get_map.emplace("GovGAST2.bf1", &get_GovGAST2_bf1);
+	get_map.emplace("GovGAST2.bf2", &get_GovGAST2_bf2);
+	get_map.emplace("GovGAST2.c", &get_GovGAST2_c);
+	get_map.emplace("GovGAST2.cf2", &get_GovGAST2_cf2);
+	get_map.emplace("GovGAST2.ecr", &get_GovGAST2_ecr);
+	get_map.emplace("GovGAST2.etd", &get_GovGAST2_etd);
+	get_map.emplace("GovGAST2.k3", &get_GovGAST2_k3);
+	get_map.emplace("GovGAST2.k4", &get_GovGAST2_k4);
+	get_map.emplace("GovGAST2.k5", &get_GovGAST2_k5);
+	get_map.emplace("GovGAST2.k6", &get_GovGAST2_k6);
+	get_map.emplace("GovGAST2.kf", &get_GovGAST2_kf);
+	get_map.emplace("GovGAST2.mwbase", &get_GovGAST2_mwbase);
+	get_map.emplace("GovGAST2.t", &get_GovGAST2_t);
+	get_map.emplace("GovGAST2.t3", &get_GovGAST2_t3);
+	get_map.emplace("GovGAST2.t4", &get_GovGAST2_t4);
+	get_map.emplace("GovGAST2.t5", &get_GovGAST2_t5);
+	get_map.emplace("GovGAST2.tc", &get_GovGAST2_tc);
+	get_map.emplace("GovGAST2.tcd", &get_GovGAST2_tcd);
+	get_map.emplace("GovGAST2.tf", &get_GovGAST2_tf);
+	get_map.emplace("GovGAST2.tmax", &get_GovGAST2_tmax);
+	get_map.emplace("GovGAST2.tmin", &get_GovGAST2_tmin);
+	get_map.emplace("GovGAST2.tr", &get_GovGAST2_tr);
+	get_map.emplace("GovGAST2.trate", &get_GovGAST2_trate);
+	get_map.emplace("GovGAST2.tt", &get_GovGAST2_tt);
+	get_map.emplace("GovGAST2.w", &get_GovGAST2_w);
+	get_map.emplace("GovGAST2.x", &get_GovGAST2_x);
+	get_map.emplace("GovGAST2.y", &get_GovGAST2_y);
+	get_map.emplace("GovGAST2.z", &get_GovGAST2_z);
 }
 
 void GovGAST2::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -1096,9 +1128,23 @@ void GovGAST2::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) 
 	TurbineGovernorDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool GovGAST2::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "GovGAST2" &&
+		dynamic_cast<GovGAST2*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner GovGAST2::declare()
 {
 	return BaseClassDefiner(GovGAST2::addConstructToMap, GovGAST2::addPrimitiveAssignFnsToMap, GovGAST2::addClassAssignFnsToMap, GovGAST2::debugName);
+}
+
+std::map<std::string, AttrDetails> GovGAST2::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = TurbineGovernorDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

@@ -13,41 +13,73 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		WindContRotorRIEC(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "WindContRotorRIEC.WindDynamicsLookupTable", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContRotorRIEC.WindGenTurbineType2IEC", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContRotorRIEC.kirr", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContRotorRIEC.komegafilt", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContRotorRIEC.kpfilt", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContRotorRIEC.kprr", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContRotorRIEC.rmax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContRotorRIEC.rmin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContRotorRIEC.tomegafilt", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContRotorRIEC.tpfilt", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 WindContRotorRIEC::WindContRotorRIEC() : WindGenTurbineType2IEC(nullptr) {}
 WindContRotorRIEC::~WindContRotorRIEC() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& WindContRotorRIEC::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:WindContRotorRIEC.WindDynamicsLookupTable", { CGMESProfile::DY, } },
-	{ "cim:WindContRotorRIEC.WindGenTurbineType2IEC", { CGMESProfile::DY, } },
-	{ "cim:WindContRotorRIEC.kirr", { CGMESProfile::DY, } },
-	{ "cim:WindContRotorRIEC.komegafilt", { CGMESProfile::DY, } },
-	{ "cim:WindContRotorRIEC.kpfilt", { CGMESProfile::DY, } },
-	{ "cim:WindContRotorRIEC.kprr", { CGMESProfile::DY, } },
-	{ "cim:WindContRotorRIEC.rmax", { CGMESProfile::DY, } },
-	{ "cim:WindContRotorRIEC.rmin", { CGMESProfile::DY, } },
-	{ "cim:WindContRotorRIEC.tomegafilt", { CGMESProfile::DY, } },
-	{ "cim:WindContRotorRIEC.tpfilt", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-WindContRotorRIEC::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-WindContRotorRIEC::getPossibleProfilesForAttributes() const
+const std::string& WindContRotorRIEC::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& WindContRotorRIEC::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& WindContRotorRIEC::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& WindContRotorRIEC::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& WindContRotorRIEC::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& WindContRotorRIEC::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_WindDynamicsLookupTable_WindContRotorRIEC(BaseClass*, BaseClass*);
@@ -326,38 +358,38 @@ const char* WindContRotorRIEC::debugString() const
 
 void WindContRotorRIEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:WindContRotorRIEC", &WindContRotorRIEC_factory);
+	factory_map.emplace("WindContRotorRIEC", &WindContRotorRIEC_factory);
 }
 
 void WindContRotorRIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindContRotorRIEC.kirr", &assign_WindContRotorRIEC_kirr);
-	assign_map.emplace("cim:WindContRotorRIEC.komegafilt", &assign_WindContRotorRIEC_komegafilt);
-	assign_map.emplace("cim:WindContRotorRIEC.kpfilt", &assign_WindContRotorRIEC_kpfilt);
-	assign_map.emplace("cim:WindContRotorRIEC.kprr", &assign_WindContRotorRIEC_kprr);
-	assign_map.emplace("cim:WindContRotorRIEC.rmax", &assign_WindContRotorRIEC_rmax);
-	assign_map.emplace("cim:WindContRotorRIEC.rmin", &assign_WindContRotorRIEC_rmin);
-	assign_map.emplace("cim:WindContRotorRIEC.tomegafilt", &assign_WindContRotorRIEC_tomegafilt);
-	assign_map.emplace("cim:WindContRotorRIEC.tpfilt", &assign_WindContRotorRIEC_tpfilt);
+	assign_map.emplace("WindContRotorRIEC.kirr", &assign_WindContRotorRIEC_kirr);
+	assign_map.emplace("WindContRotorRIEC.komegafilt", &assign_WindContRotorRIEC_komegafilt);
+	assign_map.emplace("WindContRotorRIEC.kpfilt", &assign_WindContRotorRIEC_kpfilt);
+	assign_map.emplace("WindContRotorRIEC.kprr", &assign_WindContRotorRIEC_kprr);
+	assign_map.emplace("WindContRotorRIEC.rmax", &assign_WindContRotorRIEC_rmax);
+	assign_map.emplace("WindContRotorRIEC.rmin", &assign_WindContRotorRIEC_rmin);
+	assign_map.emplace("WindContRotorRIEC.tomegafilt", &assign_WindContRotorRIEC_tomegafilt);
+	assign_map.emplace("WindContRotorRIEC.tpfilt", &assign_WindContRotorRIEC_tpfilt);
 }
 
 void WindContRotorRIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindContRotorRIEC.WindDynamicsLookupTable", &assign_WindContRotorRIEC_WindDynamicsLookupTable);
-	assign_map.emplace("cim:WindContRotorRIEC.WindGenTurbineType2IEC", &assign_WindContRotorRIEC_WindGenTurbineType2IEC);
+	assign_map.emplace("WindContRotorRIEC.WindDynamicsLookupTable", &assign_WindContRotorRIEC_WindDynamicsLookupTable);
+	assign_map.emplace("WindContRotorRIEC.WindGenTurbineType2IEC", &assign_WindContRotorRIEC_WindGenTurbineType2IEC);
 }
 
 void WindContRotorRIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:WindContRotorRIEC.kirr", &get_WindContRotorRIEC_kirr);
-	get_map.emplace("cim:WindContRotorRIEC.komegafilt", &get_WindContRotorRIEC_komegafilt);
-	get_map.emplace("cim:WindContRotorRIEC.kpfilt", &get_WindContRotorRIEC_kpfilt);
-	get_map.emplace("cim:WindContRotorRIEC.kprr", &get_WindContRotorRIEC_kprr);
-	get_map.emplace("cim:WindContRotorRIEC.rmax", &get_WindContRotorRIEC_rmax);
-	get_map.emplace("cim:WindContRotorRIEC.rmin", &get_WindContRotorRIEC_rmin);
-	get_map.emplace("cim:WindContRotorRIEC.tomegafilt", &get_WindContRotorRIEC_tomegafilt);
-	get_map.emplace("cim:WindContRotorRIEC.tpfilt", &get_WindContRotorRIEC_tpfilt);
+	get_map.emplace("WindContRotorRIEC.kirr", &get_WindContRotorRIEC_kirr);
+	get_map.emplace("WindContRotorRIEC.komegafilt", &get_WindContRotorRIEC_komegafilt);
+	get_map.emplace("WindContRotorRIEC.kpfilt", &get_WindContRotorRIEC_kpfilt);
+	get_map.emplace("WindContRotorRIEC.kprr", &get_WindContRotorRIEC_kprr);
+	get_map.emplace("WindContRotorRIEC.rmax", &get_WindContRotorRIEC_rmax);
+	get_map.emplace("WindContRotorRIEC.rmin", &get_WindContRotorRIEC_rmin);
+	get_map.emplace("WindContRotorRIEC.tomegafilt", &get_WindContRotorRIEC_tomegafilt);
+	get_map.emplace("WindContRotorRIEC.tpfilt", &get_WindContRotorRIEC_tpfilt);
 }
 
 void WindContRotorRIEC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -370,9 +402,23 @@ void WindContRotorRIEC::addEnumGetFnsToMap(std::map<std::string, get_function>& 
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool WindContRotorRIEC::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "WindContRotorRIEC" &&
+		dynamic_cast<WindContRotorRIEC*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner WindContRotorRIEC::declare()
 {
 	return BaseClassDefiner(WindContRotorRIEC::addConstructToMap, WindContRotorRIEC::addPrimitiveAssignFnsToMap, WindContRotorRIEC::addClassAssignFnsToMap, WindContRotorRIEC::debugName);
+}
+
+std::map<std::string, AttrDetails> WindContRotorRIEC::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

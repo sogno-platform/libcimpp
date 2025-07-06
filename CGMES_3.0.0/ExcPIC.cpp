@@ -11,54 +11,86 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ExcPIC(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ExcPIC.e1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcPIC.e2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcPIC.efdmax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcPIC.efdmin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcPIC.ka", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcPIC.kc", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcPIC.ke", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcPIC.kf", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcPIC.ki", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcPIC.kp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcPIC.se1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcPIC.se2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcPIC.ta1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcPIC.ta2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcPIC.ta3", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcPIC.ta4", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcPIC.te", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcPIC.tf1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcPIC.tf2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcPIC.vr1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcPIC.vr2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcPIC.vrmax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcPIC.vrmin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ExcPIC::ExcPIC() {}
 ExcPIC::~ExcPIC() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ExcPIC::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ExcPIC.e1", { CGMESProfile::DY, } },
-	{ "cim:ExcPIC.e2", { CGMESProfile::DY, } },
-	{ "cim:ExcPIC.efdmax", { CGMESProfile::DY, } },
-	{ "cim:ExcPIC.efdmin", { CGMESProfile::DY, } },
-	{ "cim:ExcPIC.ka", { CGMESProfile::DY, } },
-	{ "cim:ExcPIC.kc", { CGMESProfile::DY, } },
-	{ "cim:ExcPIC.ke", { CGMESProfile::DY, } },
-	{ "cim:ExcPIC.kf", { CGMESProfile::DY, } },
-	{ "cim:ExcPIC.ki", { CGMESProfile::DY, } },
-	{ "cim:ExcPIC.kp", { CGMESProfile::DY, } },
-	{ "cim:ExcPIC.se1", { CGMESProfile::DY, } },
-	{ "cim:ExcPIC.se2", { CGMESProfile::DY, } },
-	{ "cim:ExcPIC.ta1", { CGMESProfile::DY, } },
-	{ "cim:ExcPIC.ta2", { CGMESProfile::DY, } },
-	{ "cim:ExcPIC.ta3", { CGMESProfile::DY, } },
-	{ "cim:ExcPIC.ta4", { CGMESProfile::DY, } },
-	{ "cim:ExcPIC.te", { CGMESProfile::DY, } },
-	{ "cim:ExcPIC.tf1", { CGMESProfile::DY, } },
-	{ "cim:ExcPIC.tf2", { CGMESProfile::DY, } },
-	{ "cim:ExcPIC.vr1", { CGMESProfile::DY, } },
-	{ "cim:ExcPIC.vr2", { CGMESProfile::DY, } },
-	{ "cim:ExcPIC.vrmax", { CGMESProfile::DY, } },
-	{ "cim:ExcPIC.vrmin", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-ExcPIC::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ExcPIC::getPossibleProfilesForAttributes() const
+const std::string& ExcPIC::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ExcPIC::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ExcPIC::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ExcPIC::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ExcPIC::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ExcPIC::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ExcPIC_e1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -736,34 +768,34 @@ const char* ExcPIC::debugString() const
 
 void ExcPIC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ExcPIC", &ExcPIC_factory);
+	factory_map.emplace("ExcPIC", &ExcPIC_factory);
 }
 
 void ExcPIC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ExcPIC.e1", &assign_ExcPIC_e1);
-	assign_map.emplace("cim:ExcPIC.e2", &assign_ExcPIC_e2);
-	assign_map.emplace("cim:ExcPIC.efdmax", &assign_ExcPIC_efdmax);
-	assign_map.emplace("cim:ExcPIC.efdmin", &assign_ExcPIC_efdmin);
-	assign_map.emplace("cim:ExcPIC.ka", &assign_ExcPIC_ka);
-	assign_map.emplace("cim:ExcPIC.kc", &assign_ExcPIC_kc);
-	assign_map.emplace("cim:ExcPIC.ke", &assign_ExcPIC_ke);
-	assign_map.emplace("cim:ExcPIC.kf", &assign_ExcPIC_kf);
-	assign_map.emplace("cim:ExcPIC.ki", &assign_ExcPIC_ki);
-	assign_map.emplace("cim:ExcPIC.kp", &assign_ExcPIC_kp);
-	assign_map.emplace("cim:ExcPIC.se1", &assign_ExcPIC_se1);
-	assign_map.emplace("cim:ExcPIC.se2", &assign_ExcPIC_se2);
-	assign_map.emplace("cim:ExcPIC.ta1", &assign_ExcPIC_ta1);
-	assign_map.emplace("cim:ExcPIC.ta2", &assign_ExcPIC_ta2);
-	assign_map.emplace("cim:ExcPIC.ta3", &assign_ExcPIC_ta3);
-	assign_map.emplace("cim:ExcPIC.ta4", &assign_ExcPIC_ta4);
-	assign_map.emplace("cim:ExcPIC.te", &assign_ExcPIC_te);
-	assign_map.emplace("cim:ExcPIC.tf1", &assign_ExcPIC_tf1);
-	assign_map.emplace("cim:ExcPIC.tf2", &assign_ExcPIC_tf2);
-	assign_map.emplace("cim:ExcPIC.vr1", &assign_ExcPIC_vr1);
-	assign_map.emplace("cim:ExcPIC.vr2", &assign_ExcPIC_vr2);
-	assign_map.emplace("cim:ExcPIC.vrmax", &assign_ExcPIC_vrmax);
-	assign_map.emplace("cim:ExcPIC.vrmin", &assign_ExcPIC_vrmin);
+	assign_map.emplace("ExcPIC.e1", &assign_ExcPIC_e1);
+	assign_map.emplace("ExcPIC.e2", &assign_ExcPIC_e2);
+	assign_map.emplace("ExcPIC.efdmax", &assign_ExcPIC_efdmax);
+	assign_map.emplace("ExcPIC.efdmin", &assign_ExcPIC_efdmin);
+	assign_map.emplace("ExcPIC.ka", &assign_ExcPIC_ka);
+	assign_map.emplace("ExcPIC.kc", &assign_ExcPIC_kc);
+	assign_map.emplace("ExcPIC.ke", &assign_ExcPIC_ke);
+	assign_map.emplace("ExcPIC.kf", &assign_ExcPIC_kf);
+	assign_map.emplace("ExcPIC.ki", &assign_ExcPIC_ki);
+	assign_map.emplace("ExcPIC.kp", &assign_ExcPIC_kp);
+	assign_map.emplace("ExcPIC.se1", &assign_ExcPIC_se1);
+	assign_map.emplace("ExcPIC.se2", &assign_ExcPIC_se2);
+	assign_map.emplace("ExcPIC.ta1", &assign_ExcPIC_ta1);
+	assign_map.emplace("ExcPIC.ta2", &assign_ExcPIC_ta2);
+	assign_map.emplace("ExcPIC.ta3", &assign_ExcPIC_ta3);
+	assign_map.emplace("ExcPIC.ta4", &assign_ExcPIC_ta4);
+	assign_map.emplace("ExcPIC.te", &assign_ExcPIC_te);
+	assign_map.emplace("ExcPIC.tf1", &assign_ExcPIC_tf1);
+	assign_map.emplace("ExcPIC.tf2", &assign_ExcPIC_tf2);
+	assign_map.emplace("ExcPIC.vr1", &assign_ExcPIC_vr1);
+	assign_map.emplace("ExcPIC.vr2", &assign_ExcPIC_vr2);
+	assign_map.emplace("ExcPIC.vrmax", &assign_ExcPIC_vrmax);
+	assign_map.emplace("ExcPIC.vrmin", &assign_ExcPIC_vrmin);
 }
 
 void ExcPIC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -773,29 +805,29 @@ void ExcPIC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign
 void ExcPIC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ExcPIC.e1", &get_ExcPIC_e1);
-	get_map.emplace("cim:ExcPIC.e2", &get_ExcPIC_e2);
-	get_map.emplace("cim:ExcPIC.efdmax", &get_ExcPIC_efdmax);
-	get_map.emplace("cim:ExcPIC.efdmin", &get_ExcPIC_efdmin);
-	get_map.emplace("cim:ExcPIC.ka", &get_ExcPIC_ka);
-	get_map.emplace("cim:ExcPIC.kc", &get_ExcPIC_kc);
-	get_map.emplace("cim:ExcPIC.ke", &get_ExcPIC_ke);
-	get_map.emplace("cim:ExcPIC.kf", &get_ExcPIC_kf);
-	get_map.emplace("cim:ExcPIC.ki", &get_ExcPIC_ki);
-	get_map.emplace("cim:ExcPIC.kp", &get_ExcPIC_kp);
-	get_map.emplace("cim:ExcPIC.se1", &get_ExcPIC_se1);
-	get_map.emplace("cim:ExcPIC.se2", &get_ExcPIC_se2);
-	get_map.emplace("cim:ExcPIC.ta1", &get_ExcPIC_ta1);
-	get_map.emplace("cim:ExcPIC.ta2", &get_ExcPIC_ta2);
-	get_map.emplace("cim:ExcPIC.ta3", &get_ExcPIC_ta3);
-	get_map.emplace("cim:ExcPIC.ta4", &get_ExcPIC_ta4);
-	get_map.emplace("cim:ExcPIC.te", &get_ExcPIC_te);
-	get_map.emplace("cim:ExcPIC.tf1", &get_ExcPIC_tf1);
-	get_map.emplace("cim:ExcPIC.tf2", &get_ExcPIC_tf2);
-	get_map.emplace("cim:ExcPIC.vr1", &get_ExcPIC_vr1);
-	get_map.emplace("cim:ExcPIC.vr2", &get_ExcPIC_vr2);
-	get_map.emplace("cim:ExcPIC.vrmax", &get_ExcPIC_vrmax);
-	get_map.emplace("cim:ExcPIC.vrmin", &get_ExcPIC_vrmin);
+	get_map.emplace("ExcPIC.e1", &get_ExcPIC_e1);
+	get_map.emplace("ExcPIC.e2", &get_ExcPIC_e2);
+	get_map.emplace("ExcPIC.efdmax", &get_ExcPIC_efdmax);
+	get_map.emplace("ExcPIC.efdmin", &get_ExcPIC_efdmin);
+	get_map.emplace("ExcPIC.ka", &get_ExcPIC_ka);
+	get_map.emplace("ExcPIC.kc", &get_ExcPIC_kc);
+	get_map.emplace("ExcPIC.ke", &get_ExcPIC_ke);
+	get_map.emplace("ExcPIC.kf", &get_ExcPIC_kf);
+	get_map.emplace("ExcPIC.ki", &get_ExcPIC_ki);
+	get_map.emplace("ExcPIC.kp", &get_ExcPIC_kp);
+	get_map.emplace("ExcPIC.se1", &get_ExcPIC_se1);
+	get_map.emplace("ExcPIC.se2", &get_ExcPIC_se2);
+	get_map.emplace("ExcPIC.ta1", &get_ExcPIC_ta1);
+	get_map.emplace("ExcPIC.ta2", &get_ExcPIC_ta2);
+	get_map.emplace("ExcPIC.ta3", &get_ExcPIC_ta3);
+	get_map.emplace("ExcPIC.ta4", &get_ExcPIC_ta4);
+	get_map.emplace("ExcPIC.te", &get_ExcPIC_te);
+	get_map.emplace("ExcPIC.tf1", &get_ExcPIC_tf1);
+	get_map.emplace("ExcPIC.tf2", &get_ExcPIC_tf2);
+	get_map.emplace("ExcPIC.vr1", &get_ExcPIC_vr1);
+	get_map.emplace("ExcPIC.vr2", &get_ExcPIC_vr2);
+	get_map.emplace("ExcPIC.vrmax", &get_ExcPIC_vrmax);
+	get_map.emplace("ExcPIC.vrmin", &get_ExcPIC_vrmin);
 }
 
 void ExcPIC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -808,9 +840,23 @@ void ExcPIC::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) co
 	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool ExcPIC::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ExcPIC" &&
+		dynamic_cast<ExcPIC*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ExcPIC::declare()
 {
 	return BaseClassDefiner(ExcPIC::addConstructToMap, ExcPIC::addPrimitiveAssignFnsToMap, ExcPIC::addClassAssignFnsToMap, ExcPIC::debugName);
+}
+
+std::map<std::string, AttrDetails> ExcPIC::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ExcitationSystemDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

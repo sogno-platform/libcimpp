@@ -12,33 +12,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		VCompIEEEType2(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "VCompIEEEType2.GenICompensationForGenJ", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "VCompIEEEType2.tr", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 VCompIEEEType2::VCompIEEEType2() {}
 VCompIEEEType2::~VCompIEEEType2() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& VCompIEEEType2::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:VCompIEEEType2.GenICompensationForGenJ", { CGMESProfile::DY, } },
-	{ "cim:VCompIEEEType2.tr", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-VCompIEEEType2::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-VCompIEEEType2::getPossibleProfilesForAttributes() const
+const std::string& VCompIEEEType2::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = VoltageCompensatorDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& VCompIEEEType2::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& VCompIEEEType2::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& VCompIEEEType2::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& VCompIEEEType2::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& VCompIEEEType2::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_GenICompensationForGenJ_VcompIEEEType2(BaseClass*, BaseClass*);
@@ -96,23 +128,23 @@ const char* VCompIEEEType2::debugString() const
 
 void VCompIEEEType2::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:VCompIEEEType2", &VCompIEEEType2_factory);
+	factory_map.emplace("VCompIEEEType2", &VCompIEEEType2_factory);
 }
 
 void VCompIEEEType2::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:VCompIEEEType2.tr", &assign_VCompIEEEType2_tr);
+	assign_map.emplace("VCompIEEEType2.tr", &assign_VCompIEEEType2_tr);
 }
 
 void VCompIEEEType2::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:VCompIEEEType2.GenICompensationForGenJ", &assign_VCompIEEEType2_GenICompensationForGenJ);
+	assign_map.emplace("VCompIEEEType2.GenICompensationForGenJ", &assign_VCompIEEEType2_GenICompensationForGenJ);
 }
 
 void VCompIEEEType2::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	VoltageCompensatorDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:VCompIEEEType2.tr", &get_VCompIEEEType2_tr);
+	get_map.emplace("VCompIEEEType2.tr", &get_VCompIEEEType2_tr);
 }
 
 void VCompIEEEType2::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -125,9 +157,23 @@ void VCompIEEEType2::addEnumGetFnsToMap(std::map<std::string, get_function>& get
 	VoltageCompensatorDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool VCompIEEEType2::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "VCompIEEEType2" &&
+		dynamic_cast<VCompIEEEType2*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner VCompIEEEType2::declare()
 {
 	return BaseClassDefiner(VCompIEEEType2::addConstructToMap, VCompIEEEType2::addPrimitiveAssignFnsToMap, VCompIEEEType2::addClassAssignFnsToMap, VCompIEEEType2::debugName);
+}
+
+std::map<std::string, AttrDetails> VCompIEEEType2::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = VoltageCompensatorDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

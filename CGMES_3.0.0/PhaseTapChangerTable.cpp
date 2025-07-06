@@ -13,33 +13,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		PhaseTapChangerTable(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "PhaseTapChangerTable.PhaseTapChangerTablePoint", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "PhaseTapChangerTable.PhaseTapChangerTabular", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 PhaseTapChangerTable::PhaseTapChangerTable() {}
 PhaseTapChangerTable::~PhaseTapChangerTable() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& PhaseTapChangerTable::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:PhaseTapChangerTable.PhaseTapChangerTablePoint", { CGMESProfile::EQ, } },
-	{ "cim:PhaseTapChangerTable.PhaseTapChangerTabular", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-PhaseTapChangerTable::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-PhaseTapChangerTable::getPossibleProfilesForAttributes() const
+const std::string& PhaseTapChangerTable::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& PhaseTapChangerTable::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& PhaseTapChangerTable::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& PhaseTapChangerTable::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& PhaseTapChangerTable::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& PhaseTapChangerTable::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_PhaseTapChangerTablePoint_PhaseTapChangerTable(BaseClass*, BaseClass*);
@@ -86,7 +118,7 @@ const char* PhaseTapChangerTable::debugString() const
 
 void PhaseTapChangerTable::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:PhaseTapChangerTable", &PhaseTapChangerTable_factory);
+	factory_map.emplace("PhaseTapChangerTable", &PhaseTapChangerTable_factory);
 }
 
 void PhaseTapChangerTable::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -95,8 +127,8 @@ void PhaseTapChangerTable::addPrimitiveAssignFnsToMap(std::unordered_map<std::st
 
 void PhaseTapChangerTable::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:PhaseTapChangerTable.PhaseTapChangerTablePoint", &assign_PhaseTapChangerTable_PhaseTapChangerTablePoint);
-	assign_map.emplace("cim:PhaseTapChangerTable.PhaseTapChangerTabular", &assign_PhaseTapChangerTable_PhaseTapChangerTabular);
+	assign_map.emplace("PhaseTapChangerTable.PhaseTapChangerTablePoint", &assign_PhaseTapChangerTable_PhaseTapChangerTablePoint);
+	assign_map.emplace("PhaseTapChangerTable.PhaseTapChangerTabular", &assign_PhaseTapChangerTable_PhaseTapChangerTabular);
 }
 
 void PhaseTapChangerTable::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -114,9 +146,23 @@ void PhaseTapChangerTable::addEnumGetFnsToMap(std::map<std::string, get_function
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool PhaseTapChangerTable::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "PhaseTapChangerTable" &&
+		dynamic_cast<PhaseTapChangerTable*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner PhaseTapChangerTable::declare()
 {
 	return BaseClassDefiner(PhaseTapChangerTable::addConstructToMap, PhaseTapChangerTable::addPrimitiveAssignFnsToMap, PhaseTapChangerTable::addClassAssignFnsToMap, PhaseTapChangerTable::debugName);
+}
+
+std::map<std::string, AttrDetails> PhaseTapChangerTable::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

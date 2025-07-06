@@ -12,33 +12,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		PowerSystemStabilizerUserDefined(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "PowerSystemStabilizerUserDefined.ProprietaryParameterDynamics", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "PowerSystemStabilizerUserDefined.proprietary", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 PowerSystemStabilizerUserDefined::PowerSystemStabilizerUserDefined() {}
 PowerSystemStabilizerUserDefined::~PowerSystemStabilizerUserDefined() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& PowerSystemStabilizerUserDefined::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:PowerSystemStabilizerUserDefined.ProprietaryParameterDynamics", { CGMESProfile::DY, } },
-	{ "cim:PowerSystemStabilizerUserDefined.proprietary", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-PowerSystemStabilizerUserDefined::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-PowerSystemStabilizerUserDefined::getPossibleProfilesForAttributes() const
+const std::string& PowerSystemStabilizerUserDefined::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = PowerSystemStabilizerDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& PowerSystemStabilizerUserDefined::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& PowerSystemStabilizerUserDefined::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& PowerSystemStabilizerUserDefined::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& PowerSystemStabilizerUserDefined::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& PowerSystemStabilizerUserDefined::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ProprietaryParameterDynamics_PowerSystemStabilizerUserDefined(BaseClass*, BaseClass*);
@@ -96,23 +128,23 @@ const char* PowerSystemStabilizerUserDefined::debugString() const
 
 void PowerSystemStabilizerUserDefined::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:PowerSystemStabilizerUserDefined", &PowerSystemStabilizerUserDefined_factory);
+	factory_map.emplace("PowerSystemStabilizerUserDefined", &PowerSystemStabilizerUserDefined_factory);
 }
 
 void PowerSystemStabilizerUserDefined::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:PowerSystemStabilizerUserDefined.proprietary", &assign_PowerSystemStabilizerUserDefined_proprietary);
+	assign_map.emplace("PowerSystemStabilizerUserDefined.proprietary", &assign_PowerSystemStabilizerUserDefined_proprietary);
 }
 
 void PowerSystemStabilizerUserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:PowerSystemStabilizerUserDefined.ProprietaryParameterDynamics", &assign_PowerSystemStabilizerUserDefined_ProprietaryParameterDynamics);
+	assign_map.emplace("PowerSystemStabilizerUserDefined.ProprietaryParameterDynamics", &assign_PowerSystemStabilizerUserDefined_ProprietaryParameterDynamics);
 }
 
 void PowerSystemStabilizerUserDefined::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	PowerSystemStabilizerDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:PowerSystemStabilizerUserDefined.proprietary", &get_PowerSystemStabilizerUserDefined_proprietary);
+	get_map.emplace("PowerSystemStabilizerUserDefined.proprietary", &get_PowerSystemStabilizerUserDefined_proprietary);
 }
 
 void PowerSystemStabilizerUserDefined::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -125,9 +157,23 @@ void PowerSystemStabilizerUserDefined::addEnumGetFnsToMap(std::map<std::string, 
 	PowerSystemStabilizerDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool PowerSystemStabilizerUserDefined::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "PowerSystemStabilizerUserDefined" &&
+		dynamic_cast<PowerSystemStabilizerUserDefined*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner PowerSystemStabilizerUserDefined::declare()
 {
 	return BaseClassDefiner(PowerSystemStabilizerUserDefined::addConstructToMap, PowerSystemStabilizerUserDefined::addPrimitiveAssignFnsToMap, PowerSystemStabilizerUserDefined::addClassAssignFnsToMap, PowerSystemStabilizerUserDefined::debugName);
+}
+
+std::map<std::string, AttrDetails> PowerSystemStabilizerUserDefined::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = PowerSystemStabilizerDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

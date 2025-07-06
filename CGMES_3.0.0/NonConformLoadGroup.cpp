@@ -13,33 +13,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		NonConformLoadGroup(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "NonConformLoadGroup.EnergyConsumers", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "NonConformLoadGroup.NonConformLoadSchedules", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 NonConformLoadGroup::NonConformLoadGroup() {}
 NonConformLoadGroup::~NonConformLoadGroup() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& NonConformLoadGroup::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:NonConformLoadGroup.EnergyConsumers", { CGMESProfile::EQ, } },
-	{ "cim:NonConformLoadGroup.NonConformLoadSchedules", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-NonConformLoadGroup::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-NonConformLoadGroup::getPossibleProfilesForAttributes() const
+const std::string& NonConformLoadGroup::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = LoadGroup::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& NonConformLoadGroup::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& NonConformLoadGroup::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& NonConformLoadGroup::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& NonConformLoadGroup::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& NonConformLoadGroup::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_NonConformLoad_LoadGroup(BaseClass*, BaseClass*);
@@ -86,7 +118,7 @@ const char* NonConformLoadGroup::debugString() const
 
 void NonConformLoadGroup::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:NonConformLoadGroup", &NonConformLoadGroup_factory);
+	factory_map.emplace("NonConformLoadGroup", &NonConformLoadGroup_factory);
 }
 
 void NonConformLoadGroup::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -95,8 +127,8 @@ void NonConformLoadGroup::addPrimitiveAssignFnsToMap(std::unordered_map<std::str
 
 void NonConformLoadGroup::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:NonConformLoadGroup.EnergyConsumers", &assign_NonConformLoadGroup_EnergyConsumers);
-	assign_map.emplace("cim:NonConformLoadGroup.NonConformLoadSchedules", &assign_NonConformLoadGroup_NonConformLoadSchedules);
+	assign_map.emplace("NonConformLoadGroup.EnergyConsumers", &assign_NonConformLoadGroup_EnergyConsumers);
+	assign_map.emplace("NonConformLoadGroup.NonConformLoadSchedules", &assign_NonConformLoadGroup_NonConformLoadSchedules);
 }
 
 void NonConformLoadGroup::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -114,9 +146,23 @@ void NonConformLoadGroup::addEnumGetFnsToMap(std::map<std::string, get_function>
 	LoadGroup::addEnumGetFnsToMap(get_map);
 }
 
+bool NonConformLoadGroup::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "NonConformLoadGroup" &&
+		dynamic_cast<NonConformLoadGroup*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner NonConformLoadGroup::declare()
 {
 	return BaseClassDefiner(NonConformLoadGroup::addConstructToMap, NonConformLoadGroup::addPrimitiveAssignFnsToMap, NonConformLoadGroup::addClassAssignFnsToMap, NonConformLoadGroup::debugName);
+}
+
+std::map<std::string, AttrDetails> NonConformLoadGroup::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = LoadGroup::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

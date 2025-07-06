@@ -11,48 +11,80 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		GovSteamCC(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "GovSteamCC.dhp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "GovSteamCC.dlp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "GovSteamCC.fhp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "GovSteamCC.flp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "GovSteamCC.mwbase", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "GovSteamCC.pmaxhp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "GovSteamCC.pmaxlp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "GovSteamCC.rhp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "GovSteamCC.rlp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "GovSteamCC.t1hp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "GovSteamCC.t1lp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "GovSteamCC.t3hp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "GovSteamCC.t3lp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "GovSteamCC.t4hp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "GovSteamCC.t4lp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "GovSteamCC.t5hp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "GovSteamCC.t5lp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 GovSteamCC::GovSteamCC() {}
 GovSteamCC::~GovSteamCC() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& GovSteamCC::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:GovSteamCC.dhp", { CGMESProfile::DY, } },
-	{ "cim:GovSteamCC.dlp", { CGMESProfile::DY, } },
-	{ "cim:GovSteamCC.fhp", { CGMESProfile::DY, } },
-	{ "cim:GovSteamCC.flp", { CGMESProfile::DY, } },
-	{ "cim:GovSteamCC.mwbase", { CGMESProfile::DY, } },
-	{ "cim:GovSteamCC.pmaxhp", { CGMESProfile::DY, } },
-	{ "cim:GovSteamCC.pmaxlp", { CGMESProfile::DY, } },
-	{ "cim:GovSteamCC.rhp", { CGMESProfile::DY, } },
-	{ "cim:GovSteamCC.rlp", { CGMESProfile::DY, } },
-	{ "cim:GovSteamCC.t1hp", { CGMESProfile::DY, } },
-	{ "cim:GovSteamCC.t1lp", { CGMESProfile::DY, } },
-	{ "cim:GovSteamCC.t3hp", { CGMESProfile::DY, } },
-	{ "cim:GovSteamCC.t3lp", { CGMESProfile::DY, } },
-	{ "cim:GovSteamCC.t4hp", { CGMESProfile::DY, } },
-	{ "cim:GovSteamCC.t4lp", { CGMESProfile::DY, } },
-	{ "cim:GovSteamCC.t5hp", { CGMESProfile::DY, } },
-	{ "cim:GovSteamCC.t5lp", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-GovSteamCC::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-GovSteamCC::getPossibleProfilesForAttributes() const
+const std::string& GovSteamCC::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = CrossCompoundTurbineGovernorDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& GovSteamCC::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& GovSteamCC::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& GovSteamCC::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& GovSteamCC::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& GovSteamCC::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_GovSteamCC_dhp(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -556,28 +588,28 @@ const char* GovSteamCC::debugString() const
 
 void GovSteamCC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:GovSteamCC", &GovSteamCC_factory);
+	factory_map.emplace("GovSteamCC", &GovSteamCC_factory);
 }
 
 void GovSteamCC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:GovSteamCC.dhp", &assign_GovSteamCC_dhp);
-	assign_map.emplace("cim:GovSteamCC.dlp", &assign_GovSteamCC_dlp);
-	assign_map.emplace("cim:GovSteamCC.fhp", &assign_GovSteamCC_fhp);
-	assign_map.emplace("cim:GovSteamCC.flp", &assign_GovSteamCC_flp);
-	assign_map.emplace("cim:GovSteamCC.mwbase", &assign_GovSteamCC_mwbase);
-	assign_map.emplace("cim:GovSteamCC.pmaxhp", &assign_GovSteamCC_pmaxhp);
-	assign_map.emplace("cim:GovSteamCC.pmaxlp", &assign_GovSteamCC_pmaxlp);
-	assign_map.emplace("cim:GovSteamCC.rhp", &assign_GovSteamCC_rhp);
-	assign_map.emplace("cim:GovSteamCC.rlp", &assign_GovSteamCC_rlp);
-	assign_map.emplace("cim:GovSteamCC.t1hp", &assign_GovSteamCC_t1hp);
-	assign_map.emplace("cim:GovSteamCC.t1lp", &assign_GovSteamCC_t1lp);
-	assign_map.emplace("cim:GovSteamCC.t3hp", &assign_GovSteamCC_t3hp);
-	assign_map.emplace("cim:GovSteamCC.t3lp", &assign_GovSteamCC_t3lp);
-	assign_map.emplace("cim:GovSteamCC.t4hp", &assign_GovSteamCC_t4hp);
-	assign_map.emplace("cim:GovSteamCC.t4lp", &assign_GovSteamCC_t4lp);
-	assign_map.emplace("cim:GovSteamCC.t5hp", &assign_GovSteamCC_t5hp);
-	assign_map.emplace("cim:GovSteamCC.t5lp", &assign_GovSteamCC_t5lp);
+	assign_map.emplace("GovSteamCC.dhp", &assign_GovSteamCC_dhp);
+	assign_map.emplace("GovSteamCC.dlp", &assign_GovSteamCC_dlp);
+	assign_map.emplace("GovSteamCC.fhp", &assign_GovSteamCC_fhp);
+	assign_map.emplace("GovSteamCC.flp", &assign_GovSteamCC_flp);
+	assign_map.emplace("GovSteamCC.mwbase", &assign_GovSteamCC_mwbase);
+	assign_map.emplace("GovSteamCC.pmaxhp", &assign_GovSteamCC_pmaxhp);
+	assign_map.emplace("GovSteamCC.pmaxlp", &assign_GovSteamCC_pmaxlp);
+	assign_map.emplace("GovSteamCC.rhp", &assign_GovSteamCC_rhp);
+	assign_map.emplace("GovSteamCC.rlp", &assign_GovSteamCC_rlp);
+	assign_map.emplace("GovSteamCC.t1hp", &assign_GovSteamCC_t1hp);
+	assign_map.emplace("GovSteamCC.t1lp", &assign_GovSteamCC_t1lp);
+	assign_map.emplace("GovSteamCC.t3hp", &assign_GovSteamCC_t3hp);
+	assign_map.emplace("GovSteamCC.t3lp", &assign_GovSteamCC_t3lp);
+	assign_map.emplace("GovSteamCC.t4hp", &assign_GovSteamCC_t4hp);
+	assign_map.emplace("GovSteamCC.t4lp", &assign_GovSteamCC_t4lp);
+	assign_map.emplace("GovSteamCC.t5hp", &assign_GovSteamCC_t5hp);
+	assign_map.emplace("GovSteamCC.t5lp", &assign_GovSteamCC_t5lp);
 }
 
 void GovSteamCC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -587,23 +619,23 @@ void GovSteamCC::addClassAssignFnsToMap(std::unordered_map<std::string, class_as
 void GovSteamCC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	CrossCompoundTurbineGovernorDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:GovSteamCC.dhp", &get_GovSteamCC_dhp);
-	get_map.emplace("cim:GovSteamCC.dlp", &get_GovSteamCC_dlp);
-	get_map.emplace("cim:GovSteamCC.fhp", &get_GovSteamCC_fhp);
-	get_map.emplace("cim:GovSteamCC.flp", &get_GovSteamCC_flp);
-	get_map.emplace("cim:GovSteamCC.mwbase", &get_GovSteamCC_mwbase);
-	get_map.emplace("cim:GovSteamCC.pmaxhp", &get_GovSteamCC_pmaxhp);
-	get_map.emplace("cim:GovSteamCC.pmaxlp", &get_GovSteamCC_pmaxlp);
-	get_map.emplace("cim:GovSteamCC.rhp", &get_GovSteamCC_rhp);
-	get_map.emplace("cim:GovSteamCC.rlp", &get_GovSteamCC_rlp);
-	get_map.emplace("cim:GovSteamCC.t1hp", &get_GovSteamCC_t1hp);
-	get_map.emplace("cim:GovSteamCC.t1lp", &get_GovSteamCC_t1lp);
-	get_map.emplace("cim:GovSteamCC.t3hp", &get_GovSteamCC_t3hp);
-	get_map.emplace("cim:GovSteamCC.t3lp", &get_GovSteamCC_t3lp);
-	get_map.emplace("cim:GovSteamCC.t4hp", &get_GovSteamCC_t4hp);
-	get_map.emplace("cim:GovSteamCC.t4lp", &get_GovSteamCC_t4lp);
-	get_map.emplace("cim:GovSteamCC.t5hp", &get_GovSteamCC_t5hp);
-	get_map.emplace("cim:GovSteamCC.t5lp", &get_GovSteamCC_t5lp);
+	get_map.emplace("GovSteamCC.dhp", &get_GovSteamCC_dhp);
+	get_map.emplace("GovSteamCC.dlp", &get_GovSteamCC_dlp);
+	get_map.emplace("GovSteamCC.fhp", &get_GovSteamCC_fhp);
+	get_map.emplace("GovSteamCC.flp", &get_GovSteamCC_flp);
+	get_map.emplace("GovSteamCC.mwbase", &get_GovSteamCC_mwbase);
+	get_map.emplace("GovSteamCC.pmaxhp", &get_GovSteamCC_pmaxhp);
+	get_map.emplace("GovSteamCC.pmaxlp", &get_GovSteamCC_pmaxlp);
+	get_map.emplace("GovSteamCC.rhp", &get_GovSteamCC_rhp);
+	get_map.emplace("GovSteamCC.rlp", &get_GovSteamCC_rlp);
+	get_map.emplace("GovSteamCC.t1hp", &get_GovSteamCC_t1hp);
+	get_map.emplace("GovSteamCC.t1lp", &get_GovSteamCC_t1lp);
+	get_map.emplace("GovSteamCC.t3hp", &get_GovSteamCC_t3hp);
+	get_map.emplace("GovSteamCC.t3lp", &get_GovSteamCC_t3lp);
+	get_map.emplace("GovSteamCC.t4hp", &get_GovSteamCC_t4hp);
+	get_map.emplace("GovSteamCC.t4lp", &get_GovSteamCC_t4lp);
+	get_map.emplace("GovSteamCC.t5hp", &get_GovSteamCC_t5hp);
+	get_map.emplace("GovSteamCC.t5lp", &get_GovSteamCC_t5lp);
 }
 
 void GovSteamCC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -616,9 +648,23 @@ void GovSteamCC::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map
 	CrossCompoundTurbineGovernorDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool GovSteamCC::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "GovSteamCC" &&
+		dynamic_cast<GovSteamCC*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner GovSteamCC::declare()
 {
 	return BaseClassDefiner(GovSteamCC::addConstructToMap, GovSteamCC::addPrimitiveAssignFnsToMap, GovSteamCC::addClassAssignFnsToMap, GovSteamCC::debugName);
+}
+
+std::map<std::string, AttrDetails> GovSteamCC::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = CrossCompoundTurbineGovernorDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

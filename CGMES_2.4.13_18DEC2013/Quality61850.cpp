@@ -11,43 +11,75 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		Quality61850(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "Quality61850.badReference", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Quality61850.estimatorReplaced", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Quality61850.failure", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Quality61850.oldData", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Quality61850.operatorBlocked", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Quality61850.oscillatory", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Quality61850.outOfRange", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Quality61850.overFlow", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Quality61850.source", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Quality61850.suspect", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Quality61850.test", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Quality61850.validity", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 Quality61850::Quality61850() {}
 Quality61850::~Quality61850() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& Quality61850::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:Quality61850.badReference", { CGMESProfile::EQ, } },
-	{ "cim:Quality61850.estimatorReplaced", { CGMESProfile::EQ, } },
-	{ "cim:Quality61850.failure", { CGMESProfile::EQ, } },
-	{ "cim:Quality61850.oldData", { CGMESProfile::EQ, } },
-	{ "cim:Quality61850.operatorBlocked", { CGMESProfile::EQ, } },
-	{ "cim:Quality61850.oscillatory", { CGMESProfile::EQ, } },
-	{ "cim:Quality61850.outOfRange", { CGMESProfile::EQ, } },
-	{ "cim:Quality61850.overFlow", { CGMESProfile::EQ, } },
-	{ "cim:Quality61850.source", { CGMESProfile::EQ, } },
-	{ "cim:Quality61850.suspect", { CGMESProfile::EQ, } },
-	{ "cim:Quality61850.test", { CGMESProfile::EQ, } },
-	{ "cim:Quality61850.validity", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-Quality61850::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-Quality61850::getPossibleProfilesForAttributes() const
+const std::string& Quality61850::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& Quality61850::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& Quality61850::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& Quality61850::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& Quality61850::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& Quality61850::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_Quality61850_badReference(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -406,23 +438,23 @@ const char* Quality61850::debugString() const
 
 void Quality61850::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:Quality61850", &Quality61850_factory);
+	factory_map.emplace("Quality61850", &Quality61850_factory);
 }
 
 void Quality61850::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:Quality61850.badReference", &assign_Quality61850_badReference);
-	assign_map.emplace("cim:Quality61850.estimatorReplaced", &assign_Quality61850_estimatorReplaced);
-	assign_map.emplace("cim:Quality61850.failure", &assign_Quality61850_failure);
-	assign_map.emplace("cim:Quality61850.oldData", &assign_Quality61850_oldData);
-	assign_map.emplace("cim:Quality61850.operatorBlocked", &assign_Quality61850_operatorBlocked);
-	assign_map.emplace("cim:Quality61850.oscillatory", &assign_Quality61850_oscillatory);
-	assign_map.emplace("cim:Quality61850.outOfRange", &assign_Quality61850_outOfRange);
-	assign_map.emplace("cim:Quality61850.overFlow", &assign_Quality61850_overFlow);
-	assign_map.emplace("cim:Quality61850.source", &assign_Quality61850_source);
-	assign_map.emplace("cim:Quality61850.suspect", &assign_Quality61850_suspect);
-	assign_map.emplace("cim:Quality61850.test", &assign_Quality61850_test);
-	assign_map.emplace("cim:Quality61850.validity", &assign_Quality61850_validity);
+	assign_map.emplace("Quality61850.badReference", &assign_Quality61850_badReference);
+	assign_map.emplace("Quality61850.estimatorReplaced", &assign_Quality61850_estimatorReplaced);
+	assign_map.emplace("Quality61850.failure", &assign_Quality61850_failure);
+	assign_map.emplace("Quality61850.oldData", &assign_Quality61850_oldData);
+	assign_map.emplace("Quality61850.operatorBlocked", &assign_Quality61850_operatorBlocked);
+	assign_map.emplace("Quality61850.oscillatory", &assign_Quality61850_oscillatory);
+	assign_map.emplace("Quality61850.outOfRange", &assign_Quality61850_outOfRange);
+	assign_map.emplace("Quality61850.overFlow", &assign_Quality61850_overFlow);
+	assign_map.emplace("Quality61850.source", &assign_Quality61850_source);
+	assign_map.emplace("Quality61850.suspect", &assign_Quality61850_suspect);
+	assign_map.emplace("Quality61850.test", &assign_Quality61850_test);
+	assign_map.emplace("Quality61850.validity", &assign_Quality61850_validity);
 }
 
 void Quality61850::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -432,16 +464,16 @@ void Quality61850::addClassAssignFnsToMap(std::unordered_map<std::string, class_
 void Quality61850::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	BaseClass::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:Quality61850.badReference", &get_Quality61850_badReference);
-	get_map.emplace("cim:Quality61850.estimatorReplaced", &get_Quality61850_estimatorReplaced);
-	get_map.emplace("cim:Quality61850.failure", &get_Quality61850_failure);
-	get_map.emplace("cim:Quality61850.oldData", &get_Quality61850_oldData);
-	get_map.emplace("cim:Quality61850.operatorBlocked", &get_Quality61850_operatorBlocked);
-	get_map.emplace("cim:Quality61850.oscillatory", &get_Quality61850_oscillatory);
-	get_map.emplace("cim:Quality61850.outOfRange", &get_Quality61850_outOfRange);
-	get_map.emplace("cim:Quality61850.overFlow", &get_Quality61850_overFlow);
-	get_map.emplace("cim:Quality61850.suspect", &get_Quality61850_suspect);
-	get_map.emplace("cim:Quality61850.test", &get_Quality61850_test);
+	get_map.emplace("Quality61850.badReference", &get_Quality61850_badReference);
+	get_map.emplace("Quality61850.estimatorReplaced", &get_Quality61850_estimatorReplaced);
+	get_map.emplace("Quality61850.failure", &get_Quality61850_failure);
+	get_map.emplace("Quality61850.oldData", &get_Quality61850_oldData);
+	get_map.emplace("Quality61850.operatorBlocked", &get_Quality61850_operatorBlocked);
+	get_map.emplace("Quality61850.oscillatory", &get_Quality61850_oscillatory);
+	get_map.emplace("Quality61850.outOfRange", &get_Quality61850_outOfRange);
+	get_map.emplace("Quality61850.overFlow", &get_Quality61850_overFlow);
+	get_map.emplace("Quality61850.suspect", &get_Quality61850_suspect);
+	get_map.emplace("Quality61850.test", &get_Quality61850_test);
 }
 
 void Quality61850::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -452,13 +484,27 @@ void Quality61850::addClassGetFnsToMap(std::map<std::string, class_get_function>
 void Quality61850::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	BaseClass::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:Quality61850.source", &get_Quality61850_source);
-	get_map.emplace("cim:Quality61850.validity", &get_Quality61850_validity);
+	get_map.emplace("Quality61850.source", &get_Quality61850_source);
+	get_map.emplace("Quality61850.validity", &get_Quality61850_validity);
+}
+
+bool Quality61850::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "Quality61850" &&
+		dynamic_cast<Quality61850*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner Quality61850::declare()
 {
 	return BaseClassDefiner(Quality61850::addConstructToMap, Quality61850::addPrimitiveAssignFnsToMap, Quality61850::addClassAssignFnsToMap, Quality61850::debugName);
+}
+
+std::map<std::string, AttrDetails> Quality61850::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = BaseClass::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

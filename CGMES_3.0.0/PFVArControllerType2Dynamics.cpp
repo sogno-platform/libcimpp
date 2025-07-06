@@ -12,32 +12,64 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		PFVArControllerType2Dynamics(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "PFVArControllerType2Dynamics.ExcitationSystemDynamics", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 PFVArControllerType2Dynamics::PFVArControllerType2Dynamics() : ExcitationSystemDynamics(nullptr) {}
 PFVArControllerType2Dynamics::~PFVArControllerType2Dynamics() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& PFVArControllerType2Dynamics::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:PFVArControllerType2Dynamics.ExcitationSystemDynamics", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-PFVArControllerType2Dynamics::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-PFVArControllerType2Dynamics::getPossibleProfilesForAttributes() const
+const std::string& PFVArControllerType2Dynamics::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = DynamicsFunctionBlock::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& PFVArControllerType2Dynamics::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& PFVArControllerType2Dynamics::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& PFVArControllerType2Dynamics::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& PFVArControllerType2Dynamics::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& PFVArControllerType2Dynamics::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ExcitationSystemDynamics_PFVArControllerType2Dynamics(BaseClass*, BaseClass*);
@@ -79,7 +111,7 @@ const char* PFVArControllerType2Dynamics::debugString() const
 
 void PFVArControllerType2Dynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:PFVArControllerType2Dynamics", &PFVArControllerType2Dynamics_factory);
+	factory_map.emplace("PFVArControllerType2Dynamics", &PFVArControllerType2Dynamics_factory);
 }
 
 void PFVArControllerType2Dynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -88,7 +120,7 @@ void PFVArControllerType2Dynamics::addPrimitiveAssignFnsToMap(std::unordered_map
 
 void PFVArControllerType2Dynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:PFVArControllerType2Dynamics.ExcitationSystemDynamics", &assign_PFVArControllerType2Dynamics_ExcitationSystemDynamics);
+	assign_map.emplace("PFVArControllerType2Dynamics.ExcitationSystemDynamics", &assign_PFVArControllerType2Dynamics_ExcitationSystemDynamics);
 }
 
 void PFVArControllerType2Dynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -99,7 +131,7 @@ void PFVArControllerType2Dynamics::addPrimitiveGetFnsToMap(std::map<std::string,
 void PFVArControllerType2Dynamics::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	DynamicsFunctionBlock::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:PFVArControllerType2Dynamics.ExcitationSystemDynamics", &get_PFVArControllerType2Dynamics_ExcitationSystemDynamics);
+	get_map.emplace("PFVArControllerType2Dynamics.ExcitationSystemDynamics", &get_PFVArControllerType2Dynamics_ExcitationSystemDynamics);
 }
 
 void PFVArControllerType2Dynamics::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -107,9 +139,23 @@ void PFVArControllerType2Dynamics::addEnumGetFnsToMap(std::map<std::string, get_
 	DynamicsFunctionBlock::addEnumGetFnsToMap(get_map);
 }
 
+bool PFVArControllerType2Dynamics::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "PFVArControllerType2Dynamics" &&
+		dynamic_cast<PFVArControllerType2Dynamics*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner PFVArControllerType2Dynamics::declare()
 {
 	return BaseClassDefiner(PFVArControllerType2Dynamics::addConstructToMap, PFVArControllerType2Dynamics::addPrimitiveAssignFnsToMap, PFVArControllerType2Dynamics::addClassAssignFnsToMap, PFVArControllerType2Dynamics::debugName);
+}
+
+std::map<std::string, AttrDetails> PFVArControllerType2Dynamics::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = DynamicsFunctionBlock::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

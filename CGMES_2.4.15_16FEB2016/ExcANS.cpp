@@ -11,45 +11,77 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ExcANS(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ExcANS.blint", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcANS.ifmn", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcANS.ifmx", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcANS.k2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcANS.k3", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcANS.kce", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcANS.krvecc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcANS.kvfif", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcANS.t1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcANS.t2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcANS.t3", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcANS.tb", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcANS.vrmn", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcANS.vrmx", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ExcANS::ExcANS() {}
 ExcANS::~ExcANS() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ExcANS::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ExcANS.blint", { CGMESProfile::DY, } },
-	{ "cim:ExcANS.ifmn", { CGMESProfile::DY, } },
-	{ "cim:ExcANS.ifmx", { CGMESProfile::DY, } },
-	{ "cim:ExcANS.k2", { CGMESProfile::DY, } },
-	{ "cim:ExcANS.k3", { CGMESProfile::DY, } },
-	{ "cim:ExcANS.kce", { CGMESProfile::DY, } },
-	{ "cim:ExcANS.krvecc", { CGMESProfile::DY, } },
-	{ "cim:ExcANS.kvfif", { CGMESProfile::DY, } },
-	{ "cim:ExcANS.t1", { CGMESProfile::DY, } },
-	{ "cim:ExcANS.t2", { CGMESProfile::DY, } },
-	{ "cim:ExcANS.t3", { CGMESProfile::DY, } },
-	{ "cim:ExcANS.tb", { CGMESProfile::DY, } },
-	{ "cim:ExcANS.vrmn", { CGMESProfile::DY, } },
-	{ "cim:ExcANS.vrmx", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-ExcANS::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ExcANS::getPossibleProfilesForAttributes() const
+const std::string& ExcANS::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ExcANS::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ExcANS::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ExcANS::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ExcANS::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ExcANS::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ExcANS_blint(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -466,25 +498,25 @@ const char* ExcANS::debugString() const
 
 void ExcANS::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ExcANS", &ExcANS_factory);
+	factory_map.emplace("ExcANS", &ExcANS_factory);
 }
 
 void ExcANS::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ExcANS.blint", &assign_ExcANS_blint);
-	assign_map.emplace("cim:ExcANS.ifmn", &assign_ExcANS_ifmn);
-	assign_map.emplace("cim:ExcANS.ifmx", &assign_ExcANS_ifmx);
-	assign_map.emplace("cim:ExcANS.k2", &assign_ExcANS_k2);
-	assign_map.emplace("cim:ExcANS.k3", &assign_ExcANS_k3);
-	assign_map.emplace("cim:ExcANS.kce", &assign_ExcANS_kce);
-	assign_map.emplace("cim:ExcANS.krvecc", &assign_ExcANS_krvecc);
-	assign_map.emplace("cim:ExcANS.kvfif", &assign_ExcANS_kvfif);
-	assign_map.emplace("cim:ExcANS.t1", &assign_ExcANS_t1);
-	assign_map.emplace("cim:ExcANS.t2", &assign_ExcANS_t2);
-	assign_map.emplace("cim:ExcANS.t3", &assign_ExcANS_t3);
-	assign_map.emplace("cim:ExcANS.tb", &assign_ExcANS_tb);
-	assign_map.emplace("cim:ExcANS.vrmn", &assign_ExcANS_vrmn);
-	assign_map.emplace("cim:ExcANS.vrmx", &assign_ExcANS_vrmx);
+	assign_map.emplace("ExcANS.blint", &assign_ExcANS_blint);
+	assign_map.emplace("ExcANS.ifmn", &assign_ExcANS_ifmn);
+	assign_map.emplace("ExcANS.ifmx", &assign_ExcANS_ifmx);
+	assign_map.emplace("ExcANS.k2", &assign_ExcANS_k2);
+	assign_map.emplace("ExcANS.k3", &assign_ExcANS_k3);
+	assign_map.emplace("ExcANS.kce", &assign_ExcANS_kce);
+	assign_map.emplace("ExcANS.krvecc", &assign_ExcANS_krvecc);
+	assign_map.emplace("ExcANS.kvfif", &assign_ExcANS_kvfif);
+	assign_map.emplace("ExcANS.t1", &assign_ExcANS_t1);
+	assign_map.emplace("ExcANS.t2", &assign_ExcANS_t2);
+	assign_map.emplace("ExcANS.t3", &assign_ExcANS_t3);
+	assign_map.emplace("ExcANS.tb", &assign_ExcANS_tb);
+	assign_map.emplace("ExcANS.vrmn", &assign_ExcANS_vrmn);
+	assign_map.emplace("ExcANS.vrmx", &assign_ExcANS_vrmx);
 }
 
 void ExcANS::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -494,20 +526,20 @@ void ExcANS::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign
 void ExcANS::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ExcANS.blint", &get_ExcANS_blint);
-	get_map.emplace("cim:ExcANS.ifmn", &get_ExcANS_ifmn);
-	get_map.emplace("cim:ExcANS.ifmx", &get_ExcANS_ifmx);
-	get_map.emplace("cim:ExcANS.k2", &get_ExcANS_k2);
-	get_map.emplace("cim:ExcANS.k3", &get_ExcANS_k3);
-	get_map.emplace("cim:ExcANS.kce", &get_ExcANS_kce);
-	get_map.emplace("cim:ExcANS.krvecc", &get_ExcANS_krvecc);
-	get_map.emplace("cim:ExcANS.kvfif", &get_ExcANS_kvfif);
-	get_map.emplace("cim:ExcANS.t1", &get_ExcANS_t1);
-	get_map.emplace("cim:ExcANS.t2", &get_ExcANS_t2);
-	get_map.emplace("cim:ExcANS.t3", &get_ExcANS_t3);
-	get_map.emplace("cim:ExcANS.tb", &get_ExcANS_tb);
-	get_map.emplace("cim:ExcANS.vrmn", &get_ExcANS_vrmn);
-	get_map.emplace("cim:ExcANS.vrmx", &get_ExcANS_vrmx);
+	get_map.emplace("ExcANS.blint", &get_ExcANS_blint);
+	get_map.emplace("ExcANS.ifmn", &get_ExcANS_ifmn);
+	get_map.emplace("ExcANS.ifmx", &get_ExcANS_ifmx);
+	get_map.emplace("ExcANS.k2", &get_ExcANS_k2);
+	get_map.emplace("ExcANS.k3", &get_ExcANS_k3);
+	get_map.emplace("ExcANS.kce", &get_ExcANS_kce);
+	get_map.emplace("ExcANS.krvecc", &get_ExcANS_krvecc);
+	get_map.emplace("ExcANS.kvfif", &get_ExcANS_kvfif);
+	get_map.emplace("ExcANS.t1", &get_ExcANS_t1);
+	get_map.emplace("ExcANS.t2", &get_ExcANS_t2);
+	get_map.emplace("ExcANS.t3", &get_ExcANS_t3);
+	get_map.emplace("ExcANS.tb", &get_ExcANS_tb);
+	get_map.emplace("ExcANS.vrmn", &get_ExcANS_vrmn);
+	get_map.emplace("ExcANS.vrmx", &get_ExcANS_vrmx);
 }
 
 void ExcANS::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -520,9 +552,23 @@ void ExcANS::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) co
 	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool ExcANS::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ExcANS" &&
+		dynamic_cast<ExcANS*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ExcANS::declare()
 {
 	return BaseClassDefiner(ExcANS::addConstructToMap, ExcANS::addPrimitiveAssignFnsToMap, ExcANS::addClassAssignFnsToMap, ExcANS::debugName);
+}
+
+std::map<std::string, AttrDetails> ExcANS::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ExcitationSystemDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

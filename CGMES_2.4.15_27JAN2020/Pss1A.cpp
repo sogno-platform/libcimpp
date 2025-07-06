@@ -11,53 +11,85 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		Pss1A(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "Pss1A.a1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "Pss1A.a2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "Pss1A.a3", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "Pss1A.a4", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "Pss1A.a5", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "Pss1A.a6", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "Pss1A.a7", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "Pss1A.a8", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "Pss1A.inputSignalType", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "Pss1A.kd", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "Pss1A.ks", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "Pss1A.t1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "Pss1A.t2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "Pss1A.t3", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "Pss1A.t4", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "Pss1A.t5", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "Pss1A.t6", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "Pss1A.tdelay", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "Pss1A.vcl", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "Pss1A.vcu", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "Pss1A.vrmax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "Pss1A.vrmin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 Pss1A::Pss1A() {}
 Pss1A::~Pss1A() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& Pss1A::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:Pss1A.a1", { CGMESProfile::DY, } },
-	{ "cim:Pss1A.a2", { CGMESProfile::DY, } },
-	{ "cim:Pss1A.a3", { CGMESProfile::DY, } },
-	{ "cim:Pss1A.a4", { CGMESProfile::DY, } },
-	{ "cim:Pss1A.a5", { CGMESProfile::DY, } },
-	{ "cim:Pss1A.a6", { CGMESProfile::DY, } },
-	{ "cim:Pss1A.a7", { CGMESProfile::DY, } },
-	{ "cim:Pss1A.a8", { CGMESProfile::DY, } },
-	{ "cim:Pss1A.inputSignalType", { CGMESProfile::DY, } },
-	{ "cim:Pss1A.kd", { CGMESProfile::DY, } },
-	{ "cim:Pss1A.ks", { CGMESProfile::DY, } },
-	{ "cim:Pss1A.t1", { CGMESProfile::DY, } },
-	{ "cim:Pss1A.t2", { CGMESProfile::DY, } },
-	{ "cim:Pss1A.t3", { CGMESProfile::DY, } },
-	{ "cim:Pss1A.t4", { CGMESProfile::DY, } },
-	{ "cim:Pss1A.t5", { CGMESProfile::DY, } },
-	{ "cim:Pss1A.t6", { CGMESProfile::DY, } },
-	{ "cim:Pss1A.tdelay", { CGMESProfile::DY, } },
-	{ "cim:Pss1A.vcl", { CGMESProfile::DY, } },
-	{ "cim:Pss1A.vcu", { CGMESProfile::DY, } },
-	{ "cim:Pss1A.vrmax", { CGMESProfile::DY, } },
-	{ "cim:Pss1A.vrmin", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-Pss1A::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-Pss1A::getPossibleProfilesForAttributes() const
+const std::string& Pss1A::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = PowerSystemStabilizerDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& Pss1A::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& Pss1A::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& Pss1A::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& Pss1A::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& Pss1A::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_Pss1A_a1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -706,33 +738,33 @@ const char* Pss1A::debugString() const
 
 void Pss1A::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:Pss1A", &Pss1A_factory);
+	factory_map.emplace("Pss1A", &Pss1A_factory);
 }
 
 void Pss1A::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:Pss1A.a1", &assign_Pss1A_a1);
-	assign_map.emplace("cim:Pss1A.a2", &assign_Pss1A_a2);
-	assign_map.emplace("cim:Pss1A.a3", &assign_Pss1A_a3);
-	assign_map.emplace("cim:Pss1A.a4", &assign_Pss1A_a4);
-	assign_map.emplace("cim:Pss1A.a5", &assign_Pss1A_a5);
-	assign_map.emplace("cim:Pss1A.a6", &assign_Pss1A_a6);
-	assign_map.emplace("cim:Pss1A.a7", &assign_Pss1A_a7);
-	assign_map.emplace("cim:Pss1A.a8", &assign_Pss1A_a8);
-	assign_map.emplace("cim:Pss1A.inputSignalType", &assign_Pss1A_inputSignalType);
-	assign_map.emplace("cim:Pss1A.kd", &assign_Pss1A_kd);
-	assign_map.emplace("cim:Pss1A.ks", &assign_Pss1A_ks);
-	assign_map.emplace("cim:Pss1A.t1", &assign_Pss1A_t1);
-	assign_map.emplace("cim:Pss1A.t2", &assign_Pss1A_t2);
-	assign_map.emplace("cim:Pss1A.t3", &assign_Pss1A_t3);
-	assign_map.emplace("cim:Pss1A.t4", &assign_Pss1A_t4);
-	assign_map.emplace("cim:Pss1A.t5", &assign_Pss1A_t5);
-	assign_map.emplace("cim:Pss1A.t6", &assign_Pss1A_t6);
-	assign_map.emplace("cim:Pss1A.tdelay", &assign_Pss1A_tdelay);
-	assign_map.emplace("cim:Pss1A.vcl", &assign_Pss1A_vcl);
-	assign_map.emplace("cim:Pss1A.vcu", &assign_Pss1A_vcu);
-	assign_map.emplace("cim:Pss1A.vrmax", &assign_Pss1A_vrmax);
-	assign_map.emplace("cim:Pss1A.vrmin", &assign_Pss1A_vrmin);
+	assign_map.emplace("Pss1A.a1", &assign_Pss1A_a1);
+	assign_map.emplace("Pss1A.a2", &assign_Pss1A_a2);
+	assign_map.emplace("Pss1A.a3", &assign_Pss1A_a3);
+	assign_map.emplace("Pss1A.a4", &assign_Pss1A_a4);
+	assign_map.emplace("Pss1A.a5", &assign_Pss1A_a5);
+	assign_map.emplace("Pss1A.a6", &assign_Pss1A_a6);
+	assign_map.emplace("Pss1A.a7", &assign_Pss1A_a7);
+	assign_map.emplace("Pss1A.a8", &assign_Pss1A_a8);
+	assign_map.emplace("Pss1A.inputSignalType", &assign_Pss1A_inputSignalType);
+	assign_map.emplace("Pss1A.kd", &assign_Pss1A_kd);
+	assign_map.emplace("Pss1A.ks", &assign_Pss1A_ks);
+	assign_map.emplace("Pss1A.t1", &assign_Pss1A_t1);
+	assign_map.emplace("Pss1A.t2", &assign_Pss1A_t2);
+	assign_map.emplace("Pss1A.t3", &assign_Pss1A_t3);
+	assign_map.emplace("Pss1A.t4", &assign_Pss1A_t4);
+	assign_map.emplace("Pss1A.t5", &assign_Pss1A_t5);
+	assign_map.emplace("Pss1A.t6", &assign_Pss1A_t6);
+	assign_map.emplace("Pss1A.tdelay", &assign_Pss1A_tdelay);
+	assign_map.emplace("Pss1A.vcl", &assign_Pss1A_vcl);
+	assign_map.emplace("Pss1A.vcu", &assign_Pss1A_vcu);
+	assign_map.emplace("Pss1A.vrmax", &assign_Pss1A_vrmax);
+	assign_map.emplace("Pss1A.vrmin", &assign_Pss1A_vrmin);
 }
 
 void Pss1A::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -742,27 +774,27 @@ void Pss1A::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_
 void Pss1A::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	PowerSystemStabilizerDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:Pss1A.a1", &get_Pss1A_a1);
-	get_map.emplace("cim:Pss1A.a2", &get_Pss1A_a2);
-	get_map.emplace("cim:Pss1A.a3", &get_Pss1A_a3);
-	get_map.emplace("cim:Pss1A.a4", &get_Pss1A_a4);
-	get_map.emplace("cim:Pss1A.a5", &get_Pss1A_a5);
-	get_map.emplace("cim:Pss1A.a6", &get_Pss1A_a6);
-	get_map.emplace("cim:Pss1A.a7", &get_Pss1A_a7);
-	get_map.emplace("cim:Pss1A.a8", &get_Pss1A_a8);
-	get_map.emplace("cim:Pss1A.kd", &get_Pss1A_kd);
-	get_map.emplace("cim:Pss1A.ks", &get_Pss1A_ks);
-	get_map.emplace("cim:Pss1A.t1", &get_Pss1A_t1);
-	get_map.emplace("cim:Pss1A.t2", &get_Pss1A_t2);
-	get_map.emplace("cim:Pss1A.t3", &get_Pss1A_t3);
-	get_map.emplace("cim:Pss1A.t4", &get_Pss1A_t4);
-	get_map.emplace("cim:Pss1A.t5", &get_Pss1A_t5);
-	get_map.emplace("cim:Pss1A.t6", &get_Pss1A_t6);
-	get_map.emplace("cim:Pss1A.tdelay", &get_Pss1A_tdelay);
-	get_map.emplace("cim:Pss1A.vcl", &get_Pss1A_vcl);
-	get_map.emplace("cim:Pss1A.vcu", &get_Pss1A_vcu);
-	get_map.emplace("cim:Pss1A.vrmax", &get_Pss1A_vrmax);
-	get_map.emplace("cim:Pss1A.vrmin", &get_Pss1A_vrmin);
+	get_map.emplace("Pss1A.a1", &get_Pss1A_a1);
+	get_map.emplace("Pss1A.a2", &get_Pss1A_a2);
+	get_map.emplace("Pss1A.a3", &get_Pss1A_a3);
+	get_map.emplace("Pss1A.a4", &get_Pss1A_a4);
+	get_map.emplace("Pss1A.a5", &get_Pss1A_a5);
+	get_map.emplace("Pss1A.a6", &get_Pss1A_a6);
+	get_map.emplace("Pss1A.a7", &get_Pss1A_a7);
+	get_map.emplace("Pss1A.a8", &get_Pss1A_a8);
+	get_map.emplace("Pss1A.kd", &get_Pss1A_kd);
+	get_map.emplace("Pss1A.ks", &get_Pss1A_ks);
+	get_map.emplace("Pss1A.t1", &get_Pss1A_t1);
+	get_map.emplace("Pss1A.t2", &get_Pss1A_t2);
+	get_map.emplace("Pss1A.t3", &get_Pss1A_t3);
+	get_map.emplace("Pss1A.t4", &get_Pss1A_t4);
+	get_map.emplace("Pss1A.t5", &get_Pss1A_t5);
+	get_map.emplace("Pss1A.t6", &get_Pss1A_t6);
+	get_map.emplace("Pss1A.tdelay", &get_Pss1A_tdelay);
+	get_map.emplace("Pss1A.vcl", &get_Pss1A_vcl);
+	get_map.emplace("Pss1A.vcu", &get_Pss1A_vcu);
+	get_map.emplace("Pss1A.vrmax", &get_Pss1A_vrmax);
+	get_map.emplace("Pss1A.vrmin", &get_Pss1A_vrmin);
 }
 
 void Pss1A::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -773,12 +805,26 @@ void Pss1A::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_m
 void Pss1A::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	PowerSystemStabilizerDynamics::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:Pss1A.inputSignalType", &get_Pss1A_inputSignalType);
+	get_map.emplace("Pss1A.inputSignalType", &get_Pss1A_inputSignalType);
+}
+
+bool Pss1A::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "Pss1A" &&
+		dynamic_cast<Pss1A*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner Pss1A::declare()
 {
 	return BaseClassDefiner(Pss1A::addConstructToMap, Pss1A::addPrimitiveAssignFnsToMap, Pss1A::addClassAssignFnsToMap, Pss1A::debugName);
+}
+
+std::map<std::string, AttrDetails> Pss1A::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = PowerSystemStabilizerDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

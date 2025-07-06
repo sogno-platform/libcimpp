@@ -32,56 +32,88 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ProprietaryParameterDynamics(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ProprietaryParameterDynamics.AsynchronousMachineUserDefined", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ProprietaryParameterDynamics.CSCUserDefined", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ProprietaryParameterDynamics.DiscontinuousExcitationControlUserDefined", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ProprietaryParameterDynamics.ExcitationSystemUserDefined", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ProprietaryParameterDynamics.LoadUserDefined", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ProprietaryParameterDynamics.MechanicalLoadUserDefined", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ProprietaryParameterDynamics.OverexcitationLimiterUserDefined", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ProprietaryParameterDynamics.PFVArControllerType1UserDefined", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ProprietaryParameterDynamics.PFVArControllerType2UserDefined", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ProprietaryParameterDynamics.PowerSystemStabilizerUserDefined", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ProprietaryParameterDynamics.SVCUserDefined", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ProprietaryParameterDynamics.SynchronousMachineUserDefined", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ProprietaryParameterDynamics.TurbineGovernorUserDefined", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ProprietaryParameterDynamics.TurbineLoadControllerUserDefined", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ProprietaryParameterDynamics.UnderexcitationLimiterUserDefined", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ProprietaryParameterDynamics.VSCUserDefined", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ProprietaryParameterDynamics.VoltageAdjusterUserDefined", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ProprietaryParameterDynamics.VoltageCompensatorUserDefined", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ProprietaryParameterDynamics.WindPlantUserDefined", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ProprietaryParameterDynamics.WindType1or2UserDefined", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ProprietaryParameterDynamics.WindType3or4UserDefined", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ProprietaryParameterDynamics.booleanParameterValue", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ProprietaryParameterDynamics.floatParameterValue", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ProprietaryParameterDynamics.integerParameterValue", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ProprietaryParameterDynamics.parameterNumber", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ProprietaryParameterDynamics::ProprietaryParameterDynamics() : AsynchronousMachineUserDefined(nullptr), CSCUserDefined(nullptr), DiscontinuousExcitationControlUserDefined(nullptr), ExcitationSystemUserDefined(nullptr), LoadUserDefined(nullptr), MechanicalLoadUserDefined(nullptr), OverexcitationLimiterUserDefined(nullptr), PFVArControllerType1UserDefined(nullptr), PFVArControllerType2UserDefined(nullptr), PowerSystemStabilizerUserDefined(nullptr), SVCUserDefined(nullptr), SynchronousMachineUserDefined(nullptr), TurbineGovernorUserDefined(nullptr), TurbineLoadControllerUserDefined(nullptr), UnderexcitationLimiterUserDefined(nullptr), VSCUserDefined(nullptr), VoltageAdjusterUserDefined(nullptr), VoltageCompensatorUserDefined(nullptr), WindPlantUserDefined(nullptr), WindType1or2UserDefined(nullptr), WindType3or4UserDefined(nullptr) {}
 ProprietaryParameterDynamics::~ProprietaryParameterDynamics() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ProprietaryParameterDynamics::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ProprietaryParameterDynamics.AsynchronousMachineUserDefined", { CGMESProfile::DY, } },
-	{ "cim:ProprietaryParameterDynamics.CSCUserDefined", { CGMESProfile::DY, } },
-	{ "cim:ProprietaryParameterDynamics.DiscontinuousExcitationControlUserDefined", { CGMESProfile::DY, } },
-	{ "cim:ProprietaryParameterDynamics.ExcitationSystemUserDefined", { CGMESProfile::DY, } },
-	{ "cim:ProprietaryParameterDynamics.LoadUserDefined", { CGMESProfile::DY, } },
-	{ "cim:ProprietaryParameterDynamics.MechanicalLoadUserDefined", { CGMESProfile::DY, } },
-	{ "cim:ProprietaryParameterDynamics.OverexcitationLimiterUserDefined", { CGMESProfile::DY, } },
-	{ "cim:ProprietaryParameterDynamics.PFVArControllerType1UserDefined", { CGMESProfile::DY, } },
-	{ "cim:ProprietaryParameterDynamics.PFVArControllerType2UserDefined", { CGMESProfile::DY, } },
-	{ "cim:ProprietaryParameterDynamics.PowerSystemStabilizerUserDefined", { CGMESProfile::DY, } },
-	{ "cim:ProprietaryParameterDynamics.SVCUserDefined", { CGMESProfile::DY, } },
-	{ "cim:ProprietaryParameterDynamics.SynchronousMachineUserDefined", { CGMESProfile::DY, } },
-	{ "cim:ProprietaryParameterDynamics.TurbineGovernorUserDefined", { CGMESProfile::DY, } },
-	{ "cim:ProprietaryParameterDynamics.TurbineLoadControllerUserDefined", { CGMESProfile::DY, } },
-	{ "cim:ProprietaryParameterDynamics.UnderexcitationLimiterUserDefined", { CGMESProfile::DY, } },
-	{ "cim:ProprietaryParameterDynamics.VSCUserDefined", { CGMESProfile::DY, } },
-	{ "cim:ProprietaryParameterDynamics.VoltageAdjusterUserDefined", { CGMESProfile::DY, } },
-	{ "cim:ProprietaryParameterDynamics.VoltageCompensatorUserDefined", { CGMESProfile::DY, } },
-	{ "cim:ProprietaryParameterDynamics.WindPlantUserDefined", { CGMESProfile::DY, } },
-	{ "cim:ProprietaryParameterDynamics.WindType1or2UserDefined", { CGMESProfile::DY, } },
-	{ "cim:ProprietaryParameterDynamics.WindType3or4UserDefined", { CGMESProfile::DY, } },
-	{ "cim:ProprietaryParameterDynamics.booleanParameterValue", { CGMESProfile::DY, } },
-	{ "cim:ProprietaryParameterDynamics.floatParameterValue", { CGMESProfile::DY, } },
-	{ "cim:ProprietaryParameterDynamics.integerParameterValue", { CGMESProfile::DY, } },
-	{ "cim:ProprietaryParameterDynamics.parameterNumber", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-ProprietaryParameterDynamics::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ProprietaryParameterDynamics::getPossibleProfilesForAttributes() const
+const std::string& ProprietaryParameterDynamics::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ProprietaryParameterDynamics::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ProprietaryParameterDynamics::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ProprietaryParameterDynamics::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ProprietaryParameterDynamics::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ProprietaryParameterDynamics::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_AsynchronousMachineUserDefined_ProprietaryParameterDynamics(BaseClass*, BaseClass*);
@@ -859,75 +891,75 @@ const char* ProprietaryParameterDynamics::debugString() const
 
 void ProprietaryParameterDynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ProprietaryParameterDynamics", &ProprietaryParameterDynamics_factory);
+	factory_map.emplace("ProprietaryParameterDynamics", &ProprietaryParameterDynamics_factory);
 }
 
 void ProprietaryParameterDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ProprietaryParameterDynamics.booleanParameterValue", &assign_ProprietaryParameterDynamics_booleanParameterValue);
-	assign_map.emplace("cim:ProprietaryParameterDynamics.floatParameterValue", &assign_ProprietaryParameterDynamics_floatParameterValue);
-	assign_map.emplace("cim:ProprietaryParameterDynamics.integerParameterValue", &assign_ProprietaryParameterDynamics_integerParameterValue);
-	assign_map.emplace("cim:ProprietaryParameterDynamics.parameterNumber", &assign_ProprietaryParameterDynamics_parameterNumber);
+	assign_map.emplace("ProprietaryParameterDynamics.booleanParameterValue", &assign_ProprietaryParameterDynamics_booleanParameterValue);
+	assign_map.emplace("ProprietaryParameterDynamics.floatParameterValue", &assign_ProprietaryParameterDynamics_floatParameterValue);
+	assign_map.emplace("ProprietaryParameterDynamics.integerParameterValue", &assign_ProprietaryParameterDynamics_integerParameterValue);
+	assign_map.emplace("ProprietaryParameterDynamics.parameterNumber", &assign_ProprietaryParameterDynamics_parameterNumber);
 }
 
 void ProprietaryParameterDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ProprietaryParameterDynamics.AsynchronousMachineUserDefined", &assign_ProprietaryParameterDynamics_AsynchronousMachineUserDefined);
-	assign_map.emplace("cim:ProprietaryParameterDynamics.CSCUserDefined", &assign_ProprietaryParameterDynamics_CSCUserDefined);
-	assign_map.emplace("cim:ProprietaryParameterDynamics.DiscontinuousExcitationControlUserDefined", &assign_ProprietaryParameterDynamics_DiscontinuousExcitationControlUserDefined);
-	assign_map.emplace("cim:ProprietaryParameterDynamics.ExcitationSystemUserDefined", &assign_ProprietaryParameterDynamics_ExcitationSystemUserDefined);
-	assign_map.emplace("cim:ProprietaryParameterDynamics.LoadUserDefined", &assign_ProprietaryParameterDynamics_LoadUserDefined);
-	assign_map.emplace("cim:ProprietaryParameterDynamics.MechanicalLoadUserDefined", &assign_ProprietaryParameterDynamics_MechanicalLoadUserDefined);
-	assign_map.emplace("cim:ProprietaryParameterDynamics.OverexcitationLimiterUserDefined", &assign_ProprietaryParameterDynamics_OverexcitationLimiterUserDefined);
-	assign_map.emplace("cim:ProprietaryParameterDynamics.PFVArControllerType1UserDefined", &assign_ProprietaryParameterDynamics_PFVArControllerType1UserDefined);
-	assign_map.emplace("cim:ProprietaryParameterDynamics.PFVArControllerType2UserDefined", &assign_ProprietaryParameterDynamics_PFVArControllerType2UserDefined);
-	assign_map.emplace("cim:ProprietaryParameterDynamics.PowerSystemStabilizerUserDefined", &assign_ProprietaryParameterDynamics_PowerSystemStabilizerUserDefined);
-	assign_map.emplace("cim:ProprietaryParameterDynamics.SVCUserDefined", &assign_ProprietaryParameterDynamics_SVCUserDefined);
-	assign_map.emplace("cim:ProprietaryParameterDynamics.SynchronousMachineUserDefined", &assign_ProprietaryParameterDynamics_SynchronousMachineUserDefined);
-	assign_map.emplace("cim:ProprietaryParameterDynamics.TurbineGovernorUserDefined", &assign_ProprietaryParameterDynamics_TurbineGovernorUserDefined);
-	assign_map.emplace("cim:ProprietaryParameterDynamics.TurbineLoadControllerUserDefined", &assign_ProprietaryParameterDynamics_TurbineLoadControllerUserDefined);
-	assign_map.emplace("cim:ProprietaryParameterDynamics.UnderexcitationLimiterUserDefined", &assign_ProprietaryParameterDynamics_UnderexcitationLimiterUserDefined);
-	assign_map.emplace("cim:ProprietaryParameterDynamics.VSCUserDefined", &assign_ProprietaryParameterDynamics_VSCUserDefined);
-	assign_map.emplace("cim:ProprietaryParameterDynamics.VoltageAdjusterUserDefined", &assign_ProprietaryParameterDynamics_VoltageAdjusterUserDefined);
-	assign_map.emplace("cim:ProprietaryParameterDynamics.VoltageCompensatorUserDefined", &assign_ProprietaryParameterDynamics_VoltageCompensatorUserDefined);
-	assign_map.emplace("cim:ProprietaryParameterDynamics.WindPlantUserDefined", &assign_ProprietaryParameterDynamics_WindPlantUserDefined);
-	assign_map.emplace("cim:ProprietaryParameterDynamics.WindType1or2UserDefined", &assign_ProprietaryParameterDynamics_WindType1or2UserDefined);
-	assign_map.emplace("cim:ProprietaryParameterDynamics.WindType3or4UserDefined", &assign_ProprietaryParameterDynamics_WindType3or4UserDefined);
+	assign_map.emplace("ProprietaryParameterDynamics.AsynchronousMachineUserDefined", &assign_ProprietaryParameterDynamics_AsynchronousMachineUserDefined);
+	assign_map.emplace("ProprietaryParameterDynamics.CSCUserDefined", &assign_ProprietaryParameterDynamics_CSCUserDefined);
+	assign_map.emplace("ProprietaryParameterDynamics.DiscontinuousExcitationControlUserDefined", &assign_ProprietaryParameterDynamics_DiscontinuousExcitationControlUserDefined);
+	assign_map.emplace("ProprietaryParameterDynamics.ExcitationSystemUserDefined", &assign_ProprietaryParameterDynamics_ExcitationSystemUserDefined);
+	assign_map.emplace("ProprietaryParameterDynamics.LoadUserDefined", &assign_ProprietaryParameterDynamics_LoadUserDefined);
+	assign_map.emplace("ProprietaryParameterDynamics.MechanicalLoadUserDefined", &assign_ProprietaryParameterDynamics_MechanicalLoadUserDefined);
+	assign_map.emplace("ProprietaryParameterDynamics.OverexcitationLimiterUserDefined", &assign_ProprietaryParameterDynamics_OverexcitationLimiterUserDefined);
+	assign_map.emplace("ProprietaryParameterDynamics.PFVArControllerType1UserDefined", &assign_ProprietaryParameterDynamics_PFVArControllerType1UserDefined);
+	assign_map.emplace("ProprietaryParameterDynamics.PFVArControllerType2UserDefined", &assign_ProprietaryParameterDynamics_PFVArControllerType2UserDefined);
+	assign_map.emplace("ProprietaryParameterDynamics.PowerSystemStabilizerUserDefined", &assign_ProprietaryParameterDynamics_PowerSystemStabilizerUserDefined);
+	assign_map.emplace("ProprietaryParameterDynamics.SVCUserDefined", &assign_ProprietaryParameterDynamics_SVCUserDefined);
+	assign_map.emplace("ProprietaryParameterDynamics.SynchronousMachineUserDefined", &assign_ProprietaryParameterDynamics_SynchronousMachineUserDefined);
+	assign_map.emplace("ProprietaryParameterDynamics.TurbineGovernorUserDefined", &assign_ProprietaryParameterDynamics_TurbineGovernorUserDefined);
+	assign_map.emplace("ProprietaryParameterDynamics.TurbineLoadControllerUserDefined", &assign_ProprietaryParameterDynamics_TurbineLoadControllerUserDefined);
+	assign_map.emplace("ProprietaryParameterDynamics.UnderexcitationLimiterUserDefined", &assign_ProprietaryParameterDynamics_UnderexcitationLimiterUserDefined);
+	assign_map.emplace("ProprietaryParameterDynamics.VSCUserDefined", &assign_ProprietaryParameterDynamics_VSCUserDefined);
+	assign_map.emplace("ProprietaryParameterDynamics.VoltageAdjusterUserDefined", &assign_ProprietaryParameterDynamics_VoltageAdjusterUserDefined);
+	assign_map.emplace("ProprietaryParameterDynamics.VoltageCompensatorUserDefined", &assign_ProprietaryParameterDynamics_VoltageCompensatorUserDefined);
+	assign_map.emplace("ProprietaryParameterDynamics.WindPlantUserDefined", &assign_ProprietaryParameterDynamics_WindPlantUserDefined);
+	assign_map.emplace("ProprietaryParameterDynamics.WindType1or2UserDefined", &assign_ProprietaryParameterDynamics_WindType1or2UserDefined);
+	assign_map.emplace("ProprietaryParameterDynamics.WindType3or4UserDefined", &assign_ProprietaryParameterDynamics_WindType3or4UserDefined);
 }
 
 void ProprietaryParameterDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	BaseClass::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ProprietaryParameterDynamics.booleanParameterValue", &get_ProprietaryParameterDynamics_booleanParameterValue);
-	get_map.emplace("cim:ProprietaryParameterDynamics.floatParameterValue", &get_ProprietaryParameterDynamics_floatParameterValue);
-	get_map.emplace("cim:ProprietaryParameterDynamics.integerParameterValue", &get_ProprietaryParameterDynamics_integerParameterValue);
-	get_map.emplace("cim:ProprietaryParameterDynamics.parameterNumber", &get_ProprietaryParameterDynamics_parameterNumber);
+	get_map.emplace("ProprietaryParameterDynamics.booleanParameterValue", &get_ProprietaryParameterDynamics_booleanParameterValue);
+	get_map.emplace("ProprietaryParameterDynamics.floatParameterValue", &get_ProprietaryParameterDynamics_floatParameterValue);
+	get_map.emplace("ProprietaryParameterDynamics.integerParameterValue", &get_ProprietaryParameterDynamics_integerParameterValue);
+	get_map.emplace("ProprietaryParameterDynamics.parameterNumber", &get_ProprietaryParameterDynamics_parameterNumber);
 }
 
 void ProprietaryParameterDynamics::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	BaseClass::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:ProprietaryParameterDynamics.AsynchronousMachineUserDefined", &get_ProprietaryParameterDynamics_AsynchronousMachineUserDefined);
-	get_map.emplace("cim:ProprietaryParameterDynamics.CSCUserDefined", &get_ProprietaryParameterDynamics_CSCUserDefined);
-	get_map.emplace("cim:ProprietaryParameterDynamics.DiscontinuousExcitationControlUserDefined", &get_ProprietaryParameterDynamics_DiscontinuousExcitationControlUserDefined);
-	get_map.emplace("cim:ProprietaryParameterDynamics.ExcitationSystemUserDefined", &get_ProprietaryParameterDynamics_ExcitationSystemUserDefined);
-	get_map.emplace("cim:ProprietaryParameterDynamics.LoadUserDefined", &get_ProprietaryParameterDynamics_LoadUserDefined);
-	get_map.emplace("cim:ProprietaryParameterDynamics.MechanicalLoadUserDefined", &get_ProprietaryParameterDynamics_MechanicalLoadUserDefined);
-	get_map.emplace("cim:ProprietaryParameterDynamics.OverexcitationLimiterUserDefined", &get_ProprietaryParameterDynamics_OverexcitationLimiterUserDefined);
-	get_map.emplace("cim:ProprietaryParameterDynamics.PFVArControllerType1UserDefined", &get_ProprietaryParameterDynamics_PFVArControllerType1UserDefined);
-	get_map.emplace("cim:ProprietaryParameterDynamics.PFVArControllerType2UserDefined", &get_ProprietaryParameterDynamics_PFVArControllerType2UserDefined);
-	get_map.emplace("cim:ProprietaryParameterDynamics.PowerSystemStabilizerUserDefined", &get_ProprietaryParameterDynamics_PowerSystemStabilizerUserDefined);
-	get_map.emplace("cim:ProprietaryParameterDynamics.SVCUserDefined", &get_ProprietaryParameterDynamics_SVCUserDefined);
-	get_map.emplace("cim:ProprietaryParameterDynamics.SynchronousMachineUserDefined", &get_ProprietaryParameterDynamics_SynchronousMachineUserDefined);
-	get_map.emplace("cim:ProprietaryParameterDynamics.TurbineGovernorUserDefined", &get_ProprietaryParameterDynamics_TurbineGovernorUserDefined);
-	get_map.emplace("cim:ProprietaryParameterDynamics.TurbineLoadControllerUserDefined", &get_ProprietaryParameterDynamics_TurbineLoadControllerUserDefined);
-	get_map.emplace("cim:ProprietaryParameterDynamics.UnderexcitationLimiterUserDefined", &get_ProprietaryParameterDynamics_UnderexcitationLimiterUserDefined);
-	get_map.emplace("cim:ProprietaryParameterDynamics.VSCUserDefined", &get_ProprietaryParameterDynamics_VSCUserDefined);
-	get_map.emplace("cim:ProprietaryParameterDynamics.VoltageAdjusterUserDefined", &get_ProprietaryParameterDynamics_VoltageAdjusterUserDefined);
-	get_map.emplace("cim:ProprietaryParameterDynamics.VoltageCompensatorUserDefined", &get_ProprietaryParameterDynamics_VoltageCompensatorUserDefined);
-	get_map.emplace("cim:ProprietaryParameterDynamics.WindPlantUserDefined", &get_ProprietaryParameterDynamics_WindPlantUserDefined);
-	get_map.emplace("cim:ProprietaryParameterDynamics.WindType1or2UserDefined", &get_ProprietaryParameterDynamics_WindType1or2UserDefined);
-	get_map.emplace("cim:ProprietaryParameterDynamics.WindType3or4UserDefined", &get_ProprietaryParameterDynamics_WindType3or4UserDefined);
+	get_map.emplace("ProprietaryParameterDynamics.AsynchronousMachineUserDefined", &get_ProprietaryParameterDynamics_AsynchronousMachineUserDefined);
+	get_map.emplace("ProprietaryParameterDynamics.CSCUserDefined", &get_ProprietaryParameterDynamics_CSCUserDefined);
+	get_map.emplace("ProprietaryParameterDynamics.DiscontinuousExcitationControlUserDefined", &get_ProprietaryParameterDynamics_DiscontinuousExcitationControlUserDefined);
+	get_map.emplace("ProprietaryParameterDynamics.ExcitationSystemUserDefined", &get_ProprietaryParameterDynamics_ExcitationSystemUserDefined);
+	get_map.emplace("ProprietaryParameterDynamics.LoadUserDefined", &get_ProprietaryParameterDynamics_LoadUserDefined);
+	get_map.emplace("ProprietaryParameterDynamics.MechanicalLoadUserDefined", &get_ProprietaryParameterDynamics_MechanicalLoadUserDefined);
+	get_map.emplace("ProprietaryParameterDynamics.OverexcitationLimiterUserDefined", &get_ProprietaryParameterDynamics_OverexcitationLimiterUserDefined);
+	get_map.emplace("ProprietaryParameterDynamics.PFVArControllerType1UserDefined", &get_ProprietaryParameterDynamics_PFVArControllerType1UserDefined);
+	get_map.emplace("ProprietaryParameterDynamics.PFVArControllerType2UserDefined", &get_ProprietaryParameterDynamics_PFVArControllerType2UserDefined);
+	get_map.emplace("ProprietaryParameterDynamics.PowerSystemStabilizerUserDefined", &get_ProprietaryParameterDynamics_PowerSystemStabilizerUserDefined);
+	get_map.emplace("ProprietaryParameterDynamics.SVCUserDefined", &get_ProprietaryParameterDynamics_SVCUserDefined);
+	get_map.emplace("ProprietaryParameterDynamics.SynchronousMachineUserDefined", &get_ProprietaryParameterDynamics_SynchronousMachineUserDefined);
+	get_map.emplace("ProprietaryParameterDynamics.TurbineGovernorUserDefined", &get_ProprietaryParameterDynamics_TurbineGovernorUserDefined);
+	get_map.emplace("ProprietaryParameterDynamics.TurbineLoadControllerUserDefined", &get_ProprietaryParameterDynamics_TurbineLoadControllerUserDefined);
+	get_map.emplace("ProprietaryParameterDynamics.UnderexcitationLimiterUserDefined", &get_ProprietaryParameterDynamics_UnderexcitationLimiterUserDefined);
+	get_map.emplace("ProprietaryParameterDynamics.VSCUserDefined", &get_ProprietaryParameterDynamics_VSCUserDefined);
+	get_map.emplace("ProprietaryParameterDynamics.VoltageAdjusterUserDefined", &get_ProprietaryParameterDynamics_VoltageAdjusterUserDefined);
+	get_map.emplace("ProprietaryParameterDynamics.VoltageCompensatorUserDefined", &get_ProprietaryParameterDynamics_VoltageCompensatorUserDefined);
+	get_map.emplace("ProprietaryParameterDynamics.WindPlantUserDefined", &get_ProprietaryParameterDynamics_WindPlantUserDefined);
+	get_map.emplace("ProprietaryParameterDynamics.WindType1or2UserDefined", &get_ProprietaryParameterDynamics_WindType1or2UserDefined);
+	get_map.emplace("ProprietaryParameterDynamics.WindType3or4UserDefined", &get_ProprietaryParameterDynamics_WindType3or4UserDefined);
 }
 
 void ProprietaryParameterDynamics::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -935,9 +967,23 @@ void ProprietaryParameterDynamics::addEnumGetFnsToMap(std::map<std::string, get_
 	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
+bool ProprietaryParameterDynamics::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ProprietaryParameterDynamics" &&
+		dynamic_cast<ProprietaryParameterDynamics*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ProprietaryParameterDynamics::declare()
 {
 	return BaseClassDefiner(ProprietaryParameterDynamics::addConstructToMap, ProprietaryParameterDynamics::addPrimitiveAssignFnsToMap, ProprietaryParameterDynamics::addClassAssignFnsToMap, ProprietaryParameterDynamics::debugName);
+}
+
+std::map<std::string, AttrDetails> ProprietaryParameterDynamics::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = BaseClass::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

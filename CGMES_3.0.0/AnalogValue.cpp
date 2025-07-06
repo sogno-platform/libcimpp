@@ -13,33 +13,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		AnalogValue(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::OP,
+		},
+		CGMESProfile::OP
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "AnalogValue.Analog", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::OP, } } },
+		{ "AnalogValue.AnalogControl", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::OP, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 AnalogValue::AnalogValue() : Analog(nullptr), AnalogControl(nullptr) {}
 AnalogValue::~AnalogValue() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& AnalogValue::getAttributeNames() const
 {
-	CGMESProfile::OP,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:AnalogValue.Analog", { CGMESProfile::OP, } },
-	{ "cim:AnalogValue.AnalogControl", { CGMESProfile::OP, } },
-};
-
-std::list<CGMESProfile>
-AnalogValue::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-AnalogValue::getPossibleProfilesForAttributes() const
+const std::string& AnalogValue::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = MeasurementValue::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& AnalogValue::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& AnalogValue::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& AnalogValue::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& AnalogValue::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& AnalogValue::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_Analog_AnalogValues(BaseClass*, BaseClass*);
@@ -99,7 +131,7 @@ const char* AnalogValue::debugString() const
 
 void AnalogValue::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:AnalogValue", &AnalogValue_factory);
+	factory_map.emplace("AnalogValue", &AnalogValue_factory);
 }
 
 void AnalogValue::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -108,8 +140,8 @@ void AnalogValue::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, ass
 
 void AnalogValue::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:AnalogValue.Analog", &assign_AnalogValue_Analog);
-	assign_map.emplace("cim:AnalogValue.AnalogControl", &assign_AnalogValue_AnalogControl);
+	assign_map.emplace("AnalogValue.Analog", &assign_AnalogValue_Analog);
+	assign_map.emplace("AnalogValue.AnalogControl", &assign_AnalogValue_AnalogControl);
 }
 
 void AnalogValue::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -120,7 +152,7 @@ void AnalogValue::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& g
 void AnalogValue::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	MeasurementValue::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:AnalogValue.Analog", &get_AnalogValue_Analog);
+	get_map.emplace("AnalogValue.Analog", &get_AnalogValue_Analog);
 }
 
 void AnalogValue::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -128,9 +160,23 @@ void AnalogValue::addEnumGetFnsToMap(std::map<std::string, get_function>& get_ma
 	MeasurementValue::addEnumGetFnsToMap(get_map);
 }
 
+bool AnalogValue::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "AnalogValue" &&
+		dynamic_cast<AnalogValue*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner AnalogValue::declare()
 {
 	return BaseClassDefiner(AnalogValue::addConstructToMap, AnalogValue::addPrimitiveAssignFnsToMap, AnalogValue::addClassAssignFnsToMap, AnalogValue::debugName);
+}
+
+std::map<std::string, AttrDetails> AnalogValue::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = MeasurementValue::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

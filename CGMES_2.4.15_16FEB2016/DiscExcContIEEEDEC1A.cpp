@@ -11,49 +11,81 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		DiscExcContIEEEDEC1A(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "DiscExcContIEEEDEC1A.esc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "DiscExcContIEEEDEC1A.kan", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "DiscExcContIEEEDEC1A.ketl", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "DiscExcContIEEEDEC1A.tan", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "DiscExcContIEEEDEC1A.td", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "DiscExcContIEEEDEC1A.tl1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "DiscExcContIEEEDEC1A.tl2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "DiscExcContIEEEDEC1A.tw5", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "DiscExcContIEEEDEC1A.val", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "DiscExcContIEEEDEC1A.vanmax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "DiscExcContIEEEDEC1A.vomax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "DiscExcContIEEEDEC1A.vomin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "DiscExcContIEEEDEC1A.vsmax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "DiscExcContIEEEDEC1A.vsmin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "DiscExcContIEEEDEC1A.vtc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "DiscExcContIEEEDEC1A.vtlmt", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "DiscExcContIEEEDEC1A.vtm", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "DiscExcContIEEEDEC1A.vtn", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 DiscExcContIEEEDEC1A::DiscExcContIEEEDEC1A() {}
 DiscExcContIEEEDEC1A::~DiscExcContIEEEDEC1A() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& DiscExcContIEEEDEC1A::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:DiscExcContIEEEDEC1A.esc", { CGMESProfile::DY, } },
-	{ "cim:DiscExcContIEEEDEC1A.kan", { CGMESProfile::DY, } },
-	{ "cim:DiscExcContIEEEDEC1A.ketl", { CGMESProfile::DY, } },
-	{ "cim:DiscExcContIEEEDEC1A.tan", { CGMESProfile::DY, } },
-	{ "cim:DiscExcContIEEEDEC1A.td", { CGMESProfile::DY, } },
-	{ "cim:DiscExcContIEEEDEC1A.tl1", { CGMESProfile::DY, } },
-	{ "cim:DiscExcContIEEEDEC1A.tl2", { CGMESProfile::DY, } },
-	{ "cim:DiscExcContIEEEDEC1A.tw5", { CGMESProfile::DY, } },
-	{ "cim:DiscExcContIEEEDEC1A.val", { CGMESProfile::DY, } },
-	{ "cim:DiscExcContIEEEDEC1A.vanmax", { CGMESProfile::DY, } },
-	{ "cim:DiscExcContIEEEDEC1A.vomax", { CGMESProfile::DY, } },
-	{ "cim:DiscExcContIEEEDEC1A.vomin", { CGMESProfile::DY, } },
-	{ "cim:DiscExcContIEEEDEC1A.vsmax", { CGMESProfile::DY, } },
-	{ "cim:DiscExcContIEEEDEC1A.vsmin", { CGMESProfile::DY, } },
-	{ "cim:DiscExcContIEEEDEC1A.vtc", { CGMESProfile::DY, } },
-	{ "cim:DiscExcContIEEEDEC1A.vtlmt", { CGMESProfile::DY, } },
-	{ "cim:DiscExcContIEEEDEC1A.vtm", { CGMESProfile::DY, } },
-	{ "cim:DiscExcContIEEEDEC1A.vtn", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-DiscExcContIEEEDEC1A::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-DiscExcContIEEEDEC1A::getPossibleProfilesForAttributes() const
+const std::string& DiscExcContIEEEDEC1A::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = DiscontinuousExcitationControlDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& DiscExcContIEEEDEC1A::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& DiscExcContIEEEDEC1A::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& DiscExcContIEEEDEC1A::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& DiscExcContIEEEDEC1A::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& DiscExcContIEEEDEC1A::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_DiscExcContIEEEDEC1A_esc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -586,29 +618,29 @@ const char* DiscExcContIEEEDEC1A::debugString() const
 
 void DiscExcContIEEEDEC1A::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:DiscExcContIEEEDEC1A", &DiscExcContIEEEDEC1A_factory);
+	factory_map.emplace("DiscExcContIEEEDEC1A", &DiscExcContIEEEDEC1A_factory);
 }
 
 void DiscExcContIEEEDEC1A::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:DiscExcContIEEEDEC1A.esc", &assign_DiscExcContIEEEDEC1A_esc);
-	assign_map.emplace("cim:DiscExcContIEEEDEC1A.kan", &assign_DiscExcContIEEEDEC1A_kan);
-	assign_map.emplace("cim:DiscExcContIEEEDEC1A.ketl", &assign_DiscExcContIEEEDEC1A_ketl);
-	assign_map.emplace("cim:DiscExcContIEEEDEC1A.tan", &assign_DiscExcContIEEEDEC1A_tan);
-	assign_map.emplace("cim:DiscExcContIEEEDEC1A.td", &assign_DiscExcContIEEEDEC1A_td);
-	assign_map.emplace("cim:DiscExcContIEEEDEC1A.tl1", &assign_DiscExcContIEEEDEC1A_tl1);
-	assign_map.emplace("cim:DiscExcContIEEEDEC1A.tl2", &assign_DiscExcContIEEEDEC1A_tl2);
-	assign_map.emplace("cim:DiscExcContIEEEDEC1A.tw5", &assign_DiscExcContIEEEDEC1A_tw5);
-	assign_map.emplace("cim:DiscExcContIEEEDEC1A.val", &assign_DiscExcContIEEEDEC1A_val);
-	assign_map.emplace("cim:DiscExcContIEEEDEC1A.vanmax", &assign_DiscExcContIEEEDEC1A_vanmax);
-	assign_map.emplace("cim:DiscExcContIEEEDEC1A.vomax", &assign_DiscExcContIEEEDEC1A_vomax);
-	assign_map.emplace("cim:DiscExcContIEEEDEC1A.vomin", &assign_DiscExcContIEEEDEC1A_vomin);
-	assign_map.emplace("cim:DiscExcContIEEEDEC1A.vsmax", &assign_DiscExcContIEEEDEC1A_vsmax);
-	assign_map.emplace("cim:DiscExcContIEEEDEC1A.vsmin", &assign_DiscExcContIEEEDEC1A_vsmin);
-	assign_map.emplace("cim:DiscExcContIEEEDEC1A.vtc", &assign_DiscExcContIEEEDEC1A_vtc);
-	assign_map.emplace("cim:DiscExcContIEEEDEC1A.vtlmt", &assign_DiscExcContIEEEDEC1A_vtlmt);
-	assign_map.emplace("cim:DiscExcContIEEEDEC1A.vtm", &assign_DiscExcContIEEEDEC1A_vtm);
-	assign_map.emplace("cim:DiscExcContIEEEDEC1A.vtn", &assign_DiscExcContIEEEDEC1A_vtn);
+	assign_map.emplace("DiscExcContIEEEDEC1A.esc", &assign_DiscExcContIEEEDEC1A_esc);
+	assign_map.emplace("DiscExcContIEEEDEC1A.kan", &assign_DiscExcContIEEEDEC1A_kan);
+	assign_map.emplace("DiscExcContIEEEDEC1A.ketl", &assign_DiscExcContIEEEDEC1A_ketl);
+	assign_map.emplace("DiscExcContIEEEDEC1A.tan", &assign_DiscExcContIEEEDEC1A_tan);
+	assign_map.emplace("DiscExcContIEEEDEC1A.td", &assign_DiscExcContIEEEDEC1A_td);
+	assign_map.emplace("DiscExcContIEEEDEC1A.tl1", &assign_DiscExcContIEEEDEC1A_tl1);
+	assign_map.emplace("DiscExcContIEEEDEC1A.tl2", &assign_DiscExcContIEEEDEC1A_tl2);
+	assign_map.emplace("DiscExcContIEEEDEC1A.tw5", &assign_DiscExcContIEEEDEC1A_tw5);
+	assign_map.emplace("DiscExcContIEEEDEC1A.val", &assign_DiscExcContIEEEDEC1A_val);
+	assign_map.emplace("DiscExcContIEEEDEC1A.vanmax", &assign_DiscExcContIEEEDEC1A_vanmax);
+	assign_map.emplace("DiscExcContIEEEDEC1A.vomax", &assign_DiscExcContIEEEDEC1A_vomax);
+	assign_map.emplace("DiscExcContIEEEDEC1A.vomin", &assign_DiscExcContIEEEDEC1A_vomin);
+	assign_map.emplace("DiscExcContIEEEDEC1A.vsmax", &assign_DiscExcContIEEEDEC1A_vsmax);
+	assign_map.emplace("DiscExcContIEEEDEC1A.vsmin", &assign_DiscExcContIEEEDEC1A_vsmin);
+	assign_map.emplace("DiscExcContIEEEDEC1A.vtc", &assign_DiscExcContIEEEDEC1A_vtc);
+	assign_map.emplace("DiscExcContIEEEDEC1A.vtlmt", &assign_DiscExcContIEEEDEC1A_vtlmt);
+	assign_map.emplace("DiscExcContIEEEDEC1A.vtm", &assign_DiscExcContIEEEDEC1A_vtm);
+	assign_map.emplace("DiscExcContIEEEDEC1A.vtn", &assign_DiscExcContIEEEDEC1A_vtn);
 }
 
 void DiscExcContIEEEDEC1A::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -618,24 +650,24 @@ void DiscExcContIEEEDEC1A::addClassAssignFnsToMap(std::unordered_map<std::string
 void DiscExcContIEEEDEC1A::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	DiscontinuousExcitationControlDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:DiscExcContIEEEDEC1A.esc", &get_DiscExcContIEEEDEC1A_esc);
-	get_map.emplace("cim:DiscExcContIEEEDEC1A.kan", &get_DiscExcContIEEEDEC1A_kan);
-	get_map.emplace("cim:DiscExcContIEEEDEC1A.ketl", &get_DiscExcContIEEEDEC1A_ketl);
-	get_map.emplace("cim:DiscExcContIEEEDEC1A.tan", &get_DiscExcContIEEEDEC1A_tan);
-	get_map.emplace("cim:DiscExcContIEEEDEC1A.td", &get_DiscExcContIEEEDEC1A_td);
-	get_map.emplace("cim:DiscExcContIEEEDEC1A.tl1", &get_DiscExcContIEEEDEC1A_tl1);
-	get_map.emplace("cim:DiscExcContIEEEDEC1A.tl2", &get_DiscExcContIEEEDEC1A_tl2);
-	get_map.emplace("cim:DiscExcContIEEEDEC1A.tw5", &get_DiscExcContIEEEDEC1A_tw5);
-	get_map.emplace("cim:DiscExcContIEEEDEC1A.val", &get_DiscExcContIEEEDEC1A_val);
-	get_map.emplace("cim:DiscExcContIEEEDEC1A.vanmax", &get_DiscExcContIEEEDEC1A_vanmax);
-	get_map.emplace("cim:DiscExcContIEEEDEC1A.vomax", &get_DiscExcContIEEEDEC1A_vomax);
-	get_map.emplace("cim:DiscExcContIEEEDEC1A.vomin", &get_DiscExcContIEEEDEC1A_vomin);
-	get_map.emplace("cim:DiscExcContIEEEDEC1A.vsmax", &get_DiscExcContIEEEDEC1A_vsmax);
-	get_map.emplace("cim:DiscExcContIEEEDEC1A.vsmin", &get_DiscExcContIEEEDEC1A_vsmin);
-	get_map.emplace("cim:DiscExcContIEEEDEC1A.vtc", &get_DiscExcContIEEEDEC1A_vtc);
-	get_map.emplace("cim:DiscExcContIEEEDEC1A.vtlmt", &get_DiscExcContIEEEDEC1A_vtlmt);
-	get_map.emplace("cim:DiscExcContIEEEDEC1A.vtm", &get_DiscExcContIEEEDEC1A_vtm);
-	get_map.emplace("cim:DiscExcContIEEEDEC1A.vtn", &get_DiscExcContIEEEDEC1A_vtn);
+	get_map.emplace("DiscExcContIEEEDEC1A.esc", &get_DiscExcContIEEEDEC1A_esc);
+	get_map.emplace("DiscExcContIEEEDEC1A.kan", &get_DiscExcContIEEEDEC1A_kan);
+	get_map.emplace("DiscExcContIEEEDEC1A.ketl", &get_DiscExcContIEEEDEC1A_ketl);
+	get_map.emplace("DiscExcContIEEEDEC1A.tan", &get_DiscExcContIEEEDEC1A_tan);
+	get_map.emplace("DiscExcContIEEEDEC1A.td", &get_DiscExcContIEEEDEC1A_td);
+	get_map.emplace("DiscExcContIEEEDEC1A.tl1", &get_DiscExcContIEEEDEC1A_tl1);
+	get_map.emplace("DiscExcContIEEEDEC1A.tl2", &get_DiscExcContIEEEDEC1A_tl2);
+	get_map.emplace("DiscExcContIEEEDEC1A.tw5", &get_DiscExcContIEEEDEC1A_tw5);
+	get_map.emplace("DiscExcContIEEEDEC1A.val", &get_DiscExcContIEEEDEC1A_val);
+	get_map.emplace("DiscExcContIEEEDEC1A.vanmax", &get_DiscExcContIEEEDEC1A_vanmax);
+	get_map.emplace("DiscExcContIEEEDEC1A.vomax", &get_DiscExcContIEEEDEC1A_vomax);
+	get_map.emplace("DiscExcContIEEEDEC1A.vomin", &get_DiscExcContIEEEDEC1A_vomin);
+	get_map.emplace("DiscExcContIEEEDEC1A.vsmax", &get_DiscExcContIEEEDEC1A_vsmax);
+	get_map.emplace("DiscExcContIEEEDEC1A.vsmin", &get_DiscExcContIEEEDEC1A_vsmin);
+	get_map.emplace("DiscExcContIEEEDEC1A.vtc", &get_DiscExcContIEEEDEC1A_vtc);
+	get_map.emplace("DiscExcContIEEEDEC1A.vtlmt", &get_DiscExcContIEEEDEC1A_vtlmt);
+	get_map.emplace("DiscExcContIEEEDEC1A.vtm", &get_DiscExcContIEEEDEC1A_vtm);
+	get_map.emplace("DiscExcContIEEEDEC1A.vtn", &get_DiscExcContIEEEDEC1A_vtn);
 }
 
 void DiscExcContIEEEDEC1A::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -648,9 +680,23 @@ void DiscExcContIEEEDEC1A::addEnumGetFnsToMap(std::map<std::string, get_function
 	DiscontinuousExcitationControlDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool DiscExcContIEEEDEC1A::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "DiscExcContIEEEDEC1A" &&
+		dynamic_cast<DiscExcContIEEEDEC1A*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner DiscExcContIEEEDEC1A::declare()
 {
 	return BaseClassDefiner(DiscExcContIEEEDEC1A::addConstructToMap, DiscExcContIEEEDEC1A::addPrimitiveAssignFnsToMap, DiscExcContIEEEDEC1A::addClassAssignFnsToMap, DiscExcContIEEEDEC1A::debugName);
+}
+
+std::map<std::string, AttrDetails> DiscExcContIEEEDEC1A::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = DiscontinuousExcitationControlDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP
