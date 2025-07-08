@@ -15,6 +15,9 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
+    - name: Install Boost
+      shell: bash
+      run: sudo apt-get install libboost-filesystem-dev libboost-system-dev libboost-test-dev
     - name: Create Build Environment
       run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/${{matrix.schema}}
     - name: Configure CMake and compile
