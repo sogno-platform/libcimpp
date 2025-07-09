@@ -12,4 +12,5 @@ RUN dnf -y install \
 	graphviz \
 	python3-pip \
 	rpmdevtools \
-	libxml2-devel
+	libxml2-devel \
+	boost-devel
