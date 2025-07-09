@@ -32,6 +32,7 @@ public:
    * In this case, modelId and classProfileMap are not required.
    *
    * \param path            Path of file to write
+   * \param objList         List of CIM objects to write
    * \param profile         Only data for this profile should be written (if specified)
    * \param modelId         Model ID to write into the model description
    * \param classProfileMap Mapping of CIM type to profile
