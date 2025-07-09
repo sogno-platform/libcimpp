@@ -26,3 +26,7 @@ jobs:
       run: |
           cmake ../.. -DUSE_CIM_VERSION=${{matrix.schema}}
           make -j4
+    - name: Run unit tests
+      shell: bash
+      working-directory: ${{runner.workspace}}/libcimpp/build/${{matrix.schema}}/
+      run: ctest --output-on-failure
