@@ -11,64 +11,96 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		GovHydroPID(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "GovHydroPID.aturb", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.bturb", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.db1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.db2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.eps", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.gv1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.gv2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.gv3", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.gv4", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.gv5", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.gv6", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.inputSignal", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.kd", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.kg", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.ki", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.kp", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.mwbase", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.pgv1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.pgv2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.pgv3", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.pgv4", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.pgv5", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.pgv6", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.pmax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.pmin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.r", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.td", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.tf", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.tp", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.tt", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.tturb", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.velcl", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydroPID.velop", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 GovHydroPID::GovHydroPID() {}
 GovHydroPID::~GovHydroPID() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& GovHydroPID::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:GovHydroPID.aturb", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.bturb", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.db1", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.db2", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.eps", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.gv1", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.gv2", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.gv3", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.gv4", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.gv5", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.gv6", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.inputSignal", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.kd", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.kg", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.ki", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.kp", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.mwbase", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.pgv1", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.pgv2", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.pgv3", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.pgv4", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.pgv5", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.pgv6", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.pmax", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.pmin", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.r", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.td", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.tf", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.tp", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.tt", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.tturb", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.velcl", { CGMESProfile::DY, } },
-	{ "cim:GovHydroPID.velop", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-GovHydroPID::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-GovHydroPID::getPossibleProfilesForAttributes() const
+const std::string& GovHydroPID::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = TurbineGovernorDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& GovHydroPID::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& GovHydroPID::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& GovHydroPID::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& GovHydroPID::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& GovHydroPID::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_GovHydroPID_aturb(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -1036,44 +1068,44 @@ const char* GovHydroPID::debugString() const
 
 void GovHydroPID::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:GovHydroPID", &GovHydroPID_factory);
+	factory_map.emplace("GovHydroPID", &GovHydroPID_factory);
 }
 
 void GovHydroPID::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:GovHydroPID.aturb", &assign_GovHydroPID_aturb);
-	assign_map.emplace("cim:GovHydroPID.bturb", &assign_GovHydroPID_bturb);
-	assign_map.emplace("cim:GovHydroPID.db1", &assign_GovHydroPID_db1);
-	assign_map.emplace("cim:GovHydroPID.db2", &assign_GovHydroPID_db2);
-	assign_map.emplace("cim:GovHydroPID.eps", &assign_GovHydroPID_eps);
-	assign_map.emplace("cim:GovHydroPID.gv1", &assign_GovHydroPID_gv1);
-	assign_map.emplace("cim:GovHydroPID.gv2", &assign_GovHydroPID_gv2);
-	assign_map.emplace("cim:GovHydroPID.gv3", &assign_GovHydroPID_gv3);
-	assign_map.emplace("cim:GovHydroPID.gv4", &assign_GovHydroPID_gv4);
-	assign_map.emplace("cim:GovHydroPID.gv5", &assign_GovHydroPID_gv5);
-	assign_map.emplace("cim:GovHydroPID.gv6", &assign_GovHydroPID_gv6);
-	assign_map.emplace("cim:GovHydroPID.inputSignal", &assign_GovHydroPID_inputSignal);
-	assign_map.emplace("cim:GovHydroPID.kd", &assign_GovHydroPID_kd);
-	assign_map.emplace("cim:GovHydroPID.kg", &assign_GovHydroPID_kg);
-	assign_map.emplace("cim:GovHydroPID.ki", &assign_GovHydroPID_ki);
-	assign_map.emplace("cim:GovHydroPID.kp", &assign_GovHydroPID_kp);
-	assign_map.emplace("cim:GovHydroPID.mwbase", &assign_GovHydroPID_mwbase);
-	assign_map.emplace("cim:GovHydroPID.pgv1", &assign_GovHydroPID_pgv1);
-	assign_map.emplace("cim:GovHydroPID.pgv2", &assign_GovHydroPID_pgv2);
-	assign_map.emplace("cim:GovHydroPID.pgv3", &assign_GovHydroPID_pgv3);
-	assign_map.emplace("cim:GovHydroPID.pgv4", &assign_GovHydroPID_pgv4);
-	assign_map.emplace("cim:GovHydroPID.pgv5", &assign_GovHydroPID_pgv5);
-	assign_map.emplace("cim:GovHydroPID.pgv6", &assign_GovHydroPID_pgv6);
-	assign_map.emplace("cim:GovHydroPID.pmax", &assign_GovHydroPID_pmax);
-	assign_map.emplace("cim:GovHydroPID.pmin", &assign_GovHydroPID_pmin);
-	assign_map.emplace("cim:GovHydroPID.r", &assign_GovHydroPID_r);
-	assign_map.emplace("cim:GovHydroPID.td", &assign_GovHydroPID_td);
-	assign_map.emplace("cim:GovHydroPID.tf", &assign_GovHydroPID_tf);
-	assign_map.emplace("cim:GovHydroPID.tp", &assign_GovHydroPID_tp);
-	assign_map.emplace("cim:GovHydroPID.tt", &assign_GovHydroPID_tt);
-	assign_map.emplace("cim:GovHydroPID.tturb", &assign_GovHydroPID_tturb);
-	assign_map.emplace("cim:GovHydroPID.velcl", &assign_GovHydroPID_velcl);
-	assign_map.emplace("cim:GovHydroPID.velop", &assign_GovHydroPID_velop);
+	assign_map.emplace("GovHydroPID.aturb", &assign_GovHydroPID_aturb);
+	assign_map.emplace("GovHydroPID.bturb", &assign_GovHydroPID_bturb);
+	assign_map.emplace("GovHydroPID.db1", &assign_GovHydroPID_db1);
+	assign_map.emplace("GovHydroPID.db2", &assign_GovHydroPID_db2);
+	assign_map.emplace("GovHydroPID.eps", &assign_GovHydroPID_eps);
+	assign_map.emplace("GovHydroPID.gv1", &assign_GovHydroPID_gv1);
+	assign_map.emplace("GovHydroPID.gv2", &assign_GovHydroPID_gv2);
+	assign_map.emplace("GovHydroPID.gv3", &assign_GovHydroPID_gv3);
+	assign_map.emplace("GovHydroPID.gv4", &assign_GovHydroPID_gv4);
+	assign_map.emplace("GovHydroPID.gv5", &assign_GovHydroPID_gv5);
+	assign_map.emplace("GovHydroPID.gv6", &assign_GovHydroPID_gv6);
+	assign_map.emplace("GovHydroPID.inputSignal", &assign_GovHydroPID_inputSignal);
+	assign_map.emplace("GovHydroPID.kd", &assign_GovHydroPID_kd);
+	assign_map.emplace("GovHydroPID.kg", &assign_GovHydroPID_kg);
+	assign_map.emplace("GovHydroPID.ki", &assign_GovHydroPID_ki);
+	assign_map.emplace("GovHydroPID.kp", &assign_GovHydroPID_kp);
+	assign_map.emplace("GovHydroPID.mwbase", &assign_GovHydroPID_mwbase);
+	assign_map.emplace("GovHydroPID.pgv1", &assign_GovHydroPID_pgv1);
+	assign_map.emplace("GovHydroPID.pgv2", &assign_GovHydroPID_pgv2);
+	assign_map.emplace("GovHydroPID.pgv3", &assign_GovHydroPID_pgv3);
+	assign_map.emplace("GovHydroPID.pgv4", &assign_GovHydroPID_pgv4);
+	assign_map.emplace("GovHydroPID.pgv5", &assign_GovHydroPID_pgv5);
+	assign_map.emplace("GovHydroPID.pgv6", &assign_GovHydroPID_pgv6);
+	assign_map.emplace("GovHydroPID.pmax", &assign_GovHydroPID_pmax);
+	assign_map.emplace("GovHydroPID.pmin", &assign_GovHydroPID_pmin);
+	assign_map.emplace("GovHydroPID.r", &assign_GovHydroPID_r);
+	assign_map.emplace("GovHydroPID.td", &assign_GovHydroPID_td);
+	assign_map.emplace("GovHydroPID.tf", &assign_GovHydroPID_tf);
+	assign_map.emplace("GovHydroPID.tp", &assign_GovHydroPID_tp);
+	assign_map.emplace("GovHydroPID.tt", &assign_GovHydroPID_tt);
+	assign_map.emplace("GovHydroPID.tturb", &assign_GovHydroPID_tturb);
+	assign_map.emplace("GovHydroPID.velcl", &assign_GovHydroPID_velcl);
+	assign_map.emplace("GovHydroPID.velop", &assign_GovHydroPID_velop);
 }
 
 void GovHydroPID::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -1083,39 +1115,39 @@ void GovHydroPID::addClassAssignFnsToMap(std::unordered_map<std::string, class_a
 void GovHydroPID::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	TurbineGovernorDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:GovHydroPID.aturb", &get_GovHydroPID_aturb);
-	get_map.emplace("cim:GovHydroPID.bturb", &get_GovHydroPID_bturb);
-	get_map.emplace("cim:GovHydroPID.db1", &get_GovHydroPID_db1);
-	get_map.emplace("cim:GovHydroPID.db2", &get_GovHydroPID_db2);
-	get_map.emplace("cim:GovHydroPID.eps", &get_GovHydroPID_eps);
-	get_map.emplace("cim:GovHydroPID.gv1", &get_GovHydroPID_gv1);
-	get_map.emplace("cim:GovHydroPID.gv2", &get_GovHydroPID_gv2);
-	get_map.emplace("cim:GovHydroPID.gv3", &get_GovHydroPID_gv3);
-	get_map.emplace("cim:GovHydroPID.gv4", &get_GovHydroPID_gv4);
-	get_map.emplace("cim:GovHydroPID.gv5", &get_GovHydroPID_gv5);
-	get_map.emplace("cim:GovHydroPID.gv6", &get_GovHydroPID_gv6);
-	get_map.emplace("cim:GovHydroPID.inputSignal", &get_GovHydroPID_inputSignal);
-	get_map.emplace("cim:GovHydroPID.kd", &get_GovHydroPID_kd);
-	get_map.emplace("cim:GovHydroPID.kg", &get_GovHydroPID_kg);
-	get_map.emplace("cim:GovHydroPID.ki", &get_GovHydroPID_ki);
-	get_map.emplace("cim:GovHydroPID.kp", &get_GovHydroPID_kp);
-	get_map.emplace("cim:GovHydroPID.mwbase", &get_GovHydroPID_mwbase);
-	get_map.emplace("cim:GovHydroPID.pgv1", &get_GovHydroPID_pgv1);
-	get_map.emplace("cim:GovHydroPID.pgv2", &get_GovHydroPID_pgv2);
-	get_map.emplace("cim:GovHydroPID.pgv3", &get_GovHydroPID_pgv3);
-	get_map.emplace("cim:GovHydroPID.pgv4", &get_GovHydroPID_pgv4);
-	get_map.emplace("cim:GovHydroPID.pgv5", &get_GovHydroPID_pgv5);
-	get_map.emplace("cim:GovHydroPID.pgv6", &get_GovHydroPID_pgv6);
-	get_map.emplace("cim:GovHydroPID.pmax", &get_GovHydroPID_pmax);
-	get_map.emplace("cim:GovHydroPID.pmin", &get_GovHydroPID_pmin);
-	get_map.emplace("cim:GovHydroPID.r", &get_GovHydroPID_r);
-	get_map.emplace("cim:GovHydroPID.td", &get_GovHydroPID_td);
-	get_map.emplace("cim:GovHydroPID.tf", &get_GovHydroPID_tf);
-	get_map.emplace("cim:GovHydroPID.tp", &get_GovHydroPID_tp);
-	get_map.emplace("cim:GovHydroPID.tt", &get_GovHydroPID_tt);
-	get_map.emplace("cim:GovHydroPID.tturb", &get_GovHydroPID_tturb);
-	get_map.emplace("cim:GovHydroPID.velcl", &get_GovHydroPID_velcl);
-	get_map.emplace("cim:GovHydroPID.velop", &get_GovHydroPID_velop);
+	get_map.emplace("GovHydroPID.aturb", &get_GovHydroPID_aturb);
+	get_map.emplace("GovHydroPID.bturb", &get_GovHydroPID_bturb);
+	get_map.emplace("GovHydroPID.db1", &get_GovHydroPID_db1);
+	get_map.emplace("GovHydroPID.db2", &get_GovHydroPID_db2);
+	get_map.emplace("GovHydroPID.eps", &get_GovHydroPID_eps);
+	get_map.emplace("GovHydroPID.gv1", &get_GovHydroPID_gv1);
+	get_map.emplace("GovHydroPID.gv2", &get_GovHydroPID_gv2);
+	get_map.emplace("GovHydroPID.gv3", &get_GovHydroPID_gv3);
+	get_map.emplace("GovHydroPID.gv4", &get_GovHydroPID_gv4);
+	get_map.emplace("GovHydroPID.gv5", &get_GovHydroPID_gv5);
+	get_map.emplace("GovHydroPID.gv6", &get_GovHydroPID_gv6);
+	get_map.emplace("GovHydroPID.inputSignal", &get_GovHydroPID_inputSignal);
+	get_map.emplace("GovHydroPID.kd", &get_GovHydroPID_kd);
+	get_map.emplace("GovHydroPID.kg", &get_GovHydroPID_kg);
+	get_map.emplace("GovHydroPID.ki", &get_GovHydroPID_ki);
+	get_map.emplace("GovHydroPID.kp", &get_GovHydroPID_kp);
+	get_map.emplace("GovHydroPID.mwbase", &get_GovHydroPID_mwbase);
+	get_map.emplace("GovHydroPID.pgv1", &get_GovHydroPID_pgv1);
+	get_map.emplace("GovHydroPID.pgv2", &get_GovHydroPID_pgv2);
+	get_map.emplace("GovHydroPID.pgv3", &get_GovHydroPID_pgv3);
+	get_map.emplace("GovHydroPID.pgv4", &get_GovHydroPID_pgv4);
+	get_map.emplace("GovHydroPID.pgv5", &get_GovHydroPID_pgv5);
+	get_map.emplace("GovHydroPID.pgv6", &get_GovHydroPID_pgv6);
+	get_map.emplace("GovHydroPID.pmax", &get_GovHydroPID_pmax);
+	get_map.emplace("GovHydroPID.pmin", &get_GovHydroPID_pmin);
+	get_map.emplace("GovHydroPID.r", &get_GovHydroPID_r);
+	get_map.emplace("GovHydroPID.td", &get_GovHydroPID_td);
+	get_map.emplace("GovHydroPID.tf", &get_GovHydroPID_tf);
+	get_map.emplace("GovHydroPID.tp", &get_GovHydroPID_tp);
+	get_map.emplace("GovHydroPID.tt", &get_GovHydroPID_tt);
+	get_map.emplace("GovHydroPID.tturb", &get_GovHydroPID_tturb);
+	get_map.emplace("GovHydroPID.velcl", &get_GovHydroPID_velcl);
+	get_map.emplace("GovHydroPID.velop", &get_GovHydroPID_velop);
 }
 
 void GovHydroPID::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -1128,9 +1160,23 @@ void GovHydroPID::addEnumGetFnsToMap(std::map<std::string, get_function>& get_ma
 	TurbineGovernorDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool GovHydroPID::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "GovHydroPID" &&
+		dynamic_cast<GovHydroPID*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner GovHydroPID::declare()
 {
 	return BaseClassDefiner(GovHydroPID::addConstructToMap, GovHydroPID::addPrimitiveAssignFnsToMap, GovHydroPID::addClassAssignFnsToMap, GovHydroPID::debugName);
+}
+
+std::map<std::string, AttrDetails> GovHydroPID::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = TurbineGovernorDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

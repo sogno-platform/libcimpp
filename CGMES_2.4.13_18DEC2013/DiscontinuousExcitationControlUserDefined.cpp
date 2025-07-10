@@ -12,33 +12,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		DiscontinuousExcitationControlUserDefined(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "DiscontinuousExcitationControlUserDefined.ProprietaryParameterDynamics", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "DiscontinuousExcitationControlUserDefined.proprietary", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 DiscontinuousExcitationControlUserDefined::DiscontinuousExcitationControlUserDefined() {}
 DiscontinuousExcitationControlUserDefined::~DiscontinuousExcitationControlUserDefined() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& DiscontinuousExcitationControlUserDefined::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:DiscontinuousExcitationControlUserDefined.ProprietaryParameterDynamics", { CGMESProfile::DY, } },
-	{ "cim:DiscontinuousExcitationControlUserDefined.proprietary", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-DiscontinuousExcitationControlUserDefined::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-DiscontinuousExcitationControlUserDefined::getPossibleProfilesForAttributes() const
+const std::string& DiscontinuousExcitationControlUserDefined::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = DiscontinuousExcitationControlDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& DiscontinuousExcitationControlUserDefined::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& DiscontinuousExcitationControlUserDefined::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& DiscontinuousExcitationControlUserDefined::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& DiscontinuousExcitationControlUserDefined::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& DiscontinuousExcitationControlUserDefined::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ProprietaryParameterDynamics_DiscontinuousExcitationControlUserDefined(BaseClass*, BaseClass*);
@@ -96,23 +128,23 @@ const char* DiscontinuousExcitationControlUserDefined::debugString() const
 
 void DiscontinuousExcitationControlUserDefined::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:DiscontinuousExcitationControlUserDefined", &DiscontinuousExcitationControlUserDefined_factory);
+	factory_map.emplace("DiscontinuousExcitationControlUserDefined", &DiscontinuousExcitationControlUserDefined_factory);
 }
 
 void DiscontinuousExcitationControlUserDefined::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:DiscontinuousExcitationControlUserDefined.proprietary", &assign_DiscontinuousExcitationControlUserDefined_proprietary);
+	assign_map.emplace("DiscontinuousExcitationControlUserDefined.proprietary", &assign_DiscontinuousExcitationControlUserDefined_proprietary);
 }
 
 void DiscontinuousExcitationControlUserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:DiscontinuousExcitationControlUserDefined.ProprietaryParameterDynamics", &assign_DiscontinuousExcitationControlUserDefined_ProprietaryParameterDynamics);
+	assign_map.emplace("DiscontinuousExcitationControlUserDefined.ProprietaryParameterDynamics", &assign_DiscontinuousExcitationControlUserDefined_ProprietaryParameterDynamics);
 }
 
 void DiscontinuousExcitationControlUserDefined::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	DiscontinuousExcitationControlDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:DiscontinuousExcitationControlUserDefined.proprietary", &get_DiscontinuousExcitationControlUserDefined_proprietary);
+	get_map.emplace("DiscontinuousExcitationControlUserDefined.proprietary", &get_DiscontinuousExcitationControlUserDefined_proprietary);
 }
 
 void DiscontinuousExcitationControlUserDefined::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -125,9 +157,23 @@ void DiscontinuousExcitationControlUserDefined::addEnumGetFnsToMap(std::map<std:
 	DiscontinuousExcitationControlDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool DiscontinuousExcitationControlUserDefined::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "DiscontinuousExcitationControlUserDefined" &&
+		dynamic_cast<DiscontinuousExcitationControlUserDefined*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner DiscontinuousExcitationControlUserDefined::declare()
 {
 	return BaseClassDefiner(DiscontinuousExcitationControlUserDefined::addConstructToMap, DiscontinuousExcitationControlUserDefined::addPrimitiveAssignFnsToMap, DiscontinuousExcitationControlUserDefined::addClassAssignFnsToMap, DiscontinuousExcitationControlUserDefined::debugName);
+}
+
+std::map<std::string, AttrDetails> DiscontinuousExcitationControlUserDefined::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = DiscontinuousExcitationControlDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

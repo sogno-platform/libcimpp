@@ -13,37 +13,69 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		Measurement(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "Measurement.PowerSystemResource", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Measurement.Terminal", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Measurement.measurementType", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Measurement.phases", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Measurement.unitMultiplier", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Measurement.unitSymbol", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 Measurement::Measurement() : PowerSystemResource(nullptr), Terminal(nullptr) {}
 Measurement::~Measurement() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& Measurement::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:Measurement.PowerSystemResource", { CGMESProfile::EQ, } },
-	{ "cim:Measurement.Terminal", { CGMESProfile::EQ, } },
-	{ "cim:Measurement.measurementType", { CGMESProfile::EQ, } },
-	{ "cim:Measurement.phases", { CGMESProfile::EQ, } },
-	{ "cim:Measurement.unitMultiplier", { CGMESProfile::EQ, } },
-	{ "cim:Measurement.unitSymbol", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-Measurement::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-Measurement::getPossibleProfilesForAttributes() const
+const std::string& Measurement::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& Measurement::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& Measurement::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& Measurement::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& Measurement::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& Measurement::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_PowerSystemResource_Measurements(BaseClass*, BaseClass*);
@@ -232,47 +264,61 @@ const char* Measurement::debugString() const
 
 void Measurement::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:Measurement", &Measurement_factory);
+	factory_map.emplace("Measurement", &Measurement_factory);
 }
 
 void Measurement::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:Measurement.measurementType", &assign_Measurement_measurementType);
-	assign_map.emplace("cim:Measurement.phases", &assign_Measurement_phases);
-	assign_map.emplace("cim:Measurement.unitMultiplier", &assign_Measurement_unitMultiplier);
-	assign_map.emplace("cim:Measurement.unitSymbol", &assign_Measurement_unitSymbol);
+	assign_map.emplace("Measurement.measurementType", &assign_Measurement_measurementType);
+	assign_map.emplace("Measurement.phases", &assign_Measurement_phases);
+	assign_map.emplace("Measurement.unitMultiplier", &assign_Measurement_unitMultiplier);
+	assign_map.emplace("Measurement.unitSymbol", &assign_Measurement_unitSymbol);
 }
 
 void Measurement::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:Measurement.PowerSystemResource", &assign_Measurement_PowerSystemResource);
-	assign_map.emplace("cim:Measurement.Terminal", &assign_Measurement_Terminal);
+	assign_map.emplace("Measurement.PowerSystemResource", &assign_Measurement_PowerSystemResource);
+	assign_map.emplace("Measurement.Terminal", &assign_Measurement_Terminal);
 }
 
 void Measurement::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:Measurement.measurementType", &get_Measurement_measurementType);
+	get_map.emplace("Measurement.measurementType", &get_Measurement_measurementType);
 }
 
 void Measurement::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	IdentifiedObject::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:Measurement.PowerSystemResource", &get_Measurement_PowerSystemResource);
-	get_map.emplace("cim:Measurement.Terminal", &get_Measurement_Terminal);
+	get_map.emplace("Measurement.PowerSystemResource", &get_Measurement_PowerSystemResource);
+	get_map.emplace("Measurement.Terminal", &get_Measurement_Terminal);
 }
 
 void Measurement::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:Measurement.phases", &get_Measurement_phases);
-	get_map.emplace("cim:Measurement.unitMultiplier", &get_Measurement_unitMultiplier);
-	get_map.emplace("cim:Measurement.unitSymbol", &get_Measurement_unitSymbol);
+	get_map.emplace("Measurement.phases", &get_Measurement_phases);
+	get_map.emplace("Measurement.unitMultiplier", &get_Measurement_unitMultiplier);
+	get_map.emplace("Measurement.unitSymbol", &get_Measurement_unitSymbol);
+}
+
+bool Measurement::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "Measurement" &&
+		dynamic_cast<Measurement*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner Measurement::declare()
 {
 	return BaseClassDefiner(Measurement::addConstructToMap, Measurement::addPrimitiveAssignFnsToMap, Measurement::addClassAssignFnsToMap, Measurement::debugName);
+}
+
+std::map<std::string, AttrDetails> Measurement::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

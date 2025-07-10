@@ -11,47 +11,79 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		EquivalentBranch(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "EquivalentBranch.negativeR12", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "EquivalentBranch.negativeR21", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "EquivalentBranch.negativeX12", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "EquivalentBranch.negativeX21", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "EquivalentBranch.positiveR12", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "EquivalentBranch.positiveR21", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "EquivalentBranch.positiveX12", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "EquivalentBranch.positiveX21", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "EquivalentBranch.r", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "EquivalentBranch.r21", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "EquivalentBranch.x", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "EquivalentBranch.x21", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "EquivalentBranch.zeroR12", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "EquivalentBranch.zeroR21", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "EquivalentBranch.zeroX12", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "EquivalentBranch.zeroX21", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 EquivalentBranch::EquivalentBranch() {}
 EquivalentBranch::~EquivalentBranch() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& EquivalentBranch::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:EquivalentBranch.negativeR12", { CGMESProfile::EQ, } },
-	{ "cim:EquivalentBranch.negativeR21", { CGMESProfile::EQ, } },
-	{ "cim:EquivalentBranch.negativeX12", { CGMESProfile::EQ, } },
-	{ "cim:EquivalentBranch.negativeX21", { CGMESProfile::EQ, } },
-	{ "cim:EquivalentBranch.positiveR12", { CGMESProfile::EQ, } },
-	{ "cim:EquivalentBranch.positiveR21", { CGMESProfile::EQ, } },
-	{ "cim:EquivalentBranch.positiveX12", { CGMESProfile::EQ, } },
-	{ "cim:EquivalentBranch.positiveX21", { CGMESProfile::EQ, } },
-	{ "cim:EquivalentBranch.r", { CGMESProfile::EQ, } },
-	{ "cim:EquivalentBranch.r21", { CGMESProfile::EQ, } },
-	{ "cim:EquivalentBranch.x", { CGMESProfile::EQ, } },
-	{ "cim:EquivalentBranch.x21", { CGMESProfile::EQ, } },
-	{ "cim:EquivalentBranch.zeroR12", { CGMESProfile::EQ, } },
-	{ "cim:EquivalentBranch.zeroR21", { CGMESProfile::EQ, } },
-	{ "cim:EquivalentBranch.zeroX12", { CGMESProfile::EQ, } },
-	{ "cim:EquivalentBranch.zeroX21", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-EquivalentBranch::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-EquivalentBranch::getPossibleProfilesForAttributes() const
+const std::string& EquivalentBranch::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = EquivalentEquipment::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& EquivalentBranch::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& EquivalentBranch::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& EquivalentBranch::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& EquivalentBranch::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& EquivalentBranch::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_EquivalentBranch_negativeR12(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -526,27 +558,27 @@ const char* EquivalentBranch::debugString() const
 
 void EquivalentBranch::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:EquivalentBranch", &EquivalentBranch_factory);
+	factory_map.emplace("EquivalentBranch", &EquivalentBranch_factory);
 }
 
 void EquivalentBranch::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:EquivalentBranch.negativeR12", &assign_EquivalentBranch_negativeR12);
-	assign_map.emplace("cim:EquivalentBranch.negativeR21", &assign_EquivalentBranch_negativeR21);
-	assign_map.emplace("cim:EquivalentBranch.negativeX12", &assign_EquivalentBranch_negativeX12);
-	assign_map.emplace("cim:EquivalentBranch.negativeX21", &assign_EquivalentBranch_negativeX21);
-	assign_map.emplace("cim:EquivalentBranch.positiveR12", &assign_EquivalentBranch_positiveR12);
-	assign_map.emplace("cim:EquivalentBranch.positiveR21", &assign_EquivalentBranch_positiveR21);
-	assign_map.emplace("cim:EquivalentBranch.positiveX12", &assign_EquivalentBranch_positiveX12);
-	assign_map.emplace("cim:EquivalentBranch.positiveX21", &assign_EquivalentBranch_positiveX21);
-	assign_map.emplace("cim:EquivalentBranch.r", &assign_EquivalentBranch_r);
-	assign_map.emplace("cim:EquivalentBranch.r21", &assign_EquivalentBranch_r21);
-	assign_map.emplace("cim:EquivalentBranch.x", &assign_EquivalentBranch_x);
-	assign_map.emplace("cim:EquivalentBranch.x21", &assign_EquivalentBranch_x21);
-	assign_map.emplace("cim:EquivalentBranch.zeroR12", &assign_EquivalentBranch_zeroR12);
-	assign_map.emplace("cim:EquivalentBranch.zeroR21", &assign_EquivalentBranch_zeroR21);
-	assign_map.emplace("cim:EquivalentBranch.zeroX12", &assign_EquivalentBranch_zeroX12);
-	assign_map.emplace("cim:EquivalentBranch.zeroX21", &assign_EquivalentBranch_zeroX21);
+	assign_map.emplace("EquivalentBranch.negativeR12", &assign_EquivalentBranch_negativeR12);
+	assign_map.emplace("EquivalentBranch.negativeR21", &assign_EquivalentBranch_negativeR21);
+	assign_map.emplace("EquivalentBranch.negativeX12", &assign_EquivalentBranch_negativeX12);
+	assign_map.emplace("EquivalentBranch.negativeX21", &assign_EquivalentBranch_negativeX21);
+	assign_map.emplace("EquivalentBranch.positiveR12", &assign_EquivalentBranch_positiveR12);
+	assign_map.emplace("EquivalentBranch.positiveR21", &assign_EquivalentBranch_positiveR21);
+	assign_map.emplace("EquivalentBranch.positiveX12", &assign_EquivalentBranch_positiveX12);
+	assign_map.emplace("EquivalentBranch.positiveX21", &assign_EquivalentBranch_positiveX21);
+	assign_map.emplace("EquivalentBranch.r", &assign_EquivalentBranch_r);
+	assign_map.emplace("EquivalentBranch.r21", &assign_EquivalentBranch_r21);
+	assign_map.emplace("EquivalentBranch.x", &assign_EquivalentBranch_x);
+	assign_map.emplace("EquivalentBranch.x21", &assign_EquivalentBranch_x21);
+	assign_map.emplace("EquivalentBranch.zeroR12", &assign_EquivalentBranch_zeroR12);
+	assign_map.emplace("EquivalentBranch.zeroR21", &assign_EquivalentBranch_zeroR21);
+	assign_map.emplace("EquivalentBranch.zeroX12", &assign_EquivalentBranch_zeroX12);
+	assign_map.emplace("EquivalentBranch.zeroX21", &assign_EquivalentBranch_zeroX21);
 }
 
 void EquivalentBranch::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -556,22 +588,22 @@ void EquivalentBranch::addClassAssignFnsToMap(std::unordered_map<std::string, cl
 void EquivalentBranch::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	EquivalentEquipment::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:EquivalentBranch.negativeR12", &get_EquivalentBranch_negativeR12);
-	get_map.emplace("cim:EquivalentBranch.negativeR21", &get_EquivalentBranch_negativeR21);
-	get_map.emplace("cim:EquivalentBranch.negativeX12", &get_EquivalentBranch_negativeX12);
-	get_map.emplace("cim:EquivalentBranch.negativeX21", &get_EquivalentBranch_negativeX21);
-	get_map.emplace("cim:EquivalentBranch.positiveR12", &get_EquivalentBranch_positiveR12);
-	get_map.emplace("cim:EquivalentBranch.positiveR21", &get_EquivalentBranch_positiveR21);
-	get_map.emplace("cim:EquivalentBranch.positiveX12", &get_EquivalentBranch_positiveX12);
-	get_map.emplace("cim:EquivalentBranch.positiveX21", &get_EquivalentBranch_positiveX21);
-	get_map.emplace("cim:EquivalentBranch.r", &get_EquivalentBranch_r);
-	get_map.emplace("cim:EquivalentBranch.r21", &get_EquivalentBranch_r21);
-	get_map.emplace("cim:EquivalentBranch.x", &get_EquivalentBranch_x);
-	get_map.emplace("cim:EquivalentBranch.x21", &get_EquivalentBranch_x21);
-	get_map.emplace("cim:EquivalentBranch.zeroR12", &get_EquivalentBranch_zeroR12);
-	get_map.emplace("cim:EquivalentBranch.zeroR21", &get_EquivalentBranch_zeroR21);
-	get_map.emplace("cim:EquivalentBranch.zeroX12", &get_EquivalentBranch_zeroX12);
-	get_map.emplace("cim:EquivalentBranch.zeroX21", &get_EquivalentBranch_zeroX21);
+	get_map.emplace("EquivalentBranch.negativeR12", &get_EquivalentBranch_negativeR12);
+	get_map.emplace("EquivalentBranch.negativeR21", &get_EquivalentBranch_negativeR21);
+	get_map.emplace("EquivalentBranch.negativeX12", &get_EquivalentBranch_negativeX12);
+	get_map.emplace("EquivalentBranch.negativeX21", &get_EquivalentBranch_negativeX21);
+	get_map.emplace("EquivalentBranch.positiveR12", &get_EquivalentBranch_positiveR12);
+	get_map.emplace("EquivalentBranch.positiveR21", &get_EquivalentBranch_positiveR21);
+	get_map.emplace("EquivalentBranch.positiveX12", &get_EquivalentBranch_positiveX12);
+	get_map.emplace("EquivalentBranch.positiveX21", &get_EquivalentBranch_positiveX21);
+	get_map.emplace("EquivalentBranch.r", &get_EquivalentBranch_r);
+	get_map.emplace("EquivalentBranch.r21", &get_EquivalentBranch_r21);
+	get_map.emplace("EquivalentBranch.x", &get_EquivalentBranch_x);
+	get_map.emplace("EquivalentBranch.x21", &get_EquivalentBranch_x21);
+	get_map.emplace("EquivalentBranch.zeroR12", &get_EquivalentBranch_zeroR12);
+	get_map.emplace("EquivalentBranch.zeroR21", &get_EquivalentBranch_zeroR21);
+	get_map.emplace("EquivalentBranch.zeroX12", &get_EquivalentBranch_zeroX12);
+	get_map.emplace("EquivalentBranch.zeroX21", &get_EquivalentBranch_zeroX21);
 }
 
 void EquivalentBranch::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -584,9 +616,23 @@ void EquivalentBranch::addEnumGetFnsToMap(std::map<std::string, get_function>& g
 	EquivalentEquipment::addEnumGetFnsToMap(get_map);
 }
 
+bool EquivalentBranch::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "EquivalentBranch" &&
+		dynamic_cast<EquivalentBranch*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner EquivalentBranch::declare()
 {
 	return BaseClassDefiner(EquivalentBranch::addConstructToMap, EquivalentBranch::addPrimitiveAssignFnsToMap, EquivalentBranch::addClassAssignFnsToMap, EquivalentBranch::debugName);
+}
+
+std::map<std::string, AttrDetails> EquivalentBranch::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = EquivalentEquipment::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

@@ -4,8 +4,8 @@
 #include <SAX/ContentHandler.hpp>
 #include <SAX/Locator.hpp>
 
+#include <deque>
 #include <stack>
-#include <list>
 #include <unordered_map>
 #include <vector>
 
@@ -49,8 +49,9 @@ protected:
 private:
 	std::stack<BaseClass*> objectStack;
 	std::stack<std::string> tagStack;
-	std::list<Task> taskQueue;
+	std::deque<Task> taskQueue;
 	std::string value;
+	BaseClass* retypeObject(BaseClass* oldObject_ptr, const std::string& className, const std::string& rdfid);
 };
 
 

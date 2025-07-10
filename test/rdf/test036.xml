@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:cim="http://iec.ch/TC57/2013/CIM-schema-cim16#">
+  <cim:SvStatus rdf:ID="_Status">
+    <cim:SvStatus.ConductingEquipment rdf:resource="#_PT"/>
+  </cim:SvStatus>
+  <cim:Equipment rdf:about="#_PT">
+    <cim:IdentifiedObject.description>PowerTransformer</cim:IdentifiedObject.description>
+  </cim:Equipment>
+  <cim:PowerTransformer rdf:ID="_PT">
+    <cim:IdentifiedObject.name>PT</cim:IdentifiedObject.name>
+  </cim:PowerTransformer>
+</rdf:RDF>

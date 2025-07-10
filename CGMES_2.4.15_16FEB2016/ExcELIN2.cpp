@@ -11,58 +11,90 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ExcELIN2(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ExcELIN2.efdbas", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.iefmax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.iefmax2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.iefmin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.k1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.k1ec", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.k2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.k3", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.k4", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.kd1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.ke2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.ketb", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.pid1max", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.seve1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.seve2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.tb1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.te", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.te2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.ti1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.ti3", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.ti4", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.tr4", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.upmax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.upmin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.ve1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.ve2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcELIN2.xp", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ExcELIN2::ExcELIN2() {}
 ExcELIN2::~ExcELIN2() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ExcELIN2::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ExcELIN2.efdbas", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.iefmax", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.iefmax2", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.iefmin", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.k1", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.k1ec", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.k2", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.k3", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.k4", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.kd1", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.ke2", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.ketb", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.pid1max", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.seve1", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.seve2", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.tb1", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.te", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.te2", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.ti1", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.ti3", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.ti4", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.tr4", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.upmax", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.upmin", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.ve1", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.ve2", { CGMESProfile::DY, } },
-	{ "cim:ExcELIN2.xp", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-ExcELIN2::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ExcELIN2::getPossibleProfilesForAttributes() const
+const std::string& ExcELIN2::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ExcELIN2::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ExcELIN2::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ExcELIN2::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ExcELIN2::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ExcELIN2::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ExcELIN2_efdbas(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -856,38 +888,38 @@ const char* ExcELIN2::debugString() const
 
 void ExcELIN2::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ExcELIN2", &ExcELIN2_factory);
+	factory_map.emplace("ExcELIN2", &ExcELIN2_factory);
 }
 
 void ExcELIN2::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ExcELIN2.efdbas", &assign_ExcELIN2_efdbas);
-	assign_map.emplace("cim:ExcELIN2.iefmax", &assign_ExcELIN2_iefmax);
-	assign_map.emplace("cim:ExcELIN2.iefmax2", &assign_ExcELIN2_iefmax2);
-	assign_map.emplace("cim:ExcELIN2.iefmin", &assign_ExcELIN2_iefmin);
-	assign_map.emplace("cim:ExcELIN2.k1", &assign_ExcELIN2_k1);
-	assign_map.emplace("cim:ExcELIN2.k1ec", &assign_ExcELIN2_k1ec);
-	assign_map.emplace("cim:ExcELIN2.k2", &assign_ExcELIN2_k2);
-	assign_map.emplace("cim:ExcELIN2.k3", &assign_ExcELIN2_k3);
-	assign_map.emplace("cim:ExcELIN2.k4", &assign_ExcELIN2_k4);
-	assign_map.emplace("cim:ExcELIN2.kd1", &assign_ExcELIN2_kd1);
-	assign_map.emplace("cim:ExcELIN2.ke2", &assign_ExcELIN2_ke2);
-	assign_map.emplace("cim:ExcELIN2.ketb", &assign_ExcELIN2_ketb);
-	assign_map.emplace("cim:ExcELIN2.pid1max", &assign_ExcELIN2_pid1max);
-	assign_map.emplace("cim:ExcELIN2.seve1", &assign_ExcELIN2_seve1);
-	assign_map.emplace("cim:ExcELIN2.seve2", &assign_ExcELIN2_seve2);
-	assign_map.emplace("cim:ExcELIN2.tb1", &assign_ExcELIN2_tb1);
-	assign_map.emplace("cim:ExcELIN2.te", &assign_ExcELIN2_te);
-	assign_map.emplace("cim:ExcELIN2.te2", &assign_ExcELIN2_te2);
-	assign_map.emplace("cim:ExcELIN2.ti1", &assign_ExcELIN2_ti1);
-	assign_map.emplace("cim:ExcELIN2.ti3", &assign_ExcELIN2_ti3);
-	assign_map.emplace("cim:ExcELIN2.ti4", &assign_ExcELIN2_ti4);
-	assign_map.emplace("cim:ExcELIN2.tr4", &assign_ExcELIN2_tr4);
-	assign_map.emplace("cim:ExcELIN2.upmax", &assign_ExcELIN2_upmax);
-	assign_map.emplace("cim:ExcELIN2.upmin", &assign_ExcELIN2_upmin);
-	assign_map.emplace("cim:ExcELIN2.ve1", &assign_ExcELIN2_ve1);
-	assign_map.emplace("cim:ExcELIN2.ve2", &assign_ExcELIN2_ve2);
-	assign_map.emplace("cim:ExcELIN2.xp", &assign_ExcELIN2_xp);
+	assign_map.emplace("ExcELIN2.efdbas", &assign_ExcELIN2_efdbas);
+	assign_map.emplace("ExcELIN2.iefmax", &assign_ExcELIN2_iefmax);
+	assign_map.emplace("ExcELIN2.iefmax2", &assign_ExcELIN2_iefmax2);
+	assign_map.emplace("ExcELIN2.iefmin", &assign_ExcELIN2_iefmin);
+	assign_map.emplace("ExcELIN2.k1", &assign_ExcELIN2_k1);
+	assign_map.emplace("ExcELIN2.k1ec", &assign_ExcELIN2_k1ec);
+	assign_map.emplace("ExcELIN2.k2", &assign_ExcELIN2_k2);
+	assign_map.emplace("ExcELIN2.k3", &assign_ExcELIN2_k3);
+	assign_map.emplace("ExcELIN2.k4", &assign_ExcELIN2_k4);
+	assign_map.emplace("ExcELIN2.kd1", &assign_ExcELIN2_kd1);
+	assign_map.emplace("ExcELIN2.ke2", &assign_ExcELIN2_ke2);
+	assign_map.emplace("ExcELIN2.ketb", &assign_ExcELIN2_ketb);
+	assign_map.emplace("ExcELIN2.pid1max", &assign_ExcELIN2_pid1max);
+	assign_map.emplace("ExcELIN2.seve1", &assign_ExcELIN2_seve1);
+	assign_map.emplace("ExcELIN2.seve2", &assign_ExcELIN2_seve2);
+	assign_map.emplace("ExcELIN2.tb1", &assign_ExcELIN2_tb1);
+	assign_map.emplace("ExcELIN2.te", &assign_ExcELIN2_te);
+	assign_map.emplace("ExcELIN2.te2", &assign_ExcELIN2_te2);
+	assign_map.emplace("ExcELIN2.ti1", &assign_ExcELIN2_ti1);
+	assign_map.emplace("ExcELIN2.ti3", &assign_ExcELIN2_ti3);
+	assign_map.emplace("ExcELIN2.ti4", &assign_ExcELIN2_ti4);
+	assign_map.emplace("ExcELIN2.tr4", &assign_ExcELIN2_tr4);
+	assign_map.emplace("ExcELIN2.upmax", &assign_ExcELIN2_upmax);
+	assign_map.emplace("ExcELIN2.upmin", &assign_ExcELIN2_upmin);
+	assign_map.emplace("ExcELIN2.ve1", &assign_ExcELIN2_ve1);
+	assign_map.emplace("ExcELIN2.ve2", &assign_ExcELIN2_ve2);
+	assign_map.emplace("ExcELIN2.xp", &assign_ExcELIN2_xp);
 }
 
 void ExcELIN2::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -897,33 +929,33 @@ void ExcELIN2::addClassAssignFnsToMap(std::unordered_map<std::string, class_assi
 void ExcELIN2::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ExcELIN2.efdbas", &get_ExcELIN2_efdbas);
-	get_map.emplace("cim:ExcELIN2.iefmax", &get_ExcELIN2_iefmax);
-	get_map.emplace("cim:ExcELIN2.iefmax2", &get_ExcELIN2_iefmax2);
-	get_map.emplace("cim:ExcELIN2.iefmin", &get_ExcELIN2_iefmin);
-	get_map.emplace("cim:ExcELIN2.k1", &get_ExcELIN2_k1);
-	get_map.emplace("cim:ExcELIN2.k1ec", &get_ExcELIN2_k1ec);
-	get_map.emplace("cim:ExcELIN2.k2", &get_ExcELIN2_k2);
-	get_map.emplace("cim:ExcELIN2.k3", &get_ExcELIN2_k3);
-	get_map.emplace("cim:ExcELIN2.k4", &get_ExcELIN2_k4);
-	get_map.emplace("cim:ExcELIN2.kd1", &get_ExcELIN2_kd1);
-	get_map.emplace("cim:ExcELIN2.ke2", &get_ExcELIN2_ke2);
-	get_map.emplace("cim:ExcELIN2.ketb", &get_ExcELIN2_ketb);
-	get_map.emplace("cim:ExcELIN2.pid1max", &get_ExcELIN2_pid1max);
-	get_map.emplace("cim:ExcELIN2.seve1", &get_ExcELIN2_seve1);
-	get_map.emplace("cim:ExcELIN2.seve2", &get_ExcELIN2_seve2);
-	get_map.emplace("cim:ExcELIN2.tb1", &get_ExcELIN2_tb1);
-	get_map.emplace("cim:ExcELIN2.te", &get_ExcELIN2_te);
-	get_map.emplace("cim:ExcELIN2.te2", &get_ExcELIN2_te2);
-	get_map.emplace("cim:ExcELIN2.ti1", &get_ExcELIN2_ti1);
-	get_map.emplace("cim:ExcELIN2.ti3", &get_ExcELIN2_ti3);
-	get_map.emplace("cim:ExcELIN2.ti4", &get_ExcELIN2_ti4);
-	get_map.emplace("cim:ExcELIN2.tr4", &get_ExcELIN2_tr4);
-	get_map.emplace("cim:ExcELIN2.upmax", &get_ExcELIN2_upmax);
-	get_map.emplace("cim:ExcELIN2.upmin", &get_ExcELIN2_upmin);
-	get_map.emplace("cim:ExcELIN2.ve1", &get_ExcELIN2_ve1);
-	get_map.emplace("cim:ExcELIN2.ve2", &get_ExcELIN2_ve2);
-	get_map.emplace("cim:ExcELIN2.xp", &get_ExcELIN2_xp);
+	get_map.emplace("ExcELIN2.efdbas", &get_ExcELIN2_efdbas);
+	get_map.emplace("ExcELIN2.iefmax", &get_ExcELIN2_iefmax);
+	get_map.emplace("ExcELIN2.iefmax2", &get_ExcELIN2_iefmax2);
+	get_map.emplace("ExcELIN2.iefmin", &get_ExcELIN2_iefmin);
+	get_map.emplace("ExcELIN2.k1", &get_ExcELIN2_k1);
+	get_map.emplace("ExcELIN2.k1ec", &get_ExcELIN2_k1ec);
+	get_map.emplace("ExcELIN2.k2", &get_ExcELIN2_k2);
+	get_map.emplace("ExcELIN2.k3", &get_ExcELIN2_k3);
+	get_map.emplace("ExcELIN2.k4", &get_ExcELIN2_k4);
+	get_map.emplace("ExcELIN2.kd1", &get_ExcELIN2_kd1);
+	get_map.emplace("ExcELIN2.ke2", &get_ExcELIN2_ke2);
+	get_map.emplace("ExcELIN2.ketb", &get_ExcELIN2_ketb);
+	get_map.emplace("ExcELIN2.pid1max", &get_ExcELIN2_pid1max);
+	get_map.emplace("ExcELIN2.seve1", &get_ExcELIN2_seve1);
+	get_map.emplace("ExcELIN2.seve2", &get_ExcELIN2_seve2);
+	get_map.emplace("ExcELIN2.tb1", &get_ExcELIN2_tb1);
+	get_map.emplace("ExcELIN2.te", &get_ExcELIN2_te);
+	get_map.emplace("ExcELIN2.te2", &get_ExcELIN2_te2);
+	get_map.emplace("ExcELIN2.ti1", &get_ExcELIN2_ti1);
+	get_map.emplace("ExcELIN2.ti3", &get_ExcELIN2_ti3);
+	get_map.emplace("ExcELIN2.ti4", &get_ExcELIN2_ti4);
+	get_map.emplace("ExcELIN2.tr4", &get_ExcELIN2_tr4);
+	get_map.emplace("ExcELIN2.upmax", &get_ExcELIN2_upmax);
+	get_map.emplace("ExcELIN2.upmin", &get_ExcELIN2_upmin);
+	get_map.emplace("ExcELIN2.ve1", &get_ExcELIN2_ve1);
+	get_map.emplace("ExcELIN2.ve2", &get_ExcELIN2_ve2);
+	get_map.emplace("ExcELIN2.xp", &get_ExcELIN2_xp);
 }
 
 void ExcELIN2::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -936,9 +968,23 @@ void ExcELIN2::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) 
 	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool ExcELIN2::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ExcELIN2" &&
+		dynamic_cast<ExcELIN2*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ExcELIN2::declare()
 {
 	return BaseClassDefiner(ExcELIN2::addConstructToMap, ExcELIN2::addPrimitiveAssignFnsToMap, ExcELIN2::addClassAssignFnsToMap, ExcELIN2::debugName);
+}
+
+std::map<std::string, AttrDetails> ExcELIN2::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ExcitationSystemDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

@@ -11,50 +11,82 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ExcST4B(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ExcST4B.kc", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcST4B.kg", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcST4B.ki", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcST4B.kim", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcST4B.kir", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcST4B.kp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcST4B.kpm", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcST4B.kpr", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcST4B.lvgate", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcST4B.ta", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcST4B.thetap", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcST4B.uel", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcST4B.vbmax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcST4B.vgmax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcST4B.vmmax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcST4B.vmmin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcST4B.vrmax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcST4B.vrmin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcST4B.xl", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ExcST4B::ExcST4B() {}
 ExcST4B::~ExcST4B() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ExcST4B::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ExcST4B.kc", { CGMESProfile::DY, } },
-	{ "cim:ExcST4B.kg", { CGMESProfile::DY, } },
-	{ "cim:ExcST4B.ki", { CGMESProfile::DY, } },
-	{ "cim:ExcST4B.kim", { CGMESProfile::DY, } },
-	{ "cim:ExcST4B.kir", { CGMESProfile::DY, } },
-	{ "cim:ExcST4B.kp", { CGMESProfile::DY, } },
-	{ "cim:ExcST4B.kpm", { CGMESProfile::DY, } },
-	{ "cim:ExcST4B.kpr", { CGMESProfile::DY, } },
-	{ "cim:ExcST4B.lvgate", { CGMESProfile::DY, } },
-	{ "cim:ExcST4B.ta", { CGMESProfile::DY, } },
-	{ "cim:ExcST4B.thetap", { CGMESProfile::DY, } },
-	{ "cim:ExcST4B.uel", { CGMESProfile::DY, } },
-	{ "cim:ExcST4B.vbmax", { CGMESProfile::DY, } },
-	{ "cim:ExcST4B.vgmax", { CGMESProfile::DY, } },
-	{ "cim:ExcST4B.vmmax", { CGMESProfile::DY, } },
-	{ "cim:ExcST4B.vmmin", { CGMESProfile::DY, } },
-	{ "cim:ExcST4B.vrmax", { CGMESProfile::DY, } },
-	{ "cim:ExcST4B.vrmin", { CGMESProfile::DY, } },
-	{ "cim:ExcST4B.xl", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-ExcST4B::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ExcST4B::getPossibleProfilesForAttributes() const
+const std::string& ExcST4B::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ExcST4B::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ExcST4B::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ExcST4B::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ExcST4B::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ExcST4B::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ExcST4B_kc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -616,30 +648,30 @@ const char* ExcST4B::debugString() const
 
 void ExcST4B::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ExcST4B", &ExcST4B_factory);
+	factory_map.emplace("ExcST4B", &ExcST4B_factory);
 }
 
 void ExcST4B::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ExcST4B.kc", &assign_ExcST4B_kc);
-	assign_map.emplace("cim:ExcST4B.kg", &assign_ExcST4B_kg);
-	assign_map.emplace("cim:ExcST4B.ki", &assign_ExcST4B_ki);
-	assign_map.emplace("cim:ExcST4B.kim", &assign_ExcST4B_kim);
-	assign_map.emplace("cim:ExcST4B.kir", &assign_ExcST4B_kir);
-	assign_map.emplace("cim:ExcST4B.kp", &assign_ExcST4B_kp);
-	assign_map.emplace("cim:ExcST4B.kpm", &assign_ExcST4B_kpm);
-	assign_map.emplace("cim:ExcST4B.kpr", &assign_ExcST4B_kpr);
-	assign_map.emplace("cim:ExcST4B.lvgate", &assign_ExcST4B_lvgate);
-	assign_map.emplace("cim:ExcST4B.ta", &assign_ExcST4B_ta);
-	assign_map.emplace("cim:ExcST4B.thetap", &assign_ExcST4B_thetap);
-	assign_map.emplace("cim:ExcST4B.uel", &assign_ExcST4B_uel);
-	assign_map.emplace("cim:ExcST4B.vbmax", &assign_ExcST4B_vbmax);
-	assign_map.emplace("cim:ExcST4B.vgmax", &assign_ExcST4B_vgmax);
-	assign_map.emplace("cim:ExcST4B.vmmax", &assign_ExcST4B_vmmax);
-	assign_map.emplace("cim:ExcST4B.vmmin", &assign_ExcST4B_vmmin);
-	assign_map.emplace("cim:ExcST4B.vrmax", &assign_ExcST4B_vrmax);
-	assign_map.emplace("cim:ExcST4B.vrmin", &assign_ExcST4B_vrmin);
-	assign_map.emplace("cim:ExcST4B.xl", &assign_ExcST4B_xl);
+	assign_map.emplace("ExcST4B.kc", &assign_ExcST4B_kc);
+	assign_map.emplace("ExcST4B.kg", &assign_ExcST4B_kg);
+	assign_map.emplace("ExcST4B.ki", &assign_ExcST4B_ki);
+	assign_map.emplace("ExcST4B.kim", &assign_ExcST4B_kim);
+	assign_map.emplace("ExcST4B.kir", &assign_ExcST4B_kir);
+	assign_map.emplace("ExcST4B.kp", &assign_ExcST4B_kp);
+	assign_map.emplace("ExcST4B.kpm", &assign_ExcST4B_kpm);
+	assign_map.emplace("ExcST4B.kpr", &assign_ExcST4B_kpr);
+	assign_map.emplace("ExcST4B.lvgate", &assign_ExcST4B_lvgate);
+	assign_map.emplace("ExcST4B.ta", &assign_ExcST4B_ta);
+	assign_map.emplace("ExcST4B.thetap", &assign_ExcST4B_thetap);
+	assign_map.emplace("ExcST4B.uel", &assign_ExcST4B_uel);
+	assign_map.emplace("ExcST4B.vbmax", &assign_ExcST4B_vbmax);
+	assign_map.emplace("ExcST4B.vgmax", &assign_ExcST4B_vgmax);
+	assign_map.emplace("ExcST4B.vmmax", &assign_ExcST4B_vmmax);
+	assign_map.emplace("ExcST4B.vmmin", &assign_ExcST4B_vmmin);
+	assign_map.emplace("ExcST4B.vrmax", &assign_ExcST4B_vrmax);
+	assign_map.emplace("ExcST4B.vrmin", &assign_ExcST4B_vrmin);
+	assign_map.emplace("ExcST4B.xl", &assign_ExcST4B_xl);
 }
 
 void ExcST4B::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -649,25 +681,25 @@ void ExcST4B::addClassAssignFnsToMap(std::unordered_map<std::string, class_assig
 void ExcST4B::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ExcST4B.kc", &get_ExcST4B_kc);
-	get_map.emplace("cim:ExcST4B.kg", &get_ExcST4B_kg);
-	get_map.emplace("cim:ExcST4B.ki", &get_ExcST4B_ki);
-	get_map.emplace("cim:ExcST4B.kim", &get_ExcST4B_kim);
-	get_map.emplace("cim:ExcST4B.kir", &get_ExcST4B_kir);
-	get_map.emplace("cim:ExcST4B.kp", &get_ExcST4B_kp);
-	get_map.emplace("cim:ExcST4B.kpm", &get_ExcST4B_kpm);
-	get_map.emplace("cim:ExcST4B.kpr", &get_ExcST4B_kpr);
-	get_map.emplace("cim:ExcST4B.lvgate", &get_ExcST4B_lvgate);
-	get_map.emplace("cim:ExcST4B.ta", &get_ExcST4B_ta);
-	get_map.emplace("cim:ExcST4B.thetap", &get_ExcST4B_thetap);
-	get_map.emplace("cim:ExcST4B.uel", &get_ExcST4B_uel);
-	get_map.emplace("cim:ExcST4B.vbmax", &get_ExcST4B_vbmax);
-	get_map.emplace("cim:ExcST4B.vgmax", &get_ExcST4B_vgmax);
-	get_map.emplace("cim:ExcST4B.vmmax", &get_ExcST4B_vmmax);
-	get_map.emplace("cim:ExcST4B.vmmin", &get_ExcST4B_vmmin);
-	get_map.emplace("cim:ExcST4B.vrmax", &get_ExcST4B_vrmax);
-	get_map.emplace("cim:ExcST4B.vrmin", &get_ExcST4B_vrmin);
-	get_map.emplace("cim:ExcST4B.xl", &get_ExcST4B_xl);
+	get_map.emplace("ExcST4B.kc", &get_ExcST4B_kc);
+	get_map.emplace("ExcST4B.kg", &get_ExcST4B_kg);
+	get_map.emplace("ExcST4B.ki", &get_ExcST4B_ki);
+	get_map.emplace("ExcST4B.kim", &get_ExcST4B_kim);
+	get_map.emplace("ExcST4B.kir", &get_ExcST4B_kir);
+	get_map.emplace("ExcST4B.kp", &get_ExcST4B_kp);
+	get_map.emplace("ExcST4B.kpm", &get_ExcST4B_kpm);
+	get_map.emplace("ExcST4B.kpr", &get_ExcST4B_kpr);
+	get_map.emplace("ExcST4B.lvgate", &get_ExcST4B_lvgate);
+	get_map.emplace("ExcST4B.ta", &get_ExcST4B_ta);
+	get_map.emplace("ExcST4B.thetap", &get_ExcST4B_thetap);
+	get_map.emplace("ExcST4B.uel", &get_ExcST4B_uel);
+	get_map.emplace("ExcST4B.vbmax", &get_ExcST4B_vbmax);
+	get_map.emplace("ExcST4B.vgmax", &get_ExcST4B_vgmax);
+	get_map.emplace("ExcST4B.vmmax", &get_ExcST4B_vmmax);
+	get_map.emplace("ExcST4B.vmmin", &get_ExcST4B_vmmin);
+	get_map.emplace("ExcST4B.vrmax", &get_ExcST4B_vrmax);
+	get_map.emplace("ExcST4B.vrmin", &get_ExcST4B_vrmin);
+	get_map.emplace("ExcST4B.xl", &get_ExcST4B_xl);
 }
 
 void ExcST4B::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -680,9 +712,23 @@ void ExcST4B::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) c
 	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool ExcST4B::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ExcST4B" &&
+		dynamic_cast<ExcST4B*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ExcST4B::declare()
 {
 	return BaseClassDefiner(ExcST4B::addConstructToMap, ExcST4B::addPrimitiveAssignFnsToMap, ExcST4B::addClassAssignFnsToMap, ExcST4B::debugName);
+}
+
+std::map<std::string, AttrDetails> ExcST4B::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ExcitationSystemDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

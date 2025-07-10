@@ -12,33 +12,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		EnergySchedulingType(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ_BD,
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "EnergySchedulingType.EnergySource", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 EnergySchedulingType::EnergySchedulingType() {}
 EnergySchedulingType::~EnergySchedulingType() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& EnergySchedulingType::getAttributeNames() const
 {
-	CGMESProfile::EQ_BD,
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:EnergySchedulingType.EnergySource", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-EnergySchedulingType::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-EnergySchedulingType::getPossibleProfilesForAttributes() const
+const std::string& EnergySchedulingType::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& EnergySchedulingType::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& EnergySchedulingType::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& EnergySchedulingType::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& EnergySchedulingType::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& EnergySchedulingType::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_EnergySource_EnergySchedulingType(BaseClass*, BaseClass*);
@@ -67,7 +99,7 @@ const char* EnergySchedulingType::debugString() const
 
 void EnergySchedulingType::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:EnergySchedulingType", &EnergySchedulingType_factory);
+	factory_map.emplace("EnergySchedulingType", &EnergySchedulingType_factory);
 }
 
 void EnergySchedulingType::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -76,7 +108,7 @@ void EnergySchedulingType::addPrimitiveAssignFnsToMap(std::unordered_map<std::st
 
 void EnergySchedulingType::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:EnergySchedulingType.EnergySource", &assign_EnergySchedulingType_EnergySource);
+	assign_map.emplace("EnergySchedulingType.EnergySource", &assign_EnergySchedulingType_EnergySource);
 }
 
 void EnergySchedulingType::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -94,9 +126,23 @@ void EnergySchedulingType::addEnumGetFnsToMap(std::map<std::string, get_function
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool EnergySchedulingType::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "EnergySchedulingType" &&
+		dynamic_cast<EnergySchedulingType*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner EnergySchedulingType::declare()
 {
 	return BaseClassDefiner(EnergySchedulingType::addConstructToMap, EnergySchedulingType::addPrimitiveAssignFnsToMap, EnergySchedulingType::addClassAssignFnsToMap, EnergySchedulingType::debugName);
+}
+
+std::map<std::string, AttrDetails> EnergySchedulingType::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

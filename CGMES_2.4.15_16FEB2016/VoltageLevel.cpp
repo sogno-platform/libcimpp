@@ -14,36 +14,68 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		VoltageLevel(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "VoltageLevel.BaseVoltage", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "VoltageLevel.Bays", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "VoltageLevel.Substation", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "VoltageLevel.highVoltageLimit", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "VoltageLevel.lowVoltageLimit", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 VoltageLevel::VoltageLevel() : BaseVoltage(nullptr), Substation(nullptr) {}
 VoltageLevel::~VoltageLevel() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& VoltageLevel::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:VoltageLevel.BaseVoltage", { CGMESProfile::EQ, } },
-	{ "cim:VoltageLevel.Bays", { CGMESProfile::EQ, } },
-	{ "cim:VoltageLevel.Substation", { CGMESProfile::EQ, } },
-	{ "cim:VoltageLevel.highVoltageLimit", { CGMESProfile::EQ, } },
-	{ "cim:VoltageLevel.lowVoltageLimit", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-VoltageLevel::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-VoltageLevel::getPossibleProfilesForAttributes() const
+const std::string& VoltageLevel::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = EquipmentContainer::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& VoltageLevel::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& VoltageLevel::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& VoltageLevel::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& VoltageLevel::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& VoltageLevel::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_BaseVoltage_VoltageLevel(BaseClass*, BaseClass*);
@@ -192,34 +224,34 @@ const char* VoltageLevel::debugString() const
 
 void VoltageLevel::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:VoltageLevel", &VoltageLevel_factory);
+	factory_map.emplace("VoltageLevel", &VoltageLevel_factory);
 }
 
 void VoltageLevel::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:VoltageLevel.highVoltageLimit", &assign_VoltageLevel_highVoltageLimit);
-	assign_map.emplace("cim:VoltageLevel.lowVoltageLimit", &assign_VoltageLevel_lowVoltageLimit);
+	assign_map.emplace("VoltageLevel.highVoltageLimit", &assign_VoltageLevel_highVoltageLimit);
+	assign_map.emplace("VoltageLevel.lowVoltageLimit", &assign_VoltageLevel_lowVoltageLimit);
 }
 
 void VoltageLevel::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:VoltageLevel.BaseVoltage", &assign_VoltageLevel_BaseVoltage);
-	assign_map.emplace("cim:VoltageLevel.Bays", &assign_VoltageLevel_Bays);
-	assign_map.emplace("cim:VoltageLevel.Substation", &assign_VoltageLevel_Substation);
+	assign_map.emplace("VoltageLevel.BaseVoltage", &assign_VoltageLevel_BaseVoltage);
+	assign_map.emplace("VoltageLevel.Bays", &assign_VoltageLevel_Bays);
+	assign_map.emplace("VoltageLevel.Substation", &assign_VoltageLevel_Substation);
 }
 
 void VoltageLevel::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	EquipmentContainer::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:VoltageLevel.highVoltageLimit", &get_VoltageLevel_highVoltageLimit);
-	get_map.emplace("cim:VoltageLevel.lowVoltageLimit", &get_VoltageLevel_lowVoltageLimit);
+	get_map.emplace("VoltageLevel.highVoltageLimit", &get_VoltageLevel_highVoltageLimit);
+	get_map.emplace("VoltageLevel.lowVoltageLimit", &get_VoltageLevel_lowVoltageLimit);
 }
 
 void VoltageLevel::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	EquipmentContainer::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:VoltageLevel.BaseVoltage", &get_VoltageLevel_BaseVoltage);
-	get_map.emplace("cim:VoltageLevel.Substation", &get_VoltageLevel_Substation);
+	get_map.emplace("VoltageLevel.BaseVoltage", &get_VoltageLevel_BaseVoltage);
+	get_map.emplace("VoltageLevel.Substation", &get_VoltageLevel_Substation);
 }
 
 void VoltageLevel::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -227,9 +259,23 @@ void VoltageLevel::addEnumGetFnsToMap(std::map<std::string, get_function>& get_m
 	EquipmentContainer::addEnumGetFnsToMap(get_map);
 }
 
+bool VoltageLevel::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "VoltageLevel" &&
+		dynamic_cast<VoltageLevel*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner VoltageLevel::declare()
 {
 	return BaseClassDefiner(VoltageLevel::addConstructToMap, VoltageLevel::addPrimitiveAssignFnsToMap, VoltageLevel::addClassAssignFnsToMap, VoltageLevel::debugName);
+}
+
+std::map<std::string, AttrDetails> VoltageLevel::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = EquipmentContainer::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

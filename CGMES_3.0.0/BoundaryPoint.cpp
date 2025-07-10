@@ -12,41 +12,73 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		BoundaryPoint(),
+		"http://iec.ch/TC57/CIM100-European#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::EQBD,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "BoundaryPoint.ConnectivityNode", { "http://iec.ch/TC57/CIM100-European#", { CGMESProfile::EQ, CGMESProfile::EQBD, } } },
+		{ "BoundaryPoint.fromEndIsoCode", { "http://iec.ch/TC57/CIM100-European#", { CGMESProfile::EQ, CGMESProfile::EQBD, } } },
+		{ "BoundaryPoint.fromEndName", { "http://iec.ch/TC57/CIM100-European#", { CGMESProfile::EQ, CGMESProfile::EQBD, } } },
+		{ "BoundaryPoint.fromEndNameTso", { "http://iec.ch/TC57/CIM100-European#", { CGMESProfile::EQ, CGMESProfile::EQBD, } } },
+		{ "BoundaryPoint.isDirectCurrent", { "http://iec.ch/TC57/CIM100-European#", { CGMESProfile::EQ, CGMESProfile::EQBD, } } },
+		{ "BoundaryPoint.isExcludedFromAreaInterchange", { "http://iec.ch/TC57/CIM100-European#", { CGMESProfile::EQ, CGMESProfile::EQBD, } } },
+		{ "BoundaryPoint.toEndIsoCode", { "http://iec.ch/TC57/CIM100-European#", { CGMESProfile::EQ, CGMESProfile::EQBD, } } },
+		{ "BoundaryPoint.toEndName", { "http://iec.ch/TC57/CIM100-European#", { CGMESProfile::EQ, CGMESProfile::EQBD, } } },
+		{ "BoundaryPoint.toEndNameTso", { "http://iec.ch/TC57/CIM100-European#", { CGMESProfile::EQ, CGMESProfile::EQBD, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 BoundaryPoint::BoundaryPoint() : ConnectivityNode(nullptr) {}
 BoundaryPoint::~BoundaryPoint() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& BoundaryPoint::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::EQBD,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:BoundaryPoint.ConnectivityNode", { CGMESProfile::EQ, CGMESProfile::EQBD, } },
-	{ "cim:BoundaryPoint.fromEndIsoCode", { CGMESProfile::EQ, CGMESProfile::EQBD, } },
-	{ "cim:BoundaryPoint.fromEndName", { CGMESProfile::EQ, CGMESProfile::EQBD, } },
-	{ "cim:BoundaryPoint.fromEndNameTso", { CGMESProfile::EQ, CGMESProfile::EQBD, } },
-	{ "cim:BoundaryPoint.isDirectCurrent", { CGMESProfile::EQ, CGMESProfile::EQBD, } },
-	{ "cim:BoundaryPoint.isExcludedFromAreaInterchange", { CGMESProfile::EQ, CGMESProfile::EQBD, } },
-	{ "cim:BoundaryPoint.toEndIsoCode", { CGMESProfile::EQ, CGMESProfile::EQBD, } },
-	{ "cim:BoundaryPoint.toEndName", { CGMESProfile::EQ, CGMESProfile::EQBD, } },
-	{ "cim:BoundaryPoint.toEndNameTso", { CGMESProfile::EQ, CGMESProfile::EQBD, } },
-};
-
-std::list<CGMESProfile>
-BoundaryPoint::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-BoundaryPoint::getPossibleProfilesForAttributes() const
+const std::string& BoundaryPoint::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = PowerSystemResource::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& BoundaryPoint::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& BoundaryPoint::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& BoundaryPoint::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& BoundaryPoint::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& BoundaryPoint::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ConnectivityNode_BoundaryPoint(BaseClass*, BaseClass*);
@@ -320,43 +352,43 @@ const char* BoundaryPoint::debugString() const
 
 void BoundaryPoint::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:BoundaryPoint", &BoundaryPoint_factory);
+	factory_map.emplace("BoundaryPoint", &BoundaryPoint_factory);
 }
 
 void BoundaryPoint::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:BoundaryPoint.fromEndIsoCode", &assign_BoundaryPoint_fromEndIsoCode);
-	assign_map.emplace("cim:BoundaryPoint.fromEndName", &assign_BoundaryPoint_fromEndName);
-	assign_map.emplace("cim:BoundaryPoint.fromEndNameTso", &assign_BoundaryPoint_fromEndNameTso);
-	assign_map.emplace("cim:BoundaryPoint.isDirectCurrent", &assign_BoundaryPoint_isDirectCurrent);
-	assign_map.emplace("cim:BoundaryPoint.isExcludedFromAreaInterchange", &assign_BoundaryPoint_isExcludedFromAreaInterchange);
-	assign_map.emplace("cim:BoundaryPoint.toEndIsoCode", &assign_BoundaryPoint_toEndIsoCode);
-	assign_map.emplace("cim:BoundaryPoint.toEndName", &assign_BoundaryPoint_toEndName);
-	assign_map.emplace("cim:BoundaryPoint.toEndNameTso", &assign_BoundaryPoint_toEndNameTso);
+	assign_map.emplace("BoundaryPoint.fromEndIsoCode", &assign_BoundaryPoint_fromEndIsoCode);
+	assign_map.emplace("BoundaryPoint.fromEndName", &assign_BoundaryPoint_fromEndName);
+	assign_map.emplace("BoundaryPoint.fromEndNameTso", &assign_BoundaryPoint_fromEndNameTso);
+	assign_map.emplace("BoundaryPoint.isDirectCurrent", &assign_BoundaryPoint_isDirectCurrent);
+	assign_map.emplace("BoundaryPoint.isExcludedFromAreaInterchange", &assign_BoundaryPoint_isExcludedFromAreaInterchange);
+	assign_map.emplace("BoundaryPoint.toEndIsoCode", &assign_BoundaryPoint_toEndIsoCode);
+	assign_map.emplace("BoundaryPoint.toEndName", &assign_BoundaryPoint_toEndName);
+	assign_map.emplace("BoundaryPoint.toEndNameTso", &assign_BoundaryPoint_toEndNameTso);
 }
 
 void BoundaryPoint::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:BoundaryPoint.ConnectivityNode", &assign_BoundaryPoint_ConnectivityNode);
+	assign_map.emplace("BoundaryPoint.ConnectivityNode", &assign_BoundaryPoint_ConnectivityNode);
 }
 
 void BoundaryPoint::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	PowerSystemResource::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:BoundaryPoint.fromEndIsoCode", &get_BoundaryPoint_fromEndIsoCode);
-	get_map.emplace("cim:BoundaryPoint.fromEndName", &get_BoundaryPoint_fromEndName);
-	get_map.emplace("cim:BoundaryPoint.fromEndNameTso", &get_BoundaryPoint_fromEndNameTso);
-	get_map.emplace("cim:BoundaryPoint.isDirectCurrent", &get_BoundaryPoint_isDirectCurrent);
-	get_map.emplace("cim:BoundaryPoint.isExcludedFromAreaInterchange", &get_BoundaryPoint_isExcludedFromAreaInterchange);
-	get_map.emplace("cim:BoundaryPoint.toEndIsoCode", &get_BoundaryPoint_toEndIsoCode);
-	get_map.emplace("cim:BoundaryPoint.toEndName", &get_BoundaryPoint_toEndName);
-	get_map.emplace("cim:BoundaryPoint.toEndNameTso", &get_BoundaryPoint_toEndNameTso);
+	get_map.emplace("BoundaryPoint.fromEndIsoCode", &get_BoundaryPoint_fromEndIsoCode);
+	get_map.emplace("BoundaryPoint.fromEndName", &get_BoundaryPoint_fromEndName);
+	get_map.emplace("BoundaryPoint.fromEndNameTso", &get_BoundaryPoint_fromEndNameTso);
+	get_map.emplace("BoundaryPoint.isDirectCurrent", &get_BoundaryPoint_isDirectCurrent);
+	get_map.emplace("BoundaryPoint.isExcludedFromAreaInterchange", &get_BoundaryPoint_isExcludedFromAreaInterchange);
+	get_map.emplace("BoundaryPoint.toEndIsoCode", &get_BoundaryPoint_toEndIsoCode);
+	get_map.emplace("BoundaryPoint.toEndName", &get_BoundaryPoint_toEndName);
+	get_map.emplace("BoundaryPoint.toEndNameTso", &get_BoundaryPoint_toEndNameTso);
 }
 
 void BoundaryPoint::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	PowerSystemResource::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:BoundaryPoint.ConnectivityNode", &get_BoundaryPoint_ConnectivityNode);
+	get_map.emplace("BoundaryPoint.ConnectivityNode", &get_BoundaryPoint_ConnectivityNode);
 }
 
 void BoundaryPoint::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -364,9 +396,23 @@ void BoundaryPoint::addEnumGetFnsToMap(std::map<std::string, get_function>& get_
 	PowerSystemResource::addEnumGetFnsToMap(get_map);
 }
 
+bool BoundaryPoint::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "BoundaryPoint" &&
+		dynamic_cast<BoundaryPoint*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner BoundaryPoint::declare()
 {
 	return BaseClassDefiner(BoundaryPoint::addConstructToMap, BoundaryPoint::addPrimitiveAssignFnsToMap, BoundaryPoint::addClassAssignFnsToMap, BoundaryPoint::debugName);
+}
+
+std::map<std::string, AttrDetails> BoundaryPoint::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = PowerSystemResource::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

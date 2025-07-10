@@ -12,42 +12,74 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		WindPitchContEmulIEC(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "WindPitchContEmulIEC.WindGenTurbineType2IEC", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindPitchContEmulIEC.kdroop", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindPitchContEmulIEC.kipce", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindPitchContEmulIEC.komegaaero", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindPitchContEmulIEC.kppce", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindPitchContEmulIEC.omegaref", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindPitchContEmulIEC.pimax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindPitchContEmulIEC.pimin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindPitchContEmulIEC.t1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindPitchContEmulIEC.t2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindPitchContEmulIEC.tpe", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 WindPitchContEmulIEC::WindPitchContEmulIEC() : WindGenTurbineType2IEC(nullptr) {}
 WindPitchContEmulIEC::~WindPitchContEmulIEC() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& WindPitchContEmulIEC::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:WindPitchContEmulIEC.WindGenTurbineType2IEC", { CGMESProfile::DY, } },
-	{ "cim:WindPitchContEmulIEC.kdroop", { CGMESProfile::DY, } },
-	{ "cim:WindPitchContEmulIEC.kipce", { CGMESProfile::DY, } },
-	{ "cim:WindPitchContEmulIEC.komegaaero", { CGMESProfile::DY, } },
-	{ "cim:WindPitchContEmulIEC.kppce", { CGMESProfile::DY, } },
-	{ "cim:WindPitchContEmulIEC.omegaref", { CGMESProfile::DY, } },
-	{ "cim:WindPitchContEmulIEC.pimax", { CGMESProfile::DY, } },
-	{ "cim:WindPitchContEmulIEC.pimin", { CGMESProfile::DY, } },
-	{ "cim:WindPitchContEmulIEC.t1", { CGMESProfile::DY, } },
-	{ "cim:WindPitchContEmulIEC.t2", { CGMESProfile::DY, } },
-	{ "cim:WindPitchContEmulIEC.tpe", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-WindPitchContEmulIEC::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-WindPitchContEmulIEC::getPossibleProfilesForAttributes() const
+const std::string& WindPitchContEmulIEC::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& WindPitchContEmulIEC::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& WindPitchContEmulIEC::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& WindPitchContEmulIEC::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& WindPitchContEmulIEC::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& WindPitchContEmulIEC::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_WindGenTurbineType2IEC_WindPitchContEmulIEC(BaseClass*, BaseClass*);
@@ -366,41 +398,41 @@ const char* WindPitchContEmulIEC::debugString() const
 
 void WindPitchContEmulIEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:WindPitchContEmulIEC", &WindPitchContEmulIEC_factory);
+	factory_map.emplace("WindPitchContEmulIEC", &WindPitchContEmulIEC_factory);
 }
 
 void WindPitchContEmulIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindPitchContEmulIEC.kdroop", &assign_WindPitchContEmulIEC_kdroop);
-	assign_map.emplace("cim:WindPitchContEmulIEC.kipce", &assign_WindPitchContEmulIEC_kipce);
-	assign_map.emplace("cim:WindPitchContEmulIEC.komegaaero", &assign_WindPitchContEmulIEC_komegaaero);
-	assign_map.emplace("cim:WindPitchContEmulIEC.kppce", &assign_WindPitchContEmulIEC_kppce);
-	assign_map.emplace("cim:WindPitchContEmulIEC.omegaref", &assign_WindPitchContEmulIEC_omegaref);
-	assign_map.emplace("cim:WindPitchContEmulIEC.pimax", &assign_WindPitchContEmulIEC_pimax);
-	assign_map.emplace("cim:WindPitchContEmulIEC.pimin", &assign_WindPitchContEmulIEC_pimin);
-	assign_map.emplace("cim:WindPitchContEmulIEC.t1", &assign_WindPitchContEmulIEC_t1);
-	assign_map.emplace("cim:WindPitchContEmulIEC.t2", &assign_WindPitchContEmulIEC_t2);
-	assign_map.emplace("cim:WindPitchContEmulIEC.tpe", &assign_WindPitchContEmulIEC_tpe);
+	assign_map.emplace("WindPitchContEmulIEC.kdroop", &assign_WindPitchContEmulIEC_kdroop);
+	assign_map.emplace("WindPitchContEmulIEC.kipce", &assign_WindPitchContEmulIEC_kipce);
+	assign_map.emplace("WindPitchContEmulIEC.komegaaero", &assign_WindPitchContEmulIEC_komegaaero);
+	assign_map.emplace("WindPitchContEmulIEC.kppce", &assign_WindPitchContEmulIEC_kppce);
+	assign_map.emplace("WindPitchContEmulIEC.omegaref", &assign_WindPitchContEmulIEC_omegaref);
+	assign_map.emplace("WindPitchContEmulIEC.pimax", &assign_WindPitchContEmulIEC_pimax);
+	assign_map.emplace("WindPitchContEmulIEC.pimin", &assign_WindPitchContEmulIEC_pimin);
+	assign_map.emplace("WindPitchContEmulIEC.t1", &assign_WindPitchContEmulIEC_t1);
+	assign_map.emplace("WindPitchContEmulIEC.t2", &assign_WindPitchContEmulIEC_t2);
+	assign_map.emplace("WindPitchContEmulIEC.tpe", &assign_WindPitchContEmulIEC_tpe);
 }
 
 void WindPitchContEmulIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindPitchContEmulIEC.WindGenTurbineType2IEC", &assign_WindPitchContEmulIEC_WindGenTurbineType2IEC);
+	assign_map.emplace("WindPitchContEmulIEC.WindGenTurbineType2IEC", &assign_WindPitchContEmulIEC_WindGenTurbineType2IEC);
 }
 
 void WindPitchContEmulIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:WindPitchContEmulIEC.kdroop", &get_WindPitchContEmulIEC_kdroop);
-	get_map.emplace("cim:WindPitchContEmulIEC.kipce", &get_WindPitchContEmulIEC_kipce);
-	get_map.emplace("cim:WindPitchContEmulIEC.komegaaero", &get_WindPitchContEmulIEC_komegaaero);
-	get_map.emplace("cim:WindPitchContEmulIEC.kppce", &get_WindPitchContEmulIEC_kppce);
-	get_map.emplace("cim:WindPitchContEmulIEC.omegaref", &get_WindPitchContEmulIEC_omegaref);
-	get_map.emplace("cim:WindPitchContEmulIEC.pimax", &get_WindPitchContEmulIEC_pimax);
-	get_map.emplace("cim:WindPitchContEmulIEC.pimin", &get_WindPitchContEmulIEC_pimin);
-	get_map.emplace("cim:WindPitchContEmulIEC.t1", &get_WindPitchContEmulIEC_t1);
-	get_map.emplace("cim:WindPitchContEmulIEC.t2", &get_WindPitchContEmulIEC_t2);
-	get_map.emplace("cim:WindPitchContEmulIEC.tpe", &get_WindPitchContEmulIEC_tpe);
+	get_map.emplace("WindPitchContEmulIEC.kdroop", &get_WindPitchContEmulIEC_kdroop);
+	get_map.emplace("WindPitchContEmulIEC.kipce", &get_WindPitchContEmulIEC_kipce);
+	get_map.emplace("WindPitchContEmulIEC.komegaaero", &get_WindPitchContEmulIEC_komegaaero);
+	get_map.emplace("WindPitchContEmulIEC.kppce", &get_WindPitchContEmulIEC_kppce);
+	get_map.emplace("WindPitchContEmulIEC.omegaref", &get_WindPitchContEmulIEC_omegaref);
+	get_map.emplace("WindPitchContEmulIEC.pimax", &get_WindPitchContEmulIEC_pimax);
+	get_map.emplace("WindPitchContEmulIEC.pimin", &get_WindPitchContEmulIEC_pimin);
+	get_map.emplace("WindPitchContEmulIEC.t1", &get_WindPitchContEmulIEC_t1);
+	get_map.emplace("WindPitchContEmulIEC.t2", &get_WindPitchContEmulIEC_t2);
+	get_map.emplace("WindPitchContEmulIEC.tpe", &get_WindPitchContEmulIEC_tpe);
 }
 
 void WindPitchContEmulIEC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -413,9 +445,23 @@ void WindPitchContEmulIEC::addEnumGetFnsToMap(std::map<std::string, get_function
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool WindPitchContEmulIEC::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "WindPitchContEmulIEC" &&
+		dynamic_cast<WindPitchContEmulIEC*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner WindPitchContEmulIEC::declare()
 {
 	return BaseClassDefiner(WindPitchContEmulIEC::addConstructToMap, WindPitchContEmulIEC::addPrimitiveAssignFnsToMap, WindPitchContEmulIEC::addClassAssignFnsToMap, WindPitchContEmulIEC::debugName);
+}
+
+std::map<std::string, AttrDetails> WindPitchContEmulIEC::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

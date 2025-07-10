@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:cim="http://iec.ch/TC57/2013/CIM-schema-cim16#">
+  <cim:Analog rdf:about="#Analog.N0.Voltage">
+    <cim:Measurement.measurementType>Voltage</cim:Measurement.measurementType>
+    <cim:Measurement.unitMultiplier rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitMultiplier.k" />
+    <cim:Measurement.unitSymbol rdf:resource="http://iec.ch/TC57/2013/CIM-schema-cim16#UnitSymbol.V" />
+    <cim:IdentifiedObject.name>Voltage Magnitude Measurement at N0</cim:IdentifiedObject.name>
+  </cim:Analog>
+  <cim:AnalogValue rdf:ID="AnalogValue.N0.Voltage">
+    <cim:AnalogValue.Analog rdf:resource="#Analog.N0.Voltage" />
+  </cim:AnalogValue>
+</rdf:RDF>

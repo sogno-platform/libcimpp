@@ -11,35 +11,67 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		Status(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::GL,
+		},
+		CGMESProfile::GL
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "Status.dateTime", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::GL, } } },
+		{ "Status.reason", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::GL, } } },
+		{ "Status.remark", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::GL, } } },
+		{ "Status.value", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::GL, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 Status::Status() {}
 Status::~Status() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& Status::getAttributeNames() const
 {
-	CGMESProfile::GL,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:Status.dateTime", { CGMESProfile::GL, } },
-	{ "cim:Status.reason", { CGMESProfile::GL, } },
-	{ "cim:Status.remark", { CGMESProfile::GL, } },
-	{ "cim:Status.value", { CGMESProfile::GL, } },
-};
-
-std::list<CGMESProfile>
-Status::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-Status::getPossibleProfilesForAttributes() const
+const std::string& Status::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& Status::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& Status::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& Status::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& Status::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& Status::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_Status_dateTime(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -166,15 +198,15 @@ const char* Status::debugString() const
 
 void Status::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:Status", &Status_factory);
+	factory_map.emplace("Status", &Status_factory);
 }
 
 void Status::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:Status.dateTime", &assign_Status_dateTime);
-	assign_map.emplace("cim:Status.reason", &assign_Status_reason);
-	assign_map.emplace("cim:Status.remark", &assign_Status_remark);
-	assign_map.emplace("cim:Status.value", &assign_Status_value);
+	assign_map.emplace("Status.dateTime", &assign_Status_dateTime);
+	assign_map.emplace("Status.reason", &assign_Status_reason);
+	assign_map.emplace("Status.remark", &assign_Status_remark);
+	assign_map.emplace("Status.value", &assign_Status_value);
 }
 
 void Status::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -184,10 +216,10 @@ void Status::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign
 void Status::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	BaseClass::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:Status.dateTime", &get_Status_dateTime);
-	get_map.emplace("cim:Status.reason", &get_Status_reason);
-	get_map.emplace("cim:Status.remark", &get_Status_remark);
-	get_map.emplace("cim:Status.value", &get_Status_value);
+	get_map.emplace("Status.dateTime", &get_Status_dateTime);
+	get_map.emplace("Status.reason", &get_Status_reason);
+	get_map.emplace("Status.remark", &get_Status_remark);
+	get_map.emplace("Status.value", &get_Status_value);
 }
 
 void Status::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -200,9 +232,23 @@ void Status::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) co
 	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
+bool Status::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "Status" &&
+		dynamic_cast<Status*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner Status::declare()
 {
 	return BaseClassDefiner(Status::addConstructToMap, Status::addPrimitiveAssignFnsToMap, Status::addClassAssignFnsToMap, Status::debugName);
+}
+
+std::map<std::string, AttrDetails> Status::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = BaseClass::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

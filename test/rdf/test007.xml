@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:cim="http://iec.ch/TC57/2013/CIM-schema-cim16#">
+  <cim:VoltageLevel rdf:ID="VoltageLevel.96">
+    <cim:VoltageLevel.BaseVoltage rdf:resource="#BaseVoltage.20" />
+  </cim:VoltageLevel>
+  <cim:VoltageLevel rdf:ID="VoltageLevel.97">
+    <cim:VoltageLevel.BaseVoltage rdf:resource="#BaseVoltage.20" />
+  </cim:VoltageLevel>
+  <cim:BaseVoltage rdf:ID="BaseVoltage.20">
+    <cim:BaseVoltage.nominalVoltage>20.0</cim:BaseVoltage.nominalVoltage>
+  </cim:BaseVoltage>
+  <cim:VoltageLevel rdf:ID="VoltageLevel.98">
+    <cim:VoltageLevel.BaseVoltage rdf:resource="#BaseVoltage.20" />
+  </cim:VoltageLevel>
+</rdf:RDF>

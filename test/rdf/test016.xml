@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:cim="http://iec.ch/TC57/2013/CIM-schema-cim16#">
+  <cim:TopologicalIsland rdf:ID="TopologicalIsland.N">
+    <cim:TopologicalIsland.TopologicalNodes rdf:resource="#N0" />
+    <cim:IdentifiedObject.name>N</cim:IdentifiedObject.name>
+  </cim:TopologicalIsland>
+  <cim:TopologicalNode rdf:ID="N0">
+    <cim:IdentifiedObject.name>N0</cim:IdentifiedObject.name>
+  </cim:TopologicalNode>
+  <cim:TopologicalNode rdf:ID="N1">
+    <cim:TopologicalNode.TopologicalIsland rdf:resource="#TopologicalIsland.N" />
+    <cim:IdentifiedObject.name>N1</cim:IdentifiedObject.name>
+  </cim:TopologicalNode>
+</rdf:RDF>

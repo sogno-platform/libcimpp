@@ -11,32 +11,64 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		TextDiagramObject(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DL,
+		},
+		CGMESProfile::DL
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "TextDiagramObject.text", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 TextDiagramObject::TextDiagramObject() {}
 TextDiagramObject::~TextDiagramObject() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& TextDiagramObject::getAttributeNames() const
 {
-	CGMESProfile::DL,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:TextDiagramObject.text", { CGMESProfile::DL, } },
-};
-
-std::list<CGMESProfile>
-TextDiagramObject::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-TextDiagramObject::getPossibleProfilesForAttributes() const
+const std::string& TextDiagramObject::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = DiagramObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& TextDiagramObject::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& TextDiagramObject::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& TextDiagramObject::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& TextDiagramObject::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& TextDiagramObject::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_TextDiagramObject_text(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -76,12 +108,12 @@ const char* TextDiagramObject::debugString() const
 
 void TextDiagramObject::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:TextDiagramObject", &TextDiagramObject_factory);
+	factory_map.emplace("TextDiagramObject", &TextDiagramObject_factory);
 }
 
 void TextDiagramObject::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:TextDiagramObject.text", &assign_TextDiagramObject_text);
+	assign_map.emplace("TextDiagramObject.text", &assign_TextDiagramObject_text);
 }
 
 void TextDiagramObject::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -91,7 +123,7 @@ void TextDiagramObject::addClassAssignFnsToMap(std::unordered_map<std::string, c
 void TextDiagramObject::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	DiagramObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:TextDiagramObject.text", &get_TextDiagramObject_text);
+	get_map.emplace("TextDiagramObject.text", &get_TextDiagramObject_text);
 }
 
 void TextDiagramObject::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -104,9 +136,23 @@ void TextDiagramObject::addEnumGetFnsToMap(std::map<std::string, get_function>& 
 	DiagramObject::addEnumGetFnsToMap(get_map);
 }
 
+bool TextDiagramObject::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "TextDiagramObject" &&
+		dynamic_cast<TextDiagramObject*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner TextDiagramObject::declare()
 {
 	return BaseClassDefiner(TextDiagramObject::addConstructToMap, TextDiagramObject::addPrimitiveAssignFnsToMap, TextDiagramObject::addClassAssignFnsToMap, TextDiagramObject::debugName);
+}
+
+std::map<std::string, AttrDetails> TextDiagramObject::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = DiagramObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

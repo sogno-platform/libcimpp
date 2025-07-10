@@ -13,43 +13,75 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ACLineSegment(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SC,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ACLineSegment.Clamp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "ACLineSegment.Cut", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "ACLineSegment.b0ch", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "ACLineSegment.bch", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "ACLineSegment.g0ch", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "ACLineSegment.gch", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "ACLineSegment.r", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "ACLineSegment.r0", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "ACLineSegment.shortCircuitEndTemperature", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "ACLineSegment.x", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "ACLineSegment.x0", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ACLineSegment::ACLineSegment() {}
 ACLineSegment::~ACLineSegment() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ACLineSegment::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SC,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ACLineSegment.Clamp", { CGMESProfile::EQ, } },
-	{ "cim:ACLineSegment.Cut", { CGMESProfile::EQ, } },
-	{ "cim:ACLineSegment.b0ch", { CGMESProfile::SC, } },
-	{ "cim:ACLineSegment.bch", { CGMESProfile::EQ, } },
-	{ "cim:ACLineSegment.g0ch", { CGMESProfile::SC, } },
-	{ "cim:ACLineSegment.gch", { CGMESProfile::EQ, } },
-	{ "cim:ACLineSegment.r", { CGMESProfile::EQ, } },
-	{ "cim:ACLineSegment.r0", { CGMESProfile::SC, } },
-	{ "cim:ACLineSegment.shortCircuitEndTemperature", { CGMESProfile::SC, } },
-	{ "cim:ACLineSegment.x", { CGMESProfile::EQ, } },
-	{ "cim:ACLineSegment.x0", { CGMESProfile::SC, } },
-};
-
-std::list<CGMESProfile>
-ACLineSegment::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ACLineSegment::getPossibleProfilesForAttributes() const
+const std::string& ACLineSegment::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = Conductor::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ACLineSegment::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ACLineSegment::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ACLineSegment::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ACLineSegment::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ACLineSegment::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_Clamp_ACLineSegment(BaseClass*, BaseClass*);
@@ -357,40 +389,40 @@ const char* ACLineSegment::debugString() const
 
 void ACLineSegment::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ACLineSegment", &ACLineSegment_factory);
+	factory_map.emplace("ACLineSegment", &ACLineSegment_factory);
 }
 
 void ACLineSegment::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ACLineSegment.b0ch", &assign_ACLineSegment_b0ch);
-	assign_map.emplace("cim:ACLineSegment.bch", &assign_ACLineSegment_bch);
-	assign_map.emplace("cim:ACLineSegment.g0ch", &assign_ACLineSegment_g0ch);
-	assign_map.emplace("cim:ACLineSegment.gch", &assign_ACLineSegment_gch);
-	assign_map.emplace("cim:ACLineSegment.r", &assign_ACLineSegment_r);
-	assign_map.emplace("cim:ACLineSegment.r0", &assign_ACLineSegment_r0);
-	assign_map.emplace("cim:ACLineSegment.shortCircuitEndTemperature", &assign_ACLineSegment_shortCircuitEndTemperature);
-	assign_map.emplace("cim:ACLineSegment.x", &assign_ACLineSegment_x);
-	assign_map.emplace("cim:ACLineSegment.x0", &assign_ACLineSegment_x0);
+	assign_map.emplace("ACLineSegment.b0ch", &assign_ACLineSegment_b0ch);
+	assign_map.emplace("ACLineSegment.bch", &assign_ACLineSegment_bch);
+	assign_map.emplace("ACLineSegment.g0ch", &assign_ACLineSegment_g0ch);
+	assign_map.emplace("ACLineSegment.gch", &assign_ACLineSegment_gch);
+	assign_map.emplace("ACLineSegment.r", &assign_ACLineSegment_r);
+	assign_map.emplace("ACLineSegment.r0", &assign_ACLineSegment_r0);
+	assign_map.emplace("ACLineSegment.shortCircuitEndTemperature", &assign_ACLineSegment_shortCircuitEndTemperature);
+	assign_map.emplace("ACLineSegment.x", &assign_ACLineSegment_x);
+	assign_map.emplace("ACLineSegment.x0", &assign_ACLineSegment_x0);
 }
 
 void ACLineSegment::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ACLineSegment.Clamp", &assign_ACLineSegment_Clamp);
-	assign_map.emplace("cim:ACLineSegment.Cut", &assign_ACLineSegment_Cut);
+	assign_map.emplace("ACLineSegment.Clamp", &assign_ACLineSegment_Clamp);
+	assign_map.emplace("ACLineSegment.Cut", &assign_ACLineSegment_Cut);
 }
 
 void ACLineSegment::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	Conductor::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ACLineSegment.b0ch", &get_ACLineSegment_b0ch);
-	get_map.emplace("cim:ACLineSegment.bch", &get_ACLineSegment_bch);
-	get_map.emplace("cim:ACLineSegment.g0ch", &get_ACLineSegment_g0ch);
-	get_map.emplace("cim:ACLineSegment.gch", &get_ACLineSegment_gch);
-	get_map.emplace("cim:ACLineSegment.r", &get_ACLineSegment_r);
-	get_map.emplace("cim:ACLineSegment.r0", &get_ACLineSegment_r0);
-	get_map.emplace("cim:ACLineSegment.shortCircuitEndTemperature", &get_ACLineSegment_shortCircuitEndTemperature);
-	get_map.emplace("cim:ACLineSegment.x", &get_ACLineSegment_x);
-	get_map.emplace("cim:ACLineSegment.x0", &get_ACLineSegment_x0);
+	get_map.emplace("ACLineSegment.b0ch", &get_ACLineSegment_b0ch);
+	get_map.emplace("ACLineSegment.bch", &get_ACLineSegment_bch);
+	get_map.emplace("ACLineSegment.g0ch", &get_ACLineSegment_g0ch);
+	get_map.emplace("ACLineSegment.gch", &get_ACLineSegment_gch);
+	get_map.emplace("ACLineSegment.r", &get_ACLineSegment_r);
+	get_map.emplace("ACLineSegment.r0", &get_ACLineSegment_r0);
+	get_map.emplace("ACLineSegment.shortCircuitEndTemperature", &get_ACLineSegment_shortCircuitEndTemperature);
+	get_map.emplace("ACLineSegment.x", &get_ACLineSegment_x);
+	get_map.emplace("ACLineSegment.x0", &get_ACLineSegment_x0);
 }
 
 void ACLineSegment::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -403,9 +435,23 @@ void ACLineSegment::addEnumGetFnsToMap(std::map<std::string, get_function>& get_
 	Conductor::addEnumGetFnsToMap(get_map);
 }
 
+bool ACLineSegment::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ACLineSegment" &&
+		dynamic_cast<ACLineSegment*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ACLineSegment::declare()
 {
 	return BaseClassDefiner(ACLineSegment::addConstructToMap, ACLineSegment::addPrimitiveAssignFnsToMap, ACLineSegment::addClassAssignFnsToMap, ACLineSegment::debugName);
+}
+
+std::map<std::string, AttrDetails> ACLineSegment::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = Conductor::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

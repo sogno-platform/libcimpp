@@ -11,32 +11,64 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		LoadBreakSwitch(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+	};
+    return ClassAttrDetailsMap;
+}
+
 LoadBreakSwitch::LoadBreakSwitch() {}
 LoadBreakSwitch::~LoadBreakSwitch() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& LoadBreakSwitch::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-};
-
-std::list<CGMESProfile>
-LoadBreakSwitch::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-LoadBreakSwitch::getPossibleProfilesForAttributes() const
+const std::string& LoadBreakSwitch::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ProtectedSwitch::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& LoadBreakSwitch::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& LoadBreakSwitch::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& LoadBreakSwitch::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& LoadBreakSwitch::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& LoadBreakSwitch::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 const char LoadBreakSwitch::debugName[] = "LoadBreakSwitch";
@@ -47,7 +79,7 @@ const char* LoadBreakSwitch::debugString() const
 
 void LoadBreakSwitch::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:LoadBreakSwitch", &LoadBreakSwitch_factory);
+	factory_map.emplace("LoadBreakSwitch", &LoadBreakSwitch_factory);
 }
 
 void LoadBreakSwitch::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -73,9 +105,23 @@ void LoadBreakSwitch::addEnumGetFnsToMap(std::map<std::string, get_function>& ge
 	ProtectedSwitch::addEnumGetFnsToMap(get_map);
 }
 
+bool LoadBreakSwitch::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "LoadBreakSwitch" &&
+		dynamic_cast<LoadBreakSwitch*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner LoadBreakSwitch::declare()
 {
 	return BaseClassDefiner(LoadBreakSwitch::addConstructToMap, LoadBreakSwitch::addPrimitiveAssignFnsToMap, LoadBreakSwitch::addClassAssignFnsToMap, LoadBreakSwitch::debugName);
+}
+
+std::map<std::string, AttrDetails> LoadBreakSwitch::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ProtectedSwitch::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

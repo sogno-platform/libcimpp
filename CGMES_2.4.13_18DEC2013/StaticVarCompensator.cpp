@@ -11,38 +11,70 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		StaticVarCompensator(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "StaticVarCompensator.capacitiveRating", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "StaticVarCompensator.inductiveRating", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "StaticVarCompensator.q", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SSH, } } },
+		{ "StaticVarCompensator.sVCControlMode", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "StaticVarCompensator.slope", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "StaticVarCompensator.voltageSetPoint", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 StaticVarCompensator::StaticVarCompensator() {}
 StaticVarCompensator::~StaticVarCompensator() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& StaticVarCompensator::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:StaticVarCompensator.capacitiveRating", { CGMESProfile::EQ, } },
-	{ "cim:StaticVarCompensator.inductiveRating", { CGMESProfile::EQ, } },
-	{ "cim:StaticVarCompensator.q", { CGMESProfile::SSH, } },
-	{ "cim:StaticVarCompensator.sVCControlMode", { CGMESProfile::EQ, } },
-	{ "cim:StaticVarCompensator.slope", { CGMESProfile::EQ, } },
-	{ "cim:StaticVarCompensator.voltageSetPoint", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-StaticVarCompensator::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-StaticVarCompensator::getPossibleProfilesForAttributes() const
+const std::string& StaticVarCompensator::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = RegulatingCondEq::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& StaticVarCompensator::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& StaticVarCompensator::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& StaticVarCompensator::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& StaticVarCompensator::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& StaticVarCompensator::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_StaticVarCompensator_capacitiveRating(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -227,17 +259,17 @@ const char* StaticVarCompensator::debugString() const
 
 void StaticVarCompensator::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:StaticVarCompensator", &StaticVarCompensator_factory);
+	factory_map.emplace("StaticVarCompensator", &StaticVarCompensator_factory);
 }
 
 void StaticVarCompensator::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:StaticVarCompensator.capacitiveRating", &assign_StaticVarCompensator_capacitiveRating);
-	assign_map.emplace("cim:StaticVarCompensator.inductiveRating", &assign_StaticVarCompensator_inductiveRating);
-	assign_map.emplace("cim:StaticVarCompensator.q", &assign_StaticVarCompensator_q);
-	assign_map.emplace("cim:StaticVarCompensator.sVCControlMode", &assign_StaticVarCompensator_sVCControlMode);
-	assign_map.emplace("cim:StaticVarCompensator.slope", &assign_StaticVarCompensator_slope);
-	assign_map.emplace("cim:StaticVarCompensator.voltageSetPoint", &assign_StaticVarCompensator_voltageSetPoint);
+	assign_map.emplace("StaticVarCompensator.capacitiveRating", &assign_StaticVarCompensator_capacitiveRating);
+	assign_map.emplace("StaticVarCompensator.inductiveRating", &assign_StaticVarCompensator_inductiveRating);
+	assign_map.emplace("StaticVarCompensator.q", &assign_StaticVarCompensator_q);
+	assign_map.emplace("StaticVarCompensator.sVCControlMode", &assign_StaticVarCompensator_sVCControlMode);
+	assign_map.emplace("StaticVarCompensator.slope", &assign_StaticVarCompensator_slope);
+	assign_map.emplace("StaticVarCompensator.voltageSetPoint", &assign_StaticVarCompensator_voltageSetPoint);
 }
 
 void StaticVarCompensator::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -247,11 +279,11 @@ void StaticVarCompensator::addClassAssignFnsToMap(std::unordered_map<std::string
 void StaticVarCompensator::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	RegulatingCondEq::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:StaticVarCompensator.capacitiveRating", &get_StaticVarCompensator_capacitiveRating);
-	get_map.emplace("cim:StaticVarCompensator.inductiveRating", &get_StaticVarCompensator_inductiveRating);
-	get_map.emplace("cim:StaticVarCompensator.q", &get_StaticVarCompensator_q);
-	get_map.emplace("cim:StaticVarCompensator.slope", &get_StaticVarCompensator_slope);
-	get_map.emplace("cim:StaticVarCompensator.voltageSetPoint", &get_StaticVarCompensator_voltageSetPoint);
+	get_map.emplace("StaticVarCompensator.capacitiveRating", &get_StaticVarCompensator_capacitiveRating);
+	get_map.emplace("StaticVarCompensator.inductiveRating", &get_StaticVarCompensator_inductiveRating);
+	get_map.emplace("StaticVarCompensator.q", &get_StaticVarCompensator_q);
+	get_map.emplace("StaticVarCompensator.slope", &get_StaticVarCompensator_slope);
+	get_map.emplace("StaticVarCompensator.voltageSetPoint", &get_StaticVarCompensator_voltageSetPoint);
 }
 
 void StaticVarCompensator::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -262,12 +294,26 @@ void StaticVarCompensator::addClassGetFnsToMap(std::map<std::string, class_get_f
 void StaticVarCompensator::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	RegulatingCondEq::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:StaticVarCompensator.sVCControlMode", &get_StaticVarCompensator_sVCControlMode);
+	get_map.emplace("StaticVarCompensator.sVCControlMode", &get_StaticVarCompensator_sVCControlMode);
+}
+
+bool StaticVarCompensator::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "StaticVarCompensator" &&
+		dynamic_cast<StaticVarCompensator*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner StaticVarCompensator::declare()
 {
 	return BaseClassDefiner(StaticVarCompensator::addConstructToMap, StaticVarCompensator::addPrimitiveAssignFnsToMap, StaticVarCompensator::addClassAssignFnsToMap, StaticVarCompensator::debugName);
+}
+
+std::map<std::string, AttrDetails> StaticVarCompensator::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = RegulatingCondEq::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

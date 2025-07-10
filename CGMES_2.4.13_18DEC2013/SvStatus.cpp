@@ -12,33 +12,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		SvStatus(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::SV,
+		},
+		CGMESProfile::SV
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "SvStatus.ConductingEquipment", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SV, } } },
+		{ "SvStatus.inService", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SV, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 SvStatus::SvStatus() : ConductingEquipment(nullptr) {}
 SvStatus::~SvStatus() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& SvStatus::getAttributeNames() const
 {
-	CGMESProfile::SV,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:SvStatus.ConductingEquipment", { CGMESProfile::SV, } },
-	{ "cim:SvStatus.inService", { CGMESProfile::SV, } },
-};
-
-std::list<CGMESProfile>
-SvStatus::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-SvStatus::getPossibleProfilesForAttributes() const
+const std::string& SvStatus::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& SvStatus::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& SvStatus::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& SvStatus::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& SvStatus::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& SvStatus::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ConductingEquipment_SvStatus(BaseClass*, BaseClass*);
@@ -109,29 +141,29 @@ const char* SvStatus::debugString() const
 
 void SvStatus::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:SvStatus", &SvStatus_factory);
+	factory_map.emplace("SvStatus", &SvStatus_factory);
 }
 
 void SvStatus::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:SvStatus.inService", &assign_SvStatus_inService);
+	assign_map.emplace("SvStatus.inService", &assign_SvStatus_inService);
 }
 
 void SvStatus::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:SvStatus.ConductingEquipment", &assign_SvStatus_ConductingEquipment);
+	assign_map.emplace("SvStatus.ConductingEquipment", &assign_SvStatus_ConductingEquipment);
 }
 
 void SvStatus::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	BaseClass::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:SvStatus.inService", &get_SvStatus_inService);
+	get_map.emplace("SvStatus.inService", &get_SvStatus_inService);
 }
 
 void SvStatus::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	BaseClass::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:SvStatus.ConductingEquipment", &get_SvStatus_ConductingEquipment);
+	get_map.emplace("SvStatus.ConductingEquipment", &get_SvStatus_ConductingEquipment);
 }
 
 void SvStatus::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -139,9 +171,23 @@ void SvStatus::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) 
 	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
+bool SvStatus::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "SvStatus" &&
+		dynamic_cast<SvStatus*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner SvStatus::declare()
 {
 	return BaseClassDefiner(SvStatus::addConstructToMap, SvStatus::addPrimitiveAssignFnsToMap, SvStatus::addClassAssignFnsToMap, SvStatus::debugName);
+}
+
+std::map<std::string, AttrDetails> SvStatus::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = BaseClass::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

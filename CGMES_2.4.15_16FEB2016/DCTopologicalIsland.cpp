@@ -12,32 +12,64 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		DCTopologicalIsland(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::SV,
+		},
+		CGMESProfile::SV
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "DCTopologicalIsland.DCTopologicalNodes", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SV, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 DCTopologicalIsland::DCTopologicalIsland() {}
 DCTopologicalIsland::~DCTopologicalIsland() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& DCTopologicalIsland::getAttributeNames() const
 {
-	CGMESProfile::SV,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:DCTopologicalIsland.DCTopologicalNodes", { CGMESProfile::SV, } },
-};
-
-std::list<CGMESProfile>
-DCTopologicalIsland::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-DCTopologicalIsland::getPossibleProfilesForAttributes() const
+const std::string& DCTopologicalIsland::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& DCTopologicalIsland::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& DCTopologicalIsland::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& DCTopologicalIsland::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& DCTopologicalIsland::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& DCTopologicalIsland::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_DCTopologicalNode_DCTopologicalIsland(BaseClass*, BaseClass*);
@@ -76,7 +108,7 @@ const char* DCTopologicalIsland::debugString() const
 
 void DCTopologicalIsland::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:DCTopologicalIsland", &DCTopologicalIsland_factory);
+	factory_map.emplace("DCTopologicalIsland", &DCTopologicalIsland_factory);
 }
 
 void DCTopologicalIsland::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -85,7 +117,7 @@ void DCTopologicalIsland::addPrimitiveAssignFnsToMap(std::unordered_map<std::str
 
 void DCTopologicalIsland::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:DCTopologicalIsland.DCTopologicalNodes", &assign_DCTopologicalIsland_DCTopologicalNodes);
+	assign_map.emplace("DCTopologicalIsland.DCTopologicalNodes", &assign_DCTopologicalIsland_DCTopologicalNodes);
 }
 
 void DCTopologicalIsland::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -96,7 +128,7 @@ void DCTopologicalIsland::addPrimitiveGetFnsToMap(std::map<std::string, get_func
 void DCTopologicalIsland::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	IdentifiedObject::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:DCTopologicalIsland.DCTopologicalNodes", &get_DCTopologicalIsland_DCTopologicalNodes);
+	get_map.emplace("DCTopologicalIsland.DCTopologicalNodes", &get_DCTopologicalIsland_DCTopologicalNodes);
 }
 
 void DCTopologicalIsland::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -104,9 +136,23 @@ void DCTopologicalIsland::addEnumGetFnsToMap(std::map<std::string, get_function>
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool DCTopologicalIsland::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "DCTopologicalIsland" &&
+		dynamic_cast<DCTopologicalIsland*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner DCTopologicalIsland::declare()
 {
 	return BaseClassDefiner(DCTopologicalIsland::addConstructToMap, DCTopologicalIsland::addPrimitiveAssignFnsToMap, DCTopologicalIsland::addClassAssignFnsToMap, DCTopologicalIsland::debugName);
+}
+
+std::map<std::string, AttrDetails> DCTopologicalIsland::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

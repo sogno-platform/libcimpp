@@ -11,58 +11,90 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ExcAC8B(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ExcAC8B.inlim", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.ka", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.kc", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.kd", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.kdr", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.ke", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.kir", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.kpr", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.ks", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.pidlim", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.seve1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.seve2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.ta", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.tdr", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.te", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.telim", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.ve1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.ve2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.vemin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.vfemax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.vimax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.vimin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.vpidmax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.vpidmin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.vrmax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.vrmin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAC8B.vtmult", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ExcAC8B::ExcAC8B() {}
 ExcAC8B::~ExcAC8B() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ExcAC8B::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ExcAC8B.inlim", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.ka", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.kc", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.kd", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.kdr", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.ke", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.kir", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.kpr", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.ks", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.pidlim", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.seve1", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.seve2", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.ta", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.tdr", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.te", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.telim", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.ve1", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.ve2", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.vemin", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.vfemax", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.vimax", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.vimin", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.vpidmax", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.vpidmin", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.vrmax", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.vrmin", { CGMESProfile::DY, } },
-	{ "cim:ExcAC8B.vtmult", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-ExcAC8B::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ExcAC8B::getPossibleProfilesForAttributes() const
+const std::string& ExcAC8B::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ExcAC8B::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ExcAC8B::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ExcAC8B::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ExcAC8B::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ExcAC8B::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ExcAC8B_inlim(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -856,38 +888,38 @@ const char* ExcAC8B::debugString() const
 
 void ExcAC8B::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ExcAC8B", &ExcAC8B_factory);
+	factory_map.emplace("ExcAC8B", &ExcAC8B_factory);
 }
 
 void ExcAC8B::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ExcAC8B.inlim", &assign_ExcAC8B_inlim);
-	assign_map.emplace("cim:ExcAC8B.ka", &assign_ExcAC8B_ka);
-	assign_map.emplace("cim:ExcAC8B.kc", &assign_ExcAC8B_kc);
-	assign_map.emplace("cim:ExcAC8B.kd", &assign_ExcAC8B_kd);
-	assign_map.emplace("cim:ExcAC8B.kdr", &assign_ExcAC8B_kdr);
-	assign_map.emplace("cim:ExcAC8B.ke", &assign_ExcAC8B_ke);
-	assign_map.emplace("cim:ExcAC8B.kir", &assign_ExcAC8B_kir);
-	assign_map.emplace("cim:ExcAC8B.kpr", &assign_ExcAC8B_kpr);
-	assign_map.emplace("cim:ExcAC8B.ks", &assign_ExcAC8B_ks);
-	assign_map.emplace("cim:ExcAC8B.pidlim", &assign_ExcAC8B_pidlim);
-	assign_map.emplace("cim:ExcAC8B.seve1", &assign_ExcAC8B_seve1);
-	assign_map.emplace("cim:ExcAC8B.seve2", &assign_ExcAC8B_seve2);
-	assign_map.emplace("cim:ExcAC8B.ta", &assign_ExcAC8B_ta);
-	assign_map.emplace("cim:ExcAC8B.tdr", &assign_ExcAC8B_tdr);
-	assign_map.emplace("cim:ExcAC8B.te", &assign_ExcAC8B_te);
-	assign_map.emplace("cim:ExcAC8B.telim", &assign_ExcAC8B_telim);
-	assign_map.emplace("cim:ExcAC8B.ve1", &assign_ExcAC8B_ve1);
-	assign_map.emplace("cim:ExcAC8B.ve2", &assign_ExcAC8B_ve2);
-	assign_map.emplace("cim:ExcAC8B.vemin", &assign_ExcAC8B_vemin);
-	assign_map.emplace("cim:ExcAC8B.vfemax", &assign_ExcAC8B_vfemax);
-	assign_map.emplace("cim:ExcAC8B.vimax", &assign_ExcAC8B_vimax);
-	assign_map.emplace("cim:ExcAC8B.vimin", &assign_ExcAC8B_vimin);
-	assign_map.emplace("cim:ExcAC8B.vpidmax", &assign_ExcAC8B_vpidmax);
-	assign_map.emplace("cim:ExcAC8B.vpidmin", &assign_ExcAC8B_vpidmin);
-	assign_map.emplace("cim:ExcAC8B.vrmax", &assign_ExcAC8B_vrmax);
-	assign_map.emplace("cim:ExcAC8B.vrmin", &assign_ExcAC8B_vrmin);
-	assign_map.emplace("cim:ExcAC8B.vtmult", &assign_ExcAC8B_vtmult);
+	assign_map.emplace("ExcAC8B.inlim", &assign_ExcAC8B_inlim);
+	assign_map.emplace("ExcAC8B.ka", &assign_ExcAC8B_ka);
+	assign_map.emplace("ExcAC8B.kc", &assign_ExcAC8B_kc);
+	assign_map.emplace("ExcAC8B.kd", &assign_ExcAC8B_kd);
+	assign_map.emplace("ExcAC8B.kdr", &assign_ExcAC8B_kdr);
+	assign_map.emplace("ExcAC8B.ke", &assign_ExcAC8B_ke);
+	assign_map.emplace("ExcAC8B.kir", &assign_ExcAC8B_kir);
+	assign_map.emplace("ExcAC8B.kpr", &assign_ExcAC8B_kpr);
+	assign_map.emplace("ExcAC8B.ks", &assign_ExcAC8B_ks);
+	assign_map.emplace("ExcAC8B.pidlim", &assign_ExcAC8B_pidlim);
+	assign_map.emplace("ExcAC8B.seve1", &assign_ExcAC8B_seve1);
+	assign_map.emplace("ExcAC8B.seve2", &assign_ExcAC8B_seve2);
+	assign_map.emplace("ExcAC8B.ta", &assign_ExcAC8B_ta);
+	assign_map.emplace("ExcAC8B.tdr", &assign_ExcAC8B_tdr);
+	assign_map.emplace("ExcAC8B.te", &assign_ExcAC8B_te);
+	assign_map.emplace("ExcAC8B.telim", &assign_ExcAC8B_telim);
+	assign_map.emplace("ExcAC8B.ve1", &assign_ExcAC8B_ve1);
+	assign_map.emplace("ExcAC8B.ve2", &assign_ExcAC8B_ve2);
+	assign_map.emplace("ExcAC8B.vemin", &assign_ExcAC8B_vemin);
+	assign_map.emplace("ExcAC8B.vfemax", &assign_ExcAC8B_vfemax);
+	assign_map.emplace("ExcAC8B.vimax", &assign_ExcAC8B_vimax);
+	assign_map.emplace("ExcAC8B.vimin", &assign_ExcAC8B_vimin);
+	assign_map.emplace("ExcAC8B.vpidmax", &assign_ExcAC8B_vpidmax);
+	assign_map.emplace("ExcAC8B.vpidmin", &assign_ExcAC8B_vpidmin);
+	assign_map.emplace("ExcAC8B.vrmax", &assign_ExcAC8B_vrmax);
+	assign_map.emplace("ExcAC8B.vrmin", &assign_ExcAC8B_vrmin);
+	assign_map.emplace("ExcAC8B.vtmult", &assign_ExcAC8B_vtmult);
 }
 
 void ExcAC8B::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -897,33 +929,33 @@ void ExcAC8B::addClassAssignFnsToMap(std::unordered_map<std::string, class_assig
 void ExcAC8B::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ExcAC8B.inlim", &get_ExcAC8B_inlim);
-	get_map.emplace("cim:ExcAC8B.ka", &get_ExcAC8B_ka);
-	get_map.emplace("cim:ExcAC8B.kc", &get_ExcAC8B_kc);
-	get_map.emplace("cim:ExcAC8B.kd", &get_ExcAC8B_kd);
-	get_map.emplace("cim:ExcAC8B.kdr", &get_ExcAC8B_kdr);
-	get_map.emplace("cim:ExcAC8B.ke", &get_ExcAC8B_ke);
-	get_map.emplace("cim:ExcAC8B.kir", &get_ExcAC8B_kir);
-	get_map.emplace("cim:ExcAC8B.kpr", &get_ExcAC8B_kpr);
-	get_map.emplace("cim:ExcAC8B.ks", &get_ExcAC8B_ks);
-	get_map.emplace("cim:ExcAC8B.pidlim", &get_ExcAC8B_pidlim);
-	get_map.emplace("cim:ExcAC8B.seve1", &get_ExcAC8B_seve1);
-	get_map.emplace("cim:ExcAC8B.seve2", &get_ExcAC8B_seve2);
-	get_map.emplace("cim:ExcAC8B.ta", &get_ExcAC8B_ta);
-	get_map.emplace("cim:ExcAC8B.tdr", &get_ExcAC8B_tdr);
-	get_map.emplace("cim:ExcAC8B.te", &get_ExcAC8B_te);
-	get_map.emplace("cim:ExcAC8B.telim", &get_ExcAC8B_telim);
-	get_map.emplace("cim:ExcAC8B.ve1", &get_ExcAC8B_ve1);
-	get_map.emplace("cim:ExcAC8B.ve2", &get_ExcAC8B_ve2);
-	get_map.emplace("cim:ExcAC8B.vemin", &get_ExcAC8B_vemin);
-	get_map.emplace("cim:ExcAC8B.vfemax", &get_ExcAC8B_vfemax);
-	get_map.emplace("cim:ExcAC8B.vimax", &get_ExcAC8B_vimax);
-	get_map.emplace("cim:ExcAC8B.vimin", &get_ExcAC8B_vimin);
-	get_map.emplace("cim:ExcAC8B.vpidmax", &get_ExcAC8B_vpidmax);
-	get_map.emplace("cim:ExcAC8B.vpidmin", &get_ExcAC8B_vpidmin);
-	get_map.emplace("cim:ExcAC8B.vrmax", &get_ExcAC8B_vrmax);
-	get_map.emplace("cim:ExcAC8B.vrmin", &get_ExcAC8B_vrmin);
-	get_map.emplace("cim:ExcAC8B.vtmult", &get_ExcAC8B_vtmult);
+	get_map.emplace("ExcAC8B.inlim", &get_ExcAC8B_inlim);
+	get_map.emplace("ExcAC8B.ka", &get_ExcAC8B_ka);
+	get_map.emplace("ExcAC8B.kc", &get_ExcAC8B_kc);
+	get_map.emplace("ExcAC8B.kd", &get_ExcAC8B_kd);
+	get_map.emplace("ExcAC8B.kdr", &get_ExcAC8B_kdr);
+	get_map.emplace("ExcAC8B.ke", &get_ExcAC8B_ke);
+	get_map.emplace("ExcAC8B.kir", &get_ExcAC8B_kir);
+	get_map.emplace("ExcAC8B.kpr", &get_ExcAC8B_kpr);
+	get_map.emplace("ExcAC8B.ks", &get_ExcAC8B_ks);
+	get_map.emplace("ExcAC8B.pidlim", &get_ExcAC8B_pidlim);
+	get_map.emplace("ExcAC8B.seve1", &get_ExcAC8B_seve1);
+	get_map.emplace("ExcAC8B.seve2", &get_ExcAC8B_seve2);
+	get_map.emplace("ExcAC8B.ta", &get_ExcAC8B_ta);
+	get_map.emplace("ExcAC8B.tdr", &get_ExcAC8B_tdr);
+	get_map.emplace("ExcAC8B.te", &get_ExcAC8B_te);
+	get_map.emplace("ExcAC8B.telim", &get_ExcAC8B_telim);
+	get_map.emplace("ExcAC8B.ve1", &get_ExcAC8B_ve1);
+	get_map.emplace("ExcAC8B.ve2", &get_ExcAC8B_ve2);
+	get_map.emplace("ExcAC8B.vemin", &get_ExcAC8B_vemin);
+	get_map.emplace("ExcAC8B.vfemax", &get_ExcAC8B_vfemax);
+	get_map.emplace("ExcAC8B.vimax", &get_ExcAC8B_vimax);
+	get_map.emplace("ExcAC8B.vimin", &get_ExcAC8B_vimin);
+	get_map.emplace("ExcAC8B.vpidmax", &get_ExcAC8B_vpidmax);
+	get_map.emplace("ExcAC8B.vpidmin", &get_ExcAC8B_vpidmin);
+	get_map.emplace("ExcAC8B.vrmax", &get_ExcAC8B_vrmax);
+	get_map.emplace("ExcAC8B.vrmin", &get_ExcAC8B_vrmin);
+	get_map.emplace("ExcAC8B.vtmult", &get_ExcAC8B_vtmult);
 }
 
 void ExcAC8B::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -936,9 +968,23 @@ void ExcAC8B::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) c
 	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool ExcAC8B::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ExcAC8B" &&
+		dynamic_cast<ExcAC8B*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ExcAC8B::declare()
 {
 	return BaseClassDefiner(ExcAC8B::addConstructToMap, ExcAC8B::addPrimitiveAssignFnsToMap, ExcAC8B::addClassAssignFnsToMap, ExcAC8B::debugName);
+}
+
+std::map<std::string, AttrDetails> ExcAC8B::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ExcitationSystemDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

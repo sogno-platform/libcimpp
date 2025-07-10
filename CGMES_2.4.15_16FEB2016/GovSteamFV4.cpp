@@ -11,82 +11,114 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		GovSteamFV4(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "GovSteamFV4.cpsmn", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.cpsmx", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.crmn", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.crmx", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.kdc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.kf1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.kf3", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.khp", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.kic", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.kip", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.kit", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.kmp1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.kmp2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.kpc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.kpp", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.kpt", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.krc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.ksh", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.lpi", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.lps", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.mnef", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.mxef", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.pr1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.pr2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.psmn", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.rsmimn", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.rsmimx", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.rvgmn", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.rvgmx", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.srmn", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.srmx", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.srsmp", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.svmn", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.svmx", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.ta", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.tam", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.tc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.tcm", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.tdc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.tf1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.tf2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.thp", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.tmp", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.trh", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.tv", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.ty", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.y", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.yhpmn", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.yhpmx", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.ympmn", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovSteamFV4.ympmx", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 GovSteamFV4::GovSteamFV4() {}
 GovSteamFV4::~GovSteamFV4() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& GovSteamFV4::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:GovSteamFV4.cpsmn", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.cpsmx", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.crmn", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.crmx", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.kdc", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.kf1", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.kf3", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.khp", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.kic", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.kip", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.kit", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.kmp1", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.kmp2", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.kpc", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.kpp", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.kpt", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.krc", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.ksh", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.lpi", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.lps", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.mnef", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.mxef", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.pr1", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.pr2", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.psmn", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.rsmimn", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.rsmimx", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.rvgmn", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.rvgmx", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.srmn", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.srmx", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.srsmp", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.svmn", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.svmx", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.ta", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.tam", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.tc", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.tcm", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.tdc", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.tf1", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.tf2", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.thp", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.tmp", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.trh", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.tv", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.ty", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.y", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.yhpmn", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.yhpmx", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.ympmn", { CGMESProfile::DY, } },
-	{ "cim:GovSteamFV4.ympmx", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-GovSteamFV4::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-GovSteamFV4::getPossibleProfilesForAttributes() const
+const std::string& GovSteamFV4::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = TurbineGovernorDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& GovSteamFV4::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& GovSteamFV4::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& GovSteamFV4::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& GovSteamFV4::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& GovSteamFV4::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_GovSteamFV4_cpsmn(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -1576,62 +1608,62 @@ const char* GovSteamFV4::debugString() const
 
 void GovSteamFV4::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:GovSteamFV4", &GovSteamFV4_factory);
+	factory_map.emplace("GovSteamFV4", &GovSteamFV4_factory);
 }
 
 void GovSteamFV4::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:GovSteamFV4.cpsmn", &assign_GovSteamFV4_cpsmn);
-	assign_map.emplace("cim:GovSteamFV4.cpsmx", &assign_GovSteamFV4_cpsmx);
-	assign_map.emplace("cim:GovSteamFV4.crmn", &assign_GovSteamFV4_crmn);
-	assign_map.emplace("cim:GovSteamFV4.crmx", &assign_GovSteamFV4_crmx);
-	assign_map.emplace("cim:GovSteamFV4.kdc", &assign_GovSteamFV4_kdc);
-	assign_map.emplace("cim:GovSteamFV4.kf1", &assign_GovSteamFV4_kf1);
-	assign_map.emplace("cim:GovSteamFV4.kf3", &assign_GovSteamFV4_kf3);
-	assign_map.emplace("cim:GovSteamFV4.khp", &assign_GovSteamFV4_khp);
-	assign_map.emplace("cim:GovSteamFV4.kic", &assign_GovSteamFV4_kic);
-	assign_map.emplace("cim:GovSteamFV4.kip", &assign_GovSteamFV4_kip);
-	assign_map.emplace("cim:GovSteamFV4.kit", &assign_GovSteamFV4_kit);
-	assign_map.emplace("cim:GovSteamFV4.kmp1", &assign_GovSteamFV4_kmp1);
-	assign_map.emplace("cim:GovSteamFV4.kmp2", &assign_GovSteamFV4_kmp2);
-	assign_map.emplace("cim:GovSteamFV4.kpc", &assign_GovSteamFV4_kpc);
-	assign_map.emplace("cim:GovSteamFV4.kpp", &assign_GovSteamFV4_kpp);
-	assign_map.emplace("cim:GovSteamFV4.kpt", &assign_GovSteamFV4_kpt);
-	assign_map.emplace("cim:GovSteamFV4.krc", &assign_GovSteamFV4_krc);
-	assign_map.emplace("cim:GovSteamFV4.ksh", &assign_GovSteamFV4_ksh);
-	assign_map.emplace("cim:GovSteamFV4.lpi", &assign_GovSteamFV4_lpi);
-	assign_map.emplace("cim:GovSteamFV4.lps", &assign_GovSteamFV4_lps);
-	assign_map.emplace("cim:GovSteamFV4.mnef", &assign_GovSteamFV4_mnef);
-	assign_map.emplace("cim:GovSteamFV4.mxef", &assign_GovSteamFV4_mxef);
-	assign_map.emplace("cim:GovSteamFV4.pr1", &assign_GovSteamFV4_pr1);
-	assign_map.emplace("cim:GovSteamFV4.pr2", &assign_GovSteamFV4_pr2);
-	assign_map.emplace("cim:GovSteamFV4.psmn", &assign_GovSteamFV4_psmn);
-	assign_map.emplace("cim:GovSteamFV4.rsmimn", &assign_GovSteamFV4_rsmimn);
-	assign_map.emplace("cim:GovSteamFV4.rsmimx", &assign_GovSteamFV4_rsmimx);
-	assign_map.emplace("cim:GovSteamFV4.rvgmn", &assign_GovSteamFV4_rvgmn);
-	assign_map.emplace("cim:GovSteamFV4.rvgmx", &assign_GovSteamFV4_rvgmx);
-	assign_map.emplace("cim:GovSteamFV4.srmn", &assign_GovSteamFV4_srmn);
-	assign_map.emplace("cim:GovSteamFV4.srmx", &assign_GovSteamFV4_srmx);
-	assign_map.emplace("cim:GovSteamFV4.srsmp", &assign_GovSteamFV4_srsmp);
-	assign_map.emplace("cim:GovSteamFV4.svmn", &assign_GovSteamFV4_svmn);
-	assign_map.emplace("cim:GovSteamFV4.svmx", &assign_GovSteamFV4_svmx);
-	assign_map.emplace("cim:GovSteamFV4.ta", &assign_GovSteamFV4_ta);
-	assign_map.emplace("cim:GovSteamFV4.tam", &assign_GovSteamFV4_tam);
-	assign_map.emplace("cim:GovSteamFV4.tc", &assign_GovSteamFV4_tc);
-	assign_map.emplace("cim:GovSteamFV4.tcm", &assign_GovSteamFV4_tcm);
-	assign_map.emplace("cim:GovSteamFV4.tdc", &assign_GovSteamFV4_tdc);
-	assign_map.emplace("cim:GovSteamFV4.tf1", &assign_GovSteamFV4_tf1);
-	assign_map.emplace("cim:GovSteamFV4.tf2", &assign_GovSteamFV4_tf2);
-	assign_map.emplace("cim:GovSteamFV4.thp", &assign_GovSteamFV4_thp);
-	assign_map.emplace("cim:GovSteamFV4.tmp", &assign_GovSteamFV4_tmp);
-	assign_map.emplace("cim:GovSteamFV4.trh", &assign_GovSteamFV4_trh);
-	assign_map.emplace("cim:GovSteamFV4.tv", &assign_GovSteamFV4_tv);
-	assign_map.emplace("cim:GovSteamFV4.ty", &assign_GovSteamFV4_ty);
-	assign_map.emplace("cim:GovSteamFV4.y", &assign_GovSteamFV4_y);
-	assign_map.emplace("cim:GovSteamFV4.yhpmn", &assign_GovSteamFV4_yhpmn);
-	assign_map.emplace("cim:GovSteamFV4.yhpmx", &assign_GovSteamFV4_yhpmx);
-	assign_map.emplace("cim:GovSteamFV4.ympmn", &assign_GovSteamFV4_ympmn);
-	assign_map.emplace("cim:GovSteamFV4.ympmx", &assign_GovSteamFV4_ympmx);
+	assign_map.emplace("GovSteamFV4.cpsmn", &assign_GovSteamFV4_cpsmn);
+	assign_map.emplace("GovSteamFV4.cpsmx", &assign_GovSteamFV4_cpsmx);
+	assign_map.emplace("GovSteamFV4.crmn", &assign_GovSteamFV4_crmn);
+	assign_map.emplace("GovSteamFV4.crmx", &assign_GovSteamFV4_crmx);
+	assign_map.emplace("GovSteamFV4.kdc", &assign_GovSteamFV4_kdc);
+	assign_map.emplace("GovSteamFV4.kf1", &assign_GovSteamFV4_kf1);
+	assign_map.emplace("GovSteamFV4.kf3", &assign_GovSteamFV4_kf3);
+	assign_map.emplace("GovSteamFV4.khp", &assign_GovSteamFV4_khp);
+	assign_map.emplace("GovSteamFV4.kic", &assign_GovSteamFV4_kic);
+	assign_map.emplace("GovSteamFV4.kip", &assign_GovSteamFV4_kip);
+	assign_map.emplace("GovSteamFV4.kit", &assign_GovSteamFV4_kit);
+	assign_map.emplace("GovSteamFV4.kmp1", &assign_GovSteamFV4_kmp1);
+	assign_map.emplace("GovSteamFV4.kmp2", &assign_GovSteamFV4_kmp2);
+	assign_map.emplace("GovSteamFV4.kpc", &assign_GovSteamFV4_kpc);
+	assign_map.emplace("GovSteamFV4.kpp", &assign_GovSteamFV4_kpp);
+	assign_map.emplace("GovSteamFV4.kpt", &assign_GovSteamFV4_kpt);
+	assign_map.emplace("GovSteamFV4.krc", &assign_GovSteamFV4_krc);
+	assign_map.emplace("GovSteamFV4.ksh", &assign_GovSteamFV4_ksh);
+	assign_map.emplace("GovSteamFV4.lpi", &assign_GovSteamFV4_lpi);
+	assign_map.emplace("GovSteamFV4.lps", &assign_GovSteamFV4_lps);
+	assign_map.emplace("GovSteamFV4.mnef", &assign_GovSteamFV4_mnef);
+	assign_map.emplace("GovSteamFV4.mxef", &assign_GovSteamFV4_mxef);
+	assign_map.emplace("GovSteamFV4.pr1", &assign_GovSteamFV4_pr1);
+	assign_map.emplace("GovSteamFV4.pr2", &assign_GovSteamFV4_pr2);
+	assign_map.emplace("GovSteamFV4.psmn", &assign_GovSteamFV4_psmn);
+	assign_map.emplace("GovSteamFV4.rsmimn", &assign_GovSteamFV4_rsmimn);
+	assign_map.emplace("GovSteamFV4.rsmimx", &assign_GovSteamFV4_rsmimx);
+	assign_map.emplace("GovSteamFV4.rvgmn", &assign_GovSteamFV4_rvgmn);
+	assign_map.emplace("GovSteamFV4.rvgmx", &assign_GovSteamFV4_rvgmx);
+	assign_map.emplace("GovSteamFV4.srmn", &assign_GovSteamFV4_srmn);
+	assign_map.emplace("GovSteamFV4.srmx", &assign_GovSteamFV4_srmx);
+	assign_map.emplace("GovSteamFV4.srsmp", &assign_GovSteamFV4_srsmp);
+	assign_map.emplace("GovSteamFV4.svmn", &assign_GovSteamFV4_svmn);
+	assign_map.emplace("GovSteamFV4.svmx", &assign_GovSteamFV4_svmx);
+	assign_map.emplace("GovSteamFV4.ta", &assign_GovSteamFV4_ta);
+	assign_map.emplace("GovSteamFV4.tam", &assign_GovSteamFV4_tam);
+	assign_map.emplace("GovSteamFV4.tc", &assign_GovSteamFV4_tc);
+	assign_map.emplace("GovSteamFV4.tcm", &assign_GovSteamFV4_tcm);
+	assign_map.emplace("GovSteamFV4.tdc", &assign_GovSteamFV4_tdc);
+	assign_map.emplace("GovSteamFV4.tf1", &assign_GovSteamFV4_tf1);
+	assign_map.emplace("GovSteamFV4.tf2", &assign_GovSteamFV4_tf2);
+	assign_map.emplace("GovSteamFV4.thp", &assign_GovSteamFV4_thp);
+	assign_map.emplace("GovSteamFV4.tmp", &assign_GovSteamFV4_tmp);
+	assign_map.emplace("GovSteamFV4.trh", &assign_GovSteamFV4_trh);
+	assign_map.emplace("GovSteamFV4.tv", &assign_GovSteamFV4_tv);
+	assign_map.emplace("GovSteamFV4.ty", &assign_GovSteamFV4_ty);
+	assign_map.emplace("GovSteamFV4.y", &assign_GovSteamFV4_y);
+	assign_map.emplace("GovSteamFV4.yhpmn", &assign_GovSteamFV4_yhpmn);
+	assign_map.emplace("GovSteamFV4.yhpmx", &assign_GovSteamFV4_yhpmx);
+	assign_map.emplace("GovSteamFV4.ympmn", &assign_GovSteamFV4_ympmn);
+	assign_map.emplace("GovSteamFV4.ympmx", &assign_GovSteamFV4_ympmx);
 }
 
 void GovSteamFV4::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -1641,57 +1673,57 @@ void GovSteamFV4::addClassAssignFnsToMap(std::unordered_map<std::string, class_a
 void GovSteamFV4::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	TurbineGovernorDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:GovSteamFV4.cpsmn", &get_GovSteamFV4_cpsmn);
-	get_map.emplace("cim:GovSteamFV4.cpsmx", &get_GovSteamFV4_cpsmx);
-	get_map.emplace("cim:GovSteamFV4.crmn", &get_GovSteamFV4_crmn);
-	get_map.emplace("cim:GovSteamFV4.crmx", &get_GovSteamFV4_crmx);
-	get_map.emplace("cim:GovSteamFV4.kdc", &get_GovSteamFV4_kdc);
-	get_map.emplace("cim:GovSteamFV4.kf1", &get_GovSteamFV4_kf1);
-	get_map.emplace("cim:GovSteamFV4.kf3", &get_GovSteamFV4_kf3);
-	get_map.emplace("cim:GovSteamFV4.khp", &get_GovSteamFV4_khp);
-	get_map.emplace("cim:GovSteamFV4.kic", &get_GovSteamFV4_kic);
-	get_map.emplace("cim:GovSteamFV4.kip", &get_GovSteamFV4_kip);
-	get_map.emplace("cim:GovSteamFV4.kit", &get_GovSteamFV4_kit);
-	get_map.emplace("cim:GovSteamFV4.kmp1", &get_GovSteamFV4_kmp1);
-	get_map.emplace("cim:GovSteamFV4.kmp2", &get_GovSteamFV4_kmp2);
-	get_map.emplace("cim:GovSteamFV4.kpc", &get_GovSteamFV4_kpc);
-	get_map.emplace("cim:GovSteamFV4.kpp", &get_GovSteamFV4_kpp);
-	get_map.emplace("cim:GovSteamFV4.kpt", &get_GovSteamFV4_kpt);
-	get_map.emplace("cim:GovSteamFV4.krc", &get_GovSteamFV4_krc);
-	get_map.emplace("cim:GovSteamFV4.ksh", &get_GovSteamFV4_ksh);
-	get_map.emplace("cim:GovSteamFV4.lpi", &get_GovSteamFV4_lpi);
-	get_map.emplace("cim:GovSteamFV4.lps", &get_GovSteamFV4_lps);
-	get_map.emplace("cim:GovSteamFV4.mnef", &get_GovSteamFV4_mnef);
-	get_map.emplace("cim:GovSteamFV4.mxef", &get_GovSteamFV4_mxef);
-	get_map.emplace("cim:GovSteamFV4.pr1", &get_GovSteamFV4_pr1);
-	get_map.emplace("cim:GovSteamFV4.pr2", &get_GovSteamFV4_pr2);
-	get_map.emplace("cim:GovSteamFV4.psmn", &get_GovSteamFV4_psmn);
-	get_map.emplace("cim:GovSteamFV4.rsmimn", &get_GovSteamFV4_rsmimn);
-	get_map.emplace("cim:GovSteamFV4.rsmimx", &get_GovSteamFV4_rsmimx);
-	get_map.emplace("cim:GovSteamFV4.rvgmn", &get_GovSteamFV4_rvgmn);
-	get_map.emplace("cim:GovSteamFV4.rvgmx", &get_GovSteamFV4_rvgmx);
-	get_map.emplace("cim:GovSteamFV4.srmn", &get_GovSteamFV4_srmn);
-	get_map.emplace("cim:GovSteamFV4.srmx", &get_GovSteamFV4_srmx);
-	get_map.emplace("cim:GovSteamFV4.srsmp", &get_GovSteamFV4_srsmp);
-	get_map.emplace("cim:GovSteamFV4.svmn", &get_GovSteamFV4_svmn);
-	get_map.emplace("cim:GovSteamFV4.svmx", &get_GovSteamFV4_svmx);
-	get_map.emplace("cim:GovSteamFV4.ta", &get_GovSteamFV4_ta);
-	get_map.emplace("cim:GovSteamFV4.tam", &get_GovSteamFV4_tam);
-	get_map.emplace("cim:GovSteamFV4.tc", &get_GovSteamFV4_tc);
-	get_map.emplace("cim:GovSteamFV4.tcm", &get_GovSteamFV4_tcm);
-	get_map.emplace("cim:GovSteamFV4.tdc", &get_GovSteamFV4_tdc);
-	get_map.emplace("cim:GovSteamFV4.tf1", &get_GovSteamFV4_tf1);
-	get_map.emplace("cim:GovSteamFV4.tf2", &get_GovSteamFV4_tf2);
-	get_map.emplace("cim:GovSteamFV4.thp", &get_GovSteamFV4_thp);
-	get_map.emplace("cim:GovSteamFV4.tmp", &get_GovSteamFV4_tmp);
-	get_map.emplace("cim:GovSteamFV4.trh", &get_GovSteamFV4_trh);
-	get_map.emplace("cim:GovSteamFV4.tv", &get_GovSteamFV4_tv);
-	get_map.emplace("cim:GovSteamFV4.ty", &get_GovSteamFV4_ty);
-	get_map.emplace("cim:GovSteamFV4.y", &get_GovSteamFV4_y);
-	get_map.emplace("cim:GovSteamFV4.yhpmn", &get_GovSteamFV4_yhpmn);
-	get_map.emplace("cim:GovSteamFV4.yhpmx", &get_GovSteamFV4_yhpmx);
-	get_map.emplace("cim:GovSteamFV4.ympmn", &get_GovSteamFV4_ympmn);
-	get_map.emplace("cim:GovSteamFV4.ympmx", &get_GovSteamFV4_ympmx);
+	get_map.emplace("GovSteamFV4.cpsmn", &get_GovSteamFV4_cpsmn);
+	get_map.emplace("GovSteamFV4.cpsmx", &get_GovSteamFV4_cpsmx);
+	get_map.emplace("GovSteamFV4.crmn", &get_GovSteamFV4_crmn);
+	get_map.emplace("GovSteamFV4.crmx", &get_GovSteamFV4_crmx);
+	get_map.emplace("GovSteamFV4.kdc", &get_GovSteamFV4_kdc);
+	get_map.emplace("GovSteamFV4.kf1", &get_GovSteamFV4_kf1);
+	get_map.emplace("GovSteamFV4.kf3", &get_GovSteamFV4_kf3);
+	get_map.emplace("GovSteamFV4.khp", &get_GovSteamFV4_khp);
+	get_map.emplace("GovSteamFV4.kic", &get_GovSteamFV4_kic);
+	get_map.emplace("GovSteamFV4.kip", &get_GovSteamFV4_kip);
+	get_map.emplace("GovSteamFV4.kit", &get_GovSteamFV4_kit);
+	get_map.emplace("GovSteamFV4.kmp1", &get_GovSteamFV4_kmp1);
+	get_map.emplace("GovSteamFV4.kmp2", &get_GovSteamFV4_kmp2);
+	get_map.emplace("GovSteamFV4.kpc", &get_GovSteamFV4_kpc);
+	get_map.emplace("GovSteamFV4.kpp", &get_GovSteamFV4_kpp);
+	get_map.emplace("GovSteamFV4.kpt", &get_GovSteamFV4_kpt);
+	get_map.emplace("GovSteamFV4.krc", &get_GovSteamFV4_krc);
+	get_map.emplace("GovSteamFV4.ksh", &get_GovSteamFV4_ksh);
+	get_map.emplace("GovSteamFV4.lpi", &get_GovSteamFV4_lpi);
+	get_map.emplace("GovSteamFV4.lps", &get_GovSteamFV4_lps);
+	get_map.emplace("GovSteamFV4.mnef", &get_GovSteamFV4_mnef);
+	get_map.emplace("GovSteamFV4.mxef", &get_GovSteamFV4_mxef);
+	get_map.emplace("GovSteamFV4.pr1", &get_GovSteamFV4_pr1);
+	get_map.emplace("GovSteamFV4.pr2", &get_GovSteamFV4_pr2);
+	get_map.emplace("GovSteamFV4.psmn", &get_GovSteamFV4_psmn);
+	get_map.emplace("GovSteamFV4.rsmimn", &get_GovSteamFV4_rsmimn);
+	get_map.emplace("GovSteamFV4.rsmimx", &get_GovSteamFV4_rsmimx);
+	get_map.emplace("GovSteamFV4.rvgmn", &get_GovSteamFV4_rvgmn);
+	get_map.emplace("GovSteamFV4.rvgmx", &get_GovSteamFV4_rvgmx);
+	get_map.emplace("GovSteamFV4.srmn", &get_GovSteamFV4_srmn);
+	get_map.emplace("GovSteamFV4.srmx", &get_GovSteamFV4_srmx);
+	get_map.emplace("GovSteamFV4.srsmp", &get_GovSteamFV4_srsmp);
+	get_map.emplace("GovSteamFV4.svmn", &get_GovSteamFV4_svmn);
+	get_map.emplace("GovSteamFV4.svmx", &get_GovSteamFV4_svmx);
+	get_map.emplace("GovSteamFV4.ta", &get_GovSteamFV4_ta);
+	get_map.emplace("GovSteamFV4.tam", &get_GovSteamFV4_tam);
+	get_map.emplace("GovSteamFV4.tc", &get_GovSteamFV4_tc);
+	get_map.emplace("GovSteamFV4.tcm", &get_GovSteamFV4_tcm);
+	get_map.emplace("GovSteamFV4.tdc", &get_GovSteamFV4_tdc);
+	get_map.emplace("GovSteamFV4.tf1", &get_GovSteamFV4_tf1);
+	get_map.emplace("GovSteamFV4.tf2", &get_GovSteamFV4_tf2);
+	get_map.emplace("GovSteamFV4.thp", &get_GovSteamFV4_thp);
+	get_map.emplace("GovSteamFV4.tmp", &get_GovSteamFV4_tmp);
+	get_map.emplace("GovSteamFV4.trh", &get_GovSteamFV4_trh);
+	get_map.emplace("GovSteamFV4.tv", &get_GovSteamFV4_tv);
+	get_map.emplace("GovSteamFV4.ty", &get_GovSteamFV4_ty);
+	get_map.emplace("GovSteamFV4.y", &get_GovSteamFV4_y);
+	get_map.emplace("GovSteamFV4.yhpmn", &get_GovSteamFV4_yhpmn);
+	get_map.emplace("GovSteamFV4.yhpmx", &get_GovSteamFV4_yhpmx);
+	get_map.emplace("GovSteamFV4.ympmn", &get_GovSteamFV4_ympmn);
+	get_map.emplace("GovSteamFV4.ympmx", &get_GovSteamFV4_ympmx);
 }
 
 void GovSteamFV4::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -1704,9 +1736,23 @@ void GovSteamFV4::addEnumGetFnsToMap(std::map<std::string, get_function>& get_ma
 	TurbineGovernorDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool GovSteamFV4::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "GovSteamFV4" &&
+		dynamic_cast<GovSteamFV4*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner GovSteamFV4::declare()
 {
 	return BaseClassDefiner(GovSteamFV4::addConstructToMap, GovSteamFV4::addPrimitiveAssignFnsToMap, GovSteamFV4::addClassAssignFnsToMap, GovSteamFV4::debugName);
+}
+
+std::map<std::string, AttrDetails> GovSteamFV4::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = TurbineGovernorDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

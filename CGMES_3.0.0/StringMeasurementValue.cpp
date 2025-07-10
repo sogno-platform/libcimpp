@@ -12,32 +12,64 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		StringMeasurementValue(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::OP,
+		},
+		CGMESProfile::OP
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "StringMeasurementValue.StringMeasurement", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::OP, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 StringMeasurementValue::StringMeasurementValue() : StringMeasurement(nullptr) {}
 StringMeasurementValue::~StringMeasurementValue() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& StringMeasurementValue::getAttributeNames() const
 {
-	CGMESProfile::OP,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:StringMeasurementValue.StringMeasurement", { CGMESProfile::OP, } },
-};
-
-std::list<CGMESProfile>
-StringMeasurementValue::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-StringMeasurementValue::getPossibleProfilesForAttributes() const
+const std::string& StringMeasurementValue::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = MeasurementValue::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& StringMeasurementValue::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& StringMeasurementValue::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& StringMeasurementValue::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& StringMeasurementValue::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& StringMeasurementValue::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_StringMeasurement_StringMeasurementValues(BaseClass*, BaseClass*);
@@ -79,7 +111,7 @@ const char* StringMeasurementValue::debugString() const
 
 void StringMeasurementValue::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:StringMeasurementValue", &StringMeasurementValue_factory);
+	factory_map.emplace("StringMeasurementValue", &StringMeasurementValue_factory);
 }
 
 void StringMeasurementValue::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -88,7 +120,7 @@ void StringMeasurementValue::addPrimitiveAssignFnsToMap(std::unordered_map<std::
 
 void StringMeasurementValue::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:StringMeasurementValue.StringMeasurement", &assign_StringMeasurementValue_StringMeasurement);
+	assign_map.emplace("StringMeasurementValue.StringMeasurement", &assign_StringMeasurementValue_StringMeasurement);
 }
 
 void StringMeasurementValue::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -99,7 +131,7 @@ void StringMeasurementValue::addPrimitiveGetFnsToMap(std::map<std::string, get_f
 void StringMeasurementValue::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	MeasurementValue::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:StringMeasurementValue.StringMeasurement", &get_StringMeasurementValue_StringMeasurement);
+	get_map.emplace("StringMeasurementValue.StringMeasurement", &get_StringMeasurementValue_StringMeasurement);
 }
 
 void StringMeasurementValue::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -107,9 +139,23 @@ void StringMeasurementValue::addEnumGetFnsToMap(std::map<std::string, get_functi
 	MeasurementValue::addEnumGetFnsToMap(get_map);
 }
 
+bool StringMeasurementValue::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "StringMeasurementValue" &&
+		dynamic_cast<StringMeasurementValue*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner StringMeasurementValue::declare()
 {
 	return BaseClassDefiner(StringMeasurementValue::addConstructToMap, StringMeasurementValue::addPrimitiveAssignFnsToMap, StringMeasurementValue::addClassAssignFnsToMap, StringMeasurementValue::debugName);
+}
+
+std::map<std::string, AttrDetails> StringMeasurementValue::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = MeasurementValue::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

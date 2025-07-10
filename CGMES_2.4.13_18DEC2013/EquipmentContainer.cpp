@@ -12,33 +12,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		EquipmentContainer(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ_BD,
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "EquipmentContainer.Equipments", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 EquipmentContainer::EquipmentContainer() {}
 EquipmentContainer::~EquipmentContainer() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& EquipmentContainer::getAttributeNames() const
 {
-	CGMESProfile::EQ_BD,
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:EquipmentContainer.Equipments", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-EquipmentContainer::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-EquipmentContainer::getPossibleProfilesForAttributes() const
+const std::string& EquipmentContainer::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ConnectivityNodeContainer::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& EquipmentContainer::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& EquipmentContainer::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& EquipmentContainer::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& EquipmentContainer::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& EquipmentContainer::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_Equipment_EquipmentContainer(BaseClass*, BaseClass*);
@@ -67,7 +99,7 @@ const char* EquipmentContainer::debugString() const
 
 void EquipmentContainer::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:EquipmentContainer", &EquipmentContainer_factory);
+	factory_map.emplace("EquipmentContainer", &EquipmentContainer_factory);
 }
 
 void EquipmentContainer::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -76,7 +108,7 @@ void EquipmentContainer::addPrimitiveAssignFnsToMap(std::unordered_map<std::stri
 
 void EquipmentContainer::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:EquipmentContainer.Equipments", &assign_EquipmentContainer_Equipments);
+	assign_map.emplace("EquipmentContainer.Equipments", &assign_EquipmentContainer_Equipments);
 }
 
 void EquipmentContainer::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -94,9 +126,23 @@ void EquipmentContainer::addEnumGetFnsToMap(std::map<std::string, get_function>&
 	ConnectivityNodeContainer::addEnumGetFnsToMap(get_map);
 }
 
+bool EquipmentContainer::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "EquipmentContainer" &&
+		dynamic_cast<EquipmentContainer*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner EquipmentContainer::declare()
 {
 	return BaseClassDefiner(EquipmentContainer::addConstructToMap, EquipmentContainer::addPrimitiveAssignFnsToMap, EquipmentContainer::addClassAssignFnsToMap, EquipmentContainer::debugName);
+}
+
+std::map<std::string, AttrDetails> EquipmentContainer::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ConnectivityNodeContainer::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

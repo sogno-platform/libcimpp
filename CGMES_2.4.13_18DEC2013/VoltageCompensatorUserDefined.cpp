@@ -12,33 +12,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		VoltageCompensatorUserDefined(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "VoltageCompensatorUserDefined.ProprietaryParameterDynamics", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "VoltageCompensatorUserDefined.proprietary", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 VoltageCompensatorUserDefined::VoltageCompensatorUserDefined() {}
 VoltageCompensatorUserDefined::~VoltageCompensatorUserDefined() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& VoltageCompensatorUserDefined::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:VoltageCompensatorUserDefined.ProprietaryParameterDynamics", { CGMESProfile::DY, } },
-	{ "cim:VoltageCompensatorUserDefined.proprietary", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-VoltageCompensatorUserDefined::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-VoltageCompensatorUserDefined::getPossibleProfilesForAttributes() const
+const std::string& VoltageCompensatorUserDefined::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = VoltageCompensatorDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& VoltageCompensatorUserDefined::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& VoltageCompensatorUserDefined::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& VoltageCompensatorUserDefined::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& VoltageCompensatorUserDefined::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& VoltageCompensatorUserDefined::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ProprietaryParameterDynamics_VoltageCompensatorUserDefined(BaseClass*, BaseClass*);
@@ -96,23 +128,23 @@ const char* VoltageCompensatorUserDefined::debugString() const
 
 void VoltageCompensatorUserDefined::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:VoltageCompensatorUserDefined", &VoltageCompensatorUserDefined_factory);
+	factory_map.emplace("VoltageCompensatorUserDefined", &VoltageCompensatorUserDefined_factory);
 }
 
 void VoltageCompensatorUserDefined::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:VoltageCompensatorUserDefined.proprietary", &assign_VoltageCompensatorUserDefined_proprietary);
+	assign_map.emplace("VoltageCompensatorUserDefined.proprietary", &assign_VoltageCompensatorUserDefined_proprietary);
 }
 
 void VoltageCompensatorUserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:VoltageCompensatorUserDefined.ProprietaryParameterDynamics", &assign_VoltageCompensatorUserDefined_ProprietaryParameterDynamics);
+	assign_map.emplace("VoltageCompensatorUserDefined.ProprietaryParameterDynamics", &assign_VoltageCompensatorUserDefined_ProprietaryParameterDynamics);
 }
 
 void VoltageCompensatorUserDefined::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	VoltageCompensatorDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:VoltageCompensatorUserDefined.proprietary", &get_VoltageCompensatorUserDefined_proprietary);
+	get_map.emplace("VoltageCompensatorUserDefined.proprietary", &get_VoltageCompensatorUserDefined_proprietary);
 }
 
 void VoltageCompensatorUserDefined::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -125,9 +157,23 @@ void VoltageCompensatorUserDefined::addEnumGetFnsToMap(std::map<std::string, get
 	VoltageCompensatorDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool VoltageCompensatorUserDefined::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "VoltageCompensatorUserDefined" &&
+		dynamic_cast<VoltageCompensatorUserDefined*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner VoltageCompensatorUserDefined::declare()
 {
 	return BaseClassDefiner(VoltageCompensatorUserDefined::addConstructToMap, VoltageCompensatorUserDefined::addPrimitiveAssignFnsToMap, VoltageCompensatorUserDefined::addClassAssignFnsToMap, VoltageCompensatorUserDefined::debugName);
+}
+
+std::map<std::string, AttrDetails> VoltageCompensatorUserDefined::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = VoltageCompensatorDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

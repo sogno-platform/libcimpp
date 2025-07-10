@@ -14,43 +14,75 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		RegulatingControl(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "RegulatingControl.RegulatingCondEq", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "RegulatingControl.RegulationSchedule", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "RegulatingControl.Terminal", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "RegulatingControl.discrete", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+		{ "RegulatingControl.enabled", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+		{ "RegulatingControl.maxAllowedTargetValue", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+		{ "RegulatingControl.minAllowedTargetValue", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+		{ "RegulatingControl.mode", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "RegulatingControl.targetDeadband", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+		{ "RegulatingControl.targetValue", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+		{ "RegulatingControl.targetValueUnitMultiplier", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 RegulatingControl::RegulatingControl() : Terminal(nullptr) {}
 RegulatingControl::~RegulatingControl() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& RegulatingControl::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:RegulatingControl.RegulatingCondEq", { CGMESProfile::EQ, } },
-	{ "cim:RegulatingControl.RegulationSchedule", { CGMESProfile::EQ, } },
-	{ "cim:RegulatingControl.Terminal", { CGMESProfile::EQ, } },
-	{ "cim:RegulatingControl.discrete", { CGMESProfile::SSH, } },
-	{ "cim:RegulatingControl.enabled", { CGMESProfile::SSH, } },
-	{ "cim:RegulatingControl.maxAllowedTargetValue", { CGMESProfile::SSH, } },
-	{ "cim:RegulatingControl.minAllowedTargetValue", { CGMESProfile::SSH, } },
-	{ "cim:RegulatingControl.mode", { CGMESProfile::EQ, } },
-	{ "cim:RegulatingControl.targetDeadband", { CGMESProfile::SSH, } },
-	{ "cim:RegulatingControl.targetValue", { CGMESProfile::SSH, } },
-	{ "cim:RegulatingControl.targetValueUnitMultiplier", { CGMESProfile::SSH, } },
-};
-
-std::list<CGMESProfile>
-RegulatingControl::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-RegulatingControl::getPossibleProfilesForAttributes() const
+const std::string& RegulatingControl::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = PowerSystemResource::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& RegulatingControl::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& RegulatingControl::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& RegulatingControl::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& RegulatingControl::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& RegulatingControl::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_RegulatingCondEq_RegulatingControl(BaseClass*, BaseClass*);
@@ -360,55 +392,69 @@ const char* RegulatingControl::debugString() const
 
 void RegulatingControl::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:RegulatingControl", &RegulatingControl_factory);
+	factory_map.emplace("RegulatingControl", &RegulatingControl_factory);
 }
 
 void RegulatingControl::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:RegulatingControl.discrete", &assign_RegulatingControl_discrete);
-	assign_map.emplace("cim:RegulatingControl.enabled", &assign_RegulatingControl_enabled);
-	assign_map.emplace("cim:RegulatingControl.maxAllowedTargetValue", &assign_RegulatingControl_maxAllowedTargetValue);
-	assign_map.emplace("cim:RegulatingControl.minAllowedTargetValue", &assign_RegulatingControl_minAllowedTargetValue);
-	assign_map.emplace("cim:RegulatingControl.mode", &assign_RegulatingControl_mode);
-	assign_map.emplace("cim:RegulatingControl.targetDeadband", &assign_RegulatingControl_targetDeadband);
-	assign_map.emplace("cim:RegulatingControl.targetValue", &assign_RegulatingControl_targetValue);
-	assign_map.emplace("cim:RegulatingControl.targetValueUnitMultiplier", &assign_RegulatingControl_targetValueUnitMultiplier);
+	assign_map.emplace("RegulatingControl.discrete", &assign_RegulatingControl_discrete);
+	assign_map.emplace("RegulatingControl.enabled", &assign_RegulatingControl_enabled);
+	assign_map.emplace("RegulatingControl.maxAllowedTargetValue", &assign_RegulatingControl_maxAllowedTargetValue);
+	assign_map.emplace("RegulatingControl.minAllowedTargetValue", &assign_RegulatingControl_minAllowedTargetValue);
+	assign_map.emplace("RegulatingControl.mode", &assign_RegulatingControl_mode);
+	assign_map.emplace("RegulatingControl.targetDeadband", &assign_RegulatingControl_targetDeadband);
+	assign_map.emplace("RegulatingControl.targetValue", &assign_RegulatingControl_targetValue);
+	assign_map.emplace("RegulatingControl.targetValueUnitMultiplier", &assign_RegulatingControl_targetValueUnitMultiplier);
 }
 
 void RegulatingControl::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:RegulatingControl.RegulatingCondEq", &assign_RegulatingControl_RegulatingCondEq);
-	assign_map.emplace("cim:RegulatingControl.RegulationSchedule", &assign_RegulatingControl_RegulationSchedule);
-	assign_map.emplace("cim:RegulatingControl.Terminal", &assign_RegulatingControl_Terminal);
+	assign_map.emplace("RegulatingControl.RegulatingCondEq", &assign_RegulatingControl_RegulatingCondEq);
+	assign_map.emplace("RegulatingControl.RegulationSchedule", &assign_RegulatingControl_RegulationSchedule);
+	assign_map.emplace("RegulatingControl.Terminal", &assign_RegulatingControl_Terminal);
 }
 
 void RegulatingControl::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	PowerSystemResource::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:RegulatingControl.discrete", &get_RegulatingControl_discrete);
-	get_map.emplace("cim:RegulatingControl.enabled", &get_RegulatingControl_enabled);
-	get_map.emplace("cim:RegulatingControl.maxAllowedTargetValue", &get_RegulatingControl_maxAllowedTargetValue);
-	get_map.emplace("cim:RegulatingControl.minAllowedTargetValue", &get_RegulatingControl_minAllowedTargetValue);
-	get_map.emplace("cim:RegulatingControl.targetDeadband", &get_RegulatingControl_targetDeadband);
-	get_map.emplace("cim:RegulatingControl.targetValue", &get_RegulatingControl_targetValue);
+	get_map.emplace("RegulatingControl.discrete", &get_RegulatingControl_discrete);
+	get_map.emplace("RegulatingControl.enabled", &get_RegulatingControl_enabled);
+	get_map.emplace("RegulatingControl.maxAllowedTargetValue", &get_RegulatingControl_maxAllowedTargetValue);
+	get_map.emplace("RegulatingControl.minAllowedTargetValue", &get_RegulatingControl_minAllowedTargetValue);
+	get_map.emplace("RegulatingControl.targetDeadband", &get_RegulatingControl_targetDeadband);
+	get_map.emplace("RegulatingControl.targetValue", &get_RegulatingControl_targetValue);
 }
 
 void RegulatingControl::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	PowerSystemResource::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:RegulatingControl.Terminal", &get_RegulatingControl_Terminal);
+	get_map.emplace("RegulatingControl.Terminal", &get_RegulatingControl_Terminal);
 }
 
 void RegulatingControl::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	PowerSystemResource::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:RegulatingControl.mode", &get_RegulatingControl_mode);
-	get_map.emplace("cim:RegulatingControl.targetValueUnitMultiplier", &get_RegulatingControl_targetValueUnitMultiplier);
+	get_map.emplace("RegulatingControl.mode", &get_RegulatingControl_mode);
+	get_map.emplace("RegulatingControl.targetValueUnitMultiplier", &get_RegulatingControl_targetValueUnitMultiplier);
+}
+
+bool RegulatingControl::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "RegulatingControl" &&
+		dynamic_cast<RegulatingControl*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner RegulatingControl::declare()
 {
 	return BaseClassDefiner(RegulatingControl::addConstructToMap, RegulatingControl::addPrimitiveAssignFnsToMap, RegulatingControl::addClassAssignFnsToMap, RegulatingControl::debugName);
+}
+
+std::map<std::string, AttrDetails> RegulatingControl::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = PowerSystemResource::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

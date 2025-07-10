@@ -12,35 +12,67 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		PerLengthDCLineParameter(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "PerLengthDCLineParameter.DCLineSegments", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "PerLengthDCLineParameter.capacitance", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "PerLengthDCLineParameter.inductance", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "PerLengthDCLineParameter.resistance", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 PerLengthDCLineParameter::PerLengthDCLineParameter() {}
 PerLengthDCLineParameter::~PerLengthDCLineParameter() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& PerLengthDCLineParameter::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:PerLengthDCLineParameter.DCLineSegments", { CGMESProfile::EQ, } },
-	{ "cim:PerLengthDCLineParameter.capacitance", { CGMESProfile::EQ, } },
-	{ "cim:PerLengthDCLineParameter.inductance", { CGMESProfile::EQ, } },
-	{ "cim:PerLengthDCLineParameter.resistance", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-PerLengthDCLineParameter::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-PerLengthDCLineParameter::getPossibleProfilesForAttributes() const
+const std::string& PerLengthDCLineParameter::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& PerLengthDCLineParameter::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& PerLengthDCLineParameter::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& PerLengthDCLineParameter::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& PerLengthDCLineParameter::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& PerLengthDCLineParameter::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_DCLineSegment_PerLengthParameter(BaseClass*, BaseClass*);
@@ -156,27 +188,27 @@ const char* PerLengthDCLineParameter::debugString() const
 
 void PerLengthDCLineParameter::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:PerLengthDCLineParameter", &PerLengthDCLineParameter_factory);
+	factory_map.emplace("PerLengthDCLineParameter", &PerLengthDCLineParameter_factory);
 }
 
 void PerLengthDCLineParameter::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:PerLengthDCLineParameter.capacitance", &assign_PerLengthDCLineParameter_capacitance);
-	assign_map.emplace("cim:PerLengthDCLineParameter.inductance", &assign_PerLengthDCLineParameter_inductance);
-	assign_map.emplace("cim:PerLengthDCLineParameter.resistance", &assign_PerLengthDCLineParameter_resistance);
+	assign_map.emplace("PerLengthDCLineParameter.capacitance", &assign_PerLengthDCLineParameter_capacitance);
+	assign_map.emplace("PerLengthDCLineParameter.inductance", &assign_PerLengthDCLineParameter_inductance);
+	assign_map.emplace("PerLengthDCLineParameter.resistance", &assign_PerLengthDCLineParameter_resistance);
 }
 
 void PerLengthDCLineParameter::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:PerLengthDCLineParameter.DCLineSegments", &assign_PerLengthDCLineParameter_DCLineSegments);
+	assign_map.emplace("PerLengthDCLineParameter.DCLineSegments", &assign_PerLengthDCLineParameter_DCLineSegments);
 }
 
 void PerLengthDCLineParameter::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	BaseClass::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:PerLengthDCLineParameter.capacitance", &get_PerLengthDCLineParameter_capacitance);
-	get_map.emplace("cim:PerLengthDCLineParameter.inductance", &get_PerLengthDCLineParameter_inductance);
-	get_map.emplace("cim:PerLengthDCLineParameter.resistance", &get_PerLengthDCLineParameter_resistance);
+	get_map.emplace("PerLengthDCLineParameter.capacitance", &get_PerLengthDCLineParameter_capacitance);
+	get_map.emplace("PerLengthDCLineParameter.inductance", &get_PerLengthDCLineParameter_inductance);
+	get_map.emplace("PerLengthDCLineParameter.resistance", &get_PerLengthDCLineParameter_resistance);
 }
 
 void PerLengthDCLineParameter::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -189,9 +221,23 @@ void PerLengthDCLineParameter::addEnumGetFnsToMap(std::map<std::string, get_func
 	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
+bool PerLengthDCLineParameter::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "PerLengthDCLineParameter" &&
+		dynamic_cast<PerLengthDCLineParameter*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner PerLengthDCLineParameter::declare()
 {
 	return BaseClassDefiner(PerLengthDCLineParameter::addConstructToMap, PerLengthDCLineParameter::addPrimitiveAssignFnsToMap, PerLengthDCLineParameter::addClassAssignFnsToMap, PerLengthDCLineParameter::debugName);
+}
+
+std::map<std::string, AttrDetails> PerLengthDCLineParameter::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = BaseClass::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

@@ -12,43 +12,75 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		LoadResponseCharacteristic(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "LoadResponseCharacteristic.EnergyConsumer", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "LoadResponseCharacteristic.exponentModel", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "LoadResponseCharacteristic.pConstantCurrent", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "LoadResponseCharacteristic.pConstantImpedance", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "LoadResponseCharacteristic.pConstantPower", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "LoadResponseCharacteristic.pFrequencyExponent", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "LoadResponseCharacteristic.pVoltageExponent", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "LoadResponseCharacteristic.qConstantCurrent", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "LoadResponseCharacteristic.qConstantImpedance", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "LoadResponseCharacteristic.qConstantPower", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "LoadResponseCharacteristic.qFrequencyExponent", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "LoadResponseCharacteristic.qVoltageExponent", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 LoadResponseCharacteristic::LoadResponseCharacteristic() {}
 LoadResponseCharacteristic::~LoadResponseCharacteristic() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& LoadResponseCharacteristic::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:LoadResponseCharacteristic.EnergyConsumer", { CGMESProfile::EQ, } },
-	{ "cim:LoadResponseCharacteristic.exponentModel", { CGMESProfile::EQ, } },
-	{ "cim:LoadResponseCharacteristic.pConstantCurrent", { CGMESProfile::EQ, } },
-	{ "cim:LoadResponseCharacteristic.pConstantImpedance", { CGMESProfile::EQ, } },
-	{ "cim:LoadResponseCharacteristic.pConstantPower", { CGMESProfile::EQ, } },
-	{ "cim:LoadResponseCharacteristic.pFrequencyExponent", { CGMESProfile::EQ, } },
-	{ "cim:LoadResponseCharacteristic.pVoltageExponent", { CGMESProfile::EQ, } },
-	{ "cim:LoadResponseCharacteristic.qConstantCurrent", { CGMESProfile::EQ, } },
-	{ "cim:LoadResponseCharacteristic.qConstantImpedance", { CGMESProfile::EQ, } },
-	{ "cim:LoadResponseCharacteristic.qConstantPower", { CGMESProfile::EQ, } },
-	{ "cim:LoadResponseCharacteristic.qFrequencyExponent", { CGMESProfile::EQ, } },
-	{ "cim:LoadResponseCharacteristic.qVoltageExponent", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-LoadResponseCharacteristic::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-LoadResponseCharacteristic::getPossibleProfilesForAttributes() const
+const std::string& LoadResponseCharacteristic::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& LoadResponseCharacteristic::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& LoadResponseCharacteristic::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& LoadResponseCharacteristic::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& LoadResponseCharacteristic::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& LoadResponseCharacteristic::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_EnergyConsumer_LoadResponse(BaseClass*, BaseClass*);
@@ -396,43 +428,43 @@ const char* LoadResponseCharacteristic::debugString() const
 
 void LoadResponseCharacteristic::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:LoadResponseCharacteristic", &LoadResponseCharacteristic_factory);
+	factory_map.emplace("LoadResponseCharacteristic", &LoadResponseCharacteristic_factory);
 }
 
 void LoadResponseCharacteristic::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:LoadResponseCharacteristic.exponentModel", &assign_LoadResponseCharacteristic_exponentModel);
-	assign_map.emplace("cim:LoadResponseCharacteristic.pConstantCurrent", &assign_LoadResponseCharacteristic_pConstantCurrent);
-	assign_map.emplace("cim:LoadResponseCharacteristic.pConstantImpedance", &assign_LoadResponseCharacteristic_pConstantImpedance);
-	assign_map.emplace("cim:LoadResponseCharacteristic.pConstantPower", &assign_LoadResponseCharacteristic_pConstantPower);
-	assign_map.emplace("cim:LoadResponseCharacteristic.pFrequencyExponent", &assign_LoadResponseCharacteristic_pFrequencyExponent);
-	assign_map.emplace("cim:LoadResponseCharacteristic.pVoltageExponent", &assign_LoadResponseCharacteristic_pVoltageExponent);
-	assign_map.emplace("cim:LoadResponseCharacteristic.qConstantCurrent", &assign_LoadResponseCharacteristic_qConstantCurrent);
-	assign_map.emplace("cim:LoadResponseCharacteristic.qConstantImpedance", &assign_LoadResponseCharacteristic_qConstantImpedance);
-	assign_map.emplace("cim:LoadResponseCharacteristic.qConstantPower", &assign_LoadResponseCharacteristic_qConstantPower);
-	assign_map.emplace("cim:LoadResponseCharacteristic.qFrequencyExponent", &assign_LoadResponseCharacteristic_qFrequencyExponent);
-	assign_map.emplace("cim:LoadResponseCharacteristic.qVoltageExponent", &assign_LoadResponseCharacteristic_qVoltageExponent);
+	assign_map.emplace("LoadResponseCharacteristic.exponentModel", &assign_LoadResponseCharacteristic_exponentModel);
+	assign_map.emplace("LoadResponseCharacteristic.pConstantCurrent", &assign_LoadResponseCharacteristic_pConstantCurrent);
+	assign_map.emplace("LoadResponseCharacteristic.pConstantImpedance", &assign_LoadResponseCharacteristic_pConstantImpedance);
+	assign_map.emplace("LoadResponseCharacteristic.pConstantPower", &assign_LoadResponseCharacteristic_pConstantPower);
+	assign_map.emplace("LoadResponseCharacteristic.pFrequencyExponent", &assign_LoadResponseCharacteristic_pFrequencyExponent);
+	assign_map.emplace("LoadResponseCharacteristic.pVoltageExponent", &assign_LoadResponseCharacteristic_pVoltageExponent);
+	assign_map.emplace("LoadResponseCharacteristic.qConstantCurrent", &assign_LoadResponseCharacteristic_qConstantCurrent);
+	assign_map.emplace("LoadResponseCharacteristic.qConstantImpedance", &assign_LoadResponseCharacteristic_qConstantImpedance);
+	assign_map.emplace("LoadResponseCharacteristic.qConstantPower", &assign_LoadResponseCharacteristic_qConstantPower);
+	assign_map.emplace("LoadResponseCharacteristic.qFrequencyExponent", &assign_LoadResponseCharacteristic_qFrequencyExponent);
+	assign_map.emplace("LoadResponseCharacteristic.qVoltageExponent", &assign_LoadResponseCharacteristic_qVoltageExponent);
 }
 
 void LoadResponseCharacteristic::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:LoadResponseCharacteristic.EnergyConsumer", &assign_LoadResponseCharacteristic_EnergyConsumer);
+	assign_map.emplace("LoadResponseCharacteristic.EnergyConsumer", &assign_LoadResponseCharacteristic_EnergyConsumer);
 }
 
 void LoadResponseCharacteristic::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:LoadResponseCharacteristic.exponentModel", &get_LoadResponseCharacteristic_exponentModel);
-	get_map.emplace("cim:LoadResponseCharacteristic.pConstantCurrent", &get_LoadResponseCharacteristic_pConstantCurrent);
-	get_map.emplace("cim:LoadResponseCharacteristic.pConstantImpedance", &get_LoadResponseCharacteristic_pConstantImpedance);
-	get_map.emplace("cim:LoadResponseCharacteristic.pConstantPower", &get_LoadResponseCharacteristic_pConstantPower);
-	get_map.emplace("cim:LoadResponseCharacteristic.pFrequencyExponent", &get_LoadResponseCharacteristic_pFrequencyExponent);
-	get_map.emplace("cim:LoadResponseCharacteristic.pVoltageExponent", &get_LoadResponseCharacteristic_pVoltageExponent);
-	get_map.emplace("cim:LoadResponseCharacteristic.qConstantCurrent", &get_LoadResponseCharacteristic_qConstantCurrent);
-	get_map.emplace("cim:LoadResponseCharacteristic.qConstantImpedance", &get_LoadResponseCharacteristic_qConstantImpedance);
-	get_map.emplace("cim:LoadResponseCharacteristic.qConstantPower", &get_LoadResponseCharacteristic_qConstantPower);
-	get_map.emplace("cim:LoadResponseCharacteristic.qFrequencyExponent", &get_LoadResponseCharacteristic_qFrequencyExponent);
-	get_map.emplace("cim:LoadResponseCharacteristic.qVoltageExponent", &get_LoadResponseCharacteristic_qVoltageExponent);
+	get_map.emplace("LoadResponseCharacteristic.exponentModel", &get_LoadResponseCharacteristic_exponentModel);
+	get_map.emplace("LoadResponseCharacteristic.pConstantCurrent", &get_LoadResponseCharacteristic_pConstantCurrent);
+	get_map.emplace("LoadResponseCharacteristic.pConstantImpedance", &get_LoadResponseCharacteristic_pConstantImpedance);
+	get_map.emplace("LoadResponseCharacteristic.pConstantPower", &get_LoadResponseCharacteristic_pConstantPower);
+	get_map.emplace("LoadResponseCharacteristic.pFrequencyExponent", &get_LoadResponseCharacteristic_pFrequencyExponent);
+	get_map.emplace("LoadResponseCharacteristic.pVoltageExponent", &get_LoadResponseCharacteristic_pVoltageExponent);
+	get_map.emplace("LoadResponseCharacteristic.qConstantCurrent", &get_LoadResponseCharacteristic_qConstantCurrent);
+	get_map.emplace("LoadResponseCharacteristic.qConstantImpedance", &get_LoadResponseCharacteristic_qConstantImpedance);
+	get_map.emplace("LoadResponseCharacteristic.qConstantPower", &get_LoadResponseCharacteristic_qConstantPower);
+	get_map.emplace("LoadResponseCharacteristic.qFrequencyExponent", &get_LoadResponseCharacteristic_qFrequencyExponent);
+	get_map.emplace("LoadResponseCharacteristic.qVoltageExponent", &get_LoadResponseCharacteristic_qVoltageExponent);
 }
 
 void LoadResponseCharacteristic::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -445,9 +477,23 @@ void LoadResponseCharacteristic::addEnumGetFnsToMap(std::map<std::string, get_fu
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool LoadResponseCharacteristic::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "LoadResponseCharacteristic" &&
+		dynamic_cast<LoadResponseCharacteristic*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner LoadResponseCharacteristic::declare()
 {
 	return BaseClassDefiner(LoadResponseCharacteristic::addConstructToMap, LoadResponseCharacteristic::addPrimitiveAssignFnsToMap, LoadResponseCharacteristic::addClassAssignFnsToMap, LoadResponseCharacteristic::debugName);
+}
+
+std::map<std::string, AttrDetails> LoadResponseCharacteristic::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

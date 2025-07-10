@@ -11,47 +11,79 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ExcIEEEDC2A(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ExcIEEEDC2A.efd1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcIEEEDC2A.efd2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcIEEEDC2A.exclim", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcIEEEDC2A.ka", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcIEEEDC2A.ke", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcIEEEDC2A.kf", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcIEEEDC2A.seefd1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcIEEEDC2A.seefd2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcIEEEDC2A.ta", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcIEEEDC2A.tb", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcIEEEDC2A.tc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcIEEEDC2A.te", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcIEEEDC2A.tf", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcIEEEDC2A.uelin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcIEEEDC2A.vrmax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcIEEEDC2A.vrmin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ExcIEEEDC2A::ExcIEEEDC2A() {}
 ExcIEEEDC2A::~ExcIEEEDC2A() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ExcIEEEDC2A::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ExcIEEEDC2A.efd1", { CGMESProfile::DY, } },
-	{ "cim:ExcIEEEDC2A.efd2", { CGMESProfile::DY, } },
-	{ "cim:ExcIEEEDC2A.exclim", { CGMESProfile::DY, } },
-	{ "cim:ExcIEEEDC2A.ka", { CGMESProfile::DY, } },
-	{ "cim:ExcIEEEDC2A.ke", { CGMESProfile::DY, } },
-	{ "cim:ExcIEEEDC2A.kf", { CGMESProfile::DY, } },
-	{ "cim:ExcIEEEDC2A.seefd1", { CGMESProfile::DY, } },
-	{ "cim:ExcIEEEDC2A.seefd2", { CGMESProfile::DY, } },
-	{ "cim:ExcIEEEDC2A.ta", { CGMESProfile::DY, } },
-	{ "cim:ExcIEEEDC2A.tb", { CGMESProfile::DY, } },
-	{ "cim:ExcIEEEDC2A.tc", { CGMESProfile::DY, } },
-	{ "cim:ExcIEEEDC2A.te", { CGMESProfile::DY, } },
-	{ "cim:ExcIEEEDC2A.tf", { CGMESProfile::DY, } },
-	{ "cim:ExcIEEEDC2A.uelin", { CGMESProfile::DY, } },
-	{ "cim:ExcIEEEDC2A.vrmax", { CGMESProfile::DY, } },
-	{ "cim:ExcIEEEDC2A.vrmin", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-ExcIEEEDC2A::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ExcIEEEDC2A::getPossibleProfilesForAttributes() const
+const std::string& ExcIEEEDC2A::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ExcIEEEDC2A::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ExcIEEEDC2A::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ExcIEEEDC2A::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ExcIEEEDC2A::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ExcIEEEDC2A::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ExcIEEEDC2A_efd1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -526,27 +558,27 @@ const char* ExcIEEEDC2A::debugString() const
 
 void ExcIEEEDC2A::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ExcIEEEDC2A", &ExcIEEEDC2A_factory);
+	factory_map.emplace("ExcIEEEDC2A", &ExcIEEEDC2A_factory);
 }
 
 void ExcIEEEDC2A::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ExcIEEEDC2A.efd1", &assign_ExcIEEEDC2A_efd1);
-	assign_map.emplace("cim:ExcIEEEDC2A.efd2", &assign_ExcIEEEDC2A_efd2);
-	assign_map.emplace("cim:ExcIEEEDC2A.exclim", &assign_ExcIEEEDC2A_exclim);
-	assign_map.emplace("cim:ExcIEEEDC2A.ka", &assign_ExcIEEEDC2A_ka);
-	assign_map.emplace("cim:ExcIEEEDC2A.ke", &assign_ExcIEEEDC2A_ke);
-	assign_map.emplace("cim:ExcIEEEDC2A.kf", &assign_ExcIEEEDC2A_kf);
-	assign_map.emplace("cim:ExcIEEEDC2A.seefd1", &assign_ExcIEEEDC2A_seefd1);
-	assign_map.emplace("cim:ExcIEEEDC2A.seefd2", &assign_ExcIEEEDC2A_seefd2);
-	assign_map.emplace("cim:ExcIEEEDC2A.ta", &assign_ExcIEEEDC2A_ta);
-	assign_map.emplace("cim:ExcIEEEDC2A.tb", &assign_ExcIEEEDC2A_tb);
-	assign_map.emplace("cim:ExcIEEEDC2A.tc", &assign_ExcIEEEDC2A_tc);
-	assign_map.emplace("cim:ExcIEEEDC2A.te", &assign_ExcIEEEDC2A_te);
-	assign_map.emplace("cim:ExcIEEEDC2A.tf", &assign_ExcIEEEDC2A_tf);
-	assign_map.emplace("cim:ExcIEEEDC2A.uelin", &assign_ExcIEEEDC2A_uelin);
-	assign_map.emplace("cim:ExcIEEEDC2A.vrmax", &assign_ExcIEEEDC2A_vrmax);
-	assign_map.emplace("cim:ExcIEEEDC2A.vrmin", &assign_ExcIEEEDC2A_vrmin);
+	assign_map.emplace("ExcIEEEDC2A.efd1", &assign_ExcIEEEDC2A_efd1);
+	assign_map.emplace("ExcIEEEDC2A.efd2", &assign_ExcIEEEDC2A_efd2);
+	assign_map.emplace("ExcIEEEDC2A.exclim", &assign_ExcIEEEDC2A_exclim);
+	assign_map.emplace("ExcIEEEDC2A.ka", &assign_ExcIEEEDC2A_ka);
+	assign_map.emplace("ExcIEEEDC2A.ke", &assign_ExcIEEEDC2A_ke);
+	assign_map.emplace("ExcIEEEDC2A.kf", &assign_ExcIEEEDC2A_kf);
+	assign_map.emplace("ExcIEEEDC2A.seefd1", &assign_ExcIEEEDC2A_seefd1);
+	assign_map.emplace("ExcIEEEDC2A.seefd2", &assign_ExcIEEEDC2A_seefd2);
+	assign_map.emplace("ExcIEEEDC2A.ta", &assign_ExcIEEEDC2A_ta);
+	assign_map.emplace("ExcIEEEDC2A.tb", &assign_ExcIEEEDC2A_tb);
+	assign_map.emplace("ExcIEEEDC2A.tc", &assign_ExcIEEEDC2A_tc);
+	assign_map.emplace("ExcIEEEDC2A.te", &assign_ExcIEEEDC2A_te);
+	assign_map.emplace("ExcIEEEDC2A.tf", &assign_ExcIEEEDC2A_tf);
+	assign_map.emplace("ExcIEEEDC2A.uelin", &assign_ExcIEEEDC2A_uelin);
+	assign_map.emplace("ExcIEEEDC2A.vrmax", &assign_ExcIEEEDC2A_vrmax);
+	assign_map.emplace("ExcIEEEDC2A.vrmin", &assign_ExcIEEEDC2A_vrmin);
 }
 
 void ExcIEEEDC2A::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -556,22 +588,22 @@ void ExcIEEEDC2A::addClassAssignFnsToMap(std::unordered_map<std::string, class_a
 void ExcIEEEDC2A::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ExcIEEEDC2A.efd1", &get_ExcIEEEDC2A_efd1);
-	get_map.emplace("cim:ExcIEEEDC2A.efd2", &get_ExcIEEEDC2A_efd2);
-	get_map.emplace("cim:ExcIEEEDC2A.exclim", &get_ExcIEEEDC2A_exclim);
-	get_map.emplace("cim:ExcIEEEDC2A.ka", &get_ExcIEEEDC2A_ka);
-	get_map.emplace("cim:ExcIEEEDC2A.ke", &get_ExcIEEEDC2A_ke);
-	get_map.emplace("cim:ExcIEEEDC2A.kf", &get_ExcIEEEDC2A_kf);
-	get_map.emplace("cim:ExcIEEEDC2A.seefd1", &get_ExcIEEEDC2A_seefd1);
-	get_map.emplace("cim:ExcIEEEDC2A.seefd2", &get_ExcIEEEDC2A_seefd2);
-	get_map.emplace("cim:ExcIEEEDC2A.ta", &get_ExcIEEEDC2A_ta);
-	get_map.emplace("cim:ExcIEEEDC2A.tb", &get_ExcIEEEDC2A_tb);
-	get_map.emplace("cim:ExcIEEEDC2A.tc", &get_ExcIEEEDC2A_tc);
-	get_map.emplace("cim:ExcIEEEDC2A.te", &get_ExcIEEEDC2A_te);
-	get_map.emplace("cim:ExcIEEEDC2A.tf", &get_ExcIEEEDC2A_tf);
-	get_map.emplace("cim:ExcIEEEDC2A.uelin", &get_ExcIEEEDC2A_uelin);
-	get_map.emplace("cim:ExcIEEEDC2A.vrmax", &get_ExcIEEEDC2A_vrmax);
-	get_map.emplace("cim:ExcIEEEDC2A.vrmin", &get_ExcIEEEDC2A_vrmin);
+	get_map.emplace("ExcIEEEDC2A.efd1", &get_ExcIEEEDC2A_efd1);
+	get_map.emplace("ExcIEEEDC2A.efd2", &get_ExcIEEEDC2A_efd2);
+	get_map.emplace("ExcIEEEDC2A.exclim", &get_ExcIEEEDC2A_exclim);
+	get_map.emplace("ExcIEEEDC2A.ka", &get_ExcIEEEDC2A_ka);
+	get_map.emplace("ExcIEEEDC2A.ke", &get_ExcIEEEDC2A_ke);
+	get_map.emplace("ExcIEEEDC2A.kf", &get_ExcIEEEDC2A_kf);
+	get_map.emplace("ExcIEEEDC2A.seefd1", &get_ExcIEEEDC2A_seefd1);
+	get_map.emplace("ExcIEEEDC2A.seefd2", &get_ExcIEEEDC2A_seefd2);
+	get_map.emplace("ExcIEEEDC2A.ta", &get_ExcIEEEDC2A_ta);
+	get_map.emplace("ExcIEEEDC2A.tb", &get_ExcIEEEDC2A_tb);
+	get_map.emplace("ExcIEEEDC2A.tc", &get_ExcIEEEDC2A_tc);
+	get_map.emplace("ExcIEEEDC2A.te", &get_ExcIEEEDC2A_te);
+	get_map.emplace("ExcIEEEDC2A.tf", &get_ExcIEEEDC2A_tf);
+	get_map.emplace("ExcIEEEDC2A.uelin", &get_ExcIEEEDC2A_uelin);
+	get_map.emplace("ExcIEEEDC2A.vrmax", &get_ExcIEEEDC2A_vrmax);
+	get_map.emplace("ExcIEEEDC2A.vrmin", &get_ExcIEEEDC2A_vrmin);
 }
 
 void ExcIEEEDC2A::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -584,9 +616,23 @@ void ExcIEEEDC2A::addEnumGetFnsToMap(std::map<std::string, get_function>& get_ma
 	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool ExcIEEEDC2A::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ExcIEEEDC2A" &&
+		dynamic_cast<ExcIEEEDC2A*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ExcIEEEDC2A::declare()
 {
 	return BaseClassDefiner(ExcIEEEDC2A::addConstructToMap, ExcIEEEDC2A::addPrimitiveAssignFnsToMap, ExcIEEEDC2A::addClassAssignFnsToMap, ExcIEEEDC2A::debugName);
+}
+
+std::map<std::string, AttrDetails> ExcIEEEDC2A::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ExcitationSystemDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

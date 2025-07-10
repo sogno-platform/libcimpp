@@ -11,41 +11,73 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ExcSEXS(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ExcSEXS.efdmax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcSEXS.efdmin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcSEXS.emax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcSEXS.emin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcSEXS.k", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcSEXS.kc", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcSEXS.tatb", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcSEXS.tb", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcSEXS.tc", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcSEXS.te", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ExcSEXS::ExcSEXS() {}
 ExcSEXS::~ExcSEXS() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ExcSEXS::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ExcSEXS.efdmax", { CGMESProfile::DY, } },
-	{ "cim:ExcSEXS.efdmin", { CGMESProfile::DY, } },
-	{ "cim:ExcSEXS.emax", { CGMESProfile::DY, } },
-	{ "cim:ExcSEXS.emin", { CGMESProfile::DY, } },
-	{ "cim:ExcSEXS.k", { CGMESProfile::DY, } },
-	{ "cim:ExcSEXS.kc", { CGMESProfile::DY, } },
-	{ "cim:ExcSEXS.tatb", { CGMESProfile::DY, } },
-	{ "cim:ExcSEXS.tb", { CGMESProfile::DY, } },
-	{ "cim:ExcSEXS.tc", { CGMESProfile::DY, } },
-	{ "cim:ExcSEXS.te", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-ExcSEXS::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ExcSEXS::getPossibleProfilesForAttributes() const
+const std::string& ExcSEXS::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ExcSEXS::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ExcSEXS::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ExcSEXS::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ExcSEXS::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ExcSEXS::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ExcSEXS_efdmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -346,21 +378,21 @@ const char* ExcSEXS::debugString() const
 
 void ExcSEXS::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ExcSEXS", &ExcSEXS_factory);
+	factory_map.emplace("ExcSEXS", &ExcSEXS_factory);
 }
 
 void ExcSEXS::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ExcSEXS.efdmax", &assign_ExcSEXS_efdmax);
-	assign_map.emplace("cim:ExcSEXS.efdmin", &assign_ExcSEXS_efdmin);
-	assign_map.emplace("cim:ExcSEXS.emax", &assign_ExcSEXS_emax);
-	assign_map.emplace("cim:ExcSEXS.emin", &assign_ExcSEXS_emin);
-	assign_map.emplace("cim:ExcSEXS.k", &assign_ExcSEXS_k);
-	assign_map.emplace("cim:ExcSEXS.kc", &assign_ExcSEXS_kc);
-	assign_map.emplace("cim:ExcSEXS.tatb", &assign_ExcSEXS_tatb);
-	assign_map.emplace("cim:ExcSEXS.tb", &assign_ExcSEXS_tb);
-	assign_map.emplace("cim:ExcSEXS.tc", &assign_ExcSEXS_tc);
-	assign_map.emplace("cim:ExcSEXS.te", &assign_ExcSEXS_te);
+	assign_map.emplace("ExcSEXS.efdmax", &assign_ExcSEXS_efdmax);
+	assign_map.emplace("ExcSEXS.efdmin", &assign_ExcSEXS_efdmin);
+	assign_map.emplace("ExcSEXS.emax", &assign_ExcSEXS_emax);
+	assign_map.emplace("ExcSEXS.emin", &assign_ExcSEXS_emin);
+	assign_map.emplace("ExcSEXS.k", &assign_ExcSEXS_k);
+	assign_map.emplace("ExcSEXS.kc", &assign_ExcSEXS_kc);
+	assign_map.emplace("ExcSEXS.tatb", &assign_ExcSEXS_tatb);
+	assign_map.emplace("ExcSEXS.tb", &assign_ExcSEXS_tb);
+	assign_map.emplace("ExcSEXS.tc", &assign_ExcSEXS_tc);
+	assign_map.emplace("ExcSEXS.te", &assign_ExcSEXS_te);
 }
 
 void ExcSEXS::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -370,16 +402,16 @@ void ExcSEXS::addClassAssignFnsToMap(std::unordered_map<std::string, class_assig
 void ExcSEXS::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ExcSEXS.efdmax", &get_ExcSEXS_efdmax);
-	get_map.emplace("cim:ExcSEXS.efdmin", &get_ExcSEXS_efdmin);
-	get_map.emplace("cim:ExcSEXS.emax", &get_ExcSEXS_emax);
-	get_map.emplace("cim:ExcSEXS.emin", &get_ExcSEXS_emin);
-	get_map.emplace("cim:ExcSEXS.k", &get_ExcSEXS_k);
-	get_map.emplace("cim:ExcSEXS.kc", &get_ExcSEXS_kc);
-	get_map.emplace("cim:ExcSEXS.tatb", &get_ExcSEXS_tatb);
-	get_map.emplace("cim:ExcSEXS.tb", &get_ExcSEXS_tb);
-	get_map.emplace("cim:ExcSEXS.tc", &get_ExcSEXS_tc);
-	get_map.emplace("cim:ExcSEXS.te", &get_ExcSEXS_te);
+	get_map.emplace("ExcSEXS.efdmax", &get_ExcSEXS_efdmax);
+	get_map.emplace("ExcSEXS.efdmin", &get_ExcSEXS_efdmin);
+	get_map.emplace("ExcSEXS.emax", &get_ExcSEXS_emax);
+	get_map.emplace("ExcSEXS.emin", &get_ExcSEXS_emin);
+	get_map.emplace("ExcSEXS.k", &get_ExcSEXS_k);
+	get_map.emplace("ExcSEXS.kc", &get_ExcSEXS_kc);
+	get_map.emplace("ExcSEXS.tatb", &get_ExcSEXS_tatb);
+	get_map.emplace("ExcSEXS.tb", &get_ExcSEXS_tb);
+	get_map.emplace("ExcSEXS.tc", &get_ExcSEXS_tc);
+	get_map.emplace("ExcSEXS.te", &get_ExcSEXS_te);
 }
 
 void ExcSEXS::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -392,9 +424,23 @@ void ExcSEXS::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) c
 	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool ExcSEXS::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ExcSEXS" &&
+		dynamic_cast<ExcSEXS*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ExcSEXS::declare()
 {
 	return BaseClassDefiner(ExcSEXS::addConstructToMap, ExcSEXS::addPrimitiveAssignFnsToMap, ExcSEXS::addClassAssignFnsToMap, ExcSEXS::debugName);
+}
+
+std::map<std::string, AttrDetails> ExcSEXS::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ExcitationSystemDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

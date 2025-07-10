@@ -12,47 +12,79 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		EnergySource(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SC,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "EnergySource.EnergySchedulingType", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "EnergySource.activePower", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+		{ "EnergySource.nominalVoltage", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "EnergySource.pMax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "EnergySource.pMin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "EnergySource.r", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "EnergySource.r0", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "EnergySource.reactivePower", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+		{ "EnergySource.rn", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "EnergySource.voltageAngle", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+		{ "EnergySource.voltageMagnitude", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+		{ "EnergySource.x", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "EnergySource.x0", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "EnergySource.xn", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 EnergySource::EnergySource() : EnergySchedulingType(nullptr) {}
 EnergySource::~EnergySource() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& EnergySource::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SC,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:EnergySource.EnergySchedulingType", { CGMESProfile::EQ, } },
-	{ "cim:EnergySource.activePower", { CGMESProfile::SSH, } },
-	{ "cim:EnergySource.nominalVoltage", { CGMESProfile::EQ, } },
-	{ "cim:EnergySource.pMax", { CGMESProfile::EQ, } },
-	{ "cim:EnergySource.pMin", { CGMESProfile::EQ, } },
-	{ "cim:EnergySource.r", { CGMESProfile::SC, } },
-	{ "cim:EnergySource.r0", { CGMESProfile::SC, } },
-	{ "cim:EnergySource.reactivePower", { CGMESProfile::SSH, } },
-	{ "cim:EnergySource.rn", { CGMESProfile::SC, } },
-	{ "cim:EnergySource.voltageAngle", { CGMESProfile::SSH, } },
-	{ "cim:EnergySource.voltageMagnitude", { CGMESProfile::SSH, } },
-	{ "cim:EnergySource.x", { CGMESProfile::SC, } },
-	{ "cim:EnergySource.x0", { CGMESProfile::SC, } },
-	{ "cim:EnergySource.xn", { CGMESProfile::SC, } },
-};
-
-std::list<CGMESProfile>
-EnergySource::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-EnergySource::getPossibleProfilesForAttributes() const
+const std::string& EnergySource::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = EnergyConnection::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& EnergySource::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& EnergySource::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& EnergySource::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& EnergySource::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& EnergySource::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_EnergySchedulingType_EnergySource(BaseClass*, BaseClass*);
@@ -471,53 +503,53 @@ const char* EnergySource::debugString() const
 
 void EnergySource::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:EnergySource", &EnergySource_factory);
+	factory_map.emplace("EnergySource", &EnergySource_factory);
 }
 
 void EnergySource::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:EnergySource.activePower", &assign_EnergySource_activePower);
-	assign_map.emplace("cim:EnergySource.nominalVoltage", &assign_EnergySource_nominalVoltage);
-	assign_map.emplace("cim:EnergySource.pMax", &assign_EnergySource_pMax);
-	assign_map.emplace("cim:EnergySource.pMin", &assign_EnergySource_pMin);
-	assign_map.emplace("cim:EnergySource.r", &assign_EnergySource_r);
-	assign_map.emplace("cim:EnergySource.r0", &assign_EnergySource_r0);
-	assign_map.emplace("cim:EnergySource.reactivePower", &assign_EnergySource_reactivePower);
-	assign_map.emplace("cim:EnergySource.rn", &assign_EnergySource_rn);
-	assign_map.emplace("cim:EnergySource.voltageAngle", &assign_EnergySource_voltageAngle);
-	assign_map.emplace("cim:EnergySource.voltageMagnitude", &assign_EnergySource_voltageMagnitude);
-	assign_map.emplace("cim:EnergySource.x", &assign_EnergySource_x);
-	assign_map.emplace("cim:EnergySource.x0", &assign_EnergySource_x0);
-	assign_map.emplace("cim:EnergySource.xn", &assign_EnergySource_xn);
+	assign_map.emplace("EnergySource.activePower", &assign_EnergySource_activePower);
+	assign_map.emplace("EnergySource.nominalVoltage", &assign_EnergySource_nominalVoltage);
+	assign_map.emplace("EnergySource.pMax", &assign_EnergySource_pMax);
+	assign_map.emplace("EnergySource.pMin", &assign_EnergySource_pMin);
+	assign_map.emplace("EnergySource.r", &assign_EnergySource_r);
+	assign_map.emplace("EnergySource.r0", &assign_EnergySource_r0);
+	assign_map.emplace("EnergySource.reactivePower", &assign_EnergySource_reactivePower);
+	assign_map.emplace("EnergySource.rn", &assign_EnergySource_rn);
+	assign_map.emplace("EnergySource.voltageAngle", &assign_EnergySource_voltageAngle);
+	assign_map.emplace("EnergySource.voltageMagnitude", &assign_EnergySource_voltageMagnitude);
+	assign_map.emplace("EnergySource.x", &assign_EnergySource_x);
+	assign_map.emplace("EnergySource.x0", &assign_EnergySource_x0);
+	assign_map.emplace("EnergySource.xn", &assign_EnergySource_xn);
 }
 
 void EnergySource::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:EnergySource.EnergySchedulingType", &assign_EnergySource_EnergySchedulingType);
+	assign_map.emplace("EnergySource.EnergySchedulingType", &assign_EnergySource_EnergySchedulingType);
 }
 
 void EnergySource::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	EnergyConnection::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:EnergySource.activePower", &get_EnergySource_activePower);
-	get_map.emplace("cim:EnergySource.nominalVoltage", &get_EnergySource_nominalVoltage);
-	get_map.emplace("cim:EnergySource.pMax", &get_EnergySource_pMax);
-	get_map.emplace("cim:EnergySource.pMin", &get_EnergySource_pMin);
-	get_map.emplace("cim:EnergySource.r", &get_EnergySource_r);
-	get_map.emplace("cim:EnergySource.r0", &get_EnergySource_r0);
-	get_map.emplace("cim:EnergySource.reactivePower", &get_EnergySource_reactivePower);
-	get_map.emplace("cim:EnergySource.rn", &get_EnergySource_rn);
-	get_map.emplace("cim:EnergySource.voltageAngle", &get_EnergySource_voltageAngle);
-	get_map.emplace("cim:EnergySource.voltageMagnitude", &get_EnergySource_voltageMagnitude);
-	get_map.emplace("cim:EnergySource.x", &get_EnergySource_x);
-	get_map.emplace("cim:EnergySource.x0", &get_EnergySource_x0);
-	get_map.emplace("cim:EnergySource.xn", &get_EnergySource_xn);
+	get_map.emplace("EnergySource.activePower", &get_EnergySource_activePower);
+	get_map.emplace("EnergySource.nominalVoltage", &get_EnergySource_nominalVoltage);
+	get_map.emplace("EnergySource.pMax", &get_EnergySource_pMax);
+	get_map.emplace("EnergySource.pMin", &get_EnergySource_pMin);
+	get_map.emplace("EnergySource.r", &get_EnergySource_r);
+	get_map.emplace("EnergySource.r0", &get_EnergySource_r0);
+	get_map.emplace("EnergySource.reactivePower", &get_EnergySource_reactivePower);
+	get_map.emplace("EnergySource.rn", &get_EnergySource_rn);
+	get_map.emplace("EnergySource.voltageAngle", &get_EnergySource_voltageAngle);
+	get_map.emplace("EnergySource.voltageMagnitude", &get_EnergySource_voltageMagnitude);
+	get_map.emplace("EnergySource.x", &get_EnergySource_x);
+	get_map.emplace("EnergySource.x0", &get_EnergySource_x0);
+	get_map.emplace("EnergySource.xn", &get_EnergySource_xn);
 }
 
 void EnergySource::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	EnergyConnection::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:EnergySource.EnergySchedulingType", &get_EnergySource_EnergySchedulingType);
+	get_map.emplace("EnergySource.EnergySchedulingType", &get_EnergySource_EnergySchedulingType);
 }
 
 void EnergySource::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -525,9 +557,23 @@ void EnergySource::addEnumGetFnsToMap(std::map<std::string, get_function>& get_m
 	EnergyConnection::addEnumGetFnsToMap(get_map);
 }
 
+bool EnergySource::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "EnergySource" &&
+		dynamic_cast<EnergySource*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner EnergySource::declare()
 {
 	return BaseClassDefiner(EnergySource::addConstructToMap, EnergySource::addPrimitiveAssignFnsToMap, EnergySource::addClassAssignFnsToMap, EnergySource::debugName);
+}
+
+std::map<std::string, AttrDetails> EnergySource::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = EnergyConnection::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

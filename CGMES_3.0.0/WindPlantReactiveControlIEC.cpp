@@ -13,51 +13,83 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		WindPlantReactiveControlIEC(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "WindPlantReactiveControlIEC.WindDynamicsLookupTable", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPlantReactiveControlIEC.WindPlantIEC", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPlantReactiveControlIEC.dxrefmax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPlantReactiveControlIEC.dxrefmin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPlantReactiveControlIEC.kiwpx", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPlantReactiveControlIEC.kiwpxmax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPlantReactiveControlIEC.kiwpxmin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPlantReactiveControlIEC.kpwpx", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPlantReactiveControlIEC.kwpqref", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPlantReactiveControlIEC.kwpqu", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPlantReactiveControlIEC.tuqfilt", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPlantReactiveControlIEC.twppfiltq", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPlantReactiveControlIEC.twpqfiltq", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPlantReactiveControlIEC.twpufiltq", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPlantReactiveControlIEC.txft", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPlantReactiveControlIEC.txfv", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPlantReactiveControlIEC.uwpqdip", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPlantReactiveControlIEC.windPlantQcontrolModesType", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPlantReactiveControlIEC.xrefmax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPlantReactiveControlIEC.xrefmin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 WindPlantReactiveControlIEC::WindPlantReactiveControlIEC() : WindPlantIEC(nullptr) {}
 WindPlantReactiveControlIEC::~WindPlantReactiveControlIEC() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& WindPlantReactiveControlIEC::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:WindPlantReactiveControlIEC.WindDynamicsLookupTable", { CGMESProfile::DY, } },
-	{ "cim:WindPlantReactiveControlIEC.WindPlantIEC", { CGMESProfile::DY, } },
-	{ "cim:WindPlantReactiveControlIEC.dxrefmax", { CGMESProfile::DY, } },
-	{ "cim:WindPlantReactiveControlIEC.dxrefmin", { CGMESProfile::DY, } },
-	{ "cim:WindPlantReactiveControlIEC.kiwpx", { CGMESProfile::DY, } },
-	{ "cim:WindPlantReactiveControlIEC.kiwpxmax", { CGMESProfile::DY, } },
-	{ "cim:WindPlantReactiveControlIEC.kiwpxmin", { CGMESProfile::DY, } },
-	{ "cim:WindPlantReactiveControlIEC.kpwpx", { CGMESProfile::DY, } },
-	{ "cim:WindPlantReactiveControlIEC.kwpqref", { CGMESProfile::DY, } },
-	{ "cim:WindPlantReactiveControlIEC.kwpqu", { CGMESProfile::DY, } },
-	{ "cim:WindPlantReactiveControlIEC.tuqfilt", { CGMESProfile::DY, } },
-	{ "cim:WindPlantReactiveControlIEC.twppfiltq", { CGMESProfile::DY, } },
-	{ "cim:WindPlantReactiveControlIEC.twpqfiltq", { CGMESProfile::DY, } },
-	{ "cim:WindPlantReactiveControlIEC.twpufiltq", { CGMESProfile::DY, } },
-	{ "cim:WindPlantReactiveControlIEC.txft", { CGMESProfile::DY, } },
-	{ "cim:WindPlantReactiveControlIEC.txfv", { CGMESProfile::DY, } },
-	{ "cim:WindPlantReactiveControlIEC.uwpqdip", { CGMESProfile::DY, } },
-	{ "cim:WindPlantReactiveControlIEC.windPlantQcontrolModesType", { CGMESProfile::DY, } },
-	{ "cim:WindPlantReactiveControlIEC.xrefmax", { CGMESProfile::DY, } },
-	{ "cim:WindPlantReactiveControlIEC.xrefmin", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-WindPlantReactiveControlIEC::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-WindPlantReactiveControlIEC::getPossibleProfilesForAttributes() const
+const std::string& WindPlantReactiveControlIEC::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& WindPlantReactiveControlIEC::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& WindPlantReactiveControlIEC::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& WindPlantReactiveControlIEC::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& WindPlantReactiveControlIEC::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& WindPlantReactiveControlIEC::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_WindDynamicsLookupTable_WindPlantReactiveControlIEC(BaseClass*, BaseClass*);
@@ -626,57 +658,57 @@ const char* WindPlantReactiveControlIEC::debugString() const
 
 void WindPlantReactiveControlIEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:WindPlantReactiveControlIEC", &WindPlantReactiveControlIEC_factory);
+	factory_map.emplace("WindPlantReactiveControlIEC", &WindPlantReactiveControlIEC_factory);
 }
 
 void WindPlantReactiveControlIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindPlantReactiveControlIEC.dxrefmax", &assign_WindPlantReactiveControlIEC_dxrefmax);
-	assign_map.emplace("cim:WindPlantReactiveControlIEC.dxrefmin", &assign_WindPlantReactiveControlIEC_dxrefmin);
-	assign_map.emplace("cim:WindPlantReactiveControlIEC.kiwpx", &assign_WindPlantReactiveControlIEC_kiwpx);
-	assign_map.emplace("cim:WindPlantReactiveControlIEC.kiwpxmax", &assign_WindPlantReactiveControlIEC_kiwpxmax);
-	assign_map.emplace("cim:WindPlantReactiveControlIEC.kiwpxmin", &assign_WindPlantReactiveControlIEC_kiwpxmin);
-	assign_map.emplace("cim:WindPlantReactiveControlIEC.kpwpx", &assign_WindPlantReactiveControlIEC_kpwpx);
-	assign_map.emplace("cim:WindPlantReactiveControlIEC.kwpqref", &assign_WindPlantReactiveControlIEC_kwpqref);
-	assign_map.emplace("cim:WindPlantReactiveControlIEC.kwpqu", &assign_WindPlantReactiveControlIEC_kwpqu);
-	assign_map.emplace("cim:WindPlantReactiveControlIEC.tuqfilt", &assign_WindPlantReactiveControlIEC_tuqfilt);
-	assign_map.emplace("cim:WindPlantReactiveControlIEC.twppfiltq", &assign_WindPlantReactiveControlIEC_twppfiltq);
-	assign_map.emplace("cim:WindPlantReactiveControlIEC.twpqfiltq", &assign_WindPlantReactiveControlIEC_twpqfiltq);
-	assign_map.emplace("cim:WindPlantReactiveControlIEC.twpufiltq", &assign_WindPlantReactiveControlIEC_twpufiltq);
-	assign_map.emplace("cim:WindPlantReactiveControlIEC.txft", &assign_WindPlantReactiveControlIEC_txft);
-	assign_map.emplace("cim:WindPlantReactiveControlIEC.txfv", &assign_WindPlantReactiveControlIEC_txfv);
-	assign_map.emplace("cim:WindPlantReactiveControlIEC.uwpqdip", &assign_WindPlantReactiveControlIEC_uwpqdip);
-	assign_map.emplace("cim:WindPlantReactiveControlIEC.windPlantQcontrolModesType", &assign_WindPlantReactiveControlIEC_windPlantQcontrolModesType);
-	assign_map.emplace("cim:WindPlantReactiveControlIEC.xrefmax", &assign_WindPlantReactiveControlIEC_xrefmax);
-	assign_map.emplace("cim:WindPlantReactiveControlIEC.xrefmin", &assign_WindPlantReactiveControlIEC_xrefmin);
+	assign_map.emplace("WindPlantReactiveControlIEC.dxrefmax", &assign_WindPlantReactiveControlIEC_dxrefmax);
+	assign_map.emplace("WindPlantReactiveControlIEC.dxrefmin", &assign_WindPlantReactiveControlIEC_dxrefmin);
+	assign_map.emplace("WindPlantReactiveControlIEC.kiwpx", &assign_WindPlantReactiveControlIEC_kiwpx);
+	assign_map.emplace("WindPlantReactiveControlIEC.kiwpxmax", &assign_WindPlantReactiveControlIEC_kiwpxmax);
+	assign_map.emplace("WindPlantReactiveControlIEC.kiwpxmin", &assign_WindPlantReactiveControlIEC_kiwpxmin);
+	assign_map.emplace("WindPlantReactiveControlIEC.kpwpx", &assign_WindPlantReactiveControlIEC_kpwpx);
+	assign_map.emplace("WindPlantReactiveControlIEC.kwpqref", &assign_WindPlantReactiveControlIEC_kwpqref);
+	assign_map.emplace("WindPlantReactiveControlIEC.kwpqu", &assign_WindPlantReactiveControlIEC_kwpqu);
+	assign_map.emplace("WindPlantReactiveControlIEC.tuqfilt", &assign_WindPlantReactiveControlIEC_tuqfilt);
+	assign_map.emplace("WindPlantReactiveControlIEC.twppfiltq", &assign_WindPlantReactiveControlIEC_twppfiltq);
+	assign_map.emplace("WindPlantReactiveControlIEC.twpqfiltq", &assign_WindPlantReactiveControlIEC_twpqfiltq);
+	assign_map.emplace("WindPlantReactiveControlIEC.twpufiltq", &assign_WindPlantReactiveControlIEC_twpufiltq);
+	assign_map.emplace("WindPlantReactiveControlIEC.txft", &assign_WindPlantReactiveControlIEC_txft);
+	assign_map.emplace("WindPlantReactiveControlIEC.txfv", &assign_WindPlantReactiveControlIEC_txfv);
+	assign_map.emplace("WindPlantReactiveControlIEC.uwpqdip", &assign_WindPlantReactiveControlIEC_uwpqdip);
+	assign_map.emplace("WindPlantReactiveControlIEC.windPlantQcontrolModesType", &assign_WindPlantReactiveControlIEC_windPlantQcontrolModesType);
+	assign_map.emplace("WindPlantReactiveControlIEC.xrefmax", &assign_WindPlantReactiveControlIEC_xrefmax);
+	assign_map.emplace("WindPlantReactiveControlIEC.xrefmin", &assign_WindPlantReactiveControlIEC_xrefmin);
 }
 
 void WindPlantReactiveControlIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindPlantReactiveControlIEC.WindDynamicsLookupTable", &assign_WindPlantReactiveControlIEC_WindDynamicsLookupTable);
-	assign_map.emplace("cim:WindPlantReactiveControlIEC.WindPlantIEC", &assign_WindPlantReactiveControlIEC_WindPlantIEC);
+	assign_map.emplace("WindPlantReactiveControlIEC.WindDynamicsLookupTable", &assign_WindPlantReactiveControlIEC_WindDynamicsLookupTable);
+	assign_map.emplace("WindPlantReactiveControlIEC.WindPlantIEC", &assign_WindPlantReactiveControlIEC_WindPlantIEC);
 }
 
 void WindPlantReactiveControlIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:WindPlantReactiveControlIEC.dxrefmax", &get_WindPlantReactiveControlIEC_dxrefmax);
-	get_map.emplace("cim:WindPlantReactiveControlIEC.dxrefmin", &get_WindPlantReactiveControlIEC_dxrefmin);
-	get_map.emplace("cim:WindPlantReactiveControlIEC.kiwpx", &get_WindPlantReactiveControlIEC_kiwpx);
-	get_map.emplace("cim:WindPlantReactiveControlIEC.kiwpxmax", &get_WindPlantReactiveControlIEC_kiwpxmax);
-	get_map.emplace("cim:WindPlantReactiveControlIEC.kiwpxmin", &get_WindPlantReactiveControlIEC_kiwpxmin);
-	get_map.emplace("cim:WindPlantReactiveControlIEC.kpwpx", &get_WindPlantReactiveControlIEC_kpwpx);
-	get_map.emplace("cim:WindPlantReactiveControlIEC.kwpqref", &get_WindPlantReactiveControlIEC_kwpqref);
-	get_map.emplace("cim:WindPlantReactiveControlIEC.kwpqu", &get_WindPlantReactiveControlIEC_kwpqu);
-	get_map.emplace("cim:WindPlantReactiveControlIEC.tuqfilt", &get_WindPlantReactiveControlIEC_tuqfilt);
-	get_map.emplace("cim:WindPlantReactiveControlIEC.twppfiltq", &get_WindPlantReactiveControlIEC_twppfiltq);
-	get_map.emplace("cim:WindPlantReactiveControlIEC.twpqfiltq", &get_WindPlantReactiveControlIEC_twpqfiltq);
-	get_map.emplace("cim:WindPlantReactiveControlIEC.twpufiltq", &get_WindPlantReactiveControlIEC_twpufiltq);
-	get_map.emplace("cim:WindPlantReactiveControlIEC.txft", &get_WindPlantReactiveControlIEC_txft);
-	get_map.emplace("cim:WindPlantReactiveControlIEC.txfv", &get_WindPlantReactiveControlIEC_txfv);
-	get_map.emplace("cim:WindPlantReactiveControlIEC.uwpqdip", &get_WindPlantReactiveControlIEC_uwpqdip);
-	get_map.emplace("cim:WindPlantReactiveControlIEC.xrefmax", &get_WindPlantReactiveControlIEC_xrefmax);
-	get_map.emplace("cim:WindPlantReactiveControlIEC.xrefmin", &get_WindPlantReactiveControlIEC_xrefmin);
+	get_map.emplace("WindPlantReactiveControlIEC.dxrefmax", &get_WindPlantReactiveControlIEC_dxrefmax);
+	get_map.emplace("WindPlantReactiveControlIEC.dxrefmin", &get_WindPlantReactiveControlIEC_dxrefmin);
+	get_map.emplace("WindPlantReactiveControlIEC.kiwpx", &get_WindPlantReactiveControlIEC_kiwpx);
+	get_map.emplace("WindPlantReactiveControlIEC.kiwpxmax", &get_WindPlantReactiveControlIEC_kiwpxmax);
+	get_map.emplace("WindPlantReactiveControlIEC.kiwpxmin", &get_WindPlantReactiveControlIEC_kiwpxmin);
+	get_map.emplace("WindPlantReactiveControlIEC.kpwpx", &get_WindPlantReactiveControlIEC_kpwpx);
+	get_map.emplace("WindPlantReactiveControlIEC.kwpqref", &get_WindPlantReactiveControlIEC_kwpqref);
+	get_map.emplace("WindPlantReactiveControlIEC.kwpqu", &get_WindPlantReactiveControlIEC_kwpqu);
+	get_map.emplace("WindPlantReactiveControlIEC.tuqfilt", &get_WindPlantReactiveControlIEC_tuqfilt);
+	get_map.emplace("WindPlantReactiveControlIEC.twppfiltq", &get_WindPlantReactiveControlIEC_twppfiltq);
+	get_map.emplace("WindPlantReactiveControlIEC.twpqfiltq", &get_WindPlantReactiveControlIEC_twpqfiltq);
+	get_map.emplace("WindPlantReactiveControlIEC.twpufiltq", &get_WindPlantReactiveControlIEC_twpufiltq);
+	get_map.emplace("WindPlantReactiveControlIEC.txft", &get_WindPlantReactiveControlIEC_txft);
+	get_map.emplace("WindPlantReactiveControlIEC.txfv", &get_WindPlantReactiveControlIEC_txfv);
+	get_map.emplace("WindPlantReactiveControlIEC.uwpqdip", &get_WindPlantReactiveControlIEC_uwpqdip);
+	get_map.emplace("WindPlantReactiveControlIEC.xrefmax", &get_WindPlantReactiveControlIEC_xrefmax);
+	get_map.emplace("WindPlantReactiveControlIEC.xrefmin", &get_WindPlantReactiveControlIEC_xrefmin);
 }
 
 void WindPlantReactiveControlIEC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -687,12 +719,26 @@ void WindPlantReactiveControlIEC::addClassGetFnsToMap(std::map<std::string, clas
 void WindPlantReactiveControlIEC::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:WindPlantReactiveControlIEC.windPlantQcontrolModesType", &get_WindPlantReactiveControlIEC_windPlantQcontrolModesType);
+	get_map.emplace("WindPlantReactiveControlIEC.windPlantQcontrolModesType", &get_WindPlantReactiveControlIEC_windPlantQcontrolModesType);
+}
+
+bool WindPlantReactiveControlIEC::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "WindPlantReactiveControlIEC" &&
+		dynamic_cast<WindPlantReactiveControlIEC*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner WindPlantReactiveControlIEC::declare()
 {
 	return BaseClassDefiner(WindPlantReactiveControlIEC::addConstructToMap, WindPlantReactiveControlIEC::addPrimitiveAssignFnsToMap, WindPlantReactiveControlIEC::addClassAssignFnsToMap, WindPlantReactiveControlIEC::debugName);
+}
+
+std::map<std::string, AttrDetails> WindPlantReactiveControlIEC::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

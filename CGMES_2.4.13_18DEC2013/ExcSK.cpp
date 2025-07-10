@@ -11,63 +11,95 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ExcSK(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ExcSK.efdmax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.efdmin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.emax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.emin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.k", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.k1", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.k2", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.kc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.kce", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.kd", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.kgob", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.kp", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.kqi", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.kqob", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.kqp", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.nq", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.qconoff", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.qz", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.remote", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.sbase", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.tc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.te", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.ti", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.tp", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.tr", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.uimax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.uimin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.urmax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.urmin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.vtmax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.vtmin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcSK.yp", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ExcSK::ExcSK() {}
 ExcSK::~ExcSK() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ExcSK::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ExcSK.efdmax", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.efdmin", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.emax", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.emin", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.k", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.k1", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.k2", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.kc", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.kce", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.kd", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.kgob", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.kp", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.kqi", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.kqob", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.kqp", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.nq", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.qconoff", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.qz", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.remote", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.sbase", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.tc", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.te", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.ti", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.tp", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.tr", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.uimax", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.uimin", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.urmax", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.urmin", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.vtmax", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.vtmin", { CGMESProfile::DY, } },
-	{ "cim:ExcSK.yp", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-ExcSK::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ExcSK::getPossibleProfilesForAttributes() const
+const std::string& ExcSK::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ExcSK::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ExcSK::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ExcSK::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ExcSK::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ExcSK::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ExcSK_efdmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -1006,43 +1038,43 @@ const char* ExcSK::debugString() const
 
 void ExcSK::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ExcSK", &ExcSK_factory);
+	factory_map.emplace("ExcSK", &ExcSK_factory);
 }
 
 void ExcSK::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ExcSK.efdmax", &assign_ExcSK_efdmax);
-	assign_map.emplace("cim:ExcSK.efdmin", &assign_ExcSK_efdmin);
-	assign_map.emplace("cim:ExcSK.emax", &assign_ExcSK_emax);
-	assign_map.emplace("cim:ExcSK.emin", &assign_ExcSK_emin);
-	assign_map.emplace("cim:ExcSK.k", &assign_ExcSK_k);
-	assign_map.emplace("cim:ExcSK.k1", &assign_ExcSK_k1);
-	assign_map.emplace("cim:ExcSK.k2", &assign_ExcSK_k2);
-	assign_map.emplace("cim:ExcSK.kc", &assign_ExcSK_kc);
-	assign_map.emplace("cim:ExcSK.kce", &assign_ExcSK_kce);
-	assign_map.emplace("cim:ExcSK.kd", &assign_ExcSK_kd);
-	assign_map.emplace("cim:ExcSK.kgob", &assign_ExcSK_kgob);
-	assign_map.emplace("cim:ExcSK.kp", &assign_ExcSK_kp);
-	assign_map.emplace("cim:ExcSK.kqi", &assign_ExcSK_kqi);
-	assign_map.emplace("cim:ExcSK.kqob", &assign_ExcSK_kqob);
-	assign_map.emplace("cim:ExcSK.kqp", &assign_ExcSK_kqp);
-	assign_map.emplace("cim:ExcSK.nq", &assign_ExcSK_nq);
-	assign_map.emplace("cim:ExcSK.qconoff", &assign_ExcSK_qconoff);
-	assign_map.emplace("cim:ExcSK.qz", &assign_ExcSK_qz);
-	assign_map.emplace("cim:ExcSK.remote", &assign_ExcSK_remote);
-	assign_map.emplace("cim:ExcSK.sbase", &assign_ExcSK_sbase);
-	assign_map.emplace("cim:ExcSK.tc", &assign_ExcSK_tc);
-	assign_map.emplace("cim:ExcSK.te", &assign_ExcSK_te);
-	assign_map.emplace("cim:ExcSK.ti", &assign_ExcSK_ti);
-	assign_map.emplace("cim:ExcSK.tp", &assign_ExcSK_tp);
-	assign_map.emplace("cim:ExcSK.tr", &assign_ExcSK_tr);
-	assign_map.emplace("cim:ExcSK.uimax", &assign_ExcSK_uimax);
-	assign_map.emplace("cim:ExcSK.uimin", &assign_ExcSK_uimin);
-	assign_map.emplace("cim:ExcSK.urmax", &assign_ExcSK_urmax);
-	assign_map.emplace("cim:ExcSK.urmin", &assign_ExcSK_urmin);
-	assign_map.emplace("cim:ExcSK.vtmax", &assign_ExcSK_vtmax);
-	assign_map.emplace("cim:ExcSK.vtmin", &assign_ExcSK_vtmin);
-	assign_map.emplace("cim:ExcSK.yp", &assign_ExcSK_yp);
+	assign_map.emplace("ExcSK.efdmax", &assign_ExcSK_efdmax);
+	assign_map.emplace("ExcSK.efdmin", &assign_ExcSK_efdmin);
+	assign_map.emplace("ExcSK.emax", &assign_ExcSK_emax);
+	assign_map.emplace("ExcSK.emin", &assign_ExcSK_emin);
+	assign_map.emplace("ExcSK.k", &assign_ExcSK_k);
+	assign_map.emplace("ExcSK.k1", &assign_ExcSK_k1);
+	assign_map.emplace("ExcSK.k2", &assign_ExcSK_k2);
+	assign_map.emplace("ExcSK.kc", &assign_ExcSK_kc);
+	assign_map.emplace("ExcSK.kce", &assign_ExcSK_kce);
+	assign_map.emplace("ExcSK.kd", &assign_ExcSK_kd);
+	assign_map.emplace("ExcSK.kgob", &assign_ExcSK_kgob);
+	assign_map.emplace("ExcSK.kp", &assign_ExcSK_kp);
+	assign_map.emplace("ExcSK.kqi", &assign_ExcSK_kqi);
+	assign_map.emplace("ExcSK.kqob", &assign_ExcSK_kqob);
+	assign_map.emplace("ExcSK.kqp", &assign_ExcSK_kqp);
+	assign_map.emplace("ExcSK.nq", &assign_ExcSK_nq);
+	assign_map.emplace("ExcSK.qconoff", &assign_ExcSK_qconoff);
+	assign_map.emplace("ExcSK.qz", &assign_ExcSK_qz);
+	assign_map.emplace("ExcSK.remote", &assign_ExcSK_remote);
+	assign_map.emplace("ExcSK.sbase", &assign_ExcSK_sbase);
+	assign_map.emplace("ExcSK.tc", &assign_ExcSK_tc);
+	assign_map.emplace("ExcSK.te", &assign_ExcSK_te);
+	assign_map.emplace("ExcSK.ti", &assign_ExcSK_ti);
+	assign_map.emplace("ExcSK.tp", &assign_ExcSK_tp);
+	assign_map.emplace("ExcSK.tr", &assign_ExcSK_tr);
+	assign_map.emplace("ExcSK.uimax", &assign_ExcSK_uimax);
+	assign_map.emplace("ExcSK.uimin", &assign_ExcSK_uimin);
+	assign_map.emplace("ExcSK.urmax", &assign_ExcSK_urmax);
+	assign_map.emplace("ExcSK.urmin", &assign_ExcSK_urmin);
+	assign_map.emplace("ExcSK.vtmax", &assign_ExcSK_vtmax);
+	assign_map.emplace("ExcSK.vtmin", &assign_ExcSK_vtmin);
+	assign_map.emplace("ExcSK.yp", &assign_ExcSK_yp);
 }
 
 void ExcSK::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -1052,38 +1084,38 @@ void ExcSK::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_
 void ExcSK::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ExcSK.efdmax", &get_ExcSK_efdmax);
-	get_map.emplace("cim:ExcSK.efdmin", &get_ExcSK_efdmin);
-	get_map.emplace("cim:ExcSK.emax", &get_ExcSK_emax);
-	get_map.emplace("cim:ExcSK.emin", &get_ExcSK_emin);
-	get_map.emplace("cim:ExcSK.k", &get_ExcSK_k);
-	get_map.emplace("cim:ExcSK.k1", &get_ExcSK_k1);
-	get_map.emplace("cim:ExcSK.k2", &get_ExcSK_k2);
-	get_map.emplace("cim:ExcSK.kc", &get_ExcSK_kc);
-	get_map.emplace("cim:ExcSK.kce", &get_ExcSK_kce);
-	get_map.emplace("cim:ExcSK.kd", &get_ExcSK_kd);
-	get_map.emplace("cim:ExcSK.kgob", &get_ExcSK_kgob);
-	get_map.emplace("cim:ExcSK.kp", &get_ExcSK_kp);
-	get_map.emplace("cim:ExcSK.kqi", &get_ExcSK_kqi);
-	get_map.emplace("cim:ExcSK.kqob", &get_ExcSK_kqob);
-	get_map.emplace("cim:ExcSK.kqp", &get_ExcSK_kqp);
-	get_map.emplace("cim:ExcSK.nq", &get_ExcSK_nq);
-	get_map.emplace("cim:ExcSK.qconoff", &get_ExcSK_qconoff);
-	get_map.emplace("cim:ExcSK.qz", &get_ExcSK_qz);
-	get_map.emplace("cim:ExcSK.remote", &get_ExcSK_remote);
-	get_map.emplace("cim:ExcSK.sbase", &get_ExcSK_sbase);
-	get_map.emplace("cim:ExcSK.tc", &get_ExcSK_tc);
-	get_map.emplace("cim:ExcSK.te", &get_ExcSK_te);
-	get_map.emplace("cim:ExcSK.ti", &get_ExcSK_ti);
-	get_map.emplace("cim:ExcSK.tp", &get_ExcSK_tp);
-	get_map.emplace("cim:ExcSK.tr", &get_ExcSK_tr);
-	get_map.emplace("cim:ExcSK.uimax", &get_ExcSK_uimax);
-	get_map.emplace("cim:ExcSK.uimin", &get_ExcSK_uimin);
-	get_map.emplace("cim:ExcSK.urmax", &get_ExcSK_urmax);
-	get_map.emplace("cim:ExcSK.urmin", &get_ExcSK_urmin);
-	get_map.emplace("cim:ExcSK.vtmax", &get_ExcSK_vtmax);
-	get_map.emplace("cim:ExcSK.vtmin", &get_ExcSK_vtmin);
-	get_map.emplace("cim:ExcSK.yp", &get_ExcSK_yp);
+	get_map.emplace("ExcSK.efdmax", &get_ExcSK_efdmax);
+	get_map.emplace("ExcSK.efdmin", &get_ExcSK_efdmin);
+	get_map.emplace("ExcSK.emax", &get_ExcSK_emax);
+	get_map.emplace("ExcSK.emin", &get_ExcSK_emin);
+	get_map.emplace("ExcSK.k", &get_ExcSK_k);
+	get_map.emplace("ExcSK.k1", &get_ExcSK_k1);
+	get_map.emplace("ExcSK.k2", &get_ExcSK_k2);
+	get_map.emplace("ExcSK.kc", &get_ExcSK_kc);
+	get_map.emplace("ExcSK.kce", &get_ExcSK_kce);
+	get_map.emplace("ExcSK.kd", &get_ExcSK_kd);
+	get_map.emplace("ExcSK.kgob", &get_ExcSK_kgob);
+	get_map.emplace("ExcSK.kp", &get_ExcSK_kp);
+	get_map.emplace("ExcSK.kqi", &get_ExcSK_kqi);
+	get_map.emplace("ExcSK.kqob", &get_ExcSK_kqob);
+	get_map.emplace("ExcSK.kqp", &get_ExcSK_kqp);
+	get_map.emplace("ExcSK.nq", &get_ExcSK_nq);
+	get_map.emplace("ExcSK.qconoff", &get_ExcSK_qconoff);
+	get_map.emplace("ExcSK.qz", &get_ExcSK_qz);
+	get_map.emplace("ExcSK.remote", &get_ExcSK_remote);
+	get_map.emplace("ExcSK.sbase", &get_ExcSK_sbase);
+	get_map.emplace("ExcSK.tc", &get_ExcSK_tc);
+	get_map.emplace("ExcSK.te", &get_ExcSK_te);
+	get_map.emplace("ExcSK.ti", &get_ExcSK_ti);
+	get_map.emplace("ExcSK.tp", &get_ExcSK_tp);
+	get_map.emplace("ExcSK.tr", &get_ExcSK_tr);
+	get_map.emplace("ExcSK.uimax", &get_ExcSK_uimax);
+	get_map.emplace("ExcSK.uimin", &get_ExcSK_uimin);
+	get_map.emplace("ExcSK.urmax", &get_ExcSK_urmax);
+	get_map.emplace("ExcSK.urmin", &get_ExcSK_urmin);
+	get_map.emplace("ExcSK.vtmax", &get_ExcSK_vtmax);
+	get_map.emplace("ExcSK.vtmin", &get_ExcSK_vtmin);
+	get_map.emplace("ExcSK.yp", &get_ExcSK_yp);
 }
 
 void ExcSK::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -1096,9 +1128,23 @@ void ExcSK::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) con
 	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool ExcSK::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ExcSK" &&
+		dynamic_cast<ExcSK*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ExcSK::declare()
 {
 	return BaseClassDefiner(ExcSK::addConstructToMap, ExcSK::addPrimitiveAssignFnsToMap, ExcSK::addClassAssignFnsToMap, ExcSK::debugName);
+}
+
+std::map<std::string, AttrDetails> ExcSK::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ExcitationSystemDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

@@ -12,49 +12,81 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		EquivalentInjection(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SC,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "EquivalentInjection.ReactiveCapabilityCurve", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "EquivalentInjection.maxP", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "EquivalentInjection.maxQ", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "EquivalentInjection.minP", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "EquivalentInjection.minQ", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "EquivalentInjection.p", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+		{ "EquivalentInjection.q", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+		{ "EquivalentInjection.r", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "EquivalentInjection.r0", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "EquivalentInjection.r2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "EquivalentInjection.regulationCapability", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "EquivalentInjection.regulationStatus", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+		{ "EquivalentInjection.regulationTarget", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+		{ "EquivalentInjection.x", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "EquivalentInjection.x0", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "EquivalentInjection.x2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 EquivalentInjection::EquivalentInjection() : ReactiveCapabilityCurve(nullptr) {}
 EquivalentInjection::~EquivalentInjection() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& EquivalentInjection::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SC,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:EquivalentInjection.ReactiveCapabilityCurve", { CGMESProfile::EQ, } },
-	{ "cim:EquivalentInjection.maxP", { CGMESProfile::EQ, } },
-	{ "cim:EquivalentInjection.maxQ", { CGMESProfile::EQ, } },
-	{ "cim:EquivalentInjection.minP", { CGMESProfile::EQ, } },
-	{ "cim:EquivalentInjection.minQ", { CGMESProfile::EQ, } },
-	{ "cim:EquivalentInjection.p", { CGMESProfile::SSH, } },
-	{ "cim:EquivalentInjection.q", { CGMESProfile::SSH, } },
-	{ "cim:EquivalentInjection.r", { CGMESProfile::SC, } },
-	{ "cim:EquivalentInjection.r0", { CGMESProfile::SC, } },
-	{ "cim:EquivalentInjection.r2", { CGMESProfile::SC, } },
-	{ "cim:EquivalentInjection.regulationCapability", { CGMESProfile::EQ, } },
-	{ "cim:EquivalentInjection.regulationStatus", { CGMESProfile::SSH, } },
-	{ "cim:EquivalentInjection.regulationTarget", { CGMESProfile::SSH, } },
-	{ "cim:EquivalentInjection.x", { CGMESProfile::SC, } },
-	{ "cim:EquivalentInjection.x0", { CGMESProfile::SC, } },
-	{ "cim:EquivalentInjection.x2", { CGMESProfile::SC, } },
-};
-
-std::list<CGMESProfile>
-EquivalentInjection::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-EquivalentInjection::getPossibleProfilesForAttributes() const
+const std::string& EquivalentInjection::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = EquivalentEquipment::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& EquivalentInjection::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& EquivalentInjection::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& EquivalentInjection::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& EquivalentInjection::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& EquivalentInjection::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ReactiveCapabilityCurve_EquivalentInjection(BaseClass*, BaseClass*);
@@ -531,57 +563,57 @@ const char* EquivalentInjection::debugString() const
 
 void EquivalentInjection::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:EquivalentInjection", &EquivalentInjection_factory);
+	factory_map.emplace("EquivalentInjection", &EquivalentInjection_factory);
 }
 
 void EquivalentInjection::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:EquivalentInjection.maxP", &assign_EquivalentInjection_maxP);
-	assign_map.emplace("cim:EquivalentInjection.maxQ", &assign_EquivalentInjection_maxQ);
-	assign_map.emplace("cim:EquivalentInjection.minP", &assign_EquivalentInjection_minP);
-	assign_map.emplace("cim:EquivalentInjection.minQ", &assign_EquivalentInjection_minQ);
-	assign_map.emplace("cim:EquivalentInjection.p", &assign_EquivalentInjection_p);
-	assign_map.emplace("cim:EquivalentInjection.q", &assign_EquivalentInjection_q);
-	assign_map.emplace("cim:EquivalentInjection.r", &assign_EquivalentInjection_r);
-	assign_map.emplace("cim:EquivalentInjection.r0", &assign_EquivalentInjection_r0);
-	assign_map.emplace("cim:EquivalentInjection.r2", &assign_EquivalentInjection_r2);
-	assign_map.emplace("cim:EquivalentInjection.regulationCapability", &assign_EquivalentInjection_regulationCapability);
-	assign_map.emplace("cim:EquivalentInjection.regulationStatus", &assign_EquivalentInjection_regulationStatus);
-	assign_map.emplace("cim:EquivalentInjection.regulationTarget", &assign_EquivalentInjection_regulationTarget);
-	assign_map.emplace("cim:EquivalentInjection.x", &assign_EquivalentInjection_x);
-	assign_map.emplace("cim:EquivalentInjection.x0", &assign_EquivalentInjection_x0);
-	assign_map.emplace("cim:EquivalentInjection.x2", &assign_EquivalentInjection_x2);
+	assign_map.emplace("EquivalentInjection.maxP", &assign_EquivalentInjection_maxP);
+	assign_map.emplace("EquivalentInjection.maxQ", &assign_EquivalentInjection_maxQ);
+	assign_map.emplace("EquivalentInjection.minP", &assign_EquivalentInjection_minP);
+	assign_map.emplace("EquivalentInjection.minQ", &assign_EquivalentInjection_minQ);
+	assign_map.emplace("EquivalentInjection.p", &assign_EquivalentInjection_p);
+	assign_map.emplace("EquivalentInjection.q", &assign_EquivalentInjection_q);
+	assign_map.emplace("EquivalentInjection.r", &assign_EquivalentInjection_r);
+	assign_map.emplace("EquivalentInjection.r0", &assign_EquivalentInjection_r0);
+	assign_map.emplace("EquivalentInjection.r2", &assign_EquivalentInjection_r2);
+	assign_map.emplace("EquivalentInjection.regulationCapability", &assign_EquivalentInjection_regulationCapability);
+	assign_map.emplace("EquivalentInjection.regulationStatus", &assign_EquivalentInjection_regulationStatus);
+	assign_map.emplace("EquivalentInjection.regulationTarget", &assign_EquivalentInjection_regulationTarget);
+	assign_map.emplace("EquivalentInjection.x", &assign_EquivalentInjection_x);
+	assign_map.emplace("EquivalentInjection.x0", &assign_EquivalentInjection_x0);
+	assign_map.emplace("EquivalentInjection.x2", &assign_EquivalentInjection_x2);
 }
 
 void EquivalentInjection::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:EquivalentInjection.ReactiveCapabilityCurve", &assign_EquivalentInjection_ReactiveCapabilityCurve);
+	assign_map.emplace("EquivalentInjection.ReactiveCapabilityCurve", &assign_EquivalentInjection_ReactiveCapabilityCurve);
 }
 
 void EquivalentInjection::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	EquivalentEquipment::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:EquivalentInjection.maxP", &get_EquivalentInjection_maxP);
-	get_map.emplace("cim:EquivalentInjection.maxQ", &get_EquivalentInjection_maxQ);
-	get_map.emplace("cim:EquivalentInjection.minP", &get_EquivalentInjection_minP);
-	get_map.emplace("cim:EquivalentInjection.minQ", &get_EquivalentInjection_minQ);
-	get_map.emplace("cim:EquivalentInjection.p", &get_EquivalentInjection_p);
-	get_map.emplace("cim:EquivalentInjection.q", &get_EquivalentInjection_q);
-	get_map.emplace("cim:EquivalentInjection.r", &get_EquivalentInjection_r);
-	get_map.emplace("cim:EquivalentInjection.r0", &get_EquivalentInjection_r0);
-	get_map.emplace("cim:EquivalentInjection.r2", &get_EquivalentInjection_r2);
-	get_map.emplace("cim:EquivalentInjection.regulationCapability", &get_EquivalentInjection_regulationCapability);
-	get_map.emplace("cim:EquivalentInjection.regulationStatus", &get_EquivalentInjection_regulationStatus);
-	get_map.emplace("cim:EquivalentInjection.regulationTarget", &get_EquivalentInjection_regulationTarget);
-	get_map.emplace("cim:EquivalentInjection.x", &get_EquivalentInjection_x);
-	get_map.emplace("cim:EquivalentInjection.x0", &get_EquivalentInjection_x0);
-	get_map.emplace("cim:EquivalentInjection.x2", &get_EquivalentInjection_x2);
+	get_map.emplace("EquivalentInjection.maxP", &get_EquivalentInjection_maxP);
+	get_map.emplace("EquivalentInjection.maxQ", &get_EquivalentInjection_maxQ);
+	get_map.emplace("EquivalentInjection.minP", &get_EquivalentInjection_minP);
+	get_map.emplace("EquivalentInjection.minQ", &get_EquivalentInjection_minQ);
+	get_map.emplace("EquivalentInjection.p", &get_EquivalentInjection_p);
+	get_map.emplace("EquivalentInjection.q", &get_EquivalentInjection_q);
+	get_map.emplace("EquivalentInjection.r", &get_EquivalentInjection_r);
+	get_map.emplace("EquivalentInjection.r0", &get_EquivalentInjection_r0);
+	get_map.emplace("EquivalentInjection.r2", &get_EquivalentInjection_r2);
+	get_map.emplace("EquivalentInjection.regulationCapability", &get_EquivalentInjection_regulationCapability);
+	get_map.emplace("EquivalentInjection.regulationStatus", &get_EquivalentInjection_regulationStatus);
+	get_map.emplace("EquivalentInjection.regulationTarget", &get_EquivalentInjection_regulationTarget);
+	get_map.emplace("EquivalentInjection.x", &get_EquivalentInjection_x);
+	get_map.emplace("EquivalentInjection.x0", &get_EquivalentInjection_x0);
+	get_map.emplace("EquivalentInjection.x2", &get_EquivalentInjection_x2);
 }
 
 void EquivalentInjection::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	EquivalentEquipment::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:EquivalentInjection.ReactiveCapabilityCurve", &get_EquivalentInjection_ReactiveCapabilityCurve);
+	get_map.emplace("EquivalentInjection.ReactiveCapabilityCurve", &get_EquivalentInjection_ReactiveCapabilityCurve);
 }
 
 void EquivalentInjection::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -589,9 +621,23 @@ void EquivalentInjection::addEnumGetFnsToMap(std::map<std::string, get_function>
 	EquivalentEquipment::addEnumGetFnsToMap(get_map);
 }
 
+bool EquivalentInjection::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "EquivalentInjection" &&
+		dynamic_cast<EquivalentInjection*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner EquivalentInjection::declare()
 {
 	return BaseClassDefiner(EquivalentInjection::addConstructToMap, EquivalentInjection::addPrimitiveAssignFnsToMap, EquivalentInjection::addClassAssignFnsToMap, EquivalentInjection::debugName);
+}
+
+std::map<std::string, AttrDetails> EquivalentInjection::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = EquivalentEquipment::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

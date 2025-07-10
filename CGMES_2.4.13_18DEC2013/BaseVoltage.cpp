@@ -15,39 +15,71 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		BaseVoltage(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ_BD,
+			CGMESProfile::EQ,
+			CGMESProfile::TP_BD,
+			CGMESProfile::TP,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "BaseVoltage.ConductingEquipment", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "BaseVoltage.TopologicalNode", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::TP_BD, CGMESProfile::TP, } } },
+		{ "BaseVoltage.TransformerEnds", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "BaseVoltage.VoltageLevel", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "BaseVoltage.nominalVoltage", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ_BD, CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 BaseVoltage::BaseVoltage() {}
 BaseVoltage::~BaseVoltage() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& BaseVoltage::getAttributeNames() const
 {
-	CGMESProfile::EQ_BD,
-	CGMESProfile::EQ,
-	CGMESProfile::TP_BD,
-	CGMESProfile::TP,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:BaseVoltage.ConductingEquipment", { CGMESProfile::EQ, } },
-	{ "cim:BaseVoltage.TopologicalNode", { CGMESProfile::TP_BD, CGMESProfile::TP, } },
-	{ "cim:BaseVoltage.TransformerEnds", { CGMESProfile::EQ, } },
-	{ "cim:BaseVoltage.VoltageLevel", { CGMESProfile::EQ, } },
-	{ "cim:BaseVoltage.nominalVoltage", { CGMESProfile::EQ_BD, CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-BaseVoltage::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-BaseVoltage::getPossibleProfilesForAttributes() const
+const std::string& BaseVoltage::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& BaseVoltage::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& BaseVoltage::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& BaseVoltage::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& BaseVoltage::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& BaseVoltage::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ConductingEquipment_BaseVoltage(BaseClass*, BaseClass*);
@@ -159,26 +191,26 @@ const char* BaseVoltage::debugString() const
 
 void BaseVoltage::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:BaseVoltage", &BaseVoltage_factory);
+	factory_map.emplace("BaseVoltage", &BaseVoltage_factory);
 }
 
 void BaseVoltage::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:BaseVoltage.nominalVoltage", &assign_BaseVoltage_nominalVoltage);
+	assign_map.emplace("BaseVoltage.nominalVoltage", &assign_BaseVoltage_nominalVoltage);
 }
 
 void BaseVoltage::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:BaseVoltage.ConductingEquipment", &assign_BaseVoltage_ConductingEquipment);
-	assign_map.emplace("cim:BaseVoltage.TopologicalNode", &assign_BaseVoltage_TopologicalNode);
-	assign_map.emplace("cim:BaseVoltage.TransformerEnds", &assign_BaseVoltage_TransformerEnds);
-	assign_map.emplace("cim:BaseVoltage.VoltageLevel", &assign_BaseVoltage_VoltageLevel);
+	assign_map.emplace("BaseVoltage.ConductingEquipment", &assign_BaseVoltage_ConductingEquipment);
+	assign_map.emplace("BaseVoltage.TopologicalNode", &assign_BaseVoltage_TopologicalNode);
+	assign_map.emplace("BaseVoltage.TransformerEnds", &assign_BaseVoltage_TransformerEnds);
+	assign_map.emplace("BaseVoltage.VoltageLevel", &assign_BaseVoltage_VoltageLevel);
 }
 
 void BaseVoltage::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:BaseVoltage.nominalVoltage", &get_BaseVoltage_nominalVoltage);
+	get_map.emplace("BaseVoltage.nominalVoltage", &get_BaseVoltage_nominalVoltage);
 }
 
 void BaseVoltage::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -191,9 +223,23 @@ void BaseVoltage::addEnumGetFnsToMap(std::map<std::string, get_function>& get_ma
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool BaseVoltage::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "BaseVoltage" &&
+		dynamic_cast<BaseVoltage*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner BaseVoltage::declare()
 {
 	return BaseClassDefiner(BaseVoltage::addConstructToMap, BaseVoltage::addPrimitiveAssignFnsToMap, BaseVoltage::addClassAssignFnsToMap, BaseVoltage::debugName);
+}
+
+std::map<std::string, AttrDetails> BaseVoltage::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

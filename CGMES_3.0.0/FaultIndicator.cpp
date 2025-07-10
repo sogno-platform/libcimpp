@@ -11,31 +11,63 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		FaultIndicator(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+	};
+    return ClassAttrDetailsMap;
+}
+
 FaultIndicator::FaultIndicator() {}
 FaultIndicator::~FaultIndicator() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& FaultIndicator::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-};
-
-std::list<CGMESProfile>
-FaultIndicator::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-FaultIndicator::getPossibleProfilesForAttributes() const
+const std::string& FaultIndicator::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = AuxiliaryEquipment::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& FaultIndicator::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& FaultIndicator::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& FaultIndicator::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& FaultIndicator::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& FaultIndicator::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 const char FaultIndicator::debugName[] = "FaultIndicator";
@@ -46,7 +78,7 @@ const char* FaultIndicator::debugString() const
 
 void FaultIndicator::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:FaultIndicator", &FaultIndicator_factory);
+	factory_map.emplace("FaultIndicator", &FaultIndicator_factory);
 }
 
 void FaultIndicator::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -72,9 +104,23 @@ void FaultIndicator::addEnumGetFnsToMap(std::map<std::string, get_function>& get
 	AuxiliaryEquipment::addEnumGetFnsToMap(get_map);
 }
 
+bool FaultIndicator::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "FaultIndicator" &&
+		dynamic_cast<FaultIndicator*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner FaultIndicator::declare()
 {
 	return BaseClassDefiner(FaultIndicator::addConstructToMap, FaultIndicator::addPrimitiveAssignFnsToMap, FaultIndicator::addClassAssignFnsToMap, FaultIndicator::debugName);
+}
+
+std::map<std::string, AttrDetails> FaultIndicator::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = AuxiliaryEquipment::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

@@ -11,33 +11,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		DCSeriesDevice(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "DCSeriesDevice.inductance", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "DCSeriesDevice.resistance", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 DCSeriesDevice::DCSeriesDevice() {}
 DCSeriesDevice::~DCSeriesDevice() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& DCSeriesDevice::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:DCSeriesDevice.inductance", { CGMESProfile::EQ, } },
-	{ "cim:DCSeriesDevice.resistance", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-DCSeriesDevice::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-DCSeriesDevice::getPossibleProfilesForAttributes() const
+const std::string& DCSeriesDevice::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = DCConductingEquipment::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& DCSeriesDevice::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& DCSeriesDevice::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& DCSeriesDevice::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& DCSeriesDevice::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& DCSeriesDevice::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_DCSeriesDevice_inductance(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -106,13 +138,13 @@ const char* DCSeriesDevice::debugString() const
 
 void DCSeriesDevice::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:DCSeriesDevice", &DCSeriesDevice_factory);
+	factory_map.emplace("DCSeriesDevice", &DCSeriesDevice_factory);
 }
 
 void DCSeriesDevice::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:DCSeriesDevice.inductance", &assign_DCSeriesDevice_inductance);
-	assign_map.emplace("cim:DCSeriesDevice.resistance", &assign_DCSeriesDevice_resistance);
+	assign_map.emplace("DCSeriesDevice.inductance", &assign_DCSeriesDevice_inductance);
+	assign_map.emplace("DCSeriesDevice.resistance", &assign_DCSeriesDevice_resistance);
 }
 
 void DCSeriesDevice::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -122,8 +154,8 @@ void DCSeriesDevice::addClassAssignFnsToMap(std::unordered_map<std::string, clas
 void DCSeriesDevice::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	DCConductingEquipment::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:DCSeriesDevice.inductance", &get_DCSeriesDevice_inductance);
-	get_map.emplace("cim:DCSeriesDevice.resistance", &get_DCSeriesDevice_resistance);
+	get_map.emplace("DCSeriesDevice.inductance", &get_DCSeriesDevice_inductance);
+	get_map.emplace("DCSeriesDevice.resistance", &get_DCSeriesDevice_resistance);
 }
 
 void DCSeriesDevice::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -136,9 +168,23 @@ void DCSeriesDevice::addEnumGetFnsToMap(std::map<std::string, get_function>& get
 	DCConductingEquipment::addEnumGetFnsToMap(get_map);
 }
 
+bool DCSeriesDevice::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "DCSeriesDevice" &&
+		dynamic_cast<DCSeriesDevice*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner DCSeriesDevice::declare()
 {
 	return BaseClassDefiner(DCSeriesDevice::addConstructToMap, DCSeriesDevice::addPrimitiveAssignFnsToMap, DCSeriesDevice::addClassAssignFnsToMap, DCSeriesDevice::debugName);
+}
+
+std::map<std::string, AttrDetails> DCSeriesDevice::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = DCConductingEquipment::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

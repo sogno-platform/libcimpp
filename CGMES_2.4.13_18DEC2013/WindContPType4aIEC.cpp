@@ -12,35 +12,67 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		WindContPType4aIEC(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "WindContPType4aIEC.WindTurbineType4aIEC", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContPType4aIEC.dpmax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContPType4aIEC.tpord", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContPType4aIEC.tufilt", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 WindContPType4aIEC::WindContPType4aIEC() : WindTurbineType4aIEC(nullptr) {}
 WindContPType4aIEC::~WindContPType4aIEC() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& WindContPType4aIEC::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:WindContPType4aIEC.WindTurbineType4aIEC", { CGMESProfile::DY, } },
-	{ "cim:WindContPType4aIEC.dpmax", { CGMESProfile::DY, } },
-	{ "cim:WindContPType4aIEC.tpord", { CGMESProfile::DY, } },
-	{ "cim:WindContPType4aIEC.tufilt", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-WindContPType4aIEC::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-WindContPType4aIEC::getPossibleProfilesForAttributes() const
+const std::string& WindContPType4aIEC::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& WindContPType4aIEC::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& WindContPType4aIEC::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& WindContPType4aIEC::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& WindContPType4aIEC::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& WindContPType4aIEC::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_WindTurbineType4aIEC_WindContPType4aIEC(BaseClass*, BaseClass*);
@@ -156,27 +188,27 @@ const char* WindContPType4aIEC::debugString() const
 
 void WindContPType4aIEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:WindContPType4aIEC", &WindContPType4aIEC_factory);
+	factory_map.emplace("WindContPType4aIEC", &WindContPType4aIEC_factory);
 }
 
 void WindContPType4aIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindContPType4aIEC.dpmax", &assign_WindContPType4aIEC_dpmax);
-	assign_map.emplace("cim:WindContPType4aIEC.tpord", &assign_WindContPType4aIEC_tpord);
-	assign_map.emplace("cim:WindContPType4aIEC.tufilt", &assign_WindContPType4aIEC_tufilt);
+	assign_map.emplace("WindContPType4aIEC.dpmax", &assign_WindContPType4aIEC_dpmax);
+	assign_map.emplace("WindContPType4aIEC.tpord", &assign_WindContPType4aIEC_tpord);
+	assign_map.emplace("WindContPType4aIEC.tufilt", &assign_WindContPType4aIEC_tufilt);
 }
 
 void WindContPType4aIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindContPType4aIEC.WindTurbineType4aIEC", &assign_WindContPType4aIEC_WindTurbineType4aIEC);
+	assign_map.emplace("WindContPType4aIEC.WindTurbineType4aIEC", &assign_WindContPType4aIEC_WindTurbineType4aIEC);
 }
 
 void WindContPType4aIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:WindContPType4aIEC.dpmax", &get_WindContPType4aIEC_dpmax);
-	get_map.emplace("cim:WindContPType4aIEC.tpord", &get_WindContPType4aIEC_tpord);
-	get_map.emplace("cim:WindContPType4aIEC.tufilt", &get_WindContPType4aIEC_tufilt);
+	get_map.emplace("WindContPType4aIEC.dpmax", &get_WindContPType4aIEC_dpmax);
+	get_map.emplace("WindContPType4aIEC.tpord", &get_WindContPType4aIEC_tpord);
+	get_map.emplace("WindContPType4aIEC.tufilt", &get_WindContPType4aIEC_tufilt);
 }
 
 void WindContPType4aIEC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -189,9 +221,23 @@ void WindContPType4aIEC::addEnumGetFnsToMap(std::map<std::string, get_function>&
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool WindContPType4aIEC::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "WindContPType4aIEC" &&
+		dynamic_cast<WindContPType4aIEC*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner WindContPType4aIEC::declare()
 {
 	return BaseClassDefiner(WindContPType4aIEC::addConstructToMap, WindContPType4aIEC::addPrimitiveAssignFnsToMap, WindContPType4aIEC::addClassAssignFnsToMap, WindContPType4aIEC::debugName);
+}
+
+std::map<std::string, AttrDetails> WindContPType4aIEC::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

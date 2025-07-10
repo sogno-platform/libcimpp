@@ -13,33 +13,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		HydroPump(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "HydroPump.HydroPowerPlant", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "HydroPump.RotatingMachine", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 HydroPump::HydroPump() : HydroPowerPlant(nullptr), RotatingMachine(nullptr) {}
 HydroPump::~HydroPump() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& HydroPump::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:HydroPump.HydroPowerPlant", { CGMESProfile::EQ, } },
-	{ "cim:HydroPump.RotatingMachine", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-HydroPump::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-HydroPump::getPossibleProfilesForAttributes() const
+const std::string& HydroPump::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = Equipment::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& HydroPump::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& HydroPump::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& HydroPump::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& HydroPump::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& HydroPump::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_HydroPowerPlant_HydroPumps(BaseClass*, BaseClass*);
@@ -112,7 +144,7 @@ const char* HydroPump::debugString() const
 
 void HydroPump::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:HydroPump", &HydroPump_factory);
+	factory_map.emplace("HydroPump", &HydroPump_factory);
 }
 
 void HydroPump::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -121,8 +153,8 @@ void HydroPump::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assig
 
 void HydroPump::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:HydroPump.HydroPowerPlant", &assign_HydroPump_HydroPowerPlant);
-	assign_map.emplace("cim:HydroPump.RotatingMachine", &assign_HydroPump_RotatingMachine);
+	assign_map.emplace("HydroPump.HydroPowerPlant", &assign_HydroPump_HydroPowerPlant);
+	assign_map.emplace("HydroPump.RotatingMachine", &assign_HydroPump_RotatingMachine);
 }
 
 void HydroPump::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -133,8 +165,8 @@ void HydroPump::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get
 void HydroPump::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	Equipment::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:HydroPump.HydroPowerPlant", &get_HydroPump_HydroPowerPlant);
-	get_map.emplace("cim:HydroPump.RotatingMachine", &get_HydroPump_RotatingMachine);
+	get_map.emplace("HydroPump.HydroPowerPlant", &get_HydroPump_HydroPowerPlant);
+	get_map.emplace("HydroPump.RotatingMachine", &get_HydroPump_RotatingMachine);
 }
 
 void HydroPump::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -142,9 +174,23 @@ void HydroPump::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map)
 	Equipment::addEnumGetFnsToMap(get_map);
 }
 
+bool HydroPump::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "HydroPump" &&
+		dynamic_cast<HydroPump*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner HydroPump::declare()
 {
 	return BaseClassDefiner(HydroPump::addConstructToMap, HydroPump::addPrimitiveAssignFnsToMap, HydroPump::addClassAssignFnsToMap, HydroPump::debugName);
+}
+
+std::map<std::string, AttrDetails> HydroPump::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = Equipment::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

@@ -11,34 +11,66 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		DCShunt(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "DCShunt.capacitance", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "DCShunt.ratedUdc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "DCShunt.resistance", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 DCShunt::DCShunt() {}
 DCShunt::~DCShunt() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& DCShunt::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:DCShunt.capacitance", { CGMESProfile::EQ, } },
-	{ "cim:DCShunt.ratedUdc", { CGMESProfile::EQ, } },
-	{ "cim:DCShunt.resistance", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-DCShunt::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-DCShunt::getPossibleProfilesForAttributes() const
+const std::string& DCShunt::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = DCConductingEquipment::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& DCShunt::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& DCShunt::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& DCShunt::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& DCShunt::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& DCShunt::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_DCShunt_capacitance(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -136,14 +168,14 @@ const char* DCShunt::debugString() const
 
 void DCShunt::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:DCShunt", &DCShunt_factory);
+	factory_map.emplace("DCShunt", &DCShunt_factory);
 }
 
 void DCShunt::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:DCShunt.capacitance", &assign_DCShunt_capacitance);
-	assign_map.emplace("cim:DCShunt.ratedUdc", &assign_DCShunt_ratedUdc);
-	assign_map.emplace("cim:DCShunt.resistance", &assign_DCShunt_resistance);
+	assign_map.emplace("DCShunt.capacitance", &assign_DCShunt_capacitance);
+	assign_map.emplace("DCShunt.ratedUdc", &assign_DCShunt_ratedUdc);
+	assign_map.emplace("DCShunt.resistance", &assign_DCShunt_resistance);
 }
 
 void DCShunt::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -153,9 +185,9 @@ void DCShunt::addClassAssignFnsToMap(std::unordered_map<std::string, class_assig
 void DCShunt::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	DCConductingEquipment::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:DCShunt.capacitance", &get_DCShunt_capacitance);
-	get_map.emplace("cim:DCShunt.ratedUdc", &get_DCShunt_ratedUdc);
-	get_map.emplace("cim:DCShunt.resistance", &get_DCShunt_resistance);
+	get_map.emplace("DCShunt.capacitance", &get_DCShunt_capacitance);
+	get_map.emplace("DCShunt.ratedUdc", &get_DCShunt_ratedUdc);
+	get_map.emplace("DCShunt.resistance", &get_DCShunt_resistance);
 }
 
 void DCShunt::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -168,9 +200,23 @@ void DCShunt::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) c
 	DCConductingEquipment::addEnumGetFnsToMap(get_map);
 }
 
+bool DCShunt::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "DCShunt" &&
+		dynamic_cast<DCShunt*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner DCShunt::declare()
 {
 	return BaseClassDefiner(DCShunt::addConstructToMap, DCShunt::addPrimitiveAssignFnsToMap, DCShunt::addClassAssignFnsToMap, DCShunt::debugName);
+}
+
+std::map<std::string, AttrDetails> DCShunt::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = DCConductingEquipment::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

@@ -14,41 +14,73 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		WindPitchContPowerIEC(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "WindPitchContPowerIEC.WindDynamicsLookupTable", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPitchContPowerIEC.WindGenTurbineType1bIEC", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPitchContPowerIEC.WindGenTurbineType2IEC", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPitchContPowerIEC.dpmax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPitchContPowerIEC.dpmin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPitchContPowerIEC.pmin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPitchContPowerIEC.pset", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPitchContPowerIEC.t1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPitchContPowerIEC.tr", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindPitchContPowerIEC.uuvrt", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 WindPitchContPowerIEC::WindPitchContPowerIEC() : WindGenTurbineType1bIEC(nullptr), WindGenTurbineType2IEC(nullptr) {}
 WindPitchContPowerIEC::~WindPitchContPowerIEC() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& WindPitchContPowerIEC::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:WindPitchContPowerIEC.WindDynamicsLookupTable", { CGMESProfile::DY, } },
-	{ "cim:WindPitchContPowerIEC.WindGenTurbineType1bIEC", { CGMESProfile::DY, } },
-	{ "cim:WindPitchContPowerIEC.WindGenTurbineType2IEC", { CGMESProfile::DY, } },
-	{ "cim:WindPitchContPowerIEC.dpmax", { CGMESProfile::DY, } },
-	{ "cim:WindPitchContPowerIEC.dpmin", { CGMESProfile::DY, } },
-	{ "cim:WindPitchContPowerIEC.pmin", { CGMESProfile::DY, } },
-	{ "cim:WindPitchContPowerIEC.pset", { CGMESProfile::DY, } },
-	{ "cim:WindPitchContPowerIEC.t1", { CGMESProfile::DY, } },
-	{ "cim:WindPitchContPowerIEC.tr", { CGMESProfile::DY, } },
-	{ "cim:WindPitchContPowerIEC.uuvrt", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-WindPitchContPowerIEC::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-WindPitchContPowerIEC::getPossibleProfilesForAttributes() const
+const std::string& WindPitchContPowerIEC::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& WindPitchContPowerIEC::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& WindPitchContPowerIEC::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& WindPitchContPowerIEC::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& WindPitchContPowerIEC::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& WindPitchContPowerIEC::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_WindDynamicsLookupTable_WindPitchContPowerIEC(BaseClass*, BaseClass*);
@@ -316,37 +348,37 @@ const char* WindPitchContPowerIEC::debugString() const
 
 void WindPitchContPowerIEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:WindPitchContPowerIEC", &WindPitchContPowerIEC_factory);
+	factory_map.emplace("WindPitchContPowerIEC", &WindPitchContPowerIEC_factory);
 }
 
 void WindPitchContPowerIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindPitchContPowerIEC.dpmax", &assign_WindPitchContPowerIEC_dpmax);
-	assign_map.emplace("cim:WindPitchContPowerIEC.dpmin", &assign_WindPitchContPowerIEC_dpmin);
-	assign_map.emplace("cim:WindPitchContPowerIEC.pmin", &assign_WindPitchContPowerIEC_pmin);
-	assign_map.emplace("cim:WindPitchContPowerIEC.pset", &assign_WindPitchContPowerIEC_pset);
-	assign_map.emplace("cim:WindPitchContPowerIEC.t1", &assign_WindPitchContPowerIEC_t1);
-	assign_map.emplace("cim:WindPitchContPowerIEC.tr", &assign_WindPitchContPowerIEC_tr);
-	assign_map.emplace("cim:WindPitchContPowerIEC.uuvrt", &assign_WindPitchContPowerIEC_uuvrt);
+	assign_map.emplace("WindPitchContPowerIEC.dpmax", &assign_WindPitchContPowerIEC_dpmax);
+	assign_map.emplace("WindPitchContPowerIEC.dpmin", &assign_WindPitchContPowerIEC_dpmin);
+	assign_map.emplace("WindPitchContPowerIEC.pmin", &assign_WindPitchContPowerIEC_pmin);
+	assign_map.emplace("WindPitchContPowerIEC.pset", &assign_WindPitchContPowerIEC_pset);
+	assign_map.emplace("WindPitchContPowerIEC.t1", &assign_WindPitchContPowerIEC_t1);
+	assign_map.emplace("WindPitchContPowerIEC.tr", &assign_WindPitchContPowerIEC_tr);
+	assign_map.emplace("WindPitchContPowerIEC.uuvrt", &assign_WindPitchContPowerIEC_uuvrt);
 }
 
 void WindPitchContPowerIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindPitchContPowerIEC.WindDynamicsLookupTable", &assign_WindPitchContPowerIEC_WindDynamicsLookupTable);
-	assign_map.emplace("cim:WindPitchContPowerIEC.WindGenTurbineType1bIEC", &assign_WindPitchContPowerIEC_WindGenTurbineType1bIEC);
-	assign_map.emplace("cim:WindPitchContPowerIEC.WindGenTurbineType2IEC", &assign_WindPitchContPowerIEC_WindGenTurbineType2IEC);
+	assign_map.emplace("WindPitchContPowerIEC.WindDynamicsLookupTable", &assign_WindPitchContPowerIEC_WindDynamicsLookupTable);
+	assign_map.emplace("WindPitchContPowerIEC.WindGenTurbineType1bIEC", &assign_WindPitchContPowerIEC_WindGenTurbineType1bIEC);
+	assign_map.emplace("WindPitchContPowerIEC.WindGenTurbineType2IEC", &assign_WindPitchContPowerIEC_WindGenTurbineType2IEC);
 }
 
 void WindPitchContPowerIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:WindPitchContPowerIEC.dpmax", &get_WindPitchContPowerIEC_dpmax);
-	get_map.emplace("cim:WindPitchContPowerIEC.dpmin", &get_WindPitchContPowerIEC_dpmin);
-	get_map.emplace("cim:WindPitchContPowerIEC.pmin", &get_WindPitchContPowerIEC_pmin);
-	get_map.emplace("cim:WindPitchContPowerIEC.pset", &get_WindPitchContPowerIEC_pset);
-	get_map.emplace("cim:WindPitchContPowerIEC.t1", &get_WindPitchContPowerIEC_t1);
-	get_map.emplace("cim:WindPitchContPowerIEC.tr", &get_WindPitchContPowerIEC_tr);
-	get_map.emplace("cim:WindPitchContPowerIEC.uuvrt", &get_WindPitchContPowerIEC_uuvrt);
+	get_map.emplace("WindPitchContPowerIEC.dpmax", &get_WindPitchContPowerIEC_dpmax);
+	get_map.emplace("WindPitchContPowerIEC.dpmin", &get_WindPitchContPowerIEC_dpmin);
+	get_map.emplace("WindPitchContPowerIEC.pmin", &get_WindPitchContPowerIEC_pmin);
+	get_map.emplace("WindPitchContPowerIEC.pset", &get_WindPitchContPowerIEC_pset);
+	get_map.emplace("WindPitchContPowerIEC.t1", &get_WindPitchContPowerIEC_t1);
+	get_map.emplace("WindPitchContPowerIEC.tr", &get_WindPitchContPowerIEC_tr);
+	get_map.emplace("WindPitchContPowerIEC.uuvrt", &get_WindPitchContPowerIEC_uuvrt);
 }
 
 void WindPitchContPowerIEC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -359,9 +391,23 @@ void WindPitchContPowerIEC::addEnumGetFnsToMap(std::map<std::string, get_functio
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool WindPitchContPowerIEC::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "WindPitchContPowerIEC" &&
+		dynamic_cast<WindPitchContPowerIEC*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner WindPitchContPowerIEC::declare()
 {
 	return BaseClassDefiner(WindPitchContPowerIEC::addConstructToMap, WindPitchContPowerIEC::addPrimitiveAssignFnsToMap, WindPitchContPowerIEC::addClassAssignFnsToMap, WindPitchContPowerIEC::debugName);
+}
+
+std::map<std::string, AttrDetails> WindPitchContPowerIEC::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

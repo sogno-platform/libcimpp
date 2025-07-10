@@ -16,41 +16,73 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		DiagramObject(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DL,
+		},
+		CGMESProfile::DL
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "DiagramObject.Diagram", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+		{ "DiagramObject.DiagramObjectPoints", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+		{ "DiagramObject.DiagramObjectStyle", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+		{ "DiagramObject.IdentifiedObject", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+		{ "DiagramObject.VisibilityLayers", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+		{ "DiagramObject.drawingOrder", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+		{ "DiagramObject.isPolygon", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+		{ "DiagramObject.offsetX", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+		{ "DiagramObject.offsetY", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+		{ "DiagramObject.rotation", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 DiagramObject::DiagramObject() : Diagram(nullptr), DiagramObjectStyle(nullptr), IdentifiedObject(nullptr) {}
 DiagramObject::~DiagramObject() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& DiagramObject::getAttributeNames() const
 {
-	CGMESProfile::DL,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:DiagramObject.Diagram", { CGMESProfile::DL, } },
-	{ "cim:DiagramObject.DiagramObjectPoints", { CGMESProfile::DL, } },
-	{ "cim:DiagramObject.DiagramObjectStyle", { CGMESProfile::DL, } },
-	{ "cim:DiagramObject.IdentifiedObject", { CGMESProfile::DL, } },
-	{ "cim:DiagramObject.VisibilityLayers", { CGMESProfile::DL, } },
-	{ "cim:DiagramObject.drawingOrder", { CGMESProfile::DL, } },
-	{ "cim:DiagramObject.isPolygon", { CGMESProfile::DL, } },
-	{ "cim:DiagramObject.offsetX", { CGMESProfile::DL, } },
-	{ "cim:DiagramObject.offsetY", { CGMESProfile::DL, } },
-	{ "cim:DiagramObject.rotation", { CGMESProfile::DL, } },
-};
-
-std::list<CGMESProfile>
-DiagramObject::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-DiagramObject::getPossibleProfilesForAttributes() const
+const std::string& DiagramObject::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& DiagramObject::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& DiagramObject::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& DiagramObject::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& DiagramObject::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& DiagramObject::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_Diagram_DiagramElements(BaseClass*, BaseClass*);
@@ -335,43 +367,43 @@ const char* DiagramObject::debugString() const
 
 void DiagramObject::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:DiagramObject", &DiagramObject_factory);
+	factory_map.emplace("DiagramObject", &DiagramObject_factory);
 }
 
 void DiagramObject::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:DiagramObject.drawingOrder", &assign_DiagramObject_drawingOrder);
-	assign_map.emplace("cim:DiagramObject.isPolygon", &assign_DiagramObject_isPolygon);
-	assign_map.emplace("cim:DiagramObject.offsetX", &assign_DiagramObject_offsetX);
-	assign_map.emplace("cim:DiagramObject.offsetY", &assign_DiagramObject_offsetY);
-	assign_map.emplace("cim:DiagramObject.rotation", &assign_DiagramObject_rotation);
+	assign_map.emplace("DiagramObject.drawingOrder", &assign_DiagramObject_drawingOrder);
+	assign_map.emplace("DiagramObject.isPolygon", &assign_DiagramObject_isPolygon);
+	assign_map.emplace("DiagramObject.offsetX", &assign_DiagramObject_offsetX);
+	assign_map.emplace("DiagramObject.offsetY", &assign_DiagramObject_offsetY);
+	assign_map.emplace("DiagramObject.rotation", &assign_DiagramObject_rotation);
 }
 
 void DiagramObject::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:DiagramObject.Diagram", &assign_DiagramObject_Diagram);
-	assign_map.emplace("cim:DiagramObject.DiagramObjectPoints", &assign_DiagramObject_DiagramObjectPoints);
-	assign_map.emplace("cim:DiagramObject.DiagramObjectStyle", &assign_DiagramObject_DiagramObjectStyle);
-	assign_map.emplace("cim:DiagramObject.IdentifiedObject", &assign_DiagramObject_IdentifiedObject);
-	assign_map.emplace("cim:DiagramObject.VisibilityLayers", &assign_DiagramObject_VisibilityLayers);
+	assign_map.emplace("DiagramObject.Diagram", &assign_DiagramObject_Diagram);
+	assign_map.emplace("DiagramObject.DiagramObjectPoints", &assign_DiagramObject_DiagramObjectPoints);
+	assign_map.emplace("DiagramObject.DiagramObjectStyle", &assign_DiagramObject_DiagramObjectStyle);
+	assign_map.emplace("DiagramObject.IdentifiedObject", &assign_DiagramObject_IdentifiedObject);
+	assign_map.emplace("DiagramObject.VisibilityLayers", &assign_DiagramObject_VisibilityLayers);
 }
 
 void DiagramObject::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:DiagramObject.drawingOrder", &get_DiagramObject_drawingOrder);
-	get_map.emplace("cim:DiagramObject.isPolygon", &get_DiagramObject_isPolygon);
-	get_map.emplace("cim:DiagramObject.offsetX", &get_DiagramObject_offsetX);
-	get_map.emplace("cim:DiagramObject.offsetY", &get_DiagramObject_offsetY);
-	get_map.emplace("cim:DiagramObject.rotation", &get_DiagramObject_rotation);
+	get_map.emplace("DiagramObject.drawingOrder", &get_DiagramObject_drawingOrder);
+	get_map.emplace("DiagramObject.isPolygon", &get_DiagramObject_isPolygon);
+	get_map.emplace("DiagramObject.offsetX", &get_DiagramObject_offsetX);
+	get_map.emplace("DiagramObject.offsetY", &get_DiagramObject_offsetY);
+	get_map.emplace("DiagramObject.rotation", &get_DiagramObject_rotation);
 }
 
 void DiagramObject::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	IdentifiedObject::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:DiagramObject.Diagram", &get_DiagramObject_Diagram);
-	get_map.emplace("cim:DiagramObject.DiagramObjectStyle", &get_DiagramObject_DiagramObjectStyle);
-	get_map.emplace("cim:DiagramObject.IdentifiedObject", &get_DiagramObject_IdentifiedObject);
+	get_map.emplace("DiagramObject.Diagram", &get_DiagramObject_Diagram);
+	get_map.emplace("DiagramObject.DiagramObjectStyle", &get_DiagramObject_DiagramObjectStyle);
+	get_map.emplace("DiagramObject.IdentifiedObject", &get_DiagramObject_IdentifiedObject);
 }
 
 void DiagramObject::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -379,9 +411,23 @@ void DiagramObject::addEnumGetFnsToMap(std::map<std::string, get_function>& get_
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool DiagramObject::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "DiagramObject" &&
+		dynamic_cast<DiagramObject*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner DiagramObject::declare()
 {
 	return BaseClassDefiner(DiagramObject::addConstructToMap, DiagramObject::addPrimitiveAssignFnsToMap, DiagramObject::addClassAssignFnsToMap, DiagramObject::debugName);
+}
+
+std::map<std::string, AttrDetails> DiagramObject::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

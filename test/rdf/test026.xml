@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:cim="http://iec.ch/TC57/2013/CIM-schema-cim16#">
+  <cim:VoltageLevel rdf:ID="_VL">
+    <cim:IdentifiedObject.name>VL</cim:IdentifiedObject.name>
+  </cim:VoltageLevel>
+  <cim:PowerTransformer rdf:about="#_PT">
+    <cim:IdentifiedObject.name>PT</cim:IdentifiedObject.name>
+  </cim:PowerTransformer>
+  <cim:Equipment rdf:ID="_PT">
+    <cim:Equipment.EquipmentContainer rdf:resource="#_VL" />
+    <cim:IdentifiedObject.description>PowerTransformer</cim:IdentifiedObject.description>
+  </cim:Equipment>
+  <cim:PowerTransformerEnd rdf:ID="_PTE">
+    <cim:PowerTransformerEnd.PowerTransformer rdf:resource="#_PT" />
+  </cim:PowerTransformerEnd>
+</rdf:RDF>

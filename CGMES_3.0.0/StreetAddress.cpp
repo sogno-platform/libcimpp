@@ -14,37 +14,69 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		StreetAddress(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::GL,
+		},
+		CGMESProfile::GL
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "StreetAddress.language", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::GL, } } },
+		{ "StreetAddress.poBox", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::GL, } } },
+		{ "StreetAddress.postalCode", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::GL, } } },
+		{ "StreetAddress.status", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::GL, } } },
+		{ "StreetAddress.streetDetail", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::GL, } } },
+		{ "StreetAddress.townDetail", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::GL, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 StreetAddress::StreetAddress() : status(nullptr), streetDetail(nullptr), townDetail(nullptr) {}
 StreetAddress::~StreetAddress() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& StreetAddress::getAttributeNames() const
 {
-	CGMESProfile::GL,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:StreetAddress.language", { CGMESProfile::GL, } },
-	{ "cim:StreetAddress.poBox", { CGMESProfile::GL, } },
-	{ "cim:StreetAddress.postalCode", { CGMESProfile::GL, } },
-	{ "cim:StreetAddress.status", { CGMESProfile::GL, } },
-	{ "cim:StreetAddress.streetDetail", { CGMESProfile::GL, } },
-	{ "cim:StreetAddress.townDetail", { CGMESProfile::GL, } },
-};
-
-std::list<CGMESProfile>
-StreetAddress::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-StreetAddress::getPossibleProfilesForAttributes() const
+const std::string& StreetAddress::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& StreetAddress::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& StreetAddress::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& StreetAddress::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& StreetAddress::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& StreetAddress::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_StreetAddress_language(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -226,37 +258,37 @@ const char* StreetAddress::debugString() const
 
 void StreetAddress::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:StreetAddress", &StreetAddress_factory);
+	factory_map.emplace("StreetAddress", &StreetAddress_factory);
 }
 
 void StreetAddress::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:StreetAddress.language", &assign_StreetAddress_language);
-	assign_map.emplace("cim:StreetAddress.poBox", &assign_StreetAddress_poBox);
-	assign_map.emplace("cim:StreetAddress.postalCode", &assign_StreetAddress_postalCode);
+	assign_map.emplace("StreetAddress.language", &assign_StreetAddress_language);
+	assign_map.emplace("StreetAddress.poBox", &assign_StreetAddress_poBox);
+	assign_map.emplace("StreetAddress.postalCode", &assign_StreetAddress_postalCode);
 }
 
 void StreetAddress::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:StreetAddress.status", &assign_StreetAddress_status);
-	assign_map.emplace("cim:StreetAddress.streetDetail", &assign_StreetAddress_streetDetail);
-	assign_map.emplace("cim:StreetAddress.townDetail", &assign_StreetAddress_townDetail);
+	assign_map.emplace("StreetAddress.status", &assign_StreetAddress_status);
+	assign_map.emplace("StreetAddress.streetDetail", &assign_StreetAddress_streetDetail);
+	assign_map.emplace("StreetAddress.townDetail", &assign_StreetAddress_townDetail);
 }
 
 void StreetAddress::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	BaseClass::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:StreetAddress.language", &get_StreetAddress_language);
-	get_map.emplace("cim:StreetAddress.poBox", &get_StreetAddress_poBox);
-	get_map.emplace("cim:StreetAddress.postalCode", &get_StreetAddress_postalCode);
+	get_map.emplace("StreetAddress.language", &get_StreetAddress_language);
+	get_map.emplace("StreetAddress.poBox", &get_StreetAddress_poBox);
+	get_map.emplace("StreetAddress.postalCode", &get_StreetAddress_postalCode);
 }
 
 void StreetAddress::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	BaseClass::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:StreetAddress.status", &get_StreetAddress_status);
-	get_map.emplace("cim:StreetAddress.streetDetail", &get_StreetAddress_streetDetail);
-	get_map.emplace("cim:StreetAddress.townDetail", &get_StreetAddress_townDetail);
+	get_map.emplace("StreetAddress.status", &get_StreetAddress_status);
+	get_map.emplace("StreetAddress.streetDetail", &get_StreetAddress_streetDetail);
+	get_map.emplace("StreetAddress.townDetail", &get_StreetAddress_townDetail);
 }
 
 void StreetAddress::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -264,9 +296,23 @@ void StreetAddress::addEnumGetFnsToMap(std::map<std::string, get_function>& get_
 	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
+bool StreetAddress::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "StreetAddress" &&
+		dynamic_cast<StreetAddress*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner StreetAddress::declare()
 {
 	return BaseClassDefiner(StreetAddress::addConstructToMap, StreetAddress::addPrimitiveAssignFnsToMap, StreetAddress::addClassAssignFnsToMap, StreetAddress::debugName);
+}
+
+std::map<std::string, AttrDetails> StreetAddress::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = BaseClass::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

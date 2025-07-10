@@ -12,33 +12,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		WindPlantUserDefined(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "WindPlantUserDefined.ProprietaryParameterDynamics", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindPlantUserDefined.proprietary", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 WindPlantUserDefined::WindPlantUserDefined() {}
 WindPlantUserDefined::~WindPlantUserDefined() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& WindPlantUserDefined::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:WindPlantUserDefined.ProprietaryParameterDynamics", { CGMESProfile::DY, } },
-	{ "cim:WindPlantUserDefined.proprietary", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-WindPlantUserDefined::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-WindPlantUserDefined::getPossibleProfilesForAttributes() const
+const std::string& WindPlantUserDefined::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = WindPlantDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& WindPlantUserDefined::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& WindPlantUserDefined::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& WindPlantUserDefined::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& WindPlantUserDefined::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& WindPlantUserDefined::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ProprietaryParameterDynamics_WindPlantUserDefined(BaseClass*, BaseClass*);
@@ -96,23 +128,23 @@ const char* WindPlantUserDefined::debugString() const
 
 void WindPlantUserDefined::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:WindPlantUserDefined", &WindPlantUserDefined_factory);
+	factory_map.emplace("WindPlantUserDefined", &WindPlantUserDefined_factory);
 }
 
 void WindPlantUserDefined::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindPlantUserDefined.proprietary", &assign_WindPlantUserDefined_proprietary);
+	assign_map.emplace("WindPlantUserDefined.proprietary", &assign_WindPlantUserDefined_proprietary);
 }
 
 void WindPlantUserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindPlantUserDefined.ProprietaryParameterDynamics", &assign_WindPlantUserDefined_ProprietaryParameterDynamics);
+	assign_map.emplace("WindPlantUserDefined.ProprietaryParameterDynamics", &assign_WindPlantUserDefined_ProprietaryParameterDynamics);
 }
 
 void WindPlantUserDefined::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	WindPlantDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:WindPlantUserDefined.proprietary", &get_WindPlantUserDefined_proprietary);
+	get_map.emplace("WindPlantUserDefined.proprietary", &get_WindPlantUserDefined_proprietary);
 }
 
 void WindPlantUserDefined::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -125,9 +157,23 @@ void WindPlantUserDefined::addEnumGetFnsToMap(std::map<std::string, get_function
 	WindPlantDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool WindPlantUserDefined::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "WindPlantUserDefined" &&
+		dynamic_cast<WindPlantUserDefined*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner WindPlantUserDefined::declare()
 {
 	return BaseClassDefiner(WindPlantUserDefined::addConstructToMap, WindPlantUserDefined::addPrimitiveAssignFnsToMap, WindPlantUserDefined::addClassAssignFnsToMap, WindPlantUserDefined::debugName);
+}
+
+std::map<std::string, AttrDetails> WindPlantUserDefined::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = WindPlantDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:cim="http://iec.ch/TC57/2013/CIM-schema-cim16#">
+  <cim:VoltageLevel rdf:ID="VoltageLevel.98">
+    <cim:IdentifiedObject.name>98</cim:IdentifiedObject.name>
+  </cim:VoltageLevel>
+  <cim:EnergyConsumer rdf:ID="EnergyConsumer.H-5">
+    <cim:Equipment.EquipmentContainer rdf:resource="#VoltageLevel.98" />
+  </cim:EnergyConsumer>
+</rdf:RDF>

@@ -11,39 +11,71 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ExcSCRX(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ExcSCRX.cswitch", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcSCRX.emax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcSCRX.emin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcSCRX.k", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcSCRX.rcrfd", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcSCRX.tatb", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcSCRX.tb", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcSCRX.te", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ExcSCRX::ExcSCRX() {}
 ExcSCRX::~ExcSCRX() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ExcSCRX::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ExcSCRX.cswitch", { CGMESProfile::DY, } },
-	{ "cim:ExcSCRX.emax", { CGMESProfile::DY, } },
-	{ "cim:ExcSCRX.emin", { CGMESProfile::DY, } },
-	{ "cim:ExcSCRX.k", { CGMESProfile::DY, } },
-	{ "cim:ExcSCRX.rcrfd", { CGMESProfile::DY, } },
-	{ "cim:ExcSCRX.tatb", { CGMESProfile::DY, } },
-	{ "cim:ExcSCRX.tb", { CGMESProfile::DY, } },
-	{ "cim:ExcSCRX.te", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-ExcSCRX::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ExcSCRX::getPossibleProfilesForAttributes() const
+const std::string& ExcSCRX::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ExcSCRX::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ExcSCRX::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ExcSCRX::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ExcSCRX::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ExcSCRX::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ExcSCRX_cswitch(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -286,19 +318,19 @@ const char* ExcSCRX::debugString() const
 
 void ExcSCRX::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ExcSCRX", &ExcSCRX_factory);
+	factory_map.emplace("ExcSCRX", &ExcSCRX_factory);
 }
 
 void ExcSCRX::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ExcSCRX.cswitch", &assign_ExcSCRX_cswitch);
-	assign_map.emplace("cim:ExcSCRX.emax", &assign_ExcSCRX_emax);
-	assign_map.emplace("cim:ExcSCRX.emin", &assign_ExcSCRX_emin);
-	assign_map.emplace("cim:ExcSCRX.k", &assign_ExcSCRX_k);
-	assign_map.emplace("cim:ExcSCRX.rcrfd", &assign_ExcSCRX_rcrfd);
-	assign_map.emplace("cim:ExcSCRX.tatb", &assign_ExcSCRX_tatb);
-	assign_map.emplace("cim:ExcSCRX.tb", &assign_ExcSCRX_tb);
-	assign_map.emplace("cim:ExcSCRX.te", &assign_ExcSCRX_te);
+	assign_map.emplace("ExcSCRX.cswitch", &assign_ExcSCRX_cswitch);
+	assign_map.emplace("ExcSCRX.emax", &assign_ExcSCRX_emax);
+	assign_map.emplace("ExcSCRX.emin", &assign_ExcSCRX_emin);
+	assign_map.emplace("ExcSCRX.k", &assign_ExcSCRX_k);
+	assign_map.emplace("ExcSCRX.rcrfd", &assign_ExcSCRX_rcrfd);
+	assign_map.emplace("ExcSCRX.tatb", &assign_ExcSCRX_tatb);
+	assign_map.emplace("ExcSCRX.tb", &assign_ExcSCRX_tb);
+	assign_map.emplace("ExcSCRX.te", &assign_ExcSCRX_te);
 }
 
 void ExcSCRX::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -308,14 +340,14 @@ void ExcSCRX::addClassAssignFnsToMap(std::unordered_map<std::string, class_assig
 void ExcSCRX::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ExcSCRX.cswitch", &get_ExcSCRX_cswitch);
-	get_map.emplace("cim:ExcSCRX.emax", &get_ExcSCRX_emax);
-	get_map.emplace("cim:ExcSCRX.emin", &get_ExcSCRX_emin);
-	get_map.emplace("cim:ExcSCRX.k", &get_ExcSCRX_k);
-	get_map.emplace("cim:ExcSCRX.rcrfd", &get_ExcSCRX_rcrfd);
-	get_map.emplace("cim:ExcSCRX.tatb", &get_ExcSCRX_tatb);
-	get_map.emplace("cim:ExcSCRX.tb", &get_ExcSCRX_tb);
-	get_map.emplace("cim:ExcSCRX.te", &get_ExcSCRX_te);
+	get_map.emplace("ExcSCRX.cswitch", &get_ExcSCRX_cswitch);
+	get_map.emplace("ExcSCRX.emax", &get_ExcSCRX_emax);
+	get_map.emplace("ExcSCRX.emin", &get_ExcSCRX_emin);
+	get_map.emplace("ExcSCRX.k", &get_ExcSCRX_k);
+	get_map.emplace("ExcSCRX.rcrfd", &get_ExcSCRX_rcrfd);
+	get_map.emplace("ExcSCRX.tatb", &get_ExcSCRX_tatb);
+	get_map.emplace("ExcSCRX.tb", &get_ExcSCRX_tb);
+	get_map.emplace("ExcSCRX.te", &get_ExcSCRX_te);
 }
 
 void ExcSCRX::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -328,9 +360,23 @@ void ExcSCRX::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) c
 	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool ExcSCRX::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ExcSCRX" &&
+		dynamic_cast<ExcSCRX*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ExcSCRX::declare()
 {
 	return BaseClassDefiner(ExcSCRX::addConstructToMap, ExcSCRX::addPrimitiveAssignFnsToMap, ExcSCRX::addClassAssignFnsToMap, ExcSCRX::debugName);
+}
+
+std::map<std::string, AttrDetails> ExcSCRX::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ExcitationSystemDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

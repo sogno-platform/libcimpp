@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:md="http://iec.ch/TC57/61970-552/ModelDescription/1#"
+         xmlns:cim="http://iec.ch/TC57/CIM100#"
+         xmlns:eu="http://iec.ch/TC57/CIM100-European#">
+  <md:FullModel rdf:about="test004">
+    <md:Model.profile>http://iec.ch/TC57/ns/CIM/CoreEquipment-EU/3.0</md:Model.profile>
+  </md:FullModel>
+  <cim:BaseVoltage rdf:ID="BaseVoltage.20">
+    <cim:BaseVoltage.nominalVoltage>20.0</cim:BaseVoltage.nominalVoltage>
+    <eu:IdentifiedObject.shortName>20</eu:IdentifiedObject.shortName>
+  </cim:BaseVoltage>
+</rdf:RDF>

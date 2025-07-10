@@ -11,33 +11,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		WindGeneratingUnit(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "WindGeneratingUnit.windGenUnitType", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 WindGeneratingUnit::WindGeneratingUnit() {}
 WindGeneratingUnit::~WindGeneratingUnit() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& WindGeneratingUnit::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:WindGeneratingUnit.windGenUnitType", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-WindGeneratingUnit::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-WindGeneratingUnit::getPossibleProfilesForAttributes() const
+const std::string& WindGeneratingUnit::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = GeneratingUnit::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& WindGeneratingUnit::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& WindGeneratingUnit::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& WindGeneratingUnit::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& WindGeneratingUnit::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& WindGeneratingUnit::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_WindGeneratingUnit_windGenUnitType(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -77,12 +109,12 @@ const char* WindGeneratingUnit::debugString() const
 
 void WindGeneratingUnit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:WindGeneratingUnit", &WindGeneratingUnit_factory);
+	factory_map.emplace("WindGeneratingUnit", &WindGeneratingUnit_factory);
 }
 
 void WindGeneratingUnit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindGeneratingUnit.windGenUnitType", &assign_WindGeneratingUnit_windGenUnitType);
+	assign_map.emplace("WindGeneratingUnit.windGenUnitType", &assign_WindGeneratingUnit_windGenUnitType);
 }
 
 void WindGeneratingUnit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -102,12 +134,26 @@ void WindGeneratingUnit::addClassGetFnsToMap(std::map<std::string, class_get_fun
 void WindGeneratingUnit::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	GeneratingUnit::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:WindGeneratingUnit.windGenUnitType", &get_WindGeneratingUnit_windGenUnitType);
+	get_map.emplace("WindGeneratingUnit.windGenUnitType", &get_WindGeneratingUnit_windGenUnitType);
+}
+
+bool WindGeneratingUnit::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "WindGeneratingUnit" &&
+		dynamic_cast<WindGeneratingUnit*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner WindGeneratingUnit::declare()
 {
 	return BaseClassDefiner(WindGeneratingUnit::addConstructToMap, WindGeneratingUnit::addPrimitiveAssignFnsToMap, WindGeneratingUnit::addClassAssignFnsToMap, WindGeneratingUnit::debugName);
+}
+
+std::map<std::string, AttrDetails> WindGeneratingUnit::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = GeneratingUnit::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

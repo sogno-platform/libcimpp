@@ -15,37 +15,69 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ConnectivityNode(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::EQBD,
+			CGMESProfile::TP,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ConnectivityNode.BoundaryPoint", { "http://iec.ch/TC57/CIM100-European#", { CGMESProfile::EQ, CGMESProfile::EQBD, } } },
+		{ "ConnectivityNode.ConnectivityNodeContainer", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, CGMESProfile::EQBD, } } },
+		{ "ConnectivityNode.Terminals", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, CGMESProfile::EQBD, } } },
+		{ "ConnectivityNode.TopologicalNode", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::TP, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ConnectivityNode::ConnectivityNode() : BoundaryPoint(nullptr), ConnectivityNodeContainer(nullptr), TopologicalNode(nullptr) {}
 ConnectivityNode::~ConnectivityNode() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ConnectivityNode::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::EQBD,
-	CGMESProfile::TP,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ConnectivityNode.BoundaryPoint", { CGMESProfile::EQ, CGMESProfile::EQBD, } },
-	{ "cim:ConnectivityNode.ConnectivityNodeContainer", { CGMESProfile::EQ, CGMESProfile::EQBD, } },
-	{ "cim:ConnectivityNode.Terminals", { CGMESProfile::EQ, CGMESProfile::EQBD, } },
-	{ "cim:ConnectivityNode.TopologicalNode", { CGMESProfile::TP, } },
-};
-
-std::list<CGMESProfile>
-ConnectivityNode::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ConnectivityNode::getPossibleProfilesForAttributes() const
+const std::string& ConnectivityNode::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ConnectivityNode::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ConnectivityNode::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ConnectivityNode::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ConnectivityNode::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ConnectivityNode::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_BoundaryPoint_ConnectivityNode(BaseClass*, BaseClass*);
@@ -154,7 +186,7 @@ const char* ConnectivityNode::debugString() const
 
 void ConnectivityNode::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ConnectivityNode", &ConnectivityNode_factory);
+	factory_map.emplace("ConnectivityNode", &ConnectivityNode_factory);
 }
 
 void ConnectivityNode::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -163,10 +195,10 @@ void ConnectivityNode::addPrimitiveAssignFnsToMap(std::unordered_map<std::string
 
 void ConnectivityNode::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ConnectivityNode.BoundaryPoint", &assign_ConnectivityNode_BoundaryPoint);
-	assign_map.emplace("cim:ConnectivityNode.ConnectivityNodeContainer", &assign_ConnectivityNode_ConnectivityNodeContainer);
-	assign_map.emplace("cim:ConnectivityNode.Terminals", &assign_ConnectivityNode_Terminals);
-	assign_map.emplace("cim:ConnectivityNode.TopologicalNode", &assign_ConnectivityNode_TopologicalNode);
+	assign_map.emplace("ConnectivityNode.BoundaryPoint", &assign_ConnectivityNode_BoundaryPoint);
+	assign_map.emplace("ConnectivityNode.ConnectivityNodeContainer", &assign_ConnectivityNode_ConnectivityNodeContainer);
+	assign_map.emplace("ConnectivityNode.Terminals", &assign_ConnectivityNode_Terminals);
+	assign_map.emplace("ConnectivityNode.TopologicalNode", &assign_ConnectivityNode_TopologicalNode);
 }
 
 void ConnectivityNode::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -177,8 +209,8 @@ void ConnectivityNode::addPrimitiveGetFnsToMap(std::map<std::string, get_functio
 void ConnectivityNode::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	IdentifiedObject::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:ConnectivityNode.ConnectivityNodeContainer", &get_ConnectivityNode_ConnectivityNodeContainer);
-	get_map.emplace("cim:ConnectivityNode.TopologicalNode", &get_ConnectivityNode_TopologicalNode);
+	get_map.emplace("ConnectivityNode.ConnectivityNodeContainer", &get_ConnectivityNode_ConnectivityNodeContainer);
+	get_map.emplace("ConnectivityNode.TopologicalNode", &get_ConnectivityNode_TopologicalNode);
 }
 
 void ConnectivityNode::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -186,9 +218,23 @@ void ConnectivityNode::addEnumGetFnsToMap(std::map<std::string, get_function>& g
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool ConnectivityNode::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ConnectivityNode" &&
+		dynamic_cast<ConnectivityNode*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ConnectivityNode::declare()
 {
 	return BaseClassDefiner(ConnectivityNode::addConstructToMap, ConnectivityNode::addPrimitiveAssignFnsToMap, ConnectivityNode::addClassAssignFnsToMap, ConnectivityNode::debugName);
+}
+
+std::map<std::string, AttrDetails> ConnectivityNode::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

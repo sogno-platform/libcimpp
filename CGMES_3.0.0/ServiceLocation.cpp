@@ -11,31 +11,63 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ServiceLocation(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::GL,
+		},
+		CGMESProfile::GL
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+	};
+    return ClassAttrDetailsMap;
+}
+
 ServiceLocation::ServiceLocation() {}
 ServiceLocation::~ServiceLocation() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ServiceLocation::getAttributeNames() const
 {
-	CGMESProfile::GL,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-};
-
-std::list<CGMESProfile>
-ServiceLocation::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ServiceLocation::getPossibleProfilesForAttributes() const
+const std::string& ServiceLocation::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = WorkLocation::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ServiceLocation::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ServiceLocation::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ServiceLocation::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ServiceLocation::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ServiceLocation::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 const char ServiceLocation::debugName[] = "ServiceLocation";
@@ -46,7 +78,7 @@ const char* ServiceLocation::debugString() const
 
 void ServiceLocation::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ServiceLocation", &ServiceLocation_factory);
+	factory_map.emplace("ServiceLocation", &ServiceLocation_factory);
 }
 
 void ServiceLocation::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -72,9 +104,23 @@ void ServiceLocation::addEnumGetFnsToMap(std::map<std::string, get_function>& ge
 	WorkLocation::addEnumGetFnsToMap(get_map);
 }
 
+bool ServiceLocation::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ServiceLocation" &&
+		dynamic_cast<ServiceLocation*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ServiceLocation::declare()
 {
 	return BaseClassDefiner(ServiceLocation::addConstructToMap, ServiceLocation::addPrimitiveAssignFnsToMap, ServiceLocation::addClassAssignFnsToMap, ServiceLocation::debugName);
+}
+
+std::map<std::string, AttrDetails> ServiceLocation::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = WorkLocation::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

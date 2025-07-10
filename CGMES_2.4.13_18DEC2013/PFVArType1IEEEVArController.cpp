@@ -11,37 +11,69 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		PFVArType1IEEEVArController(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "PFVArType1IEEEVArController.tvarc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "PFVArType1IEEEVArController.vvar", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "PFVArType1IEEEVArController.vvarcbw", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "PFVArType1IEEEVArController.vvarref", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "PFVArType1IEEEVArController.vvtmax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "PFVArType1IEEEVArController.vvtmin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 PFVArType1IEEEVArController::PFVArType1IEEEVArController() {}
 PFVArType1IEEEVArController::~PFVArType1IEEEVArController() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& PFVArType1IEEEVArController::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:PFVArType1IEEEVArController.tvarc", { CGMESProfile::DY, } },
-	{ "cim:PFVArType1IEEEVArController.vvar", { CGMESProfile::DY, } },
-	{ "cim:PFVArType1IEEEVArController.vvarcbw", { CGMESProfile::DY, } },
-	{ "cim:PFVArType1IEEEVArController.vvarref", { CGMESProfile::DY, } },
-	{ "cim:PFVArType1IEEEVArController.vvtmax", { CGMESProfile::DY, } },
-	{ "cim:PFVArType1IEEEVArController.vvtmin", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-PFVArType1IEEEVArController::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-PFVArType1IEEEVArController::getPossibleProfilesForAttributes() const
+const std::string& PFVArType1IEEEVArController::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = PFVArControllerType1Dynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& PFVArType1IEEEVArController::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& PFVArType1IEEEVArController::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& PFVArType1IEEEVArController::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& PFVArType1IEEEVArController::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& PFVArType1IEEEVArController::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_PFVArType1IEEEVArController_tvarc(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -226,17 +258,17 @@ const char* PFVArType1IEEEVArController::debugString() const
 
 void PFVArType1IEEEVArController::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:PFVArType1IEEEVArController", &PFVArType1IEEEVArController_factory);
+	factory_map.emplace("PFVArType1IEEEVArController", &PFVArType1IEEEVArController_factory);
 }
 
 void PFVArType1IEEEVArController::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:PFVArType1IEEEVArController.tvarc", &assign_PFVArType1IEEEVArController_tvarc);
-	assign_map.emplace("cim:PFVArType1IEEEVArController.vvar", &assign_PFVArType1IEEEVArController_vvar);
-	assign_map.emplace("cim:PFVArType1IEEEVArController.vvarcbw", &assign_PFVArType1IEEEVArController_vvarcbw);
-	assign_map.emplace("cim:PFVArType1IEEEVArController.vvarref", &assign_PFVArType1IEEEVArController_vvarref);
-	assign_map.emplace("cim:PFVArType1IEEEVArController.vvtmax", &assign_PFVArType1IEEEVArController_vvtmax);
-	assign_map.emplace("cim:PFVArType1IEEEVArController.vvtmin", &assign_PFVArType1IEEEVArController_vvtmin);
+	assign_map.emplace("PFVArType1IEEEVArController.tvarc", &assign_PFVArType1IEEEVArController_tvarc);
+	assign_map.emplace("PFVArType1IEEEVArController.vvar", &assign_PFVArType1IEEEVArController_vvar);
+	assign_map.emplace("PFVArType1IEEEVArController.vvarcbw", &assign_PFVArType1IEEEVArController_vvarcbw);
+	assign_map.emplace("PFVArType1IEEEVArController.vvarref", &assign_PFVArType1IEEEVArController_vvarref);
+	assign_map.emplace("PFVArType1IEEEVArController.vvtmax", &assign_PFVArType1IEEEVArController_vvtmax);
+	assign_map.emplace("PFVArType1IEEEVArController.vvtmin", &assign_PFVArType1IEEEVArController_vvtmin);
 }
 
 void PFVArType1IEEEVArController::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -246,12 +278,12 @@ void PFVArType1IEEEVArController::addClassAssignFnsToMap(std::unordered_map<std:
 void PFVArType1IEEEVArController::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	PFVArControllerType1Dynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:PFVArType1IEEEVArController.tvarc", &get_PFVArType1IEEEVArController_tvarc);
-	get_map.emplace("cim:PFVArType1IEEEVArController.vvar", &get_PFVArType1IEEEVArController_vvar);
-	get_map.emplace("cim:PFVArType1IEEEVArController.vvarcbw", &get_PFVArType1IEEEVArController_vvarcbw);
-	get_map.emplace("cim:PFVArType1IEEEVArController.vvarref", &get_PFVArType1IEEEVArController_vvarref);
-	get_map.emplace("cim:PFVArType1IEEEVArController.vvtmax", &get_PFVArType1IEEEVArController_vvtmax);
-	get_map.emplace("cim:PFVArType1IEEEVArController.vvtmin", &get_PFVArType1IEEEVArController_vvtmin);
+	get_map.emplace("PFVArType1IEEEVArController.tvarc", &get_PFVArType1IEEEVArController_tvarc);
+	get_map.emplace("PFVArType1IEEEVArController.vvar", &get_PFVArType1IEEEVArController_vvar);
+	get_map.emplace("PFVArType1IEEEVArController.vvarcbw", &get_PFVArType1IEEEVArController_vvarcbw);
+	get_map.emplace("PFVArType1IEEEVArController.vvarref", &get_PFVArType1IEEEVArController_vvarref);
+	get_map.emplace("PFVArType1IEEEVArController.vvtmax", &get_PFVArType1IEEEVArController_vvtmax);
+	get_map.emplace("PFVArType1IEEEVArController.vvtmin", &get_PFVArType1IEEEVArController_vvtmin);
 }
 
 void PFVArType1IEEEVArController::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -264,9 +296,23 @@ void PFVArType1IEEEVArController::addEnumGetFnsToMap(std::map<std::string, get_f
 	PFVArControllerType1Dynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool PFVArType1IEEEVArController::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "PFVArType1IEEEVArController" &&
+		dynamic_cast<PFVArType1IEEEVArController*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner PFVArType1IEEEVArController::declare()
 {
 	return BaseClassDefiner(PFVArType1IEEEVArController::addConstructToMap, PFVArType1IEEEVArController::addPrimitiveAssignFnsToMap, PFVArType1IEEEVArController::addClassAssignFnsToMap, PFVArType1IEEEVArController::debugName);
+}
+
+std::map<std::string, AttrDetails> PFVArType1IEEEVArController::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = PFVArControllerType1Dynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

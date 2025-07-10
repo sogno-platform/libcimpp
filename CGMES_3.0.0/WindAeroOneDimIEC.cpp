@@ -12,34 +12,66 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		WindAeroOneDimIEC(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "WindAeroOneDimIEC.WindTurbineType3IEC", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindAeroOneDimIEC.ka", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindAeroOneDimIEC.thetaomega", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 WindAeroOneDimIEC::WindAeroOneDimIEC() : WindTurbineType3IEC(nullptr) {}
 WindAeroOneDimIEC::~WindAeroOneDimIEC() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& WindAeroOneDimIEC::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:WindAeroOneDimIEC.WindTurbineType3IEC", { CGMESProfile::DY, } },
-	{ "cim:WindAeroOneDimIEC.ka", { CGMESProfile::DY, } },
-	{ "cim:WindAeroOneDimIEC.thetaomega", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-WindAeroOneDimIEC::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-WindAeroOneDimIEC::getPossibleProfilesForAttributes() const
+const std::string& WindAeroOneDimIEC::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& WindAeroOneDimIEC::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& WindAeroOneDimIEC::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& WindAeroOneDimIEC::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& WindAeroOneDimIEC::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& WindAeroOneDimIEC::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_WindTurbineType3IEC_WindAeroOneDimIEC(BaseClass*, BaseClass*);
@@ -126,25 +158,25 @@ const char* WindAeroOneDimIEC::debugString() const
 
 void WindAeroOneDimIEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:WindAeroOneDimIEC", &WindAeroOneDimIEC_factory);
+	factory_map.emplace("WindAeroOneDimIEC", &WindAeroOneDimIEC_factory);
 }
 
 void WindAeroOneDimIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindAeroOneDimIEC.ka", &assign_WindAeroOneDimIEC_ka);
-	assign_map.emplace("cim:WindAeroOneDimIEC.thetaomega", &assign_WindAeroOneDimIEC_thetaomega);
+	assign_map.emplace("WindAeroOneDimIEC.ka", &assign_WindAeroOneDimIEC_ka);
+	assign_map.emplace("WindAeroOneDimIEC.thetaomega", &assign_WindAeroOneDimIEC_thetaomega);
 }
 
 void WindAeroOneDimIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindAeroOneDimIEC.WindTurbineType3IEC", &assign_WindAeroOneDimIEC_WindTurbineType3IEC);
+	assign_map.emplace("WindAeroOneDimIEC.WindTurbineType3IEC", &assign_WindAeroOneDimIEC_WindTurbineType3IEC);
 }
 
 void WindAeroOneDimIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:WindAeroOneDimIEC.ka", &get_WindAeroOneDimIEC_ka);
-	get_map.emplace("cim:WindAeroOneDimIEC.thetaomega", &get_WindAeroOneDimIEC_thetaomega);
+	get_map.emplace("WindAeroOneDimIEC.ka", &get_WindAeroOneDimIEC_ka);
+	get_map.emplace("WindAeroOneDimIEC.thetaomega", &get_WindAeroOneDimIEC_thetaomega);
 }
 
 void WindAeroOneDimIEC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -157,9 +189,23 @@ void WindAeroOneDimIEC::addEnumGetFnsToMap(std::map<std::string, get_function>& 
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool WindAeroOneDimIEC::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "WindAeroOneDimIEC" &&
+		dynamic_cast<WindAeroOneDimIEC*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner WindAeroOneDimIEC::declare()
 {
 	return BaseClassDefiner(WindAeroOneDimIEC::addConstructToMap, WindAeroOneDimIEC::addPrimitiveAssignFnsToMap, WindAeroOneDimIEC::addClassAssignFnsToMap, WindAeroOneDimIEC::debugName);
+}
+
+std::map<std::string, AttrDetails> WindAeroOneDimIEC::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

@@ -12,33 +12,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ACDCConverterDCTerminal(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ACDCConverterDCTerminal.DCConductingEquipment", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ACDCConverterDCTerminal.polarity", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ACDCConverterDCTerminal::ACDCConverterDCTerminal() : DCConductingEquipment(nullptr) {}
 ACDCConverterDCTerminal::~ACDCConverterDCTerminal() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ACDCConverterDCTerminal::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ACDCConverterDCTerminal.DCConductingEquipment", { CGMESProfile::EQ, } },
-	{ "cim:ACDCConverterDCTerminal.polarity", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-ACDCConverterDCTerminal::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ACDCConverterDCTerminal::getPossibleProfilesForAttributes() const
+const std::string& ACDCConverterDCTerminal::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = DCBaseTerminal::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ACDCConverterDCTerminal::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ACDCConverterDCTerminal::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ACDCConverterDCTerminal::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ACDCConverterDCTerminal::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ACDCConverterDCTerminal::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ACDCConverter_DCTerminals(BaseClass*, BaseClass*);
@@ -109,17 +141,17 @@ const char* ACDCConverterDCTerminal::debugString() const
 
 void ACDCConverterDCTerminal::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ACDCConverterDCTerminal", &ACDCConverterDCTerminal_factory);
+	factory_map.emplace("ACDCConverterDCTerminal", &ACDCConverterDCTerminal_factory);
 }
 
 void ACDCConverterDCTerminal::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ACDCConverterDCTerminal.polarity", &assign_ACDCConverterDCTerminal_polarity);
+	assign_map.emplace("ACDCConverterDCTerminal.polarity", &assign_ACDCConverterDCTerminal_polarity);
 }
 
 void ACDCConverterDCTerminal::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ACDCConverterDCTerminal.DCConductingEquipment", &assign_ACDCConverterDCTerminal_DCConductingEquipment);
+	assign_map.emplace("ACDCConverterDCTerminal.DCConductingEquipment", &assign_ACDCConverterDCTerminal_DCConductingEquipment);
 }
 
 void ACDCConverterDCTerminal::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -130,18 +162,32 @@ void ACDCConverterDCTerminal::addPrimitiveGetFnsToMap(std::map<std::string, get_
 void ACDCConverterDCTerminal::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	DCBaseTerminal::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:ACDCConverterDCTerminal.DCConductingEquipment", &get_ACDCConverterDCTerminal_DCConductingEquipment);
+	get_map.emplace("ACDCConverterDCTerminal.DCConductingEquipment", &get_ACDCConverterDCTerminal_DCConductingEquipment);
 }
 
 void ACDCConverterDCTerminal::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	DCBaseTerminal::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:ACDCConverterDCTerminal.polarity", &get_ACDCConverterDCTerminal_polarity);
+	get_map.emplace("ACDCConverterDCTerminal.polarity", &get_ACDCConverterDCTerminal_polarity);
+}
+
+bool ACDCConverterDCTerminal::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ACDCConverterDCTerminal" &&
+		dynamic_cast<ACDCConverterDCTerminal*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner ACDCConverterDCTerminal::declare()
 {
 	return BaseClassDefiner(ACDCConverterDCTerminal::addConstructToMap, ACDCConverterDCTerminal::addPrimitiveAssignFnsToMap, ACDCConverterDCTerminal::addClassAssignFnsToMap, ACDCConverterDCTerminal::debugName);
+}
+
+std::map<std::string, AttrDetails> ACDCConverterDCTerminal::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = DCBaseTerminal::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

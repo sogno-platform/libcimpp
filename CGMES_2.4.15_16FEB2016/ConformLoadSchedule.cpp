@@ -12,32 +12,64 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ConformLoadSchedule(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ConformLoadSchedule.ConformLoadGroup", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ConformLoadSchedule::ConformLoadSchedule() : ConformLoadGroup(nullptr) {}
 ConformLoadSchedule::~ConformLoadSchedule() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ConformLoadSchedule::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ConformLoadSchedule.ConformLoadGroup", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-ConformLoadSchedule::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ConformLoadSchedule::getPossibleProfilesForAttributes() const
+const std::string& ConformLoadSchedule::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = SeasonDayTypeSchedule::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ConformLoadSchedule::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ConformLoadSchedule::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ConformLoadSchedule::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ConformLoadSchedule::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ConformLoadSchedule::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ConformLoadGroup_ConformLoadSchedules(BaseClass*, BaseClass*);
@@ -79,7 +111,7 @@ const char* ConformLoadSchedule::debugString() const
 
 void ConformLoadSchedule::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ConformLoadSchedule", &ConformLoadSchedule_factory);
+	factory_map.emplace("ConformLoadSchedule", &ConformLoadSchedule_factory);
 }
 
 void ConformLoadSchedule::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -88,7 +120,7 @@ void ConformLoadSchedule::addPrimitiveAssignFnsToMap(std::unordered_map<std::str
 
 void ConformLoadSchedule::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ConformLoadSchedule.ConformLoadGroup", &assign_ConformLoadSchedule_ConformLoadGroup);
+	assign_map.emplace("ConformLoadSchedule.ConformLoadGroup", &assign_ConformLoadSchedule_ConformLoadGroup);
 }
 
 void ConformLoadSchedule::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -99,7 +131,7 @@ void ConformLoadSchedule::addPrimitiveGetFnsToMap(std::map<std::string, get_func
 void ConformLoadSchedule::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	SeasonDayTypeSchedule::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:ConformLoadSchedule.ConformLoadGroup", &get_ConformLoadSchedule_ConformLoadGroup);
+	get_map.emplace("ConformLoadSchedule.ConformLoadGroup", &get_ConformLoadSchedule_ConformLoadGroup);
 }
 
 void ConformLoadSchedule::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -107,9 +139,23 @@ void ConformLoadSchedule::addEnumGetFnsToMap(std::map<std::string, get_function>
 	SeasonDayTypeSchedule::addEnumGetFnsToMap(get_map);
 }
 
+bool ConformLoadSchedule::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ConformLoadSchedule" &&
+		dynamic_cast<ConformLoadSchedule*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ConformLoadSchedule::declare()
 {
 	return BaseClassDefiner(ConformLoadSchedule::addConstructToMap, ConformLoadSchedule::addPrimitiveAssignFnsToMap, ConformLoadSchedule::addClassAssignFnsToMap, ConformLoadSchedule::debugName);
+}
+
+std::map<std::string, AttrDetails> ConformLoadSchedule::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = SeasonDayTypeSchedule::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

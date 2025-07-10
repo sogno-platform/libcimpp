@@ -12,45 +12,77 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		VsConverter(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SV,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "VsConverter.CapabilityCurve", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "VsConverter.delta", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SV, } } },
+		{ "VsConverter.droop", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SSH, } } },
+		{ "VsConverter.droopCompensation", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SSH, } } },
+		{ "VsConverter.maxModulationIndex", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "VsConverter.maxValveCurrent", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "VsConverter.pPccControl", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SSH, } } },
+		{ "VsConverter.qPccControl", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SSH, } } },
+		{ "VsConverter.qShare", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SSH, } } },
+		{ "VsConverter.targetQpcc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SSH, } } },
+		{ "VsConverter.targetUpcc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SSH, } } },
+		{ "VsConverter.uf", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SV, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 VsConverter::VsConverter() : CapabilityCurve(nullptr) {}
 VsConverter::~VsConverter() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& VsConverter::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SV,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:VsConverter.CapabilityCurve", { CGMESProfile::EQ, } },
-	{ "cim:VsConverter.delta", { CGMESProfile::SV, } },
-	{ "cim:VsConverter.droop", { CGMESProfile::SSH, } },
-	{ "cim:VsConverter.droopCompensation", { CGMESProfile::SSH, } },
-	{ "cim:VsConverter.maxModulationIndex", { CGMESProfile::EQ, } },
-	{ "cim:VsConverter.maxValveCurrent", { CGMESProfile::EQ, } },
-	{ "cim:VsConverter.pPccControl", { CGMESProfile::SSH, } },
-	{ "cim:VsConverter.qPccControl", { CGMESProfile::SSH, } },
-	{ "cim:VsConverter.qShare", { CGMESProfile::SSH, } },
-	{ "cim:VsConverter.targetQpcc", { CGMESProfile::SSH, } },
-	{ "cim:VsConverter.targetUpcc", { CGMESProfile::SSH, } },
-	{ "cim:VsConverter.uf", { CGMESProfile::SV, } },
-};
-
-std::list<CGMESProfile>
-VsConverter::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-VsConverter::getPossibleProfilesForAttributes() const
+const std::string& VsConverter::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ACDCConverter::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& VsConverter::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& VsConverter::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& VsConverter::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& VsConverter::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& VsConverter::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_VsCapabilityCurve_VsConverterDCSides(BaseClass*, BaseClass*);
@@ -411,59 +443,73 @@ const char* VsConverter::debugString() const
 
 void VsConverter::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:VsConverter", &VsConverter_factory);
+	factory_map.emplace("VsConverter", &VsConverter_factory);
 }
 
 void VsConverter::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:VsConverter.delta", &assign_VsConverter_delta);
-	assign_map.emplace("cim:VsConverter.droop", &assign_VsConverter_droop);
-	assign_map.emplace("cim:VsConverter.droopCompensation", &assign_VsConverter_droopCompensation);
-	assign_map.emplace("cim:VsConverter.maxModulationIndex", &assign_VsConverter_maxModulationIndex);
-	assign_map.emplace("cim:VsConverter.maxValveCurrent", &assign_VsConverter_maxValveCurrent);
-	assign_map.emplace("cim:VsConverter.pPccControl", &assign_VsConverter_pPccControl);
-	assign_map.emplace("cim:VsConverter.qPccControl", &assign_VsConverter_qPccControl);
-	assign_map.emplace("cim:VsConverter.qShare", &assign_VsConverter_qShare);
-	assign_map.emplace("cim:VsConverter.targetQpcc", &assign_VsConverter_targetQpcc);
-	assign_map.emplace("cim:VsConverter.targetUpcc", &assign_VsConverter_targetUpcc);
-	assign_map.emplace("cim:VsConverter.uf", &assign_VsConverter_uf);
+	assign_map.emplace("VsConverter.delta", &assign_VsConverter_delta);
+	assign_map.emplace("VsConverter.droop", &assign_VsConverter_droop);
+	assign_map.emplace("VsConverter.droopCompensation", &assign_VsConverter_droopCompensation);
+	assign_map.emplace("VsConverter.maxModulationIndex", &assign_VsConverter_maxModulationIndex);
+	assign_map.emplace("VsConverter.maxValveCurrent", &assign_VsConverter_maxValveCurrent);
+	assign_map.emplace("VsConverter.pPccControl", &assign_VsConverter_pPccControl);
+	assign_map.emplace("VsConverter.qPccControl", &assign_VsConverter_qPccControl);
+	assign_map.emplace("VsConverter.qShare", &assign_VsConverter_qShare);
+	assign_map.emplace("VsConverter.targetQpcc", &assign_VsConverter_targetQpcc);
+	assign_map.emplace("VsConverter.targetUpcc", &assign_VsConverter_targetUpcc);
+	assign_map.emplace("VsConverter.uf", &assign_VsConverter_uf);
 }
 
 void VsConverter::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:VsConverter.CapabilityCurve", &assign_VsConverter_CapabilityCurve);
+	assign_map.emplace("VsConverter.CapabilityCurve", &assign_VsConverter_CapabilityCurve);
 }
 
 void VsConverter::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ACDCConverter::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:VsConverter.delta", &get_VsConverter_delta);
-	get_map.emplace("cim:VsConverter.droop", &get_VsConverter_droop);
-	get_map.emplace("cim:VsConverter.droopCompensation", &get_VsConverter_droopCompensation);
-	get_map.emplace("cim:VsConverter.maxModulationIndex", &get_VsConverter_maxModulationIndex);
-	get_map.emplace("cim:VsConverter.maxValveCurrent", &get_VsConverter_maxValveCurrent);
-	get_map.emplace("cim:VsConverter.qShare", &get_VsConverter_qShare);
-	get_map.emplace("cim:VsConverter.targetQpcc", &get_VsConverter_targetQpcc);
-	get_map.emplace("cim:VsConverter.targetUpcc", &get_VsConverter_targetUpcc);
-	get_map.emplace("cim:VsConverter.uf", &get_VsConverter_uf);
+	get_map.emplace("VsConverter.delta", &get_VsConverter_delta);
+	get_map.emplace("VsConverter.droop", &get_VsConverter_droop);
+	get_map.emplace("VsConverter.droopCompensation", &get_VsConverter_droopCompensation);
+	get_map.emplace("VsConverter.maxModulationIndex", &get_VsConverter_maxModulationIndex);
+	get_map.emplace("VsConverter.maxValveCurrent", &get_VsConverter_maxValveCurrent);
+	get_map.emplace("VsConverter.qShare", &get_VsConverter_qShare);
+	get_map.emplace("VsConverter.targetQpcc", &get_VsConverter_targetQpcc);
+	get_map.emplace("VsConverter.targetUpcc", &get_VsConverter_targetUpcc);
+	get_map.emplace("VsConverter.uf", &get_VsConverter_uf);
 }
 
 void VsConverter::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	ACDCConverter::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:VsConverter.CapabilityCurve", &get_VsConverter_CapabilityCurve);
+	get_map.emplace("VsConverter.CapabilityCurve", &get_VsConverter_CapabilityCurve);
 }
 
 void VsConverter::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ACDCConverter::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:VsConverter.pPccControl", &get_VsConverter_pPccControl);
-	get_map.emplace("cim:VsConverter.qPccControl", &get_VsConverter_qPccControl);
+	get_map.emplace("VsConverter.pPccControl", &get_VsConverter_pPccControl);
+	get_map.emplace("VsConverter.qPccControl", &get_VsConverter_qPccControl);
+}
+
+bool VsConverter::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "VsConverter" &&
+		dynamic_cast<VsConverter*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner VsConverter::declare()
 {
 	return BaseClassDefiner(VsConverter::addConstructToMap, VsConverter::addPrimitiveAssignFnsToMap, VsConverter::addClassAssignFnsToMap, VsConverter::debugName);
+}
+
+std::map<std::string, AttrDetails> VsConverter::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ACDCConverter::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

@@ -12,33 +12,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		MechanicalLoadUserDefined(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "MechanicalLoadUserDefined.ProprietaryParameterDynamics", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "MechanicalLoadUserDefined.proprietary", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 MechanicalLoadUserDefined::MechanicalLoadUserDefined() {}
 MechanicalLoadUserDefined::~MechanicalLoadUserDefined() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& MechanicalLoadUserDefined::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:MechanicalLoadUserDefined.ProprietaryParameterDynamics", { CGMESProfile::DY, } },
-	{ "cim:MechanicalLoadUserDefined.proprietary", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-MechanicalLoadUserDefined::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-MechanicalLoadUserDefined::getPossibleProfilesForAttributes() const
+const std::string& MechanicalLoadUserDefined::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = MechanicalLoadDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& MechanicalLoadUserDefined::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& MechanicalLoadUserDefined::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& MechanicalLoadUserDefined::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& MechanicalLoadUserDefined::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& MechanicalLoadUserDefined::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ProprietaryParameterDynamics_MechanicalLoadUserDefined(BaseClass*, BaseClass*);
@@ -96,23 +128,23 @@ const char* MechanicalLoadUserDefined::debugString() const
 
 void MechanicalLoadUserDefined::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:MechanicalLoadUserDefined", &MechanicalLoadUserDefined_factory);
+	factory_map.emplace("MechanicalLoadUserDefined", &MechanicalLoadUserDefined_factory);
 }
 
 void MechanicalLoadUserDefined::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:MechanicalLoadUserDefined.proprietary", &assign_MechanicalLoadUserDefined_proprietary);
+	assign_map.emplace("MechanicalLoadUserDefined.proprietary", &assign_MechanicalLoadUserDefined_proprietary);
 }
 
 void MechanicalLoadUserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:MechanicalLoadUserDefined.ProprietaryParameterDynamics", &assign_MechanicalLoadUserDefined_ProprietaryParameterDynamics);
+	assign_map.emplace("MechanicalLoadUserDefined.ProprietaryParameterDynamics", &assign_MechanicalLoadUserDefined_ProprietaryParameterDynamics);
 }
 
 void MechanicalLoadUserDefined::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	MechanicalLoadDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:MechanicalLoadUserDefined.proprietary", &get_MechanicalLoadUserDefined_proprietary);
+	get_map.emplace("MechanicalLoadUserDefined.proprietary", &get_MechanicalLoadUserDefined_proprietary);
 }
 
 void MechanicalLoadUserDefined::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -125,9 +157,23 @@ void MechanicalLoadUserDefined::addEnumGetFnsToMap(std::map<std::string, get_fun
 	MechanicalLoadDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool MechanicalLoadUserDefined::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "MechanicalLoadUserDefined" &&
+		dynamic_cast<MechanicalLoadUserDefined*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner MechanicalLoadUserDefined::declare()
 {
 	return BaseClassDefiner(MechanicalLoadUserDefined::addConstructToMap, MechanicalLoadUserDefined::addPrimitiveAssignFnsToMap, MechanicalLoadUserDefined::addClassAssignFnsToMap, MechanicalLoadUserDefined::debugName);
+}
+
+std::map<std::string, AttrDetails> MechanicalLoadUserDefined::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = MechanicalLoadDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

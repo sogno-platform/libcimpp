@@ -20,41 +20,73 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		RemoteInputSignal(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "RemoteInputSignal.DiscontinuousExcitationControlDynamics", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "RemoteInputSignal.PFVArControllerType1Dynamics", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "RemoteInputSignal.PowerSystemStabilizerDynamics", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "RemoteInputSignal.Terminal", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "RemoteInputSignal.UnderexcitationLimiterDynamics", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "RemoteInputSignal.VoltageCompensatorDynamics", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "RemoteInputSignal.WindPlantDynamics", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "RemoteInputSignal.WindTurbineType1or2Dynamics", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "RemoteInputSignal.WindTurbineType3or4Dynamics", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "RemoteInputSignal.remoteSignalType", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 RemoteInputSignal::RemoteInputSignal() : DiscontinuousExcitationControlDynamics(nullptr), PFVArControllerType1Dynamics(nullptr), PowerSystemStabilizerDynamics(nullptr), Terminal(nullptr), UnderexcitationLimiterDynamics(nullptr), VoltageCompensatorDynamics(nullptr), WindPlantDynamics(nullptr), WindTurbineType1or2Dynamics(nullptr), WindTurbineType3or4Dynamics(nullptr) {}
 RemoteInputSignal::~RemoteInputSignal() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& RemoteInputSignal::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:RemoteInputSignal.DiscontinuousExcitationControlDynamics", { CGMESProfile::DY, } },
-	{ "cim:RemoteInputSignal.PFVArControllerType1Dynamics", { CGMESProfile::DY, } },
-	{ "cim:RemoteInputSignal.PowerSystemStabilizerDynamics", { CGMESProfile::DY, } },
-	{ "cim:RemoteInputSignal.Terminal", { CGMESProfile::DY, } },
-	{ "cim:RemoteInputSignal.UnderexcitationLimiterDynamics", { CGMESProfile::DY, } },
-	{ "cim:RemoteInputSignal.VoltageCompensatorDynamics", { CGMESProfile::DY, } },
-	{ "cim:RemoteInputSignal.WindPlantDynamics", { CGMESProfile::DY, } },
-	{ "cim:RemoteInputSignal.WindTurbineType1or2Dynamics", { CGMESProfile::DY, } },
-	{ "cim:RemoteInputSignal.WindTurbineType3or4Dynamics", { CGMESProfile::DY, } },
-	{ "cim:RemoteInputSignal.remoteSignalType", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-RemoteInputSignal::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-RemoteInputSignal::getPossibleProfilesForAttributes() const
+const std::string& RemoteInputSignal::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& RemoteInputSignal::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& RemoteInputSignal::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& RemoteInputSignal::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& RemoteInputSignal::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& RemoteInputSignal::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_DiscontinuousExcitationControlDynamics_RemoteInputSignal(BaseClass*, BaseClass*);
@@ -334,25 +366,25 @@ const char* RemoteInputSignal::debugString() const
 
 void RemoteInputSignal::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:RemoteInputSignal", &RemoteInputSignal_factory);
+	factory_map.emplace("RemoteInputSignal", &RemoteInputSignal_factory);
 }
 
 void RemoteInputSignal::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:RemoteInputSignal.remoteSignalType", &assign_RemoteInputSignal_remoteSignalType);
+	assign_map.emplace("RemoteInputSignal.remoteSignalType", &assign_RemoteInputSignal_remoteSignalType);
 }
 
 void RemoteInputSignal::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:RemoteInputSignal.DiscontinuousExcitationControlDynamics", &assign_RemoteInputSignal_DiscontinuousExcitationControlDynamics);
-	assign_map.emplace("cim:RemoteInputSignal.PFVArControllerType1Dynamics", &assign_RemoteInputSignal_PFVArControllerType1Dynamics);
-	assign_map.emplace("cim:RemoteInputSignal.PowerSystemStabilizerDynamics", &assign_RemoteInputSignal_PowerSystemStabilizerDynamics);
-	assign_map.emplace("cim:RemoteInputSignal.Terminal", &assign_RemoteInputSignal_Terminal);
-	assign_map.emplace("cim:RemoteInputSignal.UnderexcitationLimiterDynamics", &assign_RemoteInputSignal_UnderexcitationLimiterDynamics);
-	assign_map.emplace("cim:RemoteInputSignal.VoltageCompensatorDynamics", &assign_RemoteInputSignal_VoltageCompensatorDynamics);
-	assign_map.emplace("cim:RemoteInputSignal.WindPlantDynamics", &assign_RemoteInputSignal_WindPlantDynamics);
-	assign_map.emplace("cim:RemoteInputSignal.WindTurbineType1or2Dynamics", &assign_RemoteInputSignal_WindTurbineType1or2Dynamics);
-	assign_map.emplace("cim:RemoteInputSignal.WindTurbineType3or4Dynamics", &assign_RemoteInputSignal_WindTurbineType3or4Dynamics);
+	assign_map.emplace("RemoteInputSignal.DiscontinuousExcitationControlDynamics", &assign_RemoteInputSignal_DiscontinuousExcitationControlDynamics);
+	assign_map.emplace("RemoteInputSignal.PFVArControllerType1Dynamics", &assign_RemoteInputSignal_PFVArControllerType1Dynamics);
+	assign_map.emplace("RemoteInputSignal.PowerSystemStabilizerDynamics", &assign_RemoteInputSignal_PowerSystemStabilizerDynamics);
+	assign_map.emplace("RemoteInputSignal.Terminal", &assign_RemoteInputSignal_Terminal);
+	assign_map.emplace("RemoteInputSignal.UnderexcitationLimiterDynamics", &assign_RemoteInputSignal_UnderexcitationLimiterDynamics);
+	assign_map.emplace("RemoteInputSignal.VoltageCompensatorDynamics", &assign_RemoteInputSignal_VoltageCompensatorDynamics);
+	assign_map.emplace("RemoteInputSignal.WindPlantDynamics", &assign_RemoteInputSignal_WindPlantDynamics);
+	assign_map.emplace("RemoteInputSignal.WindTurbineType1or2Dynamics", &assign_RemoteInputSignal_WindTurbineType1or2Dynamics);
+	assign_map.emplace("RemoteInputSignal.WindTurbineType3or4Dynamics", &assign_RemoteInputSignal_WindTurbineType3or4Dynamics);
 }
 
 void RemoteInputSignal::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -363,23 +395,37 @@ void RemoteInputSignal::addPrimitiveGetFnsToMap(std::map<std::string, get_functi
 void RemoteInputSignal::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	IdentifiedObject::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:RemoteInputSignal.DiscontinuousExcitationControlDynamics", &get_RemoteInputSignal_DiscontinuousExcitationControlDynamics);
-	get_map.emplace("cim:RemoteInputSignal.PFVArControllerType1Dynamics", &get_RemoteInputSignal_PFVArControllerType1Dynamics);
-	get_map.emplace("cim:RemoteInputSignal.PowerSystemStabilizerDynamics", &get_RemoteInputSignal_PowerSystemStabilizerDynamics);
-	get_map.emplace("cim:RemoteInputSignal.Terminal", &get_RemoteInputSignal_Terminal);
-	get_map.emplace("cim:RemoteInputSignal.UnderexcitationLimiterDynamics", &get_RemoteInputSignal_UnderexcitationLimiterDynamics);
-	get_map.emplace("cim:RemoteInputSignal.VoltageCompensatorDynamics", &get_RemoteInputSignal_VoltageCompensatorDynamics);
+	get_map.emplace("RemoteInputSignal.DiscontinuousExcitationControlDynamics", &get_RemoteInputSignal_DiscontinuousExcitationControlDynamics);
+	get_map.emplace("RemoteInputSignal.PFVArControllerType1Dynamics", &get_RemoteInputSignal_PFVArControllerType1Dynamics);
+	get_map.emplace("RemoteInputSignal.PowerSystemStabilizerDynamics", &get_RemoteInputSignal_PowerSystemStabilizerDynamics);
+	get_map.emplace("RemoteInputSignal.Terminal", &get_RemoteInputSignal_Terminal);
+	get_map.emplace("RemoteInputSignal.UnderexcitationLimiterDynamics", &get_RemoteInputSignal_UnderexcitationLimiterDynamics);
+	get_map.emplace("RemoteInputSignal.VoltageCompensatorDynamics", &get_RemoteInputSignal_VoltageCompensatorDynamics);
 }
 
 void RemoteInputSignal::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:RemoteInputSignal.remoteSignalType", &get_RemoteInputSignal_remoteSignalType);
+	get_map.emplace("RemoteInputSignal.remoteSignalType", &get_RemoteInputSignal_remoteSignalType);
+}
+
+bool RemoteInputSignal::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "RemoteInputSignal" &&
+		dynamic_cast<RemoteInputSignal*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner RemoteInputSignal::declare()
 {
 	return BaseClassDefiner(RemoteInputSignal::addConstructToMap, RemoteInputSignal::addPrimitiveAssignFnsToMap, RemoteInputSignal::addClassAssignFnsToMap, RemoteInputSignal::debugName);
+}
+
+std::map<std::string, AttrDetails> RemoteInputSignal::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

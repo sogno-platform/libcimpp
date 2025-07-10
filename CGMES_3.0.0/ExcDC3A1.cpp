@@ -11,45 +11,77 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ExcDC3A1(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ExcDC3A1.exclim", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcDC3A1.ka", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcDC3A1.ke", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcDC3A1.kf", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcDC3A1.ki", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcDC3A1.kp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcDC3A1.ta", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcDC3A1.te", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcDC3A1.tf", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcDC3A1.vb1max", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcDC3A1.vblim", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcDC3A1.vbmax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcDC3A1.vrmax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcDC3A1.vrmin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ExcDC3A1::ExcDC3A1() {}
 ExcDC3A1::~ExcDC3A1() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ExcDC3A1::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ExcDC3A1.exclim", { CGMESProfile::DY, } },
-	{ "cim:ExcDC3A1.ka", { CGMESProfile::DY, } },
-	{ "cim:ExcDC3A1.ke", { CGMESProfile::DY, } },
-	{ "cim:ExcDC3A1.kf", { CGMESProfile::DY, } },
-	{ "cim:ExcDC3A1.ki", { CGMESProfile::DY, } },
-	{ "cim:ExcDC3A1.kp", { CGMESProfile::DY, } },
-	{ "cim:ExcDC3A1.ta", { CGMESProfile::DY, } },
-	{ "cim:ExcDC3A1.te", { CGMESProfile::DY, } },
-	{ "cim:ExcDC3A1.tf", { CGMESProfile::DY, } },
-	{ "cim:ExcDC3A1.vb1max", { CGMESProfile::DY, } },
-	{ "cim:ExcDC3A1.vblim", { CGMESProfile::DY, } },
-	{ "cim:ExcDC3A1.vbmax", { CGMESProfile::DY, } },
-	{ "cim:ExcDC3A1.vrmax", { CGMESProfile::DY, } },
-	{ "cim:ExcDC3A1.vrmin", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-ExcDC3A1::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ExcDC3A1::getPossibleProfilesForAttributes() const
+const std::string& ExcDC3A1::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ExcDC3A1::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ExcDC3A1::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ExcDC3A1::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ExcDC3A1::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ExcDC3A1::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ExcDC3A1_exclim(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -466,25 +498,25 @@ const char* ExcDC3A1::debugString() const
 
 void ExcDC3A1::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ExcDC3A1", &ExcDC3A1_factory);
+	factory_map.emplace("ExcDC3A1", &ExcDC3A1_factory);
 }
 
 void ExcDC3A1::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ExcDC3A1.exclim", &assign_ExcDC3A1_exclim);
-	assign_map.emplace("cim:ExcDC3A1.ka", &assign_ExcDC3A1_ka);
-	assign_map.emplace("cim:ExcDC3A1.ke", &assign_ExcDC3A1_ke);
-	assign_map.emplace("cim:ExcDC3A1.kf", &assign_ExcDC3A1_kf);
-	assign_map.emplace("cim:ExcDC3A1.ki", &assign_ExcDC3A1_ki);
-	assign_map.emplace("cim:ExcDC3A1.kp", &assign_ExcDC3A1_kp);
-	assign_map.emplace("cim:ExcDC3A1.ta", &assign_ExcDC3A1_ta);
-	assign_map.emplace("cim:ExcDC3A1.te", &assign_ExcDC3A1_te);
-	assign_map.emplace("cim:ExcDC3A1.tf", &assign_ExcDC3A1_tf);
-	assign_map.emplace("cim:ExcDC3A1.vb1max", &assign_ExcDC3A1_vb1max);
-	assign_map.emplace("cim:ExcDC3A1.vblim", &assign_ExcDC3A1_vblim);
-	assign_map.emplace("cim:ExcDC3A1.vbmax", &assign_ExcDC3A1_vbmax);
-	assign_map.emplace("cim:ExcDC3A1.vrmax", &assign_ExcDC3A1_vrmax);
-	assign_map.emplace("cim:ExcDC3A1.vrmin", &assign_ExcDC3A1_vrmin);
+	assign_map.emplace("ExcDC3A1.exclim", &assign_ExcDC3A1_exclim);
+	assign_map.emplace("ExcDC3A1.ka", &assign_ExcDC3A1_ka);
+	assign_map.emplace("ExcDC3A1.ke", &assign_ExcDC3A1_ke);
+	assign_map.emplace("ExcDC3A1.kf", &assign_ExcDC3A1_kf);
+	assign_map.emplace("ExcDC3A1.ki", &assign_ExcDC3A1_ki);
+	assign_map.emplace("ExcDC3A1.kp", &assign_ExcDC3A1_kp);
+	assign_map.emplace("ExcDC3A1.ta", &assign_ExcDC3A1_ta);
+	assign_map.emplace("ExcDC3A1.te", &assign_ExcDC3A1_te);
+	assign_map.emplace("ExcDC3A1.tf", &assign_ExcDC3A1_tf);
+	assign_map.emplace("ExcDC3A1.vb1max", &assign_ExcDC3A1_vb1max);
+	assign_map.emplace("ExcDC3A1.vblim", &assign_ExcDC3A1_vblim);
+	assign_map.emplace("ExcDC3A1.vbmax", &assign_ExcDC3A1_vbmax);
+	assign_map.emplace("ExcDC3A1.vrmax", &assign_ExcDC3A1_vrmax);
+	assign_map.emplace("ExcDC3A1.vrmin", &assign_ExcDC3A1_vrmin);
 }
 
 void ExcDC3A1::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -494,20 +526,20 @@ void ExcDC3A1::addClassAssignFnsToMap(std::unordered_map<std::string, class_assi
 void ExcDC3A1::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ExcDC3A1.exclim", &get_ExcDC3A1_exclim);
-	get_map.emplace("cim:ExcDC3A1.ka", &get_ExcDC3A1_ka);
-	get_map.emplace("cim:ExcDC3A1.ke", &get_ExcDC3A1_ke);
-	get_map.emplace("cim:ExcDC3A1.kf", &get_ExcDC3A1_kf);
-	get_map.emplace("cim:ExcDC3A1.ki", &get_ExcDC3A1_ki);
-	get_map.emplace("cim:ExcDC3A1.kp", &get_ExcDC3A1_kp);
-	get_map.emplace("cim:ExcDC3A1.ta", &get_ExcDC3A1_ta);
-	get_map.emplace("cim:ExcDC3A1.te", &get_ExcDC3A1_te);
-	get_map.emplace("cim:ExcDC3A1.tf", &get_ExcDC3A1_tf);
-	get_map.emplace("cim:ExcDC3A1.vb1max", &get_ExcDC3A1_vb1max);
-	get_map.emplace("cim:ExcDC3A1.vblim", &get_ExcDC3A1_vblim);
-	get_map.emplace("cim:ExcDC3A1.vbmax", &get_ExcDC3A1_vbmax);
-	get_map.emplace("cim:ExcDC3A1.vrmax", &get_ExcDC3A1_vrmax);
-	get_map.emplace("cim:ExcDC3A1.vrmin", &get_ExcDC3A1_vrmin);
+	get_map.emplace("ExcDC3A1.exclim", &get_ExcDC3A1_exclim);
+	get_map.emplace("ExcDC3A1.ka", &get_ExcDC3A1_ka);
+	get_map.emplace("ExcDC3A1.ke", &get_ExcDC3A1_ke);
+	get_map.emplace("ExcDC3A1.kf", &get_ExcDC3A1_kf);
+	get_map.emplace("ExcDC3A1.ki", &get_ExcDC3A1_ki);
+	get_map.emplace("ExcDC3A1.kp", &get_ExcDC3A1_kp);
+	get_map.emplace("ExcDC3A1.ta", &get_ExcDC3A1_ta);
+	get_map.emplace("ExcDC3A1.te", &get_ExcDC3A1_te);
+	get_map.emplace("ExcDC3A1.tf", &get_ExcDC3A1_tf);
+	get_map.emplace("ExcDC3A1.vb1max", &get_ExcDC3A1_vb1max);
+	get_map.emplace("ExcDC3A1.vblim", &get_ExcDC3A1_vblim);
+	get_map.emplace("ExcDC3A1.vbmax", &get_ExcDC3A1_vbmax);
+	get_map.emplace("ExcDC3A1.vrmax", &get_ExcDC3A1_vrmax);
+	get_map.emplace("ExcDC3A1.vrmin", &get_ExcDC3A1_vrmin);
 }
 
 void ExcDC3A1::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -520,9 +552,23 @@ void ExcDC3A1::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) 
 	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool ExcDC3A1::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ExcDC3A1" &&
+		dynamic_cast<ExcDC3A1*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ExcDC3A1::declare()
 {
 	return BaseClassDefiner(ExcDC3A1::addConstructToMap, ExcDC3A1::addPrimitiveAssignFnsToMap, ExcDC3A1::addClassAssignFnsToMap, ExcDC3A1::debugName);
+}
+
+std::map<std::string, AttrDetails> ExcDC3A1::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ExcitationSystemDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

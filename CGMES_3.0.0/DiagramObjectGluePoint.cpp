@@ -12,32 +12,64 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		DiagramObjectGluePoint(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DL,
+		},
+		CGMESProfile::DL
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "DiagramObjectGluePoint.DiagramObjectPoints", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DL, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 DiagramObjectGluePoint::DiagramObjectGluePoint() {}
 DiagramObjectGluePoint::~DiagramObjectGluePoint() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& DiagramObjectGluePoint::getAttributeNames() const
 {
-	CGMESProfile::DL,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:DiagramObjectGluePoint.DiagramObjectPoints", { CGMESProfile::DL, } },
-};
-
-std::list<CGMESProfile>
-DiagramObjectGluePoint::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-DiagramObjectGluePoint::getPossibleProfilesForAttributes() const
+const std::string& DiagramObjectGluePoint::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& DiagramObjectGluePoint::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& DiagramObjectGluePoint::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& DiagramObjectGluePoint::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& DiagramObjectGluePoint::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& DiagramObjectGluePoint::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_DiagramObjectPoint_DiagramObjectGluePoint(BaseClass*, BaseClass*);
@@ -66,7 +98,7 @@ const char* DiagramObjectGluePoint::debugString() const
 
 void DiagramObjectGluePoint::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:DiagramObjectGluePoint", &DiagramObjectGluePoint_factory);
+	factory_map.emplace("DiagramObjectGluePoint", &DiagramObjectGluePoint_factory);
 }
 
 void DiagramObjectGluePoint::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -75,7 +107,7 @@ void DiagramObjectGluePoint::addPrimitiveAssignFnsToMap(std::unordered_map<std::
 
 void DiagramObjectGluePoint::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:DiagramObjectGluePoint.DiagramObjectPoints", &assign_DiagramObjectGluePoint_DiagramObjectPoints);
+	assign_map.emplace("DiagramObjectGluePoint.DiagramObjectPoints", &assign_DiagramObjectGluePoint_DiagramObjectPoints);
 }
 
 void DiagramObjectGluePoint::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -93,9 +125,23 @@ void DiagramObjectGluePoint::addEnumGetFnsToMap(std::map<std::string, get_functi
 	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
+bool DiagramObjectGluePoint::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "DiagramObjectGluePoint" &&
+		dynamic_cast<DiagramObjectGluePoint*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner DiagramObjectGluePoint::declare()
 {
 	return BaseClassDefiner(DiagramObjectGluePoint::addConstructToMap, DiagramObjectGluePoint::addPrimitiveAssignFnsToMap, DiagramObjectGluePoint::addClassAssignFnsToMap, DiagramObjectGluePoint::debugName);
+}
+
+std::map<std::string, AttrDetails> DiagramObjectGluePoint::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = BaseClass::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

@@ -14,38 +14,70 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ControlArea(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ControlArea.ControlAreaGeneratingUnit", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ControlArea.EnergyArea", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ControlArea.TieFlow", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ControlArea.netInterchange", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SSH, } } },
+		{ "ControlArea.pTolerance", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SSH, } } },
+		{ "ControlArea.type", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ControlArea::ControlArea() : EnergyArea(nullptr) {}
 ControlArea::~ControlArea() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ControlArea::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ControlArea.ControlAreaGeneratingUnit", { CGMESProfile::EQ, } },
-	{ "cim:ControlArea.EnergyArea", { CGMESProfile::EQ, } },
-	{ "cim:ControlArea.TieFlow", { CGMESProfile::EQ, } },
-	{ "cim:ControlArea.netInterchange", { CGMESProfile::SSH, } },
-	{ "cim:ControlArea.pTolerance", { CGMESProfile::SSH, } },
-	{ "cim:ControlArea.type", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-ControlArea::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ControlArea::getPossibleProfilesForAttributes() const
+const std::string& ControlArea::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = PowerSystemResource::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ControlArea::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ControlArea::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ControlArea::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ControlArea::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ControlArea::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ControlAreaGeneratingUnit_ControlArea(BaseClass*, BaseClass*);
@@ -210,45 +242,59 @@ const char* ControlArea::debugString() const
 
 void ControlArea::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ControlArea", &ControlArea_factory);
+	factory_map.emplace("ControlArea", &ControlArea_factory);
 }
 
 void ControlArea::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ControlArea.netInterchange", &assign_ControlArea_netInterchange);
-	assign_map.emplace("cim:ControlArea.pTolerance", &assign_ControlArea_pTolerance);
-	assign_map.emplace("cim:ControlArea.type", &assign_ControlArea_type);
+	assign_map.emplace("ControlArea.netInterchange", &assign_ControlArea_netInterchange);
+	assign_map.emplace("ControlArea.pTolerance", &assign_ControlArea_pTolerance);
+	assign_map.emplace("ControlArea.type", &assign_ControlArea_type);
 }
 
 void ControlArea::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ControlArea.ControlAreaGeneratingUnit", &assign_ControlArea_ControlAreaGeneratingUnit);
-	assign_map.emplace("cim:ControlArea.EnergyArea", &assign_ControlArea_EnergyArea);
-	assign_map.emplace("cim:ControlArea.TieFlow", &assign_ControlArea_TieFlow);
+	assign_map.emplace("ControlArea.ControlAreaGeneratingUnit", &assign_ControlArea_ControlAreaGeneratingUnit);
+	assign_map.emplace("ControlArea.EnergyArea", &assign_ControlArea_EnergyArea);
+	assign_map.emplace("ControlArea.TieFlow", &assign_ControlArea_TieFlow);
 }
 
 void ControlArea::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	PowerSystemResource::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ControlArea.netInterchange", &get_ControlArea_netInterchange);
-	get_map.emplace("cim:ControlArea.pTolerance", &get_ControlArea_pTolerance);
+	get_map.emplace("ControlArea.netInterchange", &get_ControlArea_netInterchange);
+	get_map.emplace("ControlArea.pTolerance", &get_ControlArea_pTolerance);
 }
 
 void ControlArea::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	PowerSystemResource::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:ControlArea.EnergyArea", &get_ControlArea_EnergyArea);
+	get_map.emplace("ControlArea.EnergyArea", &get_ControlArea_EnergyArea);
 }
 
 void ControlArea::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	PowerSystemResource::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:ControlArea.type", &get_ControlArea_type);
+	get_map.emplace("ControlArea.type", &get_ControlArea_type);
+}
+
+bool ControlArea::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ControlArea" &&
+		dynamic_cast<ControlArea*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner ControlArea::declare()
 {
 	return BaseClassDefiner(ControlArea::addConstructToMap, ControlArea::addPrimitiveAssignFnsToMap, ControlArea::addClassAssignFnsToMap, ControlArea::debugName);
+}
+
+std::map<std::string, AttrDetails> ControlArea::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = PowerSystemResource::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

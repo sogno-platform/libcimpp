@@ -11,39 +11,71 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		PetersenCoil(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SC,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "PetersenCoil.mode", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "PetersenCoil.nominalU", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "PetersenCoil.offsetCurrent", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "PetersenCoil.positionCurrent", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "PetersenCoil.xGroundMax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "PetersenCoil.xGroundMin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "PetersenCoil.xGroundNominal", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 PetersenCoil::PetersenCoil() {}
 PetersenCoil::~PetersenCoil() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& PetersenCoil::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SC,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:PetersenCoil.mode", { CGMESProfile::SC, } },
-	{ "cim:PetersenCoil.nominalU", { CGMESProfile::SC, } },
-	{ "cim:PetersenCoil.offsetCurrent", { CGMESProfile::SC, } },
-	{ "cim:PetersenCoil.positionCurrent", { CGMESProfile::SC, } },
-	{ "cim:PetersenCoil.xGroundMax", { CGMESProfile::SC, } },
-	{ "cim:PetersenCoil.xGroundMin", { CGMESProfile::SC, } },
-	{ "cim:PetersenCoil.xGroundNominal", { CGMESProfile::SC, } },
-};
-
-std::list<CGMESProfile>
-PetersenCoil::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-PetersenCoil::getPossibleProfilesForAttributes() const
+const std::string& PetersenCoil::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = EarthFaultCompensator::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& PetersenCoil::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& PetersenCoil::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& PetersenCoil::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& PetersenCoil::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& PetersenCoil::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_PetersenCoil_mode(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -257,18 +289,18 @@ const char* PetersenCoil::debugString() const
 
 void PetersenCoil::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:PetersenCoil", &PetersenCoil_factory);
+	factory_map.emplace("PetersenCoil", &PetersenCoil_factory);
 }
 
 void PetersenCoil::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:PetersenCoil.mode", &assign_PetersenCoil_mode);
-	assign_map.emplace("cim:PetersenCoil.nominalU", &assign_PetersenCoil_nominalU);
-	assign_map.emplace("cim:PetersenCoil.offsetCurrent", &assign_PetersenCoil_offsetCurrent);
-	assign_map.emplace("cim:PetersenCoil.positionCurrent", &assign_PetersenCoil_positionCurrent);
-	assign_map.emplace("cim:PetersenCoil.xGroundMax", &assign_PetersenCoil_xGroundMax);
-	assign_map.emplace("cim:PetersenCoil.xGroundMin", &assign_PetersenCoil_xGroundMin);
-	assign_map.emplace("cim:PetersenCoil.xGroundNominal", &assign_PetersenCoil_xGroundNominal);
+	assign_map.emplace("PetersenCoil.mode", &assign_PetersenCoil_mode);
+	assign_map.emplace("PetersenCoil.nominalU", &assign_PetersenCoil_nominalU);
+	assign_map.emplace("PetersenCoil.offsetCurrent", &assign_PetersenCoil_offsetCurrent);
+	assign_map.emplace("PetersenCoil.positionCurrent", &assign_PetersenCoil_positionCurrent);
+	assign_map.emplace("PetersenCoil.xGroundMax", &assign_PetersenCoil_xGroundMax);
+	assign_map.emplace("PetersenCoil.xGroundMin", &assign_PetersenCoil_xGroundMin);
+	assign_map.emplace("PetersenCoil.xGroundNominal", &assign_PetersenCoil_xGroundNominal);
 }
 
 void PetersenCoil::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -278,12 +310,12 @@ void PetersenCoil::addClassAssignFnsToMap(std::unordered_map<std::string, class_
 void PetersenCoil::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	EarthFaultCompensator::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:PetersenCoil.nominalU", &get_PetersenCoil_nominalU);
-	get_map.emplace("cim:PetersenCoil.offsetCurrent", &get_PetersenCoil_offsetCurrent);
-	get_map.emplace("cim:PetersenCoil.positionCurrent", &get_PetersenCoil_positionCurrent);
-	get_map.emplace("cim:PetersenCoil.xGroundMax", &get_PetersenCoil_xGroundMax);
-	get_map.emplace("cim:PetersenCoil.xGroundMin", &get_PetersenCoil_xGroundMin);
-	get_map.emplace("cim:PetersenCoil.xGroundNominal", &get_PetersenCoil_xGroundNominal);
+	get_map.emplace("PetersenCoil.nominalU", &get_PetersenCoil_nominalU);
+	get_map.emplace("PetersenCoil.offsetCurrent", &get_PetersenCoil_offsetCurrent);
+	get_map.emplace("PetersenCoil.positionCurrent", &get_PetersenCoil_positionCurrent);
+	get_map.emplace("PetersenCoil.xGroundMax", &get_PetersenCoil_xGroundMax);
+	get_map.emplace("PetersenCoil.xGroundMin", &get_PetersenCoil_xGroundMin);
+	get_map.emplace("PetersenCoil.xGroundNominal", &get_PetersenCoil_xGroundNominal);
 }
 
 void PetersenCoil::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -294,12 +326,26 @@ void PetersenCoil::addClassGetFnsToMap(std::map<std::string, class_get_function>
 void PetersenCoil::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	EarthFaultCompensator::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:PetersenCoil.mode", &get_PetersenCoil_mode);
+	get_map.emplace("PetersenCoil.mode", &get_PetersenCoil_mode);
+}
+
+bool PetersenCoil::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "PetersenCoil" &&
+		dynamic_cast<PetersenCoil*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner PetersenCoil::declare()
 {
 	return BaseClassDefiner(PetersenCoil::addConstructToMap, PetersenCoil::addPrimitiveAssignFnsToMap, PetersenCoil::addClassAssignFnsToMap, PetersenCoil::debugName);
+}
+
+std::map<std::string, AttrDetails> PetersenCoil::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = EarthFaultCompensator::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

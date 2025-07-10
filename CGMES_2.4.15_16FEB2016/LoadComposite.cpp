@@ -11,42 +11,74 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		LoadComposite(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "LoadComposite.epfd", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadComposite.epfs", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadComposite.epvd", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadComposite.epvs", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadComposite.eqfd", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadComposite.eqfs", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadComposite.eqvd", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadComposite.eqvs", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadComposite.h", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadComposite.lfrac", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadComposite.pfrac", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 LoadComposite::LoadComposite() {}
 LoadComposite::~LoadComposite() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& LoadComposite::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:LoadComposite.epfd", { CGMESProfile::DY, } },
-	{ "cim:LoadComposite.epfs", { CGMESProfile::DY, } },
-	{ "cim:LoadComposite.epvd", { CGMESProfile::DY, } },
-	{ "cim:LoadComposite.epvs", { CGMESProfile::DY, } },
-	{ "cim:LoadComposite.eqfd", { CGMESProfile::DY, } },
-	{ "cim:LoadComposite.eqfs", { CGMESProfile::DY, } },
-	{ "cim:LoadComposite.eqvd", { CGMESProfile::DY, } },
-	{ "cim:LoadComposite.eqvs", { CGMESProfile::DY, } },
-	{ "cim:LoadComposite.h", { CGMESProfile::DY, } },
-	{ "cim:LoadComposite.lfrac", { CGMESProfile::DY, } },
-	{ "cim:LoadComposite.pfrac", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-LoadComposite::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-LoadComposite::getPossibleProfilesForAttributes() const
+const std::string& LoadComposite::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = LoadDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& LoadComposite::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& LoadComposite::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& LoadComposite::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& LoadComposite::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& LoadComposite::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_LoadComposite_epfd(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -376,22 +408,22 @@ const char* LoadComposite::debugString() const
 
 void LoadComposite::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:LoadComposite", &LoadComposite_factory);
+	factory_map.emplace("LoadComposite", &LoadComposite_factory);
 }
 
 void LoadComposite::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:LoadComposite.epfd", &assign_LoadComposite_epfd);
-	assign_map.emplace("cim:LoadComposite.epfs", &assign_LoadComposite_epfs);
-	assign_map.emplace("cim:LoadComposite.epvd", &assign_LoadComposite_epvd);
-	assign_map.emplace("cim:LoadComposite.epvs", &assign_LoadComposite_epvs);
-	assign_map.emplace("cim:LoadComposite.eqfd", &assign_LoadComposite_eqfd);
-	assign_map.emplace("cim:LoadComposite.eqfs", &assign_LoadComposite_eqfs);
-	assign_map.emplace("cim:LoadComposite.eqvd", &assign_LoadComposite_eqvd);
-	assign_map.emplace("cim:LoadComposite.eqvs", &assign_LoadComposite_eqvs);
-	assign_map.emplace("cim:LoadComposite.h", &assign_LoadComposite_h);
-	assign_map.emplace("cim:LoadComposite.lfrac", &assign_LoadComposite_lfrac);
-	assign_map.emplace("cim:LoadComposite.pfrac", &assign_LoadComposite_pfrac);
+	assign_map.emplace("LoadComposite.epfd", &assign_LoadComposite_epfd);
+	assign_map.emplace("LoadComposite.epfs", &assign_LoadComposite_epfs);
+	assign_map.emplace("LoadComposite.epvd", &assign_LoadComposite_epvd);
+	assign_map.emplace("LoadComposite.epvs", &assign_LoadComposite_epvs);
+	assign_map.emplace("LoadComposite.eqfd", &assign_LoadComposite_eqfd);
+	assign_map.emplace("LoadComposite.eqfs", &assign_LoadComposite_eqfs);
+	assign_map.emplace("LoadComposite.eqvd", &assign_LoadComposite_eqvd);
+	assign_map.emplace("LoadComposite.eqvs", &assign_LoadComposite_eqvs);
+	assign_map.emplace("LoadComposite.h", &assign_LoadComposite_h);
+	assign_map.emplace("LoadComposite.lfrac", &assign_LoadComposite_lfrac);
+	assign_map.emplace("LoadComposite.pfrac", &assign_LoadComposite_pfrac);
 }
 
 void LoadComposite::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -401,17 +433,17 @@ void LoadComposite::addClassAssignFnsToMap(std::unordered_map<std::string, class
 void LoadComposite::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	LoadDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:LoadComposite.epfd", &get_LoadComposite_epfd);
-	get_map.emplace("cim:LoadComposite.epfs", &get_LoadComposite_epfs);
-	get_map.emplace("cim:LoadComposite.epvd", &get_LoadComposite_epvd);
-	get_map.emplace("cim:LoadComposite.epvs", &get_LoadComposite_epvs);
-	get_map.emplace("cim:LoadComposite.eqfd", &get_LoadComposite_eqfd);
-	get_map.emplace("cim:LoadComposite.eqfs", &get_LoadComposite_eqfs);
-	get_map.emplace("cim:LoadComposite.eqvd", &get_LoadComposite_eqvd);
-	get_map.emplace("cim:LoadComposite.eqvs", &get_LoadComposite_eqvs);
-	get_map.emplace("cim:LoadComposite.h", &get_LoadComposite_h);
-	get_map.emplace("cim:LoadComposite.lfrac", &get_LoadComposite_lfrac);
-	get_map.emplace("cim:LoadComposite.pfrac", &get_LoadComposite_pfrac);
+	get_map.emplace("LoadComposite.epfd", &get_LoadComposite_epfd);
+	get_map.emplace("LoadComposite.epfs", &get_LoadComposite_epfs);
+	get_map.emplace("LoadComposite.epvd", &get_LoadComposite_epvd);
+	get_map.emplace("LoadComposite.epvs", &get_LoadComposite_epvs);
+	get_map.emplace("LoadComposite.eqfd", &get_LoadComposite_eqfd);
+	get_map.emplace("LoadComposite.eqfs", &get_LoadComposite_eqfs);
+	get_map.emplace("LoadComposite.eqvd", &get_LoadComposite_eqvd);
+	get_map.emplace("LoadComposite.eqvs", &get_LoadComposite_eqvs);
+	get_map.emplace("LoadComposite.h", &get_LoadComposite_h);
+	get_map.emplace("LoadComposite.lfrac", &get_LoadComposite_lfrac);
+	get_map.emplace("LoadComposite.pfrac", &get_LoadComposite_pfrac);
 }
 
 void LoadComposite::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -424,9 +456,23 @@ void LoadComposite::addEnumGetFnsToMap(std::map<std::string, get_function>& get_
 	LoadDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool LoadComposite::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "LoadComposite" &&
+		dynamic_cast<LoadComposite*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner LoadComposite::declare()
 {
 	return BaseClassDefiner(LoadComposite::addConstructToMap, LoadComposite::addPrimitiveAssignFnsToMap, LoadComposite::addClassAssignFnsToMap, LoadComposite::debugName);
+}
+
+std::map<std::string, AttrDetails> LoadComposite::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = LoadDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

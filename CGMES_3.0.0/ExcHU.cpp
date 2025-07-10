@@ -11,43 +11,75 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ExcHU(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ExcHU.ae", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcHU.ai", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcHU.atr", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcHU.emax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcHU.emin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcHU.imax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcHU.imin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcHU.ke", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcHU.ki", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcHU.te", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcHU.ti", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcHU.tr", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ExcHU::ExcHU() {}
 ExcHU::~ExcHU() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ExcHU::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ExcHU.ae", { CGMESProfile::DY, } },
-	{ "cim:ExcHU.ai", { CGMESProfile::DY, } },
-	{ "cim:ExcHU.atr", { CGMESProfile::DY, } },
-	{ "cim:ExcHU.emax", { CGMESProfile::DY, } },
-	{ "cim:ExcHU.emin", { CGMESProfile::DY, } },
-	{ "cim:ExcHU.imax", { CGMESProfile::DY, } },
-	{ "cim:ExcHU.imin", { CGMESProfile::DY, } },
-	{ "cim:ExcHU.ke", { CGMESProfile::DY, } },
-	{ "cim:ExcHU.ki", { CGMESProfile::DY, } },
-	{ "cim:ExcHU.te", { CGMESProfile::DY, } },
-	{ "cim:ExcHU.ti", { CGMESProfile::DY, } },
-	{ "cim:ExcHU.tr", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-ExcHU::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ExcHU::getPossibleProfilesForAttributes() const
+const std::string& ExcHU::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ExcHU::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ExcHU::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ExcHU::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ExcHU::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ExcHU::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ExcHU_ae(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -406,23 +438,23 @@ const char* ExcHU::debugString() const
 
 void ExcHU::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ExcHU", &ExcHU_factory);
+	factory_map.emplace("ExcHU", &ExcHU_factory);
 }
 
 void ExcHU::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ExcHU.ae", &assign_ExcHU_ae);
-	assign_map.emplace("cim:ExcHU.ai", &assign_ExcHU_ai);
-	assign_map.emplace("cim:ExcHU.atr", &assign_ExcHU_atr);
-	assign_map.emplace("cim:ExcHU.emax", &assign_ExcHU_emax);
-	assign_map.emplace("cim:ExcHU.emin", &assign_ExcHU_emin);
-	assign_map.emplace("cim:ExcHU.imax", &assign_ExcHU_imax);
-	assign_map.emplace("cim:ExcHU.imin", &assign_ExcHU_imin);
-	assign_map.emplace("cim:ExcHU.ke", &assign_ExcHU_ke);
-	assign_map.emplace("cim:ExcHU.ki", &assign_ExcHU_ki);
-	assign_map.emplace("cim:ExcHU.te", &assign_ExcHU_te);
-	assign_map.emplace("cim:ExcHU.ti", &assign_ExcHU_ti);
-	assign_map.emplace("cim:ExcHU.tr", &assign_ExcHU_tr);
+	assign_map.emplace("ExcHU.ae", &assign_ExcHU_ae);
+	assign_map.emplace("ExcHU.ai", &assign_ExcHU_ai);
+	assign_map.emplace("ExcHU.atr", &assign_ExcHU_atr);
+	assign_map.emplace("ExcHU.emax", &assign_ExcHU_emax);
+	assign_map.emplace("ExcHU.emin", &assign_ExcHU_emin);
+	assign_map.emplace("ExcHU.imax", &assign_ExcHU_imax);
+	assign_map.emplace("ExcHU.imin", &assign_ExcHU_imin);
+	assign_map.emplace("ExcHU.ke", &assign_ExcHU_ke);
+	assign_map.emplace("ExcHU.ki", &assign_ExcHU_ki);
+	assign_map.emplace("ExcHU.te", &assign_ExcHU_te);
+	assign_map.emplace("ExcHU.ti", &assign_ExcHU_ti);
+	assign_map.emplace("ExcHU.tr", &assign_ExcHU_tr);
 }
 
 void ExcHU::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -432,18 +464,18 @@ void ExcHU::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_
 void ExcHU::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ExcHU.ae", &get_ExcHU_ae);
-	get_map.emplace("cim:ExcHU.ai", &get_ExcHU_ai);
-	get_map.emplace("cim:ExcHU.atr", &get_ExcHU_atr);
-	get_map.emplace("cim:ExcHU.emax", &get_ExcHU_emax);
-	get_map.emplace("cim:ExcHU.emin", &get_ExcHU_emin);
-	get_map.emplace("cim:ExcHU.imax", &get_ExcHU_imax);
-	get_map.emplace("cim:ExcHU.imin", &get_ExcHU_imin);
-	get_map.emplace("cim:ExcHU.ke", &get_ExcHU_ke);
-	get_map.emplace("cim:ExcHU.ki", &get_ExcHU_ki);
-	get_map.emplace("cim:ExcHU.te", &get_ExcHU_te);
-	get_map.emplace("cim:ExcHU.ti", &get_ExcHU_ti);
-	get_map.emplace("cim:ExcHU.tr", &get_ExcHU_tr);
+	get_map.emplace("ExcHU.ae", &get_ExcHU_ae);
+	get_map.emplace("ExcHU.ai", &get_ExcHU_ai);
+	get_map.emplace("ExcHU.atr", &get_ExcHU_atr);
+	get_map.emplace("ExcHU.emax", &get_ExcHU_emax);
+	get_map.emplace("ExcHU.emin", &get_ExcHU_emin);
+	get_map.emplace("ExcHU.imax", &get_ExcHU_imax);
+	get_map.emplace("ExcHU.imin", &get_ExcHU_imin);
+	get_map.emplace("ExcHU.ke", &get_ExcHU_ke);
+	get_map.emplace("ExcHU.ki", &get_ExcHU_ki);
+	get_map.emplace("ExcHU.te", &get_ExcHU_te);
+	get_map.emplace("ExcHU.ti", &get_ExcHU_ti);
+	get_map.emplace("ExcHU.tr", &get_ExcHU_tr);
 }
 
 void ExcHU::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -456,9 +488,23 @@ void ExcHU::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) con
 	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool ExcHU::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ExcHU" &&
+		dynamic_cast<ExcHU*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ExcHU::declare()
 {
 	return BaseClassDefiner(ExcHU::addConstructToMap, ExcHU::addPrimitiveAssignFnsToMap, ExcHU::addClassAssignFnsToMap, ExcHU::debugName);
+}
+
+std::map<std::string, AttrDetails> ExcHU::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ExcitationSystemDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

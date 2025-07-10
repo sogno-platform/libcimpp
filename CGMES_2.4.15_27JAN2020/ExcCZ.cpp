@@ -11,41 +11,73 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ExcCZ(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ExcCZ.efdmax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcCZ.efdmin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcCZ.ka", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcCZ.ke", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcCZ.kp", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcCZ.ta", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcCZ.tc", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcCZ.te", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcCZ.vrmax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcCZ.vrmin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ExcCZ::ExcCZ() {}
 ExcCZ::~ExcCZ() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ExcCZ::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ExcCZ.efdmax", { CGMESProfile::DY, } },
-	{ "cim:ExcCZ.efdmin", { CGMESProfile::DY, } },
-	{ "cim:ExcCZ.ka", { CGMESProfile::DY, } },
-	{ "cim:ExcCZ.ke", { CGMESProfile::DY, } },
-	{ "cim:ExcCZ.kp", { CGMESProfile::DY, } },
-	{ "cim:ExcCZ.ta", { CGMESProfile::DY, } },
-	{ "cim:ExcCZ.tc", { CGMESProfile::DY, } },
-	{ "cim:ExcCZ.te", { CGMESProfile::DY, } },
-	{ "cim:ExcCZ.vrmax", { CGMESProfile::DY, } },
-	{ "cim:ExcCZ.vrmin", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-ExcCZ::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ExcCZ::getPossibleProfilesForAttributes() const
+const std::string& ExcCZ::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ExcCZ::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ExcCZ::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ExcCZ::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ExcCZ::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ExcCZ::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ExcCZ_efdmax(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -346,21 +378,21 @@ const char* ExcCZ::debugString() const
 
 void ExcCZ::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ExcCZ", &ExcCZ_factory);
+	factory_map.emplace("ExcCZ", &ExcCZ_factory);
 }
 
 void ExcCZ::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ExcCZ.efdmax", &assign_ExcCZ_efdmax);
-	assign_map.emplace("cim:ExcCZ.efdmin", &assign_ExcCZ_efdmin);
-	assign_map.emplace("cim:ExcCZ.ka", &assign_ExcCZ_ka);
-	assign_map.emplace("cim:ExcCZ.ke", &assign_ExcCZ_ke);
-	assign_map.emplace("cim:ExcCZ.kp", &assign_ExcCZ_kp);
-	assign_map.emplace("cim:ExcCZ.ta", &assign_ExcCZ_ta);
-	assign_map.emplace("cim:ExcCZ.tc", &assign_ExcCZ_tc);
-	assign_map.emplace("cim:ExcCZ.te", &assign_ExcCZ_te);
-	assign_map.emplace("cim:ExcCZ.vrmax", &assign_ExcCZ_vrmax);
-	assign_map.emplace("cim:ExcCZ.vrmin", &assign_ExcCZ_vrmin);
+	assign_map.emplace("ExcCZ.efdmax", &assign_ExcCZ_efdmax);
+	assign_map.emplace("ExcCZ.efdmin", &assign_ExcCZ_efdmin);
+	assign_map.emplace("ExcCZ.ka", &assign_ExcCZ_ka);
+	assign_map.emplace("ExcCZ.ke", &assign_ExcCZ_ke);
+	assign_map.emplace("ExcCZ.kp", &assign_ExcCZ_kp);
+	assign_map.emplace("ExcCZ.ta", &assign_ExcCZ_ta);
+	assign_map.emplace("ExcCZ.tc", &assign_ExcCZ_tc);
+	assign_map.emplace("ExcCZ.te", &assign_ExcCZ_te);
+	assign_map.emplace("ExcCZ.vrmax", &assign_ExcCZ_vrmax);
+	assign_map.emplace("ExcCZ.vrmin", &assign_ExcCZ_vrmin);
 }
 
 void ExcCZ::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -370,16 +402,16 @@ void ExcCZ::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_
 void ExcCZ::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ExcCZ.efdmax", &get_ExcCZ_efdmax);
-	get_map.emplace("cim:ExcCZ.efdmin", &get_ExcCZ_efdmin);
-	get_map.emplace("cim:ExcCZ.ka", &get_ExcCZ_ka);
-	get_map.emplace("cim:ExcCZ.ke", &get_ExcCZ_ke);
-	get_map.emplace("cim:ExcCZ.kp", &get_ExcCZ_kp);
-	get_map.emplace("cim:ExcCZ.ta", &get_ExcCZ_ta);
-	get_map.emplace("cim:ExcCZ.tc", &get_ExcCZ_tc);
-	get_map.emplace("cim:ExcCZ.te", &get_ExcCZ_te);
-	get_map.emplace("cim:ExcCZ.vrmax", &get_ExcCZ_vrmax);
-	get_map.emplace("cim:ExcCZ.vrmin", &get_ExcCZ_vrmin);
+	get_map.emplace("ExcCZ.efdmax", &get_ExcCZ_efdmax);
+	get_map.emplace("ExcCZ.efdmin", &get_ExcCZ_efdmin);
+	get_map.emplace("ExcCZ.ka", &get_ExcCZ_ka);
+	get_map.emplace("ExcCZ.ke", &get_ExcCZ_ke);
+	get_map.emplace("ExcCZ.kp", &get_ExcCZ_kp);
+	get_map.emplace("ExcCZ.ta", &get_ExcCZ_ta);
+	get_map.emplace("ExcCZ.tc", &get_ExcCZ_tc);
+	get_map.emplace("ExcCZ.te", &get_ExcCZ_te);
+	get_map.emplace("ExcCZ.vrmax", &get_ExcCZ_vrmax);
+	get_map.emplace("ExcCZ.vrmin", &get_ExcCZ_vrmin);
 }
 
 void ExcCZ::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -392,9 +424,23 @@ void ExcCZ::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) con
 	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool ExcCZ::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ExcCZ" &&
+		dynamic_cast<ExcCZ*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ExcCZ::declare()
 {
 	return BaseClassDefiner(ExcCZ::addConstructToMap, ExcCZ::addPrimitiveAssignFnsToMap, ExcCZ::addClassAssignFnsToMap, ExcCZ::debugName);
+}
+
+std::map<std::string, AttrDetails> ExcCZ::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ExcitationSystemDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

@@ -13,33 +13,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		OperationalLimit(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "OperationalLimit.OperationalLimitSet", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "OperationalLimit.OperationalLimitType", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 OperationalLimit::OperationalLimit() : OperationalLimitSet(nullptr), OperationalLimitType(nullptr) {}
 OperationalLimit::~OperationalLimit() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& OperationalLimit::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:OperationalLimit.OperationalLimitSet", { CGMESProfile::EQ, } },
-	{ "cim:OperationalLimit.OperationalLimitType", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-OperationalLimit::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-OperationalLimit::getPossibleProfilesForAttributes() const
+const std::string& OperationalLimit::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& OperationalLimit::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& OperationalLimit::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& OperationalLimit::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& OperationalLimit::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& OperationalLimit::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_OperationalLimitSet_OperationalLimitValue(BaseClass*, BaseClass*);
@@ -112,7 +144,7 @@ const char* OperationalLimit::debugString() const
 
 void OperationalLimit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:OperationalLimit", &OperationalLimit_factory);
+	factory_map.emplace("OperationalLimit", &OperationalLimit_factory);
 }
 
 void OperationalLimit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -121,8 +153,8 @@ void OperationalLimit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string
 
 void OperationalLimit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:OperationalLimit.OperationalLimitSet", &assign_OperationalLimit_OperationalLimitSet);
-	assign_map.emplace("cim:OperationalLimit.OperationalLimitType", &assign_OperationalLimit_OperationalLimitType);
+	assign_map.emplace("OperationalLimit.OperationalLimitSet", &assign_OperationalLimit_OperationalLimitSet);
+	assign_map.emplace("OperationalLimit.OperationalLimitType", &assign_OperationalLimit_OperationalLimitType);
 }
 
 void OperationalLimit::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -133,8 +165,8 @@ void OperationalLimit::addPrimitiveGetFnsToMap(std::map<std::string, get_functio
 void OperationalLimit::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	IdentifiedObject::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:OperationalLimit.OperationalLimitSet", &get_OperationalLimit_OperationalLimitSet);
-	get_map.emplace("cim:OperationalLimit.OperationalLimitType", &get_OperationalLimit_OperationalLimitType);
+	get_map.emplace("OperationalLimit.OperationalLimitSet", &get_OperationalLimit_OperationalLimitSet);
+	get_map.emplace("OperationalLimit.OperationalLimitType", &get_OperationalLimit_OperationalLimitType);
 }
 
 void OperationalLimit::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -142,9 +174,23 @@ void OperationalLimit::addEnumGetFnsToMap(std::map<std::string, get_function>& g
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool OperationalLimit::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "OperationalLimit" &&
+		dynamic_cast<OperationalLimit*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner OperationalLimit::declare()
 {
 	return BaseClassDefiner(OperationalLimit::addConstructToMap, OperationalLimit::addPrimitiveAssignFnsToMap, OperationalLimit::addClassAssignFnsToMap, OperationalLimit::debugName);
+}
+
+std::map<std::string, AttrDetails> OperationalLimit::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

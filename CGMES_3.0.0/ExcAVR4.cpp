@@ -11,45 +11,77 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ExcAVR4(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ExcAVR4.imul", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAVR4.ka", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAVR4.ke", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAVR4.kif", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAVR4.t1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAVR4.t1if", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAVR4.t2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAVR4.t3", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAVR4.t4", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAVR4.tif", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAVR4.vfmn", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAVR4.vfmx", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAVR4.vrmn", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcAVR4.vrmx", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ExcAVR4::ExcAVR4() {}
 ExcAVR4::~ExcAVR4() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ExcAVR4::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ExcAVR4.imul", { CGMESProfile::DY, } },
-	{ "cim:ExcAVR4.ka", { CGMESProfile::DY, } },
-	{ "cim:ExcAVR4.ke", { CGMESProfile::DY, } },
-	{ "cim:ExcAVR4.kif", { CGMESProfile::DY, } },
-	{ "cim:ExcAVR4.t1", { CGMESProfile::DY, } },
-	{ "cim:ExcAVR4.t1if", { CGMESProfile::DY, } },
-	{ "cim:ExcAVR4.t2", { CGMESProfile::DY, } },
-	{ "cim:ExcAVR4.t3", { CGMESProfile::DY, } },
-	{ "cim:ExcAVR4.t4", { CGMESProfile::DY, } },
-	{ "cim:ExcAVR4.tif", { CGMESProfile::DY, } },
-	{ "cim:ExcAVR4.vfmn", { CGMESProfile::DY, } },
-	{ "cim:ExcAVR4.vfmx", { CGMESProfile::DY, } },
-	{ "cim:ExcAVR4.vrmn", { CGMESProfile::DY, } },
-	{ "cim:ExcAVR4.vrmx", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-ExcAVR4::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ExcAVR4::getPossibleProfilesForAttributes() const
+const std::string& ExcAVR4::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ExcAVR4::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ExcAVR4::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ExcAVR4::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ExcAVR4::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ExcAVR4::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ExcAVR4_imul(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -466,25 +498,25 @@ const char* ExcAVR4::debugString() const
 
 void ExcAVR4::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ExcAVR4", &ExcAVR4_factory);
+	factory_map.emplace("ExcAVR4", &ExcAVR4_factory);
 }
 
 void ExcAVR4::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ExcAVR4.imul", &assign_ExcAVR4_imul);
-	assign_map.emplace("cim:ExcAVR4.ka", &assign_ExcAVR4_ka);
-	assign_map.emplace("cim:ExcAVR4.ke", &assign_ExcAVR4_ke);
-	assign_map.emplace("cim:ExcAVR4.kif", &assign_ExcAVR4_kif);
-	assign_map.emplace("cim:ExcAVR4.t1", &assign_ExcAVR4_t1);
-	assign_map.emplace("cim:ExcAVR4.t1if", &assign_ExcAVR4_t1if);
-	assign_map.emplace("cim:ExcAVR4.t2", &assign_ExcAVR4_t2);
-	assign_map.emplace("cim:ExcAVR4.t3", &assign_ExcAVR4_t3);
-	assign_map.emplace("cim:ExcAVR4.t4", &assign_ExcAVR4_t4);
-	assign_map.emplace("cim:ExcAVR4.tif", &assign_ExcAVR4_tif);
-	assign_map.emplace("cim:ExcAVR4.vfmn", &assign_ExcAVR4_vfmn);
-	assign_map.emplace("cim:ExcAVR4.vfmx", &assign_ExcAVR4_vfmx);
-	assign_map.emplace("cim:ExcAVR4.vrmn", &assign_ExcAVR4_vrmn);
-	assign_map.emplace("cim:ExcAVR4.vrmx", &assign_ExcAVR4_vrmx);
+	assign_map.emplace("ExcAVR4.imul", &assign_ExcAVR4_imul);
+	assign_map.emplace("ExcAVR4.ka", &assign_ExcAVR4_ka);
+	assign_map.emplace("ExcAVR4.ke", &assign_ExcAVR4_ke);
+	assign_map.emplace("ExcAVR4.kif", &assign_ExcAVR4_kif);
+	assign_map.emplace("ExcAVR4.t1", &assign_ExcAVR4_t1);
+	assign_map.emplace("ExcAVR4.t1if", &assign_ExcAVR4_t1if);
+	assign_map.emplace("ExcAVR4.t2", &assign_ExcAVR4_t2);
+	assign_map.emplace("ExcAVR4.t3", &assign_ExcAVR4_t3);
+	assign_map.emplace("ExcAVR4.t4", &assign_ExcAVR4_t4);
+	assign_map.emplace("ExcAVR4.tif", &assign_ExcAVR4_tif);
+	assign_map.emplace("ExcAVR4.vfmn", &assign_ExcAVR4_vfmn);
+	assign_map.emplace("ExcAVR4.vfmx", &assign_ExcAVR4_vfmx);
+	assign_map.emplace("ExcAVR4.vrmn", &assign_ExcAVR4_vrmn);
+	assign_map.emplace("ExcAVR4.vrmx", &assign_ExcAVR4_vrmx);
 }
 
 void ExcAVR4::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -494,20 +526,20 @@ void ExcAVR4::addClassAssignFnsToMap(std::unordered_map<std::string, class_assig
 void ExcAVR4::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ExcAVR4.imul", &get_ExcAVR4_imul);
-	get_map.emplace("cim:ExcAVR4.ka", &get_ExcAVR4_ka);
-	get_map.emplace("cim:ExcAVR4.ke", &get_ExcAVR4_ke);
-	get_map.emplace("cim:ExcAVR4.kif", &get_ExcAVR4_kif);
-	get_map.emplace("cim:ExcAVR4.t1", &get_ExcAVR4_t1);
-	get_map.emplace("cim:ExcAVR4.t1if", &get_ExcAVR4_t1if);
-	get_map.emplace("cim:ExcAVR4.t2", &get_ExcAVR4_t2);
-	get_map.emplace("cim:ExcAVR4.t3", &get_ExcAVR4_t3);
-	get_map.emplace("cim:ExcAVR4.t4", &get_ExcAVR4_t4);
-	get_map.emplace("cim:ExcAVR4.tif", &get_ExcAVR4_tif);
-	get_map.emplace("cim:ExcAVR4.vfmn", &get_ExcAVR4_vfmn);
-	get_map.emplace("cim:ExcAVR4.vfmx", &get_ExcAVR4_vfmx);
-	get_map.emplace("cim:ExcAVR4.vrmn", &get_ExcAVR4_vrmn);
-	get_map.emplace("cim:ExcAVR4.vrmx", &get_ExcAVR4_vrmx);
+	get_map.emplace("ExcAVR4.imul", &get_ExcAVR4_imul);
+	get_map.emplace("ExcAVR4.ka", &get_ExcAVR4_ka);
+	get_map.emplace("ExcAVR4.ke", &get_ExcAVR4_ke);
+	get_map.emplace("ExcAVR4.kif", &get_ExcAVR4_kif);
+	get_map.emplace("ExcAVR4.t1", &get_ExcAVR4_t1);
+	get_map.emplace("ExcAVR4.t1if", &get_ExcAVR4_t1if);
+	get_map.emplace("ExcAVR4.t2", &get_ExcAVR4_t2);
+	get_map.emplace("ExcAVR4.t3", &get_ExcAVR4_t3);
+	get_map.emplace("ExcAVR4.t4", &get_ExcAVR4_t4);
+	get_map.emplace("ExcAVR4.tif", &get_ExcAVR4_tif);
+	get_map.emplace("ExcAVR4.vfmn", &get_ExcAVR4_vfmn);
+	get_map.emplace("ExcAVR4.vfmx", &get_ExcAVR4_vfmx);
+	get_map.emplace("ExcAVR4.vrmn", &get_ExcAVR4_vrmn);
+	get_map.emplace("ExcAVR4.vrmx", &get_ExcAVR4_vrmx);
 }
 
 void ExcAVR4::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -520,9 +552,23 @@ void ExcAVR4::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) c
 	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool ExcAVR4::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ExcAVR4" &&
+		dynamic_cast<ExcAVR4*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ExcAVR4::declare()
 {
 	return BaseClassDefiner(ExcAVR4::addConstructToMap, ExcAVR4::addPrimitiveAssignFnsToMap, ExcAVR4::addClassAssignFnsToMap, ExcAVR4::debugName);
+}
+
+std::map<std::string, AttrDetails> ExcAVR4::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ExcitationSystemDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

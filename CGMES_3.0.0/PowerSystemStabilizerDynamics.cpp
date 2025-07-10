@@ -13,33 +13,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		PowerSystemStabilizerDynamics(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "PowerSystemStabilizerDynamics.ExcitationSystemDynamics", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "PowerSystemStabilizerDynamics.RemoteInputSignal", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 PowerSystemStabilizerDynamics::PowerSystemStabilizerDynamics() : ExcitationSystemDynamics(nullptr) {}
 PowerSystemStabilizerDynamics::~PowerSystemStabilizerDynamics() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& PowerSystemStabilizerDynamics::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:PowerSystemStabilizerDynamics.ExcitationSystemDynamics", { CGMESProfile::DY, } },
-	{ "cim:PowerSystemStabilizerDynamics.RemoteInputSignal", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-PowerSystemStabilizerDynamics::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-PowerSystemStabilizerDynamics::getPossibleProfilesForAttributes() const
+const std::string& PowerSystemStabilizerDynamics::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = DynamicsFunctionBlock::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& PowerSystemStabilizerDynamics::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& PowerSystemStabilizerDynamics::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& PowerSystemStabilizerDynamics::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& PowerSystemStabilizerDynamics::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& PowerSystemStabilizerDynamics::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ExcitationSystemDynamics_PowerSystemStabilizerDynamics(BaseClass*, BaseClass*);
@@ -99,7 +131,7 @@ const char* PowerSystemStabilizerDynamics::debugString() const
 
 void PowerSystemStabilizerDynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:PowerSystemStabilizerDynamics", &PowerSystemStabilizerDynamics_factory);
+	factory_map.emplace("PowerSystemStabilizerDynamics", &PowerSystemStabilizerDynamics_factory);
 }
 
 void PowerSystemStabilizerDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -108,8 +140,8 @@ void PowerSystemStabilizerDynamics::addPrimitiveAssignFnsToMap(std::unordered_ma
 
 void PowerSystemStabilizerDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:PowerSystemStabilizerDynamics.ExcitationSystemDynamics", &assign_PowerSystemStabilizerDynamics_ExcitationSystemDynamics);
-	assign_map.emplace("cim:PowerSystemStabilizerDynamics.RemoteInputSignal", &assign_PowerSystemStabilizerDynamics_RemoteInputSignal);
+	assign_map.emplace("PowerSystemStabilizerDynamics.ExcitationSystemDynamics", &assign_PowerSystemStabilizerDynamics_ExcitationSystemDynamics);
+	assign_map.emplace("PowerSystemStabilizerDynamics.RemoteInputSignal", &assign_PowerSystemStabilizerDynamics_RemoteInputSignal);
 }
 
 void PowerSystemStabilizerDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -120,7 +152,7 @@ void PowerSystemStabilizerDynamics::addPrimitiveGetFnsToMap(std::map<std::string
 void PowerSystemStabilizerDynamics::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	DynamicsFunctionBlock::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:PowerSystemStabilizerDynamics.ExcitationSystemDynamics", &get_PowerSystemStabilizerDynamics_ExcitationSystemDynamics);
+	get_map.emplace("PowerSystemStabilizerDynamics.ExcitationSystemDynamics", &get_PowerSystemStabilizerDynamics_ExcitationSystemDynamics);
 }
 
 void PowerSystemStabilizerDynamics::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -128,9 +160,23 @@ void PowerSystemStabilizerDynamics::addEnumGetFnsToMap(std::map<std::string, get
 	DynamicsFunctionBlock::addEnumGetFnsToMap(get_map);
 }
 
+bool PowerSystemStabilizerDynamics::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "PowerSystemStabilizerDynamics" &&
+		dynamic_cast<PowerSystemStabilizerDynamics*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner PowerSystemStabilizerDynamics::declare()
 {
 	return BaseClassDefiner(PowerSystemStabilizerDynamics::addConstructToMap, PowerSystemStabilizerDynamics::addPrimitiveAssignFnsToMap, PowerSystemStabilizerDynamics::addClassAssignFnsToMap, PowerSystemStabilizerDynamics::debugName);
+}
+
+std::map<std::string, AttrDetails> PowerSystemStabilizerDynamics::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = DynamicsFunctionBlock::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

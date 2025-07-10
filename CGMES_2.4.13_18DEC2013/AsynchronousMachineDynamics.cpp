@@ -15,35 +15,67 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		AsynchronousMachineDynamics(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "AsynchronousMachineDynamics.AsynchronousMachine", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "AsynchronousMachineDynamics.MechanicalLoadDynamics", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "AsynchronousMachineDynamics.TurbineGovernorDynamics", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "AsynchronousMachineDynamics.WindTurbineType1or2Dynamics", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 AsynchronousMachineDynamics::AsynchronousMachineDynamics() : AsynchronousMachine(nullptr), MechanicalLoadDynamics(nullptr), TurbineGovernorDynamics(nullptr), WindTurbineType1or2Dynamics(nullptr) {}
 AsynchronousMachineDynamics::~AsynchronousMachineDynamics() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& AsynchronousMachineDynamics::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:AsynchronousMachineDynamics.AsynchronousMachine", { CGMESProfile::DY, } },
-	{ "cim:AsynchronousMachineDynamics.MechanicalLoadDynamics", { CGMESProfile::DY, } },
-	{ "cim:AsynchronousMachineDynamics.TurbineGovernorDynamics", { CGMESProfile::DY, } },
-	{ "cim:AsynchronousMachineDynamics.WindTurbineType1or2Dynamics", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-AsynchronousMachineDynamics::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-AsynchronousMachineDynamics::getPossibleProfilesForAttributes() const
+const std::string& AsynchronousMachineDynamics::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = RotatingMachineDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& AsynchronousMachineDynamics::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& AsynchronousMachineDynamics::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& AsynchronousMachineDynamics::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& AsynchronousMachineDynamics::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& AsynchronousMachineDynamics::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_AsynchronousMachine_AsynchronousMachineDynamics(BaseClass*, BaseClass*);
@@ -139,7 +171,7 @@ const char* AsynchronousMachineDynamics::debugString() const
 
 void AsynchronousMachineDynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:AsynchronousMachineDynamics", &AsynchronousMachineDynamics_factory);
+	factory_map.emplace("AsynchronousMachineDynamics", &AsynchronousMachineDynamics_factory);
 }
 
 void AsynchronousMachineDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -148,10 +180,10 @@ void AsynchronousMachineDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<
 
 void AsynchronousMachineDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:AsynchronousMachineDynamics.AsynchronousMachine", &assign_AsynchronousMachineDynamics_AsynchronousMachine);
-	assign_map.emplace("cim:AsynchronousMachineDynamics.MechanicalLoadDynamics", &assign_AsynchronousMachineDynamics_MechanicalLoadDynamics);
-	assign_map.emplace("cim:AsynchronousMachineDynamics.TurbineGovernorDynamics", &assign_AsynchronousMachineDynamics_TurbineGovernorDynamics);
-	assign_map.emplace("cim:AsynchronousMachineDynamics.WindTurbineType1or2Dynamics", &assign_AsynchronousMachineDynamics_WindTurbineType1or2Dynamics);
+	assign_map.emplace("AsynchronousMachineDynamics.AsynchronousMachine", &assign_AsynchronousMachineDynamics_AsynchronousMachine);
+	assign_map.emplace("AsynchronousMachineDynamics.MechanicalLoadDynamics", &assign_AsynchronousMachineDynamics_MechanicalLoadDynamics);
+	assign_map.emplace("AsynchronousMachineDynamics.TurbineGovernorDynamics", &assign_AsynchronousMachineDynamics_TurbineGovernorDynamics);
+	assign_map.emplace("AsynchronousMachineDynamics.WindTurbineType1or2Dynamics", &assign_AsynchronousMachineDynamics_WindTurbineType1or2Dynamics);
 }
 
 void AsynchronousMachineDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -162,7 +194,7 @@ void AsynchronousMachineDynamics::addPrimitiveGetFnsToMap(std::map<std::string, 
 void AsynchronousMachineDynamics::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	RotatingMachineDynamics::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:AsynchronousMachineDynamics.AsynchronousMachine", &get_AsynchronousMachineDynamics_AsynchronousMachine);
+	get_map.emplace("AsynchronousMachineDynamics.AsynchronousMachine", &get_AsynchronousMachineDynamics_AsynchronousMachine);
 }
 
 void AsynchronousMachineDynamics::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -170,9 +202,23 @@ void AsynchronousMachineDynamics::addEnumGetFnsToMap(std::map<std::string, get_f
 	RotatingMachineDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool AsynchronousMachineDynamics::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "AsynchronousMachineDynamics" &&
+		dynamic_cast<AsynchronousMachineDynamics*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner AsynchronousMachineDynamics::declare()
 {
 	return BaseClassDefiner(AsynchronousMachineDynamics::addConstructToMap, AsynchronousMachineDynamics::addPrimitiveAssignFnsToMap, AsynchronousMachineDynamics::addClassAssignFnsToMap, AsynchronousMachineDynamics::debugName);
+}
+
+std::map<std::string, AttrDetails> AsynchronousMachineDynamics::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = RotatingMachineDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

@@ -12,34 +12,66 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		EquivalentEquipment(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SC,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "EquivalentEquipment.EquivalentNetwork", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 EquivalentEquipment::EquivalentEquipment() : EquivalentNetwork(nullptr) {}
 EquivalentEquipment::~EquivalentEquipment() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& EquivalentEquipment::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SC,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:EquivalentEquipment.EquivalentNetwork", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-EquivalentEquipment::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-EquivalentEquipment::getPossibleProfilesForAttributes() const
+const std::string& EquivalentEquipment::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ConductingEquipment::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& EquivalentEquipment::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& EquivalentEquipment::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& EquivalentEquipment::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& EquivalentEquipment::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& EquivalentEquipment::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_EquivalentNetwork_EquivalentEquipments(BaseClass*, BaseClass*);
@@ -81,7 +113,7 @@ const char* EquivalentEquipment::debugString() const
 
 void EquivalentEquipment::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:EquivalentEquipment", &EquivalentEquipment_factory);
+	factory_map.emplace("EquivalentEquipment", &EquivalentEquipment_factory);
 }
 
 void EquivalentEquipment::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -90,7 +122,7 @@ void EquivalentEquipment::addPrimitiveAssignFnsToMap(std::unordered_map<std::str
 
 void EquivalentEquipment::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:EquivalentEquipment.EquivalentNetwork", &assign_EquivalentEquipment_EquivalentNetwork);
+	assign_map.emplace("EquivalentEquipment.EquivalentNetwork", &assign_EquivalentEquipment_EquivalentNetwork);
 }
 
 void EquivalentEquipment::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -101,7 +133,7 @@ void EquivalentEquipment::addPrimitiveGetFnsToMap(std::map<std::string, get_func
 void EquivalentEquipment::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	ConductingEquipment::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:EquivalentEquipment.EquivalentNetwork", &get_EquivalentEquipment_EquivalentNetwork);
+	get_map.emplace("EquivalentEquipment.EquivalentNetwork", &get_EquivalentEquipment_EquivalentNetwork);
 }
 
 void EquivalentEquipment::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -109,9 +141,23 @@ void EquivalentEquipment::addEnumGetFnsToMap(std::map<std::string, get_function>
 	ConductingEquipment::addEnumGetFnsToMap(get_map);
 }
 
+bool EquivalentEquipment::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "EquivalentEquipment" &&
+		dynamic_cast<EquivalentEquipment*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner EquivalentEquipment::declare()
 {
 	return BaseClassDefiner(EquivalentEquipment::addConstructToMap, EquivalentEquipment::addPrimitiveAssignFnsToMap, EquivalentEquipment::addClassAssignFnsToMap, EquivalentEquipment::debugName);
+}
+
+std::map<std::string, AttrDetails> EquivalentEquipment::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ConductingEquipment::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

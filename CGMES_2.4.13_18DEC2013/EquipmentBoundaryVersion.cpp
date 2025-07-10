@@ -11,42 +11,74 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		EquipmentBoundaryVersion(),
+		"http://entsoe.eu/CIM/SchemaExtension/3/1#",
+		{
+			CGMESProfile::EQ_BD,
+		},
+		CGMESProfile::EQ_BD
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "EquipmentBoundaryVersion.baseUML", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::EQ_BD, } } },
+		{ "EquipmentBoundaryVersion.baseURI", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::EQ_BD, } } },
+		{ "EquipmentBoundaryVersion.date", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::EQ_BD, } } },
+		{ "EquipmentBoundaryVersion.differenceModelURI", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::EQ_BD, } } },
+		{ "EquipmentBoundaryVersion.entsoeUML", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::EQ_BD, } } },
+		{ "EquipmentBoundaryVersion.entsoeURIcore", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::EQ_BD, } } },
+		{ "EquipmentBoundaryVersion.entsoeURIoperation", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::EQ_BD, } } },
+		{ "EquipmentBoundaryVersion.modelDescriptionURI", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::EQ_BD, } } },
+		{ "EquipmentBoundaryVersion.namespaceRDF", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::EQ_BD, } } },
+		{ "EquipmentBoundaryVersion.namespaceUML", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::EQ_BD, } } },
+		{ "EquipmentBoundaryVersion.shortName", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::EQ_BD, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 EquipmentBoundaryVersion::EquipmentBoundaryVersion() {}
 EquipmentBoundaryVersion::~EquipmentBoundaryVersion() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& EquipmentBoundaryVersion::getAttributeNames() const
 {
-	CGMESProfile::EQ_BD,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:EquipmentBoundaryVersion.baseUML", { CGMESProfile::EQ_BD, } },
-	{ "cim:EquipmentBoundaryVersion.baseURI", { CGMESProfile::EQ_BD, } },
-	{ "cim:EquipmentBoundaryVersion.date", { CGMESProfile::EQ_BD, } },
-	{ "cim:EquipmentBoundaryVersion.differenceModelURI", { CGMESProfile::EQ_BD, } },
-	{ "cim:EquipmentBoundaryVersion.entsoeUML", { CGMESProfile::EQ_BD, } },
-	{ "cim:EquipmentBoundaryVersion.entsoeURIcore", { CGMESProfile::EQ_BD, } },
-	{ "cim:EquipmentBoundaryVersion.entsoeURIoperation", { CGMESProfile::EQ_BD, } },
-	{ "cim:EquipmentBoundaryVersion.modelDescriptionURI", { CGMESProfile::EQ_BD, } },
-	{ "cim:EquipmentBoundaryVersion.namespaceRDF", { CGMESProfile::EQ_BD, } },
-	{ "cim:EquipmentBoundaryVersion.namespaceUML", { CGMESProfile::EQ_BD, } },
-	{ "cim:EquipmentBoundaryVersion.shortName", { CGMESProfile::EQ_BD, } },
-};
-
-std::list<CGMESProfile>
-EquipmentBoundaryVersion::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-EquipmentBoundaryVersion::getPossibleProfilesForAttributes() const
+const std::string& EquipmentBoundaryVersion::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& EquipmentBoundaryVersion::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& EquipmentBoundaryVersion::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& EquipmentBoundaryVersion::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& EquipmentBoundaryVersion::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& EquipmentBoundaryVersion::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_EquipmentBoundaryVersion_baseUML(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -376,22 +408,22 @@ const char* EquipmentBoundaryVersion::debugString() const
 
 void EquipmentBoundaryVersion::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:EquipmentBoundaryVersion", &EquipmentBoundaryVersion_factory);
+	factory_map.emplace("EquipmentBoundaryVersion", &EquipmentBoundaryVersion_factory);
 }
 
 void EquipmentBoundaryVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:EquipmentBoundaryVersion.baseUML", &assign_EquipmentBoundaryVersion_baseUML);
-	assign_map.emplace("cim:EquipmentBoundaryVersion.baseURI", &assign_EquipmentBoundaryVersion_baseURI);
-	assign_map.emplace("cim:EquipmentBoundaryVersion.date", &assign_EquipmentBoundaryVersion_date);
-	assign_map.emplace("cim:EquipmentBoundaryVersion.differenceModelURI", &assign_EquipmentBoundaryVersion_differenceModelURI);
-	assign_map.emplace("cim:EquipmentBoundaryVersion.entsoeUML", &assign_EquipmentBoundaryVersion_entsoeUML);
-	assign_map.emplace("cim:EquipmentBoundaryVersion.entsoeURIcore", &assign_EquipmentBoundaryVersion_entsoeURIcore);
-	assign_map.emplace("cim:EquipmentBoundaryVersion.entsoeURIoperation", &assign_EquipmentBoundaryVersion_entsoeURIoperation);
-	assign_map.emplace("cim:EquipmentBoundaryVersion.modelDescriptionURI", &assign_EquipmentBoundaryVersion_modelDescriptionURI);
-	assign_map.emplace("cim:EquipmentBoundaryVersion.namespaceRDF", &assign_EquipmentBoundaryVersion_namespaceRDF);
-	assign_map.emplace("cim:EquipmentBoundaryVersion.namespaceUML", &assign_EquipmentBoundaryVersion_namespaceUML);
-	assign_map.emplace("cim:EquipmentBoundaryVersion.shortName", &assign_EquipmentBoundaryVersion_shortName);
+	assign_map.emplace("EquipmentBoundaryVersion.baseUML", &assign_EquipmentBoundaryVersion_baseUML);
+	assign_map.emplace("EquipmentBoundaryVersion.baseURI", &assign_EquipmentBoundaryVersion_baseURI);
+	assign_map.emplace("EquipmentBoundaryVersion.date", &assign_EquipmentBoundaryVersion_date);
+	assign_map.emplace("EquipmentBoundaryVersion.differenceModelURI", &assign_EquipmentBoundaryVersion_differenceModelURI);
+	assign_map.emplace("EquipmentBoundaryVersion.entsoeUML", &assign_EquipmentBoundaryVersion_entsoeUML);
+	assign_map.emplace("EquipmentBoundaryVersion.entsoeURIcore", &assign_EquipmentBoundaryVersion_entsoeURIcore);
+	assign_map.emplace("EquipmentBoundaryVersion.entsoeURIoperation", &assign_EquipmentBoundaryVersion_entsoeURIoperation);
+	assign_map.emplace("EquipmentBoundaryVersion.modelDescriptionURI", &assign_EquipmentBoundaryVersion_modelDescriptionURI);
+	assign_map.emplace("EquipmentBoundaryVersion.namespaceRDF", &assign_EquipmentBoundaryVersion_namespaceRDF);
+	assign_map.emplace("EquipmentBoundaryVersion.namespaceUML", &assign_EquipmentBoundaryVersion_namespaceUML);
+	assign_map.emplace("EquipmentBoundaryVersion.shortName", &assign_EquipmentBoundaryVersion_shortName);
 }
 
 void EquipmentBoundaryVersion::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -401,17 +433,17 @@ void EquipmentBoundaryVersion::addClassAssignFnsToMap(std::unordered_map<std::st
 void EquipmentBoundaryVersion::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	BaseClass::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:EquipmentBoundaryVersion.baseUML", &get_EquipmentBoundaryVersion_baseUML);
-	get_map.emplace("cim:EquipmentBoundaryVersion.baseURI", &get_EquipmentBoundaryVersion_baseURI);
-	get_map.emplace("cim:EquipmentBoundaryVersion.date", &get_EquipmentBoundaryVersion_date);
-	get_map.emplace("cim:EquipmentBoundaryVersion.differenceModelURI", &get_EquipmentBoundaryVersion_differenceModelURI);
-	get_map.emplace("cim:EquipmentBoundaryVersion.entsoeUML", &get_EquipmentBoundaryVersion_entsoeUML);
-	get_map.emplace("cim:EquipmentBoundaryVersion.entsoeURIcore", &get_EquipmentBoundaryVersion_entsoeURIcore);
-	get_map.emplace("cim:EquipmentBoundaryVersion.entsoeURIoperation", &get_EquipmentBoundaryVersion_entsoeURIoperation);
-	get_map.emplace("cim:EquipmentBoundaryVersion.modelDescriptionURI", &get_EquipmentBoundaryVersion_modelDescriptionURI);
-	get_map.emplace("cim:EquipmentBoundaryVersion.namespaceRDF", &get_EquipmentBoundaryVersion_namespaceRDF);
-	get_map.emplace("cim:EquipmentBoundaryVersion.namespaceUML", &get_EquipmentBoundaryVersion_namespaceUML);
-	get_map.emplace("cim:EquipmentBoundaryVersion.shortName", &get_EquipmentBoundaryVersion_shortName);
+	get_map.emplace("EquipmentBoundaryVersion.baseUML", &get_EquipmentBoundaryVersion_baseUML);
+	get_map.emplace("EquipmentBoundaryVersion.baseURI", &get_EquipmentBoundaryVersion_baseURI);
+	get_map.emplace("EquipmentBoundaryVersion.date", &get_EquipmentBoundaryVersion_date);
+	get_map.emplace("EquipmentBoundaryVersion.differenceModelURI", &get_EquipmentBoundaryVersion_differenceModelURI);
+	get_map.emplace("EquipmentBoundaryVersion.entsoeUML", &get_EquipmentBoundaryVersion_entsoeUML);
+	get_map.emplace("EquipmentBoundaryVersion.entsoeURIcore", &get_EquipmentBoundaryVersion_entsoeURIcore);
+	get_map.emplace("EquipmentBoundaryVersion.entsoeURIoperation", &get_EquipmentBoundaryVersion_entsoeURIoperation);
+	get_map.emplace("EquipmentBoundaryVersion.modelDescriptionURI", &get_EquipmentBoundaryVersion_modelDescriptionURI);
+	get_map.emplace("EquipmentBoundaryVersion.namespaceRDF", &get_EquipmentBoundaryVersion_namespaceRDF);
+	get_map.emplace("EquipmentBoundaryVersion.namespaceUML", &get_EquipmentBoundaryVersion_namespaceUML);
+	get_map.emplace("EquipmentBoundaryVersion.shortName", &get_EquipmentBoundaryVersion_shortName);
 }
 
 void EquipmentBoundaryVersion::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -424,9 +456,23 @@ void EquipmentBoundaryVersion::addEnumGetFnsToMap(std::map<std::string, get_func
 	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
+bool EquipmentBoundaryVersion::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "EquipmentBoundaryVersion" &&
+		dynamic_cast<EquipmentBoundaryVersion*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner EquipmentBoundaryVersion::declare()
 {
 	return BaseClassDefiner(EquipmentBoundaryVersion::addConstructToMap, EquipmentBoundaryVersion::addPrimitiveAssignFnsToMap, EquipmentBoundaryVersion::addClassAssignFnsToMap, EquipmentBoundaryVersion::debugName);
+}
+
+std::map<std::string, AttrDetails> EquipmentBoundaryVersion::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = BaseClass::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

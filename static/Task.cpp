@@ -18,16 +18,15 @@ Task::Task(BaseClass* CIMObj, const std::string CIMAttrName, const std::string V
 
 Task::~Task() {}
 
-void Task::print()
+void Task::print() const
 {
 	if(IdentifiedObject* IdObj = dynamic_cast<IdentifiedObject*>(_CIMObj))
 		std::cout << _CIMAttrName << " '" << IdObj->name << "' = '" << _Value << "'" << std::endl;
 	else
 		std::cout << _CIMAttrName << " = '" << _Value << "'" << std::endl;
-
 }
 
-bool Task::resolve(std::unordered_map<std::string, BaseClass*> *RDFMap)
+bool Task::resolve(std::unordered_map<std::string, BaseClass*> *RDFMap) const
 {
 	std::unordered_map<std::string, BaseClass*>::iterator it_id = RDFMap->find(_Value);
 	if(it_id == RDFMap->end()) {
@@ -45,6 +44,14 @@ bool Task::resolve(std::unordered_map<std::string, BaseClass*> *RDFMap)
 		return true;
 	else
 		return (*it_func->second)(it_id->second, _CIMObj);
+}
+
+void Task::replaceObject(BaseClass* oldObject_ptr, BaseClass* newObject_ptr)
+{
+	if (_CIMObj == oldObject_ptr)
+	{
+		_CIMObj = newObject_ptr;
+	}
 }
 
 static std::unordered_map<std::string, class_assign_function> initialize()

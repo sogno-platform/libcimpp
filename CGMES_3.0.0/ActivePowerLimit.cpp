@@ -11,34 +11,66 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ActivePowerLimit(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ActivePowerLimit.normalValue", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "ActivePowerLimit.value", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ActivePowerLimit::ActivePowerLimit() {}
 ActivePowerLimit::~ActivePowerLimit() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ActivePowerLimit::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ActivePowerLimit.normalValue", { CGMESProfile::EQ, } },
-	{ "cim:ActivePowerLimit.value", { CGMESProfile::SSH, } },
-};
-
-std::list<CGMESProfile>
-ActivePowerLimit::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ActivePowerLimit::getPossibleProfilesForAttributes() const
+const std::string& ActivePowerLimit::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = OperationalLimit::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ActivePowerLimit::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ActivePowerLimit::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ActivePowerLimit::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ActivePowerLimit::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ActivePowerLimit::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ActivePowerLimit_normalValue(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -107,13 +139,13 @@ const char* ActivePowerLimit::debugString() const
 
 void ActivePowerLimit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ActivePowerLimit", &ActivePowerLimit_factory);
+	factory_map.emplace("ActivePowerLimit", &ActivePowerLimit_factory);
 }
 
 void ActivePowerLimit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ActivePowerLimit.normalValue", &assign_ActivePowerLimit_normalValue);
-	assign_map.emplace("cim:ActivePowerLimit.value", &assign_ActivePowerLimit_value);
+	assign_map.emplace("ActivePowerLimit.normalValue", &assign_ActivePowerLimit_normalValue);
+	assign_map.emplace("ActivePowerLimit.value", &assign_ActivePowerLimit_value);
 }
 
 void ActivePowerLimit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -123,8 +155,8 @@ void ActivePowerLimit::addClassAssignFnsToMap(std::unordered_map<std::string, cl
 void ActivePowerLimit::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	OperationalLimit::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ActivePowerLimit.normalValue", &get_ActivePowerLimit_normalValue);
-	get_map.emplace("cim:ActivePowerLimit.value", &get_ActivePowerLimit_value);
+	get_map.emplace("ActivePowerLimit.normalValue", &get_ActivePowerLimit_normalValue);
+	get_map.emplace("ActivePowerLimit.value", &get_ActivePowerLimit_value);
 }
 
 void ActivePowerLimit::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -137,9 +169,23 @@ void ActivePowerLimit::addEnumGetFnsToMap(std::map<std::string, get_function>& g
 	OperationalLimit::addEnumGetFnsToMap(get_map);
 }
 
+bool ActivePowerLimit::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ActivePowerLimit" &&
+		dynamic_cast<ActivePowerLimit*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ActivePowerLimit::declare()
 {
 	return BaseClassDefiner(ActivePowerLimit::addConstructToMap, ActivePowerLimit::addPrimitiveAssignFnsToMap, ActivePowerLimit::addClassAssignFnsToMap, ActivePowerLimit::debugName);
+}
+
+std::map<std::string, AttrDetails> ActivePowerLimit::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = OperationalLimit::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

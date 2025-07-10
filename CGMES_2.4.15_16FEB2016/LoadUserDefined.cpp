@@ -12,33 +12,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		LoadUserDefined(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "LoadUserDefined.ProprietaryParameterDynamics", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "LoadUserDefined.proprietary", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 LoadUserDefined::LoadUserDefined() {}
 LoadUserDefined::~LoadUserDefined() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& LoadUserDefined::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:LoadUserDefined.ProprietaryParameterDynamics", { CGMESProfile::DY, } },
-	{ "cim:LoadUserDefined.proprietary", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-LoadUserDefined::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-LoadUserDefined::getPossibleProfilesForAttributes() const
+const std::string& LoadUserDefined::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = LoadDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& LoadUserDefined::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& LoadUserDefined::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& LoadUserDefined::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& LoadUserDefined::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& LoadUserDefined::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ProprietaryParameterDynamics_LoadUserDefined(BaseClass*, BaseClass*);
@@ -96,23 +128,23 @@ const char* LoadUserDefined::debugString() const
 
 void LoadUserDefined::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:LoadUserDefined", &LoadUserDefined_factory);
+	factory_map.emplace("LoadUserDefined", &LoadUserDefined_factory);
 }
 
 void LoadUserDefined::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:LoadUserDefined.proprietary", &assign_LoadUserDefined_proprietary);
+	assign_map.emplace("LoadUserDefined.proprietary", &assign_LoadUserDefined_proprietary);
 }
 
 void LoadUserDefined::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:LoadUserDefined.ProprietaryParameterDynamics", &assign_LoadUserDefined_ProprietaryParameterDynamics);
+	assign_map.emplace("LoadUserDefined.ProprietaryParameterDynamics", &assign_LoadUserDefined_ProprietaryParameterDynamics);
 }
 
 void LoadUserDefined::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	LoadDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:LoadUserDefined.proprietary", &get_LoadUserDefined_proprietary);
+	get_map.emplace("LoadUserDefined.proprietary", &get_LoadUserDefined_proprietary);
 }
 
 void LoadUserDefined::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -125,9 +157,23 @@ void LoadUserDefined::addEnumGetFnsToMap(std::map<std::string, get_function>& ge
 	LoadDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool LoadUserDefined::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "LoadUserDefined" &&
+		dynamic_cast<LoadUserDefined*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner LoadUserDefined::declare()
 {
 	return BaseClassDefiner(LoadUserDefined::addConstructToMap, LoadUserDefined::addPrimitiveAssignFnsToMap, LoadUserDefined::addClassAssignFnsToMap, LoadUserDefined::debugName);
+}
+
+std::map<std::string, AttrDetails> LoadUserDefined::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = LoadDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

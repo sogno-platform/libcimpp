@@ -13,34 +13,66 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		AccumulatorValue(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "AccumulatorValue.Accumulator", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "AccumulatorValue.AccumulatorReset", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "AccumulatorValue.value", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 AccumulatorValue::AccumulatorValue() : Accumulator(nullptr), AccumulatorReset(nullptr) {}
 AccumulatorValue::~AccumulatorValue() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& AccumulatorValue::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:AccumulatorValue.Accumulator", { CGMESProfile::EQ, } },
-	{ "cim:AccumulatorValue.AccumulatorReset", { CGMESProfile::EQ, } },
-	{ "cim:AccumulatorValue.value", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-AccumulatorValue::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-AccumulatorValue::getPossibleProfilesForAttributes() const
+const std::string& AccumulatorValue::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = MeasurementValue::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& AccumulatorValue::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& AccumulatorValue::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& AccumulatorValue::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& AccumulatorValue::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& AccumulatorValue::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_Accumulator_AccumulatorValues(BaseClass*, BaseClass*);
@@ -129,30 +161,30 @@ const char* AccumulatorValue::debugString() const
 
 void AccumulatorValue::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:AccumulatorValue", &AccumulatorValue_factory);
+	factory_map.emplace("AccumulatorValue", &AccumulatorValue_factory);
 }
 
 void AccumulatorValue::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:AccumulatorValue.value", &assign_AccumulatorValue_value);
+	assign_map.emplace("AccumulatorValue.value", &assign_AccumulatorValue_value);
 }
 
 void AccumulatorValue::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:AccumulatorValue.Accumulator", &assign_AccumulatorValue_Accumulator);
-	assign_map.emplace("cim:AccumulatorValue.AccumulatorReset", &assign_AccumulatorValue_AccumulatorReset);
+	assign_map.emplace("AccumulatorValue.Accumulator", &assign_AccumulatorValue_Accumulator);
+	assign_map.emplace("AccumulatorValue.AccumulatorReset", &assign_AccumulatorValue_AccumulatorReset);
 }
 
 void AccumulatorValue::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	MeasurementValue::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:AccumulatorValue.value", &get_AccumulatorValue_value);
+	get_map.emplace("AccumulatorValue.value", &get_AccumulatorValue_value);
 }
 
 void AccumulatorValue::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	MeasurementValue::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:AccumulatorValue.Accumulator", &get_AccumulatorValue_Accumulator);
+	get_map.emplace("AccumulatorValue.Accumulator", &get_AccumulatorValue_Accumulator);
 }
 
 void AccumulatorValue::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -160,9 +192,23 @@ void AccumulatorValue::addEnumGetFnsToMap(std::map<std::string, get_function>& g
 	MeasurementValue::addEnumGetFnsToMap(get_map);
 }
 
+bool AccumulatorValue::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "AccumulatorValue" &&
+		dynamic_cast<AccumulatorValue*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner AccumulatorValue::declare()
 {
 	return BaseClassDefiner(AccumulatorValue::addConstructToMap, AccumulatorValue::addPrimitiveAssignFnsToMap, AccumulatorValue::addClassAssignFnsToMap, AccumulatorValue::debugName);
+}
+
+std::map<std::string, AttrDetails> AccumulatorValue::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = MeasurementValue::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

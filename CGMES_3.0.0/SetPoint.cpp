@@ -11,33 +11,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		SetPoint(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::OP,
+		},
+		CGMESProfile::OP
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "SetPoint.normalValue", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::OP, } } },
+		{ "SetPoint.value", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::OP, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 SetPoint::SetPoint() {}
 SetPoint::~SetPoint() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& SetPoint::getAttributeNames() const
 {
-	CGMESProfile::OP,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:SetPoint.normalValue", { CGMESProfile::OP, } },
-	{ "cim:SetPoint.value", { CGMESProfile::OP, } },
-};
-
-std::list<CGMESProfile>
-SetPoint::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-SetPoint::getPossibleProfilesForAttributes() const
+const std::string& SetPoint::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = AnalogControl::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& SetPoint::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& SetPoint::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& SetPoint::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& SetPoint::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& SetPoint::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_SetPoint_normalValue(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -106,13 +138,13 @@ const char* SetPoint::debugString() const
 
 void SetPoint::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:SetPoint", &SetPoint_factory);
+	factory_map.emplace("SetPoint", &SetPoint_factory);
 }
 
 void SetPoint::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:SetPoint.normalValue", &assign_SetPoint_normalValue);
-	assign_map.emplace("cim:SetPoint.value", &assign_SetPoint_value);
+	assign_map.emplace("SetPoint.normalValue", &assign_SetPoint_normalValue);
+	assign_map.emplace("SetPoint.value", &assign_SetPoint_value);
 }
 
 void SetPoint::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -122,8 +154,8 @@ void SetPoint::addClassAssignFnsToMap(std::unordered_map<std::string, class_assi
 void SetPoint::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	AnalogControl::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:SetPoint.normalValue", &get_SetPoint_normalValue);
-	get_map.emplace("cim:SetPoint.value", &get_SetPoint_value);
+	get_map.emplace("SetPoint.normalValue", &get_SetPoint_normalValue);
+	get_map.emplace("SetPoint.value", &get_SetPoint_value);
 }
 
 void SetPoint::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -136,9 +168,23 @@ void SetPoint::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) 
 	AnalogControl::addEnumGetFnsToMap(get_map);
 }
 
+bool SetPoint::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "SetPoint" &&
+		dynamic_cast<SetPoint*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner SetPoint::declare()
 {
 	return BaseClassDefiner(SetPoint::addConstructToMap, SetPoint::addPrimitiveAssignFnsToMap, SetPoint::addClassAssignFnsToMap, SetPoint::debugName);
+}
+
+std::map<std::string, AttrDetails> SetPoint::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = AnalogControl::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

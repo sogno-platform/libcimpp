@@ -12,32 +12,64 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		StaticVarCompensatorDynamics(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "StaticVarCompensatorDynamics.StaticVarCompensator", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 StaticVarCompensatorDynamics::StaticVarCompensatorDynamics() : StaticVarCompensator(nullptr) {}
 StaticVarCompensatorDynamics::~StaticVarCompensatorDynamics() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& StaticVarCompensatorDynamics::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:StaticVarCompensatorDynamics.StaticVarCompensator", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-StaticVarCompensatorDynamics::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-StaticVarCompensatorDynamics::getPossibleProfilesForAttributes() const
+const std::string& StaticVarCompensatorDynamics::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = DynamicsFunctionBlock::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& StaticVarCompensatorDynamics::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& StaticVarCompensatorDynamics::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& StaticVarCompensatorDynamics::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& StaticVarCompensatorDynamics::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& StaticVarCompensatorDynamics::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_StaticVarCompensator_StaticVarCompensatorDynamics(BaseClass*, BaseClass*);
@@ -79,7 +111,7 @@ const char* StaticVarCompensatorDynamics::debugString() const
 
 void StaticVarCompensatorDynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:StaticVarCompensatorDynamics", &StaticVarCompensatorDynamics_factory);
+	factory_map.emplace("StaticVarCompensatorDynamics", &StaticVarCompensatorDynamics_factory);
 }
 
 void StaticVarCompensatorDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -88,7 +120,7 @@ void StaticVarCompensatorDynamics::addPrimitiveAssignFnsToMap(std::unordered_map
 
 void StaticVarCompensatorDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:StaticVarCompensatorDynamics.StaticVarCompensator", &assign_StaticVarCompensatorDynamics_StaticVarCompensator);
+	assign_map.emplace("StaticVarCompensatorDynamics.StaticVarCompensator", &assign_StaticVarCompensatorDynamics_StaticVarCompensator);
 }
 
 void StaticVarCompensatorDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -99,7 +131,7 @@ void StaticVarCompensatorDynamics::addPrimitiveGetFnsToMap(std::map<std::string,
 void StaticVarCompensatorDynamics::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	DynamicsFunctionBlock::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:StaticVarCompensatorDynamics.StaticVarCompensator", &get_StaticVarCompensatorDynamics_StaticVarCompensator);
+	get_map.emplace("StaticVarCompensatorDynamics.StaticVarCompensator", &get_StaticVarCompensatorDynamics_StaticVarCompensator);
 }
 
 void StaticVarCompensatorDynamics::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -107,9 +139,23 @@ void StaticVarCompensatorDynamics::addEnumGetFnsToMap(std::map<std::string, get_
 	DynamicsFunctionBlock::addEnumGetFnsToMap(get_map);
 }
 
+bool StaticVarCompensatorDynamics::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "StaticVarCompensatorDynamics" &&
+		dynamic_cast<StaticVarCompensatorDynamics*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner StaticVarCompensatorDynamics::declare()
 {
 	return BaseClassDefiner(StaticVarCompensatorDynamics::addConstructToMap, StaticVarCompensatorDynamics::addPrimitiveAssignFnsToMap, StaticVarCompensatorDynamics::addClassAssignFnsToMap, StaticVarCompensatorDynamics::debugName);
+}
+
+std::map<std::string, AttrDetails> StaticVarCompensatorDynamics::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = DynamicsFunctionBlock::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

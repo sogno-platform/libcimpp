@@ -13,34 +13,66 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		DCEquipmentContainer(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::TP,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "DCEquipmentContainer.DCNodes", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "DCEquipmentContainer.DCTopologicalNode", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::TP, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 DCEquipmentContainer::DCEquipmentContainer() {}
 DCEquipmentContainer::~DCEquipmentContainer() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& DCEquipmentContainer::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::TP,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:DCEquipmentContainer.DCNodes", { CGMESProfile::EQ, } },
-	{ "cim:DCEquipmentContainer.DCTopologicalNode", { CGMESProfile::TP, } },
-};
-
-std::list<CGMESProfile>
-DCEquipmentContainer::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-DCEquipmentContainer::getPossibleProfilesForAttributes() const
+const std::string& DCEquipmentContainer::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = EquipmentContainer::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& DCEquipmentContainer::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& DCEquipmentContainer::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& DCEquipmentContainer::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& DCEquipmentContainer::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& DCEquipmentContainer::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_DCNode_DCEquipmentContainer(BaseClass*, BaseClass*);
@@ -87,7 +119,7 @@ const char* DCEquipmentContainer::debugString() const
 
 void DCEquipmentContainer::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:DCEquipmentContainer", &DCEquipmentContainer_factory);
+	factory_map.emplace("DCEquipmentContainer", &DCEquipmentContainer_factory);
 }
 
 void DCEquipmentContainer::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -96,8 +128,8 @@ void DCEquipmentContainer::addPrimitiveAssignFnsToMap(std::unordered_map<std::st
 
 void DCEquipmentContainer::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:DCEquipmentContainer.DCNodes", &assign_DCEquipmentContainer_DCNodes);
-	assign_map.emplace("cim:DCEquipmentContainer.DCTopologicalNode", &assign_DCEquipmentContainer_DCTopologicalNode);
+	assign_map.emplace("DCEquipmentContainer.DCNodes", &assign_DCEquipmentContainer_DCNodes);
+	assign_map.emplace("DCEquipmentContainer.DCTopologicalNode", &assign_DCEquipmentContainer_DCTopologicalNode);
 }
 
 void DCEquipmentContainer::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -115,9 +147,23 @@ void DCEquipmentContainer::addEnumGetFnsToMap(std::map<std::string, get_function
 	EquipmentContainer::addEnumGetFnsToMap(get_map);
 }
 
+bool DCEquipmentContainer::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "DCEquipmentContainer" &&
+		dynamic_cast<DCEquipmentContainer*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner DCEquipmentContainer::declare()
 {
 	return BaseClassDefiner(DCEquipmentContainer::addConstructToMap, DCEquipmentContainer::addPrimitiveAssignFnsToMap, DCEquipmentContainer::addClassAssignFnsToMap, DCEquipmentContainer::debugName);
+}
+
+std::map<std::string, AttrDetails> DCEquipmentContainer::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = EquipmentContainer::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

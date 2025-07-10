@@ -12,6 +12,7 @@
 
 #include "BaseClassDefiner.hpp"
 #include "CGMESProfile.hpp"
+#include "CimClassDetails.hpp"
 
 class BaseClass;
 typedef bool (*class_get_function)(const BaseClass*, std::list<const BaseClass*>&);
@@ -29,8 +30,15 @@ public:
 	static const char debugName[];
 	virtual const char* debugString() const;
 
-	virtual std::list<CGMESProfile> getPossibleProfilesForClass() const;
-	virtual std::map<std::string, std::list<CGMESProfile>> getPossibleProfilesForAttributes() const;
+	virtual const std::list<std::string>& getAttributeNames() const;
+
+	virtual const std::string& getClassNamespaceUrl() const;
+	virtual const std::string& getAttributeNamespaceUrl(const std::string& attrName) const;
+
+	virtual const std::list<CGMESProfile>& getPossibleProfiles() const;
+	virtual const CGMESProfile& getRecommendedProfile() const;
+	virtual const std::list<CGMESProfile>& getPossibleAttributeProfiles(const std::string& attrName) const;
+	virtual const std::list<CGMESProfile>& getPossibleProfilesIncludingAttributes() const;
 
 	static void addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map);
 	static void addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map);
@@ -38,6 +46,12 @@ public:
 	virtual void addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const;
 	virtual void addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const;
 	virtual void addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const;
+
+	virtual bool isAssignableFrom(BaseClass* otherObject) const { return false; }
 	static const CIMPP::BaseClassDefiner declare();
+
+protected:
+	friend class CimClassDetails;
+	virtual std::map<std::string, AttrDetails> allAttrDetailsMap() const;
 };
 #endif // BASECLASS_HPP

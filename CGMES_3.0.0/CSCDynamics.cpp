@@ -12,32 +12,64 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		CSCDynamics(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "CSCDynamics.CSConverter", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 CSCDynamics::CSCDynamics() : CSConverter(nullptr) {}
 CSCDynamics::~CSCDynamics() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& CSCDynamics::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:CSCDynamics.CSConverter", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-CSCDynamics::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-CSCDynamics::getPossibleProfilesForAttributes() const
+const std::string& CSCDynamics::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = HVDCDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& CSCDynamics::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& CSCDynamics::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& CSCDynamics::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& CSCDynamics::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& CSCDynamics::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_CsConverter_CSCDynamics(BaseClass*, BaseClass*);
@@ -79,7 +111,7 @@ const char* CSCDynamics::debugString() const
 
 void CSCDynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:CSCDynamics", &CSCDynamics_factory);
+	factory_map.emplace("CSCDynamics", &CSCDynamics_factory);
 }
 
 void CSCDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -88,7 +120,7 @@ void CSCDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, ass
 
 void CSCDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:CSCDynamics.CSConverter", &assign_CSCDynamics_CSConverter);
+	assign_map.emplace("CSCDynamics.CSConverter", &assign_CSCDynamics_CSConverter);
 }
 
 void CSCDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -99,7 +131,7 @@ void CSCDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& g
 void CSCDynamics::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	HVDCDynamics::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:CSCDynamics.CSConverter", &get_CSCDynamics_CSConverter);
+	get_map.emplace("CSCDynamics.CSConverter", &get_CSCDynamics_CSConverter);
 }
 
 void CSCDynamics::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -107,9 +139,23 @@ void CSCDynamics::addEnumGetFnsToMap(std::map<std::string, get_function>& get_ma
 	HVDCDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool CSCDynamics::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "CSCDynamics" &&
+		dynamic_cast<CSCDynamics*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner CSCDynamics::declare()
 {
 	return BaseClassDefiner(CSCDynamics::addConstructToMap, CSCDynamics::addPrimitiveAssignFnsToMap, CSCDynamics::addClassAssignFnsToMap, CSCDynamics::debugName);
+}
+
+std::map<std::string, AttrDetails> CSCDynamics::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = HVDCDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

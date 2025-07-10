@@ -12,33 +12,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		SvShuntCompensatorSections(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::SV,
+		},
+		CGMESProfile::SV
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "SvShuntCompensatorSections.ShuntCompensator", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SV, } } },
+		{ "SvShuntCompensatorSections.sections", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SV, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 SvShuntCompensatorSections::SvShuntCompensatorSections() : ShuntCompensator(nullptr) {}
 SvShuntCompensatorSections::~SvShuntCompensatorSections() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& SvShuntCompensatorSections::getAttributeNames() const
 {
-	CGMESProfile::SV,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:SvShuntCompensatorSections.ShuntCompensator", { CGMESProfile::SV, } },
-	{ "cim:SvShuntCompensatorSections.sections", { CGMESProfile::SV, } },
-};
-
-std::list<CGMESProfile>
-SvShuntCompensatorSections::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-SvShuntCompensatorSections::getPossibleProfilesForAttributes() const
+const std::string& SvShuntCompensatorSections::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& SvShuntCompensatorSections::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& SvShuntCompensatorSections::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& SvShuntCompensatorSections::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& SvShuntCompensatorSections::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& SvShuntCompensatorSections::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ShuntCompensator_SvShuntCompensatorSections(BaseClass*, BaseClass*);
@@ -109,29 +141,29 @@ const char* SvShuntCompensatorSections::debugString() const
 
 void SvShuntCompensatorSections::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:SvShuntCompensatorSections", &SvShuntCompensatorSections_factory);
+	factory_map.emplace("SvShuntCompensatorSections", &SvShuntCompensatorSections_factory);
 }
 
 void SvShuntCompensatorSections::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:SvShuntCompensatorSections.sections", &assign_SvShuntCompensatorSections_sections);
+	assign_map.emplace("SvShuntCompensatorSections.sections", &assign_SvShuntCompensatorSections_sections);
 }
 
 void SvShuntCompensatorSections::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:SvShuntCompensatorSections.ShuntCompensator", &assign_SvShuntCompensatorSections_ShuntCompensator);
+	assign_map.emplace("SvShuntCompensatorSections.ShuntCompensator", &assign_SvShuntCompensatorSections_ShuntCompensator);
 }
 
 void SvShuntCompensatorSections::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	BaseClass::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:SvShuntCompensatorSections.sections", &get_SvShuntCompensatorSections_sections);
+	get_map.emplace("SvShuntCompensatorSections.sections", &get_SvShuntCompensatorSections_sections);
 }
 
 void SvShuntCompensatorSections::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	BaseClass::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:SvShuntCompensatorSections.ShuntCompensator", &get_SvShuntCompensatorSections_ShuntCompensator);
+	get_map.emplace("SvShuntCompensatorSections.ShuntCompensator", &get_SvShuntCompensatorSections_ShuntCompensator);
 }
 
 void SvShuntCompensatorSections::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -139,9 +171,23 @@ void SvShuntCompensatorSections::addEnumGetFnsToMap(std::map<std::string, get_fu
 	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
+bool SvShuntCompensatorSections::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "SvShuntCompensatorSections" &&
+		dynamic_cast<SvShuntCompensatorSections*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner SvShuntCompensatorSections::declare()
 {
 	return BaseClassDefiner(SvShuntCompensatorSections::addConstructToMap, SvShuntCompensatorSections::addPrimitiveAssignFnsToMap, SvShuntCompensatorSections::addClassAssignFnsToMap, SvShuntCompensatorSections::debugName);
+}
+
+std::map<std::string, AttrDetails> SvShuntCompensatorSections::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = BaseClass::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

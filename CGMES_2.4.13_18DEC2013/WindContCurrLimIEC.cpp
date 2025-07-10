@@ -13,38 +13,70 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		WindContCurrLimIEC(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "WindContCurrLimIEC.WindDynamicsLookupTable", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContCurrLimIEC.WindTurbineType3or4IEC", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContCurrLimIEC.imax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContCurrLimIEC.imaxdip", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContCurrLimIEC.mdfslim", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContCurrLimIEC.mqpri", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindContCurrLimIEC.tufilt", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 WindContCurrLimIEC::WindContCurrLimIEC() : WindTurbineType3or4IEC(nullptr) {}
 WindContCurrLimIEC::~WindContCurrLimIEC() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& WindContCurrLimIEC::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:WindContCurrLimIEC.WindDynamicsLookupTable", { CGMESProfile::DY, } },
-	{ "cim:WindContCurrLimIEC.WindTurbineType3or4IEC", { CGMESProfile::DY, } },
-	{ "cim:WindContCurrLimIEC.imax", { CGMESProfile::DY, } },
-	{ "cim:WindContCurrLimIEC.imaxdip", { CGMESProfile::DY, } },
-	{ "cim:WindContCurrLimIEC.mdfslim", { CGMESProfile::DY, } },
-	{ "cim:WindContCurrLimIEC.mqpri", { CGMESProfile::DY, } },
-	{ "cim:WindContCurrLimIEC.tufilt", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-WindContCurrLimIEC::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-WindContCurrLimIEC::getPossibleProfilesForAttributes() const
+const std::string& WindContCurrLimIEC::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& WindContCurrLimIEC::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& WindContCurrLimIEC::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& WindContCurrLimIEC::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& WindContCurrLimIEC::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& WindContCurrLimIEC::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_WindDynamicsLookupTable_WindContCurrLimIEC(BaseClass*, BaseClass*);
@@ -236,32 +268,32 @@ const char* WindContCurrLimIEC::debugString() const
 
 void WindContCurrLimIEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:WindContCurrLimIEC", &WindContCurrLimIEC_factory);
+	factory_map.emplace("WindContCurrLimIEC", &WindContCurrLimIEC_factory);
 }
 
 void WindContCurrLimIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindContCurrLimIEC.imax", &assign_WindContCurrLimIEC_imax);
-	assign_map.emplace("cim:WindContCurrLimIEC.imaxdip", &assign_WindContCurrLimIEC_imaxdip);
-	assign_map.emplace("cim:WindContCurrLimIEC.mdfslim", &assign_WindContCurrLimIEC_mdfslim);
-	assign_map.emplace("cim:WindContCurrLimIEC.mqpri", &assign_WindContCurrLimIEC_mqpri);
-	assign_map.emplace("cim:WindContCurrLimIEC.tufilt", &assign_WindContCurrLimIEC_tufilt);
+	assign_map.emplace("WindContCurrLimIEC.imax", &assign_WindContCurrLimIEC_imax);
+	assign_map.emplace("WindContCurrLimIEC.imaxdip", &assign_WindContCurrLimIEC_imaxdip);
+	assign_map.emplace("WindContCurrLimIEC.mdfslim", &assign_WindContCurrLimIEC_mdfslim);
+	assign_map.emplace("WindContCurrLimIEC.mqpri", &assign_WindContCurrLimIEC_mqpri);
+	assign_map.emplace("WindContCurrLimIEC.tufilt", &assign_WindContCurrLimIEC_tufilt);
 }
 
 void WindContCurrLimIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindContCurrLimIEC.WindDynamicsLookupTable", &assign_WindContCurrLimIEC_WindDynamicsLookupTable);
-	assign_map.emplace("cim:WindContCurrLimIEC.WindTurbineType3or4IEC", &assign_WindContCurrLimIEC_WindTurbineType3or4IEC);
+	assign_map.emplace("WindContCurrLimIEC.WindDynamicsLookupTable", &assign_WindContCurrLimIEC_WindDynamicsLookupTable);
+	assign_map.emplace("WindContCurrLimIEC.WindTurbineType3or4IEC", &assign_WindContCurrLimIEC_WindTurbineType3or4IEC);
 }
 
 void WindContCurrLimIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:WindContCurrLimIEC.imax", &get_WindContCurrLimIEC_imax);
-	get_map.emplace("cim:WindContCurrLimIEC.imaxdip", &get_WindContCurrLimIEC_imaxdip);
-	get_map.emplace("cim:WindContCurrLimIEC.mdfslim", &get_WindContCurrLimIEC_mdfslim);
-	get_map.emplace("cim:WindContCurrLimIEC.mqpri", &get_WindContCurrLimIEC_mqpri);
-	get_map.emplace("cim:WindContCurrLimIEC.tufilt", &get_WindContCurrLimIEC_tufilt);
+	get_map.emplace("WindContCurrLimIEC.imax", &get_WindContCurrLimIEC_imax);
+	get_map.emplace("WindContCurrLimIEC.imaxdip", &get_WindContCurrLimIEC_imaxdip);
+	get_map.emplace("WindContCurrLimIEC.mdfslim", &get_WindContCurrLimIEC_mdfslim);
+	get_map.emplace("WindContCurrLimIEC.mqpri", &get_WindContCurrLimIEC_mqpri);
+	get_map.emplace("WindContCurrLimIEC.tufilt", &get_WindContCurrLimIEC_tufilt);
 }
 
 void WindContCurrLimIEC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -274,9 +306,23 @@ void WindContCurrLimIEC::addEnumGetFnsToMap(std::map<std::string, get_function>&
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool WindContCurrLimIEC::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "WindContCurrLimIEC" &&
+		dynamic_cast<WindContCurrLimIEC*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner WindContCurrLimIEC::declare()
 {
 	return BaseClassDefiner(WindContCurrLimIEC::addConstructToMap, WindContCurrLimIEC::addPrimitiveAssignFnsToMap, WindContCurrLimIEC::addClassAssignFnsToMap, WindContCurrLimIEC::debugName);
+}
+
+std::map<std::string, AttrDetails> WindContCurrLimIEC::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

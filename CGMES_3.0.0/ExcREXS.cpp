@@ -11,67 +11,99 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ExcREXS(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ExcREXS.e1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.e2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.fbf", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.flimf", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.kc", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.kd", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.ke", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.kefd", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.kf", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.kh", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.kii", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.kip", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.ks", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.kvi", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.kvp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.kvphz", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.nvphz", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.se1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.se2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.ta", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.tb1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.tb2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.tc1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.tc2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.te", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.tf", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.tf1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.tf2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.tp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.vcmax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.vfmax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.vfmin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.vimax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.vrmax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.vrmin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "ExcREXS.xc", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ExcREXS::ExcREXS() {}
 ExcREXS::~ExcREXS() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ExcREXS::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ExcREXS.e1", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.e2", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.fbf", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.flimf", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.kc", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.kd", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.ke", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.kefd", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.kf", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.kh", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.kii", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.kip", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.ks", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.kvi", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.kvp", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.kvphz", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.nvphz", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.se1", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.se2", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.ta", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.tb1", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.tb2", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.tc1", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.tc2", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.te", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.tf", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.tf1", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.tf2", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.tp", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.vcmax", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.vfmax", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.vfmin", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.vimax", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.vrmax", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.vrmin", { CGMESProfile::DY, } },
-	{ "cim:ExcREXS.xc", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-ExcREXS::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ExcREXS::getPossibleProfilesForAttributes() const
+const std::string& ExcREXS::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ExcitationSystemDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ExcREXS::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ExcREXS::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ExcREXS::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ExcREXS::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ExcREXS::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_ExcREXS_e1(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -1126,47 +1158,47 @@ const char* ExcREXS::debugString() const
 
 void ExcREXS::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ExcREXS", &ExcREXS_factory);
+	factory_map.emplace("ExcREXS", &ExcREXS_factory);
 }
 
 void ExcREXS::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ExcREXS.e1", &assign_ExcREXS_e1);
-	assign_map.emplace("cim:ExcREXS.e2", &assign_ExcREXS_e2);
-	assign_map.emplace("cim:ExcREXS.fbf", &assign_ExcREXS_fbf);
-	assign_map.emplace("cim:ExcREXS.flimf", &assign_ExcREXS_flimf);
-	assign_map.emplace("cim:ExcREXS.kc", &assign_ExcREXS_kc);
-	assign_map.emplace("cim:ExcREXS.kd", &assign_ExcREXS_kd);
-	assign_map.emplace("cim:ExcREXS.ke", &assign_ExcREXS_ke);
-	assign_map.emplace("cim:ExcREXS.kefd", &assign_ExcREXS_kefd);
-	assign_map.emplace("cim:ExcREXS.kf", &assign_ExcREXS_kf);
-	assign_map.emplace("cim:ExcREXS.kh", &assign_ExcREXS_kh);
-	assign_map.emplace("cim:ExcREXS.kii", &assign_ExcREXS_kii);
-	assign_map.emplace("cim:ExcREXS.kip", &assign_ExcREXS_kip);
-	assign_map.emplace("cim:ExcREXS.ks", &assign_ExcREXS_ks);
-	assign_map.emplace("cim:ExcREXS.kvi", &assign_ExcREXS_kvi);
-	assign_map.emplace("cim:ExcREXS.kvp", &assign_ExcREXS_kvp);
-	assign_map.emplace("cim:ExcREXS.kvphz", &assign_ExcREXS_kvphz);
-	assign_map.emplace("cim:ExcREXS.nvphz", &assign_ExcREXS_nvphz);
-	assign_map.emplace("cim:ExcREXS.se1", &assign_ExcREXS_se1);
-	assign_map.emplace("cim:ExcREXS.se2", &assign_ExcREXS_se2);
-	assign_map.emplace("cim:ExcREXS.ta", &assign_ExcREXS_ta);
-	assign_map.emplace("cim:ExcREXS.tb1", &assign_ExcREXS_tb1);
-	assign_map.emplace("cim:ExcREXS.tb2", &assign_ExcREXS_tb2);
-	assign_map.emplace("cim:ExcREXS.tc1", &assign_ExcREXS_tc1);
-	assign_map.emplace("cim:ExcREXS.tc2", &assign_ExcREXS_tc2);
-	assign_map.emplace("cim:ExcREXS.te", &assign_ExcREXS_te);
-	assign_map.emplace("cim:ExcREXS.tf", &assign_ExcREXS_tf);
-	assign_map.emplace("cim:ExcREXS.tf1", &assign_ExcREXS_tf1);
-	assign_map.emplace("cim:ExcREXS.tf2", &assign_ExcREXS_tf2);
-	assign_map.emplace("cim:ExcREXS.tp", &assign_ExcREXS_tp);
-	assign_map.emplace("cim:ExcREXS.vcmax", &assign_ExcREXS_vcmax);
-	assign_map.emplace("cim:ExcREXS.vfmax", &assign_ExcREXS_vfmax);
-	assign_map.emplace("cim:ExcREXS.vfmin", &assign_ExcREXS_vfmin);
-	assign_map.emplace("cim:ExcREXS.vimax", &assign_ExcREXS_vimax);
-	assign_map.emplace("cim:ExcREXS.vrmax", &assign_ExcREXS_vrmax);
-	assign_map.emplace("cim:ExcREXS.vrmin", &assign_ExcREXS_vrmin);
-	assign_map.emplace("cim:ExcREXS.xc", &assign_ExcREXS_xc);
+	assign_map.emplace("ExcREXS.e1", &assign_ExcREXS_e1);
+	assign_map.emplace("ExcREXS.e2", &assign_ExcREXS_e2);
+	assign_map.emplace("ExcREXS.fbf", &assign_ExcREXS_fbf);
+	assign_map.emplace("ExcREXS.flimf", &assign_ExcREXS_flimf);
+	assign_map.emplace("ExcREXS.kc", &assign_ExcREXS_kc);
+	assign_map.emplace("ExcREXS.kd", &assign_ExcREXS_kd);
+	assign_map.emplace("ExcREXS.ke", &assign_ExcREXS_ke);
+	assign_map.emplace("ExcREXS.kefd", &assign_ExcREXS_kefd);
+	assign_map.emplace("ExcREXS.kf", &assign_ExcREXS_kf);
+	assign_map.emplace("ExcREXS.kh", &assign_ExcREXS_kh);
+	assign_map.emplace("ExcREXS.kii", &assign_ExcREXS_kii);
+	assign_map.emplace("ExcREXS.kip", &assign_ExcREXS_kip);
+	assign_map.emplace("ExcREXS.ks", &assign_ExcREXS_ks);
+	assign_map.emplace("ExcREXS.kvi", &assign_ExcREXS_kvi);
+	assign_map.emplace("ExcREXS.kvp", &assign_ExcREXS_kvp);
+	assign_map.emplace("ExcREXS.kvphz", &assign_ExcREXS_kvphz);
+	assign_map.emplace("ExcREXS.nvphz", &assign_ExcREXS_nvphz);
+	assign_map.emplace("ExcREXS.se1", &assign_ExcREXS_se1);
+	assign_map.emplace("ExcREXS.se2", &assign_ExcREXS_se2);
+	assign_map.emplace("ExcREXS.ta", &assign_ExcREXS_ta);
+	assign_map.emplace("ExcREXS.tb1", &assign_ExcREXS_tb1);
+	assign_map.emplace("ExcREXS.tb2", &assign_ExcREXS_tb2);
+	assign_map.emplace("ExcREXS.tc1", &assign_ExcREXS_tc1);
+	assign_map.emplace("ExcREXS.tc2", &assign_ExcREXS_tc2);
+	assign_map.emplace("ExcREXS.te", &assign_ExcREXS_te);
+	assign_map.emplace("ExcREXS.tf", &assign_ExcREXS_tf);
+	assign_map.emplace("ExcREXS.tf1", &assign_ExcREXS_tf1);
+	assign_map.emplace("ExcREXS.tf2", &assign_ExcREXS_tf2);
+	assign_map.emplace("ExcREXS.tp", &assign_ExcREXS_tp);
+	assign_map.emplace("ExcREXS.vcmax", &assign_ExcREXS_vcmax);
+	assign_map.emplace("ExcREXS.vfmax", &assign_ExcREXS_vfmax);
+	assign_map.emplace("ExcREXS.vfmin", &assign_ExcREXS_vfmin);
+	assign_map.emplace("ExcREXS.vimax", &assign_ExcREXS_vimax);
+	assign_map.emplace("ExcREXS.vrmax", &assign_ExcREXS_vrmax);
+	assign_map.emplace("ExcREXS.vrmin", &assign_ExcREXS_vrmin);
+	assign_map.emplace("ExcREXS.xc", &assign_ExcREXS_xc);
 }
 
 void ExcREXS::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -1176,41 +1208,41 @@ void ExcREXS::addClassAssignFnsToMap(std::unordered_map<std::string, class_assig
 void ExcREXS::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ExcitationSystemDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ExcREXS.e1", &get_ExcREXS_e1);
-	get_map.emplace("cim:ExcREXS.e2", &get_ExcREXS_e2);
-	get_map.emplace("cim:ExcREXS.flimf", &get_ExcREXS_flimf);
-	get_map.emplace("cim:ExcREXS.kc", &get_ExcREXS_kc);
-	get_map.emplace("cim:ExcREXS.kd", &get_ExcREXS_kd);
-	get_map.emplace("cim:ExcREXS.ke", &get_ExcREXS_ke);
-	get_map.emplace("cim:ExcREXS.kefd", &get_ExcREXS_kefd);
-	get_map.emplace("cim:ExcREXS.kf", &get_ExcREXS_kf);
-	get_map.emplace("cim:ExcREXS.kh", &get_ExcREXS_kh);
-	get_map.emplace("cim:ExcREXS.kii", &get_ExcREXS_kii);
-	get_map.emplace("cim:ExcREXS.kip", &get_ExcREXS_kip);
-	get_map.emplace("cim:ExcREXS.ks", &get_ExcREXS_ks);
-	get_map.emplace("cim:ExcREXS.kvi", &get_ExcREXS_kvi);
-	get_map.emplace("cim:ExcREXS.kvp", &get_ExcREXS_kvp);
-	get_map.emplace("cim:ExcREXS.kvphz", &get_ExcREXS_kvphz);
-	get_map.emplace("cim:ExcREXS.nvphz", &get_ExcREXS_nvphz);
-	get_map.emplace("cim:ExcREXS.se1", &get_ExcREXS_se1);
-	get_map.emplace("cim:ExcREXS.se2", &get_ExcREXS_se2);
-	get_map.emplace("cim:ExcREXS.ta", &get_ExcREXS_ta);
-	get_map.emplace("cim:ExcREXS.tb1", &get_ExcREXS_tb1);
-	get_map.emplace("cim:ExcREXS.tb2", &get_ExcREXS_tb2);
-	get_map.emplace("cim:ExcREXS.tc1", &get_ExcREXS_tc1);
-	get_map.emplace("cim:ExcREXS.tc2", &get_ExcREXS_tc2);
-	get_map.emplace("cim:ExcREXS.te", &get_ExcREXS_te);
-	get_map.emplace("cim:ExcREXS.tf", &get_ExcREXS_tf);
-	get_map.emplace("cim:ExcREXS.tf1", &get_ExcREXS_tf1);
-	get_map.emplace("cim:ExcREXS.tf2", &get_ExcREXS_tf2);
-	get_map.emplace("cim:ExcREXS.tp", &get_ExcREXS_tp);
-	get_map.emplace("cim:ExcREXS.vcmax", &get_ExcREXS_vcmax);
-	get_map.emplace("cim:ExcREXS.vfmax", &get_ExcREXS_vfmax);
-	get_map.emplace("cim:ExcREXS.vfmin", &get_ExcREXS_vfmin);
-	get_map.emplace("cim:ExcREXS.vimax", &get_ExcREXS_vimax);
-	get_map.emplace("cim:ExcREXS.vrmax", &get_ExcREXS_vrmax);
-	get_map.emplace("cim:ExcREXS.vrmin", &get_ExcREXS_vrmin);
-	get_map.emplace("cim:ExcREXS.xc", &get_ExcREXS_xc);
+	get_map.emplace("ExcREXS.e1", &get_ExcREXS_e1);
+	get_map.emplace("ExcREXS.e2", &get_ExcREXS_e2);
+	get_map.emplace("ExcREXS.flimf", &get_ExcREXS_flimf);
+	get_map.emplace("ExcREXS.kc", &get_ExcREXS_kc);
+	get_map.emplace("ExcREXS.kd", &get_ExcREXS_kd);
+	get_map.emplace("ExcREXS.ke", &get_ExcREXS_ke);
+	get_map.emplace("ExcREXS.kefd", &get_ExcREXS_kefd);
+	get_map.emplace("ExcREXS.kf", &get_ExcREXS_kf);
+	get_map.emplace("ExcREXS.kh", &get_ExcREXS_kh);
+	get_map.emplace("ExcREXS.kii", &get_ExcREXS_kii);
+	get_map.emplace("ExcREXS.kip", &get_ExcREXS_kip);
+	get_map.emplace("ExcREXS.ks", &get_ExcREXS_ks);
+	get_map.emplace("ExcREXS.kvi", &get_ExcREXS_kvi);
+	get_map.emplace("ExcREXS.kvp", &get_ExcREXS_kvp);
+	get_map.emplace("ExcREXS.kvphz", &get_ExcREXS_kvphz);
+	get_map.emplace("ExcREXS.nvphz", &get_ExcREXS_nvphz);
+	get_map.emplace("ExcREXS.se1", &get_ExcREXS_se1);
+	get_map.emplace("ExcREXS.se2", &get_ExcREXS_se2);
+	get_map.emplace("ExcREXS.ta", &get_ExcREXS_ta);
+	get_map.emplace("ExcREXS.tb1", &get_ExcREXS_tb1);
+	get_map.emplace("ExcREXS.tb2", &get_ExcREXS_tb2);
+	get_map.emplace("ExcREXS.tc1", &get_ExcREXS_tc1);
+	get_map.emplace("ExcREXS.tc2", &get_ExcREXS_tc2);
+	get_map.emplace("ExcREXS.te", &get_ExcREXS_te);
+	get_map.emplace("ExcREXS.tf", &get_ExcREXS_tf);
+	get_map.emplace("ExcREXS.tf1", &get_ExcREXS_tf1);
+	get_map.emplace("ExcREXS.tf2", &get_ExcREXS_tf2);
+	get_map.emplace("ExcREXS.tp", &get_ExcREXS_tp);
+	get_map.emplace("ExcREXS.vcmax", &get_ExcREXS_vcmax);
+	get_map.emplace("ExcREXS.vfmax", &get_ExcREXS_vfmax);
+	get_map.emplace("ExcREXS.vfmin", &get_ExcREXS_vfmin);
+	get_map.emplace("ExcREXS.vimax", &get_ExcREXS_vimax);
+	get_map.emplace("ExcREXS.vrmax", &get_ExcREXS_vrmax);
+	get_map.emplace("ExcREXS.vrmin", &get_ExcREXS_vrmin);
+	get_map.emplace("ExcREXS.xc", &get_ExcREXS_xc);
 }
 
 void ExcREXS::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -1221,12 +1253,26 @@ void ExcREXS::addClassGetFnsToMap(std::map<std::string, class_get_function>& get
 void ExcREXS::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ExcitationSystemDynamics::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:ExcREXS.fbf", &get_ExcREXS_fbf);
+	get_map.emplace("ExcREXS.fbf", &get_ExcREXS_fbf);
+}
+
+bool ExcREXS::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ExcREXS" &&
+		dynamic_cast<ExcREXS*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner ExcREXS::declare()
 {
 	return BaseClassDefiner(ExcREXS::addConstructToMap, ExcREXS::addPrimitiveAssignFnsToMap, ExcREXS::addClassAssignFnsToMap, ExcREXS::debugName);
+}
+
+std::map<std::string, AttrDetails> ExcREXS::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ExcitationSystemDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

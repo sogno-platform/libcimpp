@@ -11,45 +11,77 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		GovHydro1(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "GovHydro1.at", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydro1.dturb", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydro1.gmax", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydro1.gmin", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydro1.hdam", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydro1.mwbase", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydro1.qnl", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydro1.rperm", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydro1.rtemp", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydro1.tf", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydro1.tg", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydro1.tr", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydro1.tw", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "GovHydro1.velm", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 GovHydro1::GovHydro1() {}
 GovHydro1::~GovHydro1() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& GovHydro1::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:GovHydro1.at", { CGMESProfile::DY, } },
-	{ "cim:GovHydro1.dturb", { CGMESProfile::DY, } },
-	{ "cim:GovHydro1.gmax", { CGMESProfile::DY, } },
-	{ "cim:GovHydro1.gmin", { CGMESProfile::DY, } },
-	{ "cim:GovHydro1.hdam", { CGMESProfile::DY, } },
-	{ "cim:GovHydro1.mwbase", { CGMESProfile::DY, } },
-	{ "cim:GovHydro1.qnl", { CGMESProfile::DY, } },
-	{ "cim:GovHydro1.rperm", { CGMESProfile::DY, } },
-	{ "cim:GovHydro1.rtemp", { CGMESProfile::DY, } },
-	{ "cim:GovHydro1.tf", { CGMESProfile::DY, } },
-	{ "cim:GovHydro1.tg", { CGMESProfile::DY, } },
-	{ "cim:GovHydro1.tr", { CGMESProfile::DY, } },
-	{ "cim:GovHydro1.tw", { CGMESProfile::DY, } },
-	{ "cim:GovHydro1.velm", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-GovHydro1::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-GovHydro1::getPossibleProfilesForAttributes() const
+const std::string& GovHydro1::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = TurbineGovernorDynamics::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& GovHydro1::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& GovHydro1::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& GovHydro1::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& GovHydro1::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& GovHydro1::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_GovHydro1_at(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -466,25 +498,25 @@ const char* GovHydro1::debugString() const
 
 void GovHydro1::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:GovHydro1", &GovHydro1_factory);
+	factory_map.emplace("GovHydro1", &GovHydro1_factory);
 }
 
 void GovHydro1::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:GovHydro1.at", &assign_GovHydro1_at);
-	assign_map.emplace("cim:GovHydro1.dturb", &assign_GovHydro1_dturb);
-	assign_map.emplace("cim:GovHydro1.gmax", &assign_GovHydro1_gmax);
-	assign_map.emplace("cim:GovHydro1.gmin", &assign_GovHydro1_gmin);
-	assign_map.emplace("cim:GovHydro1.hdam", &assign_GovHydro1_hdam);
-	assign_map.emplace("cim:GovHydro1.mwbase", &assign_GovHydro1_mwbase);
-	assign_map.emplace("cim:GovHydro1.qnl", &assign_GovHydro1_qnl);
-	assign_map.emplace("cim:GovHydro1.rperm", &assign_GovHydro1_rperm);
-	assign_map.emplace("cim:GovHydro1.rtemp", &assign_GovHydro1_rtemp);
-	assign_map.emplace("cim:GovHydro1.tf", &assign_GovHydro1_tf);
-	assign_map.emplace("cim:GovHydro1.tg", &assign_GovHydro1_tg);
-	assign_map.emplace("cim:GovHydro1.tr", &assign_GovHydro1_tr);
-	assign_map.emplace("cim:GovHydro1.tw", &assign_GovHydro1_tw);
-	assign_map.emplace("cim:GovHydro1.velm", &assign_GovHydro1_velm);
+	assign_map.emplace("GovHydro1.at", &assign_GovHydro1_at);
+	assign_map.emplace("GovHydro1.dturb", &assign_GovHydro1_dturb);
+	assign_map.emplace("GovHydro1.gmax", &assign_GovHydro1_gmax);
+	assign_map.emplace("GovHydro1.gmin", &assign_GovHydro1_gmin);
+	assign_map.emplace("GovHydro1.hdam", &assign_GovHydro1_hdam);
+	assign_map.emplace("GovHydro1.mwbase", &assign_GovHydro1_mwbase);
+	assign_map.emplace("GovHydro1.qnl", &assign_GovHydro1_qnl);
+	assign_map.emplace("GovHydro1.rperm", &assign_GovHydro1_rperm);
+	assign_map.emplace("GovHydro1.rtemp", &assign_GovHydro1_rtemp);
+	assign_map.emplace("GovHydro1.tf", &assign_GovHydro1_tf);
+	assign_map.emplace("GovHydro1.tg", &assign_GovHydro1_tg);
+	assign_map.emplace("GovHydro1.tr", &assign_GovHydro1_tr);
+	assign_map.emplace("GovHydro1.tw", &assign_GovHydro1_tw);
+	assign_map.emplace("GovHydro1.velm", &assign_GovHydro1_velm);
 }
 
 void GovHydro1::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -494,20 +526,20 @@ void GovHydro1::addClassAssignFnsToMap(std::unordered_map<std::string, class_ass
 void GovHydro1::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	TurbineGovernorDynamics::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:GovHydro1.at", &get_GovHydro1_at);
-	get_map.emplace("cim:GovHydro1.dturb", &get_GovHydro1_dturb);
-	get_map.emplace("cim:GovHydro1.gmax", &get_GovHydro1_gmax);
-	get_map.emplace("cim:GovHydro1.gmin", &get_GovHydro1_gmin);
-	get_map.emplace("cim:GovHydro1.hdam", &get_GovHydro1_hdam);
-	get_map.emplace("cim:GovHydro1.mwbase", &get_GovHydro1_mwbase);
-	get_map.emplace("cim:GovHydro1.qnl", &get_GovHydro1_qnl);
-	get_map.emplace("cim:GovHydro1.rperm", &get_GovHydro1_rperm);
-	get_map.emplace("cim:GovHydro1.rtemp", &get_GovHydro1_rtemp);
-	get_map.emplace("cim:GovHydro1.tf", &get_GovHydro1_tf);
-	get_map.emplace("cim:GovHydro1.tg", &get_GovHydro1_tg);
-	get_map.emplace("cim:GovHydro1.tr", &get_GovHydro1_tr);
-	get_map.emplace("cim:GovHydro1.tw", &get_GovHydro1_tw);
-	get_map.emplace("cim:GovHydro1.velm", &get_GovHydro1_velm);
+	get_map.emplace("GovHydro1.at", &get_GovHydro1_at);
+	get_map.emplace("GovHydro1.dturb", &get_GovHydro1_dturb);
+	get_map.emplace("GovHydro1.gmax", &get_GovHydro1_gmax);
+	get_map.emplace("GovHydro1.gmin", &get_GovHydro1_gmin);
+	get_map.emplace("GovHydro1.hdam", &get_GovHydro1_hdam);
+	get_map.emplace("GovHydro1.mwbase", &get_GovHydro1_mwbase);
+	get_map.emplace("GovHydro1.qnl", &get_GovHydro1_qnl);
+	get_map.emplace("GovHydro1.rperm", &get_GovHydro1_rperm);
+	get_map.emplace("GovHydro1.rtemp", &get_GovHydro1_rtemp);
+	get_map.emplace("GovHydro1.tf", &get_GovHydro1_tf);
+	get_map.emplace("GovHydro1.tg", &get_GovHydro1_tg);
+	get_map.emplace("GovHydro1.tr", &get_GovHydro1_tr);
+	get_map.emplace("GovHydro1.tw", &get_GovHydro1_tw);
+	get_map.emplace("GovHydro1.velm", &get_GovHydro1_velm);
 }
 
 void GovHydro1::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -520,9 +552,23 @@ void GovHydro1::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map)
 	TurbineGovernorDynamics::addEnumGetFnsToMap(get_map);
 }
 
+bool GovHydro1::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "GovHydro1" &&
+		dynamic_cast<GovHydro1*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner GovHydro1::declare()
 {
 	return BaseClassDefiner(GovHydro1::addConstructToMap, GovHydro1::addPrimitiveAssignFnsToMap, GovHydro1::addClassAssignFnsToMap, GovHydro1::debugName);
+}
+
+std::map<std::string, AttrDetails> GovHydro1::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = TurbineGovernorDynamics::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

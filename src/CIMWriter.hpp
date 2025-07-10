@@ -16,23 +16,57 @@ class CIMWriter
 {
 public:
   /**
-   * \brief Write CIM RDF/XML files.
+   * \brief Write the CIM data to a RDF/XML file.
    *
-   * This function writes CIM objects into one or more RDF/XML files separated by profiles.
+   * All CIM objects are written to just one file, regardless of profiles.
+   *
+   * \param path     Path of the file to write
+   * \param objList  List of CIM objects to write
+   */
+  static void writeFile(const std::string& path, const std::vector<BaseClass*>& objList);
+
+  /**
+   * \brief Write the CIM data corresponding to one profile to a RDF file.
+   *
+   * If no profile is specified, all objects are written, regardless of profiles.
+   * In this case, modelId and classProfileMap are not required.
+   *
+   * \param path            Path of file to write
+   * \param objList         List of CIM objects to write
+   * \param profile         Only data for this profile should be written (if specified)
+   * \param modelId         Model ID to write into the model description
+   * \param classProfileMap Mapping of CIM type to profile
+   */
+  static void writeFile(const std::string& path, const std::vector<BaseClass*>& objList,
+                        const CGMESProfile& profile, const std::string& modelId,
+                        const std::map<std::string, CGMESProfile>& classProfileMap);
+
+  /**
+   * \brief Write the CIM data to RDF/XML files separated by profiles.
    *
    * Each CIM object will be written to its corresponding profile file depending on classProfileMap.
    * But some objects to more than one file if some attribute profiles are not the same as the class profile.
    *
-   * \param outputfile       Stem of the output file, resulting files: <outputfile>_<profileName>.xml
+   * \param pathStem         Stem of the output files, resulting files: <pathStem>_<profileName>.xml
    * \param objList          List of CIM objects to write
-   * \param modelID          Stem of the model IDs, resulting IDs: <modelID>_<profileName>
+   * \param modelIdStem      Stem of the model IDs, resulting IDs: <modelIdStem>_<profileName>
    * \param classProfileMap  Mapping of CIM type to profile
    * \return                 Written files: Mapping of profile to file
    */
-  static std::map<CGMESProfile, std::string> writeFiles(const std::string& outputfile,
+  static std::map<CGMESProfile, std::string> writeFiles(const std::string& pathStem,
                                                         const std::vector<BaseClass*>& objList,
-                                                        const std::string& modelID,
+                                                        const std::string& modelIdStem,
                                                         const std::map<std::string, CGMESProfile>& classProfileMap);
+
+  /**
+   * \brief Write the CIM data to a stream (e.g. a file stream).
+   *
+   * All CIM objects are written to just one stream, regardless of profiles.
+   *
+   * \param rdf      Output stream
+   * \param objList  List of CIM objects to write
+   */
+  static void writeCim(std::ostream& rdf, const std::vector<BaseClass*>& objList);
 
   /**
    * \brief Write CIM objects as RDF/XML data to a stream.
@@ -42,12 +76,12 @@ public:
    * \param rdf              Output stream
    * \param objList          List of CIM objects to write
    * \param profile          Only data for this profile should be written
-   * \param modelID          Model ID to write into the model description
+   * \param modelId          Model ID to write into the model description
    * \param classProfileMap  Mapping of CIM type to profile
    * \return                 Success: at least one object ist written to the stream
    */
   static bool writeCim(std::ostream& rdf, const std::vector<BaseClass*>& objList,
-                       const CGMESProfile& profile, const std::string& modelID,
+                       const CGMESProfile& profile, const std::string& modelId,
                        const std::map<std::string, CGMESProfile>& classProfileMap);
 
   /**
@@ -106,6 +140,8 @@ public:
                                           const CGMESProfile& classProfile);
 
 private:
+  static std::map<std::string, std::string> getUsedNamespaces(const std::vector<BaseClass*>& objList);
+  static std::string getNamespaceKey(const std::string& url);
   static std::string xmlEscape(const std::string& txt);
 };
 

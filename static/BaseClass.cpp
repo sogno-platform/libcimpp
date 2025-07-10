@@ -4,8 +4,15 @@ using namespace CIMPP;
 
 BaseClass::~BaseClass() {}
 
-std::list<CGMESProfile> BaseClass::getPossibleProfilesForClass() const { return {}; }
-std::map<std::string, std::list<CGMESProfile>> BaseClass::getPossibleProfilesForAttributes() const { return {}; }
+const std::list<std::string>& BaseClass::getAttributeNames() const { return CimClassDetails::UnknownAttributes; };
+
+const std::string& BaseClass::getClassNamespaceUrl() const { return CimClassDetails::UnknownNamespace; }
+const std::string& BaseClass::getAttributeNamespaceUrl(const std::string& /*attrName*/) const { return CimClassDetails::UnknownNamespace; }
+
+const std::list<CGMESProfile>& BaseClass::getPossibleProfiles() const { return CimClassDetails::UnknownProfiles; }
+const CGMESProfile& BaseClass::getRecommendedProfile() const { return UnknownProfile; }
+const std::list<CGMESProfile>& BaseClass::getPossibleAttributeProfiles(const std::string& /*attrName*/) const { return CimClassDetails::UnknownProfiles; }
+const std::list<CGMESProfile>& BaseClass::getPossibleProfilesIncludingAttributes() const { return CimClassDetails::UnknownProfiles; }
 
 const char BaseClass::debugName[] = "BaseClass";
 const char* BaseClass::debugString() const
@@ -23,4 +30,9 @@ void BaseClass::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map)
 const BaseClassDefiner BaseClass::declare()
 {
 	return BaseClassDefiner(BaseClass::addConstructToMap, BaseClass::addPrimitiveAssignFnsToMap, BaseClass::addClassAssignFnsToMap, BaseClass::debugName);
+}
+
+std::map<std::string, AttrDetails> BaseClass::allAttrDetailsMap() const
+{
+	return {};
 }

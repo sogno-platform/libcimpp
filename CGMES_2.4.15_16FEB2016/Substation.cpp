@@ -14,34 +14,66 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		Substation(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "Substation.DCConverterUnit", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Substation.Region", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "Substation.VoltageLevels", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 Substation::Substation() : Region(nullptr) {}
 Substation::~Substation() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& Substation::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:Substation.DCConverterUnit", { CGMESProfile::EQ, } },
-	{ "cim:Substation.Region", { CGMESProfile::EQ, } },
-	{ "cim:Substation.VoltageLevels", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-Substation::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-Substation::getPossibleProfilesForAttributes() const
+const std::string& Substation::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = EquipmentContainer::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& Substation::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& Substation::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& Substation::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& Substation::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& Substation::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_DCConverterUnit_Substation(BaseClass*, BaseClass*);
@@ -119,7 +151,7 @@ const char* Substation::debugString() const
 
 void Substation::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:Substation", &Substation_factory);
+	factory_map.emplace("Substation", &Substation_factory);
 }
 
 void Substation::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -128,9 +160,9 @@ void Substation::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assi
 
 void Substation::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:Substation.DCConverterUnit", &assign_Substation_DCConverterUnit);
-	assign_map.emplace("cim:Substation.Region", &assign_Substation_Region);
-	assign_map.emplace("cim:Substation.VoltageLevels", &assign_Substation_VoltageLevels);
+	assign_map.emplace("Substation.DCConverterUnit", &assign_Substation_DCConverterUnit);
+	assign_map.emplace("Substation.Region", &assign_Substation_Region);
+	assign_map.emplace("Substation.VoltageLevels", &assign_Substation_VoltageLevels);
 }
 
 void Substation::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -141,7 +173,7 @@ void Substation::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& ge
 void Substation::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	EquipmentContainer::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:Substation.Region", &get_Substation_Region);
+	get_map.emplace("Substation.Region", &get_Substation_Region);
 }
 
 void Substation::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -149,9 +181,23 @@ void Substation::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map
 	EquipmentContainer::addEnumGetFnsToMap(get_map);
 }
 
+bool Substation::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "Substation" &&
+		dynamic_cast<Substation*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner Substation::declare()
 {
 	return BaseClassDefiner(Substation::addConstructToMap, Substation::addPrimitiveAssignFnsToMap, Substation::addClassAssignFnsToMap, Substation::debugName);
+}
+
+std::map<std::string, AttrDetails> Substation::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = EquipmentContainer::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

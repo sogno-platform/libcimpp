@@ -12,35 +12,67 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		WindGenType3bIEC(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "WindGenType3bIEC.WindDynamicsLookupTable", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindGenType3bIEC.mwtcwp", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindGenType3bIEC.tg", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindGenType3bIEC.two", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 WindGenType3bIEC::WindGenType3bIEC() {}
 WindGenType3bIEC::~WindGenType3bIEC() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& WindGenType3bIEC::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:WindGenType3bIEC.WindDynamicsLookupTable", { CGMESProfile::DY, } },
-	{ "cim:WindGenType3bIEC.mwtcwp", { CGMESProfile::DY, } },
-	{ "cim:WindGenType3bIEC.tg", { CGMESProfile::DY, } },
-	{ "cim:WindGenType3bIEC.two", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-WindGenType3bIEC::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-WindGenType3bIEC::getPossibleProfilesForAttributes() const
+const std::string& WindGenType3bIEC::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = WindGenType3IEC::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& WindGenType3bIEC::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& WindGenType3bIEC::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& WindGenType3bIEC::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& WindGenType3bIEC::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& WindGenType3bIEC::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_WindDynamicsLookupTable_WindGenType3bIEC(BaseClass*, BaseClass*);
@@ -156,27 +188,27 @@ const char* WindGenType3bIEC::debugString() const
 
 void WindGenType3bIEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:WindGenType3bIEC", &WindGenType3bIEC_factory);
+	factory_map.emplace("WindGenType3bIEC", &WindGenType3bIEC_factory);
 }
 
 void WindGenType3bIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindGenType3bIEC.mwtcwp", &assign_WindGenType3bIEC_mwtcwp);
-	assign_map.emplace("cim:WindGenType3bIEC.tg", &assign_WindGenType3bIEC_tg);
-	assign_map.emplace("cim:WindGenType3bIEC.two", &assign_WindGenType3bIEC_two);
+	assign_map.emplace("WindGenType3bIEC.mwtcwp", &assign_WindGenType3bIEC_mwtcwp);
+	assign_map.emplace("WindGenType3bIEC.tg", &assign_WindGenType3bIEC_tg);
+	assign_map.emplace("WindGenType3bIEC.two", &assign_WindGenType3bIEC_two);
 }
 
 void WindGenType3bIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindGenType3bIEC.WindDynamicsLookupTable", &assign_WindGenType3bIEC_WindDynamicsLookupTable);
+	assign_map.emplace("WindGenType3bIEC.WindDynamicsLookupTable", &assign_WindGenType3bIEC_WindDynamicsLookupTable);
 }
 
 void WindGenType3bIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	WindGenType3IEC::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:WindGenType3bIEC.mwtcwp", &get_WindGenType3bIEC_mwtcwp);
-	get_map.emplace("cim:WindGenType3bIEC.tg", &get_WindGenType3bIEC_tg);
-	get_map.emplace("cim:WindGenType3bIEC.two", &get_WindGenType3bIEC_two);
+	get_map.emplace("WindGenType3bIEC.mwtcwp", &get_WindGenType3bIEC_mwtcwp);
+	get_map.emplace("WindGenType3bIEC.tg", &get_WindGenType3bIEC_tg);
+	get_map.emplace("WindGenType3bIEC.two", &get_WindGenType3bIEC_two);
 }
 
 void WindGenType3bIEC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -189,9 +221,23 @@ void WindGenType3bIEC::addEnumGetFnsToMap(std::map<std::string, get_function>& g
 	WindGenType3IEC::addEnumGetFnsToMap(get_map);
 }
 
+bool WindGenType3bIEC::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "WindGenType3bIEC" &&
+		dynamic_cast<WindGenType3bIEC*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner WindGenType3bIEC::declare()
 {
 	return BaseClassDefiner(WindGenType3bIEC::addConstructToMap, WindGenType3bIEC::addPrimitiveAssignFnsToMap, WindGenType3bIEC::addClassAssignFnsToMap, WindGenType3bIEC::debugName);
+}
+
+std::map<std::string, AttrDetails> WindGenType3bIEC::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = WindGenType3IEC::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

@@ -12,37 +12,69 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		WindAeroLinearIEC(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "WindAeroLinearIEC.WindGenTurbineType3IEC", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindAeroLinearIEC.dpomega", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindAeroLinearIEC.dptheta", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindAeroLinearIEC.omegazero", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindAeroLinearIEC.pavail", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "WindAeroLinearIEC.thetazero", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 WindAeroLinearIEC::WindAeroLinearIEC() : WindGenTurbineType3IEC(nullptr) {}
 WindAeroLinearIEC::~WindAeroLinearIEC() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& WindAeroLinearIEC::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:WindAeroLinearIEC.WindGenTurbineType3IEC", { CGMESProfile::DY, } },
-	{ "cim:WindAeroLinearIEC.dpomega", { CGMESProfile::DY, } },
-	{ "cim:WindAeroLinearIEC.dptheta", { CGMESProfile::DY, } },
-	{ "cim:WindAeroLinearIEC.omegazero", { CGMESProfile::DY, } },
-	{ "cim:WindAeroLinearIEC.pavail", { CGMESProfile::DY, } },
-	{ "cim:WindAeroLinearIEC.thetazero", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-WindAeroLinearIEC::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-WindAeroLinearIEC::getPossibleProfilesForAttributes() const
+const std::string& WindAeroLinearIEC::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& WindAeroLinearIEC::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& WindAeroLinearIEC::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& WindAeroLinearIEC::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& WindAeroLinearIEC::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& WindAeroLinearIEC::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_WindGenTurbineType3IEC_WindAeroLinearIEC(BaseClass*, BaseClass*);
@@ -216,31 +248,31 @@ const char* WindAeroLinearIEC::debugString() const
 
 void WindAeroLinearIEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:WindAeroLinearIEC", &WindAeroLinearIEC_factory);
+	factory_map.emplace("WindAeroLinearIEC", &WindAeroLinearIEC_factory);
 }
 
 void WindAeroLinearIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindAeroLinearIEC.dpomega", &assign_WindAeroLinearIEC_dpomega);
-	assign_map.emplace("cim:WindAeroLinearIEC.dptheta", &assign_WindAeroLinearIEC_dptheta);
-	assign_map.emplace("cim:WindAeroLinearIEC.omegazero", &assign_WindAeroLinearIEC_omegazero);
-	assign_map.emplace("cim:WindAeroLinearIEC.pavail", &assign_WindAeroLinearIEC_pavail);
-	assign_map.emplace("cim:WindAeroLinearIEC.thetazero", &assign_WindAeroLinearIEC_thetazero);
+	assign_map.emplace("WindAeroLinearIEC.dpomega", &assign_WindAeroLinearIEC_dpomega);
+	assign_map.emplace("WindAeroLinearIEC.dptheta", &assign_WindAeroLinearIEC_dptheta);
+	assign_map.emplace("WindAeroLinearIEC.omegazero", &assign_WindAeroLinearIEC_omegazero);
+	assign_map.emplace("WindAeroLinearIEC.pavail", &assign_WindAeroLinearIEC_pavail);
+	assign_map.emplace("WindAeroLinearIEC.thetazero", &assign_WindAeroLinearIEC_thetazero);
 }
 
 void WindAeroLinearIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindAeroLinearIEC.WindGenTurbineType3IEC", &assign_WindAeroLinearIEC_WindGenTurbineType3IEC);
+	assign_map.emplace("WindAeroLinearIEC.WindGenTurbineType3IEC", &assign_WindAeroLinearIEC_WindGenTurbineType3IEC);
 }
 
 void WindAeroLinearIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:WindAeroLinearIEC.dpomega", &get_WindAeroLinearIEC_dpomega);
-	get_map.emplace("cim:WindAeroLinearIEC.dptheta", &get_WindAeroLinearIEC_dptheta);
-	get_map.emplace("cim:WindAeroLinearIEC.omegazero", &get_WindAeroLinearIEC_omegazero);
-	get_map.emplace("cim:WindAeroLinearIEC.pavail", &get_WindAeroLinearIEC_pavail);
-	get_map.emplace("cim:WindAeroLinearIEC.thetazero", &get_WindAeroLinearIEC_thetazero);
+	get_map.emplace("WindAeroLinearIEC.dpomega", &get_WindAeroLinearIEC_dpomega);
+	get_map.emplace("WindAeroLinearIEC.dptheta", &get_WindAeroLinearIEC_dptheta);
+	get_map.emplace("WindAeroLinearIEC.omegazero", &get_WindAeroLinearIEC_omegazero);
+	get_map.emplace("WindAeroLinearIEC.pavail", &get_WindAeroLinearIEC_pavail);
+	get_map.emplace("WindAeroLinearIEC.thetazero", &get_WindAeroLinearIEC_thetazero);
 }
 
 void WindAeroLinearIEC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -253,9 +285,23 @@ void WindAeroLinearIEC::addEnumGetFnsToMap(std::map<std::string, get_function>& 
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
 }
 
+bool WindAeroLinearIEC::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "WindAeroLinearIEC" &&
+		dynamic_cast<WindAeroLinearIEC*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner WindAeroLinearIEC::declare()
 {
 	return BaseClassDefiner(WindAeroLinearIEC::addConstructToMap, WindAeroLinearIEC::addPrimitiveAssignFnsToMap, WindAeroLinearIEC::addClassAssignFnsToMap, WindAeroLinearIEC::debugName);
+}
+
+std::map<std::string, AttrDetails> WindAeroLinearIEC::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

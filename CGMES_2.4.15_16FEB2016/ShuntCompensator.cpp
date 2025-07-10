@@ -12,43 +12,75 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ShuntCompensator(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SV,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ShuntCompensator.SvShuntCompensatorSections", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SV, } } },
+		{ "ShuntCompensator.aVRDelay", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ShuntCompensator.grounded", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ShuntCompensator.maximumSections", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ShuntCompensator.nomU", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ShuntCompensator.normalSections", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ShuntCompensator.sections", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SSH, } } },
+		{ "ShuntCompensator.switchOnCount", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ShuntCompensator.switchOnDate", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "ShuntCompensator.voltageSensitivity", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ShuntCompensator::ShuntCompensator() : SvShuntCompensatorSections(nullptr) {}
 ShuntCompensator::~ShuntCompensator() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ShuntCompensator::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SV,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ShuntCompensator.SvShuntCompensatorSections", { CGMESProfile::SV, } },
-	{ "cim:ShuntCompensator.aVRDelay", { CGMESProfile::EQ, } },
-	{ "cim:ShuntCompensator.grounded", { CGMESProfile::EQ, } },
-	{ "cim:ShuntCompensator.maximumSections", { CGMESProfile::EQ, } },
-	{ "cim:ShuntCompensator.nomU", { CGMESProfile::EQ, } },
-	{ "cim:ShuntCompensator.normalSections", { CGMESProfile::EQ, } },
-	{ "cim:ShuntCompensator.sections", { CGMESProfile::SSH, } },
-	{ "cim:ShuntCompensator.switchOnCount", { CGMESProfile::EQ, } },
-	{ "cim:ShuntCompensator.switchOnDate", { CGMESProfile::EQ, } },
-	{ "cim:ShuntCompensator.voltageSensitivity", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-ShuntCompensator::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ShuntCompensator::getPossibleProfilesForAttributes() const
+const std::string& ShuntCompensator::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = RegulatingCondEq::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ShuntCompensator::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ShuntCompensator::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ShuntCompensator::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ShuntCompensator::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ShuntCompensator::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_SvShuntCompensatorSections_ShuntCompensator(BaseClass*, BaseClass*);
@@ -338,39 +370,39 @@ const char* ShuntCompensator::debugString() const
 
 void ShuntCompensator::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ShuntCompensator", &ShuntCompensator_factory);
+	factory_map.emplace("ShuntCompensator", &ShuntCompensator_factory);
 }
 
 void ShuntCompensator::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ShuntCompensator.aVRDelay", &assign_ShuntCompensator_aVRDelay);
-	assign_map.emplace("cim:ShuntCompensator.grounded", &assign_ShuntCompensator_grounded);
-	assign_map.emplace("cim:ShuntCompensator.maximumSections", &assign_ShuntCompensator_maximumSections);
-	assign_map.emplace("cim:ShuntCompensator.nomU", &assign_ShuntCompensator_nomU);
-	assign_map.emplace("cim:ShuntCompensator.normalSections", &assign_ShuntCompensator_normalSections);
-	assign_map.emplace("cim:ShuntCompensator.sections", &assign_ShuntCompensator_sections);
-	assign_map.emplace("cim:ShuntCompensator.switchOnCount", &assign_ShuntCompensator_switchOnCount);
-	assign_map.emplace("cim:ShuntCompensator.switchOnDate", &assign_ShuntCompensator_switchOnDate);
-	assign_map.emplace("cim:ShuntCompensator.voltageSensitivity", &assign_ShuntCompensator_voltageSensitivity);
+	assign_map.emplace("ShuntCompensator.aVRDelay", &assign_ShuntCompensator_aVRDelay);
+	assign_map.emplace("ShuntCompensator.grounded", &assign_ShuntCompensator_grounded);
+	assign_map.emplace("ShuntCompensator.maximumSections", &assign_ShuntCompensator_maximumSections);
+	assign_map.emplace("ShuntCompensator.nomU", &assign_ShuntCompensator_nomU);
+	assign_map.emplace("ShuntCompensator.normalSections", &assign_ShuntCompensator_normalSections);
+	assign_map.emplace("ShuntCompensator.sections", &assign_ShuntCompensator_sections);
+	assign_map.emplace("ShuntCompensator.switchOnCount", &assign_ShuntCompensator_switchOnCount);
+	assign_map.emplace("ShuntCompensator.switchOnDate", &assign_ShuntCompensator_switchOnDate);
+	assign_map.emplace("ShuntCompensator.voltageSensitivity", &assign_ShuntCompensator_voltageSensitivity);
 }
 
 void ShuntCompensator::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ShuntCompensator.SvShuntCompensatorSections", &assign_ShuntCompensator_SvShuntCompensatorSections);
+	assign_map.emplace("ShuntCompensator.SvShuntCompensatorSections", &assign_ShuntCompensator_SvShuntCompensatorSections);
 }
 
 void ShuntCompensator::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	RegulatingCondEq::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:ShuntCompensator.aVRDelay", &get_ShuntCompensator_aVRDelay);
-	get_map.emplace("cim:ShuntCompensator.grounded", &get_ShuntCompensator_grounded);
-	get_map.emplace("cim:ShuntCompensator.maximumSections", &get_ShuntCompensator_maximumSections);
-	get_map.emplace("cim:ShuntCompensator.nomU", &get_ShuntCompensator_nomU);
-	get_map.emplace("cim:ShuntCompensator.normalSections", &get_ShuntCompensator_normalSections);
-	get_map.emplace("cim:ShuntCompensator.sections", &get_ShuntCompensator_sections);
-	get_map.emplace("cim:ShuntCompensator.switchOnCount", &get_ShuntCompensator_switchOnCount);
-	get_map.emplace("cim:ShuntCompensator.switchOnDate", &get_ShuntCompensator_switchOnDate);
-	get_map.emplace("cim:ShuntCompensator.voltageSensitivity", &get_ShuntCompensator_voltageSensitivity);
+	get_map.emplace("ShuntCompensator.aVRDelay", &get_ShuntCompensator_aVRDelay);
+	get_map.emplace("ShuntCompensator.grounded", &get_ShuntCompensator_grounded);
+	get_map.emplace("ShuntCompensator.maximumSections", &get_ShuntCompensator_maximumSections);
+	get_map.emplace("ShuntCompensator.nomU", &get_ShuntCompensator_nomU);
+	get_map.emplace("ShuntCompensator.normalSections", &get_ShuntCompensator_normalSections);
+	get_map.emplace("ShuntCompensator.sections", &get_ShuntCompensator_sections);
+	get_map.emplace("ShuntCompensator.switchOnCount", &get_ShuntCompensator_switchOnCount);
+	get_map.emplace("ShuntCompensator.switchOnDate", &get_ShuntCompensator_switchOnDate);
+	get_map.emplace("ShuntCompensator.voltageSensitivity", &get_ShuntCompensator_voltageSensitivity);
 }
 
 void ShuntCompensator::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -383,9 +415,23 @@ void ShuntCompensator::addEnumGetFnsToMap(std::map<std::string, get_function>& g
 	RegulatingCondEq::addEnumGetFnsToMap(get_map);
 }
 
+bool ShuntCompensator::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ShuntCompensator" &&
+		dynamic_cast<ShuntCompensator*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ShuntCompensator::declare()
 {
 	return BaseClassDefiner(ShuntCompensator::addConstructToMap, ShuntCompensator::addPrimitiveAssignFnsToMap, ShuntCompensator::addClassAssignFnsToMap, ShuntCompensator::debugName);
+}
+
+std::map<std::string, AttrDetails> ShuntCompensator::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = RegulatingCondEq::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

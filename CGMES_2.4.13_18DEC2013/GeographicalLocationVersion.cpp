@@ -11,41 +11,73 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		GeographicalLocationVersion(),
+		"http://entsoe.eu/CIM/SchemaExtension/3/1#",
+		{
+			CGMESProfile::GL,
+		},
+		CGMESProfile::GL
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "GeographicalLocationVersion.baseUML", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::GL, } } },
+		{ "GeographicalLocationVersion.baseURI", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::GL, } } },
+		{ "GeographicalLocationVersion.date", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::GL, } } },
+		{ "GeographicalLocationVersion.differenceModelURI", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::GL, } } },
+		{ "GeographicalLocationVersion.entsoeUML", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::GL, } } },
+		{ "GeographicalLocationVersion.entsoeURI", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::GL, } } },
+		{ "GeographicalLocationVersion.modelDescriptionURI", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::GL, } } },
+		{ "GeographicalLocationVersion.namespaceRDF", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::GL, } } },
+		{ "GeographicalLocationVersion.namespaceUML", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::GL, } } },
+		{ "GeographicalLocationVersion.shortName", { "http://entsoe.eu/CIM/SchemaExtension/3/1#", { CGMESProfile::GL, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 GeographicalLocationVersion::GeographicalLocationVersion() {}
 GeographicalLocationVersion::~GeographicalLocationVersion() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& GeographicalLocationVersion::getAttributeNames() const
 {
-	CGMESProfile::GL,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:GeographicalLocationVersion.baseUML", { CGMESProfile::GL, } },
-	{ "cim:GeographicalLocationVersion.baseURI", { CGMESProfile::GL, } },
-	{ "cim:GeographicalLocationVersion.date", { CGMESProfile::GL, } },
-	{ "cim:GeographicalLocationVersion.differenceModelURI", { CGMESProfile::GL, } },
-	{ "cim:GeographicalLocationVersion.entsoeUML", { CGMESProfile::GL, } },
-	{ "cim:GeographicalLocationVersion.entsoeURI", { CGMESProfile::GL, } },
-	{ "cim:GeographicalLocationVersion.modelDescriptionURI", { CGMESProfile::GL, } },
-	{ "cim:GeographicalLocationVersion.namespaceRDF", { CGMESProfile::GL, } },
-	{ "cim:GeographicalLocationVersion.namespaceUML", { CGMESProfile::GL, } },
-	{ "cim:GeographicalLocationVersion.shortName", { CGMESProfile::GL, } },
-};
-
-std::list<CGMESProfile>
-GeographicalLocationVersion::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-GeographicalLocationVersion::getPossibleProfilesForAttributes() const
+const std::string& GeographicalLocationVersion::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& GeographicalLocationVersion::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& GeographicalLocationVersion::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& GeographicalLocationVersion::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& GeographicalLocationVersion::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& GeographicalLocationVersion::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_GeographicalLocationVersion_baseUML(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -346,21 +378,21 @@ const char* GeographicalLocationVersion::debugString() const
 
 void GeographicalLocationVersion::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:GeographicalLocationVersion", &GeographicalLocationVersion_factory);
+	factory_map.emplace("GeographicalLocationVersion", &GeographicalLocationVersion_factory);
 }
 
 void GeographicalLocationVersion::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:GeographicalLocationVersion.baseUML", &assign_GeographicalLocationVersion_baseUML);
-	assign_map.emplace("cim:GeographicalLocationVersion.baseURI", &assign_GeographicalLocationVersion_baseURI);
-	assign_map.emplace("cim:GeographicalLocationVersion.date", &assign_GeographicalLocationVersion_date);
-	assign_map.emplace("cim:GeographicalLocationVersion.differenceModelURI", &assign_GeographicalLocationVersion_differenceModelURI);
-	assign_map.emplace("cim:GeographicalLocationVersion.entsoeUML", &assign_GeographicalLocationVersion_entsoeUML);
-	assign_map.emplace("cim:GeographicalLocationVersion.entsoeURI", &assign_GeographicalLocationVersion_entsoeURI);
-	assign_map.emplace("cim:GeographicalLocationVersion.modelDescriptionURI", &assign_GeographicalLocationVersion_modelDescriptionURI);
-	assign_map.emplace("cim:GeographicalLocationVersion.namespaceRDF", &assign_GeographicalLocationVersion_namespaceRDF);
-	assign_map.emplace("cim:GeographicalLocationVersion.namespaceUML", &assign_GeographicalLocationVersion_namespaceUML);
-	assign_map.emplace("cim:GeographicalLocationVersion.shortName", &assign_GeographicalLocationVersion_shortName);
+	assign_map.emplace("GeographicalLocationVersion.baseUML", &assign_GeographicalLocationVersion_baseUML);
+	assign_map.emplace("GeographicalLocationVersion.baseURI", &assign_GeographicalLocationVersion_baseURI);
+	assign_map.emplace("GeographicalLocationVersion.date", &assign_GeographicalLocationVersion_date);
+	assign_map.emplace("GeographicalLocationVersion.differenceModelURI", &assign_GeographicalLocationVersion_differenceModelURI);
+	assign_map.emplace("GeographicalLocationVersion.entsoeUML", &assign_GeographicalLocationVersion_entsoeUML);
+	assign_map.emplace("GeographicalLocationVersion.entsoeURI", &assign_GeographicalLocationVersion_entsoeURI);
+	assign_map.emplace("GeographicalLocationVersion.modelDescriptionURI", &assign_GeographicalLocationVersion_modelDescriptionURI);
+	assign_map.emplace("GeographicalLocationVersion.namespaceRDF", &assign_GeographicalLocationVersion_namespaceRDF);
+	assign_map.emplace("GeographicalLocationVersion.namespaceUML", &assign_GeographicalLocationVersion_namespaceUML);
+	assign_map.emplace("GeographicalLocationVersion.shortName", &assign_GeographicalLocationVersion_shortName);
 }
 
 void GeographicalLocationVersion::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -370,16 +402,16 @@ void GeographicalLocationVersion::addClassAssignFnsToMap(std::unordered_map<std:
 void GeographicalLocationVersion::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	BaseClass::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:GeographicalLocationVersion.baseUML", &get_GeographicalLocationVersion_baseUML);
-	get_map.emplace("cim:GeographicalLocationVersion.baseURI", &get_GeographicalLocationVersion_baseURI);
-	get_map.emplace("cim:GeographicalLocationVersion.date", &get_GeographicalLocationVersion_date);
-	get_map.emplace("cim:GeographicalLocationVersion.differenceModelURI", &get_GeographicalLocationVersion_differenceModelURI);
-	get_map.emplace("cim:GeographicalLocationVersion.entsoeUML", &get_GeographicalLocationVersion_entsoeUML);
-	get_map.emplace("cim:GeographicalLocationVersion.entsoeURI", &get_GeographicalLocationVersion_entsoeURI);
-	get_map.emplace("cim:GeographicalLocationVersion.modelDescriptionURI", &get_GeographicalLocationVersion_modelDescriptionURI);
-	get_map.emplace("cim:GeographicalLocationVersion.namespaceRDF", &get_GeographicalLocationVersion_namespaceRDF);
-	get_map.emplace("cim:GeographicalLocationVersion.namespaceUML", &get_GeographicalLocationVersion_namespaceUML);
-	get_map.emplace("cim:GeographicalLocationVersion.shortName", &get_GeographicalLocationVersion_shortName);
+	get_map.emplace("GeographicalLocationVersion.baseUML", &get_GeographicalLocationVersion_baseUML);
+	get_map.emplace("GeographicalLocationVersion.baseURI", &get_GeographicalLocationVersion_baseURI);
+	get_map.emplace("GeographicalLocationVersion.date", &get_GeographicalLocationVersion_date);
+	get_map.emplace("GeographicalLocationVersion.differenceModelURI", &get_GeographicalLocationVersion_differenceModelURI);
+	get_map.emplace("GeographicalLocationVersion.entsoeUML", &get_GeographicalLocationVersion_entsoeUML);
+	get_map.emplace("GeographicalLocationVersion.entsoeURI", &get_GeographicalLocationVersion_entsoeURI);
+	get_map.emplace("GeographicalLocationVersion.modelDescriptionURI", &get_GeographicalLocationVersion_modelDescriptionURI);
+	get_map.emplace("GeographicalLocationVersion.namespaceRDF", &get_GeographicalLocationVersion_namespaceRDF);
+	get_map.emplace("GeographicalLocationVersion.namespaceUML", &get_GeographicalLocationVersion_namespaceUML);
+	get_map.emplace("GeographicalLocationVersion.shortName", &get_GeographicalLocationVersion_shortName);
 }
 
 void GeographicalLocationVersion::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -392,9 +424,23 @@ void GeographicalLocationVersion::addEnumGetFnsToMap(std::map<std::string, get_f
 	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
+bool GeographicalLocationVersion::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "GeographicalLocationVersion" &&
+		dynamic_cast<GeographicalLocationVersion*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner GeographicalLocationVersion::declare()
 {
 	return BaseClassDefiner(GeographicalLocationVersion::addConstructToMap, GeographicalLocationVersion::addPrimitiveAssignFnsToMap, GeographicalLocationVersion::addClassAssignFnsToMap, GeographicalLocationVersion::debugName);
+}
+
+std::map<std::string, AttrDetails> GeographicalLocationVersion::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = BaseClass::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

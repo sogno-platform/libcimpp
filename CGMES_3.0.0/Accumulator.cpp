@@ -13,33 +13,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		Accumulator(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::OP,
+		},
+		CGMESProfile::OP
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "Accumulator.AccumulatorValues", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::OP, } } },
+		{ "Accumulator.LimitSets", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::OP, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 Accumulator::Accumulator() {}
 Accumulator::~Accumulator() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& Accumulator::getAttributeNames() const
 {
-	CGMESProfile::OP,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:Accumulator.AccumulatorValues", { CGMESProfile::OP, } },
-	{ "cim:Accumulator.LimitSets", { CGMESProfile::OP, } },
-};
-
-std::list<CGMESProfile>
-Accumulator::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-Accumulator::getPossibleProfilesForAttributes() const
+const std::string& Accumulator::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = Measurement::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& Accumulator::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& Accumulator::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& Accumulator::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& Accumulator::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& Accumulator::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_AccumulatorValue_Accumulator(BaseClass*, BaseClass*);
@@ -86,7 +118,7 @@ const char* Accumulator::debugString() const
 
 void Accumulator::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:Accumulator", &Accumulator_factory);
+	factory_map.emplace("Accumulator", &Accumulator_factory);
 }
 
 void Accumulator::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -95,8 +127,8 @@ void Accumulator::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, ass
 
 void Accumulator::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:Accumulator.AccumulatorValues", &assign_Accumulator_AccumulatorValues);
-	assign_map.emplace("cim:Accumulator.LimitSets", &assign_Accumulator_LimitSets);
+	assign_map.emplace("Accumulator.AccumulatorValues", &assign_Accumulator_AccumulatorValues);
+	assign_map.emplace("Accumulator.LimitSets", &assign_Accumulator_LimitSets);
 }
 
 void Accumulator::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -114,9 +146,23 @@ void Accumulator::addEnumGetFnsToMap(std::map<std::string, get_function>& get_ma
 	Measurement::addEnumGetFnsToMap(get_map);
 }
 
+bool Accumulator::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "Accumulator" &&
+		dynamic_cast<Accumulator*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner Accumulator::declare()
 {
 	return BaseClassDefiner(Accumulator::addConstructToMap, Accumulator::addPrimitiveAssignFnsToMap, Accumulator::addClassAssignFnsToMap, Accumulator::debugName);
+}
+
+std::map<std::string, AttrDetails> Accumulator::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = Measurement::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

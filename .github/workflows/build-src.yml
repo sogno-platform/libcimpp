@@ -15,11 +15,18 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
+    - name: Install Boost
+      shell: bash
+      run: sudo apt-get install libboost-filesystem-dev libboost-system-dev libboost-test-dev
     - name: Create Build Environment
-      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/${{matrix.schema}}
+      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build_${{matrix.schema}}
     - name: Configure CMake and compile
       shell: bash
-      working-directory: ${{runner.workspace}}/libcimpp/build/${{matrix.schema}}/
+      working-directory: ${{runner.workspace}}/libcimpp/build_${{matrix.schema}}/
       run: |
-          cmake ../.. -DUSE_CIM_VERSION=${{matrix.schema}}
+          cmake .. -DUSE_CIM_VERSION=${{matrix.schema}}
           make -j4
+    - name: Run unit tests
+      shell: bash
+      working-directory: ${{runner.workspace}}/libcimpp/build_${{matrix.schema}}/
+      run: ctest --output-on-failure

@@ -12,35 +12,67 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		RegulatingCondEq(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+			CGMESProfile::EQ,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "RegulatingCondEq.RegulatingControl", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "RegulatingCondEq.controlEnabled", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::SSH, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 RegulatingCondEq::RegulatingCondEq() : RegulatingControl(nullptr) {}
 RegulatingCondEq::~RegulatingCondEq() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& RegulatingCondEq::getAttributeNames() const
 {
-	CGMESProfile::DY,
-	CGMESProfile::EQ,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:RegulatingCondEq.RegulatingControl", { CGMESProfile::EQ, } },
-	{ "cim:RegulatingCondEq.controlEnabled", { CGMESProfile::SSH, } },
-};
-
-std::list<CGMESProfile>
-RegulatingCondEq::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-RegulatingCondEq::getPossibleProfilesForAttributes() const
+const std::string& RegulatingCondEq::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = ConductingEquipment::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& RegulatingCondEq::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& RegulatingCondEq::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& RegulatingCondEq::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& RegulatingCondEq::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& RegulatingCondEq::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_RegulatingControl_RegulatingCondEq(BaseClass*, BaseClass*);
@@ -111,29 +143,29 @@ const char* RegulatingCondEq::debugString() const
 
 void RegulatingCondEq::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:RegulatingCondEq", &RegulatingCondEq_factory);
+	factory_map.emplace("RegulatingCondEq", &RegulatingCondEq_factory);
 }
 
 void RegulatingCondEq::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:RegulatingCondEq.controlEnabled", &assign_RegulatingCondEq_controlEnabled);
+	assign_map.emplace("RegulatingCondEq.controlEnabled", &assign_RegulatingCondEq_controlEnabled);
 }
 
 void RegulatingCondEq::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:RegulatingCondEq.RegulatingControl", &assign_RegulatingCondEq_RegulatingControl);
+	assign_map.emplace("RegulatingCondEq.RegulatingControl", &assign_RegulatingCondEq_RegulatingControl);
 }
 
 void RegulatingCondEq::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	ConductingEquipment::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:RegulatingCondEq.controlEnabled", &get_RegulatingCondEq_controlEnabled);
+	get_map.emplace("RegulatingCondEq.controlEnabled", &get_RegulatingCondEq_controlEnabled);
 }
 
 void RegulatingCondEq::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	ConductingEquipment::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:RegulatingCondEq.RegulatingControl", &get_RegulatingCondEq_RegulatingControl);
+	get_map.emplace("RegulatingCondEq.RegulatingControl", &get_RegulatingCondEq_RegulatingControl);
 }
 
 void RegulatingCondEq::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -141,9 +173,23 @@ void RegulatingCondEq::addEnumGetFnsToMap(std::map<std::string, get_function>& g
 	ConductingEquipment::addEnumGetFnsToMap(get_map);
 }
 
+bool RegulatingCondEq::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "RegulatingCondEq" &&
+		dynamic_cast<RegulatingCondEq*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner RegulatingCondEq::declare()
 {
 	return BaseClassDefiner(RegulatingCondEq::addConstructToMap, RegulatingCondEq::addPrimitiveAssignFnsToMap, RegulatingCondEq::addClassAssignFnsToMap, RegulatingCondEq::debugName);
+}
+
+std::map<std::string, AttrDetails> RegulatingCondEq::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = ConductingEquipment::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

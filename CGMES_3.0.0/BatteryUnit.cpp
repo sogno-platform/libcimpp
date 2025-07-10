@@ -11,35 +11,67 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		BatteryUnit(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::EQ,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "BatteryUnit.batteryState", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+		{ "BatteryUnit.ratedE", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "BatteryUnit.storedE", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 BatteryUnit::BatteryUnit() {}
 BatteryUnit::~BatteryUnit() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& BatteryUnit::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:BatteryUnit.batteryState", { CGMESProfile::SSH, } },
-	{ "cim:BatteryUnit.ratedE", { CGMESProfile::EQ, } },
-	{ "cim:BatteryUnit.storedE", { CGMESProfile::SSH, } },
-};
-
-std::list<CGMESProfile>
-BatteryUnit::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-BatteryUnit::getPossibleProfilesForAttributes() const
+const std::string& BatteryUnit::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = PowerElectronicsUnit::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& BatteryUnit::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& BatteryUnit::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& BatteryUnit::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& BatteryUnit::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& BatteryUnit::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_BatteryUnit_batteryState(std::stringstream& buffer, BaseClass* BaseClass_ptr1)
@@ -137,14 +169,14 @@ const char* BatteryUnit::debugString() const
 
 void BatteryUnit::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:BatteryUnit", &BatteryUnit_factory);
+	factory_map.emplace("BatteryUnit", &BatteryUnit_factory);
 }
 
 void BatteryUnit::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:BatteryUnit.batteryState", &assign_BatteryUnit_batteryState);
-	assign_map.emplace("cim:BatteryUnit.ratedE", &assign_BatteryUnit_ratedE);
-	assign_map.emplace("cim:BatteryUnit.storedE", &assign_BatteryUnit_storedE);
+	assign_map.emplace("BatteryUnit.batteryState", &assign_BatteryUnit_batteryState);
+	assign_map.emplace("BatteryUnit.ratedE", &assign_BatteryUnit_ratedE);
+	assign_map.emplace("BatteryUnit.storedE", &assign_BatteryUnit_storedE);
 }
 
 void BatteryUnit::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
@@ -154,8 +186,8 @@ void BatteryUnit::addClassAssignFnsToMap(std::unordered_map<std::string, class_a
 void BatteryUnit::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	PowerElectronicsUnit::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:BatteryUnit.ratedE", &get_BatteryUnit_ratedE);
-	get_map.emplace("cim:BatteryUnit.storedE", &get_BatteryUnit_storedE);
+	get_map.emplace("BatteryUnit.ratedE", &get_BatteryUnit_ratedE);
+	get_map.emplace("BatteryUnit.storedE", &get_BatteryUnit_storedE);
 }
 
 void BatteryUnit::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -166,12 +198,26 @@ void BatteryUnit::addClassGetFnsToMap(std::map<std::string, class_get_function>&
 void BatteryUnit::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	PowerElectronicsUnit::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:BatteryUnit.batteryState", &get_BatteryUnit_batteryState);
+	get_map.emplace("BatteryUnit.batteryState", &get_BatteryUnit_batteryState);
+}
+
+bool BatteryUnit::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "BatteryUnit" &&
+		dynamic_cast<BatteryUnit*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner BatteryUnit::declare()
 {
 	return BaseClassDefiner(BatteryUnit::addConstructToMap, BatteryUnit::addPrimitiveAssignFnsToMap, BatteryUnit::addClassAssignFnsToMap, BatteryUnit::debugName);
+}
+
+std::map<std::string, AttrDetails> BatteryUnit::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = PowerElectronicsUnit::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

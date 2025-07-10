@@ -12,34 +12,66 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		AnalogControl(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::OP,
+		},
+		CGMESProfile::OP
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "AnalogControl.AnalogValue", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::OP, } } },
+		{ "AnalogControl.maxValue", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::OP, } } },
+		{ "AnalogControl.minValue", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::OP, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 AnalogControl::AnalogControl() : AnalogValue(nullptr) {}
 AnalogControl::~AnalogControl() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& AnalogControl::getAttributeNames() const
 {
-	CGMESProfile::OP,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:AnalogControl.AnalogValue", { CGMESProfile::OP, } },
-	{ "cim:AnalogControl.maxValue", { CGMESProfile::OP, } },
-	{ "cim:AnalogControl.minValue", { CGMESProfile::OP, } },
-};
-
-std::list<CGMESProfile>
-AnalogControl::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-AnalogControl::getPossibleProfilesForAttributes() const
+const std::string& AnalogControl::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = Control::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& AnalogControl::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& AnalogControl::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& AnalogControl::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& AnalogControl::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& AnalogControl::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_AnalogValue_AnalogControl(BaseClass*, BaseClass*);
@@ -139,31 +171,31 @@ const char* AnalogControl::debugString() const
 
 void AnalogControl::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:AnalogControl", &AnalogControl_factory);
+	factory_map.emplace("AnalogControl", &AnalogControl_factory);
 }
 
 void AnalogControl::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:AnalogControl.maxValue", &assign_AnalogControl_maxValue);
-	assign_map.emplace("cim:AnalogControl.minValue", &assign_AnalogControl_minValue);
+	assign_map.emplace("AnalogControl.maxValue", &assign_AnalogControl_maxValue);
+	assign_map.emplace("AnalogControl.minValue", &assign_AnalogControl_minValue);
 }
 
 void AnalogControl::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:AnalogControl.AnalogValue", &assign_AnalogControl_AnalogValue);
+	assign_map.emplace("AnalogControl.AnalogValue", &assign_AnalogControl_AnalogValue);
 }
 
 void AnalogControl::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	Control::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:AnalogControl.maxValue", &get_AnalogControl_maxValue);
-	get_map.emplace("cim:AnalogControl.minValue", &get_AnalogControl_minValue);
+	get_map.emplace("AnalogControl.maxValue", &get_AnalogControl_maxValue);
+	get_map.emplace("AnalogControl.minValue", &get_AnalogControl_minValue);
 }
 
 void AnalogControl::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	Control::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:AnalogControl.AnalogValue", &get_AnalogControl_AnalogValue);
+	get_map.emplace("AnalogControl.AnalogValue", &get_AnalogControl_AnalogValue);
 }
 
 void AnalogControl::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -171,9 +203,23 @@ void AnalogControl::addEnumGetFnsToMap(std::map<std::string, get_function>& get_
 	Control::addEnumGetFnsToMap(get_map);
 }
 
+bool AnalogControl::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "AnalogControl" &&
+		dynamic_cast<AnalogControl*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner AnalogControl::declare()
 {
 	return BaseClassDefiner(AnalogControl::addConstructToMap, AnalogControl::addPrimitiveAssignFnsToMap, AnalogControl::addClassAssignFnsToMap, AnalogControl::debugName);
+}
+
+std::map<std::string, AttrDetails> AnalogControl::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = Control::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

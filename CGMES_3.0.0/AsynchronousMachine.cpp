@@ -12,45 +12,77 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		AsynchronousMachine(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+			CGMESProfile::EQ,
+			CGMESProfile::SC,
+			CGMESProfile::SSH,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "AsynchronousMachine.AsynchronousMachineDynamics", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "AsynchronousMachine.asynchronousMachineType", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SSH, } } },
+		{ "AsynchronousMachine.converterFedDrive", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "AsynchronousMachine.efficiency", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "AsynchronousMachine.iaIrRatio", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "AsynchronousMachine.nominalFrequency", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "AsynchronousMachine.nominalSpeed", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::EQ, } } },
+		{ "AsynchronousMachine.polePairNumber", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "AsynchronousMachine.ratedMechanicalPower", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "AsynchronousMachine.reversible", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+		{ "AsynchronousMachine.rxLockedRotorRatio", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SC, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 AsynchronousMachine::AsynchronousMachine() : AsynchronousMachineDynamics(nullptr) {}
 AsynchronousMachine::~AsynchronousMachine() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& AsynchronousMachine::getAttributeNames() const
 {
-	CGMESProfile::DY,
-	CGMESProfile::EQ,
-	CGMESProfile::SC,
-	CGMESProfile::SSH,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:AsynchronousMachine.AsynchronousMachineDynamics", { CGMESProfile::DY, } },
-	{ "cim:AsynchronousMachine.asynchronousMachineType", { CGMESProfile::SSH, } },
-	{ "cim:AsynchronousMachine.converterFedDrive", { CGMESProfile::SC, } },
-	{ "cim:AsynchronousMachine.efficiency", { CGMESProfile::SC, } },
-	{ "cim:AsynchronousMachine.iaIrRatio", { CGMESProfile::SC, } },
-	{ "cim:AsynchronousMachine.nominalFrequency", { CGMESProfile::EQ, } },
-	{ "cim:AsynchronousMachine.nominalSpeed", { CGMESProfile::EQ, } },
-	{ "cim:AsynchronousMachine.polePairNumber", { CGMESProfile::SC, } },
-	{ "cim:AsynchronousMachine.ratedMechanicalPower", { CGMESProfile::SC, } },
-	{ "cim:AsynchronousMachine.reversible", { CGMESProfile::SC, } },
-	{ "cim:AsynchronousMachine.rxLockedRotorRatio", { CGMESProfile::SC, } },
-};
-
-std::list<CGMESProfile>
-AsynchronousMachine::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-AsynchronousMachine::getPossibleProfilesForAttributes() const
+const std::string& AsynchronousMachine::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = RotatingMachine::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& AsynchronousMachine::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& AsynchronousMachine::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& AsynchronousMachine::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& AsynchronousMachine::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& AsynchronousMachine::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_AsynchronousMachineDynamics_AsynchronousMachine(BaseClass*, BaseClass*);
@@ -369,40 +401,40 @@ const char* AsynchronousMachine::debugString() const
 
 void AsynchronousMachine::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:AsynchronousMachine", &AsynchronousMachine_factory);
+	factory_map.emplace("AsynchronousMachine", &AsynchronousMachine_factory);
 }
 
 void AsynchronousMachine::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:AsynchronousMachine.asynchronousMachineType", &assign_AsynchronousMachine_asynchronousMachineType);
-	assign_map.emplace("cim:AsynchronousMachine.converterFedDrive", &assign_AsynchronousMachine_converterFedDrive);
-	assign_map.emplace("cim:AsynchronousMachine.efficiency", &assign_AsynchronousMachine_efficiency);
-	assign_map.emplace("cim:AsynchronousMachine.iaIrRatio", &assign_AsynchronousMachine_iaIrRatio);
-	assign_map.emplace("cim:AsynchronousMachine.nominalFrequency", &assign_AsynchronousMachine_nominalFrequency);
-	assign_map.emplace("cim:AsynchronousMachine.nominalSpeed", &assign_AsynchronousMachine_nominalSpeed);
-	assign_map.emplace("cim:AsynchronousMachine.polePairNumber", &assign_AsynchronousMachine_polePairNumber);
-	assign_map.emplace("cim:AsynchronousMachine.ratedMechanicalPower", &assign_AsynchronousMachine_ratedMechanicalPower);
-	assign_map.emplace("cim:AsynchronousMachine.reversible", &assign_AsynchronousMachine_reversible);
-	assign_map.emplace("cim:AsynchronousMachine.rxLockedRotorRatio", &assign_AsynchronousMachine_rxLockedRotorRatio);
+	assign_map.emplace("AsynchronousMachine.asynchronousMachineType", &assign_AsynchronousMachine_asynchronousMachineType);
+	assign_map.emplace("AsynchronousMachine.converterFedDrive", &assign_AsynchronousMachine_converterFedDrive);
+	assign_map.emplace("AsynchronousMachine.efficiency", &assign_AsynchronousMachine_efficiency);
+	assign_map.emplace("AsynchronousMachine.iaIrRatio", &assign_AsynchronousMachine_iaIrRatio);
+	assign_map.emplace("AsynchronousMachine.nominalFrequency", &assign_AsynchronousMachine_nominalFrequency);
+	assign_map.emplace("AsynchronousMachine.nominalSpeed", &assign_AsynchronousMachine_nominalSpeed);
+	assign_map.emplace("AsynchronousMachine.polePairNumber", &assign_AsynchronousMachine_polePairNumber);
+	assign_map.emplace("AsynchronousMachine.ratedMechanicalPower", &assign_AsynchronousMachine_ratedMechanicalPower);
+	assign_map.emplace("AsynchronousMachine.reversible", &assign_AsynchronousMachine_reversible);
+	assign_map.emplace("AsynchronousMachine.rxLockedRotorRatio", &assign_AsynchronousMachine_rxLockedRotorRatio);
 }
 
 void AsynchronousMachine::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:AsynchronousMachine.AsynchronousMachineDynamics", &assign_AsynchronousMachine_AsynchronousMachineDynamics);
+	assign_map.emplace("AsynchronousMachine.AsynchronousMachineDynamics", &assign_AsynchronousMachine_AsynchronousMachineDynamics);
 }
 
 void AsynchronousMachine::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	RotatingMachine::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:AsynchronousMachine.converterFedDrive", &get_AsynchronousMachine_converterFedDrive);
-	get_map.emplace("cim:AsynchronousMachine.efficiency", &get_AsynchronousMachine_efficiency);
-	get_map.emplace("cim:AsynchronousMachine.iaIrRatio", &get_AsynchronousMachine_iaIrRatio);
-	get_map.emplace("cim:AsynchronousMachine.nominalFrequency", &get_AsynchronousMachine_nominalFrequency);
-	get_map.emplace("cim:AsynchronousMachine.nominalSpeed", &get_AsynchronousMachine_nominalSpeed);
-	get_map.emplace("cim:AsynchronousMachine.polePairNumber", &get_AsynchronousMachine_polePairNumber);
-	get_map.emplace("cim:AsynchronousMachine.ratedMechanicalPower", &get_AsynchronousMachine_ratedMechanicalPower);
-	get_map.emplace("cim:AsynchronousMachine.reversible", &get_AsynchronousMachine_reversible);
-	get_map.emplace("cim:AsynchronousMachine.rxLockedRotorRatio", &get_AsynchronousMachine_rxLockedRotorRatio);
+	get_map.emplace("AsynchronousMachine.converterFedDrive", &get_AsynchronousMachine_converterFedDrive);
+	get_map.emplace("AsynchronousMachine.efficiency", &get_AsynchronousMachine_efficiency);
+	get_map.emplace("AsynchronousMachine.iaIrRatio", &get_AsynchronousMachine_iaIrRatio);
+	get_map.emplace("AsynchronousMachine.nominalFrequency", &get_AsynchronousMachine_nominalFrequency);
+	get_map.emplace("AsynchronousMachine.nominalSpeed", &get_AsynchronousMachine_nominalSpeed);
+	get_map.emplace("AsynchronousMachine.polePairNumber", &get_AsynchronousMachine_polePairNumber);
+	get_map.emplace("AsynchronousMachine.ratedMechanicalPower", &get_AsynchronousMachine_ratedMechanicalPower);
+	get_map.emplace("AsynchronousMachine.reversible", &get_AsynchronousMachine_reversible);
+	get_map.emplace("AsynchronousMachine.rxLockedRotorRatio", &get_AsynchronousMachine_rxLockedRotorRatio);
 }
 
 void AsynchronousMachine::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -413,12 +445,26 @@ void AsynchronousMachine::addClassGetFnsToMap(std::map<std::string, class_get_fu
 void AsynchronousMachine::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	RotatingMachine::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:AsynchronousMachine.asynchronousMachineType", &get_AsynchronousMachine_asynchronousMachineType);
+	get_map.emplace("AsynchronousMachine.asynchronousMachineType", &get_AsynchronousMachine_asynchronousMachineType);
+}
+
+bool AsynchronousMachine::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "AsynchronousMachine" &&
+		dynamic_cast<AsynchronousMachine*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner AsynchronousMachine::declare()
 {
 	return BaseClassDefiner(AsynchronousMachine::addConstructToMap, AsynchronousMachine::addPrimitiveAssignFnsToMap, AsynchronousMachine::addClassAssignFnsToMap, AsynchronousMachine::debugName);
+}
+
+std::map<std::string, AttrDetails> AsynchronousMachine::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = RotatingMachine::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

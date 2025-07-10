@@ -12,33 +12,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		SvTapStep(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::SV,
+		},
+		CGMESProfile::SV
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "SvTapStep.TapChanger", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SV, } } },
+		{ "SvTapStep.position", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::SV, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 SvTapStep::SvTapStep() : TapChanger(nullptr) {}
 SvTapStep::~SvTapStep() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& SvTapStep::getAttributeNames() const
 {
-	CGMESProfile::SV,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:SvTapStep.TapChanger", { CGMESProfile::SV, } },
-	{ "cim:SvTapStep.position", { CGMESProfile::SV, } },
-};
-
-std::list<CGMESProfile>
-SvTapStep::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-SvTapStep::getPossibleProfilesForAttributes() const
+const std::string& SvTapStep::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = BaseClass::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& SvTapStep::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& SvTapStep::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& SvTapStep::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& SvTapStep::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& SvTapStep::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_TapChanger_SvTapStep(BaseClass*, BaseClass*);
@@ -109,29 +141,29 @@ const char* SvTapStep::debugString() const
 
 void SvTapStep::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:SvTapStep", &SvTapStep_factory);
+	factory_map.emplace("SvTapStep", &SvTapStep_factory);
 }
 
 void SvTapStep::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:SvTapStep.position", &assign_SvTapStep_position);
+	assign_map.emplace("SvTapStep.position", &assign_SvTapStep_position);
 }
 
 void SvTapStep::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:SvTapStep.TapChanger", &assign_SvTapStep_TapChanger);
+	assign_map.emplace("SvTapStep.TapChanger", &assign_SvTapStep_TapChanger);
 }
 
 void SvTapStep::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	BaseClass::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:SvTapStep.position", &get_SvTapStep_position);
+	get_map.emplace("SvTapStep.position", &get_SvTapStep_position);
 }
 
 void SvTapStep::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	BaseClass::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:SvTapStep.TapChanger", &get_SvTapStep_TapChanger);
+	get_map.emplace("SvTapStep.TapChanger", &get_SvTapStep_TapChanger);
 }
 
 void SvTapStep::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -139,9 +171,23 @@ void SvTapStep::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map)
 	BaseClass::addEnumGetFnsToMap(get_map);
 }
 
+bool SvTapStep::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "SvTapStep" &&
+		dynamic_cast<SvTapStep*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner SvTapStep::declare()
 {
 	return BaseClassDefiner(SvTapStep::addConstructToMap, SvTapStep::addPrimitiveAssignFnsToMap, SvTapStep::addClassAssignFnsToMap, SvTapStep::debugName);
+}
+
+std::map<std::string, AttrDetails> SvTapStep::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = BaseClass::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

@@ -13,35 +13,67 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		Command(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::OP,
+		},
+		CGMESProfile::OP
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "Command.DiscreteValue", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::OP, } } },
+		{ "Command.ValueAliasSet", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::OP, } } },
+		{ "Command.normalValue", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::OP, } } },
+		{ "Command.value", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::OP, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 Command::Command() : DiscreteValue(nullptr), ValueAliasSet(nullptr) {}
 Command::~Command() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& Command::getAttributeNames() const
 {
-	CGMESProfile::OP,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:Command.DiscreteValue", { CGMESProfile::OP, } },
-	{ "cim:Command.ValueAliasSet", { CGMESProfile::OP, } },
-	{ "cim:Command.normalValue", { CGMESProfile::OP, } },
-	{ "cim:Command.value", { CGMESProfile::OP, } },
-};
-
-std::list<CGMESProfile>
-Command::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-Command::getPossibleProfilesForAttributes() const
+const std::string& Command::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = Control::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& Command::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& Command::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& Command::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& Command::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& Command::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_DiscreteValue_Command(BaseClass*, BaseClass*);
@@ -172,33 +204,33 @@ const char* Command::debugString() const
 
 void Command::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:Command", &Command_factory);
+	factory_map.emplace("Command", &Command_factory);
 }
 
 void Command::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:Command.normalValue", &assign_Command_normalValue);
-	assign_map.emplace("cim:Command.value", &assign_Command_value);
+	assign_map.emplace("Command.normalValue", &assign_Command_normalValue);
+	assign_map.emplace("Command.value", &assign_Command_value);
 }
 
 void Command::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:Command.DiscreteValue", &assign_Command_DiscreteValue);
-	assign_map.emplace("cim:Command.ValueAliasSet", &assign_Command_ValueAliasSet);
+	assign_map.emplace("Command.DiscreteValue", &assign_Command_DiscreteValue);
+	assign_map.emplace("Command.ValueAliasSet", &assign_Command_ValueAliasSet);
 }
 
 void Command::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	Control::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:Command.normalValue", &get_Command_normalValue);
-	get_map.emplace("cim:Command.value", &get_Command_value);
+	get_map.emplace("Command.normalValue", &get_Command_normalValue);
+	get_map.emplace("Command.value", &get_Command_value);
 }
 
 void Command::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	Control::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:Command.DiscreteValue", &get_Command_DiscreteValue);
-	get_map.emplace("cim:Command.ValueAliasSet", &get_Command_ValueAliasSet);
+	get_map.emplace("Command.DiscreteValue", &get_Command_DiscreteValue);
+	get_map.emplace("Command.ValueAliasSet", &get_Command_ValueAliasSet);
 }
 
 void Command::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -206,9 +238,23 @@ void Command::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) c
 	Control::addEnumGetFnsToMap(get_map);
 }
 
+bool Command::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "Command" &&
+		dynamic_cast<Command*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner Command::declare()
 {
 	return BaseClassDefiner(Command::addConstructToMap, Command::addPrimitiveAssignFnsToMap, Command::addClassAssignFnsToMap, Command::debugName);
+}
+
+std::map<std::string, AttrDetails> Command::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = Control::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

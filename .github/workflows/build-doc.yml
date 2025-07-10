@@ -18,6 +18,9 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
+    - name: Install Boost
+      shell: bash
+      run: sudo apt-get install libboost-filesystem-dev libboost-system-dev libboost-test-dev
     - name: Install Doxygen
       shell: bash
       run: sudo apt-get install doxygen
@@ -26,18 +29,18 @@ jobs:
       run: sudo apt-get install graphviz
     - name: Create Build Environment
       shell: bash
-      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build/${{matrix.schema}}
+      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build_${{matrix.schema}}
     - name: Configure CMake and compile
       shell: bash
-      working-directory: ${{runner.workspace}}/libcimpp/build/${{matrix.schema}}/
+      working-directory: ${{runner.workspace}}/libcimpp/build_${{matrix.schema}}/
       run: |
-          cmake ../.. -DUSE_CIM_VERSION=${{matrix.schema}}
+          cmake .. -DUSE_CIM_VERSION=${{matrix.schema}}
           make -j4 doc
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
         name: doc_${{matrix.schema}}
-        path: ${{runner.workspace}}/libcimpp/build/${{matrix.schema}}/doc/html
+        path: ${{runner.workspace}}/libcimpp/build_${{matrix.schema}}/doc/html
 
   build-gh-pages-artifact:
     name: Build and Upload Artifact github-pages

@@ -12,55 +12,87 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		WindContQIEC(),
+		"http://iec.ch/TC57/CIM100#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "WindContQIEC.WindTurbineType3or4IEC", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindContQIEC.iqh1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindContQIEC.iqmax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindContQIEC.iqmin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindContQIEC.iqpost", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindContQIEC.kiq", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindContQIEC.kiu", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindContQIEC.kpq", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindContQIEC.kpu", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindContQIEC.kqv", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindContQIEC.rdroop", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindContQIEC.tpfiltq", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindContQIEC.tpost", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindContQIEC.tqord", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindContQIEC.tufiltq", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindContQIEC.udb1", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindContQIEC.udb2", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindContQIEC.umax", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindContQIEC.umin", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindContQIEC.uqdip", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindContQIEC.uref0", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindContQIEC.windQcontrolModesType", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindContQIEC.windUVRTQcontrolModesType", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+		{ "WindContQIEC.xdroop", { "http://iec.ch/TC57/CIM100#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 WindContQIEC::WindContQIEC() : WindTurbineType3or4IEC(nullptr) {}
 WindContQIEC::~WindContQIEC() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& WindContQIEC::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:WindContQIEC.WindTurbineType3or4IEC", { CGMESProfile::DY, } },
-	{ "cim:WindContQIEC.iqh1", { CGMESProfile::DY, } },
-	{ "cim:WindContQIEC.iqmax", { CGMESProfile::DY, } },
-	{ "cim:WindContQIEC.iqmin", { CGMESProfile::DY, } },
-	{ "cim:WindContQIEC.iqpost", { CGMESProfile::DY, } },
-	{ "cim:WindContQIEC.kiq", { CGMESProfile::DY, } },
-	{ "cim:WindContQIEC.kiu", { CGMESProfile::DY, } },
-	{ "cim:WindContQIEC.kpq", { CGMESProfile::DY, } },
-	{ "cim:WindContQIEC.kpu", { CGMESProfile::DY, } },
-	{ "cim:WindContQIEC.kqv", { CGMESProfile::DY, } },
-	{ "cim:WindContQIEC.rdroop", { CGMESProfile::DY, } },
-	{ "cim:WindContQIEC.tpfiltq", { CGMESProfile::DY, } },
-	{ "cim:WindContQIEC.tpost", { CGMESProfile::DY, } },
-	{ "cim:WindContQIEC.tqord", { CGMESProfile::DY, } },
-	{ "cim:WindContQIEC.tufiltq", { CGMESProfile::DY, } },
-	{ "cim:WindContQIEC.udb1", { CGMESProfile::DY, } },
-	{ "cim:WindContQIEC.udb2", { CGMESProfile::DY, } },
-	{ "cim:WindContQIEC.umax", { CGMESProfile::DY, } },
-	{ "cim:WindContQIEC.umin", { CGMESProfile::DY, } },
-	{ "cim:WindContQIEC.uqdip", { CGMESProfile::DY, } },
-	{ "cim:WindContQIEC.uref0", { CGMESProfile::DY, } },
-	{ "cim:WindContQIEC.windQcontrolModesType", { CGMESProfile::DY, } },
-	{ "cim:WindContQIEC.windUVRTQcontrolModesType", { CGMESProfile::DY, } },
-	{ "cim:WindContQIEC.xdroop", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-WindContQIEC::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-WindContQIEC::getPossibleProfilesForAttributes() const
+const std::string& WindContQIEC::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = IdentifiedObject::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& WindContQIEC::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& WindContQIEC::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& WindContQIEC::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& WindContQIEC::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& WindContQIEC::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_WindTurbineType3or4IEC_WIndContQIEC(BaseClass*, BaseClass*);
@@ -756,65 +788,65 @@ const char* WindContQIEC::debugString() const
 
 void WindContQIEC::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:WindContQIEC", &WindContQIEC_factory);
+	factory_map.emplace("WindContQIEC", &WindContQIEC_factory);
 }
 
 void WindContQIEC::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindContQIEC.iqh1", &assign_WindContQIEC_iqh1);
-	assign_map.emplace("cim:WindContQIEC.iqmax", &assign_WindContQIEC_iqmax);
-	assign_map.emplace("cim:WindContQIEC.iqmin", &assign_WindContQIEC_iqmin);
-	assign_map.emplace("cim:WindContQIEC.iqpost", &assign_WindContQIEC_iqpost);
-	assign_map.emplace("cim:WindContQIEC.kiq", &assign_WindContQIEC_kiq);
-	assign_map.emplace("cim:WindContQIEC.kiu", &assign_WindContQIEC_kiu);
-	assign_map.emplace("cim:WindContQIEC.kpq", &assign_WindContQIEC_kpq);
-	assign_map.emplace("cim:WindContQIEC.kpu", &assign_WindContQIEC_kpu);
-	assign_map.emplace("cim:WindContQIEC.kqv", &assign_WindContQIEC_kqv);
-	assign_map.emplace("cim:WindContQIEC.rdroop", &assign_WindContQIEC_rdroop);
-	assign_map.emplace("cim:WindContQIEC.tpfiltq", &assign_WindContQIEC_tpfiltq);
-	assign_map.emplace("cim:WindContQIEC.tpost", &assign_WindContQIEC_tpost);
-	assign_map.emplace("cim:WindContQIEC.tqord", &assign_WindContQIEC_tqord);
-	assign_map.emplace("cim:WindContQIEC.tufiltq", &assign_WindContQIEC_tufiltq);
-	assign_map.emplace("cim:WindContQIEC.udb1", &assign_WindContQIEC_udb1);
-	assign_map.emplace("cim:WindContQIEC.udb2", &assign_WindContQIEC_udb2);
-	assign_map.emplace("cim:WindContQIEC.umax", &assign_WindContQIEC_umax);
-	assign_map.emplace("cim:WindContQIEC.umin", &assign_WindContQIEC_umin);
-	assign_map.emplace("cim:WindContQIEC.uqdip", &assign_WindContQIEC_uqdip);
-	assign_map.emplace("cim:WindContQIEC.uref0", &assign_WindContQIEC_uref0);
-	assign_map.emplace("cim:WindContQIEC.windQcontrolModesType", &assign_WindContQIEC_windQcontrolModesType);
-	assign_map.emplace("cim:WindContQIEC.windUVRTQcontrolModesType", &assign_WindContQIEC_windUVRTQcontrolModesType);
-	assign_map.emplace("cim:WindContQIEC.xdroop", &assign_WindContQIEC_xdroop);
+	assign_map.emplace("WindContQIEC.iqh1", &assign_WindContQIEC_iqh1);
+	assign_map.emplace("WindContQIEC.iqmax", &assign_WindContQIEC_iqmax);
+	assign_map.emplace("WindContQIEC.iqmin", &assign_WindContQIEC_iqmin);
+	assign_map.emplace("WindContQIEC.iqpost", &assign_WindContQIEC_iqpost);
+	assign_map.emplace("WindContQIEC.kiq", &assign_WindContQIEC_kiq);
+	assign_map.emplace("WindContQIEC.kiu", &assign_WindContQIEC_kiu);
+	assign_map.emplace("WindContQIEC.kpq", &assign_WindContQIEC_kpq);
+	assign_map.emplace("WindContQIEC.kpu", &assign_WindContQIEC_kpu);
+	assign_map.emplace("WindContQIEC.kqv", &assign_WindContQIEC_kqv);
+	assign_map.emplace("WindContQIEC.rdroop", &assign_WindContQIEC_rdroop);
+	assign_map.emplace("WindContQIEC.tpfiltq", &assign_WindContQIEC_tpfiltq);
+	assign_map.emplace("WindContQIEC.tpost", &assign_WindContQIEC_tpost);
+	assign_map.emplace("WindContQIEC.tqord", &assign_WindContQIEC_tqord);
+	assign_map.emplace("WindContQIEC.tufiltq", &assign_WindContQIEC_tufiltq);
+	assign_map.emplace("WindContQIEC.udb1", &assign_WindContQIEC_udb1);
+	assign_map.emplace("WindContQIEC.udb2", &assign_WindContQIEC_udb2);
+	assign_map.emplace("WindContQIEC.umax", &assign_WindContQIEC_umax);
+	assign_map.emplace("WindContQIEC.umin", &assign_WindContQIEC_umin);
+	assign_map.emplace("WindContQIEC.uqdip", &assign_WindContQIEC_uqdip);
+	assign_map.emplace("WindContQIEC.uref0", &assign_WindContQIEC_uref0);
+	assign_map.emplace("WindContQIEC.windQcontrolModesType", &assign_WindContQIEC_windQcontrolModesType);
+	assign_map.emplace("WindContQIEC.windUVRTQcontrolModesType", &assign_WindContQIEC_windUVRTQcontrolModesType);
+	assign_map.emplace("WindContQIEC.xdroop", &assign_WindContQIEC_xdroop);
 }
 
 void WindContQIEC::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:WindContQIEC.WindTurbineType3or4IEC", &assign_WindContQIEC_WindTurbineType3or4IEC);
+	assign_map.emplace("WindContQIEC.WindTurbineType3or4IEC", &assign_WindContQIEC_WindTurbineType3or4IEC);
 }
 
 void WindContQIEC::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addPrimitiveGetFnsToMap(get_map);
-	get_map.emplace("cim:WindContQIEC.iqh1", &get_WindContQIEC_iqh1);
-	get_map.emplace("cim:WindContQIEC.iqmax", &get_WindContQIEC_iqmax);
-	get_map.emplace("cim:WindContQIEC.iqmin", &get_WindContQIEC_iqmin);
-	get_map.emplace("cim:WindContQIEC.iqpost", &get_WindContQIEC_iqpost);
-	get_map.emplace("cim:WindContQIEC.kiq", &get_WindContQIEC_kiq);
-	get_map.emplace("cim:WindContQIEC.kiu", &get_WindContQIEC_kiu);
-	get_map.emplace("cim:WindContQIEC.kpq", &get_WindContQIEC_kpq);
-	get_map.emplace("cim:WindContQIEC.kpu", &get_WindContQIEC_kpu);
-	get_map.emplace("cim:WindContQIEC.kqv", &get_WindContQIEC_kqv);
-	get_map.emplace("cim:WindContQIEC.rdroop", &get_WindContQIEC_rdroop);
-	get_map.emplace("cim:WindContQIEC.tpfiltq", &get_WindContQIEC_tpfiltq);
-	get_map.emplace("cim:WindContQIEC.tpost", &get_WindContQIEC_tpost);
-	get_map.emplace("cim:WindContQIEC.tqord", &get_WindContQIEC_tqord);
-	get_map.emplace("cim:WindContQIEC.tufiltq", &get_WindContQIEC_tufiltq);
-	get_map.emplace("cim:WindContQIEC.udb1", &get_WindContQIEC_udb1);
-	get_map.emplace("cim:WindContQIEC.udb2", &get_WindContQIEC_udb2);
-	get_map.emplace("cim:WindContQIEC.umax", &get_WindContQIEC_umax);
-	get_map.emplace("cim:WindContQIEC.umin", &get_WindContQIEC_umin);
-	get_map.emplace("cim:WindContQIEC.uqdip", &get_WindContQIEC_uqdip);
-	get_map.emplace("cim:WindContQIEC.uref0", &get_WindContQIEC_uref0);
-	get_map.emplace("cim:WindContQIEC.xdroop", &get_WindContQIEC_xdroop);
+	get_map.emplace("WindContQIEC.iqh1", &get_WindContQIEC_iqh1);
+	get_map.emplace("WindContQIEC.iqmax", &get_WindContQIEC_iqmax);
+	get_map.emplace("WindContQIEC.iqmin", &get_WindContQIEC_iqmin);
+	get_map.emplace("WindContQIEC.iqpost", &get_WindContQIEC_iqpost);
+	get_map.emplace("WindContQIEC.kiq", &get_WindContQIEC_kiq);
+	get_map.emplace("WindContQIEC.kiu", &get_WindContQIEC_kiu);
+	get_map.emplace("WindContQIEC.kpq", &get_WindContQIEC_kpq);
+	get_map.emplace("WindContQIEC.kpu", &get_WindContQIEC_kpu);
+	get_map.emplace("WindContQIEC.kqv", &get_WindContQIEC_kqv);
+	get_map.emplace("WindContQIEC.rdroop", &get_WindContQIEC_rdroop);
+	get_map.emplace("WindContQIEC.tpfiltq", &get_WindContQIEC_tpfiltq);
+	get_map.emplace("WindContQIEC.tpost", &get_WindContQIEC_tpost);
+	get_map.emplace("WindContQIEC.tqord", &get_WindContQIEC_tqord);
+	get_map.emplace("WindContQIEC.tufiltq", &get_WindContQIEC_tufiltq);
+	get_map.emplace("WindContQIEC.udb1", &get_WindContQIEC_udb1);
+	get_map.emplace("WindContQIEC.udb2", &get_WindContQIEC_udb2);
+	get_map.emplace("WindContQIEC.umax", &get_WindContQIEC_umax);
+	get_map.emplace("WindContQIEC.umin", &get_WindContQIEC_umin);
+	get_map.emplace("WindContQIEC.uqdip", &get_WindContQIEC_uqdip);
+	get_map.emplace("WindContQIEC.uref0", &get_WindContQIEC_uref0);
+	get_map.emplace("WindContQIEC.xdroop", &get_WindContQIEC_xdroop);
 }
 
 void WindContQIEC::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
@@ -825,13 +857,27 @@ void WindContQIEC::addClassGetFnsToMap(std::map<std::string, class_get_function>
 void WindContQIEC::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
 {
 	IdentifiedObject::addEnumGetFnsToMap(get_map);
-	get_map.emplace("cim:WindContQIEC.windQcontrolModesType", &get_WindContQIEC_windQcontrolModesType);
-	get_map.emplace("cim:WindContQIEC.windUVRTQcontrolModesType", &get_WindContQIEC_windUVRTQcontrolModesType);
+	get_map.emplace("WindContQIEC.windQcontrolModesType", &get_WindContQIEC_windQcontrolModesType);
+	get_map.emplace("WindContQIEC.windUVRTQcontrolModesType", &get_WindContQIEC_windUVRTQcontrolModesType);
+}
+
+bool WindContQIEC::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "WindContQIEC" &&
+		dynamic_cast<WindContQIEC*>(otherObject) != nullptr;
 }
 
 const BaseClassDefiner WindContQIEC::declare()
 {
 	return BaseClassDefiner(WindContQIEC::addConstructToMap, WindContQIEC::addPrimitiveAssignFnsToMap, WindContQIEC::addClassAssignFnsToMap, WindContQIEC::debugName);
+}
+
+std::map<std::string, AttrDetails> WindContQIEC::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = IdentifiedObject::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

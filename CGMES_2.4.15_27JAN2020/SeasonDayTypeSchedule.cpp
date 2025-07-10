@@ -13,33 +13,65 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		SeasonDayTypeSchedule(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::EQ,
+		},
+		CGMESProfile::EQ
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "SeasonDayTypeSchedule.DayType", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+		{ "SeasonDayTypeSchedule.Season", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::EQ, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 SeasonDayTypeSchedule::SeasonDayTypeSchedule() : DayType(nullptr), Season(nullptr) {}
 SeasonDayTypeSchedule::~SeasonDayTypeSchedule() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& SeasonDayTypeSchedule::getAttributeNames() const
 {
-	CGMESProfile::EQ,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:SeasonDayTypeSchedule.DayType", { CGMESProfile::EQ, } },
-	{ "cim:SeasonDayTypeSchedule.Season", { CGMESProfile::EQ, } },
-};
-
-std::list<CGMESProfile>
-SeasonDayTypeSchedule::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-SeasonDayTypeSchedule::getPossibleProfilesForAttributes() const
+const std::string& SeasonDayTypeSchedule::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = RegularIntervalSchedule::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& SeasonDayTypeSchedule::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& SeasonDayTypeSchedule::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& SeasonDayTypeSchedule::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& SeasonDayTypeSchedule::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& SeasonDayTypeSchedule::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_DayType_SeasonDayTypeSchedules(BaseClass*, BaseClass*);
@@ -112,7 +144,7 @@ const char* SeasonDayTypeSchedule::debugString() const
 
 void SeasonDayTypeSchedule::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:SeasonDayTypeSchedule", &SeasonDayTypeSchedule_factory);
+	factory_map.emplace("SeasonDayTypeSchedule", &SeasonDayTypeSchedule_factory);
 }
 
 void SeasonDayTypeSchedule::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -121,8 +153,8 @@ void SeasonDayTypeSchedule::addPrimitiveAssignFnsToMap(std::unordered_map<std::s
 
 void SeasonDayTypeSchedule::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:SeasonDayTypeSchedule.DayType", &assign_SeasonDayTypeSchedule_DayType);
-	assign_map.emplace("cim:SeasonDayTypeSchedule.Season", &assign_SeasonDayTypeSchedule_Season);
+	assign_map.emplace("SeasonDayTypeSchedule.DayType", &assign_SeasonDayTypeSchedule_DayType);
+	assign_map.emplace("SeasonDayTypeSchedule.Season", &assign_SeasonDayTypeSchedule_Season);
 }
 
 void SeasonDayTypeSchedule::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -133,8 +165,8 @@ void SeasonDayTypeSchedule::addPrimitiveGetFnsToMap(std::map<std::string, get_fu
 void SeasonDayTypeSchedule::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	RegularIntervalSchedule::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:SeasonDayTypeSchedule.DayType", &get_SeasonDayTypeSchedule_DayType);
-	get_map.emplace("cim:SeasonDayTypeSchedule.Season", &get_SeasonDayTypeSchedule_Season);
+	get_map.emplace("SeasonDayTypeSchedule.DayType", &get_SeasonDayTypeSchedule_DayType);
+	get_map.emplace("SeasonDayTypeSchedule.Season", &get_SeasonDayTypeSchedule_Season);
 }
 
 void SeasonDayTypeSchedule::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -142,9 +174,23 @@ void SeasonDayTypeSchedule::addEnumGetFnsToMap(std::map<std::string, get_functio
 	RegularIntervalSchedule::addEnumGetFnsToMap(get_map);
 }
 
+bool SeasonDayTypeSchedule::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "SeasonDayTypeSchedule" &&
+		dynamic_cast<SeasonDayTypeSchedule*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner SeasonDayTypeSchedule::declare()
 {
 	return BaseClassDefiner(SeasonDayTypeSchedule::addConstructToMap, SeasonDayTypeSchedule::addPrimitiveAssignFnsToMap, SeasonDayTypeSchedule::addClassAssignFnsToMap, SeasonDayTypeSchedule::debugName);
+}
+
+std::map<std::string, AttrDetails> SeasonDayTypeSchedule::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = RegularIntervalSchedule::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP

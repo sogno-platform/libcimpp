@@ -19,39 +19,71 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 
 using namespace CIMPP;
 
+static const CimClassDetails& getCimClassDetails()
+{
+	static const CimClassDetails ClassDetails = CimClassDetails(
+		ExcitationSystemDynamics(),
+		"http://iec.ch/TC57/2013/CIM-schema-cim16#",
+		{
+			CGMESProfile::DY,
+		},
+		CGMESProfile::DY
+	);
+	return ClassDetails;
+}
+
+static const std::map<std::string, AttrDetails>& getClassAttrDetailsMap()
+{
+	static const std::map<std::string, AttrDetails> ClassAttrDetailsMap =
+	{
+		{ "ExcitationSystemDynamics.DiscontinuousExcitationControlDynamics", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcitationSystemDynamics.OverexcitationLimiterDynamics", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcitationSystemDynamics.PFVArControllerType1Dynamics", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcitationSystemDynamics.PFVArControllerType2Dynamics", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcitationSystemDynamics.PowerSystemStabilizerDynamics", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcitationSystemDynamics.SynchronousMachineDynamics", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcitationSystemDynamics.UnderexcitationLimiterDynamics", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+		{ "ExcitationSystemDynamics.VoltageCompensatorDynamics", { "http://iec.ch/TC57/2013/CIM-schema-cim16#", { CGMESProfile::DY, } } },
+	};
+    return ClassAttrDetailsMap;
+}
+
 ExcitationSystemDynamics::ExcitationSystemDynamics() : DiscontinuousExcitationControlDynamics(nullptr), OverexcitationLimiterDynamics(nullptr), PFVArControllerType1Dynamics(nullptr), PFVArControllerType2Dynamics(nullptr), PowerSystemStabilizerDynamics(nullptr), SynchronousMachineDynamics(nullptr), UnderexcitationLimiterDynamics(nullptr), VoltageCompensatorDynamics(nullptr) {}
 ExcitationSystemDynamics::~ExcitationSystemDynamics() {}
 
-static const std::list<CGMESProfile> PossibleProfilesForClass =
+const std::list<std::string>& ExcitationSystemDynamics::getAttributeNames() const
 {
-	CGMESProfile::DY,
-};
-
-static const std::map<std::string, std::list<CGMESProfile>> PossibleProfilesForAttributes =
-{
-	{ "cim:ExcitationSystemDynamics.DiscontinuousExcitationControlDynamics", { CGMESProfile::DY, } },
-	{ "cim:ExcitationSystemDynamics.OverexcitationLimiterDynamics", { CGMESProfile::DY, } },
-	{ "cim:ExcitationSystemDynamics.PFVArControllerType1Dynamics", { CGMESProfile::DY, } },
-	{ "cim:ExcitationSystemDynamics.PFVArControllerType2Dynamics", { CGMESProfile::DY, } },
-	{ "cim:ExcitationSystemDynamics.PowerSystemStabilizerDynamics", { CGMESProfile::DY, } },
-	{ "cim:ExcitationSystemDynamics.SynchronousMachineDynamics", { CGMESProfile::DY, } },
-	{ "cim:ExcitationSystemDynamics.UnderexcitationLimiterDynamics", { CGMESProfile::DY, } },
-	{ "cim:ExcitationSystemDynamics.VoltageCompensatorDynamics", { CGMESProfile::DY, } },
-};
-
-std::list<CGMESProfile>
-ExcitationSystemDynamics::getPossibleProfilesForClass() const
-{
-	return PossibleProfilesForClass;
+	return getCimClassDetails().AttrNamesList;
 }
 
-std::map<std::string, std::list<CGMESProfile>>
-ExcitationSystemDynamics::getPossibleProfilesForAttributes() const
+const std::string& ExcitationSystemDynamics::getClassNamespaceUrl() const
 {
-	auto map = PossibleProfilesForAttributes;
-	auto&& parent_map = DynamicsFunctionBlock::getPossibleProfilesForAttributes();
-	map.insert(parent_map.begin(), parent_map.end());
-	return map;
+	return getCimClassDetails().ClassNamespace;
+}
+
+const std::string& ExcitationSystemDynamics::getAttributeNamespaceUrl(const std::string& attrName) const
+{
+	return getCimClassDetails().getAttributeNamespaceUrl(attrName);
+}
+
+const std::list<CGMESProfile>& ExcitationSystemDynamics::getPossibleProfiles() const
+{
+	return getCimClassDetails().PossibleProfiles;
+}
+
+const CGMESProfile& ExcitationSystemDynamics::getRecommendedProfile() const
+{
+	return getCimClassDetails().RecommendedProfile;
+}
+
+const std::list<CGMESProfile>& ExcitationSystemDynamics::getPossibleAttributeProfiles(const std::string& attrName) const
+{
+	return getCimClassDetails().getPossibleAttributeProfiles(attrName);
+}
+
+const std::list<CGMESProfile>& ExcitationSystemDynamics::getPossibleProfilesIncludingAttributes() const
+{
+	return getCimClassDetails().PossibleProfilesIncludingAttributes;
 }
 
 bool assign_DiscontinuousExcitationControlDynamics_ExcitationSystemDynamics(BaseClass*, BaseClass*);
@@ -219,7 +251,7 @@ const char* ExcitationSystemDynamics::debugString() const
 
 void ExcitationSystemDynamics::addConstructToMap(std::unordered_map<std::string, BaseClass* (*)()>& factory_map)
 {
-	factory_map.emplace("cim:ExcitationSystemDynamics", &ExcitationSystemDynamics_factory);
+	factory_map.emplace("ExcitationSystemDynamics", &ExcitationSystemDynamics_factory);
 }
 
 void ExcitationSystemDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std::string, assign_function>& assign_map)
@@ -228,14 +260,14 @@ void ExcitationSystemDynamics::addPrimitiveAssignFnsToMap(std::unordered_map<std
 
 void ExcitationSystemDynamics::addClassAssignFnsToMap(std::unordered_map<std::string, class_assign_function>& assign_map)
 {
-	assign_map.emplace("cim:ExcitationSystemDynamics.DiscontinuousExcitationControlDynamics", &assign_ExcitationSystemDynamics_DiscontinuousExcitationControlDynamics);
-	assign_map.emplace("cim:ExcitationSystemDynamics.OverexcitationLimiterDynamics", &assign_ExcitationSystemDynamics_OverexcitationLimiterDynamics);
-	assign_map.emplace("cim:ExcitationSystemDynamics.PFVArControllerType1Dynamics", &assign_ExcitationSystemDynamics_PFVArControllerType1Dynamics);
-	assign_map.emplace("cim:ExcitationSystemDynamics.PFVArControllerType2Dynamics", &assign_ExcitationSystemDynamics_PFVArControllerType2Dynamics);
-	assign_map.emplace("cim:ExcitationSystemDynamics.PowerSystemStabilizerDynamics", &assign_ExcitationSystemDynamics_PowerSystemStabilizerDynamics);
-	assign_map.emplace("cim:ExcitationSystemDynamics.SynchronousMachineDynamics", &assign_ExcitationSystemDynamics_SynchronousMachineDynamics);
-	assign_map.emplace("cim:ExcitationSystemDynamics.UnderexcitationLimiterDynamics", &assign_ExcitationSystemDynamics_UnderexcitationLimiterDynamics);
-	assign_map.emplace("cim:ExcitationSystemDynamics.VoltageCompensatorDynamics", &assign_ExcitationSystemDynamics_VoltageCompensatorDynamics);
+	assign_map.emplace("ExcitationSystemDynamics.DiscontinuousExcitationControlDynamics", &assign_ExcitationSystemDynamics_DiscontinuousExcitationControlDynamics);
+	assign_map.emplace("ExcitationSystemDynamics.OverexcitationLimiterDynamics", &assign_ExcitationSystemDynamics_OverexcitationLimiterDynamics);
+	assign_map.emplace("ExcitationSystemDynamics.PFVArControllerType1Dynamics", &assign_ExcitationSystemDynamics_PFVArControllerType1Dynamics);
+	assign_map.emplace("ExcitationSystemDynamics.PFVArControllerType2Dynamics", &assign_ExcitationSystemDynamics_PFVArControllerType2Dynamics);
+	assign_map.emplace("ExcitationSystemDynamics.PowerSystemStabilizerDynamics", &assign_ExcitationSystemDynamics_PowerSystemStabilizerDynamics);
+	assign_map.emplace("ExcitationSystemDynamics.SynchronousMachineDynamics", &assign_ExcitationSystemDynamics_SynchronousMachineDynamics);
+	assign_map.emplace("ExcitationSystemDynamics.UnderexcitationLimiterDynamics", &assign_ExcitationSystemDynamics_UnderexcitationLimiterDynamics);
+	assign_map.emplace("ExcitationSystemDynamics.VoltageCompensatorDynamics", &assign_ExcitationSystemDynamics_VoltageCompensatorDynamics);
 }
 
 void ExcitationSystemDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -246,7 +278,7 @@ void ExcitationSystemDynamics::addPrimitiveGetFnsToMap(std::map<std::string, get
 void ExcitationSystemDynamics::addClassGetFnsToMap(std::map<std::string, class_get_function>& get_map) const
 {
 	DynamicsFunctionBlock::addClassGetFnsToMap(get_map);
-	get_map.emplace("cim:ExcitationSystemDynamics.SynchronousMachineDynamics", &get_ExcitationSystemDynamics_SynchronousMachineDynamics);
+	get_map.emplace("ExcitationSystemDynamics.SynchronousMachineDynamics", &get_ExcitationSystemDynamics_SynchronousMachineDynamics);
 }
 
 void ExcitationSystemDynamics::addEnumGetFnsToMap(std::map<std::string, get_function>& get_map) const
@@ -254,9 +286,23 @@ void ExcitationSystemDynamics::addEnumGetFnsToMap(std::map<std::string, get_func
 	DynamicsFunctionBlock::addEnumGetFnsToMap(get_map);
 }
 
+bool ExcitationSystemDynamics::isAssignableFrom(BaseClass* otherObject) const
+{
+	return std::string(debugString()) == "ExcitationSystemDynamics" &&
+		dynamic_cast<ExcitationSystemDynamics*>(otherObject) != nullptr;
+}
+
 const BaseClassDefiner ExcitationSystemDynamics::declare()
 {
 	return BaseClassDefiner(ExcitationSystemDynamics::addConstructToMap, ExcitationSystemDynamics::addPrimitiveAssignFnsToMap, ExcitationSystemDynamics::addClassAssignFnsToMap, ExcitationSystemDynamics::debugName);
+}
+
+std::map<std::string, AttrDetails> ExcitationSystemDynamics::allAttrDetailsMap() const
+{
+	auto map = getClassAttrDetailsMap();
+	const auto& parent_map = DynamicsFunctionBlock::allAttrDetailsMap();
+	map.insert(parent_map.begin(), parent_map.end());
+	return map;
 }
 
 namespace CIMPP
