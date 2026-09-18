@@ -1,11 +1,11 @@
-name: Release packages
+name: Release Packages
 on:
   push:
     tags: ['release/v*']
 jobs:
   package:
     runs-on: ubuntu-latest
-    name: A job to build the packages
+    name: Build Packages
     strategy:
       matrix:
         schema:
@@ -14,24 +14,25 @@ jobs:
         - CGMES_2.4.15_27JAN2020
         - CGMES_3.0.0
     steps:
-    - name: Checkout
+    - name: Checkout Repository
       uses: actions/checkout@v7
-    - name: Build
+    - name: Build Packages
       uses: ./package/
       env:
         USE_CIM_VERSION: ${{matrix.schema}}
-    - name: UploadRPM
+    - name: Upload RPM Package
       uses: actions/upload-artifact@v7
       with:
         name: rpm_${{matrix.schema}}
         path: ${{ github.workspace }}/build/*.rpm
-    - name: UploadDEB
+    - name: Upload DEB Package
       uses: actions/upload-artifact@v7
       with:
         name: deb_${{matrix.schema}}
         path: ${{ github.workspace }}/build/*.deb
   release:
     needs: package
+    name: Release Packages
     runs-on: ubuntu-latest
     permissions:
       contents: write

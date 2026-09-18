@@ -1,13 +1,18 @@
 name: Documentation
+
 on:
   pull_request:
   push:
     branches: [master]
 
+env:
+  BUILD_TYPE: Release
+
 jobs:
   build-doc-artifacts:
     name: Build and Upload doc Artifacts
     runs-on: ubuntu-latest
+
     strategy:
       matrix:
         schema:
@@ -15,32 +20,29 @@ jobs:
         - CGMES_2.4.15_16FEB2016
         - CGMES_2.4.15_27JAN2020
         - CGMES_3.0.0
+
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v7
-    - name: Install Boost
-      shell: bash
-      run: sudo apt-get install libboost-filesystem-dev libboost-system-dev libboost-test-dev
-    - name: Install Doxygen
-      shell: bash
-      run: sudo apt-get install doxygen
-    - name: Install Graphviz
-      shell: bash
-      run: sudo apt-get install graphviz
-    - name: Create Build Environment
-      shell: bash
-      run: cmake -E make_directory ${{runner.workspace}}/libcimpp/build_${{matrix.schema}}
-    - name: Configure CMake and compile
-      shell: bash
-      working-directory: ${{runner.workspace}}/libcimpp/build_${{matrix.schema}}/
+
+    - name: Install Dependencies
       run: |
-          cmake .. -DUSE_CIM_VERSION=${{matrix.schema}}
-          make -j4 doc
+          sudo apt-get update
+          sudo apt-get install -y libboost-filesystem-dev libboost-system-dev libboost-test-dev doxygen graphviz
+
+    - name: Configure CMake
+      run: >
+          cmake -B ${{github.workspace}}/build_${{matrix.schema}} -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+          -DUSE_CIM_VERSION=${{matrix.schema}}
+
+    - name: Build doc
+      run: cmake --build ${{github.workspace}}/build_${{matrix.schema}} --parallel 4 --target doc
+
     - name: Upload Artifact
       uses: actions/upload-artifact@v7
       with:
         name: doc_${{matrix.schema}}
-        path: ${{runner.workspace}}/libcimpp/build_${{matrix.schema}}/doc/html
+        path: ${{github.workspace}}/build_${{matrix.schema}}/doc/html
 
   build-gh-pages-artifact:
     name: Build and Upload Artifact github-pages

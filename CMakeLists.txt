@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.12...3.28)
 
 project(libcimpp CXX)
 set(CMAKE_CXX_STANDARD 11)
@@ -37,6 +37,14 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/src/version.hpp.in ${CMAKE_CURRENT_SO
 option(BUILD_SHARED_LIBS "Build shared library" OFF)
 option(CIMPP_BUILD_EXAMPLES "Build examples" OFF)
 option(CIMPP_BUILD_DOC "Build documentation" ON)
+
+# Set a default build type if none was specified
+if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
+    message(STATUS "Setting build type to 'Release' as none was specified.")
+    set(CMAKE_BUILD_TYPE "Release" CACHE STRING "Choose the type of build." FORCE)
+    # Set the possible values for tools like cmake-gui
+    set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
+endif()
 
 if(CIMPP_BUILD_DOC)
   message(STATUS "Building doc")

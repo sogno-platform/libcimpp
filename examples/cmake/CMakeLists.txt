@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.12...3.28)
 project(example)
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/../../ ${CMAKE_CURRENT_BINARY_DIR}/libcimpp)
 add_executable(example ${CMAKE_CURRENT_LIST_DIR}/../src/main.cpp)

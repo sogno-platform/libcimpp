@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.12...3.28)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ".")
 set(PROJECT_TEST_NAME ${PROJECT_NAME}${USE_CIM_VERSION}_unit_tests)

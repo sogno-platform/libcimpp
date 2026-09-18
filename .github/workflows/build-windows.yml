@@ -1,0 +1,63 @@
+name: Build & Test on Windows
+
+on: [push, pull_request]
+
+env:
+  BUILD_TYPE: Release
+
+permissions:
+  checks: write
+  contents: read
+  issues: read
+  pull-requests: write
+
+jobs:
+  build-and-test:
+    name: Build & Test
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v7
+
+    # Cache the compiled vcpkg packages to drastically reduce build times on subsequent workflow runs
+    # Cache only the vcpkg binary cache directory (avoids absolute path issues)
+    - name: Cache vcpkg binaries
+      uses: actions/cache@v6
+      with:
+        path: ${{github.workspace}}/vcpkg_binary_cache
+        key: vcpkg-windows-${{ hashFiles('.github/workflows/build-windows.yml') }}
+        restore-keys: vcpkg-windows-
+
+    # Load the MSVC environment so that Ninja uses cl.exe (MSVC) instead of gcc (MinGW)
+    - name: Enable MSVC for Ninja
+      uses: TheMrMilchmann/setup-msvc-dev@v4
+      with:
+        arch: x64
+
+    - name: Install Dependencies
+      env:
+        VCPKG_BINARY_SOURCES: "clear;files,${{github.workspace}}/vcpkg_binary_cache,readwrite"
+      run: |
+        vcpkg install boost-test:x64-windows
+        vcpkg install boost-filesystem:x64-windows
+        vcpkg install boost-system:x64-windows
+        vcpkg install libxml2:x64-windows
+
+    - name: Configure CMake
+      run: >
+        cmake -B ${{github.workspace}}/build -G Ninja -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+        -DCMAKE_TOOLCHAIN_FILE="$env:VCPKG_INSTALLATION_ROOT/scripts/buildsystems/vcpkg.cmake"
+
+    - name: Build
+      run: cmake --build ${{github.workspace}}/build --parallel 4
+
+    - name: Test
+      working-directory: ${{github.workspace}}/build
+      run: ctest --output-on-failure --output-junit test-results.xml
+
+    - name: Publish Test Results
+      uses: EnricoMi/publish-unit-test-result-action/windows@v2
+      if: ${{ !cancelled() }}
+      with:
+        files: "${{github.workspace}}/build/test-results.xml"
