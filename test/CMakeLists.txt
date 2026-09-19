@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.12...3.28)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ".")
 set(PROJECT_TEST_NAME ${PROJECT_NAME}${USE_CIM_VERSION}_unit_tests)
 
-find_package(Boost COMPONENTS filesystem system unit_test_framework REQUIRED)
+find_package(Boost CONFIG COMPONENTS unit_test_framework REQUIRED)
 
 file(GLOB_RECURSE TEST_SRC_FILES *.cpp)
 

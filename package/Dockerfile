@@ -16,8 +16,6 @@ RUN DEBIAN_FRONTEND=noninteractive \
 			libxml2-dev \
 			make \
 			rpm \
-			libboost-filesystem-dev \
-			libboost-system-dev \
 			libboost-test-dev
 
 # Starts on github with workdir /github/workspace which is bind mount to libcimpp.
