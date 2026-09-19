@@ -40,8 +40,6 @@ jobs:
         VCPKG_BINARY_SOURCES: "clear;files,${{github.workspace}}/vcpkg_binary_cache,readwrite"
       run: |
         vcpkg install boost-test:x64-windows
-        vcpkg install boost-filesystem:x64-windows
-        vcpkg install boost-system:x64-windows
         vcpkg install libxml2:x64-windows
 
     - name: Configure CMake
