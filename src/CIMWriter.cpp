@@ -64,11 +64,13 @@ bool CIMWriter::writeCim(std::ostream& rdf, const std::vector<BaseClass*>& objLi
                          const std::map<std::string, CGMESProfile>& classProfileMap)
 {
   int objectsCount = 0;
-  static const auto& cimURL = NamespaceMap.at("cim");
-  static const auto& mdURL  = NamespaceMap.at("md");
+  static const std::string mdURL = []() {
+    auto it = NamespaceMap.find("md");
+    return (it != NamespaceMap.end()) ? it->second : std::string();
+  }();
 
   auto usedNamespaces = getUsedNamespaces(objList);
-  if (profile != UnknownProfile)
+  if (profile != UnknownProfile && !mdURL.empty())
   {
     usedNamespaces.emplace("md", mdURL);
   }
@@ -242,8 +244,16 @@ CGMESProfile CIMWriter::getAttributeProfile(const BaseClass* obj, const std::str
 
 std::map<std::string, std::string> CIMWriter::getUsedNamespaces(const std::vector<BaseClass*>& objList)
 {
+  static const std::string rdfURL = []() {
+    auto it = NamespaceMap.find("rdf");
+    return (it != NamespaceMap.end()) ? it->second : std::string();
+  }();
+
   std::set<std::string> urls;
-  urls.insert(NamespaceMap.at("rdf"));
+  if (!rdfURL.empty())
+  {
+    urls.insert(rdfURL);
+  }
 
   for (const BaseClass* obj : objList)
   {

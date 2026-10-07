@@ -2,16 +2,15 @@
 #define CIMCONTENTHANDLER_HPP
 
 #include <SAX/ContentHandler.hpp>
-#include <SAX/Locator.hpp>
 
 #include <deque>
 #include <stack>
+#include <string>
 #include <unordered_map>
 #include <vector>
 
 #include "BaseClass.hpp"
 #include "Task.hpp"
-#include "Folders.hpp"
 
 class CIMContentHandler : public Arabica::SAX::ContentHandler<std::string>
 {
@@ -51,6 +50,8 @@ private:
 	std::stack<std::string> tagStack;
 	std::deque<Task> taskQueue;
 	std::string value;
+	std::string RDF;
+	std::string MD;
 	BaseClass* retypeObject(BaseClass* oldObject_ptr, const std::string& className, const std::string& rdfid);
 };
 

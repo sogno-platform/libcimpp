@@ -6,14 +6,23 @@
 #include "CIMExceptions.hpp"
 #include "CIMFactory.hpp"
 #include "CimConstants.hpp"
+#include "IdentifiedObject.hpp"
+
 #include "assignments.hpp"
 #include "gettercache.hpp"
 
-static std::string RDF = NamespaceMap.at("rdf");
-static std::string MD  = NamespaceMap.at("md");
-
 CIMContentHandler::CIMContentHandler() : Objects(nullptr), RDFMap(nullptr)
 {
+	auto itRDF = NamespaceMap.find("rdf");
+	if (itRDF != NamespaceMap.end())
+	{
+		RDF = itRDF->second;
+	}
+	auto itMD = NamespaceMap.find("md");
+	if (itMD != NamespaceMap.end())
+	{
+		MD = itMD->second;
+	}
 }
 
 CIMContentHandler::~CIMContentHandler()
