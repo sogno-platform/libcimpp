@@ -88,6 +88,11 @@ install(DIRECTORY ${USE_CIM_VERSION} static src
         PATTERN "*.hpp"
 )
 
+install(FILES README.md package/copyright
+    DESTINATION ${CMAKE_INSTALL_DOCDIR}
+    COMPONENT runtime
+)
+
 # Settings for packaging
 include(CIMppPackaging)
 
