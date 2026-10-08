@@ -11,6 +11,8 @@ RUN apt-get update
 # Toolchain
 RUN DEBIAN_FRONTEND=noninteractive \
 	apt-get -y install \
+			file \
+			dpkg-dev \
 			cmake \
 			g++ \
 			libxml2-dev \
