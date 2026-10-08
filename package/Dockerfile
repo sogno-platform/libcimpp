@@ -1,10 +1,10 @@
-FROM ubuntu:latest
+FROM ubuntu:24.04
 
 LABEL \
-	org.label-schema.schema-version = "2.3.0" \
-	org.label-schema.name = "libcimpp" \
-	org.label-schema.license = "Apache-2.0" \
-	org.label-schema.vcs-url = "https://github.com/sogno-platform/libcimpp"
+	org.label-schema.schema-version="2.3.0" \
+	org.label-schema.name="libcimpp" \
+	org.label-schema.license="Apache-2.0" \
+	org.label-schema.vcs-url="https://github.com/sogno-platform/libcimpp"
 
 RUN apt-get update
 
