@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.12...3.28)
 
 project(libcimpp CXX)
 set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake/" "${CMAKE_CURRENT_SOURCE_DIR}/../../cmake")
 
 if(NOT USE_CIM_VERSION)
@@ -28,7 +29,7 @@ endif()
 
 set(libcimpp_MAJOR_VERSION 2)
 set(libcimpp_MINOR_VERSION 3)
-set(libcimpp_PATCH_VERSION 0)
+set(libcimpp_PATCH_VERSION 1)
 set(libcimpp_VERSION ${libcimpp_MAJOR_VERSION}.${libcimpp_MINOR_VERSION}.${libcimpp_PATCH_VERSION})
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/src/version.hpp.in ${CMAKE_CURRENT_SOURCE_DIR}/src/version.hpp)
@@ -70,7 +71,6 @@ target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURR
 target_link_libraries(${PROJECT_NAME} PUBLIC arabica)
 target_link_options(${PROJECT_NAME} PRIVATE -Wl,--no-warn-search-mismatch)
 target_link_options(arabica PRIVATE -Wl,--no-warn-search-mismatch)
-set_property(TARGET arabica PROPERTY POSITION_INDEPENDENT_CODE ON)
 
 include(GNUInstallDirs)
 
@@ -86,6 +86,11 @@ install(DIRECTORY ${USE_CIM_VERSION} static src
     FILES_MATCHING
         PATTERN "*.h"
         PATTERN "*.hpp"
+)
+
+install(FILES README.md package/copyright
+    DESTINATION ${CMAKE_INSTALL_DOCDIR}
+    COMPONENT runtime
 )
 
 # Settings for packaging
