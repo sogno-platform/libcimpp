@@ -11,11 +11,6 @@ set(ARABICA_MAJOR_VERSION 2024)
 set(ARABICA_MINOR_VERSION September)
 
 #
-# Build as shared library
-#
-option(BUILD_SHARED_LIBS "Build as shared libaries" OFF)
-
-#
 # Set the used xml backend
 # options: USE_MSXML, USE_EXPAT, USE_LIBXML2, USE_XERCES
 set(ARABICA_XML_BACKEND USE_LIBXML2)
@@ -122,7 +117,7 @@ set(SOURCE_FILES
 source_group("Source Files" FILES ${SOURCE_FILES})
 
 
-add_library (${LIB_NAME}
+add_library (${LIB_NAME} STATIC
   ${GENERATED_HEADER_FILES}
   ${PUBLIC_HEADER_FILES}
   ${SOURCE_FILES}
