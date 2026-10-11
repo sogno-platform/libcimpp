@@ -77,6 +77,26 @@ make -j 4
 
 The make example is currently not supported due to the lack of an install target for arabica.
 
+## Usage of the Debian package
+
+Installing the Debian package (e.g. the CGMES_3.0.0 version),
+applications like the example program could be compiled and run:
+
+```bash
+sudo dpkg --install libcimpp-cgmes-3.0.0-*-Linux.deb
+
+g++ examples/src/main.cpp \
+    -o example \
+    -std=c++11 \
+    -I/usr/include/cimpp/CGMES_3.0.0 \
+    -I/usr/include/cimpp/static \
+    -I/usr/include/cimpp/src \
+    -I/usr/include/cimpp/arabica \
+    -lcimppCGMES_3.0.0
+./example
+./example cim.xml
+```
+
 ## License
 
 This project is released under the terms of the [Apache License 2.0](./LICENSE).
