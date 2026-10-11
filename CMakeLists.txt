@@ -36,6 +36,7 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/src/version.hpp.in ${CMAKE_CURRENT_SO
 
 # Options
 option(CIMPP_BUILD_EXAMPLES "Build examples" OFF)
+option(CIMPP_LINK_EXAMPLES_STATICALLY "Link examples statically against static library" OFF)
 option(CIMPP_BUILD_DOC "Build documentation" ON)
 
 # Set a default build type if none was specified
@@ -113,8 +114,14 @@ if(CIMPP_BUILD_EXAMPLES)
   message(STATUS "Building examples")
   add_executable(example examples/src/main.cpp)
   add_executable(readwrite examples/src/readwrite.cpp)
-  target_link_libraries(example ${PROJECT_NAME})
-  target_link_libraries(readwrite ${PROJECT_NAME})
+  # Link statically or dynamically depending on CIMPP_LINK_EXAMPLES_STATICALLY
+  if(NOT CIMPP_LINK_EXAMPLES_STATICALLY)
+    target_link_libraries(example ${PROJECT_NAME})
+    target_link_libraries(readwrite ${PROJECT_NAME})
+  else()
+    target_link_libraries(example ${PROJECT_NAME}_static)
+    target_link_libraries(readwrite ${PROJECT_NAME}_static)
+  endif()
   target_compile_features(example PUBLIC cxx_range_for)
 endif()
 
