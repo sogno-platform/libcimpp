@@ -117,7 +117,7 @@ set(SOURCE_FILES
 source_group("Source Files" FILES ${SOURCE_FILES})
 
 
-add_library (${LIB_NAME} STATIC
+add_library (${LIB_NAME} OBJECT
   ${GENERATED_HEADER_FILES}
   ${PUBLIC_HEADER_FILES}
   ${SOURCE_FILES}
@@ -128,16 +128,7 @@ target_include_directories(${LIB_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_
 target_include_directories(${LIB_NAME} PUBLIC ${ADDITIONAL_INC} ${Boost_INCLUDE_DIRS})
 target_include_directories(${LIB_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/include>)
 # link backend
-target_link_libraries(${LIB_NAME} ${ADDITIONAL_LIB})
-
-#
-# Install library
-#
-install(TARGETS ${LIB_NAME}
-  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-  ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
-)
+target_link_libraries(${LIB_NAME} PUBLIC ${ADDITIONAL_LIB})
 
 install(DIRECTORY include/
   DESTINATION include/${PROJECT_NAME}

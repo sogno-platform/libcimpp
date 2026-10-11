@@ -35,7 +35,6 @@ set(${PROJECT_NAME}_VERSION ${${PROJECT_NAME}_MAJOR_VERSION}.${${PROJECT_NAME}_M
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/src/version.hpp.in ${CMAKE_CURRENT_SOURCE_DIR}/src/version.hpp)
 
 # Options
-option(BUILD_SHARED_LIBS "Build shared library" OFF)
 option(CIMPP_BUILD_EXAMPLES "Build examples" OFF)
 option(CIMPP_BUILD_DOC "Build documentation" ON)
 
@@ -63,18 +62,32 @@ add_subdirectory(arabica)
 file(GLOB_RECURSE SRC src/*.cpp)
 file(GLOB_RECURSE CIM_STATIC static/*.cpp)
 file(GLOB_RECURSE CIM_SRC ${USE_CIM_VERSION}/*.cpp)
-add_library(${PROJECT_NAME} ${SRC} ${CIM_STATIC} ${CIM_SRC})
+
+set(CIMPP_BUILD_INCLUDE_DIRS
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/${USE_CIM_VERSION}>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/static>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
+)
+
+# Object library: Compile all CIMpp source files once (-fPIC is globally active)
+add_library(${PROJECT_NAME}_obj OBJECT ${SRC} ${CIM_STATIC} ${CIM_SRC})
+target_include_directories(${PROJECT_NAME}_obj PUBLIC ${CIMPP_BUILD_INCLUDE_DIRS})
+target_link_libraries(${PROJECT_NAME}_obj PUBLIC arabica)
+
+# Dynamic/Shared library (.so): Inherits objects, includes, and dependencies from ${PROJECT_NAME}_obj and arabica
+add_library(${PROJECT_NAME} SHARED $<TARGET_OBJECTS:${PROJECT_NAME}_obj>)
 set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "cimpp${USE_CIM_VERSION}")
-target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/${USE_CIM_VERSION}>)
-target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/static>)
-target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>)
-target_link_libraries(${PROJECT_NAME} PUBLIC arabica)
+target_link_libraries(${PROJECT_NAME} PUBLIC ${PROJECT_NAME}_obj arabica)
 target_link_options(${PROJECT_NAME} PRIVATE -Wl,--no-warn-search-mismatch)
-target_link_options(arabica PRIVATE -Wl,--no-warn-search-mismatch)
+
+# Static library (.a): Inherits objects, includes, and dependencies from ${PROJECT_NAME}_obj and arabica
+add_library(${PROJECT_NAME}_static STATIC $<TARGET_OBJECTS:${PROJECT_NAME}_obj>)
+set_target_properties(${PROJECT_NAME}_static PROPERTIES OUTPUT_NAME "cimpp${USE_CIM_VERSION}")
+target_link_libraries(${PROJECT_NAME}_static PUBLIC ${PROJECT_NAME}_obj arabica)
 
 include(GNUInstallDirs)
 
-install(TARGETS ${PROJECT_NAME}
+install(TARGETS ${PROJECT_NAME} ${PROJECT_NAME}_static
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
