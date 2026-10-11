@@ -83,7 +83,11 @@ target_link_options(${PROJECT_NAME} PRIVATE -Wl,--no-warn-search-mismatch)
 
 # Static library (.a): Inherits objects, includes, and dependencies from ${PROJECT_NAME}_obj and arabica
 add_library(${PROJECT_NAME}_static STATIC $<TARGET_OBJECTS:${PROJECT_NAME}_obj>)
-set_target_properties(${PROJECT_NAME}_static PROPERTIES OUTPUT_NAME "cimpp${USE_CIM_VERSION}")
+if(WIN32)
+  set_target_properties(${PROJECT_NAME}_static PROPERTIES OUTPUT_NAME "cimpp${USE_CIM_VERSION}_static")
+else()
+  set_target_properties(${PROJECT_NAME}_static PROPERTIES OUTPUT_NAME "cimpp${USE_CIM_VERSION}")
+endif()
 target_link_libraries(${PROJECT_NAME}_static PUBLIC ${PROJECT_NAME}_obj arabica)
 
 include(GNUInstallDirs)
