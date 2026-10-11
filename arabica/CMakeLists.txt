@@ -131,12 +131,12 @@ target_include_directories(${LIB_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_
 target_link_libraries(${LIB_NAME} PUBLIC ${ADDITIONAL_LIB})
 
 install(DIRECTORY include/
-  DESTINATION include/${PROJECT_NAME}
+  DESTINATION include/cimpp/${PROJECT_NAME}
   FILES_MATCHING
     PATTERN *.hpp
     PATTERN *.h
 )
 
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/include/SAX/ArabicaConfig.hpp
-  DESTINATION include/${PROJECT_NAME}/SAX
+  DESTINATION include/cimpp/${PROJECT_NAME}/SAX
 )
