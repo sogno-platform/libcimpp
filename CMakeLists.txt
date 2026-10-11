@@ -102,13 +102,13 @@ install(DIRECTORY ${USE_CIM_VERSION} static src
         PATTERN "*.hpp"
 )
 
-install(FILES README.md package/copyright
-    DESTINATION ${CMAKE_INSTALL_DOCDIR}
-    COMPONENT runtime
-)
-
 # Settings for packaging
 include(CIMppPackaging)
+
+install(FILES README.md package/copyright
+    DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/doc/${CPACK_PACKAGE_NAME}
+    COMPONENT runtime
+)
 
 if(CIMPP_BUILD_EXAMPLES)
   message(STATUS "Building examples")
