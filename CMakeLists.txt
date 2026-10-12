@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.12...3.28)
 project(libcimpp CXX)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake/" "${CMAKE_CURRENT_SOURCE_DIR}/../../cmake")
 
 if(NOT USE_CIM_VERSION)
@@ -79,7 +80,9 @@ target_link_libraries(${PROJECT_NAME}_obj PUBLIC arabica)
 add_library(${PROJECT_NAME} SHARED $<TARGET_OBJECTS:${PROJECT_NAME}_obj>)
 set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "cimpp${USE_CIM_VERSION}")
 target_link_libraries(${PROJECT_NAME} PUBLIC ${PROJECT_NAME}_obj arabica)
-target_link_options(${PROJECT_NAME} PRIVATE -Wl,--no-warn-search-mismatch)
+if(NOT MSVC)
+  target_link_options(${PROJECT_NAME} PRIVATE -Wl,--no-warn-search-mismatch)
+endif()
 
 # Static library (.a): Inherits objects, includes, and dependencies from ${PROJECT_NAME}_obj and arabica
 add_library(${PROJECT_NAME}_static STATIC $<TARGET_OBJECTS:${PROJECT_NAME}_obj>)
