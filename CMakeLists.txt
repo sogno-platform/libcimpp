@@ -78,7 +78,7 @@ target_link_libraries(${PROJECT_NAME}_obj PUBLIC arabica)
 
 # Dynamic/Shared library (.so): Inherits objects, includes, and dependencies from ${PROJECT_NAME}_obj and arabica
 add_library(${PROJECT_NAME} SHARED $<TARGET_OBJECTS:${PROJECT_NAME}_obj>)
-set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "cimpp${USE_CIM_VERSION}")
+set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "cimpp")
 target_link_libraries(${PROJECT_NAME} PUBLIC ${PROJECT_NAME}_obj arabica)
 if(NOT MSVC)
   target_link_options(${PROJECT_NAME} PRIVATE -Wl,--no-warn-search-mismatch)
@@ -87,9 +87,9 @@ endif()
 # Static library (.a): Inherits objects, includes, and dependencies from ${PROJECT_NAME}_obj and arabica
 add_library(${PROJECT_NAME}_static STATIC $<TARGET_OBJECTS:${PROJECT_NAME}_obj>)
 if(WIN32)
-  set_target_properties(${PROJECT_NAME}_static PROPERTIES OUTPUT_NAME "cimpp${USE_CIM_VERSION}_static")
+  set_target_properties(${PROJECT_NAME}_static PROPERTIES OUTPUT_NAME "cimpp_static")
 else()
-  set_target_properties(${PROJECT_NAME}_static PROPERTIES OUTPUT_NAME "cimpp${USE_CIM_VERSION}")
+  set_target_properties(${PROJECT_NAME}_static PROPERTIES OUTPUT_NAME "cimpp")
 endif()
 target_link_libraries(${PROJECT_NAME}_static PUBLIC ${PROJECT_NAME}_obj arabica)
 
@@ -101,8 +101,16 @@ install(TARGETS ${PROJECT_NAME} ${PROJECT_NAME}_static
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
 
-install(DIRECTORY ${USE_CIM_VERSION} static src
+install(DIRECTORY static/ src/
     DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/cimpp
+    COMPONENT devel
+    FILES_MATCHING
+        PATTERN "*.h"
+        PATTERN "*.hpp"
+)
+
+install(DIRECTORY ${USE_CIM_VERSION}/
+    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/cimpp/cgmes
     COMPONENT devel
     FILES_MATCHING
         PATTERN "*.h"

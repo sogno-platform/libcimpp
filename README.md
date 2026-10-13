@@ -88,11 +88,10 @@ sudo dpkg --install libcimpp-cgmes-3.0.0-*-Linux.deb
 g++ examples/src/main.cpp \
     -o example \
     -std=c++11 \
-    -I/usr/include/cimpp/CGMES_3.0.0 \
-    -I/usr/include/cimpp/static \
-    -I/usr/include/cimpp/src \
+    -I/usr/include/cimpp \
+    -I/usr/include/cimpp/cgmes \
     -I/usr/include/cimpp/arabica \
-    -lcimppCGMES_3.0.0
+    -lcimpp
 ./example
 ./example cim.xml
 ```
