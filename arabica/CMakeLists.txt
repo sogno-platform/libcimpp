@@ -11,11 +11,6 @@ set(ARABICA_MAJOR_VERSION 2024)
 set(ARABICA_MINOR_VERSION September)
 
 #
-# Build as shared library
-#
-option(BUILD_SHARED_LIBS "Build as shared libaries" OFF)
-
-#
 # Set the used xml backend
 # options: USE_MSXML, USE_EXPAT, USE_LIBXML2, USE_XERCES
 set(ARABICA_XML_BACKEND USE_LIBXML2)
@@ -30,7 +25,6 @@ if(ARABICA_XML_BACKEND STREQUAL USE_LIBXML2)
 endif()
 
 if(WIN32)
-  set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
   set(USE_WINSOCK TRUE)
   set(ADDITIONAL_LIB ${ADDITIONAL_LIB} wsock32 ws2_32)
 endif()
@@ -122,7 +116,7 @@ set(SOURCE_FILES
 source_group("Source Files" FILES ${SOURCE_FILES})
 
 
-add_library (${LIB_NAME}
+add_library (${LIB_NAME} OBJECT
   ${GENERATED_HEADER_FILES}
   ${PUBLIC_HEADER_FILES}
   ${SOURCE_FILES}
@@ -133,24 +127,15 @@ target_include_directories(${LIB_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_
 target_include_directories(${LIB_NAME} PUBLIC ${ADDITIONAL_INC} ${Boost_INCLUDE_DIRS})
 target_include_directories(${LIB_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/include>)
 # link backend
-target_link_libraries(${LIB_NAME} ${ADDITIONAL_LIB})
-
-#
-# Install library
-#
-install(TARGETS ${LIB_NAME}
-  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-  ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
-)
+target_link_libraries(${LIB_NAME} PUBLIC ${ADDITIONAL_LIB})
 
 install(DIRECTORY include/
-  DESTINATION include/${PROJECT_NAME}
+  DESTINATION include/cimpp/${PROJECT_NAME}
   FILES_MATCHING
     PATTERN *.hpp
     PATTERN *.h
 )
 
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/include/SAX/ArabicaConfig.hpp
-  DESTINATION include/${PROJECT_NAME}/SAX
+  DESTINATION include/cimpp/${PROJECT_NAME}/SAX
 )

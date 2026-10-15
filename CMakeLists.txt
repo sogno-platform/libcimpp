@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.12...3.28)
 project(libcimpp CXX)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake/" "${CMAKE_CURRENT_SOURCE_DIR}/../../cmake")
 
 if(NOT USE_CIM_VERSION)
@@ -27,16 +28,16 @@ else()
   message(FATAL_ERROR "${USE_CIM_VERSION} is an invalid value for USE_CIM_VERSION")
 endif()
 
-set(libcimpp_MAJOR_VERSION 2)
-set(libcimpp_MINOR_VERSION 3)
-set(libcimpp_PATCH_VERSION 1)
-set(libcimpp_VERSION ${libcimpp_MAJOR_VERSION}.${libcimpp_MINOR_VERSION}.${libcimpp_PATCH_VERSION})
+set(${PROJECT_NAME}_MAJOR_VERSION 2)
+set(${PROJECT_NAME}_MINOR_VERSION 3)
+set(${PROJECT_NAME}_PATCH_VERSION 1)
+set(${PROJECT_NAME}_VERSION ${${PROJECT_NAME}_MAJOR_VERSION}.${${PROJECT_NAME}_MINOR_VERSION}.${${PROJECT_NAME}_PATCH_VERSION})
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/src/version.hpp.in ${CMAKE_CURRENT_SOURCE_DIR}/src/version.hpp)
 
 # Options
-option(BUILD_SHARED_LIBS "Build shared library" OFF)
 option(CIMPP_BUILD_EXAMPLES "Build examples" OFF)
+option(CIMPP_LINK_EXAMPLES_STATICALLY "Link examples statically against static library" OFF)
 option(CIMPP_BUILD_DOC "Build documentation" ON)
 
 # Set a default build type if none was specified
@@ -63,24 +64,44 @@ add_subdirectory(arabica)
 file(GLOB_RECURSE SRC src/*.cpp)
 file(GLOB_RECURSE CIM_STATIC static/*.cpp)
 file(GLOB_RECURSE CIM_SRC ${USE_CIM_VERSION}/*.cpp)
-add_library(${PROJECT_NAME} ${SRC} ${CIM_STATIC} ${CIM_SRC})
-set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "cimpp${USE_CIM_VERSION}")
-target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/${USE_CIM_VERSION}>)
-target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/static>)
-target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>)
-target_link_libraries(${PROJECT_NAME} PUBLIC arabica)
-target_link_options(${PROJECT_NAME} PRIVATE -Wl,--no-warn-search-mismatch)
-target_link_options(arabica PRIVATE -Wl,--no-warn-search-mismatch)
+
+set(CIMPP_BUILD_INCLUDE_DIRS
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/${USE_CIM_VERSION}>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/static>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
+)
+
+# Object library: Compile all CIMpp source files once (-fPIC is globally active)
+add_library(${PROJECT_NAME}_obj OBJECT ${SRC} ${CIM_STATIC} ${CIM_SRC})
+target_include_directories(${PROJECT_NAME}_obj PUBLIC ${CIMPP_BUILD_INCLUDE_DIRS})
+target_link_libraries(${PROJECT_NAME}_obj PUBLIC arabica)
+
+# Dynamic/Shared library (.so): Inherits objects, includes, and dependencies from ${PROJECT_NAME}_obj and arabica
+add_library(${PROJECT_NAME} SHARED $<TARGET_OBJECTS:${PROJECT_NAME}_obj>)
+set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "cimpp")
+target_link_libraries(${PROJECT_NAME} PUBLIC ${PROJECT_NAME}_obj arabica)
+if(NOT MSVC)
+  target_link_options(${PROJECT_NAME} PRIVATE -Wl,--no-warn-search-mismatch)
+endif()
+
+# Static library (.a): Inherits objects, includes, and dependencies from ${PROJECT_NAME}_obj and arabica
+add_library(${PROJECT_NAME}_static STATIC $<TARGET_OBJECTS:${PROJECT_NAME}_obj>)
+if(WIN32)
+  set_target_properties(${PROJECT_NAME}_static PROPERTIES OUTPUT_NAME "cimpp_static")
+else()
+  set_target_properties(${PROJECT_NAME}_static PROPERTIES OUTPUT_NAME "cimpp")
+endif()
+target_link_libraries(${PROJECT_NAME}_static PUBLIC ${PROJECT_NAME}_obj arabica)
 
 include(GNUInstallDirs)
 
-install(TARGETS ${PROJECT_NAME}
+install(TARGETS ${PROJECT_NAME} ${PROJECT_NAME}_static
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
 
-install(DIRECTORY ${USE_CIM_VERSION} static src
+install(DIRECTORY static/ src/
     DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/cimpp
     COMPONENT devel
     FILES_MATCHING
@@ -88,20 +109,34 @@ install(DIRECTORY ${USE_CIM_VERSION} static src
         PATTERN "*.hpp"
 )
 
-install(FILES README.md package/copyright
-    DESTINATION ${CMAKE_INSTALL_DOCDIR}
-    COMPONENT runtime
+install(DIRECTORY ${USE_CIM_VERSION}/
+    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/cimpp/cgmes
+    COMPONENT devel
+    FILES_MATCHING
+        PATTERN "*.h"
+        PATTERN "*.hpp"
 )
 
 # Settings for packaging
 include(CIMppPackaging)
 
+install(FILES README.md package/copyright
+    DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/doc/${CPACK_PACKAGE_NAME}
+    COMPONENT runtime
+)
+
 if(CIMPP_BUILD_EXAMPLES)
   message(STATUS "Building examples")
   add_executable(example examples/src/main.cpp)
   add_executable(readwrite examples/src/readwrite.cpp)
-  target_link_libraries(example libcimpp)
-  target_link_libraries(readwrite libcimpp)
+  # Link statically or dynamically depending on CIMPP_LINK_EXAMPLES_STATICALLY
+  if(NOT CIMPP_LINK_EXAMPLES_STATICALLY)
+    target_link_libraries(example ${PROJECT_NAME})
+    target_link_libraries(readwrite ${PROJECT_NAME})
+  else()
+    target_link_libraries(example ${PROJECT_NAME}_static)
+    target_link_libraries(readwrite ${PROJECT_NAME}_static)
+  endif()
   target_compile_features(example PUBLIC cxx_range_for)
 endif()
 

@@ -1,7 +1,6 @@
 # libcimpp
 
 libcimpp is a serialiser & deserialiser library for C++ objects from XML/RDF documents based on the Common Information Model (CIM) standards (i.e. IEC61970/61968/62325) and CGMES for the energy sector.
-It is part of the CIM++ project. More on CIM++ can be found [here](http://rdcu.be/vOop).
 
 Supported CIM / CGMES versions:
 
@@ -78,6 +77,36 @@ make -j 4
 
 The make example is currently not supported due to the lack of an install target for arabica.
 
+## Usage of the Debian package
+
+Installing the Debian package (e.g. the CGMES_3.0.0 version),
+applications like the example program could be compiled and run:
+
+```bash
+sudo dpkg --install libcimpp-cgmes-3.0.0-*-Linux.deb
+
+g++ examples/src/main.cpp \
+    -o example \
+    -std=c++11 \
+    -I/usr/include/cimpp \
+    -I/usr/include/cimpp/cgmes \
+    -I/usr/include/cimpp/arabica \
+    -lcimpp
+./example
+./example cim.xml
+```
+
 ## License
 
 This project is released under the terms of the [Apache License 2.0](./LICENSE).
+
+## Publications
+
+Razik, L., Mirz, M., Knibbe, D., Lantes, S., Monti, A.:
+Automated deserializer generation from CIM ontologies: CIM++ —
+an easy-to-use and automated adaptable open-source library for object deserialization in C++
+from documents based on user-specified UML models following the
+Common Information Model (CIM) standards for the energy sector.
+Comput Sci Res Dev 33, 93–103 (2018).
+[https://doi.org/10.1007/s00450-017-0350-y](https://doi.org/10.1007/s00450-017-0350-y)
+([http://rdcu.be/vOop](http://rdcu.be/vOop))
