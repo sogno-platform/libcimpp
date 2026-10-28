@@ -18,7 +18,7 @@ int main(int argc, char** argv)
 	{
 		std::cout << "Usage: example <cim file> [additional cim files]" << std::endl;
 		std::cout << "Provide at least one cim file" << std::endl;
-		std::cout << "Version: libcimpp " << RELEASE_VERSION << " (" << CimVersion << ")" << std::endl;
+		std::cout << "Version: libcimpp " << RELEASE_VERSION << " (" << getCimVersion() << ")" << std::endl;
 		return 1;
 	}
 

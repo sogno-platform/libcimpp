@@ -31,7 +31,7 @@ bool assign(BaseClass* CIMObj, const std::string& CIMAttrName, const std::string
 std::unordered_map<std::string, assign_function> dynamic_switch_factory()
 {
 	std::unordered_map<std::string, assign_function> assign_map;
-	for (const BaseClassDefiner& CIMClass : CIMClassList)
+	for (const BaseClassDefiner& CIMClass : getCIMClassList())
 	{
 		CIMClass.addPrimitiveAssignFnsToMap(assign_map);
 	}

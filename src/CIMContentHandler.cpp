@@ -13,13 +13,14 @@
 
 CIMContentHandler::CIMContentHandler() : Objects(nullptr), RDFMap(nullptr)
 {
-	auto itRDF = NamespaceMap.find("rdf");
-	if (itRDF != NamespaceMap.end())
+	const auto& namespaceMap = getNamespaceMap();
+	auto itRDF = namespaceMap.find("rdf");
+	if (itRDF != namespaceMap.end())
 	{
 		RDF = itRDF->second;
 	}
-	auto itMD = NamespaceMap.find("md");
-	if (itMD != NamespaceMap.end())
+	auto itMD = namespaceMap.find("md");
+	if (itMD != namespaceMap.end())
 	{
 		MD = itMD->second;
 	}

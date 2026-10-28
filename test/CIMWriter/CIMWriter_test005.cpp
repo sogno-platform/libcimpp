@@ -11,11 +11,11 @@
 BOOST_AUTO_TEST_CASE(CIMWriter_test005)
 {
   // Check object with custom namespace and class attribute with custom namespace
-  if (CimVersion == "cgmes_v2_4_13")
+  if (getCimVersion() == "cgmes_v2_4_13")
   {
     // There is no class or list attribute in cgmes_v2_4_13 with entsoe namespace
   }
-  else if (CimVersion == "cgmes_v2_4_15")
+  else if (getCimVersion() == "cgmes_v2_4_15")
   {
     CIMModel model;
     model.setDependencyCheckOff();

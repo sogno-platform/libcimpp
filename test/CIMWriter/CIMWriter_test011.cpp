@@ -11,7 +11,7 @@
 BOOST_AUTO_TEST_CASE(CIMWriter_test011){
   // Check class attributes of Status, StreetAddress, StreetDetail, TownDetail
   // (to make sure they are not primitive string attributes, only for CGMES3)
-  if (CimVersion == "cgmes_v3_0_0")
+  if (getCimVersion() == "cgmes_v3_0_0")
   {
     CIMModel model;
     model.setDependencyCheckOff();

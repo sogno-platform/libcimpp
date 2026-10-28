@@ -8,7 +8,7 @@ BOOST_AUTO_TEST_CASE(CGMESProfile_getProfileFromLongName)
   // Check getProfileFromLongName
   auto EQ = "Equipment";
   auto TP = "Topology";
-  if (CimVersion == "cgmes_v3_0_0")
+  if (getCimVersion() == "cgmes_v3_0_0")
   {
     EQ = "CoreEquipment";
   }

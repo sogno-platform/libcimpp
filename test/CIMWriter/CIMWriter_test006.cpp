@@ -11,7 +11,7 @@
 BOOST_AUTO_TEST_CASE(CIMWriter_test006)
 {
   // Check enum attribute with custom namespace
-  if (CimVersion == "cgmes_v2_4_13" || CimVersion == "cgmes_v2_4_15")
+  if (getCimVersion() == "cgmes_v2_4_13" || getCimVersion() == "cgmes_v2_4_15")
   {
     CIMModel model;
     model.setDependencyCheckOff();
@@ -42,14 +42,14 @@ BOOST_AUTO_TEST_CASE(CIMWriter_test006)
     BOOST_REQUIRE_EQUAL("    <cim:IdentifiedObject.name>High Voltage</cim:IdentifiedObject.name>", lines[1]);
     if (lines[2].find("entsoe:OperationalLimitType.limitType") != std::string::npos)
     {
-      BOOST_REQUIRE_EQUAL("    <entsoe:OperationalLimitType.limitType rdf:resource='" + NamespaceMap.at("entsoe") +
+      BOOST_REQUIRE_EQUAL("    <entsoe:OperationalLimitType.limitType rdf:resource='" + getNamespaceMap().at("entsoe") +
                             "LimitTypeKind.highVoltage' />",
                           lines[2]);
     }
     else
     {
       // In CGMES_2.4.15_16FEB2016 the namespace for OperationalLimitType.limitType is wrong
-      BOOST_REQUIRE_EQUAL("    <cim:OperationalLimitType.limitType rdf:resource='" + NamespaceMap.at("cim") +
+      BOOST_REQUIRE_EQUAL("    <cim:OperationalLimitType.limitType rdf:resource='" + getNamespaceMap().at("cim") +
                             "LimitTypeKind.highVoltage' />",
                           lines[2]);
     }
@@ -84,7 +84,7 @@ BOOST_AUTO_TEST_CASE(CIMWriter_test006)
 
     BOOST_REQUIRE_EQUAL("  <cim:OperationalLimitType rdf:ID='OLT'>", lines[0]);
     BOOST_REQUIRE_EQUAL("    <cim:IdentifiedObject.name>High Voltage</cim:IdentifiedObject.name>", lines[1]);
-    BOOST_REQUIRE_EQUAL("    <eu:OperationalLimitType.kind rdf:resource='" + NamespaceMap.at("eu") +
+    BOOST_REQUIRE_EQUAL("    <eu:OperationalLimitType.kind rdf:resource='" + getNamespaceMap().at("eu") +
                           "LimitKind.highVoltage' />",
                         lines[2]);
     BOOST_REQUIRE_EQUAL("  </cim:OperationalLimitType>", lines[3]);

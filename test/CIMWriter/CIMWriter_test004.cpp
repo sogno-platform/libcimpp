@@ -11,7 +11,7 @@
 BOOST_AUTO_TEST_CASE(CIMWriter_test004)
 {
   // Check reading model header and primitive attribute with custom namespace
-  static std::string ENTSOE_EU = CimVersion == "cgmes_v3_0_0" ? "eu" : "entsoe";
+  static std::string ENTSOE_EU = getCimVersion() == "cgmes_v3_0_0" ? "eu" : "entsoe";
   CIMModel model;
   model.setDependencyCheckOff();
 

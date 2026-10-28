@@ -11,7 +11,7 @@
 BOOST_AUTO_TEST_CASE(CIMWriter_test002)
 {
   // Check enum attributes
-  static std::string CIM = NamespaceMap.at("cim");
+  static std::string CIM = getNamespaceMap().at("cim");
   CIMModel model;
   model.setDependencyCheckOff();
 

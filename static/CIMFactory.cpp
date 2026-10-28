@@ -36,7 +36,7 @@ CIMFactory::~CIMFactory() {}
 
 static std::unordered_map<std::string, BaseClass* (*)()> initialize() {
     std::unordered_map<std::string, BaseClass* (*)()> map;
-    for (const BaseClassDefiner& CIMClass : CIMClassList)
+    for (const BaseClassDefiner& CIMClass : getCIMClassList())
     {
         CIMClass.addConstructToMap(map);
     }
