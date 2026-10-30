@@ -62,17 +62,15 @@ add_subdirectory(arabica)
 #endif()
 
 file(GLOB_RECURSE SRC src/*.cpp)
-file(GLOB_RECURSE CIM_STATIC static/*.cpp)
 file(GLOB_RECURSE CIM_SRC ${USE_CIM_VERSION}/*.cpp)
 
 set(CIMPP_BUILD_INCLUDE_DIRS
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/${USE_CIM_VERSION}>
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/static>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
 )
 
 # Object library: Compile all CIMpp source files once (-fPIC is globally active)
-add_library(${PROJECT_NAME}_obj OBJECT ${SRC} ${CIM_STATIC} ${CIM_SRC})
+add_library(${PROJECT_NAME}_obj OBJECT ${SRC} ${CIM_SRC})
 target_include_directories(${PROJECT_NAME}_obj PUBLIC ${CIMPP_BUILD_INCLUDE_DIRS})
 target_link_libraries(${PROJECT_NAME}_obj PUBLIC arabica)
 
@@ -101,7 +99,7 @@ install(TARGETS ${PROJECT_NAME} ${PROJECT_NAME}_static
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
 
-install(DIRECTORY static/ src/
+install(DIRECTORY src/
     DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/cimpp
     COMPONENT devel
     FILES_MATCHING

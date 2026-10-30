@@ -13,7 +13,7 @@ BOOST_AUTO_TEST_CASE(CGMESProfile_getProfileList)
   int count = 9;
   int EQ = 0;
   int TP = 7;
-  if (CimVersion == "cgmes_v3_0_0")
+  if (getCimVersion() == "cgmes_v3_0_0")
   {
     count = 10;
     TP = 9;

@@ -9,7 +9,6 @@ file(GLOB_RECURSE TEST_SRC_FILES *.cpp)
 
 include_directories(${Boost_INCLUDE_DIRS})
 include_directories(../${USE_CIM_VERSION})
-include_directories(../static)
 include_directories(../src)
 
 # Build unit tests

@@ -65,8 +65,9 @@ bool CIMWriter::writeCim(std::ostream& rdf, const std::vector<BaseClass*>& objLi
 {
   int objectsCount = 0;
   static const std::string mdURL = []() {
-    auto it = NamespaceMap.find("md");
-    return (it != NamespaceMap.end()) ? it->second : std::string();
+    const auto& namespaceMap = getNamespaceMap();
+    auto it = namespaceMap.find("md");
+    return (it != namespaceMap.end()) ? it->second : std::string();
   }();
 
   auto usedNamespaces = getUsedNamespaces(objList);
@@ -245,8 +246,9 @@ CGMESProfile CIMWriter::getAttributeProfile(const BaseClass* obj, const std::str
 std::map<std::string, std::string> CIMWriter::getUsedNamespaces(const std::vector<BaseClass*>& objList)
 {
   static const std::string rdfURL = []() {
-    auto it = NamespaceMap.find("rdf");
-    return (it != NamespaceMap.end()) ? it->second : std::string();
+    const auto& namespaceMap = getNamespaceMap();
+    auto it = namespaceMap.find("rdf");
+    return (it != namespaceMap.end()) ? it->second : std::string();
   }();
 
   std::set<std::string> urls;
@@ -309,7 +311,7 @@ std::map<std::string, std::string> CIMWriter::getUsedNamespaces(const std::vecto
 
 std::string CIMWriter::getNamespaceKey(const std::string& url)
 {
-  for (const auto& nsAndUrl : NamespaceMap)
+  for (const auto& nsAndUrl : getNamespaceMap())
   {
     if (nsAndUrl.second == url)
     {

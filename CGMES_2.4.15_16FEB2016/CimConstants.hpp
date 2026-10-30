@@ -8,9 +8,9 @@ Generated from the CGMES files via cimgen: https://github.com/sogno-platform/cim
 #include <string>
 
 /** \brief CIM version string. */
-extern const std::string CimVersion;
+const std::string& getCimVersion();
 
 /** \brief Default namespaces used by CGMES. Map of namespace key to URL. */
-extern const std::map<std::string, std::string> NamespaceMap;
+const std::map<std::string, std::string>& getNamespaceMap();
 
 #endif

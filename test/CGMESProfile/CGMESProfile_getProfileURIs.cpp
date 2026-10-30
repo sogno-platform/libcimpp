@@ -9,7 +9,7 @@
 BOOST_AUTO_TEST_CASE(CGMESProfile_getProfileURIs)
 {
   // Check getProfileURIs
-  if (CimVersion == "cgmes_v2_4_13" || CimVersion == "cgmes_v2_4_15")
+  if (getCimVersion() == "cgmes_v2_4_13" || getCimVersion() == "cgmes_v2_4_15")
   {
     auto uris = getProfileURIs(CGMESProfile::EQ);
     BOOST_REQUIRE_EQUAL(3, uris.size());

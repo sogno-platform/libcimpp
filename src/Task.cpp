@@ -57,7 +57,7 @@ void Task::replaceObject(BaseClass* oldObject_ptr, BaseClass* newObject_ptr)
 static std::unordered_map<std::string, class_assign_function> initialize()
 {
 	std::unordered_map<std::string, class_assign_function> object_map;
-	for (const BaseClassDefiner& CIMClass : CIMClassList) {
+	for (const BaseClassDefiner& CIMClass : getCIMClassList()) {
 		CIMClass.addClassAssignFnsToMap(object_map);
 	}
 

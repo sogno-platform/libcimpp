@@ -4,9 +4,6 @@
 #include <string>
 
 #include "CIMExceptions.hpp"
-#include "IEC61970/IEC61970CIMVersion.h"
-
-using CIMPP::IEC61970CIMVersion;
 
 ModelDescriptionHandler::ModelDescriptionHandler() : modelDescription(nullptr)
 {
@@ -25,22 +22,7 @@ void ModelDescriptionHandler::endDocument()
 {}
 
 void ModelDescriptionHandler::startPrefixMapping(const std::string &prefix, const std::string &uri)
-{
-	if(prefix == "cim")
-	{
-		std::string version = IEC61970CIMVersion::version;
-		std::size_t pos = version.find("CIM");
-		std::string versionParser = version.substr(pos+3, 2);
-
-		pos = uri.find("cim");
-		std::string versionFile = uri.substr(pos+3,2);
-
-		if(versionParser != versionFile)
-		{
-			std::cout << "CIM version(" << versionFile << ") in File does not match CIM version(" << versionParser << ") in Parser" << std::endl;
-		}
-	}
-}
+{}
 
 void ModelDescriptionHandler::endPrefixMapping(const std::string &prefix)
 {}

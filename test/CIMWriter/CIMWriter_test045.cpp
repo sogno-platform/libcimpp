@@ -12,7 +12,7 @@ BOOST_AUTO_TEST_CASE(CIMWriter_test045)
 {
   // Check list attributes with inverse list (ManyToMany)
   // from DiagramObject to VisibilityLayer (not CGMES conform)
-  if (CimVersion == "cgmes_v2_4_13")
+  if (getCimVersion() == "cgmes_v2_4_13")
   {
     // DiagramObject has no name in cgmes_v2_4_13
     CIMModel model;

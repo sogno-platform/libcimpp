@@ -11,7 +11,7 @@
 BOOST_AUTO_TEST_CASE(CIMModel_test005)
 {
   // Check object with custom namespace and class attribute with custom namespace
-  if (CimVersion == "cgmes_v2_4_13" || CimVersion == "cgmes_v2_4_15")
+  if (getCimVersion() == "cgmes_v2_4_13" || getCimVersion() == "cgmes_v2_4_15")
   {
     CIMModel model;
     model.setDependencyCheckOff();

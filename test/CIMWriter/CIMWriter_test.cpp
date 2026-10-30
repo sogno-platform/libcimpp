@@ -17,7 +17,7 @@ BOOST_AUTO_TEST_CASE(writeCim_empty)
 {
   // Check writing with empty CIM objects list without profile
   static std::string XML_HEADER = "<?xml version='1.0' encoding='utf-8' ?>";
-  static std::string RDF = NamespaceMap.at("rdf");
+  static std::string RDF = getNamespaceMap().at("rdf");
 
   std::stringstream rdf;
   CIMWriter::writeCim(rdf, {});
@@ -39,8 +39,8 @@ BOOST_AUTO_TEST_CASE(writeCim_one_object)
 {
   // Check writing one CIM object without profile
   static std::string XML_HEADER = "<?xml version='1.0' encoding='utf-8' ?>";
-  static std::string RDF = NamespaceMap.at("rdf");
-  static std::string CIM = NamespaceMap.at("cim");
+  static std::string RDF = getNamespaceMap().at("rdf");
+  static std::string CIM = getNamespaceMap().at("cim");
 
   auto* cimObj = new CIMPP::IdentifiedObject;
   cimObj->setRdfid("rdfid");
@@ -68,9 +68,9 @@ BOOST_AUTO_TEST_CASE(writeCim_with_custom_namespace)
 {
   // Check writing one CIM object without profile including one attribute with custom namespace
   static std::string XML_HEADER = "<?xml version='1.0' encoding='utf-8' ?>";
-  static std::string RDF = NamespaceMap.at("rdf");
-  static std::string CIM = NamespaceMap.at("cim");
-  static std::string ENTSOE_EU = CimVersion == "cgmes_v3_0_0" ? "eu" : "entsoe";
+  static std::string RDF = getNamespaceMap().at("rdf");
+  static std::string CIM = getNamespaceMap().at("cim");
+  static std::string ENTSOE_EU = getCimVersion() == "cgmes_v3_0_0" ? "eu" : "entsoe";
 
   auto* cimObj = new CIMPP::IdentifiedObject;
   cimObj->setRdfid("rdfid");
@@ -89,7 +89,7 @@ BOOST_AUTO_TEST_CASE(writeCim_with_custom_namespace)
   BOOST_REQUIRE_EQUAL(6, lines.size());
 
   BOOST_REQUIRE_EQUAL(XML_HEADER, lines[0]);
-  BOOST_REQUIRE_EQUAL("<rdf:RDF xmlns:cim='" + CIM + "' xmlns:" + ENTSOE_EU + "='" + NamespaceMap.at(ENTSOE_EU) +
+  BOOST_REQUIRE_EQUAL("<rdf:RDF xmlns:cim='" + CIM + "' xmlns:" + ENTSOE_EU + "='" + getNamespaceMap().at(ENTSOE_EU) +
                         "' xmlns:rdf='" + RDF + "'>",
                       lines[1]);
   BOOST_REQUIRE_EQUAL("  <cim:IdentifiedObject rdf:ID='rdfid'>", lines[2]);
@@ -103,9 +103,9 @@ BOOST_AUTO_TEST_CASE(writeCim_with_profile)
 {
   // Check writing one CIM object with profile
   static std::string XML_HEADER = "<?xml version='1.0' encoding='utf-8' ?>";
-  static std::string RDF = NamespaceMap.at("rdf");
-  static std::string CIM = NamespaceMap.at("cim");
-  static std::string MD = NamespaceMap.at("md");
+  static std::string RDF = getNamespaceMap().at("rdf");
+  static std::string CIM = getNamespaceMap().at("cim");
+  static std::string MD = getNamespaceMap().at("md");
 
   auto* cimObj = new CIMPP::IdentifiedObject;
   cimObj->setRdfid("rdfid");
@@ -198,22 +198,23 @@ BOOST_AUTO_TEST_CASE(writeFiles_with_profiles)
 BOOST_AUTO_TEST_CASE(getClassNamespaceUrl)
 {
   // Check getClassNamespaceUrl
-  static std::string CIM = NamespaceMap.at("cim");
-  static std::string ENTSOE_EU = CimVersion == "cgmes_v3_0_0" ? NamespaceMap.at("eu") : NamespaceMap.at("entsoe");
+  static std::string CIM = getNamespaceMap().at("cim");
+  static std::string ENTSOE_EU = getCimVersion() == "cgmes_v3_0_0" ? getNamespaceMap().at("eu") :
+                                                                     getNamespaceMap().at("entsoe");
 
   // Check CIM namespace
   BOOST_REQUIRE_EQUAL(CIM, CIMPP::IdentifiedObject().getClassNamespaceUrl());
 
   // Check custom namespace
-  if (CimVersion == "cgmes_v2_4_13")
+  if (getCimVersion() == "cgmes_v2_4_13")
   {
     // There is no class in cgmes_v2_4_13 with entsoe namespace
   }
-  else if (CimVersion == "cgmes_v2_4_15")
+  else if (getCimVersion() == "cgmes_v2_4_15")
   {
     BOOST_REQUIRE_EQUAL(ENTSOE_EU, CIMPP::EnergySchedulingType().getClassNamespaceUrl());
   }
-  else if (CimVersion == "cgmes_v3_0_0")
+  else if (getCimVersion() == "cgmes_v3_0_0")
   {
     BaseClass* cimObj = CIMPP::CIMFactory::CreateNew("BoundaryPoint");
     BOOST_REQUIRE_EQUAL(ENTSOE_EU, cimObj->getClassNamespaceUrl());
@@ -223,8 +224,9 @@ BOOST_AUTO_TEST_CASE(getClassNamespaceUrl)
 BOOST_AUTO_TEST_CASE(getAttributeNamespaceUrl)
 {
   // Check getAttributeNamespaceUrl
-  static std::string CIM = NamespaceMap.at("cim");
-  static std::string ENTSOE_EU = CimVersion == "cgmes_v3_0_0" ? NamespaceMap.at("eu") : NamespaceMap.at("entsoe");
+  static std::string CIM = getNamespaceMap().at("cim");
+  static std::string ENTSOE_EU = getCimVersion() == "cgmes_v3_0_0" ? getNamespaceMap().at("eu") :
+                                                                     getNamespaceMap().at("entsoe");
   BaseClass* cimObj = new CIMPP::IdentifiedObject;
 
   // Check CIM namespace
